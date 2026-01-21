@@ -1,0 +1,438 @@
+/**
+ * SRObro - Player Entity Class
+ * Represents a player character in the game world
+ */
+
+import { Entity, EntityState } from './Entity';
+import { Position, EntityType, CharacterRace, Character as SharedCharacter } from '@srobro/shared';
+import { prisma } from '../database/prisma';
+import { createLogger } from '../core/Logger';
+
+const logger = createLogger('PlayerEntity');
+
+/**
+ * Player entity options
+ */
+export interface PlayerEntityOptions {
+  id: string;
+  name: string;
+  accountId: string;
+  race: CharacterRace;
+  level: number;
+  exp: number;
+  sp: number;
+  hp: number;
+  maxHp: number;
+  mp: number;
+  maxMp: number;
+  str: number;
+  int: number;
+  position: Position;
+  rotation: number;
+  gold: number;
+  zoneId: string;
+  modelId: string;
+  skillPoints: number;
+  statPoints: number;
+}
+
+/**
+ * Player Entity class
+ */
+export class PlayerEntity extends Entity {
+  public readonly accountId: string;
+  public readonly race: CharacterRace;
+  public exp: number;
+  public sp: number;
+  public hp: number;
+  public maxHp: number;
+  public mp: number;
+  public maxMp: number;
+  public str: number;
+  public int: number;
+  public gold: number;
+  public skillPoints: number;
+  public statPoints: number;
+
+  // Cached combat stats (calculated from equipment, buffs, etc.)
+  public stats: {
+    attackPower: { min: number; max: number };
+    magicalAttackPower: { min: number; max: number };
+    defense: number;
+    magicalDefense: number;
+    parryRatio: number;
+    blockRatio: number;
+    criticalChance: number;
+    attackRating: number;
+  };
+
+  private autoSaveInterval: NodeJS.Timeout | null = null;
+  private readonly AUTO_SAVE_INTERVAL = 30000; // 30 seconds
+
+  constructor(options: PlayerEntityOptions) {
+    super({
+      id: options.id,
+      name: options.name,
+      type: EntityType.PLAYER,
+      level: options.level,
+      position: options.position,
+      rotation: options.rotation,
+      modelId: options.modelId,
+      zoneId: options.zoneId,
+    });
+
+    this.accountId = options.accountId;
+    this.race = options.race;
+    this.exp = options.exp;
+    this.sp = options.sp;
+    this.hp = options.hp;
+    this.maxHp = options.maxHp;
+    this.mp = options.mp;
+    this.maxMp = options.maxMp;
+    this.str = options.str;
+    this.int = options.int;
+    this.gold = options.gold;
+    this.skillPoints = options.skillPoints;
+    this.statPoints = options.statPoints;
+
+    // Calculate initial combat stats
+    this.stats = this.calculateStats();
+
+    // Start auto-save
+    this.startAutoSave();
+
+    logger.info(`Player entity created: ${this.name}`, {
+      id: this.id,
+      level: this.level,
+      race: this.race,
+    });
+  }
+
+  /**
+   * Update player (called every tick)
+   */
+  update(deltaTime: number): void {
+    super.update(deltaTime);
+
+    // Regenerate HP/MP
+    this.regenerate(deltaTime);
+  }
+
+  /**
+   * Set HP
+   */
+  setHp(hp: number): void {
+    const oldHp = this.hp;
+    this.hp = Math.max(0, Math.min(hp, this.maxHp));
+
+    if (this.hp === 0 && oldHp > 0) {
+      this.setState(EntityState.DEAD);
+      this.handleDeath();
+    }
+
+    this.emit('hpChanged', { entityId: this.id, oldHp, newHp: this.hp });
+  }
+
+  /**
+   * Set MP
+   */
+  setMp(mp: number): void {
+    const oldMp = this.mp;
+    this.mp = Math.max(0, Math.min(mp, this.maxMp));
+    this.emit('mpChanged', { entityId: this.id, oldMp, newMp: this.mp });
+  }
+
+  /**
+   * Add experience
+   */
+  addExp(amount: number): void {
+    const oldExp = this.exp;
+    this.exp += amount;
+
+    // Check for level up
+    const expNeeded = this.getExpNeededForLevel(this.level + 1);
+    if (this.exp >= expNeeded) {
+      this.levelUp();
+    }
+
+    this.emit('expGained', { entityId: this.id, amount, oldExp, newExp: this.exp });
+  }
+
+  /**
+   * Add SP
+   */
+  addSp(amount: number): void {
+    const oldSp = this.sp;
+    this.sp += amount;
+    this.emit('spGained', { entityId: this.id, amount, oldSp, newSp: this.sp });
+  }
+
+  /**
+   * Add gold
+   */
+  addGold(amount: number): void {
+    const oldGold = this.gold;
+    this.gold += amount;
+    this.emit('goldGained', { entityId: this.id, amount, oldGold, newGold: this.gold });
+  }
+
+  /**
+   * Remove gold
+   */
+  removeGold(amount: number): boolean {
+    if (this.gold < amount) {
+      return false;
+    }
+    const oldGold = this.gold;
+    this.gold -= amount;
+    this.emit('goldSpent', { entityId: this.id, amount, oldGold, newGold: this.gold });
+    return true;
+  }
+
+  /**
+   * Add stat point
+   */
+  addStatPoint(stat: 'str' | 'int'): boolean {
+    if (this.statPoints <= 0) {
+      return false;
+    }
+
+    this.statPoints--;
+    if (stat === 'str') {
+      this.str++;
+      this.maxHp += 20; // HP per STR
+    } else {
+      this.int++;
+      this.maxMp += 15; // MP per INT
+    }
+
+    // Recalculate stats
+    this.stats = this.calculateStats();
+
+    this.emit('statAdded', { entityId: this.id, stat, value: this[stat] });
+    return true;
+  }
+
+  /**
+   * Level up
+   */
+  private levelUp(): void {
+    const oldLevel = this.level;
+    this.level++;
+
+    // Give stat points
+    this.statPoints += 3;
+
+    // Increase HP/MP
+    this.maxHp += 20;
+    this.maxMp += 10;
+    this.hp = this.maxHp;
+    this.mp = this.maxMp;
+
+    // Recalculate stats
+    this.stats = this.calculateStats();
+
+    logger.info(`Player leveled up: ${this.name}`, {
+      oldLevel,
+      newLevel: this.level,
+    });
+
+    this.emit('levelUp', { entityId: this.id, oldLevel, newLevel: this.level });
+  }
+
+  /**
+   * Get exp needed for a level
+   */
+  private getExpNeededForLevel(level: number): number {
+    // SRO exp formula: base * (multiplier ^ (level - 1))
+    const base = 100;
+    const multiplier = 1.15;
+    return Math.floor(base * Math.pow(multiplier, level - 1));
+  }
+
+  /**
+   * Regenerate HP/MP
+   */
+  private regenerate(deltaTime: number): void {
+    if (this.state === EntityState.DEAD || this.state === EntityState.RESPawning) {
+      return;
+    }
+
+    // HP regen: 1% per 10 seconds
+    const hpRegenRate = this.maxHp * 0.001; // per second
+    const hpRegen = Math.floor(hpRegenRate * (deltaTime / 1000));
+    if (hpRegen > 0 && this.hp < this.maxHp) {
+      this.setHp(Math.min(this.maxHp, this.hp + hpRegen));
+    }
+
+    // MP regen: 1% per 5 seconds
+    const mpRegenRate = this.maxMp * 0.002; // per second
+    const mpRegen = Math.floor(mpRegenRate * (deltaTime / 1000));
+    if (mpRegen > 0 && this.mp < this.maxMp) {
+      this.setMp(Math.min(this.maxMp, this.mp + mpRegen));
+    }
+  }
+
+  /**
+   * Calculate combat stats
+   */
+  private calculateStats(): PlayerEntity['stats'] {
+    // Base stats from STR/INT
+    const baseAttack = Math.floor(this.str * 1.5);
+    const baseMagicAttack = Math.floor(this.int * 1.5);
+    const baseDefense = Math.floor(this.str * 0.5);
+    const baseMagicDefense = Math.floor(this.int * 0.5);
+
+    // Level-based bonuses
+    const levelBonus = this.level * 2;
+
+    return {
+      attackPower: {
+        min: baseAttack + levelBonus,
+        max: baseAttack + levelBonus + 10,
+      },
+      magicalAttackPower: {
+        min: baseMagicAttack + levelBonus,
+        max: baseMagicAttack + levelBonus + 10,
+      },
+      defense: baseDefense + levelBonus,
+      magicalDefense: baseMagicDefense + Math.floor(levelBonus / 2),
+      parryRatio: Math.min(50, 5 + this.level),
+      blockRatio: Math.min(40, this.level),
+      criticalChance: Math.min(30, 3 + this.level * 0.5),
+      attackRating: this.level * 10,
+    };
+  }
+
+  /**
+   * Handle death
+   */
+  private handleDeath(): void {
+    logger.info(`Player died: ${this.name}`, { level: this.level, position: this.position });
+
+    // Death penalty: lose 3% exp
+    const expPenalty = Math.floor(this.exp * 0.03);
+    this.exp = Math.max(0, this.exp - expPenalty);
+
+    this.emit('death', { entityId: this.id, expPenalty });
+  }
+
+  /**
+   * Respawn
+   */
+  respawn(position: Position): void {
+    this.hp = this.maxHp;
+    this.mp = this.maxMp;
+    this.setPosition(position);
+    this.setState(EntityState.IDLE);
+
+    logger.info(`Player respawned: ${this.name}`, { position });
+
+    this.emit('respawn', { entityId: this.id, position });
+  }
+
+  /**
+   * Start auto-save
+   */
+  private startAutoSave(): void {
+    this.autoSaveInterval = setInterval(async () => {
+      await this.saveToDatabase();
+    }, this.AUTO_SAVE_INTERVAL);
+  }
+
+  /**
+   * Stop auto-save
+   */
+  private stopAutoSave(): void {
+    if (this.autoSaveInterval) {
+      clearInterval(this.autoSaveInterval);
+      this.autoSaveInterval = null;
+    }
+  }
+
+  /**
+   * Save to database
+   */
+  async saveToDatabase(): Promise<void> {
+    try {
+      await prisma.character.update({
+        where: { id: this.id },
+        data: {
+          level: this.level,
+          exp: BigInt(this.exp),
+          sp: BigInt(this.sp),
+          hp: this.hp,
+          mp: this.mp,
+          maxHp: this.maxHp,
+          maxMp: this.maxMp,
+          str: this.str,
+          int: this.int,
+          positionX: this.position.x,
+          positionY: this.position.y,
+          positionZ: this.position.z,
+          rotation: this.rotation,
+          gold: BigInt(this.gold),
+          skillPoints: this.skillPoints,
+          statPoints: this.statPoints,
+          isOnline: true,
+        },
+      });
+
+      logger.debug(`Player saved to database: ${this.name}`);
+    } catch (error) {
+      logger.error(`Failed to save player to database: ${this.name}`, error);
+    }
+  }
+
+  /**
+   * Serialize for network
+   */
+  serialize(): Record<string, unknown> {
+    return {
+      ...super.serialize(),
+      race: this.race,
+      hp: this.hp,
+      maxHp: this.maxHp,
+      mp: this.mp,
+      maxMp: this.maxMp,
+      gold: this.gold,
+      stats: this.stats,
+    };
+  }
+
+  /**
+   * Clean up
+   */
+  destroy(): void {
+    this.stopAutoSave();
+    super.destroy();
+  }
+}
+
+/**
+ * Create a PlayerEntity from database character
+ */
+export async function createPlayerEntityFromDb(character: Character): Promise<PlayerEntity> {
+  return new PlayerEntity({
+    id: character.id,
+    name: character.name,
+    accountId: character.accountId,
+    race: character.race,
+    level: character.level,
+    exp: character.exp,
+    sp: character.sp,
+    hp: character.hp,
+    maxHp: character.maxHp,
+    mp: character.mp,
+    maxMp: character.maxMp,
+    str: character.stats.str,
+    int: character.stats.int,
+    position: character.position,
+    rotation: character.rotation,
+    gold: character.gold,
+    zoneId: character.zoneId,
+    modelId: 'char_chinese_male', // Default model
+    skillPoints: 0, // TODO: Load from DB
+    statPoints: 0, // TODO: Load from DB
+  });
+}

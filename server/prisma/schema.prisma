@@ -1,0 +1,1116 @@
+// ============================================
+// SRObro - Silkroad Online Server Schema
+// ============================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// ACCOUNT & AUTHENTICATION
+// ============================================
+
+model Account {
+  id           String   @id @default(uuid())
+  username     String   @unique
+  email        String   @unique
+  passwordHash String
+  isBanned     Boolean  @default(false)
+  banReason    String?
+  banUntil     DateTime?
+  createdAt    DateTime @default(now())
+  lastLoginAt  DateTime @default(now())
+
+  // Relations
+  sessions     Session[]
+  characters   Character[]
+  guilds       GuildMember[]
+
+  @@index([username])
+  @@index([email])
+}
+
+model Session {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  accountId String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  // Relations
+  account   Account   @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  @@index([token])
+  @@index([accountId])
+}
+
+// ============================================
+// CHARACTER SYSTEM
+// ============================================
+
+model Character {
+  id           String   @id @default(uuid())
+  accountId    String
+  name         String   @unique
+  race         CharacterRace
+  level        Int      @default(1)
+  exp          BigInt   @default(0)
+  sp           BigInt   @default(0)
+  hp           Int      @default(200)
+  mp           Int      @default(100)
+  maxHp        Int      @default(200)
+  maxMp        Int      @default(100)
+  str          Int      @default(20)
+  int          Int      @default(20)
+  positionX    Float    @default(0)
+  positionY    Float    @default(0)
+  positionZ    Float    @default(0)
+  rotation     Float    @default(0)
+  zoneId       String   @default("zone_jangan")
+  gold         BigInt   @default(0)
+  skillPoints  Int      @default(0)
+  statPoints   Int      @default(0)
+  isOnline     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  lastLoginAt  DateTime @default(now())
+
+  // Relations
+  account           Account             @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  masteries         CharacterMastery[]
+  skills            CharacterSkill[]
+  inventoryItems    InventoryItem[]
+  equipment         Equipment?
+  partyMemberships  PartyMember[]
+  guildMembership   GuildMember?
+  kills             KillLog[]           @relation("Killer")
+  deaths            KillLog[]           @relation("Victim")
+  statusEffects     StatusEffect[]
+  jobState          JobState?
+  pkStatus          PKStatus?
+  transport         Transport?
+  stall             Stall?
+  questProgress     QuestProgress[]
+  mount             Mount?
+  pet               Pet?
+  hotkeyBindings    HotkeyBinding[]
+  settings          CharacterSettings?
+
+  @@index([accountId])
+  @@index([name])
+  @@index([zoneId])
+  @@index([isOnline])
+}
+
+enum CharacterRace {
+  chinese
+  european
+}
+
+enum EntityType {
+  CHARACTER
+  MONSTER
+  NPC
+  PET
+  TRANSPORT
+}
+
+// Character Masteries
+model Mastery {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  tree        MasteryTree
+  maxLevel    Int
+  description String?
+  createdAt   DateTime @default(now())
+
+  // Relations
+  characterMasteries CharacterMastery[]
+  skills              Skill[]
+
+  @@index([tree])
+}
+
+enum MasteryTree {
+  BICHEON       // Chinese Sword/Blade
+  HEUKSAL       // Chinese Spear/Glaive
+  PACHEON       // Chinese Bow
+  FIRE          // Chinese Fire Force
+  COLD          // Chinese Cold Force
+  LIGHTNING     // Chinese Lightning Force
+  FORCE         // Chinese Force Force
+  WARRIOR       // European Warrior
+  ROGUE         // European Rogue
+  WIZARD        // European Wizard
+  WARLOCK       // European Warlock
+  CLERIC        // European Cleric
+  BARD          // European Bard
+}
+
+model CharacterMastery {
+  id           String   @id @default(uuid())
+  characterId  String
+  masteryId    String
+  level        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  character Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  mastery   Mastery   @relation(fields: [masteryId], references: [id], onDelete: Cascade)
+
+  @@unique([characterId, masteryId])
+  @@index([characterId])
+}
+
+// Skills
+model Skill {
+  id                   String   @id @default(uuid())
+  masteryId            String
+  name                 String
+  type                 SkillType
+  level                Int      @default(1)
+  element              Element?
+  baseDamage           Int      @default(0)
+  mpCost               Int      @default(0)
+  castTime             Int      @default(0)      // milliseconds
+  cooldown             Int      @default(0)      // milliseconds
+  range                Float    @default(3.0)    // meters
+  requiredLevel        Int      @default(1)
+  requiredMasteryLevel Int      @default(0)
+  iconId               String?
+  description          String?
+  createdAt            DateTime @default(now())
+
+  // Relations
+  mastery            Mastery            @relation(fields: [masteryId], references: [id], onDelete: Cascade)
+  characterSkills    CharacterSkill[]
+
+  @@index([masteryId])
+  @@index([requiredLevel])
+}
+
+enum SkillType {
+  passive
+  active
+  buff
+}
+
+enum Element {
+  physical
+  fire
+  cold
+  lightning
+  force
+}
+
+model CharacterSkill {
+  id         String   @id @default(uuid())
+  characterId String
+  skillId    String
+  level      Int      @default(1)
+  createdAt  DateTime @default(now())
+
+  // Relations
+  character Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  skill     Skill     @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+  @@unique([characterId, skillId])
+  @@index([characterId])
+}
+
+// ============================================
+// ITEMS & INVENTORY
+// ============================================
+
+model Item {
+  id              String      @id @default(uuid())
+  name            String
+  type            ItemType
+  subType         String?     // weapon_type, armor_type, etc.
+  rarity          ItemRarity  @default(common)
+  requiredLevel   Int         @default(1)
+  requiredStr     Int         @default(0)
+  requiredInt     Int         @default(0)
+  bonusStr        Int         @default(0)
+  bonusInt        Int         @default(0)
+  attackPowerMin  Int         @default(0)
+  attackPowerMax  Int         @default(0)
+  magicalAttackMin Int         @default(0)
+  magicalAttackMax Int         @default(0)
+  defense         Int         @default(0)
+  magicalDefense  Int         @default(0)
+  durability      Int         @default(0)
+  maxDurability   Int         @default(0)
+  price           BigInt      @default(0)
+  stackable       Boolean     @default(false)
+  maxStack        Int         @default(1)
+  iconId          String?
+  modelId         String?
+  description     String?
+  createdAt       DateTime    @default(now())
+
+  // Relations
+  inventoryItems InventoryItem[]
+  shopItems      ShopItem[]
+  drops          MonsterDrop[]
+
+  @@index([type])
+  @@index([requiredLevel])
+  @@index([rarity])
+}
+
+enum ItemType {
+  weapon
+  shield
+  helmet
+  chest
+  shoulder
+  legs
+  boots
+  ring
+  necklace
+  earring
+  potion
+  skill
+  material
+  quest
+  amm
+  arrow
+  bolt
+  general
+}
+
+enum ItemRarity {
+  common
+  rare
+  legendary
+  unique
+}
+
+model InventoryItem {
+  id         String   @id @default(uuid())
+  characterId String
+  itemId     String
+  slot       Int
+  quantity   Int      @default(1)
+  plus       Int      @default(0)      // +1 to +12
+  durability Int      @default(-1)     // -1 = unbreakable
+  sockets    String[] @default([])     // Socket data (JSON string for each socket)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // Relations
+  character Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  item      Item      @relation(fields: [itemId], references: [id])
+  alchemyAttempts AlchemyAttempt[]
+
+  @@unique([characterId, slot])
+  @@index([characterId])
+}
+
+model Equipment {
+  id              String   @id @default(uuid())
+  characterId     String   @unique
+  weapon          String?
+  shield          String?
+  helmet          String?
+  chest           String?
+  shoulder        String?
+  legs            String?
+  boots           String?
+  ring1           String?
+  ring2           String?
+  necklace        String?
+  earring1        String?
+  earring2        String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  character Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+}
+
+// ============================================
+// MONSTERS & COMBAT
+// ============================================
+
+model Monster {
+  id           String   @id @default(uuid())
+  name         String
+  level        Int
+  hp           Int
+  mp           Int      @default(0)
+  attackPowerMin Int
+  attackPowerMax Int
+  defense      Int
+  magicalDefense Int     @default(0)
+  exp          BigInt
+  sp           BigInt
+  aggroRange   Float    @default(15.0)
+  attackRange  Float    @default(2.5)
+  moveSpeed    Float    @default(3.0)
+  attackSpeed  Int      @default(2000)     // milliseconds
+  respawnTime  Int      @default(10)      // seconds
+  modelId      String
+  isUnique     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+
+  // Relations
+  spawns   MonsterSpawn[]
+  drops    MonsterDrop[]
+
+  @@index([level])
+  @@index([isUnique])
+}
+
+model MonsterSpawn {
+  id          String   @id @default(uuid())
+  monsterId   String
+  zoneId      String
+  positionX   Float
+  positionY   Float
+  positionZ   Float
+  rotation    Float    @default(0)
+  maxCount    Int      @default(10)
+  respawnTime Int      @default(10)       // seconds
+  patrolRange Float    @default(20.0)     // meters
+  createdAt   DateTime @default(now())
+
+  // Relations
+  monster Monster @relation(fields: [monsterId], references: [id], onDelete: Cascade)
+  zone    Zone    @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+
+  @@index([zoneId])
+}
+
+model MonsterDrop {
+  id         String   @id @default(uuid())
+  monsterId  String
+  itemId     String
+  chance     Float    // 0.0 to 1.0
+  quantityMin Int     @default(1)
+  quantityMax Int     @default(1)
+  createdAt  DateTime @default(now())
+
+  // Relations
+  monster Monster @relation(fields: [monsterId], references: [id], onDelete: Cascade)
+  item    Item    @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  @@index([monsterId])
+}
+
+model KillLog {
+  id         String   @id @default(uuid())
+  killerId   String
+  victimId   String
+  victimType EntityType
+  damage     Int
+  timestamp  DateTime @default(now())
+
+  // Relations
+  killer Character @relation("Killer", fields: [killerId], references: [id], onDelete: Cascade)
+  victim Character @relation("Victim", fields: [victimId], references: [id], onDelete: Cascade)
+
+  @@index([killerId])
+  @@index([victimId])
+  @@index([timestamp])
+}
+
+// ============================================
+// NPCs
+// ============================================
+
+model NPC {
+  id          String   @id @default(uuid())
+  name        String
+  npcType     NPCType
+  zoneId      String
+  positionX   Float
+  positionY   Float
+  positionZ   Float
+  rotation    Float    @default(0)
+  modelId     String
+  dialogue    String?  // JSON array of dialogue strings
+  createdAt   DateTime @default(now())
+
+  // Relations
+  zone      Zone       @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+  shopItems ShopItem[]
+
+  @@index([zoneId])
+  @@index([npcType])
+}
+
+enum NPCType {
+  shop
+  storage
+  stable
+  quest
+  teleport
+  exchange
+  guild
+  union
+  job
+}
+
+model ShopItem {
+  id        String   @id @default(uuid())
+  npcId     String
+  itemId    String
+  price     BigInt?
+  stock     Int?     // null = unlimited
+  createdAt DateTime @default(now())
+
+  // Relations
+  npc NPC @relation(fields: [npcId], references: [id], onDelete: Cascade)
+  item Item @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  @@index([npcId])
+}
+
+// ============================================
+// ZONES & WORLD
+// ============================================
+
+model Zone {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  levelMin    Int      @default(1)
+  levelMax    Int      @default(120)
+  width       Float    @default(1000.0)     // meters
+  height      Float    @default(1000.0)     // meters
+  weather     String?  @default("sunny")
+  createdAt   DateTime @default(now())
+
+  // Relations
+  spawns     MonsterSpawn[]
+  npcs       NPC[]
+  teleportPoints TeleportPoint[]
+
+  @@index([levelMin])
+  @@index([levelMax])
+}
+
+model TeleportPoint {
+  id                  String   @id @default(uuid())
+  zoneId              String
+  name                String
+  positionX           Float
+  positionY           Float
+  positionZ           Float
+  destinationZoneId   String
+  destinationPositionX Float
+  destinationPositionY Float
+  destinationPositionZ Float
+  cost                BigInt   @default(0)
+  requiredLevel       Int      @default(1)
+  createdAt           DateTime @default(now())
+
+  // Relations
+  zone Zone @relation(fields: [zoneId], references: [id], onDelete: Cascade)
+
+  @@index([zoneId])
+  @@index([destinationZoneId])
+}
+
+// ============================================
+// STATUS EFFECTS
+// ============================================
+
+model StatusEffect {
+  id           String   @id @default(uuid())
+  characterId  String
+  name         String
+  effectType   StatusEffectType
+  duration     Int      // milliseconds
+  value        Int?     // effect magnitude
+  sourceId     String?  // who applied it
+  isBuff       Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  expiresAt    DateTime
+
+  // Relations
+  character Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@index([characterId])
+  @@index([expiresAt])
+}
+
+enum StatusEffectType {
+  buff
+  debuff
+  dot     // damage over time
+  hot     // heal over time
+  stun
+  knockback
+  knockdown
+  sleep
+  poison
+  burn
+  freeze
+  paralysis
+}
+
+// ============================================
+// PARTY SYSTEM
+// ============================================
+
+model Party {
+  id                  String   @id @default(uuid())
+  leaderId            String
+  expSharing          ExpSharingType @default(level)
+  itemDistribution    ItemDistributionType @default(freeforall)
+  createdAt           DateTime @default(now())
+
+  // Relations
+  members PartyMember[]
+
+  @@index([leaderId])
+}
+
+enum ExpSharingType {
+  equal
+  level
+}
+
+enum ItemDistributionType {
+  freeforall
+  sequential
+  random
+}
+
+model PartyMember {
+  id         String   @id @default(uuid())
+  partyId    String
+  characterId String  @unique
+  joinedAt   DateTime @default(now())
+
+  // Relations
+  party     Party     @relation(fields: [partyId], references: [id], onDelete: Cascade)
+  character Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@index([partyId])
+  @@index([characterId])
+}
+
+// ============================================
+// GUILD SYSTEM
+// ============================================
+
+model Guild {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  level       Int      @default(1)
+  exp         BigInt   @default(0)
+  notice      String   @default("")
+  createdAt   DateTime @default(now())
+
+  // Relations
+  members GuildMember[]
+
+  @@index([level])
+}
+
+model GuildMember {
+  id           String   @id @default(uuid())
+  guildId      String
+  accountId    String
+  characterId  String   @unique
+  rank         GuildRank @default(member)
+  contribution BigInt   @default(0)
+  joinedAt     DateTime @default(now())
+
+  // Relations
+  guild     Guild     @relation(fields: [guildId], references: [id], onDelete: Cascade)
+  account   Account   @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  character Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@index([guildId])
+  @@index([accountId])
+  @@index([characterId])
+}
+
+enum GuildRank {
+  leader
+  assistant
+  senior
+  member
+  junior
+}
+
+model GuildStorage {
+  id          String   @id @default(uuid())
+  guildId     String   @unique
+  gold        BigInt   @default(0)
+  items       Json     @default("[]")  // Array of {itemId, quantity, slot}
+  lastAccess  DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([guildId])
+}
+
+model Union {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  leaderGuild String   @unique  // Guild ID that leads the union
+  maxMembers   Int      @default(8)  // Max 8 guilds in a union
+  createdAt   DateTime @default(now())
+
+  @@index([leaderGuild])
+}
+
+model UnionMember {
+  id        String   @id @default(uuid())
+  unionId   String
+  guildId   String   @unique
+  joinedAt  DateTime @default(now())
+
+  @@index([unionId])
+  @@index([guildId])
+}
+
+// ============================================
+// JOB SYSTEM
+// ============================================
+
+model JobState {
+  id           String   @id @default(uuid())
+  characterId  String   @unique
+  jobType      JobType  @default(none)
+  level        Int      @default(1)
+  exp          BigInt   @default(0)
+  contribution BigInt   @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  character Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@index([characterId])
+  @@index([jobType])
+}
+
+enum JobType {
+  trader
+  thief
+  hunter
+  none
+}
+
+// ============================================
+// ALCHEMY SYSTEM
+// ============================================
+
+model AlchemyAttempt {
+  id           String   @id @default(uuid())
+  inventoryItemId String
+  characterId  String
+  targetPlus   Int      // Target + level (e.g., +6)
+  result       AlchemyResult
+  wasCritical  Boolean  @default(false)  // +2 instead of +1
+  wasDestroyed Boolean  @default(false)  // Item destroyed
+  usedLuckyPowder AlchemyGrade? // A, B, C or null
+  usedElixir   String?  // Weapon, Armor, Accessory
+  usedProtector Boolean @default(false)  // Tablet/Stone used
+  timestamp    DateTime @default(now())
+
+  // Relations
+  inventoryItem InventoryItem @relation(fields: [inventoryItemId], references: [id], onDelete: Cascade)
+
+  @@index([characterId])
+  @@index([timestamp])
+}
+
+enum AlchemyResult {
+  success
+  fail
+  destroyed
+}
+
+enum AlchemyGrade {
+  A  // Lucky Powder A (+15%)
+  B  // Lucky Powder B (+10%)
+  C  // Lucky Powder C (+5%)
+}
+
+// ============================================
+// PK/PVP SYSTEM
+// ============================================
+
+model PKStatus {
+  id           String   @id @default(uuid())
+  characterId  String   @unique
+  pkPoints     Int      @default(0)
+  murdererLevel Int     @default(0)  // 0-4
+  penaltyExp   BigInt   @default(0)
+  penaltyTimer Int      @default(0)  // seconds
+  lastKillAt   DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  character    Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@index([characterId])
+  @@index([pkPoints])
+}
+
+// ============================================
+// STALL NETWORK SYSTEM
+// ============================================
+
+model Stall {
+  id           String   @id @default(uuid())
+  characterId  String   @unique
+  characterName String
+  title        String
+  zoneId       String
+  positionX    Float
+  positionY    Float
+  positionZ    Float
+  isOpen       Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  character    Character  @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  stallItems   StallItem[]
+
+  @@index([zoneId])
+  @@index([isOpen])
+}
+
+model StallItem {
+  id          String   @id @default(uuid())
+  stallId     String
+  inventoryItemId String
+  price       BigInt
+  createdAt   DateTime @default(now())
+
+  // Relations
+  stall Stall @relation(fields: [stallId], references: [id], onDelete: Cascade)
+
+  @@index([stallId])
+}
+
+// ============================================
+// TRANSPORT SYSTEM (Job System)
+// ============================================
+
+model Transport {
+  id           String   @id @default(uuid())
+  characterId  String   @unique
+  transportType TransportType
+  starLevel    Int      @default(1)  // 1-5 stars
+  hp           Int      @default(5000)
+  maxHp        Int      @default(5000)
+  positionX    Float
+  positionY    Float
+  positionZ    Float
+  rotation     Float    @default(0)
+  zoneId       String
+  inventorySlots Json    @default("[]")  // Array of goods
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  character    Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@index([zoneId])
+}
+
+enum TransportType {
+  one_star
+  two_star
+  three_star
+  four_star
+  five_star
+}
+
+model TradeGood {
+  id          String   @id @default(uuid())
+  itemId      String
+  sourceZone  String
+  buyPrice    BigInt
+  sellPrice   BigInt
+  quantity    Int      @default(1)
+  createdAt   DateTime @default(now())
+
+  @@index([sourceZone])
+}
+
+// ============================================
+// CHAT LOGS (Optional - for moderation)
+// ============================================
+
+model ChatMessage {
+  id         String   @id @default(uuid())
+  characterId String
+  channel    ChatChannel
+  message    String
+  targetId   String?  // for whispers
+  timestamp  DateTime @default(now())
+
+  @@index([characterId])
+  @@index([timestamp])
+}
+
+enum ChatChannel {
+  general
+  whisper
+  shout
+  party
+  guild
+  global
+  union
+}
+
+// ============================================
+// FORTRESS WAR SYSTEM
+// ============================================
+
+model Fortress {
+  id              String   @id @default(uuid())
+  name            String   @unique
+  level           Int      @default(1)  // 1, 3, or 5
+  ownerGuildId    String?  @unique
+  taxRate         Int      @default(0)  // -20 to +20 percent
+  nextWarTime     DateTime
+  warDuration     Int      @default(90)  // minutes
+  registrationDay String   // "Saturday"
+  registrationHour Int     @default(18)  // 6 PM
+  state           FortressState @default(peace)
+  lastWarAt       DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([ownerGuildId])
+  @@index([state])
+}
+
+enum FortressState {
+  peace           // No war active
+  registration    // Guilds registering
+  preparation     // 30min before war
+  active          // War in progress
+  ended           // War finished
+}
+
+model FortressRegistration {
+  id          String   @id @default(uuid())
+  fortressId  String
+  guildId     String
+  registeredAt DateTime @default(now())
+
+  @@unique([fortressId, guildId])
+  @@index([fortressId])
+  @@index([guildId])
+}
+
+model FortressHistory {
+  id          String   @id @default(uuid())
+  fortressId  String
+  guildId     String
+  capturedAt  DateTime @default(now())
+  lostAt      DateTime?
+
+  @@index([fortressId])
+  @@index([guildId])
+}
+
+// ============================================
+// QUEST SYSTEM
+// ============================================
+
+model Quest {
+  id          String   @id @default(uuid())
+  name        String
+  type        QuestType
+  minLevel    Int
+  maxLevel    Int?
+  prerequisite Json?    // Array of quest IDs
+  objectives  Json     // Array of {type, targetId, count, targetName}
+  rewards     Json     // {exp, sp, gold, items}
+  startsAt    String[]  // NPC IDs
+  endsAt      String[]  // NPC IDs
+  repeatable  Boolean  @default(false)
+  repeatCooldownHrs Int?  // Hours before repeatable
+  isDaily     Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  // Relations
+  progress    QuestProgress[]
+
+  @@index([type])
+  @@index([minLevel])
+}
+
+enum QuestType {
+  tutorial
+  collection
+  hunting
+  delivery
+  story
+  daily
+  chain
+}
+
+model QuestProgress {
+  id          String      @id @default(uuid())
+  characterId String
+  questId     String
+  status      QuestStatus @default(in_progress)
+  progress    Json       // {objectiveIndex: currentCount}
+  startedAt   DateTime    @default(now())
+  completedAt DateTime?
+  canRepeatAt DateTime?   // For repeatable quests
+
+  character   Character   @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  quest       Quest       @relation(fields: [questId], references: [id], onDelete: Cascade)
+
+  @@unique([characterId, questId])
+  @@index([characterId])
+  @@index([status])
+}
+
+enum QuestStatus {
+  not_started
+  in_progress
+  completed
+  failed
+}
+
+// ============================================
+// MOUNT & PET SYSTEM
+// ============================================
+
+model Mount {
+  id              String   @id @default(uuid())
+  characterId     String   @unique
+  mountType       String   // 'horse_a', 'horse_b', etc.
+  level           Int      @default(1)
+  exp             BigInt   @default(0)
+  hp              Int      @default(100)
+  maxHp           Int      @default(100)
+  hunger          Int      @default(100)  // 0-100, decreases over time
+  isActive        Boolean  @default(false)
+  summonedAt      DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  character       Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  inventory       MountInventory[]
+
+  @@index([characterId])
+  @@index([isActive])
+}
+
+model MountInventory {
+  id          String   @id @default(uuid())
+  mountId     String
+  itemId      String
+  slot        Int
+  quantity    Int      @default(1)
+  createdAt   DateTime @default(now())
+
+  mount       Mount    @relation(fields: [mountId], references: [id], onDelete: Cascade)
+
+  @@unique([mountId, slot])
+  @@index([mountId])
+}
+
+model Pet {
+  id          String   @id @default(uuid())
+  characterId String   @unique
+  petType     String
+  level       Int      @default(1)
+  exp         BigInt   @default(0)
+  hp          Int      @default(100)
+  maxHp       Int      @default(100)
+  attackPower Int      @default(10)
+  isActive    Boolean  @default(false)
+  skillId     String?  // Pickup skill, attack skill, etc.
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@index([characterId])
+  @@index([isActive])
+}
+
+// ============================================
+// HOTKEY SYSTEM
+// ============================================
+
+model HotkeyBinding {
+  id          String   @id @default(uuid())
+  characterId String
+  slotIndex   Int      // 0-26 for 27 slots
+  slotType    HotkeySlotType
+  itemId      String?
+  skillId     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@unique([characterId, slotIndex, slotType])
+  @@index([characterId])
+}
+
+enum HotkeySlotType {
+  F1_F8       // Function keys row 1
+  ONE_NINE    // Number keys row 2
+  CTRL_F1_F8  // Function keys row 3 (with Ctrl)
+  ALT_ONE_NINE // Number keys row 4 (with Alt)
+}
+
+// ============================================
+// DROPPED ITEMS SYSTEM
+// ============================================
+
+model DroppedItem {
+  id          String   @id @default(uuid())
+  zoneId      String
+  itemId      String
+  itemData    Json     // Full item data including plus, durability, quantity
+  positionX   Float
+  positionY   Float
+  positionZ   Float
+  ownerId     String?  // Character ID who can pick up first
+  expiresAt   DateTime
+  createdAt   DateTime @default(now())
+
+  @@index([zoneId])
+  @@index([expiresAt])
+  @@index([ownerId])
+}
+
+// ============================================
+// CHARACTER SETTINGS
+// ============================================
+
+model CharacterSettings {
+  id              String   @id @default(uuid())
+  characterId     String   @unique
+  autoPickup      Boolean  @default(false)
+  lootFilter      Json     @default("{\"common\":true,\"rare\":true,\"legendary\":true,\"unique\":true}")
+  minimapZoom     Int      @default(5)
+  uiScale         Float    @default(1.0)
+  showTooltips    Boolean  @default(true)
+  tooltipDelay    Int      @default(300) // milliseconds
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  character       Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@index([characterId])
+}

@@ -1,0 +1,58 @@
+{
+  "name": "srobro",
+  "version": "0.1.0",
+  "description": "Silkroad Online WebGL Clone - Browser-based SRO emulator",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "tools/*",
+    "shared"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:client && npm run install:server && npm run install:tools",
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
+    "install:tools": "cd tools/pk2-extractor && npm install",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "build:shared": "cd shared && npm run build",
+    "build": "npm run build:shared && npm run build:client && npm run build:server",
+    "db:migrate": "cd server && npm run db:migrate",
+    "db:seed": "cd server && npm run db:seed",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "concurrently": "^8.2.2",
+    "prisma": "^5.22.0",
+    "typescript": "^5.3.3",
+    "vite": "^7.3.1"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/SRObro.git"
+  },
+  "keywords": [
+    "silkroad-online",
+    "mmorpg",
+    "webgl",
+    "babylonjs",
+    "game",
+    "emulator"
+  ],
+  "author": "SRObro Team",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^5.22.0"
+  }
+}
