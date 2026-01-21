@@ -1,0 +1,29 @@
+[package]
+name = "jmx_converter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Binary parsing & serialization
+byteorder = "1.5"
+bytemuck = "1.15"
+# JSON
+serde_json = "1.0"
+# glTF export
+gltf = "1.4"
+# Image processing (for DDJ textures)
+image = { version = "0.25", default-features = false, features = ["dds", "png"] }
+# Parallel processing
+rayon = "1.10"
+# CLI
+clap = { version = "4.5", features = ["derive"] }
+# Progress bars
+indicatif = "0.17"
+# Logging
+tracing = "0.1"
+tracing-subscriber = "0.3"
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+# Path handling
+glob = "0.3"
