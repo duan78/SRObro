@@ -1,0 +1,16 @@
+{
+  "file_name": "big_defensive_position_dmg_02",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\defensive\\dfposition02_dmg_01.bms",
+    "prim\\mesh\\artifact\\guild\\defensive\\dfposition02_dmg_01.bms",
+    "prim\\mesh\\artifact\\guild\\defensive\\dfposition02_dmg_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\defensive\\defensive position_dmg_02.bmt"
+  ],
+  "effects": [
+    "map\\guild\\blue_green_oura.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

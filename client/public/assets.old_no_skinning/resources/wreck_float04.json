@@ -1,0 +1,10 @@
+{
+  "file_name": "wreck_float04",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\wreck_float.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

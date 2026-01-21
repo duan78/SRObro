@@ -1,0 +1,19 @@
+{
+  "file_name": "oas_hot_tut",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_turtlest05.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_turtlest01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_turtlest02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_turtlest03.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_turtlest05.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_turtlest_alpha.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_turtlest_alpha_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_turtlest04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oas_hot_turtle.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

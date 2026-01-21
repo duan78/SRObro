@@ -1,0 +1,19 @@
+{
+  "file_name": "cj_rich2_buil02",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan06\\rich02\\cj_rich2_buil02_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich02\\cj_rich2_buil02_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich02\\cj_rich2_buil02_floor2.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich02\\cj_rich2_buil02_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich02\\cj_rich2_buil02_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich02\\cj_rich2_buil02_wall02.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich02\\cj_rich2_buil02_wall01_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich02\\cj_rich2_buil02_wall02_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan06\\rich02\\cj_rich2_buil02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

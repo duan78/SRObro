@@ -1,0 +1,13 @@
+{
+  "file_name": "rock_m_branch05",
+  "meshes": [
+    "prim\\mesh\\nature\\west asia\\rock mt\\rock_m_branch05.bms",
+    "prim\\mesh\\nature\\west asia\\rock mt\\rock_m_branch05_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\west asia\\rock mt\\rock_m_branch05.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

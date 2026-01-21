@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_dual_special_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 23098
+}

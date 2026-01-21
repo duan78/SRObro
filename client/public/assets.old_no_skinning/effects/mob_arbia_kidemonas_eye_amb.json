@@ -1,0 +1,10 @@
+{
+  "file_name": "mob_arbia_kidemonas_eye_amb",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13980
+}

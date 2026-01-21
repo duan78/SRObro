@@ -1,0 +1,7 @@
+{
+  "file_name": "kerberos_boss_dungeon_stone",
+  "textures": [
+    "prim\\mtrl\\mob\\bossdungeon\\kerberos_boss_dungeon_stone.ddj",
+    "prim\\mtrl\\mob\\bossdungeon\\chain1_boss_dungeon_stone.ddj"
+  ]
+}

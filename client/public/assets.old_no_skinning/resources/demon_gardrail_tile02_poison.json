@@ -1,0 +1,23 @@
+{
+  "file_name": "demon_gardrail_tile02_poison",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_gardrail_tile02.bms",
+    "prim\\mesh\\dun\\demon\\demon_gardrail_tile02.bms",
+    "prim\\mesh\\dun\\demon\\demon_gardrail_tile02_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_gardrail_tile.bmt"
+  ],
+  "effects": [
+    "dun\\demon_flame_poison01.efp",
+    "dun\\demon_flame_poison01.efp",
+    "dun\\demon_flame_poison01.efp",
+    "dun\\demon_flame_poison01.efp",
+    "dun\\demon_flame_poison01.efp",
+    "dun\\demon_flame_poison01.efp",
+    "dun\\demon_flame_poison01.efp",
+    "dun\\demon_flame_poison01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

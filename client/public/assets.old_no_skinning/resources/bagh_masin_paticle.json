@@ -1,0 +1,15 @@
+{
+  "file_name": "bagh_masin_paticle",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\masin\\bagh_masin_ptree.bmt"
+  ],
+  "effects": [
+    "dun\\sky_green_small_weak.efp",
+    "dun\\sky_green_small_weak.efp",
+    "dun\\sky_green_small_weak.efp",
+    "dun\\sky_green_small_weak.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

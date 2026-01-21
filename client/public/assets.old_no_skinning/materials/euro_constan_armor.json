@@ -1,0 +1,14 @@
+{
+  "file_name": "euro_constan_armor",
+  "textures": [
+    "euro_constan_armor_wall03.ddj",
+    "euro_constan_armor_wall01.ddj",
+    "euro_constan_armor_sign.ddj",
+    "euro_constan_armor_wall02.ddj",
+    "euro_constan_armor_roof_window.ddj",
+    "euro_constan_armor_wood_wall.ddj",
+    "euro_constan_armor_alpha.ddj",
+    "euro_constan_armor_roof.ddj",
+    "euro_constan_armor_winlight.ddj"
+  ]
+}

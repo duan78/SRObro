@@ -1,0 +1,10 @@
+{
+  "file_name": "wc_ghostsmoke_bk",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6104
+}

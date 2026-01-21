@@ -1,0 +1,34 @@
+{
+  "file_name": "whitetiger_clon",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\tiger_01.bms",
+    "prim\\mesh\\mob\\china\\tiger_part1.bms",
+    "prim\\mesh\\mob\\china\\tiger_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\whitetiger_clon.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\tiger\\tiger_stand01.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_stand02.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_walk.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_run.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_attack01.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_damage01.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_damage02.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_die.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_die_loop.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_down.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_downwait.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_downdamage.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_wakeup.ban",
+    "prim\\ani\\mob\\china\\tiger\\tiger_downdie.ban"
+  ],
+  "textures": []
+}

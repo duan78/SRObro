@@ -1,0 +1,14 @@
+{
+  "file_name": "w_cd_mc_bari",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_bari_body.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_bari_body.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_bari_edge.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_bari.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

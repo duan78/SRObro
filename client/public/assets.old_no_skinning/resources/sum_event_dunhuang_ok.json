@@ -1,0 +1,42 @@
+{
+  "file_name": "sum_event_dunhuang_ok",
+  "meshes": [
+    "prim\\mesh\\etc\\summer_event\\sum_event_dunhuang_ok01.bms",
+    "prim\\mesh\\etc\\summer_event\\sum_event_dunhuang_ok02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\summer_event\\sum_event.bmt"
+  ],
+  "effects": [
+    "map\\sum_event_y.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_r.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_y.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_r.efp",
+    "map\\sum_event_y.efp",
+    "map\\sum_event_y.efp",
+    "map\\sum_event_r.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_y.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_r.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_r.efp",
+    "map\\sum_event_y.efp",
+    "map\\sum_event_r.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_y.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

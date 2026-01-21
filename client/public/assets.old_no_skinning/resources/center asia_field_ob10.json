@@ -1,0 +1,12 @@
+{
+  "file_name": "center asia_field_ob10",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\center asia_field_ob10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\center asia_field_ob06.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "w_earthgst_house2",
+  "textures": [
+    "w_earthgst_house2_window.ddj",
+    "w_earthgst_house2_wall.ddj",
+    "w_earthgst_house2_doorwall.ddj",
+    "w_earthgst_house2_togi.ddj",
+    "w_earthgst_house2_wall2.ddj",
+    "w_earthgst_house2_etc.ddj",
+    "w_earthgst_house2_flag.ddj",
+    "w_earthgst_house2_entrance.ddj",
+    "w_earthgst_house2_alpha.ddj"
+  ]
+}

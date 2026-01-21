@@ -1,0 +1,19 @@
+{
+  "file_name": "euro_esteuro_viking24",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking24_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking24_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking24_02.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking24_03.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking24_04.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking24_05.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking24_06.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking24_07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking24.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

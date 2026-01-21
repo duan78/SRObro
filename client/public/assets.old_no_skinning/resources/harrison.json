@@ -1,0 +1,51 @@
+{
+  "file_name": "harrison",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\mob_arabia_harrison_skirt.bms",
+    "prim\\mesh\\mob\\arabia\\mob_arabia_harrison_hand01_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mob_arabia_harrison_hand01_part2.bms",
+    "prim\\mesh\\mob\\arabia\\mob_arabia_harrison_haed.bms",
+    "prim\\mesh\\mob\\arabia\\mob_arabia_harrison_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mob_arabia_harrison_part2.bms",
+    "prim\\mesh\\mob\\arabia\\mob_arabia_harrison_hand03_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mob_arabia_harrison_hand03_part2.bms",
+    "prim\\mesh\\mob\\arabia\\mob_arabia_harrison_hand02_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mob_arabia_harrison_hand02_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\mob_arabia_harrison.bmt"
+  ],
+  "effects": [
+    "monster\\arabia\\geenie_at03.efp",
+    "monster\\arabia\\geenie_at03.efp",
+    "monster\\arabia\\geenie_at03.efp",
+    "monster\\arabia\\geenie_at03.efp",
+    "monster\\arabia\\harrison_focus_attack2.efp",
+    "monster\\arabia\\harrison_focus_attack2.efp",
+    "monster\\arabia\\harrison_focus_attack2.efp",
+    "monster\\arabia\\harrison_focus_attack2.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_stand01.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_walk.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_run.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack01.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack02.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack03.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack04.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack05.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack06.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack07.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack08.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack09.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack10.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack11.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack12.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack14.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_attack13.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_stand02.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_die.ban",
+    "prim\\ani\\mob\\arabia\\harrison\\mob_arabia_harrison_die_rm.ban"
+  ],
+  "textures": []
+}

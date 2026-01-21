@@ -1,0 +1,27 @@
+{
+  "file_name": "redscorpion_down_die",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4037,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    327680,
+    157038,
+    704477,
+    2,
+    11,
+    612,
+    1714,
+    560,
+    1718,
+    562,
+    1590,
+    565,
+    1727,
+    564
+  ]
+}

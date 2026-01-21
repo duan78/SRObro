@@ -1,0 +1,14 @@
+{
+  "file_name": "w_cd_millstone",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_millstone1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_millstone1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_millstone2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_millstone1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

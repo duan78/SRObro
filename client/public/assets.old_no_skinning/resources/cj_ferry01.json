@@ -1,0 +1,29 @@
+{
+  "file_name": "cj_ferry01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_flag01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_02.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_roofa.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_tower01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_tower02.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_tower03.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_toweralpha.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_buil1_door.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_buil1_gidung.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_buil1_gidung_a.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_buil1_roof.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_flag01_a.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_pavilion01_a.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_pavilion01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_pavilion02.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry01_winlight.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\cj_ferry\\cj_ferry01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

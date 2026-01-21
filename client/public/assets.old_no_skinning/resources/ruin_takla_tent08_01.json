@@ -1,0 +1,14 @@
+{
+  "file_name": "ruin_takla_tent08_01",
+  "meshes": [
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tent08_01.bms",
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tent08_01.bms",
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tent08_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\ruins\\tent\\ruin_takla_tent08_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

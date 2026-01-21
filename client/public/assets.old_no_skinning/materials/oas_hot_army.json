@@ -1,0 +1,17 @@
+{
+  "file_name": "oas_hot_army",
+  "textures": [
+    "oas_hot_army_flag01.ddj",
+    "oas_hot_army_roof.ddj",
+    "oas_hot_army_bottom.ddj",
+    "oas_hot_army_winlight.ddj",
+    "oas_hot_army_wall01.ddj",
+    "oas_hot_army_wall02.ddj",
+    "oas_hot_army_winwall.ddj",
+    "oas_hot_army_darkwall.ddj",
+    "oas_hot_army_deco02.ddj",
+    "oas_hot_army_deco.ddj",
+    "oas_hot_army_door02.ddj",
+    "oas_hot_army_door01.ddj"
+  ]
+}

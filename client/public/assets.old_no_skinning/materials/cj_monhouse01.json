@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_monhouse01",
+  "textures": [
+    "cj_monhouse_alpha1.ddj",
+    "cj_monhouse_line.ddj",
+    "cj_monhouse_bigcolumn.ddj",
+    "cj_monhouse_leaf.ddj",
+    "cj_monhouse_stone.ddj",
+    "cj_monhouse_wall.ddj",
+    "cj_monhouse_ground2.ddj",
+    "cj_monhouse_ground.ddj",
+    "cj_monhouse_tree2.ddj",
+    "cj_monhouse_fruit.ddj"
+  ]
+}

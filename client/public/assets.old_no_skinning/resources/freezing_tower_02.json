@@ -1,0 +1,20 @@
+{
+  "file_name": "freezing_tower_02",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\guard tower\\freezing tower_02.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\freezing tower_02.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\freezing tower_02_01.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\freezing tower_02_flag.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\freezing tower_02_metal.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\guard tower\\freezing tower_2_3_5.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\artifact\\guild\\guard tower\\tower_stand.ban",
+    "prim\\ani\\artifact\\guild\\guard tower\\tower_ready.ban",
+    "prim\\ani\\artifact\\guild\\guard tower\\tower_wait.ban"
+  ],
+  "textures": []
+}

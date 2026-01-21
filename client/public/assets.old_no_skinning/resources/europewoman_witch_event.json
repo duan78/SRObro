@@ -1,0 +1,26 @@
+{
+  "file_name": "europewoman_witch_event",
+  "meshes": [
+    "prim\\mesh\\npc\\npc_eu_carnival01.bms",
+    "prim\\mesh\\npc\\npc_eu_carnival02.bms",
+    "prim\\mesh\\npc\\npc_eu_carnival04.bms",
+    "prim\\mesh\\npc\\npc_eu_carnival05.bms",
+    "prim\\mesh\\npc\\npc_eu_carnival06.bms",
+    "prim\\mesh\\npc\\npc_eu_carnival07.bms",
+    "prim\\mesh\\npc\\npc_eu_carnival08.bms",
+    "prim\\mesh\\npc\\npc_eu_carnival09.bms",
+    "prim\\mesh\\npc\\npc_eu_carnival10.bms",
+    "prim\\mesh\\npc\\npc_eu_carnival11.bms",
+    "prim\\mesh\\npc\\npc_eu_carnival03_part1.bms",
+    "prim\\mesh\\npc\\npc_eu_carnival03_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\npc_eu_carnival.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\npc_eu_carnival_stand01.ban",
+    "prim\\ani\\npc\\npc_eu_carnival_stand02.ban"
+  ],
+  "textures": []
+}

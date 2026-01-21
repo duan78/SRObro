@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_dd_body_al",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 9564
+}

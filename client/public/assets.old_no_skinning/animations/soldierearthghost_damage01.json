@@ -1,0 +1,30 @@
+{
+  "file_name": "soldierearthghost_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1077,
+  "animation_name": "\u001a",
+  "data_blocks": [
+    400,
+    30,
+    0,
+    8,
+    0,
+    33,
+    100,
+    133,
+    200,
+    266,
+    333,
+    400,
+    4,
+    12,
+    8,
+    10,
+    551779,
+    703113,
+    8,
+    15
+  ]
+}

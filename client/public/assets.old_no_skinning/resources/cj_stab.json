@@ -1,0 +1,23 @@
+{
+  "file_name": "cj_stab",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_stab_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_stab_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_stab_gidung.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_stab_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_stab_roof01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_stab_sign.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_stab_window.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_stab_winlight.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_stab_flag.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_stab.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_orange_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

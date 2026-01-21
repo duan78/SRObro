@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_snakedemon_ac5_absorption",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 16421
+}

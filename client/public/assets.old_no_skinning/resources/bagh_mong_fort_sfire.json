@@ -1,0 +1,17 @@
+{
+  "file_name": "bagh_mong_fort_sfire",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_sfire01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_sfire01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_sfire02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_sfire03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_sfire.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame_sb_s02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

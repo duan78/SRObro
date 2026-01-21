@@ -1,0 +1,25 @@
+{
+  "file_name": "snakewoman_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 579,
+  "animation_name": "\u0013",
+  "data_blocks": [
+    128049,
+    7680,
+    0,
+    2048,
+    0,
+    8448,
+    16896,
+    25600,
+    51200,
+    59648,
+    110848,
+    128000,
+    512,
+    2560,
+    2148
+  ]
+}

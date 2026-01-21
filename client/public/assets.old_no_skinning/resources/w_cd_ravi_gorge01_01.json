@@ -1,0 +1,19 @@
+{
+  "file_name": "w_cd_ravi_gorge01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_gorge01_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_gorge01_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_gorge01_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_gorge01_03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_gorge01_04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_gorge01_05.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_gorge01_06.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_gorge01_07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_gorge01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

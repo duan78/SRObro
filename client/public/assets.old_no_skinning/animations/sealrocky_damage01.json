@@ -1,0 +1,32 @@
+{
+  "file_name": "sealrocky_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2251,
+  "animation_name": "\u0012",
+  "data_blocks": [
+    500,
+    30,
+    0,
+    12,
+    0,
+    66,
+    100,
+    133,
+    200,
+    233,
+    266,
+    300,
+    333,
+    366,
+    400,
+    500,
+    6,
+    10,
+    813923,
+    768807,
+    3121,
+    2747
+  ]
+}

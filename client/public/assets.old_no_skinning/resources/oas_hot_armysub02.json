@@ -1,0 +1,26 @@
+{
+  "file_name": "oas_hot_armysub02",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_armysub02_floor.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_armysub02_box.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_armysub02_flag01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_armysub02_flag02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_armysub02_floor.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_armysub02_pole.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_armysub02_sword.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_armysub02_tent.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_armysub02_wpole.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\hot_army\\oas_hot_armysub02.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp",
+    "map\\frame2.efp",
+    "map\\frame2.efp",
+    "map\\frame2.efp",
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

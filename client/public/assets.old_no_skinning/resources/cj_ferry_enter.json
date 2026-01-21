@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_ferry_enter",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_enter.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_enter.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_enter_a.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_enter_roof.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\cj_ferry\\cj_ferry.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

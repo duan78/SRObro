@@ -1,0 +1,22 @@
+{
+  "file_name": "euro_esteuro_castle_f01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_f01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_f01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_f01_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_f01_03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_f01_04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_rose01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_rose02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_rose03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_rose01_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_rose02_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_rose03_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_esteuro_castle_f01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

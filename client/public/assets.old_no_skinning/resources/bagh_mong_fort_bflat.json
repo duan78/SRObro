@@ -1,0 +1,22 @@
+{
+  "file_name": "bagh_mong_fort_bflat",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat13.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat15.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat17.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bflat.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

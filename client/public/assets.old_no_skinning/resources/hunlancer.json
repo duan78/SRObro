@@ -1,0 +1,29 @@
+{
+  "file_name": "hunlancer",
+  "meshes": [
+    "prim\\mesh\\mob\\casia\\hun_lance.bms",
+    "prim\\mesh\\mob\\casia\\hung02.bms",
+    "prim\\mesh\\mob\\casia\\hun_part1.bms",
+    "prim\\mesh\\mob\\casia\\hun_part2.bms",
+    "prim\\mesh\\mob\\casia\\hung_part1.bms",
+    "prim\\mesh\\mob\\casia\\hung_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\casia\\hunlancer.bmt",
+    "prim\\mtrl\\mob\\casia\\hunlancer_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\casia\\hunlancer\\hunlancer_stand01.ban",
+    "prim\\ani\\mob\\casia\\hunlancer\\hunlancer_walk.ban",
+    "prim\\ani\\mob\\casia\\hunlancer\\hunlancer_run.ban",
+    "prim\\ani\\mob\\casia\\hunlancer\\hunlancer_attack01.ban",
+    "prim\\ani\\mob\\casia\\hunlancer\\hunlancer_attack02.ban",
+    "prim\\ani\\mob\\casia\\hunlancer\\hunlancer_attack03.ban",
+    "prim\\ani\\mob\\casia\\hunlancer\\hunlancer_attack04.ban",
+    "prim\\ani\\mob\\casia\\hunlancer\\hunlancer_damage01.ban",
+    "prim\\ani\\mob\\casia\\hunlancer\\hunlancer_die.ban",
+    "prim\\ani\\mob\\casia\\hunlancer\\hunlancer_die_rm.ban"
+  ],
+  "textures": []
+}

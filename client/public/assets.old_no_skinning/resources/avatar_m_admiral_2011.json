@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_m_admiral_2011",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_admiral01_2011.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_admiral_2011_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_admiral_2011_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_admiral_2011.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

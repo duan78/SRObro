@@ -1,0 +1,14 @@
+{
+  "file_name": "sd_t_area_warehouse2",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_t_area_warehouse2_box.bms",
+    "prim\\mesh\\npc\\sd\\sd_t_area_warehouse2_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_t_area_warehouse2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_t_area_warehouse2.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

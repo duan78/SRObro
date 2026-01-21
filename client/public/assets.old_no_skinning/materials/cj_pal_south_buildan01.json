@@ -1,0 +1,9 @@
+{
+  "file_name": "cj_pal_south_buildan01",
+  "textures": [
+    "cj_pal_bridge.ddj",
+    "cj_pal_floor.ddj",
+    "cj_pal_roof.ddj",
+    "cj_pal_dan.ddj"
+  ]
+}

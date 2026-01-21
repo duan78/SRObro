@@ -1,0 +1,16 @@
+{
+  "file_name": "togui_brig",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\togui\\togui_brig_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_brig_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_brig_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\togui\\togui_brig_01.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

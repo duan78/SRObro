@@ -1,0 +1,12 @@
+{
+  "file_name": "balloon_test",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\balloon_test.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\etc\\balloon_test.ban"
+  ],
+  "textures": []
+}

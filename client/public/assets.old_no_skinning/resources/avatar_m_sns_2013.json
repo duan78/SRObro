@@ -1,0 +1,16 @@
+{
+  "file_name": "avatar_m_sns_2013",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_sns_2013.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_sns_2013_hand.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_sns_2013_l.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_sns_2013_r.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_sns_2013_wrap.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_sns_2013.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

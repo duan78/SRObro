@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_kk_snow_pine04_01",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree1\\oas_kk_snow_pine04_01.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree1\\oas_kk_snow_pine04_01.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree1\\oas_kk_snow_pine04_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\karakorm\\kako-tree1\\oas_kk_snow_pine04_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

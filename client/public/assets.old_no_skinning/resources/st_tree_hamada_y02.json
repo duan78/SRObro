@@ -1,0 +1,13 @@
+{
+  "file_name": "st_tree_hamada_y02",
+  "meshes": [
+    "prim\\mesh\\nature\\dun\\tree\\st_tree_hamada_y02_01.bms",
+    "prim\\mesh\\nature\\dun\\tree\\st_tree_hamada_y02_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\dun\\tree\\st_tree_hamada.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

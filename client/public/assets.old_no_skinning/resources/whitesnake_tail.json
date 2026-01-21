@@ -1,0 +1,10 @@
+{
+  "file_name": "whitesnake_tail",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\whitesnake_tail.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

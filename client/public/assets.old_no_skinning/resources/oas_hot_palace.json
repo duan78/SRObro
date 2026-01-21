@@ -1,0 +1,41 @@
+{
+  "file_name": "oas_hot_palace",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_castle.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_board.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_al.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_alpha.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_bridge.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_castle.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_castle_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_castle_tile.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_cloth.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_gtw.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_l_rampart.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_plag.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_roof.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_s_rampart.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_tile3.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_turtlest_04.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_water.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_window.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_castle_winlight.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_round_l_rampart.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_round_pool_floor02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_round_refinery_door.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_round_refinery_wall.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_round_roof.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_round_temple.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_round_tile_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_temple_alpha.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_temple_construction.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_temple_tree.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_ruond_win.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\castle\\palace\\oas_hot_c3_castle.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

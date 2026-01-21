@@ -1,0 +1,16 @@
+{
+  "file_name": "sd_guild_agent3",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_guild_agent3_book.bms",
+    "prim\\mesh\\npc\\sd\\sd_guild_agent3_s2.bms",
+    "prim\\mesh\\npc\\sd\\sd_guild_agent3_s3.bms",
+    "prim\\mesh\\npc\\sd\\sd_guild_agent3_s1_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_guild_agent3_s1_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_guild_agent3.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

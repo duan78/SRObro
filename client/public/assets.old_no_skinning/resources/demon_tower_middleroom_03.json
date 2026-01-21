@@ -1,0 +1,38 @@
+{
+  "file_name": "demon_tower_middleroom_03",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m26.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m01.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m02.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m03.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m04.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m05.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m06.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m07.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m08.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m09.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m10.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m11.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m13.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m14.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m15.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m16.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m17.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m18.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m19.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m20.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m21.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m22.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m23.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m24.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m26.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m27.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_middleroom_01\\demon_tower_m28.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\fire\\demon_tower_middleroom_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

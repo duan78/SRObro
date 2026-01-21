@@ -1,0 +1,10 @@
+{
+  "file_name": "keep_osiris_guard_summon",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 24280
+}

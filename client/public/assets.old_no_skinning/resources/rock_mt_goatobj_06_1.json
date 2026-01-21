@@ -1,0 +1,14 @@
+{
+  "file_name": "rock_mt_goatobj_06_1",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goatobj_06_1.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goatobj_06_1.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goatobj_06_2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\goat\\rock_mt_goatobj_06_1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

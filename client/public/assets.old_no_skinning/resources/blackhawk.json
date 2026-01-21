@@ -1,0 +1,20 @@
+{
+  "file_name": "blackhawk",
+  "meshes": [
+    "prim\\mesh\\npc\\animal\\hawk01.bms",
+    "prim\\mesh\\npc\\animal\\hawk02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\animal\\hawk.bmt"
+  ],
+  "effects": [
+    "skill\\china\\mirage_blackeagle.efp"
+  ],
+  "animations": [
+    "prim\\ani\\npc\\animal\\hawk_stand.ban",
+    "prim\\ani\\npc\\animal\\hawk_walk.ban",
+    "prim\\ani\\npc\\animal\\hawk_run.ban",
+    "prim\\ani\\npc\\animal\\hawk_attack01.ban"
+  ],
+  "textures": []
+}

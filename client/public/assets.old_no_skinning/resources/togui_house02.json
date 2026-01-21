@@ -1,0 +1,26 @@
+{
+  "file_name": "togui_house02",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_02.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_03.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_04.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_05.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_06.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_07.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_08.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_09.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_10.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_11.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house02_12.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\togui\\togui_house02_01.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

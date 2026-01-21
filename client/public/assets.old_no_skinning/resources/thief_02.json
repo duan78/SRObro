@@ -1,0 +1,13 @@
+{
+  "file_name": "thief_02",
+  "meshes": [
+    "prim\\mesh\\item\\china\\woman_item\\thief_02_part1.bms",
+    "prim\\mesh\\item\\china\\woman_item\\thief_02_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\woman_item\\thief_02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

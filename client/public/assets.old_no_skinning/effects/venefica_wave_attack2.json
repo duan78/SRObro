@@ -1,0 +1,11 @@
+{
+  "file_name": "venefica_wave_attack2",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 294293
+}

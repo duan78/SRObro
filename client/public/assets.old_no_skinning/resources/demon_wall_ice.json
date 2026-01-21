@@ -1,0 +1,40 @@
+{
+  "file_name": "demon_wall_ice",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_wall18_ice.bms",
+    "prim\\mesh\\dun\\demon\\demon_wall19_ice.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_wall_ice.bmt"
+  ],
+  "effects": [
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice.efp",
+    "dun\\demon_flame_ice02.efp",
+    "dun\\demon_flame_ice02.efp",
+    "dun\\demon_flame_ice02.efp",
+    "dun\\demon_flame_ice02.efp",
+    "dun\\demon_flame_ice02.efp",
+    "dun\\demon_flame_ice02.efp",
+    "dun\\blue_flame_a02.efp",
+    "dun\\blue_flame_a02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

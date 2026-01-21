@@ -1,0 +1,18 @@
+{
+  "file_name": "chinashop_dignifiedgirl",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinashop_dignifiedgirl_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinashop_dignifiedgirl_part1.bms",
+    "prim\\mesh\\npc\\china\\chinashop_dignifiedgirl_part2_part1.bms",
+    "prim\\mesh\\npc\\china\\chinashop_dignifiedgirl_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinashop_dignifiedgirl.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinashop_dignifiedgirl_basic.ban",
+    "prim\\ani\\npc\\china\\chinashop_dignifiedgirl_time.ban"
+  ],
+  "textures": []
+}

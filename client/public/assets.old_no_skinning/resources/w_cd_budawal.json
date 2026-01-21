@@ -1,0 +1,13 @@
+{
+  "file_name": "w_cd_budawal",
+  "meshes": [
+    "prim\\mesh\\nature\\china\\dunghuang\\ferry\\w_cd_budawal.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\ferry\\w_cd_budawal_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\china\\dunhuang\\ferry\\w_cd_budawal.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_flame_cowking_keep_weapon",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 40520
+}

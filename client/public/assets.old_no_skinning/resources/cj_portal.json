@@ -1,0 +1,18 @@
+{
+  "file_name": "cj_portal",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_por_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_por_fence.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_por_fenceal.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_por_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_por_gidung.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_por_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_por_stone01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_portal.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

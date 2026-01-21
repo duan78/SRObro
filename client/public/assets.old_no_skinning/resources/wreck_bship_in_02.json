@@ -1,0 +1,16 @@
+{
+  "file_name": "wreck_bship_in_02",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_bship_out_deco08_in_02.bms",
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_bship_in_box.bms",
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_bship_in_wall04.bms",
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_bship_out_gate02.bms",
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_bship_out_line01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\wreck_bship.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

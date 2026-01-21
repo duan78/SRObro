@@ -1,0 +1,10 @@
+{
+  "file_name": "fire_circle_03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 9041
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_rich_bridge",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan06\\obj\\cj_rich_bridge_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\obj\\cj_rich_bridge_fence_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\obj\\cj_rich_bridge_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan06\\obj\\cj_rich_bridge.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

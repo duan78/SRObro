@@ -1,0 +1,9 @@
+{
+  "file_name": "mustafa_boss_dungeon_stone",
+  "textures": [
+    "prim\\mtrl\\mob\\bossdungeon\\mustafa_boss_dungeon_stone.ddj",
+    "prim\\mtrl\\mob\\arabia\\mustafa_n.ddj",
+    "prim\\mtrl\\mob\\bossdungeon\\mustafa_01_boss_dungeon_stone.ddj",
+    "prim\\mtrl\\mob\\arabia\\mustafa_01_n.ddj"
+  ]
+}

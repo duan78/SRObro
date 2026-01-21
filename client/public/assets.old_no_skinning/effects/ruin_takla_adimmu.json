@@ -1,0 +1,10 @@
+{
+  "file_name": "ruin_takla_adimmu",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 12085
+}

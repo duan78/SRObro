@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_mong_tree07",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\mong\\tree\\bagh_mong_tree07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\mong\\tree\\bagh_mong_tree.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

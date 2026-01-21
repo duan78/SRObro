@@ -1,0 +1,19 @@
+{
+  "file_name": "big_gate_ht",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\hotang\\castlegate\\fortress_hotan_door_01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\castlegate\\fortress_hotan_door_01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\castlegate\\fortress_hotan_door_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\hotang\\castlegate\\fortress_hotan_door_01.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\bldg\\guild\\hotang\\castlegate\\fortress_hotan_door_close.ban",
+    "prim\\ani\\bldg\\guild\\hotang\\castlegate\\fortress_hotan_door_opening.ban",
+    "prim\\ani\\bldg\\guild\\hotang\\castlegate\\fortress_hotan_door_open.ban",
+    "prim\\ani\\bldg\\guild\\hotang\\castlegate\\fortress_hotan_door_closing.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "fort_woman",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\fort_woman_part1.bms",
+    "prim\\mesh\\item\\etc\\fort_woman_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\fort_woman_ally.bmt",
+    "prim\\mtrl\\item\\etc\\fort_woman_enemy.bmt",
+    "prim\\mtrl\\item\\etc\\fort_woman_attenemy.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

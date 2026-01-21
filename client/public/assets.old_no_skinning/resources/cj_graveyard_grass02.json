@@ -1,0 +1,10 @@
+{
+  "file_name": "cj_graveyard_grass02",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\grass\\cj_graveyard_grass01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

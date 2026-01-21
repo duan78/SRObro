@@ -1,0 +1,13 @@
+{
+  "file_name": "w_cd_minga_corner",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_corner_03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_corner_03_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\minga\\w_cd_mingagroup.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

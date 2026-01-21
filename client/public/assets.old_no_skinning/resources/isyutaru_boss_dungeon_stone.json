@@ -1,0 +1,26 @@
+{
+  "file_name": "isyutaru_boss_dungeon_stone",
+  "meshes": [
+    "prim\\mesh\\mob\\karakoram\\isyutaru_wings.bms",
+    "prim\\mesh\\mob\\karakoram\\isyutaru_body_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\isyutaru_body_part2_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\isyutaru_body_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\isyutaru_body_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\isyutaru_body_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\bossdungeon\\isyutaru_boss_dungeon_stone.bmt"
+  ],
+  "effects": [
+    "battle\\status_cure_burn.efp",
+    "battle\\status_cure_burn.efp",
+    "monster\\dead\\dead_bluesmog.efp",
+    "monster\\dead\\dead_bluesmog.efp",
+    "monster\\dead\\dead_bluesmog.efp",
+    "monster\\dead\\dead_bluesmog.efp",
+    "monster\\dead\\dead_bluesmog.efp",
+    "monster\\dead\\dead_bluesmog.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

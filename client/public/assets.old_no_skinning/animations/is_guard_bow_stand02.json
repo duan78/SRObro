@@ -1,0 +1,20 @@
+{
+  "file_name": "is_guard_bow_stand02",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 8125,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    458752,
+    0,
+    327680,
+    0,
+    484718,
+    834239,
+    471397,
+    703204,
+    7
+  ]
+}

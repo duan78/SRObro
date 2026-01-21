@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_hot_rock_l_01",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\hotang\\rock\\oas_hot_rock_l_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\hotang\\rock\\oas_hot_rock_l_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

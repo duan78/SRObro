@@ -1,0 +1,41 @@
+{
+  "file_name": "alex_ship_l",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship06.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship07.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship08.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship09.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship10.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship11.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship12.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship13.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship14.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship15.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship16.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship17.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship18.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship19.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship20.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship21.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship22.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship23.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship24.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship25.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship26.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship27.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship28.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship29.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_ship30.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\ship\\alex_ship_l.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

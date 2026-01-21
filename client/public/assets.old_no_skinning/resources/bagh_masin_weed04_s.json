@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_masin_weed04_s",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_weed04_s.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\masin\\bagh_masin_weed04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

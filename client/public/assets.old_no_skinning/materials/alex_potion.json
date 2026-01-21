@@ -1,0 +1,27 @@
+{
+  "file_name": "alex_potion",
+  "textures": [
+    "alex_potion_carpet.ddj",
+    "alex_potion_potion3.ddj",
+    "alex_potion_tent2.ddj",
+    "alex_potion_winecage1.ddj",
+    "alex_potion_winecagestand.ddj",
+    "alex_potion_box1.ddj",
+    "alex_potion_box2.ddj",
+    "alex_potion_winecage2.ddj",
+    "alex_potion_tent1.ddj",
+    "alex_potion_potion2.ddj",
+    "alex_potion_potion4.ddj",
+    "alex_potion_potion1.ddj",
+    "alex_potion_column.ddj",
+    "alex_special_tentlight_chain.ddj",
+    "alex_special_tentlight02.ddj",
+    "alex_special_tentlight01_alpha.ddj",
+    "alex_potion_carpet2.ddj",
+    "alex_potion_stand3.ddj",
+    "alex_variety_column.ddj",
+    "alex_potion_stand1.ddj",
+    "alex_potion_stand2.ddj",
+    "alex_special_tentlight01.ddj"
+  ]
+}

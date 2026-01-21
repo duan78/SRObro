@@ -1,0 +1,33 @@
+{
+  "file_name": "bastet_mad",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\bastet02.bms",
+    "prim\\mesh\\mob\\sd\\bastet_part1.bms",
+    "prim\\mesh\\mob\\sd\\bastet_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\bastet_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\bastet_mad.bmt",
+    "prim\\mtrl\\mob\\sd\\bastet_clon2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\bastet\\bastet_stand01.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_walk.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_run.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_attack01.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_attack02.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_attack03.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_attack04.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_attack05.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_damage01.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_die.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_die_rm.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_down.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_down_rm.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_down_damage.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_down_up.ban",
+    "prim\\ani\\mob\\sd\\bastet\\bastet_down_die.ban"
+  ],
+  "textures": []
+}

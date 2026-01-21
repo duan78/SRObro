@@ -1,0 +1,11 @@
+{
+  "file_name": "ishade_ice_shot",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\karakoram\\ishade.bmt",
+    "prim\\mtrl\\mob\\karakoram\\ishade_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

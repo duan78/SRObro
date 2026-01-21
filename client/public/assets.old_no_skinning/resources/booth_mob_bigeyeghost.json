@@ -1,0 +1,14 @@
+{
+  "file_name": "booth_mob_bigeyeghost",
+  "meshes": [
+    "prim\\mesh\\avatar\\booth.bms",
+    "prim\\mesh\\avatar\\booth_mob_bigeyeghost.bms",
+    "prim\\mesh\\avatar\\booth_mob_bigeyeghost_2side.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\avatar\\booth_mob_bigeyeghost.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

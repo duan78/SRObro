@@ -1,0 +1,44 @@
+{
+  "file_name": "scorpion",
+  "meshes": [
+    "prim\\mesh\\mob\\oasis\\scorpion_part1.bms",
+    "prim\\mesh\\mob\\oasis\\scorpion_part2_part1.bms",
+    "prim\\mesh\\mob\\oasis\\scorpion_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\oasis\\scorpion.bmt",
+    "prim\\mtrl\\mob\\oasis\\scorpion_champ.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_icing_on.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp",
+    "monster\\dust_scorpion_walk.efp",
+    "monster\\dust_scorpion_walk.efp",
+    "monster\\dust_scorpion_walk.efp",
+    "monster\\dust_scorpion_walk.efp",
+    "monster\\dust_scorpion_down.efp",
+    "monster\\dust_scorpion_run.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_stand01.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_stand02.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_walk.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_run.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_attack01.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_attack02.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_attack03.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_damage01.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_damage02.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_die.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_die_loop.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_down.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_downwait.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_downup.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_downdamage.ban",
+    "prim\\ani\\mob\\oasis\\scorpion\\scorpion_downdie.ban"
+  ],
+  "textures": []
+}

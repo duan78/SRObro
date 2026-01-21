@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_staff_base",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8358
+}

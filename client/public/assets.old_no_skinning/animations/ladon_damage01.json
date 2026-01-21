@@ -1,0 +1,29 @@
+{
+  "file_name": "ladon_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1612,
+  "animation_name": "\u000e",
+  "data_blocks": [
+    3200,
+    30,
+    0,
+    7,
+    0,
+    66,
+    266,
+    373,
+    480,
+    500,
+    3200,
+    7,
+    10,
+    486243,
+    703050,
+    7,
+    15,
+    471660,
+    471346
+  ]
+}

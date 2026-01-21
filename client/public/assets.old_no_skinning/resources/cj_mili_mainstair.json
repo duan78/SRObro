@@ -1,0 +1,16 @@
+{
+  "file_name": "cj_mili_mainstair",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_mainste01.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_mainste01.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_mainste02.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_mainste03.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_mainste04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan04\\cj_mili_mainstair.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

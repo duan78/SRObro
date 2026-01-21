@@ -1,0 +1,16 @@
+{
+  "file_name": "heavenly_gods",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\heavenly_gods.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\heavenly_gods\\heavenly_gods_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\heavenly_gods\\heavenly_gods_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\heavenly_gods\\heavenly_gods_damage1.ban",
+    "prim\\ani\\mob\\jupiter\\heavenly_gods\\heavenly_gods_die.ban",
+    "prim\\ani\\mob\\jupiter\\heavenly_gods\\heavenly_gods_die_rm.ban"
+  ],
+  "textures": []
+}

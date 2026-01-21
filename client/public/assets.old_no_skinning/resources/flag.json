@@ -1,0 +1,10 @@
+{
+  "file_name": "flag",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\event_flag_070919.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,22 @@
+{
+  "file_name": "arabianf_bujok03",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_bujok03_mag01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_bujok03_mag01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_bujok03_obj01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_bujok03_stone01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_bujok_chain_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_bujok_chain_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_bujok03_core.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_bujok03_mag02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_arabia_f\\arabianf_bujok.bmt"
+  ],
+  "effects": [
+    "dun\\fire_circle_02.efp",
+    "dun\\arabiaf_down_smoke02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

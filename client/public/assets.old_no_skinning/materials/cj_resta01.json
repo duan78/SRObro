@@ -1,0 +1,10 @@
+{
+  "file_name": "cj_resta01",
+  "textures": [
+    "cj_resta01_light02.ddj",
+    "cj_resta01_fence.ddj",
+    "cj_resta01_wall01.ddj",
+    "cj_resta01_roof.ddj",
+    "cj_resta01_flag.ddj"
+  ]
+}

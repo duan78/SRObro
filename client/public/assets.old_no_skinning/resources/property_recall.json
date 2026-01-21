@@ -1,0 +1,17 @@
+{
+  "file_name": "property_recall",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\com\\property_recall_obj01.bms",
+    "prim\\mesh\\dun\\property\\com\\property_recall_obj01.bms",
+    "prim\\mesh\\dun\\property\\com\\property_recall_obj02.bms",
+    "prim\\mesh\\dun\\property\\com\\property_recall_obj03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\com\\property_recall.bmt"
+  ],
+  "effects": [
+    "dun\\fire_brige_03.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

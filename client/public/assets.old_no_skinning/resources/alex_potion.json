@@ -1,0 +1,45 @@
+{
+  "file_name": "alex_potion",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_box1.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_box1.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_box2.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_carpet.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_carpet2.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_column.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_column1.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_drawer.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_potion2.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_potion3.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_potion4.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_stand1.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_stand2.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_stand3.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_tent1.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_tent2.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_tentlight01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_tentlight01_alpha.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_tentlight02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_tentlight_chain.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_winecage1.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_winecage2.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_winecagestand.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_potion1_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_potion_potion1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\mainshop\\alex_potion.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_orange02_s.efp",
+    "map\\cj_pal_lamp_orange02_s.efp",
+    "dun\\alex_potion_g.efp",
+    "dun\\alex_potion_r.efp",
+    "dun\\alex_potion_up.efp",
+    "dun\\alex_potion_up.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

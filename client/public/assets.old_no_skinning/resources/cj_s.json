@@ -1,0 +1,21 @@
+{
+  "file_name": "cj_s",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan_enter\\cj_s_stair.bms",
+    "prim\\mesh\\bldg\\china\\jangan_enter\\cj_s_alpha.bms",
+    "prim\\mesh\\bldg\\china\\jangan_enter\\cj_s_door.bms",
+    "prim\\mesh\\bldg\\china\\jangan_enter\\cj_s_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan_enter\\cj_s_stair.bms",
+    "prim\\mesh\\bldg\\china\\jangan_enter\\cj_s_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan_enter\\cj_s_wall02.bms",
+    "prim\\mesh\\bldg\\china\\jangan_enter\\cj_s_wall03.bms",
+    "prim\\mesh\\bldg\\china\\jangan_enter\\cj_s_wall04.bms",
+    "prim\\mesh\\bldg\\china\\jangan_enter\\cj_s_wall05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan_enter\\cj_s.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

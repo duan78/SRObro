@@ -1,0 +1,15 @@
+{
+  "file_name": "khotanshop_armor",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotanshop_armor_2s.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_armor_al.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_armor_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_armor_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotanshop_armor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

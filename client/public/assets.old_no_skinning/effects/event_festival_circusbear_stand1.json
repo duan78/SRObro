@@ -1,0 +1,10 @@
+{
+  "file_name": "event_festival_circusbear_stand1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10303
+}

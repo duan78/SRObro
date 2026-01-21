@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_pot01",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_pot01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_pot01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

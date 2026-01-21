@@ -1,0 +1,31 @@
+{
+  "file_name": "fortress_hotan_part03",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_02.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_03.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_04.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_05.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_06.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_07.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_08.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_09.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_10.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_11.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_12.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_13.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_14.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_15.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_16.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_17.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_18.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\part03\\fortress_hotan_part03_flag.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\hotang\\fortress_hotan_part03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

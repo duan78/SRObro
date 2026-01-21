@@ -1,0 +1,17 @@
+{
+  "file_name": "oas_tarim_wagon01",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_wagon1_wheel.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_wagon1_alpha.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_wagon1_etc.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_wagon1_umb.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_wagon1_wheel.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_wagon1_wood.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_tarim_wagon01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ar_firespirit_at1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 71352
+}

@@ -1,0 +1,40 @@
+{
+  "file_name": "firespirit",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\flame_spirit l elbow01.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit l elbow02.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit l elbow03.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit r elbow01.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit r elbow02.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit r elbow03.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit_l_hand.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit_legstone.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit_legstone01.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit_legstone02.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit_legstone03.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit_legstone04.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit_legstone05.bms",
+    "prim\\mesh\\mob\\arabia\\flame_spirit_r_hand.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\flame_spirit.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_stand01.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_walk.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_attack01.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_damage01.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_die.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_attack02.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_run.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_attack03.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_attack04.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_down.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_down_damage.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_down_up.ban",
+    "prim\\ani\\mob\\arabia\\flame_spirit\\flame_spirit_f_attack05.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "event_silsamo_f",
+  "meshes": [
+    "prim\\mesh\\item\\china\\woman_item\\event_silsamo_f_aa.bms",
+    "prim\\mesh\\item\\china\\woman_item\\event_silsamo_f_ba.bms",
+    "prim\\mesh\\item\\china\\woman_item\\event_silsamo_f_fa.bms",
+    "prim\\mesh\\item\\china\\woman_item\\event_silsamo_f_la.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\woman_item\\event_silsamo_f.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

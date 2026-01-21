@@ -1,0 +1,10 @@
+{
+  "file_name": "item_firework_spray",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4405
+}

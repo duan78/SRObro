@@ -1,0 +1,13 @@
+{
+  "file_name": "oas_hot_pool02_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\swaterfall03.bmt"
+  ],
+  "effects": [
+    "map\\pajang-m-02.efp",
+    "map\\multigi.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

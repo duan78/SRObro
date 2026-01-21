@@ -1,0 +1,13 @@
+{
+  "file_name": "sd_m_area_merchant",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_merchant_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_merchant_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_m_area_merchant.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

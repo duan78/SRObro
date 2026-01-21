@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_stone_pile04",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\hotang\\stone\\oas_stone_pile04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\hotang\\stone\\oas_stone_pile01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

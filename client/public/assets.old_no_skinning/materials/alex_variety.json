@@ -1,0 +1,20 @@
+{
+  "file_name": "alex_variety",
+  "textures": [
+    "alex_variety_box01.ddj",
+    "alex_variety_carpet.ddj",
+    "alex_variety_box02.ddj",
+    "alex_variety_roof.ddj",
+    "alex_variety_stand.ddj",
+    "alex_variety_wall.ddj",
+    "alex_variety_jewels01.ddj",
+    "alex_variety_jewels02.ddj",
+    "alex_variety_drum.ddj",
+    "alex_variety_column.ddj",
+    "alex_variety_jewels03.ddj",
+    "alex_variety_tentlight02.ddj",
+    "alex_variety_tentlight01_alpha.ddj",
+    "alex_variety_tentlight_chain.ddj",
+    "alex_variety_tentlight01.ddj"
+  ]
+}

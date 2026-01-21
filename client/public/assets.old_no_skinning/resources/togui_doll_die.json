@@ -1,0 +1,13 @@
+{
+  "file_name": "togui_doll_die",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\togui_doll_die.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\god\\togui_doll\\togui_doll_die.ban",
+    "prim\\ani\\mob\\god\\togui_doll\\togui_doll_die_rm.ban"
+  ],
+  "textures": []
+}

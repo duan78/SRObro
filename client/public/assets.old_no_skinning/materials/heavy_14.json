@@ -1,0 +1,11 @@
+{
+  "file_name": "heavy_14",
+  "textures": [
+    "prim\\mtrl\\item\\common\\woman_item\\heavy_14_aa.ddj",
+    "prim\\mtrl\\item\\common\\woman_item\\heavy_14_fa.ddj",
+    "prim\\mtrl\\item\\common\\woman_item\\heavy_14_ha.ddj",
+    "prim\\mtrl\\item\\common\\woman_item\\heavy_14_la.ddj",
+    "prim\\mtrl\\item\\common\\woman_item\\heavy_14_ba.ddj",
+    "prim\\mtrl\\item\\common\\woman_item\\heavy_14_sa.ddj"
+  ]
+}

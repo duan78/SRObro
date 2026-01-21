@@ -1,0 +1,8 @@
+{
+  "file_name": "cj_acce",
+  "textures": [
+    "cj_acce_wall.ddj",
+    "cj_acce_roof.ddj",
+    "cj_acce_winlight.ddj"
+  ]
+}

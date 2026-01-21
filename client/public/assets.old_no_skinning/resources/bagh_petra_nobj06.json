@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_petra_nobj06",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj06_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj06_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj06_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj06.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

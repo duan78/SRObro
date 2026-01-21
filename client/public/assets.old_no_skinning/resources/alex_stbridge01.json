@@ -1,0 +1,17 @@
+{
+  "file_name": "alex_stbridge01",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_stbridge01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_stbridge01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_stbridge02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_stbridge03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_stbridge04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_stbridge05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\etc\\alex_stbridge.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,33 @@
+{
+  "file_name": "flame_archer",
+  "meshes": [
+    "prim\\mesh\\mob\\qinshi\\tombarcher01.bms",
+    "prim\\mesh\\mob\\qinshi\\tombarcher02.bms",
+    "prim\\mesh\\mob\\qinshi\\tombarcher03.bms",
+    "prim\\mesh\\mob\\qinshi\\tombarcher_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\tombarcher_part2_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\tombarcher_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\flame_archer.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_stand01.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_attack01.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_attack02.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_attack04.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_attack05.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_attack06.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_die.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_walk.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_run.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_die_rm.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_down.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_down_rm.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_down_damage.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_down_up.ban",
+    "prim\\ani\\mob\\qinshi\\tombarcher\\tombarcher_damage01.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_w",
+  "textures": [
+    "cj_alpha.ddj",
+    "cj_stair.ddj",
+    "cj_wall03.ddj",
+    "cj_wall05.ddj",
+    "cj_door.ddj",
+    "cj_roof.ddj",
+    "cj_wall01.ddj",
+    "cj_wall02.ddj",
+    "cj_wall04.ddj"
+  ]
+}

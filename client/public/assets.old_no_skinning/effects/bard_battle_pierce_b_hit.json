@@ -1,0 +1,10 @@
+{
+  "file_name": "bard_battle_pierce_b_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2081
+}

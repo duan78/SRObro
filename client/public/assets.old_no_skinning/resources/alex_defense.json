@@ -1,0 +1,33 @@
+{
+  "file_name": "alex_defense",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_carpet01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_carpet01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_h78_c89.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_h78_c89_2.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_h9.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_h9_2.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_l789_c78.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_l789_c78_2.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_tent01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_tent02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_tent03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_tentlight01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_tentlight01_alpha.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_tentlight02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_tentlight_chain.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_wall01_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_wall02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_wood01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_defense_wood02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\mainshop\\alex_defense.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_orange_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

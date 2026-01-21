@@ -1,0 +1,27 @@
+{
+  "file_name": "spirits",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\spirits_part1.bms",
+    "prim\\mesh\\mob\\roc\\spirits_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\spirits_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\spirits.bmt",
+    "prim\\mtrl\\mob\\roc\\spirits_clon2.bmt",
+    "prim\\mtrl\\mob\\roc\\spirits_clon3.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\roc\\spirits\\spirits_stand.ban",
+    "prim\\ani\\mob\\roc\\spirits\\spirits_walk.ban",
+    "prim\\ani\\mob\\roc\\spirits\\spirits_run.ban",
+    "prim\\ani\\mob\\roc\\spirits\\spirits_attack01.ban",
+    "prim\\ani\\mob\\roc\\spirits\\spirits_attack02.ban",
+    "prim\\ani\\mob\\roc\\spirits\\spirits_attack03.ban",
+    "prim\\ani\\mob\\roc\\spirits\\spirits_attack04.ban",
+    "prim\\ani\\mob\\roc\\spirits\\spirits_die.ban",
+    "prim\\ani\\mob\\roc\\spirits\\spirits_die_rm.ban",
+    "prim\\ani\\mob\\roc\\spirits\\spirits_damage01.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_khepri_ac3_powder_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10060
+}

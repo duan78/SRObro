@@ -1,0 +1,32 @@
+{
+  "file_name": "ghost_wreck_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 5566,
+  "animation_name": "\u0012",
+  "data_blocks": [
+    300,
+    30,
+    0,
+    6,
+    0,
+    33,
+    66,
+    133,
+    200,
+    300,
+    30,
+    12,
+    6,
+    10,
+    420969,
+    770015,
+    1585,
+    3003,
+    6,
+    6,
+    405808,
+    442015
+  ]
+}

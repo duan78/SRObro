@@ -1,0 +1,14 @@
+{
+  "file_name": "tstaff_12",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\tstaff_12.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_tstaff_12.efp",
+    "system\\item_eu_tstaff_12_w.efp",
+    "system\\item_eu_tstaff_12_w02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

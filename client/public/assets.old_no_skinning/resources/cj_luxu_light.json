@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_luxu_light",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_luxury.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_red_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

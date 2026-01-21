@@ -1,0 +1,12 @@
+{
+  "file_name": "piety_greendoor",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_greendoor.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_greendoor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

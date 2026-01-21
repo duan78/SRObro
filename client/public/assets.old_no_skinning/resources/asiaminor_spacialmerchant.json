@@ -1,0 +1,14 @@
+{
+  "file_name": "asiaminor_spacialmerchant",
+  "meshes": [
+    "prim\\mesh\\npc\\common\\asiaminor_spacialmerchant_2s.bms",
+    "prim\\mesh\\npc\\common\\asiaminor_spacialmerchant_part1.bms",
+    "prim\\mesh\\npc\\common\\asiaminor_spacialmerchant_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\common\\asiaminor_spacialmerchant.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

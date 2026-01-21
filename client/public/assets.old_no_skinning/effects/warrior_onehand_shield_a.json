@@ -1,0 +1,10 @@
+{
+  "file_name": "warrior_onehand_shield_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 1484
+}

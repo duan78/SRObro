@@ -1,0 +1,20 @@
+{
+  "file_name": "cj5_tem_tutle",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_turtle01.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_buddha.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_buddha_back.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_buddha_dan.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_turtle01.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_turtle02.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_turtle03.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_turtle_brg.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_turtle_fence.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan05\\cj5_tem_turtle.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

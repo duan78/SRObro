@@ -1,0 +1,10 @@
+{
+  "file_name": "light_15_ha",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\common\\woman_item\\light_15.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_resta04",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta04_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta04_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta04_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta04_wall01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_resta04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

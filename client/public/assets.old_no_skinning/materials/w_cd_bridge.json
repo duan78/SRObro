@@ -1,0 +1,10 @@
+{
+  "file_name": "w_cd_bridge",
+  "textures": [
+    "w_cd_brid02.ddj",
+    "w_cd_brid01.ddj",
+    "w_cd_rock04.ddj",
+    "w_cd_rock02.ddj",
+    "w_cd_rock03.ddj"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "avatar_w_saintwarrior_2011",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_saintwarrior01.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_saintwarrior02.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_saintwarrior_02.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_saintwarrior_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_saintwarrior_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_saintwarrior_2011.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

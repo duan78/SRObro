@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ar_blackrobberarcher_armor_ac06",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6474
+}

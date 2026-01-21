@@ -1,0 +1,31 @@
+{
+  "file_name": "oas_hot_c3_castle",
+  "textures": [
+    "oas_hot_turtlest_04.ddj",
+    "oas_hot_castle.ddj",
+    "oas_hot_roof.ddj",
+    "oas_hot_gtw.ddj",
+    "oas_hot_plag.ddj",
+    "oas_hot_s_rampart.ddj",
+    "oas_hot_alpha.ddj",
+    "oas_hot_castle_02.ddj",
+    "oas_hot_tile3.ddj",
+    "oas_hot_l_rampart.ddj",
+    "oas_hot_castle_tile.ddj",
+    "oas_hot_bridge.ddj",
+    "oas_hot_window.ddj",
+    "oas_hot_al.ddj",
+    "oas_hot_castle_winlight.ddj",
+    "oas_hot_pool_floor02.ddj",
+    "oas_hot_cloth.ddj",
+    "oas_hot_temple_alpha.ddj",
+    "oas_hot_temple_construction.ddj",
+    "oas_hot_temple_tree.ddj",
+    "oas_hot_temple.ddj",
+    "oas_hot_tile_02.ddj",
+    "oas_hot_refinery_door.ddj",
+    "oas_hot_water.ddj",
+    "oas_hot_refinery_wall.ddj",
+    "oas_hot_board.ddj"
+  ]
+}

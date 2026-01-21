@@ -1,0 +1,18 @@
+{
+  "file_name": "avatar_m_viking",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_viking.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_viking01.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_viking02.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_viking_hand.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_viking_lab.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_viking01_fur.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_viking02_fur.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_viking.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

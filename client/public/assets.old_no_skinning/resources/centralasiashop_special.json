@@ -1,0 +1,16 @@
+{
+  "file_name": "centralasiashop_special",
+  "meshes": [
+    "prim\\mesh\\npc\\casia\\centralasiashop_special_al.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_special_al_1.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_special_al_2.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_special_part1.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_special_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\casia\\centralasiashop_special.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

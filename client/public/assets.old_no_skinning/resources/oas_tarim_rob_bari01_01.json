@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_tarim_rob_bari01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_bari01_01.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_bari01_01.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_bari01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_b_center.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

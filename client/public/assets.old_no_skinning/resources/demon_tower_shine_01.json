@@ -1,0 +1,10 @@
+{
+  "file_name": "demon_tower_shine_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\fire\\demon_tower_shine_fire.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

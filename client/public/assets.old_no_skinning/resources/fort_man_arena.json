@@ -1,0 +1,15 @@
+{
+  "file_name": "fort_man_arena",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\fort_man_part1.bms",
+    "prim\\mesh\\item\\etc\\fort_man_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\fort_man_yellow.bmt",
+    "prim\\mtrl\\item\\etc\\fort_man_red.bmt",
+    "prim\\mtrl\\item\\etc\\fort_man_blue.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

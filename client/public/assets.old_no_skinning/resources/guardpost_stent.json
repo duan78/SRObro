@@ -1,0 +1,22 @@
+{
+  "file_name": "guardpost_stent",
+  "meshes": [
+    "prim\\mesh\\etc\\guardpost\\guardpost_stent01.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_stent01.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_stent02.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_stent03.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_stent04.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_stent05.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_stent06.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_stent07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\guardpost\\guardpost_stent.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_flame.efp",
+    "dun\\yellow_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

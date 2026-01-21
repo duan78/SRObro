@@ -1,0 +1,18 @@
+{
+  "file_name": "cj_inn",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_inn_floor.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_inn_breakewal.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_inn_fence_a.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_inn_floor.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_inn_roof.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_inn_wall.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_inn_wall01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\greenfield\\cj_inn.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "battle_arena_flag",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\battle_arena_flag.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,28 @@
+{
+  "file_name": "demon_tower_ice_laisle_r01",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_laisle_r\\demon_tower_laisle_r01_02.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_laisle_r\\demon_tower_laisle_r01_01.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_laisle_r\\demon_tower_laisle_r01_02.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_laisle_r\\demon_tower_laisle_r01_03.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_laisle_r\\demon_tower_laisle_r01_04.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_laisle_r\\demon_tower_laisle_r01_05.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_laisle_r\\demon_tower_laisle_r01_06.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_laisle_r\\demon_tower_laisle_r01_07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\ice\\demon_tower_laisle_ice.bmt"
+  ],
+  "effects": [
+    "dun\\demon_tower_ice_s01.efp",
+    "dun\\demon_tower_ice_s01.efp",
+    "dun\\demon_tower_ice_s01.efp",
+    "dun\\demon_tower_ice_s01.efp",
+    "dun\\demon_tower_ice_s01.efp",
+    "dun\\demon_tower_ice_s01.efp",
+    "dun\\demon_tower_ice_s01.efp",
+    "dun\\demon_tower_ice_s01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

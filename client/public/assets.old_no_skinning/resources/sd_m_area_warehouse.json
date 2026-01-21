@@ -1,0 +1,15 @@
+{
+  "file_name": "sd_m_area_warehouse",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_warehouse_2al.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_warehouse_box.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_warehouse_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_warehouse_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_m_area_warehouse.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

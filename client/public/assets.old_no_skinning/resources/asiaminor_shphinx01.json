@@ -1,0 +1,14 @@
+{
+  "file_name": "asiaminor_shphinx01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\cleo\\asiaminor_shphinx01.bms",
+    "prim\\mesh\\bldg\\asia minor\\cleo\\asiaminor_shphinx01.bms",
+    "prim\\mesh\\bldg\\asia minor\\cleo\\asiaminor_shphinx02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\cleo\\asiaminor_shphinx01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

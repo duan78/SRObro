@@ -1,0 +1,21 @@
+{
+  "file_name": "cj5_tem_main",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_main_stair.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_main01.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_main02.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_main03.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_main_stair.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_main04.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_main05.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_main06.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_main07.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_main08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan05\\cj5_tem_main.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

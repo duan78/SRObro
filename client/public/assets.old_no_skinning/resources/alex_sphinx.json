@@ -1,0 +1,14 @@
+{
+  "file_name": "alex_sphinx",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_sphinx01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_sphinx01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_sphinx02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\deco\\alex_sphinx.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

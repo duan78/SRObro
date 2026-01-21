@@ -1,0 +1,17 @@
+{
+  "file_name": "bj_guild_right_up",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_up_deco01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_up_deco01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_up_floor01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_up_gidung.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_up_wall01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_up_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\bj\\bj_guild_right_up.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

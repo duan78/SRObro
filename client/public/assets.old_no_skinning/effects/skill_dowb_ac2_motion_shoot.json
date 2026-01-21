@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_dowb_ac2_motion_shoot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6859
+}

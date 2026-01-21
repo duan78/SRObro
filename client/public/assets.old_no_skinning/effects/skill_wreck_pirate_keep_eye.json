@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_wreck_pirate_keep_eye",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10161
+}

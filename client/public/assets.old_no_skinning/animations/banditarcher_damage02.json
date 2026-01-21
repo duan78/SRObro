@@ -1,0 +1,17 @@
+{
+  "file_name": "banditarcher_damage02",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 32333,
+  "animation_name": "\u0015",
+  "data_blocks": [
+    0,
+    0,
+    26,
+    12,
+    26,
+    0,
+    0
+  ]
+}

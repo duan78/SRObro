@@ -1,0 +1,9 @@
+{
+  "file_name": "oas_hot_potal",
+  "textures": [
+    "oas_hot_potal_wall.ddj",
+    "oas_hot_potal_chain.ddj",
+    "oas_hot_pool_floor02.ddj",
+    "oas_hot_water.ddj"
+  ]
+}

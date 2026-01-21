@@ -1,0 +1,10 @@
+{
+  "file_name": "light_14_sa",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\common\\man_item\\light_14_sa.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

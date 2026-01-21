@@ -1,0 +1,16 @@
+{
+  "file_name": "easteuropequest_soldier_takia",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_takia_2s_01.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_takia_2s_02.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_takia_arm.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_takia_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_takia_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_soldier_takia.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

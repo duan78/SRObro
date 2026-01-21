@@ -1,0 +1,12 @@
+{
+  "file_name": "ruin_takl_mammoth_01",
+  "meshes": [
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\bone\\ruin_takl_mammoth_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\ruins\\taklamakan des\\bone\\ruin_takl_mammoth_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

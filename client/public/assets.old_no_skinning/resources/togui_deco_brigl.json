@@ -1,0 +1,23 @@
+{
+  "file_name": "togui_deco_brigl",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigl_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigl_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigl_02.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigl_03.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigl_04.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigl_05.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigl_06.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigl_07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\togui\\togui_deco_brigl_01.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

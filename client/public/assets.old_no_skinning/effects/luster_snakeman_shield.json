@@ -1,0 +1,10 @@
+{
+  "file_name": "luster_snakeman_shield",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 25232
+}

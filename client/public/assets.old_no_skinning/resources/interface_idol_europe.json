@@ -1,0 +1,12 @@
+{
+  "file_name": "interface_idol_europe",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\interface\\interface.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\interface\\interface_idol_europe_bump.ddj"
+  ]
+}

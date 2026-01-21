@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_kerberos_ac3_effect_stone_s",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2918
+}

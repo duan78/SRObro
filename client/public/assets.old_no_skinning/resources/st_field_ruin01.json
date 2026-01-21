@@ -1,0 +1,16 @@
+{
+  "file_name": "st_field_ruin01",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_field_ruin01_01.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_field_ruin01_01.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_field_ruin01_02.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_field_ruin01_03.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_field_ruin01_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r2_cv\\field\\st_field_ruin01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

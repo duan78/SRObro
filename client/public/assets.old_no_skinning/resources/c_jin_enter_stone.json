@@ -1,0 +1,14 @@
+{
+  "file_name": "c_jin_enter_stone",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\jin_imperial\\c_jin_enter_arroof.bms",
+    "prim\\mesh\\artifact\\china\\jin_imperial\\c_jin_enter_arroof.bms",
+    "prim\\mesh\\artifact\\china\\jin_imperial\\c_jin_enter_arsenic.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\jin_imperial\\c_jin_enter_stone.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

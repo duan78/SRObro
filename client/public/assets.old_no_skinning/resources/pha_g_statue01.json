@@ -1,0 +1,13 @@
+{
+  "file_name": "pha_g_statue01",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_g_statue\\pha_statue_l01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_g_statue\\pha_statue_l01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\dun\\pha_g_statue.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

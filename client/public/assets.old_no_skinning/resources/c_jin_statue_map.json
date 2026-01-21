@@ -1,0 +1,12 @@
+{
+  "file_name": "c_jin_statue_map",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\jin_imperial\\c_jin_statue_map.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\jin_imperial\\c_jin_statue_map.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

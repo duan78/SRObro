@@ -1,0 +1,15 @@
+{
+  "file_name": "easteuropequest_gravekeeper",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_gravekeeper_2.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_gravekeeper_3.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_gravekeeper_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_gravekeeper_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_gravekeeper.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

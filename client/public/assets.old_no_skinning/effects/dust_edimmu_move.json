@@ -1,0 +1,10 @@
+{
+  "file_name": "dust_edimmu_move",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4694
+}

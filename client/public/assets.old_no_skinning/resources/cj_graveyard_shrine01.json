@@ -1,0 +1,25 @@
+{
+  "file_name": "cj_graveyard_shrine01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shri_floor.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shri_column.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shri_floor.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shri_property1.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shrii_column1.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shrine03.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shrine05.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shri_property.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shri_tombstone.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shrine01.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shrine02.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shrine04.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shrine06.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_shri_sign.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\graveyard\\cj_graveyard_shrine01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "skill_tomebugghost_ac6_wave",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 10748
+}

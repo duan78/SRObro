@@ -1,0 +1,15 @@
+{
+  "file_name": "fort_woman_arena",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\fort_woman_part1.bms",
+    "prim\\mesh\\item\\etc\\fort_woman_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\fort_woman_yellow.bmt",
+    "prim\\mtrl\\item\\etc\\fort_woman_red.bmt",
+    "prim\\mtrl\\item\\etc\\fort_woman_blue.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

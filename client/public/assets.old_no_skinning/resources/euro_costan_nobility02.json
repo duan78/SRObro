@@ -1,0 +1,24 @@
+{
+  "file_name": "euro_costan_nobility02",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_10.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_12.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_14.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_16.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_24.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_25.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_25_winlight.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_26.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_27.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02_28.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\minga\\euro_costan_nobility02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

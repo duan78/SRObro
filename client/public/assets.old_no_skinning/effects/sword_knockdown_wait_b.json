@@ -1,0 +1,10 @@
+{
+  "file_name": "sword_knockdown_wait_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10655
+}

@@ -1,0 +1,30 @@
+{
+  "file_name": "bagh_potion",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_box.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_box.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_box02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_light01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_light01_alpha.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_light02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_patten01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_patten02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_patten03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_pot.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_sot.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_top.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_tree01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_tree02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_potion_tree03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_potion.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_orange02_b.efp",
+    "map\\cj_pal_lamp_orange_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

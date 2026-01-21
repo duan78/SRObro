@@ -1,0 +1,17 @@
+{
+  "file_name": "firework_spin",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\firework_spin.bmt"
+  ],
+  "effects": [
+    "system\\item_firework_spin.efp",
+    "system\\item_firework_spin.efp",
+    "system\\item_firework_spin.efp"
+  ],
+  "animations": [
+    "prim\\ani\\item\\china\\firework_stand.ban",
+    "prim\\ani\\item\\china\\firework_spin.ban"
+  ],
+  "textures": []
+}

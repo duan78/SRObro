@@ -1,0 +1,22 @@
+{
+  "file_name": "fw_bigspider",
+  "meshes": [
+    "prim\\mesh\\mob\\fortress\\fw_bigspider_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_bigspider_part2_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_bigspider_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\fortress\\fw_bigspider.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\fortress\\fw_bigspider\\fw_bigspider_stand01.ban",
+    "prim\\ani\\mob\\fortress\\fw_bigspider\\fw_bigspider_walk.ban",
+    "prim\\ani\\mob\\fortress\\fw_bigspider\\fw_bigspider_run.ban",
+    "prim\\ani\\mob\\fortress\\fw_bigspider\\fw_bigspider_attack01.ban",
+    "prim\\ani\\mob\\fortress\\fw_bigspider\\fw_bigspider_die.ban",
+    "prim\\ani\\mob\\fortress\\fw_bigspider\\fw_bigspider_die_rm.ban",
+    "prim\\ani\\mob\\fortress\\fw_bigspider\\fw_bigspider_attack02.ban"
+  ],
+  "textures": []
+}

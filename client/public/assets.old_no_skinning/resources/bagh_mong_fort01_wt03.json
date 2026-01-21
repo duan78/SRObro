@@ -1,0 +1,21 @@
+{
+  "file_name": "bagh_mong_fort01_wt03",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_wt03_brazier01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_wt03_brazier01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_wt03_brazier02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_wt03_roof.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_wt03_top.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_wt03_tree01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_wt03_tree02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_wt03_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_wt03.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame_sb_s01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_kara_cloth",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_cloth01_01.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_cloth01.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_cloth01_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\karakorm\\oas_kara_cloth.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

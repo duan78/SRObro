@@ -1,0 +1,9 @@
+{
+  "file_name": "khulood",
+  "textures": [
+    "khulood_01.ddj",
+    "prim\\mtrl\\mob\\arabia\\khulood_01_n.ddj",
+    "khulood.ddj",
+    "prim\\mtrl\\mob\\arabia\\khulood_n.ddj"
+  ]
+}

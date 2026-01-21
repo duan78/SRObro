@@ -1,0 +1,26 @@
+{
+  "file_name": "flame_event_break",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\flame\\event\\flame_break_obj01.bms",
+    "prim\\mesh\\dun\\property\\flame\\event\\flame_break_obj01.bms",
+    "prim\\mesh\\dun\\property\\flame\\event\\flame_break_obj02.bms",
+    "prim\\mesh\\dun\\property\\flame\\event\\flame_break_obj03.bms",
+    "prim\\mesh\\dun\\property\\flame\\event\\flame_break_obj04.bms",
+    "prim\\mesh\\dun\\property\\flame\\event\\flame_break_obj05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\flame\\event\\flame_break.bmt"
+  ],
+  "effects": [
+    "dun\\fire_brige.efp",
+    "dun\\fire_brige.efp",
+    "dun\\fire_brige.efp",
+    "dun\\fire_brige.efp",
+    "dun\\fire_brige.efp",
+    "dun\\fire_brige.efp",
+    "dun\\fire_brige.efp",
+    "dun\\fire_brige.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

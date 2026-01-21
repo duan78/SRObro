@@ -1,0 +1,10 @@
+{
+  "file_name": "pha_ssroom4_top_oura_v",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 29803
+}

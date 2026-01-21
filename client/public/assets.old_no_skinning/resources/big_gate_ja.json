@@ -1,0 +1,19 @@
+{
+  "file_name": "big_gate_ja",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\jangan\\big_mun_ja_01_01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\big_mun_ja_01_01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\big_mun_ja_01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\jangan\\big_gate_ja_01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\bldg\\guild\\jangan\\big_mun_ja_ing.ban",
+    "prim\\ani\\bldg\\guild\\jangan\\big_gate_ja_still.ban",
+    "prim\\ani\\bldg\\guild\\jangan\\big_gate_ja_open.ban",
+    "prim\\ani\\bldg\\guild\\jangan\\big_gate_ja_open_clo.ban"
+  ],
+  "textures": []
+}

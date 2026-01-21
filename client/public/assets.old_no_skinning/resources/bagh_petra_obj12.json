@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_petra_obj12",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_obj12.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_petra\\bagh_petra_obj10.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

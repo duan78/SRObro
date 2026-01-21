@@ -1,0 +1,12 @@
+{
+  "file_name": "alex_bl02",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_bl02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\etc\\alex_bl.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_field_straw",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_straw.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\farm\\bagh_field_straw.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

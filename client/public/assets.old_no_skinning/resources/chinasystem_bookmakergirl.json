@@ -1,0 +1,18 @@
+{
+  "file_name": "chinasystem_bookmakergirl",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinasystem_bookmakergirl_2s01.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_bookmakergirl_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_bookmakergirl_part1.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_bookmakergirl_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinasystem_bookmakergirl.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinasystem_bookmakergirl_ani_basic.ban",
+    "prim\\ani\\npc\\china\\chinasystem_bookmakergirl_ani_time.ban"
+  ],
+  "textures": []
+}

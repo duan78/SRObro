@@ -1,0 +1,10 @@
+{
+  "file_name": "hit_4_one_hand_staff",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4580
+}

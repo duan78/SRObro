@@ -1,0 +1,10 @@
+{
+  "file_name": "red_orange_flame_glow_2small",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2500
+}

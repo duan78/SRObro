@@ -1,0 +1,31 @@
+{
+  "file_name": "earthking",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\earthking_part1.bms",
+    "prim\\mesh\\mob\\china\\earthking_part2_part1.bms",
+    "prim\\mesh\\mob\\china\\earthking_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\earthking.bmt",
+    "prim\\mtrl\\mob\\china\\earthking_champ.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_poison.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\earthking\\earthking_stand01.ban",
+    "prim\\ani\\mob\\china\\earthking\\earthking_stand02.ban",
+    "prim\\ani\\mob\\china\\earthking\\earthking_walk.ban",
+    "prim\\ani\\mob\\china\\earthking\\earthking_run.ban",
+    "prim\\ani\\mob\\china\\earthking\\earthking_attack02.ban",
+    "prim\\ani\\mob\\china\\earthking\\earthking_damage01.ban",
+    "prim\\ani\\mob\\china\\earthking\\earthking_damage02.ban",
+    "prim\\ani\\mob\\china\\earthking\\earthking_attack01.ban",
+    "prim\\ani\\mob\\china\\earthking\\earthking_die.ban",
+    "prim\\ani\\mob\\china\\earthking\\earthking_die_loop.ban",
+    "prim\\ani\\mob\\china\\earthking\\earthking_attack03.ban"
+  ],
+  "textures": []
+}

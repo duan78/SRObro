@@ -1,0 +1,10 @@
+{
+  "file_name": "event_princess_ac3_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 14332
+}

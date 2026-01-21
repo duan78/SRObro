@@ -1,0 +1,28 @@
+{
+  "file_name": "bagh_petra_jini_lamp",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_lamp.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_lamp.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\petra_flame_yellow.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,27 @@
+{
+  "file_name": "euro_constan_bumship01_02",
+  "meshes": [
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_02.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_03.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_04.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_05.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_06.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_07.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_08.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_09.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_10.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_11.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_alpha01.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_alpha02.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_alpha03.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_alpha04.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_light01.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\europe\\east eurpoe\\euro_constan_bumship01_02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

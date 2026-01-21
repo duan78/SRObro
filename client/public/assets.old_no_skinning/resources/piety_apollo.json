@@ -1,0 +1,10 @@
+{
+  "file_name": "piety_apollo",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_boss.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

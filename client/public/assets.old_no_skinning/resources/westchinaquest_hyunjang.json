@@ -1,0 +1,18 @@
+{
+  "file_name": "westchinaquest_hyunjang",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\westchinaquest_hyunjang_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_hyunjang_al_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_hyunjang_horse_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_hyunjang_horse_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_hyunjang_horse_part2.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_hyunjang_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_hyunjang_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\westchinaquest_hyunjang.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

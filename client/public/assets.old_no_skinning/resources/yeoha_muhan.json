@@ -1,0 +1,13 @@
+{
+  "file_name": "yeoha_muhan",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\yeoha_part1.bms",
+    "prim\\mesh\\mob\\china\\yeoha_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\yeoha_muhan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,21 @@
+{
+  "file_name": "cj_acce",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_acce_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_acce_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_acce_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_acce_wall_1.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_acce_winlight.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_acce_kite.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_acce_wall_2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_acce.bmt"
+  ],
+  "effects": [
+    "map\\light.efp",
+    "map\\light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

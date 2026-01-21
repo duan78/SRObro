@@ -1,0 +1,26 @@
+{
+  "file_name": "isis",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\isis02.bms",
+    "prim\\mesh\\mob\\sd\\isis01_part1.bms",
+    "prim\\mesh\\mob\\sd\\isis01_part2.bms",
+    "prim\\mesh\\mob\\sd\\isis_part1.bms",
+    "prim\\mesh\\mob\\sd\\isis_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\isis_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\isis.bmt",
+    "prim\\mtrl\\mob\\sd\\isis_clon1.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\isis\\isis_stand01.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_walk.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_attack01.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_attack02.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_attack03.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_attack04.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_attack05.ban"
+  ],
+  "textures": []
+}

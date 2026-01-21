@@ -1,0 +1,9 @@
+{
+  "file_name": "avatar_m_2012_new_devil_hat",
+  "textures": [
+    "avatar_m_2012_new_devil_hair.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_2012_new_devil_hair_n.ddj",
+    "avatar_m_2012_new_devil_head.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_2012_new_devil_head_n.ddj"
+  ]
+}

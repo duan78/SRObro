@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_osiris_ac4_parasite_ready",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 36926
+}

@@ -1,0 +1,18 @@
+{
+  "file_name": "khotansystem_warehousekeeper",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotansystem_warehousekeeper_al_2s.bms",
+    "prim\\mesh\\npc\\khotan\\khotansystem_warehousekeeper_box.bms",
+    "prim\\mesh\\npc\\khotan\\khotansystem_warehousekeeper_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotansystem_warehousekeeper_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotansystem_warehousekeeper.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\khotan\\khotansystem_warehousekeeper_basic.ban",
+    "prim\\ani\\npc\\khotan\\khotansystem_warehousekeeper_basic2.ban"
+  ],
+  "textures": []
+}

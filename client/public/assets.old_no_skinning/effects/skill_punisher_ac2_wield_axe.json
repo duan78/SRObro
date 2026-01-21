@@ -1,0 +1,12 @@
+{
+  "file_name": "skill_punisher_ac2_wield_axe",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 5802
+}

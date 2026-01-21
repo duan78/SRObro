@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_brazier_etc01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_brazier_etc01.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_brazier_etc01.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_brazier_etcalpha.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan02\\cj_brazier_etc01.bmt"
+  ],
+  "effects": [
+    "map\\w_cd_shri.efp",
+    "map\\w_cd_shri.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

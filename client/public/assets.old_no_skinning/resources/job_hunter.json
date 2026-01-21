@@ -1,0 +1,18 @@
+{
+  "file_name": "job_hunter",
+  "meshes": [
+    "prim\\mesh\\mob\\arenajob\\job_hunter.bms",
+    "prim\\mesh\\mob\\arenajob\\job_hunter_haed.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arenajob\\job_hunter.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arenajob\\job_hunter\\job_hunter_stand01.ban",
+    "prim\\ani\\mob\\arenajob\\job_hunter\\job_hunter_die.ban",
+    "prim\\ani\\mob\\arenajob\\job_hunter\\job_hunter_die_rm.ban",
+    "prim\\ani\\mob\\arenajob\\job_hunter\\job_hunter_damage01.ban"
+  ],
+  "textures": []
+}

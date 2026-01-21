@@ -1,0 +1,10 @@
+{
+  "file_name": "fortress_battering_ram",
+  "textures": [
+    "fortress_battering_ram_03.ddj",
+    "fortress_battering_ram_02.ddj",
+    "fortress_battering_ram_01.ddj",
+    "fortress_battering_ram_chain.ddj",
+    "fortress_battering_ram_fleg.ddj"
+  ]
+}

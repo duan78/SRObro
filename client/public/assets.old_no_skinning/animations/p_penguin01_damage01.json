@@ -1,0 +1,25 @@
+{
+  "file_name": "p_penguin01_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1034,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    327680,
+    0,
+    393216,
+    655360,
+    5,
+    10,
+    353377,
+    1329,
+    3903,
+    5,
+    6,
+    340272,
+    409541,
+    5
+  ]
+}

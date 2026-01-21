@@ -1,0 +1,13 @@
+{
+  "file_name": "bagh_abal_foun_shadow",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun13.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_abal_foun_shadow.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

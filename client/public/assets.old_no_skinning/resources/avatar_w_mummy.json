@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_w_mummy",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_mummy_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_mummy_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_mummy_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_mummy.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

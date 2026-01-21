@@ -1,0 +1,14 @@
+{
+  "file_name": "easteuropequest_chamberlain",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_chamberlain_2s.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_chamberlain_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_chamberlain_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_chamberlain.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

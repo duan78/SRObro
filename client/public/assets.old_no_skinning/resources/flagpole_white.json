@@ -1,0 +1,10 @@
+{
+  "file_name": "flagpole_white",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\flagpole_white.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

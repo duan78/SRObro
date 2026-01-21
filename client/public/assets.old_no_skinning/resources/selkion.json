@@ -1,0 +1,33 @@
+{
+  "file_name": "selkion",
+  "meshes": [
+    "prim\\mesh\\mob\\oasis\\redscorpion_part1.bms",
+    "prim\\mesh\\mob\\oasis\\redscorpion_part2_part1.bms",
+    "prim\\mesh\\mob\\oasis\\redscorpion_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\selkion.bmt",
+    "prim\\mtrl\\mob\\sd\\selkion_clon2.bmt",
+    "prim\\mtrl\\mob\\sd\\selkion_clon3.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_stand01.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_stand02.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_walk.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_run.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_attack01.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_attack02.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_attack03.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_damage01.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_damage02.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_die.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_die_loop.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_down.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_down_rm.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_down_damage.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_down_up.ban",
+    "prim\\ani\\mob\\oasis\\redscorpion\\redscorpion_down_die.ban"
+  ],
+  "textures": []
+}

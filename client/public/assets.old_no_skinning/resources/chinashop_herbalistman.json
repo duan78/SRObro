@@ -1,0 +1,18 @@
+{
+  "file_name": "chinashop_herbalistman",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinashop_herbalistman_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinashop_herbalistman_yak.bms",
+    "prim\\mesh\\npc\\china\\chinashop_herbalistman_part1.bms",
+    "prim\\mesh\\npc\\china\\chinashop_herbalistman_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinashop_herbalistman.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinashop_herbalistman_basic.ban",
+    "prim\\ani\\npc\\china\\chinashop_herbalistman_time.ban"
+  ],
+  "textures": []
+}

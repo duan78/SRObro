@@ -1,0 +1,10 @@
+{
+  "file_name": "spear_spin_damage_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 5190
+}

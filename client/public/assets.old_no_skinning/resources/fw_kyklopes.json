@@ -1,0 +1,32 @@
+{
+  "file_name": "fw_kyklopes",
+  "meshes": [
+    "prim\\mesh\\mob\\fortress\\fw_kyklopes01.bms",
+    "prim\\mesh\\mob\\fortress\\fw_kyklopes02.bms",
+    "prim\\mesh\\mob\\fortress\\fw_kyklopes_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_kyklopes_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\fortress\\fw_kyklopes.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_stand01.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_walk.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_run.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_attack01.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_attack03.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_die.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_die_rm.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_down.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_down_rm.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_down_damage.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_down_up.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_down_die.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_attack02.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_attack04.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_attack05.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_attack06.ban"
+  ],
+  "textures": []
+}

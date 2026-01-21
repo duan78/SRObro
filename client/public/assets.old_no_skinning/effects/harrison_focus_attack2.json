@@ -1,0 +1,10 @@
+{
+  "file_name": "harrison_focus_attack2",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 43423
+}

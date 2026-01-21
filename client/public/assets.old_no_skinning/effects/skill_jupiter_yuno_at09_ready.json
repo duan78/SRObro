@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_jupiter_yuno_at09_ready",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 32650
+}

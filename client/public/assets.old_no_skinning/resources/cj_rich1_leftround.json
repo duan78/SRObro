@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_rich1_leftround",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan06\\rich01\\cj_rich1_leftround.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan06\\rich01\\cj_rich1_leftround.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

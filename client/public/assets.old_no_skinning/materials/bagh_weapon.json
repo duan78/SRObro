@@ -1,0 +1,18 @@
+{
+  "file_name": "bagh_weapon",
+  "textures": [
+    "bagh_city_weapon_sword.ddj",
+    "bagh_city_weapon_wood02.ddj",
+    "bagh_city_weapon_shield.ddj",
+    "bagh_city_weapon_anvil.ddj",
+    "bagh_city_weapon_furnace.ddj",
+    "bagh_field_stable_light_alpha.ddj",
+    "bagh_city_weapon_wood03.ddj",
+    "bagh_city_weapon_area.ddj",
+    "bagh_city_weapon_light.ddj",
+    "bagh_city_weapon_fabric03.ddj",
+    "bagh_city_weapon_fabric01.ddj",
+    "bagh_city_weapon_fabric02.ddj",
+    "bagh_city_weapon_wood01.ddj"
+  ]
+}

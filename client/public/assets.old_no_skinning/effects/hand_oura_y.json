@@ -1,0 +1,10 @@
+{
+  "file_name": "hand_oura_y",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 11534
+}

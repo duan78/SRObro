@@ -1,0 +1,28 @@
+{
+  "file_name": "hide03_side04",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_bottom_04.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_ceiling.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_column01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_column02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_column03.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_ground01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_ground02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_wall01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_wall02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_wall03.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_sidedoor_01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_sidedoor_02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_sidedoor_04.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_bottom_04.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_dragon01_01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_dragon01_02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide03_side_dragon01_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\hide\\hide03_side.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

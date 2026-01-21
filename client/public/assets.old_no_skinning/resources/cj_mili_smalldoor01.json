@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_mili_smalldoor01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_smallwall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_smallroof01.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_smallwall01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan04\\cj_mili_smalldoor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

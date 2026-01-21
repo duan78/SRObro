@@ -1,0 +1,21 @@
+{
+  "file_name": "bagh_merchant",
+  "textures": [
+    "bagh_hunter_step01.ddj",
+    "bagh_hunter_will05.ddj",
+    "bagh_hunter_will06.ddj",
+    "bagh_hunter_win01.ddj",
+    "bagh_hunter_roof02.ddj",
+    "bagh_hunter_will02.ddj",
+    "bagh_merchant_will04.ddj",
+    "bagh_merchant_door02.ddj",
+    "bagh_merchant_door01.ddj",
+    "bagh_merchant_door03.ddj",
+    "bagh_merchant_tile01.ddj",
+    "bagh_merchant_will01.ddj",
+    "bagh_hunter_will03.ddj",
+    "bagh_merchant_flag01.ddj",
+    "bagh_merchant_roof01.ddj",
+    "bagh_merchant_roof03.ddj"
+  ]
+}

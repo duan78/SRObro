@@ -1,0 +1,14 @@
+{
+  "file_name": "demon_p_altar_fire_d",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\death\\demon_p_altar_etc\\demon_p_altar_fire.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\death\\demon_p_altar_fire.bmt"
+  ],
+  "effects": [
+    "dun\\masin_pupple_red_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "oas_tarim_obj01",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_obj01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_obj01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_obj01_1.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_obj01_al01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_obj01_al02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_tarim_obj01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

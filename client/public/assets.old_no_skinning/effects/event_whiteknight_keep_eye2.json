@@ -1,0 +1,10 @@
+{
+  "file_name": "event_whiteknight_keep_eye2",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13027
+}

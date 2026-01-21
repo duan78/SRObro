@@ -1,0 +1,17 @@
+{
+  "file_name": "khotansystem_bikiniqueen",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotansystem_bikiniqueen_al.bms",
+    "prim\\mesh\\npc\\khotan\\khotansystem_bikiniqueen_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotansystem_bikiniqueen_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotansystem_bikiniqueen.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\khotan\\khotansystem_bikiniqueen_basic.ban",
+    "prim\\ani\\npc\\khotan\\khotansystem_bikiniqueen_basic2.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "piety_thunder",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_thunder.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

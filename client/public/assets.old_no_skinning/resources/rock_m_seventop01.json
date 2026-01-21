@@ -1,0 +1,13 @@
+{
+  "file_name": "rock_m_seventop01",
+  "meshes": [
+    "prim\\mesh\\artifact\\west asia\\rock mt\\seventop\\rock_m_seventop01_1.bms",
+    "prim\\mesh\\artifact\\west asia\\rock mt\\seventop\\rock_m_seventop01_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\west asia\\rock mt\\seventop\\rock_m_seventop01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

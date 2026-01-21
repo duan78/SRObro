@@ -1,0 +1,23 @@
+{
+  "file_name": "oas_kara_villi",
+  "textures": [
+    "oas_kara_wall_tree.ddj",
+    "oas_kara_wall_bwall_01.ddj",
+    "oas_kara_wall_longw.ddj",
+    "oas_kara_wall_bwall_04.ddj",
+    "oas_kara_wall_bwall_02.ddj",
+    "oas_kara_wall_top.ddj",
+    "oas_kara_wall_bridgefloor.ddj",
+    "oas_kara_wall_ch.ddj",
+    "oas_kara_wall_bwall_03.ddj",
+    "oas_kara_wall_bridgef.ddj",
+    "oas_kara_wall_bridgetree.ddj",
+    "oas_kara_wall_wall.ddj",
+    "oas_kara_wall_box.ddj",
+    "oas_kara_wall_xtree.ddj",
+    "oas_kara_wall_line.ddj",
+    "oas_kara_wall_treedan.ddj",
+    "oas_kara_wall_broken.ddj",
+    "02.ddj"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "banditarcher_arrow",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\banditarcher.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

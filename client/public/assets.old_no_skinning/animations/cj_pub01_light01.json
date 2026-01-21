@@ -1,0 +1,25 @@
+{
+  "file_name": "cj_pub01_light01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 464,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    196608,
+    0,
+    262144,
+    393216,
+    3,
+    6,
+    209456,
+    439699,
+    3,
+    6,
+    209968,
+    10016,
+    10043,
+    9992
+  ]
+}

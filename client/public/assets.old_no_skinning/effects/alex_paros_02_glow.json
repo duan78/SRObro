@@ -1,0 +1,10 @@
+{
+  "file_name": "alex_paros_02_glow",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2478
+}

@@ -1,0 +1,11 @@
+{
+  "file_name": "light_12",
+  "textures": [
+    "light_12_ha.ddj",
+    "light_12_la.ddj",
+    "light_12_fa.ddj",
+    "light_12_ba.ddj",
+    "light_12_aa.ddj",
+    "light_12_sa.ddj"
+  ]
+}

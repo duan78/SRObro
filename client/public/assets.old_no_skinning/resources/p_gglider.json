@@ -1,0 +1,20 @@
+{
+  "file_name": "p_gglider",
+  "meshes": [
+    "prim\\mesh\\cos\\p_gglider01.bms",
+    "prim\\mesh\\cos\\p_gglider_part1.bms",
+    "prim\\mesh\\cos\\p_gglider_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_gglider.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\p_gglider\\p_gglider_stand01.ban",
+    "prim\\ani\\cos\\p_gglider\\p_gglider_run.ban",
+    "prim\\ani\\cos\\p_gglider\\p_gglider_walk.ban",
+    "prim\\ani\\cos\\p_gglider\\p_gglider_emotion.ban",
+    "prim\\ani\\cos\\p_gglider\\p_gglider_pick.ban"
+  ],
+  "textures": []
+}

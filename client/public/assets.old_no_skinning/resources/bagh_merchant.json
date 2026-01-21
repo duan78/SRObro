@@ -1,0 +1,29 @@
+{
+  "file_name": "bagh_merchant",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_door01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_door01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_door02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_door03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_flag01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_flag02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_roof01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_roof02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_roof03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_step01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_tile01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_will01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_will02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_will03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_will04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_will05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_will06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_merchant_win01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_merchant.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_m_noblesse_hat",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_noblesse.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "prison_whale_body",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\etc\\prison\\prison_bone.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

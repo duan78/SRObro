@@ -1,0 +1,28 @@
+{
+  "file_name": "planar_die",
+  "meshes": [
+    "prim\\mesh\\mob\\karakoram\\planardie01.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie02.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie03.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_ice05.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_ice06.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_ice07.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_ice08.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_ice1.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_ice2.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_ice3.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_ice4.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\karakoram\\planar.bmt",
+    "prim\\mtrl\\mob\\karakoram\\planar_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\karakoram\\planar\\planar_die.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_die_loop.ban"
+  ],
+  "textures": []
+}

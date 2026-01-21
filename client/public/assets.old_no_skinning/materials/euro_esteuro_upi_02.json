@@ -1,0 +1,20 @@
+{
+  "file_name": "euro_esteuro_upi_02",
+  "textures": [
+    "euro_esteuro_upi_alpha.ddj",
+    "euro_esteuro_upi_area.ddj",
+    "euro_esteuro_upi_carve01.ddj",
+    "euro_esteuro_upi_carve02.ddj",
+    "euro_esteuro_upi_door01.ddj",
+    "euro_esteuro_upi_door02.ddj",
+    "euro_esteuro_upi_pillar01.ddj",
+    "euro_esteuro_upi_pillar02.ddj",
+    "euro_esteuro_upi_pillar03.ddj",
+    "euro_esteuro_upi_roof.ddj",
+    "euro_esteuro_upi_stairs.ddj",
+    "euro_esteuro_upi_wall03.ddj",
+    "euro_esteuro_upi_wall04.ddj",
+    "euro_esteuro_upi_wall05.ddj",
+    "euro_esteuro_upi_brazier.ddj"
+  ]
+}

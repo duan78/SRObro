@@ -1,0 +1,32 @@
+{
+  "file_name": "septu",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\septu_part1.bms",
+    "prim\\mesh\\mob\\sd\\septu_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\septu_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\septu.bmt",
+    "prim\\mtrl\\mob\\sd\\septu_clon2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\septu\\septu_stand01.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_walk.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_run.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_attack1.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_attack2.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_attack3.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_attack4.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_attack5.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_die.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_down.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_damage1.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_down_rm.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_down_damage.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_down_up.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_die_rm.ban",
+    "prim\\ani\\mob\\sd\\septu\\septu_down_die.ban"
+  ],
+  "textures": []
+}

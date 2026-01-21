@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_pal_sub_buil01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sub_buil01_roof01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sub_buil01_roof02_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sub_buil01_roof03_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sub_buil01_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sub_buil01_wall01_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sub_buil01_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_sub_buil01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

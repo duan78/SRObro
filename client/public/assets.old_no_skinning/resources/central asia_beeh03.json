@@ -1,0 +1,12 @@
+{
+  "file_name": "central asia_beeh03",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\central asia_beeh03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\central asia_beeh.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

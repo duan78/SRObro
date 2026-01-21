@@ -1,0 +1,19 @@
+{
+  "file_name": "ja_small_gt01",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\jangan\\ja_small_gt01_01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\ja_small_gt01_01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\ja_small_gt01_02.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\ja_small_gt01_03.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\ja_small_gt01_04.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\ja_small_gt01_05.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\ja_small_gt01_06.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\ja_small_gt01_07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\jangan\\ja_small_gt01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "arena_ship_alpha",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\wreck\\arena_ship\\arena_ship_cob01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\arena_ship\\arena_ship_cob02.bms",
+    "prim\\mesh\\dun\\property\\wreck\\arena_ship\\arena_ship_cob03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\arena_ship_alpha.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

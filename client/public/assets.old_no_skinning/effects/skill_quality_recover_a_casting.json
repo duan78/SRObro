@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_quality_recover_a_casting",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 21349
+}

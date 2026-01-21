@@ -1,0 +1,16 @@
+{
+  "file_name": "pha_burner",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_burner01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_burner01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_burner02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\field\\pha_burner.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame_sb_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

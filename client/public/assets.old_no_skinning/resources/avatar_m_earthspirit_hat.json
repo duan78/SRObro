@@ -1,0 +1,12 @@
+{
+  "file_name": "avatar_m_earthspirit_hat",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_earthspirit.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\oura_13.ddj"
+  ]
+}

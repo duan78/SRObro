@@ -1,0 +1,12 @@
+{
+  "file_name": "guil_jang_stair02_wall02",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_jang_stair02_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\jangan\\guil_jang_stair01_wall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

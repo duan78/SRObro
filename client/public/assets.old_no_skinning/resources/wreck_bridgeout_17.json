@@ -1,0 +1,15 @@
+{
+  "file_name": "wreck_bridgeout_17",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\wreck\\bridge\\wreck_bridgeout_17_01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\bridge\\wreck_bridgeout_17_01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\bridge\\wreck_bridgeout_17_02.bms",
+    "prim\\mesh\\dun\\property\\wreck\\bridge\\wreck_bridgeout_17_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\wreck_bridge_out.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

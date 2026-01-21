@@ -1,0 +1,30 @@
+{
+  "file_name": "ghost_beast",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\ghost_beast_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_beast_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_beast_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_beast_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\ghost_beast.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_wreck_beast_keep_nail_01.efp",
+    "monster\\god\\skill_wreck_beast_keep_nail_02.efp",
+    "monster\\god\\skill_wreck_beast_keep_nail_03.efp",
+    "monster\\god\\skill_wreck_beast_keep_nail_04.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\god\\ghost_beast\\ghost_beast_stand01.ban",
+    "prim\\ani\\mob\\god\\ghost_beast\\ghost_beast_damage.ban",
+    "prim\\ani\\mob\\god\\ghost_beast\\ghost_beast_walk.ban",
+    "prim\\ani\\mob\\god\\ghost_beast\\ghost_beast_run.ban",
+    "prim\\ani\\mob\\god\\ghost_beast\\ghost_beast_attack01.ban",
+    "prim\\ani\\mob\\god\\ghost_beast\\ghost_beast_attack02.ban",
+    "prim\\ani\\mob\\god\\ghost_beast\\ghost_beast_attack03.ban",
+    "prim\\ani\\mob\\god\\ghost_beast\\ghost_beast_die.ban",
+    "prim\\ani\\mob\\god\\ghost_beast\\ghost_beast_die_rm.ban"
+  ],
+  "textures": []
+}

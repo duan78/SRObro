@@ -1,0 +1,37 @@
+{
+  "file_name": "flame_gigantic",
+  "meshes": [
+    "prim\\mesh\\mob\\fortress\\fw_battlegolem01.bms",
+    "prim\\mesh\\mob\\fortress\\fw_battlegolem02.bms",
+    "prim\\mesh\\mob\\fortress\\fw_battlegolem03.bms",
+    "prim\\mesh\\mob\\fortress\\fw_battlegolem04.bms",
+    "prim\\mesh\\mob\\fortress\\fw_battlegolem05.bms",
+    "prim\\mesh\\mob\\fortress\\fw_battlegolem06.bms",
+    "prim\\mesh\\mob\\fortress\\fw_battlegolem07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\flame_gigantic.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_flame_gigantic_keep_body_02.efp",
+    "monster\\god\\skill_flame_gigantic_keep_body.efp",
+    "monster\\god\\skill_flame_gigantic_ac2_shoot.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\casia\\golem\\golem_stand01.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_walk.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_run.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_attack01.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_attack02.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_attack03.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_die.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_die_rm.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_down.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_down_rm.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_down_damage.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_downup.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_downdie.ban",
+    "prim\\ani\\mob\\casia\\golem\\golem_attack04.ban"
+  ],
+  "textures": []
+}

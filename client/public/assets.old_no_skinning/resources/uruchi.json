@@ -1,0 +1,30 @@
+{
+  "file_name": "uruchi",
+  "meshes": [
+    "prim\\mesh\\mob\\oasis\\uruchi_mantle.bms",
+    "prim\\mesh\\mob\\oasis\\uruchi_spear.bms",
+    "prim\\mesh\\mob\\oasis\\uruchi_spear01.bms",
+    "prim\\mesh\\mob\\oasis\\uruchi_body_part1.bms",
+    "prim\\mesh\\mob\\oasis\\uruchi_body_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\oasis\\uruchi.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_stand01.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_stand02.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_run.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_walk.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_attack01.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_attack02.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_attack03.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_damage02.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_die.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_help.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_die_loop.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_find.ban",
+    "prim\\ani\\mob\\oasis\\uruchi\\uruchi_damage01.ban"
+  ],
+  "textures": []
+}

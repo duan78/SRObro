@@ -1,0 +1,14 @@
+{
+  "file_name": "rock_mt_house14_fence01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house14_fence01_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house14_fence01_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house14_fence01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\village\\rock_mt_house14_fence01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

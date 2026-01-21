@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_haroeris_ac7_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 41439
+}

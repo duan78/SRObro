@@ -1,0 +1,19 @@
+{
+  "file_name": "bagh_build_deco03",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco3_roof01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco3_roof02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco3_roof03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco3_tree01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco3_tree02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco3_will01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco3_win01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco3_win02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_build_deco3.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

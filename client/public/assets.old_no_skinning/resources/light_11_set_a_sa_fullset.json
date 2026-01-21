@@ -1,0 +1,15 @@
+{
+  "file_name": "light_11_set_a_sa_fullset",
+  "meshes": [
+    "prim\\mesh\\item\\china\\woman_item\\light_11_set_a_sa.bms",
+    "prim\\mesh\\item\\china\\woman_item\\light_11_set_a_sa_ef.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\woman_item\\light_11_set_a.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line.ddj"
+  ]
+}

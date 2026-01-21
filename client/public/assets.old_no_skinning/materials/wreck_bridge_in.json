@@ -1,0 +1,10 @@
+{
+  "file_name": "wreck_bridge_in",
+  "textures": [
+    "wreck_isl_ground.ddj",
+    "wreck_bridge_01.ddj",
+    "wreck_bridge_02.ddj",
+    "wreck_isl_wall02.ddj",
+    "wreck_bridge_03.ddj"
+  ]
+}

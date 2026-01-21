@@ -1,0 +1,14 @@
+{
+  "file_name": "supplies_potion_eu",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropeshop_accessory_2s.bms",
+    "prim\\mesh\\npc\\europe\\easteuropeshop_accessory_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropeshop_accessory_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\supplies_potion_eu.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

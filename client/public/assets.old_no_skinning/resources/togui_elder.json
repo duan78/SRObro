@@ -1,0 +1,33 @@
+{
+  "file_name": "togui_elder",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\togui_eider01.bms",
+    "prim\\mesh\\mob\\god\\togui_eider02.bms",
+    "prim\\mesh\\mob\\god\\togui_eider_part1.bms",
+    "prim\\mesh\\mob\\god\\togui_eider_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\togui_eider_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\togui_eider_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\togui_eider_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\togui_eider_part2_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\togui_eider_part2_part2_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\togui_eider.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_stand01.ban",
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_stand02.ban",
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_attacak1.ban",
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_attacak2.ban",
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_attacak3_ready.ban",
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_attacak3_wait.ban",
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_attacak3_shot.ban",
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_attacak4.ban",
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_die.ban",
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_die_rm.ban",
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_walk.ban",
+    "prim\\ani\\mob\\god\\togui_eider\\togui_eider_run.ban"
+  ],
+  "textures": []
+}

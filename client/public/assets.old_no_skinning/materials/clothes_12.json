@@ -1,0 +1,11 @@
+{
+  "file_name": "clothes_12",
+  "textures": [
+    "prim\\mtrl\\item\\common\\woman_item\\clothes_12_la.ddj",
+    "clothes_12_aa.ddj",
+    "clothes_12_ba.ddj",
+    "clothes_12_fa.ddj",
+    "clothes_12_ha.ddj",
+    "clothes_12_sa.ddj"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "file_name": "avatar_w_samurai",
+  "textures": [
+    "avatar_w_samurai_hat.ddj",
+    "avatar_w_samurai_attach_01.ddj",
+    "avatar_w_samurai.ddj",
+    "avatar_w_samurai_attach_02.ddj"
+  ]
+}

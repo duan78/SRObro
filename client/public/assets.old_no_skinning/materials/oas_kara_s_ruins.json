@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_kara_s_ruins",
+  "textures": [
+    "oas_kara_ruins_sbrick.ddj",
+    "oas_kara_ruins_sleftwall.ddj",
+    "oas_kara_ruins_swall.ddj",
+    "oas_kara_ruins_ladder.ddj",
+    "oas_kara_ruins_backwall.ddj",
+    "oas_kara_ruins_roof.ddj",
+    "oas_kara_ruins_etc.ddj"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "bugghost_down_up",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 8453,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    0,
+    458752,
+    0,
+    327680,
+    484718,
+    900865
+  ]
+}

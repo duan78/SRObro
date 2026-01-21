@@ -1,0 +1,33 @@
+{
+  "file_name": "flame_giant",
+  "meshes": [
+    "prim\\mesh\\mob\\qinshi\\tombsoldier_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\tombsoldier_part2_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\tombsoldier_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\flame_giant.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_flame_giant_ac3_keep.efp",
+    "monster\\god\\skill_flame_giant_ac3_keep.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_stand01.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_walk.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_attack01.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_attack02.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_attack03.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_attack04.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_damage01.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_die.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_die_rm.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_down.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_down_rm.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_down_damage.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_down_up.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_down_die.ban",
+    "prim\\ani\\mob\\qinshi\\tombsoldier\\tombsoldier_run.ban"
+  ],
+  "textures": []
+}

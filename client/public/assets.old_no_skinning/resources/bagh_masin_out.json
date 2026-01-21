@@ -1,0 +1,39 @@
+{
+  "file_name": "bagh_masin_out",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_root.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_tile.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall30.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall31.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall_rose01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall_rose02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_masin\\bagh_masin_out.bmt"
+  ],
+  "effects": [
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\sky_green_big_weak.efp",
+    "dun\\bagh_masin_out01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

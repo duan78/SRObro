@@ -1,0 +1,25 @@
+{
+  "file_name": "alex_ship_s02",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_body01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_body02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_body03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_body04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_body05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_body06.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_body07.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_door.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_mast.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_roap.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_roof.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_sail.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_wall.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\ship\\alex_boat02_window.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\ship\\alex_ship_s.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

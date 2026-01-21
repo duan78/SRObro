@@ -1,0 +1,17 @@
+{
+  "file_name": "w_earthgst_house3",
+  "textures": [
+    "w_earthgst_house3_togi.ddj",
+    "w_earthgst_house3_entrance.ddj",
+    "w_earthgst_house2_wall.ddj",
+    "w_earthgst_house3_etc.ddj",
+    "w_earthgst_house3_metal_02.ddj",
+    "w_earthgst_house3_metal_01.ddj",
+    "earthgst_house3_metal_00.ddj",
+    "w_earthgst_house3_wall2.ddj",
+    "w_earthgst_house3_window.ddj",
+    "w_earthgst_house2_doorwall.ddj",
+    "w_earthgst_house3_alpha.ddj",
+    "w_earthgst_house3_roof.ddj"
+  ]
+}

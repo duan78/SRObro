@@ -1,0 +1,23 @@
+{
+  "file_name": "euro_esteuro_fountain01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_fountain01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_fountain01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_fountain02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_fountain03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_fountain04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_fountain05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_fountain07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_fountain06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_esteuro_fountain01.bmt"
+  ],
+  "effects": [
+    "map\\rock_mt_portal.efp",
+    "map\\rock_mt_portal.efp",
+    "map\\euro_constan_center.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

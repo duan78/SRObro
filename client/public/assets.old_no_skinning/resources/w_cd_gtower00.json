@@ -1,0 +1,12 @@
+{
+  "file_name": "w_cd_gtower00",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_gtower00.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ruins\\w_cd_gtower00.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

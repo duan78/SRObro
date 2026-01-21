@@ -1,0 +1,53 @@
+{
+  "file_name": "alex_paros",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_column01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_column01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_column02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_dark.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_door.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_edge01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_edge02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_gate01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_gate02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_light.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_middle01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_middle02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_middle03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_middle04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_middle05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_stair.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_statue01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_statue02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_statue03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_statue04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_statue05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_statue06.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_statue07.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_tile.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_top01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_top02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_top03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_under01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_under02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_under03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_wall.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\paros\\alex_paros_window.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\paros\\alex_paros.bmt"
+  ],
+  "effects": [
+    "map\\alex_paros_01.efp",
+    "map\\alex_paros_02.efp",
+    "map\\alex_paros_02_glow.efp",
+    "map\\alex_paros_02.efp",
+    "map\\alex_paros_02.efp",
+    "map\\alex_paros_02.efp",
+    "map\\alex_paros_02_glow.efp",
+    "map\\alex_paros_02_glow.efp",
+    "map\\alex_paros_02_glow.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

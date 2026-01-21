@@ -1,0 +1,24 @@
+{
+  "file_name": "p_raven02_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4930,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    327680,
+    157038,
+    834060,
+    143717,
+    702978,
+    2,
+    11,
+    143979,
+    702856,
+    2,
+    15
+  ]
+}

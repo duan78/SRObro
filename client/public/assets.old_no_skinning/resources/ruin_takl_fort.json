@@ -1,0 +1,18 @@
+{
+  "file_name": "ruin_takl_fort",
+  "meshes": [
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\fort\\ruin_takl_fort_wall_01.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\fort\\ruin_takl_fort_door.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\fort\\ruin_takl_fort_floor.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\fort\\ruin_takl_fort_wall_01.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\fort\\ruin_takl_fort_wall_02.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\fort\\ruin_takl_fort_wall_03.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\fort\\ruin_takl_fort_wall_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\ruins\\taklamakan des\\fort\\ruin_takl_fort.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,26 @@
+{
+  "file_name": "tre_bank01_big",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 462,
+  "animation_name": "\u000e",
+  "data_blocks": [
+    17000,
+    30,
+    1,
+    3,
+    0,
+    8333,
+    17000,
+    4,
+    6,
+    209200,
+    410005,
+    3,
+    6,
+    209712,
+    440447,
+    3
+  ]
+}

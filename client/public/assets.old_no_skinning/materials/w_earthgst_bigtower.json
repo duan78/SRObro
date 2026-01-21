@@ -1,0 +1,9 @@
+{
+  "file_name": "w_earthgst_bigtower",
+  "textures": [
+    "w_earthgst_gwall02.ddj",
+    "w_earthgst_fence.ddj",
+    "w_earthgst_tower.ddj",
+    "w_earthgst_gwall01.ddj"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "file_name": "p_penguin02",
+  "meshes": [
+    "prim\\mesh\\cos\\p_penguin02_part1.bms",
+    "prim\\mesh\\cos\\p_penguin02_part2_part1.bms",
+    "prim\\mesh\\cos\\p_penguin02_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_penguin02.bmt"
+  ],
+  "effects": [
+    "cos\\cos_penguin2_ac1.efp",
+    "cos\\cos_penguin2_bodywind.efp",
+    "cos\\cos_penguin2_kick.efp"
+  ],
+  "animations": [
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_stand01.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_walk.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_attackready.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_run.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_attack01.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_attack02.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_damage01.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_die.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_die_rm.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_down.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_down_rm.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_downup.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_downdie.ban",
+    "prim\\ani\\cos\\p_penguin02\\p_penguin02_emotion.ban"
+  ],
+  "textures": []
+}

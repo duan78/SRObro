@@ -1,0 +1,20 @@
+{
+  "file_name": "cg_gardenvil",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\greenfield\\cg_gardenvill_floor.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cg_gardenvill_alpha.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cg_gardenvill_column.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cg_gardenvill_column2side.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cg_gardenvill_etc.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cg_gardenvill_floor.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cg_gardenvill_roof.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cg_gardenvill_roof2side.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cg_gardenvill_wood.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\greenfield\\cg_gardenvill.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

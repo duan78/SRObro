@@ -1,0 +1,12 @@
+{
+  "file_name": "cj3_lion_dan",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj3_lion_dan01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj3_lion_dan01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

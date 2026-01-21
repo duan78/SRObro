@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_bastet_ac5_knife_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 12777
+}

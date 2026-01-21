@@ -1,0 +1,16 @@
+{
+  "file_name": "avatar_m_day_deathassassin",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_assassin02.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_assassin03.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_assassin_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_assassin_part2.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_assassin01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_day_deathassassin.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

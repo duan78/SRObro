@@ -1,0 +1,18 @@
+{
+  "file_name": "khotansystem_turtleshipticketagent",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotansystem_turtleshipticketagent_2s.bms",
+    "prim\\mesh\\npc\\khotan\\khotansystem_turtleshipticketagent_al_2s.bms",
+    "prim\\mesh\\npc\\khotan\\khotansystem_turtleshipticketagent_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotansystem_turtleshipticketagent_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotansystem_turtleshipticketagent.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\khotan\\khotansystem_turtleshipticketagent_basic.ban",
+    "prim\\ani\\npc\\khotan\\khotansystem_turtleshipticketagent_basic2.ban"
+  ],
+  "textures": []
+}

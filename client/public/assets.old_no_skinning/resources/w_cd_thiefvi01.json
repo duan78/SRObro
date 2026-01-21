@@ -1,0 +1,14 @@
+{
+  "file_name": "w_cd_thiefvi01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_thiefvill_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_thiefvill_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_thiefvill_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_thiefvill_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

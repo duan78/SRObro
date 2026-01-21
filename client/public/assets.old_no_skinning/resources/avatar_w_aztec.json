@@ -1,0 +1,15 @@
+{
+  "file_name": "avatar_w_aztec",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_aztec.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_aztec_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_aztec_02.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_aztec_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_aztec.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

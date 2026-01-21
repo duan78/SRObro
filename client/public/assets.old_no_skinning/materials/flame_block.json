@@ -1,0 +1,9 @@
+{
+  "file_name": "flame_block",
+  "textures": [
+    "flame_break_obj02.ddj",
+    "flame_block_obj01.ddj",
+    "flame_break_obj01.ddj",
+    "flame_block_obj02.ddj"
+  ]
+}

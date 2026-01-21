@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_fire_trap_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 14351
+}

@@ -1,0 +1,20 @@
+{
+  "file_name": "ruin_takla_nia02_1",
+  "meshes": [
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\remain\\ruin_takla_nia02_1.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\remain\\ruin_takla_nia02_1.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\remain\\ruin_takla_nia02_2.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\remain\\ruin_takla_nia02_3.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\remain\\ruin_takla_nia02_4.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\remain\\ruin_takla_nia02_5.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\remain\\ruin_takla_nia02_6.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\remain\\ruin_takla_nia02_7.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\remain\\ruin_takla_nia02_9.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\ruins\\taklamakan des\\remain\\ruin_takla_nia02_1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

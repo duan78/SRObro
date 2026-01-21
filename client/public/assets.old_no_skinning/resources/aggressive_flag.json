@@ -1,0 +1,10 @@
+{
+  "file_name": "aggressive_flag",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\flag\\aggressive_flag.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

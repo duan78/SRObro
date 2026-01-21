@@ -1,0 +1,10 @@
+{
+  "file_name": "pha_isquare_topside_g",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 5069
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_field_treeroot04",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_field_treeroot04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\tree\\bagh_field_treeroot01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

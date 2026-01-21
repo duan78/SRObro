@@ -1,0 +1,10 @@
+{
+  "file_name": "oas_kara_ruins01",
+  "textures": [
+    "oas_kara_ruins_leftwall.ddj",
+    "oas_kara_ruins_backwall.ddj",
+    "oas_kara_ruins_wall.ddj",
+    "oas_kara_ruins_etc.ddj",
+    "oas_kara_ruins_roof.ddj"
+  ]
+}

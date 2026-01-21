@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_jupiter_babilion_at11_body",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 11274
+}

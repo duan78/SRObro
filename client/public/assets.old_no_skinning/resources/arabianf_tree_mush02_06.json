@@ -1,0 +1,12 @@
+{
+  "file_name": "arabianf_tree_mush02_06",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\weed\\arabianf_tree_mush02_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\weed\\arabianf_tree_mush.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "alex_minga07",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_minga07_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_minga07_02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_minga07_03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_minga07_04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_minga07_05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_minga07_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\minga\\alex_minga05.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

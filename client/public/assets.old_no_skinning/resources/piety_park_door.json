@@ -1,0 +1,12 @@
+{
+  "file_name": "piety_park_door",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_park_door.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_park_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "getflag",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\getflag.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\event_flag_070919.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

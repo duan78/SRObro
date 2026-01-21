@@ -1,0 +1,15 @@
+{
+  "file_name": "arabia_sheherazade",
+  "meshes": [
+    "prim\\mesh\\npc\\arabia\\arabia_sheherazade_part1.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_sheherazade_part2_part1.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_sheherazade_part2_part2_part1.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_sheherazade_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\arabia\\arabia_sheherazade.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

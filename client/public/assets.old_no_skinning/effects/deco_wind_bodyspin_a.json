@@ -1,0 +1,11 @@
+{
+  "file_name": "deco_wind_bodyspin_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 8105
+}

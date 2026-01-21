@@ -1,0 +1,30 @@
+{
+  "file_name": "oas_kara_villi",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_box.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_box.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_bridgef.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_bridgefloor.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_bridgetree.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_broken-02.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_broken.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_bwall_01.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_bwall_02.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_bwall_03.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_bwall_04.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_ch.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_line.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_longw.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_top.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_tree.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_treedan.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_wall.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\lake-villiage\\oas_kara_wall_xtree.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\lake-village\\oas_kara_villi.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

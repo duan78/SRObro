@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRObro - Test Maps 3D</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100vh;
+            touch-action: none;
+        }
+
+        #ui {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.85);
+            border: 1px solid #444;
+            border-radius: 8px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .section {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #444;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 8px;
+            background: #2d2d44;
+            border: 1px solid #444;
+            border-radius: 4px;
+            color: #eee;
+            font-size: 13px;
+            cursor: pointer;
+            margin: 2px 0;
+        }
+
+        select:hover, button:hover {
+            background: #3d3d5c;
+            border-color: #666;
+        }
+
+        button:active {
+            background: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        button.primary {
+            background: #2196F3;
+        }
+
+        button.primary:hover {
+            background: #1976D2;
+        }
+
+        button.danger {
+            background: #f44336;
+        }
+
+        button.danger:hover {
+            background: #d32f2f;
+        }
+
+        #stats {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #aaa;
+        }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 2px 0;
+        }
+
+        .stat-value {
+            color: #4CAF50;
+        }
+
+        #logs {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 11px;
+            max-height: 150px;
+            overflow-y: auto;
+            background: #0a0a0a;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .log-entry {
+            margin: 2px 0;
+            line-height: 1.3;
+        }
+
+        .log-success { color: #4CAF50; }
+        .log-error { color: #f44336; }
+        .log-info { color: #2196F3; }
+        .log-warn { color: #ff9800; }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .checkbox-group input {
+            margin-right: 8px;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+
+    <div id="ui">
+        <h1>🗺️ Test Maps 3D - Heightmaps + Objets</h1>
+
+        <div class="section">
+            <label>Map ID à charger</label>
+            <select id="mapSelect">
+                <option value="100">100 (Zone de départ)</option>
+                <option value="101">101</option>
+                <option value="102">102</option>
+                <option value="68">68</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <button id="loadMapBtn" class="primary">📥 Charger Map</button>
+            <button id="unloadMapBtn" class="danger">🗑️ Décharger Map</button>
+        </div>
+
+        <div class="section">
+            <button id="resetCameraBtn">📷 Reset Caméra</button>
+            <button id="wireframeBtn">📐 Wireframe</button>
+        </div>
+
+        <div class="section">
+            <div class="checkbox-group">
+                <input type="checkbox" id="autoRotateCheck" checked>
+                <label for="autoRotateCheck">Auto-rotation caméra</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="showObjectsCheck" checked>
+                <label for="showObjectsCheck">Afficher objets marqueurs</label>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 style="font-size: 13px; color: #aaa; margin: 10px 0;">📊 Statistiques</h3>
+            <div id="stats">
+                <div class="stat">
+                    <span>FPS:</span>
+                    <span class="stat-value" id="fps">0</span>
+                </div>
+                <div class="stat">
+                    <span>Vertices:</span>
+                    <span class="stat-value" id="vertexCount">0</span>
+                </div>
+                <div class="stat">
+                    <span>Triangles:</span>
+                    <span class="stat-value" id="triangleCount">0</span>
+                </div>
+                <div class="stat">
+                    <span>Objets:</span>
+                    <span class="stat-value" id="objectCount">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 style="font-size: 13px; color: #aaa; margin: 10px 0;">📋 Logs</h3>
+            <div id="logs"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="https://cdn.babylonjs.com/materials/babylonjs.materials.min.js"></script>
+
+    <script>
+        // Variables globales
+        let canvas, engine, scene;
+        let camera = null;
+        let currentMap = null;
+        let mapObjects = [];
+        let autoRotate = true;
+        let showObjects = true;
+        let wireframe = false;
+
+        // Initialisation
+        async function init() {
+            canvas = document.getElementById('renderCanvas');
+            engine = new BABYLON.Engine(canvas, true);
+
+            scene = new BABYLON.Scene(engine);
+            scene.clearColor = new BABYLON.Color3(0.1, 0.1, 0.18);
+
+            // Caméra
+            camera = new BABYLON.ArcRotateCamera('camera', -Math.PI / 2, Math.PI / 2.5, 500, BABYLON.Vector3.Zero(), scene);
+            camera.attachControl(canvas, true);
+            camera.wheelPrecision = 50;
+            camera.lowerRadiusLimit = 50;
+            camera.upperRadiusLimit = 1000;
+
+            // Lumières
+            const hemiLight = new BABYLON.HemisphericLight('hemiLight', new BABYLON.Vector3(0, 1, 0), scene);
+            hemiLight.intensity = 0.6;
+
+            const dirLight = new BABYLON.DirectionalLight('dirLight', new BABYLON.Vector3(-1, -2, -1), scene);
+            dirLight.position = new BABYLON.Vector3(200, 400, 200);
+            dirLight.intensity = 0.7;
+
+            // Ground par défaut
+            const defaultGround = BABYLON.MeshBuilder.CreateGround('defaultGround', { width: 1000, height: 1000 }, scene);
+            const groundMat = new BABYLON.StandardMaterial('defaultGroundMat', scene);
+            groundMat.diffuseColor = new BABYLON.Color3(0.2, 0.2, 0.25);
+            groundMat.specularColor = new BABYLON.Color3(0.1, 0.1, 0.1);
+            ground.material = groundMat;
+            defaultGround.position.y = -1;
+
+            // Setup UI events
+            setupUIEvents();
+
+            // Boucle de rendu
+            engine.runRenderLoop(() => {
+                if (autoRotate && currentMap) {
+                    camera.alpha += 0.002;
+                }
+                scene.render();
+
+                // Update FPS
+                document.getElementById('fps').textContent = engine.getFps().toFixed(0);
+            });
+
+            log('✅ Scene initialisée', 'success');
+        }
+
+        function setupUIEvents() {
+            document.getElementById('loadMapBtn').addEventListener('click', loadMap);
+            document.getElementById('unloadMapBtn').addEventListener('click', unloadMap);
+            document.getElementById('resetCameraBtn').addEventListener('click', resetCamera);
+            document.getElementById('wireframeBtn').addEventListener('click', toggleWireframe);
+            document.getElementById('autoRotateCheck').addEventListener('change', (e) => {
+                autoRotate = e.target.checked;
+            });
+            document.getElementById('showObjectsCheck').addEventListener('change', (e) => {
+                showObjects = e.target.checked;
+                if (mapObjects.length > 0) {
+                    mapObjects.forEach(obj => {
+                        obj.setEnabled(showObjects);
+                    });
+                }
+            });
+        }
+
+        async function loadMap() {
+            const mapId = document.getElementById('mapSelect').value;
+
+            if (!mapId) {
+                log('❌ Veuillez choisir une map', 'error');
+                return;
+            }
+
+            log(`🗺️  Chargement de la map ${mapId}...`, 'info');
+
+            try {
+                // Décharger la map actuelle si nécessaire
+                if (currentMap) {
+                    currentMap.dispose();
+                    currentMap = null;
+                }
+
+                // Supprimer les anciens objets
+                mapObjects.forEach(obj => obj.dispose());
+                mapObjects = [];
+
+                // Charger le heightmap
+                const heightmapPath = `../../assets/maps_heightmap/${mapId}/${mapId}.json`;
+                log(`   📊 Chargement heightmap: ${heightmapPath}`, 'info');
+
+                const response = await fetch(heightmapPath);
+                if (!response.ok) {
+                    throw new Error(`Heightmap not found: ${heightmapPath}`);
+                }
+
+                const heightmap = await response.json();
+                log(`   ✅ Heightmap chargé: ${heightmap.metadata.width}x${heightmap.metadata.height}`, 'success');
+
+                // Créer le terrain
+                const ground = createGroundFromHeightmap(mapId, heightmap);
+                currentMap = ground;
+
+                // Charger les objets
+                const objectsPath = `../../assets/maps_objects/${mapId}/${mapId}.o2.json`;
+                log(`   📦 Chargement objets: ${objectsPath}`, 'info');
+
+                try {
+                    const objResponse = await fetch(objectsPath);
+                    if (objResponse.ok) {
+                        const objectFile = await objResponse.json();
+                        log(`   ✅ Objets chargés: ${objectFile.objects.length}`, 'success');
+
+                        // Créer les marqueurs d'objets
+                        if (objectFile.objects.length > 0) {
+                            placeObjects(objectFile.objects);
+                        }
+                    } else {
+                        log(`   ⚠️  Pas de fichier objets (ou introuvable)`, 'warn');
+                    }
+                } catch (objError) {
+                    log(`   ⚠️  Erreur chargement objets: ${objError.message}`, 'warn');
+                }
+
+                // Mettre à jour les stats
+                updateStats(ground);
+
+                log(`✅ Map ${mapId} chargée avec succès!`, 'success');
+
+            } catch (error) {
+                log(`❌ Erreur lors du chargement: ${error.message}`, 'error');
+                console.error(error);
+            }
+        }
+
+        function createGroundFromHeightmap(mapId, heightmap) {
+            const { width, height, min, max } = heightmap.metadata;
+            const { data } = heightmap;
+
+            log(`   📐 Création du terrain ${width}x${height}...`, 'info');
+
+            // Normaliser les hauteurs
+            const range = max - min || 1;
+            const scale = 100;
+
+            try {
+                // Créer le terrain avec subdivision
+                const subdivisions = width - 1;
+                const ground = BABYLON.MeshBuilder.CreateGround(
+                    `${mapId}_ground`,
+                    {
+                        width: width * 10,
+                        height: height * 10,
+                        subdivisionsX: subdivisions,
+                        subdivisionsY: subdivisions
+                    },
+                    scene
+                );
+                log(`   ✅ Mesh créé`, 'success');
+
+                // Modifier les vertices selon le heightmap
+                const positions = ground.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+                log(`   ✅ Positions récupérées: ${positions.length}`, 'success');
+
+                for (let y = 0; y < height; y++) {
+                    for (let x = 0; x < width; x++) {
+                        const heightValue = data[y][x];
+                        const normalizedHeight = (heightValue - min) / range;
+                        const worldHeight = normalizedHeight * scale;
+
+                        const i = y * width + x;
+                        positions[i * 3 + 1] = worldHeight;
+                    }
+                }
+                log(`   ✅ Heights appliquées`, 'success');
+
+                ground.updateVerticesData(BABYLON.VertexBuffer.PositionKind, positions);
+                ground.updateBoundingInfo();
+                log(`   ✅ Vertices mis à jour`, 'success');
+
+                // Material
+                const groundMat = new BABYLON.StandardMaterial(`${mapId}_groundMat`, scene);
+                groundMat.diffuseColor = new BABYLON.Color3(0.3, 0.5, 0.3);
+                groundMat.specularColor = new BABYLON.Color3(0.1, 0.1, 0.1);
+                groundMat.wireframe = false;
+                ground.material = groundMat;
+                log(`   ✅ Matériau appliqué`, 'success');
+
+                log(`   ✅ Terrain créé avec ${(width * height)} vertices`, 'success');
+
+                return ground;
+            } catch (e) {
+                log(`   ❌ Erreur dans createGround: ${e.message}`, 'error');
+                console.error(e);
+                throw e;
+            }
+        }
+
+        function placeObjects(objects) {
+            log(`   📦 Placement de ${objects.length} objets...`, 'info');
+
+            // Limiter à 50 objets pour le test
+            const objectsToPlace = objects.slice(0, 50);
+
+            objectsToPlace.forEach((obj, index) => {
+                // Créer un marqueur (boîte rouge)
+                const marker = BABYLON.MeshBuilder.CreateBox(
+                    `obj_${obj.id}`,
+                    { size: 2 },
+                    scene
+                );
+
+                marker.position = new BABYLON.Vector3(
+                    obj.position.x * 10,
+                    obj.position.y * 10 + 2,
+                    obj.position.z * 10
+                );
+
+                // Material rouge semi-transparent
+                const markerMat = new BABYLON.StandardMaterial(`markerMat_${obj.id}`, scene);
+                markerMat.diffuseColor = new BABYLON.Color3(1, 0.2, 0.2);
+                markerMat.alpha = 0.8;
+                marker.material = markerMat;
+
+                mapObjects.push(marker);
+            });
+
+            log(`   ✅ ${mapObjects.length} marqueurs créés`, 'success');
+        }
+
+        function unloadMap() {
+            if (!currentMap) {
+                log('⚠️  Aucune map chargée', 'warn');
+                return;
+            }
+
+            currentMap.dispose();
+            currentMap = null;
+
+            mapObjects.forEach(obj => obj.dispose());
+            mapObjects = [];
+
+            resetStats();
+
+            log('🗑️  Map déchargée', 'info');
+        }
+
+        function resetCamera() {
+            if (!currentMap) {
+                camera.setTarget(BABYLON.Vector3.Zero());
+            } else {
+                camera.setTarget(new BABYLON.Vector3(
+                    (currentMap.metadata?.width || 256) * 5,
+                    0,
+                    (currentMap.metadata?.height || 256) * 5
+                ));
+            }
+
+            camera.alpha = -Math.PI / 2;
+            camera.beta = Math.PI / 2.5;
+            camera.radius = 500;
+
+            log('📷 Caméra réinitialisée', 'info');
+        }
+
+        function toggleWireframe() {
+            wireframe = !wireframe;
+
+            scene.meshes.forEach(mesh => {
+                if (mesh.material) {
+                    if (Array.isArray(mesh.material)) {
+                        mesh.material.forEach(mat => mat.wireframe = wireframe);
+                    } else {
+                        mesh.material.wireframe = wireframe;
+                    }
+                }
+            });
+
+            log(`📐 Wireframe: ${wireframe ? 'activé' : 'désactivé'}`, 'info');
+        }
+
+        function updateStats(ground) {
+            if (!ground) {
+                document.getElementById('vertexCount').textContent = '0';
+                document.getElementById('triangleCount').textContent = '0';
+                return;
+            }
+
+            const totalVertices = ground.getTotalVertices();
+            const totalIndices = ground.getTotalIndices();
+
+            document.getElementById('vertexCount').textContent = totalVertices.toLocaleString();
+            document.getElementById('triangleCount').textContent = (totalIndices / 3).toLocaleString();
+            document.getElementById('objectCount').textContent = mapObjects.length.toLocaleString();
+        }
+
+        function resetStats() {
+            document.getElementById('vertexCount').textContent = '0';
+            document.getElementById('triangleCount').textContent = '0';
+            document.getElementById('objectCount').textContent = '0';
+        }
+
+        function log(message, type = 'info') {
+            const logs = document.getElementById('logs');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            entry.textContent = message;
+            logs.appendChild(entry);
+            logs.scrollTop = logs.scrollHeight;
+
+            console.log(message);
+        }
+
+        // Lancer l'initialisation
+        init();
+    </script>
+</body>
+</html>

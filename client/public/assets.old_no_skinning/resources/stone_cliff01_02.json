@@ -1,0 +1,10 @@
+{
+  "file_name": "stone_cliff01_02",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\cliff\\stone_clif01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

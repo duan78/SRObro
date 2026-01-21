@@ -1,0 +1,15 @@
+{
+  "file_name": "euro_esteuro_fibasketl01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_esteuro_fibasketl01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_esteuro_fibasketl01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_esteuro_fibasketl01_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_esteuro_fibasketl01_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\etc\\euro_esteuro_basketdummy.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_store",
+  "meshes": [
+    "prim\\mesh\\item\\china\\cj_store .bms",
+    "prim\\mesh\\item\\china\\cj_store_01.bms",
+    "prim\\mesh\\item\\china\\cj_store_03.bms",
+    "prim\\mesh\\item\\china\\cj_store_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\cj_store.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

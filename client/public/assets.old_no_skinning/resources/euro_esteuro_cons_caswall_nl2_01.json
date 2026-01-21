@@ -1,0 +1,14 @@
+{
+  "file_name": "euro_esteuro_cons_caswall_nl2_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_nl2_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_nl2_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_nl2_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_nl2_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

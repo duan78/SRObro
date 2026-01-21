@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_hagiazo_ac2_mirage",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 1538
+}

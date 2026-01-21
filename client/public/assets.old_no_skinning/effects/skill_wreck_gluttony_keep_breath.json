@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_wreck_gluttony_keep_breath",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13804
+}

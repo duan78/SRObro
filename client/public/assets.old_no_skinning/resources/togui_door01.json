@@ -1,0 +1,14 @@
+{
+  "file_name": "togui_door01",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\togui\\togui_door01_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_door01_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_door01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\togui\\togui_door01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

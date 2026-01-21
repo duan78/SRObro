@@ -1,0 +1,10 @@
+{
+  "file_name": "hwanlook_c_panda1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 241074
+}

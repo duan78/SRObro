@@ -1,0 +1,19 @@
+{
+  "file_name": "sum_event_pillar_three",
+  "meshes": [
+    "prim\\mesh\\etc\\summer_event\\sum_event_flower_three.bms",
+    "prim\\mesh\\etc\\summer_event\\sum_event_pillar01_three.bms",
+    "prim\\mesh\\etc\\summer_event\\sum_event_pillar02_three.bms",
+    "prim\\mesh\\etc\\summer_event\\sum_event_roof_three.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\summer_event\\sum_event_pillar01.bmt"
+  ],
+  "effects": [
+    "system\\summer_oura.efp",
+    "system\\summer_oura.efp",
+    "system\\summer_oura.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

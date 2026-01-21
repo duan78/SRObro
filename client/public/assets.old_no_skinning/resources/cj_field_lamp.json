@@ -1,0 +1,16 @@
+{
+  "file_name": "cj_field_lamp",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_lamp.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_lamp.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_lamp_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_lamp.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

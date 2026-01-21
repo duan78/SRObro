@@ -1,0 +1,20 @@
+{
+  "file_name": "w_cd_castle_wall06",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall06.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_alpha_2.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall06.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall06_2.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall06_4.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_door_2.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall06_1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall06_3.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall06_5.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall06.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "e051021_bluedragon_bunting_m",
+  "meshes": [
+    "prim\\mesh\\avatar\\e051021_m.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\avatar\\e051021_bluedragon_bunting.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

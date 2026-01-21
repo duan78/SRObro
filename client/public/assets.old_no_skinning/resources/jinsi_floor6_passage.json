@@ -1,0 +1,28 @@
+{
+  "file_name": "jinsi_floor6_passage",
+  "meshes": [
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_05.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_02.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_03.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_04.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_05.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_06.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_07.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_08.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_alpha01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_alpha02.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_09.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_alpha03.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_alpha04.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_06\\passage\\jinsi_floor6_c01_alpha05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\floor_04\\jinsi_floor6_passage.bmt"
+  ],
+  "effects": [
+    "system\\system_dungeonpotal.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

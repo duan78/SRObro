@@ -1,0 +1,10 @@
+{
+  "file_name": "rock_mt_seven-ball_red",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 5051
+}

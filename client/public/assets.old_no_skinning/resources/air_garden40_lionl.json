@@ -1,0 +1,13 @@
+{
+  "file_name": "air_garden40_lionl",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_lionl_01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_lionl_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden40_lionl.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

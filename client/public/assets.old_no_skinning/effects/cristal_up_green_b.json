@@ -1,0 +1,10 @@
+{
+  "file_name": "cristal_up_green_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2083
+}

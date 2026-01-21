@@ -1,0 +1,15 @@
+{
+  "file_name": "rocmountainquest_youngwoman1",
+  "meshes": [
+    "prim\\mesh\\npc\\common\\rocmountainquest_youngwoman102.bms",
+    "prim\\mesh\\npc\\common\\rocmountainquest_youngwoman103.bms",
+    "prim\\mesh\\npc\\common\\rocmountainquest_youngwoman101_part1.bms",
+    "prim\\mesh\\npc\\common\\rocmountainquest_youngwoman101_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\common\\rocmountainquest_youngwoman1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,32 @@
+{
+  "file_name": "tahomet_boss_dungeon",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\tahomet_stick.bms",
+    "prim\\mesh\\mob\\roc\\tahomet_stick01.bms",
+    "prim\\mesh\\mob\\roc\\tahomet_part1.bms",
+    "prim\\mesh\\mob\\roc\\tahomet_part2.bms",
+    "prim\\mesh\\mob\\roc\\tahomet01_part1.bms",
+    "prim\\mesh\\mob\\roc\\tahomet01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\tahomet.bmt"
+  ],
+  "effects": [
+    "monster\\luster_tahometstaff.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_stand01.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_walk.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_attack01.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_attack02.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_attack03.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_run.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_damage02.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_damage01.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_die.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_die_loop.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_attack04.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_attack05.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "china_wall_statue",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\flag_war\\china_wall_statue.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

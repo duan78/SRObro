@@ -1,0 +1,13 @@
+{
+  "file_name": "frame_lroom_mid",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\flame\\lroom\\frame_lroom_ceil_chain.bms",
+    "prim\\mesh\\dun\\property\\flame\\lroom\\frame_lroom_ceil_hook.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\flame\\frame_lroom_mid.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

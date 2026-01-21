@@ -1,0 +1,28 @@
+{
+  "file_name": "elemental",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\elemental01.bms",
+    "prim\\mesh\\mob\\god\\elemental02.bms",
+    "prim\\mesh\\mob\\god\\elemental_part1.bms",
+    "prim\\mesh\\mob\\god\\elemental_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\elemental_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\elemental_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\elemental_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\elemental_part2_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\elemental.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\god\\elemental\\elemental_stand01.ban",
+    "prim\\ani\\mob\\god\\elemental\\elemental_walk.ban",
+    "prim\\ani\\mob\\god\\elemental\\elemental_run.ban",
+    "prim\\ani\\mob\\god\\elemental\\elemental_attack1.ban",
+    "prim\\ani\\mob\\god\\elemental\\elemental_stand02.ban",
+    "prim\\ani\\mob\\god\\elemental\\elemental_damage1.ban",
+    "prim\\ani\\mob\\god\\elemental\\elemental_die.ban",
+    "prim\\ani\\mob\\god\\elemental\\elemental_die_rm.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,23 @@
+{
+  "file_name": "mad_general_1",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\mad_general_weapon_01.bms",
+    "prim\\mesh\\mob\\arabia\\mad_general_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mad_general_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mad_general_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\mad_general.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_stand01.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_walk01.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_run01.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_attack01.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_attack02.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_attack12.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_attack03.ban"
+  ],
+  "textures": []
+}

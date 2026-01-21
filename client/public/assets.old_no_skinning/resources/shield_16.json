@@ -1,0 +1,12 @@
+{
+  "file_name": "shield_16",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\weapon\\shield_16.bmt"
+  ],
+  "effects": [
+    "system\\item_ch_shield_15.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

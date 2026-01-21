@@ -1,0 +1,35 @@
+{
+  "file_name": "haroeris",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\haroeris03.bms",
+    "prim\\mesh\\mob\\sd\\haroeris04.bms",
+    "prim\\mesh\\mob\\sd\\haroeris05.bms",
+    "prim\\mesh\\mob\\sd\\haroeris07.bms",
+    "prim\\mesh\\mob\\sd\\haroeris08.bms",
+    "prim\\mesh\\mob\\sd\\haroeris01_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris01_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris01_part2_part2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris02_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris02_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris02_part2_part2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris06_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris06_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris06_part2_part2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris09.bms",
+    "prim\\mesh\\mob\\sd\\haroeris10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\haroeris.bmt"
+  ],
+  "effects": [
+    "monster\\sd\\skill_haroeris_ac3_wait.efp",
+    "monster\\sd\\skill_haroeris_ac3_wait.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_stand01.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_attack01.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_attack02.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_attack03.ban"
+  ],
+  "textures": []
+}

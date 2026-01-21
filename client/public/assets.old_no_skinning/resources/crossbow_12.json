@@ -1,0 +1,19 @@
+{
+  "file_name": "crossbow_12",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\crossbow_12.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_crossbow_12_front.efp",
+    "system\\item_eu_crossbow_12_front02.efp",
+    "system\\item_eu_crossbow_12_back.efp",
+    "system\\item_eu_crossbow_12_back02.efp",
+    "system\\item_eu_crossbow_12_back03.efp",
+    "system\\item_eu_crossbow_12_left.efp",
+    "system\\item_eu_crossbow_12_right.efp",
+    "system\\item_eu_crossbow_12_j.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

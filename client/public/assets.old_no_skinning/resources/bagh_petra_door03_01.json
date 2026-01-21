@@ -1,0 +1,17 @@
+{
+  "file_name": "bagh_petra_door03_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_door_pole.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_door_flame.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_door_pole.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_petra\\bagh_petra_door.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,33 @@
+{
+  "file_name": "mayan_16",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_02.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_03.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_04.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_05.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_06.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_07.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_08.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_09.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_10.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_11.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_12.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_13.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_14.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_15.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_16.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_17.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_18.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_19.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_20.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan16_21.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\score_war\\mayan_16.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

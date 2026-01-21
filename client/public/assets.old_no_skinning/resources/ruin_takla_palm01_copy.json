@@ -1,0 +1,17 @@
+{
+  "file_name": "ruin_takla_palm01_copy",
+  "meshes": [
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\palm\\ruin_takla_palm01_01_copy.bms",
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\palm\\ruin_takla_palm01_02.bms",
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\palm\\ruin_takla_palm01_03.bms",
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\palm\\ruin_takla_palm01_04.bms",
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\palm\\ruin_takla_palm01_leaf.bms",
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\palm\\ruin_takla_palm01_01_copy.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\ruins\\taklamakan des\\palm\\ruin_takla_palm01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

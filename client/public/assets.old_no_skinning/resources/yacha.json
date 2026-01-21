@@ -1,0 +1,31 @@
+{
+  "file_name": "yacha",
+  "meshes": [
+    "prim\\mesh\\mob\\wchina\\yacha02.bms",
+    "prim\\mesh\\mob\\wchina\\yacha03.bms",
+    "prim\\mesh\\mob\\wchina\\yacha01.bms",
+    "prim\\mesh\\mob\\wchina\\yacha_part1.bms",
+    "prim\\mesh\\mob\\wchina\\yacha_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\wchina\\yacha.bmt",
+    "prim\\mtrl\\mob\\wchina\\yacha_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_die.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_stand01.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_stand02.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_run.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_damage02.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_down.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_down_rm.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_down_damage.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_down_up.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_walk.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_damage01.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_attack01.ban",
+    "prim\\ani\\mob\\wchina\\yacha\\yacha_attack02.ban"
+  ],
+  "textures": []
+}

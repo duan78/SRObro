@@ -1,0 +1,12 @@
+{
+  "file_name": "asiaminor_haran_top03",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\haran\\asiaminor_haran_top03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "bow_area_bomb_d",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 26844
+}

@@ -1,0 +1,32 @@
+{
+  "file_name": "w_cd_store",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_box.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_box_2sid.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_chun.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_fence.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_fence_2sid.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_food02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_food02_2sid.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_food_2sid.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_ob.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_pilla.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_pilla_2sid.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_wall01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_wall02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_wall03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_stor_wall04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\minga\\w_cd_store.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\w_cd_shri.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

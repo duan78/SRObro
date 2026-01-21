@@ -1,0 +1,9 @@
+{
+  "file_name": "avatar_w_headknights",
+  "textures": [
+    "avatar_w_headknights_hat.ddj",
+    "avatar_w_headknights_attach.ddj",
+    "avatar_w_headknights.ddj",
+    "avatar_w_headknights_01.ddj"
+  ]
+}

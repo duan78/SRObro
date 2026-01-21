@@ -1,0 +1,13 @@
+{
+  "file_name": "bj_guild_right_door",
+  "textures": [
+    "bijeokdan_front_door03.ddj",
+    "bj_front_roof.ddj",
+    "bijeokdan_front_door08.ddj",
+    "bj_front_door05.ddj",
+    "bj_front_door02.ddj",
+    "bijeokdan_front_door01.ddj",
+    "bijeokdan_front_door07.ddj",
+    "bijeokdan_front_door06.ddj"
+  ]
+}

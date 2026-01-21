@@ -1,0 +1,20 @@
+{
+  "file_name": "fort_gate01",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\common\\fort_gate01_01.bms",
+    "prim\\mesh\\bldg\\guild\\common\\fort_gate01_01.bms",
+    "prim\\mesh\\bldg\\guild\\common\\fort_gate01_02.bms",
+    "prim\\mesh\\bldg\\guild\\common\\fort_gate01_03.bms",
+    "prim\\mesh\\bldg\\guild\\common\\fort_gate01_04.bms",
+    "prim\\mesh\\bldg\\guild\\common\\fort_gate01_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\common\\fort_gate01.bmt"
+  ],
+  "effects": [
+    "map\\w_cd_potal_blue_g.efp",
+    "map\\w_cd_potal_blue_g.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

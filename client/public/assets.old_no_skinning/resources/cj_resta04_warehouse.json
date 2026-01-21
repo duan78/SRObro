@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_resta04_warehouse",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta04_warehou.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta04_warehou.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta04_wareroof.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_resta04_warehouse.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

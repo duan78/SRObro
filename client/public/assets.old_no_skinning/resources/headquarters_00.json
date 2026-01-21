@@ -1,0 +1,14 @@
+{
+  "file_name": "headquarters_00",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\headq\\headquarters_00_dan.bms",
+    "prim\\mesh\\artifact\\guild\\headq\\headquarters_00_dan.bms",
+    "prim\\mesh\\artifact\\guild\\headq\\headquarters_00_fence.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\headq\\headquarters_00.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

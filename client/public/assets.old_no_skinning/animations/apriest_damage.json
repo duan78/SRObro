@@ -1,0 +1,27 @@
+{
+  "file_name": "apriest_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1664,
+  "animation_name": "\u000e",
+  "data_blocks": [
+    266,
+    30,
+    0,
+    5,
+    0,
+    53,
+    133,
+    186,
+    266,
+    10,
+    10,
+    355171,
+    704233,
+    5,
+    15,
+    340588,
+    340274
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "sd_dustfall02_02",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\sd_dustfall02_02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

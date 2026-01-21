@@ -1,0 +1,36 @@
+{
+  "file_name": "thief_boss",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\thief_boss_attach.bms",
+    "prim\\mesh\\mob\\arabia\\thief_boss_attach_l.bms",
+    "prim\\mesh\\mob\\arabia\\thief_boss_attach_r.bms",
+    "prim\\mesh\\mob\\arabia\\thief_boss_part1.bms",
+    "prim\\mesh\\mob\\arabia\\thief_boss_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\thief_boss_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\thief_boss_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\thief_boss_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\thief_boss_part2_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\thief_boss.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_attack01.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_attack04.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_attack06.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_attack07.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_die.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_die_rm.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_stand01.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_stand02.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_walk.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_run.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_attack03.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_attack05.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_shot.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_ready.ban",
+    "prim\\ani\\mob\\arabia\\thief_boss\\thief_boss_wait.ban"
+  ],
+  "textures": []
+}

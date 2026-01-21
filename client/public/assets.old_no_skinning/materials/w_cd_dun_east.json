@@ -1,0 +1,11 @@
+{
+  "file_name": "w_cd_dun_east",
+  "textures": [
+    "w_cd_eastwa_roof.ddj",
+    "w_cd_eastwa_alpha.ddj",
+    "w_cd_eastwa_wall03.ddj",
+    "w_cd_eastwa_door.ddj",
+    "w_cd_eastwa_wall02.ddj",
+    "w_cd_eastwa_wall01.ddj"
+  ]
+}

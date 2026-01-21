@@ -1,0 +1,12 @@
+{
+  "file_name": "small_enter_dam03_rr",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\jangan\\small_enter_dam03_rr.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\jangan\\left_s_ent01_cent.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

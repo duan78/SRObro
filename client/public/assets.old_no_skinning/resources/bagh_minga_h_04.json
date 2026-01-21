@@ -1,0 +1,34 @@
+{
+  "file_name": "bagh_minga_h_04",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_13.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_14.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_16.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_17.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_18.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_19.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_win01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_win01_alpha.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_win02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah04_win02_alpha.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_minga_h.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

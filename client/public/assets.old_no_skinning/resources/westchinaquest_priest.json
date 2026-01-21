@@ -1,0 +1,15 @@
+{
+  "file_name": "westchinaquest_priest",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\westchinaquest_priest_yumjoo.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_priest_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_priest_part2_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_priest_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\westchinaquest_priest.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

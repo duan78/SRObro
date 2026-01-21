@@ -1,0 +1,38 @@
+{
+  "file_name": "the_earth",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\kyklopess01.bms",
+    "prim\\mesh\\mob\\europe\\kyklopess02.bms",
+    "prim\\mesh\\mob\\europe\\kyklopess_part1.bms",
+    "prim\\mesh\\mob\\europe\\kyklopess_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\the_earth.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_stand01.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_walk.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_run.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_attack01.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_attack03.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_die.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_die_rm.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_down.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_down_rm.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_down_damage.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_down_up.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_down_die.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_attack02.ban",
+    "prim\\ani\\mob\\europe\\kyklopess\\kyklopess_attack04.ban",
+    "prim\\ani\\mob\\jupiter\\the_earth\\the_earth_attack05.ban",
+    "prim\\ani\\mob\\jupiter\\the_earth\\the_earth_attack09.ban",
+    "prim\\ani\\mob\\jupiter\\the_earth\\the_earth_attack11_shot.ban",
+    "prim\\ani\\mob\\jupiter\\the_earth\\the_earth_attack13.ban",
+    "prim\\ani\\mob\\jupiter\\the_earth\\the_earth_attack14.ban",
+    "prim\\ani\\mob\\jupiter\\the_earth\\the_earth_attack15.ban",
+    "prim\\ani\\mob\\jupiter\\the_earth\\the_earth_attack11_ready.ban",
+    "prim\\ani\\mob\\jupiter\\the_earth\\the_earth_attack11_wait.ban"
+  ],
+  "textures": []
+}

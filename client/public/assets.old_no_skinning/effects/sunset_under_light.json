@@ -1,0 +1,10 @@
+{
+  "file_name": "sunset_under_light",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2750
+}

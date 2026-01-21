@@ -1,0 +1,16 @@
+{
+  "file_name": "euro_est euro_constan_hanggu_store_flower_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_store_flower_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_store_flower_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_store_flower_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_store_flower_03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_store_flower_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_store_flower_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

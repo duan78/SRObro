@@ -1,0 +1,10 @@
+{
+  "file_name": "event_festival_rainbow",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\cos\\event_festival_rainbow.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

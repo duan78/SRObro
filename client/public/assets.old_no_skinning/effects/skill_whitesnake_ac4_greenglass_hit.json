@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_whitesnake_ac4_greenglass_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 44218
+}

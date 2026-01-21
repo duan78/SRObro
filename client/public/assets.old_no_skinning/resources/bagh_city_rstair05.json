@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_city_rstair05",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_5rstair01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_5rstair01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_5rstair02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_rstair.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

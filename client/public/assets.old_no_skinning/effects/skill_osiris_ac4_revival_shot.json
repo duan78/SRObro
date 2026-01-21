@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_osiris_ac4_revival_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 23828
+}

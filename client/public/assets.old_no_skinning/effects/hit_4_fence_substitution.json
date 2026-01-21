@@ -1,0 +1,10 @@
+{
+  "file_name": "hit_4_fence_substitution",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4882
+}

@@ -1,0 +1,28 @@
+{
+  "file_name": "cj_adult04_light01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 368,
+  "animation_name": "\u0012",
+  "data_blocks": [
+    8000,
+    30,
+    1,
+    3,
+    0,
+    4000,
+    8000,
+    3,
+    6,
+    209200,
+    442102,
+    3,
+    6,
+    209712,
+    42095,
+    9848,
+    9941,
+    42232
+  ]
+}

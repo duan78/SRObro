@@ -1,0 +1,16 @@
+{
+  "file_name": "box",
+  "meshes": [
+    "prim\\mesh\\interface\\interface_box.bms",
+    "prim\\mesh\\interface\\interface_compass.bms",
+    "prim\\mesh\\interface\\interface_idol_brushcase.bms",
+    "prim\\mesh\\interface\\interface_letter.bms",
+    "prim\\mesh\\interface\\interface_map.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\interface\\interface.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

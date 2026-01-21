@@ -1,0 +1,12 @@
+{
+  "file_name": "drop_reinforce_recipe",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\drop_reinforce_recipe.bmt"
+  ],
+  "effects": [
+    "system\\system_item_elixir.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

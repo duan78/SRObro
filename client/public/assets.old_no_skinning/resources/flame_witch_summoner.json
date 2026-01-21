@@ -1,0 +1,30 @@
+{
+  "file_name": "flame_witch_summoner",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\flame_witch_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_witch_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_witch_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_witch_part2_part2_part2.bms",
+    "prim\\mesh\\mob\\god\\flame_witch01_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_witch01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\flame_witch_summoner.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\god\\flame_witch\\flame_witch_stand01.ban",
+    "prim\\ani\\mob\\god\\flame_witch\\flame_witch_walk.ban",
+    "prim\\ani\\mob\\god\\flame_witch\\flame_witch_attack1.ban",
+    "prim\\ani\\mob\\god\\flame_witch\\flame_witch_damege1.ban",
+    "prim\\ani\\mob\\god\\flame_witch\\flame_witch_die.ban",
+    "prim\\ani\\mob\\god\\flame_witch\\flame_witch_attack2.ban",
+    "prim\\ani\\mob\\god\\flame_witch\\flame_witch_run.ban",
+    "prim\\ani\\mob\\god\\flame_witch\\flame_witch_attack3.ban",
+    "prim\\ani\\mob\\arabia\\flame_witch\\flame_witch_attack04.ban",
+    "prim\\ani\\mob\\god\\flame_witch\\flame_witch_die_rm.ban",
+    "prim\\ani\\mob\\arabia\\flame_witch\\flame_witch_attack05.ban",
+    "prim\\ani\\mob\\jupiter\\charm_witch\\charm_witch_attack04.ban"
+  ],
+  "textures": []
+}

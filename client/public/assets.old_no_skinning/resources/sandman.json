@@ -1,0 +1,37 @@
+{
+  "file_name": "sandman",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\sandman01.bms",
+    "prim\\mesh\\mob\\sd\\sandman02.bms",
+    "prim\\mesh\\mob\\sd\\sandman_part1.bms",
+    "prim\\mesh\\mob\\sd\\sandman_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\sandman_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\sandman_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\sandman.bmt",
+    "prim\\mtrl\\mob\\sd\\sandman_clon2.bmt",
+    "prim\\mtrl\\mob\\sd\\sandman_clon3.bmt"
+  ],
+  "effects": [
+    "monster\\sd\\skill_sandman_move_sand.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\sd\\sandman\\sandman_stand01.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_walk.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_run.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_attack1.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_attack2.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_attack3.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_attack4.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_attack5.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_damage1.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_down.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_down_rm.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_down_damage.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_down_up.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_down_die.ban",
+    "prim\\ani\\mob\\sd\\sandman\\sandman_die.ban"
+  ],
+  "textures": []
+}

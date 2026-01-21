@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_adult_brg",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult_brg01.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult_brg01.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult_brg02.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult_brg_fence.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan02\\cj_adult_brg.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

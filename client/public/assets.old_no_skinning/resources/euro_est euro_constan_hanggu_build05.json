@@ -1,0 +1,22 @@
+{
+  "file_name": "euro_est euro_constan_hanggu_build05",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05_door01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05_door02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05_door02_under.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05_roof.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05_small.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05_unroof.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05_win01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05_win02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_build05.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

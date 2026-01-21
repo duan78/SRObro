@@ -1,0 +1,12 @@
+{
+  "file_name": "ruin_takl_rock_b10",
+  "meshes": [
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\rock\\ruin_takl_rock_b10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\ruins\\taklamakan des\\rock\\ruin_takl_rock_b05.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

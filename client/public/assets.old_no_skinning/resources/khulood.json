@@ -1,0 +1,33 @@
+{
+  "file_name": "khulood",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\khulood_arm.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_hand_part1.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_hand_part2.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_head_part1.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_head_part2.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_part1.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_part2_part2.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_shoulder.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\khulood.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_stand01.ban",
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_stand02.ban",
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_walk.ban",
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_run.ban",
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_attack01.ban",
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_attack02.ban",
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_attack03.ban",
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_attack04.ban",
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_attack05.ban",
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_attack06.ban",
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_die.ban",
+    "prim\\ani\\mob\\arabia\\khulood\\khulood_die_rm.ban"
+  ],
+  "textures": []
+}

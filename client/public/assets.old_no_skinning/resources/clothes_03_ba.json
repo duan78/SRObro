@@ -1,0 +1,13 @@
+{
+  "file_name": "clothes_03_ba",
+  "meshes": [
+    "prim\\mesh\\item\\china\\woman_item\\clothes_03_ba.bms",
+    "prim\\mesh\\item\\china\\woman_item\\clothes_03_ba_2s.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\woman_item\\clothes_03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

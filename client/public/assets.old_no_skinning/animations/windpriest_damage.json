@@ -1,0 +1,19 @@
+{
+  "file_name": "windpriest_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1667,
+  "animation_name": "\u0011",
+  "data_blocks": [
+    0,
+    0,
+    1387,
+    2750,
+    340332,
+    340273,
+    1330,
+    4159,
+    1329
+  ]
+}

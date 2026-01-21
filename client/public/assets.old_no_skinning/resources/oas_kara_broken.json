@@ -1,0 +1,19 @@
+{
+  "file_name": "oas_kara_broken",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_brok_gate.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\as_kk_brok_roof.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_brok_door.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_brok_gate.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_brok_wall01.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_brok_wall02.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_brok_stick.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_brok_wall01_2sid.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\oas_kk_brok_castle.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

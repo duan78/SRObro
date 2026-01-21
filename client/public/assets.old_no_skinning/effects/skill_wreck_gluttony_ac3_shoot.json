@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_wreck_gluttony_ac3_shoot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 17828
+}

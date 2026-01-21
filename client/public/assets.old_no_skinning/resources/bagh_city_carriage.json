@@ -1,0 +1,15 @@
+{
+  "file_name": "bagh_city_carriage",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_city_carriage01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_city_carriage01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_city_carriage02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_city_carriage03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_carriage01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

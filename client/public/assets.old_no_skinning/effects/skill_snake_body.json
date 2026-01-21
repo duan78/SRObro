@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_snake_body",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10751
+}

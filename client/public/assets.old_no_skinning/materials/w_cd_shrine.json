@@ -1,0 +1,13 @@
+{
+  "file_name": "w_cd_shrine",
+  "textures": [
+    "w_cd_shri_column.ddj",
+    "w_cd_shri_floor.ddj",
+    "w_cd_shri_tombstone.ddj",
+    "w_cd_shri_roof.ddj",
+    "w_cd_shri_property.ddj",
+    "w_cd_shri_insidewall.ddj",
+    "w_cd_shri_sign.ddj",
+    "w_cd_shri_screen.ddj"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "file_name": "ishade_ice",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\karakoram\\ishade.bmt",
+    "prim\\mtrl\\mob\\karakoram\\ishade_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_ice_stand01.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_ice_down.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_ice_down_wait.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_ice_down_damage.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_ice_down_up.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_ice_down_die.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_ice_die.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_ice_die_rm.ban"
+  ],
+  "textures": []
+}

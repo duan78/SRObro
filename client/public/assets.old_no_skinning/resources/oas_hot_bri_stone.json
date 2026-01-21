@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_hot_bri_stone",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oas_hot_bri_stone.bmt"
+  ],
+  "effects": [
+    "map\\w_cd_potal_blue_g.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "clothes_11_set_a_ha_fullset",
+  "meshes": [
+    "prim\\mesh\\item\\china\\woman_item\\clothes_11_set_a_ha_ef.bms",
+    "prim\\mesh\\item\\china\\woman_item\\clothes_11_set_a_ha_part1.bms",
+    "prim\\mesh\\item\\china\\woman_item\\clothes_11_set_a_ha_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\woman_item\\clothes_11_set_a.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line.ddj"
+  ]
+}

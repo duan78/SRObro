@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_ferry_buil",
+  "textures": [
+    "cj_ferry_floor01_1.ddj",
+    "cj_ferry_buil1_gidung.ddj",
+    "cj_ferry_buil1_roof.ddj",
+    "cj_ferry_floor01.ddj",
+    "cj_ferry_flag.ddj",
+    "cj_ferry_pavil_deco.ddj",
+    "cj_ferry_pavil_fence.ddj",
+    "cj_ferry_pavil_roof.ddj",
+    "cj_ferry_buil1_door.ddj",
+    "cj_ferry_winlight.ddj"
+  ]
+}

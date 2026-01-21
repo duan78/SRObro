@@ -1,0 +1,27 @@
+{
+  "file_name": "room202",
+  "meshes": [
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_bottom01.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_bottom01.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_bottom03.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_ceiling01.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_ceiling02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_gate.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_pic02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_pole.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_road01.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_road02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_square_statue.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_wall01.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_wall02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_wall06.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_wall06_h.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_2\\room202\\stone_room202_wallpic.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv\\floor_2\\202.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

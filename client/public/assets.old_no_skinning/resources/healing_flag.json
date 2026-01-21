@@ -1,0 +1,10 @@
+{
+  "file_name": "healing_flag",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\flag\\healing_flag.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

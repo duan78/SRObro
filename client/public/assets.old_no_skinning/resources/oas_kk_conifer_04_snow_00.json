@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_kk_conifer_04_snow_00",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree\\oas_kk_conifer_04_snow_00.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree\\oas_kk_conifer_04_snow_00.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree\\oas_kk_conifer_08_snow_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\karakorm\\kako-tree\\oas_kk_conifer_04_snow_00.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,24 @@
+{
+  "file_name": "bandit_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 555,
+  "animation_name": "\u000f",
+  "data_blocks": [
+    93745,
+    7680,
+    0,
+    1280,
+    0,
+    17152,
+    51200,
+    68352,
+    93952,
+    768,
+    3072,
+    1329,
+    2746,
+    1380
+  ]
+}

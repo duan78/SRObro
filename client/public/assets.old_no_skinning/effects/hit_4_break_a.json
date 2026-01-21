@@ -1,0 +1,10 @@
+{
+  "file_name": "hit_4_break_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 12733
+}

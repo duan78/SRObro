@@ -1,0 +1,33 @@
+{
+  "file_name": "flame_croom01_prison",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\flame\\croom\\flame_croom_stone01_prison.bms",
+    "prim\\mesh\\dun\\property\\flame\\croom\\flame_croom_ceiling.bms",
+    "prim\\mesh\\dun\\property\\flame\\croom\\flame_croom_ground01.bms",
+    "prim\\mesh\\dun\\property\\flame\\croom\\flame_croom_ground02.bms",
+    "prim\\mesh\\dun\\property\\flame\\croom\\flame_croom_ground03.bms",
+    "prim\\mesh\\dun\\property\\flame\\croom\\flame_croom_ground04.bms",
+    "prim\\mesh\\dun\\property\\flame\\croom\\flame_croom_stone02.bms",
+    "prim\\mesh\\dun\\property\\flame\\croom\\flame_croom_wall01.bms",
+    "prim\\mesh\\dun\\property\\flame\\croom\\flame_croom_wall02.bms",
+    "prim\\mesh\\dun\\property\\flame\\croom\\flame_croom_magma.bms",
+    "prim\\mesh\\dun\\property\\flame\\croom\\flame_croom_stone01_prison.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\flame\\flame_croom.bmt"
+  ],
+  "effects": [
+    "dun\\fire_animation_etc_slow.efp",
+    "dun\\fire_animation_etc_slow.efp",
+    "dun\\fire_animation_etc_slow.efp",
+    "dun\\fire_animation_etc_slow.efp",
+    "dun\\fire_animation_etc_slow.efp",
+    "dun\\fire_animation_etc_slow.efp",
+    "dun\\fire_animation_etc_slow.efp",
+    "dun\\fire_piece_air.efp",
+    "dun\\fire_piece_air.efp",
+    "dun\\fire_piece_air.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

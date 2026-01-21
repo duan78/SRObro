@@ -1,0 +1,37 @@
+{
+  "file_name": "bagh_masin_wall",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall13.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall14.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall15.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall16.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall17.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall18.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall19.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall20.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall21.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall22.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall23.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall24.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_wall25.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_masin\\bagh_masin_wall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

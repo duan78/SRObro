@@ -1,0 +1,13 @@
+{
+  "file_name": "thiefden_thief_c",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\thiefden_thief_c_part1.bms",
+    "prim\\mesh\\npc\\china\\thiefden_thief_c_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\thiefden_thief_c.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

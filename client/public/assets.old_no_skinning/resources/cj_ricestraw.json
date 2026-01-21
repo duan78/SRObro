@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_ricestraw",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\cj_ricestraw.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\cj_ricestraw.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

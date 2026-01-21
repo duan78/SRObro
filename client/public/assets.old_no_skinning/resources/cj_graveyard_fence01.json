@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_graveyard_fence01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_fence01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\graveyard\\cj_graveyard_fence01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

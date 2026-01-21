@@ -1,0 +1,10 @@
+{
+  "file_name": "c_pondflower",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\grass\\c_pondflower.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

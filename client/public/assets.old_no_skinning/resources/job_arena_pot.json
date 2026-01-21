@@ -1,0 +1,13 @@
+{
+  "file_name": "job_arena_pot",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\arenajob\\job_arena_pot.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arenajob\\job_arena_pot\\job_arena_pot_stand01.ban",
+    "prim\\ani\\mob\\arenajob\\job_arena_pot\\job_arena_pot_die.ban"
+  ],
+  "textures": []
+}

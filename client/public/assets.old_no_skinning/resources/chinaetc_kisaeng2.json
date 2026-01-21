@@ -1,0 +1,21 @@
+{
+  "file_name": "chinaetc_kisaeng2",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng2_hair.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng2_skirt.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng2_body_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng2_body_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaetc_kisaeng2.bmt"
+  ],
+  "effects": [
+    "npc\\npc_chinasystem_shaman_pipesmoke.efp",
+    "npc\\npc_chinasystem_shaman_pipesmoke.efp"
+  ],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinaetc_kisaeng2_basic.ban",
+    "prim\\ani\\npc\\china\\chinaetc_kisaeng2_time.ban"
+  ],
+  "textures": []
+}

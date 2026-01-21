@@ -1,0 +1,28 @@
+{
+  "file_name": "imouthes_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1949,
+  "animation_name": "\u000f",
+  "data_blocks": [
+    85349,
+    7680,
+    0,
+    1536,
+    0,
+    16896,
+    34048,
+    42496,
+    51200,
+    85248,
+    2560,
+    2560,
+    1636,
+    4020,
+    6,
+    16,
+    6,
+    15
+  ]
+}

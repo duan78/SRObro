@@ -1,0 +1,27 @@
+{
+  "file_name": "yuno",
+  "meshes": [
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno01.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_part2_part2_part2.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_weapon.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\yuno.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\yuno\\yuno_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\yuno\\yuno_walk.ban",
+    "prim\\ani\\mob\\jupiter\\yuno\\yuno_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\yuno\\yuno_attack02.ban",
+    "prim\\ani\\mob\\jupiter\\yuno\\yuno_attack03.ban",
+    "prim\\ani\\mob\\jupiter\\yuno\\yuno_attack08.ban",
+    "prim\\ani\\mob\\jupiter\\yuno\\yuno_attack09_shot.ban",
+    "prim\\ani\\mob\\jupiter\\yuno\\yuno_attack09_ready.ban",
+    "prim\\ani\\mob\\jupiter\\yuno\\yuno_attack09_wait.ban"
+  ],
+  "textures": []
+}

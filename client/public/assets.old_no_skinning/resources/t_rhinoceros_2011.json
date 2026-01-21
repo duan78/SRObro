@@ -1,0 +1,22 @@
+{
+  "file_name": "t_rhinoceros_2011",
+  "meshes": [
+    "prim\\mesh\\cos\\cart\\t_rhinoceros_part1.bms",
+    "prim\\mesh\\cos\\cart\\t_rhinoceros_part2_part1.bms",
+    "prim\\mesh\\cos\\cart\\t_rhinoceros_part2_part2_part1.bms",
+    "prim\\mesh\\cos\\cart\\t_rhinoceros_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\t_rhinoceros_2011.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\cart\\t_rhinoceros\\t_rhinoceros_walk.ban",
+    "prim\\ani\\cos\\cart\\t_rhinoceros\\t_rhinoceros_stand01.ban",
+    "prim\\ani\\cos\\cart\\t_rhinoceros\\t_rhinoceros_damage01.ban",
+    "prim\\ani\\cos\\cart\\t_rhinoceros\\t_rhinoceros_die.ban",
+    "prim\\ani\\cos\\cart\\t_rhinoceros\\t_rhinoceros_run.ban",
+    "prim\\ani\\cos\\cart\\t_rhinoceros\\t_rhinoceros_die_rm.ban"
+  ],
+  "textures": []
+}

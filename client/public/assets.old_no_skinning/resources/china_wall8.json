@@ -1,0 +1,37 @@
+{
+  "file_name": "china_wall8",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_blackroof.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_blackroof.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_blackroof01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_blackroof02.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_bong.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_bong01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_dan.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_door.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_dragonpattern.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_flag.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_gateline.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_gatepattern.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_hole.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_lineart.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_maintile.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_roofex.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_sideroof.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_sideroof01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_sign01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_sign02.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_stair.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_tile.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_walltile01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_walltile02.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_walltile03.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall8_walltile04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\flag_war\\china_wall8.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

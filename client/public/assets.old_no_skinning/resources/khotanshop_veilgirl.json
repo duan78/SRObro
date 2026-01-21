@@ -1,0 +1,19 @@
+{
+  "file_name": "khotanshop_veilgirl",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotanshop_veilgirl_2s.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_veilgirl_al.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_veilgirl_al2.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_veilgirl_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_veilgirl_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotanshop_veilgirl.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\khotan\\khotanshop_veilgirl_basic.ban",
+    "prim\\ani\\npc\\khotan\\khotanshop_veilgirl_basic2.ban"
+  ],
+  "textures": []
+}

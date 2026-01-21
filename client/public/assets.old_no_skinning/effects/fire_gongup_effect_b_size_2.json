@@ -1,0 +1,10 @@
+{
+  "file_name": "fire_gongup_effect_b_size_2",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 12202
+}

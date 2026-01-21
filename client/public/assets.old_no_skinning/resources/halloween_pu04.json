@@ -1,0 +1,16 @@
+{
+  "file_name": "halloween_pu04",
+  "meshes": [
+    "prim\\mesh\\etc\\halloween\\halloween_pu04.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu04_box.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu04_can.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu04_hat.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu04_skull.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\halloween\\halloween_pu04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

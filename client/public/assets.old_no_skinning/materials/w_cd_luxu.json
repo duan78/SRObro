@@ -1,0 +1,16 @@
+{
+  "file_name": "w_cd_luxu",
+  "textures": [
+    "w_cd_luxu_roof.ddj",
+    "w_cd_luxu_column.ddj",
+    "w_cd_luxu_handrail.ddj",
+    "w_cd_luxu_jewel.ddj",
+    "w_cd_luxu_light.ddj",
+    "w_cd_luxu_ornament.ddj",
+    "w_cd_luxu_ornament02.ddj",
+    "w_cd_luxu_wall.ddj",
+    "w_cd_luxu_winlight.ddj",
+    "w_cd_luxu_roof02.ddj",
+    "w_cd_luxu_deco.ddj"
+  ]
+}

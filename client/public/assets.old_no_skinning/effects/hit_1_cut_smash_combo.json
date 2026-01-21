@@ -1,0 +1,10 @@
+{
+  "file_name": "hit_1_cut_smash_combo",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3336
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "alex_potion_up",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4869
+}

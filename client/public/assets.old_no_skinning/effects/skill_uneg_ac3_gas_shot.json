@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_uneg_ac3_gas_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17541
+}

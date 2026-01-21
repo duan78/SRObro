@@ -1,0 +1,10 @@
+{
+  "file_name": "sword_shieldpd_get_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 22866
+}

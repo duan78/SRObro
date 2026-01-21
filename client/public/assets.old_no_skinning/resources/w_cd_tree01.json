@@ -1,0 +1,14 @@
+{
+  "file_name": "w_cd_tree01",
+  "meshes": [
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_tree02.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_tree01.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_tree02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\china\\dunhuang\\tree\\w_cd_tree01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

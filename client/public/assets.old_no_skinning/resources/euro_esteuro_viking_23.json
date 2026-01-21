@@ -1,0 +1,17 @@
+{
+  "file_name": "euro_esteuro_viking_23",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking_23_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking_23_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking_23_02.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking_23_03.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking_23_04.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking_23_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking_23.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "euro_constan_stable_trough01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_stable_trough01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_stable_trough02_1.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_stable_trough01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_constan_stable.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

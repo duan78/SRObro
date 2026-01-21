@@ -1,0 +1,19 @@
+{
+  "file_name": "heavenly_gods_boss_dungeon",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\heavenly_gods.bmt"
+  ],
+  "effects": [
+    "skill\\china\\bow_area_bomb_c.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\heavenly_gods\\heavenly_gods_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\heavenly_gods\\heavenly_gods_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\heavenly_gods\\heavenly_gods_damage1.ban",
+    "prim\\ani\\mob\\jupiter\\heavenly_gods\\heavenly_gods_die.ban",
+    "prim\\ani\\mob\\jupiter\\heavenly_gods\\heavenly_gods_die_rm.ban",
+    "prim\\ani\\mob\\jupiter\\heavenly_gods\\heavenly_gods_attack02.ban"
+  ],
+  "textures": []
+}

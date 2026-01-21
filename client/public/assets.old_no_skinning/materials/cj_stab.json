@@ -1,0 +1,10 @@
+{
+  "file_name": "cj_stab",
+  "textures": [
+    "cj_stab_roof.ddj",
+    "cj_stab_floor.ddj",
+    "cj_stab_gidung.ddj",
+    "cj_stab_sign.ddj",
+    "cj_stab_winlight.ddj"
+  ]
+}

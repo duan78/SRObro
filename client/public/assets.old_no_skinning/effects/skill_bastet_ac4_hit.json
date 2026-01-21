@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_bastet_ac4_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 26720
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "dust_kyklopes_ac4_pole_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4651
+}

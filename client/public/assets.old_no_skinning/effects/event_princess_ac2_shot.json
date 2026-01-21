@@ -1,0 +1,10 @@
+{
+  "file_name": "event_princess_ac2_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13104
+}

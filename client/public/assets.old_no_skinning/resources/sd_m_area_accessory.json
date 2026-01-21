@@ -1,0 +1,13 @@
+{
+  "file_name": "sd_m_area_accessory",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_accessory_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_accessory_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_m_area_accessory.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "flame_b_glow_blu",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv_clone\\common\\flame_b.bmt"
+  ],
+  "effects": [
+    "map\\frame5-b.efp",
+    "map\\cj_pal_lamp_blue_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

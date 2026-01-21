@@ -1,0 +1,18 @@
+{
+  "file_name": "demon_altar_deco_death",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_altar01.bms",
+    "prim\\mesh\\dun\\demon\\demon_altar01_01.bms",
+    "prim\\mesh\\dun\\demon\\demon_altar_chain.bms",
+    "prim\\mesh\\dun\\demon\\demon_altar_chain_01.bms",
+    "prim\\mesh\\dun\\demon\\demon_altar_chain_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_altar_deco.bmt"
+  ],
+  "effects": [
+    "dun\\demon_altar_death.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

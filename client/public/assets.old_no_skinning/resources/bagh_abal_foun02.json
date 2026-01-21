@@ -1,0 +1,17 @@
+{
+  "file_name": "bagh_abal_foun02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun19.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun19.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_abal_foun.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

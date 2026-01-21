@@ -1,0 +1,10 @@
+{
+  "file_name": "deathkara_fishbone",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\taklamakan\\deathkara_clon.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,39 @@
+{
+  "file_name": "alex_warehouse",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_bottom01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_bottom01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_bottom02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_box01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_box02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_box03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_column01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_dark01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_dark02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_door01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_drum01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_drum02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_grass.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_line.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_stair01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_stair02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_wall01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_wall02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_wall03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_wall04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_wall05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_wall06.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_wall07.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_wall08.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_window.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_window01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_window_alpha.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_warehouse_window_roof.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\union\\alex_warehouse.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

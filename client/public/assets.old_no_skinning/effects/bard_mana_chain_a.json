@@ -1,0 +1,10 @@
+{
+  "file_name": "bard_mana_chain_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4248
+}

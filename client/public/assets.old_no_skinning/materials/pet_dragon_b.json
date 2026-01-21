@@ -1,0 +1,8 @@
+{
+  "file_name": "pet_dragon_b",
+  "textures": [
+    "prim\\mtrl\\cos\\saddle_dragon_b.ddj",
+    "prim\\mtrl\\cos\\pet_dragon_b1.ddj",
+    "prim\\mtrl\\cos\\pet_dragon_b2.ddj"
+  ]
+}

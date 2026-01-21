@@ -1,0 +1,20 @@
+{
+  "file_name": "rock_mt_house15_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house15_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house15_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house15_03.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house15_04.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house15_05.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house15_06.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house15_07.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house15_02.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house15_08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\village\\rock_mt_house15_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

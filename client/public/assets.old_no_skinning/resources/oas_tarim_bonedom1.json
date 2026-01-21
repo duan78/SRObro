@@ -1,0 +1,18 @@
+{
+  "file_name": "oas_tarim_bonedom1",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_bonedom01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_bonedom01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_bonedom02.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_bonedom03.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_bonedom04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_tarim_bonedom.bmt"
+  ],
+  "effects": [
+    "map\\wc_ghostsmoke_bk01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

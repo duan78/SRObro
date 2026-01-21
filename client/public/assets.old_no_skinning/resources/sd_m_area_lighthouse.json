@@ -1,0 +1,14 @@
+{
+  "file_name": "sd_m_area_lighthouse",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_lighthouse_lamp.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_lighthouse_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_lighthouse_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_m_area_lighthouse.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

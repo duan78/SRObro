@@ -1,0 +1,23 @@
+{
+  "file_name": "cj_resta01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_blight.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_enter.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_fence.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_flag.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_gidung01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_light02.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_flag01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_resta01.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,18 @@
+{
+  "file_name": "clothes_11_set_b_sa_fullset",
+  "meshes": [
+    "prim\\mesh\\item\\china\\man_item\\clothes_11_set_b_sa.bms",
+    "prim\\mesh\\item\\china\\man_item\\clothes_11_set_b_sa_ef.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\man_item\\clothes_11_set_b_sa.bmt"
+  ],
+  "effects": [
+    "system\\item_equip_shoulder_11_b.efp",
+    "system\\item_equip_shoulder_11_b.efp"
+  ],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line.ddj"
+  ]
+}

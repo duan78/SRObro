@@ -1,0 +1,25 @@
+{
+  "file_name": "oas_hot_army01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_bottom.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_bottom.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_darkwall.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_deco.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_deco02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_door01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_door02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_flag01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_flag02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_roof.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_wall01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_wall02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_winlight.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army_winwall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\hot_army\\oas_hot_army.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

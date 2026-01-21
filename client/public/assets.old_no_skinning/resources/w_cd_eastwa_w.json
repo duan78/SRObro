@@ -1,0 +1,18 @@
+{
+  "file_name": "w_cd_eastwa_w",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\enter\\w_cd_eastwa_w_wall01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\enter\\w_cd_eastwa_w_alpha.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\enter\\w_cd_eastwa_w_door.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\enter\\w_cd_eastwa_w_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\enter\\w_cd_eastwa_w_wall01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\enter\\w_cd_eastwa_w_wall02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\enter\\w_cd_eastwa_w_wall03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\enter\\w_cd_dun_east.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

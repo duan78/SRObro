@@ -1,0 +1,15 @@
+{
+  "file_name": "piety_fountain_jewels",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_jewels01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_fountain_jewels.bmt"
+  ],
+  "effects": [
+    "dun\\bigsujung_potal_glow.efp",
+    "dun\\trap01_center.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

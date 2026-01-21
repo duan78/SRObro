@@ -1,0 +1,10 @@
+{
+  "file_name": "system_rarebow_c_honor",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 28689
+}

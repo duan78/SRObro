@@ -1,0 +1,12 @@
+{
+  "file_name": "arabia_f_smoke",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_arabia_f\\arabianf_bujok.bmt"
+  ],
+  "effects": [
+    "dun\\fire_piece_air02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

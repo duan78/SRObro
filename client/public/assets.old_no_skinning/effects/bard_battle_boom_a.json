@@ -1,0 +1,10 @@
+{
+  "file_name": "bard_battle_boom_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 5183
+}

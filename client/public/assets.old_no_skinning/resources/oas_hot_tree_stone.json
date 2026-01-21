@@ -1,0 +1,13 @@
+{
+  "file_name": "oas_hot_tree_stone",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oas_hot_tree_stone.bmt"
+  ],
+  "effects": [
+    "map\\w_cd_potal_blue_g.efp",
+    "map\\w_cd_potal_blue.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

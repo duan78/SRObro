@@ -1,0 +1,32 @@
+{
+  "file_name": "demonhorse_clon",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\demonhorse_part1.bms",
+    "prim\\mesh\\mob\\china\\demonhorse_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\demonhorse_clone.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\dust_demonhorse_run.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_stand01.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_walk.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_run.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_attack01.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_damage01.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_damage02.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_die.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_die_loop.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_down.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_downwait.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_downdamage.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_wakeup.ban",
+    "prim\\ani\\mob\\china\\demonhorse\\demonhorse_downdie.ban"
+  ],
+  "textures": []
+}

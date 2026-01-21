@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_isis_ac4_weakness_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 22266
+}

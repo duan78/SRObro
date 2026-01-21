@@ -1,0 +1,12 @@
+{
+  "file_name": "waterfall-turtle01-3",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\waterfall03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\pokpo3.ddj"
+  ]
+}

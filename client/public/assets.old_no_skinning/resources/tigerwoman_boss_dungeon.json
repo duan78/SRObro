@@ -1,0 +1,32 @@
+{
+  "file_name": "tigerwoman_boss_dungeon",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\tigerwoman_2side.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_wand.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_wand_2side.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_body_part1.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_body_part2_part1.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_body_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_body_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\tigerwoman.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_stand01.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_stand02.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_walk.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_run.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_attack01.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_attack02.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_attack03.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_damage01.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_damage02.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_help.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_die.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_die_loop.ban",
+    "prim\\ani\\mob\\china\\tigerwoman\\tigerwoman_find.ban"
+  ],
+  "textures": []
+}

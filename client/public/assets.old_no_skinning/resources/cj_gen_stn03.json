@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_gen_stn03",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_gen_stn03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\cj_jin_gen_stn03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\cj_jin_gen_stn030.ddj"
+  ]
+}

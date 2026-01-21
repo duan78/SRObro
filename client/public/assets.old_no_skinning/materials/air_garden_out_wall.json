@@ -1,0 +1,12 @@
+{
+  "file_name": "air_garden_out_wall",
+  "textures": [
+    "air_garden_water.ddj",
+    "air_garden_out_wall01.ddj",
+    "air_garden_out_wall02_01.ddj",
+    "air_garden_out_wall03.ddj",
+    "air_garden_out_wall01_01.ddj",
+    "air_garden_out_wall02.ddj",
+    "air_garden_out_wall03_01.ddj"
+  ]
+}

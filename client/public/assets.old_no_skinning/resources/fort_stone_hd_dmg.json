@@ -1,0 +1,16 @@
+{
+  "file_name": "fort_stone_hd_dmg",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_hd_dmg01.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_hd_dmg01.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_hd_dmg02.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_hd_dmg03.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_hd_dmg04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\fort_stone\\fort_stone_hd.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

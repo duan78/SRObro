@@ -1,0 +1,16 @@
+{
+  "file_name": "bj_guild_sidetop",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_sidetop01_01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_sidetop01_01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_sidetop01_02.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_sidetop01_03.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_sidetop01_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\bj\\bj_guild_sidetop01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

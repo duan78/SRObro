@@ -1,0 +1,14 @@
+{
+  "file_name": "cj5_tem_rightdam",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_rightdam_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_rightdam_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_rightdam_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan05\\cj5_tem_rightdam.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

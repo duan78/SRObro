@@ -1,0 +1,10 @@
+{
+  "file_name": "wizard_light_lighting_b_1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 30399
+}

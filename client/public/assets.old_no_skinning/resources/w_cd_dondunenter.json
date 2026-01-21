@@ -1,0 +1,24 @@
+{
+  "file_name": "w_cd_dondunenter",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_dge01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_dge01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_dge02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_dge07.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_dge_alpha01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_dge_alpha02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_dge03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_dge04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_dge05.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_dge06.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_dge08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_dondunenter.bmt"
+  ],
+  "effects": [
+    "system\\system_dungeonpotal.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

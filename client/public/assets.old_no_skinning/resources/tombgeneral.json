@@ -1,0 +1,29 @@
+{
+  "file_name": "tombgeneral",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\tombgeneral.bmt",
+    "prim\\mtrl\\mob\\qinshi\\tombgeneral_clon2.bmt",
+    "prim\\mtrl\\mob\\qinshi\\tombgeneral_clon3.bmt"
+  ],
+  "effects": [
+    "monster\\eu\\skill\\skill_snake_body_big.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_stand01.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_attack03.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_walk.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_run.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_attack01.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_attack02.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_damage01.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_die.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_die_rm.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_down.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_down_rm.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_down_damage.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_down_up.ban",
+    "prim\\ani\\mob\\qinshi\\tombgeneral\\tombgeneral_down_die.ban"
+  ],
+  "textures": []
+}

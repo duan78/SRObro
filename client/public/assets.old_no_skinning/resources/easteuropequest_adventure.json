@@ -1,0 +1,14 @@
+{
+  "file_name": "easteuropequest_adventure",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_adventure_hr.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_adventure_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_adventure_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_adventure.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "cj2_brg",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan02\\cj2_brg_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj2_brg_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj2_brg_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj2_brg_wall_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan02\\cj2_brg.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

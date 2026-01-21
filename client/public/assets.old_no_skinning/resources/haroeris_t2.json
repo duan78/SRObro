@@ -1,0 +1,50 @@
+{
+  "file_name": "haroeris_t2",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\haroeris03_t2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris04_t2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris05_t2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris06_t2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris07_t2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_eyelid01_t2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_eyelid02_t2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_eyes_t2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_t2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris01_t2_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris01_t2_part2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris02_t2_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris02_t2_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris02_t2_part2_part2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris08_t2_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris08_t2_part2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_2side_t2_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_2side_t2_part2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris09_t2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris10_t2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris01_t2_section.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_t2_section.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\haroeris.bmt"
+  ],
+  "effects": [
+    "monster\\sd\\keep_haroeris_blood.efp",
+    "monster\\sd\\keep_haroeris_blood.efp",
+    "monster\\sd\\skill_haroeris_ac7_wait.efp",
+    "monster\\sd\\skill_haroeris_ac7_wait.efp",
+    "monster\\sd\\skill_haroeris_ac7_wait.efp",
+    "monster\\sd\\skill_haroeris_ac7_wait.efp",
+    "monster\\sd\\skill_haroeris_ac3_wait.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_attack05.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_attack06.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_attack07.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_t2_stand01.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_die.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_attack04_shot.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_attack04_ready.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_attack03.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,26 @@
+{
+  "file_name": "alex_isis",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis06.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis07.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis08.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis09.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis10.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis11.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis12.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis13.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\isis\\alex_isis14.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\isis\\alex_isis.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

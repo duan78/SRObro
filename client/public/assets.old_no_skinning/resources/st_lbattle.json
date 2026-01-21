@@ -1,0 +1,36 @@
+{
+  "file_name": "st_lbattle",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_ax1.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_ax1.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_ax2.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_center.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_center_brick.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_column.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_doorsill.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_groundx1.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_in_stair.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_out_stair.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_roof.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_sphinx01.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_sphinx02.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_tilex1.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_tilex2.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_tilex3.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_tilex4.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_wall 02.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_wall paint01.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_wall paint02.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_wall paint03.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_wall paint04.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_wall paint05.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_wallx1.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part01\\st_lbattle_wall paint06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r2_cv\\part\\st_part01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

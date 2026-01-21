@@ -1,0 +1,18 @@
+{
+  "file_name": "khotanshop_smith",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotanshop_smith_2s.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_smith_al.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_smith_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_smith_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotanshop_smith.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\khotan\\khotanshop_smith_basic.ban",
+    "prim\\ani\\npc\\khotan\\khotanshop_smith_basic2.ban"
+  ],
+  "textures": []
+}

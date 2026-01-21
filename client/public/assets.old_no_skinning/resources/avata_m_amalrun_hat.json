@@ -1,0 +1,10 @@
+{
+  "file_name": "avata_m_amalrun_hat",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\avatar\\avata_m_amalrun.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

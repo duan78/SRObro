@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_field_bench",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_bench.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\farm\\bagh_field_bench.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

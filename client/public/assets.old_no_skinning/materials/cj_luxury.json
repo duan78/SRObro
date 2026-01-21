@@ -1,0 +1,13 @@
+{
+  "file_name": "cj_luxury",
+  "textures": [
+    "cj_luxu_desk.ddj",
+    "cj_luxu_door_sign.ddj",
+    "cj_luxu_roof.ddj",
+    "cj_luxu_deco_tiger02.ddj",
+    "cj_luxu_deco_tiger01.ddj",
+    "cj_luxu_floor.ddj",
+    "cj_luxu_winlight02.ddj",
+    "cj_luxu_winlight.ddj"
+  ]
+}

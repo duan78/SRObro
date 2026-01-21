@@ -1,0 +1,28 @@
+{
+  "file_name": "room102_event",
+  "meshes": [
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_event.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_bottom_b.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_bottom_c.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_ceiling_a.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_ceiling_b.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_corner_a.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_corner_b.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_event.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_obj_b_01.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_obj_b_02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_pole_a.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_wall.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_wall_a.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_wall_buda.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_wall_corner.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_walldeco_a.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\room102event\\stone_room102_walldeco_b.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv_clone\\floor_1\\102.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

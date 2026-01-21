@@ -1,0 +1,15 @@
+{
+  "file_name": "taklamakansystem_tunnel_so",
+  "meshes": [
+    "prim\\mesh\\npc\\common\\taklamakansystem_tunnel_so_2s.bms",
+    "prim\\mesh\\npc\\common\\taklamakansystem_tunnel_so_al.bms",
+    "prim\\mesh\\npc\\common\\taklamakansystem_tunnel_so_part1.bms",
+    "prim\\mesh\\npc\\common\\taklamakansystem_tunnel_so_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\common\\taklamakansystem_tunnel_so.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

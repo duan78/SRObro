@@ -1,0 +1,13 @@
+{
+  "file_name": "jinsi_floor6_jewel",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\floor_04\\jinsi_floor6_jewel.bmt"
+  ],
+  "effects": [
+    "dun\\bigsujung_up.efp",
+    "dun\\bigsujung.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

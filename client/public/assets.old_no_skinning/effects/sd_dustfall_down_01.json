@@ -1,0 +1,9 @@
+{
+  "file_name": "sd_dustfall_down_01",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true
+  },
+  "raw_size": 20773
+}

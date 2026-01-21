@@ -1,0 +1,9 @@
+{
+  "file_name": "earthgst_house",
+  "textures": [
+    "w_earthgst_house_wall2.ddj",
+    "w_earthgst_house_wall.ddj",
+    "w_earthgst_house_etc.ddj",
+    "w_earthgst_house_alpha.ddj"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "euro_esteuro_lawless03",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\lawlessfld\\euro_esteuro_lawless03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\lawlessfld\\euro_esteuro_lawless01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

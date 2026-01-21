@@ -1,0 +1,15 @@
+{
+  "file_name": "centralasiaquest_soldier_ea1",
+  "meshes": [
+    "prim\\mesh\\npc\\casia\\centralasiaquest_soldier_ea1_2s.bms",
+    "prim\\mesh\\npc\\casia\\centralasiaquest_soldier_ea1_al.bms",
+    "prim\\mesh\\npc\\casia\\centralasiaquest_soldier_ea1_01_part1.bms",
+    "prim\\mesh\\npc\\casia\\centralasiaquest_soldier_ea1_01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\casia\\centralasiaquest_soldier_ea1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "alex_library_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\library\\alex_library01.bmt"
+  ],
+  "effects": [
+    "map\\alex_library_01.efp",
+    "map\\alex_library_01.efp",
+    "map\\alex_library_01.efp",
+    "map\\alex_library_01.efp",
+    "map\\alex_library_01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

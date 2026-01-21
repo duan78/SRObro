@@ -1,0 +1,13 @@
+{
+  "file_name": "jinsi_floor1_burn",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\common\\jinsi_floor1_burn.bmt"
+  ],
+  "effects": [
+    "dun\\dragon_head_flame.efp",
+    "dun\\dragon_head_flame_glow.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

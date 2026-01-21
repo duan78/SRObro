@@ -1,0 +1,21 @@
+{
+  "file_name": "demon_p_altar_l02",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_l\\demon_p_altar_l02_06.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_l\\demon_p_altar_l02_01.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_l\\demon_p_altar_l02_02.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_l\\demon_p_altar_l02_03.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_l\\demon_p_altar_l02_04.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_l\\demon_p_altar_l02_05.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_l\\demon_p_altar_l02_06.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_l\\demon_p_altar_l02_07.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_l\\demon_p_altar_l02_08.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_l\\demon_p_altar_l02_09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\poison\\demon_p_altar_l.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

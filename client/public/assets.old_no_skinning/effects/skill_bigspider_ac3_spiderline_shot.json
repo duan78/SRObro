@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_bigspider_ac3_spiderline_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2892
+}

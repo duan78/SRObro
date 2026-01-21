@@ -1,0 +1,23 @@
+{
+  "file_name": "cj_weapon",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_chimnup.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_fence.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_outwal.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_floor.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_weapon.bmt"
+  ],
+  "effects": [
+    "map\\oas_hot_etc_b.efp",
+    "map\\oas_hot_etc_b.efp",
+    "map\\cj_pal_lamp_red_b.efp",
+    "map\\oas_hot_etc_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

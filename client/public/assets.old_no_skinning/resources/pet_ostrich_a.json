@@ -1,0 +1,34 @@
+{
+  "file_name": "pet_ostrich_a",
+  "meshes": [
+    "prim\\mesh\\cos\\pet_ostrich_a01.bms",
+    "prim\\mesh\\cos\\pet_ostrich_a02.bms",
+    "prim\\mesh\\cos\\pet_ostrich_a03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\pet_ostrich_a.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_stand01.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_stand02.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_walk.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_run.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_attack01.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_attack02.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_attack03.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_attack04.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_attack05.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_attack06.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_attack07.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_damage01.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_die1.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_die1_rm.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_down.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_down_rm.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_down_damage.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_down_up.ban",
+    "prim\\ani\\cos\\pet_ostrich_a\\pet_ostrich_a_down_die.ban"
+  ],
+  "textures": []
+}

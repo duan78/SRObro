@@ -1,0 +1,10 @@
+{
+  "file_name": "dead_shine",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 40390
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "demon_rail_deco_poison",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_rail_deco.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_piller_light.bmt"
+  ],
+  "effects": [
+    "dun\\demon_flame_poison01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

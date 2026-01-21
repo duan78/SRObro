@@ -1,0 +1,10 @@
+{
+  "file_name": "bard_pleasure_hit_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 12907
+}

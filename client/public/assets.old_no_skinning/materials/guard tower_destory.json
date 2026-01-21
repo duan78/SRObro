@@ -1,0 +1,8 @@
+{
+  "file_name": "guard tower_destory",
+  "textures": [
+    "tower_metal.ddj",
+    "tower_destroy.ddj",
+    "tower_dmg_broken.ddj"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "bagh_city_flag",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_flag.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

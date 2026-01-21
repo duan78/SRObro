@@ -1,0 +1,32 @@
+{
+  "file_name": "windpriest",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\windpriest02.bms",
+    "prim\\mesh\\mob\\sd\\windpriest_part1.bms",
+    "prim\\mesh\\mob\\sd\\windpriest_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\windpriest_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\windpriest.bmt",
+    "prim\\mtrl\\mob\\sd\\windpriest_clon2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_stand01.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_stand02.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_walk.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_run.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_attack01.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_attack04.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_attack05.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_damage.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_die.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_down.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_down_rm.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_down_up.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_down_die.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_die_rm.ban",
+    "prim\\ani\\mob\\sd\\windpriest\\windpriest_down_damage.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "strucure_tower_lighting_attact",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 38800
+}

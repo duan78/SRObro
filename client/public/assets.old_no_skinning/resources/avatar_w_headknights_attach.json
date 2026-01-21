@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_w_headknights_attach",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\avatar\\avatar_w_headknights.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

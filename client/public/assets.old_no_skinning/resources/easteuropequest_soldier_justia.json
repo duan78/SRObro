@@ -1,0 +1,16 @@
+{
+  "file_name": "easteuropequest_soldier_justia",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_justia_2s_01.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_justia_2s_02.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_justia_arm.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_justia_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_justia_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_soldier_justia.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

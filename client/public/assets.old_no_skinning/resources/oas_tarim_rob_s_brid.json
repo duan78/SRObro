@@ -1,0 +1,22 @@
+{
+  "file_name": "oas_tarim_rob_s_brid",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_01.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_01.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_02.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_03.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_04.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_05.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_06.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_07.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_08ani.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_09ani.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_10ani.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_brid_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

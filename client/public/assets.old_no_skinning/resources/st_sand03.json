@@ -1,0 +1,19 @@
+{
+  "file_name": "st_sand03",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\st_sandflo01.bmt"
+  ],
+  "effects": [
+    "map\\st_sand.efp",
+    "map\\st_sand.efp",
+    "map\\st_sand.efp",
+    "map\\st_sand.efp",
+    "map\\st_sand.efp",
+    "map\\st_sand.efp",
+    "map\\st_sand.efp",
+    "map\\st_sand.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

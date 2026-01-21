@@ -1,0 +1,23 @@
+{
+  "file_name": "halloween_pu02",
+  "meshes": [
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_01.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_02.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_03_01.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_03_02.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_04.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_can.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_candy.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_hat01.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_hat02.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_in.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_leaf.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu02_skull.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\halloween\\halloween_pu02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

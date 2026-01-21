@@ -1,0 +1,17 @@
+{
+  "file_name": "bagh_field_stable",
+  "textures": [
+    "bagh_field_stable_wood03.ddj",
+    "bagh_field_stable_straw.ddj",
+    "bagh_field_stable_wood02.ddj",
+    "bagh_field_stable_light.ddj",
+    "bagh_field_stable_light_alpha.ddj",
+    "bagh_field_stable_wall01.ddj",
+    "wall.ddj",
+    "bagh_field_stable_porcelain.ddj",
+    "bagh_field_stable_wall02.ddj",
+    "bagh_field_stable_door.ddj",
+    "bagh_field_stable_fence.ddj",
+    "bagh_field_stable_wood01.ddj"
+  ]
+}

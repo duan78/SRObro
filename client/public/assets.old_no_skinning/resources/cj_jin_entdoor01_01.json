@@ -1,0 +1,19 @@
+{
+  "file_name": "cj_jin_entdoor01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\cj_jin_entdoor01_01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\cj_jin_entdoor01_01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\cj_jin_entdoor01_stair01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\cj_jin_entdoor01_stair02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\enter\\cj_jin_entdoor01_01.bmt"
+  ],
+  "effects": [
+    "system\\system_dungeonpotal.efp",
+    "map\\frame3.efp",
+    "map\\frame3.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

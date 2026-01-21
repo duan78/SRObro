@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_m_plague_doctor_hat",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_plaguedoctor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "demon_outaltar_b",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_outaltar_b01.bms",
+    "prim\\mesh\\dun\\demon\\demon_outaltar_b01.bms",
+    "prim\\mesh\\dun\\demon\\demon_outaltar_b02.bms",
+    "prim\\mesh\\dun\\demon\\demon_outaltar_b03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_outaltar_b.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

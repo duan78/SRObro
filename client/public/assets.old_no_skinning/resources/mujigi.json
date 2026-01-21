@@ -1,0 +1,32 @@
+{
+  "file_name": "mujigi",
+  "meshes": [
+    "prim\\mesh\\mob\\khotan\\mujigi_part1.bms",
+    "prim\\mesh\\mob\\khotan\\mujigi_part2_part1.bms",
+    "prim\\mesh\\mob\\khotan\\mujigi_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\khotan\\mujigi.bmt",
+    "prim\\mtrl\\mob\\khotan\\mujigi_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_stand01.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_stand02.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_walk.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_run.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_attack01.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_attack02.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_attack03.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_damage01.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_damage02.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_die.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_die_loop.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_down.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_down_rm.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_down_damage.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_down_up.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_down_die.ban"
+  ],
+  "textures": []
+}

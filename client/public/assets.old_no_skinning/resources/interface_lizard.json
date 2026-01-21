@@ -1,0 +1,19 @@
+{
+  "file_name": "interface_lizard",
+  "meshes": [
+    "prim\\mesh\\interface\\interface_lizard_part1.bms",
+    "prim\\mesh\\interface\\interface_lizard_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\interface\\interface.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\nature\\interface_lizard_stand.ban",
+    "prim\\ani\\nature\\interface_lizard_move.ban",
+    "prim\\ani\\nature\\interface_lizard_run.ban"
+  ],
+  "textures": [
+    "prim\\mtrl\\nature\\interface_lizard.ddj"
+  ]
+}

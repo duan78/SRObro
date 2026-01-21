@@ -1,0 +1,13 @@
+{
+  "file_name": "oas_hot_tutle",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\oa_ho_turtle01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oa_ho_turtle02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oa_ho_turtle.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "euro_constan_uni",
+  "textures": [
+    "euro_constan_uni_wall05.ddj",
+    "euro_constan_uni_pillar.ddj",
+    "euro_constan_uni_roof.ddj",
+    "euro_constan_uni_wall02.ddj",
+    "euro_constan_uni_wall03.ddj",
+    "euro_constan_uni_wall04.ddj",
+    "euro_constan_uni_wall06.ddj",
+    "euro_constan_uni_wall01.ddj",
+    "euro_constan_uni_stairs.ddj",
+    "euro_constan_uni_alpha.ddj"
+  ]
+}

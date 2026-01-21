@@ -1,0 +1,9 @@
+{
+  "file_name": "chinasystem_warehousekeeper_woman",
+  "textures": [
+    "chinasystem_warehousekeeper_woman.ddj",
+    "chinasystem_warehousekeeper_chain.ddj",
+    "chinasystem_warehousekeeper_box.ddj",
+    "chinasystem_warehousekeeper_woman_al.ddj"
+  ]
+}

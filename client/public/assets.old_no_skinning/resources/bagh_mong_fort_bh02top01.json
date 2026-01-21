@@ -1,0 +1,22 @@
+{
+  "file_name": "bagh_mong_fort_bh02top01",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top01_bottom.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top01_bottom.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top01_door.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top01_flag01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top01_flag02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top01_roof01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top01_roof02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top01_tree01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top01_tree02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top01_wall.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top01_window.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bh01top.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

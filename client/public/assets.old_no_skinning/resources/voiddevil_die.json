@@ -1,0 +1,21 @@
+{
+  "file_name": "voiddevil_die",
+  "meshes": [
+    "prim\\mesh\\mob\\dm\\voiddevil_die_c.bms",
+    "prim\\mesh\\mob\\dm\\voiddevil_die_part1.bms",
+    "prim\\mesh\\mob\\dm\\voiddevil_die_part2_part1.bms",
+    "prim\\mesh\\mob\\dm\\voiddevil_die_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\dm\\voiddevil_die_part2_part2_part2.bms",
+    "prim\\mesh\\mob\\dm\\voiddevil_die_b_part1.bms",
+    "prim\\mesh\\mob\\dm\\voiddevil_die_b_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\dm\\voiddevil_die.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\dm\\voiddevil\\voiddevil_die.ban",
+    "prim\\ani\\mob\\dm\\voiddevil\\voiddevil_die_rm.ban"
+  ],
+  "textures": []
+}

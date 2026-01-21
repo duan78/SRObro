@@ -1,0 +1,10 @@
+{
+  "file_name": "mall_balloon_l_kerberos",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\mall_balloon_r_kerberos.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

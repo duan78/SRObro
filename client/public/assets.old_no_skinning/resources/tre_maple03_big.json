@@ -1,0 +1,14 @@
+{
+  "file_name": "tre_maple03_big",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\tre_maple03_big_brn.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_maple03_big_brn.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_maple03_big_leaf.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tre_maple03_big.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

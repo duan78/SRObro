@@ -1,0 +1,14 @@
+{
+  "file_name": "piety_pool01_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\piety_pool01_01.bmt"
+  ],
+  "effects": [
+    "map\\pajang-m-02.efp",
+    "map\\oas_hot_etc_b.efp",
+    "map\\oas_hot_etc_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

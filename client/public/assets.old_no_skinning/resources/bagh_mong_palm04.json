@@ -1,0 +1,15 @@
+{
+  "file_name": "bagh_mong_palm04",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\mong\\tree\\bagh_mong_palm04_01.bms",
+    "prim\\mesh\\nature\\arabia\\mong\\tree\\bagh_mong_palm04_02.bms",
+    "prim\\mesh\\nature\\arabia\\mong\\tree\\bagh_mong_palm04_03.bms",
+    "prim\\mesh\\nature\\arabia\\mong\\tree\\bagh_mong_palm04_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\mong\\tree\\bagh_mong_palm.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

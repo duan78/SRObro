@@ -1,0 +1,12 @@
+{
+  "file_name": "hit_1_cut_downattack",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 4196
+}

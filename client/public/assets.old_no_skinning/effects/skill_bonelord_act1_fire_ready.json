@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_bonelord_act1_fire_ready",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 23482
+}

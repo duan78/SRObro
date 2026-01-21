@@ -1,0 +1,23 @@
+{
+  "file_name": "rogue_stand01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 5730,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    5,
+    12,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    11,
+    1387,
+    3002,
+    5
+  ]
+}

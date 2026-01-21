@@ -1,0 +1,15 @@
+{
+  "file_name": "rocmountainshop_villagechief",
+  "meshes": [
+    "prim\\mesh\\npc\\common\\rocmountainshop_villagechief02.bms",
+    "prim\\mesh\\npc\\common\\rocmountainshop_villagechief03.bms",
+    "prim\\mesh\\npc\\common\\rocmountainshop_villagechief01_part1.bms",
+    "prim\\mesh\\npc\\common\\rocmountainshop_villagechief01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\common\\rocmountainshop_villagechief.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

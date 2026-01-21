@@ -1,0 +1,10 @@
+{
+  "file_name": "bigx-mastree-ball_r",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 5637
+}

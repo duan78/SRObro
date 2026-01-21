@@ -1,0 +1,15 @@
+{
+  "file_name": "oas_tarim_rob_s_side",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_side_01.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_side_01.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_side_02.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_side_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_s_side_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

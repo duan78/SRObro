@@ -1,0 +1,10 @@
+{
+  "file_name": "fort_gate01",
+  "textures": [
+    "gate_02.ddj",
+    "gate_01.ddj",
+    "gate_03.ddj",
+    "gate_04.ddj",
+    "gate_05.ddj"
+  ]
+}

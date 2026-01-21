@@ -1,0 +1,10 @@
+{
+  "file_name": "oas_tarim_wagon01",
+  "textures": [
+    "oas_tarim_wagon1_umb.ddj",
+    "oas_tarim_wagon1_wood.ddj",
+    "oas_tarim_wagon1_etc.ddj",
+    "oas_tarim_wagon1_alpha.ddj",
+    "oas_tarim_wagon1_wheel.ddj"
+  ]
+}

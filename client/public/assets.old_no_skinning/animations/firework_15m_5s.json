@@ -1,0 +1,17 @@
+{
+  "file_name": "firework_15m_5s",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 137,
+  "animation_name": "\u000f",
+  "data_blocks": [
+    7680,
+    256,
+    512,
+    0,
+    256,
+    1536,
+    0
+  ]
+}

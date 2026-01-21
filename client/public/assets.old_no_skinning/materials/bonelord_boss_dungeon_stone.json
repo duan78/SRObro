@@ -1,0 +1,7 @@
+{
+  "file_name": "bonelord_boss_dungeon_stone",
+  "textures": [
+    "prim\\mtrl\\mob\\bossdungeon\\bonelord_boss_dungeon_stone.ddj",
+    "prim\\mtrl\\mob\\bossdungeon\\bonelord_2side_boss_dungeon_stone.ddj"
+  ]
+}

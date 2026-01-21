@@ -1,0 +1,27 @@
+{
+  "file_name": "room304",
+  "meshes": [
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_bottom.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_bottom.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_bottom01.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_bottom02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_ceiling.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_door.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_door02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_tower.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_wall_a01.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_wall_a02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_wall_b01.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_wall_b02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_wallpic_l.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_wallpic_s.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_buda01.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room304\\stone_room304_buda03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv\\floor_3\\304.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

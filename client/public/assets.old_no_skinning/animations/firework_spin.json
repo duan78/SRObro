@@ -1,0 +1,23 @@
+{
+  "file_name": "firework_spin",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 14729,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    32305,
+    0,
+    191,
+    191,
+    63
+  ]
+}

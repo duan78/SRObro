@@ -1,0 +1,30 @@
+{
+  "file_name": "w_cd_luxu",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_wall.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_column.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_handrail.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_wall.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_deco.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_jewel.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_light.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_ornament.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_ornament02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_winlight.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu_roof02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_luxu.bmt"
+  ],
+  "effects": [
+    "map\\light.efp",
+    "map\\light.efp",
+    "map\\cj_pal_lamp_blue.efp",
+    "map\\light.efp",
+    "map\\light.efp",
+    "map\\cj_pal_lamp_blue.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

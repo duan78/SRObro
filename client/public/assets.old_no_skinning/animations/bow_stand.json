@@ -1,0 +1,25 @@
+{
+  "file_name": "bow_stand",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 7456,
+  "animation_name": "\t",
+  "data_blocks": [
+    0,
+    6,
+    12,
+    6,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    11,
+    6,
+    12,
+    6,
+    12
+  ]
+}

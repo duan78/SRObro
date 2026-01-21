@@ -1,0 +1,30 @@
+{
+  "file_name": "fortress_battering_ram_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4421,
+  "animation_name": "\u001d",
+  "data_blocks": [
+    0,
+    561,
+    1601,
+    0,
+    563,
+    1729,
+    0,
+    569,
+    1729,
+    565,
+    1729,
+    0,
+    561,
+    1729,
+    567,
+    1729,
+    0,
+    565,
+    1729,
+    0
+  ]
+}

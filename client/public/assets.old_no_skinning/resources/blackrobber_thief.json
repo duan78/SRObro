@@ -1,0 +1,39 @@
+{
+  "file_name": "blackrobber_thief",
+  "meshes": [
+    "prim\\mesh\\mob\\oasis\\blackrobber_sword.bms",
+    "prim\\mesh\\mob\\oasis\\blackrobber_body_part1.bms",
+    "prim\\mesh\\mob\\oasis\\blackrobber_body_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\blackrobber_thief.bmt",
+    "prim\\mtrl\\mob\\arabia\\blackrobber_thief_champ.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_icing_on.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_stand01.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_stand02.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_walk.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_attack01.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_attack02.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_damage01.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_damage02.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_help.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_run.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_die.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_die_loop.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_down.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_wakeup.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_downwait.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_downdamage.ban",
+    "prim\\ani\\mob\\oasis\\blackrobber\\blackrobber_downdie.ban",
+    "prim\\ani\\mob\\arabia\\blackrobber_mad\\blackrobber_mad_attack03.ban"
+  ],
+  "textures": []
+}

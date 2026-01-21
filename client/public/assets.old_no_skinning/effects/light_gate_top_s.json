@@ -1,0 +1,10 @@
+{
+  "file_name": "light_gate_top_s",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 11024
+}

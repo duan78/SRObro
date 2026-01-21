@@ -1,0 +1,12 @@
+{
+  "file_name": "euro_esteuro_stone03",
+  "meshes": [
+    "prim\\mesh\\nature\\europe\\east eurpoe\\stone\\euro_esteuro_stone03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\europe\\east eurpoe\\stone\\euro_esteuro_stone01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

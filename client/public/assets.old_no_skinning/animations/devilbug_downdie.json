@@ -1,0 +1,29 @@
+{
+  "file_name": "devilbug_downdie",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2492,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    327680,
+    157038,
+    670104,
+    2,
+    10,
+    156769,
+    561,
+    4158,
+    613,
+    4154,
+    621,
+    4017,
+    2,
+    12,
+    2,
+    15
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_confuse_illusion_a_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13044
+}

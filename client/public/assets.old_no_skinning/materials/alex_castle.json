@@ -1,0 +1,24 @@
+{
+  "file_name": "alex_castle",
+  "textures": [
+    "alex_castlegate_bottom01.ddj",
+    "alex_castlegate_wall03.ddj",
+    "alex_castlegate_door03.ddj",
+    "alex_castlegate_wall05.ddj",
+    "alex_castlegate_tower02.ddj",
+    "alex_castlegate_door02.ddj",
+    "alex_castlegate_door01.ddj",
+    "alex_castlegate_wall04.ddj",
+    "alex_castlegate_door04.ddj",
+    "alex_castlegate_crevice.ddj",
+    "alex_castlegate_wall01.ddj",
+    "alex_castlegate_bottom02.ddj",
+    "alex_castlegate_flag.ddj",
+    "alex_castlegate_tower01.ddj",
+    "alex_castlegate_center.ddj",
+    "alex_castlegate_column.ddj",
+    "alex_castlegate_wall02.ddj",
+    "alex_castlegate_dark.ddj",
+    "alex_castlegate_wall06.ddj"
+  ]
+}

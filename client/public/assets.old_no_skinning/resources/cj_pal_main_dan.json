@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_pal_main_dan",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_main_dan_floor01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_main_dan_dragon.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_main_dan_floor01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_main_dan_floor02.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_main_dan_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_main_dan_wall_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_main_dan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

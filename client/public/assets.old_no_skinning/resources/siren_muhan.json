@@ -1,0 +1,15 @@
+{
+  "file_name": "siren_muhan",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\siren01.bms",
+    "prim\\mesh\\mob\\europe\\siren02.bms",
+    "prim\\mesh\\mob\\europe\\siren_part1.bms",
+    "prim\\mesh\\mob\\europe\\siren_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\europe\\siren_muhan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,20 @@
+{
+  "file_name": "royalsoldier_stand01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 8330,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    458752,
+    0,
+    327680,
+    0,
+    484718,
+    834454,
+    471397,
+    703404,
+    7
+  ]
+}

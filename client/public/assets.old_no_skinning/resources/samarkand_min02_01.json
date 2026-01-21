@@ -1,0 +1,21 @@
+{
+  "file_name": "samarkand_min02_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_min02_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_min02_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_min02_02.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_min02_03.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_min02_04.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_min02_05.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_min02_06.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_min02_07.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_min02_08.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_min02_09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\samarkand\\samarkand_buil.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

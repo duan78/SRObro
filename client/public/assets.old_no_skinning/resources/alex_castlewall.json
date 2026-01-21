@@ -1,0 +1,20 @@
+{
+  "file_name": "alex_castlewall",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlewall_bottom01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlewall_bottom01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlewall_deco01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlewall_wall01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlewall_wall02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlewall_wall03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlewall_tower01_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlewall_tower01_02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlewall_dark.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\gate\\alex_castle.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

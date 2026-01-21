@@ -1,0 +1,27 @@
+{
+  "file_name": "p_gorilla02_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 708,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    327680,
+    0,
+    262144,
+    655360,
+    5,
+    10,
+    353377,
+    439513,
+    5,
+    6,
+    340528,
+    12449,
+    12527,
+    45450,
+    12334,
+    12449
+  ]
+}

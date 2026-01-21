@@ -1,0 +1,25 @@
+{
+  "file_name": "avatar_saytan_attach",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_saytan_attach_2side.bms",
+    "prim\\mesh\\item\\etc\\avatar_saytan_attach_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_saytan_attach_part2_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_saytan_attach_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_saytan_attach.bmt"
+  ],
+  "effects": [
+    "system\\avatar_saytan_attach_b.efp",
+    "system\\avatar_saytan_attach_h.efp",
+    "system\\avatar_saytan_attach_h.efp"
+  ],
+  "animations": [
+    "prim\\ani\\item\\etc\\avatar_saytan_attach_stand01.ban",
+    "prim\\ani\\item\\etc\\avatar_saytan_attach_walk.ban",
+    "prim\\ani\\item\\etc\\avatar_saytan_attach_run.ban",
+    "prim\\ani\\item\\etc\\avatar_saytan_attach_damage02.ban",
+    "prim\\ani\\item\\etc\\avatar_saytan_attach_stand03.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "hide02_door",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_door_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\hide\\hide_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

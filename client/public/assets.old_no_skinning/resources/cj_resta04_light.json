@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_resta04_light",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_resta04_light.bmt"
+  ],
+  "effects": [
+    "map\\light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

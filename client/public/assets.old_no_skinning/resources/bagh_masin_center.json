@@ -1,0 +1,16 @@
+{
+  "file_name": "bagh_masin_center",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_center01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_center01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_center02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_center03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_center04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_masin\\bagh_masin_center.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_flame_crazy_ac2_water",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13308
+}

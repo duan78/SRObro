@@ -1,0 +1,35 @@
+{
+  "file_name": "mino",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\flame_cowking01.bms",
+    "prim\\mesh\\mob\\god\\flame_cowking_weapon.bms",
+    "prim\\mesh\\mob\\god\\flame_cowking_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_cowking_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_cowking_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\mino.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_flame_cowking_keep_weapon.efp",
+    "monster\\god\\skill_flame_cowking_fire_body.efp",
+    "monster\\god\\skill_flame_cowking_fire_body.efp",
+    "monster\\god\\skill_flame_cowking_fire_body.efp",
+    "monster\\god\\skill_flame_cowking_fire_body_01.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_stand01.ban",
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_walk.ban",
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_run.ban",
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_attack01.ban",
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_attack02.ban",
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_attack03.ban",
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_attack04_ready.ban",
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_attack04_wait.ban",
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_attack04_shot.ban",
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_attack05.ban",
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_die.ban",
+    "prim\\ani\\mob\\god\\flame_cowking\\flame_cowking_die_rm.ban"
+  ],
+  "textures": []
+}

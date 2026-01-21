@@ -1,0 +1,12 @@
+{
+  "file_name": "jinsi_floor2_stonelantern",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\common\\jinsi_floor2_stonelantern.bmt"
+  ],
+  "effects": [
+    "dun\\blue_flame_stonelantern.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

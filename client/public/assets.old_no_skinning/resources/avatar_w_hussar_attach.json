@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_w_hussar_attach",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_hussar.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

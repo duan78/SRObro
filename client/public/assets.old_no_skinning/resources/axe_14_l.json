@@ -1,0 +1,17 @@
+{
+  "file_name": "axe_14_l",
+  "meshes": [
+    "prim\\mesh\\item\\europe\\weapon\\axe_14_l.bms",
+    "prim\\mesh\\item\\europe\\weapon\\axe_14_l_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\axe_14.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_axe_14_l.efp"
+  ],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line_red.ddj"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "file_name": "object_festival_summer",
+  "meshes": [
+    "prim\\mesh\\npc\\npc\\object_festival_summer_carpet.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_flag.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_pillar01.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_wagon.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_box.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_goods.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_pillar02.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_flower01.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_lamp.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_model.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_flower02.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_grass02.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_grass03.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_bomb.bms",
+    "prim\\mesh\\npc\\npc\\object_festival_summer_grass01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\npc\\object_festival_summer.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,32 @@
+{
+  "file_name": "piety_park",
+  "textures": [
+    "piety_park_door.ddj",
+    "piety_wall05.ddj",
+    "piety_wall03.ddj",
+    "piety_wall04.ddj",
+    "piety_area.ddj",
+    "piety_carve01.ddj",
+    "piety_gate_wall01.ddj",
+    "piety_gate_wall07.ddj",
+    "piety_gate_wall06.ddj",
+    "piety_gate_wall04.ddj",
+    "piety_gate_wall02.ddj",
+    "piety_alpha.ddj",
+    "piety_gate_wall03.ddj",
+    "piety_roof.ddj",
+    "piety_carve02.ddj",
+    "piety_pillar01.ddj",
+    "piety_gate_wall05.ddj",
+    "piety_park_wall08.ddj",
+    "piety_brazier.ddj",
+    "piety_wall01.ddj",
+    "piety_pillar03.ddj",
+    "piety_park_wall09.ddj",
+    "piety_park_wall06.ddj",
+    "piety_park_wall02.ddj",
+    "piety_park_bottom.ddj",
+    "piety_park_wall07.ddj",
+    "piety_brazier01.ddj"
+  ]
+}

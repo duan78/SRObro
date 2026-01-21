@@ -1,0 +1,15 @@
+{
+  "file_name": "w_cd_brhwood03_01",
+  "meshes": [
+    "prim\\mesh\\nature\\china\\dunghuang\\tree3\\w_cd_brhwood03_01.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree3\\w_cd_brhwood03_01.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree3\\w_cd_brhwood03_02.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree3\\w_cd_brhwood03_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\china\\dunhuang\\tree3\\w_cd_brhwood05_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

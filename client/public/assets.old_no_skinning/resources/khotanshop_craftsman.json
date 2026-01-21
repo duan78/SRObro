@@ -1,0 +1,17 @@
+{
+  "file_name": "khotanshop_craftsman",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotanshop_craftsman_al_2s.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_craftsman_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_craftsman_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotanshop_craftsman.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\khotan\\khotanshop_craftsman_basic.ban",
+    "prim\\ani\\npc\\khotan\\khotanshop_craftsman_basic2.ban"
+  ],
+  "textures": []
+}

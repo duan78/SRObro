@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_m_darkwarrior",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_darkwarrior_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_darkwarrior_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_darkwarrior_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_darkwarrior.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

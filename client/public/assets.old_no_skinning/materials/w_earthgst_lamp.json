@@ -1,0 +1,15 @@
+{
+  "file_name": "w_earthgst_lamp",
+  "textures": [
+    "w_earthgst_lamp_wood_01.ddj",
+    "w_earthgst_lamp_metal_01.ddj",
+    "earthgst_lamp_metal_00.ddj",
+    "w_earthgst_lamp_tex_00.ddj",
+    "w_earthgst_lamp_wood_00.ddj",
+    "w_earthgst_lamp_wood_02.ddj",
+    "w_earthgst_lamp_metal_03.ddj",
+    "w_earthgst_lamp_seize_00.ddj",
+    "w_earthgst_lamp_metal_02.ddj",
+    "w_earthgst_lamp_stone_00.ddj"
+  ]
+}

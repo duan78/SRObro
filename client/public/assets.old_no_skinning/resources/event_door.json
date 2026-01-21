@@ -1,0 +1,15 @@
+{
+  "file_name": "event_door",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv_clone\\common\\event_ani_door.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\dun\\wchina\\donhwang_cv_clone\\common\\event_door_close.ban",
+    "prim\\ani\\dun\\wchina\\donhwang_cv_clone\\common\\event_door_opening.ban",
+    "prim\\ani\\dun\\wchina\\donhwang_cv_clone\\common\\event_door_open.ban",
+    "prim\\ani\\dun\\wchina\\donhwang_cv_clone\\common\\event_door_closing.ban"
+  ],
+  "textures": []
+}

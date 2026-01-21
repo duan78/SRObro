@@ -1,0 +1,16 @@
+{
+  "file_name": "w_cd_mcfence02",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mcfence02_wall03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mcfence02_flag03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mcfence02_flag04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mcfence02_wall03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mcfence02_wall04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\milicamp\\w_cd_mcfence01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,7 @@
+{
+  "file_name": "isyutaru_boss_dungeon_stone",
+  "textures": [
+    "prim\\mtrl\\mob\\bossdungeon\\isyutaru_wings_boss_dungeon_stone.ddj",
+    "prim\\mtrl\\mob\\bossdungeon\\isyutaru_body_boss_dungeon_stone.ddj"
+  ]
+}

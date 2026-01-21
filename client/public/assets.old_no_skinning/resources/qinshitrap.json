@@ -1,0 +1,16 @@
+{
+  "file_name": "qinshitrap",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\qinshitrap.bmt"
+  ],
+  "effects": [
+    "dun\\oura_up_roof_s.efp",
+    "dun\\oura_up_roof_s.efp",
+    "dun\\oura_up_roof_s.efp",
+    "dun\\wind_around_a.efp",
+    "dun\\wind_around_a.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

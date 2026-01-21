@@ -1,0 +1,22 @@
+{
+  "file_name": "event_winter_snowman",
+  "meshes": [
+    "prim\\mesh\\mob\\common\\event_winter_snowman_part1.bms",
+    "prim\\mesh\\mob\\common\\event_winter_snowman_part2_part1.bms",
+    "prim\\mesh\\mob\\common\\event_winter_snowman_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\common\\event_winter_snowman.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\common\\event_winter_snowman\\event_winter_snowman_stand01.ban",
+    "prim\\ani\\mob\\common\\event_winter_snowman\\event_winter_snowman_walk.ban",
+    "prim\\ani\\mob\\common\\event_winter_snowman\\event_winter_snowman_run.ban",
+    "prim\\ani\\mob\\common\\event_winter_snowman\\event_winter_snowman_die.ban",
+    "prim\\ani\\mob\\common\\event_winter_snowman\\event_winter_snowman_die_rm.ban",
+    "prim\\ani\\mob\\common\\event_winter_snowman\\event_winter_snowman_emoticon.ban",
+    "prim\\ani\\mob\\common\\event_winter_snowman\\event_winter_snowman_pickup.ban"
+  ],
+  "textures": []
+}

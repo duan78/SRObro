@@ -1,0 +1,16 @@
+{
+  "file_name": "cj_mili_horstair",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_horstair01.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_horstair01.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_horstair02.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_horstair03.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_horstair04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan04\\cj_mili_horstair.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

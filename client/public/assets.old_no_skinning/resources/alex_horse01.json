@@ -1,0 +1,13 @@
+{
+  "file_name": "alex_horse01",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\animal\\alex_horse01_part1.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\animal\\alex_horse01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\animal\\alex_horse01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

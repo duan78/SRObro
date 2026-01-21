@@ -1,0 +1,40 @@
+{
+  "file_name": "pet_crocodile_a_saddle",
+  "meshes": [
+    "prim\\mesh\\cos\\pet_crocodile_saddle_a.bms",
+    "prim\\mesh\\cos\\pet_crocodile_part1.bms",
+    "prim\\mesh\\cos\\pet_crocodile_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_crocodile_part2_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_crocodile_part2_part2_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_crocodile_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_crocodile_part2_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\pet_crocodile_saddle_a.bmt"
+  ],
+  "effects": [
+    "cos\\pet_crocodile_head.efp"
+  ],
+  "animations": [
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_attack01.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_attack02.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_attack03.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_attack04.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_attack05.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_attack06.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_attack07.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_damage.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_die.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_die_rm.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_down.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_down_damage.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_down_die.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_down_rm.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_down_up.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_run.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_stand01.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_stand02.ban",
+    "prim\\ani\\cos\\pet_crocodile_a\\pet_crocodile_saddle_a_walk.ban"
+  ],
+  "textures": []
+}

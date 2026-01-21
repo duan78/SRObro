@@ -1,0 +1,39 @@
+{
+  "file_name": "euro_esteuro_port01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port08.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port09.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port10.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port11.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port12.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t08.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t09.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t10.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t11.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t12.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t13.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t14.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port_t15.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

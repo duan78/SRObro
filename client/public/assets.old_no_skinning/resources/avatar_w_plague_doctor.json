@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_w_plague_doctor",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_plaguedoctor.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_plaguedoctor_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_plaguedoctor_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_plaguedoctor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

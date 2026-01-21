@@ -1,0 +1,10 @@
+{
+  "file_name": "freebattle_red",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 25617
+}

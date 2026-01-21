@@ -1,0 +1,13 @@
+{
+  "file_name": "light_11_set_a",
+  "textures": [
+    "light_11_set_a_ha.ddj",
+    "light_11_set_a_la.ddj",
+    "light_11_set_a_ba.ddj",
+    "light_11_set_a_aa.ddj",
+    "light_11_set_a_fa.ddj",
+    "light_11_set_a_sa.ddj",
+    "w_light_11_set_a_ha_alpha.ddj",
+    "w_light_11_set_a_sa_alpha.ddj"
+  ]
+}

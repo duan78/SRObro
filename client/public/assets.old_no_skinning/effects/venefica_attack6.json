@@ -1,0 +1,10 @@
+{
+  "file_name": "venefica_attack6",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 22063
+}

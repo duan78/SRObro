@@ -1,0 +1,24 @@
+{
+  "file_name": "wingtribespear_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 566,
+  "animation_name": "\u0017",
+  "data_blocks": [
+    102449,
+    7680,
+    0,
+    1280,
+    0,
+    8448,
+    25600,
+    59648,
+    102400,
+    768,
+    2560,
+    1380,
+    3892,
+    5
+  ]
+}

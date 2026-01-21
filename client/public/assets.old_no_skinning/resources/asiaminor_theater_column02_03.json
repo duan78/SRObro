@@ -1,0 +1,14 @@
+{
+  "file_name": "asiaminor_theater_column02_03",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\theater\\asiaminor_theater_column02_03.bms",
+    "prim\\mesh\\bldg\\asia minor\\theater\\asiaminor_theater_column02_03.bms",
+    "prim\\mesh\\bldg\\asia minor\\theater\\asiaminor_theater_column02_03_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\theater\\asiaminor_theater_column02_03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

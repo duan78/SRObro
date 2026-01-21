@@ -1,0 +1,11 @@
+{
+  "file_name": "harrison_boom_attack14",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 149109
+}

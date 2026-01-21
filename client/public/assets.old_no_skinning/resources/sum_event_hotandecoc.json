@@ -1,0 +1,37 @@
+{
+  "file_name": "sum_event_hotandecoc",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\etc\\summer_event\\sum_event.bmt"
+  ],
+  "effects": [
+    "map\\sum_event_y.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_r.efp",
+    "map\\sum_event_y.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_y.efp",
+    "map\\sum_event_y.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_r.efp",
+    "map\\sum_event_y.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_r.efp",
+    "map\\sum_event_y.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_r.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_r.efp",
+    "map\\sum_event_y.efp",
+    "map\\sum_event_b.efp",
+    "map\\sum_event_g.efp",
+    "map\\sum_event_r.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

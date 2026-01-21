@@ -1,0 +1,10 @@
+{
+  "file_name": "spear_pierce_shoot_c",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17487
+}

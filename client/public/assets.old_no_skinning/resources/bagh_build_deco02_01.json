@@ -1,0 +1,13 @@
+{
+  "file_name": "bagh_build_deco02_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_build_deco2.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

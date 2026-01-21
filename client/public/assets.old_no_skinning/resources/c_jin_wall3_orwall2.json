@@ -1,0 +1,16 @@
+{
+  "file_name": "c_jin_wall3_orwall2",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall3_orwall2.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall3_ealpha2.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall3_fire2.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall3_master2.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall3_orwall2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\dan\\c_jin_wall3_orwall2.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

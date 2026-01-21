@@ -1,0 +1,25 @@
+{
+  "file_name": "samarkand_center_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_center_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_center_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_center_02.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potal_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potal_02.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potal_03.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potal_04.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potal_05.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potal_06.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potal_07.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potal_08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\samarkand\\samarkand_center_01.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_potal_blue.efp",
+    "map\\cj_pal_potal_blue.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

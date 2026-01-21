@@ -1,0 +1,14 @@
+{
+  "file_name": "booth_mob_earthghost",
+  "meshes": [
+    "prim\\mesh\\avatar\\booth.bms",
+    "prim\\mesh\\avatar\\booth_mob_earthghost.bms",
+    "prim\\mesh\\avatar\\booth_mob_earthghost_2side.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\avatar\\booth_mob_earthghost.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

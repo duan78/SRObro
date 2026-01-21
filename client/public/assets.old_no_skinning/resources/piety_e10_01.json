@@ -1,0 +1,12 @@
+{
+  "file_name": "piety_e10_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_e01_door.bmt"
+  ],
+  "effects": [
+    "dun\\bigsujung_up.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,32 @@
+{
+  "file_name": "whitesnake",
+  "meshes": [
+    "prim\\mesh\\mob\\qinshi\\whitesnake01.bms",
+    "prim\\mesh\\mob\\qinshi\\whitesnake_part2_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\whitesnake_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\whitesnake_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\whitesnake_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\whitesnake.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_stand01.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_attack01.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_attack03.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_attack07.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_attack09.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_attack02.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_attack04.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_attack05.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_attack06.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_attack08.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_die.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_die_rm.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_stand02.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_attack03_ready.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_attack03_wait.ban"
+  ],
+  "textures": []
+}

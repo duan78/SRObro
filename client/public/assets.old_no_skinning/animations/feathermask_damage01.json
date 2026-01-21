@@ -1,0 +1,27 @@
+{
+  "file_name": "feathermask_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1115,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    262144,
+    0,
+    524288,
+    655360,
+    4,
+    10,
+    287841,
+    1073,
+    4159,
+    1073,
+    369152,
+    369337,
+    1721,
+    1072,
+    1715,
+    1074
+  ]
+}

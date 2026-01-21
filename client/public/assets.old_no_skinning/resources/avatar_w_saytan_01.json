@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_w_saytan_01",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_saytan_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_saytan_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_saytan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,33 @@
+{
+  "file_name": "tombbugghost",
+  "meshes": [
+    "prim\\mesh\\mob\\qinshi\\tombbugghost_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\tombbugghost_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\tombbugghost.bmt",
+    "prim\\mtrl\\mob\\qinshi\\tombbugghost_champ.bmt",
+    "prim\\mtrl\\mob\\qinshi\\tombbugghost_clon2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_stand01.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_stand02.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_walk.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_run.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_attack01.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_attack02.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_attack03.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_attack04.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_attack06.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_damage01.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_die.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_die_rm.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_down.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_down_rm.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_down_damage.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_down_up.ban",
+    "prim\\ani\\mob\\qinshi\\tombbughost\\tombbughost_down_die.ban"
+  ],
+  "textures": []
+}

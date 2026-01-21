@@ -1,0 +1,28 @@
+{
+  "file_name": "flame_pass02_01",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_light01.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_basewall.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_light01.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_tile01.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_tile02.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_tile03.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_tile04.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_tile04_01.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_tile05.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_upside.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_wall01.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_wall02.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_wall03.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_wall04.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_wall05.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_wall06.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass02\\flame_pass02_01_magma.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\flame\\flame_pass.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

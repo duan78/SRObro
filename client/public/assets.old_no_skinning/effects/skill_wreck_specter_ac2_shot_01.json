@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_wreck_specter_ac2_shot_01",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 18066
+}

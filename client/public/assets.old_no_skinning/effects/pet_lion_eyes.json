@@ -1,0 +1,10 @@
+{
+  "file_name": "pet_lion_eyes",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6553
+}

@@ -1,0 +1,24 @@
+{
+  "file_name": "alex_stable",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_archi01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_archi01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_archi02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_column01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_column02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_etc.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_etc_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_roof01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_roof02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_sidewall.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_top.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_topbottom.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\stable\\alex_stable_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\stable\\alex_stable.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

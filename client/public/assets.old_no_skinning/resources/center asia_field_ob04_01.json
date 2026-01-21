@@ -1,0 +1,16 @@
+{
+  "file_name": "center asia_field_ob04_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\center asia_field_ob04_01.bms",
+    "prim\\mesh\\bldg\\central asia\\center asia_field_ob04_01.bms",
+    "prim\\mesh\\bldg\\central asia\\center asia_field_ob04_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\center asia_field_ob04_01.bmt"
+  ],
+  "effects": [
+    "map\\minga_smoke_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "euro_esteuro_viking08",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking08_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking08_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking08_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking08.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

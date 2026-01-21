@@ -1,0 +1,20 @@
+{
+  "file_name": "beetle_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4733,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    0,
+    1387,
+    3007,
+    5,
+    11,
+    1380,
+    3892,
+    5,
+    15
+  ]
+}

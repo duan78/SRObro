@@ -1,0 +1,10 @@
+{
+  "file_name": "hit_2_greenblood_down",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13261
+}

@@ -1,0 +1,26 @@
+{
+  "file_name": "w_earthgst_house3",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_wall.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_wall.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_entrance.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_etc.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_metal_00.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_metal_02.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_togi.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house_wall2.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_alpha.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_doorwall.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_metal_01.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_roof.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_house3_window.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\earthghost\\w_earthgst_house3.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

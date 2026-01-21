@@ -1,0 +1,10 @@
+{
+  "file_name": "fire_piece_air",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 32375
+}

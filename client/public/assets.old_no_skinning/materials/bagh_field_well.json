@@ -1,0 +1,10 @@
+{
+  "file_name": "bagh_field_well",
+  "textures": [
+    "bagh_field_house09.ddj",
+    "bagh_field_stable_wall01.ddj",
+    "bagh_field_house01.ddj",
+    "bagh_field_house_line.ddj",
+    "bagh_field_stable_porcelain.ddj"
+  ]
+}

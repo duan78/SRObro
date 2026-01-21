@@ -1,0 +1,16 @@
+{
+  "file_name": "demon_altar",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_altar02.bms",
+    "prim\\mesh\\dun\\demon\\demon_altar02.bms",
+    "prim\\mesh\\dun\\demon\\demon_altar03.bms",
+    "prim\\mesh\\dun\\demon\\demon_altar04.bms",
+    "prim\\mesh\\dun\\demon\\demon_altar05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_altar.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

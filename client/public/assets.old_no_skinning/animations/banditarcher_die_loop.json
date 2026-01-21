@@ -1,0 +1,33 @@
+{
+  "file_name": "banditarcher_die_loop",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 3341,
+  "animation_name": "\u0015",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    2,
+    12,
+    2,
+    12,
+    2,
+    12,
+    2,
+    13,
+    616,
+    3261,
+    614,
+    3251,
+    628,
+    3249,
+    560,
+    3135,
+    561,
+    2747
+  ]
+}

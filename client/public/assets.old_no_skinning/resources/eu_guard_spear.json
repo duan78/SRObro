@@ -1,0 +1,32 @@
+{
+  "file_name": "eu_guard_spear",
+  "meshes": [
+    "prim\\mesh\\cos\\eu_guard_bow01.bms",
+    "prim\\mesh\\cos\\eu_guard_bow02.bms",
+    "prim\\mesh\\cos\\eu_guard_bow03_part1.bms",
+    "prim\\mesh\\cos\\eu_guard_bow03_part2.bms",
+    "prim\\mesh\\cos\\eu_guard_spear.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\eu_guard.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_stand01.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_stand02.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_walk.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_run.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_attack01.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_attack02.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_die.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_die_rm.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_down.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_down_rm.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_down_damage.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_down_up.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_down_die.ban",
+    "prim\\ani\\cos\\eu_guard_bow\\eu_guard_bow_damage01.ban",
+    "prim\\ani\\cos\\eu_guard_spear\\eu_guard_spear_attack03.ban"
+  ],
+  "textures": []
+}

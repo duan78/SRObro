@@ -1,0 +1,22 @@
+{
+  "file_name": "c_jin_bb_wall",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_wall.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_alpha.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_bwall.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_door.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_master.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_nangan.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_roof.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_soldier.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_top.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_twall.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\back-obj\\c_jin_bb_wall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

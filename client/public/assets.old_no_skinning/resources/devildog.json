@@ -1,0 +1,25 @@
+{
+  "file_name": "devildog",
+  "meshes": [
+    "prim\\mesh\\mob\\jupiter\\devildog\\devildog_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\devildog\\devildog_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\devildog.bmt",
+    "prim\\mtrl\\mob\\jupiter\\devildog_clon.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\devildog\\devildog_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\devildog\\devildog_walk.ban",
+    "prim\\ani\\mob\\jupiter\\devildog\\devildog_run.ban",
+    "prim\\ani\\mob\\jupiter\\devildog\\devildog_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\devildog\\devildog_attack02.ban",
+    "prim\\ani\\mob\\jupiter\\devildog\\devildog_attack03.ban",
+    "prim\\ani\\mob\\jupiter\\devildog\\devildog_attack04.ban",
+    "prim\\ani\\mob\\jupiter\\devildog\\devildog_die.ban",
+    "prim\\ani\\mob\\jupiter\\devildog\\devildog_die_rm.ban",
+    "prim\\ani\\mob\\jupiter\\devildog\\devildog_damage1.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,21 @@
+{
+  "file_name": "revival_gate",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\gate_4\\revival_gate00_01.bms",
+    "prim\\mesh\\artifact\\guild\\gate_4\\revival_gate00_01.bms",
+    "prim\\mesh\\artifact\\guild\\gate_4\\revival_gate00_02.bms",
+    "prim\\mesh\\artifact\\guild\\gate_4\\revival_gate00_03.bms",
+    "prim\\mesh\\artifact\\guild\\gate_4\\revival_gate00_04.bms",
+    "prim\\mesh\\artifact\\guild\\gate_4\\revival_gate00_05.bms",
+    "prim\\mesh\\artifact\\guild\\gate_4\\revival_gate00_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\gate_4\\revival_gate.bmt"
+  ],
+  "effects": [
+    "map\\guild\\waterup_blue_long.efp",
+    "map\\guild\\light_gate_top_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

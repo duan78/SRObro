@@ -1,0 +1,10 @@
+{
+  "file_name": "p2skill_pro_damage_absorption_2",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 63435
+}

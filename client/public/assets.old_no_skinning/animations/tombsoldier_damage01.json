@@ -1,0 +1,22 @@
+{
+  "file_name": "tombsoldier_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 3038,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    524288,
+    0,
+    786432,
+    655360,
+    8,
+    10,
+    549985,
+    996514,
+    2097,
+    4159,
+    2097
+  ]
+}

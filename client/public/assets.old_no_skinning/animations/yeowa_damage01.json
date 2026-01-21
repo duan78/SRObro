@@ -1,0 +1,32 @@
+{
+  "file_name": "yeowa_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2557,
+  "animation_name": "\u000e",
+  "data_blocks": [
+    500,
+    30,
+    0,
+    9,
+    0,
+    33,
+    66,
+    100,
+    200,
+    233,
+    333,
+    433,
+    500,
+    9,
+    12,
+    9,
+    12,
+    9,
+    10,
+    617315,
+    703012,
+    9
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_m_redhood",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_redhood.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_redhood_02_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_redhood_02_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_redhood.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

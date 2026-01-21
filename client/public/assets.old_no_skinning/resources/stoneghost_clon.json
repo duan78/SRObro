@@ -1,0 +1,33 @@
+{
+  "file_name": "stoneghost_clon",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\stoneghost_part1.bms",
+    "prim\\mesh\\mob\\china\\stoneghost_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\stoneghost_clon.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_stand01.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_stand02.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_walk.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_run.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_attack01.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_damage01.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_damage02.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_die.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_die_loop.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_down.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_downwait.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_downdamage.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_downup.ban",
+    "prim\\ani\\mob\\china\\stoneghost\\stoneghost_downdie.ban"
+  ],
+  "textures": []
+}

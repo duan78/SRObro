@@ -1,0 +1,24 @@
+{
+  "file_name": "t_behemoth_2011",
+  "meshes": [
+    "prim\\mesh\\cos\\cart\\t_behemoth01.bms",
+    "prim\\mesh\\cos\\cart\\t_behemoth_part1.bms",
+    "prim\\mesh\\cos\\cart\\t_behemoth_part2_part1.bms",
+    "prim\\mesh\\cos\\cart\\t_behemoth_part2_part2_part1.bms",
+    "prim\\mesh\\cos\\cart\\t_behemoth_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\t_behemoth_2011.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\cart\\t_behemoth\\t_behemoth_stand01.ban",
+    "prim\\ani\\cos\\cart\\t_behemoth\\t_behemoth_walk.ban",
+    "prim\\ani\\cos\\cart\\t_behemoth\\t_behemoth_run.ban",
+    "prim\\ani\\cos\\cart\\t_behemoth\\t_behemoth_damage01.ban",
+    "prim\\ani\\cos\\cart\\t_behemoth\\t_behemoth_die.ban",
+    "prim\\ani\\cos\\cart\\t_behemoth\\t_behemoth_attack01.ban",
+    "prim\\ani\\cos\\cart\\t_behemoth\\t_behemoth_die_rm.ban"
+  ],
+  "textures": []
+}

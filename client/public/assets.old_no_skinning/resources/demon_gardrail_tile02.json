@@ -1,0 +1,23 @@
+{
+  "file_name": "demon_gardrail_tile02",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_gardrail_tile02.bms",
+    "prim\\mesh\\dun\\demon\\demon_gardrail_tile02.bms",
+    "prim\\mesh\\dun\\demon\\demon_gardrail_tile02_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_gardrail_tile.bmt"
+  ],
+  "effects": [
+    "dun\\blue_flame_a02.efp",
+    "dun\\blue_flame_a02.efp",
+    "dun\\blue_flame_a02.efp",
+    "dun\\blue_flame_a02.efp",
+    "dun\\blue_flame_a02.efp",
+    "dun\\blue_flame_a02.efp",
+    "dun\\blue_flame_a02.efp",
+    "dun\\blue_flame_a02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

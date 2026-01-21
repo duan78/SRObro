@@ -1,0 +1,10 @@
+{
+  "file_name": "dun_waterfall_b02",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\dun_waterfall_b02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "drop_archemy",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 21913
+}

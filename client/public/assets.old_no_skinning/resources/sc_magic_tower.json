@@ -1,0 +1,16 @@
+{
+  "file_name": "sc_magic_tower",
+  "meshes": [
+    "prim\\mesh\\mob\\season\\sc_magic_tower_01.bms",
+    "prim\\mesh\\mob\\season\\sc_magic_tower_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\season\\sc_magic_tower.bmt"
+  ],
+  "effects": [
+    "map\\yellow_oura_b.efp",
+    "map\\yellow_oura_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "sword_shieldpd_ready_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 14205
+}

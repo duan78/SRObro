@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_jupiter_reflection_shield_amb",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13543
+}

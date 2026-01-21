@@ -1,0 +1,13 @@
+{
+  "file_name": "hide_start_zealot",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\hide\\hide01_start_zealot01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide01_start_zealot02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\hide\\hide_boss_zealot.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

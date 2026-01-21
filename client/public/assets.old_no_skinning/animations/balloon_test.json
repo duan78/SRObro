@@ -1,0 +1,20 @@
+{
+  "file_name": "balloon_test",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 538,
+  "animation_name": "\f",
+  "data_blocks": [
+    65536,
+    327680,
+    0,
+    196608,
+    393216,
+    5,
+    6,
+    340528,
+    439808,
+    5
+  ]
+}

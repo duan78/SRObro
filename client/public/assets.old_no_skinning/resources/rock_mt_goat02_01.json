@@ -1,0 +1,21 @@
+{
+  "file_name": "rock_mt_goat02_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goat02_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goat02_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goat02_02.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goat02_03.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goat02_04.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goat02_05.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goat02_06.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goat02_07.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goat02_08.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\goat\\rock_mt_goat02_09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\goat\\rock_mt_goat02_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

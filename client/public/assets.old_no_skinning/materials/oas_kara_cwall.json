@@ -1,0 +1,15 @@
+{
+  "file_name": "oas_kara_cwall",
+  "textures": [
+    "oas_kk_sha_roof.ddj",
+    "oas_kara_cwall_cwall.ddj",
+    "oas_kara_cwall_window.ddj",
+    "oas_kk_sha_floor.ddj",
+    "oas_kk_sha_wall_02.ddj",
+    "oas_kara_cwall_nangan.ddj",
+    "oas_kara_cwall_lwindow.ddj",
+    "oas_kara_cwall_enterwall.ddj",
+    "oas_kara_obj01_alph.ddj",
+    "oas_kara_cwall_fire.ddj"
+  ]
+}

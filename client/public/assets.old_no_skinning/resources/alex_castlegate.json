@@ -1,0 +1,31 @@
+{
+  "file_name": "alex_castlegate",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_bottom01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_bottom01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_bottom02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_center.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_column.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_crevice.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_dark.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_door01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_door02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_door03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_door04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_flag.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_tower01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_tower02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_wall01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_wall02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_wall03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_wall04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_wall05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castlegate_wall06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\gate\\alex_castle.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

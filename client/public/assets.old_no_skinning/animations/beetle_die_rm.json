@@ -1,0 +1,32 @@
+{
+  "file_name": "beetle_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 6885,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    2,
+    12,
+    2,
+    12,
+    2,
+    12,
+    2,
+    13,
+    616,
+    3135,
+    614,
+    3253,
+    628,
+    3252,
+    560,
+    2625,
+    143723
+  ]
+}

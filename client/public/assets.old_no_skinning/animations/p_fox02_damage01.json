@@ -1,0 +1,24 @@
+{
+  "file_name": "p_fox02_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2898,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    0,
+    327680,
+    0,
+    655360,
+    5,
+    10,
+    353377,
+    1329,
+    4287,
+    1329,
+    4026,
+    5,
+    16,
+    5
+  ]
+}

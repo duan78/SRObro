@@ -1,0 +1,26 @@
+{
+  "file_name": "air_garden40_dom",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_04.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_05.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_06.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_07.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_08.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_09.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_10.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_11.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_12.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_13.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_14.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_dom_15.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden40_dom.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

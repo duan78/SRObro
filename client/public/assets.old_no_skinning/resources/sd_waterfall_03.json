@@ -1,0 +1,10 @@
+{
+  "file_name": "sd_waterfall_03",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\sd_waterfall_03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

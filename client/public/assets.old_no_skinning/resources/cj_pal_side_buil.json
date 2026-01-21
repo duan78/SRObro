@@ -1,0 +1,21 @@
+{
+  "file_name": "cj_pal_side_buil",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_buil_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_buil_fence_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_buil_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_buil_pilla.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_buil_pilla_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_buil_roof02_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_buil_roof01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_buil_roof03_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_buil_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_buil_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_side_buil.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

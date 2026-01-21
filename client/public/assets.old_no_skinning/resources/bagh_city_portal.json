@@ -1,0 +1,22 @@
+{
+  "file_name": "bagh_city_portal",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_portal01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_portal01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_portal02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_portal03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_portal04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_portal05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_portal06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_portal07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_portal08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_portal.bmt"
+  ],
+  "effects": [
+    "map\\bagh_portal.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,19 @@
+{
+  "file_name": "charge_gate",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\gate_4\\charge_gate00_01.bms",
+    "prim\\mesh\\artifact\\guild\\gate_4\\charge_gate00_01.bms",
+    "prim\\mesh\\artifact\\guild\\gate_4\\charge_gate00_02.bms",
+    "prim\\mesh\\artifact\\guild\\gate_4\\charge_gate00_03.bms",
+    "prim\\mesh\\artifact\\guild\\gate_4\\charge_gate00_04.bms",
+    "prim\\mesh\\artifact\\guild\\gate_4\\charge_gate_water_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\gate_4\\charge_gate.bmt"
+  ],
+  "effects": [
+    "map\\guild\\sphere_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "bagh_mong_fort_quayside02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_quayside01_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_quayside02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_quayside03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_quayside01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_quayside.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "avartar_w_viking_rc",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 51425
+}

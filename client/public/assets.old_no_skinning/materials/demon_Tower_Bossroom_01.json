@@ -1,0 +1,26 @@
+{
+  "file_name": "demon_Tower_Bossroom_01",
+  "textures": [
+    "demon_tower_m09.ddj",
+    "demon_tower_m07.ddj",
+    "demon_tower_m15.ddj",
+    "demon_tower_m16.ddj",
+    "demon_tower_b08.ddj",
+    "demon_tower_b13.ddj",
+    "demon_tower_b03.ddj",
+    "demon_tower_b04.ddj",
+    "demon_tower_b06.ddj",
+    "demon_tower_b07.ddj",
+    "demon_tower_b05.ddj",
+    "demon_tower_b12.ddj",
+    "demon_tower_b09.ddj",
+    "demon_tower_b02.ddj",
+    "demon_tower_b11.ddj",
+    "demon_tower_h02.ddj",
+    "demon_tower_h01.ddj",
+    "demon_tower_b10.ddj",
+    "demon_tower_h03.ddj",
+    "demon_tower_b01_fire.ddj",
+    "demon_tower_gate09.ddj"
+  ]
+}

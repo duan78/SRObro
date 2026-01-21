@@ -1,0 +1,26 @@
+{
+  "file_name": "bagh_field_stable",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_door.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_door.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_fence.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_light.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_light_alpha.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_porcelain.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_stone wall.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_straw.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_wall01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_wall02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_wood01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_wood02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_wood03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange02_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

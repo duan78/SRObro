@@ -1,0 +1,21 @@
+{
+  "file_name": "whitesnake_die",
+  "meshes": [
+    "prim\\mesh\\mob\\qinshi\\whitesnake01.bms",
+    "prim\\mesh\\mob\\qinshi\\whitesnake_part2_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\whitesnake_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\whitesnake_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\whitesnake_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\whitesnake.bmt"
+  ],
+  "effects": [
+    "monster\\eu\\skill\\skill_whitesnake_die.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_die.ban",
+    "prim\\ani\\mob\\qinshi\\whitesnake\\whitesnake_die_rm.ban"
+  ],
+  "textures": []
+}

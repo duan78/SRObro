@@ -1,0 +1,26 @@
+{
+  "file_name": "room301",
+  "meshes": [
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_bottom.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_bigbuda.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_bottom.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_bottom02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_bottom03.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_budabwall.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_ceiling.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_door.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_door02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_lamp.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_smallbuda.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_tower.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_wall_a01.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_wall_a02.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\room301\\stone_room301_wallpic.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv\\floor_3\\301.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

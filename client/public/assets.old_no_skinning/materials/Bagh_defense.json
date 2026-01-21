@@ -1,0 +1,18 @@
+{
+  "file_name": "Bagh_defense",
+  "textures": [
+    "bagh_defense_de01.ddj",
+    "bagh_defense_de02.ddj",
+    "bagh_defense_wood03.ddj",
+    "bagh_defense_de03.ddj",
+    "bagh_defense_patten03.ddj",
+    "bagh_defense_wood01.ddj",
+    "bagh_defense_patten02.ddj",
+    "bagh_defense_line.ddj",
+    "bagh_defense_de04.ddj",
+    "bagh_defense_box.ddj",
+    "bagh_defense_patten01.ddj",
+    "bagh_defense_wood02.ddj",
+    "bagh_city_weapon_light.ddj"
+  ]
+}

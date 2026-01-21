@@ -1,0 +1,12 @@
+{
+  "file_name": "w_cd_bigtortoise02",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\dunhuang\\turtle\\w_cd_bigtortoise02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\dunhuang\\turtle\\w_cd_bigtortoise01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

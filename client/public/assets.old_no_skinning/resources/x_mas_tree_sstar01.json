@@ -1,0 +1,29 @@
+{
+  "file_name": "x_mas_tree_sstar01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\common\\event-xmas\\x_mas_tree.bmt"
+  ],
+  "effects": [
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp",
+    "map\\x-mastree-star_big.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

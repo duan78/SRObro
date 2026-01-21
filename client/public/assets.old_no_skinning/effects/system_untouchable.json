@@ -1,0 +1,10 @@
+{
+  "file_name": "system_untouchable",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2089
+}

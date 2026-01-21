@@ -1,0 +1,17 @@
+{
+  "file_name": "event_santa_kisaeng1",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\event_santa_kisaeng1_2s.bms",
+    "prim\\mesh\\npc\\china\\event_santa_kisaeng1_al_2s.bms",
+    "prim\\mesh\\npc\\china\\event_santa_kisaeng1_hat.bms",
+    "prim\\mesh\\npc\\china\\event_santa_kisaeng1_part1.bms",
+    "prim\\mesh\\npc\\china\\event_santa_kisaeng1_part2_part1.bms",
+    "prim\\mesh\\npc\\china\\event_santa_kisaeng1_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\event_santa_kisaeng1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

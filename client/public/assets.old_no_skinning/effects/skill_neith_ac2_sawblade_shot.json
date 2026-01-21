@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_neith_ac2_sawblade_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 19122
+}

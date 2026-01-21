@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_rich_lamp",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan06\\obj\\cj_rich_lamp01.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\obj\\cj_rich_lamp01.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\obj\\cj_rich_lamp02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan06\\obj\\cj_rich_lamp.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

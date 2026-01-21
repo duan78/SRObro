@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_whitesnake_ac2_blackglass_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 27999
+}

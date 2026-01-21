@@ -1,0 +1,17 @@
+{
+  "file_name": "bagh_bfountain",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_bfountain01_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_bfountain01_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_bfountain01_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_bfountain01_g01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_bfountain01_g02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_bfountain01_g03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_bfountain.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

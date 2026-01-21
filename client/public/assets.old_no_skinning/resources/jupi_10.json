@@ -1,0 +1,16 @@
+{
+  "file_name": "jupi_10",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_10_01.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_10_01.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_10_02.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_10_03.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_10_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\field\\jupi_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

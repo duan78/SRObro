@@ -1,0 +1,15 @@
+{
+  "file_name": "avatar_w_headknights",
+  "meshes": [
+    "prim\\mesh\\avatar\\avatar_w_headknights_06.bms",
+    "prim\\mesh\\avatar\\avatar_w_headknights_07.bms",
+    "prim\\mesh\\avatar\\avatar_w_headknights_part1.bms",
+    "prim\\mesh\\avatar\\avatar_w_headknights_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\avatar\\avatar_w_headknights.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

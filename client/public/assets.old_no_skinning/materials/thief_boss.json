@@ -1,0 +1,7 @@
+{
+  "file_name": "thief_boss",
+  "textures": [
+    "prim\\mtrl\\mob\\arabia\\thief_boss.ddj",
+    "thief_boss_attach.ddj"
+  ]
+}

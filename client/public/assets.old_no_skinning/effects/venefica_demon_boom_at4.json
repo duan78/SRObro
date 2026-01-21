@@ -1,0 +1,11 @@
+{
+  "file_name": "venefica_demon_boom_at4",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 38040
+}

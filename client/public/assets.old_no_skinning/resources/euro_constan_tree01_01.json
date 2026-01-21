@@ -1,0 +1,17 @@
+{
+  "file_name": "euro_constan_tree01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_tree01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_tree01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_tree01_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_tree01_03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_tree01_04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_tree01_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\minga\\euro_constan_tree02_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

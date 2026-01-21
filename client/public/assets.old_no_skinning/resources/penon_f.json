@@ -1,0 +1,28 @@
+{
+  "file_name": "penon_f",
+  "meshes": [
+    "prim\\mesh\\mob\\karakoram\\penonf_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\penonf_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\karakoram\\penonf.bmt",
+    "prim\\mtrl\\mob\\karakoram\\penonf_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_stand01.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_stand02.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_walk.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_run.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_attack01.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_attack02.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_damage01.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_damage02.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_down.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_down_rm.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_down_damage.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_down_up.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_down_die.ban"
+  ],
+  "textures": []
+}

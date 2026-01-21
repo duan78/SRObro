@@ -1,0 +1,16 @@
+{
+  "file_name": "c_swamp_tree_dark05",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\c_swamp_tree_dark05_01.bms",
+    "prim\\mesh\\nature\\common\\tree\\c_swamp_tree_dark05_01.bms",
+    "prim\\mesh\\nature\\common\\tree\\c_swamp_tree_dark05_02.bms",
+    "prim\\mesh\\nature\\common\\tree\\c_swamp_tree_dark05_03.bms",
+    "prim\\mesh\\nature\\common\\tree\\c_swamp_tree_dark05_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tree\\c_swamp_tree_dark.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,20 @@
+{
+  "file_name": "osiris_guard_statue",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\osiris_guard_statue.bms",
+    "prim\\mesh\\mob\\sd\\osiris_guard_statue01.bms",
+    "prim\\mesh\\mob\\sd\\osiris_guard_statue02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\osiris_guard_statue.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\osiris_guard_statue\\osiris_guard_statue_stand01.ban",
+    "prim\\ani\\mob\\sd\\osiris_guard_statue\\osiris_guard_statue_stand02.ban",
+    "prim\\ani\\mob\\sd\\osiris_guard_statue\\osiris_guard_statue_attack01.ban",
+    "prim\\ani\\mob\\sd\\osiris_guard_statue\\osiris_guard_statue_die.ban",
+    "prim\\ani\\mob\\sd\\osiris_guard_statue\\osiris_guard_statue_die_rm.ban"
+  ],
+  "textures": []
+}

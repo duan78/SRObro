@@ -1,0 +1,37 @@
+{
+  "file_name": "p_jinn_02",
+  "meshes": [
+    "prim\\mesh\\cos\\p_jinn_part1.bms",
+    "prim\\mesh\\cos\\p_jinn_part2_part1.bms",
+    "prim\\mesh\\cos\\p_jinn_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_jinn02.bmt"
+  ],
+  "effects": [
+    "system\\cos_p_jinn_leg_loop_b.efp",
+    "system\\cos_p_jinn_leg_loop_b.efp",
+    "system\\cos_p_jinn_leg_loop_a.efp",
+    "system\\cos_p_jinn_leg_loop_a.efp"
+  ],
+  "animations": [
+    "prim\\ani\\cos\\p_jinn\\p_jinn_stand01.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_walk.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_attack01.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_attack02.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_attackready01.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_die.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_die_rm.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_run.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_stand02.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_stand03.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_attack03.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_attack04.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_stand04.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_attack05.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_cart_stand01.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_damage01.ban",
+    "prim\\ani\\cos\\p_jinn\\p_jinn_run_part01.ban"
+  ],
+  "textures": []
+}

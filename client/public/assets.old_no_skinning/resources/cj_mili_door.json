@@ -1,0 +1,19 @@
+{
+  "file_name": "cj_mili_door",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_door_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_door01.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_door_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_door_roofal.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_door_roofside.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_door_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_door_wallside.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_fence_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan04\\cj_mili_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

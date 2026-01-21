@@ -1,0 +1,16 @@
+{
+  "file_name": "cj_jin_center_rock",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_cent_rock.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_12g_01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_12g_02.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_13g_rock.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_cent_rock.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\cj_jin_cent_rock.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

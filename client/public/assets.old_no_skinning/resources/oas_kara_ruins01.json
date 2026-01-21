@@ -1,0 +1,17 @@
+{
+  "file_name": "oas_kara_ruins01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kara_ruins_wall.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kara_ruins_backwall.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kara_ruins_etc.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kara_ruins_leftwall.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kara_ruins_roof.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kara_ruins_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\oas_kara_ruins01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

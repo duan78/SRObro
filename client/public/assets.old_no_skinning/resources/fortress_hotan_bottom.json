@@ -1,0 +1,12 @@
+{
+  "file_name": "fortress_hotan_bottom",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_bottom.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\hotang\\fortress_hotan_bottom.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

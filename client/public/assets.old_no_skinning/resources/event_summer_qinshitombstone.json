@@ -1,0 +1,35 @@
+{
+  "file_name": "event_summer_qinshitombstone",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\tombstone_body.bms",
+    "prim\\mesh\\mob\\china\\tombstone_head.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\qinshitombstone.bmt",
+    "prim\\mtrl\\mob\\qinshi\\qinshitombstone_champ.bmt",
+    "prim\\mtrl\\mob\\qinshi\\qinshitombstone_clon2.bmt"
+  ],
+  "effects": [
+    "system\\ghost_keep01.efp",
+    "system\\ghost_keep01.efp",
+    "system\\ghost_keep01.efp",
+    "system\\ghost_keep01.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_stand01.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_stand02.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_walk.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_run.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_attack01.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_damage01.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_damage02.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_down.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_down_rm.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_down_damage.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_down_up.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_down_die.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_attack02.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_attack03.ban"
+  ],
+  "textures": []
+}

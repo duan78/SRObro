@@ -1,0 +1,19 @@
+{
+  "file_name": "fortress_ct_fort_in_door01",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_door03.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_door03.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_door04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\fortress_ct_fort_gate_door.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\bldg\\guild\\constantinople\\ct_in_door_close.ban",
+    "prim\\ani\\bldg\\guild\\constantinople\\ct_in_door_opening.ban",
+    "prim\\ani\\bldg\\guild\\constantinople\\ct_in_door_open.ban",
+    "prim\\ani\\bldg\\guild\\constantinople\\ct_in_door_closing.ban"
+  ],
+  "textures": []
+}

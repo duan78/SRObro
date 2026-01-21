@@ -1,0 +1,21 @@
+{
+  "file_name": "w_cd_broken_weap03",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_weap03_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_weap03_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_weap03_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_weap03_03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_weap03_09.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_weap03_04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_weap03_05.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_weap03_06.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_weap03_07.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_weap03_08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_weap03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

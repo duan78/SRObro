@@ -1,0 +1,21 @@
+{
+  "file_name": "cj_ferry_private02",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_private02_01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_deco.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_deco_01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_deco_02.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_private02_02.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_private02_03.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_private02_04.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_private02_a01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_framecarrier.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_private02_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\cj_ferry\\cj_ferry_private02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

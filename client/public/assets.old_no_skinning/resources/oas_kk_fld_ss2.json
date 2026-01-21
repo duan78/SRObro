@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_kk_fld_ss2",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\karakorm\\kara-field-obj\\oas_kk_fld_ss2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\karakorm\\kara-field-obj\\oas_kk_fld_ss1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

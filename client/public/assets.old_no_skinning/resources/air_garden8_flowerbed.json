@@ -1,0 +1,13 @@
+{
+  "file_name": "air_garden8_flowerbed",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_flowerbed02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_flowerbed01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden8_flowerbed.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

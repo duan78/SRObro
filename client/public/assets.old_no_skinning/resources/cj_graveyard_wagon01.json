@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_graveyard_wagon01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_wagon01.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_wagon01.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_wagon01_1.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_wagon01_2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\graveyard\\cj_graveyard_wagon01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

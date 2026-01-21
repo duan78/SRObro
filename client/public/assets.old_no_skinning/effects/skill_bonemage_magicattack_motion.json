@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_bonemage_magicattack_motion",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 30457
+}

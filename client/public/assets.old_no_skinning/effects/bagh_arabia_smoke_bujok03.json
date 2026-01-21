@@ -1,0 +1,10 @@
+{
+  "file_name": "bagh_arabia_smoke_bujok03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 27439
+}

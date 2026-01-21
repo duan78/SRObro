@@ -1,0 +1,19 @@
+{
+  "file_name": "cj5_tem_door",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_door01.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_door01.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_door02.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_door03.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_door_deco.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_door_fence.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_door_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_door_statue.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan05\\cj5_tem_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,26 @@
+{
+  "file_name": "Bagh_special",
+  "textures": [
+    "bagh_special_bottom01.ddj",
+    "bagh_special_object02.ddj",
+    "bagh_special_box01.ddj",
+    "bagh_special_flag.ddj",
+    "bagh_special_ca02.ddj",
+    "bagh_special_ca01.ddj",
+    "bagh_special_ca03.ddj",
+    "bagh_special_tent03.ddj",
+    "bagh_special_tent01.ddj",
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_weapon_light.ddj",
+    "bagh_special_ca07.ddj",
+    "bagh_special_tent02.ddj",
+    "bagh_field_stable_fence.ddj",
+    "bagh_special_tent_ac.ddj",
+    "bagh_special_stick.ddj",
+    "bagh_pot02.ddj",
+    "bagh_pot01.ddj",
+    "bagh_special_object03.ddj",
+    "bagh_special_object01.ddj",
+    "bagh_special_wood01.ddj",
+    "bagh_special_line.ddj"
+  ]
+}

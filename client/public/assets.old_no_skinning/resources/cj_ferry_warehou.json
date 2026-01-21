@@ -1,0 +1,16 @@
+{
+  "file_name": "cj_ferry_warehou",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_warehou_door.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_warehou_door.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_warehou_gidun.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_warehou_roof.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_warehou_window.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\cj_ferry\\cj_ferry.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "desert_brazier",
+  "meshes": [
+    "prim\\mesh\\dun\\survival\\desert\\desert_brazier.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\desert\\desert_brazier.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame_sb_s03.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

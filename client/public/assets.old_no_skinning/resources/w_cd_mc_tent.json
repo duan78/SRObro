@@ -1,0 +1,16 @@
+{
+  "file_name": "w_cd_mc_tent",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_tent01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_tent01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_tent02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_tent03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_tent04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_tent.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

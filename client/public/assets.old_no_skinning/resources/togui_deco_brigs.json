@@ -1,0 +1,18 @@
+{
+  "file_name": "togui_deco_brigs",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigs_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigs_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigs_02.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigs_03.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigs_04.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigs_05.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_deco_brigs_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\togui\\togui_deco_brigl_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

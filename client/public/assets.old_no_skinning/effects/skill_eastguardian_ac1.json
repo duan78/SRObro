@@ -1,0 +1,9 @@
+{
+  "file_name": "skill_eastguardian_ac1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true
+  },
+  "raw_size": 19820
+}

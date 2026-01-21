@@ -1,0 +1,11 @@
+{
+  "file_name": "operator_harmony",
+  "meshes": [],
+  "materials": [],
+  "effects": [
+    "water_harmony_keep_a.efp",
+    "system\\operator_harmony.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,21 @@
+{
+  "file_name": "peryton_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1208,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    0,
+    393216,
+    0,
+    393216,
+    655360,
+    6,
+    11,
+    406123,
+    768794,
+    1587,
+    2746
+  ]
+}

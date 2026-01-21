@@ -1,0 +1,26 @@
+{
+  "file_name": "event_door_close",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 208,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    131072,
+    393216,
+    2,
+    6,
+    143920,
+    0,
+    32768,
+    32768,
+    32768,
+    46687,
+    32768,
+    32768,
+    32768
+  ]
+}

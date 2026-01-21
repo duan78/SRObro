@@ -1,0 +1,10 @@
+{
+  "file_name": "cos_scarabaeus_light",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4678
+}

@@ -1,0 +1,31 @@
+{
+  "file_name": "ghostbug_die_loop",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2915,
+  "animation_name": "\u0011",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    619,
+    3000,
+    2,
+    10,
+    156769,
+    439244,
+    2,
+    6,
+    143922,
+    439045,
+    2,
+    16,
+    2,
+    16,
+    2,
+    15
+  ]
+}

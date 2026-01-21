@@ -1,0 +1,15 @@
+{
+  "file_name": "avatar_w_fairy_2",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_fairy_wing_2.bmt"
+  ],
+  "effects": [
+    "system\\avatar_fairy_m_wing_keep01.efp"
+  ],
+  "animations": [
+    "prim\\ani\\etc\\avatar_m_fairy_wing_stand01.ban",
+    "prim\\ani\\etc\\avatar_m_fairy_wing_run.ban"
+  ],
+  "textures": []
+}

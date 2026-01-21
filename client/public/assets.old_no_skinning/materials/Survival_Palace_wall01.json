@@ -1,0 +1,8 @@
+{
+  "file_name": "Survival_Palace_wall01",
+  "textures": [
+    "c_jin_wall_orwall.ddj",
+    "c_jin_bb_alpha.ddj",
+    "c_jin_enter_wall01.ddj"
+  ]
+}

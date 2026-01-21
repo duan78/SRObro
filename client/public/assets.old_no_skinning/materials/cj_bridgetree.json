@@ -1,0 +1,13 @@
+{
+  "file_name": "cj_bridgetree",
+  "textures": [
+    "cj_bridge_side.ddj",
+    "cj_bridge_btree.ddj",
+    "cj_bridge_stone.ddj",
+    "cj_bridge_treef.ddj",
+    "cj_bridge_cup.ddj",
+    "cj_bridge_rope.ddj",
+    "cj_bridge_stree.ddj",
+    "cj_bridge_treea.ddj"
+  ]
+}

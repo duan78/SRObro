@@ -1,0 +1,10 @@
+{
+  "file_name": "shamoot_at06",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 48316
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_ferry_private02",
+  "textures": [
+    "cj_ferry_private_03.ddj",
+    "cj_ferry_private_01.ddj",
+    "cj_ferry_private_04.ddj",
+    "cj_ferry_deco.ddj",
+    "cj_framecarrier.ddj",
+    "cj_ferry_deco_02.ddj",
+    "cj_ferry_deco_01.ddj"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "supplies_valuables_eu",
+  "meshes": [
+    "prim\\mesh\\npc\\casia\\centralasiashop_accessory_al_2s.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_accessory_part1.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_accessory_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\casia\\supplies_valuables_eu.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

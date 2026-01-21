@@ -1,0 +1,14 @@
+{
+  "file_name": "air_garden_waterfall",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\air_garden_waterfall01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden_waterfall02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden_waterfall03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden_waterfall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

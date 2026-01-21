@@ -1,0 +1,18 @@
+{
+  "file_name": "khotanshop_designer",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotanshop_designer_2s.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_designer_al.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_designer_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_designer_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotanshop_designer.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\khotan\\khotanshop_designer_basic.ban",
+    "prim\\ani\\npc\\khotan\\khotanshop_designer_basic2.ban"
+  ],
+  "textures": []
+}

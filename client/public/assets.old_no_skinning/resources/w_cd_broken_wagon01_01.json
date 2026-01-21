@@ -1,0 +1,18 @@
+{
+  "file_name": "w_cd_broken_wagon01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_wagon01_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_wagon01_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_wagon01_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_wagon01_03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_wagon01_04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_wagon01_05.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_wagon01_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ruins\\w_cd_broken_wagon01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

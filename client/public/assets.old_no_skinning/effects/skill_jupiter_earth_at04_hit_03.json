@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_jupiter_earth_at04_hit_03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 33102
+}

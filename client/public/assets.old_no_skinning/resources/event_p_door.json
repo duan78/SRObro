@@ -1,0 +1,10 @@
+{
+  "file_name": "event_p_door",
+  "meshes": [],
+  "materials": [],
+  "effects": [
+    "dun\\up_smoke.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

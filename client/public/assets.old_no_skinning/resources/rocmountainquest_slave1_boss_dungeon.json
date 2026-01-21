@@ -1,0 +1,15 @@
+{
+  "file_name": "rocmountainquest_slave1_boss_dungeon",
+  "meshes": [
+    "prim\\mesh\\npc\\common\\rocmountainquest_slave1_part1.bms",
+    "prim\\mesh\\npc\\common\\rocmountainquest_slave1_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\common\\rocmountainquest_slave1_boss_dungeon.bmt"
+  ],
+  "effects": [
+    "dun\\wind_around_a.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

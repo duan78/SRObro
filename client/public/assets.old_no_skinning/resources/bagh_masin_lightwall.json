@@ -1,0 +1,15 @@
+{
+  "file_name": "bagh_masin_lightwall",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_lightwall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_masin\\bagh_masin_lightwall.bmt"
+  ],
+  "effects": [
+    "dun\\bagh_masin_lightwall.efp",
+    "dun\\bagh_masin_lightwall.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "centralasiashop_potion",
+  "meshes": [
+    "prim\\mesh\\npc\\casia\\centralasiashop_potion_al.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_potion_2s.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_potion_part1.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_potion_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\casia\\centralasiashop_potion.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

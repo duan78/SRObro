@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_rich1_longwall",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan06\\rich01\\cj_rich1_longwall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan06\\rich01\\cj_rich1_longwall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

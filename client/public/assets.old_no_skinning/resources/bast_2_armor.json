@@ -1,0 +1,31 @@
+{
+  "file_name": "bast_2_armor",
+  "meshes": [
+    "prim\\mesh\\mob\\asiam\\rogue_02.bms",
+    "prim\\mesh\\mob\\asiam\\rogue_weapon.bms",
+    "prim\\mesh\\mob\\asiam\\rogue_part1.bms",
+    "prim\\mesh\\mob\\asiam\\rogue_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\bast_2_armor.bmt",
+    "prim\\mtrl\\mob\\asiam\\rogue_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_stand01.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_walk.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_run.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_attack01.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_attack02.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_attack03.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_damage01.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_die.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_die_rm.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_down.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_downrm.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_downdamage.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_downup.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_downdie.ban"
+  ],
+  "textures": []
+}

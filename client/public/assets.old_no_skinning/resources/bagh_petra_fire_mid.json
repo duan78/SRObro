@@ -1,0 +1,13 @@
+{
+  "file_name": "bagh_petra_fire_mid",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_petra\\bagh_petra_door.bmt"
+  ],
+  "effects": [
+    "dun\\petra_fire_down.efp",
+    "dun\\petra_fire_mid.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

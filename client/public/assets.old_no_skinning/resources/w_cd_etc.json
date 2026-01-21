@@ -1,0 +1,24 @@
+{
+  "file_name": "w_cd_etc",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_etc_wall01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_etc_roof_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_etc_wall02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_etc_wall02_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_etc_wall03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_etc_wall04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_etc_winlight.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_etc_deer.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_etc_jar.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_etc_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_etc_wall01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_etc.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "piety_e12_door",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_e12.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_e01_door.bmt"
+  ],
+  "effects": [
+    "dun\\pha_mroon_02.efp",
+    "dun\\pha_mroon_02.efp",
+    "dun\\pha_mroon_02.efp",
+    "dun\\pha_mroon_02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

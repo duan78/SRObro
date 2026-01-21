@@ -1,0 +1,11 @@
+{
+  "file_name": "event_whiteknight_ac2_motion",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 36465
+}

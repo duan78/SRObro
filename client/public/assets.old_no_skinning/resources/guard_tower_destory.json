@@ -1,0 +1,19 @@
+{
+  "file_name": "guard_tower_destory",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower_destory.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower_destory.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower_destory_01.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower_destory_metal.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\guard tower\\guard tower_destory.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\artifact\\guild\\guard tower\\tower_stand.ban",
+    "prim\\ani\\artifact\\guild\\guard tower\\tower_ready.ban",
+    "prim\\ani\\artifact\\guild\\guard tower\\tower_wait.ban"
+  ],
+  "textures": []
+}

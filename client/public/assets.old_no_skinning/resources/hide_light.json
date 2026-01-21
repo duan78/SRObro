@@ -1,0 +1,15 @@
+{
+  "file_name": "hide_light",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_light01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_light02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\hide\\hide_light.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

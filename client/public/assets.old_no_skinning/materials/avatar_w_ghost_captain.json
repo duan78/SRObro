@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_w_ghost_captain",
+  "textures": [
+    "avatar_w_ghost_captain.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_ghost_captain_n.ddj",
+    "avatar_w_ghost_captain01.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_ghost_captain01_n.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_ghost_captain_attach.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_ghost_captain_attach_n.ddj",
+    "avatar_w_ghost_captain_hat.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_ghost_captain_hat_n.ddj"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_neith_ac5_hand_wait",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10419
+}

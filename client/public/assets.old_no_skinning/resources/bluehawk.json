@@ -1,0 +1,17 @@
+{
+  "file_name": "bluehawk",
+  "meshes": [
+    "prim\\mesh\\npc\\animal\\hawk01.bms",
+    "prim\\mesh\\npc\\animal\\hawk02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\animal\\bluehawk.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\animal\\hawk_stand.ban",
+    "prim\\ani\\npc\\animal\\hawk_walk.ban",
+    "prim\\ani\\npc\\animal\\hawk_run.ban"
+  ],
+  "textures": []
+}

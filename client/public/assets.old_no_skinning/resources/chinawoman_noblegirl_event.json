@@ -1,0 +1,20 @@
+{
+  "file_name": "chinawoman_noblegirl_event",
+  "meshes": [
+    "prim\\mesh\\npc\\npc_ch_event_clown01.bms",
+    "prim\\mesh\\npc\\npc_ch_event_clown02.bms",
+    "prim\\mesh\\npc\\npc_ch_event_clown04.bms",
+    "prim\\mesh\\npc\\npc_ch_event_clown03_part2.bms",
+    "prim\\mesh\\npc\\npc_ch_event_clown03_part1_part1.bms",
+    "prim\\mesh\\npc\\npc_ch_event_clown03_part1_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\npc_ch_event_clown.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\npc_ch_event_clown_stand01.ban",
+    "prim\\ani\\npc\\npc_ch_event_clown_stand02.ban"
+  ],
+  "textures": []
+}

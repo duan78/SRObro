@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_earth_root_loop_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 5486
+}

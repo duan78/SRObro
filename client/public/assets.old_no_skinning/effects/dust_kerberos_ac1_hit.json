@@ -1,0 +1,10 @@
+{
+  "file_name": "dust_kerberos_ac1_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13664
+}

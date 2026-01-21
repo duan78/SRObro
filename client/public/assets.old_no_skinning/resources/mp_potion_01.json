@@ -1,0 +1,10 @@
+{
+  "file_name": "mp_potion_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\mpherb.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "shield_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\armor\\shield_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

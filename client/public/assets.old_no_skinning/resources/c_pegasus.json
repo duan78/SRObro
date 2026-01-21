@@ -1,0 +1,21 @@
+{
+  "file_name": "c_pegasus",
+  "meshes": [
+    "prim\\mesh\\cos\\c_pegasus_part1.bms",
+    "prim\\mesh\\cos\\c_pegasus_part2_part1.bms",
+    "prim\\mesh\\cos\\c_pegasus_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\c_pegasus.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\c_pegasus\\c_pegasus_stand01.ban",
+    "prim\\ani\\cos\\c_pegasus\\c_pegasus_walk.ban",
+    "prim\\ani\\cos\\c_pegasus\\c_pegasus_damage01.ban",
+    "prim\\ani\\cos\\c_pegasus\\c_pegasus_die.ban",
+    "prim\\ani\\cos\\c_pegasus\\c_pegasus_die_rm.ban",
+    "prim\\ani\\cos\\c_pegasus\\c_pegasus_run.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,11 @@
+{
+  "file_name": "mad_general_at15_wait",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 69383
+}

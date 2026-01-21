@@ -1,0 +1,30 @@
+{
+  "file_name": "tombstoneghost_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1162,
+  "animation_name": "\u0017",
+  "data_blocks": [
+    85297,
+    7680,
+    0,
+    1792,
+    0,
+    16896,
+    21248,
+    42496,
+    56320,
+    69888,
+    85248,
+    1280,
+    2560,
+    1892,
+    4020,
+    7,
+    6,
+    471344,
+    409808,
+    7
+  ]
+}

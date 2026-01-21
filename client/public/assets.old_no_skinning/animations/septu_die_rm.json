@@ -1,0 +1,20 @@
+{
+  "file_name": "septu_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 7133,
+  "animation_name": "\f",
+  "data_blocks": [
+    65536,
+    327680,
+    0,
+    327680,
+    353646,
+    802447,
+    340325,
+    703440,
+    5,
+    11
+  ]
+}

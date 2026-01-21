@@ -1,0 +1,18 @@
+{
+  "file_name": "bagh_masin_lf",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_lf_04.bms",
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_lf_01.bms",
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_lf_02.bms",
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_lf_03.bms",
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_lf_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\masin\\bagh_masin_lf.bmt"
+  ],
+  "effects": [
+    "dun\\trap01_center.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

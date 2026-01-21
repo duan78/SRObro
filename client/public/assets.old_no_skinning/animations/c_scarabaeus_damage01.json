@@ -1,0 +1,21 @@
+{
+  "file_name": "c_scarabaeus_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 6603,
+  "animation_name": "\u0015",
+  "data_blocks": [
+    0,
+    0,
+    1643,
+    694079,
+    700991,
+    791871,
+    944959,
+    2751,
+    406124,
+    405810,
+    406066
+  ]
+}

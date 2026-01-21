@@ -1,0 +1,17 @@
+{
+  "file_name": "oas_tarim_rob_bigfire01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_bigfire01_01.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_bigfire01_02.bms",
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_bigfire01_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_bigfire01.bmt"
+  ],
+  "effects": [
+    "map\\oas_hot_etc_b.efp",
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

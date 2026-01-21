@@ -1,0 +1,18 @@
+{
+  "file_name": "chinaquest_merchant_spear",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaquest_merchant_spear_2s.bms",
+    "prim\\mesh\\npc\\china\\chinaquest_merchant_spear_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaquest_merchant_spear_part2.bms",
+    "prim\\mesh\\npc\\china\\chinaquest_merchant_spear_al_2s.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaquest_merchant_spear.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinaquest_merchant_basic.ban",
+    "prim\\ani\\npc\\china\\chinaquest_merchant_time.ban"
+  ],
+  "textures": []
+}

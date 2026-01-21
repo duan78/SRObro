@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_deserttrunkz_root_motion",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2173
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_inn_oldtree",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_inn_oldtree.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_inn_oldtree.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_inn_oldtree_01.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_inn_oldtree_bran.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\greenfield\\cj_inn.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

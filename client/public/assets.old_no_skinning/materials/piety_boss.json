@@ -1,0 +1,29 @@
+{
+  "file_name": "piety_boss",
+  "textures": [
+    "piety_boss_brick.ddj",
+    "piety_boss_column.ddj",
+    "piety_pillar01.ddj",
+    "piety_altar_patten.ddj",
+    "piety_boss_relief.ddj",
+    "piety_boss_arch.ddj",
+    "piety_boss_mark.ddj",
+    "piety_altar_brazier.ddj",
+    "piety_boss_dan.ddj",
+    "piety_boss_brick2.ddj",
+    "piety_carve02.ddj",
+    "piety_boss_dan2.ddj",
+    "piety_boss_apollo.ddj",
+    "piety_area.ddj",
+    "piety_boss_bottom_line2.ddj",
+    "piety_boss_bottom_patten.ddj",
+    "piety_boss_bottom_tiger.ddj",
+    "piety_boss_bottom_line.ddj",
+    "piety_boss_top.ddj",
+    "piety_boss_arch2.ddj",
+    "chair_map.ddj",
+    "piety_boss_nike.ddj",
+    "piety_boss_atena_01.ddj",
+    "piety_boss_atena_02.ddj"
+  ]
+}

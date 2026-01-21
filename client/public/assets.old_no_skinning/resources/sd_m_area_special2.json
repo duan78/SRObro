@@ -1,0 +1,15 @@
+{
+  "file_name": "sd_m_area_special2",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_special2_al2.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_special2_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_special2_part2_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_special2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_m_area_special2.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

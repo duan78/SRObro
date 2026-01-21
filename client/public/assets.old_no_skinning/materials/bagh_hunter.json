@@ -1,0 +1,20 @@
+{
+  "file_name": "bagh_hunter",
+  "textures": [
+    "bagh_hunter_step01.ddj",
+    "bagh_hunter_will05.ddj",
+    "bagh_hunter_will06.ddj",
+    "bagh_hunter_win01.ddj",
+    "bagh_hunter_roof02.ddj",
+    "bagh_hunter_will02.ddj",
+    "bagh_hunter_will03.ddj",
+    "bagh_hunter_will04.ddj",
+    "bagh_hunter_roof01.ddj",
+    "bagh_hunter_flag01.ddj",
+    "bagh_hunter_door02.ddj",
+    "bagh_hunter_door01.ddj",
+    "bagh_hunter_door03.ddj",
+    "bagh_hunter_tile01.ddj",
+    "bagh_hunter_will01.ddj"
+  ]
+}

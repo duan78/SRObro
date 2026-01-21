@@ -1,0 +1,15 @@
+{
+  "file_name": "chinaetc_horse2",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaetc_horse2_2s.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_horse2_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_horse2_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_horse2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaetc_horse2.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

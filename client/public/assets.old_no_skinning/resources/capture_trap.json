@@ -1,0 +1,17 @@
+{
+  "file_name": "capture_trap",
+  "meshes": [
+    "prim\\mesh\\etc\\capture_trap.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\capture_trap.bmt"
+  ],
+  "effects": [
+    "system\\system_capture_trap.efp"
+  ],
+  "animations": [
+    "prim\\ani\\etc\\capture_trap_stand01.ban",
+    "prim\\ani\\etc\\capture_trap_attack01.ban"
+  ],
+  "textures": []
+}

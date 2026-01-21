@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_ferry_boat_old",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_boat_old.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\cj_ferry\\cj_ferry_boat_old.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

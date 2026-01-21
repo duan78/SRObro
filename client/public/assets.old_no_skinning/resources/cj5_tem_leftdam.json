@@ -1,0 +1,14 @@
+{
+  "file_name": "cj5_tem_leftdam",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_leftdam_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_leftdam_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_leftdam_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan05\\cj5_tem_leftdam.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

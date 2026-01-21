@@ -1,0 +1,17 @@
+{
+  "file_name": "chinaquest_priest",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaquest_priest_al.bms",
+    "prim\\mesh\\npc\\china\\chinaquest_priest_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaquest_priest_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaquest_priest.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinaquest_priest_basic.ban",
+    "prim\\ani\\npc\\china\\chinaquest_priest_time.ban"
+  ],
+  "textures": []
+}

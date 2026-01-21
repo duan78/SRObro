@@ -1,0 +1,10 @@
+{
+  "file_name": "cos_p_gold_pig_etc",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3442
+}

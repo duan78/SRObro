@@ -1,0 +1,15 @@
+{
+  "file_name": "hawk",
+  "meshes": [
+    "prim\\mesh\\nature\\hawk01.bms",
+    "prim\\mesh\\nature\\hawk02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\hawk.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\nature\\hawk_fly.ban"
+  ],
+  "textures": []
+}

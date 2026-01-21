@@ -1,0 +1,25 @@
+{
+  "file_name": "euro_constan_ship03",
+  "meshes": [
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_01.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_02.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_03.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_04.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_05.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_06.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_07.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_08.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_09.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_10.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_11.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_12.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_13.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\euro_constan_ship03_14.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\europe\\east eurpoe\\euro_constan_ship03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

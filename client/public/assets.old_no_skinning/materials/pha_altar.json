@@ -1,0 +1,12 @@
+{
+  "file_name": "pha_altar",
+  "textures": [
+    "pha_statue01.ddj",
+    "pha_altar03.ddj",
+    "pha_altar05.ddj",
+    "pha_altar02.ddj",
+    "pha_altar04.ddj",
+    "pha_altar01.ddj",
+    "pha_pillar01.ddj"
+  ]
+}

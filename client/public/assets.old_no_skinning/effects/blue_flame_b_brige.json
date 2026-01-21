@@ -1,0 +1,10 @@
+{
+  "file_name": "blue_flame_b_brige",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13235
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "w_cd_statue_r",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_statue_walr.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_statue_r.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_statue_walr.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\dunhuang\\w_cd_statue.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,18 @@
+{
+  "file_name": "oas_kk_castle",
+  "textures": [
+    "oas_kk_sha_wall_02.ddj",
+    "oas_kk_sha_wall_01.ddj",
+    "oas_kk_sha_floor.ddj",
+    "oas_kk_sha_tow_03.ddj",
+    "oas_kk_sha_tow_02.tga",
+    "oas_kk_sha_tow_02.ddj",
+    "oas_kk_sha_roof.ddj",
+    "oas_kk_sha_al.ddj",
+    "oas_kk_sha_bro.ddj",
+    "oas_kk_sha_sta.ddj",
+    "oas_kk_sha_wall_03.ddj",
+    "oas_kk_sha_pillar.ddj",
+    "oas_kk_sha_tow_01.ddj"
+  ]
+}

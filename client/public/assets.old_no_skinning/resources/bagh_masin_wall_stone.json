@@ -1,0 +1,15 @@
+{
+  "file_name": "bagh_masin_wall_stone",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_masin\\bagh_masin_wall_stone.bmt"
+  ],
+  "effects": [
+    "dun\\masin_stone.efp",
+    "dun\\masin_stone.efp",
+    "dun\\masin_stone.efp",
+    "dun\\masin_stone.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

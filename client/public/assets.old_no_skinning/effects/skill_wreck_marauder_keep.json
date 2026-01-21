@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_wreck_marauder_keep",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 15621
+}

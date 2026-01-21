@@ -1,0 +1,20 @@
+{
+  "file_name": "chinasystem_boatman2",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinasystem_boatman2_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_boatman2_ship01.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_boatman2_ship02.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_boatman2_ship03.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_boatman2_ship04.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_boatman2_ship05.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_boatman2_ship_al.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_boatman2_part1.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_boatman2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinasystem_boatman02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

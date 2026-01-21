@@ -1,0 +1,37 @@
+{
+  "file_name": "oas_hot_c1_castle",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_castle.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_al.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_alpha.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_armor_roof.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_castle.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_castle_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_castle_tile.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_gard.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_gtw.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_l_rampart.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_plag.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_refinery_wall.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_s_rampart.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_bigloof_stone.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_bigroof.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_bigroof_2sid.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_pool_wall05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\castle\\oas_hot_c1_castle.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

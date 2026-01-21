@@ -1,0 +1,12 @@
+{
+  "file_name": "stone_field04",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\stone_field04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\stone_field04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

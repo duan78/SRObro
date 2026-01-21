@@ -1,0 +1,10 @@
+{
+  "file_name": "bard_pleasure_move_keep_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13450
+}

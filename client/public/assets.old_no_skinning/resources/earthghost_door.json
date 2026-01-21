@@ -1,0 +1,20 @@
+{
+  "file_name": "earthghost_door",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\earthghost\\w-earthgst_entr_door_stone.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w-earthgst_entr_door_metal.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w-earthgst_entr_door_seize.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w-earthgst_entr_door_stone.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w-earthgst_entr_door_tex.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w-earthgst_entr_door_wood.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\earthghost\\earthghosr_door.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp",
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

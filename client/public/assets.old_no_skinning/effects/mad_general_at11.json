@@ -1,0 +1,11 @@
+{
+  "file_name": "mad_general_at11",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 71268
+}

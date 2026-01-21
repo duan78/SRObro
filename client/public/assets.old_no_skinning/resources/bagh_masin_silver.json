@@ -1,0 +1,39 @@
+{
+  "file_name": "bagh_masin_silver",
+  "meshes": [
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver01.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver01.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver02.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver03.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver04.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver05.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver06.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver07.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver08.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver09.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver10.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver11.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver12.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver13.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver14.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver15.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver16.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver17.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver18.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver19.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver20.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver21.bms",
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver22.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\arabia\\bagh_masin\\bagh_masin_silver.bmt"
+  ],
+  "effects": [
+    "dun\\bagh_masin_silver.efp",
+    "dun\\bagh_masin_silver_b.efp",
+    "dun\\bagh_masin_silver.efp",
+    "dun\\bagh_masin_silver.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

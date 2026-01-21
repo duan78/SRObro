@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_neith_ac3_lighting_shoot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 43132
+}

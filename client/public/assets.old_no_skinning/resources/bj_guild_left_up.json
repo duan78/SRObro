@@ -1,0 +1,18 @@
+{
+  "file_name": "bj_guild_left_up",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_up_deco01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_up_deco01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_up_floor01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_up_gidung.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_up_wall01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_up_wall02.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_up_wall03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\bj\\bj_guild_left_up.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

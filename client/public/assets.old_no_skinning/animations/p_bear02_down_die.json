@@ -1,0 +1,26 @@
+{
+  "file_name": "p_bear02_down_die",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2423,
+  "animation_name": "\u0011",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    619,
+    2624,
+    143724,
+    999179,
+    562,
+    1599,
+    562,
+    1718,
+    564,
+    4278,
+    613
+  ]
+}

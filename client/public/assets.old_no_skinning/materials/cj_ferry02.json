@@ -1,0 +1,18 @@
+{
+  "file_name": "cj_ferry02",
+  "textures": [
+    "cj_ferry01_tower02.ddj",
+    "cj_ferry01_pavilion01.ddj",
+    "cj_ferry_02_toweralpha.ddj",
+    "cj_ferry_02_tower01.ddj",
+    "cj_ferry01_02.ddj",
+    "cj_ferry01_01.ddj",
+    "cj_ferry_02_flag01.ddj",
+    "cj_ferry01_roofa.ddj",
+    "cj_ferry_02_winlight.ddj",
+    "cj_ferry_02_buil1_roof.ddj",
+    "cj_ferry_02_buil1_gidung.ddj",
+    "cj_ferry_02_buil1_door.ddj",
+    "cj_ferry_02_pavilion02.ddj"
+  ]
+}

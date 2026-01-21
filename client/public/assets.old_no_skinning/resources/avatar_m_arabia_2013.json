@@ -1,0 +1,15 @@
+{
+  "file_name": "avatar_m_arabia_2013",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_arabia_2013.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_arabia_2013_hand.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_arabia_2013_l.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_arabia_2013_r.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_arabia_2013.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

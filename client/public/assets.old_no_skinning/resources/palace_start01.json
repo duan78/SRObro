@@ -1,0 +1,12 @@
+{
+  "file_name": "palace_start01",
+  "meshes": [
+    "prim\\mesh\\dun\\survival\\palace\\palace_start01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\palace\\palace_start.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

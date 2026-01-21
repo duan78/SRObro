@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_jupiter_jupiter_amb_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8188
+}

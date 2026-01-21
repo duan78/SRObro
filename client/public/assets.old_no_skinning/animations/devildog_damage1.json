@@ -1,0 +1,31 @@
+{
+  "file_name": "devildog_damage1",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 854,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    262144,
+    0,
+    393216,
+    655360,
+    4,
+    6,
+    274736,
+    409549,
+    4,
+    0,
+    0,
+    0,
+    0,
+    15,
+    275052,
+    441794,
+    4,
+    0,
+    0,
+    0
+  ]
+}

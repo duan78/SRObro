@@ -1,0 +1,35 @@
+{
+  "file_name": "wingtribespear",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\wingtribe_2side_part1.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_2side_part2.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_part1.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_part2_part2_part2_part2.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_spear.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\wingtribe.bmt",
+    "prim\\mtrl\\mob\\roc\\wingtribespear_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\roc\\wingtribe\\wingtribe_damage02.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_die.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_attack01.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_attack02.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_stand01.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_run.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_walk.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_down.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_down_wait.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_down_damage.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_down_up.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_die_rm.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_damage01.ban",
+    "prim\\ani\\mob\\roc\\wingtribespear\\wingtribespear_down_die.ban"
+  ],
+  "textures": []
+}

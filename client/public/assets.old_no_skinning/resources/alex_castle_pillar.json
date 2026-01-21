@@ -1,0 +1,18 @@
+{
+  "file_name": "alex_castle_pillar",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castle_pillar01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castle_pillar01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castle_pillar02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castle_pillar03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castle_pillar04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castle_pillar05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_castle_pillar06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\gate\\alex_castle.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

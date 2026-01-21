@@ -1,0 +1,12 @@
+{
+  "file_name": "st_saltrock02",
+  "meshes": [
+    "prim\\mesh\\nature\\dun\\st_saltrock02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\dun\\st_saltrock02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

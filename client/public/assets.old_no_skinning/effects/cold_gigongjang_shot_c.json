@@ -1,0 +1,10 @@
+{
+  "file_name": "cold_gigongjang_shot_c",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 21757
+}

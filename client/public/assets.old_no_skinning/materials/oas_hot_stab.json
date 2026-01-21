@@ -1,0 +1,16 @@
+{
+  "file_name": "oas_hot_stab",
+  "textures": [
+    "oas_hot_stab_silk.ddj",
+    "oas_hot_stab_sdbld.ddj",
+    "oas_hot_stab_tent.ddj",
+    "oas_hot_stab_ground.ddj",
+    "oas_hot_stab_straw.ddj",
+    "oas_hot_stab_flat.ddj",
+    "oas_hot_stab_pill01.ddj",
+    "oas_hot_stab_chain.ddj",
+    "oas_hot_stab_pill02.ddj",
+    "oas_hot_stab_cotton.ddj",
+    "oas_hot_stab_hor.ddj"
+  ]
+}

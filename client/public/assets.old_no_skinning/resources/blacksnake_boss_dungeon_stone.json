@@ -1,0 +1,17 @@
+{
+  "file_name": "blacksnake_boss_dungeon_stone",
+  "meshes": [
+    "prim\\mesh\\mob\\oasis\\yeowa_part1.bms",
+    "prim\\mesh\\mob\\oasis\\yeowa_part2_part1.bms",
+    "prim\\mesh\\mob\\oasis\\yeowa_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\bossdungeon\\blacksnake_boss_dungeon_stone.bmt"
+  ],
+  "effects": [
+    "battle\\status_cure_burn.efp",
+    "battle\\status_cure_burn.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

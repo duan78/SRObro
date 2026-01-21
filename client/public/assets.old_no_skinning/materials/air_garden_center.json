@@ -1,0 +1,24 @@
+{
+  "file_name": "air_garden_center",
+  "textures": [
+    "air_garden_water.ddj",
+    "air_garden_grass05.ddj",
+    "air_garden_bridge_tile01.ddj",
+    "air_garden_wall_tile.ddj",
+    "air_garden_wall03.ddj",
+    "air_garden_cen_tile04.ddj",
+    "air_garden_cen_tile01.ddj",
+    "air_garden_cen_tile02.ddj",
+    "air_garden_cen_tile03.ddj",
+    "air_garden_cen_tile05.ddj",
+    "air_garden_cen_tile06.ddj",
+    "air_garden_cen_tile07.ddj",
+    "air_garden_cen_tile08.ddj",
+    "air_garden_grass02.ddj",
+    "air_garden_grass04.ddj",
+    "air_garden_wall02.ddj",
+    "air_garden_wall01.ddj",
+    "air_garden_zone_start.ddj",
+    "air_garden_cen_lionbox.ddj"
+  ]
+}

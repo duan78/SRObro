@@ -1,0 +1,20 @@
+{
+  "file_name": "survival_palace_bb",
+  "meshes": [
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_bb_alpha.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_bb_bwall.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_bb_door.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_bb_nangan.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_bb_roof.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_bb_soldier.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_bb_top.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_bb_twall.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_bb_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\palace\\survival_palace_bb.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

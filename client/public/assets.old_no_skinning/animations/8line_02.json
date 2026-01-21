@@ -1,0 +1,15 @@
+{
+  "file_name": "8line_02",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1026,
+  "animation_name": "\b",
+  "data_blocks": [
+    65536,
+    0,
+    65536,
+    393216,
+    30
+  ]
+}

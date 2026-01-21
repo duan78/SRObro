@@ -1,0 +1,56 @@
+{
+  "file_name": "seth_t3",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\seth_t3_02.bms",
+    "prim\\mesh\\mob\\sd\\seth_t3_03.bms",
+    "prim\\mesh\\mob\\sd\\seth_t3_04.bms",
+    "prim\\mesh\\mob\\sd\\seth_t3_05.bms",
+    "prim\\mesh\\mob\\sd\\seth_t3_06.bms",
+    "prim\\mesh\\mob\\sd\\seth_t3_07.bms",
+    "prim\\mesh\\mob\\sd\\seth_t3_08.bms",
+    "prim\\mesh\\mob\\sd\\seth_t3_01_part1.bms",
+    "prim\\mesh\\mob\\sd\\seth_t3_01_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\seth_t3_01_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\seth_t3_01_part2_part2_part2.bms",
+    "prim\\mesh\\mob\\sd\\seth_t3_09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\seth.bmt",
+    "prim\\mtrl\\mob\\sd\\seth_clon1.bmt"
+  ],
+  "effects": [
+    "monster\\sd\\keep_seth_headeye_red.efp",
+    "monster\\sd\\keep_seth_headeye_red.efp",
+    "monster\\sd\\keep_seth_eye_greeneye.efp",
+    "monster\\sd\\keep_seth_eye_greeneye.efp",
+    "monster\\sd\\keep_seth_mouth_mouthsmoke.efp",
+    "monster\\sd\\keep_seth_mouth_mouthsteem.efp",
+    "monster\\sd\\skill_seth_ac8_sword_wait.efp",
+    "monster\\sd\\keep_seth_ring.efp",
+    "monster\\sd\\keep_seth_hand.efp",
+    "monster\\sd\\keep_seth_hand.efp",
+    "monster\\sd\\keep_seth_hand.efp",
+    "monster\\sd\\keep_seth_hand.efp",
+    "monster\\sd\\skill_seth_die_bomb.efp",
+    "monster\\sd\\skill_seth_ac13_grayshot_wait.efp",
+    "monster\\sd\\skill_seth_ac8_sword_wait.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_stand01.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack12.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack15.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack16.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_die.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_die_rm.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack10_shot.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack10_ready.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack13_ready.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack10_wait.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack14_ready.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack13_wait.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack14_wait.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack13_shot.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t3_attack14_shot.ban"
+  ],
+  "textures": []
+}

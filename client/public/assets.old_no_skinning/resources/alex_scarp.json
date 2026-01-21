@@ -1,0 +1,16 @@
+{
+  "file_name": "alex_scarp",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_scarp_pillar.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_scarp_pillar.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_scarp_wall01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_scarp_wall02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_scarp_wall03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\etc\\alex_scarp.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

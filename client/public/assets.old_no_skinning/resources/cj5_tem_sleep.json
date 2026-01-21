@@ -1,0 +1,18 @@
+{
+  "file_name": "cj5_tem_sleep",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_sleep01.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_sleep02.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_sleep03.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_sleep04.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_sleep05.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_sleep06.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj5_tem_sleep07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan05\\cj5_tem_sleep.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

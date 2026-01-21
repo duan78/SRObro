@@ -1,0 +1,12 @@
+{
+  "file_name": "euro_esteuro_conch03",
+  "meshes": [
+    "prim\\mesh\\nature\\europe\\east eurpoe\\beach\\euro_esteuro_conch03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\europe\\east eurpoe\\beach\\euro_esteuro_conch01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

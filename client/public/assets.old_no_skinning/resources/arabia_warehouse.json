@@ -1,0 +1,14 @@
+{
+  "file_name": "arabia_warehouse",
+  "meshes": [
+    "prim\\mesh\\npc\\arabia\\arabia_warehouse_part1.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_warehouse_part2.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_warehouse_box.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\arabia_warehouse.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

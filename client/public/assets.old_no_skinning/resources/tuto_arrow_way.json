@@ -1,0 +1,10 @@
+{
+  "file_name": "tuto_arrow_way",
+  "meshes": [],
+  "materials": [],
+  "effects": [
+    "system\\tuto_arrow_way.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

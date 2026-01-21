@@ -1,0 +1,15 @@
+{
+  "file_name": "avatar_m_2012_new_devil_hat",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_hat_02.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_hat_01_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_hat_01_part2_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_hat_01_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_2012_new_devil_hat.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

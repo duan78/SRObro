@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_enter_fire",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan_enter\\cj_enter_fire.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_seth_ac7_sword_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 29714
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "fa_confue01_cristal",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3988
+}

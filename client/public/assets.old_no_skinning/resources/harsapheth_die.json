@@ -1,0 +1,23 @@
+{
+  "file_name": "harsapheth_die",
+  "meshes": [
+    "prim\\mesh\\mob\\taklamakan\\bonemage01.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage02.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage03.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage04.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage05.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage06.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage07.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage08.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\harsapheth.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_die.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_die_rm.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_boneroc_ac5_breath_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 117880
+}

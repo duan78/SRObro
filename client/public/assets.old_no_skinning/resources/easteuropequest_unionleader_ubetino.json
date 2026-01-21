@@ -1,0 +1,14 @@
+{
+  "file_name": "easteuropequest_unionleader_ubetino",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_unionleader_ubetino_2s.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_unionleader_ubetino_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_unionleader_ubetino_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_unionleader_ubetino.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

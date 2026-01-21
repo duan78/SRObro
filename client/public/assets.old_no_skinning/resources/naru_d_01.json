@@ -1,0 +1,27 @@
+{
+  "file_name": "naru_d_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_05.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_06.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_07.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_09.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_10.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_11.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_12.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_13.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_14.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_15.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_d_16.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ferry\\naru_d_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

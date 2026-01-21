@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_m_water_element",
+  "textures": [
+    "avatar_m_water_element_hat.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_water_element_hat_n.ddj",
+    "avatar_m_water_element.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_water_element_n.ddj",
+    "avatar_m_water_element_01.ddj",
+    "avatar_m_water_element_attach.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_water_element_attach_n.ddj",
+    "avatar_m_water_element_02.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_water_element_02_n.ddj"
+  ]
+}

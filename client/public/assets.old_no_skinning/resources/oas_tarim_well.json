@@ -1,0 +1,17 @@
+{
+  "file_name": "oas_tarim_well",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_well01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_well01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_well02.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_well03.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_well04.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_well05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_tarim_well.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

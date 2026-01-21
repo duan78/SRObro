@@ -1,0 +1,10 @@
+{
+  "file_name": "event_whiteknight_mouth",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3961
+}

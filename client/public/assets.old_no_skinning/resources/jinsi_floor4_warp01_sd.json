@@ -1,0 +1,27 @@
+{
+  "file_name": "jinsi_floor4_warp01_sd",
+  "meshes": [
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\warp01\\jinsi_floor4_warp01_01_sd.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\warp01\\jinsi_floor4_warp01_02.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\warp01\\jinsi_floor4_warp01_g02.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\warp01\\jinsi_floor4_warp01_g03.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\warp01\\jinsi_floor4_warp01_01_sd.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\floor_04\\jinsi_floor4_b01_01.bmt"
+  ],
+  "effects": [
+    "dun\\sky_violet_small_weak.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

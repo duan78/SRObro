@@ -1,0 +1,13 @@
+{
+  "file_name": "sd_dustfall_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\sd_dustfall_01.bmt"
+  ],
+  "effects": [
+    "map\\sd_dustfall_down_01.efp",
+    "map\\sd_dustfall_down.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

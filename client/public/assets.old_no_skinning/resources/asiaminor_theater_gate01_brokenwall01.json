@@ -1,0 +1,17 @@
+{
+  "file_name": "asiaminor_theater_gate01_brokenwall01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\theater\\asiaminor_theater_gate01_brokenwall01.bms",
+    "prim\\mesh\\bldg\\asia minor\\theater\\asiaminor_theater_gate01_brokenwall01.bms",
+    "prim\\mesh\\bldg\\asia minor\\theater\\asiaminor_theater_gate01_column01.bms",
+    "prim\\mesh\\bldg\\asia minor\\theater\\asiaminor_theater_gate01_tile01.bms",
+    "prim\\mesh\\bldg\\asia minor\\theater\\asiaminor_theater_gate01_wall01.bms",
+    "prim\\mesh\\bldg\\asia minor\\theater\\asiaminor_theater_gate01_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\theater\\asiaminor_theater_gate01_brokenwall01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

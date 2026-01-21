@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_dual_twist_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3714
+}

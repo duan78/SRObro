@@ -1,0 +1,14 @@
+{
+  "file_name": "sd_guild_agent2",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_guild_agent2_arm.bms",
+    "prim\\mesh\\npc\\sd\\sd_guild_agent2_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_guild_agent2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_guild_agent2.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

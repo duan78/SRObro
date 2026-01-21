@@ -1,0 +1,30 @@
+{
+  "file_name": "flame_adjutant_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 6401,
+  "animation_name": "\u0015",
+  "data_blocks": [
+    0,
+    3,
+    12,
+    3,
+    11,
+    3,
+    12,
+    3,
+    17,
+    875,
+    3124,
+    884,
+    3251,
+    816,
+    3392,
+    209200,
+    12160,
+    12160,
+    12160,
+    898335
+  ]
+}

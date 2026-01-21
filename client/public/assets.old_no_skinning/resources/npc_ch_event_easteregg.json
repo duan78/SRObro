@@ -1,0 +1,10 @@
+{
+  "file_name": "npc_ch_event_easteregg",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\npc\\npc_ch_event_easteregg.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

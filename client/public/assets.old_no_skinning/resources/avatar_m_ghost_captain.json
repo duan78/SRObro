@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_m_ghost_captain",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_ghost_captain_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_ghost_captain_part2.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_ghost_captain01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_ghost_captain.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,23 @@
+{
+  "file_name": "khulood_boss_dungeon_stone",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\khulood_arm.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_hand_part1.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_hand_part2.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_head_part1.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_head_part2.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_part1.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_part2_part2.bms",
+    "prim\\mesh\\mob\\arabia\\khulood_shoulder.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\bossdungeon\\khulood_boss_dungeon.bmt"
+  ],
+  "effects": [
+    "battle\\status_cure_burn.efp",
+    "battle\\status_cure_burn.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

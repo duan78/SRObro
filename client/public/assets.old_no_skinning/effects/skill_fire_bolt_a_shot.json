@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_fire_bolt_a_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10391
+}

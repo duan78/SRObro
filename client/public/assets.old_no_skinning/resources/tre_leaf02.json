@@ -1,0 +1,15 @@
+{
+  "file_name": "tre_leaf02",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\tre_lea02_wood01.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_lea02_01.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_lea02_02.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_lea02_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tree\\tre_leaf02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

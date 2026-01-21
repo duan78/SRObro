@@ -1,0 +1,18 @@
+{
+  "file_name": "khotanshop_spacialmerchant",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotanshop_spacialmerchant_al.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_spacialmerchant_al_1.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_spacialmerchant_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotanshop_spacialmerchant_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotanshop_spacialmerchant.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\khotan\\khotanshop_spacialmerchant_basic.ban",
+    "prim\\ani\\npc\\khotan\\khotanshop_spacialmerchant_basic2.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "event_festival_treasurebox",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\event\\event_festival_treasurebox.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

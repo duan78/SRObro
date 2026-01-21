@@ -1,0 +1,10 @@
+{
+  "file_name": "thief_boss_at06",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 23609
+}

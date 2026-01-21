@@ -1,0 +1,28 @@
+{
+  "file_name": "mayan_pyramid04",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_02.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_03.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_04.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_05.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_06.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_07.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_08.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_09.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_10.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_11.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_12.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_13.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_14.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_15.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_16.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid04_17.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\score_war\\mayan_pyramid04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

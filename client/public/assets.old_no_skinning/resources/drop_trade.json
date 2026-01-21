@@ -1,0 +1,10 @@
+{
+  "file_name": "drop_trade",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\drop_trade.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

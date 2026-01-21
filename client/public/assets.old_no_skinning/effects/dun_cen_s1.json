@@ -1,0 +1,10 @@
+{
+  "file_name": "dun_cen_s1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6150
+}

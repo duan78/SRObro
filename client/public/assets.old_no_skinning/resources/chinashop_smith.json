@@ -1,0 +1,19 @@
+{
+  "file_name": "chinashop_smith",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinashop_smith_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinashop_smith_hammer.bms",
+    "prim\\mesh\\npc\\china\\chinashop_smith_tree.bms",
+    "prim\\mesh\\npc\\china\\chinashop_smith_part1.bms",
+    "prim\\mesh\\npc\\china\\chinashop_smith_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinashop_smith.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinashop_smith_basic.ban",
+    "prim\\ani\\npc\\china\\chinashop_smith_time.ban"
+  ],
+  "textures": []
+}

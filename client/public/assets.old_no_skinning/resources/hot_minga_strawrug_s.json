@@ -1,0 +1,14 @@
+{
+  "file_name": "hot_minga_strawrug_s",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_poptent_s.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_poptent_s.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_strawrug_s.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\minga\\hot_minga_strawrug_s.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

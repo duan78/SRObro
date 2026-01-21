@@ -1,0 +1,33 @@
+{
+  "file_name": "ghost_undine",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\ghost_undine01.bms",
+    "prim\\mesh\\mob\\god\\ghost_undine02.bms",
+    "prim\\mesh\\mob\\god\\ghost_undine_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_undine_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_undine_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_undine_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_undine_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_undine_part2_part2_part2_part2_part2.bms",
+    "prim\\mesh\\mob\\god\\ghost_undine03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\ghost_undine.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_stand01.ban",
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_walk.ban",
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_run.ban",
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_attack01.ban",
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_attack02.ban",
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_attack03_wait.ban",
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_attack03_shot.ban",
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_attack04.ban",
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_attack05.ban",
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_die.ban",
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_die_rm.ban",
+    "prim\\ani\\mob\\god\\ghost_undine\\ghost_undine_attack03_ready.ban"
+  ],
+  "textures": []
+}

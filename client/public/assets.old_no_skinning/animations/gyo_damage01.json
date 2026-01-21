@@ -1,0 +1,23 @@
+{
+  "file_name": "gyo_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2867,
+  "animation_name": "\f",
+  "data_blocks": [
+    0,
+    458752,
+    0,
+    851968,
+    786432,
+    471397,
+    703232,
+    7,
+    11,
+    471659,
+    603855,
+    768721,
+    1843
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "rm_tahometdevil_hand",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6198
+}

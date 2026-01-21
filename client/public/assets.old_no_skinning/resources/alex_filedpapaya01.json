@@ -1,0 +1,18 @@
+{
+  "file_name": "alex_filedpapaya01",
+  "meshes": [
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpapaya01_01.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpapaya01_01.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpapaya01_02.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpapaya01_03.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpapaya01_04.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpapaya01_05.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpapaya01_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\north africa\\alexandria\\tree\\alex_filedpapaya01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

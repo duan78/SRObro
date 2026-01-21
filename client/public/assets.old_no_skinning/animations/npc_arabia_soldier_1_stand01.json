@@ -1,0 +1,14 @@
+{
+  "file_name": "npc_arabia_soldier_1_stand01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 45850,
+  "animation_name": "\u001c",
+  "data_blocks": [
+    65536,
+    0,
+    327680,
+    0
+  ]
+}

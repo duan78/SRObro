@@ -1,0 +1,16 @@
+{
+  "file_name": "w_earthgst_dexit",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_dexit01.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_dexit01.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_dexit02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\earthghost\\w_earthgst_dexit.bmt"
+  ],
+  "effects": [
+    "map\\frame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

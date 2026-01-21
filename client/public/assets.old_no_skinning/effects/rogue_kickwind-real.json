@@ -1,0 +1,12 @@
+{
+  "file_name": "rogue_kickwind-real",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 3179
+}

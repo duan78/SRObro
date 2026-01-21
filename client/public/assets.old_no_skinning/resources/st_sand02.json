@@ -1,0 +1,10 @@
+{
+  "file_name": "st_sand02",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\st_sandflo02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

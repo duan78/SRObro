@@ -1,0 +1,19 @@
+{
+  "file_name": "bagh_mong_fort_Wt02",
+  "textures": [
+    "bagh_mong_fort_bflat08.ddj",
+    "bagh_mong_fort_bflat05.ddj",
+    "bagh_mong_fort_bw_door.ddj",
+    "bagh_mong_fort_gate02.ddj",
+    "bagh_mong_fort_bw_bottom.ddj",
+    "bagh_mong_fort_bw_top.ddj",
+    "bagh_mong_fort_gate08.ddj",
+    "bagh_mong_fort_bw_tree01.ddj",
+    "bagh_mong_fort_bflat09.ddj",
+    "bagh_mong_fort_pillar01_02.ddj",
+    "bagh_mong_tent_tentlight.ddj",
+    "bagh_mong_tent_tentlight_alpha.ddj",
+    "bagh_mong_fort_bflat06.ddj",
+    "bagh_mong_tent_btent10.ddj"
+  ]
+}

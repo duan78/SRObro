@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_togui_elder_ac1_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 11283
+}

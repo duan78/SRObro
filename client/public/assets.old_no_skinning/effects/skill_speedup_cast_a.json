@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_speedup_cast_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 1992
+}

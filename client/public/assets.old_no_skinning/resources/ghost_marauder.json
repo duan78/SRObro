@@ -1,0 +1,35 @@
+{
+  "file_name": "ghost_marauder",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\edenp01.bms",
+    "prim\\mesh\\mob\\europe\\edenp_part1.bms",
+    "prim\\mesh\\mob\\europe\\edenp_part2_part1.bms",
+    "prim\\mesh\\mob\\europe\\edenp_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\europe\\edenp_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\ghost_marauder.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_wreck_marauder_keep.efp",
+    "monster\\god\\skill_wreck_marauder_keep.efp",
+    "monster\\god\\skill_flame_evil_keep_mace_01.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\europe\\edenp\\edenp_stand01.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_walk.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_run.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_attack01.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_attack02.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_attack03.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_die.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_die_rm.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_down.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_down_rm.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_down_damage.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_down_up.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_down_die.ban",
+    "prim\\ani\\mob\\europe\\edenp\\edenp_damage01.ban"
+  ],
+  "textures": []
+}

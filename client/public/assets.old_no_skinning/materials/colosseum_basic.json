@@ -1,0 +1,16 @@
+{
+  "file_name": "colosseum_basic",
+  "textures": [
+    "colosseum_03.ddj",
+    "colosseum_01.ddj",
+    "colosseum_05.ddj",
+    "colosseum_08.ddj",
+    "colosseum_04.ddj",
+    "colosseum_02.ddj",
+    "colosseum_07.ddj",
+    "colosseum_09.ddj",
+    "colosseum_door09.ddj",
+    "colosseum_platform05.ddj",
+    "colosseum_platform06.ddj"
+  ]
+}

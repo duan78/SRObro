@@ -1,0 +1,10 @@
+{
+  "file_name": "fortress_battering_attack1_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6627
+}

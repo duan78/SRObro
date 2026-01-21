@@ -1,0 +1,18 @@
+{
+  "file_name": "drop_ch_money_ing",
+  "meshes": [
+    "prim\\mesh\\item\\china\\etc\\drop_ch_money_ing01.bms",
+    "prim\\mesh\\item\\china\\etc\\drop_ch_money_ing02.bms",
+    "prim\\mesh\\item\\china\\etc\\drop_ch_money_ing03.bms",
+    "prim\\mesh\\item\\china\\etc\\drop_ch_money_ing04.bms",
+    "prim\\mesh\\item\\china\\etc\\drop_ch_money_ing05.bms",
+    "prim\\mesh\\item\\china\\etc\\drop_ch_money_ing06.bms",
+    "prim\\mesh\\item\\china\\etc\\drop_ch_money_ing07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\drop_ch_money_ing.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

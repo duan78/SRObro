@@ -1,0 +1,37 @@
+{
+  "file_name": "bonehunter_die",
+  "meshes": [
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die01.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die02.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die03.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die04.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die05.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die06.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die07.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die08.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die09.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die10.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die11.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die12.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die13.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die14.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die15.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die16.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die17.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die18.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die19.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die20.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die21.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die22.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_die23.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\taklamakan\\bonehunter.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_die.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_die_rm.ban"
+  ],
+  "textures": []
+}

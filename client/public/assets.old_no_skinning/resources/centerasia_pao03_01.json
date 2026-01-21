@@ -1,0 +1,22 @@
+{
+  "file_name": "centerasia_pao03_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao03_01.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao03_01.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao03_02.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao03_03.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao03_04.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao03_05.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao03_alpha01.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao03_alpha02.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao03_alpha03.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao03_alpha04.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao03_flag01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\pao\\centerasia_pao03_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

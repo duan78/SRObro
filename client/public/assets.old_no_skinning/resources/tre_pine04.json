@@ -1,0 +1,13 @@
+{
+  "file_name": "tre_pine04",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\tre_pine04_gidung.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_pine04_gidung.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tre_pine04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

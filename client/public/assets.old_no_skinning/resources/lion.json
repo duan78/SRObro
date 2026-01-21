@@ -1,0 +1,30 @@
+{
+  "file_name": "lion",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\lion_part1.bms",
+    "prim\\mesh\\mob\\europe\\lion_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\europe\\lion.bmt",
+    "prim\\mtrl\\mob\\europe\\lion_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\europe\\lion\\lion_stand01.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_walk.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_run.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_attack01.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_attack02.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_attack03.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_damage02.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_die.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_die_rm.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_down.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_down_rm.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_down_damage.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_downup.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_down_die.ban",
+    "prim\\ani\\mob\\europe\\lion\\lion_damage01.ban"
+  ],
+  "textures": []
+}

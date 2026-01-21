@@ -1,0 +1,22 @@
+{
+  "file_name": "euro_constan_stable",
+  "textures": [
+    "euro_constan_stable_center.ddj",
+    "euro_constan_stable_door01.ddj",
+    "euro_constan_stable_door02.ddj",
+    "euro_constan_stable_horse01.ddj",
+    "euro_constan_stable_horse02.ddj",
+    "euro_constan_stable_pillar.ddj",
+    "euro_constan_stable_roof01.ddj",
+    "euro_constan_stable_roof02.ddj",
+    "euro_constan_stable_steel.ddj",
+    "euro_constan_stable_undroof.ddj",
+    "euro_constan_stable_wall01.ddj",
+    "euro_constan_stable_wall01_winlight.ddj",
+    "euro_constan_stable_wall02.ddj",
+    "euro_constan_stable_wall02_winlight.ddj",
+    "euro_constan_stable_wall03.ddj",
+    "euro_constan_stable_trough02.ddj",
+    "euro_constan_stable_trough01.ddj"
+  ]
+}

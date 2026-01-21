@@ -1,0 +1,10 @@
+{
+  "file_name": "status_bad_zombie",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3277
+}

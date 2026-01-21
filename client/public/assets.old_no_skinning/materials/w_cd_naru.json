@@ -1,0 +1,19 @@
+{
+  "file_name": "w_cd_naru",
+  "textures": [
+    "naru_floor01.ddj",
+    "naru_box_.ddj",
+    "naru_fence.ddj",
+    "naru_floor02.ddj",
+    "naru_pilla04.ddj",
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\naru_pilla01.ddj",
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\naru_pilla02.ddj",
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\naru_pilla03.ddj",
+    "naru_floor03.ddj",
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\naru_obj.ddj",
+    "naru_desk02.ddj",
+    "naru_desk.ddj",
+    "naru_rope.ddj",
+    "naru_fish.ddj"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "Bagh_terrace",
+  "textures": [
+    "bagh_terrace_pillar01.ddj",
+    "bagh_terrace_tree02.ddj",
+    "bagh_terrace_tree01.ddj",
+    "bagh_terrace_tree03.ddj",
+    "bagh_terrace_vine01.ddj",
+    "bagh_terrace_chair01.ddj",
+    "bagh_terrace_vine03.ddj",
+    "bagh_terrace_vine06.ddj"
+  ]
+}

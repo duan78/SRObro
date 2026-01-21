@@ -1,0 +1,10 @@
+{
+  "file_name": "grs_tile01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\grass\\grs_tile01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

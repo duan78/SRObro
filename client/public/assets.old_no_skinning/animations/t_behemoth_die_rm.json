@@ -1,0 +1,32 @@
+{
+  "file_name": "t_behemoth_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 5170,
+  "animation_name": "\u0011",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    619,
+    3008,
+    2,
+    10,
+    156769,
+    996760,
+    561,
+    4159,
+    561,
+    4283,
+    562,
+    4027,
+    2,
+    16,
+    2,
+    16,
+    2
+  ]
+}

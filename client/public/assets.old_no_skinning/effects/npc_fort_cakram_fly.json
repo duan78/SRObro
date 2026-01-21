@@ -1,0 +1,10 @@
+{
+  "file_name": "npc_fort_cakram_fly",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6523
+}

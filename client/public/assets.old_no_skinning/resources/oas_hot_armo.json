@@ -1,0 +1,23 @@
+{
+  "file_name": "oas_hot_armo",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armo_pillar.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armo_pillar.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armor_winlight.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armo_al.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armo_armor.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armo_chain.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armo_shield.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armo_statue.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armor_roof.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armor_roof_2side.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armor_wall01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_armor_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oas_hot_armo.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

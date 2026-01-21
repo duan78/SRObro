@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_eris_ac2_blanka_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 28835
+}

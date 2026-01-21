@@ -1,0 +1,13 @@
+{
+  "file_name": "flap_flagpole_red",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\flap_flagpole_white01.bms",
+    "prim\\mesh\\item\\etc\\flap_flagpole_red.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\flap_flagpole_red.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

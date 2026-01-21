@@ -1,0 +1,14 @@
+{
+  "file_name": "halloween_streetlight02",
+  "meshes": [
+    "prim\\mesh\\etc\\halloween\\halloween_display04.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_lamp04_01.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_lamp04_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\halloween\\halloween_streetlight02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,19 @@
+{
+  "file_name": "rock_mt_ship",
+  "textures": [
+    "rock_mt_ship_body.ddj",
+    "rock_mt_ship_rail.ddj",
+    "rock_mt_ship_rails.ddj",
+    "rock_mt_ship_deco01.ddj",
+    "rock_mt_ship_floor.ddj",
+    "rock_mt_ship_sail.ddj",
+    "rock_mt_ship_door.ddj",
+    "rock_mt_ship_bottom.ddj",
+    "rock_mt_ship_roof.ddj",
+    "rock_mt_ship_sail02.ddj",
+    "rock_mt_ship_rope.ddj",
+    "rock_mt_ship_window.ddj",
+    "rock_mt_ship_btrap01.ddj",
+    "rock_mt_birdbody01.ddj"
+  ]
+}

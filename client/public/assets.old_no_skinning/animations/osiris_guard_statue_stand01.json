@@ -1,0 +1,23 @@
+{
+  "file_name": "osiris_guard_statue_stand01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 499,
+  "animation_name": "\u001b",
+  "data_blocks": [
+    853297,
+    7680,
+    256,
+    512,
+    0,
+    853248,
+    1536,
+    1536,
+    566,
+    1590,
+    564,
+    1589,
+    562
+  ]
+}

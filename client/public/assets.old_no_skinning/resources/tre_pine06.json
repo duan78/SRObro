@@ -1,0 +1,16 @@
+{
+  "file_name": "tre_pine06",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\tre_pine06_01.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_pine06_01.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_pine06_02.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_pine06_03.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_pine06_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tree\\tre_pine06.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

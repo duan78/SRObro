@@ -1,0 +1,41 @@
+{
+  "file_name": "naruter_buil",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_floor01_part01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil_01_pilla02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil_01_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil_02_pilla01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil_02_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil01_chai.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil01_desk.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil_pilla01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil02_fioor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil02_ladder02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil03_pilla.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_dan01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_door_pilla.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_door_rope.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_fence01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_fence01_pilla.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_fence02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_fish02_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_flag01_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_flag02_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_floor01_part01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_floor03_part01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_pilla01_part01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_pilla01_part01_1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_pilla03_part01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_boxs.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_drum_tong.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_obj_foods.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil02_ladder01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_ladder01_02_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ferry\\w_cd_naru.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

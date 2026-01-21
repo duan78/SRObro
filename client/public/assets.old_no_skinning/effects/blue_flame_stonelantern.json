@@ -1,0 +1,10 @@
+{
+  "file_name": "blue_flame_stonelantern",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13044
+}

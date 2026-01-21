@@ -1,0 +1,10 @@
+{
+  "file_name": "cos_p_jinn_leg_loop_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4002
+}

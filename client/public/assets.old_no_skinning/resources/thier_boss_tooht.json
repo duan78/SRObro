@@ -1,0 +1,29 @@
+{
+  "file_name": "thier_boss_tooht",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\hyena_part1.bms",
+    "prim\\mesh\\mob\\arabia\\hyena_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\thief_boss_hyena.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\hyena\\hyena_stand01.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_walk.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_run.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_attack01.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_attack02.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_attack03.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_attack04.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_die.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_die_rm.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_down.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_down_damage.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_down_die.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_down_rm.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_down_up.ban",
+    "prim\\ani\\mob\\sd\\hyena\\hyena_damage.ban"
+  ],
+  "textures": []
+}

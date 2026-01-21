@@ -1,0 +1,14 @@
+{
+  "file_name": "tre_willow01",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\tre_willow01_brn.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_willow01_brn.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_willow01_leaf1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tre_willow01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

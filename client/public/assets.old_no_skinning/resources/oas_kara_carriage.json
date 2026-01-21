@@ -1,0 +1,15 @@
+{
+  "file_name": "oas_kara_carriage",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_carri_wheel.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_carri_alpha.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_carri_tree.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_carri_wheel.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\karakorm\\oas_kara_carriage.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

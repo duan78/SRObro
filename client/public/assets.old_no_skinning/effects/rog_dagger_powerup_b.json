@@ -1,0 +1,11 @@
+{
+  "file_name": "rog_dagger_powerup_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "buff": true
+  },
+  "raw_size": 12330
+}

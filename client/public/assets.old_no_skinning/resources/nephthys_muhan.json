@@ -1,0 +1,17 @@
+{
+  "file_name": "nephthys_muhan",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\nephthys01.bms",
+    "prim\\mesh\\mob\\sd\\nephthys02.bms",
+    "prim\\mesh\\mob\\sd\\nephthys_part1.bms",
+    "prim\\mesh\\mob\\sd\\nephthys_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\nephthys_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\nephthys_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\nephthys_muhan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

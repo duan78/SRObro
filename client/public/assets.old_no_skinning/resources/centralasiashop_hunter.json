@@ -1,0 +1,15 @@
+{
+  "file_name": "centralasiashop_hunter",
+  "meshes": [
+    "prim\\mesh\\npc\\casia\\centralasiashop_hunter_2s.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_hunter_al_2s.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_hunter_part1.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_hunter_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\casia\\centralasiashop_hunter.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

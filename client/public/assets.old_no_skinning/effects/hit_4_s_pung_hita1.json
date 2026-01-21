@@ -1,0 +1,10 @@
+{
+  "file_name": "hit_4_s_pung_hita1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 16352
+}

@@ -1,0 +1,20 @@
+{
+  "file_name": "w_cd_inn",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_inn_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_inn_alpha.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_inn_column.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_inn_flat.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_inn_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_inn_floor2side.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_inn_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_inn_wall.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_inn_winlight.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_inn.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

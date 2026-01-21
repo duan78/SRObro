@@ -1,0 +1,18 @@
+{
+  "file_name": "w_cd_okdoor",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_okdoor_chain.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_okdoor_wall02.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_okdoor_wall03.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_okdoor_wall04.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_okdoor_wall05.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_okdoorwall01.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_okdoor_wall06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\dunhuang\\cliff\\w_cd_okdoor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

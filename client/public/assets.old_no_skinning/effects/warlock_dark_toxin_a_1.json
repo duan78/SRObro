@@ -1,0 +1,10 @@
+{
+  "file_name": "warlock_dark_toxin_a_1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 102820
+}

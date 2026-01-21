@@ -1,0 +1,13 @@
+{
+  "file_name": "easteuropequest_steward",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_steward_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_steward_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_steward.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

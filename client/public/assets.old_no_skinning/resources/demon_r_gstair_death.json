@@ -1,0 +1,22 @@
+{
+  "file_name": "demon_r_gstair_death",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_r_gstair01.bms",
+    "prim\\mesh\\dun\\demon\\demon_r_gstair01.bms",
+    "prim\\mesh\\dun\\demon\\demon_r_gstair02.bms",
+    "prim\\mesh\\dun\\demon\\demon_r_gstair03.bms",
+    "prim\\mesh\\dun\\demon\\demon_r_gstair04.bms",
+    "prim\\mesh\\dun\\demon\\demon_r_gstair05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_gstair.bmt"
+  ],
+  "effects": [
+    "dun\\demon_flame_death01.efp",
+    "dun\\demon_flame_death01.efp",
+    "dun\\demon_flame_death01.efp",
+    "dun\\demon_flame_death01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

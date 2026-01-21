@@ -1,0 +1,11 @@
+{
+  "file_name": "guardpost_stent",
+  "textures": [
+    "guardpost_stent01.ddj",
+    "guardpost_stent04.ddj",
+    "guardpost_stent02.ddj",
+    "guardpost_stent03.ddj",
+    "guardpost_stent05.ddj",
+    "guardpost_stent06.ddj"
+  ]
+}

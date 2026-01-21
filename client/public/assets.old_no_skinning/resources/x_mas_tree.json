@@ -1,0 +1,27 @@
+{
+  "file_name": "x_mas_tree",
+  "meshes": [
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_00.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_00.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_01.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_02.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_03.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_04.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_05.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_06.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_07.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_08.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_09.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_10.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_11.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_12.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_13.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_00_14.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\common\\event-xmas\\x_mas_tree.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "interface",
+  "textures": [
+    "interface_lizard.ddj",
+    "interface_map.ddj",
+    "interface_letter.ddj",
+    "interface_brushcase.ddj",
+    "box.ddj",
+    "interface_compass.ddj",
+    "interface_idol_europe.ddj",
+    "interface_idol_china.ddj",
+    "interface_idol_islam.ddj"
+  ]
+}

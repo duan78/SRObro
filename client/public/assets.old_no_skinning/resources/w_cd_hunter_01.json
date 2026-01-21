@@ -1,0 +1,27 @@
+{
+  "file_name": "w_cd_hunter_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_05.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_06.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_07.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_08.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_09.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_10.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_11.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\association\\w_cd_hunter_12.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\association\\w_cd_hunter_01.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp",
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

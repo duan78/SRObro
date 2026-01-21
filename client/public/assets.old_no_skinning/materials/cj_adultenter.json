@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_adultenter",
+  "textures": [
+    "cj_adultenter_etc.ddj",
+    "cj_adultenter_toy_light.ddj",
+    "cj_adultenter_column.ddj",
+    "cj_adultenter_alpha.ddj",
+    "cj_adultenter_lamp.ddj",
+    "cj_adultenter_roof.ddj",
+    "cj_adultenter_column_light.ddj"
+  ]
+}

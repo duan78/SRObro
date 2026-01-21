@@ -1,0 +1,19 @@
+{
+  "file_name": "st_sulung",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_sulung_center.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_sulung_center.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_sulung_dan.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_sulung_side.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_sulung_sphinx01.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_sulung_sphinx02.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_sulung_stair.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_sulung_tile.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r2_cv\\field\\st_sulung.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

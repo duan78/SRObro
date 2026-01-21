@@ -1,0 +1,32 @@
+{
+  "file_name": "flame_captain",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\flame_captain01.bms",
+    "prim\\mesh\\mob\\god\\flame_captain02.bms",
+    "prim\\mesh\\mob\\god\\flame_captain_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_captain_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_captain_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_captain_part2_part2_part2.bms",
+    "prim\\mesh\\mob\\god\\flame_captain03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\flame_captain.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_flame_captain_keep_wing.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\god\\flame_captain\\flame_captain_stand01.ban",
+    "prim\\ani\\mob\\god\\flame_captain\\flame_captain_walk.ban",
+    "prim\\ani\\mob\\god\\flame_captain\\flame_captain_run.ban",
+    "prim\\ani\\mob\\god\\flame_captain\\flame_captain_attack1.ban",
+    "prim\\ani\\mob\\god\\flame_captain\\flame_captain_attack2.ban",
+    "prim\\ani\\mob\\god\\flame_captain\\flame_captain_attack3.ban",
+    "prim\\ani\\mob\\god\\flame_captain\\flame_captain_die.ban",
+    "prim\\ani\\mob\\god\\flame_captain\\flame_captain_die_rm.ban",
+    "prim\\ani\\mob\\god\\flame_captain\\flame_captain_damage1.ban"
+  ],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line.ddj"
+  ]
+}

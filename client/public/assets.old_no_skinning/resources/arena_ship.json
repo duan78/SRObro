@@ -1,0 +1,29 @@
+{
+  "file_name": "arena_ship",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\wreck\\arena_ship\\arena_ship_col.bms",
+    "prim\\mesh\\dun\\property\\wreck\\arena_ship\\arena_ship02_01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\arena_ship\\arena_ship_door02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\arena_ship.bmt"
+  ],
+  "effects": [
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_02.efp",
+    "dun\\big_ship_skylight_02.efp",
+    "dun\\big_ship_skylight_02.efp",
+    "dun\\big_ship_skylight_03.efp",
+    "dun\\big_ship_skylight_03.efp",
+    "dun\\big_ship_skylight_03.efp",
+    "dun\\wreck_floor_light_02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

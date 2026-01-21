@@ -1,0 +1,15 @@
+{
+  "file_name": "fort_man",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\fort_man_part1.bms",
+    "prim\\mesh\\item\\etc\\fort_man_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\fort_man_ally.bmt",
+    "prim\\mtrl\\item\\etc\\fort_man_enemy.bmt",
+    "prim\\mtrl\\item\\etc\\fort_man_attenemy.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

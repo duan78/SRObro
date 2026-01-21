@@ -1,0 +1,23 @@
+{
+  "file_name": "event_summer_ghost",
+  "meshes": [
+    "prim\\mesh\\cos\\p_ghost.bms",
+    "prim\\mesh\\cos\\p_ghost02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_ghost.bmt"
+  ],
+  "effects": [
+    "system\\event_summer_ghost_die.efp"
+  ],
+  "animations": [
+    "prim\\ani\\cos\\p_ghost\\p_ghost_stand01.ban",
+    "prim\\ani\\cos\\p_ghost\\p_ghost_walk.ban",
+    "prim\\ani\\cos\\p_ghost\\p_ghost_run.ban",
+    "prim\\ani\\cos\\p_ghost\\p_ghost_emotion.ban",
+    "prim\\ani\\cos\\p_ghost\\p_ghost_die.ban",
+    "prim\\ani\\cos\\p_ghost\\p_ghost_die_rm.ban",
+    "prim\\ani\\cos\\p_ghost\\p_ghost_pickup.ban"
+  ],
+  "textures": []
+}

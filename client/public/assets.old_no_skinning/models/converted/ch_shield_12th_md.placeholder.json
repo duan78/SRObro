@@ -1,0 +1,14 @@
+{
+  "placeholder": true,
+  "model_name": "ch_shield_12th_md",
+  "geometry": {
+    "type": "shield",
+    "shape": "sphere",
+    "scale": [
+      0.8,
+      0.8,
+      0.1
+    ]
+  },
+  "created": "2026-01-20T14:34:37.366162"
+}

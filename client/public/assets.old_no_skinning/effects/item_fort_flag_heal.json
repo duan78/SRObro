@@ -1,0 +1,10 @@
+{
+  "file_name": "item_fort_flag_heal",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 58512
+}

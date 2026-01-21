@@ -1,0 +1,20 @@
+{
+  "file_name": "bagh_potion",
+  "textures": [
+    "bagh_potion_light01.ddj",
+    "bagh_field_stable_light_alpha.ddj",
+    "bagh_potion_light01_alpha.ddj",
+    "bagh_city_weapon_light.ddj",
+    "bagh_potion_patten01.ddj",
+    "bagh_potion_patten02.ddj",
+    "bagh_potion_tree03.ddj",
+    "bagh_potion_sot.ddj",
+    "bagh_potion_tree01.ddj",
+    "bagh_city_weapon_fabric03.ddj",
+    "bagh_box.ddj",
+    "bagh_pot02.ddj",
+    "bagh_potion_box.ddj",
+    "bagh_potion_top.ddj",
+    "bagh_potion_tree02.ddj"
+  ]
+}

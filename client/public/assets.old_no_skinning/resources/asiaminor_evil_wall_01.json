@@ -1,0 +1,17 @@
+{
+  "file_name": "asiaminor_evil_wall_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_door_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_wall_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_wall_02.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_wall_03.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_door_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_door_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\evil_order\\asiaminor_evil_wall_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

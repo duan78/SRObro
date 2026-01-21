@@ -1,0 +1,18 @@
+{
+  "file_name": "asiaminor_lake1_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\pond ruin\\asiaminor_lake1_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\pond ruin\\asiaminor_lake1_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\pond ruin\\asiaminor_lake1_02.bms",
+    "prim\\mesh\\bldg\\asia minor\\pond ruin\\asiaminor_lake1_03.bms",
+    "prim\\mesh\\bldg\\asia minor\\pond ruin\\asiaminor_lake2_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\pond ruin\\asiaminor_lake2_02.bms",
+    "prim\\mesh\\bldg\\asia minor\\pond ruin\\asiaminor_lake3_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\pond ruin\\asiaminor_lake1_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,29 @@
+{
+  "file_name": "p_wolf_white_02",
+  "meshes": [
+    "prim\\mesh\\cos\\p_wolf_02_part1.bms",
+    "prim\\mesh\\cos\\p_wolf_02_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_wolf_white_02.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_stand01.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_walk.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_run.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_attack01.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_damage01.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_die.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_die_rm.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_down.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_down_rm.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_down_damage.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_down_up.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_down_die.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_stand02.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_stand03.ban",
+    "prim\\ani\\cos\\p_wolf_02\\p_wolf_02_emoticon01.ban"
+  ],
+  "textures": []
+}

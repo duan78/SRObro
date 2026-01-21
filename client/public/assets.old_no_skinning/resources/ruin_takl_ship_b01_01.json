@@ -1,0 +1,28 @@
+{
+  "file_name": "ruin_takl_ship_b01_01",
+  "meshes": [
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_01.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_010.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_011.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_012.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_013.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_014.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_015.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_016.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_017.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_02.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_03.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_04.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_05.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_06.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_07.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_08.bms",
+    "prim\\mesh\\artifact\\ruins\\ship\\ruin_takl_ship_b01_09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\ruins\\ship\\ruin_takl_ship_b01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

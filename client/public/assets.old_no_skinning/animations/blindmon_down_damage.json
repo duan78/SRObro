@@ -1,0 +1,15 @@
+{
+  "file_name": "blindmon_down_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 19391,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    851968,
+    0,
+    327680,
+    877934
+  ]
+}

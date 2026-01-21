@@ -1,0 +1,12 @@
+{
+  "file_name": "drop_ch_equip_rare",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\drop_ch_equip_rare.bmt"
+  ],
+  "effects": [
+    "system\\item_drop_equip_rare.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

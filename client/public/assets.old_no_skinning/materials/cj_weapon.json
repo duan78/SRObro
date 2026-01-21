@@ -1,0 +1,9 @@
+{
+  "file_name": "cj_weapon",
+  "textures": [
+    "cj_etc_sidewall.ddj",
+    "cj_weap_wall.ddj",
+    "cj_weap_roof.ddj",
+    "cj_weap_chimn.ddj"
+  ]
+}

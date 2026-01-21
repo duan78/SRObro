@@ -1,0 +1,15 @@
+{
+  "file_name": "alex_fieldwood02",
+  "meshes": [
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_fieldwood02_01.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_fieldwood02_01.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_fieldwood02_02.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_fieldwood02_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\north africa\\alexandria\\tree\\alex_fieldwood01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

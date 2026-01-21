@@ -1,0 +1,34 @@
+{
+  "file_name": "w_cd_milicamp01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01_floor01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01_drum.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01_flag.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01_floor01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01_floor02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01_pilla01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01_pilla02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01_roo0f.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01_wall01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil02_fence.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil02_floor01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil02_floor02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil02_floor03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil02_pilla01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil02_pilla02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil03_fence.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil03_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil03_pilla01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil03_pilla02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_drum.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_drum01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01_fence.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_buil01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

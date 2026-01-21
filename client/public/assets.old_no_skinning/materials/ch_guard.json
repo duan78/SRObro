@@ -1,0 +1,8 @@
+{
+  "file_name": "ch_guard",
+  "textures": [
+    "ch_guard_bow.ddj",
+    "ch_guard_bow_al.ddj",
+    "ch_guard_bow_arm.ddj"
+  ]
+}

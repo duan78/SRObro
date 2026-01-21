@@ -1,0 +1,21 @@
+{
+  "file_name": "p_raven02_down_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 8527,
+  "animation_name": "\u0015",
+  "data_blocks": [
+    0,
+    0,
+    4,
+    12,
+    4,
+    11,
+    1131,
+    3001,
+    4,
+    11,
+    1124
+  ]
+}

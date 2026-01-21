@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_petra_door01_02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_door_pole.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_door_pole.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_door_top01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_petra\\bagh_petra_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

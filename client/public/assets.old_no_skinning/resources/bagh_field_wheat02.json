@@ -1,0 +1,10 @@
+{
+  "file_name": "bagh_field_wheat02",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\weed\\bagh_field_wheat01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

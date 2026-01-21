@@ -1,0 +1,22 @@
+{
+  "file_name": "fw_hyeongcheon",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\fortress\\fw_hyeongcheon.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_poison.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_stand01.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_walk.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_run.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_attack01.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_attack02.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_die.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_die_loop.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_attack03.ban"
+  ],
+  "textures": []
+}

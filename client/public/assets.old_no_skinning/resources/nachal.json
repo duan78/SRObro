@@ -1,0 +1,29 @@
+{
+  "file_name": "nachal",
+  "meshes": [
+    "prim\\mesh\\mob\\wchina\\nachal.bms",
+    "prim\\mesh\\mob\\wchina\\nachal01.bms",
+    "prim\\mesh\\mob\\wchina\\nachal_face.bms",
+    "prim\\mesh\\mob\\wchina\\nachal_face01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\wchina\\nachal.bmt",
+    "prim\\mtrl\\mob\\wchina\\nachal_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_stand01.ban",
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_walk.ban",
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_run.ban",
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_attack01.ban",
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_damage01.ban",
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_damage02.ban",
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_die.ban",
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_down.ban",
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_down_wait.ban",
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_down_damage.ban",
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_down_up.ban",
+    "prim\\ani\\mob\\wchina\\nachal\\nachal_down_die.ban"
+  ],
+  "textures": []
+}

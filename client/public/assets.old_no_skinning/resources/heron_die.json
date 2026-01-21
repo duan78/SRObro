@@ -1,0 +1,20 @@
+{
+  "file_name": "heron_die",
+  "meshes": [
+    "prim\\mesh\\mob\\karakoram\\planardie01.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie02.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie03.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\planardie_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\heron.bmt",
+    "prim\\mtrl\\mob\\sd\\heron_clon.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\karakoram\\planar\\planar_die.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_die_loop.ban"
+  ],
+  "textures": []
+}

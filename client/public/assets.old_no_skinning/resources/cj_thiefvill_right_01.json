@@ -1,0 +1,32 @@
+{
+  "file_name": "cj_thiefvill_right_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_right_01.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_right_01.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_right_02.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_right_10.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_right_14.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_right_16.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_right_19.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_right_20.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_right_25.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\cj_thiefvill\\cj_thiefvill_right_01.bmt"
+  ],
+  "effects": [
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

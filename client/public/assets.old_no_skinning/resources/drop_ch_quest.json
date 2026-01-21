@@ -1,0 +1,12 @@
+{
+  "file_name": "drop_ch_quest",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\drop_ch_quest.bmt"
+  ],
+  "effects": [
+    "system\\item_drop_use.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

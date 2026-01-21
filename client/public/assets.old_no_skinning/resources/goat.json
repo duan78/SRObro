@@ -1,0 +1,33 @@
+{
+  "file_name": "goat",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\goat_spear.bms",
+    "prim\\mesh\\mob\\roc\\goat_part1.bms",
+    "prim\\mesh\\mob\\roc\\goat_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\goat_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\goat.bmt",
+    "prim\\mtrl\\mob\\roc\\goat_clon.bmt",
+    "prim\\mtrl\\mob\\roc\\goat_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\roc\\goat\\goat_attack01.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_stand01.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_walk.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_run.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_attack03.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_attack02.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_damage02.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_die.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_die_rm.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_down.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_down_rm.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_down_damage.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_down_up.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_damage01.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_down_die.ban"
+  ],
+  "textures": []
+}

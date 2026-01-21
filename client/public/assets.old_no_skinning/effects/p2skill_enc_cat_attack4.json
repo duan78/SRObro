@@ -1,0 +1,11 @@
+{
+  "file_name": "p2skill_enc_cat_attack4",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 17188
+}

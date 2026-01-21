@@ -1,0 +1,10 @@
+{
+  "file_name": "keep_osiris_die_spector",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 70477
+}

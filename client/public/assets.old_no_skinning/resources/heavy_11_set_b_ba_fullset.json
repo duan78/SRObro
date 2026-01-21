@@ -1,0 +1,15 @@
+{
+  "file_name": "heavy_11_set_b_ba_fullset",
+  "meshes": [
+    "prim\\mesh\\item\\china\\woman_item\\heavy_11_set_b_ba.bms",
+    "prim\\mesh\\item\\china\\woman_item\\heavy_11_set_b_fly.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\woman_item\\heavy_11_set_b.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line.ddj"
+  ]
+}

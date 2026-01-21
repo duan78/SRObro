@@ -1,0 +1,10 @@
+{
+  "file_name": "item_ch_tblade_14_03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 43202
+}

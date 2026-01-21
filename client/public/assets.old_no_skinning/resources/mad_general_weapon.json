@@ -1,0 +1,10 @@
+{
+  "file_name": "mad_general_weapon",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\mad_general.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

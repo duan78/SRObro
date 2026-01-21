@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ivy_ac5_drake_hwan_blue",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 15782
+}

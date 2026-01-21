@@ -1,0 +1,9 @@
+{
+  "file_name": "sphere_light",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true
+  },
+  "raw_size": 12719
+}

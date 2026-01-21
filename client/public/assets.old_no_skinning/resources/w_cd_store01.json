@@ -1,0 +1,20 @@
+{
+  "file_name": "w_cd_store01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cdstore03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cdstore01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cdstore01_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cdstore02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cdstore03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cdstore03_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cdstore_alpha.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\minga\\w_cdstore03.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_red.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "drop_ch_money_small",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\drop_ch_money_small.bmt"
+  ],
+  "effects": [
+    "system\\item_drop_money.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

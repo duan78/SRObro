@@ -1,0 +1,10 @@
+{
+  "file_name": "minga_smoke_m",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4621
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_pal_dam_center01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_dam_center01_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_dam_center01_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_dam_center01_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_dam_center01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

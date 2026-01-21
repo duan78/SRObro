@@ -1,0 +1,10 @@
+{
+  "file_name": "geenie_at05_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 43720
+}

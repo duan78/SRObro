@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_tombstone_ghost_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17447
+}

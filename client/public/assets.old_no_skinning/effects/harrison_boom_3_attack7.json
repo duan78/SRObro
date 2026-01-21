@@ -1,0 +1,10 @@
+{
+  "file_name": "harrison_boom_3_attack7",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 29616
+}

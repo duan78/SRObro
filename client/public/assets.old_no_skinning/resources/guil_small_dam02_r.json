@@ -1,0 +1,14 @@
+{
+  "file_name": "guil_small_dam02_r",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_dam02_r01_01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_dam02_r01_01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_dam02_r01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan04\\cj_mili_dam01_1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

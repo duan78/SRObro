@@ -1,0 +1,10 @@
+{
+  "file_name": "air_garden16_side_start",
+  "textures": [
+    "air_garden_grass05.ddj",
+    "air_garden_zone_line.ddj",
+    "air_garden_pillar01.ddj",
+    "air_garden_wall_tile.ddj",
+    "air_garden_door.ddj"
+  ]
+}

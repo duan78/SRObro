@@ -1,0 +1,18 @@
+{
+  "file_name": "cj_lake_gardenvill",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_lake_gardenvill_alpha.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_lake_gardenvill_alpha.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_lake_gardenvill_column.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_lake_gardenvill_floor.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_lake_gardenvill_roof.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_lake_gardenvill_roofde.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_lake_gardenvill_wood.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\greenfield\\cj_lake_gardenvill.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

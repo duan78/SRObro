@@ -1,0 +1,10 @@
+{
+  "file_name": "interface_brushcase",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\interface\\interface.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

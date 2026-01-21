@@ -1,0 +1,19 @@
+{
+  "file_name": "uruchi_boss_dungeon_stone",
+  "meshes": [
+    "prim\\mesh\\mob\\oasis\\uruchi_mantle.bms",
+    "prim\\mesh\\mob\\oasis\\uruchi_spear.bms",
+    "prim\\mesh\\mob\\oasis\\uruchi_spear01.bms",
+    "prim\\mesh\\mob\\oasis\\uruchi_body_part1.bms",
+    "prim\\mesh\\mob\\oasis\\uruchi_body_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\bossdungeon\\uruchi_boss_dungeon_stone.bmt"
+  ],
+  "effects": [
+    "battle\\status_cure_burn.efp",
+    "battle\\status_cure_burn.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

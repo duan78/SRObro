@@ -1,0 +1,10 @@
+{
+  "file_name": "pha_haro_up_blood",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2922
+}

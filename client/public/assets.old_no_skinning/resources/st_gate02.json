@@ -1,0 +1,29 @@
+{
+  "file_name": "st_gate02",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_ceiling.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_ceiling.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_center.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_ground.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_rock_01.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_rock_02.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_sphinx.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_stair.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_standard.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_top.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_wall01.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_wall02.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_wall03.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_wall04.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_wall05.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate2_wall06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r2_cv\\field\\st_gate2.bmt"
+  ],
+  "effects": [
+    "dun\\alex_indun_ent.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

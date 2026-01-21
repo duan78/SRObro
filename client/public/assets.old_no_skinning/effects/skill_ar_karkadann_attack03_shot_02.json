@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ar_karkadann_attack03_shot_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 47672
+}

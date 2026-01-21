@@ -1,0 +1,20 @@
+{
+  "file_name": "demon_stair",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_stair01.bms",
+    "prim\\mesh\\dun\\demon\\demon_stair01.bms",
+    "prim\\mesh\\dun\\demon\\demon_stair02.bms",
+    "prim\\mesh\\dun\\demon\\demon_stair03.bms",
+    "prim\\mesh\\dun\\demon\\demon_stair04.bms",
+    "prim\\mesh\\dun\\demon\\demon_stair05.bms",
+    "prim\\mesh\\dun\\demon\\demon_stair06.bms",
+    "prim\\mesh\\dun\\demon\\demon_stair07.bms",
+    "prim\\mesh\\dun\\demon\\demon_stair08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_stair.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

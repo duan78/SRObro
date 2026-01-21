@@ -1,0 +1,25 @@
+{
+  "file_name": "demon_gardrail_tile_fire",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_gardrail_tile.bms",
+    "prim\\mesh\\dun\\demon\\demon_gardrail_tile.bms",
+    "prim\\mesh\\dun\\demon\\demon_gardrail_tile_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_gardrail_tile.bmt"
+  ],
+  "effects": [
+    "dun\\demon_flame_fire01.efp",
+    "dun\\demon_flame_fire01.efp",
+    "dun\\demon_flame_fire01.efp",
+    "dun\\demon_flame_fire01.efp",
+    "dun\\demon_flame_fire01.efp",
+    "dun\\demon_flame_fire01.efp",
+    "dun\\demon_flame_fire01.efp",
+    "dun\\demon_flame_fire01.efp",
+    "dun\\demon_flame_fire01.efp",
+    "dun\\demon_flame_fire01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

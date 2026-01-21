@@ -1,0 +1,27 @@
+{
+  "file_name": "fw_darkeagle",
+  "meshes": [
+    "prim\\mesh\\mob\\fortress\\fw_darkeagle01.bms",
+    "prim\\mesh\\mob\\fortress\\fw_darkeagle02_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_darkeagle02_part2.bms",
+    "prim\\mesh\\mob\\fortress\\fw_darkeagle03.bms",
+    "prim\\mesh\\mob\\fortress\\fw_darkeagle_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_darkeagle_part2_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_darkeagle_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\fortress\\fw_darkeagle.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\fortress\\fw_darkeagle\\fw_darkeagle_stand01.ban",
+    "prim\\ani\\mob\\fortress\\fw_darkeagle\\fw_darkeagle_attack01.ban",
+    "prim\\ani\\mob\\fortress\\fw_darkeagle\\fw_darkeagle_attack03.ban",
+    "prim\\ani\\mob\\fortress\\fw_darkeagle\\fw_darkeagle_attack02.ban",
+    "prim\\ani\\mob\\fortress\\fw_darkeagle\\fw_darkeagle_die.ban",
+    "prim\\ani\\mob\\fortress\\fw_darkeagle\\fw_darkeagle_walk.ban",
+    "prim\\ani\\mob\\fortress\\fw_darkeagle\\fw_darkeagle_run.ban",
+    "prim\\ani\\mob\\fortress\\fw_darkeagle\\fw_darkeagle_die_rm.ban"
+  ],
+  "textures": []
+}

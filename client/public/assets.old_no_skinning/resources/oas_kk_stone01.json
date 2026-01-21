@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_kk_stone01",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\karakorm\\stone\\oas_kk_stone_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\karakorm\\stone\\oas_kk_stone_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

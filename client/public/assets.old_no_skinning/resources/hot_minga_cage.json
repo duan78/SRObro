@@ -1,0 +1,12 @@
+{
+  "file_name": "hot_minga_cage",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_handcart_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\minga\\hot_minga_handcart_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

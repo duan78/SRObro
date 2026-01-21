@@ -1,0 +1,10 @@
+{
+  "file_name": "event_festival_unicorn",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\event\\event_festival_unicorn.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

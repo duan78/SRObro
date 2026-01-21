@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_kara_heap",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_heap_bottle.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_heap_bottle.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_heap_top.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\karakorm\\oas_kara_heap.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

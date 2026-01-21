@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_jupiter_devildog_at03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 49508
+}

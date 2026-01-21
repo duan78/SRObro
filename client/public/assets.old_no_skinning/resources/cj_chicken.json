@@ -1,0 +1,10 @@
+{
+  "file_name": "cj_chicken",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\npc\\animal\\cj_chicken.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

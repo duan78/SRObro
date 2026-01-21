@@ -1,0 +1,20 @@
+{
+  "file_name": "pha_maze8",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze8_1_3.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze8_1_3.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze8_3_1.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze8_3_3.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze8_4_1.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze8_4_2.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze8_5_1.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze8_5_3.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze8_6_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\field\\pha_maze.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "system_enchantharp_02_a_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 35883
+}

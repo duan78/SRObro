@@ -1,0 +1,31 @@
+{
+  "file_name": "hyeongcheon_clon",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\hyeongcheon_part1.bms",
+    "prim\\mesh\\mob\\china\\hyeongcheon_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\hyeongcheon_clon.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_poison.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_stand01.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_walk.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_run.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_attack01.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_attack02.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_damage01.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_damage02.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_die.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_die_loop.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_down.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_downwait.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_downdamage.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_wakeup.ban",
+    "prim\\ani\\mob\\china\\hyeongcheon\\hyeongcheon_downdie.ban"
+  ],
+  "textures": []
+}

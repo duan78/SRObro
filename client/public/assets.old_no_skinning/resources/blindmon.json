@@ -1,0 +1,30 @@
+{
+  "file_name": "blindmon",
+  "meshes": [
+    "prim\\mesh\\mob\\wchina\\blindmon_part1.bms",
+    "prim\\mesh\\mob\\wchina\\blindmon_part2_part1.bms",
+    "prim\\mesh\\mob\\wchina\\blindmon_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\wchina\\blindmon.bmt",
+    "prim\\mtrl\\mob\\wchina\\blindmon_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_stand01.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_stand02.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_walk.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_attack01.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_damage01.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_damage02.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_die.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_die_loop.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_down.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_down_wait.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_down_damage.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_down_up.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_run.ban",
+    "prim\\ani\\mob\\wchina\\blindmon\\blindmon_attack02.ban"
+  ],
+  "textures": []
+}

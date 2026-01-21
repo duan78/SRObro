@@ -1,0 +1,9 @@
+{
+  "file_name": "karkadann",
+  "textures": [
+    "karkadann_01.ddj",
+    "prim\\mtrl\\mob\\arabia\\karkadann_n_01.ddj",
+    "karkadann.ddj",
+    "prim\\mtrl\\mob\\arabia\\karkadann_n.ddj"
+  ]
+}

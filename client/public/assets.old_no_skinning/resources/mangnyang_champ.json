@@ -1,0 +1,35 @@
+{
+  "file_name": "mangnyang_champ",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\mangnyang_part1.bms",
+    "prim\\mesh\\mob\\china\\mangnyang_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\mangnyang_champ.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_icing_on.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\mangnyang_stand01.ban",
+    "prim\\ani\\mob\\china\\mangnyang_walk.ban",
+    "prim\\ani\\mob\\china\\mangnyang_attack01.ban",
+    "prim\\ani\\mob\\china\\mangnyang_damage01.ban",
+    "prim\\ani\\mob\\china\\mangnyang_damage02.ban",
+    "prim\\ani\\mob\\china\\mangnyang_die.ban",
+    "prim\\ani\\mob\\china\\mangnyang_run.ban",
+    "prim\\ani\\mob\\china\\mangnyang_stand02.ban",
+    "prim\\ani\\mob\\china\\mangnyang_attack02.ban",
+    "prim\\ani\\mob\\china\\mangnyang_die_loop.ban",
+    "prim\\ani\\mob\\china\\mangnyang_down.ban",
+    "prim\\ani\\mob\\china\\mangnyang_downwait.ban",
+    "prim\\ani\\mob\\china\\mangnyang_downdamage.ban",
+    "prim\\ani\\mob\\china\\mangnyang_wakeup.ban",
+    "prim\\ani\\mob\\china\\mangnyang_downdie.ban"
+  ],
+  "textures": []
+}

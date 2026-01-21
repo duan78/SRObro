@@ -1,0 +1,12 @@
+{
+  "file_name": "rok_masin02",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\rock area\\rok_masin02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\rock area\\rok_masin02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

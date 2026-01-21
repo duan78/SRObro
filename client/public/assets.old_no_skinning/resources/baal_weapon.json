@@ -1,0 +1,29 @@
+{
+  "file_name": "baal_weapon",
+  "meshes": [
+    "prim\\mesh\\mob\\jupiter\\baal\\baal01.bms",
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part2_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\baal_weapon.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\baal_weapon\\baal_weapon_attack08.ban",
+    "prim\\ani\\mob\\jupiter\\baal_weapon\\baal_weapon_attack09.ban",
+    "prim\\ani\\mob\\jupiter\\baal_weapon\\baal_weapon_attack10.ban",
+    "prim\\ani\\mob\\jupiter\\baal_weapon\\baal_weapon_attack12.ban",
+    "prim\\ani\\mob\\jupiter\\baal_weapon\\baal_weapon_attack13.ban",
+    "prim\\ani\\mob\\jupiter\\baal_weapon\\baal_weapon_die.ban",
+    "prim\\ani\\mob\\jupiter\\baal_weapon\\baal_weapon_die_rm.ban",
+    "prim\\ani\\mob\\jupiter\\baal_weapon\\baal_weapon_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\baal_weapon\\baal_weapon_walk.ban",
+    "prim\\ani\\mob\\jupiter\\baal_weapon\\baal_weapon_run.ban"
+  ],
+  "textures": []
+}

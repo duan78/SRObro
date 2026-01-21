@@ -1,0 +1,10 @@
+{
+  "file_name": "firework_star_shower",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\firework_star_shower.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

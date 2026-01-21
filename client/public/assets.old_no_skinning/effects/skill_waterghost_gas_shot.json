@@ -1,0 +1,12 @@
+{
+  "file_name": "skill_waterghost_gas_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 8423
+}

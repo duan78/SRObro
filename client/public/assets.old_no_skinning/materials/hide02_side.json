@@ -1,0 +1,20 @@
+{
+  "file_name": "hide02_side",
+  "textures": [
+    "hide_column01.ddj",
+    "hide_column02.ddj",
+    "hide_wall03.ddj",
+    "hide_wall02.ddj",
+    "hide_column03.ddj",
+    "hide_wall01.ddj",
+    "hide_bottom.ddj",
+    "hide_ground01.ddj",
+    "hide_door_02.ddj",
+    "hide_door_01.ddj",
+    "hide_door_03.ddj",
+    "hide_ceiling03.ddj",
+    "hide_ground02.ddj",
+    "hide_devil_01.ddj",
+    "hide_devil_02.ddj"
+  ]
+}

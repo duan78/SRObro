@@ -1,0 +1,13 @@
+{
+  "file_name": "heavy_14_sa",
+  "meshes": [
+    "prim\\mesh\\item\\common\\woman_item\\heavy_14_sa_01.bms",
+    "prim\\mesh\\item\\common\\woman_item\\heavy_14_sa_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\common\\woman_item\\heavy_14_sa.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

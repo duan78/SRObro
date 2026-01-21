@@ -1,0 +1,10 @@
+{
+  "file_name": "flame_lroom_door",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\flame\\frame_lroom_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

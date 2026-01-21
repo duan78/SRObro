@@ -1,0 +1,10 @@
+{
+  "file_name": "system_alchemy",
+  "meshes": [],
+  "materials": [],
+  "effects": [
+    "system\\system_alchemy.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

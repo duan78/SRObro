@@ -1,0 +1,12 @@
+{
+  "file_name": "pha_pass_touch",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\common\\pha_passtorch.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

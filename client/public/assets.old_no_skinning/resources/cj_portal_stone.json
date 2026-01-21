@@ -1,0 +1,13 @@
+{
+  "file_name": "cj_portal_stone",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_portal_stone.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_potal_blue.efp",
+    "map\\w_cd_potal_blue_g.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

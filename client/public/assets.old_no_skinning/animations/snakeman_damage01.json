@@ -1,0 +1,19 @@
+{
+  "file_name": "snakeman_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 763,
+  "animation_name": "\u0011",
+  "data_blocks": [
+    0,
+    0,
+    868,
+    1589,
+    818,
+    1717,
+    822,
+    1717,
+    818
+  ]
+}

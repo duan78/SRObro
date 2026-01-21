@@ -1,0 +1,14 @@
+{
+  "file_name": "thief_eu_02",
+  "meshes": [
+    "prim\\mesh\\item\\europe\\woman_item\\thief_eu_01_part1.bms",
+    "prim\\mesh\\item\\europe\\woman_item\\thief_eu_01_part2_part1.bms",
+    "prim\\mesh\\item\\europe\\woman_item\\thief_eu_01_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\woman_item\\thief_eu_02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

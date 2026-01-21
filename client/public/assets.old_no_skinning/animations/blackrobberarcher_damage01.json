@@ -1,0 +1,30 @@
+{
+  "file_name": "blackrobberarcher_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 3010,
+  "animation_name": "\u001a",
+  "data_blocks": [
+    533,
+    30,
+    0,
+    8,
+    0,
+    33,
+    133,
+    166,
+    266,
+    400,
+    433,
+    533,
+    12,
+    12,
+    8,
+    10,
+    551779,
+    702996,
+    8,
+    15
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "easteuropequest_soldier_kartino",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_kartino_2s_01.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_kartino_2s_02.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_kartino_arm.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_kartino_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_kartino_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_soldier_kartino.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

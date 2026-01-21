@@ -1,0 +1,17 @@
+{
+  "file_name": "oas_kara_well",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_well_roof.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_well_alpha.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_well_column.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_well_pot.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_well_roof.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_well_roof2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\karakorm\\oas_kara_well.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

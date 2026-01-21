@@ -1,0 +1,30 @@
+{
+  "file_name": "wreck_bisl_o",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_drum.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_gro01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_gro01_con.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_gro02_con.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_gro03_con.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_ground.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_ice.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_ice2.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_icicle.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_icicle2.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_mrock.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_rock.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_wall01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_wall02.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_wood.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_gro02.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_gro03.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_gro04.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_bisl_box_o.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\wreck_bisl.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

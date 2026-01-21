@@ -1,0 +1,15 @@
+{
+  "file_name": "p_fox02_walk",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 19037,
+  "animation_name": "\f",
+  "data_blocks": [
+    65536,
+    720896,
+    0,
+    327680,
+    746862
+  ]
+}

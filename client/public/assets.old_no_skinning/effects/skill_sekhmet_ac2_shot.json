@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_sekhmet_ac2_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 16800
+}

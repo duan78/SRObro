@@ -1,0 +1,37 @@
+{
+  "file_name": "st_horus",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_ax1.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_ax1.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_ax1_01.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_ax2_01.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_ax9.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_brick.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_center.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_center_brick.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_column1.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_column2.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_column3.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_door.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_doorsill.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_flag1.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_flag2.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_groundx1.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_groundx2.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_out stair.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_roof.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_sphinx02.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_tilex1.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_wall paintingx3.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_wallx1_01.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_wallx2.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_wallx3.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\part03\\st_horus_wallx4.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r2_cv\\part\\st_part03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

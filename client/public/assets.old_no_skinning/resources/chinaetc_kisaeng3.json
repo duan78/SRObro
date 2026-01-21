@@ -1,0 +1,16 @@
+{
+  "file_name": "chinaetc_kisaeng3",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng3_hair.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng3_skirt.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng3_umbrella.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng3_body_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng3_body_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaetc_kisaeng3.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

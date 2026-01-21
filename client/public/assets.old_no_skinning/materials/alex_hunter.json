@@ -1,0 +1,32 @@
+{
+  "file_name": "alex_hunter",
+  "textures": [
+    "alex_hunter_drum.ddj",
+    "alex_hunter_box.ddj",
+    "alex_hunter_statue04.ddj",
+    "alex_hunter_statue03.ddj",
+    "alex_hunter_column02.ddj",
+    "alex_hunter_bottom02.ddj",
+    "alex_hunter_wall08.ddj",
+    "alex_hunter_window.ddj",
+    "alex_hunter_bottom01.ddj",
+    "alex_hunter_stair.ddj",
+    "alex_hunter_wall05.ddj",
+    "alex_hunter_column03.ddj",
+    "alex_hunter_wall06.ddj",
+    "alex_hunter_column01.ddj",
+    "alex_hunter_darkwall.ddj",
+    "alex_hunter_door01.ddj",
+    "alex_hunter_door02.ddj",
+    "alex_hunter_flag.ddj",
+    "alex_hunter_roof01.ddj",
+    "alex_hunter_roof02.ddj",
+    "alex_hunter_statue01.ddj",
+    "alex_hunter_statue02.ddj",
+    "alex_hunter_wall01.ddj",
+    "alex_hunter_wall02.ddj",
+    "alex_hunter_wall03.ddj",
+    "alex_hunter_wall04.ddj",
+    "alex_hunter_wall07.ddj"
+  ]
+}

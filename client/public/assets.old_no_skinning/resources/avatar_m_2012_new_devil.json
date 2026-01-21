@@ -1,0 +1,18 @@
+{
+  "file_name": "avatar_m_2012_new_devil",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_02.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_hand.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_hand01.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_head.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_wrap.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_2012_new_devil.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

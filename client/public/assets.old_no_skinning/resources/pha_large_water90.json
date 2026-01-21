@@ -1,0 +1,10 @@
+{
+  "file_name": "pha_large_water90",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\common\\pha_water.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

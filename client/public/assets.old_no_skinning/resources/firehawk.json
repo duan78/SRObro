@@ -1,0 +1,23 @@
+{
+  "file_name": "firehawk",
+  "meshes": [
+    "prim\\mesh\\npc\\animal\\hawk01.bms",
+    "prim\\mesh\\npc\\animal\\hawk02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\animal\\firehawk.bmt"
+  ],
+  "effects": [
+    "skill\\china\\bow_bird_c.efp",
+    "skill\\china\\bow_bird_c.efp",
+    "skill\\china\\bow_bird_c.efp",
+    "skill\\china\\mirage_bow_red.efp"
+  ],
+  "animations": [
+    "prim\\ani\\npc\\animal\\hawk_stand.ban",
+    "prim\\ani\\npc\\animal\\hawk_walk.ban",
+    "prim\\ani\\npc\\animal\\hawk_run.ban",
+    "prim\\ani\\npc\\animal\\hawk_attack01.ban"
+  ],
+  "textures": []
+}

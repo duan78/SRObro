@@ -1,0 +1,10 @@
+{
+  "file_name": "ruin_takla_cave_07",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\artifact\\ruins\\tunnel\\ruin_takla_cave.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

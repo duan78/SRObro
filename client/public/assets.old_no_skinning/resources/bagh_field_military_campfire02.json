@@ -1,0 +1,16 @@
+{
+  "file_name": "bagh_field_military_campfire02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_campfire02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_campfire02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_campfire02_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_campfire01.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_red.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

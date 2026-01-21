@@ -1,0 +1,10 @@
+{
+  "file_name": "item_eu_harp_13_feye",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 15012
+}

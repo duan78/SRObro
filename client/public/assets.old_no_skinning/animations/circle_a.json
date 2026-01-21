@@ -1,0 +1,16 @@
+{
+  "file_name": "circle_a",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 386,
+  "animation_name": "\b",
+  "data_blocks": [
+    65536,
+    655360,
+    0,
+    65536,
+    393216,
+    10
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "file_name": "jinsi_floor02_small",
+  "textures": [
+    "jinsi_floor1_h_ceiling.ddj",
+    "jinsi_floor1_h_pillar03.ddj",
+    "jinsi_floor1_j_wall01.ddj",
+    "jinsi_floor1_j_pillar.ddj",
+    "jinsi_floor1_h_carve.ddj",
+    "jinsi_floor1_j_bridge_door.ddj",
+    "jinsi_floor1_h_sign.ddj",
+    "jinsi_floor2_l_basicwall.ddj",
+    "jinsi_floor1_j_stair.ddj",
+    "jinsi_floor1_j_roof.ddj",
+    "jinsi_floor1_h_pillar01.ddj",
+    "jinsi_floor2_l_ctile01.ddj",
+    "jinsi_floor1_h_deck02.ddj",
+    "jinsi_floor1_h_wall01.ddj",
+    "jinsi_floor2_l_centercircle01.ddj",
+    "jinsi_floor1_h_stair01.ddj",
+    "jinsi_floor2_l_tile01.ddj",
+    "jinsi_floor2_l_cloth02.ddj",
+    "jinsi_floor2_l_cup.ddj"
+  ]
+}

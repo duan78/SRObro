@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_fairy_w_wing_keep02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8858
+}

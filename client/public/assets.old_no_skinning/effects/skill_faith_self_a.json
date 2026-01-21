@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_faith_self_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13506
+}

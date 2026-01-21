@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ar_hyena_at4_push",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 1944
+}

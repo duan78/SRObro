@@ -1,0 +1,10 @@
+{
+  "file_name": "grass_single02",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\grass\\group_grs03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

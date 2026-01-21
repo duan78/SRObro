@@ -1,0 +1,18 @@
+{
+  "file_name": "ivy_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 332,
+  "animation_name": "\f",
+  "data_blocks": [
+    0,
+    262144,
+    0,
+    131072,
+    655360,
+    4,
+    10,
+    287841
+  ]
+}

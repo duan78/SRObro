@@ -1,0 +1,10 @@
+{
+  "file_name": "tre_dry04",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tree\\tre_dry04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "crossbow_13",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\crossbow_13.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_corssbow_13.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

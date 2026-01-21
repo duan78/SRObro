@@ -1,0 +1,10 @@
+{
+  "file_name": "bard_dance_magic_apply_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 15387
+}

@@ -1,0 +1,11 @@
+{
+  "file_name": "oas_kk_brok_castle",
+  "textures": [
+    "oas_kk_brok_roof.ddj",
+    "oas_kk_brok_wall01.ddj",
+    "oas_kk_brok_wall02.ddj",
+    "oas_tarim_house_01.ddj",
+    "oas_kk_brok_gate.ddj",
+    "oas_tarim_house_al.ddj"
+  ]
+}

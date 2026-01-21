@@ -1,0 +1,12 @@
+{
+  "file_name": "fortress_ct_fort_bl",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_bl.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\fortress_ct_fort_bl.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

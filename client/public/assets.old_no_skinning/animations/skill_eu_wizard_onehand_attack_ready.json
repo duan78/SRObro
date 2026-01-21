@@ -1,0 +1,16 @@
+{
+  "file_name": "skill_eu_wizard_onehand_attack_ready",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 16673,
+  "animation_name": "$",
+  "data_blocks": [
+    65536,
+    851968,
+    0,
+    327680,
+    0,
+    877934
+  ]
+}

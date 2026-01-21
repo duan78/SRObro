@@ -1,0 +1,20 @@
+{
+  "file_name": "chinasystem_warehousekeeper",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinasystem_warehousekeeper_box.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_warehousekeeper_chain.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_warehousekeeper_man_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_warehousekeeper_man_part1.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_warehousekeeper_man_part2_part1.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_warehousekeeper_man_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinasystem_warehousekeeper.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinasystem_warehousekeeper_basic.ban",
+    "prim\\ani\\npc\\china\\chinasystem_warehousekeeper_time.ban"
+  ],
+  "textures": []
+}

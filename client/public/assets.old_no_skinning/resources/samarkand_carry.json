@@ -1,0 +1,17 @@
+{
+  "file_name": "samarkand_carry",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_carry01_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_carry01_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_carry01_02.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_carry01_03.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_carry01_04.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_carry01_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\samarkand\\samarkand_buil.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,37 @@
+{
+  "file_name": "pet_dinosaur_a",
+  "meshes": [
+    "prim\\mesh\\cos\\pet_dinosaur_a_part1.bms",
+    "prim\\mesh\\cos\\pet_dinosaur_a_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_dinosaur_a_part2_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_dinosaur_a_part2_part2_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_dinosaur_a_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_dinosaur_a_part2_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\pet_dinosaur_a.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_stand02.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_stand01.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_walk.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_run.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_attack01.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_attack02.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_attack03.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_attack04.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_attack05.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_attack06.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_attack07.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_damage01.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_die.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_die_rm.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_down.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_down_rm.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_down_damage.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_down_up.ban",
+    "prim\\ani\\cos\\pet_dinosaur_a\\pet_dinosaur_a_down_die.ban"
+  ],
+  "textures": []
+}

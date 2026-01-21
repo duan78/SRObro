@@ -1,0 +1,22 @@
+{
+  "file_name": "cj_monhouse01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_monhouse_alpha1.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_monhouse_alpha1.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_monhouse_bigcolumn.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_monhouse_fruit.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_monhouse_ground.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_monhouse_ground2.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_monhouse_leaf.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_monhouse_line.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_monhouse_stone.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_monhouse_tree2.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_monhouse_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\greenfield\\cj_monhouse01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

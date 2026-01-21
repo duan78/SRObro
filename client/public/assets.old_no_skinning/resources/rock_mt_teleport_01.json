@@ -1,0 +1,29 @@
+{
+  "file_name": "rock_mt_teleport_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_02.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_03.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_05.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_06.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_07.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_08.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_09.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_10.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_11.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_12.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_13.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_14.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_16.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\portal\\rock_mt_teleport_01.bmt"
+  ],
+  "effects": [
+    "map\\rock_mt_portal.efp",
+    "map\\rock_mt_portal.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

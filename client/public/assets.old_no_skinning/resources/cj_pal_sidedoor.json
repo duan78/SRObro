@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_pal_sidedoor",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sidedoor_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sidedoor_door.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sidedoor_roof01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sidedoor_roof02_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sidedoor_roof03_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_sidedoor_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_sidedoor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

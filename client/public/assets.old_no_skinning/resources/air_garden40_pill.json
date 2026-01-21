@@ -1,0 +1,16 @@
+{
+  "file_name": "air_garden40_pill",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_pill_01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_pill_02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_pill_03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_pill_04.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\air_garden40_pill_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden40_pill.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

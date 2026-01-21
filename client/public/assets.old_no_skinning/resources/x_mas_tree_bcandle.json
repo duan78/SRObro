@@ -1,0 +1,22 @@
+{
+  "file_name": "x_mas_tree_bcandle",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\common\\event-xmas\\x_mas_tree.bmt"
+  ],
+  "effects": [
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

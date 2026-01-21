@@ -1,0 +1,9 @@
+{
+  "file_name": "piety_e12_door",
+  "textures": [
+    "piety_gate_wall03.ddj",
+    "piety_pillar01.ddj",
+    "piety_pillar03.ddj",
+    "piety_wall01.ddj"
+  ]
+}

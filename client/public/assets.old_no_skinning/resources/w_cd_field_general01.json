@@ -1,0 +1,12 @@
+{
+  "file_name": "w_cd_field_general01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\field-obj\\w_cd_field_general01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\field-obj\\w_cd_field_general01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "demon_tower_fire_door",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\fire\\demon_tower_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

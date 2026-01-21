@@ -1,0 +1,15 @@
+{
+  "file_name": "c_jin_ent02",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent02_stairs.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent02_dan01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent02_dan02.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent02_stairs.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\c_jin_ent.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

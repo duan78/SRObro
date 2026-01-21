@@ -1,0 +1,27 @@
+{
+  "file_name": "Bagh_Masin_bridge_up",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 212,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    131072,
+    393216,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    6,
+    143920,
+    9855,
+    16256,
+    9855
+  ]
+}

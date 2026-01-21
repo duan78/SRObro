@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_tarim_rob_smallfire01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_smallfire01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\tarim\\blackrobber\\oas_tarim_rob_smallfire01.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

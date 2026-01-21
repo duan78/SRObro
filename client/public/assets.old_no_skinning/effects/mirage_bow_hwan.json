@@ -1,0 +1,10 @@
+{
+  "file_name": "mirage_bow_hwan",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 1594
+}

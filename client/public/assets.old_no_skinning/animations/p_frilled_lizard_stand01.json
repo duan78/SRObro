@@ -1,0 +1,20 @@
+{
+  "file_name": "p_frilled_lizard_stand01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 10351,
+  "animation_name": "\u0018",
+  "data_blocks": [
+    65536,
+    327680,
+    0,
+    327680,
+    353646,
+    802620,
+    340325,
+    703156,
+    5,
+    11
+  ]
+}

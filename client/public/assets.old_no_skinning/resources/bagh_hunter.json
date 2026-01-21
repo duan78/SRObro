@@ -1,0 +1,28 @@
+{
+  "file_name": "bagh_hunter",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_door01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_door01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_door02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_door03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_flag01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_flag02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_roof01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_roof02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_step01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_tile01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_will01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_will02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_will03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_will04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_will05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_will06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_hunter_win01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_hunter.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

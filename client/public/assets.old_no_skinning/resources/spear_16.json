@@ -1,0 +1,15 @@
+{
+  "file_name": "spear_16",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\weapon\\spear_16.bmt"
+  ],
+  "effects": [
+    "system\\item_ch_spear_15..efp",
+    "system\\item_ch_spear_15..efp",
+    "system\\item_ch_spear_15..efp",
+    "system\\item_ch_spear_15..efp"
+  ],
+  "animations": [],
+  "textures": []
+}

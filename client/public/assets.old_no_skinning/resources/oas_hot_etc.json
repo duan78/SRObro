@@ -1,0 +1,17 @@
+{
+  "file_name": "oas_hot_etc",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_etc01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_etc01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_etc02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_etc03.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_etc04.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_etc05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oas_hot_etc.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

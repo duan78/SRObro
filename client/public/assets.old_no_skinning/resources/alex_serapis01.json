@@ -1,0 +1,15 @@
+{
+  "file_name": "alex_serapis01",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_serapis01_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_serapis01_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_serapis01_02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_serapis01_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\deco\\alex_serapis.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

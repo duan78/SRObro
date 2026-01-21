@@ -1,0 +1,14 @@
+{
+  "file_name": "tre_bamboo02",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\tre_bamb02_bam.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_bamb02_bam.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_bamb02_leaf.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tre_bamb02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

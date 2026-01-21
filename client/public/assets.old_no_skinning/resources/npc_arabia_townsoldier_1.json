@@ -1,0 +1,14 @@
+{
+  "file_name": "npc_arabia_townsoldier_1",
+  "meshes": [
+    "prim\\mesh\\npc\\arabia\\npc_arabia_townsoldier_1_weapon.bms",
+    "prim\\mesh\\npc\\arabia\\npc_arabia_townsoldier_1_part1.bms",
+    "prim\\mesh\\npc\\arabia\\npc_arabia_townsoldier_1_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\arabia\\npc_arabia_townsoldier_1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

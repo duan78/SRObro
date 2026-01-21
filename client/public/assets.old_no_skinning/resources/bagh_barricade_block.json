@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_barricade_block",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\event\\bagh_barricade_block.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_barricade_block.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

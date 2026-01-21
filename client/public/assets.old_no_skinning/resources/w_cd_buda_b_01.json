@@ -1,0 +1,16 @@
+{
+  "file_name": "w_cd_buda_b_01",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\dunhuang\\budaa\\w_cd_buda_b_wall.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\budaa\\w_cd_buda_b_01.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\budaa\\w_cd_buda_b_02.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\budaa\\w_cd_buda_b_03.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\budaa\\w_cd_buda_b_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\dunhuang\\budaa\\w_cd_buda_b_wall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,35 @@
+{
+  "file_name": "p_kangaroo02",
+  "meshes": [
+    "prim\\mesh\\cos\\p_kangaroo02_part1.bms",
+    "prim\\mesh\\cos\\p_kangaroo02_part2_part1.bms",
+    "prim\\mesh\\cos\\p_kangaroo02_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_kangaroo02.bmt"
+  ],
+  "effects": [
+    "skill\\china\\mirage_bow_cold.efp",
+    "cos\\cos_penguin2_bodywind.efp",
+    "skill\\china\\mirage_bow_cold.efp"
+  ],
+  "animations": [
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_stand01.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_stand02.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_attack01.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_attack02.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_run.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_die.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_die_rm.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_down.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_down_rm.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_down_damage.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_down_up.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_down_die.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_walk.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_emotion.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_stand03.ban",
+    "prim\\ani\\cos\\p_kangaroo02\\p_kangaroo02_damage.ban"
+  ],
+  "textures": []
+}

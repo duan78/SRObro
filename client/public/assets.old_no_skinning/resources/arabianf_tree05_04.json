@@ -1,0 +1,12 @@
+{
+  "file_name": "arabianf_tree05_04",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\tree\\arabianf_tree05_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\tree\\arabianf_tree02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

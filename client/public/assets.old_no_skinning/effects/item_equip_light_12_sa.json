@@ -1,0 +1,10 @@
+{
+  "file_name": "item_equip_light_12_sa",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 30932
+}

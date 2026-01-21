@@ -1,0 +1,17 @@
+{
+  "file_name": "alex_fstair01",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_fstair01_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_fstair01_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_fstair01_02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_fstair01_03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_fstair01_04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\etc\\alex_fstair01_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\etc\\alex_fstair.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

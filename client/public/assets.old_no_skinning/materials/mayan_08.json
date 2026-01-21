@@ -1,0 +1,25 @@
+{
+  "file_name": "mayan_08",
+  "textures": [
+    "mayan_08_column01.ddj",
+    "mayan_08_grass02.ddj",
+    "mayan_08_grass01.ddj",
+    "mayan_08_door02.ddj",
+    "mayan_08_door01.ddj",
+    "mayan_08_wall07.ddj",
+    "mayan_08_wall08.ddj",
+    "mayan_08_wall04.ddj",
+    "mayan_08_column03.ddj",
+    "mayan_08_wall05.ddj",
+    "mayan_08_wall01.ddj",
+    "mayan_08_wall06.ddj",
+    "mayan_08_floor01.ddj",
+    "mayan_08_floor02.ddj",
+    "mayan_08_floor03.ddj",
+    "mayan_08_wall09.ddj",
+    "mayan_08_wall02.ddj",
+    "mayan_08_stair01.ddj",
+    "mayan_08_stair02.ddj",
+    "mayan_08_chain.ddj"
+  ]
+}

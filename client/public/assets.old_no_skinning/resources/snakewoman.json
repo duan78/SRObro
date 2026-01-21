@@ -1,0 +1,32 @@
+{
+  "file_name": "snakewoman",
+  "meshes": [
+    "prim\\mesh\\mob\\qinshi\\snakewoman01.bms",
+    "prim\\mesh\\mob\\qinshi\\snakewoman02.bms",
+    "prim\\mesh\\mob\\qinshi\\snakewoman_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\snakewoman_part2_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\snakewoman_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\snakewoman.bmt",
+    "prim\\mtrl\\mob\\qinshi\\snakewoman_champ.bmt",
+    "prim\\mtrl\\mob\\qinshi\\snakewoman_clon2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_stand01.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_walk.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_attack01.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_run.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_attack02.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_attack03.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_die.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_die_rm.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_down.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_down_damage.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_down_up.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_down_die.ban",
+    "prim\\ani\\mob\\qinshi\\snakewoman\\snakewoman_damage01.ban"
+  ],
+  "textures": []
+}

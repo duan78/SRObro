@@ -1,0 +1,15 @@
+{
+  "file_name": "jupiter_soldier_m",
+  "meshes": [
+    "prim\\mesh\\npc\\jupiter\\jupiter_soldier_m_01.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_soldier_m_03.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_soldier_m_02_part1.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_soldier_m_02_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\jupiter\\jupiter_soldier_m.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,25 @@
+{
+  "file_name": "hide_center",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_bottom.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_bottom.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_ceiling04.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_column02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_column03.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_ground01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_ground05.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_wall01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_wall03.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_door_01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_column01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_door_02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_door_03.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide_center_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\hide\\hide_center.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

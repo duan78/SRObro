@@ -1,0 +1,10 @@
+{
+  "file_name": "item_equip_eu_shoulder_03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 18035
+}

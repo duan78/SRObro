@@ -1,0 +1,10 @@
+{
+  "file_name": "toadstool_at03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 16072
+}

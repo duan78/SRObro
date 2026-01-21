@@ -1,0 +1,12 @@
+{
+  "file_name": "freebattle_gray",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\etc\\ex_mark.bmt"
+  ],
+  "effects": [
+    "system\\freebattle_gray.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

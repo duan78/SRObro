@@ -1,0 +1,21 @@
+{
+  "file_name": "chinaman_standbattle",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 6063,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    327680,
+    0,
+    327680,
+    0,
+    353646,
+    834178,
+    340325,
+    703215,
+    5,
+    11
+  ]
+}

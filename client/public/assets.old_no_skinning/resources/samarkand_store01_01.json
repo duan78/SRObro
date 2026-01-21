@@ -1,0 +1,27 @@
+{
+  "file_name": "samarkand_store01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_02.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_03.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_04.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_05.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_06.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_07.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_08.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_09.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_10.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_11.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_12.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_13.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_14.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_store01_15.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\samarkand\\samarkand_buil.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,36 @@
+{
+  "file_name": "demon_tower_ice_start",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start09.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start01.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start02.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start03.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start04.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start05.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start06.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start07.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start08.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start09.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start10.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start11.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start12.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start13.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start14.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start15.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start16.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start17.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start18.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start19.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start20.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start21.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start22.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start23.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_start\\demon_tower_start24.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\ice\\demon_tower_ice_start.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

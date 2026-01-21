@@ -1,0 +1,12 @@
+{
+  "file_name": "drop_eu_acc_rare",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\etc\\drop_eu_acc_rare.bmt"
+  ],
+  "effects": [
+    "system\\item_drop_acc.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

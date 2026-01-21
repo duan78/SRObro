@@ -1,0 +1,14 @@
+{
+  "file_name": "w_cd_bridge01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\field-obj\\w_cd_bridge01_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\field-obj\\w_cd_bridge01_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\field-obj\\w_cd_bridge01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\field-obj\\w_cd_bridge01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

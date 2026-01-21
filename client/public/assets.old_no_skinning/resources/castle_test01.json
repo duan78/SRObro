@@ -1,0 +1,10 @@
+{
+  "file_name": "castle_test01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\castle_test.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "red_orange_flame_sb_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17278
+}

@@ -1,0 +1,36 @@
+{
+  "file_name": "fortress_battering_ram",
+  "meshes": [
+    "prim\\mesh\\cos\\fortress_battering_ram_01.bms",
+    "prim\\mesh\\cos\\fortress_battering_ram_02.bms",
+    "prim\\mesh\\cos\\fortress_battering_ram_03.bms",
+    "prim\\mesh\\cos\\fortress_battering_ram_chain_part1.bms",
+    "prim\\mesh\\cos\\fortress_battering_ram_chain_part2.bms",
+    "prim\\mesh\\cos\\fortress_battering_ram_fleg.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\fortress_battering_ram.bmt"
+  ],
+  "effects": [
+    "cos\\dust_fortress_run.efp",
+    "cos\\dust_fortress_run.efp",
+    "cos\\dust_fortress_run.efp",
+    "cos\\dust_fortress_run.efp",
+    "cos\\fortress_battering_attack1_ready.efp",
+    "cos\\dust_fortress_demage.efp",
+    "cos\\dust_fortress_demage.efp",
+    "cos\\dust_fortress_demage.efp",
+    "cos\\dust_fortress_demage.efp",
+    "cos\\dust_fortress_demage.efp",
+    "cos\\dust_fortress_death.efp"
+  ],
+  "animations": [
+    "prim\\ani\\cos\\fortress_battering_ram\\fortress_battering_ram_walk.ban",
+    "prim\\ani\\cos\\fortress_battering_ram\\fortress_battering_ram_run.ban",
+    "prim\\ani\\cos\\fortress_battering_ram\\fortress_battering_ram_attack01.ban",
+    "prim\\ani\\cos\\fortress_battering_ram\\fortress_battering_ram_damage01.ban",
+    "prim\\ani\\cos\\fortress_battering_ram\\fortress_battering_ram_die.ban",
+    "prim\\ani\\cos\\fortress_battering_ram\\fortress_battering_ram_die_rm.ban"
+  ],
+  "textures": []
+}

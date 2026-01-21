@@ -1,0 +1,23 @@
+{
+  "file_name": "bagh_build_deco05",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco5_curtain01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco5_light01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco5_will01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco5_will02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco5_will03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco5_will04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco5_will05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco5_win01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco5_win02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_build_deco5_win02_alpha.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_build_deco5.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

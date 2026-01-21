@@ -1,0 +1,22 @@
+{
+  "file_name": "guardpost_tent_light",
+  "meshes": [
+    "prim\\mesh\\etc\\guardpost\\guardpost_tent01.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_tent01.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_tent02.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_tent03.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_tent04.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_tent05.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_tent06.bms",
+    "prim\\mesh\\etc\\guardpost\\guardpost_tent07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\guardpost\\guardpost_tent.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_flame.efp",
+    "dun\\yellow_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

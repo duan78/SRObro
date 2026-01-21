@@ -1,0 +1,48 @@
+{
+  "file_name": "oas_kk_ferry_00",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_00.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_00.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_01.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_02.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_03.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_04.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_05.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_06.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_07.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_08.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_09.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_10.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_11.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_12.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_13.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_14.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_15.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_16.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_17.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_18.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_19.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_20.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_21.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\ferry\\oas_kk_ferry_00.bmt"
+  ],
+  "effects": [
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

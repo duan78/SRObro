@@ -1,0 +1,19 @@
+{
+  "file_name": "sd_arena_changer_stand01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 10362,
+  "animation_name": "\u0018",
+  "data_blocks": [
+    65536,
+    655360,
+    0,
+    327680,
+    0,
+    681326,
+    13626,
+    802283,
+    668005
+  ]
+}

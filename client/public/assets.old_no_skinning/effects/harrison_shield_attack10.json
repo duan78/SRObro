@@ -1,0 +1,11 @@
+{
+  "file_name": "harrison_shield_attack10",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 125173
+}

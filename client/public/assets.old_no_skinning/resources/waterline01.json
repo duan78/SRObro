@@ -1,0 +1,10 @@
+{
+  "file_name": "waterline01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\bigwaterfall01-1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

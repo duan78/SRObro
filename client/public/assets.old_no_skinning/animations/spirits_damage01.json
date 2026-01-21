@@ -1,0 +1,23 @@
+{
+  "file_name": "spirits_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1394,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    0,
+    458752,
+    0,
+    393216,
+    655360,
+    7,
+    10,
+    484449,
+    1841,
+    4155,
+    1841,
+    4026,
+    7
+  ]
+}

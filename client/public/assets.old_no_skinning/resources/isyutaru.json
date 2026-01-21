@@ -1,0 +1,35 @@
+{
+  "file_name": "isyutaru",
+  "meshes": [
+    "prim\\mesh\\mob\\karakoram\\isyutaru_wings.bms",
+    "prim\\mesh\\mob\\karakoram\\isyutaru_body_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\isyutaru_body_part2_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\isyutaru_body_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\isyutaru_body_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\isyutaru_body_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\karakoram\\isyutaru.bmt"
+  ],
+  "effects": [
+    "monster\\dead\\dead_bluesmog.efp",
+    "monster\\dead\\dead_bluesmog.efp",
+    "monster\\dead\\dead_bluesmog.efp",
+    "monster\\dead\\dead_bluesmog.efp",
+    "monster\\dead\\dead_bluesmog.efp",
+    "monster\\dead\\dead_bluesmog.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\karakoram\\isyutaru\\isyutaru_stand01.ban",
+    "prim\\ani\\mob\\karakoram\\isyutaru\\isyutaru_stand02.ban",
+    "prim\\ani\\mob\\karakoram\\isyutaru\\isyutaru_walk.ban",
+    "prim\\ani\\mob\\karakoram\\isyutaru\\isyutaru_run.ban",
+    "prim\\ani\\mob\\karakoram\\isyutaru\\isyutaru_attack01.ban",
+    "prim\\ani\\mob\\karakoram\\isyutaru\\isyutaru_attack02.ban",
+    "prim\\ani\\mob\\karakoram\\isyutaru\\isyutaru_damage02.ban",
+    "prim\\ani\\mob\\karakoram\\isyutaru\\isyutaru_die.ban",
+    "prim\\ani\\mob\\karakoram\\isyutaru\\isyutaru_damage01.ban",
+    "prim\\ani\\mob\\karakoram\\isyutaru\\isyutaru_attack03.ban"
+  ],
+  "textures": []
+}

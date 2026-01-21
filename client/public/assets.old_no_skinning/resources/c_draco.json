@@ -1,0 +1,22 @@
+{
+  "file_name": "c_draco",
+  "meshes": [
+    "prim\\mesh\\cos\\c_draco_part1.bms",
+    "prim\\mesh\\cos\\c_draco_part2_part1.bms",
+    "prim\\mesh\\cos\\c_draco_part2_part2_part1.bms",
+    "prim\\mesh\\cos\\c_draco_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\c_draco.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\c_draco\\c_draco_stand01.ban",
+    "prim\\ani\\cos\\c_draco\\c_draco_walk.ban",
+    "prim\\ani\\cos\\c_draco\\c_draco_run.ban",
+    "prim\\ani\\cos\\c_draco\\c_draco_damage01.ban",
+    "prim\\ani\\cos\\c_draco\\c_draco_die.ban",
+    "prim\\ani\\cos\\c_draco\\c_draco_die_rm.ban"
+  ],
+  "textures": []
+}

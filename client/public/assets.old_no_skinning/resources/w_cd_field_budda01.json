@@ -1,0 +1,12 @@
+{
+  "file_name": "w_cd_field_budda01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\field-obj\\w_cd_field_budda01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\field-obj\\w_cd_field_budda01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

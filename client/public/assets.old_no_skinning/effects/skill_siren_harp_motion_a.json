@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_siren_harp_motion_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 28537
+}

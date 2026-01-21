@@ -1,0 +1,31 @@
+{
+  "file_name": "reflection_shield_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 338,
+  "animation_name": "\u001a",
+  "data_blocks": [
+    400,
+    30,
+    0,
+    4,
+    0,
+    66,
+    200,
+    400,
+    2,
+    6,
+    274992,
+    13672,
+    13672,
+    13672,
+    13672,
+    406560,
+    4,
+    0,
+    0,
+    0,
+    0
+  ]
+}

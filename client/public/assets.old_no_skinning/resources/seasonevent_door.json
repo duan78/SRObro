@@ -1,0 +1,15 @@
+{
+  "file_name": "seasonevent_door",
+  "meshes": [
+    "prim\\mesh\\etc\\seasonevent_door.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\seasonevent_door.bmt"
+  ],
+  "effects": [
+    "dun\\up_smoke.efp",
+    "dun\\up_smoke.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

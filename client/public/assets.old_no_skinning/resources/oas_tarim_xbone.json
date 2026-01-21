@@ -1,0 +1,18 @@
+{
+  "file_name": "oas_tarim_xbone",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_xbone01_1.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_xbone01_1.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_xbone01_2.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_xbone01_3.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_xbone01_4.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_xbone01_5.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_xbone01_6.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_tarim_xbone.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

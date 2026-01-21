@@ -1,0 +1,15 @@
+{
+  "file_name": "bagh_field_canyon_s",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyons_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyons_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyons_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyons_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyons.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

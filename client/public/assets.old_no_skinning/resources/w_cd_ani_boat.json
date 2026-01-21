@@ -1,0 +1,17 @@
+{
+  "file_name": "w_cd_ani_boat",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_ani_boat01.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_ani_boat02.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_ani_boat03.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_ani_boat04-001.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_ani_boat04-01.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_ani_boat05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\dunhuang\\w_cd_ani_boat.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

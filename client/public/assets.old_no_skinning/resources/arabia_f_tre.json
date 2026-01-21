@@ -1,0 +1,25 @@
+{
+  "file_name": "arabia_f_tre",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree_mush01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_b_tree_mush02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_arabia_f\\arabianf_tree.bmt"
+  ],
+  "effects": [
+    "map\\bldg_arabia_ftre_fire.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

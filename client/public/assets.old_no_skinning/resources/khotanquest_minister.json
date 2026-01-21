@@ -1,0 +1,18 @@
+{
+  "file_name": "khotanquest_minister",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotanquest_minister_2s.bms",
+    "prim\\mesh\\npc\\khotan\\khotanquest_minister_al_2s.bms",
+    "prim\\mesh\\npc\\khotan\\khotanquest_minister_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotanquest_minister_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotanquest_minister.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\khotan\\khotanquest_minister_basic.ban",
+    "prim\\ani\\npc\\khotan\\khotanquest_minister_basic2.ban"
+  ],
+  "textures": []
+}

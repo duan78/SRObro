@@ -1,0 +1,30 @@
+{
+  "file_name": "pha_maze5",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_1_2.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_1_2.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_1_3.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_2_1.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_2_2.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_2_3.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_2_4.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_3_1.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_3_2.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_3_3.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_4_1.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_4_2.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_4_3.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_5_1.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_5_2.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_5_3.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_5_5.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_6_1.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_maze5_cobweb.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\field\\pha_maze.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

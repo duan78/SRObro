@@ -1,0 +1,15 @@
+{
+  "file_name": "avatar_w_ottoman",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_ottoman.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_ottoman_02.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_ottoman_03.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_ottoman_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_ottoman.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

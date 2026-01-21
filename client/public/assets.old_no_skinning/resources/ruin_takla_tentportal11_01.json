@@ -1,0 +1,19 @@
+{
+  "file_name": "ruin_takla_tentportal11_01",
+  "meshes": [
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tentportal11_01.bms",
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tentportal11_01.bms",
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tentportal11_02.bms",
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tentportal11_03.bms",
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tentportal11_04.bms",
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tentportal11_05.bms",
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tentportal11_06.bms",
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tentportal11_07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\ruins\\tent\\ruin_takla_tentportal11_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

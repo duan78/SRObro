@@ -1,0 +1,18 @@
+{
+  "file_name": "chinaetc_kisaeng5",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng5_2s02.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng5_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng5_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng5_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaetc_kisaeng5.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinaetc_kisaeng5_basic.ban",
+    "prim\\ani\\npc\\china\\chinaetc_kisaeng5_time.ban"
+  ],
+  "textures": []
+}

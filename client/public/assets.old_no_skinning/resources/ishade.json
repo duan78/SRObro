@@ -1,0 +1,35 @@
+{
+  "file_name": "ishade",
+  "meshes": [
+    "prim\\mesh\\mob\\karakoram\\ishade_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\ishade_part2_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\ishade_part2_part2.bms",
+    "prim\\mesh\\mob\\karakoram\\ishade01_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\ishade01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\karakoram\\ishade.bmt",
+    "prim\\mtrl\\mob\\karakoram\\ishade_champ.bmt"
+  ],
+  "effects": [
+    "monster\\ambient_ishade_iceloop01.efp",
+    "monster\\ambient_ishade_iceloop01.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_stand01.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_attack01.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_attack03.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_attack02.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_damage01.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_damage02.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_die.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_die_rm.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_down.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_down_wait.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_down_damage.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_down_up.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_down_die.ban",
+    "prim\\ani\\mob\\karakoram\\ishade\\ishade_stand02.ban"
+  ],
+  "textures": []
+}

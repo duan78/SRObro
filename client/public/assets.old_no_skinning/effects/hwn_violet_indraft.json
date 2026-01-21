@@ -1,0 +1,10 @@
+{
+  "file_name": "hwn_violet_indraft",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2823
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "cj_deedy02",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_deedy02_01.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_deedy02_01.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_deedy02_02.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_deedy02_03.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_deedy02_alpha.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan02\\cj_deedy01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

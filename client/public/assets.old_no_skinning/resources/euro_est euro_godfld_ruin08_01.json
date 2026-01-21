@@ -1,0 +1,14 @@
+{
+  "file_name": "euro_est euro_godfld_ruin08_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\godfld\\euro_est euro_godfld_ruin08_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\godfld\\euro_est euro_godfld_ruin08_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\godfld\\euro_est euro_godfld_ruin08_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\godfld\\euro_est euro_godfld_ruin08_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "rock_mt_stone_m01_01",
+  "meshes": [
+    "prim\\mesh\\nature\\west asia\\rock mt\\stone\\rock_mt_stone_m01_01.bms",
+    "prim\\mesh\\nature\\west asia\\rock mt\\stone\\rock_mt_stone_m01_01.bms",
+    "prim\\mesh\\nature\\west asia\\rock mt\\stone\\rock_mt_stone_m01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\west asia\\rock mt\\stone\\rock_mt_stone_m01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_neith_ac5_fire_mirage",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4007
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_w_halloween",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_halloween_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_halloween_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_halloween.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

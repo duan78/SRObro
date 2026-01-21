@@ -1,0 +1,40 @@
+{
+  "file_name": "china_wall16",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_blackroof.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_blackroof.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_blackroof01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_blackroof02.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_bong.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_bong01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_dan.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_door.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_dragonpattern.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_flag.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_gateline.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_gatepattern.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_lineart.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_maintile.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_roofex.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_roofex_cen.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_sideroof.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_sideroof01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_sign01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_sign02.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_stair.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_tile.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_tile01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_wallhole01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_walltile01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_walltile02.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_walltile03.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_walltile04.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall16_walltile05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\flag_war\\china_wall16.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

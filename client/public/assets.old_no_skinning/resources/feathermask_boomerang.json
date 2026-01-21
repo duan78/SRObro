@@ -1,0 +1,10 @@
+{
+  "file_name": "feathermask_boomerang",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\feathermask.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,20 @@
+{
+  "file_name": "p_frilled_lizard",
+  "meshes": [
+    "prim\\mesh\\cos\\p_frilled_lizard_01.bms",
+    "prim\\mesh\\cos\\p_frilled_lizard_part1.bms",
+    "prim\\mesh\\cos\\p_frilled_lizard_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_frilled_lizard.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\p_frilled_lizard\\p_frilled_lizard_stand01.ban",
+    "prim\\ani\\cos\\p_frilled_lizard\\p_frilled_lizard_walk.ban",
+    "prim\\ani\\cos\\p_frilled_lizard\\p_frilled_lizard_run.ban",
+    "prim\\ani\\cos\\p_frilled_lizard\\p_frilled_lizard_pickup.ban",
+    "prim\\ani\\cos\\p_frilled_lizard\\p_frilled_lizard_emotion.ban"
+  ],
+  "textures": []
+}

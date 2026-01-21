@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_ferry_tombstone",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_tombstone01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_tombstone.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_tombstone01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\cj_ferry\\cj_ferry.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

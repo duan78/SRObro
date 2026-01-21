@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_windpriest_ac2_slowdown_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 19858
+}

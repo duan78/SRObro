@@ -1,0 +1,10 @@
+{
+  "file_name": "event_balloon_mangnyang",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\event_balloon_mangnyang.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

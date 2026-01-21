@@ -1,0 +1,32 @@
+{
+  "file_name": "is_guard_blade",
+  "meshes": [
+    "prim\\mesh\\cos\\is_guard01.bms",
+    "prim\\mesh\\cos\\is_guard02.bms",
+    "prim\\mesh\\cos\\is_guard_blade01.bms",
+    "prim\\mesh\\cos\\is_guard_blade02.bms",
+    "prim\\mesh\\cos\\is_guard_part1.bms",
+    "prim\\mesh\\cos\\is_guard_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\is_guard.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_stand01.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_stand02.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_walk.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_run.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_attack01.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_attack02.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_damage01.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_die.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_die_rm.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_down.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_down_rm.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_down_damage.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_down_up.ban",
+    "prim\\ani\\cos\\is_guard_blade\\is_guard_blade_down_die.ban"
+  ],
+  "textures": []
+}

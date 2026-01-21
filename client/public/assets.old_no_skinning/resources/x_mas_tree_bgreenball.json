@@ -1,0 +1,17 @@
+{
+  "file_name": "x_mas_tree_bgreenball",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\common\\event-xmas\\x_mas_tree.bmt"
+  ],
+  "effects": [
+    "map\\bigx-mastree-ball_g.efp",
+    "map\\bigx-mastree-ball_g.efp",
+    "map\\bigx-mastree-ball_g.efp",
+    "map\\bigx-mastree-ball_g.efp",
+    "map\\bigx-mastree-ball_g.efp",
+    "map\\bigx-mastree-ball_g.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

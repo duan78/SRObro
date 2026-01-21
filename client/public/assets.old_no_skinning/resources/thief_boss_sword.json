@@ -1,0 +1,10 @@
+{
+  "file_name": "thief_boss_sword",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\thief_boss_sword.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

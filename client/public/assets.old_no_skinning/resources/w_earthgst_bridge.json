@@ -1,0 +1,21 @@
+{
+  "file_name": "w_earthgst_bridge",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_brid_floor.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_brid_fence.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_brid_fire01.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_brid_floor.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_brid_rock.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_brid_roof.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\earthghost\\w_earthgst_bridge.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp",
+    "map\\frame2.efp",
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

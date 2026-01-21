@@ -1,0 +1,12 @@
+{
+  "file_name": "euro_constan_st06_long02",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_st06_long02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_constan_st01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,37 @@
+{
+  "file_name": "bagh_minga_h_10",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_13.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_14.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_15.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_16.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_17.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_18.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_19.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_20.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_21.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_22.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_win01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_win01_alpha.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_win02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingah10_win02_alpha.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_minga_h.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

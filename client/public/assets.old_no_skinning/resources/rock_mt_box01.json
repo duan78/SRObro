@@ -1,0 +1,12 @@
+{
+  "file_name": "rock_mt_box01",
+  "meshes": [
+    "prim\\mesh\\artifact\\west asia\\rock mt\\deco\\rock_mt_box01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\west asia\\rock mt\\deco\\rock_mt_box01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

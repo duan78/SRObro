@@ -1,0 +1,13 @@
+{
+  "file_name": "fortress_ct_fort_in_door_deco",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_door01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_door02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\fortress_ct_fort_gate_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "drop_eu_equip",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\etc\\drop_eu_equip.bmt"
+  ],
+  "effects": [
+    "system\\item_drop_acc_01.efp",
+    "system\\item_drop_equip.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

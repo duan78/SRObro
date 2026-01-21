@@ -1,0 +1,23 @@
+{
+  "file_name": "euro_constan_house02_h01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_03_winlight.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_08.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_09.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_10.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_14.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_12.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\minga\\euro_constan_house02_h01_02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

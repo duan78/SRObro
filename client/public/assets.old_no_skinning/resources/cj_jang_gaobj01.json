@@ -1,0 +1,20 @@
+{
+  "file_name": "cj_jang_gaobj01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gateobj01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gateobj01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gateobj02.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gateobj03.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gateobj06.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gateobj09.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gateobj04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_jang_gateobj01.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_red.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

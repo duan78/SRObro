@@ -1,0 +1,19 @@
+{
+  "file_name": "hide_center",
+  "textures": [
+    "hide_door_04.ddj",
+    "hide_column01.ddj",
+    "hide_column02.ddj",
+    "hide_wall03.ddj",
+    "hide_wall02.ddj",
+    "hide_column03.ddj",
+    "hide_wall01.ddj",
+    "hide_ground05.ddj",
+    "hide_ceiling04.ddj",
+    "hide_bottom.ddj",
+    "hide_ground01.ddj",
+    "hide_door_02.ddj",
+    "hide_door_01.ddj",
+    "hide_door_03.ddj"
+  ]
+}

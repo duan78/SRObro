@@ -1,0 +1,18 @@
+{
+  "file_name": "spidey_stand",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 10649,
+  "animation_name": "\f",
+  "data_blocks": [
+    65536,
+    655360,
+    0,
+    327680,
+    0,
+    681326,
+    834128,
+    668005
+  ]
+}

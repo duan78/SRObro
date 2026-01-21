@@ -1,0 +1,10 @@
+{
+  "file_name": "drop_ch_eventbox",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\drop_ch_eventbox.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

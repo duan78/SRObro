@@ -1,0 +1,15 @@
+{
+  "file_name": "oas_ho_church",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_ho_church01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_ho_church01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_ho_church02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_ho_church_winlight.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oas_ho_church.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

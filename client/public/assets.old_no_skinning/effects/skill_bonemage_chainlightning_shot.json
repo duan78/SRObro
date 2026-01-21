@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_bonemage_chainlightning_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 5917
+}

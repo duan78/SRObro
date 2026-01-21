@@ -1,0 +1,9 @@
+{
+  "file_name": "wreck_event_break",
+  "textures": [
+    "wreck_break_obj01.ddj",
+    "wreck_break_obj02.ddj",
+    "wreck_break_obj03.ddj",
+    "wreck_break_obj04.ddj"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "asiaminor_troy01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\beach\\asiaminor_troy01.bms",
+    "prim\\mesh\\bldg\\asia minor\\beach\\asiaminor_troy01.bms",
+    "prim\\mesh\\bldg\\asia minor\\beach\\asiaminor_troy02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\beach\\asiaminor_troy01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

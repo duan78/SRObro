@@ -1,0 +1,31 @@
+{
+  "file_name": "imouthes",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\imouthes02.bms",
+    "prim\\mesh\\mob\\sd\\imouthes_part1.bms",
+    "prim\\mesh\\mob\\sd\\imouthes_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\imouthes_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\imouthes.bmt",
+    "prim\\mtrl\\mob\\sd\\imouthes_clon2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_stand01.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_stand02.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_walk.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_run.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_attack01.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_attack04.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_damage.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_die.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_die_rm.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_down.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_down_rm.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_down_damage.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_down_up.ban",
+    "prim\\ani\\mob\\sd\\imouthes\\imouthes_down_die.ban"
+  ],
+  "textures": []
+}

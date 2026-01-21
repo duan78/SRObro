@@ -1,0 +1,32 @@
+{
+  "file_name": "pumpkin_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4932,
+  "animation_name": "\u000e",
+  "data_blocks": [
+    500,
+    30,
+    0,
+    11,
+    0,
+    33,
+    66,
+    100,
+    133,
+    200,
+    266,
+    333,
+    366,
+    400,
+    500,
+    15,
+    6,
+    733488,
+    441733,
+    11,
+    6,
+    734769
+  ]
+}

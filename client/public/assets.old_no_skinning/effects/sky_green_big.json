@@ -1,0 +1,10 @@
+{
+  "file_name": "sky_green_big",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 7416
+}

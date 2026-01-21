@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_m_shogun",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_shogun_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_shogun_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_shogun.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

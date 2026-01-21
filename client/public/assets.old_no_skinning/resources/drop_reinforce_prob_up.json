@@ -1,0 +1,12 @@
+{
+  "file_name": "drop_reinforce_prob_up",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\drop_reinforce_prob_up.bmt"
+  ],
+  "effects": [
+    "system\\system_item_powder.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

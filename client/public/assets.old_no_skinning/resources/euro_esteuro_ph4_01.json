@@ -1,0 +1,24 @@
+{
+  "file_name": "euro_esteuro_ph4_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_08.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_09.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_10.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_11.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph4_12.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\minga\\euro_esteuro_ph2_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "w_cd_ravi_house_03",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_house_18.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_house_19.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ravine\\w_cd_ravi_house_03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

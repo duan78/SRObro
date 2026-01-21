@@ -1,0 +1,31 @@
+{
+  "file_name": "chinasystem_boatman02_basic",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 10004,
+  "animation_name": "\u001b",
+  "data_blocks": [
+    7680,
+    256,
+    1536,
+    0,
+    256000,
+    512000,
+    768000,
+    784896,
+    13568,
+    1536,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1586,
+    1590,
+    1590,
+    1590,
+    1592
+  ]
+}

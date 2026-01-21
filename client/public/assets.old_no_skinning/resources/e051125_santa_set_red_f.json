@@ -1,0 +1,14 @@
+{
+  "file_name": "e051125_santa_set_red_f",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\e041225_santa_hat_f.bms",
+    "prim\\mesh\\item\\etc\\e051125_santa_mitten_f.bms",
+    "prim\\mesh\\item\\etc\\e051125_santa_muffler_f.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\e051125_santa_set_red.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

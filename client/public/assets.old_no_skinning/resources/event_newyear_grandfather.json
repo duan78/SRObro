@@ -1,0 +1,13 @@
+{
+  "file_name": "event_newyear_grandfather",
+  "meshes": [
+    "prim\\mesh\\npc\\npc\\npc_ch_event_grandfather01_part1.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_grandfather01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\npc\\npc_ch_event_grandfather.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,35 @@
+{
+  "file_name": "harsapheth",
+  "meshes": [
+    "prim\\mesh\\mob\\taklamakan\\bonemage_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage_part2_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\harsapheth.bmt",
+    "prim\\mtrl\\mob\\sd\\harsapheth_clon3.bmt",
+    "prim\\mtrl\\mob\\sd\\harsapheth_clon4.bmt"
+  ],
+  "effects": [
+    "monster\\luster_earthkingeye.efp",
+    "monster\\luster_earthkingeye.efp",
+    "monster\\luster_bonemage_handlight.efp",
+    "monster\\luster_bonemage_handlight.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_stand01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_walk.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_run.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_attack01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_attack02.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_attack03.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_down.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_downwait.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_downdamage.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_downup.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_damage02.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_damage01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonemage\\bonemage_downdie.ban"
+  ],
+  "textures": []
+}

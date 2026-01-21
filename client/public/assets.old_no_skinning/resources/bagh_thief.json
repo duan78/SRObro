@@ -1,0 +1,32 @@
+{
+  "file_name": "bagh_thief",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_door01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_door01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_door02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_door03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_flag01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_flag02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_roof01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_roof02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_roof03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_rope01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_step01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_tile01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_will01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_will02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_will03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_will04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_will05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_will06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_win01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_win02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\union\\bagh_thief_win03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_thief.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

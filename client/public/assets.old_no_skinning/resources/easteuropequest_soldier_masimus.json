@@ -1,0 +1,16 @@
+{
+  "file_name": "easteuropequest_soldier_masimus",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_masimus_2s_01.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_masimus_2s_02.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_masimus_arm.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_masimus_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_soldier_masimus_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_soldier_masimus.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

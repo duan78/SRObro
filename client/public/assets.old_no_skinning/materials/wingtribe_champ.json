@@ -1,0 +1,7 @@
+{
+  "file_name": "wingtribe_champ",
+  "textures": [
+    "prim\\mtrl\\mob\\roc\\wingtribe_weapon.ddj",
+    "prim\\mtrl\\mob\\roc\\wingtribe_champ.ddj"
+  ]
+}

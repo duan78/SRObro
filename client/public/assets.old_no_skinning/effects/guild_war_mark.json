@@ -1,0 +1,10 @@
+{
+  "file_name": "guild_war_mark",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6689
+}

@@ -1,0 +1,18 @@
+{
+  "file_name": "bagh_field_well",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_well_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_well_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_well_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_well_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_well_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_well_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_well_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\farm\\bagh_field_well.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,18 @@
+{
+  "file_name": "thiefden_thief_e",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\thiefden_thief_e_2s.bms",
+    "prim\\mesh\\npc\\china\\thiefden_thief_e_al.bms",
+    "prim\\mesh\\npc\\china\\thiefden_thief_e_part1.bms",
+    "prim\\mesh\\npc\\china\\thiefden_thief_e_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\thiefden_thief_e.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinaquest_merchant_basic.ban",
+    "prim\\ani\\npc\\china\\chinaquest_merchant_time.ban"
+  ],
+  "textures": []
+}

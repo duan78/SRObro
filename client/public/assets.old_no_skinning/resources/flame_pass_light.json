@@ -1,0 +1,12 @@
+{
+  "file_name": "flame_pass_light",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\flame\\flame_pass_light.bmt"
+  ],
+  "effects": [
+    "dun\\fireball_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

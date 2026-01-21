@@ -1,0 +1,12 @@
+{
+  "file_name": "guild_war_mark",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\etc\\ex_mark.bmt"
+  ],
+  "effects": [
+    "map\\guild\\guild_war_mark.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

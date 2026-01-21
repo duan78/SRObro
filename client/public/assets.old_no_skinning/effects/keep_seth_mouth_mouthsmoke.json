@@ -1,0 +1,10 @@
+{
+  "file_name": "keep_seth_mouth_mouthsmoke",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 9331
+}

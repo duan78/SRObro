@@ -1,0 +1,14 @@
+{
+  "file_name": "demon_piller03",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_piller03_01.bms",
+    "prim\\mesh\\dun\\demon\\demon_piller03_01.bms",
+    "prim\\mesh\\dun\\demon\\demon_piller03_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_piller02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "avatar_w_blue_soulknight",
+  "textures": [
+    "avatar_w_blue_soulknight01.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_blue_soulknight01_n.ddj",
+    "avatar_w_blue_soulknight_hat.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_blue_soulknight_hat_n.ddj",
+    "avatar_w_blue_soulknight_head.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_blue_soulknight_head_n.ddj",
+    "avatar_w_blue_soulknight.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_blue_soulknight_n.ddj",
+    "avatar_w_blue_soulknight_attach.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_blue_soulknight_attach_n.ddj"
+  ]
+}

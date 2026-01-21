@@ -1,0 +1,10 @@
+{
+  "file_name": "mayan_door02",
+  "textures": [
+    "mayan_08_grass01.ddj",
+    "mayan_08_grass02.ddj",
+    "mayan_08_column01.ddj",
+    "mayan_08_door02.ddj",
+    "mayan_08_door01.ddj"
+  ]
+}

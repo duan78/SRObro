@@ -1,0 +1,10 @@
+{
+  "file_name": "dust_redeyeghost_down",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2333
+}

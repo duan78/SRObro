@@ -1,0 +1,10 @@
+{
+  "file_name": "bigsujung_potal_glow_r",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 19382
+}

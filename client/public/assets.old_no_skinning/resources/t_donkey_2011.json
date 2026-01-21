@@ -1,0 +1,20 @@
+{
+  "file_name": "t_donkey_2011",
+  "meshes": [
+    "prim\\mesh\\cos\\cart\\trade_cart_donkey_part1.bms",
+    "prim\\mesh\\cos\\cart\\trade_cart_donkey_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\t_donkey_2011.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\cart\\trade_cart_donkey\\stand01.ban",
+    "prim\\ani\\cos\\cart\\trade_cart_donkey\\walk.ban",
+    "prim\\ani\\cos\\cart\\trade_cart_donkey\\run.ban",
+    "prim\\ani\\cos\\cart\\trade_cart_donkey\\die.ban",
+    "prim\\ani\\cos\\cart\\trade_cart_donkey\\die_loop.ban",
+    "prim\\ani\\cos\\cart\\trade_cart_donkey\\damage01.ban"
+  ],
+  "textures": []
+}

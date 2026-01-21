@@ -1,0 +1,13 @@
+{
+  "file_name": "c_jin_cliff_r",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_cliff_r.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_cliff_r_pic.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\c_jin_cliff.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

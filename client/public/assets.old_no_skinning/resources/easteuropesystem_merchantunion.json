@@ -1,0 +1,14 @@
+{
+  "file_name": "easteuropesystem_merchantunion",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropesystem_merchantunion_2s.bms",
+    "prim\\mesh\\npc\\europe\\easteuropesystem_merchantunion_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropesystem_merchantunion_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropesystem_merchantunion.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,21 @@
+{
+  "file_name": "p_raccoondog",
+  "meshes": [
+    "prim\\mesh\\cos\\p_raccoondog01.bms",
+    "prim\\mesh\\cos\\p_raccoondog02.bms",
+    "prim\\mesh\\cos\\p_raccoondog_part1.bms",
+    "prim\\mesh\\cos\\p_raccoondog_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_raccoondog.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\p_raccoondog\\p_raccoondog_stand01.ban",
+    "prim\\ani\\cos\\p_raccoondog\\p_raccoondog_walk.ban",
+    "prim\\ani\\cos\\p_raccoondog\\p_raccoondog_run.ban",
+    "prim\\ani\\cos\\p_raccoondog\\p_raccoondog_pick.ban",
+    "prim\\ani\\cos\\p_raccoondog\\p_raccoondog_emotion.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,27 @@
+{
+  "file_name": "togui_general_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4904,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    131072,
+    0,
+    327680,
+    157038,
+    868011,
+    2,
+    12,
+    2,
+    12,
+    2,
+    12,
+    2,
+    6,
+    143664,
+    409752,
+    2
+  ]
+}

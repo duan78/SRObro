@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_ar_mustafa_attack1_blackboom",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 39454
+}

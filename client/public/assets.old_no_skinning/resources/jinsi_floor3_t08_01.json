@@ -1,0 +1,36 @@
+{
+  "file_name": "jinsi_floor3_t08_01",
+  "meshes": [
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_03\\passage08\\jinsi_floor3_t08_01_tile01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_03\\passage08\\jinsi_floor3_t08_01_c01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_03\\passage08\\jinsi_floor3_t08_01_m01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_03\\passage08\\jinsi_floor3_t08_01_p01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_03\\passage08\\jinsi_floor3_t08_01_rock.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_03\\passage08\\jinsi_floor3_t08_01_side01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_03\\passage08\\jinsi_floor3_t08_01_tile01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_03\\passage08\\jinsi_floor3_t08_01_tile02.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_03\\passage08\\jinsi_floor3_t08_01_tile03.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_03\\passage08\\jinsi_floor3_t08_01_tile04.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_03\\passage08\\jinsi_floor3_t08_01_up01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\floor_03\\jinsi_floor3_r05.bmt"
+  ],
+  "effects": [
+    "dun\\cristal_glow_blue_b.efp",
+    "dun\\cristal_glow_blue_b.efp",
+    "dun\\cristal_glow_blue_b.efp",
+    "dun\\cristal_glow_blue_b.efp",
+    "dun\\cristal_glow_blue_b.efp",
+    "dun\\cristal_glow_blue_b.efp",
+    "dun\\cristal_glow_blue_b.efp",
+    "dun\\cristal_up_blue_b.efp",
+    "dun\\cristal_up_blue_b.efp",
+    "dun\\cristal_up_blue_b.efp",
+    "dun\\cristal_up_blue_b.efp",
+    "dun\\cristal_up_blue_b.efp",
+    "dun\\sky_violet_big.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

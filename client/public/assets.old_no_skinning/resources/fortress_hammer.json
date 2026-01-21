@@ -1,0 +1,10 @@
+{
+  "file_name": "fortress_hammer",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\fortress_hammer_axe.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

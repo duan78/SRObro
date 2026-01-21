@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_snakegeneral_ac4_shout",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 22314
+}

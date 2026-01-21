@@ -1,0 +1,9 @@
+{
+  "file_name": "sunset_inside",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true
+  },
+  "raw_size": 4994
+}

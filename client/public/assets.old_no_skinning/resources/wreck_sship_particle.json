@@ -1,0 +1,20 @@
+{
+  "file_name": "wreck_sship_particle",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\wreck_float.bmt"
+  ],
+  "effects": [
+    "dun\\small_ship_skylight_01.efp",
+    "dun\\small_ship_skylight_01.efp",
+    "dun\\small_ship_skylight_01.efp",
+    "dun\\small_ship_skylight_02.efp",
+    "dun\\small_ship_skylight_02.efp",
+    "dun\\small_ship_skylight_02.efp",
+    "dun\\wreck_floor_light.efp",
+    "dun\\wreck_floor_light.efp",
+    "dun\\wreck_floor_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

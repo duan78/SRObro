@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_takl_hive01",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_takl_hive01_01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_takl_hive01_01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_takl_hive01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_takl_hive01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

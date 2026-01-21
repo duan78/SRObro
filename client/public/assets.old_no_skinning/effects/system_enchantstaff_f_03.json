@@ -1,0 +1,10 @@
+{
+  "file_name": "system_enchantstaff_f_03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 279866
+}

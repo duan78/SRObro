@@ -1,0 +1,25 @@
+{
+  "file_name": "ch_guard_spear_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 562,
+  "animation_name": "\u0017",
+  "data_blocks": [
+    85297,
+    7680,
+    0,
+    1280,
+    0,
+    8448,
+    25600,
+    59648,
+    85248,
+    768,
+    2560,
+    0,
+    340331,
+    702722,
+    5
+  ]
+}

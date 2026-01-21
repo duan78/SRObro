@@ -1,0 +1,10 @@
+{
+  "file_name": "colosseum_start02_1",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\colosseum\\colosseum_start.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

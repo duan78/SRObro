@@ -1,0 +1,25 @@
+{
+  "file_name": "w_cd_mc_view01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_drum.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_drum02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_fence.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_fence1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_floor01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_floor02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_pilla01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_pilla01_1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_pilla02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_pilla02_1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view_wal01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_view01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

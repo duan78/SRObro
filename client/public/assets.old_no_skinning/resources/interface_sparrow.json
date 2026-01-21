@@ -1,0 +1,13 @@
+{
+  "file_name": "interface_sparrow",
+  "meshes": [
+    "prim\\mesh\\interface\\interface_sparrow_body.bms",
+    "prim\\mesh\\interface\\interface_sparrow_wing.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\interface\\interface_sparrow.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

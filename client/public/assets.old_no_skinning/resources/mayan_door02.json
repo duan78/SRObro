@@ -1,0 +1,19 @@
+{
+  "file_name": "mayan_door02",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\score_war\\mayan_door02_01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_door02_02.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_door02_03.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_door02_04.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_door02_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\score_war\\mayan_door02.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_green_flame.efp",
+    "dun\\yellow_green_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

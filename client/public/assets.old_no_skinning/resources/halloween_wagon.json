@@ -1,0 +1,21 @@
+{
+  "file_name": "halloween_wagon",
+  "meshes": [
+    "prim\\mesh\\etc\\halloween\\hallloween_wagon.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_wa_can.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_wa_hat01.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_wa_hat02.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_wa_leaf.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_wa_pu01.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_wa_pu02.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_wa_pu03.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_wa_pu04.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_wa_skull.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\halloween\\halloween_wagon.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "event_newyear_grandmother",
+  "meshes": [
+    "prim\\mesh\\npc\\npc\\npc_ch_event_grandmother_part1.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_grandmother_part2_part1.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_grandmother_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\npc\\npc_ch_event_grandmother.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

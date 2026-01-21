@@ -1,0 +1,10 @@
+{
+  "file_name": "lightning_attack_motion_shoot_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8223
+}

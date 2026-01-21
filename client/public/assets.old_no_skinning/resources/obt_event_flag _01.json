@@ -1,0 +1,10 @@
+{
+  "file_name": "obt_event_flag _01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\etc\\obt\\obt_event.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

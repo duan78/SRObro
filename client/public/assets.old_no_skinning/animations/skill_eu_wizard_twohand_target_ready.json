@@ -1,0 +1,20 @@
+{
+  "file_name": "skill_eu_wizard_twohand_target_ready",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4593,
+  "animation_name": "$",
+  "data_blocks": [
+    0,
+    196608,
+    0,
+    327680,
+    0,
+    222574,
+    899714,
+    3,
+    12,
+    3
+  ]
+}

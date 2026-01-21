@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_greedmummy_ac6_timetodie",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 26252
+}

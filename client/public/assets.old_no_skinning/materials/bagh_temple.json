@@ -1,0 +1,24 @@
+{
+  "file_name": "bagh_temple",
+  "textures": [
+    "bagh_tample_tile07.ddj",
+    "bagh_tample_will01.ddj",
+    "bagh_tample_door01.ddj",
+    "bagh_tample_tile09.ddj",
+    "bagh_tample_tile05.ddj",
+    "bagh_tample_will02.ddj",
+    "bagh_tample_tile06.ddj",
+    "bagh_tample_door02.ddj",
+    "bagh_tample_fance01.ddj",
+    "bagh_tample_tile10.ddj",
+    "bagh_tample_tile11.ddj",
+    "bagh_tample_step01.ddj",
+    "bagh_tample_column01.ddj",
+    "bagh_tample_tile03.ddj",
+    "bagh_tample_tile02.ddj",
+    "bagh_tample_tile01.ddj",
+    "bagh_tample_tower01.ddj",
+    "bagh_tample_tile04.ddj",
+    "bagh_tample_tile08.ddj"
+  ]
+}

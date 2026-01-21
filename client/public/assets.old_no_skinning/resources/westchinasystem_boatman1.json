@@ -1,0 +1,18 @@
+{
+  "file_name": "westchinasystem_boatman1",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\westchinasystem_boatman1_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinasystem_boatman1_al_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinasystem_boatman1_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinasystem_boatman1_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\westchinasystem_boatman1.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinasystem_boatman2_basic.ban",
+    "prim\\ani\\npc\\china\\chinasystem_boatman2_time.ban"
+  ],
+  "textures": []
+}

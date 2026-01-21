@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_kk_icestone01",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\karakorm\\oas_kk_icestone01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\karakorm\\oas_kk_icestone01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

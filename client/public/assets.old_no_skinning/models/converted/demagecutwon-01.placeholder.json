@@ -1,0 +1,15 @@
+{
+  "placeholder": true,
+  "model_name": "demagecutwon-01",
+  "geometry": {
+    "type": "effect",
+    "shape": "sphere",
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "emissive": true
+  },
+  "created": "2026-01-20T14:34:37.374884"
+}

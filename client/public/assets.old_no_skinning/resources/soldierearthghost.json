@@ -1,0 +1,20 @@
+{
+  "file_name": "soldierearthghost",
+  "meshes": [
+    "prim\\mesh\\mob\\wchina\\soldierearthghost01_part1.bms",
+    "prim\\mesh\\mob\\wchina\\soldierearthghost01_part2.bms",
+    "prim\\mesh\\mob\\wchina\\soldierearthghost02.bms",
+    "prim\\mesh\\mob\\wchina\\soldierearthghost_ax.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\wchina\\soldierearthghost.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_stand02.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_run.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_damage02.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_walk.ban"
+  ],
+  "textures": []
+}

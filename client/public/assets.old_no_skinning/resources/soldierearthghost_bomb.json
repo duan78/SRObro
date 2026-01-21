@@ -1,0 +1,10 @@
+{
+  "file_name": "soldierearthghost_bomb",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\gunpowderghost.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

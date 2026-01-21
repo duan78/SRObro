@@ -1,0 +1,10 @@
+{
+  "file_name": "clothes_02",
+  "textures": [
+    "clothes_02_la.ddj",
+    "clothes_02_fa.ddj",
+    "clothes_02_ba.ddj",
+    "clothes_02_ha.ddj",
+    "clothes_02_aa.ddj"
+  ]
+}

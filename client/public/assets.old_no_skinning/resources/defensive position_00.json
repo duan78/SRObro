@@ -1,0 +1,12 @@
+{
+  "file_name": "defensive position_00",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\defensive\\defensive position_00.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\defensive\\defensive position_00.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

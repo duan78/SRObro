@@ -1,0 +1,11 @@
+{
+  "file_name": "cj_pal_indoor",
+  "textures": [
+    "cj_pal_sdoor.ddj",
+    "cj_pal_pillar.ddj",
+    "cj_pal_floor.ddj",
+    "cj_pal_roof.ddj",
+    "cj_pal_ndoor.ddj",
+    "cj_pal_dan.ddj"
+  ]
+}

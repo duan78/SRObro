@@ -1,0 +1,14 @@
+{
+  "file_name": "tre_bank01_big",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\tre_bank01_pilla_big.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_bank01_leaf_big.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_bank01_pilla_big.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tree\\tre_bank01_big.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

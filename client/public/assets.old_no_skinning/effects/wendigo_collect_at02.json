@@ -1,0 +1,10 @@
+{
+  "file_name": "wendigo_collect_at02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 15177
+}

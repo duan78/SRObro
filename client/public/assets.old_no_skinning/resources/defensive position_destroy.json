@@ -1,0 +1,14 @@
+{
+  "file_name": "defensive position_destroy",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\defensive\\dfposition03_destroy.bms",
+    "prim\\mesh\\artifact\\guild\\defensive\\dfposition03_destroy.bms",
+    "prim\\mesh\\artifact\\guild\\defensive\\dfposition_destroy_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\defensive\\defensive position_destroy.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

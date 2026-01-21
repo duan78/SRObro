@@ -1,0 +1,32 @@
+{
+  "file_name": "oas_hot_weapon",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_wall.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_alpha.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_bfloor.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_bwall.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_wall.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_etc.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_floor.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_flowerbed.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_left.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_pillar01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_statue.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_steel.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_sword.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_sword2.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_tent.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_top.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_top2.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_top2_1.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_under.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_wall2.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_weap_wall3.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oas_hot_weapon.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

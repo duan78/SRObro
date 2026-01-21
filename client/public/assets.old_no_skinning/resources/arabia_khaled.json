@@ -1,0 +1,14 @@
+{
+  "file_name": "arabia_khaled",
+  "meshes": [
+    "prim\\mesh\\npc\\arabia\\arabia_khaled_part1.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_khaled_part2_part1.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_khaled_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\arabia\\arabia_khaled.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

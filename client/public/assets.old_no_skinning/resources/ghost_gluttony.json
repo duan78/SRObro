@@ -1,0 +1,30 @@
+{
+  "file_name": "ghost_gluttony",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\ghost_gluttony_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_gluttony_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_gluttony_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_gluttony_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_gluttony_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_gluttony_part2_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_gluttony_part2_part2_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\ghost_gluttony.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_wreck_gluttony_keep_breath.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\god\\ghost_gluttony\\ghost_gluttony_stand01.ban",
+    "prim\\ani\\mob\\god\\ghost_gluttony\\ghost_gluttony_walk.ban",
+    "prim\\ani\\mob\\god\\ghost_gluttony\\ghost_gluttony_run.ban",
+    "prim\\ani\\mob\\god\\ghost_gluttony\\ghost_gluttony_attack1.ban",
+    "prim\\ani\\mob\\god\\ghost_gluttony\\ghost_gluttony_attack2.ban",
+    "prim\\ani\\mob\\god\\ghost_gluttony\\ghost_gluttony_attack3.ban",
+    "prim\\ani\\mob\\god\\ghost_gluttony\\ghost_gluttony_die.ban",
+    "prim\\ani\\mob\\god\\ghost_gluttony\\ghost_gluttony_die_rm.ban",
+    "prim\\ani\\mob\\god\\ghost_gluttony\\ghost_gluttony_damage1.ban"
+  ],
+  "textures": []
+}

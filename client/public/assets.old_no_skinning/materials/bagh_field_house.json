@@ -1,0 +1,25 @@
+{
+  "file_name": "bagh_field_house",
+  "textures": [
+    "bagh_field_house09.ddj",
+    "bagh_field_house01.ddj",
+    "bagh_field_house_line.ddj",
+    "bagh_field_stable_porcelain.ddj",
+    "bagh_field_house03.ddj",
+    "bagh_field_stable_door.ddj",
+    "bagh_field_house07.ddj",
+    "bagh_field_house06.ddj",
+    "bagh_field_house04.ddj",
+    "bagh_field_house08.ddj",
+    "bagh_field_house10.ddj",
+    "bagh_field_house_door.ddj",
+    "bagh_field_house_top.ddj",
+    "bagh_field_house05.ddj",
+    "bagh_field_house_win.ddj",
+    "bagh_field_house_light.ddj",
+    "bagh_field_house02.ddj",
+    "bagh_field_stable_light.ddj",
+    "bagh_field_stable_fence.ddj",
+    "bagh_field_stable_light_alpha.ddj"
+  ]
+}

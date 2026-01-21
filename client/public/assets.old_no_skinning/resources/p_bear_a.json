@@ -1,0 +1,20 @@
+{
+  "file_name": "p_bear_a",
+  "meshes": [
+    "prim\\mesh\\cos\\saddle_bear_a.bms",
+    "prim\\mesh\\cos\\pet_bear_a_part1.bms",
+    "prim\\mesh\\cos\\pet_bear_a_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_bear_a_part2_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_bear_a_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\pet_bear_a.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\p_bear_a\\pet_bear_a_stand01.ban",
+    "prim\\ani\\cos\\p_bear_a\\pet_bear_a_walk.ban",
+    "prim\\ani\\cos\\p_bear_a\\pet_bear_a_run.ban"
+  ],
+  "textures": []
+}

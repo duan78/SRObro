@@ -1,0 +1,18 @@
+{
+  "file_name": "shield_12",
+  "meshes": [
+    "prim\\mesh\\item\\china\\armor\\shield_12.bms",
+    "prim\\mesh\\item\\china\\armor\\shield_12_alpha.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\armor\\shield_12.bmt"
+  ],
+  "effects": [
+    "system\\item_ch_shield_12_j.efp",
+    "system\\item_ch_shield_12_m02.efp",
+    "system\\item_ch_shield_12_m.efp",
+    "system\\item_ch_shield_12_m03.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

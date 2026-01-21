@@ -1,0 +1,14 @@
+{
+  "placeholder": true,
+  "model_name": "cho-won-005-m",
+  "geometry": {
+    "type": "prop",
+    "shape": "box",
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "created": "2026-01-20T14:34:37.364740"
+}

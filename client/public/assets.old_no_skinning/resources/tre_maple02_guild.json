@@ -1,0 +1,14 @@
+{
+  "file_name": "tre_maple02_guild",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\tre_maple02_brn_guild.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_maple02_leaf.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_maple02_brn_guild.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tre_maple02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

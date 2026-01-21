@@ -1,0 +1,10 @@
+{
+  "file_name": "water_physical_a_03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 43669
+}

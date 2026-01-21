@@ -1,0 +1,30 @@
+{
+  "file_name": "uneg",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\uneg_hair.bms",
+    "prim\\mesh\\mob\\sd\\uneg_part1.bms",
+    "prim\\mesh\\mob\\sd\\uneg_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\uneg.bmt",
+    "prim\\mtrl\\mob\\sd\\uneg_clon.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\europe\\movoi\\movoi_stand01.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_walk.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_run.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_attack01.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_attack02.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_die.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_die_rm.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_down.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_down_rm.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_down_damage.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_down_up.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_down_die.ban",
+    "prim\\ani\\mob\\europe\\movoi\\movoi_damage01.ban",
+    "prim\\ani\\mob\\europe\\movoi\\weneg_attack03.ban"
+  ],
+  "textures": []
+}

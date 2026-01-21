@@ -1,0 +1,7 @@
+{
+  "file_name": "bonegeneral_champ",
+  "textures": [
+    "prim\\mtrl\\mob\\taklamakan\\bonegeneral_champ.ddj",
+    "bonegeneral_arms.ddj"
+  ]
+}

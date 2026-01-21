@@ -1,0 +1,15 @@
+{
+  "file_name": "avatar_m_darklknight",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_darkknight01.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_darkknight02.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_darkknight_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_darkknight_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_darkknight.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,21 @@
+{
+  "file_name": "event_festival_circusbear",
+  "meshes": [
+    "prim\\mesh\\mob\\event\\event_festival_circusbear_01.bms",
+    "prim\\mesh\\mob\\event\\event_festival_circusbear_part1.bms",
+    "prim\\mesh\\mob\\event\\event_festival_circusbear_part2_part1.bms",
+    "prim\\mesh\\mob\\event\\event_festival_circusbear_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\event\\event_festival_circusbear.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\event\\event_festival_circusbear\\event_festival_circusbear_stand01.ban",
+    "prim\\ani\\mob\\event\\event_festival_circusbear\\event_festival_circusbear_walk.ban",
+    "prim\\ani\\mob\\event\\event_festival_circusbear\\event_festival_circusbear_run.ban",
+    "prim\\ani\\mob\\event\\event_festival_circusbear\\event_festival_circusbear_pickup.ban",
+    "prim\\ani\\mob\\event\\event_festival_circusbear\\event_festival_circusbear_emotion.ban"
+  ],
+  "textures": []
+}

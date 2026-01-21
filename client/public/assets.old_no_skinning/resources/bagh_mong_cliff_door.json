@@ -1,0 +1,26 @@
+{
+  "file_name": "bagh_mong_cliff_door",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d_12.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_cliff_d.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame_sb.efp",
+    "dun\\red_orange_flame_sb.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

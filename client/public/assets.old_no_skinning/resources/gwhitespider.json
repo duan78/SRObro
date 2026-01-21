@@ -1,0 +1,31 @@
+{
+  "file_name": "gwhitespider",
+  "meshes": [
+    "prim\\mesh\\mob\\karakoram\\gwhitespider_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\gwhitespider_part2_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\gwhitespider_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\karakoram\\gwhitespider.bmt",
+    "prim\\mtrl\\mob\\karakoram\\gwhitespider_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_stand01.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_stand02.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_walk.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_run.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_attack01.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_attack02.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_damage01.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_damage02.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_die.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_die_loop.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_down.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_down_rm.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_down_damage.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_down_up.ban",
+    "prim\\ani\\mob\\karakoram\\gwhitespider\\gwhitespider_down_die.ban"
+  ],
+  "textures": []
+}

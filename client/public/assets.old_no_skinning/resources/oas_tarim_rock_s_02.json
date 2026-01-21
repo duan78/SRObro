@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_tarim_rock_s_02",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\tarim\\rock\\oas_tarim_rock_s_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\tarim\\rock\\oas_tarim_rock_l_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

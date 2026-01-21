@@ -1,0 +1,12 @@
+{
+  "file_name": "mayan_statue",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\score_war\\mayan_statue.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

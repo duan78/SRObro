@@ -1,0 +1,18 @@
+{
+  "file_name": "thief_vill_object12_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_object12_01.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_object12_01.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_object12_02.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_object12_03.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_object12_04.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_object12_05.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_object12_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\common\\thief-vill\\thief_vill_object12_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

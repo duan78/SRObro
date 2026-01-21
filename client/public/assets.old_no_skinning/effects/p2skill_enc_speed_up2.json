@@ -1,0 +1,10 @@
+{
+  "file_name": "p2skill_enc_speed_up2",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4106
+}

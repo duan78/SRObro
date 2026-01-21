@@ -1,0 +1,15 @@
+{
+  "file_name": "hp_potion_02",
+  "meshes": [
+    "prim\\mesh\\item\\china\\etc\\hplittlepofion01.bms",
+    "prim\\mesh\\item\\china\\etc\\hplittlepotion02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\hplittlepotion.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\item\\china\\etc\\hplittlepotion_bump.ddj"
+  ]
+}

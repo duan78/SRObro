@@ -1,0 +1,10 @@
+{
+  "file_name": "rog_trans_hide",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 24839
+}

@@ -1,0 +1,29 @@
+{
+  "file_name": "bagh_masin_ptre_center",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_ptree_01.bms",
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_ptree_02.bms",
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_ptree_03.bms",
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_ptree_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\masin\\bagh_masin_ptree.bmt"
+  ],
+  "effects": [
+    "dun\\bagh_masin_tree01.efp",
+    "dun\\bagh_masin_tree01.efp",
+    "dun\\bagh_masin_tree01.efp",
+    "dun\\bagh_masin_tree01.efp",
+    "dun\\bagh_masin_out.efp",
+    "dun\\sky_green_small_weak.efp",
+    "dun\\sky_green_small_weak.efp",
+    "dun\\sky_green_small_weak.efp",
+    "dun\\sky_green_small_weak.efp",
+    "dun\\bagh_masin_tree01.efp",
+    "dun\\bagh_masin_tree01.efp",
+    "dun\\bagh_masin_tree01.efp",
+    "dun\\bagh_masin_tree_glow.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,18 @@
+{
+  "file_name": "bagh_field_papaya02",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_field_papaya02_01.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_field_papaya02_01.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_field_papaya02_02.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_field_papaya02_03.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_field_papaya02_04.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_field_papaya02_05.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_field_papaya02_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\tree\\bagh_field_papaya01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

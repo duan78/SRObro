@@ -1,0 +1,49 @@
+{
+  "mappings": [
+    {
+      "model": "avatar_m_amalun",
+      "texture": "avatar_m_amalun"
+    },
+    {
+      "model": "ad",
+      "texture": "ad"
+    },
+    {
+      "model": "achnish_01",
+      "texture": "achnish_01"
+    },
+    {
+      "model": "achnish_02",
+      "texture": "achnish_02"
+    },
+    {
+      "model": "aggressive_flag",
+      "texture": "aggressive_flag"
+    },
+    {
+      "model": "aggressive_flag_up",
+      "texture": "aggressive_flag_up"
+    },
+    {
+      "model": "air_garden_flowerbed01",
+      "texture": "air_garden_flowerbed01"
+    },
+    {
+      "model": "air_garden_flowerbed01_01",
+      "texture": "air_garden_flowerbed01_01"
+    },
+    {
+      "model": "air_garden_flowerbed02",
+      "texture": "air_garden_flowerbed02"
+    },
+    {
+      "model": "air_garden_flowerbed03",
+      "texture": "air_garden_flowerbed03"
+    }
+  ],
+  "notes": [
+    "Texture names should be without extension (TextureMaterialManager will try .webp, .dds, .png)",
+    "If no explicit mapping is found, TextureMaterialManager will look for a texture with the same base name as the model",
+    "If no texture is found, a default colored material will be applied based on the model name hash"
+  ]
+}

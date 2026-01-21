@@ -1,0 +1,12 @@
+{
+  "file_name": "small_guardpost",
+  "textures": [
+    "small_guardpost_03.ddj",
+    "small_guardpost_04.ddj",
+    "small_guardpost_02.ddj",
+    "small_guardpost_01.ddj",
+    "small_guardpost_alpha.ddj",
+    "small_guardpost_06.ddj",
+    "small_guardpost_light.ddj"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "file_name": "bagh_field_military_tent02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02_08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02_09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02_10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tent02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

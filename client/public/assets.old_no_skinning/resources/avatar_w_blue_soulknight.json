@@ -1,0 +1,16 @@
+{
+  "file_name": "avatar_w_blue_soulknight",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_blue_soulknight.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_blue_soulknight01.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_blue_soulknight02.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_blue_soulknight_head.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_blue_soulknight_lab.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_blue_soulknight.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

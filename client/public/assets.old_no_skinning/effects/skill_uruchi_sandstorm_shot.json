@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_uruchi_sandstorm_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10880
+}

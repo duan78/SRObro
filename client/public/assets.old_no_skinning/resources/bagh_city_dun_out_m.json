@@ -1,0 +1,21 @@
+{
+  "file_name": "bagh_city_dun_out_m",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_door.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_door.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dun_out.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

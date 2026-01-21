@@ -1,0 +1,13 @@
+{
+  "file_name": "easteuropequest_unionleader_kafros",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_unionleader_kafros_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_unionleader_kafros_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_unionleader_kafros.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "pha_tree03",
+  "meshes": [
+    "prim\\mesh\\nature\\asia minor\\tree\\r1_cv\\pha_tree03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\asia minor\\tree\\r1_cv\\pha_tree.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

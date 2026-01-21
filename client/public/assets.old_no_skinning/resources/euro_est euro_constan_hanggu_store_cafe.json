@@ -1,0 +1,15 @@
+{
+  "file_name": "euro_est euro_constan_hanggu_store_cafe",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_store_cafe.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_store_cafe.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_store_cafe_door.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_store_cafe_win.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\minga\\euro_est euro_constan_hanggu_store_cafe.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

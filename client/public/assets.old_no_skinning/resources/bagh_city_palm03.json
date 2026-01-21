@@ -1,0 +1,16 @@
+{
+  "file_name": "bagh_city_palm03",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_city_palm03_02.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_city_palm03_01.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_city_palm03_02.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_city_palm03_03.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_city_palm03_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\tree\\bagh_city_palm01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

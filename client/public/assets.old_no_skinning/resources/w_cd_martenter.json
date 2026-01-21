@@ -1,0 +1,15 @@
+{
+  "file_name": "w_cd_martenter",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_martenter01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_martenter01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_martenter01_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_martenter01_alpha.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_martenter01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

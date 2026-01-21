@@ -1,0 +1,33 @@
+{
+  "file_name": "raider",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\raider_add_l.bms",
+    "prim\\mesh\\mob\\sd\\raider_add_s.bms",
+    "prim\\mesh\\mob\\sd\\raider_hair.bms",
+    "prim\\mesh\\mob\\sd\\raider_weapon.bms",
+    "prim\\mesh\\mob\\sd\\raider_part1.bms",
+    "prim\\mesh\\mob\\sd\\raider_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\raider.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_stand01.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_walk.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_run.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_attack01.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_attack02.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_attack03.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_damage01.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_die.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_die_rm.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_down.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_downrm.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_downdamage.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_downup.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\rogue_downdie.ban",
+    "prim\\ani\\mob\\asiam\\rogue\\cruelraider_attack04.ban"
+  ],
+  "textures": []
+}

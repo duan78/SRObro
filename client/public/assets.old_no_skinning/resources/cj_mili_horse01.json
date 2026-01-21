@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_mili_horse01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_horse_deco.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_horse_gidung.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_horse_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_horse_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan04\\cj_mili_horse.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

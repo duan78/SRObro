@@ -1,0 +1,19 @@
+{
+  "file_name": "wolf_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2015,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    0,
+    2155,
+    3003,
+    8,
+    10,
+    549985,
+    996483,
+    2097
+  ]
+}

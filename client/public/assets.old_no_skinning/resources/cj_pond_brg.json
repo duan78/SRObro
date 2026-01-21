@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_pond_brg",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\greenfield\\cj_pond_brg.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\greenfield\\cj_pond_brg.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

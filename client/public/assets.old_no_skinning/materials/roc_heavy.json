@@ -1,0 +1,13 @@
+{
+  "file_name": "roc_heavy",
+  "textures": [
+    "roc_heavy_ha.ddj",
+    "roc_heavy_aa.ddj",
+    "roc_heavy_fa.ddj",
+    "roc_heavy_ba.ddj",
+    "roc_heavy_sa.ddj",
+    "roc_heavy_la.ddj",
+    "roc_heavy_g_du.ddj",
+    "prim\\mtrl\\item\\china\\woman_item\\roc_heavy_dum.ddj"
+  ]
+}

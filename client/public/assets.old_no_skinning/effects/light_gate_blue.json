@@ -1,0 +1,10 @@
+{
+  "file_name": "light_gate_blue",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8877
+}

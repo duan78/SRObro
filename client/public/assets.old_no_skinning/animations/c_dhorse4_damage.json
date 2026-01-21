@@ -1,0 +1,21 @@
+{
+  "file_name": "c_dhorse4_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1212,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    0,
+    393216,
+    0,
+    393216,
+    655360,
+    6,
+    11,
+    406123,
+    703256,
+    6,
+    15
+  ]
+}

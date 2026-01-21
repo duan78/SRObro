@@ -1,0 +1,18 @@
+{
+  "file_name": "bagh_field_top",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_top01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_top01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_top02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_top03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_top04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_top05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_top06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\farm\\bagh_field_top.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

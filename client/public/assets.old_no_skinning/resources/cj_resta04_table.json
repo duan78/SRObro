@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_resta04_table",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta04_table.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_resta04_table.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

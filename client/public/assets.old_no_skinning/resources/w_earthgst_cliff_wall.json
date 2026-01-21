@@ -1,0 +1,22 @@
+{
+  "file_name": "w_earthgst_cliff_wall",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_cliff_wall.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_cliff_pillar.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_cliff_tower02.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_cliff_wall.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_cliff_door.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_cliff_door02.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_cliff_door03.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_cliff_pillar01.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_cliff_tower01.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_face.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_cliff_fence.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\earthghost\\w_earthgst_cliff.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

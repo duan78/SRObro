@@ -1,0 +1,21 @@
+{
+  "file_name": "coldhawk",
+  "meshes": [
+    "prim\\mesh\\npc\\animal\\hawk01.bms",
+    "prim\\mesh\\npc\\animal\\hawk02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\animal\\whitehawk.bmt"
+  ],
+  "effects": [
+    "skill\\china\\bow_bird_b.efp",
+    "skill\\china\\bow_bird_b.efp",
+    "skill\\china\\bow_bird_b.efp"
+  ],
+  "animations": [
+    "prim\\ani\\npc\\animal\\hawk_stand.ban",
+    "prim\\ani\\npc\\animal\\hawk_walk.ban",
+    "prim\\ani\\npc\\animal\\hawk_run.ban"
+  ],
+  "textures": []
+}

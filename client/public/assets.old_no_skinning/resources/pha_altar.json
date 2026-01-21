@@ -1,0 +1,19 @@
+{
+  "file_name": "pha_altar",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_altar01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_altar01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_altar02.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_altar03.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_altar04.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_altar05.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_altar_pillar01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_altar_statue01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\field\\pha_altar.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

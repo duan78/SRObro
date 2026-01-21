@@ -1,0 +1,10 @@
+{
+  "file_name": "system_eventmonster_xmas",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3266
+}

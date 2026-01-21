@@ -1,0 +1,15 @@
+{
+  "file_name": "roc_clothes_sa",
+  "meshes": [
+    "prim\\mesh\\item\\china\\man_item\\roc_clothes_sa.bms",
+    "prim\\mesh\\item\\china\\man_item\\roc_clothes_sa01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\man_item\\roc_clothes_sa.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line.ddj"
+  ]
+}

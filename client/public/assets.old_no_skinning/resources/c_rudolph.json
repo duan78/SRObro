@@ -1,0 +1,21 @@
+{
+  "file_name": "c_rudolph",
+  "meshes": [
+    "prim\\mesh\\cos\\c_rudolph01.bms",
+    "prim\\mesh\\cos\\c_rudolph_part1.bms",
+    "prim\\mesh\\cos\\c_rudolph_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\c_rudolph.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\c_rudolph\\c_rudolph_stand01.ban",
+    "prim\\ani\\cos\\c_rudolph\\c_rudolph_walk.ban",
+    "prim\\ani\\cos\\c_rudolph\\c_rudolph_run.ban",
+    "prim\\ani\\cos\\c_rudolph\\c_rudolph_damage01.ban",
+    "prim\\ani\\cos\\c_rudolph\\c_rudolph_die.ban",
+    "prim\\ani\\cos\\c_rudolph\\c_rudolph_die_rm.ban"
+  ],
+  "textures": []
+}

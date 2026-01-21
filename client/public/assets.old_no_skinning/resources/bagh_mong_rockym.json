@@ -1,0 +1,17 @@
+{
+  "file_name": "bagh_mong_rockym",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_rockym_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_rockym_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_rockym_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_rockym.bmt"
+  ],
+  "effects": [
+    "map\\bagh_mong_rockm_light.efp",
+    "map\\bagh_mong_rockm_cloud.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

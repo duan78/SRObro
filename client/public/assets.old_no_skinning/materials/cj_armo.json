@@ -1,0 +1,10 @@
+{
+  "file_name": "cj_armo",
+  "textures": [
+    "cj_armo_fence.ddj",
+    "cj_armo_roof.ddj",
+    "cj_armo_helmet.ddj",
+    "cj_armo_floor.ddj",
+    "cj_armo_gidung.ddj"
+  ]
+}

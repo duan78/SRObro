@@ -1,0 +1,40 @@
+{
+  "file_name": "demon_wall_fire",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_wall18_fire.bms",
+    "prim\\mesh\\dun\\demon\\demon_wall19_fire.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_wall_fire.bmt"
+  ],
+  "effects": [
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire.efp",
+    "dun\\demon_flame_fire02.efp",
+    "dun\\demon_flame_fire02.efp",
+    "dun\\demon_flame_fire02.efp",
+    "dun\\demon_flame_fire02.efp",
+    "dun\\demon_flame_fire02.efp",
+    "dun\\demon_flame_fire02.efp",
+    "dun\\demon_flame_fire01.efp",
+    "dun\\demon_flame_fire01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

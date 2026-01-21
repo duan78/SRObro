@@ -1,0 +1,24 @@
+{
+  "file_name": "euro_esteuro_port",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port08.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port09.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port10.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_port11.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_esteuro_port.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

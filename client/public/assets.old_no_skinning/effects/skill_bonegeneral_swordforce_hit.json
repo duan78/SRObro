@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_bonegeneral_swordforce_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 16667
+}

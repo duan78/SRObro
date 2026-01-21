@@ -1,0 +1,28 @@
+{
+  "file_name": "snakedemon_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2293,
+  "animation_name": "\u0013",
+  "data_blocks": [
+    102449,
+    7680,
+    0,
+    1536,
+    0,
+    16896,
+    25600,
+    51200,
+    59648,
+    102400,
+    3072,
+    2560,
+    405867,
+    703429,
+    6,
+    15,
+    1588,
+    1599
+  ]
+}

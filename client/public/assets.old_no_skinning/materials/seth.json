@@ -1,0 +1,33 @@
+{
+  "file_name": "seth",
+  "textures": [
+    "st_seth_ax1.ddj",
+    "st_seth_center.ddj",
+    "st_seth_center_brick.ddj",
+    "st_seth_column1.ddj",
+    "st_seth_column2.ddj",
+    "st_seth_column3.ddj",
+    "st_seth_column4.ddj",
+    "st_seth_column5.ddj",
+    "st_seth_column6.ddj",
+    "st_seth_column7.ddj",
+    "st_seth_groundx2.ddj",
+    "st_seth_light.ddj",
+    "st_seth_roofin.ddj",
+    "st_seth_sphinx01.ddj",
+    "st_seth_stair_01.ddj",
+    "st_seth_tilex3.ddj",
+    "st_seth_under.ddj",
+    "st_seth_underwall1.ddj",
+    "st_seth_wall1.ddj",
+    "st_seth_wallx2.ddj",
+    "st_seth_wallx3.ddj",
+    "st_seth_wall_paintingx3.ddj",
+    "st_seth_tilex1.ddj",
+    "st_seth_kj1.ddj",
+    "st_seth_wall_paintingx2.ddj",
+    "st_seth_wall_paintingx4.ddj",
+    "st_seth_roof.ddj",
+    "st_center_fire.ddj"
+  ]
+}

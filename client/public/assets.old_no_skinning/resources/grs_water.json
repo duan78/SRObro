@@ -1,0 +1,10 @@
+{
+  "file_name": "grs_water",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\grass\\grs_water.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

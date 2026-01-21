@@ -1,0 +1,14 @@
+{
+  "file_name": "arabia_thief",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_t_area_thief_2al.bms",
+    "prim\\mesh\\npc\\sd\\sd_t_area_thief_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_t_area_thief_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\arabia_thief.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

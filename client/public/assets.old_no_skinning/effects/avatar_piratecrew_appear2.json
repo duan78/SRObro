@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_piratecrew_appear2",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 14470
+}

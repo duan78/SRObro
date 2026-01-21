@@ -1,0 +1,10 @@
+{
+  "file_name": "test",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r2_cv\\field\\test.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

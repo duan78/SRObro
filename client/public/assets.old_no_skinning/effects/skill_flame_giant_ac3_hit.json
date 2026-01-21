@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_flame_giant_ac3_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 25297
+}

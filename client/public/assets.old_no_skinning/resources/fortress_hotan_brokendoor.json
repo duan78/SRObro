@@ -1,0 +1,10 @@
+{
+  "file_name": "fortress_hotan_brokendoor",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\hotang\\castlegate\\fortress_hotan_brokendoor_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "w_earthgst_bridge",
+  "textures": [
+    "w_earthgst_dexit02.ddj",
+    "w_earthgst_dexit01.ddj",
+    "w_earthgst_gwall02.ddj",
+    "w_earthgst_fence.ddj",
+    "w_earthgst_bri.ddj"
+  ]
+}

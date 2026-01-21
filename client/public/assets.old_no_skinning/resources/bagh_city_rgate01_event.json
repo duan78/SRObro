@@ -1,0 +1,22 @@
+{
+  "file_name": "bagh_city_rgate01_event",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rgate01_event.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rgate02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rgate03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rgate04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rgate05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rgate06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rgate07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rgate08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rgate09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rgate10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rgate01_event.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_rgate.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

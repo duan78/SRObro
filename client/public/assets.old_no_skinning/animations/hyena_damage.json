@@ -1,0 +1,21 @@
+{
+  "file_name": "hyena_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2659,
+  "animation_name": "\f",
+  "data_blocks": [
+    0,
+    393216,
+    0,
+    917504,
+    655360,
+    6,
+    11,
+    1636,
+    4022,
+    6,
+    15
+  ]
+}

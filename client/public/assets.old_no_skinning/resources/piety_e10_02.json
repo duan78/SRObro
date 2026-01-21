@@ -1,0 +1,14 @@
+{
+  "file_name": "piety_e10_02",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_e10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_e01_door.bmt"
+  ],
+  "effects": [
+    "dun\\pha_blue_eye_top_oura_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

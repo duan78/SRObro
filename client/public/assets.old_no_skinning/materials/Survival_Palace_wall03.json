@@ -1,0 +1,18 @@
+{
+  "file_name": "Survival_Palace_wall03",
+  "textures": [
+    "c_jin_wall_bbwall.ddj",
+    "c_jin_wall_bwall.ddj",
+    "c_jin_wall_roof.ddj",
+    "c_jin_wall_alpha.ddj",
+    "c_jin_wall_door.ddj",
+    "c_jin_wall_orwall.ddj",
+    "c_jin_wall_twall.ddj",
+    "c_jin_wall_nangan.ddj",
+    "c_jin_wall_jing.ddj",
+    "c_jin_wall_flag.ddj",
+    "c_jin_wall_sharp.ddj",
+    "c_jin_wall_exit.ddj",
+    "c_jin_wall_floor.ddj"
+  ]
+}

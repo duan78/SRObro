@@ -1,0 +1,12 @@
+{
+  "file_name": "event_balloon_movoi",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\event_balloon_movoi.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\etc\\event_balloon.ban"
+  ],
+  "textures": []
+}

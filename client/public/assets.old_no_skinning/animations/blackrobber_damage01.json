@@ -1,0 +1,20 @@
+{
+  "file_name": "blackrobber_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 824,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    524288,
+    0,
+    196608,
+    786432,
+    536933,
+    703274,
+    8,
+    10,
+    549985
+  ]
+}

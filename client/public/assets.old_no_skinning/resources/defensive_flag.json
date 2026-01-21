@@ -1,0 +1,10 @@
+{
+  "file_name": "defensive_flag",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\flag\\defesive_flag.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

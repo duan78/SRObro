@@ -1,0 +1,17 @@
+{
+  "file_name": "jupiter_investigation_f",
+  "meshes": [
+    "prim\\mesh\\npc\\jupiter\\jupiter_investigation_f_01.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_investigation_f_02.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_investigation_f_04.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_investigation_f_03_part1.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_investigation_f_03_part2_part1.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_investigation_f_03_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\jupiter\\jupiter_investigation_f.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

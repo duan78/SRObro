@@ -1,0 +1,48 @@
+{
+  "file_name": "bagh_petra_jini",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini13.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini14.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini15.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini16.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_archi01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_archi02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_archi03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_m01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_m02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_m03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_m04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_m05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_dome.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_jini_ground.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_brazier.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_petra\\bagh_petra_jini.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame_glow.efp",
+    "dun\\red_orange_flame_sb_s02.efp",
+    "dun\\red_orange_flame_sb_s02.efp",
+    "dun\\red_orange_flame_sb_s02.efp",
+    "dun\\red_orange_flame_sb_s02.efp",
+    "dun\\red_orange_flame_sb_s02.efp",
+    "dun\\red_orange_flame_sb_s02.efp",
+    "dun\\red_orange_flame_sb_s02.efp",
+    "dun\\petra_flame_yellow_glow.efp",
+    "dun\\red_orange_flame_sb_s02.efp",
+    "dun\\red_orange_flame_glow.efp",
+    "dun\\red_orange_flame_sb_s.efp",
+    "dun\\red_orange_flame_sb_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "cj_resta01_tent",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_tent.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_tentup.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_resta01_table.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

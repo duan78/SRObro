@@ -1,0 +1,16 @@
+{
+  "file_name": "w_earthgst_bigtower",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_bigto_wall01.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_bigto_fence.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_bigto_rock.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_bigto_wall01.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_bigto_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\earthghost\\w_earthgst_bigtower.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

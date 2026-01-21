@@ -1,0 +1,12 @@
+{
+  "file_name": "freebattle_blue_keep",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\etc\\ex_mark.bmt"
+  ],
+  "effects": [
+    "system\\freebattle_blue_keep.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

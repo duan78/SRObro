@@ -1,0 +1,27 @@
+{
+  "file_name": "grs_weed02",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 360,
+  "animation_name": "\n",
+  "data_blocks": [
+    10000,
+    30,
+    1,
+    3,
+    0,
+    5000,
+    10000,
+    3,
+    6,
+    209200,
+    438153,
+    3,
+    6,
+    209712,
+    45266,
+    45123,
+    45266
+  ]
+}

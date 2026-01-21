@@ -1,0 +1,10 @@
+{
+  "file_name": "worldcup_m_cheer_hat",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\worldcup_spain_cheer_hat.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

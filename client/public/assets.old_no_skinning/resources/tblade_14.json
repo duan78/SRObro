@@ -1,0 +1,20 @@
+{
+  "file_name": "tblade_14",
+  "meshes": [
+    "prim\\mesh\\item\\china\\weapon\\tblade_14.bms",
+    "prim\\mesh\\item\\china\\weapon\\tblade_14_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\weapon\\tblade_14.bmt"
+  ],
+  "effects": [
+    "system\\item_ch_tblade_14.efp",
+    "system\\item_ch_tblade_14_02.efp",
+    "system\\item_ch_tblade_14_03.efp",
+    "system\\item_ch_tblade_14_04.efp"
+  ],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line_03.ddj"
+  ]
+}

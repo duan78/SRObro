@@ -1,0 +1,27 @@
+{
+  "name": "attack",
+  "duration": 0.8,
+  "frameRate": 30,
+  "totalFrames": 24,
+  "loop": false,
+  "tracks": [
+    {
+      "boneName": "bone_0",
+      "keyframes": [
+        { "frame": 0, "position": [0, 0, 0], "rotation": [0, 0, 0, 1], "scale": [1, 1, 1] },
+        { "frame": 6, "position": [0, 0, 0.2], "rotation": [0, 0, 0.3, 0.954], "scale": [1, 1, 1] },
+        { "frame": 12, "position": [0.5, 0, 0.8], "rotation": [0, 0.5, 0, 0.866], "scale": [1, 1, 1] },
+        { "frame": 18, "position": [0.5, 0, 0.2], "rotation": [0, 0, 0, 1], "scale": [1, 1, 1] },
+        { "frame": 24, "position": [0, 0, 0], "rotation": [0, 0, 0, 1], "scale": [1, 1, 1] }
+      ]
+    },
+    {
+      "boneName": "bone_1",
+      "keyframes": [
+        { "frame": 0, "position": [0, 0, 0], "rotation": [0, 0, 0, 1], "scale": [1, 1, 1] },
+        { "frame": 12, "position": [0.3, 0, 0], "rotation": [0.3, 0, 0, 0.955], "scale": [1, 1, 1] },
+        { "frame": 24, "position": [0, 0, 0], "rotation": [0, 0, 0, 1], "scale": [1, 1, 1] }
+      ]
+    }
+  ]
+}

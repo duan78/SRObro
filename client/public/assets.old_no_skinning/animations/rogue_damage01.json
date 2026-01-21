@@ -1,0 +1,26 @@
+{
+  "file_name": "rogue_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 641,
+  "animation_name": "\u000e",
+  "data_blocks": [
+    1833,
+    30,
+    0,
+    6,
+    0,
+    66,
+    166,
+    300,
+    500,
+    1833,
+    3,
+    10,
+    420707,
+    768517,
+    1585,
+    2745
+  ]
+}

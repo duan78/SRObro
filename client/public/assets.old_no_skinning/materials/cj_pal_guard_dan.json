@@ -1,0 +1,8 @@
+{
+  "file_name": "cj_pal_guard_dan",
+  "textures": [
+    "cj_pal_dan.ddj",
+    "cj_pal_floor.ddj",
+    "cj_pal_roof.ddj"
+  ]
+}

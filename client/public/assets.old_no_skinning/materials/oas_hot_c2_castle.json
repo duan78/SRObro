@@ -1,0 +1,22 @@
+{
+  "file_name": "oas_hot_c2_castle",
+  "textures": [
+    "oas_hot_armor_roof.ddj",
+    "oas_hot_gard.ddj",
+    "oas_hot_alpha.ddj",
+    "oas_hot_l_rampart.ddj",
+    "oas_hot_gtw.ddj",
+    "oas_hot_plag.ddj",
+    "oas_hot_castle_tile.ddj",
+    "oas_hot_turtlest_03.ddj",
+    "oas_hot_bridge.ddj",
+    "oas_hot_castle.ddj",
+    "oas_hot_turtlest_04.ddj",
+    "oas_hot_turtlest_02.ddj",
+    "oas_hot_turtlest_01.ddj",
+    "oas_hot_turtlest_05.ddj",
+    "oas_hot_turtlest_06.ddj",
+    "Oas_hot_al.tga",
+    "oas_hot_al.ddj"
+  ]
+}

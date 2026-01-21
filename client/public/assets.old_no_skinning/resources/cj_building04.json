@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_building04",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_buil04_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_buil04_door.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_buil04_fence.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_buil04_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_buil04_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_buil04_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_buil04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

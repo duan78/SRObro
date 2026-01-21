@@ -1,0 +1,22 @@
+{
+  "file_name": "rock_mt_wingtribe_tree04",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04_02.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04_03.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04_04.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04_05.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04_06.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04_07.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04_08.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04_09.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04_10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\wingtribe\\rock_mt_wingtribe_tree04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "arabia_sharial",
+  "meshes": [
+    "prim\\mesh\\npc\\arabia\\arabia_sharial_attach.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_sharial_cape.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_sharial_hat.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_sharial_part1.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_sharial_part2_part1.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_sharial_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\arabia\\npc_arabia_sharial.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

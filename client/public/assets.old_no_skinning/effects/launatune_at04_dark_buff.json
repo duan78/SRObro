@@ -1,0 +1,10 @@
+{
+  "file_name": "launatune_at04_dark_buff",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 43898
+}

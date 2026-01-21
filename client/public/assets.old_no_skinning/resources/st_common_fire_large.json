@@ -1,0 +1,13 @@
+{
+  "file_name": "st_common_fire_large",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\common\\st_common_fire.bmt"
+  ],
+  "effects": [
+    "map\\frame.efp",
+    "map\\cj_pal_lamp_orange02_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

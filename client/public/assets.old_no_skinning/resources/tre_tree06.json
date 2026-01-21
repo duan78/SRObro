@@ -1,0 +1,14 @@
+{
+  "file_name": "tre_tree06",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\new-maple\\tre_tree06_01.bms",
+    "prim\\mesh\\nature\\common\\tree\\new-maple\\tre_tree06_01.bms",
+    "prim\\mesh\\nature\\common\\tree\\new-maple\\tre_tree06_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tree\\new-maple\\tre_tree06_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRObro - Test Animations BAN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100vh;
+            touch-action: none;
+        }
+
+        #ui {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #444;
+            border-radius: 8px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+
+        .section {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #444;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 8px;
+            background: #2d2d44;
+            border: 1px solid #444;
+            border-radius: 4px;
+            color: #eee;
+            font-size: 13px;
+            cursor: pointer;
+            margin: 2px 0;
+        }
+
+        select:hover, button:hover {
+            background: #3d3d5c;
+            border-color: #666;
+        }
+
+        button:active {
+            background: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        #stats {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 11px;
+            line-height: 1.4;
+            color: #aaa;
+        }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 2px 0;
+        }
+
+        .stat-value {
+            color: #4CAF50;
+        }
+
+        #logs {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 11px;
+            max-height: 150px;
+            overflow-y: auto;
+            background: #0a0a0a;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .log-entry {
+            margin: 2px 0;
+            line-height: 1.3;
+        }
+
+        .log-success { color: #4CAF50; }
+        .log-error { color: #f44336; }
+        .log-info { color: #2196F3; }
+        .log-warn { color: #ff9800; }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .checkbox-group input {
+            margin-right: 8px;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+
+    <div id="ui">
+        <h1>🎬 Test Animations BAN</h1>
+
+        <div class="section">
+            <label>Modèle GLB</label>
+            <select id="modelSelect">
+                <option value="">-- Choisir un modèle --</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <label>Animation BAN</label>
+            <select id="animationSelect">
+                <option value="">-- Choisir une animation --</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <button id="loadBtn">📥 Charger Modèle + Animation</button>
+        </div>
+
+        <div class="section">
+            <button id="playBtn" disabled>▶️ Play</button>
+            <button id="pauseBtn" disabled>⏸️ Pause</button>
+            <button id="stopBtn" disabled>⏹️ Stop</button>
+            <button id="resetCameraBtn">📷 Reset Caméra</button>
+            <button id="wireframeBtn">📐 Wireframe</button>
+        </div>
+
+        <div class="section">
+            <div class="checkbox-group">
+                <input type="checkbox" id="autoRotateCheck" checked>
+                <label for="autoRotateCheck">Auto-rotation caméra</label>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 style="font-size: 13px; color: #aaa; margin: 10px 0;">📊 Statistiques</h3>
+            <div id="stats">
+                <div class="stat">
+                    <span>FPS:</span>
+                    <span class="stat-value" id="fps">0</span>
+                </div>
+                <div class="stat">
+                    <span>Meshes:</span>
+                    <span class="stat-value" id="meshCount">0</span>
+                </div>
+                <div class="stat">
+                    <span>Os:</span>
+                    <span class="stat-value" id="boneCount">0</span>
+                </div>
+                <div class="stat">
+                    <span>Animations:</span>
+                    <span class="stat-value" id="animCount">0</span>
+                </div>
+                <div class="stat">
+                    <span>Keyframes:</span>
+                    <span class="stat-value" id="keyframeCount">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 style="font-size: 13px; color: #aaa; margin: 10px 0;">📋 Logs</h3>
+            <div id="logs"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="https://cdn.babylonjs.com/materials/babylonjs.materials.min.js"></script>
+
+    <script>
+        // Variables globales
+        let canvas, engine, scene;
+        let camera = null;
+        let currentModel = null;
+        let currentSkeleton = null;
+        let currentAnimation = null;
+        let autoRotate = true;
+
+        // Liste des modèles GLB disponibles
+        const models = [
+            'assets/glb_blender/prim/avatar_m_nasrun.glb',
+            'assets/glb_blender/prim/avatar_w_european.glb',
+            'assets/glb_blender/prim/chinaman_wu.glb',
+        ];
+
+        // Liste des animations BAN disponibles
+        const animations = [
+            {
+                name: 'flame_lroom_mid',
+                json: 'assets/data_extracted/prim/skel/dun/property/flame/lroom/flame_lroom_mid.json',
+                babylon: 'assets/data_extracted/prim/skel/dun/property/flame/lroom/flame_lroom_mid.babylon.ts',
+            },
+            {
+                name: 'ruin_takla_edimmu1',
+                json: 'assets/data_extracted/prim/skel/nature/ruins/ruin_takla_edimmu1.json',
+                babylon: 'assets/data_extracted/prim/skel/nature/ruins/ruin_takla_edimmu1.babylon.ts',
+            },
+            {
+                name: 'Arabia_Sharial_stand01',
+                json: 'assets/data_extracted/prim/skel/nature/arabia/Arabia_Sharial_stand01.json',
+                babylon: 'assets/data_extracted/prim/skel/nature/arabia/Arabia_Sharial_stand01.babylon.ts',
+            },
+        ];
+
+        // Initialisation
+        async function init() {
+            canvas = document.getElementById('renderCanvas');
+            engine = new BABYLON.Engine(canvas, true);
+
+            scene = new BABYLON.Scene(engine);
+            scene.clearColor = new BABYLON.Color3(0.1, 0.1, 0.18);
+
+            // Caméra
+            camera = new BABYLON.ArcRotateCamera('camera', -Math.PI / 2, Math.PI / 2, 5, BABYLON.Vector3.Zero(), scene);
+            camera.attachControl(canvas, true);
+            camera.wheelPrecision = 50;
+
+            // Lumière
+            const light = new BABYLON.HemisphericLight('light', new BABYLON.Vector3(0, 1, 0), scene);
+            light.intensity = 0.7;
+
+            const dirLight = new BABYLON.DirectionalLight('dirLight', new BABYLON.Vector3(-1, -2, -1), scene);
+            dirLight.position = new BABYLON.Vector3(20, 40, 20);
+            dirLight.intensity = 0.5;
+
+            // Ground
+            const ground = BABYLON.MeshBuilder.CreateGround('ground', { width: 100, height: 100 }, scene);
+            const groundMat = new BABYLON.StandardMaterial('groundMat', scene);
+            groundMat.diffuseColor = new BABYLON.Color3(0.1, 0.1, 0.15);
+            groundMat.specularColor = new BABYLON.Color3(0.1, 0.1, 0.1);
+            ground.material = groundMat;
+
+            // Remplir le dropdown des modèles
+            const modelSelect = document.getElementById('modelSelect');
+            models.forEach(model => {
+                const option = document.createElement('option');
+                option.value = model;
+                option.textContent = model.split('/').pop();
+                modelSelect.appendChild(option);
+            });
+
+            // Remplir le dropdown des animations
+            const animSelect = document.getElementById('animationSelect');
+            animations.forEach(anim => {
+                const option = document.createElement('option');
+                option.value = anim.name;
+                option.textContent = anim.name;
+                animSelect.appendChild(option);
+            });
+
+            // Setup UI events
+            setupUIEvents();
+
+            // Boucle de rendu
+            engine.runRenderLoop(() => {
+                if (autoRotate && currentModel) {
+                    camera.alpha += 0.005;
+                }
+                scene.render();
+
+                // Update FPS
+                document.getElementById('fps').textContent = engine.getFps().toFixed(0);
+            });
+
+            log('✅ Scene initialisée', 'success');
+        }
+
+        function setupUIEvents() {
+            document.getElementById('loadBtn').addEventListener('click', loadModelWithAnimation);
+            document.getElementById('playBtn').addEventListener('click', () => playAnimation(true));
+            document.getElementById('pauseBtn').addEventListener('click', () => playAnimation(false));
+            document.getElementById('stopBtn').addEventListener('click', stopAnimation);
+            document.getElementById('resetCameraBtn').addEventListener('click', resetCamera);
+            document.getElementById('wireframeBtn').addEventListener('click', toggleWireframe);
+            document.getElementById('autoRotateCheck').addEventListener('change', (e) => {
+                autoRotate = e.target.checked;
+            });
+        }
+
+        async function loadModelWithAnimation() {
+            const modelPath = document.getElementById('modelSelect').value;
+            const animName = document.getElementById('animationSelect').value;
+
+            if (!modelPath) {
+                log('❌ Veuillez choisir un modèle', 'error');
+                return;
+            }
+
+            if (!animName) {
+                log('❌ Veuillez choisir une animation', 'error');
+                return;
+            }
+
+            log(`📦 Chargement du modèle: ${modelPath}`, 'info');
+
+            // Nettoyer la scène
+            if (currentModel) {
+                currentModel.dispose();
+                currentModel = null;
+            }
+            if (currentSkeleton) {
+                currentSkeleton = null;
+            }
+
+            try {
+                // Charger le modèle
+                const result = await BABYLON.SceneLoader.ImportMeshAsync(null, modelPath.split('/').slice(0, -1) + '/', modelPath.split('/').pop(), scene);
+
+                if (result.meshes.length === 0) {
+                    throw new Error('Aucun mesh trouvé');
+                }
+
+                currentModel = result.meshes[0];
+                log(`✅ Modèle chargé: ${result.meshes.length} meshes`, 'success');
+
+                // Trouver le squelette
+                if (result.skeletons.length > 0) {
+                    currentSkeleton = result.skeletons[0];
+                    log(`✅ Squelette trouvé: ${currentSkeleton.bones.length} os`, 'success');
+
+                    // Afficher les noms des os
+                    log('🦴 Os du squelette:', 'info');
+                    currentSkeleton.bones.forEach((bone, index) => {
+                        if (index < 10 || bone.name.includes('Spine') || bone.name.includes('Head')) {
+                            log(`  • ${bone.name}`, 'info');
+                        }
+                    });
+                } else {
+                    log('⚠️  Aucun squelette trouvé dans ce modèle', 'warn');
+                }
+
+                // Charger et appliquer l'animation BAN
+                await loadBANAnimation(animName);
+
+                // Update stats
+                updateStats();
+
+            } catch (error) {
+                log(`❌ Erreur lors du chargement: ${error.message}`, 'error');
+                console.error(error);
+            }
+        }
+
+        async function loadBANAnimation(animName) {
+            log(`🎬 Chargement de l'animation: ${animName}`, 'info');
+
+            const animData = animations.find(a => a.name === animName);
+
+            if (!animData) {
+                log(`❌ Animation non trouvée: ${animName}`, 'error');
+                return;
+            }
+
+            try {
+                // Charger les données JSON
+                const response = await fetch(animData.json);
+                const banData = await response.json();
+
+                log(`📊 Animation chargée: ${banData.length} os`, 'info');
+
+                let totalKeyframes = 0;
+                let matchedBones = 0;
+
+                // Pour chaque os dans les données BAN
+                banData.forEach(boneData => {
+                    // Trouver l'os correspondant dans le squelette
+                    const bone = currentSkeleton.bones.find(b => b.name === boneData.name);
+
+                    if (bone) {
+                        matchedBones++;
+                        totalKeyframes += boneData.keyframes.length;
+
+                        // Créer l'animation Babylon.js
+                        const animation = new BABYLON.Animation(
+                            boneData.name + '_anim',
+                            'rotation',
+                            30,
+                            BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
+                            BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE
+                        );
+
+                        // Convertir les keyframes
+                        const keys = boneData.keyframes.map(kf => ({
+                            frame: kf.frame,
+                            value: new BABYLON.Vector3(kf.values[0], kf.values[1], kf.values[2])
+                        }));
+
+                        animation.setKeys(keys);
+                        bone.animations = [animation];
+
+                        log(`✅ Os "${boneData.name}": ${boneData.keyframes.length} keyframes`, 'success');
+                    } else {
+                        log(`⚠️  Os "${boneData.name}" non trouvé dans le squelette`, 'warn');
+                    }
+                });
+
+                log(`✅ Animation appliquée: ${matchedBones}/${banData.length} os matchés`, 'success');
+                log(`📊 Total keyframes: ${totalKeyframes}`, 'info');
+
+                document.getElementById('keyframeCount').textContent = totalKeyframes;
+                document.getElementById('animCount').textContent = matchedBones;
+
+            } catch (error) {
+                log(`❌ Erreur lors du chargement de l'animation: ${error.message}`, 'error');
+                console.error(error);
+            }
+        }
+
+        function playAnimation(play) {
+            if (!currentSkeleton) {
+                log('❌ Aucun squelette chargé', 'error');
+                return;
+            }
+
+            if (play) {
+                // Commencer l'animation
+                scene.beginAnimation(currentSkeleton, 0, 30, true, 1.0);
+                currentAnimation = true;
+                log('▶️ Animation démarrée (frames 0-30, loop)', 'success');
+
+                document.getElementById('playBtn').disabled = true;
+                document.getElementById('pauseBtn').disabled = false;
+                document.getElementById('stopBtn').disabled = false;
+            } else {
+                // Pause
+                scene.stopAnimation(currentSkeleton, false);
+                currentAnimation = false;
+                log('⏸️ Animation en pause', 'info');
+
+                document.getElementById('playBtn').disabled = false;
+                document.getElementById('pauseBtn').disabled = true;
+            }
+        }
+
+        function stopAnimation() {
+            if (currentSkeleton) {
+                scene.stopAnimation(currentSkeleton, true);
+                currentAnimation = false;
+                log('⏹️ Animation arrêtée', 'info');
+            }
+
+            document.getElementById('playBtn').disabled = false;
+            document.getElementById('pauseBtn').disabled = true;
+            document.getElementById('stopBtn').disabled = true;
+        }
+
+        function resetCamera() {
+            if (!currentModel) return;
+
+            camera.setTarget(BABYLON.Vector3.Zero());
+            camera.alpha = -Math.PI / 2;
+            camera.beta = Math.PI / 2;
+            camera.radius = 5;
+
+            log('📷 Caméra réinitialisée', 'info');
+        }
+
+        let wireframe = false;
+        function toggleWireframe() {
+            wireframe = !wireframe;
+
+            if (currentModel) {
+                scene.meshes.forEach(mesh => {
+                    if (mesh.material) {
+                        mesh.material.wireframe = wireframe;
+                    }
+                });
+            }
+
+            log(`📐 Wireframe: ${wireframe ? 'activé' : 'désactivé'}`, 'info');
+        }
+
+        function updateStats() {
+            document.getElementById('meshCount').textContent = scene.meshes.length;
+            document.getElementById('boneCount').textContent = currentSkeleton ? currentSkeleton.bones.length : 0;
+        }
+
+        function log(message, type = 'info') {
+            const logs = document.getElementById('logs');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            entry.textContent = message;
+            logs.appendChild(entry);
+            logs.scrollTop = logs.scrollHeight;
+
+            console.log(message);
+        }
+
+        // Lancer l'initialisation
+        init();
+    </script>
+</body>
+</html>

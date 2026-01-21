@@ -1,0 +1,10 @@
+{
+  "file_name": "cj_portal",
+  "textures": [
+    "cj_por_stone.ddj",
+    "cj_por_floor.ddj",
+    "cj_por_roof.ddj",
+    "cj_por_fence.ddj",
+    "cj_por_gidung.ddj"
+  ]
+}

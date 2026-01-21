@@ -1,0 +1,35 @@
+{
+  "file_name": "blacksnake_boss_dungeon",
+  "meshes": [
+    "prim\\mesh\\mob\\oasis\\yeowa_part1.bms",
+    "prim\\mesh\\mob\\oasis\\yeowa_part2_part1.bms",
+    "prim\\mesh\\mob\\oasis\\yeowa_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\blacksnake.bmt"
+  ],
+  "effects": [
+    "monster\\jupiter\\skill_jupiter_metamorphosis_at_02_hit.efp",
+    "hiteffect\\hit_1_cut_split.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_stand01.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_stand02.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_walk.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_run.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_attack01.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_attack02.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_attack03.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_damage01.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_damage02.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_die.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_die_rm.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_down.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_down_wait.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_down_damage.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_down_up.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_down_die.ban",
+    "prim\\ani\\mob\\oasis\\yeowa\\yeowa_attack04.ban"
+  ],
+  "textures": []
+}

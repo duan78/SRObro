@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_field_stable_cart",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_cart01_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_cart01_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_cart01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\farm\\bagh_field_stable_cart.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

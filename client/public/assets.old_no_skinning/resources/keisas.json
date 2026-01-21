@@ -1,0 +1,33 @@
+{
+  "file_name": "keisas",
+  "meshes": [
+    "prim\\mesh\\mob\\asiam\\punisher_2side.bms",
+    "prim\\mesh\\mob\\asiam\\punisher_axe.bms",
+    "prim\\mesh\\mob\\asiam\\punisher_part1.bms",
+    "prim\\mesh\\mob\\asiam\\punisher_part2_part1.bms",
+    "prim\\mesh\\mob\\asiam\\punisher_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\asiam\\punisher.bmt",
+    "prim\\mtrl\\mob\\asiam\\punisher_champ.bmt",
+    "prim\\mtrl\\mob\\asiam\\punisher_clon2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_stand01.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_walk.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_run.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_attack01.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_attack02.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_attack03.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_damage01.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_die_rm.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_die.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_down.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_downrm.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_downdamage.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_downup.ban",
+    "prim\\ani\\mob\\asiam\\punisher\\punisher_downdie.ban"
+  ],
+  "textures": []
+}

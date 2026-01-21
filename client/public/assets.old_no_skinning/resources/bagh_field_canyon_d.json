@@ -1,0 +1,26 @@
+{
+  "file_name": "bagh_field_canyon_d",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_obj01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_obj02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_obj03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_obj04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_obj05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_obj06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_obj07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_obj08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyond_obj09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\canyon\\bagh_field_canyon.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

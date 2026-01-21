@@ -1,0 +1,30 @@
+{
+  "file_name": "neith",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\neith_2.bms",
+    "prim\\mesh\\mob\\sd\\neith_3.bms",
+    "prim\\mesh\\mob\\sd\\neith_1_part1.bms",
+    "prim\\mesh\\mob\\sd\\neith_1_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\neith.bmt"
+  ],
+  "effects": [
+    "monster\\sd\\skill_neith_ac4_arrow_motion.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\sd\\neith\\neith_stand01.ban",
+    "prim\\ani\\mob\\sd\\neith\\neith_walk.ban",
+    "prim\\ani\\mob\\sd\\neith\\neith_run.ban",
+    "prim\\ani\\mob\\sd\\neith\\neith_attack01.ban",
+    "prim\\ani\\mob\\sd\\neith\\neith_attack03.ban",
+    "prim\\ani\\mob\\sd\\neith\\neith_attack06.ban",
+    "prim\\ani\\mob\\sd\\neith\\neith_attack07.ban",
+    "prim\\ani\\mob\\sd\\neith\\neith_attack04_ready.ban",
+    "prim\\ani\\mob\\sd\\neith\\neith_attack04_wait.ban",
+    "prim\\ani\\mob\\sd\\neith\\neith_attack04_shot.ban",
+    "prim\\ani\\mob\\sd\\neith\\neith_die.ban",
+    "prim\\ani\\mob\\sd\\neith\\neith_die_rm.ban"
+  ],
+  "textures": []
+}

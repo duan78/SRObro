@@ -1,0 +1,10 @@
+{
+  "file_name": "demon_blue_flame_sb",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17294
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "kerberos_stone_s1",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\europe\\kerberos_stone_s01.bmt"
+  ],
+  "effects": [
+    "monster\\eu\\skill\\skill_kerberos_ac3_effect_stone_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

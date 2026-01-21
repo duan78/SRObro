@@ -1,0 +1,10 @@
+{
+  "file_name": "hit_4_cold_hit_e",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 26134
+}

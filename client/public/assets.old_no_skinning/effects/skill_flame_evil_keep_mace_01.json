@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_flame_evil_keep_mace_01",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3984
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "booth_mob_mangyang",
+  "meshes": [
+    "prim\\mesh\\avatar\\booth.bms",
+    "prim\\mesh\\avatar\\booth_mob_mangyang.bms",
+    "prim\\mesh\\avatar\\booth_mob_mangyang_2side.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\avatar\\booth_mob_mangyang.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "alex_filedpalm03",
+  "meshes": [
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpalm03_01.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpalm03_01.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpalm03_02.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpalm03_03.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpalm03_04.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filedpalm03_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\north africa\\alexandria\\tree\\alex_filedpalm01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

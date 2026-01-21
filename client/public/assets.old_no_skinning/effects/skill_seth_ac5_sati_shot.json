@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_seth_ac5_sati_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 18117
+}

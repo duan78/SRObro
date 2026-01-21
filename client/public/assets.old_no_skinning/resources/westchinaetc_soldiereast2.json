@@ -1,0 +1,20 @@
+{
+  "file_name": "westchinaetc_soldiereast2",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\westchinaetc_soldiereast2_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinaetc_soldiereast2_al_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinaetc_soldiereast2_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinaetc_soldiereast2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\westchinaetc_soldiereast2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinaetc_soldierpalace_basic.ban",
+    "prim\\ani\\npc\\china\\chinaetc_soldierpalace_time.ban",
+    "prim\\ani\\npc\\china\\chinaetc_soldierpalace_time01.ban",
+    "prim\\ani\\npc\\china\\chinaetc_soldierpalace_time02.ban"
+  ],
+  "textures": []
+}

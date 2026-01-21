@@ -1,0 +1,17 @@
+{
+  "file_name": "halloween_tent",
+  "meshes": [
+    "prim\\mesh\\etc\\halloween\\halloween_tent01.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_tent02.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_tent03.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_tent04.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_tent05.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_tent06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\halloween\\halloween_tent.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

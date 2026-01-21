@@ -1,0 +1,14 @@
+{
+  "file_name": "alex_center",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_center01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_center01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_center02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\deco\\alex_center.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

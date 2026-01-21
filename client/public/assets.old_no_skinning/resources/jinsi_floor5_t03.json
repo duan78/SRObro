@@ -1,0 +1,17 @@
+{
+  "file_name": "jinsi_floor5_t03",
+  "meshes": [
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_05\\jinsi_floor5_t03\\jinsi_floor5_t03_01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_05\\jinsi_floor5_t03\\jinsi_floor5_t03_01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_05\\jinsi_floor5_t03\\jinsi_floor5_t03_g01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_05\\jinsi_floor5_t03\\jinsi_floor5_t03_g02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\floor_04\\jinsi_floor5.bmt"
+  ],
+  "effects": [
+    "dun\\sky_green_small_weak.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

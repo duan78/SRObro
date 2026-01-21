@@ -1,0 +1,10 @@
+{
+  "file_name": "harrison_arrow_attack11",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 18469
+}

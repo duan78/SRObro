@@ -1,0 +1,23 @@
+{
+  "file_name": "togui_dung",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\togui\\togui_dung_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_dung_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_dung_02.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_dung_03.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_dung_04.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_dung_05.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_dung_06.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_dung_07.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_dung_08.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_dung_09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\togui\\togui_dung_01.bmt"
+  ],
+  "effects": [
+    "map\\frame6.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

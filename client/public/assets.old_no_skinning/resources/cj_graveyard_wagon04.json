@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_graveyard_wagon04",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tombstone04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tombstone04_1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tombstone04_2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\cj_graveyard_wagon04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "bonesoldier_downwait",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 16339,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    655360,
+    0,
+    327680,
+    681326,
+    834325,
+    668005
+  ]
+}

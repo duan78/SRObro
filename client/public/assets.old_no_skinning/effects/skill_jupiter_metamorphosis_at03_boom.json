@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_jupiter_metamorphosis_at03_boom",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 47684
+}

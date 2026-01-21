@@ -1,0 +1,12 @@
+{
+  "file_name": "w_cd_inn",
+  "textures": [
+    "w_cd_inn_wall.ddj",
+    "w_cd_inn_column.ddj",
+    "w_cd_inn_floor.ddj",
+    "w_cd_inn_roof.ddj",
+    "w_cd_inn_flat.ddj",
+    "w_cd_inn_alpha.ddj",
+    "w_cd_inn_winlight.ddj"
+  ]
+}

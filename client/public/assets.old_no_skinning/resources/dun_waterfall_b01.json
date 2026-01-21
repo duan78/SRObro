@@ -1,0 +1,17 @@
+{
+  "file_name": "dun_waterfall_b01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\dun_waterfall_b01.bmt"
+  ],
+  "effects": [
+    "dun\\dun_waterfall_b1.efp",
+    "dun\\dun_waterfall_b1.efp",
+    "dun\\dun_waterfall_b1.efp",
+    "dun\\dun_waterfall_b1.efp",
+    "dun\\dun_waterfall_b1.efp",
+    "dun\\dun_waterfall_b1.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

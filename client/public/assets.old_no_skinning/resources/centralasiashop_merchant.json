@@ -1,0 +1,15 @@
+{
+  "file_name": "centralasiashop_merchant",
+  "meshes": [
+    "prim\\mesh\\npc\\casia\\centralasiashop_merchant_2s.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_merchant_al.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_merchant_part1.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_merchant_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\casia\\centralasiashop_merchant.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,21 @@
+{
+  "file_name": "mangnyang_die",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\mangnyang_die01.bms",
+    "prim\\mesh\\mob\\china\\mangnyang_die02.bms",
+    "prim\\mesh\\mob\\china\\mangnyang_nail01.bms",
+    "prim\\mesh\\mob\\china\\mangnyang_nail02.bms",
+    "prim\\mesh\\mob\\china\\mangnyang_nail03.bms",
+    "prim\\mesh\\mob\\china\\mangnyang_weapon.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\mangnyang.bmt",
+    "prim\\mtrl\\mob\\china\\mangnyang_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\china\\mangnyang_cut.ban",
+    "prim\\ani\\mob\\china\\mangnyang_cut_loop.ban"
+  ],
+  "textures": []
+}

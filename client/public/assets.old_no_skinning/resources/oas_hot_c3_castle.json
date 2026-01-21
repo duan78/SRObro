@@ -1,0 +1,35 @@
+{
+  "file_name": "oas_hot_c3_castle",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3_castle01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3_alpha01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3_castle01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3_armor_roof01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3_bridge01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3_castle_tile01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3_gard01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3_l_rampart01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_g3_gtw01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3_plag01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3_pool_wall06.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3turtlest_05.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_turtlest01_04.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_turtlest01_05.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_turtlest01_06.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_turtlest01_gate_05.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_turtlest01_gate_06.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_c3_al01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_turtlest01_flag.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\castle\\oas_hot_c2_castle.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,18 @@
+{
+  "file_name": "osiris_die",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\osiris01.bms",
+    "prim\\mesh\\mob\\sd\\osiris_part1.bms",
+    "prim\\mesh\\mob\\sd\\osiris_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\osiris_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\osiris.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\osiris\\osiris_die.ban",
+    "prim\\ani\\mob\\sd\\osiris\\osiris_die_rm.ban"
+  ],
+  "textures": []
+}

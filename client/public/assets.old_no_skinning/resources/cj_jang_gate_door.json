@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_jang_gate_door",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gate01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gate02.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gate03.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gate04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_jang_gate01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

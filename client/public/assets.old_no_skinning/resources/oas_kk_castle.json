@@ -1,0 +1,25 @@
+{
+  "file_name": "oas_kk_castle",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_floor.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_al.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_bro.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_floor.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_pillar.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_roof.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_sta.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_tow_01.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_tow_02.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_tow_03.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_wall_01.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_wall_02.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_wall_03.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_sha_ramh.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\oas_kk_castle.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

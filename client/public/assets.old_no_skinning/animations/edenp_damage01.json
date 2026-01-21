@@ -1,0 +1,29 @@
+{
+  "file_name": "edenp_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1544,
+  "animation_name": "\u000e",
+  "data_blocks": [
+    400,
+    30,
+    0,
+    8,
+    0,
+    33,
+    100,
+    133,
+    200,
+    266,
+    300,
+    400,
+    6,
+    10,
+    551779,
+    702926,
+    8,
+    15,
+    537196
+  ]
+}

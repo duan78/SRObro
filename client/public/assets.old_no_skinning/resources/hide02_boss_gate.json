@@ -1,0 +1,12 @@
+{
+  "file_name": "hide02_boss_gate",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_bossdoor_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\hide\\hide_boss_gate.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

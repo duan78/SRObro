@@ -1,0 +1,31 @@
+{
+  "file_name": "soldier",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\bartis01.bms",
+    "prim\\mesh\\mob\\europe\\bartis_part1.bms",
+    "prim\\mesh\\mob\\europe\\bartis_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\asiam\\soldier.bmt",
+    "prim\\mtrl\\mob\\asiam\\soldier_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\europe\\bartis\\bartis_stand01.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_walk.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_run.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_attack01.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_attack02.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_attack03.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_damage01.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_die.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_die_rm.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_down.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_down_rm.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_down_damage.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_down_up.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_down_die.ban",
+    "prim\\ani\\mob\\europe\\bartis\\bartis_attack04.ban"
+  ],
+  "textures": []
+}

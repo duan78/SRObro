@@ -1,0 +1,10 @@
+{
+  "file_name": "system_hwan_keep",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 11652
+}

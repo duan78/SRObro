@@ -1,0 +1,10 @@
+{
+  "file_name": "ma_confue01_cristal_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6245
+}

@@ -1,0 +1,30 @@
+{
+  "file_name": "flame_crazy",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\flame_crazy02.bms",
+    "prim\\mesh\\mob\\god\\flame_crazy03.bms",
+    "prim\\mesh\\mob\\god\\flame_crazy_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_crazy_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_crazy_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_crazy_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\flame_crazy.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_flame_crazy_keep_head.efp",
+    "monster\\god\\skill_flame_crazy_keep_torch.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\god\\flame_crazy\\flame_crazy_stand01.ban",
+    "prim\\ani\\mob\\god\\flame_crazy\\flame_crazy_walk.ban",
+    "prim\\ani\\mob\\god\\flame_crazy\\flame_crazy_run.ban",
+    "prim\\ani\\mob\\god\\flame_crazy\\flame_crazy_attack01.ban",
+    "prim\\ani\\mob\\god\\flame_crazy\\flame_crazy_attack02.ban",
+    "prim\\ani\\mob\\god\\flame_crazy\\flame_crazy_attack03.ban",
+    "prim\\ani\\mob\\god\\flame_crazy\\flame_crazy_damage.ban",
+    "prim\\ani\\mob\\god\\flame_crazy\\flame_crazy_die.ban",
+    "prim\\ani\\mob\\god\\flame_crazy\\flame_crazy_die_rm.ban"
+  ],
+  "textures": []
+}

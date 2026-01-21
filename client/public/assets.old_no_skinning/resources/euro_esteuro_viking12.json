@@ -1,0 +1,12 @@
+{
+  "file_name": "euro_esteuro_viking12",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_viking12.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

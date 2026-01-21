@@ -1,0 +1,12 @@
+{
+  "file_name": "togicv_c04",
+  "meshes": [
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\togi_cv\\togicv_c\\togicv_c04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv\\togi_cv\\togicv.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

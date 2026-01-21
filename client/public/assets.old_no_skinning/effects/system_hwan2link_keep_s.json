@@ -1,0 +1,10 @@
+{
+  "file_name": "system_hwan2link_keep_s",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6714
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "barricade_07",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\barricade\\barricade_07_01.bms",
+    "prim\\mesh\\artifact\\guild\\barricade\\barricade_07_01.bms",
+    "prim\\mesh\\artifact\\guild\\barricade\\barricade_07_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_bari.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

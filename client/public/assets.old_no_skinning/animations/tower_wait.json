@@ -1,0 +1,27 @@
+{
+  "file_name": "tower_wait",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 202,
+  "animation_name": "\n",
+  "data_blocks": [
+    1000,
+    30,
+    0,
+    2,
+    0,
+    1000,
+    2,
+    6,
+    143664,
+    114431,
+    48896,
+    16127,
+    114431,
+    48896,
+    16127,
+    439209,
+    2
+  ]
+}

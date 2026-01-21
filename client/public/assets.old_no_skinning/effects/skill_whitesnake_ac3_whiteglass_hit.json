@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_whitesnake_ac3_whiteglass_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4882
+}

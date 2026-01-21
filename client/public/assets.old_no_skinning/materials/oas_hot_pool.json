@@ -1,0 +1,18 @@
+{
+  "file_name": "oas_hot_pool",
+  "textures": [
+    "oas_hot_al.ddj",
+    "oas_hot_pool_floor03.ddj",
+    "oas_hot_pool_wall04.ddj",
+    "oas_hot_pool_wall02.ddj",
+    "oas_hot_pool_wall01.ddj",
+    "oas_hot_pool_floor04.ddj",
+    "oas_hot_pool_wall05.ddj",
+    "oas_hot_pool_wall03.ddj",
+    "oas_hot_pool_floor02.ddj",
+    "Oas_hot_water.tga",
+    "oas_hot_water.ddj",
+    "oas_hot_pool_floor01.ddj",
+    "oas_hot_arm_flowerbed.ddj"
+  ]
+}

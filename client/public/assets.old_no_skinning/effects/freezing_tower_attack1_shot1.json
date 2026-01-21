@@ -1,0 +1,10 @@
+{
+  "file_name": "freezing_tower_attack1_shot1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 25122
+}

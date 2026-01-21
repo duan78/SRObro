@@ -1,0 +1,9 @@
+{
+  "file_name": "oas_kara_well",
+  "textures": [
+    "oas_kara_well_roof.ddj",
+    "oas_kara_well_column.ddj",
+    "oas_kara_well_alpha.ddj",
+    "oas_kara_well_pot.ddj"
+  ]
+}

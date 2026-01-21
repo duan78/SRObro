@@ -1,0 +1,13 @@
+{
+  "file_name": "tre_pine07_03",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\tre_pine07_03_01.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_pine07_03_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tree\\tre_pine07_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

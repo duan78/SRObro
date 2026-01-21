@@ -1,0 +1,10 @@
+{
+  "file_name": "pha_haro_top_glow_r",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2408
+}

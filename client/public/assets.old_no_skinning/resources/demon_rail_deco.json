@@ -1,0 +1,14 @@
+{
+  "file_name": "demon_rail_deco",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_rail_deco.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_piller_light.bmt"
+  ],
+  "effects": [
+    "dun\\blue_flame_a02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

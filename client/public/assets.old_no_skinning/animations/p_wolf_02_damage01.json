@@ -1,0 +1,29 @@
+{
+  "file_name": "p_wolf_02_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2020,
+  "animation_name": "\u0012",
+  "data_blocks": [
+    666,
+    30,
+    0,
+    8,
+    0,
+    33,
+    66,
+    133,
+    266,
+    400,
+    466,
+    666,
+    8,
+    10,
+    551779,
+    768771,
+    2097,
+    2746,
+    536940
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "deco_force_twohand_pierce",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10661
+}

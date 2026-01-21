@@ -1,0 +1,26 @@
+{
+  "file_name": "sphinx",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\sphinx01.bms",
+    "prim\\mesh\\mob\\sd\\sphinx02.bms",
+    "prim\\mesh\\mob\\sd\\sphinx03.bms",
+    "prim\\mesh\\mob\\sd\\sphinx_part1.bms",
+    "prim\\mesh\\mob\\sd\\sphinx_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\sphinx.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\sphinx\\sphinx_stand01.ban",
+    "prim\\ani\\mob\\sd\\sphinx\\sphinx_walk.ban",
+    "prim\\ani\\mob\\sd\\sphinx\\sphinx_run.ban",
+    "prim\\ani\\mob\\sd\\sphinx\\sphinx_attack01.ban",
+    "prim\\ani\\mob\\sd\\sphinx\\sphinx_attack02.ban",
+    "prim\\ani\\mob\\sd\\sphinx\\sphinx_attack03.ban",
+    "prim\\ani\\mob\\sd\\sphinx\\sphinx_attack04.ban",
+    "prim\\ani\\mob\\sd\\sphinx\\sphinx_die.ban",
+    "prim\\ani\\mob\\sd\\sphinx\\sphinx_die_rm.ban"
+  ],
+  "textures": []
+}

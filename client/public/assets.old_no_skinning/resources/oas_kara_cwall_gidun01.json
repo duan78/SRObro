@@ -1,0 +1,18 @@
+{
+  "file_name": "oas_kara_cwall_gidun01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_gidun01.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_gidun01.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_gidun02.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_gidun03.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_gidun04.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_gidun05.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_gidun06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_gidun01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

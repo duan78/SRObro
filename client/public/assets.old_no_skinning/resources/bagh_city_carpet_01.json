@@ -1,0 +1,13 @@
+{
+  "file_name": "bagh_city_carpet_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_city_carpet_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_city_carpet_02_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_carpet.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

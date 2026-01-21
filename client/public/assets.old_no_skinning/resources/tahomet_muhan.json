@@ -1,0 +1,17 @@
+{
+  "file_name": "tahomet_muhan",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\tahomet_stick01_muhan.bms",
+    "prim\\mesh\\mob\\roc\\tahomet_stick_muhan.bms",
+    "prim\\mesh\\mob\\roc\\tahomet01_muhan_part1.bms",
+    "prim\\mesh\\mob\\roc\\tahomet01_muhan_part2.bms",
+    "prim\\mesh\\mob\\roc\\tahomet_muhan_part1.bms",
+    "prim\\mesh\\mob\\roc\\tahomet_muhan_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\tahomet_muhan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

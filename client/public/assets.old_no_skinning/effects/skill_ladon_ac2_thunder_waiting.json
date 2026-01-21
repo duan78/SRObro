@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ladon_ac2_thunder_waiting",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4590
+}

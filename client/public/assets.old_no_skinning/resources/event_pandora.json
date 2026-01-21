@@ -1,0 +1,21 @@
+{
+  "file_name": "event_pandora",
+  "meshes": [
+    "prim\\mesh\\etc\\event_pandora.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\event_pandora.bmt"
+  ],
+  "effects": [
+    "system\\event_pandora_keep.efp",
+    "system\\event_pandora_attack.efp",
+    "system\\event_pandora_keep.efp"
+  ],
+  "animations": [
+    "prim\\ani\\etc\\event_pandora_stand01.ban",
+    "prim\\ani\\etc\\event_pandora_attack01.ban",
+    "prim\\ani\\etc\\event_pandora_die.ban",
+    "prim\\ani\\etc\\event_pandora_die_rm.ban"
+  ],
+  "textures": []
+}

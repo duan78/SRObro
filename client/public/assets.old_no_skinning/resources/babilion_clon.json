@@ -1,0 +1,26 @@
+{
+  "file_name": "babilion_clon",
+  "meshes": [
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion01.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion2.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part2_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\babilion.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_attack02.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_walk.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_run.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_die.ban"
+  ],
+  "textures": []
+}

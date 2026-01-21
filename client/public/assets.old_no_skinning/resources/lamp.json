@@ -1,0 +1,11 @@
+{
+  "file_name": "lamp",
+  "meshes": [],
+  "materials": [],
+  "effects": [
+    "map\\frame5.efp",
+    "map\\cj_pal_lamp_orange02_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

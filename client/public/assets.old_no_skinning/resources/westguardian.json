@@ -1,0 +1,31 @@
+{
+  "file_name": "westguardian",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\ladon_part1.bms",
+    "prim\\mesh\\mob\\europe\\ladon_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\westguardian.bmt"
+  ],
+  "effects": [
+    "monster\\eu\\skill\\skill_westguardian_wing.efp",
+    "monster\\eu\\skill\\skill_westguardian_wing.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\europe\\ladon\\ladon_stand01.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_walk.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_attack01.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_attack02.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_attack03.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_damage01.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_die.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_die_rm.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_down.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_down_rm.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_down_damage.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_down_up.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_down_die.ban",
+    "prim\\ani\\mob\\europe\\ladon\\ladon_attack04.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,19 @@
+{
+  "file_name": "thief_vill_bonfire_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_bonfire_01.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_bonfire_01.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_bonfire_02.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_bonfire_03.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_bonfire_04.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_bonfire_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\common\\thief-vill\\thief_vill_bonfire_01.bmt"
+  ],
+  "effects": [
+    "map\\frame4.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

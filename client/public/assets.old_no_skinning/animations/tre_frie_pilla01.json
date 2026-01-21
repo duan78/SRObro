@@ -1,0 +1,25 @@
+{
+  "file_name": "tre_frie_pilla01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 464,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    196608,
+    0,
+    262144,
+    393216,
+    3,
+    6,
+    209456,
+    439494,
+    3,
+    6,
+    209968,
+    45183,
+    45128,
+    12405
+  ]
+}

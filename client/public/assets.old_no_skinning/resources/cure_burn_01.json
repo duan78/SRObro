@@ -1,0 +1,10 @@
+{
+  "file_name": "cure_burn_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\burnpotion.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

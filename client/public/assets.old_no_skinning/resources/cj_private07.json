@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_private07",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\minga\\cj_minga07_wall01.bms",
+    "prim\\mesh\\bldg\\china\\minga\\cj_minga070_wall02.bms",
+    "prim\\mesh\\bldg\\china\\minga\\cj_minga070_wall02_al.bms",
+    "prim\\mesh\\bldg\\china\\minga\\cj_minga07_roof.bms",
+    "prim\\mesh\\bldg\\china\\minga\\cj_minga07_wall01.bms",
+    "prim\\mesh\\bldg\\china\\minga\\cj_minga070_winlight.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\minga\\cj_minga07.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

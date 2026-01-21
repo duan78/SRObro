@@ -1,0 +1,10 @@
+{
+  "file_name": "fire_animation_etc_slow_01",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 38332
+}

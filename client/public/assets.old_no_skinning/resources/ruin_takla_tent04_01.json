@@ -1,0 +1,16 @@
+{
+  "file_name": "ruin_takla_tent04_01",
+  "meshes": [
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tent04_01.bms",
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tent04_01.bms",
+    "prim\\mesh\\artifact\\ruins\\tent\\ruin_takla_tent04_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\ruins\\tent\\ruin_takla_tent04_01.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,23 @@
+{
+  "file_name": "chinaquest_gt_general_sp",
+  "meshes": [
+    "prim\\mesh\\npc\\qinshi\\chinaquest_gt_general_sp_2s.bms",
+    "prim\\mesh\\npc\\qinshi\\chinaquest_gt_general_sp_al_2s.bms",
+    "prim\\mesh\\npc\\qinshi\\chinaquest_gt_general_sp_part1.bms",
+    "prim\\mesh\\npc\\qinshi\\chinaquest_gt_general_sp_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\qinshi\\chinaquest_gt_general_sp.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\qinshi\\chinaquest_gt_general_sp_stand01.ban",
+    "prim\\ani\\npc\\qinshi\\chinaquest_gt_general_sp_stand02.ban",
+    "prim\\ani\\npc\\qinshi\\chinaquest_gt_general_sp_stand03.ban",
+    "prim\\ani\\npc\\qinshi\\chinaquest_gt_general_sp_stand04.ban",
+    "prim\\ani\\npc\\qinshi\\chinaquest_gt_general_sp_walk.ban",
+    "prim\\ani\\npc\\qinshi\\chinaquest_gt_general_sp_attack01.ban",
+    "prim\\ani\\npc\\qinshi\\chinaquest_gt_general_sp_attack03.ban"
+  ],
+  "textures": []
+}

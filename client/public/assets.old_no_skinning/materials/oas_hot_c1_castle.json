@@ -1,0 +1,20 @@
+{
+  "file_name": "oas_hot_c1_castle",
+  "textures": [
+    "oas_hot_al.ddj",
+    "oas_hot_castle.ddj",
+    "oas_hot_s_rampart.ddj",
+    "oas_hot_armor_roof.ddj",
+    "oas_hot_alpha.ddj",
+    "oas_hot_plag.ddj",
+    "oas_hot_gard.ddj",
+    "oas_hot_gtw.ddj",
+    "oas_hot_bigroof.ddj",
+    "oas_hot_potal_chain.ddj",
+    "oas_hot_castle_tile.ddj",
+    "oas_hot_plaza.ddj",
+    "oas_hot_refinery_wall.ddj",
+    "oas_hot_l_rampart.ddj",
+    "oas_hot_castle_02.ddj"
+  ]
+}

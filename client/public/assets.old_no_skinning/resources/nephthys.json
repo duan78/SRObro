@@ -1,0 +1,27 @@
+{
+  "file_name": "nephthys",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\nephthys01.bms",
+    "prim\\mesh\\mob\\sd\\nephthys02.bms",
+    "prim\\mesh\\mob\\sd\\nephthys_part1.bms",
+    "prim\\mesh\\mob\\sd\\nephthys_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\nephthys_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\nephthys_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\nephthys.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\nephthys\\nephthys_stand1.ban",
+    "prim\\ani\\mob\\sd\\nephthys\\nephthys_walk.ban",
+    "prim\\ani\\mob\\sd\\nephthys\\nephthys_run.ban",
+    "prim\\ani\\mob\\sd\\nephthys\\nephthys_attack1.ban",
+    "prim\\ani\\mob\\sd\\nephthys\\nephthys_attack2.ban",
+    "prim\\ani\\mob\\sd\\nephthys\\nephthys_attack3.ban",
+    "prim\\ani\\mob\\sd\\nephthys\\nephthys_attack4.ban",
+    "prim\\ani\\mob\\sd\\nephthys\\nephthys_attack5.ban",
+    "prim\\ani\\mob\\sd\\nephthys\\nephthys_die.ban"
+  ],
+  "textures": []
+}

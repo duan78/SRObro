@@ -1,0 +1,15 @@
+{
+  "file_name": "arabiaf_ltree02",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\tree\\arabiaf_ltree02_01.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\arabiaf_ltree02_01.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\arabiaf_ltree02_02.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\arabiaf_ltree02_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\tree\\arabiaf_ltree01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

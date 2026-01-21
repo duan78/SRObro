@@ -1,0 +1,20 @@
+{
+  "file_name": "cj_brg_fir01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_brg_fir01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_brg_fir01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_brg_fir01_01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_brg_fir01_02.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_brg_fir01_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\cj_brg_fir01.bmt"
+  ],
+  "effects": [
+    "map\\frame4.efp"
+  ],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\c_brg_fir01_020.ddj"
+  ]
+}

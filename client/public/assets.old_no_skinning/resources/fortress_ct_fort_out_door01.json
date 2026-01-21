@@ -1,0 +1,19 @@
+{
+  "file_name": "fortress_ct_fort_out_door01",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_door01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_door01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_door02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\fortress_ct_fort_gate_door.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\bldg\\guild\\constantinople\\ct_out_door_still.ban",
+    "prim\\ani\\bldg\\guild\\constantinople\\ct_out_door_ing.ban",
+    "prim\\ani\\bldg\\guild\\constantinople\\ct_out_door_clo.ban",
+    "prim\\ani\\bldg\\guild\\constantinople\\ct_out_door_open.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "goat_down_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 14281,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    0,
+    655360,
+    0,
+    327680,
+    681326,
+    802279,
+    668005
+  ]
+}

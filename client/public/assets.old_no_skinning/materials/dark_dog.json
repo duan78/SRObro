@@ -1,0 +1,7 @@
+{
+  "file_name": "dark_dog",
+  "textures": [
+    "prim\\mtrl\\mob\\jupiter\\dark_dog.ddj",
+    "prim\\mtrl\\mob\\jupiter\\dark_dog_chain.ddj"
+  ]
+}

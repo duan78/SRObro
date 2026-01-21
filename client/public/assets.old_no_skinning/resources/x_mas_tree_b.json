@@ -1,0 +1,41 @@
+{
+  "file_name": "x_mas_tree_b",
+  "meshes": [
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_b00_07.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_b00_07.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_b00_08.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_b00_09.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_b00_10.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_b00_11.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_b00_12.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_b00_13.bms",
+    "prim\\mesh\\bldg\\common\\event-xmas\\x_mas_tree_b00_14.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\common\\event-xmas\\x_mas_tree.bmt"
+  ],
+  "effects": [
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

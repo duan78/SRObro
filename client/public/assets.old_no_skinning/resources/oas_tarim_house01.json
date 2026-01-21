@@ -1,0 +1,17 @@
+{
+  "file_name": "oas_tarim_house01",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_house01_01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_house01_01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_house02_al.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_house_01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_house_02.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_house_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_tarim_house01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

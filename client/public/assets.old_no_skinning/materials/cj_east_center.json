@@ -1,0 +1,10 @@
+{
+  "file_name": "cj_east_center",
+  "textures": [
+    "cj_east_downwall01.ddj",
+    "cj_east_stair.ddj",
+    "cj_east_downwall02.ddj",
+    "cj_east_downwall03.ddj",
+    "cj_east_door.ddj"
+  ]
+}

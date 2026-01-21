@@ -1,0 +1,13 @@
+{
+  "file_name": "w_cd_mc_view01",
+  "textures": [
+    "w_cd_mc_floor02.ddj",
+    "w_cd_mc_pilla.ddj",
+    "w_cd_mc_pilla02.ddj",
+    "w_cd_mc_flag.ddj",
+    "w_cd_mc_wall02.ddj",
+    "w_cd_mc_floor01.ddj",
+    "w_cd_mc_roof.ddj",
+    "w_cd_mc_wall01.ddj"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_graveyard_coffin02",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_coffin02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\graveyard\\cj_graveyard_coffin02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

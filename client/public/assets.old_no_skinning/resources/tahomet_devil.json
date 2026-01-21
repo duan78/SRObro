@@ -1,0 +1,29 @@
+{
+  "file_name": "tahomet_devil",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\tahomet_devil01.bms",
+    "prim\\mesh\\mob\\roc\\tahomet_devil_part1.bms",
+    "prim\\mesh\\mob\\roc\\tahomet_devil_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\tahomet_devil_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\tahomet.bmt"
+  ],
+  "effects": [
+    "monster\\luster_tahometdevil.efp",
+    "monster\\rm_tahometdevil_motion.efp",
+    "monster\\rm_tahometdevil_motion.efp",
+    "monster\\rm_tahometdevil_hand.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_devil_stand01.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_devil_walk.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_devil_run.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_devil_attack01.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_devil_attack02.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_devil_attack03.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_devil_damage02.ban",
+    "prim\\ani\\mob\\roc\\tahomet\\tahomet_devil_die.ban"
+  ],
+  "textures": []
+}

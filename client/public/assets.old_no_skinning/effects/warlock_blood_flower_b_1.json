@@ -1,0 +1,10 @@
+{
+  "file_name": "warlock_blood_flower_b_1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 19587
+}

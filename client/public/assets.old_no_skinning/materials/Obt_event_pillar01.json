@@ -1,0 +1,9 @@
+{
+  "file_name": "Obt_event_pillar01",
+  "textures": [
+    "sum_event_light.ddj",
+    "sum_event_pillar01.ddj",
+    "sum_event_pillar02.ddj",
+    "sum_event_flower.ddj"
+  ]
+}

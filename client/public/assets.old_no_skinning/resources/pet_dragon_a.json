@@ -1,0 +1,43 @@
+{
+  "file_name": "pet_dragon_a",
+  "meshes": [
+    "prim\\mesh\\cos\\pet_dragon_a_eye.bms",
+    "prim\\mesh\\cos\\pet_dragon_a_eyeclose.bms",
+    "prim\\mesh\\cos\\pet_dragon_a_mouth.bms",
+    "prim\\mesh\\cos\\pet_dragon_a_mouthdeco.bms",
+    "prim\\mesh\\cos\\pet_dragon_a_tongue.bms",
+    "prim\\mesh\\cos\\pet_dragon_a_wing_tail_part1.bms",
+    "prim\\mesh\\cos\\pet_dragon_a_wing_tail_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_dragon_a_wing_tail_part2_part2.bms",
+    "prim\\mesh\\cos\\pet_dragon_mouth_side.bms",
+    "prim\\mesh\\cos\\pet_dragon_a_body_part1.bms",
+    "prim\\mesh\\cos\\pet_dragon_a_body_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_dragon_a_body_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\pet_dragon_a.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_stand01.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_die_rm.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_down_damage.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_down_die.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_stand02.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_down_rm.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_walk.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_attack01.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_attack02.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_attack04.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_attack05.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_attack06.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_attack07.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_die.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_down.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_down_up.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_attack03.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_damage01.ban",
+    "prim\\ani\\cos\\pet_dragon_a\\pet_dragon_a_run.ban"
+  ],
+  "textures": []
+}

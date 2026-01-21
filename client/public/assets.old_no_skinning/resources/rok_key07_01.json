@@ -1,0 +1,13 @@
+{
+  "file_name": "rok_key07_01",
+  "meshes": [
+    "prim\\mesh\\artifact\\west asia\\rock mt\\seventop\\rok_key07_01.bms",
+    "prim\\mesh\\artifact\\west asia\\rock mt\\seventop\\rok_key07_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\west asia\\rock mt\\seventop\\rok_key02_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

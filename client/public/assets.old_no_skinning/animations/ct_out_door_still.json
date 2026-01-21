@@ -1,0 +1,31 @@
+{
+  "file_name": "ct_out_door_still",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 559,
+  "animation_name": "\u0011",
+  "data_blocks": [
+    0,
+    605,
+    0,
+    128,
+    128,
+    63,
+    0,
+    0,
+    0,
+    128,
+    128,
+    63,
+    0,
+    0,
+    1536,
+    562,
+    1591,
+    0,
+    564,
+    1717,
+    566
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "file_name": "fortress_hotan_brid03_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_gate03.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_02.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_03.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_04.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_05.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_06.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_07.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_alpha01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_flag.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_gate01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_gate02.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid03_gate03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\hotang\\fortress_hotan_brid03_01.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

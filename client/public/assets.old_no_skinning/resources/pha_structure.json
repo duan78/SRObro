@@ -1,0 +1,12 @@
+{
+  "file_name": "pha_structure",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_structure.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\field\\pha_structure.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

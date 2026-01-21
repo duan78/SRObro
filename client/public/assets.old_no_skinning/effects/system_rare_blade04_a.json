@@ -1,0 +1,10 @@
+{
+  "file_name": "system_rare_blade04_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 21484
+}

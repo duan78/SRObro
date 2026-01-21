@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_m_arabiandress",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_arabiandress_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_arabiandress_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_arabiandress.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

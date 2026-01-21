@@ -1,0 +1,15 @@
+{
+  "file_name": "thief_vill_spear_02",
+  "meshes": [
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_spear_04.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_spear_04.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_spear_05.bms",
+    "prim\\mesh\\bldg\\common\\thief-vill\\thief_vill_spear_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\common\\thief-vill\\thief_vill_spear_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

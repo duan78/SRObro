@@ -1,0 +1,19 @@
+{
+  "file_name": "goat_down_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 10317,
+  "animation_name": "\f",
+  "data_blocks": [
+    65536,
+    458752,
+    0,
+    327680,
+    484718,
+    802279,
+    471397,
+    703410,
+    7
+  ]
+}

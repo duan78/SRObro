@@ -1,0 +1,30 @@
+{
+  "file_name": "sabra",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\sabra_part1.bms",
+    "prim\\mesh\\mob\\arabia\\sabra_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\sabra_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\sabra_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\sabra.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_stand01.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_walk.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_run.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_attack01.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_attack03.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_attack04.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_attack02.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_die.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_down.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_down_damage.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_down_up.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_damage01.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_die_rm.ban",
+    "prim\\ani\\mob\\arabia\\sabra\\sabra_down_rm.ban"
+  ],
+  "textures": []
+}

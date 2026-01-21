@@ -1,0 +1,31 @@
+{
+  "file_name": "yeti_die_loop",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 3097,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    619,
+    3003,
+    2,
+    10,
+    156769,
+    561,
+    4160,
+    561,
+    4283,
+    562,
+    4283,
+    563,
+    4283,
+    613,
+    4159,
+    621
+  ]
+}

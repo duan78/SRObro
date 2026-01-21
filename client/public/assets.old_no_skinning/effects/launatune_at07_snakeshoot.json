@@ -1,0 +1,10 @@
+{
+  "file_name": "launatune_at07_snakeshoot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 39715
+}

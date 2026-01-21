@@ -1,0 +1,16 @@
+{
+  "file_name": "alex_stable",
+  "textures": [
+    "alex_stable_roof01.ddj",
+    "alex_stable_wall.ddj",
+    "alex_stable_roof02.ddj",
+    "alex_stable_archi02.ddj",
+    "alex_stable_archi01.ddj",
+    "alex_stable_topbottom.ddj",
+    "alex_stable_sidewall.ddj",
+    "alex_stable_column01.ddj",
+    "alex_stable_top.ddj",
+    "alex_stable_etc.ddj",
+    "alex_stable_column02.ddj"
+  ]
+}

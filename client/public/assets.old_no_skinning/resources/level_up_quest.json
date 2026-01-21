@@ -1,0 +1,12 @@
+{
+  "file_name": "level_up_quest",
+  "meshes": [
+    "prim\\mesh\\quest\\level_up_quest.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\quest\\level_up_quest.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,8 @@
+{
+  "file_name": "event_winter_whiteknight_effect",
+  "textures": [
+    "prim\\mtrl\\mob\\common\\event_winter_whiteknight_horse_effect.ddj",
+    "event_winter_whiteknight_lance.ddj",
+    "event_winter_whiteknight.ddj"
+  ]
+}

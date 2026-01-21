@@ -1,0 +1,51 @@
+{
+  "file_name": "piety_boss_upi",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_chair.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_arch.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_arch2.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_bottom01.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_bottom02.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_bottom_line.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_bottom_line2.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_bottom_patten.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_brazier.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_brick2.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_brick.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_column.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_dan.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_dan2.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_mark.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_patten.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_relief.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_top.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_width.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_pillar.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_bottom_tiger.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_chair.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_nike01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_boss.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp",
+    "map\\cj_pal_lamp_orange02_s.efp",
+    "map\\cj_pal_lamp_orange02_s.efp",
+    "map\\frame2.efp",
+    "map\\cj_pal_lamp_orange02_s.efp",
+    "map\\frame2.efp",
+    "map\\frame2.efp",
+    "map\\cj_pal_lamp_orange02_s.efp",
+    "map\\frame2.efp",
+    "map\\cj_pal_lamp_orange02_s.efp",
+    "map\\cj_pal_lamp_orange02_s.efp",
+    "map\\frame2.efp",
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

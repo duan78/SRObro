@@ -1,0 +1,34 @@
+{
+  "file_name": "antelope_qt",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\goat_part1.bms",
+    "prim\\mesh\\mob\\roc\\goat_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\goat_part2_part2.bms",
+    "prim\\mesh\\mob\\roc\\goat_hook.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\antelope.bmt"
+  ],
+  "effects": [
+    "monster\\dust_uruchi_walk.efp",
+    "monster\\dust_scorpion_walk.efp",
+    "monster\\dust_scorpion_walk.efp",
+    "monster\\dust_scorpion_walk.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\roc\\antelope\\antelope_stand01.ban",
+    "prim\\ani\\mob\\roc\\antelope\\antelope_walk.ban",
+    "prim\\ani\\mob\\roc\\antelope\\antelope_attack01.ban",
+    "prim\\ani\\mob\\roc\\antelope\\antelope_attack02.ban",
+    "prim\\ani\\mob\\roc\\antelope\\antelope_attack03.ban",
+    "prim\\ani\\mob\\roc\\antelope\\antelope_damage02.ban",
+    "prim\\ani\\mob\\roc\\antelope\\antelope_die.ban",
+    "prim\\ani\\mob\\roc\\antelope\\antelope_down.ban",
+    "prim\\ani\\mob\\roc\\antelope\\antelope_downwait.ban",
+    "prim\\ani\\mob\\roc\\antelope\\antelope_downdamage.ban",
+    "prim\\ani\\mob\\roc\\antelope\\antelope_downup.ban",
+    "prim\\ani\\mob\\roc\\goat\\goat_damage01.ban",
+    "prim\\ani\\mob\\roc\\antelope\\antelope_down_die.ban"
+  ],
+  "textures": []
+}

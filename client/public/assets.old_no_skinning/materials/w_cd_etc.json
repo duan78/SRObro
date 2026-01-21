@@ -1,0 +1,14 @@
+{
+  "file_name": "w_cd_etc",
+  "textures": [
+    "w_cd_etc_roof_01.ddj",
+    "w_cd_etc_wall02.ddj",
+    "w_cd_etc_wall03.ddj",
+    "w_cd_etc_wall01.ddj",
+    "w_cd_etc_jar.ddj",
+    "w_cd_etc_wall04.ddj",
+    "w_cd_etc_deer.ddj",
+    "w_cd_etc_winlight.ddj",
+    "w_cd_etc_roof.ddj"
+  ]
+}

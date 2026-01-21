@@ -1,0 +1,13 @@
+{
+  "file_name": "clothes_02_sa",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\man_item\\clothes_02_sa.bmt"
+  ],
+  "effects": [
+    "system\\item_equip_shoulder_yellow.efp",
+    "system\\item_equip_shoulder_yellow.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

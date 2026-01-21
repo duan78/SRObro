@@ -1,0 +1,8 @@
+{
+  "file_name": "cj_mili_bigdoor",
+  "textures": [
+    "cj_mili_longdoor_roof.ddj",
+    "cj_mili_dam.ddj",
+    "cj_mili_smallwall.ddj"
+  ]
+}

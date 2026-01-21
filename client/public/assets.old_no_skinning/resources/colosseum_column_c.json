@@ -1,0 +1,15 @@
+{
+  "file_name": "colosseum_column_c",
+  "meshes": [
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_column_c01.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_column_c02.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_column_c03.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_column_c04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\colosseum\\colosseum_column_c.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

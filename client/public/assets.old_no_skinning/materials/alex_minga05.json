@@ -1,0 +1,28 @@
+{
+  "file_name": "alex_minga05",
+  "textures": [
+    "alex_minga01_wall02.ddj",
+    "alex_minga01_door01.ddj",
+    "alex_minga02_ground.ddj",
+    "alex_minga01_wall03.ddj",
+    "alex_minga01_window.ddj",
+    "alex_minga02_grs_weed04.ddj",
+    "alex_minga02_arch03.ddj",
+    "alex_minga02_grs_weed01.ddj",
+    "alex_minga02_grs_weed05.ddj",
+    "alex_minga01_bottom.ddj",
+    "alex_minga02_grs_weed03.ddj",
+    "alex_minga01_wall07.ddj",
+    "alex_minga01_wall01.ddj",
+    "alex_minga01_wall04.ddj",
+    "alex_minga01_roof.ddj",
+    "alex_minga01_dark.ddj",
+    "alex_minga01_wall05.ddj",
+    "alex_minga01_wall08.ddj",
+    "alex_minga01_column02.ddj",
+    "alex_minga01_grass.ddj",
+    "alex_minga01_inside03.ddj",
+    "alex_minga01_inside01.ddj",
+    "alex_minga01_window_alpha.ddj"
+  ]
+}

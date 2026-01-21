@@ -1,0 +1,39 @@
+{
+  "file_name": "redeyeghost_champ",
+  "meshes": [
+    "prim\\mesh\\mob\\oasis\\redeyeghost_tooth.bms",
+    "prim\\mesh\\mob\\oasis\\redeyeghost_body_part1.bms",
+    "prim\\mesh\\mob\\oasis\\redeyeghost_body_part2_part1.bms",
+    "prim\\mesh\\mob\\oasis\\redeyeghost_body_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\oasis\\redeyeghost_body_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\oasis\\redeyeghost.bmt"
+  ],
+  "effects": [
+    "monster\\luster_redeyeghost.efp",
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_icing_on.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_stand01.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_stand02.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_walk.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_run.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_attack01.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_attack02.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_damage01.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_damage02.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_die.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_die_loop.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_down.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_downdamage.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_downup.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_downwait.ban",
+    "prim\\ani\\mob\\oasis\\redeyeghost\\redeyeghost_downdie.ban"
+  ],
+  "textures": []
+}

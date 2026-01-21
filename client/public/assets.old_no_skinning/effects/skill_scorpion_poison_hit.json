@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_scorpion_poison_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 4343
+}

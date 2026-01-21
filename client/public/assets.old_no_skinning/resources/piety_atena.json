@@ -1,0 +1,13 @@
+{
+  "file_name": "piety_atena",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_atena_02.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_boss_atena_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_boss.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

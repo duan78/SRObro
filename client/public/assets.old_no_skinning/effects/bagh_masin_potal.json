@@ -1,0 +1,10 @@
+{
+  "file_name": "bagh_masin_potal",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 51819
+}

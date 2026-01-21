@@ -1,0 +1,26 @@
+{
+  "file_name": "oas_hot_luxury",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_tile.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_al.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_roof.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_roof1.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_tile.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_wall02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_cloth.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_floor01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_lamp.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_roof1_1.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_shield.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_rubi01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_luxu_wall01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oas_hot_luxury.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

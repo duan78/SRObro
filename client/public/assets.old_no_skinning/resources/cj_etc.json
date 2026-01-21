@@ -1,0 +1,27 @@
+{
+  "file_name": "cj_etc",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_wall02.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_fence.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_jipuragi.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_light01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_light02.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_sidewall.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_stove.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_stoveroof.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_wagon.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_wall02.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_etc_winlight.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_etc.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

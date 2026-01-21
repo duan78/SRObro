@@ -1,0 +1,10 @@
+{
+  "file_name": "status_cure_burn",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 12137
+}

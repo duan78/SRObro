@@ -1,0 +1,15 @@
+{
+  "file_name": "sd_m_area_special3",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_special3_2al.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_special3_joopan.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_special3_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_special3_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_m_area_special3.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "center asia_field_ob03_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\center asia_field_ob03_01.bms",
+    "prim\\mesh\\bldg\\central asia\\center asia_field_ob03_01.bms",
+    "prim\\mesh\\bldg\\central asia\\center asia_field_ob03_02.bms",
+    "prim\\mesh\\bldg\\central asia\\center asia_field_ob03_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\center asia_field_ob03_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

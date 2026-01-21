@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ivy_ac2_wield_arm",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2890
+}

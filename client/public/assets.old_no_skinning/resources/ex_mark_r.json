@@ -1,0 +1,12 @@
+{
+  "file_name": "ex_mark_r",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\etc\\ex_mark.bmt"
+  ],
+  "effects": [
+    "npc\\ex_mark_r.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

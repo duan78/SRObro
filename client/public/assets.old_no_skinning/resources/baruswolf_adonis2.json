@@ -1,0 +1,31 @@
+{
+  "file_name": "baruswolf_adonis2",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\wolf01.bms",
+    "prim\\mesh\\mob\\europe\\wolf_part1.bms",
+    "prim\\mesh\\mob\\europe\\wolf_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\baruswolf_adonis2.bmt",
+    "prim\\mtrl\\mob\\arabia\\baruswolf_adonis2_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\europe\\wolf\\wolf_stand01.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_walk.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_run.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_attack01.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_attack02.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_attack03.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_damage01.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_die.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_die_rm.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_down.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_down_rm.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_down_damage.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_down_up.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_down_die.ban",
+    "prim\\ani\\mob\\europe\\wolf\\wolf_attack04.ban"
+  ],
+  "textures": []
+}

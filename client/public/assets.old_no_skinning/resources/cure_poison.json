@@ -1,0 +1,10 @@
+{
+  "file_name": "cure_poison",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\poisonpotion.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

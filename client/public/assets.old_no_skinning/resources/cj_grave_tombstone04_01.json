@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_grave_tombstone04_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\graveyard2\\cj_grave_tombstone04_01.bms",
+    "prim\\mesh\\bldg\\china\\graveyard2\\cj_grave_tombstone04_01.bms",
+    "prim\\mesh\\bldg\\china\\graveyard2\\cj_grave_tombstone04_02.bms",
+    "prim\\mesh\\bldg\\china\\graveyard2\\cj_grave_tombstone04_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\graveyard2\\cj_grave_tombstone04_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

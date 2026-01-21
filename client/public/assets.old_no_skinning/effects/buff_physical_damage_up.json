@@ -1,0 +1,10 @@
+{
+  "file_name": "buff_physical_damage_up",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13992
+}

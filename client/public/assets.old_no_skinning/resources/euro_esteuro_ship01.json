@@ -1,0 +1,14 @@
+{
+  "file_name": "euro_esteuro_ship01",
+  "meshes": [
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\vikingfld\\euro_esteuro_ship01_01.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\vikingfld\\euro_esteuro_ship01_02.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\vikingfld\\euro_esteuro_ship01_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\europe\\east eurpoe\\vikingfld\\euro_esteuro_ship01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "w_cd_cliff02",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_cilff02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\dunhuang\\cliff\\w_cd_cilff02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "venefica_demon_web_shoot_at5",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 42256
+}

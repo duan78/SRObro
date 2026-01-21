@@ -1,0 +1,16 @@
+{
+  "file_name": "drop_ch_equip",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\drop_ch_equip.bmt"
+  ],
+  "effects": [
+    "system\\item_drop_equip.efp",
+    "system\\item_drop_acc.efp"
+  ],
+  "animations": [
+    "prim\\ani\\item\\china\\drop_ch_equip.ban",
+    "prim\\ani\\item\\china\\drop_ch_equip01.ban"
+  ],
+  "textures": []
+}

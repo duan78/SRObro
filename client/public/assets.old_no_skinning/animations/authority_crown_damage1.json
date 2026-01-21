@@ -1,0 +1,19 @@
+{
+  "file_name": "authority_crown_damage1",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 177,
+  "animation_name": "\u0017",
+  "data_blocks": [
+    68145,
+    7680,
+    0,
+    768,
+    0,
+    16896,
+    68096,
+    256,
+    1536
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_mong_load01",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_load01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_load01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_cargo01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_load.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "item_drop_equip_rare_eu",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 23206
+}

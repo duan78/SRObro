@@ -1,0 +1,20 @@
+{
+  "file_name": "c_wildpig",
+  "meshes": [
+    "prim\\mesh\\cos\\c_wildpig_part1.bms",
+    "prim\\mesh\\cos\\c_wildpig_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\c_wildpig.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\c_wildpig\\c_wildpig_stand01.ban",
+    "prim\\ani\\cos\\c_wildpig\\c_wildpig_walk.ban",
+    "prim\\ani\\cos\\c_wildpig\\c_wildpig_run.ban",
+    "prim\\ani\\cos\\c_wildpig\\c_wildpig_damage01.ban",
+    "prim\\ani\\cos\\c_wildpig\\c_wildpig_die.ban",
+    "prim\\ani\\cos\\c_wildpig\\c_wildpig_die_rm.ban"
+  ],
+  "textures": []
+}

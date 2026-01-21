@@ -1,0 +1,13 @@
+{
+  "file_name": "firework_spray",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\firework_spray.bmt"
+  ],
+  "effects": [
+    "system\\item_firework_spray.efp",
+    "map\\cj_pal_lamp_orange02_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

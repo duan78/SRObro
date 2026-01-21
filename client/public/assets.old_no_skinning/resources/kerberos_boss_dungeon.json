@@ -1,0 +1,32 @@
+{
+  "file_name": "kerberos_boss_dungeon",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\kerberos02.bms",
+    "prim\\mesh\\mob\\europe\\kerberos_part1.bms",
+    "prim\\mesh\\mob\\europe\\kerberos_part2_part1.bms",
+    "prim\\mesh\\mob\\europe\\kerberos_part2_part2.bms",
+    "prim\\mesh\\mob\\europe\\kerberos03.bms",
+    "prim\\mesh\\mob\\europe\\kerberos01_part1.bms",
+    "prim\\mesh\\mob\\europe\\kerberos01_part2_part1.bms",
+    "prim\\mesh\\mob\\europe\\kerberos01_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\europe\\kerberos.bmt"
+  ],
+  "effects": [
+    "monster\\eu\\luster\\luster_kerberos_eye.efp",
+    "monster\\eu\\luster\\luster_kerberos_eye.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\europe\\kerberos\\kerberos_stand01.ban",
+    "prim\\ani\\mob\\europe\\kerberos\\kerberos_walk.ban",
+    "prim\\ani\\mob\\europe\\kerberos\\kerberos_run.ban",
+    "prim\\ani\\mob\\europe\\kerberos\\kerberos_attack01.ban",
+    "prim\\ani\\mob\\europe\\kerberos\\kerberos_attack02.ban",
+    "prim\\ani\\mob\\europe\\kerberos\\kerberos_attack03.ban",
+    "prim\\ani\\mob\\europe\\kerberos\\kerberos_attack04.ban",
+    "prim\\ani\\mob\\europe\\kerberos\\kerberos_die.ban",
+    "prim\\ani\\mob\\europe\\kerberos\\kerberos_die_rm.ban"
+  ],
+  "textures": []
+}

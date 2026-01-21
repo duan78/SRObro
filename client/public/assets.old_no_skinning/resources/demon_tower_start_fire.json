@@ -1,0 +1,12 @@
+{
+  "file_name": "demon_tower_start_fire",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\fire\\demon_tower_start_fire.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame_sb.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

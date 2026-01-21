@@ -1,0 +1,29 @@
+{
+  "file_name": "dowb",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\dowb01.bms",
+    "prim\\mesh\\mob\\europe\\dowb_part1.bms",
+    "prim\\mesh\\mob\\europe\\dowb_part2_part1.bms",
+    "prim\\mesh\\mob\\europe\\dowb_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\europe\\dowb.bmt",
+    "prim\\mtrl\\mob\\europe\\dowb_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\europe\\dowb\\dowb_stand01.ban",
+    "prim\\ani\\mob\\europe\\dowb\\dowb_walk.ban",
+    "prim\\ani\\mob\\europe\\dowb\\dowb_run.ban",
+    "prim\\ani\\mob\\europe\\dowb\\dowb_attack01.ban",
+    "prim\\ani\\mob\\europe\\dowb\\dowb_attack02.ban",
+    "prim\\ani\\mob\\europe\\dowb\\dowb_attack03.ban",
+    "prim\\ani\\mob\\europe\\dowb\\dowb_die.ban",
+    "prim\\ani\\mob\\europe\\dowb\\dowb_die_rm.ban",
+    "prim\\ani\\mob\\europe\\dowb\\dowb_down.ban",
+    "prim\\ani\\mob\\europe\\dowb\\dowb_down_rm.ban",
+    "prim\\ani\\mob\\europe\\dowb\\dowb_down_up.ban",
+    "prim\\ani\\mob\\europe\\dowb\\dowb_down_die.ban"
+  ],
+  "textures": []
+}

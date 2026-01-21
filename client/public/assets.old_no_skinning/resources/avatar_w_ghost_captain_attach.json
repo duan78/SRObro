@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_w_ghost_captain_attach",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_ghost_captain.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

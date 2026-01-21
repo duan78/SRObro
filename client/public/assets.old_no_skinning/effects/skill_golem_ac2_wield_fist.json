@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_golem_ac2_wield_fist",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 15485
+}

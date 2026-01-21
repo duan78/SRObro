@@ -1,0 +1,15 @@
+{
+  "file_name": "naruter_fish01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil02_chain.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_buil02_ladder.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_fish.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\naru_fish_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ferry\\w_cd_naru.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

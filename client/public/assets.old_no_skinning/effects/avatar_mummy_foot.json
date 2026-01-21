@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_mummy_foot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 44452
+}

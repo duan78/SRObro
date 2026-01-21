@@ -1,0 +1,10 @@
+{
+  "file_name": "item_ch_bow_12_f02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17081
+}

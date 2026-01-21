@@ -1,0 +1,31 @@
+{
+  "file_name": "cj_thiefvill_01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_01_01.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_01_01.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_02_02.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_04_04.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_07_07.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_08_08.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_09_09.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_10_10.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_11_11.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_12_12.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_13_13.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_14_14.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_16_16.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_17_17.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_21_21.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\cj_thiefvill\\cj_thiefvill_01_01.bmt"
+  ],
+  "effects": [
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

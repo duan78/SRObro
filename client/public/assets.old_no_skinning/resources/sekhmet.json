@@ -1,0 +1,25 @@
+{
+  "file_name": "sekhmet",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\sekhmet02.bms",
+    "prim\\mesh\\mob\\sd\\sekhmet_part1.bms",
+    "prim\\mesh\\mob\\sd\\sekhmet_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\sekhmet_part2_part2.bms",
+    "prim\\mesh\\mob\\sd\\sekhmet01_part1.bms",
+    "prim\\mesh\\mob\\sd\\sekhmet01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\sekhmet.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\isis\\isis_stand01.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_walk.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_attack01.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_attack02.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_attack03.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_die.ban",
+    "prim\\ani\\mob\\sd\\isis\\sekhmet_attack05.ban"
+  ],
+  "textures": []
+}

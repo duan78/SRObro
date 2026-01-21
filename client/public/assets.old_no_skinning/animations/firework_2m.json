@@ -1,0 +1,18 @@
+{
+  "file_name": "firework_2m",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 133,
+  "animation_name": "\u000b",
+  "data_blocks": [
+    170605,
+    7680,
+    256,
+    512,
+    0,
+    170496,
+    256,
+    1536
+  ]
+}

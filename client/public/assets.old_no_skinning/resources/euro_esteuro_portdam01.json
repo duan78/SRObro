@@ -1,0 +1,15 @@
+{
+  "file_name": "euro_esteuro_portdam01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_portdam01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_portdam01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_portdam02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_portdam03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\harbor\\euro_esteuro_port01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

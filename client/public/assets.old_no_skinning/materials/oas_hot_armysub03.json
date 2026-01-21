@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_hot_armysub03",
+  "textures": [
+    "oas_hot_armysub02_box.ddj",
+    "oas_hot_armysub01_flag.ddj",
+    "oas_hot_armysub02_floor.ddj",
+    "oas_hot_armysub02_pole.ddj",
+    "oas_hot_armysub02_sword.ddj",
+    "oas_hot_armysub02_tent.ddj",
+    "oas_hot_armysub02_wpole.ddj"
+  ]
+}

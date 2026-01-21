@@ -1,0 +1,18 @@
+{
+  "file_name": "cj_monstad_martbuil02_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_martbuil02_01_01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_martbuil02_01_01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_martbuil02_01_02.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_martbuil02_01_03.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_martbuil02_01_04.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_martbuil02_01_05.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_martbuil02_01_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_martbuil02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

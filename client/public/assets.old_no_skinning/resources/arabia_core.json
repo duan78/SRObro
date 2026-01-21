@@ -1,0 +1,20 @@
+{
+  "file_name": "arabia_core",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_core01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_core02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_core02_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_core02_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_core02_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_core02_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_core02_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_petra\\bagh_petra_core.bmt"
+  ],
+  "effects": [
+    "dun\\arabia_core.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

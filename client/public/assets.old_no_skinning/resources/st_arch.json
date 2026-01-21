@@ -1,0 +1,14 @@
+{
+  "file_name": "st_arch",
+  "meshes": [
+    "prim\\mesh\\nature\\dun\\rock\\st_arch01.bms",
+    "prim\\mesh\\nature\\dun\\rock\\st_arch01.bms",
+    "prim\\mesh\\nature\\dun\\rock\\st_arch02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\dun\\rock\\st_arch.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "sd_thief_agent_changer",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_thief_agent_changer_2al.bms",
+    "prim\\mesh\\npc\\sd\\sd_thief_agent_changer_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_thief_agent_changer_part2_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_thief_agent_changer_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_thief_agent_changer.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,34 @@
+{
+  "file_name": "spector",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\mummy_part1.bms",
+    "prim\\mesh\\mob\\sd\\mummy_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\mummy_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\spector.bmt",
+    "prim\\mtrl\\mob\\sd\\spector_clon2.bmt",
+    "prim\\mtrl\\mob\\sd\\spector_clon3.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\mummy\\mummy_stand01.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_stand02.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_walk.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_run.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_attack01.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_attack02.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_attack03.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_attack04.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_die.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_attack06.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_die_rm.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_damage.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_down.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_down_rm.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_down_damage.ban",
+    "prim\\ani\\mob\\sd\\mummy\\mummy_down_up.ban",
+    "prim\\ani\\mob\\sd\\mummy\\spector_attack05.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "guardtower_blaze_tower_shield",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 40466
+}

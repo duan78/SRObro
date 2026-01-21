@@ -1,0 +1,18 @@
+{
+  "file_name": "sword_skill_a",
+  "meshes": [
+    "prim\\mesh\\etc\\sword_skill.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\sword_skill.bmt"
+  ],
+  "effects": [
+    "skill\\china\\sword_special_force_a.efp",
+    "skill\\china\\sword_special_force_a.efp",
+    "skill\\china\\sword_special_force_a.efp",
+    "skill\\china\\sword_special_force_a.efp",
+    "skill\\china\\sword_special_force_a.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

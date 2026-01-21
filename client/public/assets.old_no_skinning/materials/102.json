@@ -1,0 +1,21 @@
+{
+  "file_name": "102",
+  "textures": [
+    "stone_room101_bottom02.ddj",
+    "stone_room101_bottom03.ddj",
+    "stone_room101_wall_b.ddj",
+    "stone_room101_walldeco_a.ddj",
+    "stone_room101_walldeco_b.ddj",
+    "stone_room101_bottom01.ddj",
+    "stone_room101_wall_buda.ddj",
+    "stone_room101_pole_01.ddj",
+    "stone_room101_corner_a.ddj",
+    "stone_room101_wall_a.ddj",
+    "stone_room101_ceil01.ddj",
+    "stone_room101_corner_b.ddj",
+    "stone_room101_ceil02.ddj",
+    "stone_room102_wall_corner.ddj",
+    "stone_room102_obj_b_01.ddj",
+    "stone_room102_obj_b_02.ddj"
+  ]
+}

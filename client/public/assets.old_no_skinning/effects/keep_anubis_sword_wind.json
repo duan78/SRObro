@@ -1,0 +1,10 @@
+{
+  "file_name": "keep_anubis_sword_wind",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6054
+}

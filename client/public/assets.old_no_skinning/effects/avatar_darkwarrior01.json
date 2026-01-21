@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_darkwarrior01",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 97408
+}

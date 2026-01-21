@@ -1,0 +1,16 @@
+{
+  "file_name": "flame_croom",
+  "textures": [
+    "flame_croom_wall01.ddj",
+    "flame_lroom_line02.ddj",
+    "flame_croom_ceiling.ddj",
+    "flame_magma.ddj",
+    "flame_croom_stone02.ddj",
+    "flame_croom_stone01.ddj",
+    "flame_croom_ground04.ddj",
+    "flame_croom_ground01.ddj",
+    "flame_croom_wall02.ddj",
+    "flame_croom_ground03.ddj",
+    "flame_croom_ground02.ddj"
+  ]
+}

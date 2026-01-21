@@ -1,0 +1,14 @@
+{
+  "file_name": "bugghost",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\wchina\\bugghost.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\wchina\\bugghost\\bugghost_walk.ban",
+    "prim\\ani\\mob\\wchina\\bugghost\\bugghost_stand01.ban",
+    "prim\\ani\\mob\\wchina\\bugghost\\bugghost_damage02.ban"
+  ],
+  "textures": []
+}

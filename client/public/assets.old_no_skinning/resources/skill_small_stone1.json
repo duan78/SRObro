@@ -1,0 +1,12 @@
+{
+  "file_name": "skill_small_stone1",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\europe\\kerberos_stone_s01.bmt"
+  ],
+  "effects": [
+    "monster\\skill_small_stone1.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

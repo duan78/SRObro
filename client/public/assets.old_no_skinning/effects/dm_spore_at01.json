@@ -1,0 +1,11 @@
+{
+  "file_name": "dm_spore_at01",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 34272
+}

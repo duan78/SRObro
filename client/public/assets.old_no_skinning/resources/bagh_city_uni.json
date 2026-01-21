@@ -1,0 +1,33 @@
+{
+  "file_name": "bagh_city_uni",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni13.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni14.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni15.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni16.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni17.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni18.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni19.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni20.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_uni21.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_uni.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

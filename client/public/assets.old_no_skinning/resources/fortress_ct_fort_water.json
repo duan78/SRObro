@@ -1,0 +1,16 @@
+{
+  "file_name": "fortress_ct_fort_water",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_water01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_water02.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_water03.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_water04.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_water05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\fortress_ct_fort_water.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

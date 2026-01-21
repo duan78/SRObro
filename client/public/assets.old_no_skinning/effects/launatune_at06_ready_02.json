@@ -1,0 +1,10 @@
+{
+  "file_name": "launatune_at06_ready_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 108446
+}

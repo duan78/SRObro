@@ -1,0 +1,27 @@
+{
+  "file_name": "event_winter_princess",
+  "meshes": [
+    "prim\\mesh\\mob\\common\\event_winter_princess02.bms",
+    "prim\\mesh\\mob\\common\\event_winter_princess_part1.bms",
+    "prim\\mesh\\mob\\common\\event_winter_princess_part2_part1.bms",
+    "prim\\mesh\\mob\\common\\event_winter_princess_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\common\\event_winter_princess_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\common\\event_winter_princess.bmt"
+  ],
+  "effects": [
+    "battle\\hwan_bwm.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\common\\event_winter_princess\\event_winter_princess_stand01.ban",
+    "prim\\ani\\mob\\common\\event_winter_princess\\event_winter_princess_walk.ban",
+    "prim\\ani\\mob\\common\\event_winter_princess\\event_winter_princess_run.ban",
+    "prim\\ani\\mob\\common\\event_winter_princess\\event_winter_princess_attack01.ban",
+    "prim\\ani\\mob\\common\\event_winter_princess\\event_winter_princess_attack02.ban",
+    "prim\\ani\\mob\\common\\event_winter_princess\\event_winter_princess_attack04.ban",
+    "prim\\ani\\mob\\common\\event_winter_princess\\event_winter_princess_die.ban",
+    "prim\\ani\\mob\\common\\event_winter_princess\\event_winter_princess_die_rm.ban"
+  ],
+  "textures": []
+}

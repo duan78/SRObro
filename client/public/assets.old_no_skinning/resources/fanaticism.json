@@ -1,0 +1,27 @@
+{
+  "file_name": "fanaticism",
+  "meshes": [
+    "prim\\mesh\\mob\\jupiter\\fanaticism\\fanaticism_01_02.bms",
+    "prim\\mesh\\mob\\jupiter\\fanaticism\\fanaticism_02.bms",
+    "prim\\mesh\\mob\\jupiter\\fanaticism\\fanaticism_01_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\fanaticism\\fanaticism_01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\fanaticism.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\fanaticism\\fanaticism_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\fanaticism\\fanaticism_walk.ban",
+    "prim\\ani\\mob\\jupiter\\fanaticism\\fanaticism_run.ban",
+    "prim\\ani\\mob\\jupiter\\fanaticism\\fanaticism_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\fanaticism\\fanaticism_attack02.ban",
+    "prim\\ani\\mob\\jupiter\\fanaticism\\fanaticism_attack03.ban",
+    "prim\\ani\\mob\\jupiter\\fanaticism\\fanaticism_attack04.ban",
+    "prim\\ani\\mob\\jupiter\\fanaticism\\fanaticism_attack05.ban",
+    "prim\\ani\\mob\\jupiter\\fanaticism\\fanaticism_damage1.ban",
+    "prim\\ani\\mob\\jupiter\\fanaticism\\fanaticism_die.ban",
+    "prim\\ani\\mob\\jupiter\\fanaticism\\fanaticism_die_rm.ban"
+  ],
+  "textures": []
+}

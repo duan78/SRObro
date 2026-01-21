@@ -1,0 +1,31 @@
+{
+  "file_name": "baroi",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\baroi01.bms",
+    "prim\\mesh\\mob\\europe\\baroi_part1.bms",
+    "prim\\mesh\\mob\\europe\\baroi_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\europe\\baroi.bmt",
+    "prim\\mtrl\\mob\\europe\\baroi_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\europe\\baroi\\baroi_stand01.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_walk.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_run.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_attack01.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_attack02.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_attack03.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_damage01.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_die.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_die_rm.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_down.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_down_rm.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_down_damage.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_down_up.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_down_die.ban",
+    "prim\\ani\\mob\\europe\\baroi\\baroi_attack04.ban"
+  ],
+  "textures": []
+}

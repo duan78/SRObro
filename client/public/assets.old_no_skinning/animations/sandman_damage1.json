@@ -1,0 +1,27 @@
+{
+  "file_name": "sandman_damage1",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1175,
+  "animation_name": "\u0007",
+  "data_blocks": [
+    128049,
+    7680,
+    0,
+    1536,
+    0,
+    8448,
+    25600,
+    42496,
+    68096,
+    128000,
+    1536,
+    2560,
+    1636,
+    1587,
+    1586,
+    1719,
+    1592
+  ]
+}

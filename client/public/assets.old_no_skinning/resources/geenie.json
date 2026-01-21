@@ -1,0 +1,34 @@
+{
+  "file_name": "geenie",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\geenie_under_01.bms",
+    "prim\\mesh\\mob\\arabia\\geenie_under_02.bms",
+    "prim\\mesh\\mob\\arabia\\geenie_under_03.bms",
+    "prim\\mesh\\mob\\arabia\\geenie_under_04.bms",
+    "prim\\mesh\\mob\\arabia\\geenie_under_05.bms",
+    "prim\\mesh\\mob\\arabia\\geenie_under_06.bms",
+    "prim\\mesh\\mob\\arabia\\geenie_under_07.bms",
+    "prim\\mesh\\mob\\arabia\\geenie_part1.bms",
+    "prim\\mesh\\mob\\arabia\\geenie_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\geenie_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\geenie.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_stand01.ban",
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_stand02.ban",
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_attack01.ban",
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_attack02.ban",
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_attack03.ban",
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_attack05.ban",
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_attack06.ban",
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_attack08.ban",
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_attack09.ban",
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_die.ban",
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_walk.ban",
+    "prim\\ani\\mob\\arabia\\geenie\\geenie_run.ban"
+  ],
+  "textures": []
+}

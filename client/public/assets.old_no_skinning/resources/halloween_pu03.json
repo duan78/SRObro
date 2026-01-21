@@ -1,0 +1,19 @@
+{
+  "file_name": "halloween_pu03",
+  "meshes": [
+    "prim\\mesh\\etc\\halloween\\halloween_pu03_01.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu03_02.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu03_box.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu03_broom.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu03_can.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu03_candy.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu03_hat01.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_pu03_hat02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\halloween\\halloween_pu03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

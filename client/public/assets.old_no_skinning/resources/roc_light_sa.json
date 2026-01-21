@@ -1,0 +1,15 @@
+{
+  "file_name": "roc_light_sa",
+  "meshes": [
+    "prim\\mesh\\item\\china\\woman_item\\roc_light_sa.bms",
+    "prim\\mesh\\item\\china\\woman_item\\roc_light_sa_ef.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\woman_item\\roc_light.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line.ddj"
+  ]
+}

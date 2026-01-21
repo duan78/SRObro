@@ -1,0 +1,32 @@
+{
+  "file_name": "coelacanth",
+  "meshes": [
+    "prim\\mesh\\mob\\taklamakan\\deathkara_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\deathkara_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\coelacanth.bmt"
+  ],
+  "effects": [
+    "monster\\dead_dust.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_stand01.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_walk.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_run.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_attack01.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_attack02.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_attack03.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_down.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_downwait.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_downdamage.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_downup.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_die.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_die_rm.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_downdie.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_damage01.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\deathkara_damage02.ban",
+    "prim\\ani\\mob\\taklamakan\\deathkara\\coelacan_attack04.ban"
+  ],
+  "textures": []
+}

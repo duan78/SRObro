@@ -1,0 +1,10 @@
+{
+  "file_name": "item_eu_staff_14_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 22916
+}

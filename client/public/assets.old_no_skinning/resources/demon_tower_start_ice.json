@@ -1,0 +1,12 @@
+{
+  "file_name": "demon_tower_start_ice",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\ice\\demon_tower_start_ice.bmt"
+  ],
+  "effects": [
+    "dun\\demon_blue_flame_sb.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

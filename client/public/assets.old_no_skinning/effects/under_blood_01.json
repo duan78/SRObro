@@ -1,0 +1,10 @@
+{
+  "file_name": "under_blood_01",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 20428
+}

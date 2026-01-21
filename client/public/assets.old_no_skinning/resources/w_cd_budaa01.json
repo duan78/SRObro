@@ -1,0 +1,14 @@
+{
+  "file_name": "w_cd_budaa01",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_budawal.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_budawal.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_cd_buda_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\dunhuang\\w_cd_buda_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

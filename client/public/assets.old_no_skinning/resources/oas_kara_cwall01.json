@@ -1,0 +1,22 @@
+{
+  "file_name": "oas_kara_cwall01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_alpha.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_alpha.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_cwall.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_cwall_02.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_enterwall.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_floor.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_window.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_fire.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_floor_02.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_lwindow.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_nangan.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

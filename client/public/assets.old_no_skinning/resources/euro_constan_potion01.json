@@ -1,0 +1,24 @@
+{
+  "file_name": "euro_constan_potion01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_08.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_09.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_10.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_11.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_12.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_potion01_light.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_constan_potion01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

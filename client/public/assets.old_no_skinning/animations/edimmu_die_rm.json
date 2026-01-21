@@ -1,0 +1,24 @@
+{
+  "file_name": "edimmu_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4715,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    0,
+    619,
+    3004,
+    2,
+    11,
+    144235,
+    769137,
+    564,
+    2747
+  ]
+}

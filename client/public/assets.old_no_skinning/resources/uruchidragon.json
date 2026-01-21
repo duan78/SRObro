@@ -1,0 +1,40 @@
+{
+  "file_name": "uruchidragon",
+  "meshes": [
+    "prim\\mesh\\mob\\oasis\\uruchidragon_2side_part1.bms",
+    "prim\\mesh\\mob\\oasis\\uruchidragon_2side_part2.bms",
+    "prim\\mesh\\mob\\oasis\\uruchidragon_part1.bms",
+    "prim\\mesh\\mob\\oasis\\uruchidragon_part2_part1.bms",
+    "prim\\mesh\\mob\\oasis\\uruchidragon_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\oasis\\uruchidragon_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\oasis\\uruchidragon.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp",
+    "monster\\dust_uruchi_walk.efp",
+    "monster\\dust_uruchi_walk.efp",
+    "monster\\dust_uruchi_down.efp",
+    "monster\\dust_uruchi_run.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_stand01.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_stand02.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_walk.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_run.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_attack01.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_attack02.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_attack03.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_damage02.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_die.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_help.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_die_loop.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_damage01.ban",
+    "prim\\ani\\mob\\oasis\\uruchidragon\\uruchidragon_find.ban"
+  ],
+  "textures": []
+}

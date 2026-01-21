@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_golem_ac2_union_fist",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 21807
+}

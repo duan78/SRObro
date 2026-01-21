@@ -1,0 +1,14 @@
+{
+  "file_name": "asiaminor_brig01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_brig01_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_brig01_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_brig01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\evil_order\\asiaminor_brig01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

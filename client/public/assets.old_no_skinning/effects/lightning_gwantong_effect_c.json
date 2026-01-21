@@ -1,0 +1,10 @@
+{
+  "file_name": "lightning_gwantong_effect_c",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 25325
+}

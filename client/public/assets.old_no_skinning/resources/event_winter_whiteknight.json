@@ -1,0 +1,34 @@
+{
+  "file_name": "event_winter_whiteknight",
+  "meshes": [
+    "prim\\mesh\\mob\\common\\event_winter_whiteknight01.bms",
+    "prim\\mesh\\mob\\common\\event_winter_whiteknight_lance.bms",
+    "prim\\mesh\\mob\\common\\event_winter_whiteknight_horse_part1.bms",
+    "prim\\mesh\\mob\\common\\event_winter_whiteknight_horse_part2_part1.bms",
+    "prim\\mesh\\mob\\common\\event_winter_whiteknight_horse_part2_part2.bms",
+    "prim\\mesh\\mob\\common\\event_winter_whiteknight_part1.bms",
+    "prim\\mesh\\mob\\common\\event_winter_whiteknight_part2_part1.bms",
+    "prim\\mesh\\mob\\common\\event_winter_whiteknight_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\common\\event_winter_whiteknight.bmt"
+  ],
+  "effects": [
+    "monster\\event\\event_whiteknight_keep_eye1.efp",
+    "monster\\event\\event_whiteknight_keep_eye1.efp",
+    "monster\\event\\event_whiteknight_keep_eye2.efp",
+    "monster\\event\\event_whiteknight_keep_eye2.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\common\\event_winter_whiteknight\\event_winter_whiteknight_stand01.ban",
+    "prim\\ani\\mob\\common\\event_winter_whiteknight\\event_winter_whiteknight_run.ban",
+    "prim\\ani\\mob\\common\\event_winter_whiteknight\\event_winter_whiteknight_walk.ban",
+    "prim\\ani\\mob\\common\\event_winter_whiteknight\\event_winter_whiteknight_attack01.ban",
+    "prim\\ani\\mob\\common\\event_winter_whiteknight\\event_winter_whiteknight_attack02.ban",
+    "prim\\ani\\mob\\common\\event_winter_whiteknight\\event_winter_whiteknight_attack03.ban",
+    "prim\\ani\\mob\\common\\event_winter_whiteknight\\event_winter_whiteknight_die.ban",
+    "prim\\ani\\mob\\common\\event_winter_whiteknight\\event_winter_whiteknight_die_rm.ban",
+    "prim\\ani\\mob\\common\\event_winter_whiteknight\\event_winter_whiteknight_attack04.ban"
+  ],
+  "textures": []
+}

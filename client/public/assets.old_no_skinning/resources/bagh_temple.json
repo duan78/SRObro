@@ -1,0 +1,33 @@
+{
+  "file_name": "bagh_temple",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_column01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_column01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_door01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_door02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_fance01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_step01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tile01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tile02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tile03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tile04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tile05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tile06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tile07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tile08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tile09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tile10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tile11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tower01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_will01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_will02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_column01_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_tample_tower01_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_temple.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

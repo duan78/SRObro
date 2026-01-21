@@ -1,0 +1,11 @@
+{
+  "file_name": "fort_stone_dw",
+  "textures": [
+    "fort_stone_dw01.ddj",
+    "fort_stone_dw02.ddj",
+    "fort_stone_dw03.ddj",
+    "fort_stone_dw_dmg02.ddj",
+    "fort_stone_dw_dmg03.ddj",
+    "fort_stone_dw_dmg01.ddj"
+  ]
+}

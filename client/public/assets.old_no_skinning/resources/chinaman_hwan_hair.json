@@ -1,0 +1,18 @@
+{
+  "file_name": "chinaman_hwan_hair",
+  "meshes": [
+    "prim\\mesh\\char\\china\\man\\hwan_hair_part2_part1.bms",
+    "prim\\mesh\\char\\china\\man\\hwan_hair_part2_part2_part1.bms",
+    "prim\\mesh\\char\\china\\man\\hwan_hair_part2_part2_part2.bms",
+    "prim\\mesh\\char\\china\\man\\hwan_hair_part1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\char\\china\\man\\hwan_hair.bmt"
+  ],
+  "effects": [
+    "monster\\luster_hwan.efp",
+    "monster\\luster_hwan.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "blindmon_stone",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\wchina\\blindmon_stone.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

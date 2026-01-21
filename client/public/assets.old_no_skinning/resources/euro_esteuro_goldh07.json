@@ -1,0 +1,13 @@
+{
+  "file_name": "euro_esteuro_goldh07",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_esteuro_goldh07_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_esteuro_goldh07_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\goldfld\\euro_esteuro_goldh07.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

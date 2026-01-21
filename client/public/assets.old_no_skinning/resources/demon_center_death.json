@@ -1,0 +1,30 @@
+{
+  "file_name": "demon_center_death",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_center01.bms",
+    "prim\\mesh\\dun\\demon\\demon_center01.bms",
+    "prim\\mesh\\dun\\demon\\demon_center02.bms",
+    "prim\\mesh\\dun\\demon\\demon_center03.bms",
+    "prim\\mesh\\dun\\demon\\demon_center04.bms",
+    "prim\\mesh\\dun\\demon\\demon_center05.bms",
+    "prim\\mesh\\dun\\demon\\demon_center06.bms",
+    "prim\\mesh\\dun\\demon\\demon_center07.bms",
+    "prim\\mesh\\dun\\demon\\demon_center08.bms",
+    "prim\\mesh\\dun\\demon\\demon_center09.bms",
+    "prim\\mesh\\dun\\demon\\demon_center10.bms",
+    "prim\\mesh\\dun\\demon\\demon_center11.bms",
+    "prim\\mesh\\dun\\demon\\demon_center12.bms",
+    "prim\\mesh\\dun\\demon\\demon_center13.bms",
+    "prim\\mesh\\dun\\demon\\demon_center14.bms",
+    "prim\\mesh\\dun\\demon\\demon_center15.bms",
+    "prim\\mesh\\dun\\demon\\demon_center16.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_center.bmt"
+  ],
+  "effects": [
+    "dun\\demon_center_death.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

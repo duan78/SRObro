@@ -1,0 +1,16 @@
+{
+  "file_name": "avatar_w_night_deathassassin",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_night_deathassassin.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_night_deathassassin01.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_night_deathassassin02.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_night_deathassassin_bone.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_night_deathassassin_hand.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_night_deathassassin.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,27 @@
+{
+  "file_name": "penonf_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 830,
+  "animation_name": "\u000f",
+  "data_blocks": [
+    85297,
+    7680,
+    0,
+    1536,
+    0,
+    8448,
+    16896,
+    34048,
+    42496,
+    85248,
+    1024,
+    3072,
+    1585,
+    2747,
+    405867,
+    702952,
+    6
+  ]
+}

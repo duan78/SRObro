@@ -1,0 +1,20 @@
+{
+  "file_name": "wreck_event_door",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\wreck\\event\\wreck_eventdoor01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\event\\wreck_eventdoor01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\event\\wreck_eventdoor02.bms",
+    "prim\\mesh\\dun\\property\\wreck\\event\\wreck_eventdoor03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\event\\wreck_event_door.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_green_flame01.efp",
+    "dun\\yellow_green_flame01.efp",
+    "dun\\yellow_green_flame01.efp",
+    "dun\\yellow_green_flame01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

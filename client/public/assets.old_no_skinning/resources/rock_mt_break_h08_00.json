@@ -1,0 +1,18 @@
+{
+  "file_name": "rock_mt_break_h08_00",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_break_h08_00.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_break_h08_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_break_h08_02.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_break_h08_03.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_break_h08_04.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_break_h08_05.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_break_h08_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\village\\rock_mt_break_h08_00.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "bj_guild_left_down",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_down_deco01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_down_deco01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_down_floor01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_down_gidung.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_down_wall01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_left_down_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\bj\\bj_guild_left_down.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

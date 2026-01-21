@@ -1,0 +1,25 @@
+{
+  "file_name": "fortress_hotan_cent",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent02.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent03.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent04.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent05.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent06.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent07.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent08.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent09.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent_alpha.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent_alpha01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent_alpha02.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_cent_roof.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\hotang\\fortress_hotan_cent01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

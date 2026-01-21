@@ -1,0 +1,22 @@
+{
+  "file_name": "goat_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1186,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    0,
+    1387,
+    3002,
+    5,
+    10,
+    353377,
+    1329,
+    3902,
+    5,
+    6,
+    340272
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "hot_minga_house02_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_house02_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_grocery.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_house02_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_hsdeco_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\minga\\hot_minga_house02_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

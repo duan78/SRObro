@@ -1,0 +1,14 @@
+{
+  "file_name": "w_cd_mc_cata",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_cata.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_cata.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_cata_2sid.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\milicamp\\w_cd_mc_cata.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

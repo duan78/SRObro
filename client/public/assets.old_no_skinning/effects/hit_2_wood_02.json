@@ -1,0 +1,10 @@
+{
+  "file_name": "hit_2_wood_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 22640
+}

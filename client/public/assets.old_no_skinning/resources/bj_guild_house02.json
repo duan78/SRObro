@@ -1,0 +1,16 @@
+{
+  "file_name": "bj_guild_house02",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_house02_deco.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_house02_deco.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_house02_roof.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_house02_wall.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_house2_floor.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\bj\\bj_guild_house02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

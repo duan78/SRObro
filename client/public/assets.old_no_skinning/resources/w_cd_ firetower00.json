@@ -1,0 +1,18 @@
+{
+  "file_name": "w_cd_ firetower00",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_ firetower00.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_ firetower00.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_ firetower00_2.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_ firetower00_3.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_ firetower00_4.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_ firetower00_5.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_ firetower01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ruins\\w_cd_ firetower00.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

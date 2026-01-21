@@ -1,0 +1,16 @@
+{
+  "file_name": "easteuropequest_commander_baltegru",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_commander_baltegru_2s2.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_commander_baltegru_2s_1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_commander_baltegru_arm.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_commander_baltegru_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_commander_baltegru_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_commander_baltegru.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

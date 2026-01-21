@@ -1,0 +1,16 @@
+{
+  "file_name": "life_seed",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\yuno.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\life_seed\\life_seed_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\life_seed\\life_seed_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\life_seed\\life_seed_damage.ban",
+    "prim\\ani\\mob\\jupiter\\life_seed\\life_seed_die.ban",
+    "prim\\ani\\mob\\jupiter\\life_seed\\life_seed_die_rm.ban"
+  ],
+  "textures": []
+}

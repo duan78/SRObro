@@ -1,0 +1,12 @@
+{
+  "file_name": "masterkey",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\materkey.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\materkey.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

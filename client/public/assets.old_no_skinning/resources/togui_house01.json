@@ -1,0 +1,26 @@
+{
+  "file_name": "togui_house01",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_02.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_03.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_04.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_05.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_06.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_07.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_08.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_09.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_10.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_11.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_12.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_flag01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_house01_flag02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\togui\\togui_house01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

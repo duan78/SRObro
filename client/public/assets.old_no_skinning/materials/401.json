@@ -1,0 +1,22 @@
+{
+  "file_name": "401",
+  "textures": [
+    "stone_room401_doorwall.ddj",
+    "stone_room401_wall_b.ddj",
+    "stone_room401_bottom03.ddj",
+    "stone_room403_ceiling_b.ddj",
+    "stone_room403_ceiling_a.ddj",
+    "stone_room401_ceiling_c.ddj",
+    "stone_room401_wall_a01.ddj",
+    "stone_room401_wall_c.ddj",
+    "stone_room401_tower_prop.ddj",
+    "stone_room401_tower.ddj",
+    "stone_room401_bottom01.ddj",
+    "stone_room401_bottom02.ddj",
+    "stone_room401_wall_a02.ddj",
+    "stone_room401_buda_a2.ddj",
+    "stone_room401_buda_c.ddj",
+    "stone_room401_buda_b.ddj",
+    "stone_room401_buda_a.ddj"
+  ]
+}

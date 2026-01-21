@@ -1,0 +1,28 @@
+{
+  "file_name": "ghost_gluttony_damage1",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4351,
+  "animation_name": "\u0016",
+  "data_blocks": [
+    500,
+    30,
+    1,
+    4,
+    0,
+    133,
+    333,
+    500,
+    33,
+    10,
+    289635,
+    737244,
+    1073,
+    2747,
+    274796,
+    274737,
+    274993,
+    275249
+  ]
+}

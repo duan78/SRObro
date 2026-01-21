@@ -1,0 +1,33 @@
+{
+  "file_name": "whitespider",
+  "meshes": [
+    "prim\\mesh\\mob\\khotan\\whitespider_part1.bms",
+    "prim\\mesh\\mob\\khotan\\whitespider_part2_part1.bms",
+    "prim\\mesh\\mob\\khotan\\whitespider_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\khotan\\whitespider.bmt",
+    "prim\\mtrl\\mob\\khotan\\whitespider_champ.bmt"
+  ],
+  "effects": [
+    "monster\\dead\\dead_redblood.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_stand01.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_stand02.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_walk.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_run.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_attack01.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_attack02.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_damage01.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_damage02.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_down.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_downwait.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_downdamage.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_downup.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_downdie.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_die.ban",
+    "prim\\ani\\mob\\khotan\\whitespider\\whitespider_die_loop.ban"
+  ],
+  "textures": []
+}

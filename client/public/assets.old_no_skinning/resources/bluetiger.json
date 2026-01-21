@@ -1,0 +1,29 @@
+{
+  "file_name": "bluetiger",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\bluetiger_2side.bms",
+    "prim\\mesh\\mob\\china\\bluetiger_part1.bms",
+    "prim\\mesh\\mob\\china\\bluetiger_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\bluetiger.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_walk.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_run.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_attack01.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_attack02.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_attack03.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_damage01.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_damage02.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_help.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_die.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_die_loop.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_find.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_stand02.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_stand01.ban",
+    "prim\\ani\\mob\\china\\bluetiger\\bluetiger_stnad01.ban"
+  ],
+  "textures": []
+}

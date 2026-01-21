@@ -1,0 +1,10 @@
+{
+  "file_name": "bj_guild_left_down",
+  "textures": [
+    "bj_front_floor.ddj",
+    "bijeokdan_front_door01.ddj",
+    "bj_front_door02.ddj",
+    "bj_front_door03.ddj",
+    "bijeokdan_front_door07.ddj"
+  ]
+}

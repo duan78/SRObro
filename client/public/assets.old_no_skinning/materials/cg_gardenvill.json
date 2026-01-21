@@ -1,0 +1,12 @@
+{
+  "file_name": "cg_gardenvill",
+  "textures": [
+    "cg_gardenvill_roof.ddj",
+    "cg_gardenvill_floor.ddj",
+    "cg_gardenvill_alpha.ddj",
+    "cg_gardenvill_column.ddj",
+    "cg_gardenvill_etc.ddj",
+    "cg_gardenvill_wood.ddj",
+    "cg_gardenvill_stone.ddj"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "demon_p_altar_p_door",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\poison\\demon_p_altar_p_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

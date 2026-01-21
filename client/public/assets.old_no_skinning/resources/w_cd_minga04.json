@@ -1,0 +1,16 @@
+{
+  "file_name": "w_cd_minga04",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga04_wall01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga04_door.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga04_fence.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga04_wall01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga04_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\minga\\w_cd_minga04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

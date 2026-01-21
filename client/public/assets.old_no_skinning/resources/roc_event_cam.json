@@ -1,0 +1,10 @@
+{
+  "file_name": "roc_event_cam",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\roc_event_cam.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

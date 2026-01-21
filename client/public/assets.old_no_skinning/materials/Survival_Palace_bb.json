@@ -1,0 +1,14 @@
+{
+  "file_name": "Survival_Palace_bb",
+  "textures": [
+    "c_jin_wall_roof.ddj",
+    "c_jin_wall_alpha.ddj",
+    "c_jin_wall_door.ddj",
+    "c_jin_wall_orwall.ddj",
+    "c_jin_bb_bwall.ddj",
+    "c_jin_bb_alpha.ddj",
+    "c_jin_wall_twall.ddj",
+    "c_jin_wall_nangan.ddj",
+    "c_jin_wall_soldier.ddj"
+  ]
+}

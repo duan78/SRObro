@@ -1,0 +1,15 @@
+{
+  "file_name": "x_mas_boxset01",
+  "meshes": [
+    "prim\\mesh\\etc\\x_mas\\x_mas_boxset01_01.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_boxset01_02.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_boxset01_03.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_boxset01_candle.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\x_mas\\x_mas_boxset01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

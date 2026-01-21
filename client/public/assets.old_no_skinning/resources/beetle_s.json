@@ -1,0 +1,21 @@
+{
+  "file_name": "beetle_s",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\beetle_s_part1.bms",
+    "prim\\mesh\\mob\\sd\\beetle_s_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\beetle_s.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\beetle\\beetle_s_stand01.ban",
+    "prim\\ani\\mob\\sd\\beetle\\beetle_s_attack01.ban",
+    "prim\\ani\\mob\\sd\\beetle\\beetle_s_attack02.ban",
+    "prim\\ani\\mob\\sd\\beetle\\beetle_s_die.ban",
+    "prim\\ani\\mob\\sd\\beetle\\beetle_s_die_rm.ban",
+    "prim\\ani\\mob\\sd\\beetle\\beetle_s_walk.ban",
+    "prim\\ani\\mob\\sd\\beetle\\beetle_s_run.ban"
+  ],
+  "textures": []
+}

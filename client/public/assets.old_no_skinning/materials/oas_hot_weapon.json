@@ -1,0 +1,23 @@
+{
+  "file_name": "oas_hot_weapon",
+  "textures": [
+    "oas_hot_weap_sword.ddj",
+    "oas_hot_weap_etc.ddj",
+    "oas_hot_weap_top2.ddj",
+    "oas_hot_weap_bwall.ddj",
+    "oas_hot_weap_steel.ddj",
+    "oas_hot_weap_statue.ddj",
+    "oas_hot_weap_bfloor.ddj",
+    "oas_hot_weap_wall2.ddj",
+    "oas_hot_weap_top.ddj",
+    "oas_hot_weap_flowerbed.ddj",
+    "oas_hot_weap_left.ddj",
+    "oas_hot_weap_pillar.ddj",
+    "oas_hot_weap_tent.ddj",
+    "oas_hot_weap_wall3.ddj",
+    "oas_hot_weap_floor.ddj",
+    "oas_hot_weap_under.ddj",
+    "oas_hot_weap_wall.ddj",
+    "oas_hot_weap_alpha.ddj"
+  ]
+}

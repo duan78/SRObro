@@ -1,0 +1,19 @@
+{
+  "file_name": "fortress_hotan_tutl01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\hotang\\tutl\\fortress_hotan_tutl01_01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\tutl\\fortress_hotan_tutl01_01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\tutl\\fortress_hotan_tutl01_02.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\tutl\\fortress_hotan_tutl01_03.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\tutl\\fortress_hotan_tutl01_04.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\tutl\\fortress_hotan_tutl01_05.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\tutl\\fortress_hotan_tutl01_06.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\tutl\\fortress_hotan_tutl01_flag.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\hotang\\fortress_hotan_tutl02_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

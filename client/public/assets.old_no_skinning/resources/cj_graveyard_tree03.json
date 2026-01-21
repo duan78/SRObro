@@ -1,0 +1,13 @@
+{
+  "file_name": "cj_graveyard_tree03",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\cj_graveyard_tree03.bms",
+    "prim\\mesh\\nature\\common\\tree\\cj_graveyard_tree03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tree\\cj_graveyard_tree03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

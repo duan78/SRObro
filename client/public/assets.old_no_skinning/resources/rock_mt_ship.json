@@ -1,0 +1,37 @@
+{
+  "file_name": "rock_mt_ship",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_body.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_bottom.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_btrap01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_deco01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_door.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_flag.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_floor.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_rail.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_rails.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_roof.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_rope.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_sail.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_sail02.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship_window.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdbody01_part1.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdbody01_part2.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdbody02_part1.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdbody02_part2.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdbody03_part1.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdbody03_part2.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdwing01_part1.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdwing01_part2.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdwing02_part1.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdwing02_part2.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdwing03_part1.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_birdwing03_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\ferry\\ship\\rock_mt_ship.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

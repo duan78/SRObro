@@ -1,0 +1,10 @@
+{
+  "file_name": "bagh_mong_rockm_light",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 224002
+}

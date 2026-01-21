@@ -1,0 +1,9 @@
+{
+  "file_name": "skill_wreck_commander_ac1_bomb",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true
+  },
+  "raw_size": 12696
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "sd_m_area_senmute",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_senmute_2al.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_senmute_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_senmute_part2_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_senmute_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_m_area_senmute.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

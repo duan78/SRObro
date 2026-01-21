@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_w_sparta",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_sparta_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_sparta_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_sparta.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

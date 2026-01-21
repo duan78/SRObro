@@ -1,0 +1,32 @@
+{
+  "file_name": "bunwang",
+  "meshes": [
+    "prim\\mesh\\mob\\khotan\\bunwang01.bms",
+    "prim\\mesh\\mob\\khotan\\bunwang02.bms",
+    "prim\\mesh\\mob\\khotan\\bunwang03.bms",
+    "prim\\mesh\\mob\\khotan\\bunwang_2side.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\khotan\\bunwang.bmt",
+    "prim\\mtrl\\mob\\khotan\\bunwang_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_stand01.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_run.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_attack01.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_attack02.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_damage01.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_damage02.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_die.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_die_loop.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_down.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_down_rm.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_down_damage.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_down_up.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_down_die.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_walk.ban",
+    "prim\\ani\\mob\\khotan\\bunwang\\bunwang_attack03.ban"
+  ],
+  "textures": []
+}

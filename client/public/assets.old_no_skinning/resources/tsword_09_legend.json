@@ -1,0 +1,12 @@
+{
+  "file_name": "tsword_09_legend",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\tsword_09_legend.bmt"
+  ],
+  "effects": [
+    "item\\item_eu_tsword_09_legend.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

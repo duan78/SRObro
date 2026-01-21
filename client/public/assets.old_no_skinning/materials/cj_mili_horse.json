@@ -1,0 +1,9 @@
+{
+  "file_name": "cj_mili_horse",
+  "textures": [
+    "cj_mili_main_wall.ddj",
+    "cj_mili_roof.ddj",
+    "cj_mili_fence_al.ddj",
+    "cj_mili_main_gidund.ddj"
+  ]
+}

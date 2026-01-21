@@ -1,0 +1,15 @@
+{
+  "file_name": "jupi_tent",
+  "textures": [
+    "jupi_tent01_03.ddj",
+    "jupi_tent01_04.ddj",
+    "jupi_tent01_02.ddj",
+    "jupi_tent01_01.ddj",
+    "jupi_tent01_05.ddj",
+    "jupi_tent01_light.ddj",
+    "jupi_tent01_06.ddj",
+    "jupi_tent01_07.ddj",
+    "jupi_tent01_light_alpha.ddj",
+    "jupi_tent02_01.ddj"
+  ]
+}

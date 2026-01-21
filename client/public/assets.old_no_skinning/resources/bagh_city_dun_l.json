@@ -1,0 +1,53 @@
+{
+  "file_name": "bagh_city_dun_l",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_01_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_01_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_01_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_01_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_03_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_04_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_05_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_10_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_11_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_l_12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_l_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_l_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_l_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_l_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_l_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_l_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_l_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_l_08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dun.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

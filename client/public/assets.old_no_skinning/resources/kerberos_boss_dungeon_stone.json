@@ -1,0 +1,24 @@
+{
+  "file_name": "kerberos_boss_dungeon_stone",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\kerberos02.bms",
+    "prim\\mesh\\mob\\europe\\kerberos_part1.bms",
+    "prim\\mesh\\mob\\europe\\kerberos_part2_part1.bms",
+    "prim\\mesh\\mob\\europe\\kerberos_part2_part2.bms",
+    "prim\\mesh\\mob\\europe\\kerberos03.bms",
+    "prim\\mesh\\mob\\europe\\kerberos01_part1.bms",
+    "prim\\mesh\\mob\\europe\\kerberos01_part2_part1.bms",
+    "prim\\mesh\\mob\\europe\\kerberos01_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\bossdungeon\\kerberos_boss_dungeon_stone.bmt"
+  ],
+  "effects": [
+    "monster\\eu\\luster\\luster_kerberos_eye.efp",
+    "monster\\eu\\luster\\luster_kerberos_eye.efp",
+    "battle\\status_cure_burn.efp",
+    "battle\\status_cure_burn.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

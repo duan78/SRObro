@@ -1,0 +1,29 @@
+{
+  "file_name": "ghost_seiren",
+  "meshes": [
+    "prim\\mesh\\mob\\europe\\siren01.bms",
+    "prim\\mesh\\mob\\europe\\siren02.bms",
+    "prim\\mesh\\mob\\europe\\siren_part1.bms",
+    "prim\\mesh\\mob\\europe\\siren_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\ghost_seiren.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\europe\\siren\\siren_stand01.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_walk.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_attack01.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_attack02.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_attack03.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_damage01.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_down.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_down_rm.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_down_damage.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_down_up.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_down_die.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_die.ban",
+    "prim\\ani\\mob\\europe\\siren\\siren_die_rm.ban"
+  ],
+  "textures": []
+}

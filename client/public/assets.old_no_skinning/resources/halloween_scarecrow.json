@@ -1,0 +1,16 @@
+{
+  "file_name": "halloween_scarecrow",
+  "meshes": [
+    "prim\\mesh\\etc\\halloween\\halloween_scarecrow01.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_scarecrow02.bms",
+    "prim\\mesh\\etc\\halloween\\halloween_scarecrow03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\halloween\\halloween_scarecrow.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame_sb_s01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

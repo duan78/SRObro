@@ -1,0 +1,15 @@
+{
+  "file_name": "avatar_m_angel_powers_dress",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_angel_powers_dress_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_angel_powers_dress_02.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_angel_powers_dress_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_angel_powers_dress_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_angel_powers.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

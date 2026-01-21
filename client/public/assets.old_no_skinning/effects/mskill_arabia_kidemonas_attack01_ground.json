@@ -1,0 +1,10 @@
+{
+  "file_name": "mskill_arabia_kidemonas_attack01_ground",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 32251
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "st_hamada_rock01_04",
+  "meshes": [
+    "prim\\mesh\\nature\\dun\\rock\\st_hamada_rock01_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\dun\\rock\\st_hamada_rock.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "dummy",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\togui\\togui_burner01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\togui\\togui_burner.bmt"
+  ],
+  "effects": [
+    "map\\minga_smoke_m.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,26 @@
+{
+  "file_name": "pha_gate",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_ceiling.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_ceiling.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_ground.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_piece.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_rock_01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_rock_02.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_sphinx.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_stair.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_standard.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_top.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_wall.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_wing.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_gate_cobweb.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\field\\pha_gate.bmt"
+  ],
+  "effects": [
+    "dun\\alex_indun_ent.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

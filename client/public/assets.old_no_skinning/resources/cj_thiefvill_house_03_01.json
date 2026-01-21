@@ -1,0 +1,21 @@
+{
+  "file_name": "cj_thiefvill_house_03_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_house_03_01.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_house_03_01.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_house_03_03.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_house_03_04.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_house_03_05.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_house_03_06.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_house_03_02.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_house_03_07.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_house_03_08.bms",
+    "prim\\mesh\\bldg\\china\\cj_thiefvill\\cj_thiefvill_house_03_09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\cj_thiefvill\\cj_thiefvill_house_03_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

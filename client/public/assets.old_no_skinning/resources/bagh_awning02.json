@@ -1,0 +1,13 @@
+{
+  "file_name": "bagh_awning02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_awning02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_awning01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_awning02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "p2skill_pro_around_damage",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 6188
+}

@@ -1,0 +1,23 @@
+{
+  "file_name": "euro_constan_ayasofya",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_constan_ayasofya01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_constan_ayasofya01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_constan_ayasofya02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_constan_ayasofya03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_constan_ayasofya04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_constan_ayasofya05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_constan_ayasofya06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_constan_ayasofya07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_constan_ayasofya10.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_constan_ayasofya11.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_esteuro_ayasofya08.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\ayasofya\\euro_esteuro_ayasofya09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\ayasofya\\euro_constan_ayasofya.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,23 @@
+{
+  "file_name": "cj_armo",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_armo_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_armo_deco.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_armo_fence.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_armo_fence01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_armo_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_armo_gidung.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_armo_helmet.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_armo_roof.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_armo.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

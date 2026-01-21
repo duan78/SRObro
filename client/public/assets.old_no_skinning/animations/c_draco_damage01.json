@@ -1,0 +1,21 @@
+{
+  "file_name": "c_draco_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1169,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    0,
+    458752,
+    0,
+    327680,
+    655360,
+    7,
+    11,
+    1892,
+    3892,
+    7,
+    15
+  ]
+}

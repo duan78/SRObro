@@ -1,0 +1,17 @@
+{
+  "file_name": "p_bear02_down_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 7654,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    524288,
+    0,
+    327680,
+    550254,
+    834463,
+    536933
+  ]
+}

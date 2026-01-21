@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_tarim_guknest_bone01",
+  "textures": [
+    "oas_tarim_guknest_bone01.ddj",
+    "oas_tarim_guknest_bone02.ddj",
+    "oas_tarim_guknest_rock.ddj",
+    "oas_tarim_guknest_roof.ddj",
+    "oas_tarim_guknest_bone03.ddj",
+    "oas_tarim_guknest_egg.ddj",
+    "oas_tarim_guknest_nest.ddj"
+  ]
+}

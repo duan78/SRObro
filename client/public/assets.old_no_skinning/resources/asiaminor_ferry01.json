@@ -1,0 +1,26 @@
+{
+  "file_name": "asiaminor_ferry01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry01.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry01.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry02.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry03.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry04.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry05.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry06.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry07.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry08.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry09.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry10.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry11.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry12.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry13.bms",
+    "prim\\mesh\\bldg\\asia minor\\ferry\\asiaminor_ferry_flag.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\ferry\\asiaminor_ferry01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,28 @@
+{
+  "file_name": "euro_constan_special",
+  "textures": [
+    "euro_constan_special_pillar.ddj",
+    "euro_constan_special_pottery.ddj",
+    "euro_constan_special_rollcarpet.ddj",
+    "euro_constan_special_sign.ddj",
+    "euro_constan_special_box.ddj",
+    "euro_constan_special_flag.ddj",
+    "euro_constan_special_gate.ddj",
+    "euro_constan_special_wall05.ddj",
+    "euro_constan_special_bottom.ddj",
+    "euro_constan_special_roof02.ddj",
+    "euro_constan_special_carpet.ddj",
+    "euro_constan_special_wall02.ddj",
+    "euro_constan_special_wall01.ddj",
+    "euro_constan_special_roof01.ddj",
+    "euro_constan_special_roof03.ddj",
+    "euro_constan_special_wall04.ddj",
+    "euro_constan_special_wall03.ddj",
+    "euro_constan_special_grocery.ddj",
+    "euro_constan_special_pavilion.ddj",
+    "euro_constan_special_goods.ddj",
+    "euro_constan_special_goods02.ddj",
+    "euro_constan_special_window02.ddj",
+    "euro_constan_special_window01.ddj"
+  ]
+}

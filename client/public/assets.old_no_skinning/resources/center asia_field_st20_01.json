@@ -1,0 +1,14 @@
+{
+  "file_name": "center asia_field_st20_01",
+  "meshes": [
+    "prim\\mesh\\nature\\central asia\\stone\\center asia_field_st20_01.bms",
+    "prim\\mesh\\nature\\central asia\\stone\\center asia_field_st20_01.bms",
+    "prim\\mesh\\nature\\central asia\\stone\\center asia_field_st20_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\central asia\\stone\\center asia_field_st17_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

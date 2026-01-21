@@ -1,0 +1,18 @@
+{
+  "file_name": "euro_est euro_cemetery04_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_est euro_cemetery04_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_est euro_cemetery04_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_est euro_cemetery04_02.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_est euro_cemetery04_03.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_est euro_cemetery04_04.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_est euro_cemetery04_05.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_est euro_cemetery04_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\goldfld\\euro_est euro_cemetery04_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

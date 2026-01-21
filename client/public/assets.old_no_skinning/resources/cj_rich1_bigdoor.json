@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_rich1_bigdoor",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan06\\rich01\\cj_rich1_door_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich01\\cj_rich1_door_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich01\\cj_rich1_door_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan06\\rich01\\cj_rich1_bigdoor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

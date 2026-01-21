@@ -1,0 +1,16 @@
+{
+  "file_name": "passage03_05",
+  "meshes": [
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\passage05\\passage03_bottom05.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\passage05\\passage03_bottom05.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\passage05\\passage03_pole05.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\passage05\\passage03_roof05.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\floor_3\\passage05\\passage03_wallpic05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv\\floor_3\\passage03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

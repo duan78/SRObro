@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_m_nobless_ul",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2686
+}

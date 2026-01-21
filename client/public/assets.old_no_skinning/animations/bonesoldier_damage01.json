@@ -1,0 +1,20 @@
+{
+  "file_name": "bonesoldier_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 739,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    458752,
+    0,
+    196608,
+    655360,
+    7,
+    10,
+    484449,
+    996328,
+    1841
+  ]
+}

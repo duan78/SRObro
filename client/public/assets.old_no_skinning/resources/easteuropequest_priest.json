@@ -1,0 +1,15 @@
+{
+  "file_name": "easteuropequest_priest",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_priest_2s.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_priest_ear.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_priest_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_priest_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_priest.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

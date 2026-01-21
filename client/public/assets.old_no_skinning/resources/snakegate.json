@@ -1,0 +1,14 @@
+{
+  "file_name": "snakegate",
+  "meshes": [
+    "prim\\mesh\\npc\\npc\\snakegate.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\npc\\snakegate.bmt"
+  ],
+  "effects": [
+    "dun\\snake_oura.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

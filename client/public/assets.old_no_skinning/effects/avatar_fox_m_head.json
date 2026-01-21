@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_fox_m_head",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 44343
+}

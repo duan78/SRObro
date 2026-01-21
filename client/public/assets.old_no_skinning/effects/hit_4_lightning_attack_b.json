@@ -1,0 +1,10 @@
+{
+  "file_name": "hit_4_lightning_attack_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 14208
+}

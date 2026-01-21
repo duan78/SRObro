@@ -1,0 +1,18 @@
+{
+  "file_name": "alex_roguedoor",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_roguedoor_wall01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_roguedoor_wall01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_roguedoor_wall02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_roguedoor_wall03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_roguedoor_wall04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_roguedoor_wall05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\gate\\alex_roguedoor_wall06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\gate\\alex_roguedoor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

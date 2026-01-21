@@ -1,0 +1,43 @@
+{
+  "file_name": "jinsi_floor4_b02",
+  "meshes": [
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\room02\\jinsi_floor4_b02_01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\room02\\jinsi_floor4_b02_01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\room02\\jinsi_floor4_b02_12.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\room02\\jinsi_floor4_b02_g02.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\room02\\jinsi_floor4_b02_g03.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\room02\\jinsi_floor4_b02_g04.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\room02\\jinsi_floor4_b02_g05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\floor_04\\jinsi_floor4_b01_01.bmt"
+  ],
+  "effects": [
+    "dun\\bigcristal_up_violet_b.efp",
+    "dun\\waterup_yellow_big.efp",
+    "dun\\waterup_yellow_big.efp",
+    "dun\\waterup_yellow_big.efp",
+    "dun\\sky_violet_big_weak.efp",
+    "dun\\sky_violet_big_weak.efp",
+    "dun\\sky_violet_big_weak.efp",
+    "dun\\sky_violet_big_weak.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

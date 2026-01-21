@@ -1,0 +1,17 @@
+{
+  "file_name": "air_garden8_wall",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_wall01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_wall02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_wall03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_wall04.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_wall05.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_wall06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden8_wall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

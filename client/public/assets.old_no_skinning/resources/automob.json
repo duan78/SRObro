@@ -1,0 +1,20 @@
+{
+  "file_name": "automob",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\common\\automob.bmt"
+  ],
+  "effects": [
+    "monster\\luster_automob_word.efp",
+    "monster\\luster_automob_force.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\common\\automob\\automob_stand.ban",
+    "prim\\ani\\mob\\common\\automob\\automob_damage01.ban",
+    "prim\\ani\\mob\\common\\automob\\automob_damage02.ban",
+    "prim\\ani\\mob\\common\\automob\\automob_attack.ban",
+    "prim\\ani\\mob\\common\\automob\\automob_die.ban",
+    "prim\\ani\\mob\\common\\automob\\automob_stand02.ban"
+  ],
+  "textures": []
+}

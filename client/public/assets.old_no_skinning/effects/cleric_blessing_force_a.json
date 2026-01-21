@@ -1,0 +1,10 @@
+{
+  "file_name": "cleric_blessing_force_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 15784
+}

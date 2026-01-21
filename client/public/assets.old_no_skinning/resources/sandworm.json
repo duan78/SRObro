@@ -1,0 +1,38 @@
+{
+  "file_name": "sandworm",
+  "meshes": [
+    "prim\\mesh\\mob\\taklamakan\\edimmu_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\edimmu_part2_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\edimmu_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\sandworm.bmt"
+  ],
+  "effects": [
+    "monster\\dust_edimmu_move.efp",
+    "monster\\dust_edimmu_move.efp",
+    "monster\\dust_edimmu_move.efp",
+    "monster\\dust_edimmu_move.efp",
+    "monster\\dust_edimmu_appear.efp",
+    "monster\\dust_edimmu_move.efp",
+    "monster\\dust_edimmu_die.efp",
+    "monster\\dust_edimmu_die.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_stand01.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_walk.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_run.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_attack01.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_attack02.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_attack03.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_down.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_downwait.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_downdamage.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_downup.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_die.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_die_rm.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\edimmu_downdie.ban",
+    "prim\\ani\\mob\\taklamakan\\edimmu\\devilworm_attack04.ban"
+  ],
+  "textures": []
+}

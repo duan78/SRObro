@@ -1,0 +1,13 @@
+{
+  "file_name": "notify",
+  "meshes": [
+    "prim\\mesh\\mob\\common\\notify.bms",
+    "prim\\mesh\\mob\\common\\notify2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\common\\notify.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

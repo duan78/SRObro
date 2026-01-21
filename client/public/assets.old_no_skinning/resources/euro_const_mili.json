@@ -1,0 +1,25 @@
+{
+  "file_name": "euro_const_mili",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_wall01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_alpha01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_alpha02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_pillar.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_roof.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_sign.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_stairs.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_wall01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_wall02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_wall03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_wall04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_wall05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_wall06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_const_mili_wall07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_const_mili.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

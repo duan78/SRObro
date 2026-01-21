@@ -1,0 +1,10 @@
+{
+  "file_name": "bonehunter_arrow",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\taklamakan\\bonehunter.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

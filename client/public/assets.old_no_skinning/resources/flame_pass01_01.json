@@ -1,0 +1,41 @@
+{
+  "file_name": "flame_pass01_01",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_candle.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_basewall.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_candle.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_gate01.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_gate02.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_gate03.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_gate04.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_gate05.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_gate06.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_gate06_01.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_gate07.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_gate08.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_gate09.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_light01.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_tile01.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_tile02.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_tile03.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_tile04.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_tile05.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_upside.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_wall01.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_wall02.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_wall03.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_wall04.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_wall05.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_wall06.bms",
+    "prim\\mesh\\dun\\property\\flame\\pass01\\flame_pass01_magma.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\flame\\flame_pass.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_flame.efp",
+    "dun\\yellow_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

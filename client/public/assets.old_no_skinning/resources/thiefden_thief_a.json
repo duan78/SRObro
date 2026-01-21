@@ -1,0 +1,16 @@
+{
+  "file_name": "thiefden_thief_a",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\blackrobber_body_part1.bms",
+    "prim\\mesh\\npc\\china\\blackrobber_body_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\blackrobber.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\blackrobber_stand01.ban",
+    "prim\\ani\\npc\\china\\blackrobber_stand02.ban"
+  ],
+  "textures": []
+}

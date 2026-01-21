@@ -1,0 +1,20 @@
+{
+  "file_name": "t_horse2_2011",
+  "meshes": [
+    "prim\\mesh\\cos\\cart\\t_horse1_part1.bms",
+    "prim\\mesh\\cos\\cart\\t_horse1_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\t_horse2_2011.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\cart\\t_horse\\stand01.ban",
+    "prim\\ani\\cos\\cart\\t_horse\\walk.ban",
+    "prim\\ani\\cos\\cart\\t_horse\\run.ban",
+    "prim\\ani\\cos\\cart\\t_horse\\die.ban",
+    "prim\\ani\\cos\\cart\\t_horse\\die_loop.ban",
+    "prim\\ani\\cos\\cart\\t_horse\\damage01.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,8 @@
+{
+  "file_name": "guil_jang_stair01_wall",
+  "textures": [
+    "c_jin_enter_wall01.ddj",
+    "c_jin_wall_orwal01.ddj",
+    "c_jin_wall_floor.ddj"
+  ]
+}

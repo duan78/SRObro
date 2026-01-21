@@ -1,0 +1,17 @@
+{
+  "file_name": "euro_esteuro_goldh02",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_esteuro_goldh02_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_esteuro_goldh02_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_esteuro_goldh02_02.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_esteuro_goldh02_03.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_esteuro_goldh02_04_winlight.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\goldfld\\euro_esteuro_goldh02_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\goldfld\\euro_esteuro_goldh02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

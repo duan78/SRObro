@@ -1,0 +1,17 @@
+{
+  "file_name": "rogue_downdamage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 10653,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    0,
+    655360,
+    0,
+    327680,
+    681326,
+    834293,
+    668005
+  ]
+}

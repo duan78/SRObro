@@ -1,0 +1,10 @@
+{
+  "file_name": "earthghosr_door",
+  "textures": [
+    "earthgst_entr_door_tex.ddj",
+    "earthgst_entr_door_seize.ddj",
+    "earthgst_entr_door_metal.ddj",
+    "w_earthgst_dexit01.ddj",
+    "earthgst_entr_door_stone.ddj"
+  ]
+}

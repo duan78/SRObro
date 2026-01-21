@@ -1,0 +1,12 @@
+{
+  "file_name": "w_earthgst_walldeco",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\earthghost\\w_earthgst_dexit.bmt"
+  ],
+  "effects": [
+    "map\\frame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

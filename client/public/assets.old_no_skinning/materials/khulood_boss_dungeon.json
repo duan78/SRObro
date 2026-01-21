@@ -1,0 +1,9 @@
+{
+  "file_name": "khulood_boss_dungeon",
+  "textures": [
+    "prim\\mtrl\\mob\\bossdungeon\\khulood_01_boss_dungeon_stone.ddj",
+    "prim\\mtrl\\mob\\arabia\\khulood_01_n.ddj",
+    "prim\\mtrl\\mob\\bossdungeon\\khulood_boss_dungeon_stone.ddj",
+    "prim\\mtrl\\mob\\arabia\\khulood_n.ddj"
+  ]
+}

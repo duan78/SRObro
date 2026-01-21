@@ -1,0 +1,13 @@
+{
+  "file_name": "oas_kara_cwall_goral",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_goral 01.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_goral.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\castle-wall\\oas_kara_cwall_goral.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,21 @@
+{
+  "file_name": "c_jin_ent01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent01_wall02.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent01_door01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent01_door02.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent01_door03.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent01_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent01_wall02.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent01_wall03.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent01_wall04.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent01_wall05.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\c_jin_ent01_wall06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\c_jin_ent.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

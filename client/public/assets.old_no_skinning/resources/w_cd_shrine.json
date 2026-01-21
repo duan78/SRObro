@@ -1,0 +1,27 @@
+{
+  "file_name": "w_cd_shrine",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_column.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_column_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_insidewall.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_roof_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_tombstone.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_property.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_property_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_screen.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_sign.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_shri_sign_a.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_shrine.bmt"
+  ],
+  "effects": [
+    "map\\w_cd_shri.efp",
+    "map\\w_cd_shri.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_cd_cliff_s_06",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_cliff_s_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\dunhuang\\cliff\\w_cd_cliff_s_06.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

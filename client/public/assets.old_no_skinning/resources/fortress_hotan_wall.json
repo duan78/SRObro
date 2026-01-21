@@ -1,0 +1,19 @@
+{
+  "file_name": "fortress_hotan_wall",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_wall01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_wall01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_wall02.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_wall03.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_wall04.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_wall05.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_wall_alpha.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\plaza\\fortress_hotan_wall_alpha01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\hotang\\fortress_hotan_wall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

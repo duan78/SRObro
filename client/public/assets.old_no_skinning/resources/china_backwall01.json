@@ -1,0 +1,16 @@
+{
+  "file_name": "china_backwall01",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\flag_war\\china_backwall01_01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_backwall01_02.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_backwall01_03.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_backwall01_04.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_backwall01_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\flag_war\\china_backwall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

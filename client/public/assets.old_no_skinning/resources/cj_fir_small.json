@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_fir_small",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_fir_small_02_1.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_fir_flg.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_fir_small_02.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_fir_small_02_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\cj_jin_fir_small.bmt"
+  ],
+  "effects": [
+    "map\\frame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

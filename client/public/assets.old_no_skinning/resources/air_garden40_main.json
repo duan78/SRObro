@@ -1,0 +1,35 @@
+{
+  "file_name": "air_garden40_main",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_stair.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_brick.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_bridge_tile01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_grass04.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_out_wall01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_out_wall02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_stair.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile04.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile05.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile06.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile07.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile08.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile09.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile10.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile11.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_tile12.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_wall_tile01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_wall_tile02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_wall_tile03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_water.bms",
+    "prim\\mesh\\dun\\war\\land_war\\40\\main\\air_garden40_zone_start.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden40.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

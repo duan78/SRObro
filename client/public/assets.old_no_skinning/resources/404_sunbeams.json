@@ -1,0 +1,11 @@
+{
+  "file_name": "404_sunbeams",
+  "meshes": [],
+  "materials": [],
+  "effects": [
+    "map\\404_sunbeams.efp",
+    "map\\cj_pal_lamp_orange02_sb.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

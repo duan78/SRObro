@@ -1,0 +1,24 @@
+{
+  "file_name": "gate_top",
+  "meshes": [
+    "prim\\mesh\\mob\\qinshi\\snaketrap01.bms",
+    "prim\\mesh\\mob\\qinshi\\snaketrap02.bms",
+    "prim\\mesh\\mob\\qinshi\\snaketrap03.bms",
+    "prim\\mesh\\mob\\qinshi\\snaketrap04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\snaketrap.bmt"
+  ],
+  "effects": [
+    "dun\\trap01_b.efp",
+    "dun\\trap01_b.efp",
+    "dun\\trap01_b.efp",
+    "dun\\trap01_center.efp",
+    "dun\\snaketrap_die.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\qinshi\\snaketrap.ban",
+    "prim\\ani\\mob\\qinshi\\snaketrap01.ban"
+  ],
+  "textures": []
+}

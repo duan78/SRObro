@@ -1,0 +1,12 @@
+{
+  "file_name": "harp_16",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\harp_16.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_harp_15.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

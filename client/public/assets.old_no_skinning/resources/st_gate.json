@@ -1,0 +1,26 @@
+{
+  "file_name": "st_gate",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_top.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_ceiling.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_cobweb.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_ground.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_piece.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_rock_01.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_rock_02.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_sphinx.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_stair.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_standard.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_top.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_wall.bms",
+    "prim\\mesh\\dun\\asiam\\r2_cv\\field\\st_gate_wing.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r2_cv\\field\\st_gate.bmt"
+  ],
+  "effects": [
+    "dun\\alex_indun_ent.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

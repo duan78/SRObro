@@ -1,0 +1,12 @@
+{
+  "file_name": "big_gate_ja_01_01",
+  "textures": [
+    "cj_wall03.ddj",
+    "cj_wall02.ddj",
+    "cj_stair.ddj",
+    "cj_wall01.ddj",
+    "door.ddj",
+    "cj_door.ddj",
+    "dfposition00_01.ddj"
+  ]
+}

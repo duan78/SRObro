@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ivy_ac4_drake_wind_force",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17061
+}

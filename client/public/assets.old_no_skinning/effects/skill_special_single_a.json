@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_special_single_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 20573
+}

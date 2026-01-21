@@ -1,0 +1,14 @@
+{
+  "file_name": "easteuropeshop_armor",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropeshop_armor_2s.bms",
+    "prim\\mesh\\npc\\europe\\easteuropeshop_armor_part2.bms",
+    "prim\\mesh\\npc\\europe\\easteuropeshop_armor_part1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropeshop_armor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

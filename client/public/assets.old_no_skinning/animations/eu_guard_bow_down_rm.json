@@ -1,0 +1,21 @@
+{
+  "file_name": "eu_guard_bow_down_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 5578,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    327680,
+    0,
+    327680,
+    353646,
+    834273,
+    340325,
+    703187,
+    5,
+    10,
+    353377
+  ]
+}

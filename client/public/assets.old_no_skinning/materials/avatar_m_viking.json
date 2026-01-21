@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_m_viking",
+  "textures": [
+    "avatar_m_viking_hat.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_viking_hat_n.ddj",
+    "avatar_m_viking.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_viking_n.ddj",
+    "avatar_m_viking_attach.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_viking_attach_n.ddj",
+    "avatar_m_viking01.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_m_viking01_n.ddj"
+  ]
+}

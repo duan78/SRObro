@@ -1,0 +1,40 @@
+{
+  "file_name": "ong",
+  "meshes": [
+    "prim\\mesh\\mob\\oasis\\ong_2side.bms",
+    "prim\\mesh\\mob\\oasis\\ong_body_part1.bms",
+    "prim\\mesh\\mob\\oasis\\ong_body_part2_part1.bms",
+    "prim\\mesh\\mob\\oasis\\ong_body_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\oasis\\ong.bmt",
+    "prim\\mtrl\\mob\\oasis\\ong_champ.bmt",
+    "prim\\mtrl\\mob\\oasis\\ong_clon2.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_icing_on.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\oasis\\ong\\ong_stand01.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_stand02.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_walk.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_run.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_attack01.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_attack02.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_damage01.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_damage02.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_die.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_die_loop.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_down.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_downwait.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_downdamage.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_downup.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_downdie.ban",
+    "prim\\ani\\mob\\oasis\\ong\\ong_attack03.ban"
+  ],
+  "textures": []
+}

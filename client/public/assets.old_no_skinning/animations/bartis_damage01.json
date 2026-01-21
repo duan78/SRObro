@@ -1,0 +1,22 @@
+{
+  "file_name": "bartis_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 395,
+  "animation_name": "\u000f",
+  "data_blocks": [
+    170545,
+    7680,
+    0,
+    1280,
+    0,
+    16896,
+    42496,
+    85248,
+    170496,
+    512,
+    2560,
+    1380
+  ]
+}

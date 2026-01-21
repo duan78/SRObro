@@ -1,0 +1,30 @@
+{
+  "file_name": "demon_p_altar_start",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start03.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start01.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start02.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start03.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start04.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start05.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start06.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start07.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start08.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start09.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start10.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start11.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start12.bms",
+    "prim\\mesh\\dun\\demon\\poison\\demon_p_altar_start\\demon_p_altar_start13.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\poison\\demon_p_altar_start.bmt"
+  ],
+  "effects": [
+    "dun\\demon_flame_poison01.efp",
+    "dun\\demon_flame_poison01.efp",
+    "dun\\demon_flame_poison01.efp",
+    "dun\\demon_flame_poison01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

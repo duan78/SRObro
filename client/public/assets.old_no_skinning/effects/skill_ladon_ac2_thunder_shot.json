@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ladon_ac2_thunder_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8687
+}

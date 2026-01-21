@@ -1,0 +1,10 @@
+{
+  "file_name": "oas_kk_small_tree",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\karakorm\\oas_kk_small_tree.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

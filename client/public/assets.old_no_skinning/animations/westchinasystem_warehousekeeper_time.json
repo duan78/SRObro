@@ -1,0 +1,18 @@
+{
+  "file_name": "westchinasystem_warehousekeeper_time",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 8705,
+  "animation_name": "$",
+  "data_blocks": [
+    0,
+    524288,
+    0,
+    327680,
+    0,
+    550254,
+    834227,
+    536933
+  ]
+}

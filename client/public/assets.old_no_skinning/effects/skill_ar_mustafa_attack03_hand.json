@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ar_mustafa_attack03_hand",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13165
+}

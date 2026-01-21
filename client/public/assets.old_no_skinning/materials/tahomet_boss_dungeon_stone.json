@@ -1,0 +1,7 @@
+{
+  "file_name": "tahomet_boss_dungeon_stone",
+  "textures": [
+    "prim\\mtrl\\mob\\bossdungeon\\tahomet_boss_dungeon_stone.ddj",
+    "prim\\mtrl\\mob\\bossdungeon\\tahomet_devil_boss_dungeon_stone.ddj"
+  ]
+}

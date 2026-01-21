@@ -1,0 +1,16 @@
+{
+  "file_name": "cj_pal_side_dan",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_dan_floor01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_dan_fence.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_dan_floor01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_dan_floor02.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_side_dan_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_side_dan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

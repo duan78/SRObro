@@ -1,0 +1,32 @@
+{
+  "file_name": "bonehunter",
+  "meshes": [
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_part2_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonehunter_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\taklamakan\\bonehunter.bmt",
+    "prim\\mtrl\\mob\\taklamakan\\bonehunter_champ.bmt"
+  ],
+  "effects": [
+    "monster\\luster_earthkingeye.efp",
+    "monster\\luster_earthkingeye.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_attack01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_stand01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_walk.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_run.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_attack02.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_attack03.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_damage01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_damage02.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_down.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_downwait.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_downdamage.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_downup.ban",
+    "prim\\ani\\mob\\taklamakan\\bonehunter\\bonehunter_downdie.ban"
+  ],
+  "textures": []
+}

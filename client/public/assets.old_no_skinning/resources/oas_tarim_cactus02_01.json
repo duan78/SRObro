@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_tarim_cactus02_01",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\tarim\\oas_tarim_cactus02_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\tarim\\oas_tarim_cactus02_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

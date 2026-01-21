@@ -1,0 +1,31 @@
+{
+  "file_name": "workearthghost",
+  "meshes": [
+    "prim\\mesh\\mob\\wchina\\workearthghost_pickaxe.bms",
+    "prim\\mesh\\mob\\wchina\\workearthghost_part1.bms",
+    "prim\\mesh\\mob\\wchina\\workearthghost_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\wchina\\workearthghost.bmt",
+    "prim\\mtrl\\mob\\wchina\\workearthghost_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_stand01.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_attack01.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_attack02.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_walk.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_stand02.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_run.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_damage01.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_damage02.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_down.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_down_rm.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_down_damage.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_down_up.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_down_die.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_die.ban",
+    "prim\\ani\\mob\\wchina\\workearthghost\\workearthghost_die_loop.ban"
+  ],
+  "textures": []
+}

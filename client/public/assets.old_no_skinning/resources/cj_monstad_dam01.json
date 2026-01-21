@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_monstad_dam01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_dam01_01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_dam01_01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_dam01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\monsterstadium\\cj_monstad_dam01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

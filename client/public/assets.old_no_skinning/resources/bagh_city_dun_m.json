@@ -1,0 +1,41 @@
+{
+  "file_name": "bagh_city_dun_m",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_10_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_11_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunin_m_12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dunout_m_08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\dungeon\\bagh_city_dun.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

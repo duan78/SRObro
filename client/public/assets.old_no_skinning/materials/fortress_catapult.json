@@ -1,0 +1,12 @@
+{
+  "file_name": "fortress_catapult",
+  "textures": [
+    "fortress_catapult_01.ddj",
+    "fortress_catapult_ram_chain.ddj",
+    "fortress_catapult_03.ddj",
+    "fortress_catapult_02.ddj",
+    "fortress_catapult_flag.ddj",
+    "fortress_catapult_ram_01.ddj",
+    "fortress_catapult_shield01.ddj"
+  ]
+}

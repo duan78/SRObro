@@ -1,0 +1,18 @@
+{
+  "file_name": "air_garden_out_wall",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_out_wall01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_out_wall01_01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_out_wall02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_out_wall02_01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_out_wall03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_out_wall03_01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_out_wall04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden_out_wall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

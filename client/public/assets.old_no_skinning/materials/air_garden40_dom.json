@@ -1,0 +1,19 @@
+{
+  "file_name": "air_garden40_dom",
+  "textures": [
+    "air_garden40_wall_tile.ddj",
+    "air_garden_grass01.ddj",
+    "air_garden40_brick.ddj",
+    "air_garden_wall_tile.ddj",
+    "air_garden40_wall_tile01.ddj",
+    "air_garden_pillar01.ddj",
+    "air_garden_door.ddj",
+    "air_garden_flowerbed04.ddj",
+    "air_garden_flowerbed05.ddj",
+    "air_garden_temple01.ddj",
+    "air_garden_temple03.ddj",
+    "air_garden_temple04.ddj",
+    "air_garden40_col01.ddj",
+    "air_garden_water.ddj"
+  ]
+}

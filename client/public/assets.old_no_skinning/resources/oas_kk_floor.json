@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_kk_floor",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_floor.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\oas_kk_floor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_ar_whitespider_at06_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 41588
+}

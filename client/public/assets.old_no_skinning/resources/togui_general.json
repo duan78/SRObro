@@ -1,0 +1,34 @@
+{
+  "file_name": "togui_general",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\togui_general01.bms",
+    "prim\\mesh\\mob\\god\\togui_general02.bms",
+    "prim\\mesh\\mob\\god\\togui_general03.bms",
+    "prim\\mesh\\mob\\god\\togui_general04.bms",
+    "prim\\mesh\\mob\\god\\togui_general05.bms",
+    "prim\\mesh\\mob\\god\\togui_general06.bms",
+    "prim\\mesh\\mob\\god\\togui_general07.bms",
+    "prim\\mesh\\mob\\god\\togui_general_part1.bms",
+    "prim\\mesh\\mob\\god\\togui_general_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\togui_general_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\togui_general_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\togui_general.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\god\\togui_general\\togui_general_stand01.ban",
+    "prim\\ani\\mob\\god\\togui_general\\togui_general_walk.ban",
+    "prim\\ani\\mob\\god\\togui_general\\togui_general_run.ban",
+    "prim\\ani\\mob\\god\\togui_general\\togui_general_attack1.ban",
+    "prim\\ani\\mob\\god\\togui_general\\togui_general_attack4.ban",
+    "prim\\ani\\mob\\god\\togui_general\\togui_general_attack5.ban",
+    "prim\\ani\\mob\\god\\togui_general\\togui_general_damage1.ban",
+    "prim\\ani\\mob\\god\\togui_general\\togui_general_die.ban",
+    "prim\\ani\\mob\\god\\togui_general\\togui_general_die_rm.ban",
+    "prim\\ani\\mob\\god\\togui_general\\togui_general_attack2.ban",
+    "prim\\ani\\mob\\god\\togui_general\\togui_general_attack3.ban"
+  ],
+  "textures": []
+}

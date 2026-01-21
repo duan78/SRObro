@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_w_2014_noblesse",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_noblesse_hand.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_noblesse.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_2014_noblesse.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

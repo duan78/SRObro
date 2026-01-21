@@ -1,0 +1,17 @@
+{
+  "file_name": "bagh_field_military_tower",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tower_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tower_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tower_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tower_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tower_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tower_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_tower_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

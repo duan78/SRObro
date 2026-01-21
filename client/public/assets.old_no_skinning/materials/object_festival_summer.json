@@ -1,0 +1,20 @@
+{
+  "file_name": "object_festival_summer",
+  "textures": [
+    "object_festival_summer_pillar01.ddj",
+    "object_festival_summer_wagon.ddj",
+    "object_festival_summer_carpet.ddj",
+    "object_festival_summer_flag.ddj",
+    "object_festival_summer_goods.ddj",
+    "object_festival_summer_box.ddj",
+    "object_festival_summer_pillar02.ddj",
+    "object_festival_summer_lamp.ddj",
+    "object_festival_summer_flower01.ddj",
+    "object_festival_summer_model.ddj",
+    "object_festival_summer_grass02.ddj",
+    "object_festival_summer_grass03.ddj",
+    "object_festival_summer_flower02.ddj",
+    "object_festival_summer_grass01.ddj",
+    "object_festival_summer_bomb.ddj"
+  ]
+}

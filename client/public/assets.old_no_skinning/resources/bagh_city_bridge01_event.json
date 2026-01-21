@@ -1,0 +1,26 @@
+{
+  "file_name": "bagh_city_bridge01_event",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_bridge01_01_event.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_bridge01_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_bridge01_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_bridge01_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_bridge01_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_bridge01_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_bridge01_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_bridge01_08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_bridge01_09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_bridge01_01_event.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_bridge.bmt"
+  ],
+  "effects": [
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

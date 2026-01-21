@@ -1,0 +1,18 @@
+{
+  "file_name": "rock_mt_bridge_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\fld_etc\\rock_mt_bridge_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\fld_etc\\rock_mt_bridge_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\fld_etc\\rock_mt_bridge_02.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\fld_etc\\rock_mt_bridge_03.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\fld_etc\\rock_mt_bridge_04.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\fld_etc\\rock_mt_bridge_05.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\fld_etc\\rock_mt_bridge_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\fld_etc\\rock_mt_bridge_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

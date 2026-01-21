@@ -1,0 +1,17 @@
+{
+  "file_name": "euro_esteuro_w01_bridge01",
+  "meshes": [
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\barbarian fld\\euro_esteuro_w01_bridge01.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\barbarian fld\\euro_esteuro_w01_bridge01.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\barbarian fld\\euro_esteuro_w01_bridge02.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\barbarian fld\\euro_esteuro_w01_bridge03.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\barbarian fld\\euro_esteuro_w01_bridge04.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\barbarian fld\\euro_esteuro_w01_bridge05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\europe\\east eurpoe\\barbarian fld\\euro_esteuro_w01_bridge01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

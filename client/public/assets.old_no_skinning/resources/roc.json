@@ -1,0 +1,42 @@
+{
+  "file_name": "roc",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\roc_body01.bms",
+    "prim\\mesh\\mob\\roc\\roc_body_part1.bms",
+    "prim\\mesh\\mob\\roc\\roc_body_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\roc_body_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\roc_body_part2_part2_part2.bms",
+    "prim\\mesh\\mob\\roc\\roc_wing_part1.bms",
+    "prim\\mesh\\mob\\roc\\roc_wing_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\roc.bmt"
+  ],
+  "effects": [
+    "monster\\dust_rocky_walk.efp",
+    "monster\\dust_rocky_walk.efp",
+    "monster\\rm_rocky_light_dead.efp",
+    "monster\\luster_rocky_body.efp",
+    "monster\\luster_rocky_body.efp",
+    "monster\\luster_rocky_body.efp",
+    "monster\\luster_rocky_body.efp",
+    "monster\\eu\\skill\\skill_roc_ac1_earthquake_shot.efp",
+    "monster\\eu\\skill\\skill_roc_ac1_earthquake_shot.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\roc\\roc\\roc_stand01.ban",
+    "prim\\ani\\mob\\roc\\roc\\roc_walk.ban",
+    "prim\\ani\\mob\\roc\\roc\\roc_attack01.ban",
+    "prim\\ani\\mob\\roc\\roc\\roc_attack02.ban",
+    "prim\\ani\\mob\\roc\\roc\\roc_die.ban",
+    "prim\\ani\\mob\\roc\\roc\\roc_die_rm.ban",
+    "prim\\ani\\mob\\roc\\roc\\roc_event_cam.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_03_shot.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_05_shot.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_03_ready.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_05_ready.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_03_wait.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_05_wait.ban"
+  ],
+  "textures": []
+}

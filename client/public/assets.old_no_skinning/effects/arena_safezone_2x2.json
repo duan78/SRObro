@@ -1,0 +1,10 @@
+{
+  "file_name": "arena_safezone_2x2",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 94748
+}

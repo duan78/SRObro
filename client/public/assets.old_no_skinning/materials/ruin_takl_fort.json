@@ -1,0 +1,11 @@
+{
+  "file_name": "ruin_takl_fort",
+  "textures": [
+    "ruin_takl_fort_wall_01.ddj",
+    "ruin_takl_fort_floor.ddj",
+    "ruin_takl_fort_wall_04.ddj",
+    "ruin_takl_fort_wall_02.ddj",
+    "ruin_takl_fort_wall_03.ddj",
+    "ruin_takl_fort_door.ddj"
+  ]
+}

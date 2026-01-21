@@ -1,0 +1,20 @@
+{
+  "file_name": "w_cd_temp_enter",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_enter_door.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_enter_deco.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_enter_deco_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_enter_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_enter_gidung.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_enter_gidung_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_enter_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_enter_roof_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_enter_door.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_temple.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

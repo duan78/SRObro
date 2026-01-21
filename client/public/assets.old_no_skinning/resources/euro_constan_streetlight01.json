@@ -1,0 +1,16 @@
+{
+  "file_name": "euro_constan_streetlight01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_streetlight01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_streetlight01_flag003.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_streetlight01_light.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_constan_streetlight01.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

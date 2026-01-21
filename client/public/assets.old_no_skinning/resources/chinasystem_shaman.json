@@ -1,0 +1,23 @@
+{
+  "file_name": "chinasystem_shaman",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinasystem_shaman_2s.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_shaman_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_shaman_tabaco.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_shaman_tiger.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_shaman_part1.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_shaman_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinasystem_shaman.bmt"
+  ],
+  "effects": [
+    "npc\\npc_chinasystem_shaman_pipesmoke.efp",
+    "npc\\npc_chinasystem_shaman_pipesmoke.efp"
+  ],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinasystem_shaman_time.ban",
+    "prim\\ani\\npc\\china\\chinasystem_shaman_basic.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "jinsi_floor4_t09",
+  "meshes": [
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\tunnel09\\jinsi_floor4_t09_01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\tunnel09\\jinsi_floor4_t09_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\floor_04\\jinsi_floor4_b01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

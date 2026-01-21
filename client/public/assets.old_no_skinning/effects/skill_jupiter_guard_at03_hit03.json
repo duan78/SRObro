@@ -1,0 +1,12 @@
+{
+  "file_name": "skill_jupiter_guard_at03_hit03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 13618
+}

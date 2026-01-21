@@ -1,0 +1,18 @@
+{
+  "file_name": "euro_esteuro_fishop01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_esteuro_fishop01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_esteuro_fishop01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_esteuro_fishop01_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_esteuro_fishop01_03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_esteuro_fishop01_04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_esteuro_fishop01_05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_esteuro_fishop01_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\etc\\euro_esteuro_basketdummy.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

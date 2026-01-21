@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_w_2012_new_halloween_hat",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_2012_new_halloween_hat_lab.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_2012_new_halloween_hat.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_2012_new_halloween.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

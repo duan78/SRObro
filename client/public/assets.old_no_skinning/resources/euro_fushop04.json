@@ -1,0 +1,13 @@
+{
+  "file_name": "euro_fushop04",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_fushop04_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\etc\\euro_fushop04_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\etc\\euro_fushop04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

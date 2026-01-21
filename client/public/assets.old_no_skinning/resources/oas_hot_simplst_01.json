@@ -1,0 +1,26 @@
+{
+  "file_name": "oas_hot_simplst_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_simplst_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_simplst_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_simplst_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_simplst_03.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_simplst_04.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_simplst_05.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_simplst_06.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_simplst_07.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_simplst_08.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_simplst_09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_simplst_01.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

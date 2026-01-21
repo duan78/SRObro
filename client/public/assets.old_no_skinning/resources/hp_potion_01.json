@@ -1,0 +1,10 @@
+{
+  "file_name": "hp_potion_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\hpherb.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "euro_esteuro_tent01_1",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_tent01_1.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_tent01_1.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_tent01_2.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_tent01_3.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_tent01_4.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\minga\\euro_esteuro_tent01_5.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\minga\\euro_esteuro_tent01_1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

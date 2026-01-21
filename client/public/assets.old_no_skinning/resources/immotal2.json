@@ -1,0 +1,28 @@
+{
+  "file_name": "immotal2",
+  "meshes": [
+    "prim\\mesh\\mob\\jupiter\\immotal2\\immotal2_02.bms",
+    "prim\\mesh\\mob\\jupiter\\immotal2\\immotal2_hammer.bms",
+    "prim\\mesh\\mob\\jupiter\\immotal2\\immotal2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\immotal2\\immotal2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\immotal2\\immotal2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\immotal2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\immotal2\\immotal2_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\immotal2\\immotal2_run.ban",
+    "prim\\ani\\mob\\jupiter\\immotal2\\immotal2_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\immotal2\\immotal2_attack02.ban",
+    "prim\\ani\\mob\\jupiter\\immotal2\\immotal2_attack03.ban",
+    "prim\\ani\\mob\\jupiter\\immotal2\\immotal2_attack04.ban",
+    "prim\\ani\\mob\\jupiter\\immotal2\\immotal2_attack05.ban",
+    "prim\\ani\\mob\\jupiter\\immotal2\\immotal2_damage1.ban",
+    "prim\\ani\\mob\\jupiter\\immotal2\\immotal2_die.ban",
+    "prim\\ani\\mob\\jupiter\\immotal2\\immotal2_die_rm.ban",
+    "prim\\ani\\mob\\jupiter\\immotal2\\immotal2_walk.ban"
+  ],
+  "textures": []
+}

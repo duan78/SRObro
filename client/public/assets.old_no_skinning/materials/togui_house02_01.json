@@ -1,0 +1,15 @@
+{
+  "file_name": "togui_house02_01",
+  "textures": [
+    "togui_gate_01_04.ddj",
+    "togui_gate_02_01.ddj",
+    "togui_gate_02_07.ddj",
+    "togui_house02_09.ddj",
+    "togui_burner.ddj",
+    "togui_top01_02.ddj",
+    "togui_top01_05.ddj",
+    "togui_house01_09.ddj",
+    "togui_top01_04.ddj",
+    "togui_house02_04.ddj"
+  ]
+}

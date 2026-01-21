@@ -1,0 +1,24 @@
+{
+  "file_name": "event_pandora_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 352,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    262144,
+    393216,
+    2,
+    6,
+    143920,
+    439725,
+    2,
+    6,
+    144432,
+    12249,
+    12249
+  ]
+}

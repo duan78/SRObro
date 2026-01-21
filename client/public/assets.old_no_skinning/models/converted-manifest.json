@@ -1,0 +1,1855 @@
+{
+  "version": "1.0",
+  "generated": "2026-01-20T14:34:37.425032",
+  "total_models": 264,
+  "models": {
+    "404_sunbeams01": {
+      "name": "404_sunbeams01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/404_sunbeams01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "404_sunbeams02": {
+      "name": "404_sunbeams02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/404_sunbeams02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "50cm-pl-4-1": {
+      "name": "50cm-pl-4-1",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/50cm-pl-4-1.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "6_circle_pajang": {
+      "name": "6_circle_pajang",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/6_circle_pajang.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "8_lightning": {
+      "name": "8 Lightning",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/8_lightning.glb",
+      "type": "lightning",
+      "scale": 1.0
+    },
+    "ad": {
+      "name": "ad",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/ad.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "arrow_glow": {
+      "name": "arrow_glow",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/arrow_glow.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "arrow_waypoint": {
+      "name": "arrow_waypoint",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/arrow_waypoint.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "avatar_m_amalun_s": {
+      "name": "Avatar M Amalun S",
+      "category": "characters",
+      "glbPath": "./assets/models/converted/avatar_m_amalun_s.glb",
+      "type": "avatars",
+      "scale": 1.0
+    },
+    "avatar_w_amalun_s": {
+      "name": "Avatar W Amalun S",
+      "category": "characters",
+      "glbPath": "./assets/models/converted/avatar_w_amalun_s.glb",
+      "type": "avatars",
+      "scale": 1.0
+    },
+    "ball-f": {
+      "name": "ball-f",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/ball-f.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "ball": {
+      "name": "ball",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/ball.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bandal-front": {
+      "name": "bandal-front",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bandal-front.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bandal-side": {
+      "name": "bandal-side",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bandal-side.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bang001-one": {
+      "name": "bang001-one",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bang001-one.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bang001": {
+      "name": "bang001",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bang001.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bang003": {
+      "name": "bang003",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bang003.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bangu-m": {
+      "name": "bangu-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bangu-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bangu": {
+      "name": "bangu",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bangu.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bangu02-m": {
+      "name": "bangu02-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bangu02-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bangu02": {
+      "name": "bangu02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bangu02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "ban_keep": {
+      "name": "Ban Keep",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/ban_keep.glb",
+      "type": "structures",
+      "scale": 1.0
+    },
+    "big_ship_skylight_01": {
+      "name": "Big Ship Skylight 01",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/big_ship_skylight_01.glb",
+      "type": "ships",
+      "scale": 1.0
+    },
+    "big_ship_skylight_02": {
+      "name": "Big Ship Skylight 02",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/big_ship_skylight_02.glb",
+      "type": "ships",
+      "scale": 1.0
+    },
+    "big_sujug_sunset_violet": {
+      "name": "big_sujug_sunset_violet",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/big_sujug_sunset_violet.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "big_sujug_sunset_violet_small": {
+      "name": "big_sujug_sunset_violet_small",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/big_sujug_sunset_violet_small.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bing-demagecutcorn-01-m": {
+      "name": "bing-demagecutcorn-01-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bing-demagecutcorn-01-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bing-demagecutcorn-01": {
+      "name": "bing-demagecutcorn-01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bing-demagecutcorn-01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bing-demagecutcorn-02-m": {
+      "name": "bing-demagecutcorn-02-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bing-demagecutcorn-02-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bing-demagecutcorn-02": {
+      "name": "bing-demagecutcorn-02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bing-demagecutcorn-02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bing-pan": {
+      "name": "bing-pan",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bing-pan.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bing-pan_b": {
+      "name": "bing-pan_b",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bing-pan_b.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bing-pan_c": {
+      "name": "bing-pan_c",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bing-pan_c.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bomb_up": {
+      "name": "bomb_up",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bomb_up.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "bomb_up_01": {
+      "name": "bomb_up_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/bomb_up_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "boneroc_ob": {
+      "name": "boneroc_ob",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/boneroc_ob.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "book_01": {
+      "name": "Book 01",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/book_01.glb",
+      "type": "props",
+      "scale": 1.0
+    },
+    "book_02": {
+      "name": "Book 02",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/book_02.glb",
+      "type": "props",
+      "scale": 1.0
+    },
+    "boom-gidung": {
+      "name": "boom-gidung",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/boom-gidung.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "boom-wind-02-m": {
+      "name": "boom-wind-02-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/boom-wind-02-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "boom-wind-02": {
+      "name": "boom-wind-02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/boom-wind-02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "boom-wind-m": {
+      "name": "boom-wind-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/boom-wind-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "boom-wind": {
+      "name": "boom-wind",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/boom-wind.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "brood001-m": {
+      "name": "brood001-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/brood001-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "brood001": {
+      "name": "brood001",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/brood001.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "byuk-ice-a": {
+      "name": "byuk-ice-a",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/byuk-ice-a.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "byuk-ice-b": {
+      "name": "byuk-ice-b",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/byuk-ice-b.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "byuk-ice": {
+      "name": "byuk-ice",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/byuk-ice.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "byuk-icepiece": {
+      "name": "byuk-icepiece",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/byuk-icepiece.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "chain_01": {
+      "name": "Chain 01",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/chain_01.glb",
+      "type": "props",
+      "scale": 1.0
+    },
+    "chick": {
+      "name": "Chick",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/chick.glb",
+      "type": "props",
+      "scale": 1.0
+    },
+    "cho-cyl-001": {
+      "name": "cho-cyl-001",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cho-cyl-001.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cho-won-001-m": {
+      "name": "cho-won-001-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cho-won-001-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cho-won-001": {
+      "name": "cho-won-001",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cho-won-001.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cho-won-002-m": {
+      "name": "cho-won-002-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cho-won-002-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cho-won-002": {
+      "name": "cho-won-002",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cho-won-002.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cho-won-004-m": {
+      "name": "cho-won-004-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cho-won-004-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cho-won-004": {
+      "name": "cho-won-004",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cho-won-004.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cho-won-005-m": {
+      "name": "cho-won-005-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cho-won-005-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cho-won-005": {
+      "name": "cho-won-005",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cho-won-005.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "ch_bow_12": {
+      "name": "Ch Bow 12",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/ch_bow_12.glb",
+      "type": "chinese",
+      "scale": 1.0
+    },
+    "ch_shield_12th_m": {
+      "name": "Ch Shield 12Th M",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/ch_shield_12th_m.glb",
+      "type": "chinese",
+      "scale": 1.0
+    },
+    "ch_shield_12th_md": {
+      "name": "Ch Shield 12Th Md",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/ch_shield_12th_md.glb",
+      "type": "chinese",
+      "scale": 1.0
+    },
+    "ch_shield_12th_mu": {
+      "name": "Ch Shield 12Th Mu",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/ch_shield_12th_mu.glb",
+      "type": "chinese",
+      "scale": 1.0
+    },
+    "ch_sword_13_m": {
+      "name": "Ch Sword 13 M",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/ch_sword_13_m.glb",
+      "type": "chinese",
+      "scale": 1.0
+    },
+    "circle size 6m": {
+      "name": "circle size 6m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/circle size 6m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "circular_5con": {
+      "name": "circular_5con",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/circular_5con.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "clothes_07_sa_fb": {
+      "name": "clothes_07_sa_fb",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/clothes_07_sa_fb.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cross001": {
+      "name": "cross001",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cross001.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cubeline": {
+      "name": "cubeline",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cubeline.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cubeline2": {
+      "name": "cubeline2",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cubeline2.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cubeshine01": {
+      "name": "cubeshine01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cubeshine01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "cyclone": {
+      "name": "cyclone",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/cyclone.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "demage-m": {
+      "name": "Demage-M",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demage-m.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demage-p-02-m": {
+      "name": "Demage-P-02-M",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demage-p-02-m.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demage-p-02": {
+      "name": "Demage-P-02",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demage-p-02.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demage-p-m": {
+      "name": "demage-p-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/demage-p-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "demage-p": {
+      "name": "Demage-P",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demage-p.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demage": {
+      "name": "Demage",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demage.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demage01-m": {
+      "name": "Demage01-M",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demage01-m.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demage01": {
+      "name": "Demage01",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demage01.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demage02-m": {
+      "name": "Demage02-M",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demage02-m.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demage02": {
+      "name": "Demage02",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demage02.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demage03-m": {
+      "name": "Demage03-M",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demage03-m.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demage03": {
+      "name": "Demage03",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demage03.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demagecutcorn-01-m": {
+      "name": "demagecutcorn-01-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/demagecutcorn-01-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "demagecutcorn-01": {
+      "name": "Demagecutcorn-01",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demagecutcorn-01.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demagecutcorn-02-m": {
+      "name": "demagecutcorn-02-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/demagecutcorn-02-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "demagecutcorn-02": {
+      "name": "Demagecutcorn-02",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demagecutcorn-02.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demagecutwon-01-m": {
+      "name": "demagecutwon-01-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/demagecutwon-01-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "demagecutwon-01": {
+      "name": "Demagecutwon-01",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demagecutwon-01.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "demagecutwon-02-m": {
+      "name": "demagecutwon-02-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/demagecutwon-02-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "demagecutwon-02": {
+      "name": "Demagecutwon-02",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/demagecutwon-02.glb",
+      "type": "damage",
+      "scale": 1.0
+    },
+    "engel_wing_peace": {
+      "name": "engel_wing_peace",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/engel_wing_peace.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eur_board_01": {
+      "name": "eur_board_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eur_board_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eur_cyl_01": {
+      "name": "eur_cyl_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eur_cyl_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eur_eboard01": {
+      "name": "eur_eboard01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eur_eboard01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eur_ecylinder01": {
+      "name": "eur_ecylinder01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eur_ecylinder01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eur_ecylinder02": {
+      "name": "eur_ecylinder02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eur_ecylinder02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eur_ecylinder03": {
+      "name": "eur_ecylinder03",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eur_ecylinder03.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eur_eplane01": {
+      "name": "eur_eplane01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eur_eplane01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eur_eplane03": {
+      "name": "eur_eplane03",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eur_eplane03.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eur_eshine01": {
+      "name": "eur_eshine01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eur_eshine01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eur_plane02": {
+      "name": "eur_plane02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eur_plane02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eu_baruswolf_body01": {
+      "name": "eu_baruswolf_body01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eu_baruswolf_body01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eu_baruswolf_body02": {
+      "name": "eu_baruswolf_body02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eu_baruswolf_body02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eu_harp_12_b": {
+      "name": "Eu Harp 12 B",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/eu_harp_12_b.glb",
+      "type": "european",
+      "scale": 1.0
+    },
+    "eu_harp_12_hand": {
+      "name": "Eu Harp 12 Hand",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/eu_harp_12_hand.glb",
+      "type": "european",
+      "scale": 1.0
+    },
+    "eu_harp_12_m": {
+      "name": "Eu Harp 12 M",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/eu_harp_12_m.glb",
+      "type": "european",
+      "scale": 1.0
+    },
+    "eu_harp_13": {
+      "name": "Eu Harp 13",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/eu_harp_13.glb",
+      "type": "european",
+      "scale": 1.0
+    },
+    "eu_harp_14": {
+      "name": "Eu Harp 14",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/eu_harp_14.glb",
+      "type": "european",
+      "scale": 1.0
+    },
+    "eu_shield_12": {
+      "name": "Eu Shield 12",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/eu_shield_12.glb",
+      "type": "european",
+      "scale": 1.0
+    },
+    "eu_shield_13": {
+      "name": "Eu Shield 13",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/eu_shield_13.glb",
+      "type": "european",
+      "scale": 1.0
+    },
+    "eu_sleepstar_01": {
+      "name": "eu_sleepstar_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eu_sleepstar_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eu_sword_12": {
+      "name": "Eu Sword 12",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/eu_sword_12.glb",
+      "type": "european",
+      "scale": 1.0
+    },
+    "eu_sword_13": {
+      "name": "Eu Sword 13",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/eu_sword_13.glb",
+      "type": "european",
+      "scale": 1.0
+    },
+    "eu_triangle_01": {
+      "name": "Eu Triangle 01",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/eu_triangle_01.glb",
+      "type": "european",
+      "scale": 1.0
+    },
+    "eu_triangle_02": {
+      "name": "Eu Triangle 02",
+      "category": "weapons",
+      "glbPath": "./assets/models/converted/eu_triangle_02.glb",
+      "type": "european",
+      "scale": 1.0
+    },
+    "eu_windmesh_01": {
+      "name": "eu_windmesh_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eu_windmesh_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "eu_windmesh_02": {
+      "name": "eu_windmesh_02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/eu_windmesh_02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "finger_wind": {
+      "name": "finger_wind",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/finger_wind.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "fire-ball": {
+      "name": "Fire-Ball",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/fire-ball.glb",
+      "type": "fire",
+      "scale": 1.0
+    },
+    "fire": {
+      "name": "Fire",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/fire.glb",
+      "type": "fire",
+      "scale": 1.0
+    },
+    "fire2": {
+      "name": "Fire2",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/fire2.glb",
+      "type": "fire",
+      "scale": 1.0
+    },
+    "fire3": {
+      "name": "Fire3",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/fire3.glb",
+      "type": "fire",
+      "scale": 1.0
+    },
+    "fire4": {
+      "name": "Fire4",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/fire4.glb",
+      "type": "fire",
+      "scale": 1.0
+    },
+    "fireball-d": {
+      "name": "Fireball-D",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/fireball-d.glb",
+      "type": "fire",
+      "scale": 1.0
+    },
+    "flat": {
+      "name": "flat",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/flat.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "fornt_sworld": {
+      "name": "fornt_sworld",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/fornt_sworld.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "fornt_sworld_01": {
+      "name": "fornt_sworld_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/fornt_sworld_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "fortress_01": {
+      "name": "Fortress 01",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/fortress_01.glb",
+      "type": "structures",
+      "scale": 1.0
+    },
+    "geomin-won-01-m": {
+      "name": "geomin-won-01-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/geomin-won-01-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "geomin-won-01": {
+      "name": "geomin-won-01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/geomin-won-01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "geomin-won-02-m": {
+      "name": "geomin-won-02-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/geomin-won-02-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "geomin-won-02": {
+      "name": "geomin-won-02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/geomin-won-02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "geomin-won-03-m": {
+      "name": "geomin-won-03-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/geomin-won-03-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "geomin-won-03": {
+      "name": "geomin-won-03",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/geomin-won-03.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "geujuk_front": {
+      "name": "geujuk_front",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/geujuk_front.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "geujuk_pan": {
+      "name": "geujuk_pan",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/geujuk_pan.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "gum": {
+      "name": "gum",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/gum.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "harp_1m_size_test": {
+      "name": "harp_1m_size_test",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/harp_1m_size_test.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "heart": {
+      "name": "heart",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/heart.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "heart02": {
+      "name": "heart02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/heart02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "helix": {
+      "name": "helix",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/helix.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "horse_02": {
+      "name": "Horse 02",
+      "category": "characters",
+      "glbPath": "./assets/models/converted/horse_02.glb",
+      "type": "mounts",
+      "scale": 1.0
+    },
+    "hwan01": {
+      "name": "hwan01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/hwan01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "hwan02": {
+      "name": "hwan02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/hwan02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "ice-atteck-piece-p": {
+      "name": "Ice-Atteck-Piece-P",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/ice-atteck-piece-p.glb",
+      "type": "ice",
+      "scale": 1.0
+    },
+    "ice-atteck-piece": {
+      "name": "Ice-Atteck-Piece",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/ice-atteck-piece.glb",
+      "type": "ice",
+      "scale": 1.0
+    },
+    "ice-cyl-01-m": {
+      "name": "Ice-Cyl-01-M",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/ice-cyl-01-m.glb",
+      "type": "ice",
+      "scale": 1.0
+    },
+    "ice-cyl-01": {
+      "name": "Ice-Cyl-01",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/ice-cyl-01.glb",
+      "type": "ice",
+      "scale": 1.0
+    },
+    "ice-st": {
+      "name": "Ice-St",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/ice-st.glb",
+      "type": "ice",
+      "scale": 1.0
+    },
+    "ice_big": {
+      "name": "Ice Big",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/ice_big.glb",
+      "type": "ice",
+      "scale": 1.0
+    },
+    "ice_rock": {
+      "name": "Ice Rock",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/ice_rock.glb",
+      "type": "nature",
+      "scale": 1.0
+    },
+    "jijung": {
+      "name": "jijung",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/jijung.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "jinsi_04_snake": {
+      "name": "jinsi_04_snake",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/jinsi_04_snake.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "kidemonas": {
+      "name": "kidemonas",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/kidemonas.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "land_violet_up_oura": {
+      "name": "land_violet_up_oura",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/land_violet_up_oura.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "levelup01": {
+      "name": "levelup01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/levelup01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "levelup02": {
+      "name": "levelup02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/levelup02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "levelup03": {
+      "name": "levelup03",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/levelup03.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "levelup04": {
+      "name": "levelup04",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/levelup04.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "life-cyl": {
+      "name": "life-cyl",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/life-cyl.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "light-line-m": {
+      "name": "light-line-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/light-line-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "light-line-one": {
+      "name": "light-line-one",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/light-line-one.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "light-line": {
+      "name": "light-line",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/light-line.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "light-up": {
+      "name": "light-up",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/light-up.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "light-up2": {
+      "name": "light-up2",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/light-up2.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "light-up3": {
+      "name": "light-up3",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/light-up3.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "lightning01": {
+      "name": "Lightning01",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/lightning01.glb",
+      "type": "lightning",
+      "scale": 1.0
+    },
+    "lightning_line01": {
+      "name": "Lightning Line01",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/lightning_line01.glb",
+      "type": "lightning",
+      "scale": 1.0
+    },
+    "light_jil": {
+      "name": "Light Jil",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/light_jil.glb",
+      "type": "lightning",
+      "scale": 1.0
+    },
+    "light_one_up": {
+      "name": "light_one_up",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/light_one_up.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "magic-ddi001": {
+      "name": "Magic-Ddi001",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/magic-ddi001.glb",
+      "type": "skill_effects",
+      "scale": 1.0
+    },
+    "magic-jin001": {
+      "name": "Magic-Jin001",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/magic-jin001.glb",
+      "type": "skill_effects",
+      "scale": 1.0
+    },
+    "oura_gone_circle": {
+      "name": "oura_gone_circle",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/oura_gone_circle.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "oura_gone_circle_01": {
+      "name": "oura_gone_circle_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/oura_gone_circle_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "oura_screw": {
+      "name": "oura_screw",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/oura_screw.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "oura_screw_01": {
+      "name": "oura_screw_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/oura_screw_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "oura_screw_thin": {
+      "name": "oura_screw_thin",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/oura_screw_thin.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "oura_screw_thin_01": {
+      "name": "oura_screw_thin_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/oura_screw_thin_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "oura_up": {
+      "name": "oura_up",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/oura_up.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "piece_glass": {
+      "name": "piece_glass",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/piece_glass.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "pierce-m": {
+      "name": "pierce-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/pierce-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "pierce": {
+      "name": "pierce",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/pierce.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "plan_twist": {
+      "name": "plan_twist",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/plan_twist.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "plan_twist_01": {
+      "name": "plan_twist_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/plan_twist_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "point-arrow": {
+      "name": "point-arrow",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/point-arrow.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "point": {
+      "name": "point",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/point.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "point2": {
+      "name": "point2",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/point2.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "poison-ek": {
+      "name": "poison-ek",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/poison-ek.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "portal-plane3": {
+      "name": "Portal-Plane3",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/portal-plane3.glb",
+      "type": "structures",
+      "scale": 1.0
+    },
+    "portal-size": {
+      "name": "Portal-Size",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/portal-size.glb",
+      "type": "structures",
+      "scale": 1.0
+    },
+    "portal-twirlair2": {
+      "name": "Portal-Twirlair2",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/portal-twirlair2.glb",
+      "type": "structures",
+      "scale": 1.0
+    },
+    "potion": {
+      "name": "Potion",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/potion.glb",
+      "type": "props",
+      "scale": 1.0
+    },
+    "power": {
+      "name": "power",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/power.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "pyramid": {
+      "name": "pyramid",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/pyramid.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "rain": {
+      "name": "rain",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/rain.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "rone": {
+      "name": "rone",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/rone.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sample": {
+      "name": "sample",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sample.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sample2": {
+      "name": "sample2",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sample2.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sand_down": {
+      "name": "sand_down",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sand_down.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "shadow_armor": {
+      "name": "Shadow Armor",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/shadow_armor.glb",
+      "type": "nature",
+      "scale": 1.0
+    },
+    "sharp_rock": {
+      "name": "Sharp Rock",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/sharp_rock.glb",
+      "type": "nature",
+      "scale": 1.0
+    },
+    "sharp_rock_01": {
+      "name": "Sharp Rock 01",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/sharp_rock_01.glb",
+      "type": "nature",
+      "scale": 1.0
+    },
+    "sharp_rock_02": {
+      "name": "Sharp Rock 02",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/sharp_rock_02.glb",
+      "type": "nature",
+      "scale": 1.0
+    },
+    "sharp_rock_piece_01": {
+      "name": "sharp_rock_piece_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sharp_rock_piece_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sharp_rock_piece_011": {
+      "name": "sharp_rock_piece_011",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sharp_rock_piece_011.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sharp_rock_piece_02": {
+      "name": "sharp_rock_piece_02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sharp_rock_piece_02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sharp_rock_piece_03": {
+      "name": "sharp_rock_piece_03",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sharp_rock_piece_03.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sharp_rock_piece_04": {
+      "name": "sharp_rock_piece_04",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sharp_rock_piece_04.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sharp_rock_piece_05": {
+      "name": "sharp_rock_piece_05",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sharp_rock_piece_05.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "shield_sphere": {
+      "name": "Shield Sphere",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/shield_sphere.glb",
+      "type": "props",
+      "scale": 1.0
+    },
+    "shield_sphere_01": {
+      "name": "shield_sphere_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/shield_sphere_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sign": {
+      "name": "Sign",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/sign.glb",
+      "type": "props",
+      "scale": 1.0
+    },
+    "skill_water": {
+      "name": "skill_water",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/skill_water.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "small_ship_skylight_01": {
+      "name": "Small Ship Skylight 01",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/small_ship_skylight_01.glb",
+      "type": "ships",
+      "scale": 1.0
+    },
+    "small_ship_skylight_02": {
+      "name": "Small Ship Skylight 02",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/small_ship_skylight_02.glb",
+      "type": "ships",
+      "scale": 1.0
+    },
+    "small_ship_skylight_02_01": {
+      "name": "Small Ship Skylight 02 01",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/small_ship_skylight_02_01.glb",
+      "type": "ships",
+      "scale": 1.0
+    },
+    "sphere_light": {
+      "name": "sphere_light",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sphere_light.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "spider_web": {
+      "name": "spider_web",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/spider_web.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "spin water-under": {
+      "name": "spin water-under",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/spin water-under.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "spin water-under01": {
+      "name": "spin water-under01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/spin water-under01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "spin water": {
+      "name": "spin water",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/spin water.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "spot_center_pan": {
+      "name": "spot_center_pan",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/spot_center_pan.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "stone": {
+      "name": "Stone",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/stone.glb",
+      "type": "props",
+      "scale": 1.0
+    },
+    "sujunglight03": {
+      "name": "sujunglight03",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sujunglight03.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "summons_jin_hard line": {
+      "name": "Summons Jin Hard Line",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/summons_jin_hard line.glb",
+      "type": "skill_effects",
+      "scale": 1.0
+    },
+    "summons_jin_hard line_ddi": {
+      "name": "Summons Jin Hard Line Ddi",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/summons_jin_hard line_ddi.glb",
+      "type": "skill_effects",
+      "scale": 1.0
+    },
+    "summons_jin_line word": {
+      "name": "Summons Jin Line Word",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/summons_jin_line word.glb",
+      "type": "skill_effects",
+      "scale": 1.0
+    },
+    "summons_jin_line word_ddi": {
+      "name": "Summons Jin Line Word Ddi",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/summons_jin_line word_ddi.glb",
+      "type": "skill_effects",
+      "scale": 1.0
+    },
+    "summons_jin_textile": {
+      "name": "Summons Jin Textile",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/summons_jin_textile.glb",
+      "type": "skill_effects",
+      "scale": 1.0
+    },
+    "summons_jin_triangle01": {
+      "name": "Summons Jin Triangle01",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/summons_jin_triangle01.glb",
+      "type": "skill_effects",
+      "scale": 1.0
+    },
+    "summons_jin_triangle01_ddi": {
+      "name": "Summons Jin Triangle01 Ddi",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/summons_jin_triangle01_ddi.glb",
+      "type": "skill_effects",
+      "scale": 1.0
+    },
+    "summons_jin_triangle02": {
+      "name": "Summons Jin Triangle02",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/summons_jin_triangle02.glb",
+      "type": "skill_effects",
+      "scale": 1.0
+    },
+    "summons_jin_triangle02_ddi": {
+      "name": "Summons Jin Triangle02 Ddi",
+      "category": "effects",
+      "glbPath": "./assets/models/converted/summons_jin_triangle02_ddi.glb",
+      "type": "skill_effects",
+      "scale": 1.0
+    },
+    "summons_line word": {
+      "name": "summons_line word",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/summons_line word.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sunset01": {
+      "name": "sunset01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sunset01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sunset02": {
+      "name": "sunset02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sunset02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sunset03": {
+      "name": "sunset03",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sunset03.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sunset04": {
+      "name": "sunset04",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sunset04.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "sword": {
+      "name": "sword",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/sword.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "tal-main": {
+      "name": "tal-main",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/tal-main.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "togui": {
+      "name": "togui",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/togui.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "twist": {
+      "name": "twist",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/twist.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "twist_01": {
+      "name": "twist_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/twist_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "under_pan": {
+      "name": "under_pan",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/under_pan.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "up_pan": {
+      "name": "up_pan",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/up_pan.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "waterfall-turtle01-box": {
+      "name": "waterfall-turtle01-box",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/waterfall-turtle01-box.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wind-won-01-m": {
+      "name": "wind-won-01-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wind-won-01-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wind-won-01": {
+      "name": "wind-won-01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wind-won-01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wind-won-02-m": {
+      "name": "wind-won-02-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wind-won-02-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wind-won-02": {
+      "name": "wind-won-02",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wind-won-02.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wind_screw": {
+      "name": "wind_screw",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wind_screw.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wind_screw_01": {
+      "name": "wind_screw_01",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wind_screw_01.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wing-left": {
+      "name": "wing-left",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wing-left.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wing-right": {
+      "name": "wing-right",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wing-right.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wood_piece": {
+      "name": "Wood Piece",
+      "category": "environment",
+      "glbPath": "./assets/models/converted/wood_piece.glb",
+      "type": "props",
+      "scale": 1.0
+    },
+    "wordcone04-160cm": {
+      "name": "wordcone04-160cm",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wordcone04-160cm.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wordcone04-f01-160cm": {
+      "name": "wordcone04-f01-160cm",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wordcone04-f01-160cm.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wordcone04-m": {
+      "name": "wordcone04-m",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wordcone04-m.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wordcone04": {
+      "name": "wordcone04",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wordcone04.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wordcone08-160cm": {
+      "name": "wordcone08-160cm",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wordcone08-160cm.glb",
+      "type": "unknown",
+      "scale": 1.0
+    },
+    "wordcone08-f01-160cm": {
+      "name": "wordcone08-f01-160cm",
+      "category": "misc",
+      "glbPath": "./assets/models/converted/wordcone08-f01-160cm.glb",
+      "type": "unknown",
+      "scale": 1.0
+    }
+  }
+}

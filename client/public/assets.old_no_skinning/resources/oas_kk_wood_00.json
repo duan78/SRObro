@@ -1,0 +1,16 @@
+{
+  "file_name": "oas_kk_wood_00",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree\\oas_kk_wood_00.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree\\oas_kk_wood_01.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree\\oas_kk_wood_02.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree\\oas_kk_wood_03.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree\\oas_kk_wood_al00.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\karakorm\\kako-tree\\oas_kk_wood_00.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

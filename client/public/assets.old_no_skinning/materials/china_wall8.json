@@ -1,0 +1,28 @@
+{
+  "file_name": "china_wall8",
+  "textures": [
+    "china_wall_sign02.ddj",
+    "china_wall_sign01.ddj",
+    "china_wall_tile.ddj",
+    "china_wall_sideroof.ddj",
+    "china_wall_sideroof01.ddj",
+    "china_wall_dan.ddj",
+    "china_wall_roofex.ddj",
+    "china_wall_stair.ddj",
+    "china_wall_walltile02.ddj",
+    "china_wall_gateline.ddj",
+    "china_wall_dragonpattern.ddj",
+    "china_wall_blackroof02.ddj",
+    "china_wall_blackroof.ddj",
+    "china_wall_blackroof01.ddj",
+    "china_wall_walltile05.ddj",
+    "china_wall_maintile.ddj",
+    "china_wall_wallhole.ddj",
+    "china_wall_walltile04.ddj",
+    "china_wall_walltile01.ddj",
+    "china_wall_gatepattern.ddj",
+    "china_wall_lineart.ddj",
+    "china_wall_flag.ddj",
+    "china_wall_door.ddj"
+  ]
+}

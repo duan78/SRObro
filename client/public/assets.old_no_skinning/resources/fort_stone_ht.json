@@ -1,0 +1,14 @@
+{
+  "file_name": "fort_stone_ht",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ht01.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ht01.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ht02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\fort_stone\\fort_stone_ht.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

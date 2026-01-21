@@ -1,0 +1,39 @@
+{
+  "file_name": "jinsi_floor02_small_09",
+  "meshes": [
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_center_r09.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_cloth01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_cloth02.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_coldown01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_column01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_ctile01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_dan01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_door01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_relief01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_relief02.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_relief03.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_roof01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_sign01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_stair01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_tile01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_tile02.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_tuk01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_up01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_uphall01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_wall01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_wall01_01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_colun02.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_colun03.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_02\\small_room\\jinsi_floor2_s_center_r09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\floor_01\\jinsi_floor02_small.bmt"
+  ],
+  "effects": [
+    "system\\system_dungeonpotal.efp",
+    "system\\system_dungeonpotal.efp",
+    "dun\\sunset.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

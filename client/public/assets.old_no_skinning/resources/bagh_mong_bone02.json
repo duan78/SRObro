@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_mong_bone02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_bone02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_bone.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

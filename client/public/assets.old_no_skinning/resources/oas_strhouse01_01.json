@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_strhouse01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_ strhouse01_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_ strhouse01_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_ strhouse01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oas_ strhouse01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

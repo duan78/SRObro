@@ -1,0 +1,18 @@
+{
+  "file_name": "open_market_juel",
+  "meshes": [
+    "prim\\mesh\\npc\\npc\\open_market_juel_part1.bms",
+    "prim\\mesh\\npc\\npc\\open_market_juel_part2_part1.bms",
+    "prim\\mesh\\npc\\npc\\open_market_juel_part2_part2_part1.bms",
+    "prim\\mesh\\npc\\npc\\open_market_juel_part2_part2_part2.bms",
+    "prim\\mesh\\npc\\npc\\open_market_juel_01_part1.bms",
+    "prim\\mesh\\npc\\npc\\open_market_juel_01_part2_part1.bms",
+    "prim\\mesh\\npc\\npc\\open_market_juel_01_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\npc\\open_market_juel.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

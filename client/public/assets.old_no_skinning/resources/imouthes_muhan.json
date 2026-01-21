@@ -1,0 +1,15 @@
+{
+  "file_name": "imouthes_muhan",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\imouthes02.bms",
+    "prim\\mesh\\mob\\sd\\imouthes_part1.bms",
+    "prim\\mesh\\mob\\sd\\imouthes_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\imouthes_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\imouthes_muhan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

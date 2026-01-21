@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_rich4_buil03",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan06\\rich04\\cj_rich04_buil03_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich04\\cj_rich04_buil03_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich04\\cj_rich04_buil03_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich04\\cj_rich04_buil03_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich04\\cj_rich04_buil03_wall02.bms",
+    "prim\\mesh\\bldg\\china\\jangan06\\rich04\\cj_rich_buil01_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan06\\rich04\\cj_rich04_buil03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

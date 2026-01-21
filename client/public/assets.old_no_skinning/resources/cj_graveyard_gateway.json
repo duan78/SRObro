@@ -1,0 +1,18 @@
+{
+  "file_name": "cj_graveyard_gateway",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_gateway01.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_gateway01.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_gateway02.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_gateway03.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_gateway04.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_gateway05.bms",
+    "prim\\mesh\\bldg\\china\\graveyard\\cj_graveyard_gateway06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\graveyard\\cj_graveyard_gateway.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

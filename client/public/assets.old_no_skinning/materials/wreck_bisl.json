@@ -1,0 +1,22 @@
+{
+  "file_name": "wreck_bisl",
+  "textures": [
+    "wreck_sship_box.ddj",
+    "wreck_sship_drum.ddj",
+    "wreck_isl_gro02.ddj",
+    "wreck_isl_gro03.ddj",
+    "wreck_isl_gro04.ddj",
+    "wreck_isl_gro2_con.ddj",
+    "wreck_isl_gro3_con.ddj",
+    "wreck_isl_gro_con.ddj",
+    "wreck_isl_ground.ddj",
+    "wreck_isl_ice.ddj",
+    "wreck_isl_ice2.ddj",
+    "wreck_isl_icicle2.ddj",
+    "wreck_isl_wall.ddj",
+    "wreck_isl_rock.ddj",
+    "wreck_isl_wall02.ddj",
+    "wreck_bship_out_line02.ddj",
+    "wreck_isle_gro01.ddj"
+  ]
+}

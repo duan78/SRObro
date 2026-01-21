@@ -1,0 +1,13 @@
+{
+  "file_name": "jinsi_flame_l",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\common\\jinsi_flame_l.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_green_flame.efp",
+    "dun\\yellow_green_flame_glow.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

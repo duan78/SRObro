@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_field_military_target03",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_target03_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_target03_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_target03_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\military_camp\\bagh_field_military_target03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

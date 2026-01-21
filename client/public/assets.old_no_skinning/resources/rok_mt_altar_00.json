@@ -1,0 +1,25 @@
+{
+  "file_name": "rok_mt_altar_00",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_00.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_00.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_02.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_03.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_04.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_05.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_06.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_07.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_08.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_09.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_10.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_11.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_12.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\altar\\rok_mt_altar_00.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

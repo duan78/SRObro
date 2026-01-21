@@ -1,0 +1,33 @@
+{
+  "file_name": "demon_topf_poison",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_topf_01_01.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_01_01.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_01_02.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_01_03.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_01_04.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_01_05.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_01_06.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_01_07.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_02_01.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_02_02.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_02_03.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_02_04.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_02_05.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_02_06_alpha.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_02_door.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_03_01.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_03_02.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_03_03.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_03_04.bms",
+    "prim\\mesh\\dun\\demon\\demon_topf_03_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_topf.bmt"
+  ],
+  "effects": [
+    "dun\\demon_topf_poison.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

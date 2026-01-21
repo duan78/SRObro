@@ -1,0 +1,13 @@
+{
+  "file_name": "piety_fountain",
+  "textures": [
+    "piety_fountain03.ddj",
+    "piety_area.ddj",
+    "piety_fountain04.ddj",
+    "piety_fountain02.ddj",
+    "piety_stairs.ddj",
+    "piety_fountain01.ddj",
+    "piety_fountain_weapon.ddj",
+    "piety_fountain_body.ddj"
+  ]
+}

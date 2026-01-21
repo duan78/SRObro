@@ -1,0 +1,10 @@
+{
+  "file_name": "demon_flame_poison01",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 81042
+}

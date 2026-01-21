@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_m_earthspirit",
+  "textures": [
+    "avatar_m_earthspirit_hat.ddj",
+    "avatar_m_earthspirit.ddj",
+    "avatar_m_earthspirit_attach.ddj",
+    "avatar_m_earthspirit_sa.ddj",
+    "avatar_m_earthspirit_hat_effect.ddj"
+  ]
+}

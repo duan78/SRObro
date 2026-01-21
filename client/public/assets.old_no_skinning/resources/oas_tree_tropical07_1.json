@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_tree_tropical07_1",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\hotang\\tre_palm07_1_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\tarim\\tre_palm02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

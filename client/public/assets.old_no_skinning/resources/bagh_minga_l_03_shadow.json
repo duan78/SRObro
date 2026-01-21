@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_minga_l_03_shadow",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingal03_shadow.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingal03_shadow02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\minga\\bagh_mingal03_shadow03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_minga_l_shadow.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

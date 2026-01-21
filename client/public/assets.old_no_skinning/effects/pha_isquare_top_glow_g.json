@@ -1,0 +1,10 @@
+{
+  "file_name": "pha_isquare_top_glow_g",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2448
+}

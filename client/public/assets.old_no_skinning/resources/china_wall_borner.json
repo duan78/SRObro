@@ -1,0 +1,12 @@
+{
+  "file_name": "china_wall_borner",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\flag_war\\china_wall_borner.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

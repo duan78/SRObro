@@ -1,0 +1,12 @@
+{
+  "file_name": "cg_gardenvil_stone",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\greenfield\\cg_gardenvill_stone.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\greenfield\\cg_gardenvill.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

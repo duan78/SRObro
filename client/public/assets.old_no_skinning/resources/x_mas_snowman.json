@@ -1,0 +1,14 @@
+{
+  "file_name": "x_mas_snowman",
+  "meshes": [
+    "prim\\mesh\\etc\\x_mas\\x_mas_boxset01_ribbon.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_boxset01_snow01.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_boxset01_snow02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\x_mas\\x_mas_snowman.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

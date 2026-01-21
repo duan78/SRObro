@@ -1,0 +1,12 @@
+{
+  "file_name": "rok_nest04",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\rock area\\rok_nest04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\rock area\\rok_nest04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

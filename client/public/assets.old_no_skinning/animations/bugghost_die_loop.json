@@ -1,0 +1,32 @@
+{
+  "file_name": "bugghost_die_loop",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2974,
+  "animation_name": "\u0011",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    2,
+    12,
+    2,
+    12,
+    2,
+    12,
+    2,
+    13,
+    616,
+    3135,
+    614,
+    3124,
+    628,
+    3124,
+    560,
+    2623,
+    612
+  ]
+}

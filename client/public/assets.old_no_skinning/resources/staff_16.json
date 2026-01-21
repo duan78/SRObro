@@ -1,0 +1,12 @@
+{
+  "file_name": "staff_16",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\staff_16.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_staff_15.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

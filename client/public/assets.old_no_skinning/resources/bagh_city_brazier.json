@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_city_brazier",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_city_brazier.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_brazier.bmt"
+  ],
+  "effects": [
+    "map\\frame6.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

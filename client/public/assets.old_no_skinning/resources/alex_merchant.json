@@ -1,0 +1,42 @@
+{
+  "file_name": "alex_merchant",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_bottom01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_bottom01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_bottom02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_box.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_column01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_column02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_column03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_dark.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_darkwall.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_door01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_door02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_drum01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_drum02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_flag.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_grass.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_stair01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_stair02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_statue01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_statue03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_statue04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_wall01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_wall02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_wall03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_wall04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_wall05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_wall06.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_wall07.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_wall08.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_wall09.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_wall10.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_merchant_window.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\union\\alex_merchant.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

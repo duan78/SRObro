@@ -1,0 +1,32 @@
+{
+  "file_name": "demon_tower_lowroom_ice_01",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l09.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l01.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l02.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l03.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l04.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l05.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l06.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l07.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l08.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l09.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l10.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l11.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l12.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l13.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l14.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l15.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l16.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l17.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l18.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l19.bms",
+    "prim\\mesh\\dun\\demon\\ice\\demon_tower_lowroom_01\\demon_tower_l20.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\ice\\demon_tower_lowroom_ice_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

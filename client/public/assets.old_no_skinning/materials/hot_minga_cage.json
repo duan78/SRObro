@@ -1,0 +1,8 @@
+{
+  "file_name": "hot_minga_cage",
+  "textures": [
+    "hot_minga_cagefence.ddj",
+    "hot_minga_cageroof_02.ddj",
+    "hot_minga_cageroof_01.ddj"
+  ]
+}

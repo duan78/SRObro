@@ -1,0 +1,15 @@
+{
+  "file_name": "avatar_m_gm_uniform",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\fort_man_part1.bms",
+    "prim\\mesh\\item\\etc\\fort_man_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_gm_uniform.bmt",
+    "prim\\mtrl\\item\\etc\\fort_man_enemy.bmt",
+    "prim\\mtrl\\item\\etc\\fort_man_attenemy.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

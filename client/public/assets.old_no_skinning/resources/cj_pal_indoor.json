@@ -1,0 +1,27 @@
+{
+  "file_name": "cj_pal_indoor",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_floor01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_door.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_door01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_door03.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_floor01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_pillar.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_door02.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_door04.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_door05.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_fillar02.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_floor02.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_floor03.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_roof01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_roof02_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_roof03_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_indoor_wall01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_indoor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

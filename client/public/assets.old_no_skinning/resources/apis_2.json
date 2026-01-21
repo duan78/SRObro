@@ -1,0 +1,28 @@
+{
+  "file_name": "apis_2",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\apis_part1.bms",
+    "prim\\mesh\\mob\\sd\\apis_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\apis2.bmt"
+  ],
+  "effects": [
+    "monster\\sd\\keep_apis_head.efp",
+    "monster\\dust_uruchi_down.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\sd\\apis\\apis_stand1.ban",
+    "prim\\ani\\mob\\sd\\apis\\apis_run.ban",
+    "prim\\ani\\mob\\sd\\apis\\apis_attack1.ban",
+    "prim\\ani\\mob\\sd\\apis\\apis_attack2.ban",
+    "prim\\ani\\mob\\sd\\apis\\apis_attack4.ban",
+    "prim\\ani\\mob\\sd\\apis\\apis_walk.ban",
+    "prim\\ani\\mob\\sd\\apis\\apis_attack3.ban",
+    "prim\\ani\\mob\\sd\\apis\\apis_attack5.ban",
+    "prim\\ani\\mob\\sd\\apis\\apis_damage01.ban",
+    "prim\\ani\\mob\\sd\\apis\\apis_die.ban",
+    "prim\\ani\\mob\\sd\\apis\\apis_die_rm.ban"
+  ],
+  "textures": []
+}

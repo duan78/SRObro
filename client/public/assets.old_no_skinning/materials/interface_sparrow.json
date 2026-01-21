@@ -1,0 +1,7 @@
+{
+  "file_name": "interface_sparrow",
+  "textures": [
+    "interface_sparrow_body.ddj",
+    "interface_sparrow_wing.ddj"
+  ]
+}

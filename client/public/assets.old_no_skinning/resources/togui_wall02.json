@@ -1,0 +1,14 @@
+{
+  "file_name": "togui_wall02",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\togui\\togui_wall02_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_wall02_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_wall02_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\togui\\togui_wall01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

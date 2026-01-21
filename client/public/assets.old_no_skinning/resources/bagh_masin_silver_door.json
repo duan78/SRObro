@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_masin_silver_door",
+  "meshes": [
+    "prim\\mesh\\dun\\arabia\\bagh_masin\\silver\\bagh_masin_silver_door.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\arabia\\bagh_masin\\bagh_masin_silver_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

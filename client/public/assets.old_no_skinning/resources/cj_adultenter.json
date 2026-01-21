@@ -1,0 +1,24 @@
+{
+  "file_name": "cj_adultenter",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adultenter_column.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adultenter_column.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adultenter_alpha.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adultenter_column2side.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adultenter_column_light.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adultenter_etc.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adultenter_etc2side.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adultenter_toy_light.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adultenter_lamp.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adultenter_roof.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan02\\cj_adultenter.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_orange_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

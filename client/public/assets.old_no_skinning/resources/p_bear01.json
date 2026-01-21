@@ -1,0 +1,28 @@
+{
+  "file_name": "p_bear01",
+  "meshes": [
+    "prim\\mesh\\cos\\p_bear01_part1.bms",
+    "prim\\mesh\\cos\\p_bear01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_bear01.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\p_bear01\\p_bear01_stand01.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_stand02.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_walk.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_run.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_attack01.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_damage01.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_die.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_die_rm.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_down.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_down_rm.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_down_damage.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_down_up.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_down_die.ban",
+    "prim\\ani\\cos\\p_bear01\\p_bear01_attract01.ban"
+  ],
+  "textures": []
+}

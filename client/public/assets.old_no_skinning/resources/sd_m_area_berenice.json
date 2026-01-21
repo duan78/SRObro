@@ -1,0 +1,14 @@
+{
+  "file_name": "sd_m_area_berenice",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_berenice_2al.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_berenice_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_berenice_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_m_area_berenice.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

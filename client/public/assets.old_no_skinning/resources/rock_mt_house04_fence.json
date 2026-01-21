@@ -1,0 +1,12 @@
+{
+  "file_name": "rock_mt_house04_fence",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house04_fence.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\village\\rock_mt_house04_deco.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

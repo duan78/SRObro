@@ -1,0 +1,27 @@
+{
+  "file_name": "tower_stand",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 203,
+  "animation_name": "\u000b",
+  "data_blocks": [
+    512100,
+    7680,
+    256,
+    512,
+    0,
+    512000,
+    512,
+    1536,
+    0,
+    0,
+    613,
+    0,
+    128,
+    128,
+    184,
+    128,
+    128
+  ]
+}

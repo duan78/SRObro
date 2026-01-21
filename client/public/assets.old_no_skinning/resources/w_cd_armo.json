@@ -1,0 +1,20 @@
+{
+  "file_name": "w_cd_armo",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_armo-wall.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_armo-wall.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_armo_armor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_armo_armor_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_armo_shield.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_armo_shield_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_armo-winlight.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_armo_box01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_armo_box02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_armo.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

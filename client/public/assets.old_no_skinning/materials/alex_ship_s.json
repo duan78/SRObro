@@ -1,0 +1,19 @@
+{
+  "file_name": "alex_ship_s",
+  "textures": [
+    "alex_boat_body01.ddj",
+    "alex_boat_window.ddj",
+    "alex_boat_mast.ddj",
+    "alex_boat_sail.ddj",
+    "alex_boat_roof.ddj",
+    "alex_boat_body03.ddj",
+    "alex_boat_body02.ddj",
+    "alex_boat_body06.ddj",
+    "alex_boat_body05.ddj",
+    "alex_boat_body04.ddj",
+    "alex_boat_body07.ddj",
+    "alex_boat_roap.ddj",
+    "alex_boat_wall.ddj",
+    "alex_boat_door.ddj"
+  ]
+}

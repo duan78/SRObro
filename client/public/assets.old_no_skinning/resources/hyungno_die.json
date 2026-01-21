@@ -1,0 +1,21 @@
+{
+  "file_name": "hyungno_die",
+  "meshes": [
+    "prim\\mesh\\mob\\wchina\\hyungno_die_lower.bms",
+    "prim\\mesh\\mob\\wchina\\hyungno_die_sword.bms",
+    "prim\\mesh\\mob\\wchina\\hyungno_die_upper_part1.bms",
+    "prim\\mesh\\mob\\wchina\\hyungno_die_upper_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\wchina\\hyungno.bmt",
+    "prim\\mtrl\\mob\\wchina\\hyungno_champ.bmt"
+  ],
+  "effects": [
+    "monster\\dead\\dead_redblood.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\wchina\\hyungno\\hyungno_die.ban",
+    "prim\\ani\\mob\\wchina\\hyungno\\hyungno_die_rm.ban"
+  ],
+  "textures": []
+}

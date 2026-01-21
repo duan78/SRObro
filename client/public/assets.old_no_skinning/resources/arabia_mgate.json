@@ -1,0 +1,48 @@
+{
+  "file_name": "arabia_mgate",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_13.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_14.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_15.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_16.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_17.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_18.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate_19.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_arabia_f\\arabianf_mgate.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame_sb_s03.efp",
+    "dun\\red_orange_flame_sb_02.efp",
+    "dun\\red_orange_flame_sb_s01.efp",
+    "dun\\red_orange_flame_sb_s03.efp",
+    "dun\\red_orange_flame_sb_s03.efp",
+    "dun\\red_orange_flame_sb_s03.efp",
+    "dun\\red_orange_flame_sb_s03.efp",
+    "dun\\red_orange_flame_sb_s03.efp",
+    "dun\\red_orange_flame_sb_s01.efp",
+    "dun\\red_orange_flame_sb.efp",
+    "dun\\red_orange_flame_sb_01.efp",
+    "dun\\red_orange_flame_sb_01.efp",
+    "dun\\red_orange_flame_sb.efp",
+    "dun\\red_orange_flame_sb_01.efp",
+    "dun\\red_orange_flame_sb_01.efp",
+    "map\\bagh_mgate_fire.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

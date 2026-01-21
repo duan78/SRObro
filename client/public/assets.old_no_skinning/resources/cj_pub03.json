@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_pub03",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_pub03_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult03_winlight.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_pub03_roof.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan02\\cj_pub03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

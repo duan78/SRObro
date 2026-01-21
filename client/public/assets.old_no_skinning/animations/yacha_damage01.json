@@ -1,0 +1,29 @@
+{
+  "file_name": "yacha_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1641,
+  "animation_name": "\u000e",
+  "data_blocks": [
+    433,
+    30,
+    0,
+    5,
+    0,
+    66,
+    200,
+    400,
+    433,
+    10,
+    12,
+    5,
+    10,
+    355171,
+    703149,
+    5,
+    15,
+    1329,
+    1600
+  ]
+}

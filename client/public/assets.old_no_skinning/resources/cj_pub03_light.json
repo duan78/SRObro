@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_pub03_light",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan02\\cj_pub03.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_red.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

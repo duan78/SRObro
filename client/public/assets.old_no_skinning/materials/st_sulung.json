@@ -1,0 +1,12 @@
+{
+  "file_name": "st_sulung",
+  "textures": [
+    "st_sulung_center.ddj",
+    "st_sulung_dan.ddj",
+    "st_sulung_side.ddj",
+    "st_sulung_sphinx01.ddj",
+    "st_sulung_sphinx02.ddj",
+    "st_sulung_stair.ddj",
+    "st_sulung_tile.ddj"
+  ]
+}

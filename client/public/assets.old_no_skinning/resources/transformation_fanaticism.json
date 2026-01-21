@@ -1,0 +1,28 @@
+{
+  "file_name": "transformation_fanaticism",
+  "meshes": [
+    "prim\\mesh\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\transformation_fanaticism.bmt",
+    "prim\\mtrl\\mob\\jupiter\\transformation_fanaticism_clon.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_stand1.ban",
+    "prim\\ani\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_stand2.ban",
+    "prim\\ani\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_walk.ban",
+    "prim\\ani\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_run.ban",
+    "prim\\ani\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_attack02.ban",
+    "prim\\ani\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_attack03.ban",
+    "prim\\ani\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_attack04.ban",
+    "prim\\ani\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_damage1.ban",
+    "prim\\ani\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_die.ban",
+    "prim\\ani\\mob\\jupiter\\transformation_fanaticism\\transformation_fanaticism_die_rm.ban"
+  ],
+  "textures": []
+}

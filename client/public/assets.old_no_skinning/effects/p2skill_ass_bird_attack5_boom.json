@@ -1,0 +1,10 @@
+{
+  "file_name": "p2skill_ass_bird_attack5_boom",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 36664
+}

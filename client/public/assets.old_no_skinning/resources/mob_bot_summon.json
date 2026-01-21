@@ -1,0 +1,13 @@
+{
+  "file_name": "mob_bot_summon",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\common\\mob_bot_summon.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\common\\mob_bot_summon\\mob_bot_summon_stand01.ban",
+    "prim\\ani\\mob\\common\\mob_bot_summon\\mob_bot_summon_attack01.ban"
+  ],
+  "textures": []
+}

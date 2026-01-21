@@ -1,0 +1,10 @@
+{
+  "file_name": "dust_fortress_demage",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 7595
+}

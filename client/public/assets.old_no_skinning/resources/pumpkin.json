@@ -1,0 +1,18 @@
+{
+  "file_name": "pumpkin",
+  "meshes": [
+    "prim\\mesh\\mob\\common\\pumpkin.bms",
+    "prim\\mesh\\mob\\common\\pumpkin01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\common\\pumpkin.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\common\\pumpkin\\pumpkin_stand01.ban",
+    "prim\\ani\\mob\\common\\pumpkin\\pumpkin_die.ban",
+    "prim\\ani\\mob\\common\\pumpkin\\pumpkin_damage.ban",
+    "prim\\ani\\mob\\common\\pumpkin\\pumpkin_die_rm.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_kara_icebridge",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kk_icebridge.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\karakorm\\oas_kk_icebridge.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

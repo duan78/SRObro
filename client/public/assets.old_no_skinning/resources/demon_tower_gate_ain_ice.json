@@ -1,0 +1,10 @@
+{
+  "file_name": "demon_tower_gate_ain_ice",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\ice\\demon_tower_gate_ain_ice.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

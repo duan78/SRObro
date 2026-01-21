@@ -1,0 +1,16 @@
+{
+  "file_name": "oas_hot_armo",
+  "textures": [
+    "Oas_hot_armo_al.tga",
+    "oas_hot_armo_al.ddj",
+    "oas_hot_armo_armor.ddj",
+    "w_cd_okdoor_chain.ddj",
+    "oas_hot_armo_pillar.ddj",
+    "oas_hot_armo_shield.ddj",
+    "oas_hot_armo_statue.ddj",
+    "oas_hot_armor_roof.ddj",
+    "oas_hot_armor_wall01.ddj",
+    "oas_hot_armor_wall02.ddj",
+    "oas_hot_armor_winlight.ddj"
+  ]
+}

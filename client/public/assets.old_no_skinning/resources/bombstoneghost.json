@@ -1,0 +1,36 @@
+{
+  "file_name": "bombstoneghost",
+  "meshes": [
+    "prim\\mesh\\mob\\qinshi\\tombstoneghost_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\tombstoneghost_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\tombstoneghost.bmt"
+  ],
+  "effects": [
+    "skill\\china\\bow_area_bomb_b.efp",
+    "skill\\china\\bow_area_bomb_b.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_stand01.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_walk.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_run.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_stand02.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_attack01.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_attack02.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_attack03.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_attack04.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_damage01.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_die.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_die_rm.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_down.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_down_rm.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_down_damage.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_down_up.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_down_die.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_attack05_ready01.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\tombstoneghost_attack05_wait01.ban",
+    "prim\\ani\\mob\\qinshi\\tombstoneghost\\bombstoneghost_attack05_shot01.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "ambient_boneroc_spine",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17392
+}

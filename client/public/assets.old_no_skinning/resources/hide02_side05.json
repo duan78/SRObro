@@ -1,0 +1,27 @@
+{
+  "file_name": "hide02_side05",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_bottom05.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_ceiling.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_column01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_column02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_column03.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_ground01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_ground02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_wall01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_wall02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_wall03.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_sidedoor_01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_sidedoor_02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_sidedoor_03.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_devil01_01.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_devil01_02.bms",
+    "prim\\mesh\\dun\\jupiter\\hide\\hide02_side_bottom05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\hide\\hide02_side.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

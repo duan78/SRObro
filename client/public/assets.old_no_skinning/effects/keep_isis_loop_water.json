@@ -1,0 +1,10 @@
+{
+  "file_name": "keep_isis_loop_water",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 9673
+}

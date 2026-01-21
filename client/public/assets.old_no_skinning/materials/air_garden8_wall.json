@@ -1,0 +1,11 @@
+{
+  "file_name": "air_garden8_wall",
+  "textures": [
+    "air_garden_wall03_01.ddj",
+    "air_garden_wall01.ddj",
+    "air_garden_out_wall01_01.ddj",
+    "air_garden_out_wall02_01.ddj",
+    "air_garden_out_wall02.ddj",
+    "air_garden_wall_tile.ddj"
+  ]
+}

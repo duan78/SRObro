@@ -1,0 +1,13 @@
+{
+  "file_name": "dagger_15_l",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\dagger_15.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_dagger_15_l.efp",
+    "system\\item_eu_dagger_15_l_f.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

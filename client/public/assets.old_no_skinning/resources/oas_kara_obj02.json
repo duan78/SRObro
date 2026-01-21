@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_kara_obj02",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_obj02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\karakorm\\oas_kara_obj01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

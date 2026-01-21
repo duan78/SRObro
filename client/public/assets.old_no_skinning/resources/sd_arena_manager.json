@@ -1,0 +1,13 @@
+{
+  "file_name": "sd_arena_manager",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_arena_manager_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_arena_manager_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_arena_manager.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "arabia_najima",
+  "meshes": [
+    "prim\\mesh\\npc\\common\\rocmountainquest_oldwoman02.bms",
+    "prim\\mesh\\npc\\common\\rocmountainquest_oldwoman01_part1.bms",
+    "prim\\mesh\\npc\\common\\rocmountainquest_oldwoman01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\common\\arabia_najima.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

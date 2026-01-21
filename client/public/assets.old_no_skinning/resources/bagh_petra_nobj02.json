@@ -1,0 +1,18 @@
+{
+  "file_name": "bagh_petra_nobj02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj02_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj02_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj02_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj02_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj02_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_petra\\bagh_petra_nobj02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

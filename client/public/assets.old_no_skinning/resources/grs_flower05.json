@@ -1,0 +1,10 @@
+{
+  "file_name": "grs_flower05",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\flower\\grs_flower05.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

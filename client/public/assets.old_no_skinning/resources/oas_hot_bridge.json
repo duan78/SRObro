@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_hot_bridge",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_bridge.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_bridge.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_bridge02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oas_hot_bridge.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

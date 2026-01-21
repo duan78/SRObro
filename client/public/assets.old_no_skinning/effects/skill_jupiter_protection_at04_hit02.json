@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_jupiter_protection_at04_hit02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 49254
+}

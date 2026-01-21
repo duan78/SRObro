@@ -1,0 +1,16 @@
+{
+  "file_name": "alex_habor_etc06",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_habor_etc06_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_habor_etc06_02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_habor_etc06_03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_habor_etc06_04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\deco\\alex_habor_etc06_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\deco\\alex_habor_etc.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

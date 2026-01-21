@@ -1,0 +1,12 @@
+{
+  "file_name": "wreck_float",
+  "textures": [
+    "wreck_ship_out_box.ddj",
+    "wreck_ship_out_drum.ddj",
+    "wreck_sship_out_floor08.ddj",
+    "wreck_sship_out_trunk01.ddj",
+    "wreck_sship_out_floor05.ddj",
+    "wreck_sship_out_mast03.ddj",
+    "wreck_sship_out_column.ddj"
+  ]
+}

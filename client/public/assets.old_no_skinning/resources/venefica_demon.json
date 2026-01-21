@@ -1,0 +1,31 @@
+{
+  "file_name": "venefica_demon",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\venefica_demon_body.bms",
+    "prim\\mesh\\mob\\arabia\\venefica_demon_head.bms",
+    "prim\\mesh\\mob\\arabia\\venefica_demon_leg1.bms",
+    "prim\\mesh\\mob\\arabia\\venefica_demon_tongue.bms",
+    "prim\\mesh\\mob\\arabia\\venefica_demon_leg2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\venefica_demon_leg2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\venefica_demon.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_stand01.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_stand02.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_attack01.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_walk.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_run.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_attack03.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_attack04.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_attack05.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_attack06.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_attack09.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_attack10.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_die.ban",
+    "prim\\ani\\mob\\arabia\\venefica_demon\\venefica_demon_die_rm.ban"
+  ],
+  "textures": []
+}

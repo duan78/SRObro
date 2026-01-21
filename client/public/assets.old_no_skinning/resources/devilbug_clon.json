@@ -1,0 +1,33 @@
+{
+  "file_name": "devilbug_clon",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\devilbug.bms",
+    "prim\\mesh\\mob\\china\\devilbug_wing.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\devilbug.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_icing_on.efp",
+    "monster\\status_bad_poison.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_stand01.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_attack01.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_stand02.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_walk.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_run.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_damage01.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_damage02.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_die.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_die_loop.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_down.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_downwait.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_downdamage.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_wakeup.ban",
+    "prim\\ani\\mob\\china\\devilbug\\devilbug_downdie.ban"
+  ],
+  "textures": []
+}

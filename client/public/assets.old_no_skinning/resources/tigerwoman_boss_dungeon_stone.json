@@ -1,0 +1,21 @@
+{
+  "file_name": "tigerwoman_boss_dungeon_stone",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\tigerwoman_2side.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_wand.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_wand_2side.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_body_part1.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_body_part2_part1.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_body_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\china\\tigerwoman_body_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\bossdungeon\\tigerwoman_boss_dungeon_stone.bmt"
+  ],
+  "effects": [
+    "battle\\status_cure_burn.efp",
+    "battle\\status_cure_burn.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "cristal_glow_violet_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4655
+}

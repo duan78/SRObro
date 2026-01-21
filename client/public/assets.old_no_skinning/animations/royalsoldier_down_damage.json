@@ -1,0 +1,23 @@
+{
+  "file_name": "royalsoldier_down_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 5130,
+  "animation_name": "\u0018",
+  "data_blocks": [
+    0,
+    262144,
+    0,
+    327680,
+    288110,
+    834458,
+    274789,
+    703405,
+    4,
+    10,
+    287841,
+    288108,
+    290162
+  ]
+}

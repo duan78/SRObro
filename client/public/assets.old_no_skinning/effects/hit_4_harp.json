@@ -1,0 +1,10 @@
+{
+  "file_name": "hit_4_harp",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8367
+}

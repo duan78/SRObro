@@ -1,0 +1,7 @@
+{
+  "file_name": "uruchi_boss_dungeon_stone",
+  "textures": [
+    "prim\\mtrl\\mob\\bossdungeon\\uruchi_boss_dungeon_stone.ddj",
+    "prim\\mtrl\\mob\\oasis\\uruchi_boss_dungeon_stone.ddj"
+  ]
+}

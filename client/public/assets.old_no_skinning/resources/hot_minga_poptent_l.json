@@ -1,0 +1,18 @@
+{
+  "file_name": "hot_minga_poptent_l",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_strawrug_l.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_poptent_l.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_pottery_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_pottery_03.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_pottery_04.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_rollcarpet_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\minga\\hot_minga_strawrug_l.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\minga\\hot_minga_poptent_l.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

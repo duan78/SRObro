@@ -1,0 +1,25 @@
+{
+  "file_name": "cj_ferry_02",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_buil1_door.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_buil1_door.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_buil1_gidung.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_buil1_roof.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_flag01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_pavilion01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_pavilion02.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_roof_00.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_stone_00.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_stone_01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_tower01.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_tower02.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_toweralpha.bms",
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_02_winlight.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\cj_ferry\\cj_ferry02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

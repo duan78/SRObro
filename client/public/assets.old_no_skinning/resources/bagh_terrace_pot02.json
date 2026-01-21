@@ -1,0 +1,17 @@
+{
+  "file_name": "bagh_terrace_pot02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_terrace_pot01_01_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_terrace_pot01_01_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_terrace_pot01_01_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_terrace_pot01_01_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_terrace_pot01_02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_terrace_pot01_02_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_terrace_pot.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

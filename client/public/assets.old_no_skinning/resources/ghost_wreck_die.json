@@ -1,0 +1,20 @@
+{
+  "file_name": "ghost_wreck_die",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\ghost_wreck01_die.bms",
+    "prim\\mesh\\mob\\god\\ghost_wreck02_die.bms",
+    "prim\\mesh\\mob\\god\\ghost_wreck03_die.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\ghost_wreck.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_wreck_marauder_move_impact.efp",
+    "monster\\god\\skill_wreck_marauder_die_smoke_01.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\god\\ghost_wreck\\ghost_wreck_die.ban",
+    "prim\\ani\\mob\\god\\ghost_wreck\\ghost_wreck_die_rm.ban"
+  ],
+  "textures": []
+}

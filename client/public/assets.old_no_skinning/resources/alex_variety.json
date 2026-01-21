@@ -1,0 +1,30 @@
+{
+  "file_name": "alex_variety",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_box01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_box01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_box02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_carpet.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_column.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_drum.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_jewels01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_jewels02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_jewels03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_roof.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_stand.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_tentlight01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_tentlight01_alpha.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_tentlight02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_tentlight_chain.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_variety_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\mainshop\\alex_variety.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_orange_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

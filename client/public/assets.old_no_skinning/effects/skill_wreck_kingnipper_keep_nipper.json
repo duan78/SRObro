@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_wreck_kingnipper_keep_nipper",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10385
+}

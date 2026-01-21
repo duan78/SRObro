@@ -1,0 +1,12 @@
+{
+  "file_name": "drop_archemy_1",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\drop_archemy.bmt"
+  ],
+  "effects": [
+    "item\\drop_archemy.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

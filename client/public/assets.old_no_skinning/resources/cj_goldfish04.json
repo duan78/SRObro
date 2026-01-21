@@ -1,0 +1,13 @@
+{
+  "file_name": "cj_goldfish04",
+  "meshes": [
+    "prim\\mesh\\npc\\animal\\cj_goldfish04.bms",
+    "prim\\mesh\\npc\\animal\\cj_goldfish04_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\animal\\cj_goldfish.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

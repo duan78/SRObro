@@ -1,0 +1,12 @@
+{
+  "file_name": "axe_16_l",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\axe_16.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_axe_15_l.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

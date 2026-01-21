@@ -1,0 +1,27 @@
+{
+  "file_name": "euro_esteuro_castle_hun",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_wall01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_alpha.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_carve01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_door.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_pillar.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_roof.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_wall01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_wall02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_wall03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_wall04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_wall05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_wall06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_wall07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_wall08.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_wall09.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_castle_hun_wall10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_esteuro_castle_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

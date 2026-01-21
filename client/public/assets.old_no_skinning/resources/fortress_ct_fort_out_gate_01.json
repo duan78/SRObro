@@ -1,0 +1,27 @@
+{
+  "file_name": "fortress_ct_fort_out_gate_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_01_01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_01_01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_02.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_03.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_04.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_05.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_06.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_07.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_08.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_09.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_01.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_flame.efp",
+    "dun\\yellow_flame.efp",
+    "dun\\yellow_flame.efp",
+    "dun\\yellow_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

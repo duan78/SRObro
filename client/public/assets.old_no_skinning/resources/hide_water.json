@@ -1,0 +1,10 @@
+{
+  "file_name": "hide_water",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\hide\\hide_water.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

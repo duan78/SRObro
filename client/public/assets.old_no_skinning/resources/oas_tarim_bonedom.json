@@ -1,0 +1,16 @@
+{
+  "file_name": "oas_tarim_bonedom",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_bonedom01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_bonedom01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_bonedom02.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_bonedom03.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_bonedom04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_tarim_bonedom.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

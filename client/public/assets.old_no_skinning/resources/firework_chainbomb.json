@@ -1,0 +1,10 @@
+{
+  "file_name": "firework_chainbomb",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\firework_chainbomb.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

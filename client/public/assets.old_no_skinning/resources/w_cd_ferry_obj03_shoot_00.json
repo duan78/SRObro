@@ -1,0 +1,18 @@
+{
+  "file_name": "w_cd_ferry_obj03_shoot_00",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\w_cd_ferry_obj03_shoot_00.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\w_cd_ferry_obj03_shoot_00.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\w_cd_ferry_obj03_shoot_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\w_cd_ferry_obj03_shoot_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\w_cd_ferry_obj03_shoot_03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\w_cd_ferry_obj03_shoot_04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ferry\\w_cd_ferry_obj03_shoot_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ferry\\w_cd_ferry_obj03_shoot03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

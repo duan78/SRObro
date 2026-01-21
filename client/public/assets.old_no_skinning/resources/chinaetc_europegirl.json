@@ -1,0 +1,20 @@
+{
+  "file_name": "chinaetc_europegirl",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaetc_europegirl_2s.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_europegirl_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_europegirl_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_europegirl_part2_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_europegirl_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaetc_europegirl.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinaetc_europegirl_basic.ban",
+    "prim\\ani\\npc\\china\\chinaetc_europegirl_time.ban",
+    "prim\\ani\\npc\\china\\chinaetc_europegirl_time02.ban"
+  ],
+  "textures": []
+}

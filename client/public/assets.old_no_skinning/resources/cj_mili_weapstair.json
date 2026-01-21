@@ -1,0 +1,16 @@
+{
+  "file_name": "cj_mili_weapstair",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_weapstair01.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_weapstair01.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_weapstair02.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_weapstair03.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_weapstair04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan04\\cj_mili_weapstair.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

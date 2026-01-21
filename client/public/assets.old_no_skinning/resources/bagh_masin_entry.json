@@ -1,0 +1,22 @@
+{
+  "file_name": "bagh_masin_entry",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_entry01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_entry02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_entry03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_entry04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_entry05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_entry06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_entry07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_entry08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_entry09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_entry10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_entry11.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_masin\\bagh_masin_entry.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

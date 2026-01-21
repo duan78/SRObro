@@ -1,0 +1,32 @@
+{
+  "file_name": "alex_weapon",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_anvil.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_anvil.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_axe_staff.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_carpet01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_crossbow01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_crossbow02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_dag_sw.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_good01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_shield.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_t_dstaff.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_tent01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_tent02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_tentlight01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_tentlight01_alpha.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_tentlight02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_tentlight_chain.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_wall02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon_wood01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\mainshop\\alex_weapon.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_orange_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

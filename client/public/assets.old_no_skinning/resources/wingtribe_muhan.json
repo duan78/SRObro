@@ -1,0 +1,19 @@
+{
+  "file_name": "wingtribe_muhan",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\wingtribe_archer_muhan.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_muhan_part1.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_muhan_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_muhan_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_muhan_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_muhan_part2_part2_part2_part2.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_2side_muhan_part1.bms",
+    "prim\\mesh\\mob\\roc\\wingtribe_2side_muhan_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\wingtribe_muhan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,22 @@
+{
+  "file_name": "scorpion_stand01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 8581,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    327680,
+    0,
+    327680,
+    0,
+    0,
+    0,
+    353646,
+    704413,
+    5,
+    11,
+    1380
+  ]
+}

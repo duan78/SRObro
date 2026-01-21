@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_hunter_03",
+  "meshes": [
+    "prim\\mesh\\item\\china\\woman_item\\avatar_hunter_03_part1.bms",
+    "prim\\mesh\\item\\china\\woman_item\\avatar_hunter_03_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\woman_item\\avatar_hunter_03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

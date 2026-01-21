@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_ferry_stone02",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\cj_ferry\\cj_ferry_stone02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\cj_ferry\\cj_ferry.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

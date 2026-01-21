@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_cos_lizard_ac1_bomb",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 20082
+}

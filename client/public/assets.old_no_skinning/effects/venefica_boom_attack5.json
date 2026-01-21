@@ -1,0 +1,11 @@
+{
+  "file_name": "venefica_boom_attack5",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 71997
+}

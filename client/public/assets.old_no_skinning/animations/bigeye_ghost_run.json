@@ -1,0 +1,17 @@
+{
+  "file_name": "bigeye_ghost_run",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 11242,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    655360,
+    0,
+    327680,
+    681326,
+    834162,
+    668005
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "asiaminor_cappa_stonegb01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\kapaa\\asiaminor_cappa_stonegb01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\kapaa\\asiaminor_cappa_stone01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

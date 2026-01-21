@@ -1,0 +1,10 @@
+{
+  "file_name": "pet_gryphon_j",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8919
+}

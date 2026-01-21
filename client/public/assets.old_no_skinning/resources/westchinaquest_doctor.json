@@ -1,0 +1,18 @@
+{
+  "file_name": "westchinaquest_doctor",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaquest_doctor_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinaquest_doctor_yak.bms",
+    "prim\\mesh\\npc\\china\\chinaquest_doctor_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaquest_doctor_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaquest_doctor.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinashop_herbalistman_basic.ban",
+    "prim\\ani\\npc\\china\\chinashop_herbalistman_time.ban"
+  ],
+  "textures": []
+}

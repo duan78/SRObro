@@ -1,0 +1,10 @@
+{
+  "file_name": "dubhe_collect2_at03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 28143
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_waterfall02_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\bigwaterfall03-1.bmt"
+  ],
+  "effects": [
+    "map\\multugu-b.efp",
+    "map\\multugu-b.efp",
+    "map\\pokpomulbangul.efp",
+    "map\\pokpomulbangul.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

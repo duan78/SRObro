@@ -1,0 +1,18 @@
+{
+  "file_name": "avatar_m_2012_new_arabia",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_arabia_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_arabia_02.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_arabia_03.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_arabia_04.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_arabia_hand.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_arabia_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_arabia_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_2012_new_arabia.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

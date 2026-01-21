@@ -1,0 +1,16 @@
+{
+  "file_name": "cj_pal_south_brid03",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_south_brid03_floor02.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_south_brid03_fence_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_south_brid03_floor01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_south_brid03_floor02.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_south_brid03_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_south_brid03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

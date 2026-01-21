@@ -1,0 +1,13 @@
+{
+  "file_name": "bagh_hca02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_hca02_body.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_hca02_ca02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_hca.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

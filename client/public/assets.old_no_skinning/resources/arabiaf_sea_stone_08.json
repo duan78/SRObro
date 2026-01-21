@@ -1,0 +1,14 @@
+{
+  "file_name": "arabiaf_sea_stone_08",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\stone\\arabiaf_sea_stone_08_01.bms",
+    "prim\\mesh\\nature\\arabia\\stone\\arabiaf_sea_stone_08_01.bms",
+    "prim\\mesh\\nature\\arabia\\stone\\arabiaf_sea_stone_08_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\stone\\arabiaf_sea_stone_04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

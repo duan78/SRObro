@@ -1,0 +1,12 @@
+{
+  "file_name": "harrison_light_focus_attack5",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 28488
+}

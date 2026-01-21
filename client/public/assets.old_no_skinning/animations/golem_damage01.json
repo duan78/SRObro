@@ -1,0 +1,25 @@
+{
+  "file_name": "golem_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 454,
+  "animation_name": "\u000e",
+  "data_blocks": [
+    666,
+    30,
+    0,
+    6,
+    0,
+    66,
+    133,
+    300,
+    500,
+    666,
+    2,
+    10,
+    420707,
+    703199,
+    6
+  ]
+}

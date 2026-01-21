@@ -1,0 +1,10 @@
+{
+  "file_name": "luster_snakeman_dirty_dust",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2802
+}

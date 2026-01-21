@@ -1,0 +1,32 @@
+{
+  "file_name": "mayan_40",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_02.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_03.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_04.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_05.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_06.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_07.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_08.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_09.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_10.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_11.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_12.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_13.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_14.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_15.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_16.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_17.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_18.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_19.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_40_20.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\score_war\\mayan_40.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

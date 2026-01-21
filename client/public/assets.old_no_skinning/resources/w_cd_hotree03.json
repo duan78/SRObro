@@ -1,0 +1,17 @@
+{
+  "file_name": "w_cd_hotree03",
+  "meshes": [
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_hotree03_01.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_hotree03_01.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_hotree03_02.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_hotree03_03.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_hotree03_al02.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_hotree03_leaf.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\china\\dunhuang\\tree\\w_cd_hotree03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

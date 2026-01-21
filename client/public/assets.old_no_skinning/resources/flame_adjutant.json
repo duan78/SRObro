@@ -1,0 +1,32 @@
+{
+  "file_name": "flame_adjutant",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\flame_adjutant00.bms",
+    "prim\\mesh\\mob\\god\\flame_adjutant02.bms",
+    "prim\\mesh\\mob\\god\\flame_adjutant03.bms",
+    "prim\\mesh\\mob\\god\\flame_adjutant01_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_adjutant01_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\flame_adjutant01_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\flame_adjutant.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_flame_adjutant_fire_keep_body.efp",
+    "monster\\god\\skill_flame_adjutant_fire_keep_body_02.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\god\\flame_adjutant\\flame_adjutant_stand01.ban",
+    "prim\\ani\\mob\\god\\flame_adjutant\\flame_adjutant_attack01.ban",
+    "prim\\ani\\mob\\god\\flame_adjutant\\flame_adjutant_attack02.ban",
+    "prim\\ani\\mob\\god\\flame_adjutant\\flame_adjutant_attack03.ban",
+    "prim\\ani\\mob\\god\\flame_adjutant\\flame_adjutant_die.ban",
+    "prim\\ani\\mob\\god\\flame_adjutant\\flame_adjutant_walk.ban",
+    "prim\\ani\\mob\\god\\flame_adjutant\\flame_adjutant_run.ban",
+    "prim\\ani\\mob\\god\\flame_adjutant\\flame_adjutant_die_rm.ban"
+  ],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line_03.ddj",
+    "prim\\mtrl\\etc\\robe_line_04.ddj"
+  ]
+}

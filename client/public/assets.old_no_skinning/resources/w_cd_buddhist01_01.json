@@ -1,0 +1,16 @@
+{
+  "file_name": "w_cd_buddhist01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_buddhist01_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_buddhist01_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_buddhist01_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_buddhist01_03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_buddhist01_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ruins\\w_cd_buddhist00.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "air_garden16_out_pillar",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_out_pillar01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_out_pillar02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden16_out_pillar.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

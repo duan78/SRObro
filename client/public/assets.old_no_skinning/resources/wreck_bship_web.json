@@ -1,0 +1,15 @@
+{
+  "file_name": "wreck_bship_web",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_bship_in_obj01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_bship_in_obj02.bms",
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_bship_out_obj01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_bship_out_obj02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\wreck_bship_web.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

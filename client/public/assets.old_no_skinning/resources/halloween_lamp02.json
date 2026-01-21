@@ -1,0 +1,10 @@
+{
+  "file_name": "halloween_lamp02",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\etc\\halloween\\halloween_lamp01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

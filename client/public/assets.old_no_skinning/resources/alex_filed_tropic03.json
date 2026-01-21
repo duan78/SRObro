@@ -1,0 +1,17 @@
+{
+  "file_name": "alex_filed_tropic03",
+  "meshes": [
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filed_tropic03_01.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filed_tropic03_01.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filed_tropic03_02.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filed_tropic03_03.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filed_tropic03_04.bms",
+    "prim\\mesh\\nature\\north africa\\alexandria\\tree\\alex_filed_tropic03_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\north africa\\alexandria\\tree\\alex_filed_tropic01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

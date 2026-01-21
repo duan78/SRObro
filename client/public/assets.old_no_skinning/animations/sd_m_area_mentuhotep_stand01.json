@@ -1,0 +1,22 @@
+{
+  "file_name": "sd_m_area_mentuhotep_stand01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 5586,
+  "animation_name": "\u001c",
+  "data_blocks": [
+    65536,
+    327680,
+    0,
+    327680,
+    0,
+    353646,
+    834291,
+    340325,
+    703245,
+    5,
+    10,
+    353377
+  ]
+}

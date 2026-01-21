@@ -1,0 +1,28 @@
+{
+  "file_name": "whitespider_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 21991,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    917504,
+    0,
+    393216,
+    14,
+    5,
+    3634,
+    3135,
+    3699,
+    62,
+    63,
+    3135,
+    62,
+    63,
+    3135,
+    62,
+    63,
+    3135
+  ]
+}

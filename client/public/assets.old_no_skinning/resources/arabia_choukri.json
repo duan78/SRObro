@@ -1,0 +1,18 @@
+{
+  "file_name": "arabia_choukri",
+  "meshes": [
+    "prim\\mesh\\npc\\arabia\\arabia_choukri_01.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_choukri_02.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_choukri_part1.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_choukri_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\arabia_choukri.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\arabia\\arabia_choukri_stand_01.ban",
+    "prim\\ani\\npc\\arabia\\arabia_choukri_stand_02.ban"
+  ],
+  "textures": []
+}

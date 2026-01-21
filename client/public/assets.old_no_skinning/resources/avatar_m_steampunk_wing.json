@@ -1,0 +1,19 @@
+{
+  "file_name": "avatar_m_steampunk_wing",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_steampunk_wing.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_steampunk_wing01_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_steampunk_wing01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_steampunk_attach.bmt"
+  ],
+  "effects": [
+    "system\\avatar_m_steampunk_wing.efp"
+  ],
+  "animations": [
+    "prim\\ani\\item\\etc\\new_m_wing_stand01.ban",
+    "prim\\ani\\item\\etc\\new_m_wing_run.ban"
+  ],
+  "textures": []
+}

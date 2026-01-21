@@ -1,0 +1,36 @@
+{
+  "file_name": "oas_hot_b1_bridge",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_bridge.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_ho_b1t_castle_tile.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_bridge.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_l_rampart.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_pool_wall05.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_turtlest_gate_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_turtlest_gate_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_castle.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_turtlest_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_turtlest_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_turtlest_gate_03.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_al.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_l_rampart01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_l_rampart02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\castle\\oas_hot_b1_bridge.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

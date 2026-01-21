@@ -1,0 +1,43 @@
+{
+  "file_name": "demon_tower_heightroom_01",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h29.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h01.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h02.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h03.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h04.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h05.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h06.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h07.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h08.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h09.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h10.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h11.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h12.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h13.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h14.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h15.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h16.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h17.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h18.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h19.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h20.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h21.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h22.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h23.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h24.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h25.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h26.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h27.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h28.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h29.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h32.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_heightroom_01\\demon_tower_h33.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\fire\\demon_tower_heightroom_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

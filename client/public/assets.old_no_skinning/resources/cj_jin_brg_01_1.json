@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_jin_brg_01_1",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_brg_02_1.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_brg_01_1.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_brg_02_1.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_brg_03_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\cj_jin_brg.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

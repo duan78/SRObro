@@ -1,0 +1,30 @@
+{
+  "file_name": "flame_pass",
+  "textures": [
+    "flame_lroom_gate17.ddj",
+    "flame_croom_wall01.ddj",
+    "flame_lroom_gate11.ddj",
+    "flame_lroom_gate06.ddj",
+    "flame_lroom_gate10.ddj",
+    "flame_lroom_gate08.ddj",
+    "flame_lroom_gate15.ddj",
+    "flame_lroom_gate12.ddj",
+    "flame_lroom_gate14.ddj",
+    "flame_lroom_gate16.ddj",
+    "flame_pass01_light01.ddj",
+    "flame_lroom_ftile01.ddj",
+    "flame_lroom_line02.ddj",
+    "flame_lroom_line01.ddj",
+    "flame_lroom_ftile04.ddj",
+    "flame_lroom_ftile02.ddj",
+    "flame_pass01_wall01.ddj",
+    "flame_pass01_wall02.ddj",
+    "flame_pass01_wall03.ddj",
+    "flame_pass01_wall04.ddj",
+    "flame_pass01_wall05.ddj",
+    "flame_pass01_wall06.ddj",
+    "flame_lroom_candle.ddj",
+    "flame_magma.ddj",
+    "flame_croom_ceiling.ddj"
+  ]
+}

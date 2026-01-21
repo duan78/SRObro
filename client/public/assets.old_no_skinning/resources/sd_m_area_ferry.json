@@ -1,0 +1,14 @@
+{
+  "file_name": "sd_m_area_ferry",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_ferry_book.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_ferry_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_ferry_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_m_area_ferry.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

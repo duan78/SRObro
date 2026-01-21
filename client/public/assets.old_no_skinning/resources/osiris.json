@@ -1,0 +1,28 @@
+{
+  "file_name": "osiris",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\osiris01.bms",
+    "prim\\mesh\\mob\\sd\\osiris_part1.bms",
+    "prim\\mesh\\mob\\sd\\osiris_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\osiris_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\osiris.bmt"
+  ],
+  "effects": [
+    "monster\\sd\\keep_osiris_body_spector.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\sd\\osiris\\osiris_stand01.ban",
+    "prim\\ani\\mob\\sd\\osiris\\osiris_walk.ban",
+    "prim\\ani\\mob\\sd\\osiris\\osiris_run.ban",
+    "prim\\ani\\mob\\sd\\osiris\\osiris_attack01.ban",
+    "prim\\ani\\mob\\sd\\osiris\\osiris_attack02.ban",
+    "prim\\ani\\mob\\sd\\osiris\\osiris_attack03.ban",
+    "prim\\ani\\mob\\sd\\osiris\\osiris_attack04.ban",
+    "prim\\ani\\mob\\sd\\osiris\\osiris_attack05.ban",
+    "prim\\ani\\mob\\sd\\osiris\\osiris_die.ban",
+    "prim\\ani\\mob\\sd\\osiris\\osiris_die_rm.ban"
+  ],
+  "textures": []
+}

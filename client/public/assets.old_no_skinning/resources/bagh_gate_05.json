@@ -1,0 +1,10 @@
+{
+  "file_name": "bagh_gate_05",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_gate.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

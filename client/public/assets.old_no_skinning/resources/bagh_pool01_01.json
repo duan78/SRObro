@@ -1,0 +1,10 @@
+{
+  "file_name": "bagh_pool01_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\piety_pool01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

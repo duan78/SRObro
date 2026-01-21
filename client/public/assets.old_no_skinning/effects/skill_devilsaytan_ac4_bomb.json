@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_devilsaytan_ac4_bomb",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 34464
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "easteuropequest_witchofsunset",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_witchofsunset_3.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_witchofsunset_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_witchofsunset_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_witchofsunset.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,21 @@
+{
+  "file_name": "piety_gate",
+  "textures": [
+    "piety_wall05.ddj",
+    "piety_wall03.ddj",
+    "piety_wall04.ddj",
+    "piety_area.ddj",
+    "piety_carve01.ddj",
+    "piety_gate_wall01.ddj",
+    "piety_gate_wall07.ddj",
+    "piety_gate_wall06.ddj",
+    "piety_gate_wall04.ddj",
+    "piety_gate_wall02.ddj",
+    "piety_alpha.ddj",
+    "piety_gate_wall03.ddj",
+    "piety_roof.ddj",
+    "piety_carve02.ddj",
+    "piety_pillar01.ddj",
+    "piety_gate_wall05.ddj"
+  ]
+}

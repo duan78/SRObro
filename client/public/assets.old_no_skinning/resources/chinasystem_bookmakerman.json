@@ -1,0 +1,18 @@
+{
+  "file_name": "chinasystem_bookmakerman",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinasystem_bookmakerman_2s.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_bookmakerman_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_bookmakerman_part2.bms",
+    "prim\\mesh\\npc\\china\\chinasystem_bookmakerman_part1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinasystem_bookmakerman.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinasystem_bookmakerman_basic.ban",
+    "prim\\ani\\npc\\china\\chinasystem_bookmakerman_time.ban"
+  ],
+  "textures": []
+}

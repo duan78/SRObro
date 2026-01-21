@@ -1,0 +1,19 @@
+{
+  "file_name": "npc_ch_event_grandmother",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 13918,
+  "animation_name": "\u0018",
+  "data_blocks": [
+    65536,
+    655360,
+    0,
+    327680,
+    0,
+    0,
+    681326,
+    802436,
+    668005
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "centralasiashop_armor",
+  "meshes": [
+    "prim\\mesh\\npc\\casia\\centralasiashop_armor_2s.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_armor_al.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_armor_part1.bms",
+    "prim\\mesh\\npc\\casia\\centralasiashop_armor_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\casia\\centralasiashop_armor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

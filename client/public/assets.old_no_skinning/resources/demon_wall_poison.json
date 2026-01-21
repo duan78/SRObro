@@ -1,0 +1,40 @@
+{
+  "file_name": "demon_wall_poison",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_wall18_poison.bms",
+    "prim\\mesh\\dun\\demon\\demon_wall19_poison.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_wall_poison.bmt"
+  ],
+  "effects": [
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison.efp",
+    "dun\\demon_flame_poison02.efp",
+    "dun\\demon_flame_poison02.efp",
+    "dun\\demon_flame_poison02.efp",
+    "dun\\demon_flame_poison02.efp",
+    "dun\\demon_flame_poison02.efp",
+    "dun\\demon_flame_poison02.efp",
+    "dun\\demon_flame_poison01.efp",
+    "dun\\demon_flame_poison01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

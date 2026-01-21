@@ -1,0 +1,27 @@
+{
+  "file_name": "scorpion_downdie",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4033,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    327680,
+    157038,
+    704413,
+    2,
+    11,
+    612,
+    1714,
+    560,
+    1717,
+    562,
+    1589,
+    565,
+    1727,
+    564
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_siren_ac3_sound_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8705
+}

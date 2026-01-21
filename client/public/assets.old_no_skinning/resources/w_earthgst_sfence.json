@@ -1,0 +1,12 @@
+{
+  "file_name": "w_earthgst_sfence",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_sfence.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\earthghost\\w_earthgst_sfence.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

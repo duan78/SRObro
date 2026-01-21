@@ -1,0 +1,10 @@
+{
+  "file_name": "w_cd_temple",
+  "textures": [
+    "w_cd_tem_enter_door.ddj",
+    "w_cd_tem_enter_gidung.ddj",
+    "w_cd_tem_enter_floor.ddj",
+    "w_cd_tem_enter_roof.ddj",
+    "w_cd_tem_enter_deco.ddj"
+  ]
+}

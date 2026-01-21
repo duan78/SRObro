@@ -1,0 +1,19 @@
+{
+  "file_name": "isis_stand01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 18387,
+  "animation_name": "\f",
+  "data_blocks": [
+    65536,
+    458752,
+    0,
+    327680,
+    484718,
+    802626,
+    471397,
+    703412,
+    7
+  ]
+}

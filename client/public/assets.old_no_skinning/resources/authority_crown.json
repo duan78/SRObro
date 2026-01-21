@@ -1,0 +1,16 @@
+{
+  "file_name": "authority_crown",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\authority_crown.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\authority_crown\\authority_crown_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\authority_crown\\authority_crown_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\authority_crown\\authority_crown_damage1.ban",
+    "prim\\ani\\mob\\jupiter\\authority_crown\\authority_crown_die.ban",
+    "prim\\ani\\mob\\jupiter\\authority_crown\\authority_crown_die_rm.ban"
+  ],
+  "textures": []
+}

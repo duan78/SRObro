@@ -1,0 +1,29 @@
+{
+  "file_name": "oas_hot_tree_stone",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 368,
+  "animation_name": "\u0012",
+  "data_blocks": [
+    10000,
+    30,
+    1,
+    3,
+    0,
+    5000,
+    10000,
+    3,
+    6,
+    209200,
+    406640,
+    3,
+    6,
+    209712,
+    42843,
+    16256,
+    42708,
+    147328,
+    42799
+  ]
+}

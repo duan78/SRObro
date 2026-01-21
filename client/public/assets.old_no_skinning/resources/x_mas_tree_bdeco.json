@@ -1,0 +1,27 @@
+{
+  "file_name": "x_mas_tree_bdeco",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\common\\event-xmas\\x_mas_tree.bmt"
+  ],
+  "effects": [
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp",
+    "map\\bigx-mastree-roop.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,9 @@
+{
+  "file_name": "gate_potal",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true
+  },
+  "raw_size": 18805
+}

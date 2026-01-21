@@ -1,0 +1,15 @@
+{
+  "file_name": "ins_quest_teleport",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\quest\\ins_quest_teleport.bmt"
+  ],
+  "effects": [
+    "dun\\bigsujung_light_blue.efp",
+    "dun\\bigsujung_potal_glow.efp",
+    "dun\\bigsujung_light_blue.efp",
+    "dun\\bigsujung_light_blue.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

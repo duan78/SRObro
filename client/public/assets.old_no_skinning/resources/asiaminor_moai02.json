@@ -1,0 +1,12 @@
+{
+  "file_name": "asiaminor_moai02",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\pond ruin\\asiaminor_moai02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\pond ruin\\asiaminor_moai01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

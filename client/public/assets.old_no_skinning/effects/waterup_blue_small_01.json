@@ -1,0 +1,10 @@
+{
+  "file_name": "waterup_blue_small_01",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 5786
+}

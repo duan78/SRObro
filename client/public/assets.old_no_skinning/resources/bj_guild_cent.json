@@ -1,0 +1,20 @@
+{
+  "file_name": "bj_guild_cent",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_cent_deco01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_cent_deco01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_cent_floor.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_cent_gidung01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_cent_gidung02.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_cent_roof.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_cent_side.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_cent_side02.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_cent_side03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\bj\\bj_guild_cent.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

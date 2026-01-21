@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_hagiazo_ac3_cast",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 25961
+}

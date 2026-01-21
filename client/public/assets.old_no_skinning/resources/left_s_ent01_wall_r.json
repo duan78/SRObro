@@ -1,0 +1,12 @@
+{
+  "file_name": "left_s_ent01_wall_r",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\jangan\\left_s_ent01_wall_r.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\jangan\\left_s_ent01_cent.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

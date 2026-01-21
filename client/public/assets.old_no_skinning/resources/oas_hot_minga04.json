@@ -1,0 +1,15 @@
+{
+  "file_name": "oas_hot_minga04",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\w_cd_minga04_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\w_cd_minga04_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\w_cd_minga04_03.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\w_cd_minga04_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\w_cd_minga04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

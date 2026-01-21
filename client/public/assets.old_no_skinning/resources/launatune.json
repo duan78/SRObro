@@ -1,0 +1,48 @@
+{
+  "file_name": "launatune",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\launatune_snake_tail.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_staff.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_snake_part1.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_snake_part2.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_snake_head_part1.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_snake_head_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_snake_head_part2_part2.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_skirt.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_hand_part1.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_hand_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_hand_part2_part2.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_part1.bms",
+    "prim\\mesh\\mob\\arabia\\launatune_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\launatune.bmt"
+  ],
+  "effects": [
+    "monster\\arabia\\launatune_amb02.efp",
+    "monster\\arabia\\launatune_amb.efp",
+    "monster\\arabia\\launatune_amb_b.efp",
+    "monster\\arabia\\launatune_amb_b.efp",
+    "monster\\arabia\\launatune_amb_b.efp",
+    "monster\\arabia\\launatune_amb.efp",
+    "monster\\arabia\\launatune_amb_b.efp",
+    "monster\\arabia\\launatune_amb_b.efp",
+    "monster\\arabia\\launatune_amb_b.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_stand01.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_walk.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_run.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_attack01.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_attack02.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_attack04.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_attack07.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_die.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_die_rm.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_stand02.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_attack05.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_attack03.ban",
+    "prim\\ani\\mob\\arabia\\launatune\\launatune_attack06.ban"
+  ],
+  "textures": []
+}

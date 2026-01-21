@@ -1,0 +1,15 @@
+{
+  "file_name": "booth_special_monster_01",
+  "meshes": [
+    "prim\\mesh\\avatar\\booth.bms",
+    "prim\\mesh\\avatar\\booth_special_monster_01.bms",
+    "prim\\mesh\\avatar\\booth_special_monster_01_02.bms",
+    "prim\\mesh\\avatar\\booth_special_monster_01_2side.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\avatar\\booth_special_monster_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

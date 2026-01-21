@@ -1,0 +1,33 @@
+{
+  "file_name": "air_garden8",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_cenbridge.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_cenbridge.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_cendoor.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_cenflower.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_cengrass.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_center.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_centile01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_centile02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_centile03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_centile04.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_centile06.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_centile07.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_centile08.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_cenwall.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_cenwall02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_cenwall03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_cenwallup.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_sw_line01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_sw_pillar02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_sw_wall01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_censtart.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden8_water.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden8.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

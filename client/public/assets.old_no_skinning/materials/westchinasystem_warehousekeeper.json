@@ -1,0 +1,9 @@
+{
+  "file_name": "westchinasystem_warehousekeeper",
+  "textures": [
+    "westchinasystem_warehousekeeper_chain.ddj",
+    "westchinasystem_warehousekeeper_box.ddj",
+    "westchinasystem_warehousekeeper_man.ddj",
+    "westchinasystem_warehousekeeper_man_al.ddj"
+  ]
+}

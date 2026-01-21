@@ -1,0 +1,20 @@
+{
+  "file_name": "c_jin_enter01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\c_jin_enter_wall06.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\c_jin_enter_alpha.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\c_jin_enter_bwall_01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\c_jin_enter_column.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\c_jin_enter_ealpha.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\c_jin_enter_edoor.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\c_jin_enter_orwall.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\c_jin_enter_roof.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\enter\\c_jin_enter_wall06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\enter\\c_jin_enter01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

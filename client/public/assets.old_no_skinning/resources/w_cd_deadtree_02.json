@@ -1,0 +1,12 @@
+{
+  "file_name": "w_cd_deadtree_02",
+  "meshes": [
+    "prim\\mesh\\nature\\china\\dunghuang\\tree3\\w_cd_deadtree_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\china\\dunhuang\\tree3\\w_cd_deadtree_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

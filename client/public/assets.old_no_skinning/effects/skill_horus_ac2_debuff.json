@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_horus_ac2_debuff",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 18960
+}

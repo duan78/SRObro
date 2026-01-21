@@ -1,0 +1,27 @@
+{
+  "file_name": "snake",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\desert_snake.bms",
+    "prim\\mesh\\mob\\arabia\\desert_snake_tongue.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\desert_snake.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_stand01.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_walk.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_run.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_attack01.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_attack02.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_attack03.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_die.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_die_rm.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_down.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_down_rm.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_down_up.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_down_damage.ban",
+    "prim\\ani\\mob\\arabia\\snake\\desert_snake_damage01.ban"
+  ],
+  "textures": []
+}

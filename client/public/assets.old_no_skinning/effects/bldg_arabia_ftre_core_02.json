@@ -1,0 +1,10 @@
+{
+  "file_name": "bldg_arabia_ftre_core_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 60734
+}

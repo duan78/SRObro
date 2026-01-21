@@ -1,0 +1,18 @@
+{
+  "file_name": "westchinashop_armorshopgirl",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\westchinashop_armorshopgirl_al_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_armorshopgirl_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_armorshopgirl_part2_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_armorshopgirl_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\westchinashop_armorshopgirl.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinashop_dignifiedgirl_time.ban",
+    "prim\\ani\\npc\\china\\chinashop_dignifiedgirl_basic.ban"
+  ],
+  "textures": []
+}

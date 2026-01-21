@@ -1,0 +1,31 @@
+{
+  "file_name": "p_gorilla02",
+  "meshes": [
+    "prim\\mesh\\cos\\p_gorilla02_part1.bms",
+    "prim\\mesh\\cos\\p_gorilla02_part2_part1.bms",
+    "prim\\mesh\\cos\\p_gorilla02_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_gorilla02.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_stand01.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_stand02.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_stand03.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_walk.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_run.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_attack01.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_attack02.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_damage01.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_die.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_die_rm.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_down.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_down_rm.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_down_damage.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_down_up.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_down_die.ban",
+    "prim\\ani\\cos\\p_gorilla02\\p_gorilla02_imotion.ban"
+  ],
+  "textures": []
+}

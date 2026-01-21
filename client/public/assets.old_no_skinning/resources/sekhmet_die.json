@@ -1,0 +1,27 @@
+{
+  "file_name": "sekhmet_die",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\isis01_ghost_part1.bms",
+    "prim\\mesh\\mob\\sd\\isis01_ghost_part2.bms",
+    "prim\\mesh\\mob\\sd\\isis_ghost_part1.bms",
+    "prim\\mesh\\mob\\sd\\isis_ghost_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\isis_ghost_part2_part2.bms",
+    "prim\\mesh\\mob\\sd\\isis_die_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\isis_die_part2_part2.bms",
+    "prim\\mesh\\mob\\sd\\isis01_die_part1.bms",
+    "prim\\mesh\\mob\\sd\\isis01_die_part2.bms",
+    "prim\\mesh\\mob\\sd\\sekhmet_die_part1.bms",
+    "prim\\mesh\\mob\\sd\\sekhmet_die_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\sekhmet_die_part2_part2.bms",
+    "prim\\mesh\\mob\\sd\\sekhmet02_die.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\isis_ghost.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\isis\\isis_die.ban",
+    "prim\\ani\\mob\\sd\\isis\\isis_die_rm.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "asiaminor_evil_pao03_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_pao03_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_pao03_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_pao03_02.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_pao03_03.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_pao03_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\evil_order\\asiaminor_evil_objs.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

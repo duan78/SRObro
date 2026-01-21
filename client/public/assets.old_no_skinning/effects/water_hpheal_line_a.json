@@ -1,0 +1,10 @@
+{
+  "file_name": "water_hpheal_line_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 16698
+}

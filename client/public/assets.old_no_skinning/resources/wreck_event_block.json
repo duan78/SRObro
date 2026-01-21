@@ -1,0 +1,16 @@
+{
+  "file_name": "wreck_event_block",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\wreck\\event\\wreck_blockobj01_01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\event\\wreck_blockobj01_01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\event\\wreck_blockobj01_02.bms",
+    "prim\\mesh\\dun\\property\\wreck\\event\\wreck_blockobj01_03.bms",
+    "prim\\mesh\\dun\\property\\wreck\\event\\wreck_blockobj01_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\event\\wreck_event_block.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "alex_raid_portal",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\portal\\alex_raid_portal.bmt"
+  ],
+  "effects": [
+    "map\\alex_raid_portal_01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

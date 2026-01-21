@@ -1,0 +1,19 @@
+{
+  "file_name": "guard_tower_dmg",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower_dmg_00.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower_dmg_00.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower_dmg_flag.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower_dmg_metal.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\guard tower\\guard tower1_2_3_5_dmg.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\artifact\\guild\\guard tower\\tower_stand.ban",
+    "prim\\ani\\artifact\\guild\\guard tower\\tower_ready.ban",
+    "prim\\ani\\artifact\\guild\\guard tower\\tower_wait.ban"
+  ],
+  "textures": []
+}

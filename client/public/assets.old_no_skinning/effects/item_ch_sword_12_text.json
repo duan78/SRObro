@@ -1,0 +1,10 @@
+{
+  "file_name": "item_ch_sword_12_text",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 9630
+}

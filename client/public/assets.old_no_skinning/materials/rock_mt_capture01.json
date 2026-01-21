@@ -1,0 +1,27 @@
+{
+  "file_name": "rock_mt_capture01",
+  "textures": [
+    "rock_mt_stair_00.ddj",
+    "rock_mt_bridge_00.ddj",
+    "rock_mt_bricks_02.ddj",
+    "rock_mt_fast_00.ddj",
+    "rock_mt_fast_02.ddj",
+    "rock_mt_bricks_03.ddj",
+    "rock_mt_box_01.ddj",
+    "rock_mt_bricks_01.ddj",
+    "rock_mt_bricks_00.ddj",
+    "rock_mt_roof_00.ddj",
+    "rock_mt_stone_02.ddj",
+    "rock_mt_stone_01.ddj",
+    "rock_mt_stone_03.ddj",
+    "rok_mt_altar_wood_00.ddj",
+    "rock_mt_fast_01.ddj",
+    "rock_mt_stone_00.ddj",
+    "rock_mt_fast_03.ddj",
+    "thief_vill_object01_03.ddj",
+    "thief_vill_object01_02.ddj",
+    "thief_vill_object01_01.ddj",
+    "rock_mt_ceramic.ddj",
+    "cj_graveyard_coffin01.ddj"
+  ]
+}

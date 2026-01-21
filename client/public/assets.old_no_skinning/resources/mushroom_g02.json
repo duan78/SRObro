@@ -1,0 +1,10 @@
+{
+  "file_name": "mushroom_g02",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\grass\\mushroom_g02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

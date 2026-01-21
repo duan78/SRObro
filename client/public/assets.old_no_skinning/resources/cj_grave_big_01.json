@@ -1,0 +1,18 @@
+{
+  "file_name": "cj_grave_big_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\graveyard2\\cj_grave_big_01.bms",
+    "prim\\mesh\\bldg\\china\\graveyard2\\cj_grave_big_01.bms",
+    "prim\\mesh\\bldg\\china\\graveyard2\\cj_grave_big_02.bms",
+    "prim\\mesh\\bldg\\china\\graveyard2\\cj_grave_big_03.bms",
+    "prim\\mesh\\bldg\\china\\graveyard2\\cj_grave_big_04.bms",
+    "prim\\mesh\\bldg\\china\\graveyard2\\cj_grave_big_05.bms",
+    "prim\\mesh\\bldg\\china\\graveyard2\\cj_grave_big_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\graveyard2\\cj_grave_big_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

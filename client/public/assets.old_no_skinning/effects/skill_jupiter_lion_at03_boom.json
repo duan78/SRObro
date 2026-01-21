@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_jupiter_lion_at03_boom",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10434
+}

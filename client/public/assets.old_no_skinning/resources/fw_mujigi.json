@@ -1,0 +1,25 @@
+{
+  "file_name": "fw_mujigi",
+  "meshes": [
+    "prim\\mesh\\mob\\fortress\\fw_mujigi_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_mujigi_part2_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_mujigi_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\fortress\\fw_mujigi.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_stand01.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_stand02.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_walk.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_run.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_attack01.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_attack02.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_attack03.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_die.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_die_loop.ban",
+    "prim\\ani\\mob\\khotan\\mujigi\\mujigi_attack04.ban"
+  ],
+  "textures": []
+}

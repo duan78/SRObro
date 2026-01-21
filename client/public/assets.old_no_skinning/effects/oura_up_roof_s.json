@@ -1,0 +1,10 @@
+{
+  "file_name": "oura_up_roof_s",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 39210
+}

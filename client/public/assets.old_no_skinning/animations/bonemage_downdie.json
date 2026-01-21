@@ -1,0 +1,27 @@
+{
+  "file_name": "bonemage_downdie",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 5430,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    327680,
+    157038,
+    899872,
+    2,
+    12,
+    2,
+    12,
+    2,
+    12,
+    2,
+    10,
+    158825,
+    769936,
+    561
+  ]
+}

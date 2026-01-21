@@ -1,0 +1,29 @@
+{
+  "file_name": "crab",
+  "meshes": [
+    "prim\\mesh\\mob\\asiam\\crab_part1.bms",
+    "prim\\mesh\\mob\\asiam\\crab_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\asiam\\crab.bmt",
+    "prim\\mtrl\\mob\\asiam\\crab_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\asiam\\crab\\crab_stand01.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_walk.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_run.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_damage01.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_die.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_die_rm.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_attack01.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_attack02.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_attack03.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_downup.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_down.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_downrm.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_downdamage.ban",
+    "prim\\ani\\mob\\asiam\\crab\\crab_downdie.ban"
+  ],
+  "textures": []
+}

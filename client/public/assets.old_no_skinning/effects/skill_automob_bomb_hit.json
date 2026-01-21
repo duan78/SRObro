@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_automob_bomb_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 9083
+}

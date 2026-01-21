@@ -1,0 +1,10 @@
+{
+  "file_name": "colosseum_build_b",
+  "textures": [
+    "colosseum_platform02.ddj",
+    "colosseum_fire01.ddj",
+    "colosseum_platform04.ddj",
+    "colosseum_platform03.ddj",
+    "colosseum_platform01.ddj"
+  ]
+}

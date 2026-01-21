@@ -1,0 +1,20 @@
+{
+  "file_name": "desert_stadium",
+  "meshes": [
+    "prim\\mesh\\dun\\survival\\desert\\desert_stadium01.bms",
+    "prim\\mesh\\dun\\survival\\desert\\desert_stadium01.bms",
+    "prim\\mesh\\dun\\survival\\desert\\desert_stadium02.bms",
+    "prim\\mesh\\dun\\survival\\desert\\desert_stadium03.bms",
+    "prim\\mesh\\dun\\survival\\desert\\desert_stadium04.bms",
+    "prim\\mesh\\dun\\survival\\desert\\desert_stadium05.bms",
+    "prim\\mesh\\dun\\survival\\desert\\desert_stadium06.bms",
+    "prim\\mesh\\dun\\survival\\desert\\desert_stadium07.bms",
+    "prim\\mesh\\dun\\survival\\desert\\desert_stadium08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\desert\\desert_stadium01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "easteuropeshop_potion",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropeshop_potion_h.bms",
+    "prim\\mesh\\npc\\europe\\easteuropeshop_potion_2s_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropeshop_potion_2s_part2.bms",
+    "prim\\mesh\\npc\\europe\\easteuropeshop_potion_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropeshop_potion_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropeshop_potion.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

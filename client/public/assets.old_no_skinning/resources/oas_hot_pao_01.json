@@ -1,0 +1,20 @@
+{
+  "file_name": "oas_hot_pao_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_pao_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_pao_00.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_pao_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_pao_03.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_pao_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_pao_04.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_pao_05.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_pao_06.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\oas_hot_pao_07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\oas_hot_pao_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

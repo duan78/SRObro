@@ -1,0 +1,25 @@
+{
+  "file_name": "piety_altar_02",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_altar_altar_02.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_altar_bottom.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_altar_brazier.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_altar_brick.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_altar_floor.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_altar_pattern.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_altar_pillar.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_altar_stair.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_altar_top.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_altar_width.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_altar_altar_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_altar.bmt"
+  ],
+  "effects": [
+    "map\\frame.efp",
+    "map\\frame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,22 @@
+{
+  "file_name": "ruin_takla_temple_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_01.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_01.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_02.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_03.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_04.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_05.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_06.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_07.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_08.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_09.bms",
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\ruins\\taklamakan des\\temple\\ruin_takla_temple_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

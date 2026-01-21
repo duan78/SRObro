@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_northguardian_ac3_dust",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8230
+}

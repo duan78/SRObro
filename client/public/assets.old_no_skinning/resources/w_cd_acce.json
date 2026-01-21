@@ -1,0 +1,24 @@
+{
+  "file_name": "w_cd_acce",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_wall02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_dan01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_dan02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_roof02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_sphe.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_wall02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_cera.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_man.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_roof_al.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_wall01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_acce_wall03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_acce.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

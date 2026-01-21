@@ -1,0 +1,14 @@
+{
+  "file_name": "wreck_sship_in_07",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_sship_out_flag01_in07.bms",
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_sship_in_box.bms",
+    "prim\\mesh\\dun\\property\\wreck\\ship\\wreck_sship_out_deck09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\wreck_sship.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,25 @@
+{
+  "file_name": "survival_palace_wall02",
+  "meshes": [
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_soldier.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_alpha.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_bbwall.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_bwall.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_door01.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_door02.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_flag.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_jing.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_nangan.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_orwall.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_roof.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_sharp.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_soldier.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall02_twall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\palace\\survival_palace_wall02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,9 @@
+{
+  "file_name": "sekhmet_ghost",
+  "textures": [
+    "isis_ghost.ddj",
+    "isis.ddj",
+    "isis02.ddj",
+    "sekhmet.ddj"
+  ]
+}

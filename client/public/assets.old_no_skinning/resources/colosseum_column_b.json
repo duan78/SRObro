@@ -1,0 +1,19 @@
+{
+  "file_name": "colosseum_column_b",
+  "meshes": [
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_column_b01.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_column_b02.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_column_bfire.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\colosseum\\colosseum_column_b.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_green_flame01.efp",
+    "dun\\yellow_green_flame01.efp",
+    "dun\\yellow_green_flame01.efp",
+    "dun\\yellow_green_flame01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

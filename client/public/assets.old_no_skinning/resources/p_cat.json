@@ -1,0 +1,20 @@
+{
+  "file_name": "p_cat",
+  "meshes": [
+    "prim\\mesh\\cos\\p_cat01.bms",
+    "prim\\mesh\\cos\\p_cat_part1.bms",
+    "prim\\mesh\\cos\\p_cat_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_cat.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\p_cat\\p_cat_stand01.ban",
+    "prim\\ani\\cos\\p_cat\\p_cat_walk.ban",
+    "prim\\ani\\cos\\p_cat\\p_cat_run.ban",
+    "prim\\ani\\cos\\p_cat\\p_cat_pick.ban",
+    "prim\\ani\\cos\\p_cat\\p_cat_emotion.ban"
+  ],
+  "textures": []
+}

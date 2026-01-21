@@ -1,0 +1,14 @@
+{
+  "file_name": "togui_burner",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\togui\\togui_burner.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\togui\\togui_burner.bmt"
+  ],
+  "effects": [
+    "map\\property_togui.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,26 @@
+{
+  "file_name": "event_balloon02",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 805,
+  "animation_name": "\u000f",
+  "data_blocks": [
+    853298,
+    7680,
+    256,
+    2048,
+    0,
+    85504,
+    170752,
+    256000,
+    426752,
+    554752,
+    682752,
+    853504,
+    768,
+    1536,
+    2098,
+    1717
+  ]
+}

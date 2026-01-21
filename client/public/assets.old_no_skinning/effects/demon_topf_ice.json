@@ -1,0 +1,10 @@
+{
+  "file_name": "demon_topf_ice",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 5524
+}

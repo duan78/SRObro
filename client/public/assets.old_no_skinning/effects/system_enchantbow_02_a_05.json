@@ -1,0 +1,10 @@
+{
+  "file_name": "system_enchantbow_02_a_05",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 162781
+}

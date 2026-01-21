@@ -1,0 +1,8 @@
+{
+  "file_name": "khotansystem_warehousekeeper",
+  "textures": [
+    "khotansystem_warehousekeeper.ddj",
+    "khotansystem_warehousekeeper_box.ddj",
+    "khotansystem_warehousekeeper_al.ddj"
+  ]
+}

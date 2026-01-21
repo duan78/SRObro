@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_pal_right_stair",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_right_stair01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_right_stair01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_right_stair01_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_right_stair.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

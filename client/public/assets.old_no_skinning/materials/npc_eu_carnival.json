@@ -1,0 +1,9 @@
+{
+  "file_name": "npc_eu_carnival",
+  "textures": [
+    "europewoman_witch_body.ddj",
+    "avatar_w_carnival_wear.ddj",
+    "avatar_w_carnival_hat.ddj",
+    "avatar_w_carnival_decoration.ddj"
+  ]
+}

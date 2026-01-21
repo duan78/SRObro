@@ -1,0 +1,20 @@
+{
+  "file_name": "piety_fountain",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_fountain01.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_fountain01.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_fountain02.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_fountain03.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_fountain04.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_fountain05.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_fountain06.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_fountain_body.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_fountain_weapon.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_fountain.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

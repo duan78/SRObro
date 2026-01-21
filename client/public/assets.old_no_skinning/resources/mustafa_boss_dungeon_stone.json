@@ -1,0 +1,23 @@
+{
+  "file_name": "mustafa_boss_dungeon_stone",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\mustafa_accessory.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_cape.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_hand.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_horn.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_part2_part2.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_hair_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_hair_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\bossdungeon\\mustafa_boss_dungeon_stone.bmt"
+  ],
+  "effects": [
+    "battle\\status_cure_burn.efp",
+    "battle\\status_cure_burn.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

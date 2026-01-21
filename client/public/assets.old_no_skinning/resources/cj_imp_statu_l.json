@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_imp_statu_l",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_imp_statu_l.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\cj_imp_statu_l.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\c_imp_stn_010.ddj"
+  ]
+}

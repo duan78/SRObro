@@ -1,0 +1,22 @@
+{
+  "file_name": "sd_m_area_warehouse",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 31864,
+  "animation_name": "\u0013",
+  "data_blocks": [
+    7680,
+    256,
+    7424,
+    0,
+    170496,
+    341248,
+    512000,
+    682496,
+    853248,
+    9728,
+    1280,
+    835167
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "file_name": "oas_kara_carriage",
+  "textures": [
+    "oas_kara_carriage_tree.ddj",
+    "oas_kara_carriage_alpha.ddj",
+    "oas_kara_carriage_wheel.ddj"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "demon_fentran",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_fentran_t01.bms",
+    "prim\\mesh\\dun\\demon\\demon_fentran_t01.bms",
+    "prim\\mesh\\dun\\demon\\demon_fentran_t02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_fentran.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

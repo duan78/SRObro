@@ -1,0 +1,25 @@
+{
+  "file_name": "rock_mt_mteleport",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport_02.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport_03.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport_04.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport_06.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport_07.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport_08.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport_09.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport_10.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport_11.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport_12.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\portal\\rock_mt_mteleport.bmt"
+  ],
+  "effects": [
+    "map\\rock_mt_portal.efp",
+    "map\\rock_mt_portal.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

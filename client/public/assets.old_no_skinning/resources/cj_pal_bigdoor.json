@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_pal_bigdoor",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_bigdoor_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_bigdoor_door.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_bigdoor_roof01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_bigdoor_roof02_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_bigdoor_roof03_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_bigdoor_wall01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_bigdoor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

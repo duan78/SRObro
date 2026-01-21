@@ -1,0 +1,37 @@
+{
+  "file_name": "w_cd_weapon",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_bask.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_bask.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_wall01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_wood.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_floor01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_floor02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_pilla03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_wall02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_obj.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_pilla01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_pilla02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_wall02_2sid.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_winlight.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_roof02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_sword_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_sword_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_sword_03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_weap_sword_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_weapon.bmt"
+  ],
+  "effects": [
+    "map\\oas_hot_etc_b.efp",
+    "map\\cj_pal_lamp_orange02_b.efp",
+    "map\\oas_hot_etc_b.efp",
+    "map\\frame2.efp",
+    "map\\cj_pal_lamp_orange02_b.efp",
+    "map\\frame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

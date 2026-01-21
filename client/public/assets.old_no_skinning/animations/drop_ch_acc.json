@@ -1,0 +1,23 @@
+{
+  "file_name": "drop_ch_acc",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 537,
+  "animation_name": "\u000b",
+  "data_blocks": [
+    341347,
+    7680,
+    0,
+    1280,
+    0,
+    42496,
+    128000,
+    213248,
+    341248,
+    768,
+    1536,
+    1330,
+    1715
+  ]
+}

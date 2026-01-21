@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_westguardian_wing",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 27095
+}

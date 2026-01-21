@@ -1,0 +1,15 @@
+{
+  "file_name": "w_cd_tower00",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_tower00.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_tower00.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_tower01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_tower02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ruins\\w_cd_tower00.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

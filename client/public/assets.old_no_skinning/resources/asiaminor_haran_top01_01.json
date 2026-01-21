@@ -1,0 +1,23 @@
+{
+  "file_name": "asiaminor_haran_top01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_02.bms",
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_03.bms",
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_04.bms",
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_05.bms",
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_06.bms",
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_07.bms",
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_08.bms",
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_09.bms",
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_10.bms",
+    "prim\\mesh\\bldg\\asia minor\\haran\\asiaminor_haran_top01_11.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\haran\\asiaminor_haran_top01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,25 @@
+{
+  "file_name": "Bagh_Masin_bridge_down",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 214,
+  "animation_name": "\u0016",
+  "data_blocks": [
+    4000,
+    30,
+    1,
+    2,
+    0,
+    4000,
+    2,
+    6,
+    143664,
+    46130,
+    50246,
+    46130,
+    50246,
+    393216,
+    2
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_blackrobberarcher_poisonshot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3794
+}

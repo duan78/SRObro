@@ -1,0 +1,34 @@
+{
+  "file_name": "mustafa_boss_dungeon",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\mustafa_accessory.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_cape.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_hand.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_horn.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_part2_part2.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_hair_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mustafa_hair_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\mustafa.bmt"
+  ],
+  "effects": [
+    "monster\\bossdungeon\\fire_gongup_effect_b_size_1.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\mustafa\\mustafa_stand01.ban",
+    "prim\\ani\\mob\\arabia\\mustafa\\mustafa_walk.ban",
+    "prim\\ani\\mob\\arabia\\mustafa\\mustafa_run.ban",
+    "prim\\ani\\mob\\arabia\\mustafa\\mustafa_attack01.ban",
+    "prim\\ani\\mob\\arabia\\mustafa\\mustafa_attack02.ban",
+    "prim\\ani\\mob\\arabia\\mustafa\\mustafa_attack03.ban",
+    "prim\\ani\\mob\\arabia\\mustafa\\mustafa_attack04.ban",
+    "prim\\ani\\mob\\arabia\\mustafa\\mustafa_attack05.ban",
+    "prim\\ani\\mob\\arabia\\mustafa\\mustafa_die.ban",
+    "prim\\ani\\mob\\arabia\\mustafa\\mustafa_die_rm.ban",
+    "prim\\ani\\mob\\arabia\\mustafa\\mustafa_stand02.ban"
+  ],
+  "textures": []
+}

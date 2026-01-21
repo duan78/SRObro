@@ -1,0 +1,17 @@
+{
+  "file_name": "passage01_08_event",
+  "meshes": [
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\passage08event\\passage01_bottom08.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\passage08event\\passage01_bottom08.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\passage08event\\passage01_pole08.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\passage08event\\passage01_roof08.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\passage08event\\passage01_wall_a08.bms",
+    "prim\\mesh\\dun\\wchina\\donhwang_cv_clone\\floor_1\\passage08event\\passage01_wall_c08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv_clone\\floor_1\\passage01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

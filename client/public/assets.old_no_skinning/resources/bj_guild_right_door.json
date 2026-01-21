@@ -1,0 +1,20 @@
+{
+  "file_name": "bj_guild_right_door",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_door_floor.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_door_doco02.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_door_doco03.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_door_gidung.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_door_roof.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_door_floor.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_door_wall01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_door_wall02.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\bj_guild_right_door_doco01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\bj\\bj_guild_right_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_dowb_ac2_windblade_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 9644
+}

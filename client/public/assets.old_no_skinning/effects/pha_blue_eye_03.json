@@ -1,0 +1,10 @@
+{
+  "file_name": "pha_blue_eye_03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2972
+}

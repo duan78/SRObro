@@ -1,0 +1,12 @@
+{
+  "file_name": "skill_nachal_attack1_motion_wait",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 26483
+}

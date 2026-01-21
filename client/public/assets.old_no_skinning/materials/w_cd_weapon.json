@@ -1,0 +1,21 @@
+{
+  "file_name": "w_cd_weapon",
+  "textures": [
+    "w_cd_weap_wall01.ddj",
+    "w_cd_weap_wood.ddj",
+    "w_cd_weap_wall02.ddj",
+    "naru_pilla01.ddj",
+    "w_cd_weap_roof.ddj",
+    "w_cd_weap_floor.ddj",
+    "naru_pilla02.ddj",
+    "naru_floor02.ddj",
+    "w_cd_weap_winlight.ddj",
+    "naru_obj.ddj",
+    "naru_pilla03.ddj",
+    "thief_vill_atent_04.ddj",
+    "thief_vill_sword_03.ddj",
+    "thief_vill_bigtent_07.ddj",
+    "thief_vill_bigtent_01.ddj",
+    "w_cd_weap_roof02.ddj"
+  ]
+}

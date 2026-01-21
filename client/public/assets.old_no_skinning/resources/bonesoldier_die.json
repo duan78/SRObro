@@ -1,0 +1,36 @@
+{
+  "file_name": "bonesoldier_die",
+  "meshes": [
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die00.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die01.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die02.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die03.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die04.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die05.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die06.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die07.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die08.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die09.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die10.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die11.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die12.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die13.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die14.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die15.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die16.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die17.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die18.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die19.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die20.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonesoldier_die21.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\taklamakan\\bonesoldier.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\taklamakan\\bonesoldier\\bonesoldier_die.ban",
+    "prim\\ani\\mob\\taklamakan\\bonesoldier\\bonesoldier_die_rm.ban"
+  ],
+  "textures": []
+}

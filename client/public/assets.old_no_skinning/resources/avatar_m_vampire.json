@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_m_vampire",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_vampire_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_vampire_part2.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_vampire_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_vampire.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

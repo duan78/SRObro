@@ -1,0 +1,21 @@
+{
+  "file_name": "demon_wall_deco_death",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_wall25.bms",
+    "prim\\mesh\\dun\\demon\\demon_wall30.bms",
+    "prim\\mesh\\dun\\demon\\demon_wall26_01.bms",
+    "prim\\mesh\\dun\\demon\\demon_wall26_02.bms",
+    "prim\\mesh\\dun\\demon\\demon_wall26_03.bms",
+    "prim\\mesh\\dun\\demon\\demon_wall26_04.bms",
+    "prim\\mesh\\dun\\demon\\demon_wall26_05.bms",
+    "prim\\mesh\\dun\\demon\\demon_wall26_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_wall_deco.bmt"
+  ],
+  "effects": [
+    "dun\\demon_wall_death.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

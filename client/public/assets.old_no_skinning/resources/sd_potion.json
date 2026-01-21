@@ -1,0 +1,15 @@
+{
+  "file_name": "sd_potion",
+  "meshes": [
+    "prim\\mesh\\npc\\arabia\\sd_potion_part1.bms",
+    "prim\\mesh\\npc\\arabia\\sd_potion_part2_part1.bms",
+    "prim\\mesh\\npc\\arabia\\sd_potion_part2_part2_part1.bms",
+    "prim\\mesh\\npc\\arabia\\sd_potion_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\arabia\\sd_potion.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

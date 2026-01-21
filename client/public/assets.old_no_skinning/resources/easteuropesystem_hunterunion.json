@@ -1,0 +1,16 @@
+{
+  "file_name": "easteuropesystem_hunterunion",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropesystem_hunterunion_2s_1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropesystem_hunterunion_2s_2.bms",
+    "prim\\mesh\\npc\\europe\\easteuropesystem_hunterunion_arm.bms",
+    "prim\\mesh\\npc\\europe\\easteuropesystem_hunterunion_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropesystem_hunterunion_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropesystem_hunterunion.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

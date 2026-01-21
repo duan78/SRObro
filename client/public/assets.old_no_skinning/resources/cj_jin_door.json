@@ -1,0 +1,16 @@
+{
+  "file_name": "cj_jin_door",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_door_01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_door_01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_door_str01.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_door_str01_1.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_door_str01_2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\cj_jin_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

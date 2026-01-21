@@ -1,0 +1,10 @@
+{
+  "file_name": "ammo_arrow_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\arrow.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

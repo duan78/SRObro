@@ -1,0 +1,10 @@
+{
+  "file_name": "snaketrap_die",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 23067
+}

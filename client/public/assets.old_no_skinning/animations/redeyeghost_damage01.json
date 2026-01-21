@@ -1,0 +1,19 @@
+{
+  "file_name": "redeyeghost_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 6125,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    786432,
+    0,
+    786432,
+    799077,
+    834242,
+    799333,
+    703168,
+    12
+  ]
+}

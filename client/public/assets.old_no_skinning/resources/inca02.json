@@ -1,0 +1,17 @@
+{
+  "file_name": "inca02",
+  "meshes": [
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_red_01.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_red_02.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_red_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\tower\\defence\\inca02.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame_glow_2small.efp",
+    "dun\\red_orange_flame_glow_3small.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

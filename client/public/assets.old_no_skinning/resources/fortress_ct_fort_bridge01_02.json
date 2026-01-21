@@ -1,0 +1,16 @@
+{
+  "file_name": "fortress_ct_fort_bridge01_02",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_bridge01_011.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_bridge01_011.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_bridge01_02.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_bridge01_03.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_bridge01_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\fortress_ct_fort_bridge.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "keep_windspider_body",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 22169
+}

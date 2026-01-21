@@ -1,0 +1,9 @@
+{
+  "file_name": "w_cdstore03",
+  "textures": [
+    "w_cdstore01.ddj",
+    "w_cdstore_alpha.ddj",
+    "w_cdstore03.ddj",
+    "w_cdstore02.ddj"
+  ]
+}

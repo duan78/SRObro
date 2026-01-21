@@ -1,0 +1,42 @@
+{
+  "file_name": "babilion",
+  "meshes": [
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion01.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion2.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\babilion\\babilion_part2_part2_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\babilion.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_flame_adjutant_fire_keep_body.efp",
+    "monster\\god\\skill_flame_adjutant_fire_keep_body.efp",
+    "monster\\jupiter\\skill_jupiter_babilion_em02_lightning.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_walk.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_run.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_attack02.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_attack03.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_attack05.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_attack06.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_attack09.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_attack11_shot.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_attack11_ready.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_attack11_wait.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_emotion01.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_emotion02.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_emotion03.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_emotion04.ban",
+    "prim\\ani\\mob\\jupiter\\babilion\\babilion_die.ban"
+  ],
+  "textures": []
+}

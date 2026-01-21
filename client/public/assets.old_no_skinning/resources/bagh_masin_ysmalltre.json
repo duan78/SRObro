@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_masin_ysmalltre",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_ysmalltree_01.bms",
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_ysmalltree_01.bms",
+    "prim\\mesh\\nature\\arabia\\masin\\bagh_masin_ysmalltree_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\masin\\bagh_masin_ysmalltree.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

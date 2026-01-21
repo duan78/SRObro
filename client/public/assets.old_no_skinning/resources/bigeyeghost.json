@@ -1,0 +1,36 @@
+{
+  "file_name": "bigeyeghost",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\bigeye_ghost_part1.bms",
+    "prim\\mesh\\mob\\china\\bigeye_ghost_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\bigeye_ghost.bmt",
+    "prim\\mtrl\\mob\\china\\bigeye_ghost_champ.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_icing_on.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_stand01.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_walk.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_run.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_attack01.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_damage01.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_damage02.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_die.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_die_loop.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_attack02.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_down.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_downwait.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_downdamage.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_wakeup.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_downdie.ban",
+    "prim\\ani\\mob\\china\\bigeye_ghost\\bigeye_ghost_stand02.ban"
+  ],
+  "textures": []
+}

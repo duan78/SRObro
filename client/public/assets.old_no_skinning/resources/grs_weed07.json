@@ -1,0 +1,10 @@
+{
+  "file_name": "grs_weed07",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\grass\\grs_weed06.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

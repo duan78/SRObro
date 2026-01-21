@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_w_monster_2013",
+  "textures": [
+    "avatar_w_monster_2013_01.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_monster_2013_01_n.ddj",
+    "avatar_w_monster_2013_hat.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_monster_2013_hat_n.ddj",
+    "avatar_w_monster_2013_attach.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_monster_2013_attach_n.ddj",
+    "avatar_w_monster_2013.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_monster_2013_n.ddj"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "file_name": "waterghost",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\waterghost_bottle.bms",
+    "prim\\mesh\\mob\\china\\waterghost_part1.bms",
+    "prim\\mesh\\mob\\china\\waterghost_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\waterghost.bmt",
+    "prim\\mtrl\\mob\\china\\waterghost_champ.bmt"
+  ],
+  "effects": [
+    "monster\\mco_sys_appear.efp",
+    "monster\\mco_wrong_frostbite.efp",
+    "monster\\msk_waterghost_gas.efp",
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_icing_on.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_stand01.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_walk.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_run.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_attack01.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_attack02.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_damage01.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_damage02.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_die.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_die_loop.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_stand02.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_down.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_downwait.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_downdamage.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_wakeup.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_downdie.ban",
+    "prim\\ani\\mob\\china\\waterghost\\waterghost_attack03.ban"
+  ],
+  "textures": []
+}

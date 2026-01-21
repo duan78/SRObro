@@ -1,0 +1,20 @@
+{
+  "file_name": "w_cd_stable",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_stab_buil01_hoof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_stab_buil01_hoof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_stab_buil01_hoof_al.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_stab_buil01_pilla.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_stab_buil01_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_stab_buil02_wall.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_stab_buil03_fence.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_stab_buil03_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_stab_buil03_wall_2sid.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_stable.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

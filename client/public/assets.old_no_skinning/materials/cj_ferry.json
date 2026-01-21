@@ -1,0 +1,26 @@
+{
+  "file_name": "cj_ferry",
+  "textures": [
+    "cj_ferry_buil1_door.ddj",
+    "cj_ferry_buil1_gidung.ddj",
+    "cj_ferry_buil1_roof.ddj",
+    "cj_ferry_floor01_1.ddj",
+    "cj_ferry_floor01.ddj",
+    "cj_ferry_flag.ddj",
+    "cj_ferry_pavil_deco.ddj",
+    "cj_ferry_pavil_fence.ddj",
+    "cj_ferry_pavil_roof.ddj",
+    "cj_ferry_tombstone.ddj",
+    "cj_ferry_enter_roof.ddj",
+    "cj_ferry_enter.ddj",
+    "cj_ferry_buil_wall.ddj",
+    "cj_ferry_buil_roof.ddj",
+    "cj_ferry_wagon.ddj",
+    "cj_ferry_bottle.ddj",
+    "cj_ferry_stone01.ddj",
+    "cj_ferry_warehou_door.ddj",
+    "cj_ferry_warehou_window.ddj",
+    "cj_ferry_warehou_roof.ddj",
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\cj_ferry_box.ddj"
+  ]
+}

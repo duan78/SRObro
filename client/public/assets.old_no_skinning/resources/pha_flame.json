@@ -1,0 +1,12 @@
+{
+  "file_name": "pha_flame",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\common\\pha_flame.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

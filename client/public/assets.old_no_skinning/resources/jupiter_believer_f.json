@@ -1,0 +1,17 @@
+{
+  "file_name": "jupiter_believer_f",
+  "meshes": [
+    "prim\\mesh\\npc\\jupiter\\jupiter_believer_f_01_part1.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_believer_f_01_part2_part1.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_believer_f_01_part2_part2_part1.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_believer_f_01_part2_part2_part2.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_believer_f_02_part1.bms",
+    "prim\\mesh\\npc\\jupiter\\jupiter_believer_f_02_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\jupiter\\jupiter_believer_f.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

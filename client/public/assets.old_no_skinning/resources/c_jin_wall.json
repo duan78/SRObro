@@ -1,0 +1,28 @@
+{
+  "file_name": "c_jin_wall",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_orwall.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_alpha.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_bbwall.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_bwall.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_door.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_exit.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_flag.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_floor.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_jing.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_master.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_nangan.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_orwall.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_roof.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_sharp.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_soldier.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_twall.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\dan\\c_jin_wall_door02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\dan\\c_jin_wall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

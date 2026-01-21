@@ -1,0 +1,10 @@
+{
+  "file_name": "warlock_dark_breath_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 20080
+}

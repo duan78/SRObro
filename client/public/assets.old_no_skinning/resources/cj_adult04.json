@@ -1,0 +1,20 @@
+{
+  "file_name": "cj_adult04",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult04_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult04_brg.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult04_brg_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult04_deco.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult04_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult04_fence.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult04_ligh.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult04_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_adult04_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan02\\cj_adult04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

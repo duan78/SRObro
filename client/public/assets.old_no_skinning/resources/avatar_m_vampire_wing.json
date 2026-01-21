@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_m_vampire_wing",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_vampire_wing.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\item\\etc\\avatar_m_vampire_wing_stand.ban",
+    "prim\\ani\\item\\etc\\avatar_m_vampire_wing_run.ban"
+  ],
+  "textures": []
+}

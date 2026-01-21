@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_horus_ac5_knock_motion",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17144
+}

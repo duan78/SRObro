@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_kyklopes_ac6",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 16968
+}

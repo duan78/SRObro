@@ -1,0 +1,28 @@
+{
+  "file_name": "bagh_defense",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_box.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_box.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_de01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_de02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_de03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_de04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_line.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_patten01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_patten02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_patten03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_wood01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_wood02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_wood03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_defense_llight.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_defense.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

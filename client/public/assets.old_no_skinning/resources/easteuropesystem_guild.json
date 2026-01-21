@@ -1,0 +1,13 @@
+{
+  "file_name": "easteuropesystem_guild",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropesystem_guild_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropesystem_guild_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropesystem_guild.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

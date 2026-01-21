@@ -1,0 +1,21 @@
+{
+  "file_name": "redscorpion_die_loop",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 7069,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    262144,
+    0,
+    327680,
+    288110,
+    704477,
+    4,
+    11,
+    1124,
+    1588,
+    1072
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "air_garden_lion",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_lion01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_lion02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden_lion.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

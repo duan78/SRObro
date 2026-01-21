@@ -1,0 +1,12 @@
+{
+  "file_name": "level_token_02",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\level_token_02.bmt"
+  ],
+  "effects": [
+    "item\\level_token.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

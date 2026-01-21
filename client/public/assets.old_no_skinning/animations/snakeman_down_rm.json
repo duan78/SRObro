@@ -1,0 +1,17 @@
+{
+  "file_name": "snakeman_down_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 20002,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    524288,
+    0,
+    327680,
+    550254,
+    835433,
+    536933
+  ]
+}

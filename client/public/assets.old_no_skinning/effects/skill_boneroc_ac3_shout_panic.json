@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_boneroc_ac3_shout_panic",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 38174
+}

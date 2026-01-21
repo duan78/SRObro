@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_resta03",
+  "textures": [
+    "cj_resta03_sidewal.ddj",
+    "cj_resta03_sign.ddj",
+    "cj_resta02_light02.ddj",
+    "cj_resta03_floor.ddj",
+    "cj_resta03_fence.ddj",
+    "cj_resta03_wall01.ddj",
+    "cj_resta03_gidung.ddj",
+    "cj_resta03_stair.ddj",
+    "cj_resta03_liquor.ddj",
+    "cj_resta03_roof.ddj"
+  ]
+}

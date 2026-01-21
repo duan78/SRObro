@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_field_tomb1",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\jangan\\cj_field_tomb1.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_field_tomb1.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_field_tomb1_h.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\jangan\\cj_field_tomb.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

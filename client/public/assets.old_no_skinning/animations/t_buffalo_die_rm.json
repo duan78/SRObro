@@ -1,0 +1,28 @@
+{
+  "file_name": "t_buffalo_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 5909,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    327680,
+    157038,
+    834511,
+    143717,
+    703383,
+    2,
+    11,
+    612,
+    4019,
+    2,
+    16,
+    2,
+    15,
+    561,
+    1599
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "file_name": "anubis",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\anubis01.bms",
+    "prim\\mesh\\mob\\sd\\anubis02.bms",
+    "prim\\mesh\\mob\\sd\\anubis_part1.bms",
+    "prim\\mesh\\mob\\sd\\anubis_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\anubis_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\anubis_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\anubis.bmt"
+  ],
+  "effects": [
+    "monster\\sd\\keep_anubis_sword_wind.efp",
+    "monster\\sd\\keep_anubis_sword_wind.efp",
+    "monster\\sd\\keep_anubis_sword_wind.efp",
+    "monster\\sd\\keep_anubis_sword_wind.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\sd\\anubis\\anubis_stand01.ban",
+    "prim\\ani\\mob\\sd\\anubis\\anubis_die.ban",
+    "prim\\ani\\mob\\sd\\anubis\\anubis_attack01.ban",
+    "prim\\ani\\mob\\sd\\anubis\\anubis_attack03.ban",
+    "prim\\ani\\mob\\sd\\anubis\\anubis_attack04.ban",
+    "prim\\ani\\mob\\sd\\anubis\\anubis_attack05.ban",
+    "prim\\ani\\mob\\sd\\anubis\\anubis_attack06.ban",
+    "prim\\ani\\mob\\sd\\anubis\\anubis_walk.ban",
+    "prim\\ani\\mob\\sd\\anubis\\anubis_run.ban",
+    "prim\\ani\\mob\\sd\\anubis\\anubis_attack02.ban",
+    "prim\\ani\\mob\\sd\\anubis\\anubis_die_rm.ban"
+  ],
+  "textures": []
+}

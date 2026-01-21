@@ -1,0 +1,18 @@
+{
+  "file_name": "centerasia_pao09_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao09_01.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao09_01.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao09_02.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao09_03.bms",
+    "prim\\mesh\\bldg\\central asia\\pao\\centerasia_pao09_box01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\pao\\centerasia_pao09_01.bmt"
+  ],
+  "effects": [
+    "map\\minga_smoke_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

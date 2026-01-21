@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_w_turkey _2013",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_turkry_2013_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_turkry_2013_hand.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_turkry_2013.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_turkry_2013.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "hit_1_pierce_critical",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3167
+}

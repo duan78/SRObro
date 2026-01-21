@@ -1,0 +1,23 @@
+{
+  "file_name": "grs_water_big",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 363,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    817,
+    0,
+    191,
+    65,
+    194,
+    191,
+    65,
+    194,
+    191,
+    65,
+    1730,
+    819
+  ]
+}

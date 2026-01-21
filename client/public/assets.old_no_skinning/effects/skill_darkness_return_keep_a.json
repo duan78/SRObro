@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_darkness_return_keep_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2235
+}

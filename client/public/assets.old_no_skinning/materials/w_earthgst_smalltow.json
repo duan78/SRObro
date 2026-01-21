@@ -1,0 +1,17 @@
+{
+  "file_name": "w_earthgst_smalltow",
+  "textures": [
+    "w_earthgst_smalltow_rope2.ddj",
+    "w_earthgst_smalltow_wall2.ddj",
+    "w_earthgst_smalltow_wall.ddj",
+    "w_earthgst_smalltow_floor.ddj",
+    "w_earthgst_smalltow_ring.ddj",
+    "w_earthgst_smalltow_ladder.ddj",
+    "w_earthgst_smalltow_handrail.ddj",
+    "w_earthgst_smalltow_entrance.ddj",
+    "w_earthgst_smalltow_rope.ddj",
+    "w_earthgst_smalltow_togi.ddj",
+    "w_earthgst_house2_doorwall.ddj",
+    "w_earthgst_smalltow_etc.ddj"
+  ]
+}

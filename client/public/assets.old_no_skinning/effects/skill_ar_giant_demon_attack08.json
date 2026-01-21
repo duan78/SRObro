@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_ar_giant_demon_attack08",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 26824
+}

@@ -1,0 +1,27 @@
+{
+  "file_name": "blindmon_down_die",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 3944,
+  "animation_name": "\u0011",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    619,
+    2747,
+    143724,
+    157036,
+    159090,
+    621,
+    3252,
+    612,
+    3893,
+    2,
+    16,
+    2
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_mong_fort_bari",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bari.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_fort_bari.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

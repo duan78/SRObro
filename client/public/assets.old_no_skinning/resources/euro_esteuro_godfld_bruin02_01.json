@@ -1,0 +1,16 @@
+{
+  "file_name": "euro_esteuro_godfld_bruin02_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\godfld\\euro_esteuro_godfld_bruin02_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\godfld\\euro_esteuro_godfld_bruin02_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\godfld\\euro_esteuro_godfld_bruin02_02.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\godfld\\euro_esteuro_godfld_bruin02_03.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\godfld\\euro_esteuro_godfld_bruin02_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\godfld\\euro_esteuro_godfld_bruin01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

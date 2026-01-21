@@ -1,0 +1,10 @@
+{
+  "file_name": "system_enchant_f_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 290766
+}

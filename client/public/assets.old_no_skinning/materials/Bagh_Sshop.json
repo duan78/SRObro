@@ -1,0 +1,23 @@
+{
+  "file_name": "Bagh_Sshop",
+  "textures": [
+    "bagh_sshop_body.ddj",
+    "bagh_sshop_ca01.ddj",
+    "bagh_sshop_ca02.ddj",
+    "bagh_sshop_ca03.ddj",
+    "bagh_pot01.ddj",
+    "bagh_special_wood01.ddj",
+    "bagh_pot02.ddj",
+    "bagh_sshop_pt01.ddj",
+    "bagh_special_bottom01.ddj",
+    "bagh_sshop_ob02.ddj",
+    "bagh_sshop_ob03.ddj",
+    "bagh_sshop_ob04.ddj",
+    "bagh_sshop_box.ddj",
+    "bagh_special_object01.ddj",
+    "bagh_sshop_ob01.ddj",
+    "bagh_sshop_pt02.ddj",
+    "bagh_sshop_fru.ddj",
+    "bagh_city_weapon_wood02.ddj"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "dark tower_dark",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 14809
+}

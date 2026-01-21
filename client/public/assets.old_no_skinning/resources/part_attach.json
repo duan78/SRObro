@@ -1,0 +1,12 @@
+{
+  "file_name": "part_attach",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\part_attach.bmt"
+  ],
+  "effects": [
+    "map\\wc_ghostsmoke_bk.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

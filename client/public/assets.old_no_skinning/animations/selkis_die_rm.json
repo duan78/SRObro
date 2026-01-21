@@ -1,0 +1,33 @@
+{
+  "file_name": "selkis_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 5177,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    2,
+    12,
+    2,
+    12,
+    2,
+    12,
+    2,
+    13,
+    616,
+    3263,
+    614,
+    3124,
+    628,
+    3123,
+    560,
+    3136,
+    561,
+    2747
+  ]
+}

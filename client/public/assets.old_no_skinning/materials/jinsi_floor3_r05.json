@@ -1,0 +1,19 @@
+{
+  "file_name": "jinsi_floor3_r05",
+  "textures": [
+    "jinsi_floor3_crystal01.ddj",
+    "jinsi_floor3_mushroom01.ddj",
+    "jinsi_floor3_pillar01.ddj",
+    "jinsi_floor3_side01.ddj",
+    "jinsi_floor3_tile01.ddj",
+    "jinsi_floor3_tile02.ddj",
+    "jinsi_floor3_tile03.ddj",
+    "jinsi_floor3_tile04.ddj",
+    "jinsi_floor3_up01.ddj",
+    "jinsi_floor3_watertile01.ddj",
+    "jinsi_floor3_green02.ddj",
+    "jinsi_floor3_green03.ddj",
+    "jinsi_floor3_green01.ddj",
+    "jinsi_floor3_pillar02.ddj"
+  ]
+}

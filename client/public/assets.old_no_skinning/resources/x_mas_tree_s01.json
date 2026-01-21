@@ -1,0 +1,16 @@
+{
+  "file_name": "x_mas_tree_s01",
+  "meshes": [
+    "prim\\mesh\\etc\\x_mas\\x_mas_tree_s01.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_tree_s02.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_tree_s03.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_tree_s04.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_tree_s05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\x_mas\\x_mas_tree_s.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

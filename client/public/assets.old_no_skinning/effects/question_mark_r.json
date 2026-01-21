@@ -1,0 +1,10 @@
+{
+  "file_name": "question_mark_r",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 21373
+}

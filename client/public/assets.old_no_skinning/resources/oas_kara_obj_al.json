@@ -1,0 +1,18 @@
+{
+  "file_name": "oas_kara_obj_al",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj\\oas_kara_obj_al.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj\\oas_kara_obj_floor.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj\\oas_kara_obj_roof.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj\\oas_kara_obj_roof_2.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj\\oas_kara_obj_top.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj\\oas_kara_obj_wall_3.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj\\oas_kara_obj_wall_4.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\kara-obj\\oas_kara_obj_al.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

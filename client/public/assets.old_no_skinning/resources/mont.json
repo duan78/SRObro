@@ -1,0 +1,38 @@
+{
+  "file_name": "mont",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\mont02.bms",
+    "prim\\mesh\\mob\\sd\\mont_blade.bms",
+    "prim\\mesh\\mob\\sd\\mont_shield.bms",
+    "prim\\mesh\\mob\\sd\\mont_part1.bms",
+    "prim\\mesh\\mob\\sd\\mont_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\mont_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\mont.bmt",
+    "prim\\mtrl\\mob\\sd\\mont_clon.bmt",
+    "prim\\mtrl\\mob\\sd\\mont_clon2.bmt"
+  ],
+  "effects": [
+    "monster\\luster_earthkingeye.efp",
+    "monster\\luster_earthkingeye.efp",
+    "monster\\dead_dust.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_stand01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_walk.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_run.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_attack01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_attack02.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_attack03.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_damage01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_damage02.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_die.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_down.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_downwait.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_downdamage.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_downup.ban",
+    "prim\\ani\\mob\\taklamakan\\bonegeneral\\bonegeneral_downdie.ban"
+  ],
+  "textures": []
+}

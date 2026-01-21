@@ -1,0 +1,18 @@
+{
+  "file_name": "chinaetc_islamman",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaetc_islamman_2s.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_islamman_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_islamman_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_islamman_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaetc_islamman.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinaetc_islamman_ani_basic.ban",
+    "prim\\ani\\npc\\china\\chinaetc_islamman_ani_basic02.ban"
+  ],
+  "textures": []
+}

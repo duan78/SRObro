@@ -1,0 +1,10 @@
+{
+  "file_name": "cold_gigongsul_ice_e",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 57672
+}

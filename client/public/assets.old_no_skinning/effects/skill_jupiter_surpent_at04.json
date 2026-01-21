@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_jupiter_surpent_at04",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 13549
+}

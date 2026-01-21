@@ -1,0 +1,17 @@
+{
+  "file_name": "ivy_boss_dungeon_stone",
+  "meshes": [
+    "prim\\mesh\\mob\\asiam\\ivy02.bms",
+    "prim\\mesh\\mob\\asiam\\ivy01_part1.bms",
+    "prim\\mesh\\mob\\asiam\\ivy01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\bossdungeon\\ivy_boss_dungeon_stone.bmt"
+  ],
+  "effects": [
+    "battle\\status_cure_burn.efp",
+    "battle\\status_cure_burn.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

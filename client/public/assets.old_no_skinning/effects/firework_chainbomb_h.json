@@ -1,0 +1,10 @@
+{
+  "file_name": "firework_chainbomb_h",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 25693
+}

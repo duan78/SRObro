@@ -1,0 +1,16 @@
+{
+  "file_name": "bagh_field_bridge",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_bridge_tile01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_bridge_tile01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_bridge_tile03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_bridge_tile04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_bridge_tile05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\farm\\bagh_field_bridge.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

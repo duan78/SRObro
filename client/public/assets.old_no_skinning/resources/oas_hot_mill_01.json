@@ -1,0 +1,22 @@
+{
+  "file_name": "oas_hot_mill_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_03_oas_strhouse01_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_04_oas_hot_simplst_03.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_05_cj_mill_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_06_cj_mill_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_07_oas_hot_simplst_01.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_08_oas_ strhouse01_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_09_oas_hot_simplst_02.bms",
+    "prim\\mesh\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_10_oas_hot_simplst_10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\hotang\\small_ferry\\oas_hot_mill_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

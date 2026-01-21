@@ -1,0 +1,32 @@
+{
+  "file_name": "snakeslave",
+  "meshes": [
+    "prim\\mesh\\mob\\qinshi\\snakeslave_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\snakeslave_part2_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\snakeslave_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\snakeslave.bmt",
+    "prim\\mtrl\\mob\\qinshi\\snakeslave_champ.bmt",
+    "prim\\mtrl\\mob\\qinshi\\snakeslave_clon2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_stand01.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_stand02.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_walk.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_run.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_attack01.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_attack02.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_attack03.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_die.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_damage01.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_die_rm.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_down.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_down_rm.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_down_damage.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_down_up.ban",
+    "prim\\ani\\mob\\qinshi\\snakeslave\\snakeslave_down_die.ban"
+  ],
+  "textures": []
+}

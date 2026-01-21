@@ -1,0 +1,57 @@
+{
+  "file_name": "fortress_catapult",
+  "meshes": [
+    "prim\\mesh\\cos\\fortress_catapult_01.bms",
+    "prim\\mesh\\cos\\fortress_catapult_02.bms",
+    "prim\\mesh\\cos\\fortress_catapult_02_01.bms",
+    "prim\\mesh\\cos\\fortress_catapult_03.bms",
+    "prim\\mesh\\cos\\fortress_catapult_03_01.bms",
+    "prim\\mesh\\cos\\fortress_catapult_03_02.bms",
+    "prim\\mesh\\cos\\fortress_catapult_03_03.bms",
+    "prim\\mesh\\cos\\fortress_catapult_03_04.bms",
+    "prim\\mesh\\cos\\fortress_catapult_03_05.bms",
+    "prim\\mesh\\cos\\fortress_catapult_03_06.bms",
+    "prim\\mesh\\cos\\fortress_catapult_03_07.bms",
+    "prim\\mesh\\cos\\fortress_catapult_ram_01.bms",
+    "prim\\mesh\\cos\\fortress_catapult_ram_02.bms",
+    "prim\\mesh\\cos\\fortress_catapult_ram_03.bms",
+    "prim\\mesh\\cos\\fortress_catapult_ram_04.bms",
+    "prim\\mesh\\cos\\fortress_catapult_ram_chain.bms",
+    "prim\\mesh\\cos\\fortress_catapult_shield.bms",
+    "prim\\mesh\\cos\\fortress_catapult_flag.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\fortress_catapult.bmt"
+  ],
+  "effects": [
+    "cos\\dust_fortress_death.efp",
+    "cos\\dust_fortress_run.efp",
+    "cos\\dust_fortress_run.efp",
+    "cos\\dust_fortress_run.efp",
+    "cos\\dust_fortress_run.efp",
+    "cos\\dust_fortress_run.efp",
+    "cos\\dust_fortress_run.efp",
+    "monster\\dust_earthghost_run.efp",
+    "monster\\dust_earthghost_run.efp",
+    "monster\\dust_earthghost_run.efp",
+    "monster\\dust_earthghost_run.efp",
+    "monster\\dust_earthghost_run.efp",
+    "monster\\dust_earthghost_run.efp",
+    "monster\\dust_earthghost_run.efp",
+    "monster\\dust_earthghost_run.efp",
+    "cos\\dust_fortress_demage.efp",
+    "cos\\dust_fortress_demage.efp",
+    "cos\\dust_fortress_demage.efp",
+    "cos\\dust_fortress_demage.efp",
+    "cos\\dust_fortress_demage.efp"
+  ],
+  "animations": [
+    "prim\\ani\\cos\\fortress_catapult\\fortress_catapult_walk.ban",
+    "prim\\ani\\cos\\fortress_catapult\\fortress_catapult_run.ban",
+    "prim\\ani\\cos\\fortress_catapult\\fortress_catapult_attack01.ban",
+    "prim\\ani\\cos\\fortress_catapult\\fortress_catapult_damage01.ban",
+    "prim\\ani\\cos\\fortress_catapult\\fortress_catapult_die.ban",
+    "prim\\ani\\cos\\fortress_catapult\\fortress_catapult_die_rm.ban"
+  ],
+  "textures": []
+}

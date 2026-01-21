@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_mili_main02",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_main1_deco.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_main1_gidung.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_main1_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_main1_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan04\\cj_mili_main02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

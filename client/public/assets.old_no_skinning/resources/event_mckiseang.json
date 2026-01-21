@@ -1,0 +1,24 @@
+{
+  "file_name": "event_mckiseang",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng2_hair.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng2_skirt.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng2_body_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng2_body_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaetc_kisaeng2.bmt"
+  ],
+  "effects": [
+    "npc\\npc_chinasystem_shaman_pipesmoke.efp",
+    "npc\\npc_chinasystem_shaman_pipesmoke.efp"
+  ],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinaetc_kisaeng2_basic.ban",
+    "prim\\ani\\npc\\china\\chinaetc_kisaeng2_time.ban",
+    "prim\\ani\\char\\china\\woman\\skill_china_gigong_ready_k.ban",
+    "prim\\ani\\char\\china\\woman\\skill_china_fire__wall_shoot.ban",
+    "prim\\ani\\char\\china\\woman\\skill_china_gigong_wait_k.ban"
+  ],
+  "textures": []
+}

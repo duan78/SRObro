@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_jupiter_fanaticism_amb_weapon",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 15705
+}

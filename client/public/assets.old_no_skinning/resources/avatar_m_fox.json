@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_m_fox",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_fox_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_fox_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_fox_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_fox.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "fortress_ct_fort_dan",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_dan.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_dan.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_dan02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\euro_esteuro_cons_caswall_02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

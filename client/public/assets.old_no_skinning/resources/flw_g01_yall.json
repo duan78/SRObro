@@ -1,0 +1,10 @@
+{
+  "file_name": "flw_g01_yall",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\flower\\flw_g01_yall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

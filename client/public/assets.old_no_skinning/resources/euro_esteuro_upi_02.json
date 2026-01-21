@@ -1,0 +1,28 @@
+{
+  "file_name": "euro_esteuro_upi_02",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_wall03.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_01_brazier.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_area.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_carve01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_carve02.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_door01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_door02.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_pillar01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_pillar02_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_pillar02_02.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_pillar03.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_roof.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_stairs.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_wall03.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_wall04.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_wall05.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02_alpha.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_upi_02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

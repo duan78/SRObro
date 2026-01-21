@@ -1,0 +1,10 @@
+{
+  "file_name": "tuto_waypoint",
+  "meshes": [],
+  "materials": [],
+  "effects": [
+    "system\\tuto_arrow_waypoint.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,25 @@
+{
+  "file_name": "yuno_die",
+  "meshes": [
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die01.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die02.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die03.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die04.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die05.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die06.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die07.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die08.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die09.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die10.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die11.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die_weapon.bms",
+    "prim\\mesh\\mob\\jupiter\\yuno\\yuno_die_weapon01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\yuno.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

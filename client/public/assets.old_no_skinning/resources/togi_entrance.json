@@ -1,0 +1,12 @@
+{
+  "file_name": "togi_entrance",
+  "meshes": [
+    "prim\\mesh\\dun\\wchina\\donhwang_cv\\togi_cv\\togicv_ent\\togi_entrance.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv\\togi_cv\\togicv.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

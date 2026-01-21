@@ -1,0 +1,22 @@
+{
+  "file_name": "euro_constan_uni",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_uni_alpha.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_uni_alpha.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_uni_pillar.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_uni_roof.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_uni_stairs.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_uni_wall01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_uni_wall02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_uni_wall03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_uni_wall04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_uni_wall05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_uni_wall06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_constan_uni.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

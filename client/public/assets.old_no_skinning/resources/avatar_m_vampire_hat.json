@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_m_vampire_hat",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_vampire.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,41 @@
+{
+  "file_name": "china_wall40",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_blackroof.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_blackroof.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_blackroof01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_blackroof02.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_bong.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_bong01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_centile401.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_centile402.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_dan.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_door.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_dragonpattern.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_flag.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_gatepattern.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_line.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_lineart.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_maintile.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_roofex.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_sideroof.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_sideroof01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_sign01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_sign02.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_stair.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_tile.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_tile02.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_wall01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_wall02.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_wall03.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_wall04.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_wallhole.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall40_walltile02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\flag_war\\china_wall40.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

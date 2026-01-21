@@ -1,0 +1,18 @@
+{
+  "file_name": "euro_const_mili",
+  "textures": [
+    "euro_const_mili_stairs.ddj",
+    "euro_const_mili_sign.ddj",
+    "euro_const_mili_wall03.ddj",
+    "euro_const_mili_pillar.ddj",
+    "euro_const_mili_wall01.ddj",
+    "euro_const_mili_wall05.ddj",
+    "euro_const_mili_roof.ddj",
+    "euro_const_mili_wall04.ddj",
+    "euro_const_mili_wall02.ddj",
+    "euro_const_mili_alpha01.ddj",
+    "euro_const_mili_wall06.ddj",
+    "euro_const_mili_alpha02.ddj",
+    "euro_const_mili_wall07.ddj"
+  ]
+}

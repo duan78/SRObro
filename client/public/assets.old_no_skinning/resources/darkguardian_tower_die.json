@@ -1,0 +1,29 @@
+{
+  "file_name": "darkguardian_tower_die",
+  "meshes": [
+    "prim\\mesh\\mob\\dm\\darkguardian_die.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_die11.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_die12.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_die13.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_die14.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_die15.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_die16.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_die17.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_die18.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_die19.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_die20.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian01_die.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian02_die.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_die04.bms",
+    "prim\\mesh\\mob\\dm\\darkguardian_tower.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\dm\\darkguardian.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\dm\\darkguardian\\darkguardian_tower_die.ban",
+    "prim\\ani\\mob\\dm\\darkguardian\\darkguardian_tower_die_rm.ban"
+  ],
+  "textures": []
+}

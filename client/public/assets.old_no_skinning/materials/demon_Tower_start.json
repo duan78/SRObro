@@ -1,0 +1,26 @@
+{
+  "file_name": "demon_Tower_start",
+  "textures": [
+    "demon_tower_l10.ddj",
+    "demon_tower_gate03.ddj",
+    "demon_tower_gate07.ddj",
+    "demon_tower_gate04.ddj",
+    "demon_tower_gate02.ddj",
+    "demon_tower_l04.ddj",
+    "demon_tower_l03_fire.ddj",
+    "demon_tower_l16.ddj",
+    "demon_tower_l02.ddj",
+    "demon_tower_gate05.ddj",
+    "demon_tower_l08.ddj",
+    "demon_tower_l07.ddj",
+    "demon_tower_l06.ddj",
+    "demon_tower_l05.ddj",
+    "demon_tower_l01.ddj",
+    "demon_tower_l11_fire.ddj",
+    "demon_tower_l12_fire.ddj",
+    "demon_tower_gate09.ddj",
+    "demon_tower_gate01_fire.ddj",
+    "demon_tower_l09.ddj",
+    "demon_tower_l15.ddj"
+  ]
+}

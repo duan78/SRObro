@@ -1,0 +1,8 @@
+{
+  "file_name": "avatar_w_ninja_01",
+  "textures": [
+    "prim\\mtrl\\item\\etc\\avatar_w_ninja_01_hat.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_ninja_01.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_ninja_01_attach.ddj"
+  ]
+}

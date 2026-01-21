@@ -1,0 +1,14 @@
+{
+  "file_name": "oa_ho_waterfall01_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\bigwaterfall03.bmt"
+  ],
+  "effects": [
+    "map\\pajang-b.efp",
+    "map\\multugu-b.efp",
+    "map\\pokpomulbangul-m.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "rocmountainquest_slave2",
+  "meshes": [
+    "prim\\mesh\\npc\\common\\rocmountainquest_slave202.bms",
+    "prim\\mesh\\npc\\common\\rocmountainquest_slave203.bms",
+    "prim\\mesh\\npc\\common\\rocmountainquest_slave201_part1.bms",
+    "prim\\mesh\\npc\\common\\rocmountainquest_slave201_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\common\\rocmountainquest_slave2.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

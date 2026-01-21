@@ -1,0 +1,10 @@
+{
+  "file_name": "roc_clothes_la",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\woman_item\\roc_clothes.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

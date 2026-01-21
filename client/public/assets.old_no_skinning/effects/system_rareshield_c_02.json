@@ -1,0 +1,10 @@
+{
+  "file_name": "system_rareshield_c_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 24757
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_jupiter_at03_ready",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 14365
+}

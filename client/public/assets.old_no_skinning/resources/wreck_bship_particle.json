@@ -1,0 +1,33 @@
+{
+  "file_name": "wreck_bship_particle",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\event\\wreck_event_door.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\yellow_green_flame_glow.efp",
+    "dun\\small_ship_skylight_03.efp",
+    "dun\\small_ship_skylight_03.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_01.efp",
+    "dun\\big_ship_skylight_02.efp",
+    "dun\\big_ship_skylight_02.efp",
+    "dun\\big_ship_skylight_02.efp",
+    "dun\\big_ship_skylight_03.efp",
+    "dun\\big_ship_skylight_03.efp",
+    "dun\\big_ship_skylight_03.efp",
+    "dun\\wreck_floor_light_02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

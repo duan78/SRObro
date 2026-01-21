@@ -1,0 +1,53 @@
+{
+  "file_name": "event_area_rockevent",
+  "meshes": [
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_brazier_event.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_deco01.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_deco02.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_deco03.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_deco04.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_deco05.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_door.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_stairs.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_stonestatue01.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_stonestatue02.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_stonestatue03.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_tower.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_wall02.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_wall04.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_wall05.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_wall06.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_wall07.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_wall08.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_wall09.bms",
+    "prim\\mesh\\dun\\tower\\defence\\event_area_rockevent_mpaper.bms",
+    "prim\\mesh\\dun\\tower\\defence\\event_area_rockevent_rock.bms",
+    "prim\\mesh\\dun\\tower\\defence\\event_area_rockevent_scissors.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_brazier_event.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_pattern03_event.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_tile01_event.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_tile02_event.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_wall01_event.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_wall03_event.bms",
+    "prim\\mesh\\dun\\tower\\defence\\inca_machupicchu_pattern02_evemt.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\tower\\defence\\event_area_rockevent.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp",
+    "dun\\red_orange_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

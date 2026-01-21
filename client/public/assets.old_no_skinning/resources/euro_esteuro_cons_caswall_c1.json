@@ -1,0 +1,25 @@
+{
+  "file_name": "euro_esteuro_cons_caswall_c1",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_c1_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_c1_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_c1_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_c1_03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_c1_04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_c1_05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_c1_06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_c1_alpha.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_c1_wood.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_esteuro_cons_caswall_c1.bmt"
+  ],
+  "effects": [
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp",
+    "map\\frame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

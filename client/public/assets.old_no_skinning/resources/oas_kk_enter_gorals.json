@@ -1,0 +1,13 @@
+{
+  "file_name": "oas_kk_enter_gorals",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_enter01_3s.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kk_enter_gorals.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\oas_kk_enter_gorals.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

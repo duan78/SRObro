@@ -1,0 +1,27 @@
+{
+  "file_name": "oas_kara_obj07",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_01.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_01.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_02.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_03.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_04.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_05.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_06.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_07.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_08.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_09.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_10.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_11.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_12.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_13.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_14.bms",
+    "prim\\mesh\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07_15.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\kara-obj-new\\oas_kara_obj07.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

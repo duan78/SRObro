@@ -1,0 +1,17 @@
+{
+  "file_name": "spear_14",
+  "meshes": [
+    "prim\\mesh\\item\\china\\weapon\\spear_14.bms",
+    "prim\\mesh\\item\\china\\weapon\\spear_14_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\weapon\\spear_14.bmt"
+  ],
+  "effects": [
+    "system\\item_ch_spear_14.efp"
+  ],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line.ddj"
+  ]
+}

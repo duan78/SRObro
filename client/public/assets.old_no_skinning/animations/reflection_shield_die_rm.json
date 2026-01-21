@@ -1,0 +1,24 @@
+{
+  "file_name": "reflection_shield_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 286,
+  "animation_name": "\u0018",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    196608,
+    393216,
+    2,
+    6,
+    143920,
+    16791,
+    13696,
+    16791,
+    13696,
+    439296,
+    2
+  ]
+}

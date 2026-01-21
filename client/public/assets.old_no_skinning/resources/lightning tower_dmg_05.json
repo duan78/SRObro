@@ -1,0 +1,16 @@
+{
+  "file_name": "lightning tower_dmg_05",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\guard tower\\lightning tower_dmg_05.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\lightning tower_dmg_05.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\lightning tower_dmg_05_01.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\lightning tower_dmg_05_flag.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\lightning tower_dmg_05_metal.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\guard tower\\guard tower1_2_3_5_dmg.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

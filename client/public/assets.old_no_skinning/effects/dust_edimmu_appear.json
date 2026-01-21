@@ -1,0 +1,10 @@
+{
+  "file_name": "dust_edimmu_appear",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2875
+}

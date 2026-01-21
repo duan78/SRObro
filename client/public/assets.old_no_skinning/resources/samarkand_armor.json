@@ -1,0 +1,24 @@
+{
+  "file_name": "samarkand_armor",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_02.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_03.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_04.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_05.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_06.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_07.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_08.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_09.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_10.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_11.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_armor_12.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\samarkand\\samarkand_buil.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,9 @@
+{
+  "file_name": "skill_ishade_icefield_ice",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true
+  },
+  "raw_size": 2685
+}

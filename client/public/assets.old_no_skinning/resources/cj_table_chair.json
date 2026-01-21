@@ -1,0 +1,23 @@
+{
+  "file_name": "cj_table_chair",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\jangan\\cj_table.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_obj_food03.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_obj_towel01.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_table.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_chai.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_obj_cup02.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_obj_food02.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_obj_sul01.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_obj_tong01.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_table_leg.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_chai01.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_obj_cup01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\jangan\\cj_table_chair.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

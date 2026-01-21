@@ -1,0 +1,15 @@
+{
+  "file_name": "bagh_petra_crystal04",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_crystal04_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_petra\\bagh_petra_crystal.bmt"
+  ],
+  "effects": [
+    "dun\\cristal_up_violet_b.efp",
+    "dun\\cristal_glow_violet_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

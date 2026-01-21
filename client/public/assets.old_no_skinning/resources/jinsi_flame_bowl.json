@@ -1,0 +1,13 @@
+{
+  "file_name": "jinsi_flame_bowl",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\common\\jinsi_flame_bowl.bmt"
+  ],
+  "effects": [
+    "dun\\blue_flame_bowl_glow.efp",
+    "dun\\blue_flame_bowl.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

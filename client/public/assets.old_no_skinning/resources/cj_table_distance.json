@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_table_distance",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\jangan\\cj_ table.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_ table.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_ table_01.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_ table_a.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\jangan\\cj_ table.bmt"
+  ],
+  "effects": [
+    "map\\light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

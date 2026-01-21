@@ -1,0 +1,16 @@
+{
+  "file_name": "cj_resta01_light_n",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_light_n.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_resta01_light_n01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_resta01_light_n.bmt"
+  ],
+  "effects": [
+    "map\\light.efp",
+    "map\\light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

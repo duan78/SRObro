@@ -1,0 +1,13 @@
+{
+  "file_name": "centerasia_sheep02_01",
+  "meshes": [
+    "prim\\mesh\\nature\\central asia\\animal\\centerasia_sheep02_01_part1.bms",
+    "prim\\mesh\\nature\\central asia\\animal\\centerasia_sheep02_01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\central asia\\animal\\centerasia_sheep02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

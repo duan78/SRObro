@@ -1,0 +1,28 @@
+{
+  "file_name": "jinsi_floor4_t12",
+  "meshes": [
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\tunnel12\\jinsi_floor4_t12_01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\tunnel12\\jinsi_floor4_t12_01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\tunnel12\\jinsi_floor4_t12_g01.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\tunnel12\\jinsi_floor4_t12_g02.bms",
+    "prim\\mesh\\dun\\china\\jinsi_cv\\floor_04\\tunnel12\\jinsi_floor4_t12_g03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\floor_04\\jinsi_floor4_b01_01.bmt"
+  ],
+  "effects": [
+    "dun\\sky_violet_small_weak.efp",
+    "dun\\sky_violet_small_weak.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp",
+    "dun\\plant_lingt.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

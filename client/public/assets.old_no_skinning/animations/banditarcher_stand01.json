@@ -1,0 +1,17 @@
+{
+  "file_name": "banditarcher_stand01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 7272,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    327680,
+    0,
+    327680,
+    0,
+    353646,
+    899786
+  ]
+}

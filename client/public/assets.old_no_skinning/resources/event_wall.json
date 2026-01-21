@@ -1,0 +1,10 @@
+{
+  "file_name": "event_wall",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv_clone\\common\\event_wall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

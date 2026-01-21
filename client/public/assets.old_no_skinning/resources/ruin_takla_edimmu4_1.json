@@ -1,0 +1,14 @@
+{
+  "file_name": "ruin_takla_edimmu4_1",
+  "meshes": [
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\edimmu\\ruin_takla_edimmu4_1.bms",
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\edimmu\\ruin_takla_edimmu4_1.bms",
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\edimmu\\ruin_takla_edimmu4_2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\ruins\\taklamakan des\\edimmu\\ruin_takla_edimmu3.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

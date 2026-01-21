@@ -1,0 +1,25 @@
+{
+  "file_name": "penon_w_die",
+  "meshes": [
+    "prim\\mesh\\mob\\karakoram\\penon_arm01.bms",
+    "prim\\mesh\\mob\\karakoram\\penon_arm02.bms",
+    "prim\\mesh\\mob\\karakoram\\penon_arm03.bms",
+    "prim\\mesh\\mob\\karakoram\\penon_arm04.bms",
+    "prim\\mesh\\mob\\karakoram\\penon_arm05.bms",
+    "prim\\mesh\\mob\\karakoram\\penon_arm06.bms",
+    "prim\\mesh\\mob\\karakoram\\penon_arm07.bms",
+    "prim\\mesh\\mob\\karakoram\\penon_arm08.bms",
+    "prim\\mesh\\mob\\karakoram\\penon_die_shield.bms",
+    "prim\\mesh\\mob\\karakoram\\penon_die_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\penon_die_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\karakoram\\penonw.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_die.ban",
+    "prim\\ani\\mob\\karakoram\\penonf\\penonf_die_loop.ban"
+  ],
+  "textures": []
+}

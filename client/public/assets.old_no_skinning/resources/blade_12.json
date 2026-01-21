@@ -1,0 +1,15 @@
+{
+  "file_name": "blade_12",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\weapon\\blade_12.bmt"
+  ],
+  "effects": [
+    "system\\item_ch_blade_12_text.efp",
+    "system\\item_ch_blade_12_bottom.efp",
+    "system\\item_ch_blade_12_mid.efp",
+    "system\\item_ch_blade_12_mid02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

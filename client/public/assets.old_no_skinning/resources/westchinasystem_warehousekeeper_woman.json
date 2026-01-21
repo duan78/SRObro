@@ -1,0 +1,20 @@
+{
+  "file_name": "westchinasystem_warehousekeeper_woman",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\westchinasystem_warehousekeeper_key.bms",
+    "prim\\mesh\\npc\\china\\westchinasystem_warehousekeeper_key_al_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinasystem_warehousekeeper_woman_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinasystem_warehousekeeper_woman_al_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinasystem_warehousekeeper_woman_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinasystem_warehousekeeper_woman_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\westchinasystem_warehousekeeper_woman.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\westchinasystem_warehousekeeper_woman_basic.ban",
+    "prim\\ani\\npc\\china\\westchinasystem_warehousekeeper_woman_time.ban"
+  ],
+  "textures": []
+}

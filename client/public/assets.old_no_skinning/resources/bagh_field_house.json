@@ -1,0 +1,35 @@
+{
+  "file_name": "bagh_field_house",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house_door.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house_fence.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house_light.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house_light_alpha.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house_line.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house_porcelain.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house_tent.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house_top.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house_win.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house_window.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_field\\farm\\bagh_field_house.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange02_s.efp",
+    "map\\cj_pal_lamp_orange02_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

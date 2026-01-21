@@ -1,0 +1,18 @@
+{
+  "file_name": "euro_esteuro_burnhouse06",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\bloodyhillfld\\euro_esteuro_burnhouse06_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\bloodyhillfld\\euro_esteuro_burnhouse06_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\bloodyhillfld\\euro_esteuro_burnhouse06_02.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\bloodyhillfld\\euro_esteuro_burnhouse06_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\bloodyhillfld\\euro_esteuro_burnhouse06.bmt"
+  ],
+  "effects": [
+    "map\\minga_smoke_b.efp",
+    "map\\frame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_weap_sign",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_sign.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_sign.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_sign_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_weapon.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,11 @@
+{
+  "file_name": "alex_roguedoor",
+  "textures": [
+    "alex_roguedoor_wall01.ddj",
+    "alex_roguedoor_wall02.ddj",
+    "alex_roguedoor_wall03.ddj",
+    "alex_roguedoor_wall04.ddj",
+    "alex_roguedoor_wall05.ddj",
+    "alex_roguedoor_wall06.ddj"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "file_name": "westchinashop_stableman",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\westchinashop_stableman_al.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_stableman_al_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_stableman_horse_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_stableman_horse_al_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_stableman_tong.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_stableman_horse_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_stableman_horse_part2.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_stableman_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_stableman_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\westchinashop_stableman.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

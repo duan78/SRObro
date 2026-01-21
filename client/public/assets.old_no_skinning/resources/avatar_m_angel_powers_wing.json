@@ -1,0 +1,18 @@
+{
+  "file_name": "avatar_m_angel_powers_wing",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_angel_powers_wing.bmt"
+  ],
+  "effects": [
+    "system\\avatar_angel_powers_w.efp",
+    "system\\avatar_angel_powers_w.efp",
+    "system\\avatar_angel_powers_t.efp",
+    "system\\avatar_angel_powers_t.efp"
+  ],
+  "animations": [
+    "prim\\ani\\item\\etc\\avatar_m_angel_powers_wing_stand.ban",
+    "prim\\ani\\item\\etc\\avatar_m_angel_powers_wing_run.ban"
+  ],
+  "textures": []
+}

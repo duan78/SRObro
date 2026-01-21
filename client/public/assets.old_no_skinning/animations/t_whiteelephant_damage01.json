@@ -1,0 +1,22 @@
+{
+  "file_name": "t_whiteelephant_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 7074,
+  "animation_name": "\u0018",
+  "data_blocks": [
+    0,
+    393216,
+    0,
+    655360,
+    6,
+    10,
+    418913,
+    1585,
+    4160,
+    1585,
+    4283,
+    1586
+  ]
+}

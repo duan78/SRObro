@@ -1,0 +1,31 @@
+{
+  "file_name": "bagh_mong_tent_btent",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent13.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent14.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent_15.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent_tentlight.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_btent.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange02_s.efp",
+    "map\\cj_pal_lamp_orange02_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

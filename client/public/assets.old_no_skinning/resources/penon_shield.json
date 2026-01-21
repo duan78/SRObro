@@ -1,0 +1,10 @@
+{
+  "file_name": "penon_shield",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\karakoram\\penonw.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,21 @@
+{
+  "file_name": "x_mas_tree_sdeco",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\common\\event-xmas\\x_mas_tree.bmt"
+  ],
+  "effects": [
+    "map\\x-mastree-roop.efp",
+    "map\\x-mastree-roop.efp",
+    "map\\x-mastree-roop.efp",
+    "map\\x-mastree-roop.efp",
+    "map\\x-mastree-roop.efp",
+    "map\\x-mastree-roop.efp",
+    "map\\x-mastree-roop.efp",
+    "map\\x-mastree-roop.efp",
+    "map\\x-mastree-roop.efp",
+    "map\\x-mastree-roop.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

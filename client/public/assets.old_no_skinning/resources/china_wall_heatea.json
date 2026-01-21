@@ -1,0 +1,13 @@
+{
+  "file_name": "china_wall_heatea",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall_heatea01_01.bms",
+    "prim\\mesh\\dun\\war\\flag_war\\china_wall_heatea01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\flag_war\\china_wall_heatea.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

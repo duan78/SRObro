@@ -1,0 +1,16 @@
+{
+  "file_name": "bagh_mong_tent_cargo02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_cargo02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_cargo02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_cargo02_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_cargo02_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_cargo02_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_cargo02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

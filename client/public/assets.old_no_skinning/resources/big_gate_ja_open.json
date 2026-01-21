@@ -1,0 +1,14 @@
+{
+  "file_name": "big_gate_ja_open",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\jangan\\big_gate_ja_open01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\big_gate_ja_open01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\big_gate_ja_open02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\jangan\\big_gate_ja_01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,32 @@
+{
+  "file_name": "wreck_sisl_01",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_box.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_box.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_drum.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_gro01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_gro02.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_gro03.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_gro04.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_gro2_con.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_gro_con.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_ground.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_ice.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_ice2.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_icicle.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_icicle2.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_pulley1.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_pulley2.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_rock.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_wall.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_wall02.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_wall03.bms",
+    "prim\\mesh\\dun\\property\\wreck\\island\\wreck_sisl_wood.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\wreck_sisl.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

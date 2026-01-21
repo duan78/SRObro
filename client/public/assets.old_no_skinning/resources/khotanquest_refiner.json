@@ -1,0 +1,19 @@
+{
+  "file_name": "khotanquest_refiner",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotanquest_refiner_al.bms",
+    "prim\\mesh\\npc\\khotan\\khotanquest_refiner_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotanquest_refiner_part2.bms",
+    "prim\\mesh\\npc\\khotan\\khotanquest_refiner_tool.bms",
+    "prim\\mesh\\npc\\khotan\\khotanquest_refiner_tool2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotanquest_refiner.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\khotan\\khotanquest_refiner_basic.ban",
+    "prim\\ani\\npc\\khotan\\khotanquest_refiner_basic2.ban"
+  ],
+  "textures": []
+}

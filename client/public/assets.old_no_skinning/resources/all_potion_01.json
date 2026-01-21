@@ -1,0 +1,10 @@
+{
+  "file_name": "all_potion_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\lifeherb.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

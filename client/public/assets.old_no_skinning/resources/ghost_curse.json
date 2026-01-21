@@ -1,0 +1,29 @@
+{
+  "file_name": "ghost_curse",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\ghost_curse_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_curse_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_curse_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_curse_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\ghost_curse.bmt"
+  ],
+  "effects": [
+    "monster\\god\\skill_wreck_curse_keep_eye.efp",
+    "monster\\god\\skill_wreck_curse_keep_eye.efp",
+    "monster\\god\\skill_wreck_curse_keep_mouth.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\god\\ghost_curse\\ghost_curse_stand01.ban",
+    "prim\\ani\\mob\\god\\ghost_curse\\ghost_curse_walk.ban",
+    "prim\\ani\\mob\\god\\ghost_curse\\ghost_curse_run.ban",
+    "prim\\ani\\mob\\god\\ghost_curse\\ghost_curse_damage1.ban",
+    "prim\\ani\\mob\\god\\ghost_curse\\ghost_curse_attack1.ban",
+    "prim\\ani\\mob\\god\\ghost_curse\\ghost_curse_attack2.ban",
+    "prim\\ani\\mob\\god\\ghost_curse\\ghost_curse_attack3.ban",
+    "prim\\ani\\mob\\god\\ghost_curse\\ghost_curse_die.ban",
+    "prim\\ani\\mob\\god\\ghost_curse\\ghost_curse_die_rm.ban"
+  ],
+  "textures": []
+}

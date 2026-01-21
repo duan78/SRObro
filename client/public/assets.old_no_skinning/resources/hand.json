@@ -1,0 +1,12 @@
+{
+  "file_name": "hand",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\hand.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\hand.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

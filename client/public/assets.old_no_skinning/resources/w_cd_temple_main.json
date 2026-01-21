@@ -1,0 +1,21 @@
+{
+  "file_name": "w_cd_temple_main",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_gidung.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_roof.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_roof_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_stair.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_up.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_wall.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_gidung_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tem_stair_a.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_temple_main.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

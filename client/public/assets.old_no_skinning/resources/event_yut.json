@@ -1,0 +1,27 @@
+{
+  "file_name": "event_yut",
+  "meshes": [
+    "prim\\mesh\\etc\\event_yut01.bms",
+    "prim\\mesh\\etc\\event_yut02.bms",
+    "prim\\mesh\\etc\\event_yut03.bms",
+    "prim\\mesh\\etc\\event_yut04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\event_yut.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\etc\\event_yut_skill10.ban",
+    "prim\\ani\\etc\\event_yut_skill11.ban",
+    "prim\\ani\\etc\\event_yut_skill20.ban",
+    "prim\\ani\\etc\\event_yut_skill21.ban",
+    "prim\\ani\\etc\\event_yut_skill30.ban",
+    "prim\\ani\\etc\\event_yut_skill40.ban",
+    "prim\\ani\\etc\\event_yut_skill50.ban",
+    "prim\\ani\\etc\\event_yut_skill51.ban",
+    "prim\\ani\\etc\\event_yut_skill31.ban",
+    "prim\\ani\\etc\\event_yut_skill41.ban",
+    "prim\\ani\\etc\\event_yut_stand01.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "pet2_dog_eyes_r",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 11943
+}

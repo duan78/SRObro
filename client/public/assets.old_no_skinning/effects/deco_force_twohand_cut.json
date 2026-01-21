@@ -1,0 +1,12 @@
+{
+  "file_name": "deco_force_twohand_cut",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 4169
+}

@@ -1,0 +1,11 @@
+{
+  "file_name": "mskill_arabia_kidemonas_attack04_violet_circle",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 88281
+}

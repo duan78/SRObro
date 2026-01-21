@@ -1,0 +1,27 @@
+{
+  "file_name": "samarkand_jewel_capet01",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_capet01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_capet01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_column01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_etc01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_etc02.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_light01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_stair01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_tile01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_up01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_wall01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_wall02.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_wall03.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_wall04.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_wall05.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_wall06.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_jewel_window01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\samarkand\\samarkand_buil.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

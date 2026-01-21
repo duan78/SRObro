@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_field_longtree02",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_field_longtree02_01.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_field_longtree02_01.bms",
+    "prim\\mesh\\nature\\arabia\\tree\\bagh_field_longtree02_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\tree\\bagh_field_longtree01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

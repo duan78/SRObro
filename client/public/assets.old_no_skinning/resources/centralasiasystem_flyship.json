@@ -1,0 +1,15 @@
+{
+  "file_name": "centralasiasystem_flyship",
+  "meshes": [
+    "prim\\mesh\\npc\\casia\\centralasiasystem_flyship_2s.bms",
+    "prim\\mesh\\npc\\casia\\centralasiasystem_flyship_al.bms",
+    "prim\\mesh\\npc\\casia\\centralasiasystem_flyship_part1.bms",
+    "prim\\mesh\\npc\\casia\\centralasiasystem_flyship_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\casia\\centralasiasystem_flyship.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_wf_dr_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\particle\\cj_wf_dr_01.bmt"
+  ],
+  "effects": [
+    "map\\multigi.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

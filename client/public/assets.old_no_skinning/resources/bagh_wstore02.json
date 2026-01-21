@@ -1,0 +1,17 @@
+{
+  "file_name": "bagh_wstore02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_wstore02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_wstore02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_wstore02_box.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_wstore02_patten01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_wstore02_sword.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_wstore02_tile.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_wstore02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

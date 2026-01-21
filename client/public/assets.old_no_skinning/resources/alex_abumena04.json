@@ -1,0 +1,14 @@
+{
+  "file_name": "alex_abumena04",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\abu_mena\\alex_abu04_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\abu_mena\\alex_abu04_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\abu_mena\\alex_abu04_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\abu_mena\\alex_abumena.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

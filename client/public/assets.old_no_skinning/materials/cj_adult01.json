@@ -1,0 +1,9 @@
+{
+  "file_name": "cj_adult01",
+  "textures": [
+    "cj_abult01_light.ddj",
+    "cj_adult01_wall01.ddj",
+    "cj_adult01_roof.ddj",
+    "cj_adult01_wall02.ddj"
+  ]
+}

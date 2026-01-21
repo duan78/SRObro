@@ -1,0 +1,30 @@
+{
+  "file_name": "mad_general_3",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\mad_general_weapon_01.bms",
+    "prim\\mesh\\mob\\arabia\\mad_general_weapon_02.bms",
+    "prim\\mesh\\mob\\arabia\\mad_general_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mad_general_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\mad_general_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\mad_general.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_stand03.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_walk03.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_run03.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_attack08.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_attack09.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_attack10.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_attack11.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_die.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_die_rm.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_attack14.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_shot.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_ready.ban",
+    "prim\\ani\\mob\\arabia\\mad_general\\mad_general_wait.ban"
+  ],
+  "textures": []
+}

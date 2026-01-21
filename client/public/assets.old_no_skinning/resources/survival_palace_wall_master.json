@@ -1,0 +1,10 @@
+{
+  "file_name": "survival_palace_wall_master",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\palace\\survival_palace_wall_master.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

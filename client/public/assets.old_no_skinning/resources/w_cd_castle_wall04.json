@@ -1,0 +1,14 @@
+{
+  "file_name": "w_cd_castle_wall04",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall04_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ruins\\w_cd_castle_wall04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

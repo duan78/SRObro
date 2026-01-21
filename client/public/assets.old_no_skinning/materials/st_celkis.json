@@ -1,0 +1,15 @@
+{
+  "file_name": "st_celkis",
+  "textures": [
+    "st_isis_ax1.ddj",
+    "st_celkis_ground1.ddj",
+    "st_isis_wallx1.ddj",
+    "st_isis_ax3.ddj",
+    "st_celkis_column1.ddj",
+    "st_isis_ax2.ddj",
+    "st_isis_wallx2.ddj",
+    "st_celkis_ground3.ddj",
+    "st_celkis_stair.ddj",
+    "st_celkis_ground2.ddj"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "soldierearthghost_die",
+  "meshes": [
+    "prim\\mesh\\mob\\wchina\\soldierearthghost_arm.bms",
+    "prim\\mesh\\mob\\wchina\\soldierearthghost_dieax.bms",
+    "prim\\mesh\\mob\\wchina\\soldierearthghost_jaw.bms",
+    "prim\\mesh\\mob\\wchina\\soldierearthghost_die01_part1.bms",
+    "prim\\mesh\\mob\\wchina\\soldierearthghost_die01_part2.bms",
+    "prim\\mesh\\mob\\wchina\\soldierearthghost02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\wchina\\soldierearthghost.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,20 @@
+{
+  "file_name": "cj_pub05",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_pub05_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_pub05_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_pub05_beerman.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_pub05_deco.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_pub05_enter.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_pub05_enter2.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_pub05_fence.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_pub05_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan02\\cj_pub05_winlight.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan02\\cj_pub05.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

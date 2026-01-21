@@ -1,0 +1,10 @@
+{
+  "file_name": "piety_nike",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_boss.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

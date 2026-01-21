@@ -1,0 +1,37 @@
+{
+  "file_name": "banditarcher",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\banditarcher_bow.bms",
+    "prim\\mesh\\mob\\china\\banditarcher_part1.bms",
+    "prim\\mesh\\mob\\china\\banditarcher_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\banditarcher.bmt",
+    "prim\\mtrl\\mob\\china\\banditarcher_champ.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_icing_on.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\banditarcher\\banditarcher_attack01.ban",
+    "prim\\ani\\mob\\china\\bandit\\bandit_stand01.ban",
+    "prim\\ani\\mob\\china\\banditarcher\\banditarcher_walk.ban",
+    "prim\\ani\\mob\\china\\banditarcher\\banditarcher_run.ban",
+    "prim\\ani\\mob\\china\\banditarcher\\banditarcher_damage01.ban",
+    "prim\\ani\\mob\\china\\banditarcher\\banditarcher_damage02.ban",
+    "prim\\ani\\mob\\china\\banditarcher\\banditarcher_die.ban",
+    "prim\\ani\\mob\\china\\banditarcher\\banditarcher_die_loop.ban",
+    "prim\\ani\\mob\\china\\bandit\\bandit_down.ban",
+    "prim\\ani\\mob\\china\\bandit\\bandit_downwait.ban",
+    "prim\\ani\\mob\\china\\bandit\\bandit_downdamage.ban",
+    "prim\\ani\\mob\\china\\bandit\\bandit_wakeup.ban",
+    "prim\\ani\\mob\\china\\bandit\\bandit_downdie.ban",
+    "prim\\ani\\mob\\china\\banditarcher\\banditarcher_attack02.ban",
+    "prim\\ani\\mob\\china\\banditarcher\\banditarcher_stand01.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "capture_mark",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\etc\\ex_mark.bmt"
+  ],
+  "effects": [
+    "system\\system_capture_mark.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

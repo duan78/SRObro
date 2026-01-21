@@ -1,0 +1,10 @@
+{
+  "file_name": "heavy_16_ha",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\common\\man_item\\heavy_15.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_kk_smalltree04_01",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako_tree2\\oas_kk_smalltree04_01.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako_tree2\\oas_kk_smalltree04_01.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako_tree2\\oas_kk_smalltree04_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\karakorm\\kako-tree2\\oas_kk_smalltree04_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

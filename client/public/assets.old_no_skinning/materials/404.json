@@ -1,0 +1,19 @@
+{
+  "file_name": "404",
+  "textures": [
+    "stone_room402_bottom01.ddj",
+    "stone_room404_wallpic.ddj",
+    "stone_room401_doorwall.ddj",
+    "stone_room404_wallband.ddj",
+    "stone_room401_wall_b.ddj",
+    "stone_room401_bottom01.ddj",
+    "stone_room401_wall_a01.ddj",
+    "stone_room401_ceiling_c.ddj",
+    "stone_room401_bottom03.ddj",
+    "stone_room403_ceiling_a.ddj",
+    "stone_room403_ceiling_b.ddj",
+    "stone_room404_buda01.ddj",
+    "stone_room404_buda02.ddj",
+    "stone_room404_statue.ddj"
+  ]
+}

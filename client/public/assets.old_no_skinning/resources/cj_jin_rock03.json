@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_jin_rock03",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_rock03.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_12g_04.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_12g_06.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_12g_08.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_12g_10.bms",
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_rock03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\cj_jin_rock03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

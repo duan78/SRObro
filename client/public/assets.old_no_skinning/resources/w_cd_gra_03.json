@@ -1,0 +1,15 @@
+{
+  "file_name": "w_cd_gra_03",
+  "meshes": [
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_gra_03.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_gra_03.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_lea_03.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_wood_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\china\\dunhuang\\tree\\w_cd_gra_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

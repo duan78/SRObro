@@ -1,0 +1,24 @@
+{
+  "file_name": "w_earthgst_lamp",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_lamp_wood_00.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_lamp_seize_00.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_lamp_stone.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_lamp_wood_02.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_lamp_metal_01.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_lamp_metal_02.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_lamp_metal_03.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_lamp_mm.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_lamp_tex_00.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_lamp_wood_01.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_lamp_wood_00.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\earthghost\\w_earthgst_lamp.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

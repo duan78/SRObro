@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_streetstall",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_streetstall_01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_streetstall_01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_streetstall_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_streetstall.bmt"
+  ],
+  "effects": [
+    "map\\light.efp",
+    "map\\light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

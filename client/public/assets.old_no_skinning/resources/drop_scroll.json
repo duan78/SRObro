@@ -1,0 +1,10 @@
+{
+  "file_name": "drop_scroll",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\drop_ch_scroll.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

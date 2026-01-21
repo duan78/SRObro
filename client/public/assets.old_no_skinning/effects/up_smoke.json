@@ -1,0 +1,9 @@
+{
+  "file_name": "up_smoke",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true
+  },
+  "raw_size": 13178
+}

@@ -1,0 +1,43 @@
+{
+  "file_name": "pet_jaguar_a",
+  "meshes": [
+    "prim\\mesh\\cos\\pet_jaguar_tail_a.bms",
+    "prim\\mesh\\cos\\pet_jaguar_a_part1.bms",
+    "prim\\mesh\\cos\\pet_jaguar_a_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_jaguar_a_part2_part2_part1.bms",
+    "prim\\mesh\\cos\\pet_jaguar_a_part2_part2_part2.bms",
+    "prim\\mesh\\cos\\pet_jaguar_wing_a_part1.bms",
+    "prim\\mesh\\cos\\pet_jaguar_wing_a_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\pet_jaguar_a.bmt"
+  ],
+  "effects": [
+    "cos\\pet2_jaguar_eyes.efp",
+    "cos\\pet2_jaguar_eyes.efp",
+    "cos\\pet_jaguar_wing.efp",
+    "cos\\pet_jaguar_wing.efp"
+  ],
+  "animations": [
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_attack01.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_attack02.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_attack03.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_attack04.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_attack05.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_attack06.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_damage01.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_die_rm.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_down.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_down_rm.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_down_damage.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_down_up.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_down_die.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_walk.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_run.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_die.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_attack07.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_stand01.ban",
+    "prim\\ani\\cos\\pet_jaguar_a\\pet_jaguar_a_stand02.ban"
+  ],
+  "textures": []
+}

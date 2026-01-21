@@ -1,0 +1,13 @@
+{
+  "file_name": "oas_trim_branch03_01",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\tarim\\tree1\\oas_trim_branch03_01.bms",
+    "prim\\mesh\\nature\\oasis\\tarim\\tree1\\oas_trim_branch03_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\tarim\\tree1\\oas_trim_branch02_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "stair01",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\jangan\\stair01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\jangan\\left_s_ent01_cent.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

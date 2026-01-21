@@ -1,0 +1,15 @@
+{
+  "file_name": "euro_esteuro_brokenviking03_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_brokenviking03_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_brokenviking03_01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_brokenviking03_02.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_brokenviking03_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\vikingfld\\euro_esteuro_brokenviking03_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

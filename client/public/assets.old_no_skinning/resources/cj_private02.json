@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_private02",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\minga\\cj_priva02_wall.bms",
+    "prim\\mesh\\bldg\\china\\minga\\cj_priva02_roof.bms",
+    "prim\\mesh\\bldg\\china\\minga\\cj_priva02_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\minga\\cj_priva02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

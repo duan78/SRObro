@@ -1,0 +1,11 @@
+{
+  "file_name": "light_15",
+  "textures": [
+    "prim\\mtrl\\item\\common\\woman_item\\light_15_fa.ddj",
+    "prim\\mtrl\\item\\common\\woman_item\\light_15_sa.ddj",
+    "prim\\mtrl\\item\\common\\woman_item\\light_15_ha.ddj",
+    "prim\\mtrl\\item\\common\\woman_item\\light_15_ba.ddj",
+    "prim\\mtrl\\item\\common\\woman_item\\light_15_aa.ddj",
+    "prim\\mtrl\\item\\common\\woman_item\\light_15_la.ddj"
+  ]
+}

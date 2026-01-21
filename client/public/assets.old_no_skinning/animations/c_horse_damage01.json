@@ -1,0 +1,23 @@
+{
+  "file_name": "c_horse_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 1026,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    0,
+    393216,
+    0,
+    327680,
+    720896,
+    1585,
+    3002,
+    6,
+    10,
+    418913,
+    1585,
+    3902,
+    6
+  ]
+}

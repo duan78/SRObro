@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ar_blackrobber_armor_ac06_02_t",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 29157
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "sword_13",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\weapon\\sword_13.bmt"
+  ],
+  "effects": [
+    "system\\item_ch_sword_13_j.efp",
+    "system\\item_ch_sword_13.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "cold_assist_motion_wait",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 23874
+}

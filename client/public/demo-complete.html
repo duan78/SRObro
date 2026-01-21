@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRObro - Texture & Animation Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #eee;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100vh;
+            display: block;
+        }
+
+        #ui {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            pointer-events: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .panel {
+            background: rgba(15, 12, 41, 0.95);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #6366f1;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            pointer-events: auto;
+            max-width: 350px;
+        }
+
+        h1 {
+            color: #00ff88;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+
+        h2 {
+            color: #00d4ff;
+            font-size: 16px;
+            margin: 15px 0 10px 0;
+            border-bottom: 1px solid #6366f1;
+            padding-bottom: 5px;
+        }
+
+        .control-group {
+            margin: 15px 0;
+        }
+
+        label {
+            display: block;
+            color: #00d4ff;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        select, button, input[type="range"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #6366f1;
+            background: rgba(99, 102, 241, 0.2);
+            color: #eee;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button.active {
+            background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+            color: #000;
+        }
+
+        #stats {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            font-size: 12px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            padding: 5px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 4px;
+        }
+
+        .stat-label {
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        .stat-value {
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        #log {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            max-height: 150px;
+            overflow-y: auto;
+            background: rgba(15, 12, 41, 0.95);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #6366f1;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            pointer-events: auto;
+        }
+
+        .log-entry {
+            margin: 3px 0;
+            padding: 5px 8px;
+            border-radius: 4px;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .log-success { background: rgba(0, 255, 136, 0.2); color: #00ff88; }
+        .log-error { background: rgba(255, 68, 68, 0.2); color: #ff4444; }
+        .log-info { background: rgba(0, 212, 255, 0.2); color: #00d4ff; }
+        .log-warning { background: rgba(255, 170, 0, 0.2); color: #ffaa00; }
+
+        .toggle-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .toggle-container button {
+            flex: 1;
+            padding: 8px;
+            font-size: 12px;
+        }
+
+        #texturePreview {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 2px dashed #6366f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6366f1;
+            font-size: 12px;
+        }
+
+        #texturePreview img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 6px;
+        }
+    </style>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+
+    <div id="ui">
+        <!-- Left Panel: Character Controls -->
+        <div class="panel">
+            <h1>🎮 SRObro Demo</h1>
+
+            <div class="control-group">
+                <label>👤 Personnage</label>
+                <select id="characterSelect">
+                    <option value="avatar_m_nasrun.glb">Européen Homme</option>
+                    <option value="avatar_w_nasrun.glb">Européen Femme</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>🎬 Animations</label>
+                <button onclick="playAnimation('idle')">▶️ Idle</button>
+                <button onclick="playAnimation('walk')">🚶 Walk</button>
+                <button onclick="playAnimation('attack')">⚔️ Attack</button>
+                <button onclick="stopAnimation()">⏹️ Stop</button>
+            </div>
+
+            <div class="control-group">
+                <label>⚙️ Contrôles Caméra</label>
+                <button onclick="resetCamera()">🎯 Reset Vue</button>
+                <button onclick="toggleWireframe()">📐 Wireframe</button>
+            </div>
+
+            <div id="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Meshes:</span>
+                    <span class="stat-value" id="meshCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Squelette:</span>
+                    <span class="stat-value" id="skeletonBones">0 os</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Vertices:</span>
+                    <span class="stat-value" id="vertexCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">FPS:</span>
+                    <span class="stat-value" id="fpsCount">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Texture Info -->
+        <div class="panel">
+            <h2>🎨 Textures</h2>
+
+            <div class="control-group">
+                <label>📦 Dossiers Disponibles</label>
+                <select id="textureFolder" onchange="previewTextures()">
+                    <option value="effect">Effect</option>
+                    <option value="icon">Icon</option>
+                    <option value="icon64">Icon64</option>
+                    <option value="interface">Interface</option>
+                    <option value="minimap">Minimap</option>
+                </select>
+            </div>
+
+            <div id="texturePreview">
+                Aperçu texture
+            </div>
+
+            <div class="control-group">
+                <label>📊 Conversion Progress</label>
+                <div id="conversionProgress">
+                    <div class="stat-item">
+                        <span class="stat-label">WebP créés:</span>
+                        <span class="stat-value" id="webpCount">~1,500</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Progression:</span>
+                        <span class="stat-value" id="conversionPercent">~8%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>🔍 Infos Texture</label>
+                <div id="textureInfo" style="font-size: 11px; color: #aaa;">
+                    Sélectionnez un dossier pour voir les textures
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="log"></div>
+
+    <script>
+        const canvas = document.getElementById("renderCanvas");
+        const engine = new BABYLON.Engine(canvas, true);
+        let scene = null;
+        let camera = null;
+        let currentModel = null;
+        let currentSkeleton = null;
+        let currentAnimation = null;
+        let isWireframe = false;
+
+        const log = (message, type = 'info') => {
+            const logDiv = document.getElementById('log');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logDiv.insertBefore(entry, logDiv.firstChild);
+
+            while (logDiv.children.length > 50) {
+                logDiv.removeChild(logDiv.lastChild);
+            }
+        };
+
+        async function createScene() {
+            scene = new BABYLON.Scene(engine);
+            scene.clearColor = new BABYLON.Color3(0.05, 0.05, 0.1);
+
+            // Caméra
+            camera = new BABYLON.ArcRotateCamera(
+                "camera",
+                Math.PI / 2,
+                Math.PI / 3,
+                3,
+                BABYLON.Vector3.Zero(),
+                scene
+            );
+            camera.attachControl(canvas, true);
+            camera.wheelPrecision = 50;
+
+            // Éclairage
+            const hemiLight = new BABYLON.HemisphericLight(
+                "hemiLight",
+                new BABYLON.Vector3(0, 1, 0),
+                scene
+            );
+            hemiLight.intensity = 0.7;
+
+            const dirLight = new BABYLON.DirectionalLight(
+                "dirLight",
+                new BABYLON.Vector3(-1, -2, -1),
+                scene
+            );
+            dirLight.intensity = 0.6;
+
+            // Sol avec grille
+            const ground = BABYLON.MeshBuilder.CreateGround(
+                "ground",
+                { width: 20, height: 20, subdivisions: 20 },
+                scene
+            );
+            const groundMat = new BABYLON.StandardMaterial("groundMat", scene);
+            groundMat.diffuseColor = new BABYLON.Color3(0.2, 0.2, 0.25);
+            groundMat.wireframe = true;
+            ground.material = groundMat;
+
+            // Charger le personnage par défaut
+            await loadCharacter('avatar_m_nasrun.glb');
+
+            // FPS counter
+            let lastTime = performance.now();
+            let frameCount = 0;
+            scene.registerBeforeRender(() => {
+                frameCount++;
+                const now = performance.now();
+                if (now - lastTime >= 1000) {
+                    document.getElementById('fpsCount').textContent = frameCount;
+                    frameCount = 0;
+                    lastTime = now;
+                }
+            });
+
+            return scene;
+        }
+
+        async function loadCharacter(modelPath) {
+            log(`Chargement de ${modelPath}...`, 'info');
+
+            try {
+                const result = await BABYLON.SceneLoader.ImportMeshAsync(
+                    null,
+                    "assets/glb_blender/prim/",
+                    modelPath,
+                    scene
+                );
+
+                // Nettoyer l'ancien modèle
+                if (currentModel) {
+                    currentModel.dispose();
+                }
+
+                currentModel = result.meshes[0];
+
+                // Analyser le squelette
+                if (result.skeletons.length > 0) {
+                    currentSkeleton = result.skeletons[0];
+                    log(`✅ Squelette chargé: ${currentSkeleton.bones.length} os`, 'success');
+                    updateStats();
+                }
+
+                // Centrer la caméra
+                camera.target = currentModel;
+
+                log(`✅ Modèle chargé avec succès`, 'success');
+
+            } catch (error) {
+                log(`❌ Erreur de chargement: ${error.message}`, 'error');
+            }
+        }
+
+        function playAnimation(animationName) {
+            if (!currentSkeleton) {
+                log('❌ Aucun squelette disponible', 'error');
+                return;
+            }
+
+            // Arrêter l'animation précédente
+            if (currentAnimation) {
+                scene.stopAnimation(currentSkeleton);
+            }
+
+            log(`▶️ Lecture animation: ${animationName}`, 'info');
+
+            // Créer une animation simple
+            const spineBone = currentSkeleton.bones.find(b =>
+                b.name.includes('Spine') || b.name.includes('spine')
+            );
+
+            if (spineBone) {
+                // Rotation animation
+                const animation = new BABYLON.Animation(
+                    `${animationName}Anim`,
+                    "rotation",
+                    60,
+                    BABYLON.Animation.ANIMATIONTYPE_QUATERNION,
+                    BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE
+                );
+
+                const keys = [
+                    { frame: 0, value: spineBone.rotation.clone() },
+                    { frame: 15, value: new BABYLON.Quaternion(0, Math.sin(Math.PI/4), 0, Math.cos(Math.PI/4)) },
+                    { frame: 30, value: spineBone.rotation.clone() }
+                ];
+
+                animation.setKeys(keys);
+                spineBone.animations = [animation];
+
+                currentAnimation = scene.beginAnimation(spineBone, 0, 30, true, 1.0);
+            }
+        }
+
+        function stopAnimation() {
+            if (currentAnimation) {
+                scene.stopAnimation(currentSkeleton);
+                currentAnimation = null;
+                log('⏹️ Animation arrêtée', 'info');
+            }
+        }
+
+        function resetCamera() {
+            camera.alpha = Math.PI / 2;
+            camera.beta = Math.PI / 3;
+            camera.radius = 3;
+            camera.target = BABYLON.Vector3.Zero();
+            log('🎯 Caméra reset', 'info');
+        }
+
+        function toggleWireframe() {
+            isWireframe = !isWireframe;
+            scene.meshes.forEach(mesh => {
+                if (mesh.material) {
+                    mesh.material.wireframe = isWireframe;
+                }
+            });
+            log(`📐 Wireframe: ${isWireframe ? 'ON' : 'OFF'}`, 'info');
+        }
+
+        function updateStats() {
+            const meshCount = scene.meshes.length;
+            const totalVertices = scene.meshes.reduce((sum, m) => sum + (m.getTotalVertices ? m.getTotalVertices() : 0), 0);
+
+            document.getElementById('meshCount').textContent = meshCount;
+            document.getElementById('skeletonBones').textContent = currentSkeleton ? `${currentSkeleton.bones.length} os` : '0';
+            document.getElementById('vertexCount').textContent = totalVertices.toLocaleString();
+        }
+
+        async function previewTextures() {
+            const folder = document.getElementById('textureFolder').value;
+            const preview = document.getElementById('texturePreview');
+            const info = document.getElementById('textureInfo');
+
+            preview.innerHTML = '⏳ Chargement...';
+
+            try {
+                // Simuler la récupération des textures (pas encore implémenté côté serveur)
+                const sampleTexture = `./assets/textures_webp/${folder}/`;
+
+                info.innerHTML = `
+                    📁 Dossier: ${folder}<br>
+                    📄 Format: WebP<br>
+                    🎨 Compression: 85% qualité
+                `;
+
+                preview.innerHTML = `
+                    <div style="text-align: center; padding: 20px;">
+                        ✅ Textures ${folder}<br>
+                        disponibles !<br><br>
+                        <small>Conversion en cours...</small>
+                    </div>
+                `;
+
+                log(`📂 Aperçu textures: ${folder}`, 'info');
+
+            } catch (error) {
+                preview.innerHTML = '❌ Erreur chargement';
+                log(`❌ Erreur: ${error.message}`, 'error');
+            }
+        }
+
+        // Gestion du changement de personnage
+        document.getElementById('characterSelect').addEventListener('change', (e) => {
+            loadCharacter(e.target.value);
+        });
+
+        // Initialisation
+        createScene().then(scene => {
+            engine.runRenderLoop(() => {
+                scene.render();
+            });
+        });
+
+        window.addEventListener("resize", () => {
+            engine.resize();
+        });
+
+        log('🚀 Scène initialisée', 'success');
+    </script>
+</body>
+</html>

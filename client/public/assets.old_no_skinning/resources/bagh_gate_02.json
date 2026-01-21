@@ -1,0 +1,19 @@
+{
+  "file_name": "bagh_gate_02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_gate_02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_gate_02_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_gate_02_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_gate_02_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_gate_02_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_gate_02_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_gate_02_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_gate_02_07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_gate.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

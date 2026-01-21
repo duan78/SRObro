@@ -1,0 +1,16 @@
+{
+  "file_name": "avatar_m_2012_new_devil_wing",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_wing_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_2012_new_devil_wing_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_2012_new_devil_wing.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\item\\etc\\new_m_wing_stand01.ban",
+    "prim\\ani\\item\\etc\\new_m_wing_run.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "skill_ar_mustafa_attack05_05",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 114658
+}

@@ -1,0 +1,15 @@
+{
+  "file_name": "bonemage_muhan",
+  "meshes": [
+    "prim\\mesh\\mob\\taklamakan\\bonemage_chain.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage_muhan_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage_muhan_part2_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonemage_muhan_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\taklamakan\\bonemage_muhan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

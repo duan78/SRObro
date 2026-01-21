@@ -1,0 +1,12 @@
+{
+  "file_name": "pha_fire-yellow",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\common\\pha_fire.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_green_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

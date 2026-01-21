@@ -1,0 +1,13 @@
+{
+  "file_name": "x_mas_wreath03",
+  "meshes": [
+    "prim\\mesh\\etc\\x_mas\\x_mas_wreath03_01.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_wreath03_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\x_mas\\x_mas_wreath01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

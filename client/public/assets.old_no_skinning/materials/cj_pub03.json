@@ -1,0 +1,12 @@
+{
+  "file_name": "cj_pub03",
+  "textures": [
+    "cj_pub03_wall01.ddj",
+    "cj_pub03_roof.ddj",
+    "cj_pub03_door01.ddj",
+    "cj_pub03_wall02.ddj",
+    "cj_pub03_floor.ddj",
+    "cj_pub01_light03.ddj",
+    "cj_adult04_light.ddj"
+  ]
+}

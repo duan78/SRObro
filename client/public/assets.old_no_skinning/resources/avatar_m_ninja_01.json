@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_m_ninja_01",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_ninja_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_ninja_01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_ninja_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

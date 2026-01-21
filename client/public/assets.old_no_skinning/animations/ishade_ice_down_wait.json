@@ -1,0 +1,20 @@
+{
+  "file_name": "ishade_ice_down_wait",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 212,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    131072,
+    393216,
+    2,
+    0,
+    0,
+    6,
+    143920
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "survival_palace_well01",
+  "meshes": [
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall01_ealpha.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall01_fire.bms",
+    "prim\\mesh\\dun\\survival\\palace\\survival_palace_wall01_orwall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\palace\\survival_palace_wall01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_windpriest_ac4_cyclone_wait",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 40408
+}

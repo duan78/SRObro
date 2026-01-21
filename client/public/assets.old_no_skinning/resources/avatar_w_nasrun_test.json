@@ -1,0 +1,18 @@
+{
+  "file_name": "avatar_w_nasrun_test",
+  "meshes": [
+    "prim\\avatar_w_nasrun_part1.bms",
+    "prim\\avatar_w_nasrun_part2.bms",
+    "prim\\avatar_w_nasrun02.bms",
+    "prim\\avatar_w_nasrun03_part1.bms",
+    "prim\\avatar_w_nasrun03_part2.bms"
+  ],
+  "materials": [
+    "prim\\avatar_w_nasrun_test.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line_blue_12.ddj"
+  ]
+}

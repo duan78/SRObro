@@ -1,0 +1,17 @@
+{
+  "file_name": "oas_kk_tree06",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\karakorm\\oas_kk_tree06_01.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\oas_kk_tree06_01.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\oas_kk_tree06_02.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\oas_kk_tree06_03.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\oas_kk_tree06_al01.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\oas_kk_tree06_al02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\karakorm\\oas_kk_tree06.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "asia minor_beach_ruin03_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\beach\\asia minor_beach_ruin03_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\beach\\asia minor_beach_ruin03_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\beach\\asia minor_beach_ruin03_02.bms",
+    "prim\\mesh\\bldg\\asia minor\\beach\\asia minor_beach_ruin03_03.bms",
+    "prim\\mesh\\bldg\\asia minor\\beach\\asia minor_beach_ruin03_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\beach\\asia minor_beach_ruin01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

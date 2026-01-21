@@ -1,0 +1,11 @@
+{
+  "file_name": "avata_w_amalrun_blue",
+  "textures": [
+    "prim\\mtrl\\avatar\\avata_w_amalrun_blue.ddj",
+    "avata_w_amalrun_hat.ddj",
+    "amalrun_w.ddj",
+    "prim\\mtrl\\avatar\\avata_w_amalrun_blue_2.ddj",
+    "black.ddj",
+    "prim\\mtrl\\avatar\\avata_w_amalrun_blue_3.ddj"
+  ]
+}

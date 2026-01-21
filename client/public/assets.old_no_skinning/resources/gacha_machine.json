@@ -1,0 +1,10 @@
+{
+  "file_name": "gacha_machine",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\npc\\npc\\gacha_machine.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

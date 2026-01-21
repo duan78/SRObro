@@ -1,0 +1,10 @@
+{
+  "file_name": "demon_altar_fire",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 51064
+}

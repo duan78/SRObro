@@ -1,0 +1,14 @@
+{
+  "file_name": "event_winter_whiteknight_attack03",
+  "meshes": [
+    "prim\\mesh\\mob\\common\\event_winter_whiteknight_horse_part1.bms",
+    "prim\\mesh\\mob\\common\\event_winter_whiteknight_horse_part2_part1.bms",
+    "prim\\mesh\\mob\\common\\event_winter_whiteknight_horse_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\common\\event_winter_whiteknight_effect.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "w_cd_hotree01",
+  "meshes": [
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_hotree01_01.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree\\w_cd_hotree01_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\china\\dunhuang\\tree\\w_cd_hotree01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

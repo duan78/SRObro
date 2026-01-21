@@ -1,0 +1,27 @@
+{
+  "file_name": "fanaticism_damage1",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 208,
+  "animation_name": "\u0012",
+  "data_blocks": [
+    400,
+    30,
+    0,
+    4,
+    0,
+    66,
+    200,
+    400,
+    1,
+    10,
+    287841,
+    16386,
+    13440,
+    16386,
+    13504,
+    16386,
+    13312
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "sd_merchant_changer",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_merchant_changer_2al.bms",
+    "prim\\mesh\\npc\\sd\\sd_merchant_changer_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_merchant_changer_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\sd_merchant_changer.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

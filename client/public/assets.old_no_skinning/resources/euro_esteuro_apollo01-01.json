@@ -1,0 +1,15 @@
+{
+  "file_name": "euro_esteuro_apollo01-01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_apollo01-01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_apollo01-01.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_apollo01-02.bms",
+    "prim\\mesh\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_apollo01-03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\east eurpoe\\jupitertemple\\euro_esteuro_apollo01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

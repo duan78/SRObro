@@ -1,0 +1,13 @@
+{
+  "file_name": "clothes_05_sa",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\man_item\\clothes_05_sa.bmt"
+  ],
+  "effects": [
+    "system\\item_equip_shoulder_purple.efp",
+    "system\\item_equip_shoulder_purple.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

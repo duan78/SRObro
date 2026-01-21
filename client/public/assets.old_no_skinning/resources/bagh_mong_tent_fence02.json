@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_mong_tent_fence02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_fence02_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_fence02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

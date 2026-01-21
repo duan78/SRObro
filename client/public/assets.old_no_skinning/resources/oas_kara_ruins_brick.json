@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_kara_ruins_brick",
+  "meshes": [
+    "prim\\mesh\\bldg\\oasis\\karakorm\\oas_kara_ruins_bricks.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\oasis\\karakorm\\oas_kara_ruins_bricks.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

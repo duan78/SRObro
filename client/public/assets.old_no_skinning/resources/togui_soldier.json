@@ -1,0 +1,29 @@
+{
+  "file_name": "togui_soldier",
+  "meshes": [
+    "prim\\mesh\\mob\\wchina\\soldierearthghost01_part1.bms",
+    "prim\\mesh\\mob\\wchina\\soldierearthghost01_part2.bms",
+    "prim\\mesh\\mob\\wchina\\soldierearthghost02.bms",
+    "prim\\mesh\\mob\\wchina\\soldierearthghost_ax.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\togui_soldier.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_stand02.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_run.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_damage02.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_walk.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_stand01.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_attack01.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_attack02.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_damage01.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_down.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_down_wait.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_down_damage.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_down_up.ban",
+    "prim\\ani\\mob\\wchina\\soldierearthghost\\soldierearthghost_down_die.ban"
+  ],
+  "textures": []
+}

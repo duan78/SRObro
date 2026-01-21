@@ -1,0 +1,9 @@
+{
+  "file_name": "entroom",
+  "textures": [
+    "stone_room101_wall_b.ddj",
+    "stone_room101_bottom01.ddj",
+    "entroom_ceilling.ddj",
+    "entroom_wall01.ddj"
+  ]
+}

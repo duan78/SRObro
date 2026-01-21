@@ -1,0 +1,21 @@
+{
+  "file_name": "skill_cast_hand_loop",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 5335,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    458752,
+    0,
+    786432,
+    471397,
+    703212,
+    7,
+    11,
+    1892,
+    4275,
+    1893
+  ]
+}

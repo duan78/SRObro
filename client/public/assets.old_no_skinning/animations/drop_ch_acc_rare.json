@@ -1,0 +1,20 @@
+{
+  "file_name": "drop_ch_acc_rare",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 542,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    327680,
+    0,
+    196608,
+    393216,
+    5,
+    6,
+    340528,
+    439233,
+    5
+  ]
+}

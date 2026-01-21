@@ -1,0 +1,15 @@
+{
+  "file_name": "guard tower",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower00_01.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower00_01.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower00_02.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\guard tower00_flag.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\guard tower\\guard tower1_2_3_5.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

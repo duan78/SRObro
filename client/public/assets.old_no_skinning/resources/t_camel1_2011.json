@@ -1,0 +1,20 @@
+{
+  "file_name": "t_camel1_2011",
+  "meshes": [
+    "prim\\mesh\\cos\\cart\\t_camel1_part1.bms",
+    "prim\\mesh\\cos\\cart\\t_camel1_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\t_camel1_2011.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\cart\\t_camel\\stand.ban",
+    "prim\\ani\\cos\\cart\\t_camel\\walk.ban",
+    "prim\\ani\\cos\\cart\\t_camel\\run.ban",
+    "prim\\ani\\cos\\cart\\t_camel\\die.ban",
+    "prim\\ani\\cos\\cart\\t_camel\\die_loop.ban",
+    "prim\\ani\\cos\\cart\\t_camel\\damage01.ban"
+  ],
+  "textures": []
+}

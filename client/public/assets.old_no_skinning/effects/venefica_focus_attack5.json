@@ -1,0 +1,10 @@
+{
+  "file_name": "venefica_focus_attack5",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 30571
+}

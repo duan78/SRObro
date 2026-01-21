@@ -1,0 +1,10 @@
+{
+  "file_name": "cj_stonebridge01",
+  "textures": [
+    "cj_stoneb_floor.ddj",
+    "cj_stoneb_side.ddj",
+    "cj_stoneb_alpha.ddj",
+    "cj_stoneb_floor2.ddj",
+    "cj_stoneb_side2.ddj"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "guil_cj_left_ent",
+  "textures": [
+    "cj_wall01.ddj",
+    "cj_stair.ddj",
+    "cj_wall02.ddj",
+    "cj_wall03.ddj",
+    "cj_door.ddj",
+    "door.ddj",
+    "cj_roof.ddj",
+    "cj_alpha.ddj"
+  ]
+}

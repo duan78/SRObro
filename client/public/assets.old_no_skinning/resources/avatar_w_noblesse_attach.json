@@ -1,0 +1,12 @@
+{
+  "file_name": "avatar_w_noblesse_attach",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_noblesse.bmt"
+  ],
+  "effects": [
+    "system\\avatar_w_nobless_attach.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_imp_door01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jin_imperial\\cj_jin_imp_door01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\cj_jin_imp_door01.bmt"
+  ],
+  "effects": [
+    "map\\frame3.efp",
+    "map\\frame3.efp"
+  ],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\bldg\\china\\jin_imperial\\cj_jin_imp_door01-1.ddj"
+  ]
+}

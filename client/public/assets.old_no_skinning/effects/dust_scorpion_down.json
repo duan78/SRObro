@@ -1,0 +1,10 @@
+{
+  "file_name": "dust_scorpion_down",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2333
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "skill_sekhmet_ac3_swing",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 5417
+}

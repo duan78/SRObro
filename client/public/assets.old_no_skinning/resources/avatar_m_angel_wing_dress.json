@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_m_angel_wing_dress",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_angel_wing_dress.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_angel_wing_dress01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_angel_wing.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

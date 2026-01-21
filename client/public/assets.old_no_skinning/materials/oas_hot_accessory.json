@@ -1,0 +1,15 @@
+{
+  "file_name": "oas_hot_accessory",
+  "textures": [
+    "oas_hot_acc_roof.ddj",
+    "oas_hot_acc_wall01.ddj",
+    "oas_hot_acc_wall04.ddj",
+    "oas_hot_acc_wall02.ddj",
+    "oas_hot_acc_gard.ddj",
+    "oas_hot_acc_sta.ddj",
+    "oas_hot_acc_al.ddj",
+    "oas_hot_acc_wall03.ddj",
+    "oas_hot_acc_wall05.ddj",
+    "oas_hot_acc_winlight.ddj"
+  ]
+}

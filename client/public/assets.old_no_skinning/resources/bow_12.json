@@ -1,0 +1,14 @@
+{
+  "file_name": "bow_12",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\weapon\\bow_12.bmt"
+  ],
+  "effects": [
+    "system\\item_ch_bow_12_f02.efp",
+    "system\\item_ch_bow_12_f.efp",
+    "system\\item_ch_bow_12.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "w_cd_stable",
+  "textures": [
+    "w_cd_stab_hoof.ddj",
+    "w_cd_stab_pilla.ddj",
+    "w_cd_stab_roof.ddj",
+    "w_cd_stab_wall.ddj",
+    "cj_stab_floor.ddj"
+  ]
+}

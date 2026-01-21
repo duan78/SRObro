@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_forget_target_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2430
+}

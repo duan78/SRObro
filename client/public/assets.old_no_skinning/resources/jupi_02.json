@@ -1,0 +1,20 @@
+{
+  "file_name": "jupi_02",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_02_01.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_02_01.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_02_02.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_02_03.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_02_04.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_02_05.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_02_06.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_02_07.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_02_08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\field\\jupi_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

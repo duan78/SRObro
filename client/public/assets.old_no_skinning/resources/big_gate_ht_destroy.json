@@ -1,0 +1,10 @@
+{
+  "file_name": "big_gate_ht_destroy",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\hotang\\castlegate\\fortress_hotan_brokendoor_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

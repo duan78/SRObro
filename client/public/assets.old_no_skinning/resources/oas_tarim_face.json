@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_tarim_face",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_face.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_tarim_face.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

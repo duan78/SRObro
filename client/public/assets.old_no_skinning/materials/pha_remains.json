@@ -1,0 +1,14 @@
+{
+  "file_name": "pha_remains",
+  "textures": [
+    "pha_statue01.ddj",
+    "pha_gateway02.ddj",
+    "pha_pillar01.ddj",
+    "pha_crypt6.ddj",
+    "pha_crypt1.ddj",
+    "pha_crypt5.ddj",
+    "pha_crypt3.ddj",
+    "pha_crypt4.ddj",
+    "pha_crypt2.ddj"
+  ]
+}

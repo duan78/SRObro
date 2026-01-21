@@ -1,0 +1,10 @@
+{
+  "file_name": "drop_ch_luckybox",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\drop_ch_luckybox.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

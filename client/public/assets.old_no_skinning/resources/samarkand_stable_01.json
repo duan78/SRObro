@@ -1,0 +1,26 @@
+{
+  "file_name": "samarkand_stable_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_02.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_03.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_04.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_05.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_06.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_07.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_08.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_09.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_10.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_11.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_12.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_13.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_stable_14.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\samarkand\\samarkand_buil.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

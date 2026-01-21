@@ -1,0 +1,10 @@
+{
+  "file_name": "alex_fprtal_03",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 14866
+}

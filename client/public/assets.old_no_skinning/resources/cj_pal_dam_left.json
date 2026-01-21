@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_pal_dam_left",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_dam_left_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_dam_left_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_dam_left_wall.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_dam_left.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

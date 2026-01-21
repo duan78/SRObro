@@ -1,0 +1,28 @@
+{
+  "file_name": "alex_portal",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal07.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal08.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal09.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal_ani01_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal_ani01_02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal_ani02_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal_ani02_02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal_ani03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\portal\\alex_portal_ani04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\portal\\alex_portal.bmt"
+  ],
+  "effects": [
+    "map\\alex_potal_01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

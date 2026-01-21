@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_jupiter_darkdog_ac2_ice_spray",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 4410
+}

@@ -1,0 +1,20 @@
+{
+  "file_name": "mummy_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 643,
+  "animation_name": "\f",
+  "data_blocks": [
+    0,
+    393216,
+    0,
+    196608,
+    655360,
+    6,
+    10,
+    418913,
+    996421,
+    1585
+  ]
+}

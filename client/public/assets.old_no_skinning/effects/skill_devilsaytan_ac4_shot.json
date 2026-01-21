@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_devilsaytan_ac4_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 31170
+}

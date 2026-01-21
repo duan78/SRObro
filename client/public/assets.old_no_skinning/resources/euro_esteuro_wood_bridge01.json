@@ -1,0 +1,15 @@
+{
+  "file_name": "euro_esteuro_wood_bridge01",
+  "meshes": [
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\openfld\\euro_esteuro_wood_bridge01.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\openfld\\euro_esteuro_wood_bridge01.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\openfld\\euro_esteuro_wood_bridge02.bms",
+    "prim\\mesh\\artifact\\europe\\east eurpoe\\openfld\\euro_esteuro_wood_bridge03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\europe\\east eurpoe\\openfld\\euro_esteuro_wood_bridge01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

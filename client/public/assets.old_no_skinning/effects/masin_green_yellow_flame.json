@@ -1,0 +1,10 @@
+{
+  "file_name": "masin_green_yellow_flame",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17278
+}

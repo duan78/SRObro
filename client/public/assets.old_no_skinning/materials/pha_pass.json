@@ -1,0 +1,21 @@
+{
+  "file_name": "pha_pass",
+  "textures": [
+    "st_osiris_wallx2.ddj",
+    "st_osiris_ax2.ddj",
+    "st_passage_up.ddj",
+    "pha_passage_roof.ddj",
+    "pha_ssquare_ax2.ddj",
+    "st_osiris_roof.ddj",
+    "paintingx2.ddj",
+    "st_passage_pillar.ddj",
+    "paintingx1.ddj",
+    "st_passage_wall.ddj",
+    "st_passage_tile.ddj",
+    "st_passage_stair.ddj",
+    "st_passage_stair1.ddj",
+    "st_lv100_doorsill.ddj",
+    "st_osiris_ax1.ddj",
+    "st_osiris_wallx1.ddj"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "file_name": "oas_tree_tropic09",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\hotang\\newtree\\oas_tree_tropic09_01.bms",
+    "prim\\mesh\\nature\\oasis\\hotang\\newtree\\oas_tree_tropic09_01.bms",
+    "prim\\mesh\\nature\\oasis\\hotang\\newtree\\oas_tree_tropic09_02.bms",
+    "prim\\mesh\\nature\\oasis\\hotang\\newtree\\oas_tree_tropic09_03.bms",
+    "prim\\mesh\\nature\\oasis\\hotang\\newtree\\oas_tree_tropic09_04.bms",
+    "prim\\mesh\\nature\\oasis\\hotang\\newtree\\oas_tree_tropic09_05.bms",
+    "prim\\mesh\\nature\\oasis\\hotang\\newtree\\oas_tree_tropic09_06.bms",
+    "prim\\mesh\\nature\\oasis\\hotang\\newtree\\oas_tree_tropic09_07.bms",
+    "prim\\mesh\\nature\\oasis\\hotang\\newtree\\oas_tree_tropic09_08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\hotang\\newtree\\oas_tree_tropic09_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

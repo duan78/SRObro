@@ -1,0 +1,15 @@
+{
+  "file_name": "campfire",
+  "meshes": [
+    "prim\\mesh\\item\\china\\etc\\campfire.bms",
+    "prim\\mesh\\item\\china\\etc\\fire00.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\etc\\campfire.bmt"
+  ],
+  "effects": [
+    "map\\frame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,37 @@
+{
+  "file_name": "bonelord",
+  "meshes": [
+    "prim\\mesh\\mob\\taklamakan\\bonelord_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonelord_part2_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonelord_part2_part2.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonelord_2side_part1.bms",
+    "prim\\mesh\\mob\\taklamakan\\bonelord_2side_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\taklamakan\\bonelord.bmt"
+  ],
+  "effects": [
+    "monster\\luster_bonelord_heartlight.efp",
+    "monster\\luster_earthkingeye.efp",
+    "monster\\luster_earthkingeye.efp",
+    "monster\\dead_shine.efp",
+    "monster\\dust_uruchi_run.efp",
+    "monster\\dust_uruchi_run.efp",
+    "monster\\dust_uruchi_walk.efp",
+    "monster\\dust_uruchi_walk.efp",
+    "monster\\dust_uruchi_run.efp",
+    "monster\\dust_uruchi_run.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\taklamakan\\bonelord\\bonelord_stand01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonelord\\bonelord_walk.ban",
+    "prim\\ani\\mob\\taklamakan\\bonelord\\bonelord_run.ban",
+    "prim\\ani\\mob\\taklamakan\\bonelord\\bonelord_attack01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonelord\\bonelord_attack02.ban",
+    "prim\\ani\\mob\\taklamakan\\bonelord\\bonelord_attack03.ban",
+    "prim\\ani\\mob\\taklamakan\\bonelord\\bonelord_damage01.ban",
+    "prim\\ani\\mob\\taklamakan\\bonelord\\bonelord_damage02.ban",
+    "prim\\ani\\mob\\taklamakan\\bonelord\\bonelord_die.ban"
+  ],
+  "textures": []
+}

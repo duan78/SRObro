@@ -1,0 +1,38 @@
+{
+  "file_name": "mayan_08",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_02.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_03.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_04.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_05.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_06.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_07.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_08.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_09.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_10.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_11.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_12.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_13.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_14.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_15.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_16.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_17.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_18.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_19.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_chain.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_g01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_08_g02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\score_war\\mayan_08.bmt"
+  ],
+  "effects": [
+    "dun\\yellow_green_flame.efp",
+    "dun\\yellow_green_flame.efp",
+    "dun\\yellow_green_flame.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,22 @@
+{
+  "file_name": "sealstone",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\sealstone01_01.bms",
+    "prim\\mesh\\mob\\roc\\sealstone01_02.bms",
+    "prim\\mesh\\mob\\roc\\sealstone01_03.bms",
+    "prim\\mesh\\mob\\roc\\sealstone01_04.bms",
+    "prim\\mesh\\mob\\roc\\sealstone.bms",
+    "prim\\mesh\\mob\\roc\\sealstone_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\sealstone.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\roc\\sealstone\\sealstone_stand.ban",
+    "prim\\ani\\mob\\roc\\sealstone\\sealstone_damage01.ban",
+    "prim\\ani\\mob\\roc\\sealstone\\sealstone_die.ban",
+    "prim\\ani\\mob\\roc\\sealstone\\sealstone_die_rm.ban"
+  ],
+  "textures": []
+}

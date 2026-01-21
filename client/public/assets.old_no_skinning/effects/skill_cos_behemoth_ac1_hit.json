@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_cos_behemoth_ac1_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 36440
+}

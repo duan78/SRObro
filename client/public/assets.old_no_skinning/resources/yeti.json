@@ -1,0 +1,32 @@
+{
+  "file_name": "yeti",
+  "meshes": [
+    "prim\\mesh\\mob\\karakoram\\yeti_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\yeti_part2_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\yeti_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\karakoram\\yeti.bmt",
+    "prim\\mtrl\\mob\\karakoram\\yeti_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_stand01.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_stand02.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_walk.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_run.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_attack01.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_attack02.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_damage01.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_damage02.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_die.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_die_loop.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_down.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_down_rm.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_down_damage.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_down_up.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_down_die.ban",
+    "prim\\ani\\mob\\karakoram\\yeti\\yeti_attack03.ban"
+  ],
+  "textures": []
+}

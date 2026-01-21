@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_jupiter_darkdog_at06",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 42586
+}

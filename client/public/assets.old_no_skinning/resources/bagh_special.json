@@ -1,0 +1,39 @@
+{
+  "file_name": "bagh_special",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_bottom01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_bottom01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_box01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_ca01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_ca02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_ca03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_ca04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_fence.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_flag.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_light.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_line.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_object01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_object02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_object03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_pot01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_pot01_alpha.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_pot02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_stick.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_tent01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_tent02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_tent03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_tent_ac.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_special_wood01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_special.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_orange_s.efp",
+    "map\\cj_pal_lamp_orange_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

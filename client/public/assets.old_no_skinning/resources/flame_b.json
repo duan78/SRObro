@@ -1,0 +1,12 @@
+{
+  "file_name": "flame_b",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv\\common\\flame_b.bmt"
+  ],
+  "effects": [
+    "map\\frame5.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

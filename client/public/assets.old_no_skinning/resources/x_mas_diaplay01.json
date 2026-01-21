@@ -1,0 +1,14 @@
+{
+  "file_name": "x_mas_diaplay01",
+  "meshes": [
+    "prim\\mesh\\etc\\x_mas\\x_mas_diaplay01_01.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_diaplay01_02.bms",
+    "prim\\mesh\\etc\\x_mas\\x_mas_diaplay01_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\x_mas\\x_mas_diaplay01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

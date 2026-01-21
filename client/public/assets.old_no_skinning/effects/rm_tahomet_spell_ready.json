@@ -1,0 +1,10 @@
+{
+  "file_name": "rm_tahomet_spell_ready",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 66841
+}

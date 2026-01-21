@@ -1,0 +1,18 @@
+{
+  "file_name": "w_cd_small_tower001",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_small_tower001.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_small_tower001.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_small_tower001_1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_small_tower001_2.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_small_tower001_3.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_small_tower001_4.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\ruins\\w_cd_small_tower001_5.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\ruins\\w_cd_small_tower001.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

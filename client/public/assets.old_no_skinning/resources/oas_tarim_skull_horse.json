@@ -1,0 +1,13 @@
+{
+  "file_name": "oas_tarim_skull_horse",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_skull_horse.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_skull_horse_2sid.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_tarim_skull_horse.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

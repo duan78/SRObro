@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_city_treepot",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_treepot_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_treepot_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bridge\\bagh_city_treepot_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_treepot.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

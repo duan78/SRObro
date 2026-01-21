@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_darknight_head",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 15828
+}

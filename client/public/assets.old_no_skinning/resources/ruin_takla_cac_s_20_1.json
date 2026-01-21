@@ -1,0 +1,15 @@
+{
+  "file_name": "ruin_takla_cac_s_20_1",
+  "meshes": [
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\cactus\\ruin_takla_cac_s_20_1.bms",
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\cactus\\ruin_takla_cac_s_20_1.bms",
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\cactus\\ruin_takla_cac_s_20_2.bms",
+    "prim\\mesh\\nature\\ruins\\taklamakan des\\cactus\\ruin_takla_cac_s_20_3.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\ruins\\taklamakan des\\cactus\\ruin_takla_cac_s_19_1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

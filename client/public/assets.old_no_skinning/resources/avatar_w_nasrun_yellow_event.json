@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_w_nasrun_yellow_event",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_w_nasrun_part1.bms",
+    "prim\\mesh\\item\\etc\\avatar_w_nasrun_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_w_nasrun_yellow.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

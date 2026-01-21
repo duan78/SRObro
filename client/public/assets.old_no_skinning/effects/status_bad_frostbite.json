@@ -1,0 +1,10 @@
+{
+  "file_name": "status_bad_frostbite",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3179
+}

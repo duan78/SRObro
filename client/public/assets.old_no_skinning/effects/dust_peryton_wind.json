@@ -1,0 +1,10 @@
+{
+  "file_name": "dust_peryton_wind",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8221
+}

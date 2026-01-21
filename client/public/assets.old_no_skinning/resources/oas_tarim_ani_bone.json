@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_tarim_ani_bone",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_ani_bone01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_ani_bone01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_ani_bone02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_tarim_ani_bone01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

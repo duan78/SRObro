@@ -1,0 +1,10 @@
+{
+  "file_name": "jinsi_floor3_small_water",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\china\\jinsi_cv\\common\\jinsi_floor3_water.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

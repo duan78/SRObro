@@ -1,0 +1,29 @@
+{
+  "file_name": "p_raven01_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2972,
+  "animation_name": "\u0012",
+  "data_blocks": [
+    666,
+    30,
+    0,
+    8,
+    0,
+    100,
+    166,
+    233,
+    300,
+    433,
+    466,
+    666,
+    12,
+    10,
+    551779,
+    768394,
+    2097,
+    2745,
+    536940
+  ]
+}

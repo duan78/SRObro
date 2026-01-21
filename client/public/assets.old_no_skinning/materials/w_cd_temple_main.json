@@ -1,0 +1,11 @@
+{
+  "file_name": "w_cd_temple_main",
+  "textures": [
+    "w_cd_tem_up.ddj",
+    "w_cd_tem_wall.ddj",
+    "w_cd_tem_stair.ddj",
+    "w_cd_tem_gidung.ddj",
+    "w_cd_tem_roof.ddj",
+    "w_cd_tem_floor.ddj"
+  ]
+}

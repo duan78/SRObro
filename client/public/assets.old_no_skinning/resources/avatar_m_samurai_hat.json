@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_m_samurai_hat",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_samurai.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

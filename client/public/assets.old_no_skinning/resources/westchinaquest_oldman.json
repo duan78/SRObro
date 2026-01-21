@@ -1,0 +1,21 @@
+{
+  "file_name": "westchinaquest_oldman",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\westchinaquest_oldman_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_oldman_al_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_oldman_al_2s_02.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_oldman_tree.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_oldman_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_oldman_part2_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinaquest_oldman_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\westchinaquest_oldman.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\westchinaquest_oldman_time.ban",
+    "prim\\ani\\npc\\china\\westchinaquest_oldman_basic.ban"
+  ],
+  "textures": []
+}

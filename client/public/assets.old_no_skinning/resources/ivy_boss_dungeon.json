@@ -1,0 +1,30 @@
+{
+  "file_name": "ivy_boss_dungeon",
+  "meshes": [
+    "prim\\mesh\\mob\\asiam\\ivy02.bms",
+    "prim\\mesh\\mob\\asiam\\ivy01_part1.bms",
+    "prim\\mesh\\mob\\asiam\\ivy01_part2.bms",
+    "prim\\mesh\\mob\\asiam\\ivy03_part1.bms",
+    "prim\\mesh\\mob\\asiam\\ivy03_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\asiam\\ivy.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_stand01.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_walk.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_run.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_attack01.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_attack02.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_attack03.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_attack04.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_die.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_die_rm.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_attack05.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_attack06.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_attack07.ban",
+    "prim\\ani\\mob\\asiam\\ivy\\ivy_attack08.ban"
+  ],
+  "textures": []
+}

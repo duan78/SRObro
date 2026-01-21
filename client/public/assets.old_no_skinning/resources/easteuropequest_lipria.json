@@ -1,0 +1,16 @@
+{
+  "file_name": "easteuropequest_lipria",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_lipria_2s2.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_lipria_2s_1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_lipria_arm.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_lipria_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_lipria_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_lipria.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

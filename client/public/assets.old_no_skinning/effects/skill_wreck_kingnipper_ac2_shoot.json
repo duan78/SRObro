@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_wreck_kingnipper_ac2_shoot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 30635
+}

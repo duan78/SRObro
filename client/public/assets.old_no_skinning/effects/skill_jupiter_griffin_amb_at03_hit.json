@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_jupiter_griffin_amb_at03_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 28003
+}

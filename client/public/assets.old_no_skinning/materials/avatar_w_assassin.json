@@ -1,0 +1,9 @@
+{
+  "file_name": "avatar_w_assassin",
+  "textures": [
+    "prim\\mtrl\\item\\etc\\avatar_w_assassin_hat.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_assassin01.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_assassin.ddj",
+    "prim\\mtrl\\item\\etc\\avatar_w_assassin_attach.ddj"
+  ]
+}

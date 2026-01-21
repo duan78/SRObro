@@ -1,0 +1,24 @@
+{
+  "file_name": "togui_doll",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\togui_doll_part1.bms",
+    "prim\\mesh\\mob\\god\\togui_doll_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\togui_doll_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\togui_doll.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\god\\togui_doll\\togui_doll_stand01.ban",
+    "prim\\ani\\mob\\god\\togui_doll\\togui_doll_stand02.ban",
+    "prim\\ani\\mob\\god\\togui_doll\\togui_doll_walk.ban",
+    "prim\\ani\\mob\\god\\togui_doll\\togui_doll_run.ban",
+    "prim\\ani\\mob\\god\\togui_doll\\togui_doll_attack1.ban",
+    "prim\\ani\\mob\\god\\togui_doll\\togui_doll_attack2.ban",
+    "prim\\ani\\mob\\god\\togui_doll\\togui_doll_attack3.ban",
+    "prim\\ani\\mob\\god\\togui_doll\\togui_doll_damage1.ban",
+    "prim\\ani\\cos\\p_seowon\\p_seowon_pick.ban"
+  ],
+  "textures": []
+}

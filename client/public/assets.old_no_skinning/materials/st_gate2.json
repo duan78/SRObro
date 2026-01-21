@@ -1,0 +1,20 @@
+{
+  "file_name": "st_gate2",
+  "textures": [
+    "st_gate_ceiling.ddj",
+    "st_gate_ground.ddj",
+    "st_gate_rock_01_01.ddj",
+    "st_gate_rock_02_01.ddj",
+    "st_gate_stair.ddj",
+    "st_gate_standard.ddj",
+    "st_gate_top.ddj",
+    "st_gate_wall.ddj",
+    "st_gate2_center.ddj",
+    "st_gate2_wall04.ddj",
+    "st_gate2_wall05.ddj",
+    "st_gate2_wall06.ddj",
+    "st_gate2_wall02.ddj",
+    "st_gate2_wall03.ddj",
+    "st_gate_sphinx.ddj"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "file_name": "supplies_potion_china",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinashop_spacialmerchant_2s.bms",
+    "prim\\mesh\\npc\\china\\chinashop_spacialmerchant_jupan.bms",
+    "prim\\mesh\\npc\\china\\chinashop_spacialmerchant_part1.bms",
+    "prim\\mesh\\npc\\china\\chinashop_spacialmerchant_part2_part1.bms",
+    "prim\\mesh\\npc\\china\\chinashop_spacialmerchant_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\supplies_potion_china.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinashop_spacialmerchant_basic.ban",
+    "prim\\ani\\npc\\china\\chinashop_spacialmerchant_time.ban"
+  ],
+  "textures": []
+}

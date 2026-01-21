@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_kara_pao",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_pao01.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_pao01.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_pao02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\karakorm\\oas_kara_pao.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

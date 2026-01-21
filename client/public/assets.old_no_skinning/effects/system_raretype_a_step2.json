@@ -1,0 +1,10 @@
+{
+  "file_name": "system_raretype_a_step2",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 23493
+}

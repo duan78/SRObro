@@ -1,0 +1,29 @@
+{
+  "file_name": "baal",
+  "meshes": [
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part2_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\jupiter\\baal\\baal_part2_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\baal.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\baal\\baal_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\baal\\baal_walk.ban",
+    "prim\\ani\\mob\\jupiter\\baal\\baal_run.ban",
+    "prim\\ani\\mob\\jupiter\\baal\\baal_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\baal\\baal_attack02.ban",
+    "prim\\ani\\mob\\jupiter\\baal\\baal_attack03.ban",
+    "prim\\ani\\mob\\jupiter\\baal\\baal_attack04.ban",
+    "prim\\ani\\mob\\jupiter\\baal\\baal_attack05.ban",
+    "prim\\ani\\mob\\jupiter\\baal\\baal_attack06.ban",
+    "prim\\ani\\mob\\jupiter\\baal\\baal_attack07.ban",
+    "prim\\ani\\mob\\jupiter\\baal\\baal_attack14.ban"
+  ],
+  "textures": []
+}

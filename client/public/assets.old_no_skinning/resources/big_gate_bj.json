@@ -1,0 +1,23 @@
+{
+  "file_name": "big_gate_bj",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\bj\\big_mun_bj_l01_01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\big_mun_bj_l01_01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\big_mun_bj_l01_02.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\big_mun_bj_l01_03.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\big_mun_bj_r01_01.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\big_mun_bj_r01_02.bms",
+    "prim\\mesh\\bldg\\guild\\bj\\big_mun_bj_r01_03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\bj\\big_mun_bj.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\bldg\\guild\\bj\\big_mun_bj_still.ban",
+    "prim\\ani\\bldg\\guild\\bj\\big_mun_bj_ing.ban",
+    "prim\\ani\\bldg\\guild\\bj\\big_mun_bj_open.ban",
+    "prim\\ani\\bldg\\guild\\bj\\big_mun_bj_open_close.ban"
+  ],
+  "textures": []
+}

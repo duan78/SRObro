@@ -1,0 +1,24 @@
+{
+  "file_name": "earthghost_small_tower01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_floor.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_floor.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_entrance.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_handrail.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_ladder.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_ring.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_rope.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_rope2.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_doorwall.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_etc.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_togi.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_wall.bms",
+    "prim\\mesh\\bldg\\china\\earthghost\\w_earthgst_smalltow01_wall2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\earthghost\\w_earthgst_smalltow.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

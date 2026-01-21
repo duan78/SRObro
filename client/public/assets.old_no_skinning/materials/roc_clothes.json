@@ -1,0 +1,10 @@
+{
+  "file_name": "roc_clothes",
+  "textures": [
+    "roc_clothes_ha.ddj",
+    "roc_clothes_la.ddj",
+    "roc_clothes_ba.ddj",
+    "roc_clothes_fa.ddj",
+    "roc_clothes_aa.ddj"
+  ]
+}

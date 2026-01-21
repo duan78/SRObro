@@ -1,0 +1,15 @@
+{
+  "file_name": "piety_altar",
+  "textures": [
+    "piety_altar_top.ddj",
+    "piety_area.ddj",
+    "piety_altar_altar.ddj",
+    "piety_pillar01.ddj",
+    "piety_altar_brazier.ddj",
+    "piety_altar_patten.ddj",
+    "piety_altar_stairs.ddj",
+    "piety_altar_brick.ddj",
+    "piety_altar_width.ddj",
+    "piety_altar_bottom.ddj"
+  ]
+}

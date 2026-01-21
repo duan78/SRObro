@@ -1,0 +1,21 @@
+{
+  "file_name": "apriest_2",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\apriest_part1.bms",
+    "prim\\mesh\\mob\\sd\\apriest_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\apriest_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\apriest2.bmt",
+    "prim\\mtrl\\mob\\sd\\apriest2_clon2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\sd\\apriest\\apriest_stand01.ban",
+    "prim\\ani\\mob\\sd\\apriest\\apriest_attack01.ban",
+    "prim\\ani\\mob\\sd\\apriest\\apriest_damage.ban",
+    "prim\\ani\\mob\\sd\\apriest\\apriest_die.ban",
+    "prim\\ani\\mob\\sd\\apriest\\apriest_die_rm.ban"
+  ],
+  "textures": []
+}

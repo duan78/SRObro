@@ -1,0 +1,10 @@
+{
+  "file_name": "keep_nephthys_weapon",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17484
+}

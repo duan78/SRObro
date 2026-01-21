@@ -1,0 +1,12 @@
+{
+  "file_name": "skill_wreck_marauder_ac_swing",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true,
+    "attack": true
+  },
+  "raw_size": 4989
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "rocmountainquest_oldwoman",
+  "meshes": [
+    "prim\\mesh\\npc\\common\\rocmountainquest_oldwoman02.bms",
+    "prim\\mesh\\npc\\common\\rocmountainquest_oldwoman01_part1.bms",
+    "prim\\mesh\\npc\\common\\rocmountainquest_oldwoman01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\common\\rocmountainquest_oldwoman.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

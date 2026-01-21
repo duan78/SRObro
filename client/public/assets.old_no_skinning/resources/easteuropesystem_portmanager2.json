@@ -1,0 +1,14 @@
+{
+  "file_name": "easteuropesystem_portmanager2",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropesystem_portmanager2_2s.bms",
+    "prim\\mesh\\npc\\europe\\easteuropesystem_portmanager2_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropesystem_portmanager2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropesystem_portmanager2.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

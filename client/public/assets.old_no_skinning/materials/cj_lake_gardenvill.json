@@ -1,0 +1,11 @@
+{
+  "file_name": "cj_lake_gardenvill",
+  "textures": [
+    "cj_lake_gardenvill_alpha.ddj",
+    "cj_lake_gardenvill_column.ddj",
+    "cj_lake_gardenvill_roofde.ddj",
+    "cj_lake_gardenvill_floor.ddj",
+    "cj_lake_gardenvill_roof.ddj",
+    "cj_lake_gardenvill_wood.ddj"
+  ]
+}

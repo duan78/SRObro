@@ -1,0 +1,14 @@
+{
+  "file_name": "fortress_ct_fort_out_wall03",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_wall03_01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_wall03_01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_wall03_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\fortress_ct_fort_out_wall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

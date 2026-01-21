@@ -1,0 +1,20 @@
+{
+  "file_name": "chinaetc_slumboy",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaetc_slumboy_2s.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_slumboy_al.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_slumboy_al_2s.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_slumboy_part2.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_slumboy_part1_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_slumboy_part1_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaetc_slumboy.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinaetc_slumboy_basic.ban",
+    "prim\\ani\\npc\\china\\chinaetc_slumboy_time.ban"
+  ],
+  "textures": []
+}

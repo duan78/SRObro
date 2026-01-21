@@ -1,0 +1,20 @@
+{
+  "file_name": "w_etc03",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_etc03_1.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_etc03_1.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_etc03_2.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_etc03_3.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_etc03_4.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_etc03_5.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_etc03_6.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_etc03_7.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\w_etc03_8.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\minga\\w_cdstore01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

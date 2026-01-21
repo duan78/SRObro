@@ -1,0 +1,17 @@
+{
+  "file_name": "air_garden_temple",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\air_garden_temple01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden_temple02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden_temple03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden_temple04.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden_temple05.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden_temple06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden_temple.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

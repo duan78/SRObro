@@ -1,0 +1,13 @@
+{
+  "file_name": "darkstaff_12",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\darkstaff_12.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_darkstaff_12_t.efp",
+    "system\\item_eu_darkstaff_12_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

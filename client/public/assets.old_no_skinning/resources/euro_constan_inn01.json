@@ -1,0 +1,29 @@
+{
+  "file_name": "euro_constan_inn01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_08.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_09.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_10.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_light01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_inn01_light02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_constan_inn01.bmt"
+  ],
+  "effects": [
+    "map\\light.efp",
+    "map\\light.efp",
+    "map\\light.efp",
+    "map\\light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

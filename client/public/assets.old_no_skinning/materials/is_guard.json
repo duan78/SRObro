@@ -1,0 +1,9 @@
+{
+  "file_name": "is_guard",
+  "textures": [
+    "is_guard_blade.ddj",
+    "is_guard_blade_al.ddj",
+    "is_guard_blade_blade.ddj",
+    "is_guard_bow_arm.ddj"
+  ]
+}

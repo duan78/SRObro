@@ -1,0 +1,10 @@
+{
+  "file_name": "mirage_wind_bolt_chain",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 1552
+}

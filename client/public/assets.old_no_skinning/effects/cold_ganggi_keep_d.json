@@ -1,0 +1,10 @@
+{
+  "file_name": "cold_ganggi_keep_d",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 34876
+}

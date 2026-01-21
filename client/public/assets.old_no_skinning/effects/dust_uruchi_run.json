@@ -1,0 +1,10 @@
+{
+  "file_name": "dust_uruchi_run",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 2173
+}

@@ -1,0 +1,27 @@
+{
+  "file_name": "pha_mazecas",
+  "textures": [
+    "pha_mazecas_center.ddj",
+    "pha_mazecas_column.ddj",
+    "pha_mazecas_shphinx.ddj",
+    "pha_mazecas_statue01.ddj",
+    "pha_mazecas_statue02.ddj",
+    "pha_mazecas_statue03.ddj",
+    "pha_mazecas_tile.ddj",
+    "pha_mazecas_wall01.ddj",
+    "pha_mazecas_wall02.ddj",
+    "pha_mazecas_wall03.ddj",
+    "pha_mazecas_wall04.ddj",
+    "pha_mazecas_wall05.ddj",
+    "pha_mazecas_wall06.ddj",
+    "pha_mazecas_wall07.ddj",
+    "pha_mazecas_wall08.ddj",
+    "pha_mazecas_wall09.ddj",
+    "pha_mazecas_wall10.ddj",
+    "pha_mazecas_wall11.ddj",
+    "pha_mazecas_wall12.ddj",
+    "pha_mazecas_wall13.ddj",
+    "pha_mazecas_wall14.ddj",
+    "pha_gate_cobweb.ddj"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "ruin_takla_potalstone06_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\ruins\\taklamakan des\\portal\\ruin_takla_potalstone06_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\ruins\\taklamakan des\\portal\\ruin_takla_potal_stone06_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

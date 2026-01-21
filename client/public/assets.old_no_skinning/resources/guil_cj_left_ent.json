@@ -1,0 +1,20 @@
+{
+  "file_name": "guil_cj_left_ent",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_cj_left_ent_alpha.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_cj_left_ent_alpha.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_cj_left_ent_door.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_cj_left_ent_roof.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_cj_left_ent_stair.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_cj_left_ent_wall01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_cj_left_ent_wall02.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_cj_left_ent_wall03.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_cj_left_ent_closedoor.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\jangan\\guil_cj_left_ent.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

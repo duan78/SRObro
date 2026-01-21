@@ -1,0 +1,14 @@
+{
+  "file_name": "tre_tree02",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\tre_tree02_03.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_tree02_01.bms",
+    "prim\\mesh\\nature\\common\\tree\\tre_tree02_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\tree\\tre_tree02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

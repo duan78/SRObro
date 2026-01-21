@@ -1,0 +1,13 @@
+{
+  "file_name": "w_cd_tombstone02",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tombstone02_1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_tombstone02_2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_tombstone.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

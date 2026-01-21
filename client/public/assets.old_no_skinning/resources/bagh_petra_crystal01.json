@@ -1,0 +1,21 @@
+{
+  "file_name": "bagh_petra_crystal01",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_crystal01_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_crystal01_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_petra\\bagh_petra_crystal01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_petra\\bagh_petra_crystal.bmt"
+  ],
+  "effects": [
+    "dun\\cristal_glow_violet_b.efp",
+    "dun\\cristal_up_violet_b.efp",
+    "dun\\cristal_up_violet_b.efp",
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp",
+    "map\\bigx-mastree-candle.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

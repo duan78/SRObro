@@ -1,0 +1,12 @@
+{
+  "file_name": "arabianf_fstone_04",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\stone\\arabianf_fstone_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\stone\\arabianf_fstone_03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

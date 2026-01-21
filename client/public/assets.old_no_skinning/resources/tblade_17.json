@@ -1,0 +1,12 @@
+{
+  "file_name": "tblade_17",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\weapon\\tblade_17.bmt"
+  ],
+  "effects": [
+    "system\\item_ch_tblade_15.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

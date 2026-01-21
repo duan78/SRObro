@@ -1,0 +1,10 @@
+{
+  "file_name": "cobweb",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\wchina\\donhwang_cv\\common\\cobweb.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

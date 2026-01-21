@@ -1,0 +1,13 @@
+{
+  "file_name": "oas_tarim_trebush04_01",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\tarim\\oas_tarim_trebush04_01.bms",
+    "prim\\mesh\\nature\\oasis\\tarim\\oas_tarim_trebush04_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\tarim\\oas_tarim_trebush01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

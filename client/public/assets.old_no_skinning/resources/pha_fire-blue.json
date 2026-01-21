@@ -1,0 +1,12 @@
+{
+  "file_name": "pha_fire-blue",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\common\\st_cenrer_fire.bmt"
+  ],
+  "effects": [
+    "dun\\blue_flame_bowl.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

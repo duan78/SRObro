@@ -1,0 +1,16 @@
+{
+  "file_name": "job_arena_box",
+  "meshes": [
+    "prim\\mesh\\mob\\arenajob\\oasissystem_warehousekeeper_box02.bms",
+    "prim\\mesh\\mob\\arenajob\\object03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arenajob\\oasissystem_warehousekeeper_box02.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\arenajob\\job_arena_box\\job_arena_box_stand01.ban",
+    "prim\\ani\\mob\\arenajob\\job_arena_box\\job_arena_box_die.ban"
+  ],
+  "textures": []
+}

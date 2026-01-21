@@ -1,0 +1,13 @@
+{
+  "file_name": "arabia_abshad",
+  "meshes": [
+    "prim\\mesh\\npc\\arabia\\arabia_abshad_part1.bms",
+    "prim\\mesh\\npc\\arabia\\arabia_abshad_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\arabia\\arabia_abshad.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

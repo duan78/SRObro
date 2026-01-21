@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_crab_ac2_dust",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 20681
+}

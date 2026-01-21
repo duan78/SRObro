@@ -1,0 +1,10 @@
+{
+  "file_name": "red_center_smok1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 14557
+}

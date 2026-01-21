@@ -1,0 +1,39 @@
+{
+  "file_name": "alex_hunter",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_bottom01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_bottom01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_bottom02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_box.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_column01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_column02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_column03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_darkwall.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_door01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_door02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_drum.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_flag.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_roof01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_roof02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_stair.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_statue01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_statue02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_statue03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_statue04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_wall01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_wall02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_wall03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_wall04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_wall05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_wall06.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_wall07.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_wall08.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\union\\alex_hunter_window.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\union\\alex_hunter.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

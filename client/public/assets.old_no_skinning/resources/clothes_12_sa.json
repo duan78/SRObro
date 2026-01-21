@@ -1,0 +1,13 @@
+{
+  "file_name": "clothes_12_sa",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\common\\man_item\\clothes_12.bmt"
+  ],
+  "effects": [
+    "system\\item_equip_shoulder_12.efp",
+    "system\\item_equip_shoulder_12.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

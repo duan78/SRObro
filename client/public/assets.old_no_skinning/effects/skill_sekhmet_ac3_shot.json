@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_sekhmet_ac3_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "attack": true
+  },
+  "raw_size": 18586
+}

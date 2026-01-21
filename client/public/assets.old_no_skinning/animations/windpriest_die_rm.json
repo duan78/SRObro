@@ -1,0 +1,25 @@
+{
+  "file_name": "windpriest_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 3305,
+  "animation_name": "\u0011",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    619,
+    2750,
+    143724,
+    143665,
+    562,
+    4159,
+    561,
+    1722,
+    562,
+    1715
+  ]
+}

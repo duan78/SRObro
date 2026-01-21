@@ -1,0 +1,14 @@
+{
+  "file_name": "oas_kara_tree03",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree\\oas_kara_tree03.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree\\oas_kara_tree03.bms",
+    "prim\\mesh\\nature\\oasis\\karakorm\\kako-tree\\oas_kara_tree03_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\karakorm\\kako-tree\\oas_kara_tree03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

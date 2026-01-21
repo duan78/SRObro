@@ -1,0 +1,32 @@
+{
+  "file_name": "feathermask",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\feathermask01.bms",
+    "prim\\mesh\\mob\\roc\\feathermask_part1.bms",
+    "prim\\mesh\\mob\\roc\\feathermask_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\feathermask_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\feathermask.bmt",
+    "prim\\mtrl\\mob\\roc\\feathermask_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_stand01.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_walk.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_run.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_attack01.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_attack02.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_attack03.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_damage02.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_die.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_die_rm.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_down.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_down_rm.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_down_damage.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_down_up.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_down_die.ban",
+    "prim\\ani\\mob\\roc\\feathermask\\feathermask_damage01.ban"
+  ],
+  "textures": []
+}

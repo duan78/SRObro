@@ -1,0 +1,26 @@
+{
+  "file_name": "osiris_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4419,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    2,
+    12,
+    2,
+    11,
+    619,
+    2752,
+    159090,
+    799996,
+    156782,
+    996602,
+    560,
+    4159,
+    561,
+    4148,
+    562
+  ]
+}

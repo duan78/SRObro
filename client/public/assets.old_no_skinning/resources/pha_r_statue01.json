@@ -1,0 +1,12 @@
+{
+  "file_name": "pha_r_statue01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\dun\\pha_statue.bmt"
+  ],
+  "effects": [
+    "dun\\pha_red_eye_01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

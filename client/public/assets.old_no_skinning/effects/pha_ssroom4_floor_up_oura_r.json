@@ -1,0 +1,10 @@
+{
+  "file_name": "pha_ssroom4_floor_up_oura_r",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10572
+}

@@ -1,0 +1,28 @@
+{
+  "file_name": "c_wildpig_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 730,
+  "animation_name": "\u0012",
+  "data_blocks": [
+    400,
+    30,
+    0,
+    4,
+    0,
+    66,
+    200,
+    400,
+    5,
+    10,
+    287841,
+    1073,
+    4032,
+    4,
+    6,
+    274736,
+    409645,
+    4
+  ]
+}

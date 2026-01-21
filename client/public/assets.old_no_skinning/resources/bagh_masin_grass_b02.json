@@ -1,0 +1,10 @@
+{
+  "file_name": "bagh_masin_grass_b02",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\masin\\bagh_masin_weed_tile.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

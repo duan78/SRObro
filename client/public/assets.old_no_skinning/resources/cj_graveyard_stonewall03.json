@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_graveyard_stonewall03",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\cliff\\cj_graveyard_stonewall03.bms",
+    "prim\\mesh\\nature\\common\\cliff\\cj_graveyard_stonewall03.bms",
+    "prim\\mesh\\nature\\common\\cliff\\cj_graveyard_stonewall03_grass02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\cliff\\cj_graveyard_stonewall03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,29 @@
+{
+  "file_name": "hunlancer_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4934,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    327680,
+    157038,
+    802707,
+    143717,
+    703443,
+    2,
+    11,
+    612,
+    4020,
+    2,
+    16,
+    2,
+    16,
+    2,
+    15,
+    143474
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "file_name": "kidemonas",
+  "meshes": [
+    "prim\\mesh\\mob\\arabia\\kidemonas1_part1.bms",
+    "prim\\mesh\\mob\\arabia\\kidemonas1_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\kidemonas1_part2_part2.bms",
+    "prim\\mesh\\mob\\arabia\\kidemonas_body01_part1.bms",
+    "prim\\mesh\\mob\\arabia\\kidemonas_body01_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\kidemonas_body01_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\kidemonas_body01_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\arabia\\kidemonas_body01_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\arabia\\kidemonas.bmt"
+  ],
+  "effects": [
+    "monster\\arabia\\mob_arbia_kidemonas_hat_amb.efp",
+    "monster\\arabia\\mob_arbia_kidemonas_eye_amb.efp",
+    "monster\\arabia\\mob_arbia_kidemonas_eye_amb.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_stand01.ban",
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_stand02.ban",
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_walk.ban",
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_run.ban",
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_attack01.ban",
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_attack02.ban",
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_attack03.ban",
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_attack04.ban",
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_attack05.ban",
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_attack06.ban",
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_die.ban",
+    "prim\\ani\\mob\\arabia\\kidemonas\\kidemonas_die_rm.ban"
+  ],
+  "textures": []
+}

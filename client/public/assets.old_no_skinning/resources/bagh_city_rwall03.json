@@ -1,0 +1,17 @@
+{
+  "file_name": "bagh_city_rwall03",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rwall03_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rwall03_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rwall03_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rwall03_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rwall03_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_rwall03_05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_rwall.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

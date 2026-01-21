@@ -1,0 +1,18 @@
+{
+  "file_name": "westchinashop_accessoryshopgirl",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\westchinashop_accessoryshopgirl_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_accessoryshopgirl_al_2s.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_accessoryshopgirl_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinashop_accessoryshopgirl_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\westchinashop_accessoryshopgirl.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinashop_accessoryshopgirl_basic.ban",
+    "prim\\ani\\npc\\china\\chinashop_accessoryshopgirl_time.ban"
+  ],
+  "textures": []
+}

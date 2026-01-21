@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_kara_obj_al",
+  "textures": [
+    "oas_kara_obj_wall_3.ddj",
+    "oas_kara_obj_top.ddj",
+    "oas_kara_obj_al.ddj",
+    "oas_kara_obj_roof_2.ddj",
+    "oas_kara_obj_floor.ddj",
+    "oas_kara_obj_wall_4.ddj",
+    "oas_kara_obj_roof.ddj"
+  ]
+}

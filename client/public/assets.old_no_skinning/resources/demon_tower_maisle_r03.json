@@ -1,0 +1,29 @@
+{
+  "file_name": "demon_tower_maisle_r03",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_maisle_r\\demon_tower_maisle_r03_02.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_maisle_r\\demon_tower_maisle_r03_01.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_maisle_r\\demon_tower_maisle_r03_02.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_maisle_r\\demon_tower_maisle_r03_03.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_maisle_r\\demon_tower_maisle_r03_04.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_maisle_r\\demon_tower_maisle_r03_05.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_maisle_r\\demon_tower_maisle_r03_06.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_maisle_r\\demon_tower_maisle_r03_07.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_maisle_r\\demon_tower_maisle_r03_08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\fire\\demon_tower_maisle.bmt"
+  ],
+  "effects": [
+    "dun\\red_orange_flame_sb_s01.efp",
+    "dun\\red_orange_flame_sb_s01.efp",
+    "dun\\red_orange_flame_sb_s01.efp",
+    "dun\\red_orange_flame_sb_s01.efp",
+    "dun\\red_orange_flame_sb_s01.efp",
+    "dun\\red_orange_flame_sb_s01.efp",
+    "dun\\red_orange_flame_sb_s01.efp",
+    "dun\\red_orange_flame_sb_s01.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

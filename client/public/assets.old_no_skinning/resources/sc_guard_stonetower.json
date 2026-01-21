@@ -1,0 +1,23 @@
+{
+  "file_name": "sc_guard_stonetower",
+  "meshes": [
+    "prim\\mesh\\mob\\season\\sc_guard_stonetower01.bms",
+    "prim\\mesh\\mob\\season\\sc_guard_stonetower02.bms",
+    "prim\\mesh\\mob\\season\\sc_guard_stonetower03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\season\\sc_guard_stonetower.bmt"
+  ],
+  "effects": [
+    "map\\under_blood_02.efp",
+    "map\\under_blood.efp",
+    "map\\under_blood_01.efp",
+    "map\\under_blood_01.efp",
+    "map\\under_blood.efp",
+    "map\\under_blood_02.efp",
+    "map\\under_blood_02.efp",
+    "map\\under_blood_02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

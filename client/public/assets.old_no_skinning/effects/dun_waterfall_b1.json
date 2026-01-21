@@ -1,0 +1,10 @@
+{
+  "file_name": "dun_waterfall_b1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 5145
+}

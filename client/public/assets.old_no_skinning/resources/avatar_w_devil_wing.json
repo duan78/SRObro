@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_w_devil_wing",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_devil_wing.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\etc\\avatar_m_devil_wing_stand01.ban",
+    "prim\\ani\\etc\\avatar_m_devil_wing_run.ban"
+  ],
+  "textures": []
+}

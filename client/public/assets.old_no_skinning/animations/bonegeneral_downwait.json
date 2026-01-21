@@ -1,0 +1,20 @@
+{
+  "file_name": "bonegeneral_downwait",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 10905,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    393216,
+    0,
+    327680,
+    419182,
+    835287,
+    405861,
+    703342,
+    6,
+    10
+  ]
+}

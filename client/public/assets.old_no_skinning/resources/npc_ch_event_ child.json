@@ -1,0 +1,15 @@
+{
+  "file_name": "npc_ch_event_ child",
+  "meshes": [
+    "prim\\mesh\\npc\\npc\\npc_ch_event_child_part1.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_child_part2_part1.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_child_part2_part2_part1.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_child_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\npc\\npc_ch_event_child.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

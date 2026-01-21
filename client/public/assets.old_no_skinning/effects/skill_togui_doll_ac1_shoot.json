@@ -1,0 +1,11 @@
+{
+  "file_name": "skill_togui_doll_ac1_shoot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true,
+    "skill": true
+  },
+  "raw_size": 52044
+}

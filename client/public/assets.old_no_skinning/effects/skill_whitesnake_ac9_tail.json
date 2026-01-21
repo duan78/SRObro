@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_whitesnake_ac9_tail",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 16148
+}

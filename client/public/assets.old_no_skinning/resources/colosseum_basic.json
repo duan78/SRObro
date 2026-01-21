@@ -1,0 +1,23 @@
+{
+  "file_name": "colosseum_basic",
+  "meshes": [
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_09.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_01.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_02.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_03.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_04.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_05.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_06.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_07.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_08.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_09.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_10.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_basic_11.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\colosseum\\colosseum_basic.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

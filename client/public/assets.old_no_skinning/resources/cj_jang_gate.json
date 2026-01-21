@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_jang_gate",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gate06.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gate06.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gate07.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_gate08.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_pondfen.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_jang_pondfen02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_jang_gate01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

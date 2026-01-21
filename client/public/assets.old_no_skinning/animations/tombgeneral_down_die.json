@@ -1,0 +1,27 @@
+{
+  "file_name": "tombgeneral_down_die",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 2234,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    327680,
+    157038,
+    899994,
+    2,
+    12,
+    2,
+    12,
+    2,
+    12,
+    2,
+    12,
+    2,
+    10,
+    158563
+  ]
+}

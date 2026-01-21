@@ -1,0 +1,10 @@
+{
+  "file_name": "event_festival_potion",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\event\\event_festival_potion.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

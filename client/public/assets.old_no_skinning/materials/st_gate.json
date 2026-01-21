@@ -1,0 +1,17 @@
+{
+  "file_name": "st_gate",
+  "textures": [
+    "st_gate_ceiling.ddj",
+    "st_gate_ground.ddj",
+    "st_gate_piece.ddj",
+    "st_gate_rock_01.ddj",
+    "st_gate_rock_02.ddj",
+    "st_gate_sphinx.ddj",
+    "st_gate_stair.ddj",
+    "st_gate_standard.ddj",
+    "st_gate_top.ddj",
+    "st_gate_wall.ddj",
+    "st_gate_wing.ddj",
+    "prim\\mtrl\\dun\\asiam\\r2_cv\\field\\st_gate_cobweb.ddj"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "avata_m_amalrun_blue_3",
+  "meshes": [
+    "prim\\mesh\\avatar\\avata_m_amalrun_3.bms",
+    "prim\\mesh\\avatar\\avata_m_amalrun_3_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\avatar\\avata_m_amalrun_blue.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

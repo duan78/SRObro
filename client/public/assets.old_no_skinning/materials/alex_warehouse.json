@@ -1,0 +1,32 @@
+{
+  "file_name": "alex_warehouse",
+  "textures": [
+    "alex_hunter_drum.ddj",
+    "alex_hunter_box.ddj",
+    "alex_warehouse_drum02.ddj",
+    "alex_hunter_wall08.ddj",
+    "alex_hunter_bottom01.ddj",
+    "alex_hunter_stair.ddj",
+    "alex_merchant_grass.ddj",
+    "alex_hunter_darkwall.ddj",
+    "alex_hunter_wall05.ddj",
+    "alex_warehouse_box01.ddj",
+    "alex_warehouse_box02.ddj",
+    "alex_warehouse_column01.ddj",
+    "africa\\alexandria\\union\\alex_warehouse_dark01.ddj",
+    "alex_warehouse_door01.ddj",
+    "alex_warehouse_bottom01.ddj",
+    "alex_warehouse_wall01.ddj",
+    "alex_warehouse_wall02.ddj",
+    "alex_warehouse_wall03.ddj",
+    "alex_warehouse_wall04.ddj",
+    "alex_warehouse_wall05.ddj",
+    "alex_warehouse_wall06.ddj",
+    "alex_warehouse_wall08.ddj",
+    "alex_warehouse_wall07.ddj",
+    "alex_warehouse_window.ddj",
+    "alex_hunter_column03.ddj",
+    "alex_warehouse_window_alpha.ddj",
+    "alex_warehouse_window_roof.ddj"
+  ]
+}

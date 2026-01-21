@@ -1,0 +1,40 @@
+{
+  "file_name": "fortress_hotan_brid00_02",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_03_02.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_02.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_04.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_05.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_06.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_07.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_08.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_09.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_10.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_alpha01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_alpha02.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_alpha03.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_alpha04.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_alpha05.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_gate01.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_gate02.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_gate03.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_gateflag.bms",
+    "prim\\mesh\\bldg\\guild\\hotang\\bridge\\fortress_hotan_brid00_03_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\hotang\\fortress_hotan_brid00_01.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp",
+    "map\\cj_pal_lamp_light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

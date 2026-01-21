@@ -1,0 +1,13 @@
+{
+  "file_name": "roc_light",
+  "textures": [
+    "roc_light_ha.ddj",
+    "roc_light_aa.ddj",
+    "roc_light_fa.ddj",
+    "roc_light_ba.ddj",
+    "roc_light_la.ddj",
+    "roc_light_sa.ddj",
+    "prim\\mtrl\\item\\china\\woman_item\\roc_light_dum.ddj",
+    "roc_light_g_du.ddj"
+  ]
+}

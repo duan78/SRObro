@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_barpolle_ac2_shield_hit",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 1607
+}

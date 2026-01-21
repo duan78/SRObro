@@ -1,0 +1,21 @@
+{
+  "file_name": "beetle_s_stand01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 11216,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    589824,
+    0,
+    327680,
+    0,
+    0,
+    0,
+    0,
+    0,
+    615790,
+    900977
+  ]
+}

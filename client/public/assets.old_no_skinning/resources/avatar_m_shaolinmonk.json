@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_m_shaolinmonk",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_shaolin_monk_chines.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_shaolin_monk_chines_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_shaolin_monk_chines_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_shaolinmonk.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "euro_esteuro_oltree01_l1",
+  "meshes": [
+    "prim\\mesh\\nature\\europe\\east eurpoe\\tree\\euro_esteuro_oltree01_l1.bms",
+    "prim\\mesh\\nature\\europe\\east eurpoe\\tree\\euro_esteuro_oltree01_l1.bms",
+    "prim\\mesh\\nature\\europe\\east eurpoe\\tree\\euro_esteuro_oltree01_l2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\europe\\east eurpoe\\tree\\euro_esteuro_oltree01_s1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

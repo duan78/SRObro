@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_wreck_marauder_die_smoke_01",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 16328
+}

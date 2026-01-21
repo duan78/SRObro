@@ -1,0 +1,9 @@
+{
+  "file_name": "chinasystem_shaman",
+  "textures": [
+    "chinasystem_shaman.ddj",
+    "chinasystem_shaman_al.ddj",
+    "chinasystem_shaman_snake.ddj",
+    "chinasystem_shaman_tiger.ddj"
+  ]
+}

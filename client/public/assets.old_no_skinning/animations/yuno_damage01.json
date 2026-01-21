@@ -1,0 +1,19 @@
+{
+  "file_name": "yuno_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 203,
+  "animation_name": "\r",
+  "data_blocks": [
+    0,
+    0,
+    1124,
+    64,
+    0,
+    64,
+    0,
+    64,
+    0
+  ]
+}

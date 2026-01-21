@@ -1,0 +1,48 @@
+{
+  "file_name": "rock_mt_capture01",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_00.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_00.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_01.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_02.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_03.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_04.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_05.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_06.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_07.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_08.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_09.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_10.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_11.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_12.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_13.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_14.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_15.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_16.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_17.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_18.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_19.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_20.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture_21.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\ferry\\rock_mt_capture01.bmt"
+  ],
+  "effects": [
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

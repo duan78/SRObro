@@ -1,0 +1,10 @@
+{
+  "file_name": "asiaminor_theater05_brokenwall01",
+  "textures": [
+    "asiaminor_theater_brokenwall01.ddj",
+    "asiaminor_theater_sidewall01.ddj",
+    "asiaminor_theater_stair01.ddj",
+    "asiaminor_theater_tile01.ddj",
+    "asiaminor_theater_tile02.ddj"
+  ]
+}

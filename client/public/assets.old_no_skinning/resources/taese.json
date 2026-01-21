@@ -1,0 +1,20 @@
+{
+  "file_name": "taese",
+  "meshes": [
+    "prim\\mesh\\mob\\wchina\\taese01.bms",
+    "prim\\mesh\\mob\\wchina\\taese_part1.bms",
+    "prim\\mesh\\mob\\wchina\\taese_part2_part1.bms",
+    "prim\\mesh\\mob\\wchina\\taese_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\wchina\\taese_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\wchina\\taese_part2_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\wchina\\taese.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\wchina\\taese\\taese_walk.ban",
+    "prim\\ani\\mob\\wchina\\taese\\taese_stand01.ban"
+  ],
+  "textures": []
+}

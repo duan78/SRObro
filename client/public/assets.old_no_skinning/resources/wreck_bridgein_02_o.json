@@ -1,0 +1,13 @@
+{
+  "file_name": "wreck_bridgein_02_o",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\wreck\\bridge\\wreck_bridgein_02_01.bms",
+    "prim\\mesh\\dun\\property\\wreck\\bridge\\wreck_bridgein_02_o.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\wreck\\wreck_bridge_in.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "x_mas_tree_syellball",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\bldg\\common\\event-xmas\\x_mas_tree.bmt"
+  ],
+  "effects": [
+    "map\\x-mastree-ball_y.efp",
+    "map\\x-mastree-ball_y.efp",
+    "map\\x-mastree-ball_y.efp",
+    "map\\x-mastree-ball_y.efp",
+    "map\\x-mastree-ball_y.efp",
+    "map\\x-mastree-ball_y.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

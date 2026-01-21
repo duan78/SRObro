@@ -1,0 +1,10 @@
+{
+  "file_name": "rog_crossbow_power_motion_ready",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17275
+}

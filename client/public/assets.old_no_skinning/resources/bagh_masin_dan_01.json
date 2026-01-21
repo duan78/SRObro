@@ -1,0 +1,12 @@
+{
+  "file_name": "bagh_masin_dan_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_masin\\bagh_masin_dan_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_masin\\bagh_masin_dan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

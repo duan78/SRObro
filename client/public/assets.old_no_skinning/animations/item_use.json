@@ -1,0 +1,17 @@
+{
+  "file_name": "item_use",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 898,
+  "animation_name": "\b",
+  "data_blocks": [
+    65536,
+    0,
+    65536,
+    393216,
+    26,
+    0,
+    0
+  ]
+}

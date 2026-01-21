@@ -1,0 +1,19 @@
+{
+  "file_name": "oas_tarim_guknest_bone01",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\yeowa-nest\\oas_tarim_guknest_bone01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\yeowa-nest\\oas_tarim_guknest_bone01.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\yeowa-nest\\oas_tarim_guknest_bone02.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\yeowa-nest\\oas_tarim_guknest_bone03.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\yeowa-nest\\oas_tarim_guknest_egg.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\yeowa-nest\\oas_tarim_guknest_nest.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\yeowa-nest\\oas_tarim_guknest_rock.bms",
+    "prim\\mesh\\artifact\\oasis\\tarim\\yeowa-nest\\oas_tarim_guknest_roof.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\yeowa-nest\\oas_tarim_guknest_bone01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

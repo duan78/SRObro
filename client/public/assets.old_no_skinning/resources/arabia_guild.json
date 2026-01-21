@@ -1,0 +1,15 @@
+{
+  "file_name": "arabia_guild",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_guild_2al.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_guild_book.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_guild_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_guild_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\arabia_guild.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

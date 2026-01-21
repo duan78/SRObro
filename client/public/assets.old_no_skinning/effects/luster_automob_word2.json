@@ -1,0 +1,10 @@
+{
+  "file_name": "luster_automob_word2",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3182
+}

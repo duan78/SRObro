@@ -1,0 +1,27 @@
+{
+  "file_name": "fw_taese",
+  "meshes": [
+    "prim\\mesh\\mob\\fortress\\fw_taese_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_taese_part2_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_taese_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_taese_part2_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_taese_part2_part2_part2_part2.bms",
+    "prim\\mesh\\mob\\fortress\\fw_taese01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\fortress\\fw_taese.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\fortress\\fw_taese\\fw_taese_stand01.ban",
+    "prim\\ani\\mob\\fortress\\fw_taese\\fw_taese_walk.ban",
+    "prim\\ani\\mob\\fortress\\fw_taese\\fw_taese_run.ban",
+    "prim\\ani\\mob\\fortress\\fw_taese\\fw_taese_attack01.ban",
+    "prim\\ani\\mob\\fortress\\fw_taese\\fw_taese_attack03.ban",
+    "prim\\ani\\mob\\fortress\\fw_taese\\fw_taese_die.ban",
+    "prim\\ani\\mob\\fortress\\fw_taese\\fw_taese_die_rm.ban",
+    "prim\\ani\\mob\\fortress\\fw_taese\\fw_taese_attack07.ban",
+    "prim\\ani\\mob\\fortress\\fw_taese\\fw_taese_attack02.ban"
+  ],
+  "textures": []
+}

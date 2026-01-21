@@ -1,0 +1,30 @@
+{
+  "file_name": "bagh_abal_foun",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun14.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun15.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun16.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun17.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_abal_foun18.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_abal_foun.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_potal_blue.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

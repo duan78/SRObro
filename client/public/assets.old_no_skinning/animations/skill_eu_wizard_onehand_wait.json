@@ -1,0 +1,20 @@
+{
+  "file_name": "skill_eu_wizard_onehand_wait",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 8991,
+  "animation_name": "\u001c",
+  "data_blocks": [
+    65536,
+    458752,
+    0,
+    327680,
+    0,
+    484718,
+    834186,
+    471397,
+    703207,
+    7
+  ]
+}

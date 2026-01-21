@@ -1,0 +1,10 @@
+{
+  "file_name": "demon_tower_hfire_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10711
+}

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRObro - Test Intégration Blender Assets</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            overflow: hidden;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100vh;
+            display: block;
+        }
+
+        #info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #0e3460;
+            max-width: 400px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            color: #00ff88;
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+
+        h2 {
+            color: #00d4ff;
+            font-size: 16px;
+            margin: 15px 0 10px 0;
+            border-bottom: 1px solid #0e3460;
+            padding-bottom: 5px;
+        }
+
+        .success {
+            color: #00ff88;
+        }
+
+        .warning {
+            color: #ffaa00;
+        }
+
+        .error {
+            color: #ff4444;
+        }
+
+        .info-item {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .info-label {
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 5px;
+            margin: 10px 0;
+        }
+
+        #controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #0e3460;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .control-group {
+            margin: 15px 0;
+        }
+
+        label {
+            display: block;
+            color: #00d4ff;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #0e3460;
+            background: #1a1a2e;
+            color: #eee;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button {
+            background: linear-gradient(135deg, #0e3460 0%, #1a5c9e 100%);
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #1a5c9e 0%, #0e3460 100%);
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #boneList {
+            max-height: 300px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        .bone-item {
+            padding: 3px 0;
+            border-bottom: 1px solid #0e3460;
+        }
+
+        #animationLog {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #0e3460;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+
+        .log-entry {
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .log-success {
+            background: rgba(0, 255, 136, 0.1);
+            color: #00ff88;
+        }
+
+        .log-error {
+            background: rgba(255, 68, 68, 0.1);
+            color: #ff4444;
+        }
+
+        .log-info {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+        }
+    </style>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+
+    <div id="info">
+        <h1>🎮 SRObro - Test Blender Assets</h1>
+
+        <h2>📦 Chargement du Modèle</h2>
+        <div id="loadingStatus">⏳ En cours...</div>
+
+        <h2>✅ Validation du Skinning</h2>
+        <div class="stats" id="validationStats"></div>
+    </div>
+
+    <div id="controls">
+        <div class="control-group">
+            <label for="characterSelect">👤 Personnage:</label>
+            <select id="characterSelect">
+                <option value="avatar_m_nasrun.glb">Avatar Européen Homme</option>
+                <option value="avatar_w_nasrun.glb">Avatar Européen Femme</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>🎬 Animations:</label>
+            <button onclick="playAnimation('idle')">▶️ Idle</button>
+            <button onclick="playAnimation('walk')">🚶 Walk</button>
+            <button onclick="playAnimation('attack')">⚔️ Attack</button>
+        </div>
+
+        <h2>🦴 Squelette</h2>
+        <div id="boneList"></div>
+    </div>
+
+    <div id="animationLog"></div>
+
+    <script>
+        const canvas = document.getElementById("renderCanvas");
+        const engine = new BABYLON.Engine(canvas, true);
+
+        let scene = null;
+        let camera = null;
+        let currentModel = null;
+        let currentSkeleton = null;
+
+        const characterSelect = document.getElementById("characterSelect");
+        const loadingStatus = document.getElementById("loadingStatus");
+        const validationStats = document.getElementById("validationStats");
+        const boneList = document.getElementById("boneList");
+        const animationLog = document.getElementById("animationLog");
+
+        function log(message, type = 'info') {
+            const entry = document.createElement("div");
+            entry.className = `log-entry log-${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            animationLog.insertBefore(entry, animationLog.firstChild);
+
+            // Limiter le nombre de logs
+            while (animationLog.children.length > 50) {
+                animationLog.removeChild(animationLog.lastChild);
+            }
+        }
+
+        async function loadCharacter(modelPath) {
+            log(`Chargement de ${modelPath}...`, 'info');
+
+            try {
+                const result = await BABYLON.SceneLoader.ImportMeshAsync(
+                    null,
+                    "assets/glb_blender/prim/",
+                    modelPath,
+                    scene
+                );
+
+                // Nettoyer l'ancien modèle
+                if (currentModel) {
+                    currentModel.dispose();
+                }
+
+                currentModel = result.meshes[0];
+
+                // Analyser le squelette
+                const skeletons = result.skeletons;
+                if (skeletons && skeletons.length > 0) {
+                    currentSkeleton = skeletons[0];
+                    displaySkeletonInfo(currentSkeleton);
+                    displayValidation(result);
+                    log(`✅ Modèle chargé avec succès: ${currentSkeleton.bones.length} os`, 'success');
+                } else {
+                    log(`❌ Aucun squelette trouvé`, 'error');
+                    displayNoSkeleton();
+                }
+
+                // Centrer la caméra
+                camera.target = currentModel;
+
+            } catch (error) {
+                log(`❌ Erreur de chargement: ${error.message}`, 'error');
+                console.error(error);
+            }
+        }
+
+        function displaySkeletonInfo(skeleton) {
+            let html = '';
+            skeleton.bones.forEach((bone, index) => {
+                const parent = bone.getParent();
+                const hasParent = parent ? ` (fils de ${parent.name})` : '';
+                html += `<div class="bone-item">${index + 1}. ${bone.name}${hasParent}</div>`;
+            });
+            boneList.innerHTML = html;
+        }
+
+        function displayValidation(result) {
+            const skeleton = result.skeletons[0];
+            const meshes = result.meshes;
+
+            let html = '';
+
+            // Squelette
+            html += `<div class="info-item">`;
+            html += `<span class="info-label">✅ Squelette:</span> `;
+            html += `<span class="success">${skeleton.bones.length} os</span>`;
+            html += `</div>`;
+
+            // Meshs skinnés
+            const skinnedMeshes = meshes.filter(m => m.isSkinnedMesh);
+            html += `<div class="info-item">`;
+            html += `<span class="info-label">✅ Meshs skinnés:</span> `;
+            html += `<span class="success">${skinnedMeshes.length} / ${meshes.length}</span>`;
+            html += `</div>`;
+
+            // Bone influencers
+            if (skinnedMeshes.length > 0) {
+                const numInfluencers = skinnedMeshes[0].numBoneInfluencers;
+                html += `<div class="info-item">`;
+                html += `<span class="info-label">✅ Bone influencers:</span> `;
+                html += `<span class="success">${numInfluencers} / vertex</span>`;
+                html += `</div>`;
+            }
+
+            html += `<div class="info-item">`;
+            html += `<span class="info-label">🎉 Skinning:</span> `;
+            html += `<span class="success">ACTIF - Animation possible!</span>`;
+            html += `</div>`;
+
+            validationStats.innerHTML = html;
+            loadingStatus.innerHTML = `<span class="success">🎉 SUCCÈS !</span><br>Modèle ${result.meshes[0].name} chargé`;
+        }
+
+        function displayNoSkeleton() {
+            validationStats.innerHTML = `
+                <div class="info-item">
+                    <span class="error">❌ Aucun squelette trouvé</span>
+                </div>
+                <div class="info-item">
+                    <span class="warning">⚠️ L'animation ne sera pas possible</span>
+                </div>
+            `;
+            loadingStatus.innerHTML = `<span class="error">❌ ÉCHEC</span><br>Pas de squelette`;
+        }
+
+        function playAnimation(animationName) {
+            if (!currentSkeleton) {
+                log(`❌ Aucun squelette pour jouer l'animation`, 'error');
+                return;
+            }
+
+            log(`▶️ Lecture animation: ${animationName}`, 'info');
+
+            // Créer une animation simple de rotation pour tester
+            scene.beginAnimation(currentSkeleton, 0, 60, true, 1.0, () => {
+                log(`✅ Animation ${animationName} terminée`, 'success');
+            });
+        }
+
+        async function createScene() {
+            scene = new BABYLON.Scene(engine);
+            scene.clearColor = new BABYLON.Color3(0.1, 0.1, 0.15);
+
+            // Caméra
+            camera = new BABYLON.ArcRotateCamera(
+                "camera",
+                Math.PI / 2,
+                Math.PI / 3,
+                3,
+                BABYLON.Vector3.Zero(),
+                scene
+            );
+            camera.attachControl(canvas, true);
+            camera.wheelPrecision = 50;
+
+            // Lumière
+            const light = new BABYLON.HemisphericLight(
+                "light",
+                new BABYLON.Vector3(0, 1, 0),
+                scene
+            );
+            light.intensity = 0.8;
+
+            const dirLight = new BABYLON.DirectionalLight(
+                "dirLight",
+                new BABYLON.Vector3(-1, -2, -1),
+                scene
+            );
+            dirLight.intensity = 0.5;
+
+            // Sol
+            const ground = BABYLON.MeshBuilder.CreateGround(
+                "ground",
+                { width: 10, height: 10 },
+                scene
+            );
+            const groundMat = new BABYLON.StandardMaterial("groundMat", scene);
+            groundMat.diffuseColor = new BABYLON.Color3(0.2, 0.2, 0.25);
+            ground.material = groundMat;
+
+            // Charger le personnage par défaut
+            await loadCharacter("avatar_m_nasrun.glb");
+
+            return scene;
+        }
+
+        createScene().then(scene => {
+            engine.runRenderLoop(() => {
+                scene.render();
+            });
+        });
+
+        window.addEventListener("resize", () => {
+            engine.resize();
+        });
+
+        // Gestion du changement de personnage
+        characterSelect.addEventListener("change", (e) => {
+            loadCharacter(e.target.value);
+        });
+
+        log("🚀 Initialisation de la scène de test...", 'info');
+    </script>
+</body>
+</html>

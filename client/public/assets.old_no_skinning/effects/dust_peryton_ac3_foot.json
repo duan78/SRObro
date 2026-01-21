@@ -1,0 +1,10 @@
+{
+  "file_name": "dust_peryton_ac3_foot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 23688
+}

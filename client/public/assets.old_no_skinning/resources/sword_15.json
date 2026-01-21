@@ -1,0 +1,12 @@
+{
+  "file_name": "sword_15",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\weapon\\sword_15.bmt"
+  ],
+  "effects": [
+    "system\\item_ch_sword_15.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

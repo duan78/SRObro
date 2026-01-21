@@ -1,0 +1,21 @@
+{
+  "file_name": "asiaminor_ferry1",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 5733,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    327680,
+    0,
+    327680,
+    0,
+    353646,
+    834260,
+    340325,
+    703225,
+    5,
+    11
+  ]
+}

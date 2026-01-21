@@ -1,0 +1,13 @@
+{
+  "file_name": "alex_fbed04",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed04_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed04_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\minga\\alex_fbed.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

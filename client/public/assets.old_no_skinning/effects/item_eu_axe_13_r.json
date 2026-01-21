@@ -1,0 +1,10 @@
+{
+  "file_name": "item_eu_axe_13_r",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 35385
+}

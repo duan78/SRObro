@@ -1,0 +1,16 @@
+{
+  "file_name": "fortress_flag_new",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\flag\\fortress_flag_new_01.bms",
+    "prim\\mesh\\artifact\\guild\\flag\\fortress_flag_new_01.bms",
+    "prim\\mesh\\artifact\\guild\\flag\\fortress_flag_new_02.bms",
+    "prim\\mesh\\artifact\\guild\\flag\\fortress_flag_new_mark01.bms",
+    "prim\\mesh\\artifact\\guild\\flag\\fortress_flag_new_mark02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\flag\\fortress_flag_new.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

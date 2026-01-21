@@ -1,0 +1,15 @@
+{
+  "file_name": "cj_mili_bigdoor",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_bigdoor_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_bigdoor_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_bigdoor_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_bigdoor_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan04\\cj_mili_bigdoor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

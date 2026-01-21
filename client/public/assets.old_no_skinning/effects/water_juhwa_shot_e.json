@@ -1,0 +1,10 @@
+{
+  "file_name": "water_juhwa_shot_e",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 23144
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "staff_13",
+  "meshes": [
+    "prim\\mesh\\item\\europe\\weapon\\staff_13.bms",
+    "prim\\mesh\\item\\europe\\weapon\\staff_13_wing.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\staff_13.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_staff_13.efp",
+    "system\\item_eu_staff_13_ft.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

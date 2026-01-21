@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_tomesoldier_ac2_double_zang",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 25122
+}

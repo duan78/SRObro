@@ -1,0 +1,17 @@
+{
+  "file_name": "oas_kara_fire",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_fire_stone.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_fire.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_fire_box.bms",
+    "prim\\mesh\\artifact\\oasis\\karakorm\\oas_kara_fire_stone.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\karakorm\\oas_kara_fire.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

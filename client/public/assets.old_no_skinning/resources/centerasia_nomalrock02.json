@@ -1,0 +1,12 @@
+{
+  "file_name": "centerasia_nomalrock02",
+  "meshes": [
+    "prim\\mesh\\nature\\central asia\\stone\\centerasia_nomalrock02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\central asia\\stone\\centerasia_nomalrock01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

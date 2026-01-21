@@ -1,0 +1,10 @@
+{
+  "file_name": "w_cd_potal_red",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8588
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "fire_ganggi_damage_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 6082
+}

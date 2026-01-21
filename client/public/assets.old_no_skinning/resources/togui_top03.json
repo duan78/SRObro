@@ -1,0 +1,28 @@
+{
+  "file_name": "togui_top03",
+  "meshes": [
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_01.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_02.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_03.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_04.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_05.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_06.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_07.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_08.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_09.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_10.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_11.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_12.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_13.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_14.bms",
+    "prim\\mesh\\dun\\property\\togui\\togui_top03_15.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\property\\togui\\togui_top03.bmt"
+  ],
+  "effects": [
+    "map\\frame2.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

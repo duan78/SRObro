@@ -1,0 +1,10 @@
+{
+  "file_name": "treasurebox",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\npc\\qinshi\\treasurebox.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

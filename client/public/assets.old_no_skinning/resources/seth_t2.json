@@ -1,0 +1,46 @@
+{
+  "file_name": "seth_t2",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\seth_02.bms",
+    "prim\\mesh\\mob\\sd\\seth_03.bms",
+    "prim\\mesh\\mob\\sd\\seth_04.bms",
+    "prim\\mesh\\mob\\sd\\seth_05.bms",
+    "prim\\mesh\\mob\\sd\\seth_06.bms",
+    "prim\\mesh\\mob\\sd\\seth_07.bms",
+    "prim\\mesh\\mob\\sd\\seth_08.bms",
+    "prim\\mesh\\mob\\sd\\seth_01_part1.bms",
+    "prim\\mesh\\mob\\sd\\seth_01_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\seth_01_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\sd\\seth_01_part2_part2_part2.bms",
+    "prim\\mesh\\mob\\sd\\seth_09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\seth.bmt",
+    "prim\\mtrl\\mob\\sd\\seth_clon1.bmt"
+  ],
+  "effects": [
+    "monster\\sd\\keep_seth_headeye_red.efp",
+    "monster\\sd\\keep_seth_headeye_red.efp",
+    "monster\\sd\\keep_seth_eye_greeneye.efp",
+    "monster\\sd\\keep_seth_eye_greeneye.efp",
+    "monster\\sd\\keep_seth_mouth_mouthsmoke.efp",
+    "monster\\sd\\keep_seth_ring.efp",
+    "monster\\sd\\keep_seth_hand.efp",
+    "monster\\sd\\keep_seth_hand.efp",
+    "monster\\sd\\keep_seth_hand.efp",
+    "monster\\sd\\keep_seth_hand.efp",
+    "monster\\sd\\skill_seth_ac8_sword_wait.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\sd\\seth\\seth_t2_stand01.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t2_die.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t2_die_rm.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t2_attack06.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t2_attack07.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t2_attack08_shot.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t2_attack08_ready.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t2_attack08_wait.ban",
+    "prim\\ani\\mob\\sd\\seth\\seth_t2_attack09.ban"
+  ],
+  "textures": []
+}

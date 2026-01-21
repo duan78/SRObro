@@ -1,0 +1,32 @@
+{
+  "file_name": "pha_mazecas",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_center.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_center.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_column.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_shphinx.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_statue01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_statue02.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_statue03.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall02.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall03.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall04.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall05.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall06.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall07.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall08.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall09.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall10.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall11.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall12.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall13.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\field\\pha_mazecas_wall14.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\field\\pha_mazecas.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

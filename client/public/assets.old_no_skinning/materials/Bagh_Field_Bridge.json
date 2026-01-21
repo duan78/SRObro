@@ -1,0 +1,10 @@
+{
+  "file_name": "Bagh_Field_Bridge",
+  "textures": [
+    "bagh_field_bridge_tile01.ddj",
+    "bagh_field_bridge_tile02.ddj",
+    "bagh_field_bridge_tile04.ddj",
+    "bagh_field_bridge_tile03.ddj",
+    "bagh_field_bridge_tile05.ddj"
+  ]
+}

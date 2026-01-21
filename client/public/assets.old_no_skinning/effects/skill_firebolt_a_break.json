@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_firebolt_a_break",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 22423
+}

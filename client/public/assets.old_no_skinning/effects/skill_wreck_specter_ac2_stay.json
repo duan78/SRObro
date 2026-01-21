@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_wreck_specter_ac2_stay",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 38296
+}

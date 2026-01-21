@@ -1,0 +1,33 @@
+{
+  "file_name": "p_penguin01",
+  "meshes": [
+    "prim\\mesh\\cos\\p_penguin01_eye.bms",
+    "prim\\mesh\\cos\\p_penguin01_part1.bms",
+    "prim\\mesh\\cos\\p_penguin01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_penguin01.bmt"
+  ],
+  "effects": [
+    "cos\\cos_penguin1_ac2.efp"
+  ],
+  "animations": [
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_walk.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_run.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_stand01.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_attack01.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_attack02.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_damage01.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_down.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_down_rm.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_down_damage.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_down_up.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_emotion.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_stand03.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_stand02.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_die.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_die_rm.ban",
+    "prim\\ani\\cos\\p_penguin01\\p_penguin01_down_die.ban"
+  ],
+  "textures": []
+}

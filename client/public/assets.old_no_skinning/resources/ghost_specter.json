@@ -1,0 +1,30 @@
+{
+  "file_name": "ghost_specter",
+  "meshes": [
+    "prim\\mesh\\mob\\god\\ghost_specter01.bms",
+    "prim\\mesh\\mob\\god\\ghost_specter02.bms",
+    "prim\\mesh\\mob\\god\\ghost_specter03.bms",
+    "prim\\mesh\\mob\\god\\ghost_specter04.bms",
+    "prim\\mesh\\mob\\god\\ghost_specter05.bms",
+    "prim\\mesh\\mob\\god\\ghost_specter06.bms",
+    "prim\\mesh\\mob\\god\\ghost_specter07.bms",
+    "prim\\mesh\\mob\\god\\ghost_specter08.bms",
+    "prim\\mesh\\mob\\god\\ghost_specter_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_specter_part2_part1.bms",
+    "prim\\mesh\\mob\\god\\ghost_specter_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\god\\ghost_specter.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\god\\ghost_specter\\ghost_specter_stand01.ban",
+    "prim\\ani\\mob\\god\\ghost_specter\\ghost_specter_run.ban",
+    "prim\\ani\\mob\\god\\ghost_specter\\ghost_specter_walk.ban",
+    "prim\\ani\\mob\\god\\ghost_specter\\ghost_specter_die.ban",
+    "prim\\ani\\mob\\god\\ghost_specter\\ghost_specter_attack01.ban",
+    "prim\\ani\\mob\\god\\ghost_specter\\ghost_specter_attack03.ban",
+    "prim\\ani\\mob\\god\\ghost_specter\\ghost_specter_attack02.ban"
+  ],
+  "textures": []
+}

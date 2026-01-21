@@ -1,0 +1,31 @@
+{
+  "file_name": "phhorus",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\phhorus_staff.bms",
+    "prim\\mesh\\mob\\sd\\phhorus_part1.bms",
+    "prim\\mesh\\mob\\sd\\phhorus_part2_part2.bms",
+    "prim\\mesh\\mob\\sd\\phhorus_part2_part1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\phhorus.bmt"
+  ],
+  "effects": [
+    "monster\\sd\\skill_horus_ac4_ready.efp",
+    "monster\\sd\\skill_horus_ac4_ready.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_stand01.ban",
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_walk.ban",
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_run.ban",
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_attack01.ban",
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_attack02.ban",
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_attack03.ban",
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_attack04_shot.ban",
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_attack04_ready.ban",
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_attack04_wait.ban",
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_die.ban",
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_die_rm.ban",
+    "prim\\ani\\mob\\sd\\phhorus\\phhorus_attack07.ban"
+  ],
+  "textures": []
+}

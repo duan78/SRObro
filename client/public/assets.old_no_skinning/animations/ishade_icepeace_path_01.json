@@ -1,0 +1,26 @@
+{
+  "file_name": "ishade_icepeace_path_01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 401,
+  "animation_name": "\u0017",
+  "data_blocks": [
+    256049,
+    7680,
+    256,
+    2560,
+    0,
+    28416,
+    56832,
+    85248,
+    113664,
+    142080,
+    170496,
+    198912,
+    227328,
+    256000,
+    256,
+    1536
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "cj5_tem_tower",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan05\\cj_tem_tower01.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj_tem_tower01.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj_tem_tower02.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj_tem_tower03.bms",
+    "prim\\mesh\\bldg\\china\\jangan05\\cj_tem_tower_fence.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan05\\cj_tem_tower.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

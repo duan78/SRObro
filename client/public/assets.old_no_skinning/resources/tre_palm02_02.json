@@ -1,0 +1,13 @@
+{
+  "file_name": "tre_palm02_02",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\tarim\\tre_palm02_02_01.bms",
+    "prim\\mesh\\nature\\oasis\\tarim\\tre_palm02_02_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\tarim\\tre_palm02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

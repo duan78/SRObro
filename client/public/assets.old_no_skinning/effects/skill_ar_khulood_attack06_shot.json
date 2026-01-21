@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ar_khulood_attack06_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 69998
+}

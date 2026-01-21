@@ -1,0 +1,10 @@
+{
+  "file_name": "firework_step1",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 50801
+}

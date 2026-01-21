@@ -1,0 +1,20 @@
+{
+  "file_name": "cj_bridgetree",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_bridge_btree.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_bridge_btree.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_bridge_cup.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_bridge_rope.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_bridge_side.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_bridge_stone.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_bridge_stree.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_bridge_treea.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_bridge_treef.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\greenfield\\cj_bridgetree.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

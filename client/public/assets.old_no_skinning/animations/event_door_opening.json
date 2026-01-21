@@ -1,0 +1,25 @@
+{
+  "file_name": "event_door_opening",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 210,
+  "animation_name": "\u0012",
+  "data_blocks": [
+    2000,
+    30,
+    0,
+    2,
+    0,
+    2000,
+    2,
+    6,
+    143664,
+    114431,
+    48896,
+    114431,
+    48896,
+    439857,
+    2
+  ]
+}

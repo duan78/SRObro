@@ -1,0 +1,15 @@
+{
+  "file_name": "asiaminor_ferry1",
+  "meshes": [
+    "prim\\mesh\\npc\\common\\asiaminor_ferry1_2s.bms",
+    "prim\\mesh\\npc\\common\\asiaminor_ferry1_we.bms",
+    "prim\\mesh\\npc\\common\\asiaminor_ferry1_part1.bms",
+    "prim\\mesh\\npc\\common\\asiaminor_ferry1_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\common\\asiaminor_ferry1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

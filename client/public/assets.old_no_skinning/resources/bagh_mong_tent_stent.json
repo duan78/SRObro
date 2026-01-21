@@ -1,0 +1,25 @@
+{
+  "file_name": "bagh_mong_tent_stent",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent13.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent14.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_mong\\bagh_mong_tent_stent.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

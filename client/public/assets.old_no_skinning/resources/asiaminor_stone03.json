@@ -1,0 +1,12 @@
+{
+  "file_name": "asiaminor_stone03",
+  "meshes": [
+    "prim\\mesh\\nature\\asia minor\\asiaminor_stone03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\asia minor\\asiaminor_stone01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

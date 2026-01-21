@@ -1,0 +1,22 @@
+{
+  "file_name": "pass09_02",
+  "meshes": [
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_pass09\\pha_pass09_02_paintwall01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_pass09\\pha_pass09_02_paintwall01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_pass09\\pha_pass09_02_paintwall02.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_pass09\\pha_pass09_02_pillar.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_pass09\\pha_pass09_02_pillarup.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_pass09\\pha_pass09_02_roof01.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_pass09\\pha_pass09_02_roof02.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_pass09\\pha_pass09_02_tile.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_pass09\\pha_pass09_02_wall.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_pass09\\pha_pass09_02_walldown.bms",
+    "prim\\mesh\\dun\\asiam\\r1_cv\\pha_pass09\\pha_pass09_02_wallup.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\dun\\pha_pass.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

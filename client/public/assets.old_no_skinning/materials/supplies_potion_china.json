@@ -1,0 +1,7 @@
+{
+  "file_name": "supplies_potion_china",
+  "textures": [
+    "prim\\mtrl\\npc\\china\\supplies_potion_china.ddj",
+    "chinashop_spacialmerchant.ddj"
+  ]
+}

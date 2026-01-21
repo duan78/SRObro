@@ -1,0 +1,10 @@
+{
+  "file_name": "wizard_fire_bolt_c",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 27847
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "event_summer_ghost_pick",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 10102
+}

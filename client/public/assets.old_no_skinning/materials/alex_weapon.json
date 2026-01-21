@@ -1,0 +1,22 @@
+{
+  "file_name": "alex_weapon",
+  "textures": [
+    "alex_weapon_anvil.ddj",
+    "alex_special_wall02.ddj",
+    "alex_weapon_tent01.ddj",
+    "alex_weapon_tent02.ddj",
+    "alex_weapon_good01.ddj",
+    "alex_weapon_shield.ddj",
+    "alex_weapon_dag_sw.ddj",
+    "alex_weapon_crossbow02.ddj",
+    "alex_weapon_carpet01.ddj",
+    "alex_weapon_crossbow01.ddj",
+    "alex_weapon_t_dstaff.ddj",
+    "alex_weapon_axe_staff.ddj",
+    "alex_weapon_wood01.ddj",
+    "alex_special_tentlight02.ddj",
+    "alex_special_tentlight_chain.ddj",
+    "alex_special_tentlight01.ddj",
+    "alex_special_tentlight01_alpha.ddj"
+  ]
+}

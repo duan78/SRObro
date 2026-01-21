@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_m_blackwing",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_blackwing.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\item\\etc\\avatar_m_blackwing_stand01.ban",
+    "prim\\ani\\item\\etc\\avatar_m_blackwing_run.ban"
+  ],
+  "textures": []
+}

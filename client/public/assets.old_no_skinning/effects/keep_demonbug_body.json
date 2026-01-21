@@ -1,0 +1,10 @@
+{
+  "file_name": "keep_demonbug_body",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 11335
+}

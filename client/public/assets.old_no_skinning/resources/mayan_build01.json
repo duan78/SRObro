@@ -1,0 +1,18 @@
+{
+  "file_name": "mayan_build01",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\score_war\\mayan_build01_01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_build01_02.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_build01_03.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_build01_04.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_build01_05.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_build01_06.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_build01_07.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\score_war\\mayan_build01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

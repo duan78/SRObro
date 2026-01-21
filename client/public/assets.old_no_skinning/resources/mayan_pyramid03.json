@@ -1,0 +1,25 @@
+{
+  "file_name": "mayan_pyramid03",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_02.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_03.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_04.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_05.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_06.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_07.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_08.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_09.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_10.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_11.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_pyramid03_12.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\score_war\\mayan_pyramid03.bmt"
+  ],
+  "effects": [
+    "dun\\red_center_smok.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

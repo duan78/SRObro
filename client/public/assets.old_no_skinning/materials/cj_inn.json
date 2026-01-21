@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_inn",
+  "textures": [
+    "cj_inn_fence_a.ddj",
+    "cj_inn_roof.ddj",
+    "cj_inn_floor.ddj",
+    "cj_inn_wall01.ddj",
+    "cj_inn_wall.ddj",
+    "cj_inn_breakewal.ddj",
+    "cj_inn_oldtree_bran.ddj",
+    "cj_inn_oldtree_01.ddj",
+    "cj_inn_oldtree.ddj"
+  ]
+}

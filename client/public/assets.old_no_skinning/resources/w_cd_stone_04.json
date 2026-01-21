@@ -1,0 +1,12 @@
+{
+  "file_name": "w_cd_stone_04",
+  "meshes": [
+    "prim\\mesh\\nature\\china\\dunghuang\\stone\\w_cd_stone_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\china\\dunhuang\\stone\\w_cd_stone_04.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

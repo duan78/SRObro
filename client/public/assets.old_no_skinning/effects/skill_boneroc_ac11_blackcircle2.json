@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_boneroc_ac11_blackcircle2",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 84533
+}

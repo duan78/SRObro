@@ -1,0 +1,10 @@
+{
+  "file_name": "drop_token",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\drop_token.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

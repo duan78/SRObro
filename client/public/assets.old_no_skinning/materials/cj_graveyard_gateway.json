@@ -1,0 +1,10 @@
+{
+  "file_name": "cj_graveyard_gateway",
+  "textures": [
+    "cj_graveyard_shrine03.ddj",
+    "cj_graveyard_shrine02.ddj",
+    "cj_graveyard_gateway01.ddj",
+    "cj_graveyard_gateway02.ddj",
+    "cj_graveyard_gateway03.ddj"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "fort_stone_ja",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ja00_01.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ja00_01.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ja00_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\fort_stone\\fort_stone_ja.bmt"
+  ],
+  "effects": [
+    "map\\guild\\sphere_light_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

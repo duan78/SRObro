@@ -1,0 +1,16 @@
+{
+  "file_name": "snakewoman_muhan",
+  "meshes": [
+    "prim\\mesh\\mob\\qinshi\\snakewoman_muhan01.bms",
+    "prim\\mesh\\mob\\qinshi\\snakewoman_muhan02.bms",
+    "prim\\mesh\\mob\\qinshi\\snakewoman_muhan_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\snakewoman_muhan_part2_part1.bms",
+    "prim\\mesh\\mob\\qinshi\\snakewoman_muhan_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\qinshi\\snakewoman_muhan.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

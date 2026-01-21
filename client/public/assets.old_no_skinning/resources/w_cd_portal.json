@@ -1,0 +1,26 @@
+{
+  "file_name": "w_cd_portal",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_portal_floor.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_portal_01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_portal_02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_portal_03.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_portal_04.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_portal_05.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_portal_07.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_portal_bell01.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_portal_bell01_a.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_portal_bell02.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\buildings\\w_cd_portal_floor.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\buildings\\w_cd_portal.bmt"
+  ],
+  "effects": [
+    "map\\w_cd_potal_blue.efp",
+    "map\\w_cd_potal_blue_g.efp",
+    "map\\w_cd_potal_blue_g.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

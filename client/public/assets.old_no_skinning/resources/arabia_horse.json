@@ -1,0 +1,15 @@
+{
+  "file_name": "arabia_horse",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_horse_left.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_horse_right.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_horse_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_horse_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\arabia_horse.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

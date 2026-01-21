@@ -1,0 +1,13 @@
+{
+  "file_name": "avatar_m_ottomanemperor",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_ottomanemperor.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_ottomanemperor_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_ottomanemperor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

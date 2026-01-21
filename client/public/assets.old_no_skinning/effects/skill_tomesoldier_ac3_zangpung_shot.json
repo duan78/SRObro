@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_tomesoldier_ac3_zangpung_shot",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 14885
+}

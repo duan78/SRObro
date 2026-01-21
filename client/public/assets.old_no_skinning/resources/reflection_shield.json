@@ -1,0 +1,16 @@
+{
+  "file_name": "reflection_shield",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\mob\\jupiter\\reflection_shield.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\jupiter\\reflection_shield\\reflection_shield_stand01.ban",
+    "prim\\ani\\mob\\jupiter\\reflection_shield\\reflection_shield_attack01.ban",
+    "prim\\ani\\mob\\jupiter\\reflection_shield\\reflection_shield_damage01.ban",
+    "prim\\ani\\mob\\jupiter\\reflection_shield\\reflection_shield_die.ban",
+    "prim\\ani\\mob\\jupiter\\reflection_shield\\reflection_shield_die_rm.ban"
+  ],
+  "textures": []
+}

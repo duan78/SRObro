@@ -1,0 +1,13 @@
+{
+  "file_name": "arabia_farmer",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_potion_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_potion_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\arabia_farmer.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

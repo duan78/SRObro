@@ -1,0 +1,9 @@
+{
+  "file_name": "lightning tower_light",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true
+  },
+  "raw_size": 35820
+}

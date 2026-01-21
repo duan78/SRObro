@@ -1,0 +1,13 @@
+{
+  "file_name": "air_garden16_cen_pillar",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_pillar01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_pillar02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden16_cen_pillar.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

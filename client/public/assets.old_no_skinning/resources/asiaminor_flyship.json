@@ -1,0 +1,15 @@
+{
+  "file_name": "asiaminor_flyship",
+  "meshes": [
+    "prim\\mesh\\npc\\common\\asiaminor_flyship_2s.bms",
+    "prim\\mesh\\npc\\common\\asiaminor_flyship_al.bms",
+    "prim\\mesh\\npc\\common\\asiaminor_flyship_part1.bms",
+    "prim\\mesh\\npc\\common\\asiaminor_flyship_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\common\\asiaminor_flyship.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

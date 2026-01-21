@@ -1,0 +1,10 @@
+{
+  "file_name": "desert_start02_01",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\desert\\desert_start_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

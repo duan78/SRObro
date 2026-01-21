@@ -1,0 +1,47 @@
+{
+  "file_name": "bagh_stable",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_bottom.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_bottom.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_box.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_cart.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_door.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_flag01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_flag02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_llight.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_porcelain.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_straw.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_tree01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_tree02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_tree03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_wall01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_wall02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_wall03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_wall04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_wall05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_wall06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_wall07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_wall08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_wall09_win.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_water.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_width.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_width_alpha.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_win01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_win01_alpha.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_win02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_win02_alpha.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_win03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_win03_alpha.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_win04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\system\\bagh_stable_win04_alpha.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_stable.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange.efp",
+    "map\\cj_pal_lamp_orange.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,8 @@
+{
+  "file_name": "cj_east_cornerwall",
+  "textures": [
+    "cj_east_wall01.ddj",
+    "cj_east_wall03.ddj",
+    "cj_east_wall02.ddj"
+  ]
+}

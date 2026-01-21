@@ -1,0 +1,25 @@
+{
+  "file_name": "fw_hanga",
+  "meshes": [
+    "prim\\mesh\\mob\\fortress\\fw_hanga_2side.bms",
+    "prim\\mesh\\mob\\fortress\\fw_hanga_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_hanga_part2_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_hanga_part2_part2_part1.bms",
+    "prim\\mesh\\mob\\fortress\\fw_hanga_part2_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\fortress\\fw_hanga.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\fortress\\fw_hanga\\fw_hanga_walk.ban",
+    "prim\\ani\\mob\\fortress\\fw_hanga\\fw_hanga_run.ban",
+    "prim\\ani\\mob\\fortress\\fw_hanga\\fw_hanga_stand01.ban",
+    "prim\\ani\\mob\\fortress\\fw_hanga\\fw_hanga_attack01.ban",
+    "prim\\ani\\mob\\fortress\\fw_hanga\\fw_hanga_attack03.ban",
+    "prim\\ani\\mob\\fortress\\fw_hanga\\fw_hanga_attack02.ban",
+    "prim\\ani\\mob\\fortress\\fw_hanga\\fw_hanga_die.ban",
+    "prim\\ani\\mob\\fortress\\fw_hanga\\fw_hanga_die_rm.ban"
+  ],
+  "textures": []
+}

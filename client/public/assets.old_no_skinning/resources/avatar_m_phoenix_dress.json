@@ -1,0 +1,15 @@
+{
+  "file_name": "avatar_m_phoenix_dress",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_phoenix_dress.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_phoenix_dress02.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_phoenix_dress_hand.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_phoenix_dress01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_phoenix_dress.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_m_steampunk",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\avatar_m_steampunk.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_steampunk_01.bms",
+    "prim\\mesh\\item\\etc\\avatar_m_steampunk_hand.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_steampunk.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

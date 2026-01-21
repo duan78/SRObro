@@ -1,0 +1,25 @@
+{
+  "file_name": "euro_constan_acce01",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_06.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_07.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_08.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_09.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_10.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_11.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_12.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_alpha.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_acce01_light.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_constan_acce01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

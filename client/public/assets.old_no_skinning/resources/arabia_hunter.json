@@ -1,0 +1,14 @@
+{
+  "file_name": "arabia_hunter",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_hunter_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_hunter_part2.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_hunter_2al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\arabia_hunter.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

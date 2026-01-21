@@ -1,0 +1,21 @@
+{
+  "file_name": "cj_thiefvill02_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_thiefvill02_01.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_thiefvill02_01.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_thiefvill02_02.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_thiefvill02_03.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_thiefvill02_04.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_thiefvill02_05.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_thiefvill02_06.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_thiefvill02_07.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_thiefvill02_08.bms",
+    "prim\\mesh\\bldg\\china\\greenfield\\cj_thiefvill02_09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\greenfield\\cj_thiefvill02_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

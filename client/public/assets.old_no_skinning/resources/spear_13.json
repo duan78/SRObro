@@ -1,0 +1,12 @@
+{
+  "file_name": "spear_13",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\china\\weapon\\spear_13.bmt"
+  ],
+  "effects": [
+    "system\\item_ch_spear_13_t.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

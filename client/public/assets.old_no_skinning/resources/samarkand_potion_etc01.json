@@ -1,0 +1,22 @@
+{
+  "file_name": "samarkand_potion_etc01",
+  "meshes": [
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potion_etc01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potion_etc01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potion_light01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potion_stair01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potion_up01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potion_wall01.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potion_wall02.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potion_wall03.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potion_wall04.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potion_wall05.bms",
+    "prim\\mesh\\bldg\\central asia\\samarkand\\samarkand_potion_window01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\central asia\\samarkand\\samarkand_buil.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

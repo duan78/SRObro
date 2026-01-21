@@ -1,0 +1,25 @@
+{
+  "file_name": "baroi_damage01",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 454,
+  "animation_name": "\u000e",
+  "data_blocks": [
+    666,
+    30,
+    0,
+    6,
+    0,
+    33,
+    100,
+    266,
+    500,
+    666,
+    2,
+    10,
+    420707,
+    702964,
+    6
+  ]
+}

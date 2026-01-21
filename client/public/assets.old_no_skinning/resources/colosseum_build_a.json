@@ -1,0 +1,20 @@
+{
+  "file_name": "colosseum_build_a",
+  "meshes": [
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_build_a01.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_build_a02.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_build_a03.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_build_a04.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_build_a05.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_build_a06.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_build_a07.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_build_a08.bms",
+    "prim\\mesh\\dun\\survival\\colosseum\\colosseum_build_a09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\survival\\colosseum\\colosseum_build_a.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

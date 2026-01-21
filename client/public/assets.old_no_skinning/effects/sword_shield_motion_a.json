@@ -1,0 +1,10 @@
+{
+  "file_name": "sword_shield_motion_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 20322
+}

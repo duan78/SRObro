@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_sandman_ac5_sandfire_wait",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 12496
+}

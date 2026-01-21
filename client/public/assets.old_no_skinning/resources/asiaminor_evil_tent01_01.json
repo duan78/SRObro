@@ -1,0 +1,21 @@
+{
+  "file_name": "asiaminor_evil_tent01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_tent01_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_tent01_01.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_tent01_02.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_tent01_03.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_tent01_04.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_tent01_05.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_tent01_06.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_tent01_07.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_tent01_08.bms",
+    "prim\\mesh\\bldg\\asia minor\\evil_order\\asiaminor_evil_tent01_09.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\asia minor\\evil_order\\asiaminor_evil_tent01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,19 @@
+{
+  "file_name": "tombstone_die",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\tombstone_die01.bms",
+    "prim\\mesh\\mob\\china\\tombstone_die02.bms",
+    "prim\\mesh\\mob\\china\\tombstone_die03.bms",
+    "prim\\mesh\\mob\\china\\tombstone_die04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\tombstone.bmt",
+    "prim\\mtrl\\mob\\china\\tombstone_champ.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_die.ban",
+    "prim\\ani\\mob\\china\\tombstone\\tombstone_die_loop.ban"
+  ],
+  "textures": []
+}

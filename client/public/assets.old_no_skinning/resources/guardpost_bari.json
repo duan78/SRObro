@@ -1,0 +1,12 @@
+{
+  "file_name": "guardpost_bari",
+  "meshes": [
+    "prim\\mesh\\etc\\guardpost\\guardpost_bari.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\etc\\guardpost\\guardpost_bari.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

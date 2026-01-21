@@ -1,0 +1,11 @@
+{
+  "file_name": "w_cd_okdoor",
+  "textures": [
+    "w_cd_okdoor_wall01.ddj",
+    "w_cd_okdoor_wall03.ddj",
+    "w_cd_okdoor_wall02.ddj",
+    "w_cd_okdoor_wall05.ddj",
+    "w_cd_okdoor_chain.ddj",
+    "w_cd_okdoor_wall04.ddj"
+  ]
+}

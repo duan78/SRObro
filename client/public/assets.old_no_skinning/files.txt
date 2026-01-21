@@ -1,0 +1,113 @@
+SRObro - Extracted Files Listing
+======================================================================
+
+Generated: 2026-01-19 21:25:55
+
+MODELS (.bms)
+----------------------------------------------------------------------
+  Particles\meshes\404_sunbeams01.bms                                                  0.00 MB
+  Particles\meshes\404_sunbeams02.bms                                                  0.00 MB
+  Particles\meshes\50cm-pl-4-1.bms                                                     0.00 MB
+  Particles\meshes\6_circle_pajang.bms                                                 0.00 MB
+  Particles\meshes\8_lightning.bms                                                     0.00 MB
+  Particles\meshes\ad.bms                                                              0.04 MB
+  Particles\meshes\arrow_glow.bms                                                      0.00 MB
+  Particles\meshes\arrow_waypoint.bms                                                  0.00 MB
+  Particles\meshes\avatar_m_amalun_s.bms                                               0.00 MB
+  Particles\meshes\avatar_w_amalun_s.bms                                               0.00 MB
+  Particles\meshes\ball-f.bms                                                          0.00 MB
+  Particles\meshes\ball.bms                                                            0.00 MB
+  Particles\meshes\ban_keep.bms                                                        0.00 MB
+  Particles\meshes\bandal-front.bms                                                    0.00 MB
+  Particles\meshes\bandal-side.bms                                                     0.00 MB
+  Particles\meshes\bang001-one.bms                                                     0.00 MB
+  Particles\meshes\bang001.bms                                                         0.00 MB
+  Particles\meshes\bang003.bms                                                         0.00 MB
+  Particles\meshes\bangu-m.bms                                                         0.01 MB
+  Particles\meshes\bangu.bms                                                           0.01 MB
+  Particles\meshes\bangu02-m.bms                                                       0.01 MB
+  Particles\meshes\bangu02.bms                                                         0.01 MB
+  Particles\meshes\big_ship_skylight_01.bms                                            0.00 MB
+  Particles\meshes\big_ship_skylight_02.bms                                            0.00 MB
+  Particles\meshes\big_sujug_sunset_violet.bms                                         0.00 MB
+  Particles\meshes\big_sujug_sunset_violet_small.bms                                   0.00 MB
+  Particles\meshes\bing-demagecutcorn-01-m.bms                                         0.00 MB
+  Particles\meshes\bing-demagecutcorn-01.bms                                           0.00 MB
+  Particles\meshes\bing-demagecutcorn-02-m.bms                                         0.00 MB
+  Particles\meshes\bing-demagecutcorn-02.bms                                           0.00 MB
+  Particles\meshes\bing-pan.bms                                                        0.01 MB
+  Particles\meshes\bing-pan_b.bms                                                      0.02 MB
+  Particles\meshes\bing-pan_c.bms                                                      0.02 MB
+  Particles\meshes\bomb_up.bms                                                         0.00 MB
+  Particles\meshes\bomb_up_01.bms                                                      0.00 MB
+  Particles\meshes\boneroc_ob.bms                                                      0.14 MB
+  Particles\meshes\book_01.bms                                                         0.00 MB
+  Particles\meshes\book_02.bms                                                         0.00 MB
+  Particles\meshes\boom-gidung.bms                                                     0.01 MB
+  Particles\meshes\boom-wind-02-m.bms                                                  0.00 MB
+  Particles\meshes\boom-wind-02.bms                                                    0.00 MB
+  Particles\meshes\boom-wind-m.bms                                                     0.00 MB
+  Particles\meshes\boom-wind.bms                                                       0.00 MB
+  Particles\meshes\brood001-m.bms                                                      0.00 MB
+  Particles\meshes\brood001.bms                                                        0.00 MB
+  Particles\meshes\byuk-ice-a.bms                                                      0.00 MB
+  Particles\meshes\byuk-ice-b.bms                                                      0.00 MB
+  Particles\meshes\byuk-ice.bms                                                        0.00 MB
+  Particles\meshes\byuk-icepiece.bms                                                   0.01 MB
+  Particles\meshes\ch_bow_12.bms                                                       0.03 MB
+  ... and 214 more
+
+
+TEXTURES (.ddj)
+----------------------------------------------------------------------
+  Map\skybox\cloud1.ddj                                                                0.25 MB
+  Map\skybox\cloud99.ddj                                                               1.00 MB
+  Map\skybox\glow.ddj                                                                  0.06 MB
+  Map\skybox\shadowsphere.ddj                                                          0.00 MB
+  Map\skybox\waterbump3.ddj                                                            1.00 MB
+  Map\sun\lens1.ddj                                                                    0.06 MB
+  Map\sun\lens2.ddj                                                                    0.06 MB
+  Map\sun\lens3.ddj                                                                    0.25 MB
+  Map\sun\lens4.ddj                                                                    0.06 MB
+  Map\sun\lens5.ddj                                                                    0.00 MB
+  Map\sun\lens6.ddj                                                                    0.00 MB
+  Map\sun\lens7.ddj                                                                    0.00 MB
+  Map\sun\lens8.ddj                                                                    0.00 MB
+  Map\sun\moon01.ddj                                                                   0.02 MB
+  Map\sun\moon02.ddj                                                                   0.02 MB
+  Map\sun\moon03.ddj                                                                   0.02 MB
+  Map\sun\moon04.ddj                                                                   0.02 MB
+  Map\sun\moon05.ddj                                                                   0.02 MB
+  Map\sun\moon06.ddj                                                                   0.02 MB
+  Map\sun\moon07.ddj                                                                   0.02 MB
+  Map\sun\moon08.ddj                                                                   0.02 MB
+  Map\sun\moon09.ddj                                                                   0.02 MB
+  Map\sun\moon10.ddj                                                                   0.02 MB
+  Map\sun\moon11.ddj                                                                   0.02 MB
+  Map\sun\moon12.ddj                                                                   0.02 MB
+  Map\sun\moon13.ddj                                                                   0.02 MB
+  Map\sun\moon14.ddj                                                                   0.02 MB
+  Map\sun\moon15.ddj                                                                   0.02 MB
+  Map\sun\moon16.ddj                                                                   0.02 MB
+  Map\sun\moon17.ddj                                                                   0.02 MB
+  Map\sun\moon18.ddj                                                                   0.02 MB
+  Map\sun\moon19.ddj                                                                   0.02 MB
+  Map\sun\moon20.ddj                                                                   0.02 MB
+  Map\sun\moon21.ddj                                                                   0.02 MB
+  Map\sun\moon22.ddj                                                                   0.02 MB
+  Map\sun\moon23.ddj                                                                   0.02 MB
+  Map\sun\moon24.ddj                                                                   0.02 MB
+  Map\sun\moon25.ddj                                                                   0.02 MB
+  Map\sun\moon26.ddj                                                                   0.02 MB
+  Map\sun\moon27.ddj                                                                   0.02 MB
+  Map\sun\moon28.ddj                                                                   0.02 MB
+  Map\sun\moon29.ddj                                                                   0.02 MB
+  Map\sun\moon30.ddj                                                                   0.02 MB
+  Map\tile2d\alex_dust_01.ddj                                                          0.17 MB
+  Map\tile2d\alex_dust_02.ddj                                                          0.17 MB
+  Map\tile2d\alex_dust_03.ddj                                                          0.17 MB
+  Map\tile2d\alex_dust_04.ddj                                                          0.17 MB
+  Map\tile2d\alex_dust_05.ddj                                                          0.17 MB
+  Map\tile2d\alex_dust_06.ddj                                                          0.17 MB
+  Map\tile2d\alex_dust_07.ddj                                                          0.17 MB
+  ... and 28079 more

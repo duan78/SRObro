@@ -1,0 +1,21 @@
+{
+  "file_name": "t_cow1_2011",
+  "meshes": [
+    "prim\\mesh\\cos\\cart\\t_cow1_02.bms",
+    "prim\\mesh\\cos\\cart\\t_cow1_01_part1.bms",
+    "prim\\mesh\\cos\\cart\\t_cow1_01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\t_cow1_2011.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\cart\\t_cow1\\t_cow1_stand.ban",
+    "prim\\ani\\cos\\cart\\t_cow1\\t_cow1_walk.ban",
+    "prim\\ani\\cos\\cart\\t_cow1\\t_cow1_run.ban",
+    "prim\\ani\\cos\\cart\\t_cow1\\t_cow1_damage.ban",
+    "prim\\ani\\cos\\cart\\t_cow1\\t_cow1_die.ban",
+    "prim\\ani\\cos\\cart\\t_cow1\\t_cow1_die_loop.ban"
+  ],
+  "textures": []
+}

@@ -1,0 +1,19 @@
+{
+  "file_name": "event_kisaeng2",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng1_body_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng1_body_part2_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng1_body_part2_part2.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng1_hair.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng1_skirt.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\event_kisaeng2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\event_kisaeng1.ban",
+    "prim\\ani\\npc\\china\\event_kisaeng1_time.ban"
+  ],
+  "textures": []
+}

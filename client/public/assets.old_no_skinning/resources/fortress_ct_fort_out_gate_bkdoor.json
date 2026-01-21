@@ -1,0 +1,12 @@
+{
+  "file_name": "fortress_ct_fort_out_gate_bkdoor",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_out_gate_bkdoor.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\fortress_ct_fort_gate_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

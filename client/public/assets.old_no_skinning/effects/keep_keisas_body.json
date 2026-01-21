@@ -1,0 +1,10 @@
+{
+  "file_name": "keep_keisas_body",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 21223
+}

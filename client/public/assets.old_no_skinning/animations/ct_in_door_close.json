@@ -1,0 +1,32 @@
+{
+  "file_name": "ct_in_door_close",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 418,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    327680,
+    393216,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    6,
+    143920,
+    409089,
+    2,
+    0,
+    0,
+    6,
+    144688,
+    409082,
+    2
+  ]
+}

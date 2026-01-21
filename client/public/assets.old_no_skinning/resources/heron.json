@@ -1,0 +1,32 @@
+{
+  "file_name": "heron",
+  "meshes": [
+    "prim\\mesh\\mob\\karakoram\\planar_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\planar_part2_part1.bms",
+    "prim\\mesh\\mob\\karakoram\\planar_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\heron.bmt",
+    "prim\\mtrl\\mob\\sd\\heron_clon.bmt",
+    "prim\\mtrl\\mob\\sd\\heron_clon2.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\mob\\karakoram\\planar\\planar_stand01.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_stand02.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_walk.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_run.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_attack01.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_attack02.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_damage01.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_damage02.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_down.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_down_rm.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_down_damage.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_down_up.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_down_die.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_attack03.ban",
+    "prim\\ani\\mob\\karakoram\\planar\\planar_attack04.ban"
+  ],
+  "textures": []
+}

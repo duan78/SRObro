@@ -1,0 +1,13 @@
+{
+  "file_name": "mayan_gong",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\score_war\\mayan_gong01.bms",
+    "prim\\mesh\\dun\\war\\score_war\\mayan_gong02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\score_war\\mayan_gong.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_quality_recover_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 8103
+}

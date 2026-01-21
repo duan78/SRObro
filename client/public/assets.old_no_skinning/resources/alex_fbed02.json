@@ -1,0 +1,25 @@
+{
+  "file_name": "alex_fbed02",
+  "meshes": [
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_tree01.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_tree02.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_tree03.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_tree04.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_tree05.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_tree06.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_tree07.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_tree08.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_tree09.bms",
+    "prim\\mesh\\bldg\\north africa\\alexandria\\minga\\alex_fbed02_tree10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\north africa\\alexandria\\minga\\alex_fbed.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

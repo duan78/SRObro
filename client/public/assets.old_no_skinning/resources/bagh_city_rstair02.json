@@ -1,0 +1,23 @@
+{
+  "file_name": "bagh_city_rstair02",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_2rstair01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_2rstair01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_2rstair02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_2rstair03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_2rstair04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_2rstair05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\bagh_city_2rstair06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_rstair.bmt"
+  ],
+  "effects": [
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp",
+    "map\\frame6.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

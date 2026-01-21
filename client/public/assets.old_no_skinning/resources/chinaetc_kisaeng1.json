@@ -1,0 +1,19 @@
+{
+  "file_name": "chinaetc_kisaeng1",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng1_hair.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng1_body_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng1_body_part2_part1.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng1_body_part2_part2.bms",
+    "prim\\mesh\\npc\\china\\chinaetc_kisaeng1_skirt.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\chinaetc_kisaeng1.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\chinaetc_kisaeng1_basic.ban",
+    "prim\\ani\\npc\\china\\chinaetc_kisaeng1_time.ban"
+  ],
+  "textures": []
+}

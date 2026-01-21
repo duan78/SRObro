@@ -1,0 +1,8 @@
+{
+  "file_name": "Arabia_Choukri",
+  "textures": [
+    "prim\\mtrl\\npc\\khotan\\arabia_choukri.ddj",
+    "prim\\mtrl\\npc\\khotan\\arabia_choukri_al.ddj",
+    "khotansystem_turtleshipticketagent.ddj"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "file_name": "ghostbug",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\ghostbug_part1.bms",
+    "prim\\mesh\\mob\\china\\ghostbug_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\ghostbug.bmt",
+    "prim\\mtrl\\mob\\china\\ghostbug_champ.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_icing_on.efp",
+    "monster\\status_bad_poison.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_stand01.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_stand02.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_walk.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_attack01.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_damage01.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_damage02.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_die.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_die_loop.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_down.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_downwait.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_downdamage.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_wakeup.ban",
+    "prim\\ani\\mob\\china\\ghostbug\\ghostbug_downdie.ban"
+  ],
+  "textures": []
+}

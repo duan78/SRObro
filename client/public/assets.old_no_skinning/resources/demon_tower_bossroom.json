@@ -1,0 +1,36 @@
+{
+  "file_name": "demon_tower_bossroom",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b12.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b01.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b02.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b03.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b04.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b05.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b06.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b07.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b08.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b09.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b10.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b11.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b12.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b13.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b14.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b15.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b16.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b17.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b18.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b19.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b20.bms",
+    "prim\\mesh\\dun\\demon\\fire\\demon_tower_bossroom\\demon_tower_b21.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\fire\\demon_tower_bossroom_01.bmt"
+  ],
+  "effects": [
+    "dun\\fire_piece_air.efp",
+    "dun\\fire_piece_air02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

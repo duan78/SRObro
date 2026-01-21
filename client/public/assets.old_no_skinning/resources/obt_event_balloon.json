@@ -1,0 +1,10 @@
+{
+  "file_name": "obt_event_balloon",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\etc\\obt\\obt_event_balloon.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "oas_tarim_hand",
+  "meshes": [
+    "prim\\mesh\\artifact\\oasis\\tarim\\oas_tarim_hand.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\oasis\\tarim\\oas_tarim_hand.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

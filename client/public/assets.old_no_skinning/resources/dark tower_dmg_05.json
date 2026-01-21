@@ -1,0 +1,16 @@
+{
+  "file_name": "dark tower_dmg_05",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\guard tower\\dark tower_dmg_05.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\dark tower_dmg_05.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\dark tower_dmg_05_05.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\dark tower_dmg_05_flag.bms",
+    "prim\\mesh\\artifact\\guild\\guard tower\\dark tower_dmg_05_metal.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\guard tower\\dark tower_dmg_2_3_5.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

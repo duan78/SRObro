@@ -1,0 +1,73 @@
+{
+  "file_name": "boneroc",
+  "meshes": [
+    "prim\\mesh\\mob\\roc\\dead_roc_body_part1.bms",
+    "prim\\mesh\\mob\\roc\\dead_roc_body_part2_part1.bms",
+    "prim\\mesh\\mob\\roc\\dead_roc_body_part2_part2.bms",
+    "prim\\mesh\\mob\\roc\\dead_roc_wing.bms",
+    "prim\\mesh\\mob\\roc\\dead_roc_wing02.bms",
+    "prim\\mesh\\mob\\roc\\dead_roc_leg.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\roc\\boneroc.bmt"
+  ],
+  "effects": [
+    "monster\\eu\\skill\\ambient_boneroc_eye.efp",
+    "monster\\eu\\skill\\ambient_boneroc_spine.efp",
+    "monster\\eu\\skill\\ambient_boneroc_spine.efp",
+    "monster\\eu\\skill\\ambient_boneroc_bone.efp",
+    "monster\\eu\\skill\\ambient_boneroc_bone.efp",
+    "monster\\eu\\skill\\ambient_boneroc_bone.efp",
+    "monster\\eu\\skill\\ambient_boneroc_mouth.efp",
+    "monster\\eu\\skill\\ambient_boneroc_spine02.efp",
+    "monster\\eu\\skill\\ambient_boneroc_wing.efp",
+    "monster\\eu\\skill\\ambient_boneroc_wing.efp",
+    "monster\\eu\\skill\\ambient_boneroc_wing.efp",
+    "monster\\eu\\skill\\ambient_boneroc_wing.efp",
+    "monster\\eu\\skill\\ambient_boneroc_wing.efp",
+    "monster\\eu\\skill\\ambient_boneroc_wing.efp",
+    "monster\\eu\\skill\\ambient_boneroc_wing.efp",
+    "monster\\eu\\skill\\ambient_boneroc_wing.efp",
+    "monster\\dust_rocky_walk.efp",
+    "monster\\dust_rocky_walk.efp",
+    "monster\\rm_rocky_light_dead.efp",
+    "monster\\luster_rocky_body.efp",
+    "monster\\luster_rocky_body.efp",
+    "monster\\luster_rocky_body.efp",
+    "monster\\luster_rocky_body.efp",
+    "monster\\eu\\skill\\skill_roc_ac1_earthquake_shot.efp",
+    "monster\\eu\\skill\\skill_roc_ac1_earthquake_shot.efp",
+    "monster\\eu\\skill\\skill_boneroc_ac1_earthquake_shot.efp",
+    "monster\\eu\\skill\\skill_boneroc_ac1_earthquake_shot.efp",
+    "monster\\eu\\skill\\skill_boneroc_ac1_earthquake_shot.efp",
+    "monster\\eu\\skill\\skill_boneroc_ac1_earthquake_shot.efp",
+    "monster\\eu\\skill\\skill_boneroc_ac1_earthquake_shot.efp",
+    "monster\\eu\\skill\\skill_boneroc_ac1_earthquake_shot.efp",
+    "monster\\eu\\skill\\skill_boneroc_ac1_earthquake_shot.efp",
+    "monster\\eu\\skill\\skill_boneroc_ac1_earthquake_shot.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\roc\\roc\\roc_stand01.ban",
+    "prim\\ani\\mob\\roc\\roc\\roc_walk.ban",
+    "prim\\ani\\mob\\roc\\roc\\roc_attack01.ban",
+    "prim\\ani\\mob\\roc\\roc\\roc_attack02.ban",
+    "prim\\ani\\mob\\roc\\roc\\roc_die.ban",
+    "prim\\ani\\mob\\roc\\roc\\roc_die_rm.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_03_shot.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_05_shot.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_03_ready.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_05_ready.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_03_wait.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack_05_wait.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack11_shot.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack12_shot.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack11_ready.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack12_ready.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack11_wait.ban",
+    "prim\\ani\\mob\\roc\\roc\\attack12_wait.ban",
+    "prim\\ani\\mob\\roc\\roc\\boneroc_emotion02.ban"
+  ],
+  "textures": [
+    "prim\\mtrl\\etc\\boneroc.ddj"
+  ]
+}

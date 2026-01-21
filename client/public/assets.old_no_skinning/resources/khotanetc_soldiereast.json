@@ -1,0 +1,19 @@
+{
+  "file_name": "khotanetc_soldiereast",
+  "meshes": [
+    "prim\\mesh\\npc\\khotan\\khotanetc_soldiereast_2s.bms",
+    "prim\\mesh\\npc\\khotan\\khotanetc_soldiereast_al.bms",
+    "prim\\mesh\\npc\\khotan\\khotanetc_soldiereast_part1.bms",
+    "prim\\mesh\\npc\\khotan\\khotanetc_soldiereast_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\khotan\\khotanetc_soldiereast.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\khotan\\khotanetc_soldier_basic.ban",
+    "prim\\ani\\npc\\khotan\\khotanetc_soldier_basic2.ban",
+    "prim\\ani\\npc\\khotan\\khotanetc_soldier_basic3.ban"
+  ],
+  "textures": []
+}

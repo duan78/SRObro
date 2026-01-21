@@ -1,0 +1,16 @@
+{
+  "file_name": "small_defensive_position_dmg_02",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\defensive\\small_defens_posit_dmg_02.bms",
+    "prim\\mesh\\artifact\\guild\\defensive\\small_defens_posit_dmg_02.bms",
+    "prim\\mesh\\artifact\\guild\\defensive\\small_defens_posit_dmg_02_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\defensive\\defensive position_dmg_02.bmt"
+  ],
+  "effects": [
+    "map\\guild\\blue_green_oura_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

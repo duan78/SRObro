@@ -1,0 +1,23 @@
+{
+  "file_name": "fortress_ct_fort_in_gate02",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_02.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_03.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_04.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_05.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_06.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_07.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_08.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_09.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_10.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate02_11.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\fortress_ct_fort_in_gate01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

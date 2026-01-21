@@ -1,0 +1,11 @@
+{
+  "file_name": "heavy_05",
+  "textures": [
+    "heavy_05_la.ddj",
+    "heavy_05_ha.ddj",
+    "heavy_05_ba.ddj",
+    "heavy_05_aa.ddj",
+    "heavy_05_sa.ddj",
+    "heavy_05_fa.ddj"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "file_name": "w_cd_bridge01",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_brid01.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_rock02.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_rock03.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_rock04.bms",
+    "prim\\mesh\\artifact\\china\\dunhuang\\cliff\\w_cd_brid01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\dunhuang\\cliff\\w_cd_bridge.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,19 @@
+{
+  "file_name": "npc_ch_event_ yutnori",
+  "meshes": [
+    "prim\\mesh\\npc\\npc\\npc_ch_event_yutnori02.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_yutnori03.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_yutnori04.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_yutnori05.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_yutnori06.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_yutnori_part1.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_yutnori_part2_part1.bms",
+    "prim\\mesh\\npc\\npc\\npc_ch_event_yutnori_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\npc\\npc_ch_event_yutnori.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_lamp01",
+  "meshes": [
+    "prim\\mesh\\artifact\\china\\jangan\\cj_lamp02.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_lamp02.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_lamp02_1.bms",
+    "prim\\mesh\\artifact\\china\\jangan\\cj_lamp02_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\china\\jangan\\cj_lamp.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

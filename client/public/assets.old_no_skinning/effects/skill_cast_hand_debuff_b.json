@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_cast_hand_debuff_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 1929
+}

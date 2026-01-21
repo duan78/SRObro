@@ -1,0 +1,16 @@
+{
+  "file_name": "fortress_ct_fort_in_top02",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_top02_01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_top02_01.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_top02_02.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_top02_03.bms",
+    "prim\\mesh\\bldg\\guild\\constantinople\\fortress_ct_fort_in_top02_04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\constantinople\\fortress_ct_fort_in_top.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

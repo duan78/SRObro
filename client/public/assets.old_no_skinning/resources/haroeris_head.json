@@ -1,0 +1,28 @@
+{
+  "file_name": "haroeris_head",
+  "meshes": [
+    "prim\\mesh\\mob\\sd\\haroeris_behead.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_eyelid01.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_eyelid02.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_eyes.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_2side_part1.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_2side_part2.bms",
+    "prim\\mesh\\mob\\sd\\haroeris_behead_section.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\sd\\haroeris.bmt"
+  ],
+  "effects": [
+    "monster\\sd\\skill_eris_die.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_head_stand01.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_head_walk.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_head_run.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_head_attack01.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_head_attack02.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_head_die.ban",
+    "prim\\ani\\mob\\sd\\haroeris\\haroeris_head_die_rm.ban"
+  ],
+  "textures": []
+}

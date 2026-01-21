@@ -1,0 +1,17 @@
+{
+  "file_name": "jang_guild_buil02",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\jangan\\jang_guild_buil02_01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\jang_guild_buil02_02.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\jang_guild_buil02_03.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\jang_guild_buil02_04.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\jang_guild_buil02_05.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\jang_guild_buil02_06.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\guild\\jangan\\jang_guild_buil02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

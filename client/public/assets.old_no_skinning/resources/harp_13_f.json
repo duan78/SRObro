@@ -1,0 +1,14 @@
+{
+  "file_name": "harp_13_f",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\harp_13_f.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_harp_13_fs.efp",
+    "system\\item_eu_harp_13_fc.efp",
+    "system\\item_eu_harp_13_feye.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

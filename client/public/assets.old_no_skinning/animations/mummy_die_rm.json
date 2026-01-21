@@ -1,0 +1,27 @@
+{
+  "file_name": "mummy_die_rm",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 4442,
+  "animation_name": "\f",
+  "data_blocks": [
+    65536,
+    131072,
+    0,
+    327680,
+    157038,
+    899751,
+    2,
+    12,
+    2,
+    12,
+    2,
+    12,
+    2,
+    12,
+    2,
+    12,
+    2
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "file_name": "guil_small_door01_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_door01_01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_door01_01.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_door01_03.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_door01_05.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_door01_06.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_door01_02.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_door01_04.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_door01_07.bms",
+    "prim\\mesh\\bldg\\guild\\jangan\\guil_small_door01_08.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan04\\cj_mili_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

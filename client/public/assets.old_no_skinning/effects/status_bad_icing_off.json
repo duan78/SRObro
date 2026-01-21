@@ -1,0 +1,9 @@
+{
+  "file_name": "status_bad_icing_off",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true
+  },
+  "raw_size": 15329
+}

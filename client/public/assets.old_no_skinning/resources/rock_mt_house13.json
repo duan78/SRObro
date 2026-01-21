@@ -1,0 +1,14 @@
+{
+  "file_name": "rock_mt_house13",
+  "meshes": [
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house13_00.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house13_00.bms",
+    "prim\\mesh\\bldg\\west asia\\rock mt\\village\\rock_mt_house13_01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\west asia\\rock mt\\village\\rock_mt_house11_00.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

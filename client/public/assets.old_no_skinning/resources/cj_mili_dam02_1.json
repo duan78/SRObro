@@ -1,0 +1,14 @@
+{
+  "file_name": "cj_mili_dam02_1",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_dam02_1.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_dam02_1.bms",
+    "prim\\mesh\\bldg\\china\\jangan04\\cj_mili_dam_roof02_1.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan04\\cj_mili_dam01_1.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

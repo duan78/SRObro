@@ -1,0 +1,22 @@
+{
+  "file_name": "p_brownie",
+  "meshes": [
+    "prim\\mesh\\cos\\p_brownie_part1.bms",
+    "prim\\mesh\\cos\\p_brownie_part2_part1.bms",
+    "prim\\mesh\\cos\\p_brownie_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_brownie.bmt"
+  ],
+  "effects": [
+    "cos\\cos_brownie_light.efp"
+  ],
+  "animations": [
+    "prim\\ani\\cos\\p_brownie\\p_brownie_stand01.ban",
+    "prim\\ani\\cos\\p_brownie\\p_brownie_run.ban",
+    "prim\\ani\\cos\\p_brownie\\p_brownie_walk.ban",
+    "prim\\ani\\cos\\p_brownie\\p_brownie_pick.ban",
+    "prim\\ani\\cos\\p_brownie\\p_brownie_emotion.ban"
+  ],
+  "textures": []
+}

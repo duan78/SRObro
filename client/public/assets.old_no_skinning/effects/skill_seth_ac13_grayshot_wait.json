@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_seth_ac13_grayshot_wait",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 7943
+}

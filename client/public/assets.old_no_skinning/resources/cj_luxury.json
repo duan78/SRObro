@@ -1,0 +1,24 @@
+{
+  "file_name": "cj_luxury",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_deco.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_deco_tiger02.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_desk_alpha.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_desk_alpha01.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_roof.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_roof_alpha.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_sign.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_tiger.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_wall.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_winlight.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_luxu_winlight02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_luxury.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

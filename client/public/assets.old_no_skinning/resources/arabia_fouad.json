@@ -1,0 +1,14 @@
+{
+  "file_name": "arabia_fouad",
+  "meshes": [
+    "prim\\mesh\\npc\\sd\\sd_m_area_ahha_part1.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_ahha_part2.bms",
+    "prim\\mesh\\npc\\sd\\sd_m_area_ahha_rol.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\sd\\arabia_fouad.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

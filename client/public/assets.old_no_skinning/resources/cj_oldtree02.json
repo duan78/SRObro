@@ -1,0 +1,13 @@
+{
+  "file_name": "cj_oldtree02",
+  "meshes": [
+    "prim\\mesh\\nature\\common\\tree\\cj_oldtree02.bms",
+    "prim\\mesh\\nature\\common\\tree\\cj_oldtree02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\common\\cj_oldtree02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

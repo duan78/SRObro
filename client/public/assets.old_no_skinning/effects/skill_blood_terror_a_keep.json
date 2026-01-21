@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_blood_terror_a_keep",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 7665
+}

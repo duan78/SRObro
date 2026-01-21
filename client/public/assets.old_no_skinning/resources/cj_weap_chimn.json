@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_weap_chimn",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_chimn.bms",
+    "prim\\mesh\\bldg\\china\\jangan01\\cj_weap_chimn01.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan01\\cj_weap_chimn.bmt"
+  ],
+  "effects": [
+    "map\\oas_hot_etc_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp",
+    "map\\cj_pal_lamp_orange_b.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

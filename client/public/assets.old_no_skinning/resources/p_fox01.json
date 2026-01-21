@@ -1,0 +1,31 @@
+{
+  "file_name": "p_fox01",
+  "meshes": [
+    "prim\\mesh\\cos\\p_fox01_eye.bms",
+    "prim\\mesh\\cos\\p_fox01_eye01.bms",
+    "prim\\mesh\\cos\\p_fox01_part1.bms",
+    "prim\\mesh\\cos\\p_fox01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\p_fox01.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\p_fox01\\p_fox01_stand01.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_damage01.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_die.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_die_rm.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_attack01.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_walk.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_run.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_stand02.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_stand03.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_down.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_down_rm.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_down_damage.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_down_up.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_down_die.ban",
+    "prim\\ani\\cos\\p_fox01\\p_fox01_imotion.ban"
+  ],
+  "textures": []
+}

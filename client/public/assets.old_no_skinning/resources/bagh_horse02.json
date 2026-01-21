@@ -1,0 +1,14 @@
+{
+  "file_name": "bagh_horse02",
+  "meshes": [
+    "prim\\mesh\\nature\\arabia\\animal\\bagh_horse02_02.bms",
+    "prim\\mesh\\nature\\arabia\\animal\\bagh_horse02_01_part1.bms",
+    "prim\\mesh\\nature\\arabia\\animal\\bagh_horse02_01_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\arabia\\animal\\bagh_horse02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

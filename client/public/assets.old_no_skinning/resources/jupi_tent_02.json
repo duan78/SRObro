@@ -1,0 +1,21 @@
+{
+  "file_name": "jupi_tent_02",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_tent02_01.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_tent02_01.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_tent02_02.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_tent02_03.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_tent02_04.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_tent02_05.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_tent02_light.bms",
+    "prim\\mesh\\dun\\jupiter\\field\\jupi_tent02_light_alpha.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\field\\jupi_tent.bmt"
+  ],
+  "effects": [
+    "map\\cj_pal_lamp_orange_s.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

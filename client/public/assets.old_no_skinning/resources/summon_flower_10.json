@@ -1,0 +1,20 @@
+{
+  "file_name": "summon_flower_10",
+  "meshes": [
+    "prim\\mesh\\item\\etc\\summon_flower_01_part2.bms",
+    "prim\\mesh\\item\\etc\\summon_flower_01_part1_part1.bms",
+    "prim\\mesh\\item\\etc\\summon_flower_01_part1_part2_part1.bms",
+    "prim\\mesh\\item\\etc\\summon_flower_01_part1_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\summon_flower_10.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\item\\etc\\summon_flower_01_die.ban",
+    "prim\\ani\\item\\etc\\summon_flower_01_stand.ban",
+    "prim\\ani\\item\\etc\\summon_flower_01_die_rm.ban",
+    "prim\\ani\\item\\etc\\summon_flower_01_attack01.ban"
+  ],
+  "textures": []
+}

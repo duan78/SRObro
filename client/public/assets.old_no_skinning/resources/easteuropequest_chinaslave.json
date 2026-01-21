@@ -1,0 +1,13 @@
+{
+  "file_name": "easteuropequest_chinaslave",
+  "meshes": [
+    "prim\\mesh\\npc\\europe\\easteuropequest_chinaslave_part1.bms",
+    "prim\\mesh\\npc\\europe\\easteuropequest_chinaslave_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\europe\\easteuropequest_chinaslave.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

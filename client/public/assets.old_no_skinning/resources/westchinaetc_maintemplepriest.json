@@ -1,0 +1,17 @@
+{
+  "file_name": "westchinaetc_maintemplepriest",
+  "meshes": [
+    "prim\\mesh\\npc\\china\\westchinaetc_maintemplepriest_al.bms",
+    "prim\\mesh\\npc\\china\\westchinaetc_maintemplepriest_part1.bms",
+    "prim\\mesh\\npc\\china\\westchinaetc_maintemplepriest_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\npc\\china\\westchinaetc_maintemplepriest.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\npc\\china\\westchinaetc_maintemplepriest_basic.ban",
+    "prim\\ani\\npc\\china\\westchinaetc_maintemplepriest_time.ban"
+  ],
+  "textures": []
+}

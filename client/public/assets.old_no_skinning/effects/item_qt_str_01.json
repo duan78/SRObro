@@ -1,0 +1,10 @@
+{
+  "file_name": "item_qt_str_01",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 9536
+}

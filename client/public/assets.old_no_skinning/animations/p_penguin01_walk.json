@@ -1,0 +1,16 @@
+{
+  "file_name": "p_penguin01_walk",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 7910,
+  "animation_name": "\u0010",
+  "data_blocks": [
+    65536,
+    524288,
+    0,
+    327680,
+    550254,
+    899712
+  ]
+}

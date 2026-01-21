@@ -1,0 +1,39 @@
+{
+  "file_name": "bagh_city_palace",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_03.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_05.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_06.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_07.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_08.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_09.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_10.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_11.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_12.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_13.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_14.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_15.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_16.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_17.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_18.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_19.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_20.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_21.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_22.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_23.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_24.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_25.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_26.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\structure\\bagh_city_palace_27.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_city_palace.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

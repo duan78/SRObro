@@ -1,0 +1,10 @@
+{
+  "file_name": "collect_oura_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 65097
+}

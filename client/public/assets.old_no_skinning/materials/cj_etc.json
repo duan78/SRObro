@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_etc",
+  "textures": [
+    "cj_etc_light02.ddj",
+    "cj_etc_roof.ddj",
+    "cj_etc_wall02.ddj",
+    "cj_etc_wall01.ddj",
+    "cj_etc_jipuragi.ddj",
+    "cj_etc_light01.ddj",
+    "cj_etc_stoveroof.ddj",
+    "cj_etc_stove.ddj",
+    "cj_etc_fence.ddj",
+    "cj_etc_wagon.ddj",
+    "cj_etc_sidewall.ddj",
+    "cj_etc_winlight.ddj"
+  ]
+}

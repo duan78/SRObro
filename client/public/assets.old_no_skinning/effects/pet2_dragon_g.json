@@ -1,0 +1,10 @@
+{
+  "file_name": "pet2_dragon_g",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 62636
+}

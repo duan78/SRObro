@@ -1,0 +1,23 @@
+{
+  "file_name": "bagh_sshop04",
+  "meshes": [
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_body01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_body01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_body02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_ca01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_ca04.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_drum.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_fru.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_ob02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_pot01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_pot02.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_pt01.bms",
+    "prim\\mesh\\bldg\\arabia\\bagh_city\\etc\\bagh_sshop04_susul.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\arabia\\bagh_city\\bagh_sshop.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

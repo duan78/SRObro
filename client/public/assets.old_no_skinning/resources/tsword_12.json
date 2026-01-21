@@ -1,0 +1,15 @@
+{
+  "file_name": "tsword_12",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\weapon\\tsword_12.bmt"
+  ],
+  "effects": [
+    "system\\item_eu_tsword_12_top.efp",
+    "system\\item_eu_tsword_12_side.efp",
+    "system\\item_eu_tsword_12_j.efp",
+    "system\\item_eu_tsword_12_j02.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

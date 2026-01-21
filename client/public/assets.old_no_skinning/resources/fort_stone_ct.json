@@ -1,0 +1,21 @@
+{
+  "file_name": "fort_stone_ct",
+  "meshes": [
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ct01.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ct01.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ct02.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ct03.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ct04.bms",
+    "prim\\mesh\\artifact\\guild\\fort_stone\\fort_stone_ct05.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\artifact\\guild\\fort_stone\\fort_stone_ct.bmt"
+  ],
+  "effects": [
+    "map\\euro_constan_center.efp"
+  ],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\ice-ball.ddj"
+  ]
+}

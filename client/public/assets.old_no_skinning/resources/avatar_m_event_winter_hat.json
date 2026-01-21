@@ -1,0 +1,10 @@
+{
+  "file_name": "avatar_m_event_winter_hat",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\item\\etc\\avatar_m_event_winter.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

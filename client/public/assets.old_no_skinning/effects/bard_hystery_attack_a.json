@@ -1,0 +1,10 @@
+{
+  "file_name": "bard_hystery_attack_a",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 16020
+}

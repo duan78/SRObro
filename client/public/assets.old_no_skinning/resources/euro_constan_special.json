@@ -1,0 +1,40 @@
+{
+  "file_name": "euro_constan_special",
+  "meshes": [
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_bottom.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_bottom.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_box.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_pillar.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_pottery.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_rollcarpet.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_carpet.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_flag.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_gate.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_roof01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_roof02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_roof03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_sign.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_wall01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_wall02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_wall03.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_wall04.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_wall05.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_goods.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_goods02.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_grocery.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_pavilion.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_window01.bms",
+    "prim\\mesh\\bldg\\europe\\constantinople\\euro_constan_special_window02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\europe\\constantinople\\euro_constan_special.bmt"
+  ],
+  "effects": [
+    "map\\light.efp",
+    "map\\light.efp",
+    "map\\light.efp",
+    "map\\light.efp"
+  ],
+  "animations": [],
+  "textures": []
+}

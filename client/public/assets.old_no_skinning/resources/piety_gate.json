@@ -1,0 +1,28 @@
+{
+  "file_name": "piety_gate",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_alpha.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_alpha.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_area.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_carve01.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_carve02.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_pillar01.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_roof.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_wall01.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_wall02.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_wall03.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_wall04.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_wall05.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_wall06.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_wall07.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_wall08.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_wall09.bms",
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_gate_wall10.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_gate.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

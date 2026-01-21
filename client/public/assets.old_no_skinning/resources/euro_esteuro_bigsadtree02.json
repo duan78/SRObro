@@ -1,0 +1,14 @@
+{
+  "file_name": "euro_esteuro_bigsadtree02",
+  "meshes": [
+    "prim\\mesh\\nature\\europe\\east eurpoe\\tree\\euro_esteuro_bigsadtree02_01.bms",
+    "prim\\mesh\\nature\\europe\\east eurpoe\\tree\\euro_esteuro_bigsadtree02_01.bms",
+    "prim\\mesh\\nature\\europe\\east eurpoe\\tree\\euro_esteuro_bigsadtree02_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\europe\\east eurpoe\\tree\\euro_esteuro_sadtree01_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

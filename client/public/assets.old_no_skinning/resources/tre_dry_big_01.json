@@ -1,0 +1,19 @@
+{
+  "file_name": "tre_dry_big_01",
+  "meshes": [
+    "prim\\mesh\\nature\\oasis\\tarim\\tre_dry_big01.bms",
+    "prim\\mesh\\nature\\oasis\\tarim\\tre_dry_big01.bms",
+    "prim\\mesh\\nature\\oasis\\tarim\\tre_dry_big02.bms",
+    "prim\\mesh\\nature\\oasis\\tarim\\tre_dry_big05.bms",
+    "prim\\mesh\\nature\\oasis\\tarim\\tre_dry_big06.bms",
+    "prim\\mesh\\nature\\oasis\\tarim\\tre_dry_big07.bms",
+    "prim\\mesh\\nature\\oasis\\tarim\\tre_dry_big_leaf.bms",
+    "prim\\mesh\\nature\\oasis\\tarim\\tre_dry_big_leaf2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\oasis\\tarim\\tre_dry_big_01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

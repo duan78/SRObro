@@ -1,0 +1,10 @@
+{
+  "file_name": "system_enchantshield_a_02",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 26914
+}

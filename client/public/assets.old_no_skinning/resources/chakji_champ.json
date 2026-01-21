@@ -1,0 +1,39 @@
+{
+  "file_name": "chakji_champ",
+  "meshes": [
+    "prim\\mesh\\mob\\china\\chakji_weapon.bms",
+    "prim\\mesh\\mob\\china\\chakji_part1.bms",
+    "prim\\mesh\\mob\\china\\chakji_part2_part1.bms",
+    "prim\\mesh\\mob\\china\\chakji_part2_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\mob\\china\\chakji_champ.bmt"
+  ],
+  "effects": [
+    "monster\\status_bad_burn.efp",
+    "monster\\status_bad_eshock.efp",
+    "monster\\status_bad_icing_on.efp",
+    "monster\\status_bad_poison.efp",
+    "monster\\system_appear.efp"
+  ],
+  "animations": [
+    "prim\\ani\\mob\\china\\chakji\\chakji_stand01.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_walk.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_run.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_attack01.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_attack02.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_damage01.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_damage02.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_die.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_die_loop.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_down.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_downwait.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_downdamage.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_wakeup.ban",
+    "prim\\ani\\mob\\china\\chakji\\chakji_downdie.ban"
+  ],
+  "textures": [
+    "prim\\mtrl\\mob\\china\\chakji_weapon_bump.ddj",
+    "prim\\mtrl\\mob\\china\\chakji_weapon_bump.ddj"
+  ]
+}

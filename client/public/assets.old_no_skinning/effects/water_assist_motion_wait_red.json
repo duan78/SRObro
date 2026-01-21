@@ -1,0 +1,10 @@
+{
+  "file_name": "water_assist_motion_wait_red",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17146
+}

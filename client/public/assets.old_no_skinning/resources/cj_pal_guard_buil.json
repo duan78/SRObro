@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_pal_guard_buil",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_guard_buil_roof01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_guard_buil_roof02_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_guard_buil_roof03_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_guard_buil_wall01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_guard_buil_wall01_al.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_guard_buil_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_guard_buil.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

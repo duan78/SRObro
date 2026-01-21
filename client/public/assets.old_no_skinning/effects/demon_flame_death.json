@@ -1,0 +1,10 @@
+{
+  "file_name": "demon_flame_death",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 81316
+}

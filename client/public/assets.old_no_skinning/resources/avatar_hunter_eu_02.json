@@ -1,0 +1,14 @@
+{
+  "file_name": "avatar_hunter_eu_02",
+  "meshes": [
+    "prim\\mesh\\item\\europe\\woman_item\\avatar_hunter_eu_02_hand.bms",
+    "prim\\mesh\\item\\europe\\woman_item\\avatar_hunter_eu_02_part1.bms",
+    "prim\\mesh\\item\\europe\\woman_item\\avatar_hunter_eu_02_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\europe\\woman_item\\avatar_hunter_eu_02.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

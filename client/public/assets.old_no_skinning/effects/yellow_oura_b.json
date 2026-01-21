@@ -1,0 +1,10 @@
+{
+  "file_name": "yellow_oura_b",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 9012
+}

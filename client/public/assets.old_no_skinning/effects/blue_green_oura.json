@@ -1,0 +1,9 @@
+{
+  "file_name": "blue_green_oura",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true
+  },
+  "raw_size": 6479
+}

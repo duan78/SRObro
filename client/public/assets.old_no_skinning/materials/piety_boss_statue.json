@@ -1,0 +1,9 @@
+{
+  "file_name": "piety_boss_statue",
+  "textures": [
+    "piety_boss_atena_02.ddj",
+    "piety_boss_atena_01.ddj",
+    "piety_boss_nike.ddj",
+    "piety_boss_apollo.ddj"
+  ]
+}

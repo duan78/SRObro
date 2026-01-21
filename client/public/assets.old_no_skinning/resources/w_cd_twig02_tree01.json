@@ -1,0 +1,15 @@
+{
+  "file_name": "w_cd_twig02_tree01",
+  "meshes": [
+    "prim\\mesh\\nature\\china\\dunghuang\\tree2\\w_cd_twig02_tree01.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree2\\w_cd_twig02_tree01.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree2\\w_cd_twig02_tree02.bms",
+    "prim\\mesh\\nature\\china\\dunghuang\\tree2\\w_cd_twig02_tree03.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\nature\\china\\dunhuang\\tree2\\w_cd_twig02_tree01.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

@@ -1,0 +1,12 @@
+{
+  "file_name": "piety_golddoor",
+  "meshes": [
+    "prim\\mesh\\dun\\jupiter\\piety\\piety_golddoor.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\jupiter\\piety\\piety_golddoor.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

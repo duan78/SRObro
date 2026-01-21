@@ -1,0 +1,16 @@
+{
+  "file_name": "air_garden16_side_start",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_side_door.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_side_grass.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_side_pillar.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_side_wall01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_side_wall02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden16_side_start.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

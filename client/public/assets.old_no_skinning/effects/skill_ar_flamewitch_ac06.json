@@ -1,0 +1,10 @@
+{
+  "file_name": "skill_ar_flamewitch_ac06",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 33362
+}

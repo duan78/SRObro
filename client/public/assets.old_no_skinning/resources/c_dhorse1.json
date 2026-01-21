@@ -1,0 +1,21 @@
+{
+  "file_name": "c_dhorse1",
+  "meshes": [
+    "prim\\mesh\\cos\\c_dhorse4_01.bms",
+    "prim\\mesh\\cos\\c_dhorse4_02_part1.bms",
+    "prim\\mesh\\cos\\c_dhorse4_02_part2.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\cos\\c_dhorse4.bmt"
+  ],
+  "effects": [],
+  "animations": [
+    "prim\\ani\\cos\\c_horse\\c_dhorse4_stand.ban",
+    "prim\\ani\\cos\\c_horse\\c_dhorse4_walk.ban",
+    "prim\\ani\\cos\\c_horse\\c_dhorse4_run.ban",
+    "prim\\ani\\cos\\c_horse\\c_dhorse4_damage.ban",
+    "prim\\ani\\cos\\c_horse\\c_dhorse4_die.ban",
+    "prim\\ani\\cos\\c_horse\\c_dhorse4_die_loop.ban"
+  ],
+  "textures": []
+}

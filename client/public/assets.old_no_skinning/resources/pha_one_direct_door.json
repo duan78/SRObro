@@ -1,0 +1,10 @@
+{
+  "file_name": "pha_one_direct_door",
+  "meshes": [],
+  "materials": [
+    "prim\\mtrl\\dun\\asiam\\r1_cv\\common\\one_direct_door.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

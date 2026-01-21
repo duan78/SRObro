@@ -1,0 +1,10 @@
+{
+  "file_name": "system_questmonster_mark",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 3686
+}

@@ -1,0 +1,10 @@
+{
+  "file_name": "euro_constan_center",
+  "format": "JMXVEFF",
+  "parameters": {
+    "NormalTimeLife": true,
+    "StaticEmit": true,
+    "LinkMode": true
+  },
+  "raw_size": 17458
+}

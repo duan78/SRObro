@@ -1,0 +1,17 @@
+{
+  "file_name": "cj_pal_south_buil03",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_south_buil03_floor.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_south_buil03_pillar.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_south_buil03_roof01.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_south_buil03_roof01_2side.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_south_buil03_roof02.bms",
+    "prim\\mesh\\bldg\\china\\jangan03\\cj_pal_south_buil03_roof02_al.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\jangan03\\cj_pal_south_buil03.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

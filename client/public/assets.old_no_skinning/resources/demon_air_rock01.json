@@ -1,0 +1,13 @@
+{
+  "file_name": "demon_air_rock01",
+  "meshes": [
+    "prim\\mesh\\dun\\demon\\demon_air rock01_01.bms",
+    "prim\\mesh\\dun\\demon\\demon_air rock01_02.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\demon\\demon_air rock.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

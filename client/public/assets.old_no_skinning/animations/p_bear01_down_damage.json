@@ -1,0 +1,15 @@
+{
+  "file_name": "p_bear01_down_damage",
+  "format": "JMXVBAN",
+  "bones": [],
+  "keyframes": [],
+  "raw_size": 10274,
+  "animation_name": "\u0014",
+  "data_blocks": [
+    0,
+    720896,
+    0,
+    327680,
+    746862
+  ]
+}

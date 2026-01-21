@@ -1,0 +1,35 @@
+{
+  "file_name": "air_garden_center",
+  "meshes": [
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_bridge_tile01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_bridge_tile01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_bridge_tile02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_bridge_tile03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_bridge_tile04.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_lionbox.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_tile01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_tile02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_tile03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_tile04.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_tile05.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_tile06.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_tile07.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_cen_tile08.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_grass03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_in_wall01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_in_wall02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_in_water.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_out_water.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_side_water.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_side_zone01.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_side_zone02.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_side_zone03.bms",
+    "prim\\mesh\\dun\\war\\land_war\\air_garden16_side_zone04.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\dun\\war\\land_war\\air_garden_center.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

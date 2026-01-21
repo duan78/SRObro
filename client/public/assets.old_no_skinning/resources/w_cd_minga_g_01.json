@@ -1,0 +1,22 @@
+{
+  "file_name": "w_cd_minga_g_01",
+  "meshes": [
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_g_01_1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_g_01_1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_g_01_2.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_g_01_3.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_g_01_4.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_g_01_5.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_g_01_6.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_g_04_1.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_g_04_2.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_g_04_4.bms",
+    "prim\\mesh\\bldg\\china\\dunhuang\\minga\\w_cd_minga_g_04_3.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\bldg\\china\\dunhuang\\minga\\w_cd_mingagroup.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": []
+}

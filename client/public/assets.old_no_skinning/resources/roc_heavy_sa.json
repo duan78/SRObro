@@ -1,0 +1,15 @@
+{
+  "file_name": "roc_heavy_sa",
+  "meshes": [
+    "prim\\mesh\\item\\china\\woman_item\\roc_heavy_sa.bms",
+    "prim\\mesh\\item\\china\\woman_item\\roc_heavy_sa_ef.bms"
+  ],
+  "materials": [
+    "prim\\mtrl\\item\\china\\woman_item\\roc_heavy.bmt"
+  ],
+  "effects": [],
+  "animations": [],
+  "textures": [
+    "prim\\mtrl\\etc\\robe_line.ddj"
+  ]
+}
