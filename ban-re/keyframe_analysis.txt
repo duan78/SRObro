@@ -1,0 +1,40 @@
+BAN KEYFRAME FORMAT ANALYSIS REPORT
+====================================
+
+## Bone10_LRoom Analysis
+
+### Raw Data (first 320 bytes)
+
+006D: 00 00 00 00 00 BF 00 00  00 3F FF FF FF BE 00 00  |     0.0000    0.0000   -----       0.0000
+007D: 00 3F C8 F1 36 41 5F B5  96 44 B7 0B 5D B8 00 00  |    -----      -0.0000    0.0000    0.0000
+008D: 00 BF 00 00 00 3F FF FF  FF BE 00 00 00 3F C8 F1  |     0.0000   -----       0.0000   -----   
+009D: 36 41 5F B5 96 44 B7 0B  5D B8 00 00 00 BF 00 00  |    -0.0000    0.0000    0.0000    0.0000
+00AD: 00 3F FF FF FF BE 00 00  00 3F C8 F1 36 41 5F B5  |    -----       0.0000   -----      -0.0000
+00BD: 96 44 B7 0B 5D B8 00 00  00 BF 00 00 00 3F FF FF  |     0.0000    0.0000    0.0000   -----   
+00CD: FF BE 00 00 00 3F C8 F1  36 41 5F B5 96 44 B7 0B  |     0.0000   -----      -0.0000    0.0000
+00DD: 5D B8 00 00 00 BF 00 00  00 3F FF FF FF BE 00 00  |     0.0000    0.0000   -----       0.0000
+00ED: 00 3F C8 F1 36 41 5F B5  96 44 B7 0B 5D B8 00 00  |    -----      -0.0000    0.0000    0.0000
+00FD: 00 BF 00 00 00 3F FF FF  FF BE 00 00 00 3F C8 F1  |     0.0000   -----       0.0000   -----   
+010D: 36 41 5F B5 96 44 B7 0B  5D B8 00 00 00 BF 00 00  |    -0.0000    0.0000    0.0000    0.0000
+011D: 00 3F FF FF FF BE 00 00  00 3F C8 F1 36 41 5F B5  |    -----       0.0000   -----      -0.0000
+012D: 96 44 B7 0B 5D B8 00 00  00 BF 00 00 00 3F FF FF  |     0.0000    0.0000    0.0000   -----   
+013D: FF BE 00 00 00 3F C8 F1  36 41 5F B5 96 44 B7 0B  |     0.0000   -----      -0.0000    0.0000
+014D: 5D B8 09 00 00 00 42 6F  6E 65 31 30 5F 30 30 08  |     0.0000   -----       0.0000    0.0000
+015D: 00 00 00 00 00 00 80 00  00 00 80 00 00 00 80 00  |     0.0000    0.0000    0.0000    0.0000
+016D: 00 80 3F E0 84 E4 42 CC  95 A7 B6 5D DA AC 36 00  |    -----      -----      -----       0.0000
+017D: 00 00 80 00 00 00 80 00  00 00 80 00 00 80 3F E0  |     0.0000    0.0000    0.0000   -----   
+018D: 84 E4 42 CC 95 A7 B6 5D  DA AC 36 00 00 00 80 00  |    -----      -----       0.0000    0.0000
+019D: 00 00 80 00 00 00 80 00  00 80 3F E0 84 E4 42 CC  |     0.0000    0.0000   -----      -----   
+
+## Hypothesis
+
+Based on the analysis, the keyframe format appears to be:
+- Size: 16 bytes per keyframe (not 32 as initially thought)
+- Structure: 4 x 32-bit floats (little endian)
+- Possible layout: X, Y, Z, W (position or quaternion)
+
+## Next Steps
+
+1. Verify if these are position or rotation values
+2. Check for compression or encoding
+3. Compare with other bone data to find patterns

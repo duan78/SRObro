@@ -1,0 +1,43 @@
+[package]
+name = "ban-re"
+version = "0.1.0"
+edition = "2021"
+authors = ["SRObro Team"]
+
+[dependencies]
+# Parsing binaire
+byteorder = "1.5"
+# Sérialisation
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+ron = "0.8"
+# Logging
+log = "0.4"
+env_logger = "0.11"
+# Utilitaires
+anyhow = "1.0"
+thiserror = "1.0"
+
+[[bin]]
+name = "ban-dump"
+path = "src/bin/ban-dump.rs"
+
+[[bin]]
+name = "ban-analyze"
+path = "src/bin/ban-analyze.rs"
+
+[[bin]]
+name = "ban-raw"
+path = "src/bin/ban-raw.rs"
+
+[[bin]]
+name = "ban-keyframe-analyze"
+path = "src/bin/ban-keyframe-analyze.rs"
+
+[[bin]]
+name = "ban-detect-format"
+path = "src/bin/ban-detect-format.rs"
+
+[[bin]]
+name = "ban-convert"
+path = "src/bin/ban-convert.rs"
