@@ -140,7 +140,9 @@
       "Bash(then rm -rf ban-re/.git)",
       "Bash(fi:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(then cat \"C:/Users/duan7/Desktop/SRObro/client/tsconfig.json\")",
+      "Bash(else echo \"Fichier n''existe pas\")"
     ]
   }
 }

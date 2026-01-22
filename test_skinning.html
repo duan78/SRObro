@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRObro - Skinning Test</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
+        #renderCanvas { width: 100%; height: 100%; touch-action: none; }
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            max-width: 400px;
+        }
+        .success { color: #00ff00; }
+        .warning { color: #ffaa00; }
+        .error { color: #ff0000; }
+        h2 { margin-top: 0; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <div id="info">
+        <h2>SRObro Skinning Test</h2>
+        <div id="status">Initializing...</div>
+        <div id="details"></div>
+    </div>
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script>
+        const canvas = document.getElementById('renderCanvas');
+        const statusDiv = document.getElementById('status');
+        const detailsDiv = document.getElementById('details');
+
+        function log(message, type = 'info') {
+            const color = type === 'success' ? '#00ff00' :
+                         type === 'warning' ? '#ffaa00' :
+                         type === 'error' ? '#ff0000' : '#ffffff';
+            detailsDiv.innerHTML += `<div style="color: ${color}">${message}</div>`;
+        }
+
+        async function testSkinnedMesh() {
+            try {
+                statusDiv.innerHTML = '<span class="success">Creating engine...</span>';
+                log('Babylon.js version: ' + BABYLON.Engine.Version);
+
+                const engine = new BABYLON.Engine(canvas, true);
+                const scene = new BABYLON.Scene(engine);
+
+                // Camera
+                const camera = new BABYLON.ArcRotateCamera(
+                    'camera',
+                    Math.PI / 2,
+                    Math.PI / 3,
+                    5,
+                    BABYLON.Vector3.Zero(),
+                    scene
+                );
+                camera.attachControl(canvas, true);
+                camera.wheelPrecision = 50;
+
+                // Light
+                const light = new BABYLON.HemisphericLight(
+                    'light',
+                    new BABYLON.Vector3(0, 1, 0),
+                    scene
+                );
+                light.intensity = 1;
+
+                // Ground
+                const ground = BABYLON.MeshBuilder.CreateGround(
+                    'ground',
+                    { width: 10, height: 10 },
+                    scene
+                );
+                const groundMat = new BABYLON.StandardMaterial('groundMat', scene);
+                groundMat.diffuseColor = new BABYLON.Color3(0.3, 0.3, 0.3);
+                ground.material = groundMat;
+
+                log('');
+                log('=== LOADING SKINNED MESH ===', 'success');
+                log('Loading: /assets/avatar_m_nasrun.glb');
+
+                const result = await BABYLON.SceneLoader.ImportMeshAsync(
+                    null,
+                    '/assets/',
+                    'avatar_m_nasrun.glb',
+                    scene
+                );
+
+                log('');
+                log('=== MESH ANALYSIS ===', 'success');
+                log(`Total meshes loaded: ${result.meshes.length}`);
+
+                let skinnedMeshCount = 0;
+                let skeletonFound = false;
+
+                for (let i = 0; i < result.meshes.length; i++) {
+                    const mesh = result.meshes[i];
+                    const isSkinned = mesh.isSkinnedMesh || false;
+                    const hasSkeleton = mesh.skeleton !== null;
+
+                    if (isSkinned) skinnedMeshCount++;
+                    if (hasSkeleton) skeletonFound = true;
+
+                    log(`Mesh ${i}: ${mesh.name}`);
+                    log(`  - Skinned: ${isSkinned ? 'YES' : 'NO'}`, isSkinned ? 'success' : 'warning');
+                    log(`  - Skeleton: ${hasSkeleton ? 'YES' : 'NO'}`, hasSkeleton ? 'success' : 'warning');
+
+                    if (hasSkeleton && mesh.skeleton) {
+                        const skel = mesh.skeleton;
+                        log(`  - Bones: ${skel.bones.length}`);
+                        log(`  - Name: ${skel.name}`);
+
+                        // Try to play animation
+                        if (scene.beginAnimation) {
+                            log('');
+                            log('=== TESTING ANIMATION ===', 'success');
+                            scene.beginAnimation(skel, 0, 100, true);
+                            log('Animation started: Playing frame 0-100 loop', 'success');
+                        }
+                    }
+                }
+
+                log('');
+                log('=== FINAL RESULTS ===', 'success');
+                log(`Skinned meshes: ${skinnedMeshCount}/${result.meshes.length}`, skinnedMeshCount > 0 ? 'success' : 'error');
+                log(`Skeletons found: ${skeletonFound ? 'YES' : 'NO'}`, skeletonFound ? 'success' : 'error');
+
+                if (skinnedMeshCount > 0 && skeletonFound) {
+                    log('', 'success');
+                    log('✓ SKINNING TEST PASSED!', 'success');
+                    log('✓ Character is animatable with Babylon.js!', 'success');
+                    log('✓ Ready for gameplay integration!', 'success');
+                } else {
+                    log('', 'error');
+                    log('✗ SKINNING TEST FAILED!', 'error');
+                    log('✗ Mesh may not animate properly', 'error');
+                }
+
+                // Render loop
+                engine.runRenderLoop(() => {
+                    scene.render();
+                });
+
+                window.addEventListener('resize', () => {
+                    engine.resize();
+                });
+
+            } catch (error) {
+                log('', 'error');
+                log('ERROR: ' + error.message, 'error');
+                log('Stack: ' + error.stack, 'error');
+            }
+        }
+
+        testSkinnedMesh();
+    </script>
+</body>
+</html>

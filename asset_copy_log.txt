@@ -1,0 +1,14 @@
+=== Asset Copy Log ===
+Started: 2026-01-21T18:15:47.506Z
+
+Created destination directory: C:\Users\duan7\Desktop\SRObro\client\public\assets\glb_blender
+Total GLB files: 17599
+
+
+=== Summary ===
+Copied: 17599
+Skipped: 0
+Errors: 0
+Total: 17599
+Duration: 89.43s
+Completed: 2026-01-21T18:17:16.934Z

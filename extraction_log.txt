@@ -1,0 +1,75 @@
+
+╔══════════════════════════════════════════════════════════╗
+║     SRObro - Extraction PK2 Rapide                  ║
+╚══════════════════════════════════════════════════════════╝
+
+📁 Source: C:\Program Files (x86)\Silkroad
+📁 Target: C:\Users\duan7\Desktop\SRObro\assets\pk2_media
+
+
+📦 Extraction de Media.pk2...
+   Source: C:\Program Files (x86)\Silkroad\Media.pk2
+   Target: C:\Users\duan7\Desktop\SRObro\assets\pk2_media\Media
+   ⏳ Extraction en cours...
+   ❌ Erreur: Command failed: "C:\Users\duan7\Desktop\SRObro\tools\veykril-pk2\target\release\pk2_extract.exe" "C:\Program Files (x86)\Silkroad\Media.pk2" "C:\Users\duan7\Desktop\SRObro\assets\pk2_media\Media"
+'"C:\Users\duan7\Desktop\SRObro\tools\veykril-pk2\target\release\pk2_extract.exe"' n'est pas reconnu en tant que commande interne
+ou externe, un programme ex�cutable ou un fichier de commandes.
+
+
+❌ Échec de l'extraction de Media.pk2
+
+📦 Extraction de Data.pk2...
+   Source: C:\Program Files (x86)\Silkroad\Data.pk2
+   Target: C:\Users\duan7\Desktop\SRObro\assets\pk2_media\Data
+   ⏳ Extraction en cours...
+   ❌ Erreur: Command failed: "C:\Users\duan7\Desktop\SRObro\tools\veykril-pk2\target\release\pk2_extract.exe" "C:\Program Files (x86)\Silkroad\Data.pk2" "C:\Users\duan7\Desktop\SRObro\assets\pk2_media\Data"
+'"C:\Users\duan7\Desktop\SRObro\tools\veykril-pk2\target\release\pk2_extract.exe"' n'est pas reconnu en tant que commande interne
+ou externe, un programme ex�cutable ou un fichier de commandes.
+
+
+❌ Échec de l'extraction de Data.pk2
+
+📦 Extraction de Map.pk2...
+   Source: C:\Program Files (x86)\Silkroad\Map.pk2
+   Target: C:\Users\duan7\Desktop\SRObro\assets\pk2_media\Map
+   ⏳ Extraction en cours...
+   ❌ Erreur: Command failed: "C:\Users\duan7\Desktop\SRObro\tools\veykril-pk2\target\release\pk2_extract.exe" "C:\Program Files (x86)\Silkroad\Map.pk2" "C:\Users\duan7\Desktop\SRObro\assets\pk2_media\Map"
+'"C:\Users\duan7\Desktop\SRObro\tools\veykril-pk2\target\release\pk2_extract.exe"' n'est pas reconnu en tant que commande interne
+ou externe, un programme ex�cutable ou un fichier de commandes.
+
+
+❌ Échec de l'extraction de Map.pk2
+
+╔══════════════════════════════════════════════════════════╗
+║     Extraction terminée !                             ║
+╚══════════════════════════════════════════════════════════╝
+
+📊 Analyse des fichiers extraits...
+
+find: ‘/c/$Recycle.Bin/S-1-5-18’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-1000’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-1002’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-1005’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-500’: Permission denied
+find: ‘/c/OneDriveTemp/S-1-5-21-1001145379-929850116-162619296-1002’: Permission denied
+find: ‘/c/PerfLogs’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-18’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-1000’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-1002’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-1005’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-500’: Permission denied
+find: ‘/c/OneDriveTemp/S-1-5-21-1001145379-929850116-162619296-1002’: Permission denied
+find: ‘/c/PerfLogs’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-18’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-1000’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-1002’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-1005’: Permission denied
+find: ‘/c/$Recycle.Bin/S-1-5-21-1001145379-929850116-162619296-500’: Permission denied
+find: ‘/c/OneDriveTemp/S-1-5-21-1001145379-929850116-162619296-1002’: Permission denied
+find: ‘/c/PerfLogs’: Permission denied
+  📐 BMS (Modèles):    0
+  🦴 BSK (Squelettes): 0
+  🎨 DDJ (Textures):   0
+
+  ⏱️  Temps de conversion estimé: 0.0 heures
+

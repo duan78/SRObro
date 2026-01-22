@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRObro - Test Skinning GLB</title>
+    <style>
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            max-width: 300px;
+        }
+        .success { color: #00ff00; }
+        .warning { color: #ffaa00; }
+        .error { color: #ff0000; }
+    </style>
+    <!-- Babylon.js Core -->
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <div id="info">
+        <h3>🎮 SRObro - Skinning Test</h3>
+        <div id="status">Chargement...</div>
+        <div id="details"></div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("renderCanvas");
+        const engine = new BABYLON.Engine(canvas, true);
+        const statusDiv = document.getElementById("status");
+        const detailsDiv = document.getElementById("details");
+
+        const createScene = function() {
+            const scene = new BABYLON.Scene(engine);
+            scene.clearColor = new BABYLON.Color3(0.2, 0.2, 0.3);
+
+            // Camera
+            const camera = new BABYLON.ArcRotateCamera(
+                "camera",
+                Math.PI / 2,
+                Math.PI / 3,
+                5,
+                BABYLON.Vector3.Zero(),
+                scene
+            );
+            camera.attachControl(canvas, true);
+            camera.wheelPrecision = 50;
+
+            // Light
+            const light = new BABYLON.HemisphericLight(
+                "light",
+                new BABYLON.Vector3(0, 1, 0),
+                scene
+            );
+            light.intensity = 0.8;
+
+            // Directional light for better shading
+            const dirLight = new BABYLON.DirectionalLight(
+                "dirLight",
+                new BABYLON.Vector3(-1, -2, -1),
+                scene
+            );
+            dirLight.position = new BABYLON.Vector3(20, 40, 20);
+            dirLight.intensity = 0.5;
+
+            // Ground
+            const ground = BABYLON.MeshBuilder.CreateGround(
+                "ground",
+                {width: 10, height: 10},
+                scene
+            );
+            const groundMat = new BABYLON.StandardMaterial("groundMat", scene);
+            groundMat.diffuseColor = new BABYLON.Color3(0.3, 0.3, 0.3);
+            ground.material = groundMat;
+
+            // Load GLB with skinning
+            statusDiv.innerHTML = "⏳ Chargement du modèle...";
+
+            BABYLON.SceneLoader.ImportMeshAsync(
+                null,
+                "./assets/glb_blender/prim/",
+                "avatar_m_nasrun.glb",
+                scene
+            ).then(function(result) {
+                console.log("✅ Import successful!", result);
+
+                const meshes = result.meshes;
+                const skeleton = result.skeletons[0];
+
+                // Analyse des résultats
+                let details = "";
+                let hasSkinning = false;
+
+                // Vérifier le squelette
+                if (skeleton) {
+                    hasSkinning = true;
+                    details += `<div class="success">✅ Squelette trouvé!</div>`;
+                    details += `<div>Os: <b>${skeleton.bones.length}</b></div>`;
+
+                    // Lister les premiers os
+                    details += `<div style="font-size: 11px; margin-top: 5px;"><b>Os principaux:</b><br>`;
+                    skeleton.bones.slice(0, 10).forEach((bone, i) => {
+                        details += `  ${i+1}. ${bone.name}<br>`;
+                    });
+                    if (skeleton.bones.length > 10) {
+                        details += `  ... et ${skeleton.bones.length - 10} autres<br>`;
+                    }
+                    details += `</div>`;
+
+                    // Créer une animation simple de rotation
+                    scene.beginAnimation(skeleton, 0, 100, true);
+                } else {
+                    details += `<div class="warning">⚠️ Pas de squelette trouvé</div>`;
+                }
+
+                // Vérifier les mesh
+                let skinnedMeshes = 0;
+                meshes.forEach(mesh => {
+                    if (mesh.isSkinnedMesh) {
+                        skinnedMeshes++;
+                    }
+                });
+
+                details += `<div>Meshs skinnés: <b class="success">${skinnedMeshes}/${meshes.length}</b></div>`;
+
+                // Vérifier les primitives
+                if (meshes.length > 0 && meshes[0].metadata) {
+                    details += `<div style="margin-top: 10px;"><b>Metadata GLTF:</b></div>`;
+                    const mat = meshes[0].material;
+                    if (mat) {
+                        details += `<div>Matériau: ${mat.name || 'Sans nom'}</div>`;
+                    }
+                }
+
+                // Afficher les détails
+                detailsDiv.innerHTML = details;
+
+                // Mise à jour du statut
+                if (hasSkinning) {
+                    statusDiv.innerHTML = `<div class="success">🎉 SUCCÈS!</div><div>Skinning chargé correctement</div>`;
+                    statusDiv.innerHTML += `<div style="font-size: 12px; margin-top: 5px;">Utilisez la souris pour tourner autour du personnage</div>`;
+                } else {
+                    statusDiv.innerHTML = `<div class="warning">⚠️ ATTENTION</div><div>Pas de skinning détecté</div>`;
+                }
+
+                // Ajuster la caméra pour centrer sur le modèle
+                camera.target = meshes[0];
+
+            }).catch(function(error) {
+                console.error("❌ Error loading GLB:", error);
+                statusDiv.innerHTML = `<div class="error">❌ ERREUR</div><div>${error.message}</div>`;
+                detailsDiv.innerHTML = `<div style="font-size: 11px;">${error.stack || error.toString()}</div>`;
+            });
+
+            return scene;
+        };
+
+        const scene = createScene();
+
+        engine.runRenderLoop(function() {
+            scene.render();
+        });
+
+        window.addEventListener("resize", function() {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>

@@ -4,7 +4,8 @@
  */
 
 import { Scene, Vector3, Color3, DynamicTexture, MeshBuilder, StandardMaterial, VertexBuffer } from '@babylonjs/core';
-import { Mesh } from '@babylon/core/Meshes/mesh';
+import { Mesh } from '@babylonjs/core/Meshes/mesh';
+import { GLModelLoader } from './GLModelLoader';
 
 interface HeightmapData {
     metadata: {
@@ -40,9 +41,19 @@ interface MapData {
 export class MapLoader {
     private scene: Scene;
     private loadedMaps: Map<string, Mesh> = new Map();
+    private modelLoader: GLModelLoader;
 
     constructor(scene: Scene) {
         this.scene = scene;
+        this.modelLoader = new GLModelLoader(scene);
+    }
+
+    /**
+     * Initialize le MapLoader
+     */
+    async initialize(): Promise<void> {
+        await this.modelLoader.initialize();
+        console.log('✅ MapLoader initialisé');
     }
 
     /**
@@ -157,33 +168,40 @@ export class MapLoader {
         console.log(`   📦 Placement de ${objectFile.objects.length} objets...`);
 
         const meshes: Mesh[] = [];
+        const objectsToPlace = objectFile.objects.slice(0, 100); // Augmenté à 100
 
-        // Pour l'instant, on crée des marqueurs visuels pour les positions
-        // Plus tard, on chargera les vrais modèles GLB
-        for (const obj of objectFile.objects.slice(0, 50)) { // Limiter à 50 pour le moment
-            // Créer un marqueur simple (boîte rouge)
-            const marker = MeshBuilder.CreateBox(
-                `object_${obj.id}`,
-                { size: 2 },
-                this.scene
-            );
-
-            marker.position = new Vector3(
+        for (const obj of objectsToPlace) {
+            // Convertir la position
+            const position = new Vector3(
                 obj.position.x * 10,
-                obj.position.y * 10 + 2,
+                obj.position.y * 10,
                 obj.position.z * 10
             );
 
-            // Marqueur visible (rouge semi-transparent)
-            const markerMat = new StandardMaterial(`markerMat_${obj.id}`, this.scene);
-            markerMat.diffuseColor = new Color3(1, 0.2, 0.2);
-            markerMat.alpha = 0.8;
-            marker.material = markerMat;
+            // Convertir la rotation si disponible
+            const rotation = obj.rotation
+                ? new Vector3(obj.rotation.x, obj.rotation.y, obj.rotation.z)
+                : undefined;
 
-            meshes.push(marker);
+            // Convertir l'échelle si disponible
+            const scale = obj.scale
+                ? new Vector3(obj.scale.x, obj.scale.y, obj.scale.z)
+                : new Vector3(1, 1, 1);
+
+            // Charger le modèle 3D
+            const mesh = await this.modelLoader.loadModelById(
+                obj.modelId,
+                position,
+                rotation,
+                scale
+            );
+
+            if (mesh) {
+                meshes.push(mesh);
+            }
         }
 
-        console.log(`   ✅ ${meshes.length} marqueurs créés`);
+        console.log(`   ✅ ${meshes.length} modèles 3D créés`);
 
         return meshes;
     }
@@ -198,6 +216,15 @@ export class MapLoader {
             this.loadedMaps.delete(mapId);
             console.log(`🗑️  Map ${mapId} déchargée`);
         }
+    }
+
+    /**
+     * Nettoie toutes les ressources
+     */
+    dispose(): void {
+        this.loadedMaps.forEach(map => map.dispose());
+        this.loadedMaps.clear();
+        this.modelLoader.dispose();
     }
 
     /**

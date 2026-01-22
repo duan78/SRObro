@@ -1,0 +1,4 @@
+Error   : EXCEPTION_ACCESS_VIOLATION
+Address : 0x00007FF699ED729C
+Module  : blender.exe
+Thread  : 00006fec

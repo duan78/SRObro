@@ -19,6 +19,7 @@ const BAN_CONVERTER = path.join(RUST_PROJECT, 'target', 'release', 'ban-convert.
 const BAN_SEARCH_PATTERNS = [
     'assets/data_extracted/**/*.ban',
     'assets/pk2_extracted/Particles/**/*.ban',
+    'assets/pk2_data/**/*.ban',
 ];
 
 async function findAllBANFiles(): Promise<string[]> {
