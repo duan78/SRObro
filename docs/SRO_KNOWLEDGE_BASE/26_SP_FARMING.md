@@ -467,4 +467,94 @@ SP per Level = (Required XP to Level) × (SP/XP Ratio) ÷ 400
 
 ---
 
+## 🌍 Multilingual Research Findings (2025)
+
+### 📊 Major SP Sources Discovered
+
+**🔥 Forgotten World Quests - 1 MILLION SP**
+- **Two quests** give **500k SP** each = **1,000,000 SP total**
+- Must collect all FGW (Forgotten World) cards
+- **Admin confirmed** by Simplicity (Origin server admin)
+- **Confidence**: 5/5 (Tier 1 - official source)
+- This is a **game-changing** SP source
+
+**🎯 Premium+ SP Quest - Repeatable**
+- **Location**: Hotan potion shop
+- **Repeatable**: 3 times per premium period
+- **Reward**: **10,000 SP** per completion
+- **Total**: **30,000 SP** per premium period
+- **Confidence**: 5/5 (Tier 1 - confirmed by admin)
+
+**⚡ Alexandria Unlimited SP Quests (Level 100+)**
+- **Quest Name**: "Becoming a Deity (1)"
+- **NPC**: Egyptian soldier Turian (South gate Alexandria)
+- **Requirement**: Kill 300 unegs
+- **Base Reward**: 2,801,540 EXP + 250 SP
+- **With x3 Multiplier**: 8,404,000 EXP + **750 SP**
+- **Unlimited repeatable**
+- **Confidence**: 5/5 (Tier 1 - player tested, admin confirmed)
+
+**🎲 So-Ok Trophies**
+- **SP Range**: 200 SP to 10,000 SP (lottery-based)
+- Random reward from trophy exchange
+- **Confidence**: 4/5 (Tier 2 - community confirmed)
+
+**🏆 Early Game SP Farming (Levels 1-30)**
+- **Location**: Ongs (Bandit Stronghold)
+- **SP Gained**: 5,000 - 20,000 SP
+- **Method**: Farm with academy buff
+- **Academy Buff**: Use until level 40 for +SP/+EXP
+- **Requirements**: Friend to create academy
+- **Confidence**: 4/5 (Tier 2 - community strategy)
+
+### 📋 SP Acquisition Summary Table
+
+| Method | SP Amount | Requirements | Repeatability | Confidence |
+|--------|-----------|---------------|----------------|------------|
+| **FGW Quests** | 1,000,000 | All FGW cards | Once | 5/5 |
+| **Premium+ Quest** | 30,000/premium | Premium+ | 3x/premium | 5/5 |
+| **Alexandria Quest** | 750/comp | Level 100+ | Unlimited | 5/5 |
+| **So-Ok Trophy** | 200-10,000 | Trophy item | Lottery | 4/5 |
+| **Ongs (Early)** | 5-20k | Level 1-30 | Once | 4/5 |
+| **Jewel Box Scroll** | 100 | Jewel Box | Consumable | 4/5 |
+
+### 🎯 Recommended SP Farming Strategy (Updated 2025)
+
+**Phase 1: Early Game (Levels 1-30)**
+- Use **academy buff** for bonus SP/EXP
+- Farm **Ongs** at Bandit Stronghold
+- Gain: **5-20k SP** before level 30
+- Don't worry about GAP yet
+
+**Phase 2: Mid Game (Levels 30-80)**
+- Traditional SP farming with GAP 7-9
+- Use **classic spots**: Ong Habitat, Bunwangs
+- Save FGW cards for collection
+
+**Phase 3: Late Game (Level 80+)**
+- **Complete FGW card collection** → **+1M SP**
+- **Farm Alexandria SP quests** (unlimited)
+- **Use Premium+ SP quests** (30k SP/month)
+
+**Phase 4: End Game (Level 100+)**
+- **Alexandria unlimited SP quests** - Main SP source
+- Continue Premium+ SP quests if available
+- So-Ok trophy farming for bonus SP
+
+### 💡 Key Insights
+
+1. **9-Gap Not Required**: Unless farming FGW cards, 9-gap is not necessary
+2. **Premium+ Huge Advantage**: 30k SP per premium is significant
+3. **FGW Game Changer**: 1M SP from quests transforms SP farming
+4. **Alexandria Unlimited**: After level 100, unlimited SP available
+5. **Academy Critical**: Early game academy buff = 5-20k free SP
+
+### 📝 Sources
+
+- [How To Farm SP? - Origin Online Forums](https://forum.playorigin.com/showthread.php?7167-How-To-Farm-SP)
+- Admin Simplicity confirmation posts
+
+---
+
 *Dernière mise à jour: 2025-01-20*
+*Multilingual Research Update: 2025-01-22*

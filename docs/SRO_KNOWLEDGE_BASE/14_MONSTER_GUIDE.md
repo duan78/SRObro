@@ -397,6 +397,275 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 
 ---
 
+## 🏆 Unique Monsters - Guide Complet (Recherche 2025)
+
+### Recherche Multilingue - Spawn Times & HP
+
+**Source**: [Multiple Private Server Guides](unique spawn research) + Community Sources
+
+**Note Importante**: Les spawn times varient significativement entre les serveurs officiels et les serveurs privés. Les informations ci-dessous sont des **moyennes basées sur la communauté**.
+
+### Système de Spawn des Uniques
+
+**Mécanique Générale**:
+- **Spawn Interval**: 3-6 heures sur la plupart des serveurs
+- **Private Servers**: Peuvent réduire à 1-2 heures ou moins
+- **Spawn Locations**: Points de spawn aléatoires (marqués en bleu sur la map)
+- **Unique Dungeons**: Ouvrent 2x par jour à heures fixes pendant les events uniques
+- **Timer Commence**: Après la mort de l'unique
+
+### 📊 Tableau Complet des Uniques
+
+| Unique | Level | HP | Spawn Time | Zone | Drops | Difficulté |
+|--------|-------|-----|------------|------|-------|------------|
+| **Tiger Girl** | 20 | 598,720 | 1-2 heures | Jangan area | SOS/SOM gear | Facile |
+| **Cerberus** | 20 | 693,072 | 3-5 heures | Hotan area | SOE/SOM | Facile-Moyen |
+| **Captain Ivy** | 30 | 1,094,835 | 3-5 heures | Donwhang | SOM/SOSun | Moyen |
+| **Uruchi** | 40 | 1,779,528 | 60+ min (variable) | Hotan | SOM/SOSun | Moyen |
+| **Isyutaru** | 60 | 4,324,612 | 3-6 heures | Taklamakan | SOSun (best) | Difficile |
+| **Lord Yarkan** | 70+ | High HP | 3-6 heures | Taklamakan | SOSun/SOS | Difficile |
+| **Demon Shaitan** | 80+ | Highest HP | 3-6 heures | Alexandria | Best drops | Très Difficile |
+| **Medusa** | 90+ | Extreme HP | 6-12 heures | Alexandria | Top tier drops | Extrême |
+| **Lady Lyn** | 100+ | Massive HP | 6-12 heures | Alexandria | SOSun+ | Extrême |
+| **Beithy** | 110 | Maximum HP | 8-24 heures | Alexandria | Best items | Boss Final |
+
+### 🎯 Détails par Unique
+
+#### TIGER GIRL (Level 20)
+
+**Informations**:
+```
+HP: 598,720
+Spawn Time: 1-2 heures (serveurs privés: 30-60 min)
+Level Requis: 15+
+Nombre de Joueurs: 1-2 players suffisent
+```
+
+**Stratégie**:
+- **Build**: Full STR lvl 20+ peut le solo
+- **Position**: Tank et span
+- **Drops**: SOS (Seal of Star), rare gear
+- **Gold**: 50,000-100,000 gold
+
+**Spawn Locations**:
+- Près de Jangan South Gate
+- Bandit Stronghold area
+- Plusieurs points possibles
+
+---
+
+#### CERBERUS (Level 20)
+
+**Informations**:
+```
+HP: 693,072
+Spawn Time: 3-5 heures
+Level Requis: 20+
+Nombre de Joueurs: 2-4 players recommandé
+```
+
+**Stratégie**:
+- **Build**: Full STR ou INT avec Snow Shield
+- **Position**: Kiting pour INT, tanking pour STR
+- **Drops**: SOE (Seal of Star), SOM, weapons
+- **Spécial**: Triple attack (têtes multiples)
+
+---
+
+#### CAPTAIN IVY (Level 30)
+
+**Informations**:
+```
+HP: 1,094,835
+Spawn Time: 3-5 heures
+Level Requis: 25+
+Nombre de Joueurs: 3-6 players recommandé
+```
+
+**Stratégie**:
+- **Build**: Full STR avec healer
+- **Position**: Full party avec tank + DPS + heals
+- **Drops**: SOM, Shield SOMun, weapons
+- **Note**: Plus difficile que Cerberus, require coordination
+
+---
+
+#### URUCHI (Level 40)
+
+**Informations**:
+```
+HP: 1,779,528
+Spawn Time: 60+ minutes (variable selon serveur)
+Level Requis: 35+
+Nombre de Joueurs: 4-8 players recommandé
+```
+
+**Stratégie**:
+- **Build**: Full party avec 2 tanks + heals
+- **Drops**: SOMun weapons, armor
+- **Note**: Premier unique "vraiement" challenge
+
+---
+
+#### ISYUTARU (Level 60)
+
+**Informations**:
+```
+HP: 4,324,612
+Spawn Time: 3-6 heures
+Level Requis: 55+
+Nombre de Joueurs: 6-8 players OBLIGATOIRE
+```
+
+**Stratégie**:
+- **Build**: 2 tanks (full STR) + 2 healers + 4 DPS
+- **Drops**: **SOSun** (Seal of Sun) - TOP TIER
+- **Armor**: SOSun chest, legs, etc.
+- **Weapons**: SOSun weapons (best in game)
+- **Importance**: **UNIQUE FARMING CRITIQUE** pour gear
+
+---
+
+#### LORD YARKAN (Level 70+)
+
+**Informations**:
+```
+HP: High (variable)
+Spawn Time: 3-6 heures
+Level Requis: 65+
+Nombre de Joueurs: 8 players full party
+```
+
+**Stratégie**:
+- **Build**: Full party optimisé avec CC (crowd control)
+- **Drops**: SOSun armor, weapons
+- **Difficulty**: Très élevée, require coordination parfaite
+
+---
+
+#### DEMON SHAITAN (Level 80+)
+
+**Informations**:
+```
+HP: Highest HP des uniques standard
+Spawn Time: 3-6 heures
+Level Requis: 75+
+Nombre de Joueurs: 8 players + pots spam
+```
+
+**Stratégie**:
+- **Build**: Full party max level
+- **Preparation**: HUNDREDS de potions (HP/MP)
+- **Drops**: **BEST drops du jeu**
+- **Difficulty**: EXTREME, souvent impossible sans guild coordonnée
+
+---
+
+#### MEDUSA (Level 90+)
+
+**Informations**:
+```
+HP: Extreme
+Spawn Time: 6-12 heures
+Level Requis: 85+
+Nombre de Joueurs: Full max level party (8x lvl 100+)
+```
+
+**Stratégie**:
+- **Build**: Seuls les joueurs lvl 100+ avec best gear peuvent participer
+- **Drops**: Top tier items, rare materials
+- **Difficulty**: NEAR IMPOSSIBLE sans guild
+
+---
+
+#### LADY LYN (Level 100+)
+
+**Informations**:
+```
+HP: Massive
+Spawn Time: 6-12 heures
+Level Requis: 95+
+Nombre de Joueurs: 8x lvl 100+ with PERFECT gear
+```
+
+**Stratégie**:
+- **Build**: Full max level, best gear possible
+- **Drops**: SOSun++ (best seal items)
+- **Difficulty**: ONLY pour les top guilds
+
+---
+
+#### BEITHY (Level 110)
+
+**Informations**:
+```
+HP: Maximum HP du jeu
+Spawn Time: 8-24 heures
+Level Requis: 105+
+Nombre de Joueurs: 8x lvl 110 with PERFECT gear
+```
+
+**Stratégie**:
+- **Build: Full party maxed, best gear
+- **Drops**: **BEST ITEMS DU JEU** (rarety extrême)
+- **Difficulty**: FINAL BOSS - seul 1% des joueurs peuvent le tuer
+
+---
+
+### 📈 Unique Dungeons
+
+**Système**:
+- Ouvrent **2x par jour** à heures fixes
+- Accessibles depuis des zones spécifiques
+- Contiennent des uniques avec **drops boostés**
+- Duration: ~30 minutes par ouverture
+
+**Utilisation Stratégique**:
+1. **Préparez votre team** à l'avance
+2. **Farmez les clés/craft** si requis
+3. **Entrez IMMÉDIATEMENT** à l'ouverture
+4. **Focus l'unique** avant les autres mobs
+5. **Loot fast** avant la fermeture
+
+### 💡 Tips pour Unique Hunting
+
+**Pour Organisers**:
+
+1. **Timers Tracking**:
+   - Notez l'heure de mort de chaque unique
+   - Créez un calendar avec les spawn times estimés
+   - Alertez votre guild 30 min avant le spawn
+
+2. **Spawn Points Camping**:
+   - Apprenez tous les points de spawn possibles
+   - Placez des scouts aux points stratégiques
+   - Soyez les premiers à tag l'unique
+
+3. **Kill Stealing Protection**:
+   - Sur certains serveurs, le team qui tag en premier a le loot
+   - Organisez-vous pour être first
+   - Ayez des "taggers" dédiés
+
+**Pour Participants**:
+
+1. **Come Prepared**:
+   - Full potions (HP/MP)
+   - Resurrect scrolls
+   - Buffs max
+   - Repair votre gear
+
+2. **Listen to Leader**:
+   - Suivez les instructions du raid leader
+   - Ne pas ninja loot
+   - Focus sur le target appelé
+
+3. **Loot Rules**:
+   - Établissez les règles AVANT le fight
+   - "Need before greed"
+   - Faire confiance au leader pour la distribution
+
+---
+
 ## ❓ FAQ
 
 ### Q: Quel monstre donne le plus d'EXP?

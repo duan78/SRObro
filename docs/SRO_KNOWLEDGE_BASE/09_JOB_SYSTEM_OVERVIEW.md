@@ -505,6 +505,158 @@ Une fois votre job level up, retournez voir votre job NPC pour claim vos rewards
 
 ---
 
+## 🌍 Meta Builds 2024-2026
+
+### Current Job Meta - Recherche Multilingue
+
+**Source**: [Silkroad Origin Mobile - Job System Guide](https://sromobile.com/en/guide/job-system/job-system) + Community Research 2024-2026
+
+Le meta des jobs a évolué en 2024-2026. Voici les builds **dominants** pour chaque job:
+
+### 🔥 THIEF META - 1:9 Hybrid INT Spear (Dominant)
+
+**Build le plus populaire 2024-2026**:
+
+**Distribution Stats** (Level 100 cap):
+- **STR**: 30-40 points
+- **INT**: 260-270 points
+- **Ratio**: 1:9 (1 STR pour 9 INT)
+
+**Skill Distribution**:
+```
+Heuksal (Spear):   80-100 levels
+Fire (Bicheon):    100 levels
+Lightning:         60-70 levels
+Cold:              60-70 levels
+Force:             (Optional, rare)
+```
+
+**Setup**:
+- **Armor**: **Garment** (-20% MP, +20% movement speed)
+- **Weapon**: Spear + Shield
+- **Critical Skills**:
+  - **Snow Shield** (Cold) - **OBLIGATOIRE** pour la survie
+  - **Lion Shout** (Fire) - Burst damage
+  - **Spear Nuke Chain** - DPS principal
+
+**Pourquoi ce build est dominant**:
+- ✅ **Nuke puissant** avec INT hybrid
+- ✅ **Snow Shield** permet de tank beaucoup de dégâts
+- ✅ **Garment** = MP infini pour le spam de skills
+- ✅ **Efficace solo et en groupe**
+- ✅ **Excellent PvP** (job wars, fortress)
+
+**Contre**:
+- ❌ Dépendant du Snow Shield (si dispelled = mort)
+- ❌ Vulnérable aux status effects (KB, stun)
+- ❌ Require beaucoup de SP (5-6M SP pour full masteries)
+
+---
+
+### 🛡️ HUNTER META - Pure STR Cold/Fire Blader
+
+**Build dominant**:
+
+**Distribution Stats**:
+- **STR**: Full STR (tous les points)
+- **INT**: 0 points (sauf erreurs)
+
+**Skill Distribution**:
+```
+Bicheon (Blade):   100 levels
+Cold:              100 levels (pour le shield et debuff)
+Fire:              80-100 levels (damage)
+Lightning:         (Optional, rare)
+```
+
+**Setup**:
+- **Armor**: **Protector** ou **Armor** (plus de PHY DEF)
+- **Weapon**: Blade + Shield
+- **Critical Skills**:
+  - **Cold Shield** - Defense magique
+  - **Cold imbue** - Slow les ennemis
+  - **Blade skills** - Chain knockdowns
+  - **Fire buffs** - Plus de dégâts
+
+**Pourquoi ce build**:
+- ✅ **Tank physique** énorme
+- ✅ **Knockdown chain** - Immobilise les thieves
+- ✅ **High PHY DEF** - Survit aux nukes
+- ✅ **Cold debuff** - Ralentit les thieves
+- ✅ **Peut escorter solo** des traders
+
+**Contre**:
+- ❌ Vulnérable aux INT nukers (sans Garment)
+- ❌ Moins de damage que les thieves
+- ❌ Dépendant des knocks
+
+---
+
+### 🎒 TRADER META - Pure INT (Recommandé)
+
+**Build recommandé**:
+
+**Distribution Stats**:
+- **STR**: 0 points
+- **INT**: Full INT
+
+**Skill Distribution**:
+```
+Any weapon mastery: 100 levels (Spear, Sword, ou Bow)
+Fire:                100 levels (damage buffs)
+Lightning:           100 levels (speed, nukes)
+Cold:                (Optional - pour survivability)
+```
+
+**Setup**:
+- **Armor**: **Garment** (-20% MP, +20% speed)
+- **Weapon**: Nuking weapon (Spear/Bow recommandé)
+- **Critical Skills**:
+  - **Lightning nukes** - DPS à distance
+  - **Fire imbue** - Plus de dégâts
+  - **Lightning speed buff** - Fuir les thieves
+
+**Pourquoi Pure INT**:
+- ✅ **Peut se défendre** seul contre les thieves
+- ✅ **Nuke à distance** - Ne pas se faire toucher
+- ✅ **High burst** - Peut tuer un thief solo
+- ✅ **MP infini** avec Garment
+
+**Contre**:
+- ❌ Moins de HP que STR
+- ❌ Si touché par un thief STR = danger
+- ❌ Dépendant du kiting
+
+---
+
+### 📊 Tableau Comparatif des Builds Meta
+
+| Job | Build | Armor | Style | Difficulté | Efficacité |
+|-----|-------|-------|-------|------------|------------|
+| **Thief** | 1:9 Hybrid INT Spear | Garment | Nuke + Snow Shield | Moyenne | **S** (Dominant) |
+| **Hunter** | Pure STR Cold/Fire Blader | Protector/Armor | Tank + Knockdown | Facile | **A** |
+| **Trader** | Pure INT Nuker | Garment | Kiting + Nuke | Difficile | **B** |
+
+### 💡 Notes sur le Meta
+
+**Thief 1:9 Hybrid INT Spear** est considéré comme le **meilleur build job 2024-2026** car:
+- Dominé en **1v1** contre la plupart des builds
+- **Snow Shield** le rend quasi-unkillable 1v1
+- Peut voler des traders **solo** même avec hunters
+- Excellent en **job wars** (group fights)
+
+**Cependant**:
+- Require **énormément de SP** (5-6M SP)
+- Dépendant des **buffs** (si dispelled = vulnerable)
+- **Skill cap élevé** - Difficile à maîtriser
+
+**Alternatives**:
+- **Full STR Thief** - Plus simple, moins de SP
+- **Hybrid Warrior** - Tanky thief, moins de damage
+- **Wizard/Rogue** - Européen, joue différemment
+
+---
+
 ## ❓ FAQ
 
 ### Q: Puis-je changer de job?

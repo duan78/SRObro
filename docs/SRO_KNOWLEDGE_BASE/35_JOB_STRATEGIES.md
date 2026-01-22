@@ -413,6 +413,371 @@ Le **système de jobs** de Silkroad Online est l'une des fonctionnalités les pl
 
 ---
 
+## 💰 Optimisation du Profit & Trade Routes (Recherche 2025)
+
+### Recherche Multilingue - Système de Trade 2024-2026
+
+**Source**: [Community Trade Discussions](http://www.silkroadforums.com/viewtopic.php?f=2&t=50121) + [Origin Guide](https://forum.playorigin.com/showthread.php?501-%2526%25239673%253B-Trade-l-Trade-Outposts-l-Profit-Origin-Guide)
+
+### Système de Stars - Le Guide Complet
+
+Le système de **Trade Stars** détermine le **risque et le profit** de chaque trade:
+
+**Tableau des Stars**:
+| Stars | Slots Requis | Profit Multiplier | Risque | Distance Requise |
+|-------|--------------|-------------------|--------|------------------|
+| **1-Star** | 1-2 | 1.0x | Très Bas | Court |
+| **2-Star** | 2-3 | 1.5-2.0x | Bas | Court-Moyen |
+| **3-Star** | 3-4 | 2.5-3.5x | Moyen | Moyen |
+| **4-Star** | 4-5 | 4.0-5.0x | Élevé | Long |
+| **5-Star** | 6-7 | 6.0-8.0x | Très Élevé | Très Long |
+
+**Exemple Concret**:
+```
+1-Star Trade:
+- Coût: 50,000 gold
+- Vente: 60,000 gold
+- Profit: 10,000 gold (20%)
+
+5-Star Trade:
+- Coût: 200,000 gold (plus de goods)
+- Vente: 600,000 gold
+- Profit: 400,000 gold (200%!)
+- Risque: Mais peut perdre tout si volé
+```
+
+### Facteurs de Profit
+
+**1. Distance**:
+- Plus longue la distance = **plus de profit**
+- Exemple: Jangan → Donwhang vs Jangan → Hotan
+- Distance double = profit ~double
+
+**2. Star Rating**:
+- Plus d'étoiles = **exponentiellement plus de profit**
+- 5-star peut donner **200-300% profit** vs 1-star (20%)
+
+**3. Supply & Demand**:
+- Chaque ville a des **specialties** différentes
+- Prix varient selon la demande actuelle
+- **Scanner les prix** avant d'acheter
+
+**4. Special Goods**:
+- Certains goods sont **"Special"** ou **"Rare"**
+- Prix plus élevés
+- Disponibilité limitée
+
+### Routes Optimales par Level
+
+**Level 20-40: Beginner Routes**
+
+**Route**: Jangan ↔ Donwhang
+```
+Recommendé: 1-2 Stars
+Profit: 10,000-50,000 gold per run
+Risk: Low (peu de thieves actifs)
+Time: 15-20 minutes
+
+Stratégie:
+- Faites des 1-star trades pour apprendre
+- Évitez les heures de pointe
+- Pas besoin de hunters (ou 1-2 max)
+```
+
+**Level 40-60: Intermediate Routes**
+
+**Route**: Donwhang ↔ Hotan
+```
+Recommendé: 2-3 Stars
+Profit: 50,000-150,000 gold per run
+Risk: Medium (thieves plus actifs)
+Time: 25-35 minutes
+
+Stratégie:
+- 2-3 stars pour balance risque/profit
+- 2-3 hunters recommandés
+- Trade pendant les heures creuses
+```
+
+**Level 60-80: Advanced Routes**
+
+**Route**: Hotan ↔ Taklamakan
+```
+Recommendé: 3-4 Stars
+Profit: 150,000-300,000 gold per run
+Risk: High (zones dangerereuses)
+Time: 30-45 minutes
+
+Stratégie:
+- 3-4 stars pour profit optimal
+- 4-5 hunters OBLIGATOIRES
+- Full party recommandé
+- Communication team indispensable
+```
+
+**Level 80-110: Expert Routes**
+
+**Route**: Hotan ↔ Alexandria
+```
+Recommendé: 4-5 Stars
+Profit: 300,000-600,000 gold per run
+Risk: Very High (thieves organisés)
+Time: 40-60 minutes
+
+Stratégie:
+- 5-star pour maximum profit
+- 8/8 hunters + tank + heals
+- Guild coordination requise
+- Only pour les experts
+```
+
+### Stratégies de Profit Optimisé
+
+**Stratégie 1: Volume Trading (Safe)**
+
+**Concept**: Faire beaucoup de trades à faible risque
+```
+Trades: 1-2 stars
+Fréquence: 5-10 runs per hour
+Profit per run: 10,000-30,000 gold
+Total par heure: 50,000-300,000 gold
+
+Avantages:
+- Risk très bas
+- Consistent profit
+- Pas besoin de beaucoup de hunters
+
+Inconvénients:
+- Temps-intensive
+- Boring (repetitive)
+- Less per-run profit
+```
+
+**Stratégie 2: High-Risk High-Reward (Expert)**
+
+**Concept**: Faire des trades à étoiles élevées
+```
+Trades: 4-5 stars
+Fréquence: 1-2 runs per hour
+Profit per run: 300,000-600,000 gold
+Total par heure: 300,000-600,000 gold
+
+Avantages:
+- Maximum profit per run
+- Plus excitant
+- Less runs pour même profit
+
+Inconvénients:
+- Risk énorme (tout perdre)
+- Requiert full team hunters
+- Coordination complexe
+```
+
+**Stratégie 3: Off-Peak Trading**
+
+**Concept**: Trader pendant les heures creuses
+```
+Heures: Late night, early morning (server time)
+Avantages:
+- Moins de thieves actifs
+- Routes plus sûres
+- Possibilité de faire des higher-star trades
+
+Inconvénients:
+- Moins de hunters disponibles
+- Plus difficile de trouver team
+```
+
+**Stratégie 4: Guild Trading**
+
+**Concept**: Organiser des trades avec guilde
+```
+Setup:
+- 10+ traders en caravane
+- 20+ hunters pour escorte
+- Communication via Discord/Voice
+
+Avantages:
+- Sécurité maximale
+- Profit énorme (multiple trades)
+- Fun social
+
+Inconvénients:
+- Difficile à organiser
+- Require guild active
+- Coordination complexe
+```
+
+### Pour Thief: Vol Strategy
+
+**Cibles Prioritaires**:
+
+**1. 5-Star Traders**:
+- Plus de goods à voler
+- Goods plus chers
+- Mais: Plus de guards
+
+**2. Solo Traders**:
+- Facile à voler
+- Pas de guards
+- Mais: Less goods
+
+**3. Trades Fatigués**:
+- Traders qui ont fait plusieurs runs
+- Peuvent être moins vigilants
+- HP/MP bas
+
+**Stratégies de Vol**:
+```
+Ambush Strategy:
+1. Cachez-vous près d'une route populaire
+2. Attendez un trader solo
+3. Attaquez rapidement (burst)
+4. Loot et escape
+
+Raid Strategy:
+1. Formez un groupe de thieves (3-5)
+2. Attendez une caravane guards
+3. Attaquez tous ensemble
+4. Focus sur le trader d'abord
+5. Loot tout et escape
+
+NPC Thief Farming:
+1. Farm NPC thieves attacking NPC traders
+2. Plus safe, moins de profit
+3. Consistent income
+```
+
+### Pour Hunter: Escort Strategy
+
+**Types de Contrats**:
+
+**1. Percentage Contract**:
+```
+Payment: 10-20% du profit du trader
+Avantages:
+- Si trade réussi = bon paiement
+- Aligné avec le trader
+
+Inconvénients:
+- Si trade fail = pas de paiement
+- Risky pour le hunter
+```
+
+**2. Fixed Payment**:
+```
+Payment: 50,000-100,000 gold flat
+Avantages:
+- Paiement garanti
+- Prévisible pour le hunter
+
+Inconvénients:
+- Moins de potentiel de profit
+- Trader peut refuser (trop cher)
+```
+
+**3. Hourly Rate**:
+```
+Payment: 100,000-200,000 gold per hour
+Avantages:
+- Simple pour les deux parties
+- Prévisible
+
+Inconvénients:
+- Peut être moins profitable pour le hunter
+```
+
+**Optimal Hunter Setup**:
+```
+Level 70+: Full STR Blader (Cold/Fire)
+- High PHY DEF pour tank thieves
+- Cold imbue pour slow
+- Chain knockdowns
+- Full set Armor/Protector
+
+Buffs:
+- Defense buffs
+- HP buffs
+- Speed buffs
+- Party buffs
+
+Strategy:
+1. Scout ahead de la caravane
+2. Repérez les thieves en embuscade
+3. Engagez avant qu'ils n'attaquent
+4. Protégez le trader à tout prix
+5. Report en channel "job" pour back-up
+```
+
+### Tips pour Maximiser le Profit
+
+**Pour Traders**:
+
+1. **Scanner les prix**:
+   - Comparez les prix dans différentes villes
+   - Achetez bas, vendez haut
+   - Certains goods ont plus de marge
+
+2. **Full Inventory**:
+   - Remplissez tous les slots de votre mount
+   - Plus de goods = plus de profit
+   - Mais: Plus lent si vous mourrez
+
+3. **Optimal Route**:
+   - Choisissez la route avec le meilleur profit/temps
+   - Parfois les routes plus longues ne valent pas le temps
+
+4. **Avoid Hot Zones**:
+   - Certaines zones sont des "thief highways"
+   - Scoutez avant de partir
+   - Utilisez des routes alternatives
+
+**Pour Thieves**:
+
+1. **Scoutez d'abord**:
+   - Regardez si le trader a des hunters
+   - Comptez le nombre de guards
+   - Évaluez si vous pouvez gagner
+
+2. **Choose Your Targets**:
+   - Ne volez pas les trades trop bien gardés
+   - Ciblez les traders solos ou faiblement gardés
+   - Les 5-star trades ont plus de guards
+
+3. **Escape Routes**:
+   - Planifiez votre escape avant d'attaquer
+   - Connaissez les routes vers les "thief towns"
+   - Ayez des teleport scrolls ou speed potions
+
+4. **Group Up**:
+   - Les thieves solo ont du mal vs hunters
+   - En groupe, vous pouvez overwhelm les guards
+   - Partagez le loot
+
+**Pour Hunters**:
+
+1. **Négociez Bien**:
+   - Ne sous-estimez pas votre valeur
+   - Demandez un pourcentage fair (15-20%)
+   - Exigez paiement à l'avance si possible
+
+2. **Multi-Trading**:
+   - Escortez plusieurs traders en même temps
+   - Plus de profit pour le même temps
+   - Mais: Plus difficile à gérer
+
+3. **Thief Bounties**:
+   - En plus des paiements traders, vous gagnez des primes pour les thieves tués
+   - C'est du bonus profit
+   - Les thieves "wanted" rapportent plus
+
+4. **Build Team**:
+   - Formez une team de hunters régulière
+   - Avec les mêmes players, vous apprenez à jouer ensemble
+   - Communication et coordination deviennent parfaites
+
+---
+
 ## ❓ FAQ
 
 ### Q: Quel job est le plus profitable?

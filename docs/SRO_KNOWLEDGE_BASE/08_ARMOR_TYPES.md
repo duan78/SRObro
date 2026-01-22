@@ -474,37 +474,197 @@ Il y a **3 types d'armor** dans Silkroad Online, chacun avec des avantages et in
 
 ## 🎁 Set Bonuses
 
+### Recherche Multilingue 2025 - Bonus Complets Détaillés
+
+**Source**: [Silkroad Forums - Armors Guide](http://www.silkroadforums.com/viewtopic.php?f=113&t=93505)
+
 ### Comment ça Marche
 
-Certains sets ont des **bonus quand vous portez l'ensemble complet** (toutes les pièces du même degree et type).
+Les **sets complets** (toutes les 6 pièces: chest, legs, head, hands, shoulder, feet) du même type donnent des bonus **puissants et cumulatifs**.
 
-### Types de Bonus
+### ⚠️ Règle Importante
 
-**1. Set Bonuses Normaux:**
-- +HP/MP
-- +PHY/MAG DEF
-- +STR/INT
+**Mixed Armor = NO BONUS**
+- Si vous mélangez Armor + Protector + Garment = **AUCUN BONUS**
+- Vous devez porter **les 6 pièces du même type** pour activer les bonus
+- Exemple: 5 pièces Garment + 1 pièce Armor = **PAS DE BONUS**
 
-**2. Set Bonuses SOX:**
-- Les items SOX ont souvent des bonus supplémentaires
-- Plus de stats
-- Parfois des effets spéciaux
+---
 
-### Example Set Bonus
+### 🌟 Garment Set Bonus (6 pièces complètes)
 
-**9D Armor Set Bonus:**
-- +5% PHY DEF
-- +3% MAG DEF
-- +200 HP
-- +100 MP
+**Bonus quand vous portez un FULL SET Garment:**
 
-**9D Garment Set Bonus:**
-- +3% PHY DEF
-- +5% MAG DEF
-- +100 HP
-- +200 MP
+| Bonus | Valeur | Impact |
+|-------|--------|--------|
+| **Movement Speed** | **+20%** | Vitesse de déplacement massivement augmentée |
+| **MP Consumption** | **-20%** | Réduction massive de la consommation de MP |
 
-**Note:** Les bonus dépendent du degree et du set spécifique.
+**Exemples Concrets**:
+
+**MP Reduction**:
+```
+Sans Garment:
+  - Skill coûte 100 MP
+  - 10 casts = 1,000 MP
+
+Avec Garment (-20%):
+  - Skill coûte 80 MP
+  - 10 casts = 800 MP
+  - Économie: 200 MP (20%)
+```
+
+**Movement Speed**:
+```
+Sans Garment:
+  - Vitesse de base: 100%
+
+Avec Garment (+20%):
+  - Vitesse finale: 120%
+  - Impact: Kiting beaucoup plus efficace
+  - Escape plus facile
+  - Meilleur positionnement en PvP
+```
+
+**Pourquoi Garment est DOMINANT pour SP Farming**:
+- **-20% MP** = Économie énorme en potions
+- Permet de farmer **2-3x plus longtemps** avec les mêmes potions
+- **+20% speed** = Pull plus rapide, plus efficace
+- **Recommandé pour tous les INT builds** sans exception
+
+---
+
+### 🛡️ Protector Set Bonus (6 pièces complètes)
+
+**Bonus quand vous portez un FULL SET Protector:**
+
+| Bonus | Valeur | Impact |
+|-------|--------|--------|
+| **Movement Speed** | **+10%** | Vitesse de déplacement modérément augmentée |
+| **MP Consumption** | **-10%** | Réduction modérée de la consommation de MP |
+
+**Exemples Concrets**:
+
+**MP Reduction**:
+```
+Sans Protector:
+  - Skill coûte 100 MP
+
+Avec Protector (-10%):
+  - Skill coûte 90 MP
+  - Économie: 10% (modeste mais utile)
+```
+
+**Movement Speed**:
+```
+Sans Protector:
+  - Vitesse de base: 100%
+
+Avec Protector (+10%):
+  - Vitesse finale: 110%
+  - Impact: Modérément plus rapide
+  - Bon compromis entre Armor et Garment
+```
+
+**Pourquoi Choisir Protector**:
+- **Balance parfait** entre DEF et MP reduction
+- Bon pour les **hybrid builds**
+- Bon pour les **STR qui veulent un peu de speed**
+- Moins de pénalité que Armor, moins de "squishy" que Garment
+
+---
+
+### ⚔️ Armor Set (Heavy) - PAS DE BONUS
+
+**Important**: Les sets Armor **N'ONT PAS de set bonus** spécifiques comme Garment et Protector.
+
+**Pourquoi choisir Armor alors?**
+- **PHY DEF massivement plus élevée** (compense le manque de bonus)
+- **Meilleure durabilité**
+- **Pour les tanks purs** qui ne se soucient pas du MP
+
+---
+
+### 📊 Tableau Comparatif des Set Bonuses
+
+| Type | Set Bonus? | Speed Bonus | MP Reduction | Recommandé Pour |
+|------|------------|-------------|--------------|-----------------|
+| **Garment** | ✅ Oui | **+20%** | **-20%** | SP farming, INT nukers, kiting |
+| **Protector** | ✅ Oui | **+10%** | **-10%** | Hybrids, balanced builds |
+| **Armor** | ❌ Non | **0%** | **0%** | Full STR tanks, frontline |
+
+---
+
+### 🎯 Stratégie de Set Bonus
+
+**Level 1-20: Garment OBLIGATOIRE**
+- PHY DEF différence négligeable (~5-6 points)
+- **-20% MP** = Économie énorme pour leveling
+- **+20% speed** = Leveling beaucoup plus rapide
+- Recommandé par **tous les guides**
+
+**Level 20-60: Choix selon Build**
+- **INT builds**: Restez Garment (best choice)
+- **STR builds**: Switch vers Armor ou Protector
+- **Hybrids**: Protector est optimal
+
+**Level 60+: Spécialisation**
+- **SP farming**: Garment (non-négociable)
+- **PvP Tank**: Armor
+- **Job Thief (1:9 Hybrid)**: Garment (pour MP et speed)
+- **Job Hunter**: Armor (tankiness)
+- **Job Trader**: Garment (escape et MP)
+
+---
+
+### 💡 Advanced Tips
+
+**Tip 1: Le "+1 MP" Trick**
+```
+Avec Garment (-20% MP):
+  Si un skill coûte 101 MP
+  Il coûtera 81 MP (après réduction)
+
+Mais certains skills ont des coûts "arrondis"
+  Vérifiez toujours vos skills avec Garment équipé
+```
+
+**Tip 2: MP Potion Math**
+```
+Sans Garment:
+  - 100 MP potions = 10,000 MP total
+
+Avec Garment (-20%):
+  - 100 MP potions = 12,500 MP effectifs
+  - Économie de 25% sur les potions!
+```
+
+**Tip 3: Movement Speed Stack**
+```
+Garment (+20% speed)
++ Lightning Buff (+10% speed)
++ Speed Scroll (+10% speed)
+= +40% movement speed TOTAL!
+
+C'est énorme pour:
+  - Kiting
+  - Escaping
+  - Chasing
+  - Positioning
+```
+
+**Tip 4: Low Level Strategy**
+```
+Level 1-20: GARMENT SEULEMENT
+
+Pourquoi?
+  - PHY DEF diff: ~5-6 points (négligeable)
+  - MP savings: ÉNORME
+  - Speed bonus: Leveling 2x plus rapide
+  - Gold savings: 50%+ moins de potions
+
+Conclusion: Portez Garment jusqu'à level 20 minimum
+```
 
 ---
 

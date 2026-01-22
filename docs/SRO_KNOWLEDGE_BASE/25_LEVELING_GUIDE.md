@@ -499,4 +499,180 @@ Le **leveling** dans Silkroad Online est un journey de level 1 à 110 (cap offic
 
 ---
 
+## 🌍 Multilingual Research Findings (2025)
+
+### 🗺️ Zone Progression - Official Level Ranges
+
+**Confirmed Monster Level Ranges** (from official game maps):
+
+| Zone | Monster Levels | Status | Confidence |
+|------|---------------|--------|------------|
+| **Jangan Area** | 1 to 18 | Starting region | 4/5 |
+| **Donwhang Area** | 19 to 30 | Second progression zone | 4/5 |
+| **Hotan Area (Oasis Kingdom)** | 31 to 60 | Mid-game hub | 4/5 |
+| **Taklamakan** | 60 to 80 | No city in area | 4/5 |
+| **Alexandria** | 80+ | Endgame zones | 4/5 |
+
+**Unique Dungeons**:
+- Available on right side of maps
+- Open while Unique monsters spawn
+- **2x daily** at fixed times
+- Accessible from specific areas
+
+**Sources**:
+- [Silkroad Monster Maps - silkroadforums.com](http://www.silkroadforums.com/viewtopic.php?t=197)
+
+---
+
+### ⚡ EXP Bonus System - Optimal Strategy
+
+**Critical Discovery**: The **5-10 Level Gap Rule**
+
+To maximize EXP gain:
+- Find monsters **5-10 levels higher** than your character level
+- This triggers maximum EXP bonus
+- **Too close to your level** → Lower bonus
+- **Too far above your level** → Harder to kill, less efficient
+
+**Leveling Formula**:
+```
+If you're level 20:
+- BEST EXP: Level 25-30 monsters (5-10 level gap)
+- TOO EASY: Level 20-23 monsters (low bonus)
+- TOO HARD: Level 35+ monsters (inefficient kill speed)
+```
+
+**Why This Matters**:
+- EXP bonus is **non-linear** with level gap
+- Maximizing level gap = maximizing EXP per kill
+- Balance with kill speed is critical
+
+**Sources**:
+- [Grind Locations - hazyforest.com](https://hazyforest.com/grind_locations)
+- Community testing and verification
+
+---
+
+### 🎯 Zone-by-Zone Leveling Strategy
+
+#### **Jangan Area (Levels 1-18) - Starting Zone**
+
+**Level 1-10**:
+- **Mobs**: Mangyangs, Weasels
+- **Strategy**: Complete quests for fast EXP
+- **SP Farming**: Not needed yet
+
+**Level 10-15**:
+- **Mobs**: Bandits (Archers, Fighters), Wild Dogs
+- **Location**: Jangan outskirts
+- **Strategy**: Start basic grinding, continue quests
+
+**Level 15-18**:
+- **Mobs**: Tigers, White Tigers
+- **Location**: Bandit Stronghold, Jangan Cave
+- **SP Farming**: Can begin GAP 4-5
+
+---
+
+#### **Donwhang Area (Levels 19-30) - First Progression**
+
+**Level 19-25**:
+- **Mobs**: Mice, Spiders, Beetles
+- **Location**: Donwhang Cave entrance
+- **Strategy**: Questing + grinding mix
+
+**Level 25-30**:
+- **Mobs**: Earth Ghosts, Water Ghosts, Penon mobs
+- **Location**: Penon Castle
+- **SP Farming**: GAP 4-5 becomes important
+
+---
+
+#### **Hotan Area (Levels 31-60) - Mid-Game Hub**
+
+**Level 31-40**:
+- **Mobs**: Niya Spies, Niya Guards, Dark Mice
+- **Location**: Donwhang Cave (deeper), move toward Hotan
+- **Strategy**: Party-friendly areas
+
+**Level 40-50**:
+- **Mobs**: Ong Habitat (THE classic SP farming spot)
+- **Location**: Hotan area
+- **Strategy**: Critical SP farming period
+
+**Level 50-60**:
+- **Mobs**: Bunwangs, Hotan Cave mobs
+- **Strategy**: Prepare for Taklamakan
+
+---
+
+#### **Taklamakan (Levels 60-80) - Advanced Zone**
+
+**Level 60-70**:
+- **Mobs**: Mu jun, Hang-A
+- **Density**: Very high
+- **Strategy**: Last chance before level cap (on some servers)
+
+**Level 70-80**:
+- **Mobs**: Advanced tomb mobs
+- **Strategy**: Endgame preparation
+
+---
+
+#### **Alexandria (Levels 80-110+) - Endgame**
+
+**Level 80-100**:
+- **Mobs**: Tomb Level 1 mobs, advanced unegs
+- **Strategy**: Gear focus, skill maxing
+
+**Level 100-110**:
+- **Mobs**: Highest level mobs, endgame spots
+- **Unlimited SP quests** available (see research below)
+
+**Special - Alexandria Unlimited SP Quests**:
+- **Quest**: "Becoming a Deity (1)"
+- **NPC**: Egyptian soldier Turian (South gate Alexandria)
+- **Requirement**: Kill 300 unegs
+- **Reward**: 8,404,000 EXP + **750 SP** (with x3 multiplier)
+- **Repeatable**: Unlimited times
+- **Confidence**: 5/5 (Tier 1 - admin confirmed)
+
+---
+
+### 🎮 Questing vs Grinding - Research-Informed Decision
+
+**Quest-Based Leveling** (Level 1-30):
+- **Comprehensive quest route** exists (level 1-80)
+- **Source**: [Questler LvL 1-80](https://shinakuma.wordpress.com/2007/02/23/questler-lvl-1-80/)
+- **Benefits**: Story-driven, good EXP, learn the game
+- **Best for**: New players, level 1-50
+
+**Grinding** (Level 30+):
+- **More efficient** than questing for certain level ranges
+- **Best spots**: Ong Habitat, Bunwangs, Mu jun
+- **Best for**: Level 40+, efficient leveling, party play
+
+---
+
+### 💡 Key Research Insights
+
+1. **Zone Progression is Linear**: Jangan (1-18) → Donwhang (19-30) → Hotan (31-60) → Taklamakan (60-80) → Alexandria (80+)
+2. **EXP Bonus Optimization**: 5-10 level gap above your character = maximum EXP
+3. **Unique Dungeons**: Spawn 2x daily at fixed times, accessible from specific areas
+4. **Monster Density Matters**: High-density spots (Ongs, Bunwangs) are most efficient
+5. **Level 100+ Game Changer**: Unlimited SP quests in Alexandria transform endgame progression
+
+---
+
+### 📝 Sources
+
+- [Silkroad Monster Maps - silkroadforums.com](http://www.silkroadforums.com/viewtopic.php?t=197)
+- [Grind Locations - hazyforest.com](https://hazyforest.com/grind_locations)
+- [Questler LvL 1-80 - shinakuma.wordpress.com](https://shinakuma.wordpress.com/2007/02/23/questler-lvl-1-80/)
+- [How To Farm SP? - Origin Online Forums](https://forum.playorigin.com/showthread.php?7167-How-To-Farm-SP) (Alexandria quests)
+- [MONSTER AREAS - GUILD - WordPress.com](https://guildalgarb.wordpress.com/games/sro/maps/monster-areas/)
+
+---
+
 *Dernière mise à jour: 2025-01-20*
+*Multilingual Research Update: 2025-01-22*
