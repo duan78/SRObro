@@ -47,6 +47,7 @@ export class GameServer {
 
   // Tick rate
   private tickRate = 20; // Hz
+  private tickInterval: NodeJS.Timeout | null = null;
 
   constructor(io: IOServer, dbManager: DatabaseManager) {
     this.io = io;

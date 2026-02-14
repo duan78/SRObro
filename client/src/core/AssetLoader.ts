@@ -107,6 +107,7 @@ export class AssetLoader {
     private manifest: AssetManifest | null = null;
     private mappings: any | null = null;
     private textureMaterialManager: TextureMaterialManager;
+    private baseUrl: string;
 
     // Caches
     private containerCache: Map<string, AssetContainer> = new Map();
@@ -118,7 +119,10 @@ export class AssetLoader {
         this.textureMaterialManager = new TextureMaterialManager(scene);
 
         const config = AssetConfigManager.getConfig();
+        // Set baseUrl based on asset source
+        this.baseUrl = config.source === 'blender' ? './assets/blender/' : './assets/standard/';
         console.log(`📦 AssetLoader: Initialized with ${config.source} asset source`);
+        console.log(`📦 AssetLoader: baseUrl = ${this.baseUrl}`);
     }
 
     /**
