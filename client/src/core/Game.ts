@@ -97,7 +97,7 @@ export class Game {
     this.setupShadows();
 
     // Initialize asset loader
-    this.assetLoader = new AssetLoader(this.scene, './assets');
+    this.assetLoader = new AssetLoader(this.scene);
     await this.assetLoader.initialize();
     console.log('AssetLoader initialized');
 

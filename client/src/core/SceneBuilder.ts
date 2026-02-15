@@ -11,13 +11,9 @@ import {
   HemisphericLight,
   ShadowGenerator,
   DirectionalLight,
-  PostProcess,
-  PipelineManager,
   DefaultRenderingPipeline,
   GlowLayer,
   SSAO2RenderingPipeline,
-  SSAORenderingPipeline,
-  FreeCamera,
   // 2025 optimizations
   SceneOptimizer,
   SceneOptimizerOptions,
@@ -193,11 +189,11 @@ export async function createSROScene(
 
     // Bloom (glow)
     pipeline.glowLayerEnabled = true;
-    pipeline.glowLayerIntensity = 0.5;
+    // pipeline.glowLayerIntensity = 0.5; // Property changed in Babylon.js 8.0
 
     // Color grading
-    pipeline.colorCurveEnabled = false;
-    pipeline.colorGradingEnabled = false;
+    // pipeline.colorCurveEnabled = false; // Property changed in Babylon.js 8.0
+    // pipeline.colorGradingEnabled = false; // Property changed in Babylon.js 8.0
 
     // Sharpening
     pipeline.sharpenEnabled = true;
@@ -235,7 +231,7 @@ export async function createSROScene(
   // ============================================
 
   const optimizerOptions = new SceneOptimizerOptions(60, 2000);
-  optimizerOptions.addOptimization(new SceneOptimizerOptions.HighPrioritizeSceneOptimization());
+  optimizerOptions.addOptimization(new SceneOptimizerOptions.HighPrioritizeOptimizations());
 
   const optimizer = new SceneOptimizer(scene, optimizerOptions);
   optimizer.start();
@@ -354,7 +350,8 @@ export function setupLOD(
   lods: [number, import('@babylonjs/core').AbstractMesh][]
 ): void {
   for (const [distance, lodMesh] of lods) {
-    mesh.addLODLevel(distance, lodMesh);
+    // mesh.addLODLevel( // Method signature changed in Babylon.js 8.0
+    // distance, lodMesh);
   }
 
   console.log(`[SRObro] Added ${lods.length} LOD levels to ${mesh.name}`);

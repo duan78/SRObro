@@ -63,9 +63,9 @@ export class AssetViewer {
     // Create ground plane
     const ground = Mesh.CreateGround('ground', 20, 20, 32, this.scene);
     ground.position.y = -1;
-    const groundMaterial = new BABYLON.StandardMaterial('groundMat', this.scene);
+    const groundMaterial = new StandardMaterial('groundMat', this.scene);
     groundMaterial.diffuseColor = new Color3(0.2, 0.2, 0.25);
-    groundMaterial.specularColor = new Color3(0.1, 0.1, 0.1);
+    groundMaterial.specularColor = new Color4(0.1, 0.1, 0.1, 1.0);
     ground.material = groundMaterial;
   }
 
@@ -85,7 +85,7 @@ export class AssetViewer {
     dirLight.diffuse = new Color3(1, 0.95, 0.9);
 
     // Enable shadows
-    const shadowGenerator = new BABYLON.ShadowGenerator(1024, dirLight);
+    const shadowGenerator = new ShadowGenerator(1024, dirLight);
     shadowGenerator.useBlurExponentialShadowMap = true;
     shadowGenerator.blurKernel = 32;
   }

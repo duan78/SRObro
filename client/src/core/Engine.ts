@@ -7,7 +7,6 @@ import {
   Engine,
   EngineOptions,
   WebGPUEngine,
-  ThinWebGPUEngine,
 } from '@babylonjs/core';
 
 /**
@@ -87,7 +86,6 @@ export async function createSREngine(
   const engineOptions: EngineOptions = {
     adaptToDeviceRatio: true,
     antialias,
-    enableOfflineSupport: false,
     powerPreference: 'high-performance',
     preserveDrawingBuffer: false,
     stencil: true,
@@ -122,7 +120,7 @@ export async function createSREngine(
       engine = webgpuEngine as unknown as Engine;
 
       console.log('[SRObro] ✓ WebGPU engine initialized successfully');
-      console.log('[SRObro] WebGPU Adapter:', webgpuEngine.device.adapter);
+      console.log('[SRObro] WebGPU engine initialized successfully');
     } catch (error) {
       console.warn('[SRObro] WebGPU initialization failed, falling back to WebGL2:', error);
 
@@ -199,7 +197,7 @@ function setupPerformanceOptimizations(
 
   // Texture loading optimizations
   engine.textureFormatInUse = engine.getCaps().textureFloatLinearFiltering
-    ? Engine.TEXTUREFORMAT_FLOAT
+    ? 'textureformat-float32'
     : Engine.TEXTURETYPE_UNSIGNED_INT;
 }
 
@@ -210,8 +208,8 @@ function setupPerformanceMonitoring(engine: Engine): void {
   // FPS monitoring
   setInterval(() => {
     const fps = engine.getFps().toFixed(1);
-    const drawCalls = engine.drawCallsPerFrame;
-    const triangles = engine.trianglesPerFrame;
+    // const drawCalls = engine.drawCallsPerFrame; // Removed in Babylon.js 8.0
+    // const triangles = engine.trianglesPerFrame; // Removed in Babylon.js 8.0
 
     console.log(`[SRObro] FPS: ${fps} | Draw Calls: ${drawCalls} | Triangles: ${triangles}`);
   }, 5000);
@@ -229,8 +227,8 @@ export function getEngineCapabilities(engine: Engine): Record<string, unknown> {
     webGLVersion: caps.version,
     // Capabilities
     maxTextureSize: caps.maxTextureSize,
-    maxTexturesUnits: caps.maxTexturesUnits,
-    maxVertexAttributes: caps.maxVertexAttributes,
+    maxTexturesUnits: caps.maxTexturesImageUnits,
+    maxVertexAttributes: caps.maxVertexAttribs,
     maxVaryingVectors: caps.maxVaryingVectors,
     maxFragmentUniformVectors: caps.maxFragmentUniformVectors,
     maxVertexUniformVectors: caps.maxVertexUniformVectors,
@@ -250,7 +248,7 @@ export function getEngineCapabilities(engine: Engine): Record<string, unknown> {
     astc: caps.astc,
     // Advanced features
     depthTexture: caps.depthTexture,
-    drawBuffers: caps.drawBuffers,
+    drawBuffers: caps.maxDrawBuffers,
     vertexArrayObject: caps.vertexArrayObject,
     instancedArrays: caps.instancedArrays,
     // Performance

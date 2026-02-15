@@ -76,7 +76,7 @@ export class GameLoop extends EventEmitter {
   private currentFPS: number = 60;
 
   // Register/unregister tokens for Babylon.js
-  private onBeforeRenderObservableToken: number | null = null;
+  private onBeforeRenderObservableToken: any = null;
 
   constructor(scene: Scene, config: GameLoopConfig = {}) {
     super();
