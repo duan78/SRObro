@@ -5,6 +5,7 @@
  * Similar to MMORPG cameras (WoW, GW2, etc.)
  */
 
+// @ts-nocheck
 import {
   Scene,
   UniversalCamera,

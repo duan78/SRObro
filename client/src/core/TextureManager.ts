@@ -48,7 +48,7 @@ export class TextureManager {
             const texture = new Texture(fullPath, this.scene);
 
             // Optimiser la texture
-            texture.updateSamplingMode(BABYLON.Texture.TRILINEAR_SAMPLINGMODE);
+            texture.updateSamplingMode(Texture.TRILINEAR_SAMPLINGMODE);
             texture.anisotropicFilteringLevel = 4;
 
             // Ajouter au cache

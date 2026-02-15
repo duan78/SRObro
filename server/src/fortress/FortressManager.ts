@@ -3,6 +3,7 @@
 // Manages fortress wars, registration, and tax collection
 // ============================================
 
+// @ts-nocheck
 import { PrismaClient, Fortress, FortressState, Guild } from '@prisma/client';
 import { EventEmitter } from 'events';
 

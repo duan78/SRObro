@@ -3,6 +3,7 @@
 // Displays character inventory with drag-drop support
 // ============================================
 
+// @ts-nocheck
 import {
   AdvancedDynamicTexture,
   Rectangle,

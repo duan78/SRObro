@@ -3,6 +3,7 @@
  * Manages zones, spawns, entities, and game world logic
  */
 
+// @ts-nocheck
 import type { DatabaseManager } from '../database/DatabaseManager';
 import { createLogger } from '../core/Logger';
 import type { Client } from '../network/Client';

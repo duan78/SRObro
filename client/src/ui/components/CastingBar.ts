@@ -60,7 +60,7 @@ export class CastingBar {
     this.timeText.fontSize = 10;
     this.timeText.textHorizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
     this.timeText.textVerticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
-    this.timeText.right = '5px';
+    this.timeText.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
     this.timeText.top = '3px';
     this.container.addControl(this.timeText);
 

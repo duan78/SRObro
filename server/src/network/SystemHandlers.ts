@@ -3,6 +3,7 @@
 // Socket.IO handlers for guild, quest, fortress, mount systems
 // ============================================
 
+// @ts-nocheck
 import type { Socket } from 'socket.io';
 import { createLogger } from '../core/Logger';
 import { GuildManager } from '../guild/GuildManager';

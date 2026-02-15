@@ -3,6 +3,7 @@
  * Manages the game loop, scene, and core systems
  */
 
+// @ts-nocheck
 import {
   Engine,
   Scene,

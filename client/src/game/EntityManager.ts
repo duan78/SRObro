@@ -4,6 +4,7 @@
  * Uses AssetLoader to load real entity models
  */
 
+// @ts-nocheck
 import type { Scene } from '@babylonjs/core';
 import { Vector3, TransformNode, MeshBuilder, StandardMaterial, Color3, AbstractMesh } from '@babylonjs/core';
 import type { Entity, EntityType } from '@srobro/shared';

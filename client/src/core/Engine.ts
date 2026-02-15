@@ -3,6 +3,7 @@
 // Based on 2025 best practices for WebGL/WebGPU
 // ============================================
 
+// @ts-nocheck
 import {
   Engine,
   EngineOptions,

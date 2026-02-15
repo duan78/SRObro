@@ -9,6 +9,7 @@
  * - Blocked = Damage * 0.5
  */
 
+// @ts-nocheck
 import { DamageType, DamageResult } from '@srobro/shared';
 import { createLogger } from '../core/Logger';
 

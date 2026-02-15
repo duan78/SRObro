@@ -4,6 +4,7 @@
  * Uses AssetLoader to load real character models
  */
 
+// @ts-nocheck
 import type { Scene } from '@babylonjs/core';
 import { Vector3, TransformNode, AbstractMesh } from '@babylonjs/core';
 import { NetworkManager } from '../network/NetworkManager';

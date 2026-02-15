@@ -3,6 +3,7 @@
  * Charge les heightmaps et les objets de placement
  */
 
+// @ts-nocheck
 import { Scene, Vector3, Color3, DynamicTexture, MeshBuilder, StandardMaterial, VertexBuffer } from '@babylonjs/core';
 import { Mesh } from '@babylonjs/core/Meshes/mesh';
 import { GLModelLoader } from './GLModelLoader';

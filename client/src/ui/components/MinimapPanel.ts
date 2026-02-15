@@ -53,7 +53,7 @@ export class MinimapPanel {
     this.container.background = 'rgba(0, 0, 0, 0.85)';
     this.container.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
     this.container.verticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
-    this.container.right = '10px';
+    this.container.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
     this.container.top = '10px';
     this.container.paddingLeft = '10px';
     this.container.paddingRight = '10px';
@@ -250,7 +250,7 @@ export class MinimapPanel {
       marker.dispose();
 
       // Also remove name label if exists
-      const nameLabel = this.mapCanvas?.getControlByName(`marker_name_${id}`);
+      const nameLabel = this.mapCanvas?.children.find(c => c.name === `marker_name_${id}`);
       if (nameLabel) {
         nameLabel.dispose();
       }

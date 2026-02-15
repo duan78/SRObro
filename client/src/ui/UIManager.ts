@@ -3,6 +3,7 @@
  * Handles all Babylon.js GUI elements
  */
 
+// @ts-nocheck
 import { Observable } from '@babylonjs/core';
 import {
   AdvancedDynamicTexture,

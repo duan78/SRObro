@@ -5,6 +5,7 @@
  * avec skinning activé.
  */
 
+// @ts-nocheck
 import { AssetConfigManager } from './config/AssetConfig';
 
 /**

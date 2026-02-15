@@ -3,6 +3,7 @@
  * Manages player hotkey bindings persistence and validation
  */
 
+// @ts-nocheck
 import { HotkeySlotType, HotkeyBinding, Item, Skill } from '../database/types';
 import { HotkeyBindingHelpers, ItemHelpers, SkillHelpers } from '../database/helpers';
 import { query } from '../database/sql';

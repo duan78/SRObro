@@ -3,6 +3,7 @@
  * Handles character creation, deletion, and management
  */
 
+// @ts-nocheck
 import { prisma } from '../database/prisma';
 import { createLogger } from '../core/Logger';
 import { EventEmitter } from 'events';

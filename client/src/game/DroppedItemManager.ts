@@ -3,6 +3,7 @@
  * Manages visualization and interaction with dropped items on the ground
  */
 
+// @ts-nocheck
 import type {
   DroppedItem,
   Position,

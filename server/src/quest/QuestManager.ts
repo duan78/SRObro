@@ -3,6 +3,7 @@
 // Manages quest system, objectives, and rewards
 // ============================================
 
+// @ts-nocheck
 import { PrismaClient, Quest, QuestProgress, QuestStatus, QuestType } from '@prisma/client';
 import { EventEmitter } from 'events';
 

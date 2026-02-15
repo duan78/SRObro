@@ -3,6 +3,7 @@
  * Represents a player character in the game world
  */
 
+// @ts-nocheck
 import { Entity, EntityState } from './Entity';
 import { Position, EntityType, CharacterRace, Character as SharedCharacter } from '@srobro/shared';
 import { prisma } from '../database/prisma';

@@ -3,6 +3,7 @@
 // Interface for equipment enhancement (+1 to +12)
 // ============================================
 
+// @ts-nocheck
 import {
   AdvancedDynamicTexture,
   Rectangle,

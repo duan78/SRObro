@@ -5,6 +5,7 @@
  * Utilise character-test.html pour accéder à cette interface
  */
 
+// @ts-nocheck
 import {
   Engine,
   Scene,

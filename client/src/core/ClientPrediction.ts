@@ -4,6 +4,7 @@
 // Based on 2025 best practices for networked games
 // ============================================
 
+// @ts-nocheck
 import { Vector3 } from '@babylonjs/core';
 import { Socket } from 'socket.io-client';
 

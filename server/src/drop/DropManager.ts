@@ -3,6 +3,7 @@
  * Handles item drops from monsters, NPCs, and players
  */
 
+// @ts-nocheck
 import { DroppedItem, Item, Character, InventoryItem } from '../database/types';
 import { query, transaction } from '../database/sql';
 

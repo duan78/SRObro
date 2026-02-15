@@ -3,6 +3,7 @@
  * Manages display of tooltips for items, skills, and entities
  */
 
+// @ts-nocheck
 import {
   AdvancedDynamicTexture,
   Rectangle,

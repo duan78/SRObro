@@ -26,7 +26,7 @@ export interface SROBroTestInterface {
   info: () => void;
 
   // Chargement de personnage
-  spawnCharacter: (config?: any) => Promise<AssembledCharacter | null>;
+  spawnCharacter: (config?: any) => Promise<AssembledCharacter | undefined>;
   spawnTestCube: () => void;
 
   // Tests d'équipement
@@ -66,7 +66,7 @@ export function createTestInterface(
   const skillEffectManager = new SkillEffectManager(scene);
 
   // Personnage courant
-  let currentCharacter: AssembledCharacter | null = null;
+  let currentCharacter: AssembledCharacter | undefined = undefined;
 
   return {
     _scene: scene,
@@ -231,7 +231,7 @@ export function createTestInterface(
     clearAll() {
       if (currentCharacter) {
         currentCharacter.dispose();
-        currentCharacter = null;
+        currentCharacter = undefined;
       }
 
       characterFactory.destroyAll();

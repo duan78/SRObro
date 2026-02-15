@@ -2,4 +2,5 @@
  * Test module exports
  */
 
-export { createTestInterface, initializeTestInterface, SROBroTestInterface } from './TestInterface';
+export { createTestInterface, initializeTestInterface } from './TestInterface';
+export type { SROBroTestInterface } from './TestInterface';

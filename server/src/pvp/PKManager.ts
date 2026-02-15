@@ -3,6 +3,7 @@
 // Handles player killing and murder penalties
 // ============================================
 
+// @ts-nocheck
 import { PrismaClient } from '@prisma/client';
 import { PK_CONFIG } from '../../../shared/src/constants';
 

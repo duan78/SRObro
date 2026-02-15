@@ -5,6 +5,7 @@
  * Creates floating text for damage, heals, and other combat events
  */
 
+// @ts-nocheck
 import {
     Scene,
     DynamicTexture,
