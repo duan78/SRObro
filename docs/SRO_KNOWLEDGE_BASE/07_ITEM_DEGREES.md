@@ -31,6 +31,8 @@ Le système de **Degrees** classifie les équipements de Silkroad Online selon l
 - ✅ **Enhancement :** alchimiable (+1 à +12) — voir [Alchimie](05_ALCHEMY_SYSTEM.md)
 - 🇰🇷 **KSRO (service coréen, jamais fermé) :** degrés jusqu'au **17차 (17D)** — et dès le **12차 le niveau d'équipement est FIXÉ à 101** avec pénalité de maîtrise → voir la section [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026--les-degrés-11차--17차)
 
+> ✅ **Officiel vs custom — règle tranchée (recherche PS 2026-10)** : **D12, D13, D14 et D15 sont tous OFFICIELS** — D12/D13 = cap 120 (Temple of Jupiter) ; **D14 = cap 125** (Legend IX « Arabian Nights », iSRO **01/2015**) ; **D15 = cap 130** (2ᵉ histoire arabe, **05/2016**) ; cap 140 = 2018 (Shambhala, **sans nouveau degré**). Les D14/D15 affichés par les serveurs privés sont donc des **réutilisations de contenu officiel**, pas des inventions. **Seuls D16+ sont custom** dans l'écosystème iSRO/serveurs privés (le contenu officiel iSRO s'arrête au D15) — **règle à appliquer partout dans la base**. 🇰🇷 Nuance : les 16차/17차 existent officiellement sur le **service KSRO moderne** (Legend 23, 05/2023 — section dédiée ci-dessous), sans être sortis sur iSRO. ⚠️ Les **stats chiffrées des items D13-D15 ne sont pas publiées en texte** (showcases visuels KSRO uniquement) — extraction client requise. Sources : [Facebook officiel Silkroad](https://www.facebook.com/officialsilkroad) · [elitepvpers — release dates des Legends](https://www.elitepvpers.com/forum/silkroad-online/4785835-looking-release-date-every-legends.html) · [ML_RESEARCH/RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) · voir [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md)
+
 ### Pourquoi le système de degrés ?
 - **Progression naturelle :** changer régulièrement d'équipement, look unique par degré.
 - **Structure du marché :** élixirs, powders et pierres sont échangés par degré.
@@ -54,10 +56,15 @@ Le système de **Degrees** classifie les équipements de Silkroad Online selon l
 | Legend V: Heroes of Alexandria (2011) | 110 | 11D (+ Set items, SoN, Egypt A/B) |
 | Legend VI: Forgotten World | 110 | SoN D11, Egypt via FGW/Job Temple |
 | Update Lv.120 + Temple of Jupiter | 120 | 12D et 13D |
+| Legend IX : Arabian Nights (01/2015) | 125 | **14D** (✅ recherche PS 2026-10) |
+| Arabian Nights, 2ᵉ histoire (05/2016) | 130 | **15D** (✅ recherche PS 2026-10) |
+| Update Shambhala (27/03/2018) | 140 | — (aucun nouveau degré ; Ice/Fire Temple 09-11/2018) |
 
 > ⚠️ Les items **Egypt restent du 11e degré** (Class A/B). Le 12D/13D arrive avec le cap 120. Les niveaux exacts des pièces 12D/13D (autour de 111–120) ne sont pas publiés de façon fiable — les listes communautaires les affichent souvent « Lv 101 » par défaut.
 > ✅ **Partiellement résolu (recherche KO 2026-10)** : le **13D existait en Corée dès le 07/03/2012** (sets 13차 offerts lors de l'event « comeback » du serveur unifié 초원길) — voir [Nomenclature Multilingue](#-nomenclature-multilingue-des-degrés). Les niveaux exacts des pièces restent non publiés.
 > 🇰🇷 **Résolu côté KSRO (recherche KO2 2026-10)** : le « Lv 101 » des items 12차/13차 n'est **pas un défaut d'affichage communautaire** — le site officiel KR énonce « **12차 이상의 무기 아이템들은 착용 레벨이 101Lv로 고정** » (niveau fixe à 101 dès le 12차, remplacé par une pénalité de maîtrise) et ses tables listent bien **tous les items 11/12/13차 à Lv 101**. Le « Lv 111/114/118 » des tiers 12D du dump client iSRO/vSRO (voir [ITEMS_DATABASE.md](ITEMS_DATABASE.md)) et le « Lv 101 » officiel KSRO correspondent donc à **deux implémentations réellement différentes** du haut-niveau. Détail dans la section [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026--les-degrés-11차--17차).
+
+> ✅ **Réconciliation des dates D14 KR vs iSRO (recherche PS 2026-10)** : le 14차 est attesté côté **KSRO dès 07-08/2014** (event « 14차 아이템 업데이트 », notice du 14/08/2014 — timeline KSRO ci-dessous) et côté **iSRO en janvier 2015** (Legend IX « Arabian Nights », cap 125 — le vétéran notHype : « 14d was released on the first Arabian Story (125 increase) »). Les deux chronologies sont **cohérentes** (le service coréen précède l'international d'environ 5 mois) — pas de conflit, les dates KR déjà documentées et la date iSRO 01/2015 se complètent. Le D15 suit la même logique (2ᵉ histoire arabe, 05/2016, cap 130). Sources : [ML_RESEARCH/RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md) · [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) (Facebook officiel + presse d'époque)
 
 ---
 
@@ -420,7 +427,7 @@ Toutes **Lv 101** (règle ci-dessus). Format armes : attaque physique ~ / magiqu
 **R:** Non — ~6 niveaux de pièces par degré, avec des trous entre degrés (38–41, 48–51, 58–63, 70–75, 82–89, 96–100). C'est pour ça qu'un SOX du degré inférieur reste pertinent dans les trous.
 
 ### Q: Tous les degrés existent-ils sur tous les serveurs ?
-**R:** Non : cap 80 → jusqu'à 8D ; cap 110 → jusqu'à 11D (+Egypt) ; cap 120 → 12D/13D (Temple of Jupiter). 🇰🇷 Sur le service coréen (toujours actif), les degrés vont jusqu'au **17차** (Legend 23, 05/2023) — voir la section [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026--les-degrés-11차--17차).
+**R:** Non : cap 80 → jusqu'à 8D ; cap 110 → jusqu'à 11D (+Egypt) ; cap 120 → 12D/13D (Temple of Jupiter). 🇰🇷 Sur le service coréen (toujours actif), les degrés vont jusqu'au **17차** (Legend 23, 05/2023) — voir la section [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026--les-degrés-11차--17차). ✅ **(recherche PS 2026-10)** : cap 125 → **14D officiel** ; cap 130 → **15D officiel** ; **tout degré > D15 affiché par un serveur privé (D16/D17) est custom** — seuls le KSRO moderne (Legend 23, 2023) les a rendus officiels.
 
 ### Q: 🇰🇷 Pourquoi les items 12차+ KSRO sont-ils tous « Lv 101 » ?
 **R:** Par règle officielle : dès le 12차, le niveau d'équipement est **fixé à 101** (« 착용 레벨이 101Lv로 고정 ») et la puissance est régulée par la **pénalité de maîtrise d'item (아이템 숙련 패널티)** — plus le 차수 est élevé face à un personnage de niveau modeste, plus la pénalité est forte. Les armes 12차+ portent en outre des **skills d'item**. Le degré ne « vaut » donc plus une tranche de niveaux.
@@ -481,6 +488,11 @@ Toutes **Lv 101** (règle ci-dessus). Format armes : attaque physique ~ / magiqu
 - [SroLobby — Legend 23 Update : 16D/17D, Ultimate items (EN, reprenant l'annonce KR)](https://www.srolobby.com/konular/silkroad-online-legend-23-update.3038) · [elitepvpers — annonce kSRO du 08/05/2023](https://www.elitepvpers.com/forum/silkroad-online/5137882-…-legend-23-a.html)
 - Rapports : `ML_RESEARCH/RESEARCH_KO2_ITEMS.md` (§2-§7) · `ML_RESEARCH/RESEARCH_KO2_CHRONO.md` (§3, §5.8)
 
+### ✅ Officiel vs custom + serveurs privés (recherche PS/AR 2026-10)
+- [Facebook officiel Silkroad — annonces de caps (120/Jupiter/13th degree, 125, 130, 140)](https://www.facebook.com/officialsilkroad)
+- [Elitepvpers — Legend IX : Arabian Nights (D14, cap 125, 01/2015)](https://www.elitepvpers.com/forum/silkroad-online/3565598-silkroad-online-legend-ix-arabian-nights-update.html) · [140 CAP Update @ Silkroad Global](https://www.elitepvpers.com/forum/silkroad-online/4454105-140-cap-update-silkroad-global.html) · [Looking for the release date of every Legend](https://www.elitepvpers.com/forum/silkroad-online/4785835-looking-release-date-every-legends.html)
+- Rapports : [ML_RESEARCH/RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) (chronologie officielle D12→D15, règle « D16+ = custom ») · [RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md) (D16 = 100 % custom dans la scène PS ; DB partagées D13/D14/D15) · voir [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md)
+
 ---
 
 ## 📚 Voir aussi
@@ -501,4 +513,4 @@ Toutes **Lv 101** (règle ci-dessus). Format armes : attaque physique ~ / magiqu
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: silkroadonline.fandom.com (Armor), guildalgarb.wordpress.com (sets CH), silkroadonline.wiki (DB items v1_657), annonces officielles Lv.120, elitepvpers, IGN Guidebook, Inven/TGDaily/Ruliweb/GameMeca (KO), 新浪/九游/17173/DiGeam (ZH) — rapports ML_RESEARCH 2026-10 ; site officiel KSRO krsilkroadcp.joymax.com (degrés 11-17차, Lv 101 fixe, noms KR) — rapport ML_RESEARCH/RESEARCH_KO2 (2026-10)*
+*Sources: silkroadonline.fandom.com (Armor), guildalgarb.wordpress.com (sets CH), silkroadonline.wiki (DB items v1_657), annonces officielles Lv.120, elitepvpers, IGN Guidebook, Inven/TGDaily/Ruliweb/GameMeca (KO), 新浪/九游/17173/DiGeam (ZH) — rapports ML_RESEARCH 2026-10 ; site officiel KSRO krsilkroadcp.joymax.com (degrés 11-17차, Lv 101 fixe, noms KR) — rapport ML_RESEARCH/RESEARCH_KO2 (2026-10) ; recherche PS/AR 2026-10 (RESEARCH_PS_HIGHCAP / RESEARCH_AR_SERVERS : ✅ D12-D15 officiels — D14 cap 125 iSRO 01/2015 vs KR 08/2014 réconciliés, D15 cap 130 05/2016 ; règle « D16+ = custom » côté iSRO/PS ; stats D13-15 non publiées en texte)*

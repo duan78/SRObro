@@ -39,6 +39,7 @@
 | **17 mars 2009** | **Legend IV : Tomb of the Qin-Shi Emperor** — cap 100 |
 | **26 août 2009** | **Legend IV Plus : King of the Rocs** (Hotan Fortress : déc. 2009) |
 | **9 sept. 2009** | **Legend 9 « Alexandrie » (kSRO uniquement)** — **cap 105** intermédiaire jamais sorti en iSRO (presse KR TGDaily) |
+| **02/02/2010** | **Service linguistique arabe officiel** (2e extension après le turc) — ⚠️ **portail web joymax.com en arabe, PAS un client PC localisé** (précision : recherche AR 2026-10) |
 | **2010 (printemps)** | **Legend V : Heroes of Alexandria** — cap 110 |
 | **2 juil. 2010** | **Wemade acquiert Joymax** : 25,46 % (1 751 604 actions) pour **≈ 69,36 milliards ₩ (~57 M$)** — ✅ corrige l'ancienne estimation « ~40-50 M$ » (MOU du 04/06/2010 à 25,8 %) |
 | **20 déc. 2010** | **Legend VI : Forgotten World** |
@@ -47,7 +48,8 @@
 | **Été 2011** | **Legend VIII : Mysterious Temple of Jupiter** — cap 120 |
 | **7 mars 2012** | Corée : fusion des serveurs **황하·로도스·베니스·장안·비잔틴** en un serveur unique **초원길** (« la route des plaines ») — seul serveur coréen depuis |
 | **27 juin 2012** | Corée : patch **« Rebirth (재 탄생) »**, surnommé « 리버스 (Reverse) » par la presse — c'est l'application coréenne de la « version R » (rebalance skills/masteries CH, courbes XP/SP revues, aide ≤70, Forgotten World retravaillé). ⚠️ En Corée, la « version R » n'a **jamais été un jeu séparé** (« R버전은 신규 서비스가 아닌 실크로드의 패치 ») |
-| **2008-2009** | Début de la scène des serveurs privés (fichiers vSRO 1.188 fuités) |
+| **2007-2010** | Première génération de serveurs privés (MHTC → ECSRO → SWSRO) sur **files de test cSRO fuitées** — ECSRO n'était **pas** un émulateur indépendant ; plainte Joymax c. ECSRO **2009** (~48 chefs, ~2,5 M$ réclamés), fermeture ~2010 ✅ (recherche AR/PS 2026-10) |
+| **2011** | **Fuite des fichiers serveur vSRO 1.188** (service officiel vietnamien) — le socle de ~90 % des serveurs privés ultérieurs |
 | **2012 → 4 sept. 2013** | Chine : service renommé 《丝路传说R》 (2012), puis fermeture de tous les serveurs par 世模 (04/09/2013, fin de contrat) |
 | **5 sept. 2013** | Chine : **relance** sous le nom 《新·丝路传说》 par 游艺春秋 (ICC Game) — effacement complet des comptes (清档), litige de marque ; **toujours en service en 2025** |
 | **12 déc. 2019** | Taïwan/HK/Macau : 《絲路紀元》 (Silkroad Online) en OBT chez DiGeam |
@@ -394,7 +396,7 @@ Aucun job n'est dominant: sans traders, pas de thieves ni de hunters; sans hunte
 | **Silkroad Online PC (Corée, kSRO)** | ✅ **En ligne — le service coréen n'a JAMAIS fermé** : site officiel krsilkroadcp.joymax.com actif (dernière notice **08/09/2026**, dernière maintenance **17/09/2026**), opérateur **Wemade Max** (ex-Joymax, renommé 25/03/2021), un seul serveur **초원길** (ouvert 07/03/2012), cap 140 (⚠️ conflit de cap : voir section KSRO), événements saisonniers 2026 (풍선불기 축제, 유령 사냥, 세 개의 달, 돌아온 알리바바) — ✅ Résolu (recherches KO + KO2 2026-10) |
 | **Silkroad Online PC (Chine, cSRO)** | ✅ En ligne — 《新丝路》 opéré par 游艺春秋 (ICC Game) depuis le **05/09/2013** (contrat d'exclusivité 4 ans signé le 14/06/2013, reconduit avec Wemade Max ; nouveau serveur 「烈刃焚天」 le 24/04/2024, fusions 21/11/2024) ; Taïwan/HK/Macau : 《絲路紀元》 (DiGeam) depuis le 12/12/2019 |
 | **Joymax** | La marque existe toujours (joymax.com/silkroad) ; Wemade a acquis **25,46 % des actions le 02/07/2010** pour ≈ 69,36 mds ₩ (~57 M$) — la société a ensuite été intégrée au groupe sous le nom **Wemade Max** |
-| **Silkroad Origin Mobile** | ✅ Actif — adaptation mobile officielle licenciée WeMade Max, publiée par GOSUVERSE |
+| **Silkroad Origin Mobile** | ✅ Actif — adaptation mobile officielle licenciée WeMade Max, publiée par GOSUVERSE ; existe aussi en **édition arabe officielle** « Silkroad Origin Mobile Arabia » (WeMade Max × GOSU, partenaire saoudien 14/07/2026 — voir « La communauté arabe » ci-dessus) |
 | **Silkroad Again (mobile)** | ✅ Actif — Chine 05/2025, Corée 04/2026 (IP Wemade Max) |
 | **Silkroad R** | ❌ Fermé — lancé globalement le **22/12/2011** (et non 2013), client ensuite supprimé et serveurs fusionnés dans le jeu classique |
 | **Serveurs privés** | ✅ Très actifs — Elitepvpers (2,9 M+ posts), vsro.org ; les époques caps 90/110/120 sont les plus populaires |
@@ -402,7 +404,7 @@ Aucun job n'est dominant: sans traders, pas de thieves ni de hunters; sans hunte
 ### Déclin et Héritage
 - **Botting :** dès 2006-2007, les bots ont massivement envahi iSRO (certifications anti-bot inefficaces)
 - **P2W :** monétisation de plus en plus agressive après le rachat par Wemade
-- **Communauté :** la vraie vitalité s'est déplacée vers les serveurs privés (fichiers vSRO 1.188 fuités vers 2009-2010, puis fichiers plus récents), qui recréent les époques 60/70/80/90/110
+- **Communauté :** la vraie vitalité s'est déplacée vers les serveurs privés (première génération ECSRO sur files de test cSRO ~2007-2010, puis fuite vSRO 1.188 en 2011, puis fichiers plus récents), qui recréent les époques 60/70/80/90/110
 - **20 ans après :** des vidéos « The MMO Nobody Can Quit » (2025-2026) documentent une communauté fidèle malgré tout
 
 ---
@@ -449,6 +451,45 @@ Raisons du déclin du CSRO d'origine (analyse TapTap) : grind répétitif, trans
 - **Aucun client français n'a jamais existé** : versions coréenne, japonaise, chinoise, internationale (anglais), russe uniquement (Wikipédia FR) — la communauté FR jouait en client EN et traduisait elle-même (JeuxOnline, GMS Temple).
 - **Presse : test JeuxVideo.com du 26/12/2008 (Legend III) — note 12/20** (lecteurs 14,1/20 ; Graphismes 14, Bande son 11). Points forts : PvP triangulaire « vraiment sympathique : on se prend facilement au jeu », latitude STR/INT, alchimie sans spots de ressources, académie « particulièrement bien pensée ». Points faibles : bots (« véritable fléau »), goldsellers, absence de pathfinding, progression « lente et fastidieuse », quêtes « vraiment peu intéressantes », alchimie « trop aléatoire ».
 - Communauté FR : guildes sur Xian (2006), Aege (La_Horde, 2009-2010), Helios (« team française », 2010), Alexander/Zeus/Hera (2011) ; hubs : JeuxOnline, GMS Temple, forum JeuxVideo.com — voir `ML_RESEARCH/RESEARCH_FR.md`.
+
+### 🇸🇦🇪🇬 La communauté arabe — deuxième pilier historique du monde privé (recherche AR 2026-10)
+
+> ✅ Documente l'écosystème arabophone et résout l'incertitude « localisation arabe officielle ? ». Rapports complets : [ML_RESEARCH/RESEARCH_AR_DEV.md](ML_RESEARCH/RESEARCH_AR_DEV.md) · [ML_RESEARCH/RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md). Lexique arabe : [MULTILINGUAL_GLOSSARY.md](MULTILINGUAL_GLOSSARY.md).
+
+**Le service arabe officiel (02/02/2010) : un portail web, PAS un client localisé**
+- Annoncé le **22/01/2010** ([IGN](https://www.ign.com/articles/2010/01/22/joymax-announces-the-launch-of-arabic-language-service-for-fantasy-mmorpg-silkroad-online)) et en ligne le **02/02/2010** via joymax.com/silkroad : 2e des 4 extensions linguistiques de 2010 (turc → **arabe** → espagnol en avril → allemand en mai, [GamesIndustry.biz](https://www.gamesindustry.biz/silkroad-online-historical-online-rpg-launches-turkish-language-service-arabic-german-and-spanish-versions-to-follow)) ; événements en jeu 19/01→02/02/2010 (lots « collier/boucles 10th Seal of Moon » ou 10 000 skill points), puis deux événements mondiaux début février ([Engadget/Massively, 03/02/2010](https://www.engadget.com/2010-02-03-silkroad-online-celebrates-their-new-arabic-language-service-wit.html)).
+- La presse arabe confirme l'usage : « ce site est en arabe, l'inscription est facile » ([ArabMMO, 19/05/2010](https://www.arabmmo.com/content/2010-05-18/20100518224914238.html)) — **le site/portail donc, pas le jeu**.
+- ⚠️ **Aucune preuve d'un client PC arabe** : aucune textdata/itemdata arabe jamais retrouvée, et les fils silkroad4arab expliquant « comment écrire l'arabe dans le chat du client » attestent indirectement qu'il n'affichait pas nativement l'arabe. Formulation de rigueur : **service web arabe officiel = oui (2010) ; client PC arabe = non documenté / improbable ; localisation arabe officielle complète = mobile seulement (2024-2026)**.
+
+**silkroad4arab.com — le forum-monument de l'arabophonie SRO**
+
+| Date | Membres | Messages | Connectés |
+|------|--------:|---------:|-----------|
+| 30/01/2008 | 9 251 | — | 58 en ligne |
+| 13/06/2012 | 241 806 | 2 975 391 | record 3 271 |
+| **29/12/2015 (pic)** | **313 016** | **3 636 027** | **record 17 621 le 16/07/2014** |
+| 2026 (snippet indexé) | 199 025 | 3 645 747 | — |
+
+- Sources : captures [Wayback 2008](https://web.archive.org/web/20080101/http://www.silkroad4arab.com/vb/), [2012](https://web.archive.org/web/20120601/http://www.silkroad4arab.com/vb/), [2015](https://web.archive.org/web/20160101/http://www.silkroad4arab.com/vb/) + index 2026. Fondation ~2006-2007 (première capture Wayback : 24/05/2007) ; devise : « **الموقع العربي الاول للعبة Silkroad Online** » (« le 1er site arabe dédié à Silkroad Online »).
+- En 2015, le forum hébergeait **~120 sous-forums de serveurs privés** (un par serveur) — le plus grand annuaire parallèle de la scène privée — plus des sections dev (PK2 Edit, Data Base, ST-Filter) et des B/S/T par serveur iSRO. En 2026 il est quasi dormant (accès 403) : l'activité arabe a migré vers Facebook, TikTok et Discord, le développement restant sur le forum [ProBasha](https://probasha.com).
+
+**L'Égypte, centre de gravité**
+- Le documentaire égyptien **Archer Tales** ([YouTube, 06/02/2026](https://www.youtube.com/watch?v=OtZDIhMmxBE), 47 807 vues) raconte l'ère des **cybercafés (السايبرات)** de 2006-2007 (« on jouait au cyber jusqu'au matin »), les files d'attente et l'arrivée du DSL en 2007 ; des joueurs arabes étaient sur iSRO dès **avril 2006** (screenshot daté 14/04/2006 face à Hyeongcheon).
+- **Serveurs officiels iSRO de rassemblement arabe** (jamais localisés) : **Alexander, Gaia, Sparta** (« tout le quartier d'Al-Omraniya était sur Sparta », documentaire) ; Eldorado/Red Sea/Oasis cités dans les captures 2008 du forum.
+- Fierté égyptienne : l'ajout d'**Alexandrie** (« ton pays est dans ton jeu préféré ») et les uniques égyptiens (**Sphinx, Anubis**) qui droppent l'**Egy Coin** contre les armes **D11 « Egy A/B »**.
+- Poids actuel : « these servers are usually run by 'Egyptian' people » ([r/silkroadonline](https://www.reddit.com/r/silkroadonline/comments/1kdopp1/about_private_servers)) — l'Égypte est le centre de gravité du monde privé ; le Maghreb n'a pas de portail propre documenté ; le Golfe apparaît via un serveur « United Arab Emirates Cap 140 » et le partenariat saoudien de 2026.
+
+**Silkroad Origin Mobile Arabia — la VRAIE localisation arabe officielle (2024-2026)**
+- Version mobile **officiellement licenciée WeMade Max (ex-Joymax)**, développée par **GOSU ONLINE CORPORATION** (Hanoï, Vietnam) « spécifiquement pour la communauté arabe » ([Google Play com.silkroad.arab](https://play.google.com/store/apps/details?id=com.silkroad.arab&hl=ar), maj 02/08/2026 ; [App Store Égypte](https://apps.apple.com/eg/app/silkroad-origin-mobile-arabia/id6783244528)) ; localisation complète (interface, événements, habillage culturel), **PEGI 16**.
+- **14/07/2026** : partenariat GOSU × **الامتياز العصرية (Al-Imtiaz Al-Asriya)** pour lancer le jeu en **Arabie saoudite et MENA**, événement de lancement à **Djeddah** ([A3lam KSA](http://a3lam-ksa.net/90672-2)).
+- Écosystème officiel arabe : site + **wiki officiel en arabe** [sromarabia.com/wiki](https://sromarabia.com/wiki) (le seul wiki arabe officiel existant), page Facebook et Discord dédiés.
+- La boucle historique est bouclée : 18 ans après les cybercafés égyptiens de 2006, le Silkroad officiel existe **en arabe — mais uniquement sur mobile**.
+
+**Correction historique : ECSRO n'était PAS un émulateur indépendant**
+- Les « files ECSRO » qui circulent sont des **fichiers de test cSRO fuitées**, utilisées par ECSRO/ZSZC — pas un serveur écrit from scratch ([RaGEZONE — ECSRO Server Files](https://forum.ragezone.com/threads/ecsro-server-files.830540)) ; déclencheur rapporté : un certain « KingLi » aurait obtenu les files et menacé de les publier ([elitepvpers — Lawsuit case ECSRO](https://www.elitepvpers.com/forum/sro-private-server/4402579-rare-lawsuit-case-ecsro.html)).
+- **2009 : plainte Joymax contre ECSRO** — ~**48 chefs** d'accusation, ~**2,5 M$** de dommages réclamés ([résumé elitepvpers](https://www.elitepvpers.com/forum/sro-private-server/1292481-info-summary-lawsuit-joymax-against-poor-ecsro-aka-zszc-slave-3.html) ; chiffres de fiabilité 3, documents d'époque rediffusés) ; fermeture ~2009-2010 sans retour.
+- La « première génération » (MHTC → ECSRO → SWSRO) reposait donc sur des files hackées cSRO ; c'est la **fuite vSRO 1.188 (Vietnam, 2011)** qui fournit ensuite le socle de ~90 % des serveurs privés — inventaire complet des files et chronologie : [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md) et [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md).
+- 🗣️ **Folklore à ne pas confondre avec l'historiographie** : le documentaire Archer Tales raconte que des programmeurs licenciés par Joymax auraient fuité les fichiers « par vengeance » — mémoire collective égyptienne uniquement (l'historiographie EN date la fuite vSRO de ~2011, le tuto ProBasha de 2009).
 
 ---
 
@@ -551,6 +592,12 @@ Raisons du déclin du CSRO d'origine (analyse TapTap) : grind répétitif, trans
 - [Adrenaline — Silkroad chega ao Brasil (09/05/2007, archivé)](https://web.archive.org/web/2023/https://forum.adrenaline.com.br/threads/silkroad-online-chega-ao-brasil.145831) · [UOL Start — GNGWC 2009 étape São Paulo (07/10/2009)](https://www.uol.com.br/start/ultimas-noticias/2009/10/07/campeonato-de-silkroad-leva-vencedores-para-coreia.htm) · [Suporte Level Up (2024)](https://suporte.leveluplatam.com/hc/pt-br/articles/25362726748055-Como-creditar-o-Silkroad-atrav%C3%A9s-do-Hype)
 - [JeuxVideo.com — test Silkroad Online 12/20 (26/12/2008)](https://www.jeuxvideo.com/articles/0001/00010182-silkroad-online-test.htm) · [JeuxOnline — fil d'actualité Silkroad 2006-2013](https://forums.jeuxonline.info/sujet/1104741/l-actualite-sur-silkroad-online-et-la-presentation) · [Wikipédia FR — Silkroad Online](https://fr.wikipedia.org/wiki/Silkroad_Online)
 
+**Arabe (RESEARCH_AR_DEV.md / RESEARCH_AR_SERVERS.md — recherche AR 2026-10) :**
+- [IGN — Service linguistique arabe Joymax (22/01/2010)](https://www.ign.com/articles/2010/01/22/joymax-announces-the-launch-of-arabic-language-service-for-fantasy-mmorpg-silkroad-online) · [Engadget/Massively — événements en jeu (03/02/2010)](https://www.engadget.com/2010-02-03-silkroad-online-celebrates-their-new-arabic-language-service-wit.html) · [ArabMMO — inscription sur le portail arabe (19/05/2010)](https://www.arabmmo.com/content/2010-05-18/20100518224914238.html)
+- [silkroad4arab.com](https://www.silkroad4arab.com/vb) — forum-monument arabe (stats via Wayback 2008/2012/2015) · [Archer Tales — documentaire égyptien (06/02/2026)](https://www.youtube.com/watch?v=OtZDIhMmxBE) · [ProBasha — forum dev arabe](https://probasha.com)
+- [Google Play — Silkroad Origin Mobile Arabia](https://play.google.com/store/apps/details?id=com.silkroad.arab&hl=ar) · [sromarabia.com — wiki officiel arabe](https://sromarabia.com/wiki) · [A3lam KSA — partenariat saoudien GOSU × Al-Imtiaz (14/07/2026)](http://a3lam-ksa.net/90672-2)
+- Files fuitées & serveurs privés : [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) · [ML_RESEARCH/RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) · [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md)
+
 ### Forums et Communautés
 
 #### Forums Principaux
@@ -572,7 +619,7 @@ Raisons du déclin du CSRO d'origine (analyse TapTap) : grind répétitif, trans
 ### Documentation Technique (Pour Développeurs)
 - **`assets/pk2_media/server_dep/silkroad/textdata/leveldata.txt`** — table d'XP par niveau officielle (dans ce dépôt)
 - **DEVELOPMENT_TECHNICAL_GUIDE.md** / **TECHNICAL_SPECIFICATIONS.md**
-- **Fichiers vSRO 1.188 :** base de la majorité des serveurs privés (fuite ~2009-2010)
+- **Fichiers vSRO 1.188 :** base de la majorité des serveurs privés (fuite **2011**, service vietnamien ; avant cela : files de test cSRO de l'ère ECSRO ~2007-2010 — voir [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md))
 
 ---
 
@@ -584,5 +631,5 @@ Raisons du déclin du CSRO d'origine (analyse TapTap) : grind répétitif, trans
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (enrichi par la recherche multilingue ML_RESEARCH — KO/ZH/PT/FR/DE/TR, puis KO2 : chronologie KSRO 2009-2026)*
-*Sources: Wikipedia, IGN, GamesIndustry.biz, Nostalgic.gg, Elitepvpers, silkroadforever.com, sromobile.com, Inven/GameMeca/TGDaily/ZDNet Korea/ChosunBiz/Nate (presse KR), board officiel krsilkroadcp.joymax.com (notices KO2), Baidu Baike/TapTap/iccgame/DiGeam (ZH), Adrenaline/UOL/Level Up (PT), JeuxVideo.com/JeuxOnline/Wikipédia FR (FR)*
+*Dernière mise à jour: 2026-10-01 (enrichi par la recherche multilingue ML_RESEARCH — KO/ZH/PT/FR/DE/TR, puis KO2 : chronologie KSRO 2009-2026, puis AR : communauté arabe, service arabe 2010, Silkroad Origin Mobile Arabia, correction ECSRO)*
+*Sources: Wikipedia, IGN, GamesIndustry.biz, Nostalgic.gg, Elitepvpers, silkroadforever.com, sromobile.com, Inven/GameMeca/TGDaily/ZDNet Korea/ChosunBiz/Nate (presse KR), board officiel krsilkroadcp.joymax.com (notices KO2), Baidu Baike/TapTap/iccgame/DiGeam (ZH), Adrenaline/UOL/Level Up (PT), JeuxVideo.com/JeuxOnline/Wikipédia FR (FR), IGN/Engadget/ArabMMO/silkroad4arab (Wayback)/Archer Tales/sromarabia/A3lam KSA (AR)*

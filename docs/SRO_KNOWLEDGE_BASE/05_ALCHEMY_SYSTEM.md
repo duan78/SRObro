@@ -147,6 +147,11 @@ Les rates alchimie sont configurables côté serveur (multiplicateurs courants x
 
 Confirmation TR : les administrateurs de privés vSRO ajustent les taux **via le champ Lucky Powder** — c'est LE levier de tuning côté serveur (vSRO.org : https://www.vsro.org/konular/alchemy-rate-ayarini-nasil-yapiyorsunuz.18197).
 
+Exemples documentés de taux **[CUSTOM]** — recherche PS/AR 2026-10, à ne jamais confondre avec les taux officiels ci-dessus :
+- **ErTuGrul SRO** (cap 140/D16) : « **Alchemy Rate: 3x** » — multiplicateur global annoncé par le serveur. Source : https://www.facebook.com/groups/158370414830944 · [ML_RESEARCH/RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md)
+- **Chillout Community** (cap 130/DG14) : +1~+5 = **100 %**, +6 = **90 %**, +7 « augmenté », élixirs avancés jusqu'à +5. Source : [elitepvpers 4016229](https://www.elitepvpers.com/forum/sro-pserver-advertising/4016229-chillout-community-silkroad-cap-130-dg-14-coin-system-play2win-silk-h-fgw-old-job.html)
+- **SENSATION-iSRO** (cap 140) : max **+15** (sauf ADV). Source : [srocave](https://srocave.com/konular/sensation-isro-140-cap-no-p2w-100-play-to-earn-unique-job-based-join-the-adventure.3252)
+
 ---
 
 ## ⚠️ Échec : Reset, Destruction, Malus
@@ -384,7 +389,7 @@ Textes exacts affichés en jeu (extrait de `_RefMagicOpt` / client) :
 **Blues d'avatar** (spécifiques) : Str/Int/HP/MP, Parry/Attack rate, Damage Absorption (DARA), Ignore Monster Defense (MDIA 1–4), etc.
 
 ### Plages de valeurs par degré
-Les valeurs sont définies par degré dans `_RefMagicOptByItemOptLevel` (dump public non disponible). Ordres de grandeur communautaires : Str/Int de +1 (1D) à +7/+10 (11D+) ; resistances de ~5% à ~20% ; HP/MP de quelques dizaines à plusieurs centaines. **Non vérifiable faute de dump public — à traiter comme indicatif.**
+Les valeurs sont définies par degré dans `_RefMagicOptByItemOptLevel` (paires min/max par degré et par groupe MATTR). ✅ **Résolu (recherche PS 2026-10) — la table existe publiquement** : son **schéma est public** dans le repo [ducksoup — Database/VSRO188](https://github.com/ducksoup-sro/ducksoup/tree/main/Database/VSRO188) (schémas C# des ~200 tables de la shard vSRO 1.188, avec `_RefMagicOpt`, `_RefMagicOptAssign`, `_RefMagicOptGroup`, `_RefAbilityByItemOptLevel`), et ses **données sont présentes dans chaque dump public de DB vSRO** (compilations « SRO Game Files v1.188 », « Silkroad Database v1.188 V2 », packs cap 120 — recensement dans [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) §4-§5). L'ancien constat « dump public non disponible » est donc **corrigé** ; l'extraction des paires min/max reste à faire. En attendant, les ordres de grandeur communautaires restent indicatifs : Str/Int de +1 (1D) à +7/+10 (11D+) ; resistances de ~5% à ~20% ; HP/MP de quelques dizaines à plusieurs centaines.
 
 > 📝 **Note :** des blues comme « Providence », « Deadly/Keen » ou « Olympic » n'apparaissent pas dans les données officielles PC (vSRO 1.188 / client v1_657). « Olympic » renvoie aux items de l'event JO 2008, les autres proviennent de jeux privés ou d'autres jeux.
 
@@ -500,7 +505,7 @@ Le site turc SroCave a décompressé les mêmes valeurs `Param` 32-bit (4 octets
 ### ⚠️ Ce qui reste incertain
 - Taux exacts de la Lucky **Magic** Powder (série B).
 - Chances d'application des pierres par degré (dans la DB, non publiées) — constat négatif : aucun wiki officiel CN/TW (DiGeam, iccgame) ni 17173 ne publie de table (recherche ZH 2026-10).
-- Plages de valeurs des blues par degré.
+- Plages de valeurs des blues par degré — ✅ **accès résolu (recherche PS 2026-10)** : la table `_RefMagicOptByItemOptLevel` est publique (schémas [ducksoup](https://github.com/ducksoup-sro/ducksoup/tree/main/Database/VSRO188) + données dans les dumps de DB vSRO — cf. [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) §4) ; seules les **valeurs chiffrées** restent à extraire.
 
 ---
 
@@ -563,6 +568,11 @@ Le site turc SroCave a décompressé les mêmes valeurs `Param` 32-bit (4 octets
 - [SroLobby — taux d'alchimie : le mythe du RNG pur (TR)](https://www.srolobby.com/konular/alchemy-basari-oranlari.273)
 - [Fúria Brazil — Guia Básico do Silkroad (PT-BR, ~2011)](https://furia-brazil.forumeiros.com/t9-guia-basico-do-silkroad)
 
+### Taux customs des serveurs privés (recherche PS/AR 2026-10 — [CUSTOM])
+- [ErTuGrul SRO — « Alchemy Rate: 3x » (annonce FB du serveur)](https://www.facebook.com/groups/158370414830944) · [annonce elitepvpers](https://www.elitepvpers.com/forum/sro-pserver-advertising/5129038-ertugrul-sro-l-cap140-l-dg16-l-new-system-2.html)
+- [Chillout Community — +1~+5 100 %, +6 90 % (elitepvpers)](https://www.elitepvpers.com/forum/sro-pserver-advertising/4016229-chillout-community-silkroad-cap-130-dg-14-coin-system-play2win-silk-h-fgw-old-job.html)
+- Rapports : [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) (✅ table `_RefMagicOptByItemOptLevel` publique) · [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) · [RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md) · voir [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md)
+
 ### 🇰🇷 Officiel KSRO — alchimie 12차+ (recherche KO2 2026-10)
 - [Portail officiel 연금술 (장비강화/마법속성/속성변경/고급연금술/분해/아이템업그레이드/소켓)](https://krsilkroadcp.joymax.com/gamesystem/alchemy/alchemy.asp)
 - [장비 강화 part 2 — 인핸서/보호석 12차+ (« 모두 소멸된다 », « 강화등급이 -1 하락한다 »)](https://krsilkroadcp.joymax.com/gamesystem/alchemy/iframe_alchemy/equipmentstrength_2.html)
@@ -602,4 +612,4 @@ Le site turc SroCave a décompressé les mêmes valeurs `Param` 32-bit (4 octets
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: DB vSRO dépackée (HyperbotDoc/SandSnip3r), opensro (logique décompilée), elitepvpers, silkroadforums, DonanımHaber, Silkroadmania, ItemData vSRO, SroCave + vSRO.org + SroLobby (validation TR), GMS Temple (superstitions FR 2007), silkroadonline.de (DE), Fúria Brazil (PT-BR) — rapports ML_RESEARCH 2026-10 ; site officiel KSRO krsilkroadcp.joymax.com (인핸서/보호석/각석/소켓석/연금약 12차+) — rapport ML_RESEARCH/RESEARCH_KO2 (2026-10)*
+*Sources: DB vSRO dépackée (HyperbotDoc/SandSnip3r), opensro (logique décompilée), elitepvpers, silkroadforums, DonanımHaber, Silkroadmania, ItemData vSRO, SroCave + vSRO.org + SroLobby (validation TR), GMS Temple (superstitions FR 2007), silkroadonline.de (DE), Fúria Brazil (PT-BR) — rapports ML_RESEARCH 2026-10 ; site officiel KSRO krsilkroadcp.joymax.com (인핸서/보호석/각석/소켓석/연금약 12차+) — rapport ML_RESEARCH/RESEARCH_KO2 (2026-10) ; recherche PS/AR 2026-10 (✅ `_RefMagicOptByItemOptLevel` publique via schémas ducksoup/dumps vSRO ; taux customs ErTuGrul/Chillout/SENSATION marqués [CUSTOM])*

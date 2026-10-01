@@ -5,6 +5,7 @@
 ## 📋 Table des Matières
 - [Overview](#-overview)
 - [Architecture Officielle du Jeu](#-architecture-officielle-du-jeu)
+- [Fichiers Serveur Officiels (Fuités) — Recherche PS 2026-10](#-fichiers-serveur-officiels-fuités--recherche-ps-2026-10)
 - [Protocole Réseau Officiel (TCP)](#-protocole-réseau-officiel-tcp)
 - [Core Systems](#-core-systems)
 - [Formulas and Calculations](#-formulas-and-calculations)
@@ -103,6 +104,45 @@ SR_MachineManager → SR_GlobalManager → SR_GatewayServer → SR_AgentServer �
 - **Base de données : MSSQL** — bases `SRO_VT_ACCOUNT`, `SRO_VT_SHARD`, `SRO_VT_LOG` ; billing via IIS.
 - Le **client ne parle jamais directement** au GameServer : tout passe par Gateway (login) puis Agent (jeu) — d'où le flux « token » décrit ci-dessous.
 - 🛠️ Détail de l'architecture **SRObro** (Node/WebSocket) → [DEVELOPMENT_TECHNICAL_GUIDE.md](DEVELOPMENT_TECHNICAL_GUIDE.md).
+
+---
+
+## 📂 Fichiers Serveur Officiels (Fuités) — Recherche PS 2026-10
+
+> ✅ **Ajout (recherche PS 2026-10)** : les **fichiers serveur officiels fuités** fournissent la description du **fonctionnement officiel** la plus fiable disponible — écrite par le leaker lui-même (« Chernobyl », guide du **13/09/2011**, fuite du service officiel vietnamien vSRO). Inventaire des fuites : vSRO 1.188 (Vietnam, sept. 2011, cap 110/D11) · 1.193/1.274 (2012, + Jupiter 110-120) · BlackRogue = service officiel **thaïlandais** (ini3, package `SRO_Thailand_CS_106`) · tSRO 1.258 (Taïwan) · jSRO · cSRO-R · iSRO-R « Rigid » 2015 · iSRO/KSRO (cap 125+, 14DG). Rapport complet : [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) · panorama des serveurs : [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md)
+
+### Ordre de démarrage officiel des 9 modules (vSRO 1.188)
+
+```
+1. Custom certification server  (port 32000 — « Certifier » + scripts ASP/IIS, interface SMC)
+2. SR_GlobalManager             (coordination globale)
+3. SR_MachineManager            (enregistrement/certification des machines)
+4. DownloadServer               (patchs client)
+5. GatewayServer                (liste de serveurs affichée au client)
+6. SR_FarmManager               (gestion de ferme de shards)
+7. AgentServer                  (relais clients → world — LIMITE OFFICIELLE : 1000 joueurs/AgentServer)
+8. SR_ShardManager              (un « shard » = un monde, connexions DB)
+9. SR_GameServer                (le monde de jeu lui-même)
+```
+
+- Cette liste **complète** la vue simplifiée ci-dessus (certification + DownloadServer + FarmManager en étaient absents) et **inverse** l'ordre GlobalManager/MachineManager. Source : [RaGEZONE — Setting up a server based on VSRO server files (Chernobyl, 13/09/2011)](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273) — fiabilité 5 (le leaker lui-même).
+- **3 bases MSSQL** : `SRO_VT_ACCOUNT`, `SRO_VT_SHARD`, `SRO_VT_SHARDLOG` (+ DB « SKILL » séparée dans certaines versions BR/tSRO). **Schémas publics des ~200 tables de la shard** : [ducksoup — Database/VSRO188](https://github.com/ducksoup-sro/ducksoup/tree/main/Database/VSRO188).
+- **Certification** : serveur d'authentification maison sur le **port 32000** + scripts **ASP/IIS** pour le billing ; le **SMC (Server Management Console)** pilote l'ensemble (AUTO START : Gateway/Agent/GlobalManager/GameServer).
+- **Répartition du monde** : la table **`_RefRegionBindAssocServer`** assigne chaque région à un GameServer (**0 = désactivée, 1/2/3 = GS1/2/3**) — **un seul GameServer ne peut pas charger toutes les régions** : le monde officiel tournait en **grille de plusieurs gameservers par régions**.
+
+### Rates serveur (server.cfg) — sémantique officielle
+
+```
+Taux réel = valeur / 1000
+ExpRatio 1000        = ×1   ← VALEUR PAR DÉFAUT des files = les taux officiels
+ExpRatio 35000       = ×35
+ExpRatioParty        = multiplicateur de party (ex 4500 = ×4.5) · ExpRatioPartyBonus
+DropItemRatio        = fréquence de drop (même formule /1000)
+DropGoldAmountCoef   = or par monstre (2 = double) · HwanGainFactor = vitesse de gain du Zerk
+```
+
+- Les rates se chargent **en mémoire au démarrage** → **restart complet du GameServer** requis pour tout changement. Sources : [TopGameServer — How to Change vSRO EXP and Silk Rates](https://topgameserver.net/drop) · [miroir elitepvpers du guide du leaker](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/1433603-guide-setting-up-server-based-vsro-server-files.html).
+- ⚖️ Rappel : ces files restent la propriété de Joymax/Wemade — recensées ici **à des fins de documentation uniquement** (précédent Joymax c. ECSRO, cf. rapport PS §9).
 
 ---
 
@@ -334,7 +374,7 @@ Rareté SoX : SOS ~60 % des SoX · SOM ~30 % · SOSun ~10 %
 
 ```
 Normaux : 1-5 min · Champions : 5-15 min (aléatoire) · Giants : ~5 min (spots rapides, ex. Ong)
-Uniques : 3-24 h selon l'unique (Tiger Girl, Isyutaru, etc.)
+Uniques : défauts vSRO (Tab_RefNest) — 6 h (TG/Cerberus/Ivy/Isyutaru/Yarkan/Shaitan), 3 h (Uruchi), 4 h (Medusa) · ✅ recherche PS 2026-10
 Zones fast-spawn : −50 % de respawn ; donjons : +50 %
 ```
 
@@ -637,6 +677,12 @@ Européens : Warrior tank · Rogue burst/stealth · Wizard AoE · Warlock debuff
 - [Setting up a server based on VSRO server files — RaGEZONE](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273) — modules, MSSQL, IIS
 - [Guide Most of vsro files problem solved — elitepvpers](https://www.elitepvpers.com/forum/sro-private-server/) — ordre de démarrage des services
 
+### Fichiers serveur fuités & rates (recherche PS 2026-10)
+- [TopGameServer — How to Change vSRO EXP and Silk Rates (sémantique /1000)](https://topgameserver.net/drop) · [miroir elitepvpers du guide du leaker](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/1433603-guide-setting-up-server-based-vsro-server-files.html)
+- [Dev: Unique Spawn Time — RaGEZONE](https://forum.ragezone.com/threads/dev-unique-spawn-time.820175) — timers par défaut des uniques (`Tab_RefNest`)
+- [ducksoup — schémas SQL des ~200 tables de la shard vSRO 1.188](https://github.com/ducksoup-sro/ducksoup/tree/main/Database/VSRO188)
+- Panorama des serveurs privés : [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md) · rapports [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) / [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md)
+
 ### Client / pk2 / formats
 - [PK2 Internals — Drew 'pushedx' Benton](http://www.stealthex.org/site/showthread.php?5440-More-about-PK2-Internals)
 - [Silkroad file formats (bsr/bms/bmt/bsk/ban) — elitepvpers](http://www.elitepvpers.com/forum/sro-coding-corner/1992824-wip-silkroad-file-formats-bsr-bms-bmt-bsk-ban.html)
@@ -658,6 +704,6 @@ Merci à la communauté Silkroad (SilkroadDoc, pushedx, florian0, jMerlin, elite
 
 ---
 
-**Version :** 2.0
+**Version :** 2.1 (ajout « Fichiers serveur officiels fuités » — recherche PS 2026-10 : 9 modules + ordre de démarrage, certification port 32000, 1000 joueurs/AgentServer, `_RefRegionBindAssocServer`, ExpRatio 1000 = ×1)
 **Last Updated :** 2026-10-01
 **Maintained By :** SRObro Development Team

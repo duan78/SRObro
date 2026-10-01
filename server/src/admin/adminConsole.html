@@ -137,7 +137,10 @@ function toast(msg, err = false) {
 }
 
 async function api(path, opts) {
-  const r = await fetch(path, opts);
+  // URL absolue: si la page est ouverte avec des identifiants dans l'URL
+  // (http://user:pass@host/admin), un fetch relatif hériterait des
+  // identifiants et serait rejeté par le navigateur.
+  const r = await fetch(location.origin + path, opts);
   if (!r.ok) {
     const body = await r.json().catch(() => ({}));
     throw new Error(body.error ?? `HTTP ${r.status}`);

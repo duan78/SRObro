@@ -80,6 +80,12 @@ GAP = Character Level − Highest Mastery Level
 
 → À GAP 9, le monstre ne « vaut » plus que 250 points totaux mais **presque tout se transforme en SP-exp**. Le SP est « plus cher » que l'XP : vous gagnez moins de total, beaucoup plus de SP.
 
+> ✅ **Validé (recherche AR 2026-10)** — troisième source indépendante, mêmes chiffres : un guide SP farming arabe des débuts du jeu (~2008, silkroad4arab — [« Sp Farming اسراره و خفاياه »](https://www.silkroad4arab.com/vb/showthread.php?p=381592)) publie **exactement** 400 skill exp = 1 SP, le plafond total des maîtrises = 300, et la répartition du monstre lvl 16 : gap 0 → 400 EXP + 100 SP = **500 total** ; gap 6 → 230 + 185 = **415** ; gap 9 → 30 + 220 = **250** (« chaque point de gap convertit de l'EXP en SP »). **Aucun chiffre divergent** avec la table UnKnoWnCheaTs ci-dessus ni avec le guide DE 2006 ci-dessous.
+> - Coûts de maîtrise (guide AR) : monter **une maîtrise à 16 = 128 SP** ; règle donnée : « une maîtrise au niveau *n* coûte ***n*²/2** SP » (16²/2 = 128) ; passer lvl 16→17 demande **30 902 XP** (≈ 127 840 XP cumulée).
+> - **Méthode « coréenne » (guide AR)** : arc + garment sur le spot « Stronghold » (Bandit Stronghold ; le guide AR le situe *à l'est* de Jangan, la KB à l'*ouest* — écart signalé, non tranché), **de-level par morts répétées**, objectif **~40 000 SP** ; variante « européenne » : farmer jusqu'au **niveau 29 → ~34 000 SP**. → valide la stratégie « délevel » documentée plus bas.
+> - Recommandations du guide : **10-30k SP** pour une maîtrise, **30-50k** pour deux ; astuce **Cold niveau 5** pour les INT (contrôle des mobs).
+> - Source complète : `ML_RESEARCH/RESEARCH_AR_DEV.md` §4.1.
+
 ### Tableau de mesures réelles d'époque (guide allemand Radon, 2006) — ✅ Résolu (recherche DE 2026-10)
 
 Le guide « SP-Farming Was? Wie? Wann? » (silkroadonline.de, 2006) documente la mécanique comme **±10% d'XP↔SP par niveau de gap** :
@@ -137,7 +143,7 @@ Le guide « SP-Farming Was? Wie? Wann? » (silkroadonline.de, 2006) documente la
 > ℹ️ **Variantes d'époque** : le guide DE de 2006 recommandait « gap 5 en général, gap 6 dès Lv59 (passives), sans gap dès Lv72-75 » ([silkroadonline.de, thread « Welcher Gap? »](https://www.silkroadonline.de/index.php?page=Thread&postID=279703)) — la fenêtre GAP 9 (13-32) ci-dessus est le consensus ultérieur (guides PLvL Elitepvpers). Les guides TR modernes confirment GAP 9 comme maximum utile et le recommandent pour les niveaux 70-100 (vSRO.org).
 
 ### Stratégie « délevel » (coréenne, historique)
-Les joueurs kSRO farmaient les Ongs pendant des semaines jusqu'à ~30k SP, puis **redescendaient de niveau volontairement** (morts répétées) pour re-farmer les paliers bas au ratio maximal. Extrême mais optimal — sur serveurs privés, on la remplace par des rates SP.
+Les joueurs kSRO farmaient les Ongs pendant des semaines jusqu'à ~30k SP, puis **redescendaient de niveau volontairement** (morts répétées) pour re-farmer les paliers bas au ratio maximal. Extrême mais optimal — sur serveurs privés, on la remplace par des rates SP. ✅ **Validée (recherche AR 2026-10)** : la « méthode coréenne » du guide arabe ~2008 (arc + garment à Bandit Stronghold, de-level par morts répétées) visait **~40 000 SP** ([silkroad4arab, p=381592](https://www.silkroad4arab.com/vb/showthread.php?p=381592)).
 
 ### Objectifs de stock (cap 80-90)
 - Build simple (glaive/spear) : viser **~80-100k SP**
@@ -288,6 +294,7 @@ Le farming GAP n'est pas la seule source — sur les versions tardives et beauco
 - [Masteries and SP Farming — UnKnoWnCheaTs (cougher)](https://www.unknowncheats.me/wiki/Silkroad:Masteries_and_SP_Farming) — données GAP vérifiées
 - [Complete Guide to Skill Points — UnKnoWnCheaTs](https://www.unknowncheats.me/wiki/Silkroad:Complete_Guide_to_Skill_Points) — 400 SXP = 1 SP, coûts de maîtrise
 - [SP-Farming Was? Wie? Wann? — silkroadonline.de (Radon, 2006)](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/1454-guide-sp-farming-was-wie-wann) — tableau de mesures ±10%/gap (10%/190% à GAP 9), mesures anti-delvl, suicide farming
+- [Sp Farming اسراره و خفاياه — silkroad4arab (~2008)](https://www.silkroad4arab.com/vb/showthread.php?p=381592) — validation croisée arabe des tables GAP (400 = 1 SP ; 500/415/250 au lvl 16 ; 128 SP/mastery à 16 ; méthode coréenne ~40k SP) — ✅ recherche AR 2026-10
 - [How to farm SP (SkillPoints) — Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/2461754-guide-how-farm-sp-skillpoints.html) — méthode PLvL 8/8 + Ongs, FGW, rendements
 - [How to make a full-farmed char — Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/365938-guide-how-make-full-farmed-char.html)
 - [How To Farm SP? — Origin Online Forums](https://forum.playorigin.com/showthread.php?7167-How-To-Farm-SP) — sources FGW/Premium+/Alexandrie
@@ -325,5 +332,5 @@ Le farming GAP n'est pas la seule source — sur les versions tardives et beauco
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (enrichi par la recherche multilingue ML_RESEARCH — tableau GAP/mesures DE 2006, confirmation BR FGW 500k)*
-*Sources: UnKnoWnCheaTs (mécanique GAP), Elitepvpers (méthodes PLvL, rendements), Origin Forums (FGW 500k, Premium+, Becoming a Deity), 02_CHINESE_CLASSES.md (coûts par build), silkroadonline.de (mesures GAP 2006), YouTube BR (confirmation 500k SP)*
+*Dernière mise à jour: 2026-10-01 (enrichi par la recherche multilingue ML_RESEARCH — tableau GAP/mesures DE 2006, confirmation BR FGW 500k, validation croisée AR ~2008)*
+*Sources: UnKnoWnCheaTs (mécanique GAP), Elitepvpers (méthodes PLvL, rendements), Origin Forums (FGW 500k, Premium+, Becoming a Deity), 02_CHINESE_CLASSES.md (coûts par build), silkroadonline.de (mesures GAP 2006), YouTube BR (confirmation 500k SP), silkroad4arab p=381592 (guide SP arabe ~2008 — recherche AR 2026-10)*

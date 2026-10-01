@@ -1,9 +1,10 @@
 # Multilingual Glossary
 
 ## 📋 Overview
-This glossary provides standardized terminology translations across **Korean, Chinese, Turkish, German, Portuguese (BR), English and French** for all Silkroad Online terms. Used for accurate translation and cross-referencing during research.
+This glossary provides standardized terminology translations across **Korean, Chinese, Turkish, German, Portuguese (BR), Arabic, English and French** for all Silkroad Online terms. Used for accurate translation and cross-referencing during research.
 
 > 📦 **Enrichissement 2026-10-01** : fusion des glossaires des 6 rapports de recherche multilingues ([ML_RESEARCH/](./ML_RESEARCH/)) — coréen, chinois, turc, allemand, portugais (BR) et lexique francophone. Chaque nouveau terme est attesté dans son rapport source avec URL. **Aucun terme inventé.**
+> 📦 **Puis recherche AR 2026-10** : ajout de la langue **arabe** — glossaire communautaire complet (72+ termes avec translittération, silkroad4arab/ProBasha) dans la section [Glossaire arabe](#-glossaire-arabe--communauté-arabe-recherche-ar-2026-10).
 
 ---
 
@@ -24,6 +25,7 @@ This glossary provides standardized terminology translations across **Korean, Ch
 - [Glossaire turc — compléments communautaires](#-glossaire-turc--compléments-communautaires)
 - [Glossaire allemand](#-glossaire-allemand)
 - [Glossaire portugais (BR)](#-glossaire-portugais-br)
+- [Glossaire arabe — communauté arabe (recherche AR 2026-10)](#-glossaire-arabe--communauté-arabe-recherche-ar-2026-10)
 - [Uniques — tableau croisé](#-uniques--tableau-croisé)
 - [Villes & zones — tableau croisé](#-villes--zones--tableau-croisé)
 - [Common SRO Abbreviations](#-common-sro-abbreviations)
@@ -41,6 +43,7 @@ This glossary provides standardized terminology translations across **Korean, Ch
 | 🇹🇷 | Turkish | Grande communauté SRO, orientée meta — lexique mixte TR/EN |
 | 🇩🇪 | German | Communauté silkroadonline.de / elitepvpers — terminologie communautaire (+ patch fan gSRO) |
 | 🇧🇷 | Portuguese | Communauté BR (Level Up! = revendeur de Silk) — nombreux anglicismes |
+| 🇸🇦 | Arabic | Communauté arabophone (Égypte dominante) — silkroad4arab/ProBasha ; lexique mixte AR/EN, **jamais de client PC arabe** (service web officiel 2010 ; mobile officiel 2026) |
 | 🇺🇸 | English | International standard (client iSRO) |
 | 🇫🇷 | French | Langue de documentation actuelle — lexique **communautaire uniquement** |
 
@@ -57,6 +60,7 @@ Issues des rapports [ML_RESEARCH/](./ML_RESEARCH/) — à lire avant toute tradu
 5. **🇧🇷 Level Up! Games Brasil** (09/05/2007) : partenaire de monétisation Joymax (Silk en réais, cartes pré-payées R$40 = 100 silks) — **jamais de serveurs BR ni de traduction PT** (RESEARCH_PT).
 6. **🇨🇳 Garde-fou MOBILE (⚠️ important)** : les remakes mobiles chinois 2024+ (丝路传说手游, 寻梦丝路, 丝路传说怀旧版) utilisent un **vocabulaire différent** (enhancement max **+15**, raretés en **couleur blanc→rouge**, 恶人值 +50/niveau…) qui **ne décrit PAS le jeu PC classique** (max +12, SoX). Ne pas importer ces termes/chiffres pour SRObro (RESEARCH_ZH, avertissement index + recommandation 4).
 7. **🇰🇷 ↔ 🇨🇳 noms de skills** : les noms iSRO (Bicheon, Heuksal…) sont des translittérations coréennes ; les noms chinois sont **sémantiques** (identité wuxia). La meilleure clé reste le **codename client** (RESEARCH_KO §2.2, RESEARCH_ZH Trouvaille 2).
+8. **🇸🇦 Service arabe officiel (2010) = portail web uniquement** : lancé le **02/02/2010** (annonce IGN 22/01/2010 ; 2e extension linguistique après le turc, avant l'espagnol et l'allemand), il couvrait le **site/portail et l'inscription** (confirmé par ArabMMO, 05/2010) — **jamais de client PC arabe** (aucune textdata/itemdata arabe retrouvée ; fils s4a expliquant comment écrire l'arabe dans le chat du client). La localisation arabe officielle complète n'existe que sur **mobile** : **Silkroad Origin Mobile Arabia** (WeMade Max × GOSU, 2024-2026, partenaire saoudien 14/07/2026, wiki officiel [sromarabia.com/wiki](https://sromarabia.com/wiki)) — [RESEARCH_AR_DEV](./ML_RESEARCH/RESEARCH_AR_DEV.md) §6. ⚠️ Piège associé : « Medusa » (الميدوسا) dans le lexique arabe = **BeakYung the White Viper** (tombe de Qin-Shi, B5/B6).
 
 ---
 
@@ -782,6 +786,138 @@ Issues des rapports [ML_RESEARCH/](./ML_RESEARCH/) — à lire avant toute tradu
 
 ---
 
+## 🇸🇦 Glossaire arabe — communauté arabe (recherche AR 2026-10)
+
+> Source : [ML_RESEARCH/RESEARCH_AR_DEV.md](./ML_RESEARCH/RESEARCH_AR_DEV.md) §7 — transcription intégrale du glossaire arabe → français. Sources primaires : fil « symboles et abréviations du chat » de silkroad4arab (2013), Wikipédia arabe, documentaire égyptien Archer Tales (2026), guides s4a. Prononciations = usage **égyptien**.
+> ⚠️ Le client PC n'a **jamais existé en arabe** : ce lexique est **entièrement communautaire**, à base d'anglicismes transcrits (level, quest, blues, unique, enhance…). Compléments high-cap/uniques des serveurs privés arabes : [RESEARCH_AR_SERVERS.md](./ML_RESEARCH/RESEARCH_AR_SERVERS.md).
+
+### Le jeu et les bases
+
+| Arabe | Translit. | Français |
+|---|---|---|
+| سيلك رود / سيلكرود | saylkrōd | Silkroad |
+| الطريق الحريري | al-ṭarīq al-ḥarīrī | la Route de la Soie |
+| لفل | level | niveau |
+| اكس بي | XP | expérience |
+| سبي / نقاط المهارة | SP / nuqaṭ al-mahāra | points de compétence |
+| نقاط الصحة / الدم | HP / dam | points de vie |
+| نقاط السحر | MP | mana |
+| كويست | quest | quête |
+| دروب | drop | butin / drop |
+| ريت / راتات | rate(s) | taux (EXP/drop) du serveur |
+| فتحة | fatḥa | ouverture (grand opening) d'un serveur |
+| السايبر | al-sāyber | cybercafé |
+| شحن / كرت شحن | shaḥn / kart | recharge de silk (carte) |
+
+### Personnages, classes, maîtrises
+
+| Arabe | Translit. | Français |
+|---|---|---|
+| ستر / ستات | stat | caractéristiques |
+| سترنث / انت | STR / INT | force / intelligence |
+| نيوكير | nūker | nuker (mage CH dégâts purs) |
+| ويزرد | wizard | sorcier (EU) — surnommé « المفتري » (l'hyperpuissant) |
+| وارلوك | warlock | occultiste — surnommé « الغلس » (le fourbe) |
+| كليرك | cleric | clerc — surnommé « دكتور ربيع » (le soigneur) |
+| بارد | bard | barde |
+| روج | rogue | roublard |
+| ووريور | warrior | guerrier |
+| الجليد / الثلج | al-jalīd | glace (Cold) |
+| نار | nār | feu (Fire) |
+| صاعقة / ضوء | ṣāʿiqa / ḍawʾ | foudre (Lightning) |
+| فورس / قوة | force | Force (soins/buffs CH) |
+| الماستري / القوى | mastery | maîtrise |
+| الجاب | gap | écart niveau/maîtrise (pour le SP farming) |
+| الدرع الثلجي | al-dirʿ al-thaljī | Bouclier de neige (Snow Shield) |
+
+### Armes et équipement
+
+| Arabe | Translit. | Français |
+|---|---|---|
+| السيف والدرع | sword + shield | épée + bouclier |
+| بليد | blade | lame |
+| الحربة | al-ḥarba | glaive |
+| الرمح | al-ramḥ | lance |
+| القوس / البو | bow | arc |
+| القيثارة | qīthāra | harpe (barde) |
+| الايتم | item | objet |
+| الدرع | dirʿ | armure/bouclier |
+| البلو / البلوس | blues | options magiques (blues) |
+| الصن | ṣan | Seal of **Sun** |
+| المون | mūn | Seal of **Moon** |
+| الاستار / السوس | star / sōs | Seal of **Star** / Seal-of générique |
+| الافاتار | avatar | tenue cosmétique |
+| البريميوم | premium | abonnement premium |
+| الديفل سبيرت | Devil Spirit | esprit démoniaque (pick-up/buff pet) |
+| الريفرس | reverse | Reverse Scroll (retour en ville) |
+| الارانب والقرود | lapins et singes | pets ramasseurs |
+
+### Alchimie
+
+| Arabe | Translit. | Français |
+|---|---|---|
+| الكيمياء | al-kīmiyāʾ | alchimie |
+| الالكسير | elixir | élixir |
+| بودرة الحظ | būdra al-ḥaẓẓ | Poudre de la Chance |
+| التابلت / اللوح | tablet | tablette d'attribut |
+| الحجر | ḥajar | pierre d'attribut |
+| العنصر / الالمنت | element | élément (terre/feu/eau/vent) |
+| رندو | rondo | Rondo (Destroyer/Void) |
+| الانشر | enhance | renforcement (+1, +2…) |
+| فتحة كيميائية | — | session d'alchimie (pour **enchaîner les réussites**) |
+| بلس 12 / +12 | plus 12 | niveau de renforcement |
+
+### Monstres et combat
+
+| Arabe | Translit. | Français |
+|---|---|---|
+| البوس / البوسات | bōs / bōsāt | boss / uniques (emprunt direct à l'anglais) |
+| اليونيك / اليونكس | yūnīk / yūnak (prononciation ÉG) | unique |
+| وحش | waḥsh | monstre |
+| العملاق / جاينت | giant | monstre géant |
+| الشايتان / الشيطان | shayṭān | démon (Demon Shaitan) |
+| تايجر جيرل | Tiger Girl | Tiger Girl (البوسة بتاعة جنجان — « la boss de Jangan ») |
+| هورس / أنوبيس / سفينكس | Horus/Anubis/Sphinx | uniques égyptiens d'Alexandrie |
+| الضربة القاطعة | ḍarba qāṭiʿa | coup critique |
+
+### Métiers et commerce
+
+| Arabe | Translit. | Français |
+|---|---|---|
+| التاجر | tājir | marchand (Trader) |
+| الصياد | ṣayyād | chasseur (Hunter) |
+| الحرامي / اللص | ḥarāmī / liṣṣ | voleur (Thief) |
+| القافلة / الكارفان | caravane | convoi commercial |
+| النجوم / الستارز | étoiles | charge de trade (1-5★) |
+| الجولد / الذهب | gold | pièces d'or (surnommé « الروح » — l'âme) |
+| السيلك / الحرير | silk | soies (monnaie premium) |
+| الايتم مول | Item Mall | boutique premium |
+| التاكسي | tāksī | service payant de power-leveling |
+| الديل | deal | transaction entre joueurs |
+| ادد | add | ajout (en transaction) |
+| النصابين | al-nasābīn | les arnaqueurs |
+| البيع والشراء | vente/achat | commerce (section du forum) |
+
+### Guilde / PvP / structures
+
+| Arabe | Translit. | Français |
+|---|---|---|
+| الجيلد / الجويلد | guild | guilde |
+| اليونيون | union | union de guildes |
+| حرب الجيلد | guerre de guilde | guild war |
+| حرب الحصون / الحصن | Fortress War / forteresse | Fortress War |
+| قلعة الحرامية | qalʿat al-ḥarāmiya | Forteresse des Bandits (Bandit Fortress) |
+| الوش / وشوش | wash/wushūsh | duels PvP (« faces ») |
+| البوت | bot | bot |
+| السبوت / الامبوت / الفيبوت | SBot/mBot/PhBot | bots du marché |
+| سبيد 12 | — | serveur rapide (fun) |
+| الهيرو | hero | héros (top unique killer) |
+| قفل / فتح | !lock/!unlock | verrouillage de compte (custom serveurs) |
+
+> ⚠️ **Piège de traduction « Medusa = BeakYung »** : dans le lexique communautaire arabe, « الميدوسا » (Medusa) = **BeakYung the White Viper**, le serpent blanc de la tombe de Qin-Shi (salle B5/B6 selon les sources) — **il n'existe pas de boss « Medusa » séparé** dans l'usage arabe ([RESEARCH_AR_SERVERS](./ML_RESEARCH/RESEARCH_AR_SERVERS.md) §Boss/Medusa : guide de kill arabe 2011 — « Medusa = أقوى وحش », niveau mini conseillé 101+, kill ~15 min, stuns > 40 s). Même convention que l'usage informel EN/iSRO, qui surnomme aussi BeakYung « Medusa ».
+
+---
+
 ## 👹 Uniques — tableau croisé
 
 > Sources : [RESEARCH_KO](./ML_RESEARCH/RESEARCH_KO.md) §2.8, [RESEARCH_ZH](./ML_RESEARCH/RESEARCH_ZH.md) Trouvaille 3, [RESEARCH_DE](./ML_RESEARCH/RESEARCH_DE.md) §8 (jargon signatures), [RESEARCH_TR](./ML_RESEARCH/RESEARCH_TR.md) (noms TR = anglais). Niveaux selon la base KB / rapports.
@@ -804,6 +940,8 @@ Issues des rapports [ML_RESEARCH/](./ML_RESEARCH/) — à lire avant toute tradu
 | Isis | — | — | 伊希斯 (yīxīsī) | Job Temple |
 | Selket | — | — | 赛尔基斯 (sài'ěrjīsī) | Job Temple |
 | Neith | — | — | 奈特 (nàitè) | Job Temple |
+
+> 🇸🇦 **Noms arabes attestés (recherche AR 2026-10)** : Tiger Girl = تايجر جيرل (« la boss de Jangan » — البوسة بتاعة جنجان) ; Demon Shaitan = الشايتان/الشيطان ; uniques égyptiens d'Alexandrie = هورس/أنوبيس/سفينكس (Horus/Anubis/Sphinx) ; les uniques en général = اليونيك/اليونكس (البوسات = les boss). ⚠️ **« Medusa » (الميدوسا) désigne BeakYung le serpent blanc** dans le lexique arabe — voir le [glossaire arabe](#-glossaire-arabe--communauté-arabe-recherche-ar-2026-10). Sources : [RESEARCH_AR_DEV](./ML_RESEARCH/RESEARCH_AR_DEV.md) §7 · [RESEARCH_AR_SERVERS](./ML_RESEARCH/RESEARCH_AR_SERVERS.md) §Boss.
 
 ---
 
@@ -867,6 +1005,7 @@ Issues des rapports [ML_RESEARCH/](./ML_RESEARCH/) — à lire avant toute tradu
 - **Chinese** : caractères simplifiés + variante traditionnelle (TR) quand différente + pinyin ; privilégier les noms TW officiels DiGeam (datés du service actuel)
 - **Turkish** : terminologie gaming turque moderne ; les noms propres restent en anglais
 - **German / Portuguese** : terminologie communautaire (aucun client officiel) — jargon de forum signalé comme tel
+- **Arabic** : arabe + translittération (usage **égyptien** signalé quand pertinent) ; anglicismes transcrits laissés tels quels (لفل=level, دروب=drop) ; **aucune traduction officielle n'existe** (client PC jamais localisé en arabe — service web officiel 2010, mobile officiel 2026)
 - **English** : standard SRO community terms
 - **French** : use existing documentation terms for consistency
 
@@ -894,10 +1033,13 @@ Issues des rapports [ML_RESEARCH/](./ML_RESEARCH/) — à lire avant toute tradu
 - [ML_RESEARCH/RESEARCH_DE.md](./ML_RESEARCH/RESEARCH_DE.md) — sources germanophones (silkroadonline.de, elitepvpers…)
 - [ML_RESEARCH/RESEARCH_PT.md](./ML_RESEARCH/RESEARCH_PT.md) — sources lusophones (Wikipédia PT, Adrenaline, Fúria Brazil…)
 - [ML_RESEARCH/RESEARCH_FR.md](./ML_RESEARCH/RESEARCH_FR.md) — sources francophones (JOL, GMS Temple, JVC) → lexique intégré dans [38_GLOSSARY.md](./38_GLOSSARY.md)
+- [ML_RESEARCH/RESEARCH_AR_DEV.md](./ML_RESEARCH/RESEARCH_AR_DEV.md) · [ML_RESEARCH/RESEARCH_AR_SERVERS.md](./ML_RESEARCH/RESEARCH_AR_SERVERS.md) — sources arabophones (silkroad4arab, ProBasha, Wikipédia arabe, documentaire Archer Tales, sromarabia.com, presse 2010) → glossaire arabe intégré ci-dessus (recherche AR 2026-10)
 
 ### Sources primaires clés (noms officiels)
 - Noms KR officiels 2004 : https://www.inven.co.kr/webzine/news/?news=2285
 - Wiki officiel TW (noms ZH) : https://srowiki.digeam.com/
+- Forum arabe historique (lexique AR) : https://www.silkroad4arab.com/vb (stats via Wayback 2008/2012/2015)
+- Wiki officiel arabe mobile : https://sromarabia.com/wiki (Silkroad Origin Mobile Arabia)
 - Opérateur CN actuel : https://silkroad.iccgame.com/
 - Archives CSRO 2005-2007 : http://games.sina.com.cn/o/z/slcs/ · http://sro.17173.com/
 - Wiki TW Bahamut : https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山
@@ -910,5 +1052,5 @@ Issues des rapports [ML_RESEARCH/](./ML_RESEARCH/) — à lire avant toute tradu
 
 ---
 
-**Last Updated**: 2026-10-01 (fusion des glossaires ML_RESEARCH TR/KO/ZH/FR/DE/PT)
+**Last Updated**: 2026-10-01 (fusion des glossaires ML_RESEARCH TR/KO/ZH/FR/DE/PT, puis AR : glossaire arabe complet — recherche AR 2026-10)
 **Maintained by**: SRObro Documentation Team

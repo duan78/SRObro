@@ -27,6 +27,7 @@ Ce document fournit les **coordonnées de spawn précises** pour les monstres im
 - Monster Area Wiki
 - Community guides et databases
 - Rapports multilingues 2026-10 : [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md)
+- Fichiers serveur fuités 2026-10 : [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) (✅ taux de spawn champion/giant résolus — `GiantMonster_SpawnRatio` 14 % hardcodé ; timers `Tab_RefNest` ; colonne `Rarity` de `_RefObjCommon`)
 
 **Format des Coordonnées:**
 - X, Y (World coordinates)
@@ -43,15 +44,17 @@ Ce document fournit les **coordonnées de spawn précises** pour les monstres im
 >
 > ✅ **Timers par unique (recherche TR 2026-10)** : fenêtres rapportées en minutes après la mort — **Tiger Girl ~210-390 min · Cerberus ~200-400 min · Captain Ivy ~200-450 min (jusqu'à 700 min !) · Uruchi ~230-450 min** ; règle générique DonanımHaber : « 3,5-5 h », « minimum 2 h après le dernier kill, ensuite aléatoire ». Sources : [Extraloob](https://www.extraloob.com/threads/silkroad-1-100-level-unique-hakkinda-bilgiler-234754) · [DonanımHaber](https://forum.donanimhaber.com/unique-spawn-saatleri--14339078)
 >
-> ✅ **HP validés en croisé (recherche TR/FR/DE 2026-10)** : les 7 uniques classiques sont confirmés par 2 sources TR indépendantes (DonanımHaber + MMSRN), le guide FR GMS Temple 2010 et les forums DE — valeurs identiques au client.
+> ✅ **Timers par défaut des fichiers vSRO (recherche PS 2026-10)** — `Tab_RefNest.dwDelayTimeMin/Max` (valeurs en secondes) : **TG/Cerberus/Ivy/Isyutaru/Yarkan/Shaitan = 6 h · Uruchi = 3 h · Medusa = 4 h** (respawn à un point aléatoire après tirage min/max) ; l'ancien « 4 h par défaut vSRO » est affiné en valeurs par unique. Sources : [RaGEZONE — Dev: Unique Spawn Time](https://forum.ragezone.com/threads/dev-unique-spawn-time.820175) · [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md)
 >
-> ⚠️ **Conflit FR non tranché** : spawn ressenti ~4 h ([GMS Temple 2010](https://forum.gmstemple.com/index.php?showtopic=8106)) vs ~6 h ([Wikipédia FR](https://fr.wikipedia.org/wiki/Silkroad_Online)) — voir [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md) (section Spawn Times).
+> ✅ **HP validés en croisé (recherche TR/FR/DE 2026-10)** : les 7 uniques classiques sont confirmés par 2 sources TR indépendantes (DonanımHaber + MMSRN), le guide FR GMS Temple 2010 et les forums DE — valeurs identiques au client. **Revalidés ensuite par le tracker [m3stat](https://www.m3stat.com/uniques) (serveurs officiels iSRO, recherche PS 2026-10)**, qui fournit aussi les HP des boss 111+ (Kidemonas 120 = 13 851 102, Karkadann 123 = 15 023 129, Merikh 125 = 18 372 504 — voir [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md)).
+>
+> ⚠️→✅ **Conflit FR partiellement résolu (recherche PS 2026-10)** : ~4 h ressenti ([GMS Temple 2010](https://forum.gmstemple.com/index.php?showtopic=8106)) vs ~6 h ([Wikipédia FR](https://fr.wikipedia.org/wiki/Silkroad_Online)) — les défauts vSRO étant **6 h pour la plupart** et **4 h pour Medusa** (3 h Uruchi), les deux estimations correspondent à des uniques différents. Détail : [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md) (section Spawn Times).
 
 #### Tiger Girl (Level 20)
 ```
 Zone: Bandit Stronghold (Bijeokdan Mountain) / Tiger Mountain — Chine, Jangan
 Coordonnées (rapportées): X: 4853.28, Y: 93.81 (Tiger Mountain)
-Spawn Time: 3-5 heures après mort (4h défaut vSRO), point aléatoire — fenêtre TR: 210-390 min (✅ recherche TR 2026-10)
+Spawn Time: 3-5 heures après mort (défaut vSRO: 6 h — ✅ recherche PS 2026-10), point aléatoire — fenêtre TR: 210-390 min (✅ recherche TR 2026-10)
 HP: 598,720 | ATK: 42-51 | DEF: 18 | Gold: 586,560
 ID: 1954 | Code: MOB_CH_TIGERWOMAN
 Special: AOE stun (roar)
@@ -595,7 +598,7 @@ Qin-Shi Tomb B1-B6 (donjon Jangan):
 - **Drops:** Common items, gold
 
 ### Champion Monsters
-- **Spawn rate:** Aléatoire dans les packs de monstres normaux (fréquence exacte non publiée — ~5% rapporté, non vérifié)
+- **Spawn rate:** Aléatoire dans les packs de monstres normaux — taux exact **non publié** (RNG interne du GameServer, pas dans la DB — ✅ recherche PS 2026-10, cf. Giant ci-dessous : le ratio est hardcodé dans le binaire)
 - **HP:** **~2x normal** (vérifié, guides communautaires Origin)
 - **Damage:** supérieur au normal
 - **Drops:** Better items, SOX chance
@@ -607,7 +610,7 @@ Qin-Shi Tomb B1-B6 (donjon Jangan):
 - **Party giants:** HP encore supérieur (~20x rapporté), les plus durs des monstres réguliers
 
 ### Giant Monsters
-- **Spawn rate:** Rare (~1% rapporté, non vérifié)
+- **Spawn rate:** ✅ **Résolu (recherche PS 2026-10)** — **14 % par défaut**, hardcodé dans `sr_gameserver.exe` (`GiantMonster_SpawnRatio`, patchable par éditeur binaire/OllyDbg) ; la DB (`Tab_RefNest`) ne contrôle que **quels** monstres et **combien**, pas le pourcentage champion/giant. L'ancienne estimation « ~1 % rapporté » était fausse d'un ordre de grandeur. Source : [elitepvpers — Modify VSRO 188 Party Monster Spawn Limitation](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/4231757-release-modify-vsro-188-party-monster-spawn-limitation-sr_gameserver.html) · [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md)
 - **HP:** ~5-10x normal (estimations communautaires)
 - **Damage:** 2-3x normal
 - **Drops:** Rare drops plus fréquents, SOX possible
@@ -628,6 +631,8 @@ Qin-Shi Tomb B1-B6 (donjon Jangan):
 - **Codes `MOB_EV_*`** (ex: Young Bear `MOB_EV_BEAR_A_050`) — events saisonniers
 - **Variantes Strong** (ex: Strong Ong lvl 34, 62,959 HP vs 2,099 normal; Strong Tiger Girl `_L2`), **Evil** (`_L3`), **GM's ***
 - **Raiders de trade:** bandits/thieves qui spawnent pour attaquer les caravanes pendant les trade runs
+
+> ✅ **Type d'un monstre — colonne `Rarity` de `_RefObjCommon` (recherche PS 2026-10)** : **0 = normal · 1 = Champion · 2 = Giant · 3 = unique avec notice globale de spawn · 8 = unique sans notice** (threads RaGEZONE « Unique Summon Scrolls » n°838305 et elitepvpers « Change MOB type General to Unique » — cf. [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) §3). Les nids de spawn vivent dans la chaîne **`Tab_RefHive → Tab_RefTactic → Tab_RefNest`** (région, X/Y/Z, effectif, `dwDelayTimeMin/Max`) — extraction possible des DB publiques.
 
 ---
 
@@ -809,11 +814,11 @@ class UniqueSpawnNotifier {
 | Monster Type | Spawn Rate | HP Multiplier | SOX Chance |
 |--------------|------------|---------------|------------|
 | Normal | Majorité | 1x | ~0.01% (possible mais très rare) |
-| Champion | ~5% (rapporté) | ~2x | faible |
+| Champion | non publié (RNG interne du gameserver) | ~2x | faible |
 | Party | par packs | ~10x | faible |
-| Giant | ~1% (rapporté) | ~5-10x | plus élevée |
+| Giant | **14% (défaut vSRO, hardcodé — ✅ recherche PS 2026-10)** | ~5-10x | plus élevée |
 | Party Giant | rare | ~20x (rapporté) | élevée |
-| Unique | Timed (3-5h) | 598K → 1.45Md | Best (SOS ~5-10% rapporté) |
+| Unique | Timed (défauts vSRO : 6 h/3 h Uruchi/4 h Medusa — ✅ recherche PS 2026-10) | 598K → 1.45Md | Best (SOS ~5-10% rapporté) |
 
 ### Distribution des Zones
 
@@ -827,6 +832,8 @@ class UniqueSpawnNotifier {
 | Europe | 60-80 | Medium | 7% |
 | Egypt | 80-100 | High | 8% |
 | Alexandria | 90-110+ | Very High | 10% |
+
+> ⚠️ **Prudence (recherche PS 2026-10)** : les « Champion Rate » par zone du tableau ci-dessus sont **indicatifs et non sourcés** — selon les fichiers serveur, le ratio champion/giant est un paramètre **global** du GameServer (`GiantMonster_SpawnRatio`, défaut 14 %), pas un taux par zone. À ne présenter que comme ressenti communautaire.
 
 ---
 
@@ -852,4 +859,4 @@ class UniqueSpawnNotifier {
 *Dernière mise à jour: 1 Octobre 2026*
 
 *Sources: xSROMap, silkroadonline.wiki (données client), rev6, elitepvpers, mmorpg.com (Qin-Shi Tomb), Monster Area Wiki, Community Guides*
-*Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (timers de spawn par unique, Qin-Shi B6, validation HP) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5 nommés, skills Medusa) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) (conflit spawn 4h/6h) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) · rapports KO2 (section 🇰🇷 zones de spawn KSRO 106-140 : Dimension Miroir, donjons Jupiter, Bagdad, Shambhala)*
+*Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (timers de spawn par unique, Qin-Shi B6, validation HP) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5 nommés, skills Medusa) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) (conflit spawn 4h/6h) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) · rapports KO2 (section 🇰🇷 zones de spawn KSRO 106-140 : Dimension Miroir, donjons Jupiter, Bagdad, Shambhala) · [RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) + [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) (recherche PS 2026-10 : ✅ taux de spawn champion/giant résolus — GiantMonster_SpawnRatio 14 % hardcodé ; ✅ timers Tab_RefNest 6 h/3 h/4 h ; ✅ HP 111+ m3stat ; colonne Rarity de _RefObjCommon)*

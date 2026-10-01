@@ -443,6 +443,32 @@ Les FR se regroupaient sur : **Xian** (2006), **Aege** (2009, guilde La_Horde), 
 | **passo a passo** | tutoriel pas-à-pas (titres YouTube BR) |
 | **cartão pré-pago** | carte prépayée Level Up! (R$ 40 = 100 silks) |
 
+### 🇸🇦🇪🇬 Arabe (silkroad4arab, ProBasha — recherche AR 2026-10)
+
+> ⚠️ Le client PC n'a **jamais été localisé en arabe** (le « service arabe » officiel de 2010 était un portail web, pas un client — voir [Notes de localisation](#-notes-de-localisation)) : la communauté arabe joue en client anglais et emprunte massivement l'anglais (level, quest, blues, unique…). Translittérations = usage **égyptien**. Glossaire complet (72+ termes) : **[MULTILINGUAL_GLOSSARY.md](./MULTILINGUAL_GLOSSARY.md)**.
+
+| Jargon AR | Translit. | Signification |
+|---|---|---|
+| **التاكسي** | tāksī | « taxi » = **service payant de power-leveling (plvl)** |
+| **اليونيك / اليونكس** | yūnīk / yūnak | **unique** (boss) — prononciation égyptienne |
+| **البوس / البوسات** | bōs / bōsāt | **boss / les uniques** (emprunt direct à l'anglais) |
+| **الجاب** | gap | **gap** (écart niveau/maîtrise pour le SP farming) |
+| **فتحة** | fatḥa | « ouverture » = **grand opening** d'un serveur privé |
+| **السايبر** | al-sāyber | **cybercafé** (l'ère 2006-2007 égyptienne) |
+| **شحن / كرت شحن** | shaḥn / kart | **recharge de silk** (carte) |
+| **النصابين** | al-nasābīn | **les arnaqueurs** (section dédiée du forum s4a) |
+| **الوش / وشوش** | wash / wushūsh | **duels PvP** (« faces ») |
+| **الصن / المون / السوس** | ṣan / mūn / sōs | Seal of **Sun / Moon / Star** |
+| **الانشر** | enhance | **renforcement** (+1, +2…) |
+| **الكيمياء / الالكسير** | al-kīmiyāʾ / elixir | alchimie / élixir — les élixirs sont surnommés « **المخدرات الرسمية للعبة** » (« la drogue officielle du jeu ») |
+| **الجولد / الذهب** | gold / al-dhahab | or — lui-même surnommé « **الروح** » (« l'âme ») |
+| **تايجر جيرل** | Tiger Girl | Tiger Girl, dite « **البوسة بتاعة جنجان** » (« la boss de Jangan ») |
+| **قلعة الحرامية** | qalʿat al-ḥarāmiya | **Forteresse des Bandits** (Bandit Fortress) |
+| **حرب الحصون** | ḥarb al-ḥuṣūn | **Fortress War** (3 forteresses : Jangan, Hotan, Bandit) |
+| **الميدوسا** | al-Medusa | ⚠️ **piège de traduction** — voir ci-dessous |
+
+> ⚠️ **Piège « Medusa = BeakYung »** : dans le lexique communautaire arabe, « **الميدوسا** » (Medusa) désigne **BeakYung the White Viper**, le serpent blanc de la tombe de Qin-Shi (salle B5/B6 selon les sources) — **pas** un boss « Medusa » séparé ([RESEARCH_AR_SERVERS](./ML_RESEARCH/RESEARCH_AR_SERVERS.md) §Boss : guide de kill arabe 2011 — « Medusa = أقوى وحش », niveau minimum conseillé 101+, ~15 min de kill, stuns > 40 s). Les Arabes suivent ici la convention informelle EN/iSRO, qui surnomme aussi BeakYung « Medusa ».
+
 ### 🇨🇳🇰🇷 Chinois & coréen (extraits — voir MULTILINGUAL_GLOSSARY.md)
 
 - 🇨🇳 **暗金** (ànjīn, « or sombre ») = argot CN pour les Seal equipment (règle CN : le seal ne tombe que sur le **premier tier** d'un degré)
@@ -462,6 +488,7 @@ Les FR se regroupaient sur : **Xian** (2006), **Aege** (2009, guilde La_Horde), 
 3. **Jamais de localisation turque non plus** : la communauté TR joue avec les noms anglais ([RESEARCH_TR](./ML_RESEARCH/RESEARCH_TR.md) — incertitude n°12 : « iSRO n'ayant jamais été localisé en turc, les skills restent en anglais dans les guides TR »).
 4. **🇨🇳 Garde-fou MOBILE** : les remakes mobiles chinois 2024+ (丝路传说手游, 寻梦丝路, 丝路传说怀旧版) utilisent un **vocabulaire différent** (enhancement max **+15**, raretés en **couleur**, etc.) qui **ne décrit PAS le jeu PC classique** — ne pas importer ces termes/chiffres ([RESEARCH_ZH](./ML_RESEARCH/RESEARCH_ZH.md)).
 5. **🇩🇪/🇧🇷** : pas de client officiel allemand ni portugais — le projet fan **gSRO « German Patch »** (~2008) a fourni une terminologie DE officieuse ; **Level Up! Brasil** (2007) n'était qu'un revendeur de Silk (E-PIN), sans serveurs BR ni traduction PT.
+6. **🇸🇦 Service arabe officiel (2010) = portail web uniquement** : lancé le **02/02/2010** (annonce IGN du 22/01/2010, 2e extension linguistique après le turc), il couvrait le **site/le portail et l'inscription** (confirmé par la presse arabe ArabMMO, 05/2010) — **jamais de client PC arabe** (aucune textdata/itemdata arabe retrouvée ; fils s4a expliquant comment écrire l'arabe dans le chat). La localisation arabe officielle complète n'existe que sur **mobile** : Silkroad Origin Mobile Arabia (WeMade Max × GOSU, 2024-2026, wiki officiel [sromarabia.com/wiki](https://sromarabia.com/wiki)) — [RESEARCH_AR_DEV](./ML_RESEARCH/RESEARCH_AR_DEV.md) §6.
 
 ---
 
@@ -477,9 +504,10 @@ Pour plus de termes et slang, consultez:
   - [ML_RESEARCH/RESEARCH_PT.md](./ML_RESEARCH/RESEARCH_PT.md) — glossaire BR (Wikipédia PT : https://pt.wikipedia.org/wiki/Silkroad_Online)
   - [ML_RESEARCH/RESEARCH_ZH.md](./ML_RESEARCH/RESEARCH_ZH.md) — noms ZH officiels (wiki TW : https://srowiki.digeam.com, CN : https://silkroad.iccgame.com)
   - [ML_RESEARCH/RESEARCH_KO.md](./ML_RESEARCH/RESEARCH_KO.md) — noms KR officiels (Inven 2004 : https://www.inven.co.kr/webzine/news/?news=2285)
+  - [ML_RESEARCH/RESEARCH_AR_DEV.md](./ML_RESEARCH/RESEARCH_AR_DEV.md) · [ML_RESEARCH/RESEARCH_AR_SERVERS.md](./ML_RESEARCH/RESEARCH_AR_SERVERS.md) — glossaire arabe complet (72+ termes avec translittération ; silkroad4arab : https://www.silkroad4arab.com/vb ; ProBasha : https://probasha.com) — intégré dans MULTILINGUAL_GLOSSARY.md
 - Community forums
 - In-game: Ask other players!
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (fusion des glossaires ML_RESEARCH — lexique FR + jargon international)*
+*Dernière mise à jour: 2026-10-01 (fusion des glossaires ML_RESEARCH — lexique FR + jargon international, puis ajout de la langue arabe — recherche AR 2026-10)*

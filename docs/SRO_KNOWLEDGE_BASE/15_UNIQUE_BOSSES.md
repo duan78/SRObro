@@ -28,7 +28,7 @@ Les **Uniques** sont les boss les plus puissants de Silkroad Online. Ils dropent
 ### Points Clés
 - ✅ **Meilleurs drops du jeu:** SOX items
 - ✅ **Massive EXP/SP:** Un unique peut donner plusieurs levels
-- ✅ **Long respawn:** 3-5 heures sur iSRO (4h par défaut dans les fichiers vSRO), variable selon les serveurs
+- ✅ **Long respawn:** 3-5 heures sur iSRO ; défauts vSRO **par unique** : **6 h** (TG/Cerberus/Ivy/Isyutaru/Yarkan/Shaitan), **3 h** (Uruchi), **4 h** (Medusa) — ✅ Résolu (recherche PS 2026-10), variable selon les serveurs
 - ✅ **Full party required:** Généralement impossible solo au level approprié
 - ✅ **Competition:** D'autres joueurs veulent aussi les tuer
 
@@ -68,6 +68,21 @@ Ce document a été corrigé à partir de **données extraites du client officie
 **Sous-uniques du Qin-Shi Tomb** (voir section dédiée) : 4 Gardiens (98-99), Shinmoo (100), Soso the Black Viper (100), Snake Generals (95).
 
 **Boss de donjons FGW** (voir section dédiée) : Togui General (bracket 35-50, version A1 = lvl 39), Ghost Sereness (bracket 91-100, version A1 = lvl 93) — le level des boss FGW dépend du bracket et du grade (A1-A4).
+
+### ✅ HP officiels des boss 111+ (tracker m3stat) — Résolu (recherche PS 2026-10)
+
+> ✅ **Résolu (recherche PS 2026-10)** : les HP des boss 111+ — la plus grosse lacune de ce document — sont désormais **mesurés sur les serveurs officiels iSRO** (Minerva, Palmyra…) par le tracker **M3 Stats**, qui collecte les données en jeu. Valeurs **[OFFICIEL-DÉRIVÉ]** (valeurs officielles, mesure tierce). Source : [m3stat.com/uniques](https://www.m3stat.com/uniques) · rapport : [ML_RESEARCH/RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md)
+
+| Unique | Level | HP | Statut |
+|---|---|---|---|
+| **Kidemonas** (키데모나스) | **120** | **13 851 102** | ✅ officiel (Dimension Miroir — cf. section KSRO ci-dessous) |
+| **Karkadann** | **123** | **15 023 129** | ✅ officiel (ère cap 120-125, uniques « 12-13D ») |
+| **Merikh** | **125** | **18 372 504** | ✅ officiel (ère cap 125) |
+
+- **Chaîne classique revalidée par la même source** : Tiger Girl 598 720 · Cerberus 693 072 · Captain Ivy 1 094 835 · Uruchi 1 779 528 · Isyutaru 4 324 612 · Lord Yarkan 9 353 045 · Demon Shaitan 12 732 060 · **Medusa/BeakYung 183 535 199** — **strictement identiques** aux données client du tableau ci-dessus (validation croisée supplémentaire, après TR/FR/DE/ZH/KO). Le tracker donne aussi **Roc = 1 451 891 045** (même ordre de grandeur atypique que le client — à recouper, possiblement version raid/événement).
+- Cross-validation serveur privé : le wiki ExaySRO **republie à l'identique** les HP du client officiel (dont **Apis 21 068 995**) — seule sa ligne « boss custom » diffère (voir Abshad/Bagdad ci-dessous). Source : [wiki ExaySRO — Unique Locations](https://wiki.exaysro.com/books/guides/page/unique-locations) · [ML_RESEARCH/RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md)
+- ⚠️ **Toujours manquants** : HP des boss Jupiter 111-118 (Jupiter/Yuno/Deus/Baal/Babilion/Zielkiaxe) et des boss 130+ (Benephika, Giant Overlord, Thief Boss Kalia) — le tracker s'arrête à Merikh 125 ; l'extraction `_RefObjChar`/`characterdata` des files vSRO 1.193+/BR120 reste la voie (cf. [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) §1).
+- Exemple de HP custom à ne pas confondre avec l'officiel : InPanic (cap 120) affiche Medusa à **367 070 398 HP** — le **doublement** de la valeur officielle **[CUSTOM]** ([elitepvpers 1849004](https://www.elitepvpers.com/forum/sro-pserver-advertising/1849004-inpanic-silkroad-level-120-cap-privat-server-deutsch-english-6.html)).
 
 ### Codes de région dans les noms internes
 | Préfixe | Région |
@@ -359,7 +374,7 @@ Le **Job Temple** (donjon de job au sud d'Alexandrie, cap 120) contient 6+ uniqu
 
 > ⚠️ **Périmètre** : chaîne de boss du **service coréen (KSRO, jamais fermé)** au-delà du contenu classique iSRO. **Ne pas fusionner avec les tableaux classiques ci-dessus** (les niveaux/HP classiques restent ceux du client iSRO). Rapport source : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) · chronologie : [RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md).
 >
-> ⚠️ **HP indisponibles** : aucune source officielle (KR ou TW) ne publie les HP/niveaux de ces boss — le site officiel KR ne donne que noms/niveaux (pour les monstres) et conditions d'entrée (pour les donjons). L'**extraction du client** (`characterdata`/`_RefObjChar`) reste la seule voie.
+> ⚠️ **HP indisponibles** : aucune source officielle (KR ou TW) ne publie les HP/niveaux de ces boss — le site officiel KR ne donne que noms/niveaux (pour les monstres) et conditions d'entrée (pour les donjons). ✅ **Partiellement résolu (recherche PS 2026-10)** : le tracker [m3stat](https://www.m3stat.com/uniques) (serveurs officiels iSRO) fournit désormais les HP de **Kidemonas 120 / Karkadann 123 / Merikh 125** (table ci-dessus) ; pour les boss Jupiter (111-118) et Bagdad/Shambhala (130+), l'**extraction du client** (`characterdata`/`_RefObjChar`) reste la seule voie.
 
 ### Chaîne chronologique post-Medusa
 
@@ -368,8 +383,8 @@ Le **Job Temple** (donjon de job au sud d'Alexandrie, cap 120) contient 6+ uniqu
 | **Job Temple** (2009, données officielles KR) | 셀키스/네이트/아누비스/이시스/하로에리스/세이트 (Selket, Neith, Anubis, Isis, Haroeris, Seth) | **105 → 110** | 신전 (Égypte) | identiques aux données iSRO (voir validation ci-dessus) | gamedata kSRO |
 | **Temple de Jupiter** (Legend XII KR, 22/06/2011) | **Jupiter (朱庇特), Yuno (柳諾), Deus (帝厄斯)** | non publiés (~111-113, donjons 106/111/113) | 경배의 전당 (Hall of Worship) 중급/상급 | boss éponymes du temple ; documentés par vidéos de chasse | DiGeam S14, YouTube S31 |
 | **Temple de Jupiter B** | **바알 (Baal), 바빌리온 (Babilion), Zielkiaxe (吉爾其厄斯)** | non publiés (~116-118, donjons 106/116/118) | 광신도의 은신처 (Zealots Hideout) | Baal = chef démoniaque de la Dimension Miroir ; Babilion = fondateur du culte (lore officiel KR) ; « Zielkiaxe » = orthographe EN, KR non trouvée | gamedata kSRO S1, DiGeam S15, YouTube S31 |
-| **Unique de champ** (25/04/2012) | **키데모나스 (Kidemonas)** | **120** | 거울의 차원 (Dimension Miroir) | unique de champ ajouté par notice officielle KR (K24) — le seul boss 120+ dont le niveau est publié | board KR K24 |
-| **Bagdad** (mai 2014, cap 125) | **얍샤드 대장군** (Grand Général Yapshad) | non publié | 바그다드 (champ/donjon ?) | avatar officiel KR « 얍샤드 대장군 » (04/07/2013) + vidéos KR annotées 얍샤드 — **statut d'unique à confirmer** | board KR S6, YouTube S34 |
+| **Unique de champ** (25/04/2012) | **키데모나스 (Kidemonas)** | **120** | 거울의 차원 (Dimension Miroir) | unique de champ ajouté par notice officielle KR (K24) — ✅ **HP officiel : 13 851 102** (tracker m3stat, recherche PS 2026-10) | board KR K24 · m3stat |
+| **Bagdad** (mai 2014, cap 125) | **얍샤드 대장군** (Grand Général Yapshad) | non publié | 바그다드 (champ/donjon ?) | avatar officiel KR « 얍샤드 대장군 » (04/07/2013) + vidéos KR annotées 얍샤드 — ✅ **statut confirmé (recherche PS/AR 2026-10)** : présent dans les DB vSRO étendues sous le nom EN « **Abshad Force High General** » (ExaySRO) ; ⚠️ son **99 000 000 HP** chez ExaySRO = valeur **[CUSTOM serveur]**, pas officielle | board KR S6, YouTube S34 · [wiki ExaySRO](https://wiki.exaysro.com/books/guides/page/unique-locations) |
 | **Bagdad souterrain** | **巨大魔神 (Grand Démon)** · **沙勒軍大將軍** (Général en chef, « armée de la vengeance » 萬眾復仇軍) | non publiés | 바그다드 지하 (121+) | super-boss du donjon (3×50 min/jour) | DiGeam S16 |
 | **Repaire de Kailia** | **盜賊頭目凱麗亞 (Kailia, cheffe bandite)** | non publié | 카일리아의 은신처 (121+) | orthographe KR probable 카일리아 (non sourcée) | DiGeam S17 |
 | **Raid Legend 23** (~16/05/2023) | **覺醒死亡駭骨 (« Squelette de Mort Éveillé »)** | non publié | 파멸의 성전 (Temple of Destruction, 125+) | apparaît après les 3 boss de raid ; **jamais plus d'1 final simultané** ; **disparaît au bout de 3 h** s'il n'est pas tué ; raid multi-groupes | DiGeam S20, srolobby S28 |
@@ -442,9 +457,23 @@ Les fichiers client contiennent des variantes d'uniques utilisées pour les even
 
 ```
 iSRO (officiel)      : spawn toutes les 3-5 heures à un point aléatoire ("blue spots")
-vSRO (fichiers srv)  : timer par défaut = 4 heures après la mort
+vSRO (fichiers srv)  : timers par défaut PAR UNIQUE (Tab_RefNest) — voir tableau ✅ ci-dessous
 StrategyWiki (2006)  : "spawn 1-2 fois par jour dans des zones spéciales" (ancien)
 ```
+
+> ✅ **Résolu (recherche PS 2026-10) — timers de respawn par défaut de la vSRO** : les timers vivent dans **`Tab_RefNest.dwDelayTimeMin/Max`** (valeurs **en secondes**, résolues via `Tab_RefTactics.dwObjID`). Valeurs par défaut citées pour la vSRO (source : admin de serveur privé « aokaday » — fiabilité 3-4, à recouper par extraction d'une DB 1.188 propre) :
+>
+> | Unique | dwDelayTimeMin/Max | = défaut |
+> |---|---|---|
+> | Tiger Girl, Cerberus, Captain Ivy, Isyutaru, Lord Yarkan, Demon Shaitan | 3600×6 | **6 h** |
+> | Uruchi | 3600×3 | **3 h** |
+> | BeakYung « Medusa » | 3600×4 | **4 h** |
+> | Evil Order (unique d'event) | 3600×2 | 2 h |
+> | David / Jupiter (files BR) | 3600×4 | 4 h |
+>
+> Sources : [RaGEZONE — Dev: Unique Spawn Time](https://forum.ragezone.com/threads/dev-unique-spawn-time.820175) · [elitepvpers — How to change unique spawn time](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/1773490-guide-how-change-unique-spawn-time.html) · rapport [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md)
+>
+> 📌 **Affinement** : l'ancienne formulation « 4 h par défaut vSRO » est remplacée par les valeurs réelles par type d'unique (**6 h pour la plupart, 3 h Uruchi, 4 h Medusa/Jupiter**) ; l'unique re-spawn **à un point aléatoire** après un délai tiré entre min et max (d'où les fenêtres ressenties « 3-6 h » de l'iSRO).
 
 - ⏱️ **Le timer démarre à la mort** de l'unique
 - 🎲 **Le point de spawn est aléatoire** parmi plusieurs spots prédéfinis (points bleus des maps communautaires)
@@ -472,6 +501,7 @@ Fenêtres de respawn rapportées **en minutes après la mort** ([Extraloob — g
 Règles génériques citées sur DonanımHaber ([thread « unique spawn saatleri »](https://forum.donanimhaber.com/unique-spawn-saatleri--14339078)) : « **3,5-5 h** » (rebellon) / « **minimum 2 h après le dernier kill, ensuite aléatoire** » (_aNaToLia_).
 
 > ⚠️ **Conflit FR non tranché (recherche FR 2026-10)** : le guide FR « Les Uniques » (GMS Temple, 2010) décrit un spawn ressenti « **environ toutes les 4 heures** », tandis que [Wikipédia FR](https://fr.wikipedia.org/wiki/Silkroad_Online) indique « **environ toutes les 6 heures** » — aucune des deux n'est une donnée client. Les fenêtres TR ci-dessus (3h30 → 11h40 pour Ivy) englobent les deux estimations. Source : [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md)
+> ✅ **Partiellement résolu (recherche PS 2026-10)** : les défauts vSRO étant de **6 h pour la plupart des uniques** et de **4 h pour Medusa** (3 h Uruchi — tableau ci-dessus), les deux estimations FR correspondent vraisemblablement à des uniques différents — le conflit était un artefact de généralisation.
 
 ### Variations serveurs privés
 - Low-rate (1x-5x) : souvent timers officiels
@@ -613,7 +643,7 @@ Détails complets : [MONSTERS_SPAWN_LOCATIONS.md](./MONSTERS_SPAWN_LOCATIONS.md)
 **R:** Non, c'est du RNG. Seul le gold est quasi garanti (montants ci-dessus issus du client).
 
 ### Q: Les uniques respawn-ils plus vite sur les serveurs privés ?
-**R:** Généralement oui (30 min à 2h). Le défaut vSRO est 4h.
+**R:** Généralement oui (30 min à 2h). Défauts vSRO : **6 h** (la plupart), **3 h** Uruchi, **4 h** Medusa (✅ recherche PS 2026-10).
 
 ---
 
@@ -642,7 +672,14 @@ Détails complets : [MONSTERS_SPAWN_LOCATIONS.md](./MONSTERS_SPAWN_LOCATIONS.md)
 - Wiki officiel DiGeam (TW) : [敬拜的殿堂](https://srowiki.digeam.com/%E6%95%AC%E6%8B%9C%E7%9A%84%E6%AE%BF%E5%A0%82/) · [狂信徒的藏身處](https://srowiki.digeam.com/%E7%8B%82%E4%BF%A1%E5%BE%92%E7%9A%84%E8%97%8F%E8%BA%AB%E8%99%95/) · [破滅聖殿](https://srowiki.digeam.com/%E7%A0%B4%E6%BB%85%E8%81%96%E6%AE%BF/) (boss final 覺醒死亡駭骨)
 - [Facebook officiel iSRO — Lv.140 Shambhala](https://www.facebook.com/officialsilkroad/posts/1502299075272015) · [Avatar 얍샤드 대장군 (board KR, 04/07/2013)](https://krsilkroadcp.joymax.com/news/news_view.asp?sID=2&Page=22&Num=4322&List_Ref=1501)
 
+### ✅ Trackers officiels & fichiers serveur (recherche PS/AR 2026-10)
+- [M3 Stats — Uniques](https://www.m3stat.com/uniques) — HP mesurés en jeu sur les serveurs officiels iSRO (Minerva, Palmyra…) : **Kidemonas 13 851 102 · Karkadann 15 023 129 · Merikh 18 372 504** + chaîne classique revalidée
+- [stats.projecthax.com](https://stats.projecthax.com) — suivi live de 26 serveurs officiels (kills d'uniques, population)
+- [RaGEZONE — Dev: Unique Spawn Time](https://forum.ragezone.com/threads/dev-unique-spawn-time.820175) — timers par défaut vSRO (Tab_RefNest) · [elitepvpers — How to change unique spawn time](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/1773490-guide-how-change-unique-spawn-time.html)
+- [Wiki ExaySRO — Unique Locations](https://wiki.exaysro.com/books/guides/page/unique-locations) — HP officiels republiés à l'identique + « Abshad Force High General » (99 M HP custom) = 얍샤드 대장군
+- Rapports : [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) · [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) · [RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md) · [RESEARCH_AR_DEV.md](ML_RESEARCH/RESEARCH_AR_DEV.md) · voir [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md)
+
 ---
 
 *Dernière mise à jour: 2026-10-01 (recherche web exhaustive — données client vérifiées via silkroadonline.wiki, elitepvpers, rev6, mmorpg.com, strategywiki)*
-*Fusion multilingue 2026-10 : rapports [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) (timers TR, noms ZH/KR, gardiens B5, skills Medusa, FGW) · rapports KO2 (section 🇰🇷 boss KSRO 2011-2023, validation Job Temple KR, correction Hebe/Kali/Rhea)*
+*Fusion multilingue 2026-10 : rapports [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) (timers TR, noms ZH/KR, gardiens B5, skills Medusa, FGW) · rapports KO2 (section 🇰🇷 boss KSRO 2011-2023, validation Job Temple KR, correction Hebe/Kali/Rhea) · recherche PS/AR 2026-10 ([RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md), [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md), [RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md), [RESEARCH_AR_DEV.md](ML_RESEARCH/RESEARCH_AR_DEV.md) : ✅ HP officiels 111+ via m3stat — Kidemonas 13 851 102 / Karkadann 15 023 129 / Merikh 18 372 504 ; ✅ timers vSRO par défaut 6 h/3 h/4 h (Tab_RefNest) ; ✅ confirmation 얍샤드 대장군 = « Abshad Force High General » de Bagdad)*

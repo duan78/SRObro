@@ -1122,7 +1122,7 @@ La table officielle KR ([China_Monster_Dungeon](https://krsilkroadcp.joymax.com/
 
 | Zone | Monstres connus | Statut |
 |---|---|---|
-| **거울 차원 (Dimension Miroir)** | les 45 monstres Jupiter ci-dessus (111-116) + unique de champ **키데모나스 (Kidemonas, 120)** ajouté le 25/04/2012 (notice K24) | ✅ officiel |
+| **거울 차원 (Dimension Miroir)** | les 45 monstres Jupiter ci-dessus (111-116) + unique de champ **키데모나스 (Kidemonas, 120)** ajouté le 25/04/2012 (notice K24) — ✅ **HP officiel : 13 851 102** (tracker [m3stat](https://www.m3stat.com/uniques), recherche PS 2026-10 ; également mesurés : Karkadann 123 = 15 023 129, Merikh 125 = 18 372 504 — voir [15_UNIQUE_BOSSES.md](./15_UNIQUE_BOSSES.md)) | ✅ officiel |
 | **바그다드 (Bagdad)** | vidéos KR de chasse party et d'uniques (2020-2021, S34) — **aucune liste officielle publiée** ; boss : 얍샤드 대장군 ?, Grand Démon, Général, Kailia | ⚠️ non documenté officiellement |
 | **샴발라 (Shambhala, 131-140)** | « nouvelle carte + nouveaux monstres » (notice K9) — **noms non publiés** | ⚠️ non documenté officiellement |
 
@@ -1267,6 +1267,11 @@ La table officielle KR ([China_Monster_Dungeon](https://krsilkroadcp.joymax.com/
 
 **⚠️ « Elite » (nom orange):** NON CONFIRMÉ dans les données client — probablement une confusion (variantes Strong d'event, party giants, ou serveurs privés).
 
+### ✅ Taux de spawn réels — fichiers serveur (recherche PS 2026-10)
+
+- **`GiantMonster_SpawnRatio` = 14 % par défaut, hardcodé dans `sr_gameserver.exe`** (patchable par éditeur binaire/OllyDbg) : le spawn champion/giant repose sur un **RNG interne du GameServer** — la DB ne contrôle que **quels** monstres et **combien** (`Tab_RefNest`). Corrige l'ancienne estimation « giants ~1 % » (fausse d'un ordre de grandeur). Source : [elitepvpers — Modify VSRO 188 Party Monster Spawn Limitation](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/4231757-release-modify-vsro-188-party-monster-spawn-limitation-sr_gameserver.html) · [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md)
+- **Type d'un monstre = colonne `Rarity` de `_RefObjCommon`** : **0 = normal · 1 = Champion · 2 = Giant · 3 = unique avec notice globale · 8 = unique sans notice** ([ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) §3-§4, threads RaGEZONE « Unique Summon Scrolls » n°838305 / elitepvpers « Change MOB type General to Unique »).
+
 ### Examples
 
 **Strong Ong vs Ong (données client, vérifié):**
@@ -1321,5 +1326,5 @@ La table officielle KR ([China_Monster_Dungeon](https://krsilkroadcp.joymax.com/
 ---
 
 *Dernière mise à jour: 2026-10-01 (uniques corrigés d'après données client silkroadonline.wiki; faune Alexandria/Roc Mountain corrigée)*
-*Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (validation HP, timers, Qin-Shi B6) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) · rapports KO2 (section 🇰🇷 monstres KSRO 100-140 : 45 monstres Jupiter officiels, gardiens Qin-Shi KR, monstres d'Égypte KR)*
+*Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (validation HP, timers, Qin-Shi B6) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) · rapports KO2 (section 🇰🇷 monstres KSRO 100-140 : 45 monstres Jupiter officiels, gardiens Qin-Shi KR, monstres d'Égypte KR) · [RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) + [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) (recherche PS 2026-10 : ✅ taux de spawn champion/giant résolus — GiantMonster_SpawnRatio 14 % hardcodé + types via colonne Rarity de _RefObjCommon ; ✅ HP officiels Kidemonas/Karkadann/Merikh via m3stat)*
 *Prochaine mise à jour: Monstres 60-110*

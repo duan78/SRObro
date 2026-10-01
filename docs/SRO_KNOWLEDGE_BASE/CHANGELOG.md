@@ -78,7 +78,25 @@ Ce document track toutes les modifications apportées à la documentation SRO_KN
 - Dès le **12차, niveau d'équipement fixé à 101** + pénalité de maîtrise (pas un défaut du dump)
 - « Hebe/Arges/Kali/Rhea » = serveurs iSRO, pas des uniques (note préventive)
 
-**Ajouts clés :** degrés jusqu'au **17차** ; alchimie 12D+ (인핸서 Enhancers, 보호석, 각석 upgrade de degré, blues non hérités) ; hiérarchie Magic/Rare/Legend au 12D+ ; zones 106-140 (Dimension Miroir, Bagdad, Shambhala Ice/Fire Temple) et 8 donjons ; chaîne de boss post-Medusa (Job Temple → Jupiter → Bagdad → raid 2023) ; 45 monstres officiels du Temple de Jupiter ; **base skills officielle : 64 séries/296 skills CH** (Force passée à 12 séries) + 269 noms KR EU ; 12 fellows ; calendrier events 2022-2026 ; 5 forteresses KR ; academy system ; monétisation 2026.
+---
+
+## 🏰 2026-10-01 (4) — Serveurs Privés (EN + AR) & fichier consolidé
+
+### 4 rapports PS/AR + création de 39_PRIVATE_SERVERS.md + 12 fichiers enrichis
+
+**Méthode :** ~145 requêtes (2 campagnes EN sur les fichiers de serveur fuités et la scène high-cap, 2 campagnes AR sur la communauté arabe et les serveurs arabes) → rapports `ML_RESEARCH/RESEARCH_PS_FILES / PS_HIGHCAP / AR_DEV / AR_SERVERS.md`. **Nouveau fichier central [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md)** (518 lignes) : histoire des fuites, inventaire des 14 versions de fichiers, architecture serveur, catalogue des tables SQL, scène arabe, outils d'extraction.
+
+**Résolutions majeures d'incertitudes :**
+- **HP officiels des boss 111+ trouvés** (tracker m3stat des serveurs officiels) : Kidemonas 120 = 13 851 102, Karkadann 123 = 15 023 129, Merikh 125 = 18 372 504 (boss Jupiter 111-118 et 130+ restent à extraire)
+- **Timers de respawn par défaut vSRO** (Tab_RefNest) : 6 h pour TG/Cerberus/Ivy/Isyutaru/Yarkan/Shaitan, Uruchi 3 h, Medusa 4 h — résout le conflit 4h/6h
+- **GiantMonster_SpawnRatio = 14 %** hardcodé (résout le taux champion/giant) + types via colonne Rarity de _RefObjCommon (0/1/2/3/8)
+- **_RefMagicOptByItemOptLevel (plages de blues) existe publiquement** dans les dumps vSRO (correction)
+- **Règle officiel/custom tranchée : D12-D15 = officiels** (D12 Jupiter, D14 cap 125 iSRO 01/2015 vs KR 08/2014, D15 cap 130), **D16+ = custom**
+- **Corrections historiques** : ECSRO = fichiers cSRO de test fuités (pas un émulateur indépendant), BlackRogue = service thaïlandais ini3 (pas RSRO), vSRO 1.188 = cap 110/D11, plainte Joymax 2009 (~48 chefs, 2,5 M$)
+- **Abshad Force High General = 얍샤드 대장군** (boss Bagdad KSRO confirmé via DB vSRO ; HP 99 M = custom)
+- Architecture officielle : 9 modules + ordre de démarrage, certification port 32000, ExpRatio 1000 = ×1, 1000 joueurs/AgentServer
+
+**Scène arabe documentée** : silkroad4arab (313 016 membres fin 2015, record 17 621 connectés), 18 serveurs arabes caps 120-140 (tableau), glossaire arabe 72+ termes (avec le piège « Medusa = BeakYung »), service arabe officiel 02/02/2010 = portail web (jamais de client PC arabe), Silkroad Origin Mobile Arabia (2026).
 
 ---
 

@@ -767,12 +767,14 @@ Réalité : Snow Shield (Cold) absorbe une part des dégâts en MP —
 | **AR/PR : lecture jet min/max** | AR→max (dès Lv 44), PR→min | SroCave (TR) — corroboration | 4/5 |
 | **Formule TR simplifiée** | stat × Reinforce% + atk power (sans constantes) | silkroadportal.com (TR) | 3/5 |
 | **Scaling 기공 2005** | attaque→ATK magique, défense→DEF magique, vitesse→équipement | GameAbout (KO, officiel) | 4/5 |
+| **Taux spawn Giant (vSRO)** | GiantMonster_SpawnRatio = **14 %** hardcodé (sr_gameserver.exe) | elitepvpers 4231757 (recherche PS 2026-10) | 3-4/5 |
+| **Rates serveur /1000** | **ExpRatio 1000 = ×1** par défaut (les files = taux officiels) | guide du leaker RaGEZONE 780273 + TopGameServer (recherche PS 2026-10) | 5/5 |
 
 ---
 
 ### ⚠️ Incertitudes restantes (sources divergentes)
 
-1. **Constantes multiplier exactes** (1.2767…/1.2870…) : reconstruites par tests, jamais officielles ; modifiées par certains serveurs privés — les formules DE 2006 (Troy) et TR modernes ne les contiennent pas non plus (recherches DE/TR 2026-10) → **toujours non résolues**
+1. **Constantes multiplier exactes** (1.2767…/1.2870…) : reconstruites par tests, jamais officielles ; modifiées par certains serveurs privés — les formules DE 2006 (Troy) et TR modernes ne les contiennent pas non plus (recherches DE/TR 2026-10) → **toujours non résolues** ; la recherche PS 2026-10 (inventaire complet des fuites de fichiers serveur) **confirme le constat négatif** : aucune extraction publique de la formule de dégâts n'existe ([ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) §6)
 2. **Variante du crit** : ✅ **Résolu (recherche DE 2026-10)** — le thread fondateur (elitepvpers 412387) donne bien **2×PHY + MAG** ; la « variante balance » est une proposition tardive marginale du même thread
 3. **Chance de proc des imbues par pallier de skill** : ordres de grandeur (fire ~20-30%, cold 20-60% selon skill) mais pas de table exacte publiée — la recherche DE 2026-10 explique le **scaling des dégâts** d'imbue (×% de la skill) mais pas les taux de proc ; la recherche TR ne documente que la hiérarchie Cold < Lightning < Fire → se fier aux tooltips client
 4. **Échelle exacte de la vitesse d'attaque** (coups/minute par arme) : l'ordre relatif est sûr, les valeurs absolues varient selon les sources — non documentée côté TR non plus (recherche TR 2026-10)
@@ -836,6 +838,15 @@ Büyüsel Hasar  (dégât MAG) = Total INT × Magical Reinforce % + Magical Atta
 - **Test de balance 2005** (Bicheon 20 vs Pacheon 10) : l'arc chasse aussi vite malgré la mastery moitié moindre ; l'épée critique et gèle plus (coups plus nombreux) mais encaisse plus (http://www.gameabout.com/news/articleView.html?idxno=584)
 - Rapport [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) : « formules officielles : non résolu (Joymax n'a jamais publié) » — mais scaling 2005 confirmé (confiance 3/5)
 
+### 🇻🇳 Fichiers serveur officiels fuités : taux de spawn et rates (recherche PS 2026-10)
+
+Issu de l'inventaire des files serveur fuitées — rapport [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) :
+
+- **Taux de spawn Champion/Giant — ✅ Résolu (recherche PS 2026-10)** : le ratio est **hardcodé dans `sr_gameserver.exe`**, pas dans la DB — **`GiantMonster_SpawnRatio` = 14 % par défaut** (patchable OllyDbg) ; la DB (`Tab_RefNest`) ne contrôle que **quels** monstres et **combien**, le tirage champion/giant étant un RNG interne au GameServer. Corrige les anciennes estimations « giants ~1 % ». Source : [elitepvpers — Modify VSRO 188 Party Monster Spawn Limitation](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/4231757-release-modify-vsro-188-party-monster-spawn-limitation-sr_gameserver.html)
+- **Type d'un monstre** = colonne **`Rarity` de `_RefObjCommon`** : 0 = normal · 1 = Champion · 2 = Giant · 3 = unique avec notice globale · 8 = unique sans notice.
+- **Sémantique officielle des rates serveur** : le GameServer lit `server.cfg` en **millièmes** — **`ExpRatio 1000` = ×1 (valeur par défaut des files = les taux officiels)**, 35000 = ×35 ; idem `ExpRatioParty`, `DropItemRatio`, `DropGoldAmountCoef` (or/monstre), `HwanGainFactor` (Zerk). → **les fichiers fuités tournent aux taux officiels par défaut** : tout serveur affichant ×30-×200 est custom (utile pour distinguer taux officiels vs customs dans les données publiées par les privés). Les rates se chargent en mémoire au démarrage (restart complet requis). Sources : [TopGameServer — How to Change vSRO EXP and Silk Rates](https://topgameserver.net/drop) · [guide du leaker « Chernobyl » (RaGEZONE, 13/09/2011)](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273)
+- **Constat négatif (pour l'incertitude n°1 ci-dessous)** : aucune extraction publique de la **formule de dégâts** depuis les binaires n'existe — les constantes 1.2767…/1.2870… restent des reconstructions joueurs, même après l'inventaire complet des fuites. Architecture détaillée des 9 modules serveur : [TECHNICAL_SPECIFICATIONS.md](TECHNICAL_SPECIFICATIONS.md).
+
 ---
 
 ## 📚 Sources
@@ -859,7 +870,7 @@ Büyüsel Hasar  (dégât MAG) = Total INT × Magical Reinforce % + Magical Atta
 - [SilkroadPortal — formules hasar/defans (TR)](https://silkroadportal.com/konular/silkroad-online-hasar-defans-hesaplama-attritube-stone.366) 🇹🇷
 - [SroCave — Temel Bilgiler (AR/parry, status effects, éléments)](https://srocave.com/konular/silkroad-online-oyunu-hakkinda-en-temel-bilgiler-karakter-yapilandirmasi-ve-itemler.2635) 🇹🇷
 - [GameAbout — tests 2005 (imbues lv 1, AoE, scaling 기공)](http://www.gameabout.com/news/articleView.html?idxno=613) 🇰🇷
-- Rapports [ML_RESEARCH/](ML_RESEARCH/) — RESEARCH_DE / TR / KO / FR / ZH / PT (2026-10)
+- Rapports [ML_RESEARCH/](ML_RESEARCH/) — RESEARCH_DE / TR / KO / FR / ZH / PT / PS_FILES (2026-10)
 
 ### Calculateurs
 - [evolex.dev — SRO Character Stats Calculator](https://evolex.dev/sro-char-stats)
@@ -868,4 +879,4 @@ Büyüsel Hasar  (dégât MAG) = Total INT × Magical Reinforce % + Magical Atta
 
 *Dernière mise à jour : 2026-10-01*
 
-*Sources : elitepvpers, silkroadforums, UnKnoWnCheaTs, florian0 (RE), silkroaddoc.github.io, PlayOrigin, evolex.dev, silkroad.fandom.com, SRObro Project, silkroadonline.de (DE), SilkroadPortal/SroCave (TR), GameAbout/Inven (KO) — rapports ML_RESEARCH (2026-10)*
+*Sources : elitepvpers, silkroadforums, UnKnoWnCheaTs, florian0 (RE), silkroaddoc.github.io, PlayOrigin, evolex.dev, silkroad.fandom.com, SRObro Project, silkroadonline.de (DE), SilkroadPortal/SroCave (TR), GameAbout/Inven (KO) — rapports ML_RESEARCH (2026-10), dont RESEARCH_PS_FILES (fichiers serveur fuités : taux de spawn 14 %, ExpRatio 1000 = ×1)*

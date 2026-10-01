@@ -579,3 +579,16 @@ pool de clones). musicOn vérifié true en jeu.
 Combat filmé: ciblage Mangnyang (étiquette+barre), dégâts 15/24→7/24→mort
 (+54 XP chat, despawn). Captures: minimap officielle+flèche, étiquette
 « MOB_CH_MANGNYANG Lv. 1 » au-dessus du monstre.
+
+---
+
+## Session du 1er/2 octobre 2026 : AUDIT FINAL §5 — 8/8 critères validés
+
+Voir `docs/audit/AUDIT_FINAL.md` (rapport complet + artéfacts: film webm
+22,5 s, captures, mesures). Résumé: compte+perso créés en direct, >50 m de
+déplacement au clic filmés, combat 3 skills + loot + mort + résurrection,
+niveau 2 + stats (attaque 35~45), boutique officielle + potion + arme
+équipée (mesh visible), deux onglets (visibilité mutuelle + chat + mob
+partagé), GM complet (22 commandes, /rates ×5 mesuré +270 XP sans reboot,
+console /admin temps réel, ban/kick), 60 FPS + 1 warn bénin en 15 min,
+tsc 0/0, persistance après relance serveur.

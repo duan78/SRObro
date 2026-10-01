@@ -96,6 +96,7 @@ async function init(): Promise<void> {
 
   // Initialize game
   const game = new Game(engine, network, ui);
+  (window as unknown as { __game: Game }).__game = game; // observabilité/debug
   appState.game = game;
 
   // Set up window resize handler

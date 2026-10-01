@@ -125,6 +125,7 @@ Cet **index alphabétique** vous permet de trouver rapidement n'importe quel suj
 - **Parry Ratio** → [28_ADVANCED_MECHANICS.md](28_ADVANCED_MECHANICS.md#attack-rating-et-parry-ratio) - Formules de parade
 - **Pets** → [24_MOUNTS_PETS.md](24_MOUNTS_PETS.md) - Système pets complet
 - **PK** → [20_PVP_PK_SYSTEM.md](20_PVP_PK_SYSTEM.md) - Système PvP et PK
+- **Private Servers** → [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md) - Fichiers fuités (vSRO/BlackRogue), data mining, scène arabe
 - **PvP** → [33_PVP_BUILDS.md](33_PVP_BUILDS.md) - Builds PvP détaillés
 - **PvP Builds** → [HUB_COMBAT.md](HUB_COMBAT.md) - Hub central combat
 

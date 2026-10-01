@@ -55,6 +55,19 @@ This is the central tracking document for all multilingual research conducted to
 
 **Conflits KO2 signalés** : cap 140 (notice 2018/presse EN) vs 125 (mall KR) vs 131+ (contenu 2025) ; numérotation Legend 13-22 KR non documentée ; HP des boss 111+ indisponibles (extraction client requise) ; équivalences 무신/투신↔Egyptian A/B et 혜성↔Nova = inférences.
 
+## 🏰 Session 2026-10-01 (4) — Serveurs privés EN + AR (~145 requêtes)
+
+> 4 rapports dans [ML_RESEARCH/](ML_RESEARCH/) (RESEARCH_PS_FILES / PS_HIGHCAP / AR_DEV / AR_SERVERS.md). Fichier central consolidé : [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md). 12 fichiers enrichis (15, MONSTERS_×2, 28, 07, 05, TECHNICAL_SPECIFICATIONS, 01, 26, 36, 38, MULTILINGUAL_GLOSSARY).
+
+| Rapport | Langue | Contenu clé |
+|---------|--------|-------------|
+| [PS_FILES](ML_RESEARCH/RESEARCH_PS_FILES.md) | EN | Inventaire des 14 fuites (vSRO 1.188 = **cap 110/D11**, 1.193/1.274 = 120/Jupiter, BlackRogue = **Thaïlande ini3**, ECSRO = files cSRO fuitées, iSRO-R « Rigid », Zyain KSRO cap 125/14DG), guide du leaker Chernobyl 2011, ~200 schémas SQL (repo ducksoup), architecture 9 modules, dumps publics recensés |
+| [PS_HIGHCAP](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) | EN | **HP officiels 111+ via m3stat** (Kidemonas 13,8 M / Karkadann 15 M / Merikh 18,4 M), règle D12-D15 officiels / D16+ custom, timeline des files, outils d'extraction (SRO Archive Explorer 2025, pk2_mate, RSBot, phBot), trackers (m3stat, stats.projecthax) |
+| [AR_DEV](ML_RESEARCH/RESEARCH_AR_DEV.md) | AR | silkroad4arab chiffré (313 016 membres 2015), service arabe officiel 02/02/2010 = portail web, guide SP arabe chiffré (validation croisée), documentaire égyptien, glossaire 72 termes, mobile Arabia officiel 2026 |
+| [AR_SERVERS](ML_RESEARCH/RESEARCH_AR_SERVERS.md) | AR | Wiki ExaySRO = HP officiels republiés à l'identique, **Abshad = 얍샤드 (boss Bagdad)**, 18 serveurs arabes caps 120-140, Job Temple custom chiffré, monétisation Égypte (Vodafone Cash), piège « Medusa = BeakYung » |
+
+**Résolutions** : HP boss 111+ (3 valeurs officielles), timers respawn vSRO (6/3/4 h), GiantMonster_SpawnRatio 14 %, _RefMagicOptByItemOptLevel public, règle D12-D15/D16+, ECSRO/BlackRogue/1.188 corrigés, boss Bagdad confirmé. **Restantes** : HP Jupiter 111-118 et 130+, stats D13-15 en texte, constantes formule dégâts, procs d'imbues (→ extraction DB/client).
+
 ---
 
 ## 🔍 Research Status Summary

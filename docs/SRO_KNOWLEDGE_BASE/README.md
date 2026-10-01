@@ -105,6 +105,7 @@ Données techniques et références complètes.
 | [36_USEFUL_LINKS.md](36_USEFUL_LINKS.md) | **Liens Utiles** | **Wikis, forums, outils** | ⭐ NOUVEAU |
 | [37_COMMUNITY_GUIDES.md](37_COMMUNITY_GUIDES.md) | **Guides Communauté** | **Meilleurs guides externes** | ⭐ NOUVEAU |
 | [38_GLOSSARY.md](38_GLOSSARY.md) | Glossaire | Terminologie SRO | ✅ |
+| [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md) | **Serveurs Privés** | **Fichiers fuités, data mining, scène arabe** | ⭐ NOUVEAU |
 
 **👤 Pour:** Tous les joueurs, développeurs
 
