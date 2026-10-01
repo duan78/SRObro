@@ -110,3 +110,7 @@ ban-re/target/
 
 # Lock files (optional - uncomment if using yarn)
 # yarn.lock
+
+# Données de jeu régénérables (import-textdata.ts) et captures de diagnostic
+server/data/game/*.json
+client/public/diag/

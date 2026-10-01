@@ -73,6 +73,15 @@ export class Game {
   private combat: CombatSystem | null = null;
   private targeting: TargetingSystem | null = null;
   private playerCharacter: Character | null = null;
+  // État du personnage fourni par le serveur (auth) — null en mode dégradé
+  private serverCharacter: {
+    id: string; name: string; race: string; gender: string; level: number;
+    hp: number; mp: number; maxHp: number; maxMp: number; str: number; int: number;
+    exp: number; sp: number; gold: number;
+    position: { x: number; y: number; z: number }; rotation: number;
+  } | null = null;
+  // Envoi de position réseau throttlé (le clic-bouge tourne à chaque frame)
+  private lastMoveSent = 0;
 
   // Network synchronization systems
   private prediction: ClientPrediction | null = null;
@@ -102,8 +111,14 @@ export class Game {
 
   /**
    * Initialize the game
+   * @param serverCharacter - état du personnage sélectionné côté serveur (auth)
    */
-  async initialize(): Promise<void> {
+  async initialize(serverCharacter?: {
+    id: string; name: string; race: string; gender: string; level: number;
+    hp: number; mp: number; maxHp: number; maxMp: number; str: number; int: number;
+    exp: number; sp: number; gold: number;
+    position: { x: number; y: number; z: number }; rotation: number;
+  }): Promise<void> {
     if (this.isInitialized) {
       console.warn('Game already initialized');
       return;
@@ -133,7 +148,8 @@ export class Game {
     await this.assetLoader.initialize();
     console.log('AssetLoader initialized');
 
-    // Create player character data
+    // Create player character data (état serveur si disponible)
+    this.serverCharacter = serverCharacter ?? null;
     this.playerCharacter = this.createPlayerCharacter();
 
     // Initialize MVP systems
@@ -212,6 +228,35 @@ export class Game {
    * Create player character data
    */
   private createPlayerCharacter(): Character {
+    // Personnage réel sélectionné via l'écran de connexion
+    const sc = this.serverCharacter;
+    if (sc) {
+      return {
+        id: sc.id,
+        accountId: 'server',
+        name: sc.name,
+        race: sc.race === 'european' ? CharacterRace.EUROPEAN : CharacterRace.CHINESE,
+        level: sc.level,
+        exp: sc.exp,
+        sp: sc.sp,
+        hp: sc.hp,
+        mp: sc.mp,
+        maxHp: sc.maxHp,
+        maxMp: sc.maxMp,
+        stats: { str: sc.str, int: sc.int },
+        statPoints: 0,
+        masteries: [],
+        equipment: [],
+        inventory: [],
+        skills: [],
+        position: { ...sc.position },
+        rotation: sc.rotation,
+        gold: sc.gold,
+        createdAt: new Date(),
+        lastLoginAt: new Date(),
+      };
+    }
+    // Repli hors-ligne (dégradé): aventurier de test
     return {
       id: 'player_1',
       accountId: 'account_1',
@@ -400,9 +445,12 @@ export class Game {
       new Vector3(0, 1, 0),
       this.scene
     );
-    this.hemisphericLight.intensity = 0.7;
+    // Les textures officielles DDJ→PNG converties sont sombres (gamma non
+    // corrigé) — éclairage renforcé pour rester lisible en attendant la
+    // correction du convertisseur (phase 7).
+    this.hemisphericLight.intensity = 1.15;
     this.hemisphericLight.diffuse = new Color3(1, 1, 1);
-    this.hemisphericLight.groundColor = new Color3(0.2, 0.2, 0.2);
+    this.hemisphericLight.groundColor = new Color3(0.45, 0.45, 0.45);
 
     // Directional light (sun)
     this.directionalLight = new DirectionalLight(
@@ -411,8 +459,8 @@ export class Game {
       this.scene
     );
     this.directionalLight.position = new Vector3(20, 40, 20);
-    this.directionalLight.intensity = 0.8;
-    this.directionalLight.diffuse = new Color3(1, 0.95, 0.8);
+    this.directionalLight.intensity = 1.3;
+    this.directionalLight.diffuse = new Color3(1, 0.97, 0.88);
   }
 
   /**
@@ -438,8 +486,9 @@ export class Game {
     });
 
     this.network.on('disconnected', () => {
-      console.log('Disconnected from server');
-      this.stop();
+      // Socket.io reessaie tout seul (reconnection: true). On garde le rendu
+      // local actif — tuer la boucle sur une coupure transient cassait tout.
+      console.warn('Disconnected from server — local rendering continues, retrying...');
     });
 
     this.network.on('error', (error) => {
@@ -527,19 +576,33 @@ export class Game {
       return;
     }
 
-    // Spawn player at Jangan zone spawn point (posé sur le relief réel)
+    // Spawn player at Jangan zone spawn point (posé sur le relief réel).
+    // Position serveur (dernière sauvegarde) si disponible, sinon spawn sûr.
     if (this.janganZone && this.characterManager) {
       const spawnPoint = this.janganZone.getSafeSpawnPoint();
       const terrain = this.janganZone.realTerrain;
-      const groundY = terrain ? terrain.heightAt(spawnPoint.x, spawnPoint.z) : spawnPoint.y;
-      await this.characterManager.spawnPlayer('CH_M_01', new Vector3(spawnPoint.x, groundY, spawnPoint.z));
+      const sc = this.serverCharacter;
+      const hasSavedPosition = !!sc && (Math.abs(sc.position.x) > 0.5 || Math.abs(sc.position.z) > 0.5);
+      const spawnX = hasSavedPosition ? sc!.position.x : spawnPoint.x;
+      const spawnZ = hasSavedPosition ? sc!.position.z : spawnPoint.z;
+      const groundY = terrain ? terrain.heightAt(spawnX, spawnZ) : spawnPoint.y;
+      // Modèle officiel selon le genre du personnage (CH_W_* → chinawoman)
+      const modelId = sc?.gender === 'female' ? 'CH_W_01' : 'CH_M_01';
+      await this.characterManager.spawnPlayer(modelId, new Vector3(spawnX, groundY, spawnZ));
+      if (this.characterManager.player) {
+        this.characterManager.player.rotation.y = sc?.rotation ?? 0;
+      }
       this.normalizePlayerScale();
-      console.log(`Player spawned at Jangan zone (${spawnPoint.x}, ${groundY.toFixed(1)}, ${spawnPoint.z}) [spawn sûr]`);
+      console.log(`Player spawned at (${spawnX.toFixed(1)}, ${groundY.toFixed(1)}, ${spawnZ.toFixed(1)}) [${hasSavedPosition ? 'position sauvegardée' : 'spawn sûr'}]`);
 
       // Caméra troisième personne orbitale (molette = zoom, clic droit = orbite)
       if (this.thirdPersonCamera) {
         this.thirdPersonCamera.setTarget(this.characterManager.player);
         this.scene.activeCamera = this.thirdPersonCamera.sceneCamera;
+        // CRITIQUE: sans cela le picking (clic-pour-bouger, ciblage) continue
+        // d'utiliser la FreeCamera de boot → les clics atterrissent près du
+        // spawn d'origine, pas là où le joueur clique réellement.
+        this.scene.cameraToUseForPointers = this.thirdPersonCamera.sceneCamera;
       } else if (this.camera) {
         this.camera.position.set(spawnPoint.x, groundY + 30, spawnPoint.z - 45);
         this.camera.setTarget(new Vector3(spawnPoint.x, groundY + 5, spawnPoint.z));
@@ -801,6 +864,19 @@ export class Game {
     const terrain = this.janganZone?.realTerrain;
     if (terrain) {
       player.position.y = terrain.heightAt(player.position.x, player.position.z);
+    }
+
+    // Synchronisation réseau throttlée (le serveur fait autorité sur la position)
+    if (this.network.getIsConnected()) {
+      const now = performance.now();
+      if (now - this.lastMoveSent > 200) {
+        this.lastMoveSent = now;
+        this.network.sendMove(
+          { x: player.position.x, y: player.position.y, z: player.position.z },
+          player.rotation.y,
+          this.moveDestination !== null
+        );
+      }
     }
 
     // Bascule des animations officielles selon l'état de déplacement

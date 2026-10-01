@@ -15,16 +15,26 @@ datasource db {
 // ACCOUNT & AUTHENTICATION
 // ============================================
 
+// Rôle d'un compte: player = joueur, gm = GameMaster (commandes chat),
+// admin = accès console /admin + commandes GM. Le premier compte créé
+// devient admin (owner) pour pouvoir promouvoir les autres.
+enum AccountRole {
+  player
+  gm
+  admin
+}
+
 model Account {
-  id           String   @id @default(uuid())
-  username     String   @unique
-  email        String   @unique
+  id           String       @id @default(uuid())
+  username     String       @unique
+  email        String       @unique
   passwordHash String
-  isBanned     Boolean  @default(false)
+  role         AccountRole  @default(player)
+  isBanned     Boolean      @default(false)
   banReason    String?
   banUntil     DateTime?
-  createdAt    DateTime @default(now())
-  lastLoginAt  DateTime @default(now())
+  createdAt    DateTime     @default(now())
+  lastLoginAt  DateTime     @default(now())
 
   // Relations
   sessions     Session[]
@@ -58,6 +68,7 @@ model Character {
   accountId    String
   name         String   @unique
   race         CharacterRace
+  gender       String   @default("male") // male | female (modèle chinaman_/chinawoman_)
   level        Int      @default(1)
   exp          BigInt   @default(0)
   sp           BigInt   @default(0)

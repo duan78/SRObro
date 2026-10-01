@@ -45,6 +45,10 @@ export class NetworkManager {
   // Event handlers
   private eventHandlers: Map<keyof NetworkEvents, Set<Function>> = new Map();
 
+  // Heartbeat: garde la session vivante côté serveur (timeout d'inactivité
+  // 30 s) pendant les chargements longs sans packets de jeu
+  private heartbeatInterval: ReturnType<typeof setInterval> | null = null;
+
   constructor(url: string) {
     this.url = url;
   }
@@ -76,6 +80,7 @@ export class NetworkManager {
           this.isConnected = true;
           this.isConnecting = false;
           this.reconnectAttempts = 0;
+          this.startHeartbeat();
           this.emit('connected');
           resolve();
         });
@@ -96,6 +101,7 @@ export class NetworkManager {
         this.socket.on('disconnect', (reason) => {
           console.log('Disconnected from server:', reason);
           this.isConnected = false;
+          this.stopHeartbeat();
           this.emit('disconnected');
         });
 
@@ -107,6 +113,26 @@ export class NetworkManager {
         reject(error);
       }
     });
+  }
+
+  /**
+   * Heartbeat toutes les 10 s: empêche le timeout d'inactivité serveur (30 s)
+   * pendant les chargements/AFK sans traffic de jeu.
+   */
+  private startHeartbeat(): void {
+    this.stopHeartbeat();
+    this.heartbeatInterval = setInterval(() => {
+      if (this.socket && this.isConnected) {
+        this.socket.emit('heartbeat', { t: Date.now() });
+      }
+    }, 10000);
+  }
+
+  private stopHeartbeat(): void {
+    if (this.heartbeatInterval) {
+      clearInterval(this.heartbeatInterval);
+      this.heartbeatInterval = null;
+    }
   }
 
   /**
@@ -211,6 +237,38 @@ export class NetworkManager {
     }
 
     this.socket.emit(packet.type, packet);
+  }
+
+  /**
+   * Requête/réponse avec acquittement Socket.io (auth, personnages...).
+   * Résout avec la réponse du serveur, ou rejette si non connecté.
+   */
+  request<T = any>(event: string, data?: any, timeoutMs = 10000): Promise<T> {
+    return new Promise((resolve, reject) => {
+      if (!this.socket || !this.isConnected) {
+        reject(new Error('Not connected'));
+        return;
+      }
+      const timer = setTimeout(() => {
+        reject(new Error(`Timeout awaiting response for ${event}`));
+      }, timeoutMs);
+      this.socket.emit(event, data ?? {}, (response: T) => {
+        clearTimeout(timer);
+        resolve(response);
+      });
+    });
+  }
+
+  /**
+   * Écoute un évènement brut du serveur (échappatoire typée pour les
+   * protocoles récents: auth, admin...).
+   */
+  onRaw(event: string, handler: (data: any) => void): void {
+    this.socket?.on(event, handler);
+  }
+
+  offRaw(event: string, handler: (data: any) => void): void {
+    this.socket?.off(event, handler);
   }
 
   /**
@@ -354,6 +412,7 @@ export class NetworkManager {
    * Disconnect from server
    */
   disconnect(): void {
+    this.stopHeartbeat();
     if (this.socket) {
       this.socket.disconnect();
       this.socket = null;

@@ -53,6 +53,11 @@ export class ClientManager {
       this.clientsByPlayerId.set(playerId, client);
       const characterId = client.getCharacterId();
       if (characterId) {
+        // Changement de personnage: retirer l'ancien index s'il pointait ailleurs
+        const previous = this.clientsByCharacterId.get(characterId);
+        if (previous === client || !previous) {
+          this.clientsByCharacterId.delete(characterId);
+        }
         this.clientsByCharacterId.set(characterId, client);
       }
       logger.info(`Client authenticated: ${socket.id} -> ${playerId}`);
@@ -64,6 +69,14 @@ export class ClientManager {
       if (characterId) {
         this.clientsByCharacterId.delete(characterId);
       }
+    });
+
+    // Logout / kick: le socket reste ouvert mais n'est plus rattaché
+    client.on('sessionCleared', () => {
+      const pid = client.getPlayerId();
+      if (pid) this.clientsByPlayerId.delete(pid);
+      const cid = client.getCharacterId();
+      if (cid) this.clientsByCharacterId.delete(cid);
     });
   }
 

@@ -154,6 +154,11 @@ export class RealTerrain {
     const mat = new StandardMaterial(`tile_${png}`, this.scene);
     mat.diffuseTexture = tex;
     mat.specularColor = new Color3(0.02, 0.02, 0.02);
+    // Les heightmaps extraites peuvent donner un maillage miroir (ordre des
+    // lignes inversé selon la version du script d'extraction) → winding des
+    // triangles inversé → backface culling rendait le sol invisible.
+    // Double-face: coût négligeable sur du terrain vue de dessus.
+    mat.backFaceCulling = false;
     this.matCache.set(texFile, mat);
     return mat;
   }

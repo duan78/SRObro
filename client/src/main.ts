@@ -24,6 +24,28 @@ import { DomHud } from './ui/dom/DomHud';
 SceneLoader.RegisterPlugin(new GLTFFileLoader());
 import { NetworkManager } from './network/NetworkManager';
 import { UIManager } from './ui/UIManager';
+import { AuthScreen } from './ui/dom/AuthScreen';
+
+// Collecte des erreurs console pour diagnostic navigateur (window.__errors)
+(function installErrorCollector(): void {
+  const w = window as unknown as { __errors: string[] };
+  w.__errors = [];
+  const wrap = (orig: (...args: unknown[]) => void, level: string): ((...a: unknown[]) => void) => {
+    return (...args: unknown[]) => {
+      try {
+        w.__errors.push(level + ': ' + args.map((a) => {
+          if (a instanceof Error) return a.message;
+          if (typeof a === 'string') return a;
+          try { return JSON.stringify(a)?.slice(0, 300) ?? String(a); } catch { return String(a); }
+        }).join(' '));
+        if (w.__errors.length > 200) w.__errors.shift();
+      } catch { /* ne jamais casser console */ }
+      orig(...args);
+    };
+  };
+  (window as unknown as { console: Record<string, (...a: unknown[]) => void> }).console.error = wrap(console.error.bind(console), 'error');
+  (window as unknown as { console: Record<string, (...a: unknown[]) => void> }).console.warn = wrap(console.warn.bind(console), 'warn');
+})();
 
 // Global app state
 interface AppState {
@@ -58,8 +80,9 @@ async function init(): Promise<void> {
 
   appState.engine = engine;
 
-  // Initialize network manager
-  const network = new NetworkManager('ws://localhost:3001');
+  // Initialize network manager (127.0.0.1 explicite: le serveur écoute en
+  // IPv4 et "localhost" peut résoudre en ::1 sur cette machine)
+  const network = new NetworkManager('ws://127.0.0.1:3001');
   appState.network = network;
 
   // Initialize UI manager (don't initialize yet, wait for scene)
@@ -81,13 +104,32 @@ async function init(): Promise<void> {
   updateLoadingProgress(10);
 
   try {
-    // MVP: Skip server connection for single-player testing
-    updateLoadingProgress(20, 'Starting in single-player mode...');
-    // await network.connect();
+    // Authentification réseau: connexion Socket.io puis écran de login /
+    // sélection de personnage. Le jeu démarre avec un perso chargé, ou en
+    // mode dégradé (null) si l'utilisateur choisit explicitement "hors-ligne".
+    updateLoadingProgress(20, 'Connexion au serveur...');
+    const authScreen = new AuthScreen(network);
+    const character = await new Promise<{
+      id: string; name: string; race: string; gender: string; level: number;
+      hp: number; mp: number; maxHp: number; maxMp: number; str: number; int: number;
+      exp: number; sp: number; gold: number;
+      position: { x: number; y: number; z: number }; rotation: number;
+    } | null>((resolve) => {
+      authScreen.onComplete = (c) => resolve(c ?? null);
+      void authScreen.start().catch((err) => {
+        console.error('Auth failed:', err);
+        resolve(null);
+      });
+    });
+
+    const singlePlayer = character === null;
+    if (singlePlayer) {
+      console.warn('[Main] Mode dégradé: démarrage local de test (sans serveur)');
+    }
 
     // Initialize game scene
     updateLoadingProgress(40, 'Loading game assets...');
-    await game.initialize();
+    await game.initialize(character ?? undefined);
 
     updateLoadingProgress(80, 'Preparing game world...');
 
@@ -119,7 +161,7 @@ async function init(): Promise<void> {
         const cur = p.getCurrentLevelXP();
         const next = p.getNextLevelXP();
         hud.setStats({
-          name: 'Adventurer',
+          name: character?.name ?? 'Adventurer',
           level: p.getLevel(),
           hp: p.getHP(),
           maxHp: p.getMaxHP(),
@@ -127,7 +169,7 @@ async function init(): Promise<void> {
           maxMp: p.getMaxMP(),
           exp: Math.max(0, p.getCurrentXP() - cur),
           maxExp: Math.max(1, next - cur),
-          gold: 0,
+          gold: character?.gold ?? 0,
         });
       }
       const t = g.combat?.currentTarget;

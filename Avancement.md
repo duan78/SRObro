@@ -283,3 +283,48 @@ Importer/rafraîchir les données : `cd server && npx tsx scripts/import-textdat
 Le projet a été stabilisé et assaini. La structure monorepo est maintenant cohérente et
 la majorité des erreurs de compilation bloquantes ont été résolues : migration Babylon.js 8,
 types partagés en Enums, GameLoop restauré, ports client/serveur alignés.
+
+---
+
+## Session du 1er Octobre 2026 (3/2) : PHASE 1 — Authentification complète
+
+**Le jeu est désormais réseau de bout en bout** (connexion Socket.io obligatoire,
+mode hors-ligne explicite de repli).
+
+### Serveur
+- `AuthHandlers.ts` : register (bcrypt, 1er compte = admin), login (token session
+  7 j en base, contrôle bannissement), resume par token, logout, character:
+  list/create/select/delete (vérif appartenance, nom unique 3-12, max 4/compte).
+- Schéma : `Account.role` (player/gm/admin), `Character.gender`.
+- `Client` : auth compte (authenticateAccount/clearAuthentication) distincte du
+  chargement de perso ; index ClientManager mis à jour (changement de perso).
+- Bugs corrigés : double emballage des packets dans `GameServer.handlePacket`
+  (packet.data.data → undefined), heartbeat 10 s (le timeout d'inactivité 30 s
+  déconnectait le client pendant le chargement du monde).
+
+### Client
+- `AuthScreen.ts` : overlay DOM style Silkroad (login/inscription/liste persos/
+  création race+genre/suppression, erreurs inline, reprise de session localStorage).
+- `main.ts` : boot réseau → auth → `game.initialize(serverCharacter)` ; repli
+  hors-ligne explicite.
+- `Game.ts` : spawn à la position SERVEUR (dernière sauvegarde), modèle selon
+  genre (chinawoman_adventurer pour F), envoi move throttlé 200 ms, HUD réel
+  (nom/or), déconnexion réseau ne tue plus le rendu.
+
+### Deux bugs de rendu majeurs trouvés et corrigés (non liés à l'auth)
+1. **Terrain invisible** : les heightmaps régénérées (17h32) ont un ordre de
+   lignes inversé → winding des triangles inversé → backface culling supprimait
+   TOUT le sol. Preuve : tuile isolée rend en wireframe mais pas en solide.
+   Fix : `backFaceCulling = false` sur les matériaux de tuile (RealTerrain).
+2. **Clic-pour-bouger cassé** : `scene.cameraToUseForPointers` restait sur la
+   FreeCamera de boot → les picks (clic, ciblage) atterrissaient près du spawn
+   d'origine. Fix : assignée à la caméra 3e personne au start.
+- Éclairage renforcé (textures DDJ converties sombres — gamma à corriger en
+  phase 7).
+
+### Preuves (§0.3)
+- Script `test-auth-flow.ts` : 12/12 (inscription, doublons, mauvais mdp, token,
+  position persistée 42.5/512.25 après re-login, sécurité cross-compte).
+- Navigateur : compte « arnaud » créé via l'UI, perso « Kaiser » (CH/M), re-login
+  → respawn exact (39.5, 499.1), marche 39 m cliquée → autosave 30 s → reload →
+  respawn à la position marchée. 60 FPS, connecté, 0 erreur console.

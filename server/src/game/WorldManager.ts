@@ -283,7 +283,12 @@ export class WorldManager {
       return;
     }
 
-    const data = packet.data as { position: Position; rotation: number; isRunning: boolean };
+    const data = packet.data as { position: Position; rotation: number; isRunning: number };
+
+    // Payload malformé: ignorer proprement plutôt que d'écraser la position
+    if (!data || typeof data.position?.x !== 'number' || !Number.isFinite(data.position.x)) {
+      return;
+    }
 
     // Update entity position
     playerEntity.setPosition(data.position);

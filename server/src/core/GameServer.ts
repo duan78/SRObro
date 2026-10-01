@@ -10,6 +10,7 @@ import { GameDataService } from '../data/GameDataService';
 import { ClientManager } from '../network/ClientManager';
 import { WorldManager } from '../game/WorldManager';
 import { SystemHandlers } from '../network/SystemHandlers';
+import { AuthHandlers } from '../network/AuthHandlers';
 import { GameLoop } from './GameLoop';
 import type { C2SPacket, S2CPacket } from '@srobro/shared';
 
@@ -32,6 +33,7 @@ export class GameServer {
   private clientManager: ClientManager | null = null;
   private worldManager: WorldManager | null = null;
   private systemHandlers: SystemHandlers | null = null;
+  private authHandlers: AuthHandlers | null = null;
   private gameLoop: GameLoop;
   private isRunning = false;
 
@@ -91,9 +93,14 @@ export class GameServer {
     // authentifiée de chaque socket)
     this.systemHandlers = new SystemHandlers(this.clientManager);
 
+    // Auth handlers (register/login/création+sélection de personnage) —
+    // reçoit le WorldManager quand il est prêt (spawn du joueur)
+    this.authHandlers = new AuthHandlers(this.clientManager);
+
     // Initialize world manager
     this.worldManager = new WorldManager(this.dbManager);
     await this.worldManager.initialize();
+    this.authHandlers?.setWorldManager(this.worldManager);
 
     // Spawn manager: source de vérité unique des monstres (WorldManager
     // partage sa map d'entités)
@@ -129,6 +136,11 @@ export class GameServer {
 
       // Handle client connection
       this.clientManager?.handleClientConnection(socket);
+
+      // Auth handlers (register/login/personnages) — AVANT tout le reste
+      if (this.authHandlers) {
+        this.authHandlers.registerHandlers(socket);
+      }
 
       // Register system handlers (guild, quest, fortress, mount)
       if (this.systemHandlers) {
@@ -168,6 +180,13 @@ export class GameServer {
       socket.on('chat', (data) => this.handlePacket(socket, 'chat', data));
       socket.on('interact', (data) => this.handlePacket(socket, 'interact', data));
 
+      // Heartbeat client: le chargement du monde 3D peut durer > 30 s sans
+      // aucun packet — sans cela le timeout d'inactivité déconnecte le client
+      // en pleine session.
+      socket.on('heartbeat', () => {
+        this.clientManager?.getClient(socket.id)?.touch();
+      });
+
       // Priority 1 feature packets
       socket.on('hotkey_use', (data) => this.handlePacket(socket, 'hotkey_use', data));
       socket.on('hotkey_bind', (data) => this.handlePacket(socket, 'hotkey_bind', data));
@@ -189,11 +208,19 @@ export class GameServer {
     // Toute activité réseau repousse le timeout d'inactivité du client
     client.touch();
 
+    // Le client envoie le packet complet {type, timestamp, data}: déballer
+    // pour ne pas emballer deux fois (packet.data.data.position → undefined).
+    const raw = data as { type?: string; data?: unknown } | null;
+    const payload =
+      raw && typeof raw === 'object' && 'type' in raw && 'data' in raw
+        ? raw.data
+        : data;
+
     const packet: C2SPacket = {
       type: type as any,
       timestamp: Date.now(),
       playerId: client.getPlayerId(),
-      data,
+      data: payload,
     };
 
     // Route packet to appropriate handler

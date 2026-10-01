@@ -3,3 +3,4 @@
 // ============================================
 
 export { SystemHandlers } from './SystemHandlers';
+export { AuthHandlers } from './AuthHandlers';

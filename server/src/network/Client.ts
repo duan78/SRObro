@@ -20,6 +20,9 @@ export class Client {
   private characterData: Character | null = null;
   private zoneId: string | null = null;
   private isAuthenticated = false;
+  // Authentification au niveau COMPTE (login/mot de passe OK) — distincte
+  // du chargement d'un personnage (isAuthenticated).
+  private accountAuthenticated = false;
 
   // Position
   private position: Position = { x: 0, y: 0, z: 0 };
@@ -48,6 +51,34 @@ export class Client {
    */
   getPlayerId(): string | null {
     return this.playerId;
+  }
+
+  /**
+   * Get account ID (alias de playerId: l'ID de compte authentifié)
+   */
+  getAccountId(): string | null {
+    return this.accountAuthenticated ? this.playerId : null;
+  }
+
+  /**
+   * Authentifie le socket au niveau compte (après login/mot de passe).
+   */
+  authenticateAccount(accountId: string): void {
+    this.playerId = accountId;
+    this.accountAuthenticated = true;
+  }
+
+  /**
+   * Réinitialise toute l'authentification (logout / kick): le socket peut
+   * se re-loguer mais n'agit plus sur aucun compte ni personnage.
+   */
+  clearAuthentication(): void {
+    this.playerId = null;
+    this.characterId = null;
+    this.characterData = null;
+    this.isAuthenticated = false;
+    this.accountAuthenticated = false;
+    this.emit('sessionCleared', null);
   }
 
   /**
