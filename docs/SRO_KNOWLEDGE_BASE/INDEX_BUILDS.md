@@ -1,499 +1,299 @@
 # Index des Builds - Guide Complet pour Choisir son Build
 
 > 📍 **Vous êtes ici :** [Accueil](README.md) → [Hub Classes](HUB_CLASSES.md) → [Index des Builds](INDEX_BUILDS.md)
-
----
+>
+> ✅ **Révision 2026-10** : hub aligné sur les guides révisés [33_PVP_BUILDS.md](33_PVP_BUILDS.md) et [34_PVE_BUILDS.md](34_PVE_BUILDS.md) (recherche communautaire : elitepvpers, SilkroadForums, PlayOrigin, GamersDecide, MMORPG.com, UnKnoWnCheaTs…). Masteries, tiers et SP corrigés.
 
 ## 📋 Table des Matières
-- [Introduction](#introduction)
-- [Comment Choisir son Build](#comment-choisir-son-build)
-- [Builds par Playstyle](#builds-par-playstyle)
-- [Builds par Level Cap](#builds-par-level-cap)
-- [Builds Chinois](#builds-chinois)
-- [Builds Européens](#builds-européens)
-- [Tableau Récapitulatif](#tableau-récapitulatif)
-- [Guides Détaillés](#guides-détaillés)
+- [Introduction](#-introduction)
+- [Comment Choisir son Build](#-comment-choisir-son-build)
+- [Builds par Playstyle](#-builds-par-playstyle)
+- [Builds par Level Cap](#-builds-par-level-cap)
+- [Builds Chinois](#-builds-chinois)
+- [Builds Européens](#-builds-européens)
+- [Tableau Récapitulatif](#-tableau-récapitulatif)
+- [Budget SP par Build](#-budget-sp-par-build)
+- [Guides Détaillés](#-guides-détaillés)
+- [Conseils Finaux](#-conseils-finaux)
 
 ---
 
 ## 🎯 Introduction
 
-Ce **index centralise tous les builds** de Silkroad Online, du level 1 au level 110+. Que vous soyez intéressé par le PvP, le PvE, le farming, ou le SP farming, vous trouverez ici le build optimal pour votre style de jeu.
+Cet index centralise **tous les builds** de Silkroad Online, du niveau 1 au cap 120+. Le « build » se définit par : la **race** (CH/EU), les **stats** (3 points/niveau côté CH), les **masteries** (3 max côté CH, 2 côté EU — plafonds 360/240 au cap 120) et le **stuff** (degré, seal, blues).
 
 ### Points Clés
-- 🎮 **PvP Builds** : Pour dominer en 1v1 et Fortress War
-- 👾 **PvE Builds** : Pour farming optimisé et leveling rapide
-- 📊 **SP Farming Builds** : Pour maximiser le gain de SP
-- ⚖️ **Level Caps** : Builds adaptés à chaque cap (80, 90, 100, 110, 120+)
+- 🎮 **PvP Builds** : tier lists par cap, rotations, counters → [33_PVP_BUILDS.md](33_PVP_BUILDS.md)
+- 👾 **PvE Builds** : farm solo/party, SP farming, donjons → [34_PVE_BUILDS.md](34_PVE_BUILDS.md)
+- 📊 **SP Farming** : GAP 9, Ongs, PLvL → [26_SP_FARMING.md](26_SP_FARMING.md)
+- ⚖️ **Level Caps** : 80 (CH only), 90, 100, 110 (Egypt), 120+ (12D/13D)
 
 ---
 
 ## 🤔 Comment Choisir son Build
 
-### Flowchart de Choix
-
-```
-DÉBUT
-  ↓
-Quelle race préférez-vous ?
-  ↓                    ↓
-CHINOIS              EUROPÉEN
-  ↓                    ↓
-Flexibilité          Rôles définis
-  ↓                    ↓
-Quel playstyle ?    Quelle classe ?
-  ↓                    ↓
-┌─────┬────────┬──────┐  Warrior/Cleric (Tank)
-│     │        │      │  Rogue/Cleric (Burst)
-│PvP  │  PvE   │ Farm │  Wizard/Warrior (AOE)
-│     │        │      │  Warlock/Cleric (Debuff)
-└─────┴────────┴──────┘
-  ↓        ↓         ↓
-Sword/  Spear/    Bow/
-Shield  Fire     Lightning
-```
-
 ### Questions à se Poser
 
 #### 1. Quelle race ?
-| Critère | Chinois | Européens |
+| Critère | Chinois | Européen |
 |---------|---------|-----------|
-| **Flexibilité** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ |
-| **Facilité** | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **SP Farming** | Requis | Optionnel |
-| **Meta PvP** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **Philosophie** | Sandbox : 7 masteries libres | Classes à rôles définis (6) |
+| **Stats** | Libres (STR/INT/hybride) | Liées à la classe |
+| **Solo / PvE solo** | ⭐⭐⭐⭐⭐ (pas de pot delay) | ⭐⭐ (pot delay 15 s) |
+| **Party 8/8 / farm de masse** | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **PvP de masse organisé** | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **SP requis** | Très élevés (gap quasi obligatoire) | Modérés (~760 k pour Wiz+Bard au cap 90) |
+| **Créativité de build** | ⭐⭐⭐⭐⭐ (hybrides) | ⭐⭐ (binaire) |
 
-**Choisissez CHINOIS si :**
-- ✅ Vous voulez créer votre propre build
-- ✅ Vous aimez la personnalisation
-- ✅ Vous acceptez le SP farming
-
-**Choisissez EUROPÉEN si :**
-- ✅ Vous voulez une classe prête à l'emploi
-- ✅ Vous préférez des rôles définis
-- ✅ Vous voulez éviter le SP farming
+**Choisissez CHINOIS si :** vous jouez solo/à deux, vous aimez construire un build, vous assumez le SP farming.
+**Choisissez EUROPÉEN si :** vous jouez en party, vous voulez un rôle clair, vous voulez éviter le farming extrême.
 
 #### 2. Quel playstyle ?
-| Playstyle | Description | Build Recommandé |
-|-----------|-------------|------------------|
-| **PvP 1v1** | Duel dominé | Warrior/Cleric, Rogue/Cleric |
-| **PvP Group** | AOE massives | Wizard/Warrior, Warlock |
-| **Farming Solo** | Farm rapide | Wizard, Spear Nuker, Bow |
-| **SP Farming** | Max SP | INT builds, GAP 9 |
-| **Support** | Healer/Buffer | Cleric, Bard |
+| Playstyle | Description | Builds recommandés |
+|-----------|-------------|--------------------|
+| **PvP 1v1** | Duel, jobbing solo | Warrior/Cleric, Rogue/Cleric, Force Blader, Glaive STR |
+| **PvP de masse (FW/BA/CTF)** | Fortress War, events | Wizard/*, Warlock/Cleric, Warrior, Bard |
+| **Farm solo (leveling)** | XP/heure en solo | INT Nuker (spear/S-S), Wizard/Cleric, Glaive STR |
+| **Farm party** | XP/heure en 8/8 | **Wizard/Bard** + party EU standard |
+| **SP farming** | Stocker des SP | Glaive STR (spin), Nuker INT, Wizard (plvl) |
+| **Support** | Heals/buffs | Cleric/*, Bard/*, Force hybrid CH |
+| **Unique hunting** | Chasse aux boss | Bower STR, Glaive STR, Rogue (burst) |
 
 #### 3. Quel level cap ?
-| Cap | Meta | Builds Recommandés |
-|-----|------|-------------------|
-| **80 Cap** | Old school | Sword/Ice, Spear/Fire |
-| **90 Cap** | Balanced | Warrior/Cleric, Wizard |
-| **100 Cap** | Power spike | Full INT nukers |
-| **110 Cap** | Current meta | Warrior/Cleric, Rogue/Cleric |
-| **120+ Cap** | Private servers | Specialized builds |
+| Cap | Époque / degrés | Méta marquante |
+|-----|-----------------|----------------|
+| **80** | Old school CH (+EU déjà présents), ~9D | War/Cleric & Rogue/Cleric dominent le 1v1 (PlayOrigin) |
+| **90** | 10D | Glaive STR, Force Blader (guides Apollo), Wiz/* |
+| **100** | 10D + Egypt | Warrior/Cleric roi 1v1 ; nukers full potential |
+| **110** | **11D + Egypt A/B** | War/Cleric, Force Bower, Warlock/Cleric, tri-builds Wiz |
+| **120+** | **12D/13D** | Dagger/Warlock, Dagger/Warrior, War/Warlock, Blader 13D |
 
 ---
 
 ## ⚔️ Builds par Playstyle
 
-### PvP Builds (1v1 Focus)
+### PvP (détails : [33_PVP_BUILDS.md](33_PVP_BUILDS.md))
 
-#### S-Tier (Dominants)
+#### S-Tier (consensus 80-110)
+| Build | Race | Masteries | Point fort |
+|-------|------|-----------|------------|
+| **Warrior/Cleric** | EU | Warrior 110 / Cleric 110 | Tank + heals + Dare Devil, pardonnable |
+| **Rogue/Cleric** | EU | Rogue 110 / Cleric 110 | Burst critique + Stealth (haut skill ceiling) |
+| **Force Blader** | CH | Bicheon + Fire + Force | Debuffs + KD/stabs + bouclier (top 1 GamersDecide) |
+| **Force Bower** | CH | Pacheon + Fire + Force | « PvP god » du jobbing, rez ses alliés |
+
+#### A-Tier
+| Build | Race | Masteries | Point fort |
+|-------|------|-----------|------------|
+| **Glaive STR** | CH | Heuksal + Fire (+Light/Cold/Force) | Tank + stun-lock, #2 GamersDecide |
+| **Warlock/Cleric** | EU | Warlock 110 / Cleric 110 | Debuffs (Division) + sleep/stun + heals |
+| **Wizard/Cleric** | EU | Wizard 110 / Cleric 110 | Burst AoE + Offering, le + joué |
+| **Ice Bow STR** | CH | Pacheon + Cold (+Fire) | Anti-nuker/lock, Ice Wall |
+| **Blader Light/Cold** | CH | Bicheon + Lightning/Cold | Bouclier + freeze, « 5 stabs » |
+
+### PvE (détails : [34_PVE_BUILDS.md](34_PVE_BUILDS.md))
+
+#### Farm solo
 | Build | Race | Masteries | Pourquoi |
 |-------|------|-----------|----------|
-| **Warrior/Cleric** | EU | Warrior 110 / Cleric 110 | Survie + dégâts |
-| **Rogue/Cleric** | EU | Rogue 110 / Cleric 110 | Burst énorme |
+| **INT Spear Nuker** | CH | Heuksal(spear) + Fire + Lightning | One-shot les mobs à distance |
+| **S/S Nuker** | CH | Bicheon + Lightning + Cold | Nuker « safe » (bouclier + Snow Shield) |
+| **Glaive STR** | CH | Heuksal + Fire (+Cold 20) | Spin AoE, tank, pas de downtime |
+| **Wizard/Cleric** | EU | Wizard 110 / Cleric 110 | Nukes + heals en solo |
 
-#### A-Tier (Très Forts)
-| Build | Race | Masteries | Pourquoi |
-|-------|------|-----------|----------|
-| **Warlock/Cleric** | EU | Warlock 110 / Cleric 110 | Debuffs + DoT |
-| **Wizard/Warrior** | EU | Wizard 110 / Warrior 110 | AOE massives |
-| **Sword/Shield** | CH | Bicheon 110 / Cold 110 | Tanky + CC |
+#### Farm party (8/8)
+| Build | Rôle | Pourquoi |
+|-------|------|----------|
+| **Wizard/Bard** | DPS + mana | Le meilleur XP/h du jeu |
+| **Warrior/Cleric (1H)** | Tank | Aggro, Pain Quota, fences |
+| **Bard/Cleric** | Support | Buffs + heals + rez, toujours recruté |
+| **Rogue (xbow)** | Lurer | Rapid Shot dès la mastery 10 |
 
-#### B-Tier (Viables)
-| Build | Race | Masteries | Pourquoi |
-|-------|------|-----------|----------|
-| **Bow** | CH | Pacheon 110 / Lightning 110 | Kiting |
-| **Spear** | CH | Heuksal 110 / Fire 110 | Dégâts PHY max |
-
-👉 **Détails :** [33_PVP_BUILDS.md](33_PVP_BUILDS.md)
-
----
-
-### PvE Builds (Farming Focus)
-
-#### Farming Solo (Leveling)
-| Build | Race | Masteries | Pourquoi |
-|-------|------|-----------|----------|
-| **Wizard** | EU | Wizard 110 / Warrior 110 | AOE massives |
-| **Spear Nuker** | CH | Heuksal 110 / Lightning 110 | Dégâts max |
-| **Bow** | CH | Pacheon 110 / Lightning 110 | Distance safe |
-
-#### Farming AOE (Party)
-| Build | Race | Masteries | Pourquoi |
-|-------|------|-----------|----------|
-| **Wizard/Warrior** | EU | Wizard 110 / Warrior 110 | AOE dévastatrices |
-| **Warlock/Bard** | EU | Warlock 110 / Bard 110 | AOE + buffs |
-| **Spear/Fire** | CH | Heuksal 110 / Fire 110 | AOE PHY |
-
-#### SP Farming Builds
-| Build | Race | GAP | Spots | Pourquoi |
-|-------|------|-----|-------|----------|
-| **INT Spear** | CH | 9 | Ong Habitat | AOE maximales |
-| **INT Bow** | CH | 9 | Ong Habitat | Distance + AOE |
-| **Wizard** | EU | N/A | Penon Castle | AOE naturels |
-
-👉 **Détails :** [34_PVE_BUILDS.md](34_PVE_BUILDS.md)
+#### SP farming
+| Build | GAP | Spots | Notes |
+|-------|-----|-------|-------|
+| **Glaive STR** | 9 | Ongs (13-32), Niyas (60-80) | Spin = volume de kills |
+| **Nuker INT** | 9 | Idem | Kill rapide |
+| **Wizard (plvler)** | — | Ongs 8/8 | Le plvler type (80+) |
 
 ---
 
 ## 🎯 Builds par Level Cap
 
-### 80 Cap Builds (Old School)
-
-#### Chinois
+### Cap 80 (CH + EU, degrés ~8-9D)
 | Build | Masteries | Playstyle |
 |-------|-----------|-----------|
-| **Sword/Ice/Shield** | Bicheon 80 / Cold 80 / Force 80 | Tank PvP |
-| **Spear/Fire/Light** | Heuksal 80 / Fire 80 / Lightning 80 | DPS nuker |
-| **Bow/Light/Ice** | Pacheon 80 / Lightning 80 / Cold 80 | Kiting PvP |
+| **Glaive STR** | Heuksal 80 / Fire 80 / Lightning~Cold 80 | Tank-dps CH |
+| **Blader STR** | Bicheon 80 / Lightning 80 / Cold~Fire 80 | Duelliste bouclier |
+| **Nuker INT** | Heuksal~Bicheon 80 / Fire 80 / Lightning 80 | Glass cannon |
+| **Warrior/Cleric** | Warrior 80 / Cleric 80 | S-tier 1v1 |
+| **Rogue/Cleric** | Rogue 80 / Cleric 80 | Burst 1v1 |
+| **Wizard/Bard** | Wizard 80 / Bard 80 | Farm/jobbing |
 
-#### Européens
+### Cap 90-100 (10D)
 | Build | Masteries | Playstyle |
 |-------|-----------|-----------|
-| **Warrior/Cleric** | Warrior 80 / Cleric 80 | Tank PvP |
-| **Wizard/Cleric** | Wizard 80 / Cleric 80 | AOE PvP |
+| **Force Blader** | Bicheon 90 / Fire 90 / Force 90 / Cold 30 | Debuff chain + KD/stabs (guide Apollo) |
+| **Bower STR** | Pacheon 100 / Fire 100 / Cold~Light 100 | Crit + kite |
+| **Glaive STR** | Heuksal 100 / Fire 100 / Force 80 / Cold 20 | Variante Force |
+| **Warrior/Cleric** | Warrior 100 / Cleric 100 | Roi 1v1 (guide skAz) |
+| **Wizard/Cleric** | Wizard 100 / Cleric 100 | Polyvalent n°1 |
 
----
+### Cap 110 (11D + Egypt)
+| Build | Race | Masteries | Tier PvP |
+|-------|------|-----------|----------|
+| **Warrior/Cleric** | EU | 110/110 | S |
+| **Rogue/Cleric** | EU | 110/110 | S |
+| **Force Blader / Bower** | CH | Bicheon\|Pacheon 110 / Fire 110 / Force 90 / Cold 20 | S/A |
+| **Glaive STR** | CH | Heuksal 110 / Fire 110 / Lightning 110 (ou Cold 110, ou Cold 20 + Light 90) | A |
+| **Warlock/Cleric** | EU | 110/110 | A |
+| **Wizard/Cleric** | EU | 110/110 | A (S en groupe) |
+| **Tri-build Wiz** | EU | Wiz 108 / Warrior 10 / Cleric 102 | Optimisé tout-terrain |
 
-### 90 Cap Builds
-
-#### Chinois
-| Build | Masteries | Playstyle |
-|-------|-----------|-----------|
-| **Sword/Cold/Force** | Bicheon 90 / Cold 90 / Force 90 | CC PvP |
-| **Spear/Fire/Light** | Heuksal 90 / Fire 90 / Lightning 90 | Burst DPS |
-
-#### Européens
-| Build | Masteries | Playstyle |
-|-------|-----------|-----------|
-| **Warrior/Cleric** | Warrior 90 / Cleric 90 | Meta build |
-| **Wizard/Warrior** | Wizard 90 / Warrior 90 | AOE fort |
-
----
-
-### 100 Cap Builds (Power Spike)
-
-#### Chinois
-| Build | Masteries | Playstyle |
-|-------|-----------|-----------|
-| **Full INT Spear** | Heuksal 100 / Lightning 100 / Fire 100 | Nuker max |
-| **Sword/Cold** | Bicheon 100 / Cold 100 / Force 100 | PvP tank |
-
-#### Européens
-| Build | Masteries | Playstyle |
-|-------|-----------|-----------|
-| **Warrior/Cleric** | Warrior 100 / Cleric 100 | Dominant PvP |
-| **Rogue/Cleric** | Rogue 100 / Cleric 100 | Burst PvP |
-
----
-
-### 110 Cap Builds (Current Meta)
-
-#### Chinois
-| Build | Masteries | Playstyle | Tier |
-|-------|-----------|-----------|------|
-| **Sword/Cold/Force** | Bicheon 110 / Cold 110 / Force 110 | PvP tank | A |
-| **Spear/Light/Fire** | Heuksal 110 / Lightning 110 / Fire 110 | DPS hybrid | B |
-| **Bow/Light/Ice** | Pacheon 110 / Lightning 110 / Cold 110 | Kiting | B |
-
-#### Européens
-| Build | Masteries | Playstyle | Tier |
-|-------|-----------|-----------|------|
-| **Warrior/Cleric** | Warrior 110 / Cleric 110 | Tank PvP | S |
-| **Rogue/Cleric** | Rogue 110 / Cleric 110 | Burst PvP | S |
-| **Warlock/Cleric** | Warlock 110 / Cleric 110 | Debuff PvP | A |
-| **Wizard/Warrior** | Wizard 110 / Warrior 110 | AOE PvP | A |
-
----
-
-### 120+ Cap Builds (Private Servers)
-
-**Note :** Ces builds sont pour les serveurs privés avec caps plus élevés.
-
-#### Chinois (120 Cap)
-| Build | Masteries | Notes |
-|-------|-----------|-------|
-| **Full STR Spear** | Heuksal 120 / Fire 120 / Lightning 120 | DPS max |
-| **Full INT Spear** | Heuksal 120 / Lightning 120 / Fire 120 | Nuker AOE |
-| **Sword/Shield** | Bicheon 120 / Cold 120 / Force 120 | PvP tank |
-
-#### Européens (120-140 Cap)
-| Build | Masteries | Notes |
-|-------|-----------|-------|
-| **Warrior/Cleric** | Warrior 120+ / Cleric 120+ | Reste meta |
-| **Rogue/Cleric** | Rogue 120+ / Cleric 120+ | Burst monster |
-| **Wizard/Warrior** | Wizard 120+ / Warrior 120+ | AOE god |
+### Cap 120+ (12D/13D, serveurs récents)
+| Build | Race | Notes |
+|-------|------|-------|
+| **Dagger/Warlock** | EU | Star du cap 120 (crit + debuffs) |
+| **Dagger/Warrior** | EU | Crit + interrupts |
+| **Warrior/Warlock** | EU | Popularisé au-delà du cap 124 |
+| **Blader 13D** | CH | Guide iSRO dédié (elitepvpers) |
+| **Glaive STR / Wizard/Cleric** | CH/EU | Piliers intemporels |
 
 ---
 
 ## 🇨🇳 Builds Chinois
 
-### Pure STR Builds
+### Pure STR
+| Build | Masteries type | SP (cap 80) | PvP | PvE | Difficulté |
+|-------|----------------|-------------|-----|-----|------------|
+| **Glaive (Heuksal)** | Heuksal + Fire + Light/Cold | ~80 k | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Facile |
+| **Blader (Bicheon)** | Bicheon + Light/Fire/Cold | ~200 k (le + cher) | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | Moyenne |
+| **Bower (Pacheon)** | Pacheon + Fire (+Cold/Light/Force) | ~90-100 k | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Moyenne |
 
-#### Sword/Shield (Tank PvP)
-- **Masteries** : Bicheon 110 / Cold 110 / Force 110
-- **Armor** : Armor set +12
-- **Weapon** : Sword + Shield +12
-- **Playstyle** : Tanky, CC, survive
-- **PvP** : ⭐⭐⭐⭐
-- **PvE** : ⭐⭐⭐
-- **Difficulty** : Moyenne
+👉 Guide : [02_CHINESE_CLASSES.md](02_CHINESE_CLASSES.md#-builds-classiques) — combos : stun-lock glaive, « 5 stabs » blader, kite bower.
 
-👉 **Guide :** [02_CHINESE_CLASSES.md](02_CHINESE_CLASSES.md#1-bicheon-swordblade)
+### Pure INT (Nukers)
+| Build | Masteries | Particularité |
+|-------|-----------|---------------|
+| **Spear Nuker** | Heuksal + Fire + Lightning | Dégâts max, crit spear |
+| **S/S Nuker** | Bicheon + Lightning + Cold | Bouclier + Snow Shield + Cold Wave |
+| **Bow Nuker** | Pacheon + Lightning + Cold | Portée + freeze, kitabilité max |
 
-#### Spear (DPS PHY Max)
-- **Masteries** : Heuksal 110 / Fire 110 / Lightning 110
-- **Armor** : Garment/Protector +12
-- **Weapon** : Spear/Glaive +12
-- **Playstyle** : Dégâts PHY max
-- **PvP** : ⭐⭐⭐⭐
-- **PvE** : ⭐⭐⭐⭐⭐
-- **Difficulty** : Facile
+### Hybrides (voir [ratios documentés](33_PVP_BUILDS.md#-hybrides-ch--ratios-et-builds))
+| Ratio | Usage |
+|-------|-------|
+| **4:1 / 3:1** (INT-heavy) | Nuker tanky — le compromis documenté (Kerelious) |
+| **1:2** | Nuker très léger en STR |
+| **7:1** (STR-heavy) | Glaive/blader + nukes de finish |
 
-👉 **Guide :** [02_CHINESE_CLASSES.md](02_CHINESE_CLASSES.md#2-heuksal-spearglaive)
-
-#### Bow (Kiting)
-- **Masteries** : Pacheon 110 / Lightning 110 / Cold 110
-- **Armor** : Garment +12
-- **Weapon** : Bow +12
-- **Playstyle** : Distance, kite
-- **PvP** : ⭐⭐⭐
-- **PvE** : ⭐⭐⭐⭐
-- **Difficulty** : Moyenne
-
-👉 **Guide :** [02_CHINESE_CLASSES.md](02_CHINESE_CLASSES.md#3-pacheon-bow)
-
----
-
-### Pure INT Builds
-
-#### Spear Nuker (AOE Max)
-- **Masteries** : Heuksal 110 / Lightning 110 / Fire 110
-- **Armor** : Garment +12
-- **Weapon** : Spear +12
-- **Playstyle** : AOE nuker, SP farming
-- **PvP** : ⭐⭐⭐
-- **PvE** : ⭐⭐⭐⭐⭐
-- **Difficulty** : Facile
-- **SP Farming** : ⭐⭐⭐⭐⭐ (GAP 9)
-
-👉 **Guide :** [26_SP_FARMING.md](26_SP_FARMING.md#sp-farming-chinois)
-
-#### Bow Nuker (Critiques)
-- **Masteries** : Pacheon 110 / Lightning 110 / Ice 110
-- **Armor** : Garment +12
-- **Weapon** : Bow +12
-- **Playstyle** : Critiques distance
-- **PvP** : ⭐⭐⭐
-- **PvE** : ⭐⭐⭐⭐
-- **Difficulty** : Moyenne
-
----
-
-### Hybrid Builds
-
-#### STR/INT Hybrid
-- **Masteries** : Bicheon 110 / Lightning 110 / Fire 110
-- **Armor** : Protector +12
-- **Weapon** : Sword +12
-- **Playstyle** : Équilibré
-- **PvP** : ⭐⭐
-- **PvE** : ⭐⭐⭐
-- **Difficulty** : Difficile
-- **Note** : Généralement moins optimal
+### Support
+**Force hybrid** (arme + Force + Cold/Fire) : heal, rez, cures (les seuls contre Burn/Freeze), debuffs Vital Spot — colonne vertébrale des parties CH et des FW.
 
 ---
 
 ## 🇪🇺 Builds Européens
 
-### Warrior/Cleric (The Meta Build)
+| Build | Stats | Usage principal | PvP | PvE | Difficulté |
+|-------|-------|-----------------|-----|-----|------------|
+| **Warrior/Cleric (2H)** | Full STR | PvP 1v1 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | Facile |
+| **Warrior/Cleric (1H)** | Full STR | Tank dungeon | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Facile |
+| **Rogue/Cleric (dague)** | Full STR | Assassin 1v1 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | Très difficile |
+| **Rogue/Bard (xbow)** | Full STR | Lurer + farm rapide | ⭐⭐ | ⭐⭐⭐⭐ | Moyenne |
+| **Wizard/Cleric** | Full INT | Polyvalent + plvl | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Moyenne |
+| **Wizard/Bard** | Full INT | Farm party (XP/h max) | ⭐⭐⭐ (group) | ⭐⭐⭐⭐⭐ | Moyenne |
+| **Warlock/Cleric** | Full INT | Debuffer 1v1/group | ⭐⭐⭐⭐ | ⭐⭐⭐ | Difficile |
+| **Bard/Cleric** | Full INT | Support total | ⭐⭐ (support) | ⭐⭐⭐⭐ | Facile |
+| **Tri-build Wiz 108/10/102** | Full INT | Tout-terrain cap 110 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Moyenne |
 
-- **Masteries** : Warrior 110 / Cleric 110
-- **Type** : Pure STR
-- **Armor** : Armor/Protector +12
-- **Weapon** : 2H Sword +12 + Shield +12
-- **Playstyle** : Tank + DPS + Heals
-- **PvP** : ⭐⭐⭐⭐⭐ (S-Tier)
-- **PvE** : ⭐⭐⭐⭐
-- **Difficulty** : Facile
-- **Why OP** : Survie immense, heals, dégâts 2H
-
-👉 **Guide :** [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md#warriorcleric)
-
----
-
-### Rogue/Cleric (Burst King)
-
-- **Masteries** : Rogue 110 / Cleric 110
-- **Type** : Pure STR
-- **Armor** : Protector/Garment +12
-- **Weapon** : Dual Daggers +12 + Xbow +12
-- **Playstyle** : Stealth → Knockdown → Burst
-- **PvP** : ⭐⭐⭐⭐⭐ (S-Tier)
-- **PvE** : ⭐⭐⭐
-- **Difficulty** : Très difficile
-- **Why OP** : Burst 15k+ crits, stealth
-
-👉 **Guide :** [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md#roguecleric)
-
----
-
-### Wizard/Warrior (AOE Monster)
-
-- **Masteries** : Wizard 110 / Warrior 110
-- **Type** : Pure INT
-- **Armor** : Garment +12
-- **Weapon** : Staff +12
-- **Playstyle** : AOE massives
-- **PvP** : ⭐⭐⭐⭐ (A-Tier)
-- **PvE** : ⭐⭐⭐⭐⭐
-- **Difficulty** : Moyenne
-- **Why OP** : AOE dévastatrices en PvP group
-
-👉 **Guide :** [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md#wizardwarrior)
-
----
-
-### Warlock/Cleric (Debuffer)
-
-- **Masteries** : Warlock 110 / Cleric 110
-- **Type** : Pure INT
-- **Armor** : Garment +12
-- **Weapon** : Staff +12
-- **Playstyle** : Debuffs + DoT + CC
-- **PvP** : ⭐⭐⭐⭐ (A-Tier)
-- **PvE** : ⭐⭐⭐
-- **Difficulty** : Difficile
-- **Why OP** : -50% defense, sleep, roots
-
-👉 **Guide :** [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md#warlockcleric)
-
----
-
-### Bard/Cleric (Full Support)
-
-- **Masteries** : Bard 110 / Cleric 110
-- **Type** : Pure INT
-- **Armor** : Garment +12
-- **Weapon** : Harp +12
-- **Playstyle** : Buffs + Heals
-- **PvP** : ⭐⭐ (Support)
-- **PvE** : ⭐⭐⭐⭐ (Party)
-- **Difficulty** : Facile
-- **Why** : Best support pour parties
-
-👉 **Guide :** [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md#bardcleric)
+👉 Détails et skills : [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md) — party 8/8 type : 1 War, 2 Clerics, 1 Bard, 3-4 Wizards, ± Warlock.
 
 ---
 
 ## 📊 Tableau Récapitulatif
 
-### Comparatif des Meilleurs Builds
+| Build | Race | PvP 1v1 | PvP groupe | Farm solo | Farm party | SP requis |
+|-------|------|---------|-----------|-----------|------------|-----------|
+| **Warrior/Cleric** | EU | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ (tank) | Modérés |
+| **Rogue/Cleric** | EU | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ (lurer) | Modérés |
+| **Wizard/Cleric** | EU | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Modérés |
+| **Wizard/Bard** | EU | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ (party) | ⭐⭐⭐⭐⭐ | Modérés |
+| **Warlock/Cleric** | EU | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ (Division) | Modérés |
+| **Glaive STR** | CH | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ~80 k (cap 80) |
+| **Blader STR / Force Blader** | CH | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ~200 k (cap 80) |
+| **Bower STR** | CH | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ~90-100 k (cap 80) |
+| **Nuker INT** | CH | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Élevés |
+| **Hybride 4:1** | CH | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ~170 k (niv 60) |
 
-| Build | Race | PvP 1v1 | PvP Group | Farming | SP Farm | Difficulty |
-|-------|------|---------|-----------|---------|---------|------------|
-| **Warrior/Cleric** | EU | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | N/A | Facile |
-| **Rogue/Cleric** | EU | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | N/A | Très difficile |
-| **Warlock/Cleric** | EU | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | N/A | Difficile |
-| **Wizard/Warrior** | EU | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | N/A | Moyenne |
-| **Sword/Shield** | CH | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | Moyenne |
-| **Spear Nuker** | CH | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Facile |
-| **Bow** | CH | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Moyenne |
+---
 
-### Par Objectif
+## 💰 Budget SP par Build
 
-#### Pour PvP 1v1 Dominant
-1. **Warrior/Cleric** (Plus facile)
-2. **Rogue/Cleric** (Plus skill)
+| Objectif | SP nécessaires | Contexte |
+|----------|----------------|----------|
+| Palier Ongs (13-32, GAP 9) | 20-30 k | Fenêtre la plus efficiente |
+| Glaive complet cap 80 | ~80 k | Estimation communautaire |
+| Bower complet cap 80 | ~90-100 k | Idem |
+| Blader complet cap 80 | ~200 k | Le + cher (nombreuses séries) |
+| Wizard + Bard cap 90 | ~760 k | Référence EU |
+| Hybride 4:1 (3 masteries) | ~105 k @42, ~170 k @60, ~312 k @72 | Guide Kerelious |
+| Glaive 3 masteries cap 110 | **1,88 M - 2,47 M** selon variante | Calculs elitepvpers (516942) |
 
-#### Pour PvP Groupé (Fortress)
-1. **Wizard/Warrior** (AOE)
-2. **Warlock/Cleric** (Debuffs)
-3. **Warrior/Cleric** (Tank)
-
-#### Pour Farming Solo
-1. **Wizard/Warrior** (AOE)
-2. **Spear Nuker** (Dégâts max)
-3. **Bow** (Distance safe)
-
-#### Pour SP Farming
-1. **Spear Nuker INT** (GAP 9)
-2. **Bow Nuker INT** (GAP 9)
-3. **Wizard** (AOE naturels)
+→ Méthodes de farming : [26_SP_FARMING.md](26_SP_FARMING.md)
 
 ---
 
 ## 📚 Guides Détaillés
 
-### Guides Principaux
-- **[33_PVP_BUILDS.md](33_PVP_BUILDS.md)** - Tier list PvP + builds détaillés
-- **[34_PVE_BUILDS.md](34_PVE_BUILDS.md)** - Builds PvE + SP farming
-- **[26_SP_FARMING.md](26_SP_FARMING.md)** - Guide SP farming complet
+### Guides principaux
+- **[33_PVP_BUILDS.md](33_PVP_BUILDS.md)** — Tier lists par cap, builds détaillés, rotations, counters, gear
+- **[34_PVE_BUILDS.md](34_PVE_BUILDS.md)** — Farm, SP farming, PLvL, donjons (FGW/Qin-Shi/Job Temple)
+- **[26_SP_FARMING.md](26_SP_FARMING.md)** — GAP, tableaux, spots, méthode 8/8 + Ongs
 
 ### Classes
-- **[02_CHINESE_CLASSES.md](02_CHINESE_CLASSES.md)** - Classes chinoises
-- **[03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md)** - Classes européennes
-- **[HUB_CLASSES.md](HUB_CLASSES.md)** - Hub central classes
+- **[02_CHINESE_CLASSES.md](02_CHINESE_CLASSES.md)** — 7 masteries CH, séries, imbues, combos
+- **[03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md)** — 6 classes EU, skills iSRO, party builds
+- **[HUB_CLASSES.md](HUB_CLASSES.md)** — Hub central classes
 
-### Combat et Mécaniques
-- **[HUB_COMBAT.md](HUB_COMBAT.md)** - Hub central combat
-- **[04_COMBAT_SYSTEM.md](04_COMBAT_SYSTEM.md)** - Système de combat
-- **[28_ADVANCED_MECHANICS.md](28_ADVANCED_MECHANICS.md)** - Mécaniques avancées
+### Combat et mécaniques
+- **[HUB_COMBAT.md](HUB_COMBAT.md)** / **[04_COMBAT_SYSTEM.md](04_COMBAT_SYSTEM.md)** — stats, attack rating vs parry
+- **[28_ADVANCED_MECHANICS.md](28_ADVANCED_MECHANICS.md)** — mécaniques avancées
+- **[19_FORTRESS_WAR.md](19_FORTRESS_WAR.md)** — PvP de masse
+- **[20_PVP_PK_SYSTEM.md](20_PVP_PK_SYSTEM.md)** — PK, murder, penalty
 
 ### Équipement
-- **[06_SEAL_EQUIPMENT.md](06_SEAL_EQUIPMENT.md)** - Seal equipment (SOS, SOM, SOSun)
-- **[07_ITEM_DEGREES.md](07_ITEM_DEGREES.md)** - Item Degrees (1D-13D)
-- **[05_ALCHEMY_SYSTEM.md](05_ALCHEMY_SYSTEM.md)** - Alchimie (+1 à +12)
+- **[06_SEAL_EQUIPMENT.md](06_SEAL_EQUIPMENT.md)** — SoS/SoM/SoSun/Nova
+- **[07_ITEM_DEGREES.md](07_ITEM_DEGREES.md)** — Degrés 1D-13D par cap
+- **[05_ALCHEMY_SYSTEM.md](05_ALCHEMY_SYSTEM.md)** — enchant, blues (Immortal/Astral/Steady/Lucky)
+- **[08_ARMOR_TYPES.md](08_ARMOR_TYPES.md)** — Armor/Protector/Garment & équivalents EU
+
+### Donjons et progression
+- **[29_FORGOTTEN_WORLD.md](29_FORGOTTEN_WORLD.md)** — FGW (6 ailes, talismans)
+- **[15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md)** — uniques Qin-Shi/Job Temple/Roc
+- **[25_LEVELING_GUIDE.md](25_LEVELING_GUIDE.md)** — parcours 1-110, PLvL
 
 ---
 
 ## 💡 Conseils Finaux
 
 ### Pour les Débutants
-1. **Commencez avec Warrior/Cleric** (Européen)
-   - Facile à jouer
-   - Pardonnable des erreurs
-   - Viable en PvP et PvE
-
-2. **Ou Wizard/Warrior** (Européen)
-   - Dégâts énormes
-   - Fun à jouer
-   - Excellent pour farming
+1. **Warrior/Cleric (EU)** : facile, pardonnable, viable partout — le point de départ le plus recommandé.
+2. **Wizard/Cleric (EU)** : dégâts, fun, excellent farm + rôle de plvler.
+3. **Glaive STR (CH)** si vous préférez le solo : simple, tanky, farmeur autonome.
 
 ### Pour les Intermédiaires
-3. **Essayez Rogue/Cleric**
-   - Haut skill ceiling
-   - Burst énorme
-   - Plus challenge
-
-4. **Ou Sword/Shield** (Chinois)
-   - SP farming requis
-   - Gameplay technique
-   - Viable PvP
+4. **Rogue/Cleric** : le challenge burst/stealth (haut skill ceiling).
+5. **Bower STR** : kiting, uniques, jobbing.
+6. **Nuker INT** : glass cannon, SP farming efficace.
 
 ### Pour les Avancés
-5. **Warlock/Cleric**
-   - Très technique
-   - Debuffs puissants
-   - Stratégique
+7. **Force Blader (CH)** : le build le plus technique CH — debuff chains, ~200 k SP.
+8. **Warlock/Cleric (EU)** : debuffs, contrôle, timing des locks.
+9. **Hybrides CH (4:1, 7:1)** : les deux familles de dégâts, à planifier dès le niveau 1.
 
-6. **Spear Nuker** (Chinois)
-   - SP farming optimal
-   - Dégâts max
-   - Difficile à maîtriser
+### Règle d'or
+> « Un bon joueur CH peut battre un EU moyen, et réciproquement » — le build ouvre la porte, le skill la franchit. Ne dispersez pas vos masteries, planifiez vos SP, gardez votre alchimie pour le set final.
 
 ---
 
-**Dernière mise à jour :** 2025-01-20
+**Dernière mise à jour : 2026-10-01** — aligné sur les révisions 33/34 (sources : elitepvpers, SilkroadForums, PlayOrigin, GamersDecide, MMORPG.com, UnKnoWnCheaTs, Seidenkraft, ZsZC Wiki, Reddit).
 **Index des Builds** - Guide complet pour choisir votre build SRO

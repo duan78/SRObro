@@ -1,1025 +1,454 @@
 # Forgotten World - Guide Complet
 
+> ⚠️ **Révision majeure (2026-10)** : fichier reconstruit à partir du wikitext complet du wiki Fandom (Silkroad Online Wiki), des guides PlayOrigin (Togui Village / Flame Mountain), du tutorial Seidenkraft, du tutorial elitepvpers et des scripts communautaires ProjectHax. La version précédente contenait de **grosses erreurs sur les tranches de niveaux et les noms de donjons** (Green Abyss/Sea of Resentment mal placés, « Temple of Egypt » inexistant, Sereness présenté comme boss de tous les donjons) — tout est corrigé ci-dessous.
+
 ## 📋 Table des Matières
-- [Introduction](#introduction)
-- [Conditions d'Entrée](#conditions-dentrée)
-- [Les Différents Donjons](#les-différents-donjons)
-- [Système de Difficulté](#système-de-difficulté)
-- [Mécaniques de Jeu](#mécaniques-de-jeu)
-- [Système de Talismans](#système-de-talismans)
-- [Boss et Récompenses](#boss-et-récompenses)
-- [Stratégies de Groupe](#stratégies-de-groupe)
-- [Forgotten Coins System](#forgotten-coins-system)
-- [Implémentation Technique](#implémentation-technique)
-- [Sources](#sources)
+- [Introduction](#-introduction)
+- [Conditions d'Entrée (Dimension Hole)](#-conditions-dentrée-dimension-hole)
+- [Les 4 Donjons (noms et niveaux VÉRIFIÉS)](#-les-4-donjons-noms-et-niveaux-vérifiés)
+- [Système de Difficulté (Grades 1★-4★)](#-système-de-difficulté-grades-1-4)
+- [Structure d'une Instance](#-structure-dune-instance)
+- [Boss, Uniques et Monstres](#-boss-uniques-et-monstres)
+- [Système de Talismans (Collections)](#-système-de-talismans-collections)
+- [Quêtes du Forgotten World](#-quêtes-du-forgotten-world)
+- [Récompenses](#-récompenses)
+- [Stratégies de Groupe](#-stratégies-de-groupe)
+- [Forgotten Coins (variante private servers)](#-forgotten-coins-variante-private-servers)
+- [Donjons Liés (Job Temple, Qin-Shi Tomb, Holy Water Temple)](#-donjons-liés-job-temple-qin-shi-tomb-holy-water-temple)
+- [Implémentation Technique](#-implémentation-technique)
+- [FAQ](#-faq)
+- [Incertitudes / Données Manquantes](#-incertitudes--données-manquantes)
+- [Sources](#-sources)
 
 ---
 
 ## 🎯 Introduction
 
-**Le Forgotten World (FW)** est un système d'instances dungeons introduit avec **Legend VI**, offrant aux joueurs des défis de groupe avec des récompenses exclusives. C'est l'une des activités les plus populaires de Silkroad Online pour les joueurs de niveau **35 à 110**.
+**Le Forgotten World (FW / FGW)** est le système de donjons instanciés introduit avec **Legend VI**. Chaque joueur (ou party) obtient **sa propre instance**. C'est la **seule source de talismans** du jeu, échangeables contre des armes scellées haut de gamme (jusqu'au degré 11 Seal of Nova).
 
-### Points Clés
-- ✅ **Instances de groupe** pour 2-8 joueurs
-- ✅ **Niveaux 35-110** avec différents donjons par tranche de niveaux
-- ✅ **Système de collections** avec 8 talismans par set
-- ✅ **Récompenses uniques** : armures, armes, SP, Forgotten Coins
-- ✅ **Différentes difficultés** : 1 à 4 étoiles
-- ✅ **Quêtes journalières** et récompenses
-
----
-
-## 🔑 Conditions d'Entrée
-
-### Niveau Requis
-- **Niveau minimum** : 35
-- **Niveau maximum** : 110
-- Chaque donjon s'adresse à une tranche de niveaux spécifique
-
-### Dimension Hole (Ticket d'Entrée)
-
-Pour entrer dans un Forgotten World, vous devez obtenir un **Dimension Hole** :
-
-#### Comment Obtenir un Dimension Hole
-1. Trouver un **Dimension Pillar** (Red Crystal Talisman) dans le monde
-2. Détruire le pilier
-3. Le Dimension Hole apparaît dans votre inventaire
-
-#### Où Trouver les Dimension Pillars
-- **N'importe où dans le monde** de Silkroad
-- Apparaissent aléatoirement comme des cristaux rouges
-- Visible sur la carte comme des points rouges
-- Généralement dans les zones de monstres de niveau moyen à élevé
-
-### Durée et Restrictions
-- **Durée de l'instance** : 30-60 minutes (selon le donjon)
-- **Limite d'entrées** : 3-5 par jour (selon le serveur)
-- **Taille du groupe** : 2-8 joueurs recommandé
-- **Restriction de niveau** : Doit correspondre au donjon (ex: 51-60 pour Togui Village)
+### Points Clés (vérifiés)
+- ✅ Joueurs de **niveau 35 à 110**
+- ✅ **4 donjons** : Togui Village, Flame Mountain, Shipwreck – The Green Abyss, Shipwreck – The Sea of Resentment
+- ✅ Accès via **Dimension Hole** obtenue en tuant des **Envies** (spawnées par un **Dimension Pillar**)
+- ✅ **4 grades de difficulté** (1★-4★) : type de monstres, limite de party et taux de drop de talismans
+- ✅ **Collections de 8 talismans** → arme scellée (SUN D8/D9, MOON D10, NOVA D11)
+- ✅ La jauge **berserker est rechargée après chaque unique tué**
 
 ---
 
-## 🗺️ Les Différents Donjons
+## 🔑 Conditions d'Entrée (Dimension Hole)
 
-Il existe plusieurs instances Forgotten World, chacune avec son thème et sa tranche de niveaux :
+### Chaîne d'accès : Pillar → Envies → Hole
 
-### 1. Togui Village (Niveau 51-60)
-- **Type** : Village fantôme japonais
-- **Degree** : 8D
-- **Collection** : The Phantom of the Crimson Blood
-- **Localisation** : près de Hotan
-- **Difficulty** : ★ à ★★★★
+1. **Dimension Pillar** : pilier-cristal qui spawn **aléatoirement dans le monde** (hors villes), par paliers de niveau : **35-50, 51-60, 61-70, 71-80, 81-90**. ℹ️ Le palier 91-100 a été **retiré du spawn sur les serveurs officiels**. Il n'existe pas de carte statique : les piliers apparaissent dans les zones de chasse correspondant à leur palier.
+2. Détruire le pilier fait spawner des monstres **Envy**. ⚠️ Les Envies en groupe font **très mal** — un build INT en dessous du level ~120 doit fuir (Seidenkraft).
+3. Tuer les Envies peut dropper une **Dimension Hole** (ticket d'entrée). Les trous ont un **grade (1-4)** et un **niveau** — utilisables seulement si votre niveau correspond.
+4. La Dimension Hole doit être activée **dans une ville** : clic droit → confirmation → un téléporteur **visible uniquement par vous** apparaît à côté.
 
-### 2. Flame Mountain (Niveau 61-70)
-- **Type** : Volcan enflammé
-- **Degree** : 9D
-- **Collection** : The Burning Abyss
-- **Thème** : Feu et lave
+### Timings et restrictions (wiki Fandom)
 
-### 3. Green Abyss (Niveau 71-80)
-- **Type** : Forêt maudite
-- **Degree** : 10D
-- **Collection** : The Green Abyss
-- **Thème** : Nature corrompue
+| Règle | Valeur |
+|---|---|
+| Durée de vie de l'item Dimension Hole | **24 h** (supprimé automatiquement) |
+| Délai entre 2 activations de Dimension Hole | **30 minutes** |
+| Timer de l'instance | **2 heures** pour tuer le boss (le donjon disparaît ensuite → retour au point de résurrection) |
+| Délai de ré-entrée (tous donjons confondus) | **3 heures** après être entré |
+| Bypass du délai de ré-entrée | **Forgotten World re-entry ticket** (Item Mall) |
+| Despawn du Dimension Pillar si vous quittez le donjon | **15 minutes** pour y retourner (sinon le trou disparaît) |
+| Sortir réapprovisionner/réparer | Autorisé (retour sous 15 min via Dungeon Exit / Gap of Dimensions) |
 
-### 4. Sea of Resentment (Niveau 81-90)
-- **Type** : Ruines sous-marines
-- **Degree** : 11D
-- **Collection** : The Sea of Resentment
-- **Thème** : Eau et esprits
-
-### 5. Shipwreck Dimension (Niveau 91-100)
-- **Type** : Épave de navire
-- **Degree** : 12D
-- **Collection** : Shipwreck
-- **Boss** : Sereness Ghost
-
-### 6. Temple of Egypt (Niveau 101-110)
-- **Type** : Temple égyptien
-- **Degree** : 13D
-- **Collection** : Egypt
-- **Meilleures récompenses**
+### Aider les autres joueurs
+Le **leader de party** entre avec sa propre Dimension Hole ; les autres membres (bon niveau) sont téléportés dans **la même instance** via le **Pillar of Party Member Recall**. On peut toujours rejoindre l'instance d'un autre joueur.
 
 ---
 
-## ⭐ Système de Difficulté
+## 🗺️ Les 4 Donjons (noms et niveaux VÉRIFIÉS)
 
-Chaque donjon Forgotten World dispose de **4 niveaux de difficulté** (étoiles) :
+| Donjon | Tranches de niveaux | Récompense Collection Book | NPC de quête |
+|---|---|---|---|
+| **Togui Village** | **35-50 / 51-60 / 61-70** (3 tranches) | Arme **Degré 8 Seal of Sun** | Merchant Associate **Asaman** (Hotan) |
+| **Flame Mountain** | **71-80 / 81-90** (2 tranches) | Arme **Degré 9 Seal of Sun** | Hunter Associate **Ahmok** (Hotan) |
+| **Shipwreck – The Green Abyss** | **91-100** | Arme **Degré 10 Seal of Moon** | Guild Manager **Musai** (Hotan) |
+| **Shipwreck – The Sea of Resentment** | **101-110** | Arme **Degré 11 Seal of Nova A Power** | Governor **Senmut** (Alexandria, South Palace) |
 
-### ★ 1 Star (Facile)
-- **HP des monstres** : 100%
-- **Dégâts des monstres** : 100%
-- **Drop Rate Talismans** : Bas (1x)
-- **Recommended** : Groupe débutant ou équipement moyen
-
-### ★★ 2 Stars (Normal)
-- **HP des monstres** : 150%
-- **Dégâts des monstres** : 120%
-- **Drop Rate Talismans** : Moyen (2x)
-- **Recommended** : Groupe expérimenté
-
-### ★★★ 3 Stars (Difficile)
-- **HP des monstres** : 200%
-- **Dégâts des monstres** : 150%
-- **Drop Rate Talismans** : Élevé (4x)
-- **Recommended** : Groupe bien équipé, 8 joueurs
-- **Bonus** : Arena Coins en récompense
-
-### ★★★★ 4 Stars (Extrême)
-- **HP des monstres** : 300%
-- **Dégâts des monstres** : 200%
-- **Drop Rate Talismans** : Très élevé (8x)
-- **Recommended** : Full party 8/8, équipement SOX+, full buffs
-- **Bonus** : Meilleures récompenses, plus de Forgotten Coins
-
-### Exemple de Drop Rates par Donjon
-| Donjon | Base Rate | ★ | ★★ | ★★★ | ★★★★ |
-|--------|-----------|---|----|-----|------|
-| Togui Village | 100x | 1x | 2x | 4x | 8x |
-| Flame Mountain | 70x | 0.7x | 1.4x | 2.8x | 5.6x |
+> 🚫 **Corrections importantes par rapport à l'ancienne version de ce fichier** :
+> - « Green Abyss (71-80) » et « Sea of Resentment (81-90) » étaient **faux** : ce sont les deux donjons **Shipwreck** (91-100 et 101-110).
+> - « Flame Mountain (61-70) » était faux : Flame Mountain = **71-90**.
+> - « Shipwreck Dimension (91-100) » et « Temple of Egypt (101-110) » **n'existent pas** sous ces noms. Les items « égyptiens » (Nova) viennent des drops rares de **Ghost Sereness** dans The Sea of Resentment.
+> - « Togui's Tomb » (nom parfois cité) : le nom officiel du donjon est **Togui Village**.
 
 ---
 
-## ⚔️ Mécaniques de Jeu
+## ⭐ Système de Difficulté (Grades 1★-4★)
 
-### Déroulement d'une Instance
+La difficulté est portée par la **Dimension Hole elle-même** (grade affiché sur l'item). Contrairement à une croyance répandue :
 
-#### Phase 1: Entrée et Préparation
-1. **Le leader de party** utilise le Dimension Hole
-2. **Toute la party** est téléportée dans l'instance
-3. **Timer démarre** (30-60 minutes selon le donjon)
-4. **Buffez votre groupe** avant d'engager
+- ❌ Les grades ne changent **pas** les HP/dégâts des uniques.
+- ✅ Les grades changent le **type de monstres**, la **limite de party** et le **taux de drop des talismans** (grade supérieur = bien meilleures chances).
 
-#### Phase 2: Clear des Salles
-1. **Chaque salle** contient des monstres à éliminer
-2. **Tous les monstres** doivent mourir pour débloquer la porte suivante
-3. **Treasure Boxes** apparaissent après avoir clear une salle
-4. **Les Talismans** drop des chests et des mobs uniques
+| Grade | Type de monstres | Limite de party | Notes |
+|---|---|---|---|
+| **Grade 1 ★** | Normal | **4 joueurs** | Faisable en petit groupe / haut niveau bien stuffé |
+| **Grade 2 ★★** | Champion | **4 joueurs** | Solo possible pour un level 120 correctement équipé (Seidenkraft) |
+| **Grade 3 ★★★** | ??? (élite) | **8 joueurs** | Conçu pour party ; la disposition des boxes change |
+| **Grade 4 ★★★★** | ??? (élite) | **8 joueurs** | « Hardcore » : full party coordonnée, wipes faciles, meilleurs taux de talismans |
 
-#### Phase 3: Boss Unique
-- **Elder Earth Ghost** apparaît à mi-parcours
-- **Doit être tué** pour progresser
-- **Drop des talismans** supplémentaires
-
-#### Phase 4: Boss Final - Sereness Ghost
-1. Apparaît **après avoir tué TOUS les monstres** du donjon
-2. **HP élevé** (plusieurs millions)
-3. **Skills puissantes** : AOE, debuffs, knockdowns
-4. **Drop des récompenses finales** :
-   - Arme scellée (SOS/SOM/SOSun selon grade)
-   - Talismans manquants
-   - Forgotten Coins (sur certains serveurs)
-
-### Système de Portes et Salles
-
-```typescript
-// Structure d'une instance Forgotten World
-interface FGWRoom {
-  id: number;
-  name: string;
-  monsters: Monster[];
-  treasureBox?: TreasureBox;
-  nextRoom: number;
-  isCleared: boolean;
-}
-
-interface FGWDungeon {
-  name: string;
-  levelRange: [number, number];
-  rooms: FGWRoom[];
-  boss: FGWBoss;
-  difficulty: 1 | 2 | 3 | 4;
-  timeLimit: number; // en minutes
-}
-```
+**Règle d'accès aux grades 3-4** : uniquement au-dessus du **level 70** — les Envies de niveau < 71 ne droppent jamais de trou de grade supérieur à 2 (wiki Fandom).
 
 ---
 
-## 🃏 Système de Talismans
+## 🏰 Structure d'une Instance
 
-### Collections de Talismans
+Tous les donjons FGW suivent **le même schéma** (wiki Fandom + guides Origin) :
 
-Chaque donjon possède sa propre **collection de 8 talismans** uniques.
+### Camps (rooms)
+- Chaque zone (« camp ») contient des monstres normaux + des **mini-boss (uniques)**.
+- **Tuer tous les monstres** d'un segment ouvre automatiquement la zone bloquée suivante.
+- Après le clear d'un camp, une **Envy** y spawne ; **tuer l'Envy fait spawner de nombreux monstres d'un coup** → quitter vite le camp.
+- Certains camps contiennent un **Dungeon Exit** et/ou un **Pillar of Party Member Recall**.
 
-### Collection 1: The Phantom of the Crimson Blood (Togui Village - 8D)
+### Boss Camp
+- Toujours le **dernier camp** du donjon : le **boss final** n'apparaît qu'après le clear complet de toutes les zones précédentes.
 
-Les 8 talismans à collecter :
+### Treasure Box Room
+- Salle avec monstres + **Treasure Box** (coffre). Le coffre **n'est pas obligatoire** pour progresser, mais c'est la **source principale de talismans** et de Faded Beads.
 
-1. **Red Tears** (Larmes Rouges)
-2. **Western Scriptures** (Scriptures Occidentales)
-3. **Togui Mask** (Masque de Togui)
-4. **Red Talisman** (Talisman Rouge)
-5. **Puppet** (Poupée)
-6. **Dull Kitchen Knife** (Couteau de Cuisine Émoussé)
-7. **Spell Paper** (Papier de Sort)
-8. **Elder Staff** (Bâillon des Anciens)
+### Gap of Dimensions
+- Le clear de certains camps fait apparaître un téléporteur **« Gap of Dimensions »** au début du donjon : permet aux joueurs qui rentrent de sauter directement vers les camps éloignés.
 
-### Collection 2: The Burning Abyss (Flame Mountain - 9D)
-
-Les 8 talismans à collecter :
-
-1. **Fire Flower** (Fleur de Feu)
-2. **Horned Cattle** (Bovin Cornu)
-3. **Flame of Oblivion** (Flamme de l'Oubli)
-4. **Flame Paper** (Papier de Flamme)
-5. **Hearthstone Flame** (Flamme de Foyer)
-6. **Silver Pendant** (Pendentif en Argent)
-7. **Cobalt** (Cobalt)
-8. **Obsidian Shard** (Éclat d'Obsidienne)
-
-### Collection 3: The Green Abyss (10D)
-
-Talismans de la collection (liste partielle) :
-
-1. **Jade Crystal** (Cristal de Jade)
-2. **Poison Ivy Leaf** (Feuille de Lierre Poison)
-3. **Spirit Orb** (Orbe Spirituel)
-4. **Ancient Root** (Racine Ancienne)
-5-8. *(Talismans supplémentaires)*
-
-### Collection 4: The Sea of Resentment (11D)
-
-Talismans de la collection (liste partielle) :
-
-1. **Coral Fragment** (Fragment de Corail)
-2. **Mermaid Tear** (Larme de Sirène)
-3. **Drowned Captain's Hat** (Chapeau du Capitaine Noyé)
-4. **Sea Spirit Scale** (Écaille d'Esprit de Mer)
-5-8. *(Talismans supplémentaires)*
-
-### Comment Compléter une Collection
-
-#### Étape 1: Collecter les Talismans
-- **Loot les Treasure Boxes** dans chaque salle
-- **Tuer l'Elder Earth Ghost** unique
-- **Tuer le boss final Sereness**
-- **Les talismans drop** aléatoirement de ces sources
-
-#### Étape 2: Enregistrer dans le Collection Book
-1. Ouvrez votre **Inventory**
-2. Cliquez sur l'onglet **Collection**
-3. **Cliquez droit** sur chaque talisman pour l'enregistrer
-4. La progression s'affiche (ex: 3/8)
-
-#### Étape 3: Compléter la Quête
-Une fois les **8 talismans collectés** :
-1. Retournez auprès du **NPC de quête Forgotten World**
-2. **Activez la quête de récompense**
-3. **Choisissez votre récompense** selon votre collection
+### Astuce officielle (wiki)
+> **Ne registrez PAS les talismans au fur et à mesure** : collectez les 8 avant de les enregistrer dans le Collection Book. La jauge **berserker se recharge à chaque unique tué**.
 
 ---
 
-## 🏆 Boss et Récompenses
+## 👹 Boss, Uniques et Monstres
 
-### Boss Principaux
+⚠️ L'ancienne version présentait « Sereness Ghost » comme boss final de TOUS les donjons et inventait un « Elder Earth Ghost » mid-donjon universel + des phases/chiffres de HP. **Réalité vérifiée : chaque donjon a SES uniques ; seul The Sea of Resentment a Ghost Sereness comme boss final.**
 
-#### 1. Elder Earth Ghost (Unique de Mi-Donjon)
-- **Level** : Selon le donjon (51-110)
-- **HP** : ~500,000 - 2,000,000
-- **Skills** :
-  - Earthquake AOE (dégâts de zone)
-  - Rock Throw (projets de rochers)
-  - Defense Up (buff de défense)
-- **Drops** :
-  - 1-3 Talismans aléatoires
-  - Gold (100,000 - 500,000)
-  - Potions/Consommables
+### Togui Village (35-70)
+| Unique | Rôle | Notes |
+|---|---|---|
+| **Togui General** | Unique de camp | Vu dans les runs 51-60 (timestamp ~16 min des vidéos) |
+| **Togui Elder** | Unique de camp | Fin de run (~1 h 06 dans les vidéos complètes) |
+| **Elder Earth Ghost** | Unique majeur | **Meilleure probabilité de drop de talismans** (guide Origin). À **15 % de son HP**, il spawn des **mini-uniques et monstres** → la party doit switch sur les adds |
 
-#### 2. Sereness Ghost (Boss Final)
-**Le boss principal de TOUS les Forgotten Worlds**
+### Flame Mountain (71-90)
+| Unique | Rôle | Notes |
+|---|---|---|
+| **Flame Cow King** | Unique majeur | Droppe des talismans (avec les Treasure Boxes). Il **se renforce (~+15 %)** pendant le combat (guide Origin) |
+| *Mini-uniques* | Camps | Répartis dans les 3 « Areas » du donjon |
 
-- **Level** : Selon le donjon
-- **HP** : ~2,000,000 - 10,000,000
-- **Skills** :
-  - **Scream AOE** : Dégâts magiques dans une large zone
-  - **Ghost Fire** : DoT (damage over time) de feu
-  - **Curse** : Debuff -50% défense
-  - **Summon Ghosts** : Invoque des esprits auxiliaires
-  - **Teleport** : Se téléporte aléatoirement
+### Shipwreck – The Green Abyss (91-100)
+- Uniques **non documentés nominativement** dans les sources trouvées (structure identique : camps + mini-uniques + boss camp). Voir [Incertitudes](#-incertitudes--données-manquantes).
 
-- **Stratégie** :
-  - **Tank** maintient l'aggro avec defense buffs
-  - **Nukers** attaquent à distance
-  - **Clerics/Bards** heal et purge les debuffs
-  - **Évitez l'AOE** en vous écartant pendant le cast
+### Shipwreck – The Sea of Resentment (101-110)
+| Boss/monstre | Notes |
+|---|---|
+| **Ghost Sereness** (boss final) | **Seul après le clear complet.** Cast une **pétrification** (esquive en se déplaçant pendant le cast). Spawn des **adds à ~60 % et ~20 % de HP**. Les joueurs pétrifiés à bas HP peuvent mourir |
+| **Ghost Curse** (monstre) | Monstre cité par les scripts communautaires (ProjectHax) dans le donjon 1★ |
+| Vindictive Spirit / Phantom (monstres) | Thème « esprits vengeurs » du donjon |
 
-### Récompenses par Collection
+### Drops rares de Ghost Sereness (wiki Fandom)
+- **Degré 11 Seal of Nova B Fight** (arme)
+- **Degré 11 Seal of Nova A Protection** (bouclier)
+- **Degré 11 Seal of Nova B Guard** (bouclier)
 
-#### Grade ★ - Facile
-- **Arme** : Sealed 8D-13D (normale)
-- **Stats** : +0, sans blues
-- **SP** : 0
-- **Coins** : 0-5 Forgotten Coins
+> ℹ️ Les items « égyptiens » (Nova A/B) de fin de jeu viennent donc de **Sea of Resentment**, pas d'un hypothétique « Temple of Egypt ».
 
-#### Grade ★★ - Normal
-- **Arme** : Sealed 8D-13D
-- **Stats** : +3-5, 1-2 blues
-- **SP** : 100,000
-- **Coins** : 5-10 Forgotten Coins
+---
 
-#### Grade ★★★ - Difficile
-- **Arme** : Sealed of Star (SOS) 8D-13D
-- **Stats** : +5-7, 3-4 blues
-- **SP** : 250,000
-- **Coins** : 10-20 Forgotten Coins
-- **Bonus** : Arena Coins × 50
+## 🃏 Système de Talismans (Collections)
 
-#### Grade ★★★★ - Extrême
-- **Arme** : Sealed of Star/Moon (SOS/SOM) 8D-13D
-- **Stats** : +7-9, 4-5 blues maximum
-- **SP** : 500,000
-- **Coins** : 20-50 Forgotten Coins
-- **Bonus** : Arena Coins × 100 + Chance SOSun
+Chaque donjon possède **une collection de 8 talismans** (noms officiels iSRO, croisés Fandom + Algarb + ProjectHax). Les talismans sont **vendables/échangeables** (tradeables) et droppent par les **Treasure Boxes** et les **boss/uniques**.
 
-### Récompenses Uniques
+### 1. The Phantom of the Crimson Blood — Togui Village (D8)
+1. Red Tears
+2. Western Scriptures
+3. Togui Mask
+4. Red Talisman
+5. Puppet
+6. Dull Kitchen Knife
+7. Spell Paper
+8. Elder Staff
 
-#### Armes Spéciales
-Certains donjons drop des armes spéciales :
-- **A-grade Shield** (Chinese ou European)
-- **B-grade Weapon** (arme de grade B, rare)
-- **Nova A/B Egypt Weapons** (sur certains serveurs)
+### 2. The Burning Abyss — Flame Mountain (D9)
+1. Fire Flower
+2. Horned Cattle
+3. Flame of Oblivion
+4. Flame Paper
+5. Hearthstone Flame
+6. Enchantress Necklace
+7. Honghaeah Armor
+8. Fire Dragon Sword
 
-#### Forgotten Coins System
-Sur les serveurs modernes/private servers :
-- **Treasure Boxes drop des Forgotten Coins** au lieu de talismans directs
-- **Coins peuvent être échangés** contre n'importe quel talisman
-- **Système sans RNG** : vous choisissez ce qu vous manque
-- **Shop NPC** : Forgotten World Coin Trader
+### 3. The Green Abyss — Shipwreck, The Green Abyss (D10)
+1. Silver Pendant
+2. Cobalt Emerald
+3. Logbook
+4. Love Letter
+5. Portrait of a Woman
+6. Jewelry Box
+7. Diamond Watch
+8. Mermaid's Tears
 
-```typescript
-// Exemple d'échange Forgotten Coins
-interface ForgottenCoinShop {
-  talismans: {
-    name: string;
-    cost: number; // en coins
-    stock: number; // illimité ou limité
-  }[];
-}
+### 4. The Sea of Resentment — Shipwreck, The Sea of Resentment (D11)
+1. Broken Key
+2. Large Tong
+3. Phantom Harp
+4. Evil's Heart
+5. Vindictive Spirit's Bead
+6. Hook Hand
+7. Commander's Patch *(plus rare)*
+8. Sereness's Tears *(plus rare)*
 
-// Prix exemple
-const TALISMAN_PRICES = {
-  RED_TEARS: 5,        // 5 Forgotten Coins
-  WESTERN_SCRIPTURES: 5,
-  TOGUI_MASK: 10,      // Plus rare
-  ELDER_STAFF: 15,     // Très rare
-};
-```
+### Compléter une collection
+1. Loot les Treasure Boxes + tuer les uniques/boss (les taux montent avec le grade).
+2. Astuce communauté : avoir un personnage avec **peu de talismans déjà collectés** augmente le taux de drop des boxes (Algarb).
+3. **Enregistrer les 8 talismans** dans le Collection Book (clic droit) — la quête de collection se prend **AVANT d'entrer** (voir NPC par donjon dans le tableau ci-dessus) : D8 chez un marchand, D9/D10 « the general », D11 « Alex south, north from the porter » (Algarb).
+4. Récompense : l'arme scellée correspondant au donjon (une fois par donjon par personnage).
+
+---
+
+## 📜 Quêtes du Forgotten World
+
+| Type | Fréquence | Contenu |
+|---|---|---|
+| **Collection quest** | **1 fois par donjon par personnage** | Collecter + enregistrer les 8 talismans → arme scellée (sans plus, sans blues, valeurs basses) |
+| **Série one-time** (~7 quêtes par tranche de niveau) | 1 fois | La plus longue, les plus grosses récompenses XP ; certaines donnent des items scellés |
+| **Quêtes journalières** | Toutes les **24 h** | Petites tâches (kill ou collect), faisables en 1-2 sessions, plusieurs disponibles simultanément |
+
+---
+
+## 🏆 Récompenses
+
+### Par collection (une fois par personnage)
+| Donjon | Récompense |
+|---|---|
+| Togui Village | **Arme D8 Seal of Sun** (+0, sans blues) |
+| Flame Mountain | **Arme D9 Seal of Sun** (+0, sans blues) |
+| Green Abyss | **Arme D10 Seal of Moon** (+0, sans blues) |
+| Sea of Resentment | **Arme D11 Seal of Nova A Power** (+0, sans blues — pas de bouclier) |
+
+### Items FGW
+- **Talismen** : droppés par Treasure Boxes et boss ; **vendables**.
+- **Faded Beads** : droppées par Treasure Boxes, mini-boss et boss. À l'usage : **200 à 20 000 SP aléatoires**. Vendables aussi.
+- **Drops rares de Ghost Sereness** : armes D11 Nova B Fight, boucliers Nova A Protection / Nova B Guard.
+- Le boss du dernier camp peut aussi dropper une **arme égyptienne B-grade** (D11, extrêmement rare — rapporté par Algarb).
+
+> ❌ L'ancienne version listait des récompenses par étoile (SP fixes, Arena Coins, SOS/SOM par grade) : **non documentées sur officiel** — les grades n'influencent que le taux de talismans, pas la nature de l'arme.
 
 ---
 
 ## 👥 Stratégies de Groupe
 
-### Composition Optimale de Party
+### Composition (grades 3-4, 8 joueurs max)
+- Grades 1-2 : **4 joueurs max** — un duo XP + support suffit à haut niveau.
+- Grades 3-4 : full party 8/8 avec tank (Warrior), DPS (Wizard/Rogue/CH), support (Cleric obligatoire, Bard pour mana/vitesse), Warlock pour Division (+30 % dégâts subis) sur les uniques.
 
-#### Groupe 8 Joueurs (Recommandé pour ★★★ et ★★★★)
-
-**Tank (1-2)**
-- **Warrior (European)** ou **Spear/Glaive (Chinese)**
-- Rôle : Maintenir l'aggro, encaisser les dégâts
-- Gear : Armor set, high defense, shield
-
-**Nukers (2-3)**
-- **Wizard (European)** ou **Fire/Lightning Nuker (Chinese)**
-- Rôle : Dégâts magiques à distance
-- Gear : Garment set, high MAG attack, MP potions
-
-**Damage Dealers (1-2)**
-- **Rogue (European)** ou **Bow (Chinese)**
-- Rôle : Dégâts physiques rapides, critical hits
-- Gear : Protector/Garment, high PHY attack
-
-**Support (2)**
-- **Cleric (European)** ou **Bard (European)**
-- Rôle : Healing, buffs, debuff purge
-- Gear : Garment, high MP, healing spells
-
-**Hybrid (Optionnel)**
-- **Warlock** pour les debuffs
-- **2H Warrior** pour dégâts + off-tank
-
-### Tactics par Donjon
-
-#### Togui Village (51-60)
-- **Clear rapide** des salles 1-3
-- **Focus Elder Earth Ghost** en premier
-- **N'oubliez pas les Treasure Boxes** dans chaque coin
-- **Boss Sereness** : Évitez l'AOE, kitez si nécessaire
-
-#### Flame Mountain (61-70)
-- **Fire resistance** recommandée (Cold armor buff)
-- **Attention aux pièges de lave** au sol
-- **Range attacks** privilégiées
-- **Potions de feu** nécessaires
-
-#### Green Abyss (71-80)
-- **Poison resistance** (Bard/Cleric heals)
-- **Monstres plus agressifs**
-- **Stay grouped** pour éviter l'aggro multiple
-- **Crowd control** indispensable
-
-#### Sea of Resentment (81-90)
-- **Water resistance** utile
-- **Ghosts sont immunisés** à certains debuffs
-- **AOE attacks** très fréquentes
-- **Mana potions** en quantité
-
-#### Shipwreck (91-100)
-- **Spaces réduits**, attention au placement
-- **Boss Sereness** plus difficile ici
-- **Full buffs** obligatoires
-- **Resurrections scrolls** recommandés
-
-#### Temple of Egypt (101-110)
-- **Donjon le plus difficile**
-- **Full party 8/8** requise
-- **Top equipment** (SOM/SOSun+)
-- **Multiple uniques** dans une seule run
-- **Récompenses les plus précieuses**
+### Conseils vérifiés
+- **Envies** : très agressives — un build INT fragile doit éviter de les tanker en meute.
+- **Après le kill d'une Envy dans un camp** : sortir vite, beaucoup de monstres apparaissent d'un coup.
+- **Elder Earth Ghost (Togui)** : garder les AoE/stuns pour la vague d'adds à 15 % HP.
+- **Flame Cow King (Flame Mountain)** : burst soutenu, il se buffe (~+15 %) en combat.
+- **Ghost Sereness (Sea of Resentment)** : watch le cast de pétrification → **se déplacer pendant le cast** ; prévoir les adds à 60 %/20 % ; Instant Resurrection Scroll pour ne pas perdre l'XP du boss.
+- **Berserker** : la jauge se recharge à chaque unique — enchaîner les camps en zerk.
+- **Réparation/réappro** : sortir par le Dungeon Exit et revenir sous 15 min (via Gap of Dimensions pour rejoindre le camp lointain).
 
 ---
 
-## 💰 Forgotten Coins System
+## 💰 Forgotten Coins (variante private servers)
 
-### Vue d'Ensemble
+⚠️ Le système « Forgotten Coins » (shop NPC qui échange des coins contre talismans) **n'existe pas sur les serveurs officiels** — c'est une mécanique récurrente des **private servers** modernes pour supprimer le RNG. Le principe : les coffres/boss droppent des coins, un NPC permet d'acheter le talisman manquant (prix croissant avec la rareté). Pour SRObro : à traiter comme **option de design** (réduit la frustration), pas comme donné officielle. Les taux chiffrés de l'ancienne version de ce fichier (coins par coffre, etc.) étaient **inventés** et ont été retirés.
 
-Le **Forgotten Coins System** est une alternative au système traditionnel de talismans, introduite sur certains serveurs pour réduire la frustration du RNG.
+---
 
-### Comment Ça Marche
+## 🏛️ Donjons Liés (Job Temple, Qin-Shi Tomb, Holy Water Temple)
 
-#### Étape 1: Farm des Coins
-- **Treasure Boxes** drop des **Forgotten World Coins** au lieu de talismans
-- **Quantité** : 1-5 coins par chest
-- **Boss drops** : 10-20 coins par boss (Elder Earth Ghost, Sereness)
-- **Grade influence** : Plus difficile = plus de coins
+### ⚔️ Job Temple (Job Cave — uniques égyptiens)
+Donjon **PvP job** (Thieves vs Hunters/Traders, **tenue de job requise**) — structure en « Sanctums » avec accès conditionnés aux **AP (Auction/Activity Points)** gagnés via les quêtes de job :
 
-#### Étape 2: Shop Échange
-Un **NPC spécial** permet d'échanger les coins :
+| Uniques | Sanctums | Accès | Cycle |
+|---|---|---|---|
+| **Selket & Neith** | Sanctum of Restriction / Sanctum of Blue Eye | **Aucune AP requise** | 2×/jour (03:30 / 15:30 SST) |
+| **Anubis & Isis** | Sanctum of Punishment / Sanctum of Atonement | L'**union** avec le plus d'AP | 2×/jour (09:30 / 21:30 SST) |
+| **Haroeris & Seth** | Sanctum of Immorality / Sanctum of Dark | Union avec AP ; **Haroeris doit mourir avant Seth** | 2×/jour (12:30 / 00:30 SST) |
 
-```typescript
-// Structure du shop Forgotten Coins
-interface CoinShopItem {
-  id: string;
-  name: string;
-  talismanType: string;
-  cost: number; // en Forgotten Coins
-  dungeon: string; // quel donjon
-}
+- **Sanctum of Audience** = hub central avec le NPC de quêtes AP (job suit requis pour entrer dans le temple).
+- Avertissements in-game 10 et 5 minutes avant l'ouverture des salles.
+- Drops (vSRO-type) : **coins Gold/Silver/Iron/Copper**, items 12D, Immortal/Astral stones (les niveaux exacts des uniques varient selon les serveurs : ~110-130).
 
-// Exemple de prix
-const COIN_SHOP_ITEMS: CoinShopItem[] = [
-  {
-    id: "red_tears_togui",
-    name: "Red Tears",
-    talismanType: "The Phantom of the Crimson Blood",
-    cost: 5,
-    dungeon: "Togui Village"
-  },
-  {
-    id: "togui_mask",
-    name: "Togui Mask",
-    talismanType: "The Phantom of the Crimson Blood",
-    cost: 10, // Plus rare
-    dungeon: "Togui Village"
-  },
-  {
-    id: "fire_flame_flame",
-    name: "Fire Flower",
-    talismanType: "The Burning Abyss",
-    cost: 8,
-    dungeon: "Flame Mountain"
-  }
-];
-```
+### 🐍 Qin-Shi Tomb (Jangan Cave, B1-B6)
+Le donjon « Medusa » — entrée à l'**est de Jangan** (Jangan Cave), monstres ~81+, 6 sous-sols (B1→B6) :
 
-#### Avantages du Système Coins
-✅ **Pas de RNG frustrant** : vous choisissez ce qu vous voulez
-✅ **Accumulation possible** : farmez plusieurs runs, achetez ce qu'il vous manque
-✅ **Trade possible** : sur certains serveurs, les coins sont tradeables
-✅ **Équilibré** : les talismans les plus rares coûtent plus cher
+- **B4** : l'unique **BeakYung** (garde) tué → la **Sarin Gate** (centre B4) s'ouvre **10 minutes** → accès B5.
+- **B5** (croix) — 4 uniques, un par direction :
+  - Nord : **JeonUk The Black Tortoise** (lv 98)
+  - Sud : **YumJae The Red Hawk** (lv 98, magique)
+  - Ouest : **TaeHo The Blue Dragon** (lv 99)
+  - Est : **SoHaow The White Tiger** (lv 99, physique, ~80 % stun — le plus dur)
+- Les 4 tués → **Shinmoo, The Man of Flames** (lv 100) au centre SW → drops d'équipement level 100 (10D).
+- **B6** : 3 portails de cristal bleu → salle aléatoire parmi **Guardian Chamber** (vagues 92-99), **Man-Viper Chamber** (4 Snake Generals lv 95), **Black Viper Chamber** (**Soso The Black Viper**, lv 100). Au centre de B6, 4 cristaux verts téléportent vers B1-B4.
+- **BeakYung The White Viper** alias **« Medusa »** : l'unique le plus haut niveau du donjon (**lv 105**, ~183,5 M HP), dégâts magiques, fear/poison/bind/**pétrification 1 min incurable** — les meilleurs drops 10D lv 100.
 
-#### Taux de Drop par Grade
-
-| Grade | Coins par Chest | Coins Boss Unique | Total par Run |
-|-------|-----------------|-------------------|---------------|
-| ★     | 1-2             | 5-10              | ~20-40        |
-| ★★    | 2-3             | 10-15             | ~40-70        |
-| ★★★   | 3-5             | 15-20             | ~70-120       |
-| ★★★★  | 5-8             | 20-30             | ~120-200      |
-
-### Calcul de Coût Exemple
-
-**Collection Complète : Togui Village (8 talismans)**
-
-```
-Talismans communs (5×) : 5 coins chacun = 25 coins
-Talismans rares (2×)    : 10 coins chacun = 20 coins
-Talisman ultra-rare (1×): 15 coins = 15 coins
-TOTAL pour 8/8          : 60 Forgotten Coins
-```
-
-**Runs nécessaires par grade** :
-- ★★★★ : 1 run (200 coins) → vous pouvez faire 3 collections complètes!
-- ★★★ : 1 run (120 coins) → 2 collections complètes
-- ★★ : 2 runs (70 coins/run)
-- ★ : 3 runs (40 coins/run)
+### 💧 Holy Water Temple (Alexandria South)
+Donjon d'Alexandria à progression par quêtes (Pharaon/temple égyptien) :
+- Progression : quête **Pharaoh Tomb Beginner** → **HWT Beginner** → **HWT Intermediate** (quêtes **Senior General** et **Baron**, chaîne « The Suspicious Sacrifice », ~lv 105) → **HWT Advanced**.
+- Uniques communautaires documentés (vidéos/runs) : **Sphinx, Sekhmet, Nephthys, Horus**.
+- Les runs typiques enchaînent ~5 uniques ; drops d'Arena Coins / scrolls selon serveur.
+- Système de **titres** lié (voir guide titres Silkroad Latino : Knight-Captain → Chief General).
 
 ---
 
 ## 🛠️ Implémentation Technique
 
-### Architecture du Système Forgotten World
+> 📡 **Packets officiels FGW (vSRO 1.188, SilkroadDoc)** — le protocole client-serveur a des opcodes dédiés au Forgotten World :
+>
+> | Opcode C→S | Opcode S→C | Nom |
+> |---|---|---|
+> | 0x7519 | 0xB519 | AGENT_FGW_RECALL_LIST (liste des membres rappelables) |
+> | 0x751A | 0xB51A | AGENT_FGW_RECALL_MEMBER |
+> | — | 0x741A | AGENT_FGW_RECALL_REQUEST |
+> | 0x751C | 0xB51C | AGENT_FGW_RECALL_RESPONSE |
+> | 0x751D | 0xB51D | AGENT_FGW_EXIT |
+> | — | 0x351E | AGENT_FGW_UPDATE |
+>
+> Le **Pillar of Party Member Recall** s'appuie sur cette famille de packets. Note mouvement : dans les donjons, le `RegionID` porte le flag `0x8000` (`IsDungeon`) et les coordonnées passent en **int32** au lieu de int16 (packet 0x7021).
+
+### Modèle de données (SRObro)
 
 ```typescript
-// Modèle de données pour Forgotten World
+// Configuration d'un donjon FGW — calée sur les données officielles vérifiées
 interface FGWDungeonConfig {
-  id: string;
+  id: string;                      // 'togui_village' | 'flame_mountain' | 'green_abyss' | 'sea_of_resentment'
   name: string;
-  levelRange: [number, number];
-  degree: number;
-  difficulty: 1 | 2 | 3 | 4;
-  timeLimit: number; // en secondes
-  maxPlayers: number;
-  monsters: FGWMonsterConfig[];
+  levelBrackets: [number, number][];  // ex. Togui: [[35,50],[51,60],[61,70]]
+  reward: {
+    degree: number;                // 8 | 9 | 10 | 11
+    seal: 'SUN' | 'MOON' | 'NOVA_A_POWER';
+  };
+  questNpc: { name: string; town: string };
+  talismanCollection: string[];    // 8 talismans exacts (listes ci-dessus)
   bosses: FGWBossConfig[];
-  talismanCollection: string[];
-  rewards: FGWRewardConfig[];
+  timeLimitSeconds: 7200;          // 2 h (officiel)
 }
 
-interface FGWMonsterConfig {
-  id: string;
-  name: string;
-  level: number;
-  hp: number;
-  attack: number;
-  defense: number;
-  position: { x: number; y: number; z: number };
-  drops: FGWDropConfig[];
+// Grades de difficulté — type de monstres + limite de party + multiplicateur de drop talisman
+interface FGWGrade {
+  grade: 1 | 2 | 3 | 4;
+  monsterType: 'NORMAL' | 'CHAMPION' | 'ELITE_A' | 'ELITE_B';  // G3/G4 = '???' officiel
+  maxPartySize: 4 | 8;            // 4 pour G1/G2, 8 pour G3/G4
+  talismanDropMultiplier: number; // croissant ; à calibrer (officiel non chiffré)
+  minEnvyLevel?: 71;              // grades 3-4 seulement si Envies lv 71+
 }
 
-interface FGWBossConfig {
-  id: string;
-  name: string;
-  level: number;
-  hp: number;
-  skills: FGWSkillConfig[];
-  phase: 'mid' | 'final';
-  position: { x: number; y: number; z: number };
-  drops: FGWDropConfig[];
-}
-
-interface FGWDropConfig {
-  itemType: 'talisman' | 'coin' | 'gold' | 'consumable';
-  itemId?: string;
-  coinAmount?: number;
-  goldAmount?: number;
-  dropRate: number; // 0.0 à 1.0
-}
-
-interface FGWSkillConfig {
-  name: string;
-  type: 'damage' | 'debuff' | 'summon' | 'teleport';
-  damage?: number;
-  aoe?: boolean;
-  cooldown: number; // en ms
-}
+// Timers officiels à respecter
+const FGW_TIMERS = {
+  HOLE_ITEM_EXPIRY:   24 * 3600,  // l'item disparaît après 24 h
+  HOLE_SPAWN_COOLDOWN: 30 * 60,   // 30 min entre 2 activations
+  DUNGEON_TIME_LIMIT:  2 * 3600,  // 2 h pour tuer le boss
+  REENTRY_LOCK:        3 * 3600,  // 3 h avant toute nouvelle entrée
+  EXIT_DESPAWN:        15 * 60,   // 15 min hors donjon avant despawn
+} as const;
 ```
 
-### Système d'Instance
+### Gestion d'instance (squelette)
 
 ```typescript
 class FGWInstanceManager {
-  private instances: Map<string, FGWInstance> = new Map();
-
-  // Créer une nouvelle instance
-  createInstance(
-    partyId: string,
-    dungeonId: string,
-    difficulty: number
-  ): FGWInstance {
-    const config = this.getDungeonConfig(dungeonId);
-    const instance: FGWInstance = {
-      id: this.generateInstanceId(),
-      partyId,
-      dungeonId,
-      difficulty,
-      startTime: Date.now(),
-      timeLimit: config.timeLimit,
-      players: [],
-      currentRoom: 0,
-      roomsCleared: [],
-      bossesKilled: [],
-      talismansCollected: [],
-    };
-
-    this.instances.set(instance.id, instance);
-    return instance;
+  // Entrée : le leader utilise sa Dimension Hole en ville → téléporteur visible par lui seul
+  spawnDimensionHole(playerId: string, hole: { grade: number; bracket: [number, number] }) {
+    if (this.recentHoleAt[playerId] > Date.now() - 30 * 60_000) throw new Error('HOLE_COOLDOWN');
+    if (player.level < hole.bracket[0] || player.level > hole.bracket[1]) throw new Error('LEVEL_MISMATCH');
+    // téléporteur personnel -> teleportPartyToInstance() au clic
   }
 
-  // Téléporter la party dans l'instance
-  teleportPartyToInstance(partyId: string, instanceId: string): void {
-    const instance = this.instances.get(instanceId);
-    if (!instance) throw new Error('Instance not found');
-
-    const party = this.getParty(partyId);
-    party.members.forEach(member => {
-      this.teleportPlayer(member, instance.spawnPoint);
-    });
+  // Clear d'un camp : ouvre la zone suivante, spawn l'Envy, puis la vague après kill d'Envy
+  onCampCleared(instanceId: string, campId: number) {
+    const inst = this.instances.get(instanceId)!;
+    inst.openDoor(campId + 1);
+    inst.spawnEnvy(campId);          // kill de l'Envy -> spawnMonsterWave(campId)
+    if (inst.config.camps[campId].spawnsGapOfDimensions) inst.spawnGapOfDimensions();
+    if (campId === inst.config.camps.length - 1) inst.spawnFinalBoss(); // boss camp = dernier
   }
 
-  // Gérer la mort d'un monstre
-  onMonsterKilled(
-    instanceId: string,
-    monsterId: string,
-    killerId: string
-  ): void {
-    const instance = this.instances.get(instanceId);
-    if (!instance) return;
-
-    const monster = instance.monsters.get(monsterId);
-    if (!monster) return;
-
-    // Supprimer le monstre
-    instance.monsters.delete(monsterId);
-
-    // Générer les drops
-    const drops = this.generateDrops(monster.drops, instance.difficulty);
-    drops.forEach(drop => {
-      this.spawnDrop(drop, monster.position);
-    });
-
-    // Vérifier si la salle est clear
-    this.checkRoomCleared(instance);
-  }
-
-  // Vérifier si tous les monstres de la salle sont morts
-  private checkRoomCleared(instance: FGWInstance): void {
-    const currentRoom = instance.rooms[instance.currentRoom];
-    const remainingMonsters = currentRoom.monsters.filter(m =>
-      instance.monsters.has(m.id)
-    );
-
-    if (remainingMonsters.length === 0) {
-      // Salle clear
-      instance.roomsCleared.push(instance.currentRoom);
-
-      // Spawn Treasure Box
-      this.spawnTreasureBox(instance, currentRoom.treasureBoxPosition);
-
-      // Ouvrir la porte vers la salle suivante
-      this.openDoor(instance, instance.currentRoom + 1);
-    }
-  }
-
-  // Générer les drops selon la difficulté
-  private generateDrops(
-    drops: FGWDropConfig[],
-    difficulty: number
-  ): FGWDrop[] {
-    const dropMultiplier = Math.pow(2, difficulty - 1); // 1, 2, 4, 8
-    const generatedDrops: FGWDrop[] = [];
-
-    drops.forEach(drop => {
-      if (Math.random() < drop.dropRate * dropMultiplier) {
-        if (drop.itemType === 'coin') {
-          // Système Forgotten Coins
-          const coinAmount = drop.coinAmount! * difficulty;
-          generatedDrops.push({
-            type: 'coin',
-            amount: coinAmount,
-          });
-        } else if (drop.itemType === 'talisman') {
-          // Système traditionnel
-          generatedDrops.push({
-            type: 'talisman',
-            itemId: drop.itemId!,
-          });
-        }
-      }
-    });
-
-    return generatedDrops;
-  }
-
-  // Gérer l'entrée du boss final
-  onAllRoomsCleared(instanceId: string): void {
-    const instance = this.instances.get(instanceId);
-    if (!instance) return;
-
-    // Spawn Sereness Ghost
-    const bossConfig = instance.config.bosses.find(b => b.phase === 'final');
-    if (bossConfig) {
-      this.spawnBoss(instance, bossConfig);
-      this.notifyPlayers(instance, 'Sereness Ghost has appeared!');
-    }
+  // Le boss final ne spawn qu'après le clear COMPLET ; unique tué -> berserker refill
+  onUniqueKilled(instanceId: string, uniqueId: string) {
+    const inst = this.instances.get(instanceId)!;
+    inst.players.forEach(p => p.refillBerserkerGauge());
+    if (inst.isFinalBoss(uniqueId)) this.completeInstance(instanceId);
   }
 }
 ```
 
-### Système de Collections
+### Boss — mécaniques documentées (remplace l'ancienne IA « 3 phases » inventée)
 
 ```typescript
-class FGWCollectionSystem {
-  private playerCollections: Map<string, PlayerCollection> = new Map();
+// Ghost Sereness (Sea of Resentment) — seules mécaniques documentées
+const GHOST_SERENESS = {
+  spawnCondition: 'ALL_CAMPS_CLEARED',        // n'apparaît qu'au clear complet
+  mechanics: [
+    { type: 'PETRIFY_CAST', telegraph: 'visible cast', counter: 'move during cast' },
+    { type: 'ADD_WAVE', atHpPercent: 0.60 },  // vague d'adds à ~60 %
+    { type: 'ADD_WAVE', atHpPercent: 0.20 },  // vague d'adds à ~20 %
+  ],
+  rareDrops: ['D11_NOVA_B_FIGHT_WEAPON', 'D11_NOVA_A_PROTECTION_SHIELD', 'D11_NOVA_B_GUARD_SHIELD'],
+};
 
-  // Enregistrer un talisman dans la collection
-  registerTalisman(
-    playerId: string,
-    dungeonId: string,
-    talismanId: string
-  ): void {
-    const collection = this.getPlayerCollection(playerId, dungeonId);
+// Elder Earth Ghost (Togui Village)
+const ELDER_EARTH_GHOST = {
+  highestTalismanDropRate: true,              // meilleure source de talismans du donjon
+  mechanics: [{ type: 'SPAWN_MINI_UNIQUES', atHpPercent: 0.15 }], // adds à 15 % HP
+};
 
-    if (!collection.collectedTalismans.includes(talismanId)) {
-      collection.collectedTalismans.push(talismanId);
-      this.notifyProgress(playerId, collection);
-
-      // Vérifier si la collection est complète
-      if (this.isCollectionComplete(collection)) {
-        this.onCollectionComplete(playerId, dungeonId);
-      }
-    }
-  }
-
-  // Vérifier si la collection est complète (8/8)
-  private isCollectionComplete(collection: PlayerCollection): boolean {
-    return collection.collectedTalismans.length >= 8;
-  }
-
-  // Callback quand collection complète
-  private onCollectionComplete(playerId: string, dungeonId: string): void {
-    // Offrir la quête de récompense
-    const quest = this.createRewardQuest(playerId, dungeonId);
-    this.questSystem.addQuest(playerId, quest);
-
-    // Notifier le joueur
-    this.notifyPlayer(playerId, {
-      type: 'fgw_collection_complete',
-      dungeon: dungeonId,
-      questId: quest.id,
-    });
-  }
-
-  // Échanger des Forgotten Coins contre talisman
-  exchangeCoinsForTalisman(
-    playerId: string,
-    dungeonId: string,
-    talismanId: string
-  ): void {
-    const player = this.getPlayer(playerId);
-    const talisman = this.getTalismanConfig(dungeonId, talismanId);
-    const coinCost = talisman.coinCost;
-
-    // Vérifier si le joueur a assez de coins
-    if (player.forgottenCoins < coinCost) {
-      throw new Error('Not enough Forgotten Coins');
-    }
-
-    // Déduire les coins
-    player.forgottenCoins -= coinCost;
-
-    // Ajouter le talisman
-    this.addItem(player, talismanId);
-
-    // Enregistrer dans la collection
-    this.registerTalisman(playerId, dungeonId, talismanId);
-  }
-}
+// Flame Cow King (Flame Mountain)
+const FLAME_COW_KING = {
+  dropsTalismans: true,
+  mechanics: [{ type: 'SELF_ENRAGE', rampUpPercent: 15 }], // se renforce ~+15 % en combat
+};
 ```
 
-### Système de Boss - Sereness Ghost
-
-```typescript
-class SerenessGhostAI extends BossAI {
-  private phase: 1 | 2 | 3 = 1;
-  private lastSkillTime: number = 0;
-
-  update(deltaTime: number): void {
-    const hpPercent = this.currentHp / this.maxHp;
-
-    // Phase 1: 100% - 70% HP
-    if (hpPercent > 0.7) {
-      this.phase1Behavior();
-    }
-    // Phase 2: 70% - 30% HP
-    else if (hpPercent > 0.3) {
-      if (this.phase !== 2) {
-        this.enterPhase2();
-      }
-      this.phase2Behavior();
-    }
-    // Phase 3: 30% - 0% HP (Enrage)
-    else {
-      if (this.phase !== 3) {
-        this.enterPhase3();
-      }
-      this.phase3Behavior();
-    }
-  }
-
-  private phase1Behavior(): void {
-    // Attaques normales + Coup de pied occasionnel
-    if (this.canCastSkill('BasicAttack', 2000)) {
-      this.castSkill('BasicAttack', this.target);
-    }
-
-    if (Math.random() < 0.01) { // 1% par frame
-      this.castSkill('Kick', this.target);
-    }
-  }
-
-  private enterPhase2(): void {
-    this.phase = 2;
-    this.shout('You shall not pass!');
-    this.castSkill('ScreamAOE'); // AOE immédiat
-  }
-
-  private phase2Behavior(): void {
-    // AOE plus fréquent + Ghost Fire DoT
-    if (this.canCastSkill('ScreamAOE', 15000)) {
-      this.castSkill('ScreamAOE');
-      this.announce('Sereness prepares a powerful scream!');
-    }
-
-    if (this.canCastSkill('GhostFire', 8000)) {
-      this.castSkill('GhostFire', this.randomTarget());
-    }
-
-    // Attaques normales
-    if (this.canCastSkill('BasicAttack', 2000)) {
-      this.castSkill('BasicAttack', this.target);
-    }
-  }
-
-  private enterPhase3(): void {
-    this.phase = 3;
-    this.shout('I shall not perish!');
-    this.castSkill('Curse'); // Debuff -50% defense sur tous les joueurs
-    this.buffSelf('Enrage', { attack: 2.0 }); // Double dégâts
-  }
-
-  private phase3Behavior(): void {
-    // Enrage: toutes les skills sont plus rapides
-    if (this.canCastSkill('ScreamAOE', 10000)) {
-      this.castSkill('ScreamAOE');
-    }
-
-    if (this.canCastSkill('GhostFire', 5000)) {
-      this.castSkill('GhostFire', this.randomTarget());
-    }
-
-    if (this.canCastSkill('SummonGhosts', 20000)) {
-      this.castSkill('SummonGhosts'); // Invoque des esprits
-    }
-
-    // Téléport aléatoire
-    if (Math.random() < 0.005) {
-      this.teleport(this.randomPosition());
-    }
-
-    // Attaques normales très rapides
-    if (this.canCastSkill('BasicAttack', 1000)) {
-      this.castSkill('BasicAttack', this.target);
-    }
-  }
-
-  private canCastSkill(skillName: string, cooldown: number): boolean {
-    const now = Date.now();
-    const lastCast = this.lastSkillCast.get(skillName) || 0;
-    return now - lastCast >= cooldown;
-  }
-}
-```
-
-### Schéma Prisma pour Forgotten World
+### Schéma Prisma (résumé)
 
 ```prisma
-// FGW Dungeon Config
 model FGWDungeon {
-  id          String   @id
-  name        String
-  levelMin    Int
-  levelMax    Int
-  degree      Int
-  timeLimit   Int // en secondes
-  maxPlayers  Int
-
-  rooms       FGWRoom[]
-  collections FGWCollection[]
-  instances   FGWInstance[]
+  id           String   @id
+  name         String
+  levelMin     Int
+  levelMax     Int
+  degree       Int      // 8-11
+  rewardSeal   String   // SUN | MOON | NOVA_A_POWER
+  timeLimit    Int      @default(7200)
+  reentryLock  Int      @default(10800)
+  camps        FGWCamp[]
+  talismans    FGWTalisman[]
 }
 
-model FGWRoom {
-  id          String   @id
-  dungeonId   String
-  dungeon     FGWDungeon @relation(fields: [dungeonId], references: [id])
-  roomNumber  Int
-  name        String
-
-  monsters    FGWMonster[]
-  treasureBox FGWTreasureBox?
-}
-
-model FGWMonster {
-  id          String   @id
-  roomId      String
-  room        FGWRoom @relation(fields: [roomId], references: [id])
-  name        String
-  level       Int
-  hp          Int
-  attack      Int
-  defense     Int
-  positionX   Float
-  positionY   Float
-  positionZ   Float
-
-  drops       FGWDrop[]
-}
-
-model FGWDrop {
-  id          String   @id
-  monsterId   String?
-  monster     FGWMonster? @relation(fields: [monsterId], references: [id])
-
-  itemType    String // 'talisman', 'coin', 'gold'
-  itemId      String?
-  amount      Int?
-  dropRate    Float // 0.0 à 1.0
-}
-
-model FGWCollection {
-  id          String   @id
-  dungeonId   String
-  dungeon     FGWDungeon @relation(fields: [dungeonId], references: [id])
-  name        String // ex: "The Phantom of the Crimson Blood"
-
-  talismans   FGWTalisman[]
-  playerCollections FGWPlayerCollection[]
+model FGWCamp {
+  id           String   @id
+  dungeonId    String
+  order        Int
+  hasTreasureBox Boolean @default(false)
+  hasDungeonExit Boolean @default(false)
+  hasRecallPillar Boolean @default(false)
+  spawnsGap      Boolean @default(false)
 }
 
 model FGWTalisman {
-  id          String   @id
+  id           String   @id
   collectionId String
-  collection  FGWCollection @relation(fields: [collectionId], references: [id])
-  name        String // ex: "Red Tears"
-  rarity      String // 'common', 'rare', 'epic'
-  coinCost    Int? // Pour système coins
-
-  playerTalismans FGWPlayerTalisman[]
+  name         String   // noms officiels (Red Tears, Fire Flower, ...)
+  rarity       Int      @default(1)
+  @@unique([collectionId, name])
 }
 
 model FGWInstance {
-  id          String   @id
+  id          String   @id @default(cuid())
   dungeonId   String
-  dungeon     FGWDungeon @relation(fields: [dungeonId], references: [id])
-  partyId     String
-  difficulty  Int // 1-4
-  startTime   DateTime
-  endTime     DateTime?
+  grade       Int      // 1-4
+  holeOwnerId String   // joueur qui a spawné la Dimension Hole
+  startedAt   DateTime @default(now())
+  expiresAt   DateTime // startedAt + 2 h
   completed   Boolean  @default(false)
-
-  playerProgress FGWPlayerProgress[]
-}
-
-model FGWPlayerCollection {
-  id          String   @id
-  playerId    String
-  collectionId String
-  collection  FGWCollection @relation(fields: [collectionId], references: [id])
-  collected   Int      @default(0) // Nombre de talismans collectés
-  completed   Boolean  @default(false)
-  completedAt DateTime?
-}
-
-model FGWPlayerTalisman {
-  id          String   @id
-  playerId    String
-  talismanId  String
-  talisman    FGWTalisman @relation(fields: [talismanId], references: [id])
-  obtainedAt  DateTime  @default(now())
-
-  @@unique([playerId, talismanId])
-}
-
-model Player {
-  id          String   @id
-  name        String
-
-  forgottenCoins Int    @default(0) // Solde de Forgotten Coins
-
-  fgwCollections    FGWPlayerCollection[]
-  fgwTalismans      FGWPlayerTalisman[]
-  fgwProgress       FGWPlayerProgress[]
-}
-
-model FGWPlayerProgress {
-  id          String   @id
-  playerId    String
-  player      Player @relation(fields: [playerId], references: [id])
-  instanceId  String
-  instance    FGWInstance @relation(fields: [instanceId], references: [id])
-
-  enteredAt   DateTime @default(now())
-  exitedAt    DateTime?
 }
 ```
 
@@ -1027,69 +456,82 @@ model FGWPlayerProgress {
 
 ## ❓ FAQ
 
-### Q: Combien de fois puis-je faire Forgotten World par jour ?
-**R:** Généralement **3-5 entrées par jour** selon le serveur. Certains serveurs offrent des entrées illimitées pendant les events.
+**Q: Combien de donjons FGW existent-il ?**
+R: **4** : Togui Village (35-70, en 3 tranches), Flame Mountain (71-90, 2 tranches), Shipwreck – The Green Abyss (91-100), Shipwreck – The Sea of Resentment (101-110).
 
-### Q: Puis-je faire Forgotten World solo ?
-**R:** C'est **possible en grade ★ pour certains donjons**, mais très difficile. Les grades supérieurs (★★★ et ★★★★) nécessitent un **groupe complet 8/8**.
+**Q: Comment entre-t-on ?**
+R: Détruire un **Dimension Pillar** (spawn aléatoire dans le monde par paliers 35-90) → tuer les **Envies** → loot d'une **Dimension Hole** (grade 1-4) → l'activer **en ville** (clic droit).
 
-### Q: Les talismans sont-ils tradeables ?
-**R:** Sur les serveurs officiels, **non**. Ils sont liés à votre personnage une fois lootés. Sur certains private servers, ils peuvent être tradeables ou vendables.
+**Q: Quel est le vrai rôle des étoiles/grades ?**
+R: Le grade change le **type de monstres** (Normal/Champion/plus), la **limite de party** (4 en grade 1-2, 8 en grade 3-4) et le **taux de drop des talismans**. Les HP/dégâts des uniques ne changent pas. Grades 3-4 seulement via des Envies niveau 71+.
 
-### Q: Qu'est-ce qui drop le plus de talismans ?
-**R:**
-1. **Treasure Boxes** : 1-3 talismans par chest
-2. **Elder Earth Ghost** : 2-4 talismans
-3. **Sereness Ghost** : 3-5 talismans + récompense spéciale
+**Q: Peut-on faire le FGW solo ?**
+R: Grade 1 oui (selon niveau/stuff), grade 2 possible pour un haut niveau bien équipé, grades 3-4 non (conçus pour 8).
 
-### Q: Le système Forgotten Coins est-il meilleur ?
-**R:** **Oui**, car il élimine le RNG frustrant. Vous pouvez accumuler des coins et acheter exactement ce qu'il vous manque pour compléter votre collection.
+**Q: Les talismans sont-ils tradeables ?**
+R: **Oui**, ils sont vendables/échangeables sur officiel (attention aux arnaques « talismans 9dg/10dg pour quête A-grade » — Seidenkraft).
 
-### Q: Puis-je entrer dans un donjon au-dessus de mon niveau ?
-**R:** **Non**, chaque donjon a une restriction de niveau stricte. Un niveau 60 ne peut pas entrer dans Flame Mountain (61-70).
+**Q: Ghost Sereness est-elle le boss de tous les donjons ?**
+R: **Non.** Ghost Sereness est le boss final de **The Sea of Resentment (101-110)** uniquement. Chaque donjon a ses propres uniques (Togui General/Elder, Elder Earth Ghost, Flame Cow King…).
 
-### Q: Que se passe-t-il si le temps expire ?
-**R:** Vous êtes **éjecté de l'instance** et perdez tout ce que vous n'avez pas looté. Les talismans collectés sont cependant conservés.
+**Q: Que donne la complétion d'une collection ?**
+R: Une **arme scellée** du degré du donjon (D8/D9 SUN, D10 MOON, D11 Nova A Power), sans plus ni blues — **une fois par donjon par personnage**.
 
-### Q: Les récompenses sont-elles les mêmes pour tous les grades ?
-**R:** **Non**. Plus le grade est élevé, meilleures sont les récompenses (plus de SP, armes avec meilleurs stats, plus de Forgotten Coins).
+**Q: Que sont les Faded Beads ?**
+R: Items droppés (coffres/mini-boss/boss) donnant **200 à 20 000 SP aléatoires** à l'usage, vendables.
 
-### Q: Puis-je refaire la même collection plusieurs fois ?
-**R:** Sur les serveurs officiels, **la quête de collection est une seule fois par personnage**. Sur certains private servers, elle est repeatable.
+**Q: Combien de temps entre deux donjons ?**
+R: **3 heures** de délai de ré-entrée (tous donjons confondus), contournable avec le Forgotten World re-entry ticket de l'Item Mall.
 
-### Q: Comment savoir quels talismans me manquent ?
-**R:** Ouvrez votre **Inventory → onglet Collection**. Vous verrez la progression (ex: 5/8) et les talismans manquants seront grisés.
+**Q: Que se passe-t-il si le timer de 2 h expire ?**
+R: Le boss doit être tué dans les 2 h, sinon le donjon disparaît et vous êtes téléporté à votre point de résurrection.
 
 ---
 
-## 🔗 Resources
+## ⚠️ Incertitudes / Données Manquantes
 
-### Wikis et Guides Officiels
-- [Forgotten World - Silkroad Online Wiki](https://silkroadonline.fandom.com/wiki/Forgotten_World)
-- [Silkroad Online Wiki - Main](https://silkroadonline.fandom.com/wiki/Silkroad_Online_Wiki)
+1. **Uniques du Green Abyss (91-100)** : aucun nom d'unique/boss final trouvé dans les sources publiques — structure identique aux autres (camps + boss camp) confirmée, mais les noms restent à extraire (base `_RefObjCommon` d'un client vSRO ou videos iSRO).
+2. **Type exact des monstres grades 3-4** : le wiki Fandom les note « ??? » — communément compris comme monstres élite/giant-like ; à confirmer dans les données.
+3. **Multiplicateurs exacts de drop de talismans par grade** : « plus élevé = mieux » est documenté, pas les chiffres.
+4. **Timer d'instance** : 2 h (Fandom) ; un post ProjectHax mentionne aussi une fenêtre totale de ~5 h autour — retenir 2 h comme référence officielle.
+5. **Niveaux/HP exacts des uniques FGW** : non publiés de façon fiable (l'ancienne version inventait HP 2M-10M) — à extraire de `_RefObjCommon`/`characterdata_5000.txt` si besoin précis.
+6. **Job Temple** : niveaux des uniques et loot exacts varient fortement selon les serveurs (données ici = eXay SRO/vSRO-type) ; cycles 12 h et conditions AP documentés.
+7. **Holy Water Temple** : noms d'uniques issus de vidéos communautaires (Sphinx/Sekhmet/Nephthys/Horus) — croiser avec le client officiel avant implémentation.
 
-### Forums et Guides Communautaires
-- [The Forgotten World - Togui Village Origin Guide](https://forum.playorigin.com/showthread.php?73-%2526%25239673%253B-The-Forgotten-World-Togui-Village-Instance-Origin-Guide)
-- [GUIDE Forgotten World - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=5&t=129133)
-- [Tutorial Forgotten World - Elitepvpers](http://www.elitepvpers.com/forum/sro-guides-templates/1147804-tutorial-forgotten-world.html)
-- [The FGW Tutorial - Seidenkraft Blog](https://seidenkraftblog.wordpress.com/2012/09/14/the-fgw-tutorial/)
-- [Legend VI: Forgotten World Shipwreck Dimension II](https://princessjaneblog.wordpress.com/2011/03/18/legend-vi-forgotten-world-shipwreck-dimension-ii/)
-- [Talismans Names Discussion - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=2&t=126663)
+---
 
-### Cartes et Outils
-- [Forgotten World Map - GUILD](https://guildalgarb.wordpress.com/games/sro/maps/forgotten-world/)
-- [xSROMap - Interactive Map](https://jellybitz.github.io/xSROMap/) (pour localiser les Dimension Pillars)
+## 🔗 Sources
+
+### Wiki
+- [Forgotten World — Silkroad Online Wiki (Fandom)](https://silkroadonline.fandom.com/wiki/Forgotten_World) — source principale (wikitext intégral : accès, grades, structure, quêtes, items, collections, récompenses)
+- [Silkroad Online Wiki — Accueil](https://silkroadonline.fandom.com/wiki/Silkroad_Online_Wiki)
+
+### Guides communautaires
+- [The Forgotten World – Togui Village Instance (Origin Guides)](https://forum.playorigin.com/showthread.php?73-The-Forgotten-World-Togui-Village-Instance-Origin-Guide) — Elder Earth Ghost + adds à 15 %
+- [The Forgotten World – Flame Mountain Instance (Origin Guides)](https://forum.playorigin.com/showthread.php?78-The-Forgotten-World-Flame-Mountain-Instance-Origin-Guide) — Flame Cow King, structure en 3 areas
+- [The FGW Tutorial — Seidenkraft Blog](https://seidenkraftblog.wordpress.com/2012/09/14/the-fgw-tutorial/) — grades, envies, Ghost Sereness (pétrification, adds 60 %/20 %), récompenses Nova
+- [Tutorial Forgotten World — Elitepvpers](http://www.elitepvpers.com/forum/sro-guides-templates/1147804-tutorial-forgotten-world.html)
+- [Forgotten World (FGW) Community Scripts — ProjectHax](https://forum.projecthax.com/t/forgotten-world-fgw-community-scripts/22648) — noms des talismans, Ghost Curse, plugins xAutoDungeon/FGW Helper
+- [Forgotten World — Guild Algarb](https://guildalgarb.wordpress.com/games/sro/maps/forgotten-world/) — talismans par donjon, NPC de quête SUN, grades
+- [Legend VI: Forgotten World Shipwreck Dimension II — PrincessJane](https://princessjaneblog.wordpress.com/2011/03/18/legend-vi-forgotten-world-shipwreck-dimension-ii/)
+
+### Donjons liés
+- [Job Temple Unique Guide — eXay SRO](https://forum.exaysro.com/showthread.php?tid=3875) — sanctums, cycles 12 h, AP, drops
+- [Guide Tomb Qin-Shi Uniques — Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/259810-guide-tomb-qin-shi-uniques.html) — B4-B6, BeakYung/Medusa, 183,5 M HP
+- [Quests needed for Intermediate Water Temple — ProjectHax](https://forum.projecthax.com/t/quests-needed-for-intermediate-water-temple/19844) — progression HWT
+- [Guide Titres — Silkroad Latino Wiki](https://wiki.silkroadlatino.com/en/faq/guia-titulos)
+- [xSROMap — carte interactive](https://jellybitz.github.io/xSROMap/)
+
+### Technique (packets FGW)
+- [SilkroadDoc (DummkopfOfHachtenduden) — wiki GitHub](https://github.com/DummkopfOfHachtenduden/SilkroadDoc/wiki) — opcodes FGW 0x7519-0x351E, mouvement 0x7021 + flag donjon
 
 ### Vidéos
-- [Silkroad Online - Togui Village 51-60 1 Star](https://www.youtube.com/watch?v=Aag1Ggt6Yk)
-- [Silkroad Online - Togui Spell Walkthrough](https://www.youtube.com/watch?v=W3ZMkWvGmk4)
-- [Togui Hunters Quest](https://www.youtube.com/watch?v=BK3QT0YGYE)
-- [Silkroad Online - Forgotten World Talisman Display](https://www.youtube.com/watch?v=eH1-rem53-I)
-
-### Ressources Turques (Très Complètes)
-- [Silkroad Online Forgotten World Koleksiyon Kartları](https://www.srolobby.com/konular/silkroad-online-forgotten-world-koleksiyon-kartlari.746/) (Collection Cards avec images)
+- [Togui Village 51-60 full run (Togui General 16:27, Togui Elder 1:06:15)](https://www.youtube.com/watch?v=Aag1Ggt6YQk)
+- [Togui General Unique](https://www.youtube.com/watch?v=aFHzOBZHBO0)
+- [Silkroad-R Tutorial #16: Forgotten World](https://www.youtube.com/watch?v=u9erjSYFnj8)
+- [Forgotten World Explained (TRSRO)](https://www.youtube.com/watch?v=7CTJWdfrv8A)
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
-*Sources: Silkroad Online Wiki, PlayOrigin Forums, Silkroad Forums, Seidenkraft Blog, Elitepvpers*
+*Dernière mise à jour : 2026-10-01*
+*Révision majeure : noms de donjons/tranches corrigés (Fandom wikitext), grades re-documentés (types + party, pas d'HP scaling), boss par donjon vérifiés (Origin/Seidenkraft/YouTube), collections complétées (8 talismans chacune), section donjons liés ajoutée (Job Temple/Qin-Shi/HWT), packets FGW officiels ajoutés. Chiffres non sourcés de l'ancienne version supprimés — voir « Incertitudes ».*

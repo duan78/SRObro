@@ -1,16 +1,22 @@
 # Party System
 
+> Système de groupe de Silkroad Online (client PC classique / iSRO). Document enrichi par recherche web (forums communautaires, guides Partyplay, phBot). Les chiffres marqués ⚠️ varient selon les versions (PC classique vs Silkroad-R vs mobile vs serveurs privés).
+
 ## 📋 Table des Matières
 - [Vue d'Ensemble](#-vue-densemble)
 - [Créer et Rejoindre un Party](#-créer-et-rejoindre-un-party)
-- [Experience Sharing](#-experience-sharing)
+- [Types de Party : Each Get EXP vs Auto Share](#-types-de-party--each-get-exp-vs-auto-share)
+- [Répartition des Items](#-répartition-des-items)
+- [Bonus et Répartition d'EXP](#-bonus-et-répartition-dexp)
 - [Party Matching](#-party-matching)
 - [Union Party](#-union-party)
 - [Auto-Party System](#-auto-party-system)
 - [Party Buffs](#-party-buffs)
 - [Tips pour Efficacité](#-tips-pour-efficacité)
+- [Système "Taxi" - Power Leveling (Recherche 2025)](#-système-taxi---power-leveling-recherche-2025)
+- [Bonus EXP Détaillés (Recherche 2025)](#-bonus-exp-détaillés-recherche-2025)
 - [FAQ](#-faq)
-- [[Resources](#resources)
+- [Resources](#-resources)
 
 ---
 
@@ -19,10 +25,11 @@
 Le système de **party** de Silkroad Online permet aux joueurs de se regrouper pour un leveling plus rapide, un loot partagé, et du fun social.
 
 ### Points Clés
-- ✅ **EXP Bonus:** +20-60% d'EXP en party
-- ✅ **SP Share:** Partage des skill points
-- ✅ **Social:** Jouez avec des amis
-- ✅ **Efficace:** Faster leveling
+- ✅ **Taille max: 8 joueurs** (en mode EXP auto-share) / 4 en mode « Each Get EXP »
+- ✅ **Deux modes de party** choisis à la création : Each Get EXP / Auto Share EXP
+- ✅ **Bonus d'EXP** en party (le bonus est supérieur en auto-share)
+- ✅ **Party Matching** : enregistrement/publication de groupes
+- ✅ **Union Party** (ajout tardif) : jusqu'à 4 partys liées via scroll
 
 ---
 
@@ -35,188 +42,168 @@ Le système de **party** de Silkroad Online permet aux joueurs de se regrouper p
 - Sélectionnez "Invite to Party"
 
 **Method 2: Command**
-- Type `/party [player name]`
-- Ex: `/party JohnDoe`
+- Tapez `/party [nom du joueur]` (ou via le menu social)
 
 **Method 3: Party Interface**
-- Press "P" key
-- Cliques "Create Party"
+- Touche **P** → gestion du party
+
+**À la création**, le leader choisit les **options du party** :
+- Mode d'EXP (Each Get / Auto Share)
+- Mode de répartition des items (voir sections suivantes)
 
 ### Rejoindre un Party
 
-**Comment:**
-- Wait for an invite
-- Or ask to join: "LFG party" (Looking For Group)
-
-**Party Finder:**
-- Certains serveurs ont un "Party Finder"
-- Browse des parties
-- Join directement
+- Attendre une invitation (le leader invite)
+- Demander en chat global : "LFG party" (Looking For Group)
+- Via le **Party Matching** (voir section dédiée)
 
 ### Party Leader
 
-**Role:**
-- Invite/Kick members
-- Set loot distribution
-- Change party options
-
-**Transfer Leadership:**
-- Right-click on member
-- "Make Party Leader"
+**Rôle:**
+- Invite/kick des membres
+- A défini les options du party à la création
+- Peut transférer le leadership (clic droit sur un membre)
 
 ---
 
-## 📊 Experience Sharing
+## 🔄 Types de Party : Each Get EXP vs Auto Share
 
-### EXP Bonus
+⚠️ **Précision importante (souvent mal comprise):** Silkroad Online classique a **deux types de party**, choisis à la création et non modifiables ensuite :
 
-**Plus vous êtes de membres, plus vous avez d'EXP:**
+| | **Each Get EXP** (« chacun son EXP ») | **Auto Share EXP** (« EXP partagé ») |
+|---|---|---|
+| **Membres max** | **4** | **8** |
+| **EXP** | Chacun reçoit l'EXP de ses propres kills | EXP du groupe **partagée automatiquement** entre les membres |
+| **Contrainte de distance** | **Aucune** — les membres peuvent être n'importe où | Les membres doivent rester **proches** de la zone de combat |
+| **Bonus d'EXP** | Plus faible | **Plus élevé** |
+| **Usage typique** | Quests, membres éparpillés, plvl light | **Grind 8/8**, farming, FW |
 
-| Party Size | EXP Bonus |
-|------------|-----------|
-| **2 players** | +20% |
-| **3 players** | +30% |
-| **4 players** | +40% |
-| **5 players** | +50% |
-| **6+ players** | +60% |
+> La limite de **8 membres** ne peut être atteinte **qu'en mode EXP auto-share** (source: Silkroad Forums, guide Partyplay silkroadonline.de).
 
-**Example:**
-- Solo: 1000 EXP per mob
-- Party of 4: 1400 EXP per mob (+40%)
+---
 
-### EXP Distribution
+## 🎁 Répartition des Items
 
-**Level Range:**
-- Les membres doivent être dans un level range (généralement ±10 levels)
-- Si trop d'écart, les members ne reçoivent pas d'EXP
+⚠️ **Correction :** les modes « Leader Distributes » et « Need Before Greed » listés dans les anciennes versions de ce document **n'existent pas** dans Silkroad Online — ce sont des concepts d'autres MMO.
 
-**Distance:**
-- Doit être proche du mob pour recevoir l'EXP
-- Range: ~30-50 mètres
+Les modes réels du client :
 
-### SP Sharing
+| Mode | Fonctionnement |
+|------|----------------|
+| **Free (libre)** | Premier arrivé, premier servi — chacun loot ce qu'il veut |
+| **Item Distribution / Auto Share (distribution automatique)** | Les drops sont attribués **à tour de rôle** entre les membres (A → B → C → D → A...) |
 
-**Skill Points:**
-- Partagés comme l'EXP
-- Bonus SP en party
+- Le mode de répartition est défini **à la création** du party, en même temps que le mode d'EXP
+- En distribution automatique, l'ordre des membres dans le party window détermine le tour de loot
+- Le gold looté suit les mêmes règles que les items selon le mode choisi ⚠️ (comportement exact non documenté officiellement)
 
-**Exemple:**
-- Solo: 100 SP per mob
-- Party of 4: 140 SP per mob
+---
+
+## 📊 Bonus et Répartition d'EXP
+
+### Bonus d'EXP de groupe (client PC classique)
+
+- Donnée communautaire (Silkroad Forums, thread « XP share/distribute parties ») : environ **+3% d'EXP par membre additionnel** en mode distribution
+  - Party de 2 : ~+3%, party de 4 : ~+9%, party de 8 (auto-share) : bonus supérieur ⚠️ chiffres exacts par taille non officialisés
+- Le bonus s'applique à l'EXP **et** aux skill points (SP)
+
+### Répartition en mode Auto Share
+
+- L'EXP totale du kill est **répartie entre les membres** présents dans la zone
+- ⚠️ **Correction :** il n'y a **pas de plage de niveaux stricte ±10** documentée sur le client PC classique — le système de « taxi » (voir plus bas) prouve qu'un membre de bas niveau reçoit de l'EXP d'un party qui farm des mobs bien au-dessus de son niveau. La part de chacun est pondérée (notamment par les niveaux relatifs), ce qui pénalise naturellement les gros écarts, sans les interdire.
+- Les membres **hors de portée** (trop loin / autre zone) ne reçoivent pas leur part
+- Portée approximative requise : rester dans la **même zone de chasse** (dans l'écran / quelques dizaines de mètres ⚠️ valeur exacte non documentée)
+
+### EXP par niveau du monstre
+
+Comme en solo, l'EXP dépend de l'écart de niveau entre le **mob** et le joueur (pénalité si le mob est bien plus bas). Voir [25_LEVELING_GUIDE.md](25_LEVELING_GUIDE.md) et la section Taxi ci-dessous pour l'exploitation de cette règle.
 
 ---
 
 ## 🔍 Party Matching
 
-### Qu'est-ce que Party Matching?
+### Qu'est-ce que le Party Matching?
 
-**Party Matching** est un système pour trouver des parties facilement.
+Système de **recherche de groupe** intégré au client (via le party window).
 
-**Comment utiliser:**
-1. Press "P" pour ouvrir Party Interface
-2. Cliquez "Party Matching"
-3. Voir les parties disponibles
-4. Join une party
+**Pour un leader — enregistrer son party:**
+1. Ouvrez l'interface party (**P**) → onglet Party Matching
+2. Enregistrez le party avec :
+   - **Type / objectif** (chasse, quest, job/trade, etc.)
+   - **Plage de niveaux** min/max acceptée
+   - **Titre / description**
+   - Option de confirmation (accepter manuellement les candidats ou non) ⚠️ selon versions
+3. Le party apparaît dans la liste consultable par tous les joueurs
 
-### Creating Party Matching Entry
+**Pour un joueur — chercher un party:**
+1. Ouvrez Party Matching
+2. Filtrez par objectif / niveau
+3. Rejoignez (directement ou sur acceptation du leader)
 
-**Options:**
-- Set level requirement
-- Set purpose (ex: "Leveling", "Job", "Unique")
-- Set class requirements (ex: "Need Tank")
-
-**Benefits:**
-- Plus facile de trouver des membres
-- Plus rapide que le chat global
+### Benefits
+- Plus facile de remplir un party 8/8
+- Évite le spam "LFG" en chat global
+- Standard sur iSRO et tous les serveurs privés
 
 ---
 
 ## 🤝 Union Party
 
-### Qu'est-ce qu'une Union Party?
+### ⚠️ Correction importante
 
-**Union Party** permet à plusieurs parties (8x8 = 64 players!) de communiquer et de coordonner.
+L'ancienne version de ce document décrivait l'Union Party comme « 8 partys de 8 = 64 joueurs ». C'est **inexact**. D'après le guide phBot (documentation du jeu réel) :
 
-### Benefits
+| Élément | Valeur réelle |
+|---------|---------------|
+| **Quoi** | Système ajouté **tardivement** à Silkroad, permettant de combiner le party actuel avec jusqu'à **3 partys supplémentaires** (jusqu'à ~4 × 8 = **32 joueurs**) |
+| **Condition** | Un **scroll d'Union Party** (obtenable auprès du **NPC de Guild Storage**) |
+| **Leader** | Le propriétaire du scroll / l'organisateur devient leader d'union party |
+| **Usage principal** | **Fortress War** et zones très denses en monstres (meilleur EXP total) |
 
-**Shared Chat:**
-- "Union Chat" pour toutes les parties
-- Communication pour gros events (Fortress War, Uniques)
-
-**Coordination:**
-- Organisez des massive raids
-- Fortress War coordination
-- Unique hunting parties
-
-### Creating Union Party
-
-**Requirements:**
-- Party Leader
-- Invite other party leaders
-- They accept
-
-**Max Parties:**
-- Généralement 8 parties (64 players max)
+**Note:** le canal « Union chat » (chat d'alliance) existe **indépendamment** de l'Union Party — il vient du système d'**union de guildes** (voir [17_GUILD_SYSTEM.md](17_GUILD_SYSTEM.md)), pas du party. Pour la coordination FW classique, les guildes utilisent l'union chat de guilde.
 
 ---
 
 ## 🤖 Auto-Party System
 
-### Qu'est-ce que c'est?
+**Auto-Party** = ajout automatique à un party à proximité.
 
-**Auto-Party** est un système où vous êtes automatiquement ajouté à une party quand vous êtes proche d'autres joueurs.
-
-**Available:**
-- Sur certains serveurs privés
-- Pas sur iSRO classique
-
-### How it Works
-
-**Si activé:**
-- Quand vous vous approchez d'autres players solo
-- Vous êtes automatiquement party ensemble
-- Sans manual invite
-
-**Benefits:**
-- Plus rapide
-- Plus social
-- Moins de "LFG" spam
+⚠️ **Précision:** ce n'est **pas** une fonctionnalité du client officiel iSRO classique. L'auto-party existe via :
+- **phBot** (bot tiers) : auto-invite / auto-accept selon des listes configurables
+- Certains **serveurs privés** (fonction custom)
 
 ---
 
 ## 💪 Party Buffs
 
-### Bard Buffs (最重要!)
+### Bard Buffs (cruciaux!)
 
 **Bard dans le party:**
-- **Moving March:** Speed +20%
-- **Noise:** Mana +20%
-- **Tuning:** Attack +10%
-- **Vibrate:** Dexterity +10%
-- **Guardian:** Defense +10%
+- **Moving March:** vitesse de déplacement
+- **Noise:** réduit l'aggro des monstres (déplacement discret)
+- **Tuning / Guardian etc.:** buffs physiques/défensifs
 
 **Importance:**
-- Bard est **INDISPENSABLE** en party
-- Sans Bard = vous manquez énormément de DPS
+- Bard est **INDISPENSABLE** en party de grind
+- Gestion de mana + vitesse = downtime réduit
 
 ### Cleric Buffs
 
 **Cleric dans le party:**
-- **Bless Spell:** Defense +20%
-- **Recovery Division:** Group heal
-- **Reverse:** Reflect damage
+- **Bless Spell:** défense
+- **Recovery Division:** heal de groupe
+- **Resurrection:** rez des membres morts
 
 ### Other Buffs
 
 **Warrior:**
-- **Fury:** Attack buff (party)
+- Buffs de défense/aggro (tank)
 
 **Wizard:**
-- **Mana Shield:** Protection
+- DPS de zone (AOE)
 
 **Importance:**
-- Plus de buffers = plus fort
-- Ideal party: Tank + DPS + Healer + Buffer (Bard/Cleric)
+- Composition idéale : Tank + DPS + Healer + Buffer (Bard/Cleric)
 
 ---
 
@@ -224,57 +211,26 @@ Le système de **party** de Silkroad Online permet aux joueurs de se regrouper p
 
 ### Optimal Party Composition
 
-**Standard Party (4 members):**
-1. **Tank** (Warrior) - Holds aggro
-2. **Healer** (Cleric) - Keeps everyone alive
-3. **DPS** (Wizard/Rogue) - Damage
-4. **Buffer** (Bard) - Buffs
+**Standard Party 8/8 EU (grind classique):**
+1. **2x Tanks** (Warrior) — tiennent l'aggro
+2. **2x Bards** — mana + vitesse + anti-aggro
+3. **1x Cleric** — heal groupe + rez
+4. **3x DPS** (Wizard AOE) — damage de masse
 
-**Full Party (8 members):**
-1. **2x Tanks** - Alternate tanking
-2. **2x Healers** - More healing
-3. **3x DPS** - More damage
-4. **1x Buffer** - Buffs
+> Composition 8/8 très citée (MMORPG.com, Elitepvpers) : 2 wizards, 2 tanks, 2 bards, 1 cleric, 1 warlock/rogue.
 
 ### Leveling Efficiently
 
-**1. Pull Big:**
-- Tank pull beaucoup de mobs
-- AOE them down
+1. **Pull Big:** le tank pack les mobs, AOE du wizard
+2. **Stay Together:** restez dans le rayon de partage d'EXP
+3. **Use Buffs:** full buffs avant le pull, rebuff à temps
+4. **Kill Speed:** privilégier des mobs 3-6 niveaux au-dessus du party (guide « Chinese 8/8 Party Farming » Elitepvpers)
+5. **Rest Strategically:** coordonner les pauses de regen
 
-**2. Stay Together:**
-- Don't spread out
-- Stay in EXP range
+### Loot
 
-**3. Use Buffs:**
-- Full buffs avant de pull
-- Rebuff when they fade
-
-**4. Kill Speed:**
-- Focus sur le kill speed
-- Plus vite vous tuez, plus vite vous level
-
-**5. Rest Strategically:**
-- Rest (regen HP/MP) quand tout le monde est low
-- Coordinate pour downtimes
-
-### Loot Distribution
-
-**Options:**
-
-**1. Free For All:**
-- Chacun loot ce qu'il veut
-- Fast mais peut causer des disputes
-
-**2. Leader Distributes:**
-- Leader loot tout
-- Distribue à la fin
-- Fair mais prend du temps
-
-**3. Need Before Greed:**
-- Ceux qui peuvent utilisent priorisent
-- Plus fair
-- Common dans raids
+- En mode **distribution automatique**, vérifiez l'ordre des membres avant de partir
+- En mode **libre**, définissez des règles claires (needs, ventes partagées) pour éviter les disputes
 
 ---
 
@@ -326,7 +282,7 @@ Party: Level 80 + Level 20
 Average: (80 + 20) ÷ 2 = 50
 vs Level 50 mobs
 → Level gap: 0 (parfait!)
-→ EXP bonus: +20-60% (party bonus)
+→ EXP bonus: party bonus
 → EXP multiplier: MAXIMAL (pas de penalty)
 → Résultat: EXP MASSIVE
 ```
@@ -359,19 +315,6 @@ vs Level 50 mobs
 - Cela remplace le système de taxi sur certains serveurs
 - Le but: Aider les new players à catch up sans abuse
 
-**Exemple**:
-```
-Server standard level: 50
-
-Level 30 character:
-→ Reçoit +150-200% EXP buff
-→ Peut level ultra fast
-
-Level 60 character:
-→ Reçoit EXP normal
-→ Pas de buff
-```
-
 ### Stratégies de Taxi
 
 **Pour le Taxi (High Level)**:
@@ -395,28 +338,18 @@ Level 60 character:
 
 ### Controverses
 
-**Le Problème du Taxi**:
-- Certains joueurs considèrent ça comme du "cheating"
-- C'est "pay-to-win" (payer un taxi)
-- Avantage injuste pour ceux qui ont des comptes multiples
-
-**La Solution Mobile**:
-- Silkroad Origin Mobile propose de **remplacer** le système taxi
-- Au lieu de taxi, les low-levels reçoivent des **buffs automatiques**
-- Le but: Garder l'esprit "d'aide aux new players" sans l'abuse
+- Certains joueurs considèrent le taxi comme du "cheating" / "pay-to-win"
+- Avantage injuste pour les multi-comptes
+- Silkroad Origin Mobile propose de le **remplacer** par des buffs automatiques pour les bas niveaux
 
 ### Communauté
 
 **Termes**:
-- **"Taxi"**: Un joueur high-level qui power level des low-levels
-- **"Passager"**: Le low-level qui reçoit le taxi
-- **"Driver"**: Le taxi lui-même
-- **"LFP"** (Looking For Passenger): Un taxi cherche des passagers
+- **"Taxi"**: joueur high-level qui power level des low-levels
+- **"Passager"**: le low-level qui reçoit le taxi
+- **"Driver"**: le taxi lui-même
 
-**Prix**:
-- Variable selon le serveur
-- Généralement: 100k-500k gold per session
-- Parfois gratuit (amis, guilde)
+**Prix**: variable selon le serveur (100k-500k gold par session, parfois gratuit entre amis/guildés)
 
 ---
 
@@ -426,132 +359,116 @@ Level 60 character:
 
 **Caractéristiques**:
 - **Maximum**: 4 members
-- **Type**: Chaque membre reçoit de l'EXP individuel
-- **Bonus**: **+5% EXP par player** dans le party
+- **Type**: chaque membre reçoit de l'EXP individuel (pas de partage)
+- **Bonus**: plus faible qu'en auto-share; ~**+3% par membre additionnel** selon les données communautaires
 
-**Tableau des Bonus**:
-| Membres | Bonus EXP | Total Bonus |
-|---------|-----------|-------------|
-| **2 players** | +5% each | +10% total |
-| **3 players** | +10% each | +30% total |
-| **4 players** | +15% each | +60% total |
+**Tableau indicatif**:
+| Membres | Bonus EXP (communauté) |
+|---------|------------------------|
+| **2 players** | ~+3% |
+| **3 players** | ~+6% |
+| **4 players** | ~+9% |
 
-**Note**: Le bonus s'applique à **chaque joueur individuellement**, pas au total.
-
-### "Share EXP" Party (Original PC)
+### "Auto Share EXP" Party (Original PC)
 
 **Caractéristiques**:
 - **Maximum**: 8 members
-- **Type**: EXP partagée entre les membres proches
-- **Bonus**: Généralement plus élevé que "Each get EXP"
-- **Condition**: Doit être proche des mobs/alliés
-
-**Bonus Approximatif**:
-- **Base**: +20-40% bonus (variable)
-- **Full party (8)**: Peut aller jusqu'à **+60%** ou plus
-- **Plus de members = Plus de bonus**
+- **Type**: EXP du groupe partagée automatiquement entre les membres proches (part pondérée)
+- **Bonus**: **supérieur** au mode Each Get (affirmé par Silkroad Forums & guide Partyplay allemand) — les gros +20-60% parfois cités proviennent surtout des **versions mobiles / serveurs privés** ⚠️
 
 ### Silkroad Origin Mobile (Système Tiered)
 
-**Système Modernisé**:
-| Membres | Bonus EXP | Description |
-|---------|-----------|-------------|
-| **2 members** | **+5%** | Small bonus |
-| **3 members** | **+10%** | Moderate bonus |
-| **4 members** | **+15%** | Good bonus |
-| **5 members** | **+20%** | High bonus |
-| **6 members** | **+25%** | Very high bonus |
-| **7+ members** | **+30%+** | Maximum bonus (non-confirmé exact) |
+**Système Modernisé** (≠ client PC classique):
+| Membres | Bonus EXP |
+|---------|-----------|
+| **2 members** | **+5%** |
+| **3 members** | **+10%** |
+| **4 members** | **+15%** |
+| **5 members** | **+20%** |
+| **6 members** | **+25%** |
+| **7+ members** | **+30%+** |
+
+⚠️ Ces valeurs sont celles de Silkroad Origin Mobile — ne pas les traiter comme des données du client PC.
 
 ### Level Difference Impact
 
-**Règle Générale**:
-- Partying avec des **levels similaires** = **PLUS de bonus EXP**
-- Partying avec des **levels très différents** = **MOINS de bonus** (sauf taxi system)
-
-**Exemple**:
-```
-Party Level 70 + Level 70:
-→ Levels similaires
-→ Bonus EXP maximal
-
-Party Level 70 + Level 20:
-→ Huge level gap
-→ Bonus EXP réduit (sur certains serveurs)
-→ Mais peut donner des multipliers via "average level"
-```
+- Party avec des **levels similaires** = rendement optimal par tête
+- Un low-level dans le party **abaisse l'average level** → utile en taxi (voir section dédiée), réduit sinon la part des hauts niveaux
 
 ### Formule EXP Approximative
 
-**Calcul Théorique**:
 ```
 EXP Finale = Base EXP × (1 + Party Bonus) × Level Multiplier
 
 Exemple:
 Base EXP: 1,000
-Party (4 members): +60% bonus
+Party (4 members): +9%
 Level Multiplier: 1.2 (level optimal)
 
-EXP Finale = 1,000 × 1.6 × 1.2 = 1,920 EXP
-(+92% vs solo!)
+EXP Finale = 1,000 × 1.09 × 1.2 = 1,308 EXP
+(+31% vs solo)
 ```
 
 ### Tips pour Maximiser EXP
 
-**1. Full Party Toujours**:
-- Plus de members = plus de bonus
-- Essayez d'avoir 8/8 members
-
-**2. Levels Similaires**:
-- Partez avec des players de levels similaires
-- Évitez les gaps trop grands (sauf taxi)
-
-**3. Restez Ensemble**:
-- Restez dans le range (30-50m)
-- Coordonnez vos pulls
-
-**4. AOE Parties**:
-- Wizard AOE = INSANE EXP
-- Pull 20+ mobs, AOE down
-- Full party = EXP massive
-
-**5. Buffs**:
-- Plus de buffs = plus rapide
-- Lightning speed, etc.
+1. **Party 8/8 auto-share** pour le grind
+2. **Mobs 3-6 niveaux au-dessus** du party
+3. **Restez ensemble** (rayon de partage)
+4. **AOE parties** : wizard pull 20+ mobs
+5. **Full buffs** (bard + cleric)
 
 ---
 
 ## ❓ FAQ
 
 ### Q: Quel est la taille maximum d'un party?
-**R:** 8 players maximum par party. Avec Union Party, vous pouvez avoir 8x8 = 64 players.
+**R:** **8 joueurs**, uniquement en mode **Auto Share EXP**. Le mode Each Get EXP est limité à 4. L'Union Party (tardif) combine jusqu'à 4 partys (~32 joueurs).
 
 ### Q: L'EXP est-elle partagée équitablement?
-**R:** Oui, l'EXP est partagée équitablement entre tous les membres qui sont dans le range.
+**R:** En auto-share, l'EXP du groupe est répartie entre les membres proches, pondérée (notamment par niveau). En Each Get, chacun garde l'EXP de ses kills.
 
-### Q: Les members low-level reçoivent-ils de l'EXP?
-**R:** Oui, s'ils sont dans le level range (généralement ±10 levels du monstre).
+### Q: Existe-t-il une limite de niveau entre les membres?
+**R:** Pas de plage stricte documentée sur PC classique (le système taxi en est la preuve). Certains serveurs privés/mobiles ajoutent leurs propres restrictions.
 
-### Q: Puis-ai-ai kick un membre du party?
-**R:** Oui, si vous êtes le party leader. Right-click sur le member → "Kick from Party".
+### Q: Comment fonctionne le loot en party?
+**R:** Deux modes choisis à la création : **libre** (premier servi) ou **distribution automatique** (tour de rôle A→B→C→D).
+
+### Q: Puis-je kicker un membre du party?
+**R:** Oui, si vous êtes le party leader (clic droit → kick).
 
 ### Q: Le bonus EXP s'applique-t-il aux quests?
-**R:** Généralement non. Le bonus EXP s'applique au killing de mobs, pas aux rewards de quête.
+**R:** Généralement non — le bonus s'applique aux kills de monstres.
 
-### Q: Puis-ai-ai laisser un party?
-**R:** Oui, cliquez droit sur votre portrait → "Leave Party".
+### Q: Comment quitter un party?
+**R:** Clic droit sur votre portrait → "Leave Party" (ou déconnexion).
 
 ---
 
 ## 🔗 Resources
 
 ### Guides
-- [Party System Guide](https://silkroadonline.fandom.com/wiki/Party)
-- [Leveling with Parties](http://www.silkroadforums.com/)
+- [Need Some Info about Party Systems - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=7&t=19130) — each-get vs auto-share
+- [Partyplay Guide - silkroadonline.de](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/864-partyplay) — enregistrement party matching
+- [Grouping Tips - MMORPG.com](https://www.mmorpg.com/general-articles/grouping-tips-2000116712) — composition 8/8
+- [Guide: European 8/8 Party leveling - Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/1287004-guide-european-8-8-party-leveling.html)
+- [Guide: Chinese 8/8 Party Farming - Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/3346708-guide-chinese-8-8-party-farming.html)
+- [Hunting/Grinding - Silkroad Latino Wiki](https://wiki.silkroadlatino.com/en/faq/caza-grinding) — auto-share items à tour de rôle
 
-### Communauté
-- [Silkroad Forums - Party Section](http://www.silkroadforums.com/)
+### Union Party / Auto-Party
+- [Union Party - phBot Guide](https://guide.phbot.org/phbot/union-party) — scroll, 3 partys supplémentaires
+- [Union Party System - MMOHuts](https://mmohuts.com/news/union-party-system-unlocks-hidden-silkroad-online-power)
+
+### Discussions EXP
+- [XP share/distribute parties - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=5&t=4080) — +3%/membre
+- [Party EXP adjustments - Silkroad Origin Mobile](https://sromobile.com/en/news/updates/party-exp-farming-system-adjustments)
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
+## 📚 Voir aussi
+- [Guild System](17_GUILD_SYSTEM.md) — Union de guildes vs Union Party
+- [Fortress War](19_FORTRESS_WAR.md) — Usage massif des partys
+- [Leveling Guide](25_LEVELING_GUIDE.md) — Formules d'EXP
+
+---
+
+*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : Silkroad Forums, Elitepvpers, silkroadonline.de, phBot, sromobile)*

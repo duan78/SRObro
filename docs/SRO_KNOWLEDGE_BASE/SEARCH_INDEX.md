@@ -39,7 +39,7 @@ Cet **index alphabétique** vous permet de trouver rapidement n'importe quel suj
 - **Cerberus** → [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md#cerberus) - Unique boss level 24
 - **Classes** → [HUB_CLASSES.md](HUB_CLASSES.md) - Hub central des classes
 - **Classes Chinoises** → [02_CHINESE_CLASSES.md](02_CHINESE_CLASSES.md) - 7 maîtrises
-- **Classes Européennes** → [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md) - 8 classes
+- **Classes Européennes** → [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md) - 6 classes
 - **Combat** → [HUB_COMBAT.md](HUB_COMBAT.md) - Hub central du combat
 - **Combat System** → [04_COMBAT_SYSTEM.md](04_COMBAT_SYSTEM.md) - Système de combat
 - **Consumables** → [21_CONSUMABLES.md](21_CONSUMABLES.md) - Potions et consommables
@@ -106,7 +106,7 @@ Cet **index alphabétique** vous permet de trouver rapidement n'importe quel suj
 - **Medusa** → [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md#medusa) - Unique boss level 105
 - **Monsters** → [14_MONSTER_GUIDE.md](14_MONSTER_GUIDE.md) - Guide monstres
 - **Monsters Database** → [MONSTERS_DATABASE.md](MONSTERS_DATABASE.md) - Base monstres complète
-- **Monsters High Level** → [MONSTERS_HIGHLEVEL.md](MONSTERS_HIGHLEVEL.md) - Monstres 60-110
+- **Monsters High Level** → [MONSTERS_DATABASE.md](MONSTERS_DATABASE.md) - Monstres 60-110 (fusionné dans la base complète)
 - **Monsters Spawn** → [MONSTERS_SPAWN_LOCATIONS.md](MONSTERS_SPAWN_LOCATIONS.md) - Coordonnées spawns
 - **Mounts** → [24_MOUNTS_PETS.md](24_MOUNTS_PETS.md) - Système pets complet
 - **Murderer** → [20_PVP_PK_SYSTEM.md](20_PVP_PK_SYSTEM.md) - Système PK
@@ -142,7 +142,8 @@ Cet **index alphabétique** vous permet de trouver rapidement n'importe quel suj
 - **SOSun** → [06_SEAL_EQUIPMENT.md](06_SEAL_EQUIPMENT.md#seal-of-sun-sosun) - Seal of Sun
 - **Skills** → [30_SKILLS_DATABASE.md](30_SKILLS_DATABASE.md) - Hub skills
 - **Skills Chinese** → [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md) - 7 maîtrises chinoises
-- **Skills European** → [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md) - 8 classes européennes
+- **Skills European** → [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md) - 6 classes européennes
+- **Screenshots** → [SCREENSHOTS_INDEX.md](SCREENSHOTS_INDEX.md) - 127 captures officielles (12 thèmes)
 - **SP Farming** → [26_SP_FARMING.md](26_SP_FARMING.md) - Guide SP farming complet
 - **Socket** → [28_ADVANCED_MECHANICS.md](28_ADVANCED_MECHANICS.md#socket-system) - Système de sockets
 - **Stall Network** → [23_STALL_NETWORK.md](23_STALL_NETWORK.md) - Marché player

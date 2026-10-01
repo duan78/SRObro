@@ -1,899 +1,309 @@
 # Events Silkroad Online - Guide Complet
 
+> ⚠️ **Révision majeure (2026-10)** : fichier reconstruit à partir des annonces officielles Joymax archivées (IGN, GamesIndustry.biz, MMORPG.com), des archives silkroadforums et du blog deevents princessjane25, des wikis communautaires et des systèmes vSRO. La version précédente contenait de **nombreux events inventés** (« Robot Event permanent » avec tickets Bronze/Argent/Or, boss « Grinch », « Cupid », « Pumpkin King », « Sea Serpent », quêtes fictives « Help Santa Find His Reindeer »...) — tout est corrigé ci-dessous. Les events réels suivent un format standardisé : **drops d'items d'event → échange auprès du NPC So-Ok → cadeaux via Item Storage**, plus des **rate events** (EXP/SP/drop), des **GM events** et des **événements permanents** (Battle Arena, Magic Pop, Job Temple, Forgotten World).
+
 ## 📋 Table des Matières
-- [Introduction](#introduction)
-- [Events Saisonniers](#events-saisonniers)
-- [Events Permanents](#events-permanents)
-- [Events Spéciaux](#events-spéciaux)
-- [Rewards et Prizes](#rewards-et-prizes)
-- [Stratégies pour Events](#stratégies-pour-events)
-- [Calendrier](#calendrier)
+- [Introduction — Les vrais types d'events](#-introduction--les-vrais-types-devents)
+- [Le Format Standard : So-Ok et les Boxes](#-le-format-standard--so-ok-et-les-boxes)
+- [Events Saisonniers Historiques (vérifiés)](#-events-saisonniers-historiques-vérifiés)
+- [Rate Events (EXP / SP / Drop)](#-rate-events-exp--sp--drop)
+- [GM Events](#-gm-events)
+- [Events Permanents](#-events-permanents)
+- [Magic Pop](#-magic-pop)
+- [Events Item Mall et Promotions](#-events-item-mall-et-promotions)
+- [Events des Serveurs Privés vSRO 1.188](#-events-des-serveurs-privés-vsro-1188)
+- [Calendrier Type Annuel](#-calendrier-type-annuel)
+- [Historique Chronologique](#-historique-chronologique)
+- [Stratégies et Économie](#-stratégies-et-économie)
+- [FAQ](#-faq)
+- [Incertitudes / Données Manquantes](#-incertitudes--données-manquantes)
+- [Sources](#-sources)
 
 ---
 
-## 📚 Introduction
+## 📚 Introduction — Les vrais types d'events
 
-Silkroad Online propose de nombreux **events saisonniers et permanents** qui permettent aux joueurs d'obtenir des rewards rares et uniques, de l'expérience gratuite, et des items spéciaux.
+| Type | Description | Exemples attestés |
+|---|---|---|
+| **Events items saisonniers** | Drops d'items d'event (boxes, lettres, œufs, flocons) échangés au NPC **So-Ok** | Halloween Jewel Box, Ice Festival, Easter Egg Hunt, Lucky Letter |
+| **Rate events** | Bonus temporaires EXP/SP/drop appliqués serveur-wide | 100 % EXP/SP (nov-déc 2011), 200 % Valentine's week-ends |
+| **GM events** | Events animés par les GM, quotidiens à partir de nov. 2010 | Rise of the Uniques, guild CTF battles |
+| **Attendance / login** | Récompense quotidienne via So-Ok (bouton « Receive », Item Storage) | Attendance Event 2011 |
+| **Events permanents** | Systèmes récurrents programmés | Battle Arena, Magic Pop, Job Temple, Forgotten World |
+| **Item mall events** | Promotions Silk, nouvelles boxes, ventes flash | Chocolats Valentine's, web Item Mall launch |
+| **Events privés (vSRO)** | Systèmes custom des serveurs privés | Trivia, Kill the GM, Lucky Party, Survival Arena |
 
-### Types d'Events
-
-1. **Events Saisonniers** - Noël, Halloween, Saint-Valentin, Été
-2. **Events Permanents** - Robot Event, Forgotten World, Job Temple
-3. **Events Spéciaux** - Cadeaux automatiques, promotions Item Mall
-4. **Events Communautaires** - GM-run events, contests
-
----
-
-## 🎃 Events Saisonniers
-
-### Christmas Event (Noël)
-
-**Période:** 15 Décembre - 5 Janvier
-
-```
-Activités:
-  🎄 Quests de Noël spéciales
-  🎁 Collections de cadeaux
-  ⭐ Monsters de Noël (Santa, Rudolph)
-  🎅 Special drops (Candy Canes, Christmas Gifts)
-
-Quêtes:
-  1. "Help Santa Find His Reindeer"
-     - Tuer des monsters Christmas
-     - Rewards: EXP, SP, Candy Canes
-
-  2. "Deliver Christmas Gifts"
-     - Livrer des cadeaux aux NPCs
-     - Rewards: Christmas Suit, Snowballs
-
-  3. "Defeat the Grinch"
-     - Boss special: Grinch (Unique Noël)
-     - Level: 80-100
-     - Drops: Christmas Weapons, Snow Globe
-
-Items Spéciaux:
-  - Christmas Hat (Casque décoratif)
-  - Santa Suit (Costume)
-  - Candy Cane (Consummable: +10% EXP)
-  - Snow Globe (Tradeable, rare)
-  - Christmas Weapon (Skin temporaire)
-
-Duration: ~3 semaines
-Popularity: ⭐⭐⭐⭐⭐ (Très populaire)
-```
-
-### Halloween Event
-
-**Période:** 15 Octobre - 5 Novembre
-
-```
-Activités:
-  🎃 Quests d'Halloween
-  👻 Monsters Halloween (Pumpkin Ghost, Witch)
-  🍬 Candy collection
-  🕸️ Pumpkin Boss
-
-Quêtes:
-  1. "Trick or Treat"
-     - Collecter des Candy Canes
-     - Rewards: Halloween Hat, Pumpkin Head
-
-  2. "Witch's Brew"
-     - Collecter des ingrédients
-     - Rewards: Mana Potions, SP items
-
-  3. "Defeat Pumpkin King"
-     - Boss: Pumpkin King (Level 90)
-     - Location: Special Halloween instance
-     - Drops: Pumpkin Weapons, Candy Bags
-
-Items Spéciaux:
-  - Pumpkin Head (Masque effrayant)
-  - Witch Costume
-  - Candy Bag (Random drops)
-  - Pumpkin Weapons (Orange skin)
-
-Duration: ~3 semaines
-Popularity: ⭐⭐⭐⭐ (Populaire)
-```
-
-### Valentine's Day Event (Saint-Valentin)
-
-**Période:** 1er - 15 Février
-
-```
-Activités:
-  💕 Quests romantiques
-  💘 Special drops (Cœurs, Roses)
-  💝 Gift exchange
-
-Quêtes:
-  1. "Love is in the Air"
-     - Tuer des monsters "Cupids"
-     - Rewards: Rose petals, Chocolate
-
-  2. "Gift Exchange"
-     - Échanger des cadeaux avec NPCs
-     - Rewards: Valentine's Suit, Love Potions
-
-  3. "Cupid's Challenge"
-     - Boss: Cupid (Level 80)
-     - Drops: Bow of Love, Arrows Cupid
-
-Items Spéciaux:
-  - Rose Petals (Consummable: +10% drop rate)
-  - Valentine's Suit (Costume)
-  - Love Potion (Temporaire attraction PvP)
-  - Chocolate (Restaure HP/MP)
-
-Duration: ~2 semaines
-Popularity: ⭐⭐⭐ (Modérément populaire)
-```
-
-### Summer Event
-
-**Période:** Juin - Août
-
-```
-Activités:
-  ☀️ Beach party events
-  🏖️ Summer quests
-  🍦 Ice creams et summer foods
-  🏖️ Water monsters
-
-Quêtes:
-  1. "Cool Down"
-     - Tuer des Fire monsters
-     - Rewards: Ice Cream, Summer Suit
-
-  2. "Beach Party"
-     - Collecter des coquillages
-     - Rewards: Beach items, Pearl drops
-
-  3. "Defeat Sea Serpent"
-     - Boss: Sea Serpent (Level 100)
-     - Location: Instance beach
-     - Drops: Trident, Sea Armor
-
-Items Spéciaux:
-  - Summer Hat
-  - Beach Suit
-  - Ice Cream (Consummable: +5% move speed)
-  - Pearl (Jewelry material)
-
-Duration: ~3 mois
-Popularity: ⭐⭐⭐⭐ (Populaire en été)
-```
+> ❌ **Corrigé :** le « Robot Event » permanent avec tickets Bronze/Silver/Gold et récompenses Nova **n'existe pas sur iSRO officiel** — aucune trace dans les annonces Joymax ni les wikis. Les seuls « événements permanents » réels sont listés dans la section dédiée.
 
 ---
 
-## 🤖 Events Permanents
+## 🎁 Le Format Standard : So-Ok et les Boxes
 
-### Robot Event (Event Robot Perpétuel)
+Le schéma le plus courant des events Joymax ( attesté de 2007 à aujourd'hui) :
 
-**Disponibilité:** Permanent, toute l'année
+1. **Drop** : les monstres tués droppent un item d'event (Jewel Box, lettre, œuf, flocon...) avec un taux défini pour la durée de l'event.
+2. **Collecte** : le joueur accumule les items (souvent combiner des lettres pour former un mot, ex. « SILKROAD » en Lucky Letter Collection).
+3. **Échange** : le joueur parle au NPC d'event **So-Ok** en ville pour échanger les items contre des récompenses aléatoires/fixes.
+4. **Livraison** : les cadeaux sont distribués via l'**Item Storage** (stockage d'items du site officiel), souvent **limités à un cadeau par personnage** (site d'archive So-Ok).
 
-```
-NPC: Event Robot (dans toutes les villes)
-
-Fonctionnement:
-  - Échange de tickets contre rewards
-  - Tickets obtenus en jouant
-  - Système de points (Robot Points)
-
-Comment Obtenir des Tickets:
-  - Monster drops (rare)
-  - Quest completion
-  - Event specials
-  - Acheter via Item Mall (Silk)
-
-Tickets:
-  - General Ticket (Bronze)
-  - Rare Ticket (Silver)
-  - Epic Ticket (Gold)
-
-Récompenses:
-  Général (Bronze):
-    - Potions (HP/MP)
-    - Return Scrolls
-    - Speed Scrolls
-    - Gold (10K-100K)
-
-  Rares (Silver):
-    - Elixirs 7D-9D
-    - Lucky Powders
-    - Stones
-    - Skill Points
-    - Gold (500K-1M)
-
-  Épiques (Gold):
-    - Seal of Star (SOS) items
-    - Seal of Moon (SOM) items
-    - 13D Equipment
-    - Nova weapons
-    - Gold (5M-10M)
-
-Stratégie:
-  - Accumuler des tickets
-  - Attendre des events pour utiliser
-  - Prioriser les récompenses Gold (plus value)
-```
-
-### Forgotten World
-
-**Disponibilité:** Permanent, Daily Dungeon
-
-```
-Type: Instance Dungeon pour parties
-Level Requis: 100+
-Party Size: 4-8 joueurs
-
-Fonctionnement:
-  - 1 entrée par jour (par personnage)
-  - Quêtes journalières à l'intérieur
-  - Boss à la fin
-  - Rewards spéciaux
-
-Quêtes:
-  1. "Entrance Quest" (Répétable)
-     - Entrer dans le donjon
-     - Rewards: EXP, SP
-
-  2. "Clear Monsters" (Quête principale)
-     - Tuer tous les monsters
-     - Rewards: Forgotten Coins
-
-  3. "Defeat Boss"
-     - Boss fin de donjon
-     - Rewards: Forgotten Items, Coins
-
-Rewards:
-  - Forgotten Coins (monnaie d'event)
-  - Forgotten Equipment (Set spécial)
-  - Skill Points
-  - Experience tickets
-
-Drops du Boss:
-  - Seal of Nova (rare)
-  - 13D Weapons
-  - Socket Stones
-  - Premium items
-
-Duration: ~30-45 minutes par run
-Popularity: ⭐⭐⭐⭐⭐ (Très important pour end-game)
-```
-
-### Job Temple
-
-**Disponibilité:** Permanent, Event PvPvE Job-Based
-
-```
-Type: PvPvE Instance
-Level Requis: 90+
-Participants: 3 factions (Trader, Hunter, Thief)
-
-Fonctionnement:
-  - Les Traders transportent des marchandises spéciales
-  - Les Hunters protègent les traders
-  - Les Thieves attaquent pour voler
-  - Points de Job gagnés pour participation
-
-Scoring:
-  - Succès du trader: +100 points Traders
-  - Trader tué: +50 points Thieves
-  - Thief tué: +30 points Hunters
-
-  - Monster kills: +10 points chacun
-  - Objectives spéciaux: +points bonus
-
-Rewards:
-  - Job Points (monnaie d'event)
-  - Job-specific items
-  - Job exp bonuses
-  - Gold
-
-Items Disponibles:
-  - Trader Hat (ATK boost)
-  - Hunter Cape (DEF boost)
-  - Thief Mask (Stealth boost)
-  - Special weapons Job Temple
-
-Schedule:
-  - Toutes les 2 heures
-  - Duration: 30 minutes
-  - 24 participants max
-
-Popularity: ⭐⭐⭐⭐⭐ (Essentiel pour job players)
-```
-
-### Battle Arena
-
-**Disponibilité:** Permanent, PvP Arena
-
-```
-Type: PvP Instance
-Level Requis: Tous (scalling selon level)
-Participants: 1v1, 3v3, 5v5
-
-Modes:
-  1. Solo Arena (1v1)
-     - Combat solo
-     - Matching par level proche
-     - Rounds: Best of 3
-
-  2. Team Arena (3v3, 5v5)
-     - Combat d'équipe
-     - Coordination requise
-     - Rounds: Single elimination
-
-  3. Survival Arena
-     - FFA (Free For All)
-     - Dernier survivant gagne
-     - Tous contre tous
-
-Scoring:
-  - Victoire: +3 points
-  - Défaite: +1 point
-  - Saisons: Weekly seasons
-  - Rewards basés sur ranking
-
-Rewards:
-  - Arena Coins (monnaie)
-  - Arena Weapons (Skin spécial)
-  - Arena Armor (Skin spécial)
-  - Honor points
-
-Saison:
-  - 1 mois par saison
-  - Reset des points chaque saison
-  - Rewards saison: Tier spéciaux
-
-Popularity: ⭐⭐⭐⭐ (Populaire pour PvP)
-```
+Variantes attestées :
+- **Event monsters** : monstres thématiques spawnes dans le monde (Snowman Monster à Noël, Easter Rabbit/lapins à Pâques, Rudolph sur certains serveurs) qui droppent les items d'event (10 flocons → cadeau).
+- **Event boxes achetables** : gift bags/lucky boxes vendus à l'Item Mall avec tables de loot (format « Lucky Box » repris à l'identique sur les serveurs privés via So-Ok).
 
 ---
 
-## 🎁 Events Spéciaux
+## 🎃 Events Saisonniers Historiques (vérifiés)
 
-### GM Events
+### Christmas / Holiday Season
+- ✅ **Déc. 2007** : deux events in-game lancés avec la mise à jour Fortress War, dont un Christmas event à durée limitée (GamesIndustry.biz).
+- ✅ **Déc. 2008 (Legend III Plus)** : « Joymax Celebrates the Holiday Season » — les monstres droppent des **Jewel Boxes** échangeables contre des récompenses festives (IGN, 16 déc. 2008).
+- ✅ Format Noël récurrent : **Snowman Monsters** (kill → **Snowflakes**, 10 flocons → cadeau), **Christmas Bells** (drop ~70 %), Festival Chests ; variantes serveurs privés : **Rudolph** qui spawne dans le monde et droppe des **Santa Bags** échangeables à So-Ok (Legion SRO).
+- ❌ **Corrigé :** les quêtes « Help Santa Find His Reindeer », « Defeat the Grinch » (boss « Grinch » Lv80-100), « Christmas Weapons » etc. de l'ancienne version **sont inventées**. Le format réel = drops + échange So-Ok, pas de quêtes scénarisées.
 
-**Disponibilité:** Aléatoire, annoncés à l'avance
+### Halloween
+- ✅ **Oct. 2008** : « Celebrate Halloween with Silkroad Online » — **Jewel Boxes droppées par les monstres**, échangeables avec des NPCs contre des items festifs (IGN, 28 oct. 2008).
+- ✅ **2009** : event « Bombs on your face in all towns » (annoncé sur les forums Joymax/elitepvpers).
+- ✅ **2011** : event annoncé le 8 nov. 2011, récompenses distribuées à la maintenance du 15 nov. (Silkroad4Arab).
+- ❌ **Corrigé :** pas de boss « Pumpkin King » ni d'instance Halloween dédiée documentés sur iSRO.
 
-```
-Types de GM Events:
-  1. Hide & Seek
-     - GM se cache dans la carte
-     - Joueurs doivent le trouver
-     - Reward: 10M gold, SP, items
+### Valentine's Day
+- ✅ **Fév. 2009** : event Valentine's sur Silkroad + Deco Online — **200 % EXP et 200 % drop rate chaque week-end de février**, avec **vente d'items chocolat** à l'item shop et trois semaines de bonus (IGN/GamesIndustry.biz, 11 fév. 2009). Ce format « rate event + item shop saisonnier » s'est répété les années suivantes.
+- ❌ **Corrigé :** pas de boss « Cupid », ni de « Bow of Love » documentés.
 
-  2. Trivia
-     - GM pose des questions sur SRO
-     - Premier à répondre gagne
-     - Reward: Gold, items, buffs
+### Easter Egg Hunt
+- ✅ **2008** : « Silkroad Online Easter Egg Hunt gets under way » (GamesIndustry.biz) — chasse aux œufs avec monstres lapins/œufs spawnés, échange via So-Ok pour des Easter boxes.
+- ✅ **2010** : œufs qui spawnes « anywhere » et presents obtenables via les œufs (vidéo communautaire 2010) ; édition 2022 documentée aussi (YouTube). Format repris chaque printemps sur les serveurs privés.
 
-  3. PvP Tournament
-     - Tournoi 1v1 ou 5v5
-     - Inscription requise
-     - Rewards: Items rares, titres
+### Ice Festival (hiver 2010)
+- ✅ Event d'hiver Joymax : **Ice Festival Jewel Box** (drops → boxes), en parallèle des daily events de nov.-déc. 2010 (blog archive princessjane25).
 
-  4. Lottery
-     - Tickets gagnés via gameplay
-     - Tirage au sort avec prizes
-     - Rewards: SOX items, Gold
+### New Year / Lunar New Year
+- ✅ **Janv. 2011** : « Joymax Kicks off the New Year with Four Global Events » — 4 events globaux jusqu'au **15 mars 2011**, incluant la **Lucky Letter Collection** (collecter des lettres pour former des mots → prix), des buffs, du bonus EXP et des cadeaux (IGN, 25 janv. 2011).
+- ✅ Lunar New Year resté un rendez-vous récurrent (Silkroad Origin Mobile : Lunar New Year Festival avec quêtes journalières → Star Dust).
 
-Frequency: 2-3 fois par semaine
-Duration: 30-60 minutes
-Participation: 50-500+ joueurs
-Popularity: ⭐⭐⭐⭐⭐ (Très populaires)
-```
-
-### Unique Spawn Events
-
-**Disponibilité:** Aléatoire, triggered par GM
-
-```
-Type: Spawns massifs d'uniques
-
-Fonctionnement:
-  - GM fait spawn plusieurs uniques en même temps
-  - Announced à l'avance (15-30 min)
-  - Localisation annoncée
-  - Massive participation
-
-Exemples:
-  - "Triple Tiger Girl Spawn in 10 minutes!"
-  - "Cerberus ×3 spawning at Desperado Hill!"
-  - "Medusa + Isyutaru + Captain Ivy all spawning!"
-
-Rewards:
-  - Chaque unique drop ses rewards normales
-  - Bonus rewards du GM (Gold, items)
-  - Event participation rewards
-
-Strategy:
-  - Se positionner à l'avance
-  - Avoir un spawn point prévu
-  - Partir en party (8 joueurs)
-  - Être prêt (potions, buffs, res scrolls)
-
-Duration: 30-60 minutes
-Frequency: 1-2 fois par mois
-Popularity: ⭐⭐⭐⭐⭐ (Événement majeur)
-```
-
-### Special Sale Events
-
-**Disponibilité:** Aléatoire, via Item Mall
-
-```
-Type: Promotions Item Mall
-
-Types de ventes:
-  1. Silk Discounts
-     - -20% à -50% sur Silk
-     - Bonus Silk pour achat
-     - Durée: 1-3 jours
-
-  2. Item Mall Items
-     - Items gratuits ou réduits
-     - Lucky Powders gratuits
-     - Reverse Scrolls illimités
-
-  3. Special Packages
-     - Bundles à prix réduit
-     - New items en avant-première
-     - Seasonal boxes
-
-Examples:
-  - "Black Friday Sale - 50% off Silk!"
-  - "Lucky Powder Week - Free powders!"
-  - "Summer Box - Guaranteed Nova!"
-
-Frequency: 2-3 fois par mois
-Duration: 3-7 jours
-Popularity: ⭐⭐⭐⭐⭐ (Importants pour F2P)
-```
+### Anniversaire / Joymax Day
+- ✅ **20 nov. 2012** : premier **« Joymax Day »** (anniversaire de l'éditeur, annoncé comme récurrent).
 
 ---
 
-## 🎁 Rewards et Prizes
+## 📈 Rate Events (EXP / SP / Drop)
 
-### Rewards Communs
+Joimax appliquait régulièrement des **multiplicateurs serveur** à l'EXP, aux SP ou aux drop rates, typiquement 50 %, 100 % ou 200 %, sur des périodes de 1 week-end à 1 mois :
 
-```
-Gold (Tous les events):
-  - Small: 10K-100K
-  - Medium: 100K-1M
-  - Large: 1M-10M
-  - Massive: 10M-100M (rares)
+| Event attesté | Période | Taux |
+|---|---|---|
+| Valentine's Week-ends | Février 2009 | **200 % EXP + 200 % drop** |
+| 100 % EXP/SP Event | **15 nov. – 13 déc. 2011** | **+100 % EXP et SP** |
+| 50 % SP Event | 2011 | +50 % SP |
+| SP / Skill Event | 2011 | bonus SP/skills |
+| Attendance Event | nov.-déc. 2011 | cadeaux quotidiens (checked via So-Ok) |
 
-Experience:
-  - EXP Tickets (×1.5, ×2, ×3)
-  - EXP Spikes (×1.5 pour 1 heure)
-  - Direct EXP (via quests)
+(Source : thread silkroadforums « Changes Joymax announced » + IGN 2009.)
 
-Skill Points:
-  - SP Tickets (+100 SP)
-  - Spikes (×2 SP gain)
-  - Direct SP (via quests)
-
-Items:
-  - Elixirs (7D-13D)
-  - Stones (Weapon/Armor/Accessory)
-  - Lucky Powders
-  - Socket Stones
-```
-
-### Rewards Rares
-
-```
-SOX Items (Seal Equipment):
-  - Seal of Star (SOS)
-  - Seal of Moon (SOM)
-  - Seal of Sun (SOSun)
-  - Seal of Nova (rare)
-
-Équipement High-Level:
-  - 11D-13D Weapons
-  - 12D-13D Armor Sets
-  - Accessories +5
-
-Special Items:
-  - Nova Weapons (Egypt)
-  - Job Temple Weapons
-  - Arena Weapons
-  - Event Skins (Holiday themed)
-
-Unique Items:
-  - Event-specific weapons
-  - Costume sets
-  - Pets rares
-  - Mounts spéciaux
-```
-
-### Rewards Ultra-Rares (Legendary)
-
-`` VERY RARE (Drop rate 0.01% ou moins):
-
-Seal of Nova A & B:
-  - Weapons Egypt les plus puissants
-  - Stats incroyables
-  - Value: 5B-10B+ gold
-
-Dungeon Weapons:
-  - Forgotten World Weapons
-  - Job Temple Weapons
-  - Arena Tournament Weapons
-
-Special Mounts:
-  - Unicorn Mount
-  - Dragon Mount
-  - Robot Mount
-  - Limited Edition Mounts
-
-永久 Items (Permanent):
-  - Inventory expansion tickets
-  - Skill point tickets
-  - Name change tickets
-```
+Ces rate events coincidaient souvent avec les périodes de forte affluence (fêtes, mises à jour, anniversaires) et s'accompagnaient de **drop rate up** sur les items d'event.
 
 ---
 
-## 🎯 Stratégies pour Events
+## 👨‍💼 GM Events
 
-### Préparation
+À partir de **novembre 2010**, Joymax a instauré des **daily GM events** (annoncé « Joymax Begins Hosting Daily In-Game Events », IGN 19 nov. 2010) :
 
-```
-Avant l'Event:
-  1. Stocker de gold (pour acheter des items d'event)
-  2. Garder des tickets/items d'event précédents
-  3. Préparer son inventaire (espace libre)
-  4. S'organiser en guilde/team pour les events majeurs
-  5. Surveiller les annonces (GM events, spawns)
-```
-
-### Pendant l'Event
-
-```
-Maximiser les Rewards:
-  1. Participer à TOUTES les quêtes
-  2. Farmer les monsters d'event intensivement
-  3. Utiliser les consumables d'event (Candy Canes, etc.)
-  4. Faire les donjons (Forgotten World) tous les jours
-  5. Participer au Job Temple régulièrement
-  6. Trader pendant les events (profits élevés)
-```
-
-### Après l'Event
-
-```
-Capitaliser:
-  1. Vendre les items d'event (avant qu'ils perdent de la valeur)
-  2. Utiliser les consommables avant expiration
-  3. Stocker les items permanents
-  4. Attendre le prochain event pour les items seasonals
-```
-
-### Stratégies par Type de Joueur
-
-```
-Pour F2P (Free to Play):
-  - Focus sur les events gratuits
-  - Farmer les monnaies d'event
-  - Accumuler graduellement
-  - Ne pas dépenser en Silk (sauf promotions)
-
-Pour P2P (Pay to Win):
-  - Acheter pendant les promotions
-  - Maximiser l'efficacité avec Silk
-  - Compléter avec F2P methods
-  - Investir dans les events profitables (trading)
-
-Pour Traders:
-  - Trader PENDANT les events (demande élevée)
-  - Vendre les items d'event
-  - Profiter de l'inflation post-event
-
-Pour Jobbers:
-  - Protector pendant les events (beaucoup de traders)
-  - Attaquer les traders overload avec loot
-  - Participer au Job Temple
-```
+- ✅ **Rise of the Uniques** : un GM **spawn un unique aléatoire** (Tiger Girl, Cerberus, Isyutaru...) à un endroit annoncé ; les joueurs se ruent pour le tuer et loot les drops normaux d'unique. Décrit comme « fan favorite » (MMORPG.com).
+- ✅ **Guild Collision / Capture the Flag Battle Arena** : events guildes organisés sur les créneaux Battle Arena (ex. documenté le 27 mars 2011, 16h30 Silkroad Standard Time).
+- ✅ **Halloween 2009 « Bombs on your face »** : animation GM en ville.
+- ✅ **Finding the GM / screenshot contests** : events communauté fin 2009 - début 2010 avec envoi de screenshots contre des prix (archives elitepvpers).
+- ℹ️ Les formats **Hide & Seek, Trivia, PvP Tournament, Lottery** listés par l'ancienne version existent surtout sur les **serveurs privés** (voir section vSRO) — pas d'annonce officielle iSRO retrouvée.
 
 ---
 
-## 📅 Calendrier Annuel
+## ⚔️ Events Permanents
 
-### Janvier - Mars
+### Battle Arena (PvP programmé)
+Introduite en 2011 (events guilde CTF documentés dès mars 2011). Système PvP par équipes, **niveau 20 minimum** :
 
-```
-Janvier:
-  - New Year Event
-  - Valentine's Day (February)
+| Mode | Description |
+|---|---|
+| **Arena Match** | Combat d'équipes à points (kills), équipes aléatoires ou équilibrées |
+| **Capture the Flag (CTF)** | Chaque équipe doit capturer le drapeau adverse |
+| **Party Arena Match** | Affrontement de parties organisées |
+| **Job Arena Match** | Variantes liées aux jobs (Trader/Hunter/Thief) |
 
-Février:
-  - Valentine's Day (1-15 Feb)
-  - Lent Event (certains serveurs)
+- ✅ **Arena Coins** attribuées **aux gagnants ET aux perdants** (montant supérieur aux vainqueurs).
+- ✅ Inscriptions à des **créneaux horaires fixes** (schedule quotidien affiché en jeu).
+- ✅ Boutique de récompenses contre les coins (gear PvP / items) ; les **Honor Points** de la boutique Alexandria sont liés aux activités PvP incluant la Battle Arena.
+- ❌ **Corrigé :** pas de « Solo Arena 1v1 best of 3 » ni de « saisons mensuelles » documentées sur iSRO classique.
 
-Mars:
-  - Spring Event
-  - Saint Patrick's Day (certains serveurs)
-```
+### Job Temple (PvPvE de job)
+Zone/donjon dédié aux jobs à Alexandrie (uniques égyptiens : Apis, Selket, Neith, Anubis, Isis — voir `15_UNIQUE_BOSSES.md`). Les uniques du temple droppent des **coins de job (or/argent/fer/cuivre)** + drops d'équipement, échangeables auprès des NPCs de job. (Détails des drops vérifiés surtout sur serveurs vSRO fidèles.)
 
-### Avril - Juin
+### Forgotten World (donjon répétable)
+Système de donjons instanciés 35-110 avec talismans → armes scellées. Voir le fichier dédié [`29_FORGOTTEN_WORLD.md`](29_FORGOTTEN_WORLD.md).
 
-```
-Avril:
-  - Easter Event
-  - Spring Festival
-
-Mai:
-  - Memorial Day (US servers)
-
-Juin:
-  - Summer Event (June-August)
-  - Mid-Summer Events
-```
-
-### Juillet - Septembre
-
-```
-Juillet:
-  - Summer Event (cont.)
-
-Août:
-  - Summer Event (cont.)
-  - Back-to-School Event
-
-Septembre:
-  - Halloween Preview (late Sept)
-```
-
-### Octobre - Décembre
-
-```
-Octobre:
-  - Halloween Event (15 Oct - 5 Nov)
-  - Thanksgiving (US servers)
-
-Novembre:
-  - Black Friday Sales
-  - Thanksgiving
-
-Décembre:
-  - Christmas Event (15 Dec - 5 Jan)
-  - New Year's Eve Event
-```
+### Fortress War (siège de forteresse)
+Guerre de forteresses hebdomadaire guildes — voir [`19_FORTRESS_WAR.md`](19_FORTRESS_WAR.md). Ce n'est pas un « event » ponctuel mais une institution permanente du calendrier.
 
 ---
 
-## 💡 Astuces Pro
+## 🎰 Magic Pop
 
-### Events Farming
-
-```
-1. Multi-Comptage (certains serveurs le permettent)
-   - Faire l'event sur plusieurs personnages
-   - Accumuler les rewards sur un main
-
-2. Guild Events
-   - Se coordonner avec sa guilde
-   - Partager les drops
-   - Faire les donjons en groupe
-
-3. Timing Optimization
-   - Jouer pendant les heures de pointe
-   - Éviter le lag (events très fréquent = lag)
-   - Se positionner pour les spawns
-
-4. Inventory Management
-   - Avoir assez de place pour les drops
-   - Utiliser le storage pour stocker
-   - Tri les items par valeur
-```
-
-### Event Profiteering
-
-```
-Vendre les Items d'Event:
-  - Pendant l'event: Prix très élevé
-  - Juste après: Prix commence à baisser
-  - 1-2 mois après: Items deviennent communs
-
-À Retenir:
-  - SOX event: Toujours valuable
-  - Equipment event: Perd de la valeur vite
-  - Consumables: Vendre avant expiration
-  - Skins/Costumes: Garder (collection value)
-
-Arbitrage:
-  - Acheter pendant l'event (quand abondant)
-  - Vendre plus tard (quand rare)
-  - Exemple: Candy Canes pendant Halloween
-```
+- ✅ Système de **loterie via cartes Magic Pop** (achetées à l'Item Mall / NPC **Gori**, documenté en vidéo sur iSRO en 2017).
+- ✅ Gratter une carte donne une récompense aléatoire (consommables, scrolls, cosmétiques, items rares).
+- ✅ Les récompenses ont été **revampées** au fil du temps — annonce officielle : **Red Dragon Summon Scroll, Golden Dragon Flag, Special Roc Insignia** (page Facebook officielle Silkroad).
+- ℹ️ Les cartes Magic Pop étaient aussi utilisées comme **récompenses d'events** (ex. « kill 10 Bunwangs → 7D +9 GM Set » via subscription cards, thread silkroadforums).
 
 ---
 
-## 📊 Économie des Events
+## 🛒 Events Item Mall et Promotions
 
-### Impact sur le Marché
-
-```
-Avant l'Event:
-  - Demande normale
-  - Prix stables
-  - Market équilibré
-
-Pendant l'Event:
-  - Demande explosive pour certains items
-  - Prix des items d'event montent
-  - Gold injection (rewards)
-
-Après l'Event:
-  - Saturation du marché
-  - Prix chutent dramatiquement
-  - Déflation temporaire
-
-Exemple Halloween:
-  - Pumpkin Weapons (pendant): 50M-100M
-  - Pumpkin Weapons (après): 5M-10M
-  - Perte: 90% de la valeur
-```
-
-### Inflation vs Deflation
-
-```
-Inflation:
-  - Events injectent beaucoup de gold
-  - Prix des items normaux augmentent
-  - Power creep (items plus forts deviennent communs)
-
-Deflation:
-  - Items rares deviennent communs
-  - Prix chutent
-  - Market se stabilise
-
-Cycle:
-  - Event → Inflation → Saturation → Deflation → Normalisation
-  - Ce cycle se répète pour chaque event majeur
-```
+- ✅ **Lancement du Web Item Mall** et du **Premium Silk** (annonce Joymax reprise par IGN).
+- ✅ **Ventes saisonnières** : chocolats Valentine's (fév. 2009), boxes d'event (Lucky Box, Festival Chests), avatars et pets en édition limitée (ex. Guardian Angel Wing Avatar « de retour à l'item mall »).
+- ✅ **Bonus Silk** lors des achats pendant certaines fenêtres promotionnelles (format « Silk discounts/bonus » récurrent).
+- ℹ️ Format repris à l'identique par les serveurs privés et Silkroad Origin (passes, daily login rewards, event pass battle-pass).
 
 ---
 
-## 🎮 Events au Fil du Temps
+## 🖥️ Events des Serveurs Privés vSRO 1.188
 
-### Historique
+Les fichiers **vSRO 1.188** (base des serveurs privés classiques) embarquent les events officiels (Battle Arena, Fortress War, events So-Ok configurables) et la communauté y a ajouté des **events automatiques** devenus standards :
 
-```
-2005 (Sortie Originale):
-  - Events basiques
-  - GM runs rares
-  - Simple drops
+| Event | Mécanique typique |
+|---|---|
+| **Trivia / Quiz (Ox event)** | Questions générales ou sur le jeu ; les joueurs se placent sur la zone **O ou X** ; réponses correctes → récompenses |
+| **Kill the GM** | Un GM (ou mob boss) spawn avec d'énormes HP ; dégâts classés → prix aux top DPS |
+| **Hide & Seek (HnS)** | Le GM se cache dans une carte ; premier à le trouver gagne |
+| **Lucky Party / Lucky Player** | Tirage aléatoire parmi les joueurs en ligne / en party → silk, gold, items |
+| **Lucky Box / Random Box (So-Ok)** | Gift bags droppés par les monstres échangeables à So-Ok (portage direct de l'event officiel) |
+| **Unique Event** | Spawn massif d'uniques à heure fixe (souvent plusieurs fois par jour) |
+| **Survival Arena / Last Man Standing** | Arène FFA, dernier survivant récompensé |
+| **Silk per hour / online rewards** | Silk gratuit au fil du temps de jeu (3 silk/h répandu) |
+| **Unique Ranking Rewards** | Classement hebdo des kills d'uniques → silk/items (ex. 1000/750/500 silk top 3) |
+| **Events saisonniers custom** | Rudolph + Santa Bags (Noël), Easter Rabbit + œufs (Pâques), event monsters divers |
 
-2008-2010 (Peak):
-  - Events saisonniers introduits
-  - Robot Event permanent ajouté
-  - Plus de rewards
-
-2011-2013 (Déclin):
-  - Moins d'events
-  - Focus sur updates content
-  - Peak ISRO (bots, gold sellers)
-
-2014-2016 (Private Servers):
-  - Résurgence d'intérêt
-  - Custom events
-  - Serveurs privés créent leurs propres events
-
-2020+ (SRO Mobile):
-  - Mobile SRO events
-  - Cross-promotion events
-  - Seasonal updates
-```
-
-### Events Modernes
-
-``Serveurs Modernes (2020+):
-  - Events plus fréquents
-  - Meilleures rewards
-  - Plus de participation
-  - Community-driven events
-  - Cross-server events (certains serveurs)
-
-Innovations:
-  - Event pass (battle pass style)
-  - Daily login rewards
-  - Achievement systems
-  - Leaderboards
-```
+(Packages « vSro Automatic Events : Trivia, Kill The GM, HnS, Lucky Party » vendus/partagés sur elitepvpers ; événements documentés sur les serveurs Cyper, Legion, DuckRoad, ExaySRO, etc.)
 
 ---
 
-## 🏆 Hall of Fame des Events
+## 📅 Calendrier Type Annuel
 
-### Rewards les Plus Chers
+Basé sur les événements attestés (iSRO Joymax + successeurs officiels Silkroad Forever/Origin) :
 
-```
-1. Seal of Nova A (Egypt Weapon)
-   - Value: 5,000,000,000+ gold
-   - Obtenu via: Legendary drops, Robot Event Gold
+| Période | Event type |
+|---|---|
+| **Janvier - Février** | New Year / **Lunar New Year** (Lucky Letter Collection 2011 ; Star Dust quests sur Origin) |
+| **Février** | **Valentine's** (rate events 200 %, chocolats item mall) |
+| **Mars - Avril** | **Easter Egg Hunt** (œufs + So-Ok) ; events printemps |
+| **Mai** | Labor Day / International Workers' Day (éditions récentes) |
+| **Juin - Août** | **Summer Festival** (events estivaux, boxes) |
+| **Septembre - Octobre** | Mid-Autumn Carnival (éditions récentes) ; **Halloween** (mi-oct. → début nov.) |
+| **Novembre** | Daily GM events (nov. 2010), **Joymax Day** (20 nov.), rate events 100 % EXP/SP (nov.-déc. 2011) |
+| **Décembre - Janvier** | **Holiday Season / Christmas** (Jewel Boxes, Snowman, flocons), Ice Festival, New Year |
 
-2. Dragon Mount
-   - Value: 3,000,000,000 gold
-   - Obtenu via: Robot Event rares
-
-3. 13D SUN Weapon
-   - Value: 2,000,000,000 gold
-   - Obtenu via: Unique drops, Robot Event
-
-4. Permanent Skill Point Ticket
-   - Value: Priceless (invaluable)
-   - Obtenu via: Legendary events ( très rare)
-```
-
-### Events les Plus Populaires (Historique)
-
-```
-1. Christmas 2008
-   - Événement légendaire
-   - Massive participation
-   - Rewards exceptionnels
-
-2. Halloween 2010
-   - Introduction Pumpkin King
-   - Drops incroyables
-   - Community record
-
-3. Black Friday 2022 (SRO Mobile)
-   - 50% Silk discount
-   - Records ventes
-   - Server full capacity
-
-4. Job Temple Introduction
-   - Nouveau permanent event
-   - Révolution pour job players
-   - Très populaire至今
-```
+Rendez-vous PvP/PvE récurrents quotidiens-hebdo (successeurs officiels) : Guild Boss, Guild Arena, Unique Boss à heures fixes, Job/TEMP War, événements cross-server type Glory Race.
 
 ---
 
-## 🎯 Conseils Finaux
+## 🕰️ Historique Chronologique
 
-### Pour Bénéficier au Maximum des Events
-
-```
-1. Être Informé
-   - Lire les annonces d'events
-   - Suivre les forums
-   - Rejoindre une guilde active
-
-2. Être Préparé
-   - Avoir du gold pour acheter
-   - Inventaire vide
-   - Consommables prêts
-
-3. Participer Activement
-   - Faire toutes les quêtes
-   - Farmer les monsters
-   - Rejoindre les events GM
-
-4. Être Stratégique
-   - Vendre au bon moment
-   - Acheter au bon moment
-   - Accumuler pour le long terme
-
-5. S'Amuser
-   - Events sont pour le fun!
-   - Communautaire avant tout
-   - Profiter de l'ambiance
-```
+| Année | Faits d'events vérifiés |
+|---|---|
+| **2007** | Events Christmas + Fortress War launch (GamesIndustry) |
+| **2008** | Halloween Jewel Boxes ; Legend III Plus Holiday Season ; Valentine's annoncée ; **Easter Egg Hunt** ; annonce pets Item Mall (Cat/Penguin/Tiger/Rhino) |
+| **2009** | Valentine's **200 % EXP/drop week-ends** + chocolats ; Halloween « Bombs on your face » ; GM Activity Expansion (screenshots) |
+| **2010** | **Daily GM events** (nov.) dont **Rise of the Uniques** ; **Ice Festival Jewel Box** ; Easter 2010 ; guild CTF Battle Arena (mars 2011 pour la première trace) |
+| **2011** | **New Year : 4 global events** jusqu'au 15 mars (Lucky Letter Collection) ; **Battle Arena** active ; Halloween event (8-15 nov.) ; **100 % EXP/SP Event** (15 nov. – 13 déc.), 50 % SP event, Attendance |
+| **2012** | Premier **Joymax Day** (20 nov.) ; montée des serveurs privés vSRO et de leurs events custom |
+| **2013-2016** | Era des serveurs privés : Lucky Box, Trivia, Kill GM, Survival Arena deviennent standards ; iSRO continue les events saisonniers (annonces éparses) |
+| **2020+** | Silkroad Origin Mobile / SRO Forever : événements saisonniers quotidiens (Lunar New Year, Champion Festival, Summer Festival, Mid-Autumn), tournois (Desert King), cross-server Hall of Fame (Glory Race), Guild Boss/Arena quotidiens, event pass |
 
 ---
 
-*Bonne chance et profitez bien des events!*
+## 🎯 Stratégies et Économie
+
+### Maximiser les events
+1. **Rate events** : concentrer le leveling/SP farming et l'ouverture de stacks d'items sur les fenêtres +100/+200 %.
+2. **Events items** : farmer intensivement les monstres pendant l'event (les boxes droppent sur tout tueur de mobs) ; vérifier l'**Item Storage** du site officiel après distribution.
+3. **Rise of the Uniques / Unique Events** : se positionner à l'avance aux spawns, party complète, res scrolls prêts.
+4. **Battle Arena** : participer même en perdant (Arena Coins attribuées aux deux camps).
+5. **Attendance** : connexion quotidienne pendant la fenêtre de l'event.
+
+### Effet sur le marché
+- Pendant un event : afflux d'items d'event et de gold → prix des items d'event élevés au début.
+- Après l'event : saturation → chute des prix (les boxes/consommables d'event perdent 50-90 % de valeur).
+- Les **récompenses rares uniques** (pets d'event, avatars, Devil Spirit) conservent leur valeur longtemps.
+- Arbitrage classique : stocker les consommables d'event pendant l'event, revendre quand l'offre se tarit.
 
 ---
 
-*Dernière mise à jour: 20 Janvier 2026*
+## ❓ FAQ
 
-*Sources: SRO Mobile News, Community Guides, Event Announcements*
+**Q : Existe-t-il un « Robot Event » permanent sur iSRO ?**
+R : Non — aucune trace officielle. Les équivalents permanents réels sont **Battle Arena, Magic Pop, Job Temple, Forgotten World, Fortress War**.
+
+**Q : Qui est So-Ok ?**
+R : Le NPC d'event qui apparaît en ville pendant les événements pour échanger les items collectés (Jewel Boxes, lettres, œufs, flocons...) contre des cadeaux.
+
+**Q : Les events saisonniers avaient-ils des boss dédiés (Grinch, Pumpkin King) ?**
+R : Non, pas d'annonces officielles retrouvées. Le format réel : monstres normaux qui droppent des boxes + parfois des **event monsters** thématiques (Snowman, lapins de Pâques) — pas de boss scénarisés.
+
+**Q : Les Arena Coins se gagnent-elles même en perdant ?**
+R : Oui, les deux camps reçoivent des coins (les vainqueurs davantage).
+
+**Q : Les bonus 200 % EXP existaient-ils vraiment ?**
+R : Oui : Valentine's 2009 = 200 % EXP et 200 % drop chaque week-end de février (IGN).
+
+**Q : Comment les serveurs privés distribuent-ils du silk gratuit ?**
+R : Mécaniques custom : silk/heure en ligne, events automatiques (Trivia, Lucky Party), classements d'uniques, giveaways Discord/Facebook.
+
+---
+
+## ⚠️ Incertitudes / Données Manquantes
+
+- **Dates exactes des events pré-2008** : les pages joymax.com d'origine ont disparu ; seules les reprises presse (IGN, GamesIndustry, MMORPG.com) subsistent.
+- **Tables de loot exactes** des Jewel Boxes / Lucky Letters / Easter Eggs : jamais publiées officiellement, variables par édition.
+- **Battle Arena : date d'introduction précise** (update Legend de 2011) : première trace documentée = event guilde CTF du 27 mars 2011 ; le patch exact n'est pas confirmé.
+- **Event « Monkey » / « Bunny » spécifiques** : le « Monkey event » demandé n'est pas documenté comme event iSRO (le singe = pickup pet Myowon) ; le « Bunny » n'apparaît que comme monstre d'Easter sur serveurs privés récents. Le trio Bunny/Rooster/Monkey cité dans d'anciens docs est marqué inexistant dans `15_UNIQUE_BOSSES.md`.
+- **« Go Silkroad »** : aucun event de ce nom retrouvé dans les archives — probablement confusion.
+- **Taux exacts du Magic Pop** : jamais publiés (probabilités internes).
+- **Job Temple officiel vs privé** : les drops en coins (or/argent/fer/cuivre) sont documentés côté serveurs privés fidèles aux fichiers vSRO ; la table exacte iSRO peut différer.
+
+---
+
+## 🔗 Sources
+
+- IGN — Celebrate Halloween with Silkroad Online (2008) : https://www.ign.com/articles/2008/10/28/celebrate-halloween-with-silkroad-online
+- IGN — Holiday Season / Legend III Plus (2008) : https://www.ign.com/articles/2008/12/16/joymax-celebrates-the-holiday-season-in-silkroad-online-with-the-legend-iii-plus-update
+- IGN — Valentine's Day 2009 : https://www.ign.com/articles/2009/02/11/valentines-day-comes-early-to-fantasy-mmorpgs-silkroad-online-and-deco-online
+- IGN — Joymax Begins Hosting Daily In-Game Events (2010) : https://www.ign.com/articles/2010/11/19/joymax-begins-hosting-daily-in-game-events-for-silkroad-online
+- IGN — Four Global Events / Lucky Letter Collection (2011) : https://www.ign.com/articles/2011/01/25/joymax-kicks-off-the-new-year-with-four-global-events-for-silkroad-online
+- MMORPG.com — Daily In-Game Events / Rise of the Uniques : https://www.mmorpg.com/news/daily-in-game-events-2000073109
+- GamesIndustry.biz — Silkroad Online Introduces New Features (2007) : https://www.gamesindustry.biz/silkroad-online-introduces-new-features
+- GamesIndustry.biz — Easter Egg Hunt (2008) : https://www.gamesindustry.biz/silkroad-online-easter-egg-hunt-gets-under-way
+- GamesIndustry.biz — Daily Game Master Events (2010) : https://www.gamesindustry.biz/silkroad-online-daily-game-master-events-get-under-way-in-joymax-s-mmorpg
+- Silkroad Forums — Changes Joymax announced (events 2011) : http://www.silkroadforums.com/viewtopic.php?f=2&t=130200
+- Silkroad Forums — Magic Pop (subscription cards) : http://www.silkroadforums.com/viewtopic.php?f=2&t=114649
+- Silkroad4Arab — Halloween Event 2011 : https://www.silkroad4arab.com/vb/showthread.php?t=394089
+- Silkroad Forums — Joymax Day 2012 : http://www.silkroadforums.com/viewtopic.php?f=1&t=132589
+- Blog archive princessjane25 (events 2010-2012) : https://princessjane25.wordpress.com/category/silkroad-online-events/
+- So-Ok Attendance Event (archive) : https://silkroadeventsoko.weebly.com/
+- SRO Valkyria — [Beginner Guide] Battle Arena : http://srovalkyria.blog.fc2.com/blog-entry-50.html
+- International SRO Forum — Battle Arena : https://international-sro.forumotion.com/t4475-battle-arena
+- Elitepvpers — How does Battle Arena work in KSRO (Honor Points) : https://www.elitepvpers.com/forum/silkroad-online/391461-how-does-battle-arena-works-ksro.html
+- Facebook officiel Silkroad — New Magic Pop Rewards : https://www.facebook.com/officialsilkroad/photos/new-magic-pop-rewards-magic-pop-has-never-been-this-exciting-give-your-character/10152035454918549
+- YouTube — NPC Magic POP Guide Gori iSRO 2017 : https://www.youtube.com/watch?v=hfXkyaYq7SY
+- ExaySRO Wiki — Job Temple Unique Guide : https://forum.exaysro.com/showthread.php?tid=3875
+- RaGEZONE — [DEVELOPMENT] So-Ok events (Jewel Box) : https://forum.ragezone.com/threads/development-so-ok-events.839111/
+- Cyper Online — Lucky Box Event (So-Ok) : https://sro.cypergames.com/gameinfo/gameevents/luckyboxevent
+- Legion SRO — Christmas Rudolph / Santa Bags : https://lsro.eu
+- YouTube — vSro Automatic Events (Trivia, Kill The GM, HnS, Lucky Party) : https://www.youtube.com/watch?v=e968RnQsaZw
+- YouTube — Silkroad Easter Event 2010 : https://www.youtube.com/watch?v=F_EMnGbdtdw
+- YouTube — Christmas Event Snow Flakes : https://www.youtube.com/watch?v=HPC4x0G0Bl4
+- DuckRoad SRO — events serveur privé (silk/h, unique ranking) : https://www.facebook.com/DuckRoadSRO/posts/1468391575302631
+- Silkroad Origin Mobile — News/Events : https://sromobile.com/en/news/events
+- Silkroad Origin Mobile — Christmas Event : https://sromobile.com/en/news/events/christmas-event
+- Silkroad Origin Mobile — Lunar New Year Festival : https://sromobile.com/en/news/events/lunar-new-year-festival
+
+---
+
+*Dernière mise à jour : 1er octobre 2026*
+
+*Sources : annonces Joymax archivées (IGN, GamesIndustry.biz, MMORPG.com), silkroadforums, silkroad4arab, wikis communautaires — voir section Sources.*

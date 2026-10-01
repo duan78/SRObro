@@ -1,14 +1,20 @@
 # Guild System
 
+> Système de guilde de Silkroad Online (client PC classique / iSRO). Document enrichi par recherche web (wikis, forums communautaires 2007-2010, données vSRO). Les chiffres marqués ⚠️ sont sujets à variation selon les versions et serveurs privés.
+
 ## 📋 Table des Matières
 - [Vue d'Ensemble](#-vue-densemble)
 - [Créer une Guilde](#-créer-une-guilde)
-- [Guild Levels et Powers](#-guild-levels-et-powers)
+- [Niveaux de Guilde (1-5) et Guild Points](#-niveaux-de-guilde-1-5-et-guild-points)
+- [Rangs, Droits et Gestion](#-rangs-droits-et-gestion)
 - [Guild Storage](#-guild-storage)
-- [Union System](#-union-system)
-- [Guild Chat et Gestion](#-guild-chat-et-gestion)
-- [Fortress Ownership](#-fortress-ownership)
+- [Emblème de Guilde et d'Union](#-emblème-de-guilde-et-dunion)
+- [Union System (Alliances)](#-union-system-alliances)
+- [Guild Penalty (Délai de Ré-engagement)](#-guild-penalty-délai-de-ré-engagement)
 - [Guild Wars](#-guild-wars)
+- [Fortress Ownership](#-fortress-ownership)
+- [Données Techniques (vSRO)](#-données-techniques-vsro)
+- [Tips pour Guild Masters](#-tips-pour-guild-masters)
 - [FAQ](#-faq)
 - [Resources](#-resources)
 
@@ -16,14 +22,15 @@
 
 ## 🏛️ Vue d'Ensemble
 
-Le système de **guilde** de Silkroad Online permet aux joueurs de se regrouper, de partager des ressources, et de participer à des events de groupe comme les Fortress Wars.
+Le système de **guilde** de Silkroad Online permet aux joueurs de se regrouper, de partager des ressources (storage), de former des **unions** (alliances de guildes) et de participer aux **Fortress Wars**, le PvP de masse du jeu.
 
 ### Points Clés
-- ✅ **Création:** Level 20+, 500,000 gold
-- ✅ **Guild Storage:** Espace de stockage partagé
-- ✅ **Union:** Alliance entre guildes
-- ✅ **Fortress Wars:** Guilde vs guilde (300 players!)
-- ✅ **Social:** Chat de guilde, communauté
+- ✅ **Création:** Niveau 20+, 500 000 gold (iSRO classique) auprès du Guild Manager NPC
+- ✅ **5 niveaux de guilde** (pas plus!) — de 15 à 50 membres
+- ✅ **Guild Points (GP):** 1 SP gagné par un membre = 1 GP
+- ✅ **Guild Storage:** débloqué au niveau 2 de guilde
+- ✅ **Union:** alliance de jusqu'à 8 guildes (≈400 joueurs)
+- ✅ **Fortress War:** contrôle d'une forteresse + taxes de la zone
 
 ---
 
@@ -31,73 +38,103 @@ Le système de **guilde** de Silkroad Online permet aux joueurs de se regrouper,
 
 ### Requirements
 
-**Level Minimum:** 20
-
-**Gold:** 500,000 (sur iSRO)
-
-**Location:** Guild Manager NPC dans les villes principales
+| Condition | Valeur (iSRO classique) |
+|-----------|------------------------|
+| **Niveau du personnage** | 20+ |
+| **Coût** | 500 000 gold (certaines sources/wikis citent 1 000 000 ⚠️ divergence selon versions) |
+| **Où** | Guild Manager NPC dans les villes principales |
+| **Nom** | Unique sur tout le serveur |
 
 ### Process
 
 1. Allez au **Guild Manager NPC**
 2. Choisissez "Create Guild"
 3. Entrez le nom de la guilde
-4. Payez 500,000 gold
-5. Votre guilde est créée!
+4. Payez le fee
+5. Le créateur devient automatiquement **Guild Master**
 
 ### Naming Rules
 
-- **Length:** 2-16 characters
-- **No spaces:** Use underscores or no spaces
-- **No special characters:** Letters and numbers only
-- **Unique name:** Deux guildes ne peuvent pas avoir le même nom
+- Nom **unique** à l'échelle du serveur
+- Règles usuelles : lettres/chiffres, pas de caractère spéciaux (⚠️ longueur exacte non documentée officiellement)
 
 ### First Steps
 
-Après création:
-- Invitez des membres
-- Set the guild announcement
-- Configurez les permissions
-- Start building reputation!
+Après création (guilde **niveau 1**, 15 membres max):
+- Invitez des membres (l'invité doit être niveau 20+ ⚠️ couramment rapporté)
+- Définissez la notice / l'intro de guilde
+- Configurez les permissions (inviter, storage, etc.)
+- Accumulez des GP (grind des membres) pour monter la guilde en niveau
 
 ---
 
-## 📈 Guild Levels et Powers
+## 📈 Niveaux de Guilde (1-5) et Guild Points
 
-### Guild XP
+### ⚠️ Correction importante
+Le niveau maximum d'une guilde sur Silkroad Online classique est **5** (pas 20+ comme parfois affirmé). Les guildes « level 20+ » n'existent pas sur iSRO ; certains serveurs privés ont étendu la table.
 
-**Comment gagner:**
-- Guild members killing monsters
-- Completing quests
-- Job activities
-- Fortress Wars
+### Guild Points (GP)
 
-### Guild Levels
+**Comment gagner des GP:**
+- Chaque membre qui tue des monstres : **1 Skill Point (SP) gagné = 1 GP** pour la guilde (source: StrategyWiki)
+- Participation aux Fortress Wars
+- Activités des membres (jobs, etc.)
 
-**Level 1 (Début):**
-- Max members: 20
-- Basic storage: 1 slot
+**Utilisation des GP:**
+- Payer les **montées de niveau** de la guilde (avec le gold)
+- Acheter des **guild skills / abilities** (bonus passifs pour les membres, ex: bonus d'EXP) ⚠️ mentionné par le wiki Fandom, peu documenté ailleurs
 
-**Level 5:**
-- Max members: 30
-- Storage: 5 slots
+### Table des Niveaux (iSRO classique, source Elitepvpers/Silkroad Forums)
 
-**Level 10:**
-- Max members: 40
-- Storage: 10 slots
+| Niveau guilde | GP requis (cumulés) | Gold requis | Membres max | Débloque |
+|---------------|--------------------|-------------|-------------|----------|
+| **Level 1** | — | 500 000 (création) | **15** | Base |
+| **Level 2** | 5 400 | ~3 000 000 | **20** | **Guild Storage**, création d'Union |
+| **Level 3** | 50 400 | ~9 000 000 | **25** | — |
+| **Level 4** | 135 000 | ~15 000 000 | **35** | — |
+| **Level 5** | ~370 000–380 000 | ~25 000 000 | **50** | **Emblème d'Union**, Union Message |
 
-**Level 20+ (Advanced):**
-- Max members: 50+
-- Storage: 20+ slots
-- **Fortress War eligible!**
+**Coût total approximatif L1→L5:** ~52,5M gold + ~380k GP (un post Silkroad Forums cite ~48,5M gold au total ⚠️ léger écart selon périodes/serveurs).
 
 ### Guild Powers
 
-**Plus votre guilde est high level:**
-- Plus de membres possibles
-- Plus de storage
-- Access au Fortress War
-- Reputation server-wide
+Plus votre guilde est haut niveau:
+- Plus de membres (15 → 50)
+- Guild Storage accessible
+- Union (alliance) + emblème d'union au L5
+- Meilleure crédibilité pour recruter et pour les Fortress Wars
+
+---
+
+## 👑 Rangs, Droits et Gestion
+
+### Hiérarchie
+
+Le guild window (touche **G**) gère tout. La structure de base :
+
+| Rang | Description |
+|------|-------------|
+| **Guild Master** | Chef unique. Tous les droits : inviter/exclure, rangs, storage, taxes (si forteresse), déclaration de guerre, transfert du leadership |
+| **Officers** | Nommés par le GM. Droits configurables (inviter, gérer le storage selon permissions) |
+| **Members** | Accès de base + storage si autorisé |
+
+⚠️ La communauté rapporte aussi des grades internes attribuables par le GM : *initiate, member, veteran, elite, officer* (utilisés comme titres hiérarchiques) — et le GM peut donner des **titres personnalisés** aux membres.
+
+### Guild Chat
+
+- Préfixe **@** devant le message (ex: `@Rendez-vous à Hotan pour la FW!`)
+- Canal **Union chat** séparé (préfixe **@@** ⚠️ non confirmé) pour toutes les guildes de l'union
+
+### Guild Notice / Intro
+
+- Le GM définit un **message de guilde** (notice) et une **intro** de guilde
+- Visible par les membres (à la connexion / dans le window guilde)
+
+### Autres Droits du GM
+
+- Transférer le leadership à un autre membre
+- Dissoudre la guilde
+- Gérer les taxes de forteresse (si la guilde possède une forteresse)
 
 ---
 
@@ -105,197 +142,130 @@ Après création:
 
 ### Qu'est-ce que c'est?
 
-**Guild Storage** est un espace de stockage partagé entre tous les membres de la guilde.
+**Guild Storage** = entrepôt partagé entre les membres de la guilde.
 
-**Accès:**
-- Guild Manager NPC
-- "Guild Storage" option
+**⚠️ Correction:** le Guild Storage se débloque au **niveau 2** de la guilde (pas niveau 1).
 
-### Slots
+### Accès
+- Via le **Guild (Storage) NPC** en ville
+- Le Guild Master attribue les permissions par membre/rang (lecture seule, dépôt, retrait)
 
-**Per Guild Level:**
-- Level 1-5: 1-5 slots
-- Level 6-10: 6-10 slots
-- Level 11-20: 11-20 slots
-- Level 20+: 20+ slots
+### Usage
+- Partager items et équipement entre membres
+- Trésorerie de guilde (items de valeur)
+- Stocker les **scrolls d'Union Party** (obtenables via ce NPC)
 
-**Usage:**
-- Share items entre membres
-- Store valuable items
-- Guild treasury (gold, rare items)
+⚠️ Le nombre exact de slots par niveau de guilde n'est pas documenté de façon fiable (les anciens tableaux « 1-20 slots » circulant sur le web ne sont pas sourcés).
 
-### Permissions
-
-**Guild Master:**
-- Full access
-- Can give/take anything
-
-**Members:**
-- Access limited by GM settings
-- Can be "view only" or "full access"
-
-**Security:**
-- Trust is key!
-- Don't give access to everyone
+### Security
+- Ne donnez pas le retrait à tout le monde — le vol de storage est un classique
+- Les logs de storage sont inexistants côté client : la confiance est la seule protection
 
 ---
 
-## 🤝 Union System
+## 🎨 Emblème de Guilde et d'Union
+
+- **Guild mark/emblème:** image **16x16 pixels** (bitmap) uploadée par le Guild Master, affichée à côté du nom des membres
+- **Emblème d'Union:** nécessite guilde **niveau 5**, coûte ~**30 000 GP + 2 000 000 gold** (source: guide Silkroad Forums « Union & Guild Emblem »); enregistrable/supprimable seulement au L5 (avec l'**Union Message**)
+
+---
+
+## 🤝 Union System (Alliances)
 
 ### Qu'est-ce qu'une Union?
 
-**Union** est une alliance entre plusieurs guildes.
+**Union** = alliance entre plusieurs guildes (jusqu'à **8 guildes**).
+
+⚠️ **Correction:** une union, c'est 8 guildes max — soit 8 × 50 = **400 joueurs** potentiels au maximum (guildes L5). Les guildes membres partagent le canal union et combattent ensemble en Fortress War.
 
 ### Benefits
 
-**Shared Chat:**
-- "Union Chat" pour toutes les guildes alliées
-- Communication facilitée
+**Union Chat:**
+- Canal de chat commun à toutes les guildes de l'union
+- Coordination Fortress War / trades / job wars
 
-**Shared Fortress War:**
-- All guildes in the Union fight together
-- Coordinate attacks/defense
+**Fortress War partagée:**
+- Les guildes de l'union se battent ensemble (attaque ou défense)
+- La guilde occupante peut inclure ses alliés (les guildes alliées de l'occupant **ne peuvent pas s'inscrire comme attaquantes**)
 
-**Social:**
-- Larger community
-- More players to party with
+### Créer une Union
 
-### Creating a Union
+| Étape | Détail |
+|-------|--------|
+| 1 | La guilde doit pouvoir créer une union (⚠️ sources communautaires : dès le **niveau 2** de guilde ; d'autres disent L5 — non confirmé officiellement) |
+| 2 | Le Guild Master invite d'autres guildes |
+| 3 | Le chef de guilde invitée accepte (vote du leader, pas des membres) |
+| 4 | Le fondateur devient **Union Leader** |
 
-**Requirements:**
-- Level 5+ guild
-- Guild Master approval
-- Other guildes must accept
-
-**Process:**
-1. Your guild must be Level 5+
-2. Invite other guildes to join
-3. They accept
-4. Union formed!
-
-**Max Guildes in Union:**
-- Généralement 8 guildes maximum
-- 8 x 50 members = 400 players maximum!
+**Gestion:**
+- Seul l'Union Leader peut **expulser** une guilde de l'union
+- Une guilde ne peut appartenir qu'à une seule union
+- L'union est dissoute si la guilde leader se dissout / quitte ⚠️ comportement rapporté par la communauté
 
 ---
 
-## 💬 Guild Chat et Gestion
+## ⏳ Guild Penalty (Délai de Ré-engagement)
 
-### Guild Chat
+⚠️ Mécanique souvent oubliée mais bien documentée par la communauté :
 
-**Comment utiliser:**
-- Type "@" before your message
-- Ex: "@Hey everyone, let's do Fortress War!"
+| Situation | Pénalité |
+|-----------|----------|
+| **Quitter volontairement** (via Guild Manager NPC) | **3 jours** avant de pouvoir rejoindre/créer une guilde |
+| **Être kické en ligne** (online) | **3 jours** |
+| **Être kické hors-ligne** (offline) | **Aucune pénalité** |
 
-**Purpose:**
-- Communication guild-wide
-- Coordinate parties
-- Announce events
-
-### Guild Management
-
-**Guild Master Powers:**
-- Invite/Kick members
-- Promote members to officers
-- Change guild announcement
-- Manage permissions
-- Declare guild wars
-
-**Officers:**
-- Can invite members
-- Some limited powers
-
-**Members:**
-- Basic access
-- Can use guild storage (if permitted)
-
-### Guild Announcement
-
-**Setting:**
-- Guild Master peut set un message
-- Visible to all members when they log in
-
-**Uses:**
-- Announce events
-- Remind of Fortress War time
-- Important information
-
----
-
-## 🏰 Fortress Ownership
-
-### Qu'est-ce que Fortress War?
-
-**Fortress War** est un event massif PvP où des guildes se battent pour le contrôle d'une fortress.
-
-**Participants:**
-- Jusqu'à 300 players per side!
-- 2-3 guildes vs 2-3 other guildes
-- Massive battles
-
-**Schedule:**
-- Généralement samedi
-- Heure fixe (ex: 20:00 server time)
-- 1-2 hours duration
-
-### Benefits de Fortress Ownership
-
-**Pour la Guilde Propriétaire:**
-- **Tax income:** Tous les trades dans la zone sont taxés
-- **Spawn point:** Spawn dans la fortress
-- **Prestige:** Reputation sur le serveur
-- **Rewards:** Items, gold, etc.
-
-**Tax Income:**
-- Les traders dans la zone paient une taxe à la guilde
-- Peut être énorme!
-- Ex: 10% de tous les trades dans la zone
-
-**Daily Income:**
-- 10M-100M+ gold per day (selon la zone)
-- Shared entre les membres de la guilde
-
-**Distribution:**
-- Guild Master décide comment distribuer
-- Peut être:
-  - Equal split
-  - Based on contribution
-  - Guild fund
+> Astuce communautaire : pour éviter la pénalité, se faire exclure pendant qu'on est déconnecté.
 
 ---
 
 ## ⚔️ Guild Wars
 
-### Declaration
+### Déclaration
 
-**Comment declarer une guerre:**
-- Guild Master → Guild Manager → "Declare War"
-- Sélectionnez la guilde cible
-- Payez le fee (variable)
+La guilde peut entrer en **hostilité déclarée** avec une autre guilde (via l'interface de guilde, à l'initiative du Guild Master).
 
-**Types de Wars:**
-1. **Friendly War:** Combat pour le fun
-2. **Serious War:** Guerre totale
+⚠️ **Incertitudes:** les détails exacts du système de guild war classique (fee de déclaration, durée fixe 24/48/72h, mécanique d'acceptation par la cible) ne sont **pas documentés de manière fiable** par les sources disponibles. Les guides génériques (GuildOrder) confirment seulement le concept de « declared hostility » modifiant les interactions en monde ouvert. À re-vérifier si des archives du site officiel Joymax refont surface.
 
-**Duration:**
-- 1-7 days
-- Set lors de la déclaration
+### Pendant la Guerre (comportement attendu)
 
-### Pendant la Guerre
+- Les membres des guildes en guerre peuvent s'attaquer **sans pénalité de meurtrier (murderer status)**
+- Le conflit continue en dehors de toute fenêtre programmée — affecte trades et activités des membres
+- Implique souvent les unions entières (« union war »)
 
-**Rules:**
-- Members of warring guildes can fight each other anywhere
-- Even in safe zones (selon le server)
-- No penalty pour les kills
+### Fin de la guerre
 
-**Benefits:**
-- Pride and glory
-- Bragging rights
-- Fun PvP
+- Fin de durée / abandon (« se rendre ») — conditions exactes non documentées ⚠️
 
-**Ending:**
-- Après la durée fixée
-- Ou si une guilde se rend
+---
+
+## 🏰 Fortress Ownership
+
+### Lien direct
+
+Voir le fichier dédié : [19_FORTRESS_WAR.md](19_FORTRESS_WAR.md)
+
+### Résumé des bénéfices pour la guilde propriétaire
+
+| Bénéfice | Détail |
+|----------|--------|
+| **Taxes** | Taux réglable de **-20% à +20%** appliqué aux achats NPC, stalls et téléports de la zone ; taux fixé chaque **samedi**, notifié à 00:01 le dimanche |
+| **Taux réduits alliés** | Guilde occupante + union bénéficient de taux entre -20% et 0% dans leur propre zone |
+| **NPC de forteresse** | Embauche d'un fortress administrator (production d'items de siège, entraînement de transports) |
+| **Spawn** | Point de retour/résurrection pratique dans la forteresse |
+| **Prestige** | Réputation serveur-wide |
+
+⚠️ Les estimations de revenus « 10M-100M+/jour » circulant dans les anciens guides ne sont pas sourcées : cela dépend totalement de l'économie du serveur et de la zone taxée.
+
+---
+
+## 🔧 Données Techniques (vSRO)
+
+Pour les émulateurs / serveurs privés (utile au projet SRObro) :
+
+- **Capacité par niveau** : sur les fichiers vSRO 1.188, la limite de membres n'est **pas dans une table éditable** — elle est imposée dans les stored procedures du shard (ex: `_GuildMember_Add`), avec un miroir côté client (patch OllyDbg nécessaire pour l'affichage)
+- **Union** : désactivable via T-SQL dans les mêmes procédures
+- **Tables principales** : `_Guild`, `_GuildMember`, `_AlliedClans` (union)
+- Références : threads RaGEZONE « Easiest Way to Limit Guild Member and Disable Guild Union (T-SQL vSRO 1.188) », Elitepvpers « vSro Guild user Limit [Query] », « Ollydbg Guild Limit »
 
 ---
 
@@ -304,66 +274,80 @@ Après création:
 ### Recruitment
 
 **Où recruter:**
-- Global chat: "LFG [Guild Name], level 20+ active guild"
-- Forums: Server forums
-- Friends: Ask friends to join
+- Global chat : « LFG [Guild Name], level 40+ active guild »
+- Party Matching (visibilité pendant le grind)
+- Forums / Discord du serveur
 
-**Requirements:**
-- Set level requirements (ex: Level 40+)
-- Activity requirements (ex: Must play X hours/week)
-- Language requirements (ex: English-speaking)
+**Requirements typiques:**
+- Niveau minimum (ex: 40+)
+- Activité (heures/semaine)
+- Langue commune
 
 ### Management
 
-**Leadership:**
-- Be fair
-- Listen to members
-- Make decisions for the guild, not yourself
-
-**Conflict Resolution:**
-- Mediate disputes
-- Kick toxic members
-- Keep the peace
-
-**Events:**
-- Organize guild events
-- Unique hunting parties
-- Fortress War practice
-- Job nights
+- **GP d'abord:** faites grind vos membres — le L5 (370k+ GP) est long
+- **Planifiez le gold:** ~52M gold cumulés pour L1→L5, souvent financés par les membres / le storage
+- **Ne donnez pas le retrait storage** aux nouveaux membres
+- **Pensez union:** 8 guildes coordonnées = victoire en Fortress War
 
 ---
 
 ## ❓ FAQ
 
 ### Q: Combien de membres une guilde peut-elle avoir?
-**R:** Ça dépend du level de la guilde. Level 1 = 20 members max, Level 20+ = 50+ members.
+**R:** 15 au niveau 1, jusqu'à **50 au niveau 5** (maximum sur iSRO classique).
 
-### Q: Puis-ai-ai être dans plusieurs guildes?
-**R:** Non, vous ne pouvez être que dans une seule guilde à la fois.
+### Q: Quel est le niveau max d'une guilde?
+**R:** **5.** Il n'y a pas de niveau de guilde au-delà (les guildes « level 10/20 » n'existent que sur certains serveurs privés modifiés).
 
-### Q: Les guildes sont-elles permanentes?
-**R:** Oui, tant que la guilde a des membres et paye les fees (s'il y en a).
+### Q: Comment gagne-t-on des Guild Points?
+**R:** Principalement par le grind des membres : chaque SP gagné en tuant des monstres donne 1 GP à la guilde.
 
-### Q: Puis-ai-ai quitter une guilde?
-**R:** Oui, vous pouvez quitter à tout moment via le Guild Manager NPC.
+### Q: Quand le Guild Storage se débloque-t-il?
+**R:** Au **niveau 2** de la guilde, via le Guild NPC, avec permissions gérées par le GM.
+
+### Q: Puis-je être dans plusieurs guildes?
+**R:** Non, une seule guilde (et une seule union) à la fois.
+
+### Q: Que se passe-t-il si je quitte ma guilde?
+**R:** 3 jours de pénalité avant de pouvoir rejoindre ou créer une guilde — sauf si vous êtes exclu pendant que vous êtes hors-ligne (aucune pénalité).
 
 ### Q: Le Guild Master peut-il être changé?
-**R:** Oui, le GM actuel peut transférer le leadership à un autre membre.
+**R:** Oui, le GM peut transférer le leadership à un autre membre.
+
+### Q: Combien de guildes dans une union?
+**R:** Jusqu'à **8 guildes**. L'emblème et le message d'union nécessitent une guilde leader de niveau 5.
 
 ### Q: Les guildes reçoivent-elles des revenus automatiques?
-**R:** Seulement si elles possèdent une Fortress. Sinon, les revenus viennent des contributions des membres.
+**R:** Seulement via la possession d'une forteresse (taxes). Sinon, les revenus viennent des contributions des membres.
 
 ---
 
 ## 🔗 Resources
 
-### Guides
-- [Guild Wiki](https://silkroadonline.fandom.com/wiki/Guild)
-- [Guild System Guide](http://www.silkroadforums.com/viewtopic.php?p=553750)
+### Wikis
+- [Guild - Silkroad Online Wiki (Fandom)](https://silkroadonline.fandom.com/wiki/Guild)
+- [Silkroad Online/Gameplay - StrategyWiki](https://strategywiki.org/wiki/Silkroad_Online/Gameplay)
 
-### Communauté
-- [Silkroad Forums - Guild Section](http://www.silkroadforums.com/)
+### Forums (données chiffrées 2007-2010)
+- [[Guild]Infomation? - Elitepvpers](https://www.elitepvpers.com/forum/silkroad-online/222528-guild-infomation.html) — coûts GP/gold par niveau
+- [What is Guild Storage? - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=7&t=25719)
+- [Guild lvl 5 - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=29&t=112263) — union/emblème
+- [Union & Guild Emblem Guide - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?t=38590)
+- [GUIDE: Union - Elitepvpers](https://www.elitepvpers.com/forum/silkroad-online/2115916-guide-union.html)
+- [Leaving guild penalty - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=29&t=131403)
+
+### Technique (vSRO)
+- [Limit Guild Member / Disable Union (T-SQL vSRO 1.188) - RaGEZONE](https://forum.ragezone.com/threads/easiest-way-to-limit-guild-member-and-disable-guild-union-t-sql-vsro-1-188.1067135)
+- [vSro Guild user Limit [Query] - Elitepvpers](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/3301528-vsro-guild-user-limit-query.html)
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
+## 📚 Voir aussi
+- [Fortress War](19_FORTRESS_WAR.md) — Le PvP de guilde massif
+- [Party System](18_PARTY_SYSTEM.md) — Coordination, Union Party
+- [Système PvP/PK](20_PVP_PK_SYSTEM.md) — Pénalités en monde ouvert
+
+---
+
+*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : guides officiels Joymax traduits, Elitepvpers, Silkroad Forums, RaGEZONE, StrategyWiki, IGN)*

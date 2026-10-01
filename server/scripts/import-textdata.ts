@@ -80,14 +80,24 @@ const ITEM_COLS = {
   objName: 3,
   nameStrId: 5,
   descStrId: 6,
-  typeId1: 8,
-  typeId2: 9,
-  typeId3: 10,
-  typeId4: 11,
-  price: 13,
-  maxStack: 26,
-  bsrPath: 53,
+  // Vérifié empiriquement (inspect): t1=3 équipement, (3,1)=arme, (3,3)=consommable
+  typeId1: 9,
+  typeId2: 10,
+  typeId3: 11,
+  typeId4: 12,
+  // Vérifié: potion HP=60 or, lame degré1=890 or (col 26); col 13 est constant
+  price: 26,
+  maxStack: 16,
+  bsrPath: 52,
   iconPath: 54,
+  // Stats (vérifiées: BLADE_01→21/22, BLADE_05→185/197, SWORD_08→487/521)
+  attackMin: 95,
+  attackMax: 96,
+  attackRatingMin: 63,
+  attackRatingMax: 64,
+  // Consommables: quantité restaurée (HP_POTION_01 → 50) / groupe de cooldown
+  param1: 57,
+  param2: 58,
 };
 
 /**
@@ -201,6 +211,12 @@ function parseItems(rows: string[][]): Map<number, ItemRow> {
       maxStack: num(r[ITEM_COLS.maxStack]),
       bsrPath: r[ITEM_COLS.bsrPath] && r[ITEM_COLS.bsrPath] !== 'xxx' ? r[ITEM_COLS.bsrPath] : null,
       iconPath: r[ITEM_COLS.iconPath] && r[ITEM_COLS.iconPath] !== 'xxx' ? r[ITEM_COLS.iconPath] : null,
+      // Stats officielles (colonnes vérifiées empiriquement)
+      attackMin: num(r[ITEM_COLS.attackMin]) ?? 0,
+      attackMax: num(r[ITEM_COLS.attackMax]) ?? 0,
+      attackRating: num(r[ITEM_COLS.attackRatingMin]) ?? 0,
+      restoreAmount: num(r[ITEM_COLS.param1]) ?? 0,
+      cooldownGroup: num(r[ITEM_COLS.param2]) ?? 0,
       cols: {},
     });
   }

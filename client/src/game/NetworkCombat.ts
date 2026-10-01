@@ -112,6 +112,16 @@ export class NetworkCombat {
   // ============================================
 
   private registerHandlers(): void {
+    // Reconnexion: les entités du serveur précédent sont mortes avec lui —
+    // purger les monstres/cibles fantômes (le snapshot renvoie les vrais).
+    this.network.on('connected', () => {
+      for (const m of this.monsters.values()) { m.root.dispose(); m.proxy.dispose(); }
+      this.monsters.clear();
+      this.clearTarget();
+      for (const it of this.groundItems.values()) it.mesh.dispose();
+      this.groundItems.clear();
+    });
+
     this.network.on('spawn', (data: any) => {
       const d = data?.data?.entityType ? data.data : data;
       if (d?.entityType === 'monster') {
@@ -189,8 +199,17 @@ export class NetworkCombat {
       this.showDeathScreen();
     });
 
-    this.network.on('player:respawned', () => {
+    this.network.on('player:respawned', (data: any) => {
       this.hideDeathScreen();
+      // Téléporter le perso client à la position de résurrection (ville/ici)
+      const d = data?.data ?? data;
+      const player = this.scene.meshes.find((m) => m.name.startsWith('chinaman_'));
+      if (player && d?.position) {
+        const terrain = this.janganZone?.realTerrain;
+        const y = terrain ? terrain.heightAt(d.position.x, d.position.z) : (d.position.y ?? 0);
+        const root = (player.parent ?? player) as { position: { set(x: number, y: number, z: number): void } };
+        root.position.set(d.position.x, y, d.position.z);
+      }
     });
 
     this.network.on('skill_rejected', (data: any) => {
@@ -213,6 +232,35 @@ export class NetworkCombat {
       this.hud.addChatMessage(`Ramassé: ${d?.itemData?.name ?? 'objet'}`, 'system');
       this.removeGroundItem(d?.itemData?.droppedItemId);
     });
+
+    // Visuel de l'arme équipée (phase 3): attache le GLB officiel au perso
+    this.network.onRaw('equipment:weapon', (d: any) => void this.attachWeaponVisual(d));
+  }
+
+  /** Attache/détache le modèle d'arme officiel sur le personnage. */
+  private async attachWeaponVisual(d: { itemCode: string; name: string } | null): Promise<void> {
+    try {
+      const old = this.scene.getTransformNodeByName('equipped_weapon');
+      if (old) { old.dispose(); }
+
+      if (!d) return;
+      // bsr "item\china\weapon\blade_01.bsr" → stem "blade_01" (manifest)
+      const stem = (d.itemCode || '').replace(/\\/g, '/').split('/').pop()?.replace(/\.bsr$/i, '') ?? '';
+      if (!stem) return;
+      const loaded = await this.assetLoader.loadGameObject(stem);
+      if (loaded?.root) {
+        loaded.root.name = 'equipped_weapon';
+        const player = this.scene.meshes.find((m) => m.name.startsWith('chinaman_'));
+        if (player?.parent) {
+          loaded.root.parent = player.parent as any;
+          loaded.root.position.set(0.35, 1.0, 0.1);
+          loaded.root.scaling.setAll(1.0);
+        }
+        this.hud.addChatMessage(`${d.name} équipée`, 'system');
+      }
+    } catch (e) {
+      console.warn('[NetworkCombat] visuel arme non chargé:', e);
+    }
   }
 
   private isLocalPlayerTarget(_d: any): boolean {

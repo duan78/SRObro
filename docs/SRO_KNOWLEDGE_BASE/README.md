@@ -12,13 +12,15 @@ Cette documentation est une **référence complète** couvrant tous les aspects 
 
 ### 📊 Statistiques de la Documentation
 
-- **Fichiers totaux:** 37 fichiers .md
-- **Mots:** ~200,000+ mots
-- **Lignes:** ~25,000+ lignes
-- **Coordonnées:** 500+ emplacements avec coordonnées X/Y précises
-- **NPCs répertoriés:** 130+ NPCs avec positions exactes
-- **Monstres documentés:** 15 Uniques avec spawn locations précises
-- **Dernière mise à jour:** 2025-01-20
+- **Fichiers totaux:** ~80 fichiers .md (+ 127 screenshots)
+- **Mots:** ~180,000+ mots
+- **Lignes:** ~33,000+ lignes
+- **Coordonnées:** 697 NPCs + 161 téléporteurs officiels (données client xSROMap, conversion PosX/PosY)
+- **Items:** 14 318 items du dump _RefItem client (noms/IDs/niveaux)
+- **Monstres documentés:** tous les uniques avec HP client exacts (Tiger Girl → Medusa)
+- **Dernière mise à jour:** 2026-10-01 — **révision majeure par recherche web exhaustive** (~250 requêtes, données inventées remplacées par des données sourcées, voir [CHANGELOG](CHANGELOG.md))
+
+> ⚠️ **Fiabilité :** depuis la révision 2026-10-01, chaque fichier comporte des sections « Resources » avec les URLs sources, et les données non vérifiables sont marquées « non vérifié » plutôt qu'inventées.
 
 ---
 
@@ -137,6 +139,29 @@ Documentation détaillée des villes et données de développement.
 👉 **[SEARCH_INDEX.md](SEARCH_INDEX.md)** - Index alphabétique complet de tous les sujets
 
 **Utilisez Ctrl+F pour trouver rapidement n'importe quel sujet !**
+
+---
+
+### 📸 Screenshots de Référence (NOUVEAU 2026-10-01)
+
+**127 captures officielles du jeu (2003-2026)** classées en 12 thèmes pour servir de référence visuelle au développement SRObro (HUD, villes, monstres, interface, effets) :
+
+| Thème | Contenu |
+|-------|---------|
+| `screenshots/01_villes/` | Cartes officielles + vues de Jangan, Donwhang, Hotan, Samarkand, Constantinople, Alexandrie, captures bêta 2003-2005 |
+| `screenshots/02_uniques/` | Tiger Girl, Uruchi, Isyutaru, Lord Yarkan, Demon Shaitan, Cerberus, Captain Ivy, Medusa, Roc |
+| `screenshots/03_classes_combat/` | Gameplay 2004+, personnages CH/EU, skills |
+| `screenshots/04_interface_ui/` | HUD, inventaire, arbres de compétences |
+| `screenshots/05_jobs_commerce/` | Trades 5★, caravanes, vols |
+| `screenshots/06_fortress_guild/` | Fortress Wars 2016-2026 |
+| `screenshots/07_alchimie_items/` | Enhancements, avatars item mall |
+| `screenshots/08_pets_mounts/` | Loups, évolutions, montures |
+| `screenshots/09_forgotten_world/` | Dimension Holes, collections FGW |
+| `screenshots/10_zones_monstres/` | Bestiaires, cartes de régions |
+| `screenshots/11_pvp/` | Duels, tournois |
+| `screenshots/12_events/` | Events saisonniers 2022-2025 |
+
+👉 **[SCREENSHOTS_INDEX.md](SCREENSHOTS_INDEX.md)** - Index complet avec tailles et URLs sources
 
 ---
 
@@ -388,11 +413,11 @@ Que vous soyez un nouveau joueur découvrant Silkroad Online, un vétéran reven
 
 ---
 
-**Dernière mise à jour:** 2025-01-20
-**Version:** 2.0
-**Fichiers:** 37 documents complets (+16 nouveaux dans cette session)
-**Mots:** ~200,000+ mots de documentation SRO
-**Coordonnées:** 500+ emplacements avec X/Y précis
+**Dernière mise à jour:** 2026-10-01
+**Version:** 3.0 (révision majeure par recherche web exhaustive)
+**Fichiers:** ~80 documents (+127 screenshots officiels)
+**Mots:** ~180,000+ mots de documentation SRO sourcée
+**Coordonnées:** 697 NPCs + 161 téléporteurs officiels avec PosX/PosY
 
 ---
 

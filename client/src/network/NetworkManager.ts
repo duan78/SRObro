@@ -76,7 +76,7 @@ export class NetworkManager {
         this.socket = io(this.url, {
           transports: ['websocket'],
           reconnection: true,
-          reconnectionAttempts: this.maxReconnectAttempts,
+          reconnectionAttempts: Infinity,
           reconnectionDelay: this.reconnectDelay,
         });
 
@@ -88,6 +88,7 @@ export class NetworkManager {
           this.reconnectAttempts = 0;
           this.startHeartbeat();
           this.emit('connected');
+          this.reauthenticate();
           resolve();
         });
 
@@ -118,6 +119,33 @@ export class NetworkManager {
         this.isConnecting = false;
         reject(error);
       }
+    });
+  }
+
+  /** characterId sélectionné (pour ré-auth après reconnexion). */
+  private lastCharacterId: string | null = null;
+
+  rememberCharacter(characterId: string): void {
+    this.lastCharacterId = characterId;
+  }
+
+  /**
+   * Après une REconnexion (le serveur a perdu l'état du socket): reprendre
+   * la session via le token localStorage et re-sélectionner le personnage,
+   * puis redemander l'état du monde. Silencieux si pas de session.
+   */
+  private reauthenticate(): void {
+    if (!this.socket || !this.isConnected) return;
+    const token = localStorage.getItem('srobro_session_token');
+    if (!token) return;
+    this.socket.emit('auth:resume', { token }, (res: { success: boolean }) => {
+      if (!res?.success || !this.lastCharacterId) return;
+      this.socket!.emit('character:select', { characterId: this.lastCharacterId }, (sel: { success: boolean }) => {
+        if (sel?.success) {
+          console.log('[Network] Session ré-authentifiée après reconnexion');
+          this.socket!.emit('world:snapshot', {});
+        }
+      });
     });
   }
 

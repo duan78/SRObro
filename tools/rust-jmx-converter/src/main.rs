@@ -290,14 +290,67 @@ fn convert_ddj(ddj_path: &PathBuf, input_root: &PathBuf, output_root: &PathBuf) 
     if dds.len() < 4 || &dds[0..4] != b"DDS " {
         return Err(anyhow::anyhow!("DDS payload introuvable"));
     }
-    let img = image::load_from_memory_with_format(dds, image::ImageFormat::Dds)?;
-
     let rel = ddj_path.strip_prefix(input_root)
         .unwrap_or_else(|_| ddj_path.as_path());
     let out_path = output_root.join(rel).with_extension("png");
     if let Some(parent) = out_path.parent() {
         std::fs::create_dir_all(parent)?;
     }
+
+    // Icônes SRO: DDS NON compressé 16 bpp (A1R5G5B5 / R5G6B5) — le décodeur
+    // DDS de la crate `image` ne gère que DXT, on décode manuellement via les
+    // masques du pixel format.
+    let u32le = |o: usize| u32::from_le_bytes([dds[o], dds[o + 1], dds[o + 2], dds[o + 3]]);
+    if dds.len() >= 128 {
+        let pf_flags = u32le(80);
+        let bit_count = u32le(88);
+        if pf_flags & 0x40 != 0 && (bit_count == 16 || bit_count == 32) {
+            let width = u32le(16);
+            let height = u32le(12);
+            let mask_r = u32le(92);
+            let mask_g = u32le(96);
+            let mask_b = u32le(100);
+            let mask_a = u32le(104);
+            let shift = |mask: u32| -> (u32, u32) {
+                if mask == 0 { return (0, 0); }
+                let mut s = 0u32;
+                while (mask >> s) & 1 == 0 { s += 1; }
+                let bits = (mask >> s).count_ones();
+                (s, bits)
+            };
+            let (sr, br) = shift(mask_r);
+            let (sg, bg) = shift(mask_g);
+            let (sb, bb) = shift(mask_b);
+            let (sa, ba) = shift(mask_a);
+            let upscale = |v: u32, bits: u32| -> u8 {
+                if bits == 0 { return 0; }
+                let maxv = (1u32 << bits) - 1;
+                (v * 255 / maxv) as u8
+            };
+            let px_count = (width as usize) * (height as usize);
+            let bpp_bytes = (bit_count / 8) as usize;
+            if dds.len() >= 128 + px_count * bpp_bytes {
+                let mut imgbuf = image::RgbaImage::new(width, height);
+                for i in 0..px_count {
+                    let raw: u32 = if bpp_bytes == 2 {
+                        u16::from_le_bytes([dds[128 + i * 2], dds[129 + i * 2]]) as u32
+                    } else {
+                        // 32 bpp: éventuellement A8R8G8B8 — masques génériques
+                        u32::from_le_bytes([dds[128 + i * 4], dds[129 + i * 4], dds[130 + i * 4], dds[131 + i * 4]])
+                    };
+                    let r = upscale((raw & mask_r) >> sr, br);
+                    let g = upscale((raw & mask_g) >> sg, bg);
+                    let b = upscale((raw & mask_b) >> sb, bb);
+                    let a = if mask_a == 0 { 255 } else { upscale((raw & mask_a) >> sa, ba.max(1)) };
+                    imgbuf.put_pixel((i as u32) % width, (i as u32) / width, image::Rgba([r, g, b, a]));
+                }
+                imgbuf.save_with_format(&out_path, image::ImageFormat::Png)?;
+                return Ok(());
+            }
+        }
+    }
+
+    let img = image::load_from_memory_with_format(dds, image::ImageFormat::Dds)?;
     img.save_with_format(&out_path, image::ImageFormat::Png)?;
     Ok(())
 }

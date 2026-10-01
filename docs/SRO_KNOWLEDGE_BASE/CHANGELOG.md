@@ -1,13 +1,42 @@
 # Changelog - Consolidation SRO_KNOWLEDGE_BASE
 
 **Date de création :** 2025-01-20
-**Version :** 2.0
+**Version :** 3.0
 
 ---
 
 ## 📋 Historique des Modifications
 
 Ce document track toutes les modifications apportées à la documentation SRO_KNOWLEDGE_BASE durant la consolidation de 2025.
+
+---
+
+## 🔬 2026-10-01 - Révision Majeure par Recherche Web Exhaustive (Version 3.0)
+
+### Campagne de vérification et d'enrichissement : ~40 fichiers
+
+**Méthode :** 14 campagnes de recherche web parallèles (~250 recherches/fetches au total) sur les wikis (Fandom, StrategyWiki), forums historiques (elitepvpers, silkroadforums, UnKnoWnCheaTs, RaGEZONE), données officielles extraites du client (skills.txt, dump _RefItem 14 318 items, xSROMap 697 NPCs), docs techniques (SilkroadDoc, florian0, pushedx) et archives presse (IGN, GamesIndustry.biz, MMORPG.com).
+
+**Corrections majeures (contenu inventé supprimé/remplacé) :**
+- **Vrais noms de skills iSRO** rétablis partout (CH + EU) depuis skills.txt du client — les anciens fichiers contenaient des skills imaginaires
+- **Formules de dégâts vérifiées** (elitepvpers 412387) : constantes PHY/MAG, balance, crit = 2×PHY + MAG, nukes CH ne critiquent PAS
+- **Taux d'alchimie réels** dépackés de la DB serveur (élixir seul 50/40/30/19/17..., +Lucky Powder → 100/70/50/27/25/20)
+- **Niveaux par degré corrigés** (1D 1-6, 2D 8-13, ..., 11D 101+, ≠ ancien « 10 niveaux/degré »)
+- **Liste fiable des uniques** avec HP réels du client (Tiger Girl 598 720 HP → Medusa 183 M) ; faux uniques supprimés (Bunny, Monkey, Spider Queen, Sekhmet...)
+- **Coordonnées officielles** : 697 NPCs + 161 téléporteurs xSROMap convertis en PosX/PosY via la formule client
+- **Guilde : niveaux 1-5** (pas 1-20), party 2 modes réels (Each Get 4 / Auto Share 8), Fortress War Legend II sourcée
+- **FGW corrigé** : Shipwreck Green Abyss 91-100 / Sea of Resentment 101-110, grades = type de monstres + limite de party, pas de scaling HP
+- **Table XP officielle 1-140** extraite de leveldata.txt ; GAP 9 max utile ; Ong = niveau 34
+- **Jobs** : étoiles = valeur de goods (≠ distance), Thief Town via Gisaeng Yumi, rangs 1-7, taux vérifiés (162% Jangan→Donwhang)
+- **Statut 2026** : jeu toujours en ligne (U1 Interactive), Joymax racheté par Wemade 2010, chronologie caps 60→140
+
+**Nouveaux contenus :**
+- 📸 **127 screenshots officiels** dans `screenshots/` (12 thèmes) + **SCREENSHOTS_INDEX.md**
+- Sections « Incertitudes » dans les fichiers révisés (données non vérifiables marquées au lieu d'être inventées)
+- Opcodes/structures de packets officiels (SilkroadDoc) dans TECHNICAL_SPECIFICATIONS.md
+- Chiffres sourcés partout : timers, cooldowns, HP, SP, prix, drops
+
+**Fichiers les plus impactés :** 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 33, 34, 35, CITIES_01→05, ITEMS_DATABASE, 31, 32, MONSTERS_*, NPCS_*, MAP_COORDINATES, SKILLS_DATABASE_*, TECHNICAL_SPECIFICATIONS, INDEX_BUILDS
 
 ---
 

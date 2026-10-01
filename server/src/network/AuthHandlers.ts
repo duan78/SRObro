@@ -281,6 +281,10 @@ export class AuthHandlers {
         },
       });
 
+      // Kit de départ (potions + lame degré 1) — items officiels
+      const { ItemHandlers: IH } = await import('./ItemHandlers.js');
+      await IH.giveStarterKit(character.id);
+
       logger.info(`Character created: ${name} (${race}/${gender}) for account ${accountId}`);
       this.ack(ack, {
         success: true,
@@ -325,6 +329,20 @@ export class AuthHandlers {
 
       await client!.loadCharacter(characterId);
       await this.worldManager?.handlePlayerLogin(client!, characterId);
+
+      // Appliquer l'arme équipée aux stats de combat (si présente en base)
+      try {
+        const eq = await prisma.equipment.findUnique({ where: { characterId } });
+        if (eq?.weapon) {
+          const w = await prisma.item.findUnique({ where: { id: eq.weapon } });
+          if (w) {
+            this.worldManager?.getPlayer(characterId)?.applyWeaponStats({
+              attackMin: w.attackPowerMin,
+              attackMax: w.attackPowerMax,
+            });
+          }
+        }
+      } catch { /* non bloquant */ }
 
       // État complet du perso pour le client (spawn, HUD, progression locale)
       const payload = this.buildCharacterPayload(character);

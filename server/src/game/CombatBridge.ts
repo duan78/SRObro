@@ -503,4 +503,9 @@ export class CombatBridge {
   private sendToPlayer(playerId: string, packet: S2CPacket): void {
     this.worldManager.emit('sendToClient', { playerId, packet });
   }
+
+  /** Envoi d'un évènement brut (équipement, notifications hors protocole packets). */
+  sendToPlayerRaw(playerId: string, event: string, data: unknown): void {
+    this.worldManager.emit('sendToClient', { playerId, event, data });
+  }
 }

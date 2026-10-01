@@ -1,568 +1,269 @@
-# Base de données Skills - Index Complet
+# Base de données Skills - Hub Central
 
 > 📍 **Vous êtes ici :** [Accueil](README.md) → [Hub Classes](HUB_CLASSES.md) → [Skills Database](30_SKILLS_DATABASE.md)
 
----
+> ⚠️ **Révision majeure (2026-10)** : ce hub a été resynchronisé avec [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md) et [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md), réécrits à partir des **vraies données iSRO** (fichier `skills.txt` du client, traductions elitepvpers, Silkroad Origin Mobile, PhBot). L'ancienne version du hub contenait des noms de skills **inventés** (« Flying Chain Series », « Two-Handed Warrior » comme classe…) — tout est corrigé ci-dessous.
 
 ## 📋 Table des Matières
-- [Introduction](#introduction)
-- [Skills Chinois](#skills-chinois)
-- [Skills Européens](#skills-européens)
-- [Arbres de Mastery](#arbres-de-mastery)
-- [Mécaniques de Skills](#mécaniques-de-skills)
-- [Recherche par Type](#recherche-par-type)
-- [Guide d'Optimisation](#guide-doptimisation)
-- [FAQ](#faq)
-- [Voir aussi](#voir-aussi)
+- [Introduction](#-introduction)
+- [Skills Chinois (vue d'ensemble)](#-skills-chinois-vue-densemble)
+- [Skills Européens (vue d'ensemble)](#-skills-européens-vue-densemble)
+- [Arbres de Mastery](#-arbres-de-mastery)
+- [Mécaniques de Skills](#-mécaniques-de-skills)
+- [Recherche par Type](#-recherche-par-type)
+- [Guide d'Optimisation / SP](#-guide-doptimisation--sp)
+- [Implémentation Technique](#-implémentation-technique)
+- [FAQ](#-faq)
+- [Voir aussi](#-voir-aussi)
 
 ---
 
 ## 🎯 Introduction
 
-Ce **hub centralise toutes les bases de données skills** de Silkroad Online. Les compétences sont classées par race (chinoise/européenne) et par mastery.
+Ce **hub centralise les bases de données skills** de Silkroad Online, classées par race puis par mastery. Les compétences sont identifiées par leurs **noms officiels iSRO** et, côté chinois, par leurs **codenames client** (`SKILL_CH_…`) qui servent de clé universelle (identique KSRO/iSRO/vSRO) — recommandation forte pour SRObro.
 
 ### Points Clés
-- 🇨🇳 **Chinois :** 7 maîtrises avec 300+ skills
-- 🇪🇺 **Européens :** 8 classes avec 400+ skills
-- 📊 **700+ skills** documentés au total
-- 🔢 **Niveaux :** Chaque skill a 5+ niveaux
+- 🇨🇳 **Chinois :** 7 maîtrises (3 armes + 4 forces), organisées en **séries** de 5-8 **livres** (A→F/H)
+- 🇪🇺 **Européens :** **6 maîtrises** (Warrior, Rogue, Wizard, Warlock, Bard, Cleric), grille de lignes avec **book 1 / book 2**
+- 🔢 **400 skill exp = 1 SP** (constante universelle) · paliers de déverrouillage **+2 niveaux de maîtrise** par niveau de skill (CH)
+- 🧬 **Identifiants** : les plages d'IDs classiques CH — Bicheon 3-39, Heuksal 41-69, Pacheon 71-89, Cold 90-106, Lightning 107-123, Fire 124-142, Force 143-159
 
 ---
 
-## 🇨🇳 Skills Chinois
+## 🇨🇳 Skills Chinois (vue d'ensemble)
 
-### Base de Données Complète
-👉 **[SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md)** - 7 maîtrises, 708 lignes
+👉 **[SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md)** — base complète : séries, livres, maîtrises, cast, cooldowns, nombres de niveaux
 
-**Contenu:**
-- 7 maîtrises complètes avec tous les skills
-- Dégâts, coûts MP, cooldowns
-- SP requis pour chaque niveau
-- Descriptions détaillées
+### Structure d'une maîtrise
+Chaque maîtrise = **séries** (lignes de progression), chaque série = **livres A→F/H** débloqués par paliers de maîtrise (5, 27, 49, 71, 96, 120…), chaque livre = 9+ niveaux d'upgrade (+2 maîtrise par niveau). Pattern des codenames : `<SERIE>_<LETTRE>_<N°hit>S?_<NIVEAU>` (ex. `SKILL_CH_SWORD_CHAIN_C_2S_04`).
 
-### Les 7 Maîtrises Chinoises
+### Les 7 maîtrises et leurs séries signatures
 
-#### 🗡️ Maîtrises d'Armes (3)
+| Maîtrise | Codename | Séries principales | Passif (maîtrise 10) |
+|---|---|---|---|
+| ⚔️ **Bicheon** (Sword/Blade) | `SKILL_CH_SWORD_*` | Smashing Sword · Chain Sword Attack (3-5 hits) · Shield Technique · Blade Force (distance) · Hidden Blade (KD) · Killing Heaven Blade (cibles au sol) · Sword Dance (AoE) · Bicheon Force (buffs tardifs) | Shield Protection (block ratio) |
+| 🗡️ **Heuksal** (Spear/Glaive) | `SKILL_CH_SPEAR_*` | Pierce · Storm/spin (tourbillon AoE permanent) · Heuksal Spear · **Soul Departs (stun — le meilleur du jeu)** · Ghost Spear (AoE 360°) · Chain Spear · Flying Dragon Spear (distance) | Cheolsam Force (HP max) |
+| 🏹 **Pacheon** (Bow) | `SKILL_CH_BOW_*` | Anti Devil Bow (critique) · Arrow Combo (2-7 flèches) · Hawk Summon · Autumn Wind (perforantes) · **Soul Arrow (portée, must-have)** · Explosion Arrow (AoE) · Strong Bow (chargé) · Mind Bow (360°) | Mind Concentration (attack rating) |
+| ❄️ **Cold** | `SKILL_CH_COLD_*` | Cold Force (imbue gel) · Frost Guard (DEF PHY) · Cold Wave (gel à distance) · Frost Wall · Frost Nova (AoE gel) · Snow Storm (nuke) · **Snow Shield (dégâts → MP)** | Cold Armor (DEF PHY) |
+| ⚡ **Lightning** | `SKILL_CH_LIGHTNING_*` | Thunder Force (imbue shock) · Piercing Force (%ATK MAG) · Wind Walk / **Ghost Walk (téléport)** · Lion Shout (mini-nukes, groupes de CD liés) · Concentration (parry) · Thunderbolt Force (nuke) | Heaven's Force (parry ratio) |
+| 🔥 **Fire** | `SKILL_CH_FIRE_*` | Fire Force (**imbue la plus forte** + Burn) · Fire Shield (anti-statuts) · Flame Body (%ATK PHY) · Fire Protection (DEF MAG) · Fire Wall · **Flame Wave (le nuke le plus puissant CH)** · Fire Combustion (MP) | Flame Devil Force (ATK PHY) |
+| 💪 **Force** (« Water ») | `SKILL_CH_WATER_*` | Self Heal · Force Cure (dissipe statuts) · Heal (cible) · Rebirth Art (résurrection) · Harmony Therapy (HoT) · **Vital Spot (debuffs nommés : Decay/Weaken/Impotent/Division)** · Cure Therapy · Vital Flow | Force Increasing (MP max) |
 
-##### 1. Bicheon (Sword/Blade)
-**Fichier :** [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md#bicheon-swordblade)
-
-**Skills Clés:**
-- **Chain Sword Attack Series** - Combo 4 hits
-- **Smashing Series** - Knockdowns
-- **Shield Propel** - Bash avec shield
-- **Killing Heaven Blade** - Ultimate finisher
-- **Hidden Blade** - Buff critique
-
-**Playstyle:** Melee rapide, CC, tank avec shield
-
-##### 2. Heuksal (Spear/Glaive)
-**Fichier :** [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md#heuksal-spearglaive)
-
-**Skills Clés:**
-- **Flying Dragon Spear** - Spear AOE
-- **Ghost Spear Attack** - High damage single target
-- **Spear Stripe Series** - DoT + debuff
-- **Heuksal Spear** - Ultimate AOE
-
-**Playstyle:** Dégâts PHY max, AOE massives
-
-##### 3. Pacheon (Bow)
-**Fichier :** [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md#pacheon-bow)
-
-**Skills Clés:**
-- **Arrow Shower** - AOE distance
-- **Anti-Devil Arrow** - High damage single
-- **Trap Series** - Pièges pour ennemis
-- **Mind Bow** - Buff critique
-
-**Playstyle:** Distance, kiting, safe farming
-
-#### 🔮 Maîtrises d'Éléments (4)
-
-##### 4. Cold (Ice)
-**Fichier :** [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md#cold-ice)
-
-**Skills Clés:**
-- **Cold Armor Series** - Buff DEF
-- **Frost Wall** - AOE slow + damage
-- **Cold Wave** - AOE CC
-- **Snow Shield** - -50% damage taken
-
-**Playstyle:** Défense, CC, tank
-
-##### 5. Lightning
-**Fichier :** [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md#lightning)
-
-**Skills Clés:**
-- **Lightning Armor Series** - Buff vitesse
-- **Thunder Shock Series** - Stuns
-- **Lion Shout** - AOE debuff
-- **Wind Walk** - Movement speed +
-
-**Playstyle:** Vitesse, dégâts mixtes, burst
-
-##### 6. Fire
-**Fichier :** [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md#fire)
-
-**Skills Clés:**
-- **Fire Armor Series** - Buff MAG ATK
-- **Flame Body Series** - DoT
-- **Fire Storm Series** - AOE massives
-- **Fire Force** - +PHY ATK buff
-
-**Playstyle:** Dégâts max, DoT, AOE
-
-##### 7. Force
-**Fichier :** [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md#force)
-
-**Skills Clés:**
-- **Knockdown Series** - CC physique
-- **Debuff Series** - -DEF, -ATK
-- **Shield Defense** - Buff shield
-- **Force Increasing** - +STR buff
-
-**Playstyle:** Knockdowns, debuffs physiques
+Détails complets (tableaux livre par livre, cast/CD, puissances Origin Mobile) → [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md)
 
 ---
 
-## 🇪🇺 Skills Européens
+## 🇪🇺 Skills Européens (vue d'ensemble)
 
-### Base de Données Complète
-👉 **[SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md)** - 8 classes, 754 lignes
+👉 **[SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md)** — base complète par mastery avec effets documentés et cooldowns notoires
 
-**Contenu:**
-- 8 classes complètes avec tous les skills
-- Dégâts, coûts MP, cooldowns
-- SP requis pour chaque niveau
-- Descriptions détaillées
+### Structure d'une maîtrise
+Grille de **lignes (R1, R2…)** débloquées par paliers de mastery ; chaque ligne possède un **book 1** (précoce) et un **book 2** amélioré (ex. `Moving March → Swing March`, `Blaze → Dark Blaze`, `Healing Cycle → Healing Orbit`). **2 masteries max** par personnage (total plafonné à 2 × niveau).
 
-### Les 8 Classes Européennes
+### ⚠️ Correction importante
+L'ancienne version du hub listait « 8 classes européennes » dont **Two-Handed Warrior** et **Warlock/Rogue Hybrid** comme masteries séparées : **faux**. Les lignes 1H/2H/dual-axe sont des **lignes internes de la mastery Warrior**, et les « hybrides » sont juste des combinaisons de 2 masteries. Les maîtrises EU sont **6** : Warrior, Rogue, Wizard, Warlock, Bard, Cleric.
 
-#### ⚔️ Classes de Combat (4)
+### Les 6 maîtrises et leurs skills signatures
 
-##### 1. Warrior
-**Fichier :** [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md#warrior)
+| Maîtrise | Rôle | Skills clés (vérifiés) |
+|---|---|---|
+| 🛡️ **Warrior** | Tank / DPS melee / interrupteur | **Dare Devil** (plus grosse attaque), Bash, Turn Rising, Triple Swing, Sprint Assault (interrupt), Shield Trash/Crush, Taunting Target/Howling Shout (taunts), **Pain Quota** (partage dégâts, 5 min), Iron/Mana Skin, Vital Increase, Physical/Magical/Ultimate Screen |
+| 🗡️ **Rogue** | Assassin burst / lurer | **Prick** (finisher dague), Mortal Wounds (bonus cibles au sol), Butterfly Blow (5 hits + Dull), Hurricane Shot (KD), **Rapid Shot** (lure), Distance Shot, Crossbow Extreme / Dagger Desperate (burst), Stealth, Scorn (taunt-interrupt) |
+| 🔮 **Wizard** | Nuker AoE | **Meteor** (CD 10 s partagé avec Fire Bolt), Fire Blow → Salamander Blow (7-9 hits, animation ~9 s annulable), Blizzard (80 % frostbite), Earth Quake, Charged Squall (knockback), Root/Mesh Root, Earth Barrier/Fence (cycle 20 s/CD 60 s), **Life Control + Life Turnover** (+25 % MAG cumulés, −50 % HP), Teleport |
+| 🎭 **Warlock** | Debuffer / DoT / contrôle | Séries **Raze → Ravage** (Decay/Weaken/Impotent/**Division +30 % dégâts subis**, ~80 %, 30 s), DoT Blaze/Toxin/Decayed (+ books 2 AoE), **Stun** (80 %), Slumber, Vampire Touch/Kiss (vol de vie + Disease), **Reflect** (35 % @135 %, ignore Pain Quota), Scream Mask |
+| 🎵 **Bard** | Buffer / batterie de mana | **Moving March → Swing March**, Hit March, Guard Tambour (DEF PHY) / Mana Tambour (DEF MAG, non cumulables), **Mana Cycle** (MP fixe/s pendant 16 s), Mana Orbit, **Noise** (aggro −, permanent), Cure Music (cleanse party), Tuning Noise/Sound (dégâts absolus), danses (Dance of Magic…), Awesome World (danser seul, effet /2) |
+| ⛪ **Cleric** | Healer / buffs défensifs | **Healing Cycle → Healing Orbit** (HoT tick 3 s, **zéro aggro**), Group Healing/Recovery, **Recovery Division** (HoT party 300 s), Bless Spell (DEF PHY+MAG), Body/Soul/Force/Mental Blessing (30 min), Holy Word/Spell (anti-curses), Resurrection, **Offering** (attaque la plus forte du jeu, consomme 95 % HP) |
 
-**Skills Clés:**
-- **Flying Chain Series** - Combo 2H
-- **Bash** - Single target DPS
-- **Chain Sword Attack** - Sword combo
-- **Shield Smash** - Shield CC
-- **Defense** - +DEF buff
-- **Guard Tap** - Taunt
-
-**Playstyle:** Tank, DPS, CC
-
-##### 2. Rogue
-**Fichier :** [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md#rogue)
-
-**Skills Clés:**
-- **Stealth** - Invisibilité
-- **Knockdown Series** - Stun chain
-- **Mortalal Wound** - DoT + bleed
-- **Deadly Blow** - High burst
-- **Dagger Dance** - AOE dagger
-- **Envenom** - Poison
-
-**Playstyle:** Burst, stealth, crits
-
-##### 3. Wizard
-**Fichier :** [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md#wizard)
-
-**Skills Clés:**
-- **Fire Series** - AOE feu
-- **Cold Series** - AOE glace
-- **Lightning Series** - AOE foudre
-- **Earth Series** - AOE terre
-- **Mana Shield** - Protection MP
-- **Teleport** - Flash mobilité
-
-**Playstyle:** AOE massives, nuker
-
-##### 4. Warlock
-**Fichier :** [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md#warlock)
-
-**Skills Clés:**
-- **Debuff Series** - -50% stats
-- **DoT Series** - Damage over time
-- **Sleep** - CC long
-- **Root** - Immobilise
-- **Reflect Series** - Renvoie dégâts
-- **Life Control** - HP↔MP swap
-
-**Playstyle:** Debuffer, DoT, CC
-
-#### 🛡️ Classes de Support (4)
-
-##### 5. Cleric
-**Fichier :** [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md#cleric)
-
-**Skills Clés:**
-- **Heal Series** - Soins
-- **Bless Series** - Buffs stats
-- **Reverse Oblivion** - Resurrection
-- **Division** - -50% damage taken
-- **Recovery Division** - Cleanse debuffs
-
-**Playstyle:** Healer, buffer, support
-
-##### 6. Bard
-**Fichier :** [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md#bard)
-
-**Skills Clés:**
-- **Moving March** - +20% speed
-- **Noise Series** - Buffs attaque
-- **Guardian Tango** - +MP regen
-- **Dancing Party** - AOE buffs
-- **Disabling Note** - -MP enemy
-
-**Playstyle:** Buffer, speed, mana
-
-##### 7. Two-Handed Warrior
-**Fichier :** [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md#two-handed-warrior)
-
-**Skills Clés:**
-- **Crush Series** - High DPS 2H
-- **Body Warrier** - +HP buff
-- **Brutal Scud** - Dash + damage
-- **Crash Down** - AOE smash
-
-**Playstyle:** Full DPS 2H
-
-##### 8. Warlock/Rogue Hybrid
-**Fichier :** [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md#warlockrogue-hybrid)
-
-**Playstyle:** Debuffs + burst
+Détails complets (buffs par portée, rotations, tips) → [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md)
 
 ---
 
 ## 🌳 Arbres de Mastery
 
 ### Chinois
+- **Total mastery points : 300** au cap (3 × ~90-120 selon l'époque du cap) ; chaque mastery monte jusqu'au cap serveur (90/110/120).
+- Les combos classiques limitent à **2-3 maîtrises effectives** (mastery ≤ niveau du perso).
+- **Le GAP** (niveau perso − maîtrise la plus haute) gouverne le ratio XP/SP — voir [TECHNICAL_SPECIFICATIONS.md](TECHNICAL_SPECIFICATIONS.md#-formulas-and-calculations).
 
-#### Système de Mastery Points
-- **1 Mastery Point** par level
-- **Maximum** : 120 mastery points au level 120
-- **3 maîtrises actives** en même temps
-
-#### Exemple de Combinaisons
-| Combinaison | Arme | Élément 1 | Élément 2 | Type |
-|-------------|------|-----------|-----------|------|
-| Classic | Bicheon | Cold | Force | Tank |
-| Nuker | Heuksal | Lightning | Fire | DPS INT |
-| Kiter | Pacheon | Lightning | Ice | Distance |
+| Build type | Arme | Éléments | Style |
+|---|---|---|---|
+| Tank / Blader | Bicheon | Cold (+ Force) | Survie, block, KD |
+| DPS PHY | Heuksal (glaive) | Fire + Lightning | Spin AoE, burst |
+| Nuker INT | — (sword passive) | Lightning + Fire (nuke) | Burst magique |
+| Kiter | Pacheon | Lightning + Cold | Distance, CC |
+| Support | — | Force | Heals, cures, debuffs |
 
 ### Européens
+- **2 masteries max** (total ≤ 2 × niveau : 220 au cap 110, 240 au cap 120).
+- La seconde mastery est souvent un **sub rôle** : Cleric (survivie), Bard (mana), Warrior (tank sub)…
 
-#### Système de Mastery Points
-- **1 Mastery Point** par level
-- **Maximum** : 110 mastery points par mastery (110 cap)
-- **2 maîtrises actives** en même temps
-
-#### Exemple de Combinaisons
-| Combinaison | Classe 1 | Classe 2 | Type |
-|-------------|----------|----------|------|
-| Meta | Warrior 110 | Cleric 110 | Tank/DPS |
-| Burst | Rogue 110 | Cleric 110 | DPS |
-| AOE | Wizard 110 | Warrior 110 | Nuker |
+| Combo | Rôle | Note |
+|---|---|---|
+| Warrior + Cleric | Tank/Support | Le tank autarcique |
+| Wizard + Bard | Nuker party | ~**760 000 SP** pour tout maxer au cap 90 (documenté) |
+| Rogue + Cleric | Assassin PvP | Burst + self-heal |
+| Warlock + Bard | Debuffer party | Curses + mana battery |
 
 ---
 
 ## ⚙️ Mécaniques de Skills
 
-### Coûts en SP
+### Imbues (Chinois uniquement)
+- **Une seule imbue active** à la fois (toggle). Le CD de réactivation croît avec le livre (6 → 21 s).
+- Fire = dégâts max + **Burn** (DoT) · Cold = **Frostbite** (~40 %) + **Freeze** (~20 %) · Lightning = **Shock** (réduit le parry ratio) + splash.
 
-#### Chinois (approximatif)
-- **Level 1-20:** 100-500 SP par skill
-- **Level 21-50:** 500-2000 SP par skill
-- **Level 51-80:** 2000-5000 SP par skill
-- **Level 81-110:** 5000-15000 SP par skill
+### Statuts et pilules
+| Statut | Source | Pilule universelle ? |
+|---|---|---|
+| Burn / Freeze | Imbues Fire/Cold, Flame Wave | ❌ → **Force Cure** |
+| Frostbite / Shock | Imbues Cold/Lightning | ✅ (small/medium/large : ~33/50/76 unités) |
+| Stun (état) | Soul Departs Spear, skills EU | ❌ incurable pendant la durée |
+| Decay/Weaken/Impotent/Division | Vital Spot (Force), Raze/Ravage (Warlock) | Cure party (Cure Music, Recovery Division) |
 
-#### Européens (approximatif)
-- **Level 1-20:** 100-400 SP par skill
-- **Level 21-50:** 400-1500 SP par skill
-- **Level 51-80:** 1500-4000 SP par skill
-- **Level 81-110:** 4000-12000 SP par skill
+### Cooldowns — règles structurelles
+- **CH** : attaques 3-5 s · chaînes/AoE 8 s · murs 5-10 s · buffs lourds 180-300 s · postures 60 s.
+- **EU** : gros burst ⇒ long CD **et/ou** longue animation (Salamander Blow ~9 s annulable ; Earth Barrier 20 s/CD 60 s → cycle à 3 Wizards ; Meteor CD 10 s **partagé** avec Fire Bolt, l'ordre de cast change le CD : Meteor→Fire Bolt = 10 s, Fire Bolt→Meteor = 3 s).
+- **Délai de potion EU : 15 s** entre chaque potion (règle de compensation EU).
 
-👉 **Guide SP Farming :** [26_SP_FARMING.md](26_SP_FARMING.md)
-
----
-
-### Système de Cooldowns
-
-#### Types de Cooldowns
-- **Global Cooldown (GCD):** 1-2 secondes entre skills
-- **Skill Cooldown:** 5-60 secondes
-- **Ultimate Cooldown:** 120-300 secondes
-
-#### Exemples
-| Skill | Cooldown |
-|-------|----------|
-| **Attack Skills** | 3-10 sec |
-| **Buffs** | 30-60 sec |
-| **CC (Stun, KD)** | 10-30 sec |
-| **Ultimates** | 120-300 sec |
-
----
-
-### Coûts en MP
-
-#### Par Type de Skill
-- **Attack skills:** 50-200 MP
-- **AOE skills:** 100-400 MP
-- **Buffs:** 50-150 MP
-- **Ultimates:** 300-800 MP
-
-#### Gestion du MP
-- **Potions:** HP/MP grains
-- **MP gear:** +MP max
-- **Bard buffs:** +MP regen
+### Coûts et progression SP
+- **400 skill exp = 1 SP** (constante).
+- CH : coût SP d'un niveau = table au **(maîtrise requise + 1)** ; déverrouillage **+2 maîtrise** par niveau de skill ; ~80k-200k SP « fully farmed » cap 80 selon build.
+- EU : **pas de farming SP requis** (gap optionnel) ; ~760 k SP pour Wizard+Bard cap 90 ; extrapolation ~1,2-1,5 M SP pour 2 masteries cap 110-120.
+- Reskill CH : quête Skill Resuscitation (lvl 20+, **80 % du SP remboursé**).
+- 👉 Guide détaillé : [26_SP_FARMING.md](26_SP_FARMING.md)
 
 ---
 
 ## 🔍 Recherche par Type
 
-### Skills d'Attaque
+### Burst / Finishers
+- **CH** : Heaven Chain / Thousand Army Chain (Bicheon), Chain Spear - Dragon, Flame Wave - Disintegrate, Strong Bow - Destruction
+- **EU** : **Dare Devil** (Warrior), **Prick** (Rogue), **Meteor** (Wizard), **Offering** (Cleric — 95 % HP), Tuning Sound (Bard, dégâts absolus)
 
-#### Single Target (DPS)
-- **Warrior:** Flying Chain, Bash
-- **Rogue:** Deadly Blow, Mortal Wound
-- **Wizard:** Fire Trap, Lightning Shock
-- **CH:** Chain Sword, Ghost Spear
+### AoE / Farm
+- **CH** : Bloody Fan Storm (spin glaive), Ghost Spear (360°), Sword Dance, Explosion Arrow, Flame Wave - Wide, Frost Nova, Snow Storm
+- **EU** : Earth Quake, Ground Rave, Blizzard, Charged Squall, Booming Wave, Curse Breath/Dark Breath
 
-#### AOE (Dégâts de zone)
-- **Wizard:** Flame Storm, Cold Wave
-- **Warlock:** Red Phoenix, Weak Weapon
-- **CH:** Spear AOE, Fire Storm, Bow AOE
+### Contrôle (CC)
+- **Stun** : Soul Departs Spear (CH), Stun/Daze Warlock (80 %), Sudden Twist, Sprint Assault
+- **KD/combo au sol** : Hidden Blade + Killing Heaven Blade (CH), Turn Rising/Triple Swing, Hurricane Shot + Mortal Wounds (Rogue)
+- **Root/Immo** : Root → Mesh Root (20 % d'échec), Frostbite/Freeze
+- **Sleep/Fear** : Slumber (Warlock), Lightning Shock (80 % Fear, 20 s)
 
----
+### Debuffs nommés
+- **CH (Force)** : Vital Spot — Muscle/Spirit/Body(Decay)/Mind(Weaken)/Zero(Impotent)/Brain(Division)
+- **EU (Warlock)** : Physical/Medical/Combat/Courage Raze→Ravage (Decay/Weaken/Impotent/**Division**)
 
-### Skills de Buff
-
-#### Offensifs
-- **+ATK:** Fire Force, Noise, Bless
-- **+Crit:** Hidden Blade, Critical Buff
-- **+Speed:** Lightning Armor, Moving March
-
-#### Défensifs
-- **+DEF:** Cold Armor, Division
-- **-50% Damage:** Snow Shield, Division
-- **Shield:** Shield Defense
+### Buffs / Soutien
+- **Offensifs** : Piercing Force (%MAG), Flame Body (%PHY), Pain Quota, Warcry, Dance of Magic, Force/Mental Blessing
+- **Défensifs** : Frost Guard, Fire Protection, Iron/Mana Skin, Screens (1 min), Earth Barrier (party), Bless Spell, Snow Shield (dégâts→MP)
+- **Soins** : Healing Cycle/Orbit (tick 3 s, 0 aggro), Recovery Division (300 s), Group Recovery, Heal (Force), Harmony Therapy
+- **Utilitaires** : Wind Walk/Ghost Walk, Teleport, Stealth/Invisible, Noise (aggro), Detect (anti-stealth)
 
 ---
 
-### Skills de CC (Crowd Control)
+## 🎯 Guide d'Optimisation / SP
 
-#### Stuns
-- **Knockdown:** Warrior, Spear, Rogue
-- **Sleep:** Warlock, Cold
-- **Root:** Warlock, Bow trap
-
-#### Debuffs
-- **-DEF:** Warlock debuffs, Force
-- **-ATK:** Warlock, Force
-- **-Speed:** Cold, Lightning
-
----
-
-### Skills de Soin
-
-#### Heals
-- **Cleric:** Heal Series (100-5000 HP)
-- **Bard:** Guard Tambour (regen)
-
-#### Buffs Soin
-- **Cleric:** Bless (VIT, INT)
-- **Bard:** Guard Tango (+MP regen)
-
----
-
-## 📚 Voir aussi
-
-### Bases de Données
-- [Skills Chinois](SKILLS_DATABASE_CHINESE.md) - 7 maîtrises complètes
-- [Skills Européens](SKILLS_DATABASE_EUROPEAN.md) - 8 classes complètes
-
-### Guides de Classes
-- [Classes Chinoises](02_CHINESE_CLASSES.md) - Guide complet
-- [Classes Européennes](03_EUROPEAN_CLASSES.md) - Guide complet
-- [Hub Classes](HUB_CLASSES.md) - Centralise classes
-
-### SP Farming
-- [SP Farming Guide](26_SP_FARMING.md) - Guide SP farming
-- [PvE Builds](34_PVE_BUILDS.md) - Builds SP farming
-
-### Mécaniques
-- [Mécaniques Avancées](28_ADVANCED_MECHANICS.md) - Formules de dégâts
-- [Système de Combat](04_COMBAT_SYSTEM.md) - Mécaniques de combat
+1. **Priorités CH** : maxer 1-2 séries cœur (spin glaive / chaîne épée / nuke) + passifs utiles ; l'imbue d'élément dès son palier ; Soul Arrow minimum 1 niveau (bow).
+2. **Priorités EU** : lignes de dégâts du main → book 1 des lignes clés du sub (heals/mana) → **books 2** (Meteor, Dare Devil, Recovery Division, Guard Tambour) → passifs en dernier.
+3. **SP farming** : le GAP (0 → 9) multiplie le SP par ~9 au prix de l'XP — voir les tables vérifiées dans [TECHNICAL_SPECIFICATIONS.md](TECHNICAL_SPECIFICATIONS.md).
+4. **Spots** : Jangan (débutant) → Donwhang (moyen) → Hotan (élevé) → Forgotten World / uniques (voir [29_FORGOTTEN_WORLD.md](29_FORGOTTEN_WORLD.md)).
 
 ---
 
 ## 💻 Implémentation Technique
 
-### Database Schema (SRObro)
+### Clés d'identification (SRObro)
 
 ```typescript
-// Prisma schema
+// CH: le codename client est la clé universelle (identique KSRO/iSRO/vSRO)
+interface SkillIdentity {
+  codename: string;      // ex. "SKILL_CH_SWORD_CHAIN_C_2S_04" (série, livre, hit, niveau)
+  seriesPrefix: string;  // ex. "SKILL_CH_SWORD_CHAIN_*"
+  masteryGroup: number;  // 257 (Bicheon), 258 (Heuksal), 259 (Pacheon), 277 (Cold/Lightning/Fire), 276 (Force)
+  book: 'A'|'B'|'C'|'D'|'E'|'F'|'G'|'H';
+  level: number;         // niveau du skill (déverrouillage: +2 maîtrise par niveau)
+}
+
+// EU: pas de codenames publics fiables -> clé = (mastery, ligne R, book 1|2)
+interface EUSkillIdentity {
+  mastery: 'warrior'|'rogue'|'wizard'|'warlock'|'bard'|'cleric';
+  row: number;           // R1..R9
+  book: 1 | 2;
+  displayName: string;   // ex. "Meteor", "Healing Orbit"
+}
+```
+
+### Schéma BDD (résumé)
+
+```typescript
 model Mastery {
-  id          String   @id
-  name        String   // BICHEON, HEUKSAL, etc.
-  race        Race     // CHINESE, EUROPEAN
-  type        MasteryType // WEAPON, ELEMENT
-  description String?
+  id          String   @id        // BICHEON, HEUKSAL... | WARRIOR, ROGUE...
+  race        Race                // CHINESE | EUROPEAN
+  maxLevel    Int                 // = cap serveur (90/110/120)
   skills      Skill[]
 }
 
 model Skill {
-  id           String   @id
-  masteryId    String
-  mastery      Mastery @relation(fields: [masteryId], references: [id])
-  name         String
-  level        Int      // 1-110
-  mpCost       Int
-  cooldown     Int      // seconds
-  damage       DamageFormula?
-  effects      StatusEffect[]
-  spRequired   Int
-  prerequisite Skill?   @relation("SkillPrereq")
-}
-
-model DamageFormula {
-  id         String   @id
-  skillId    String   @unique
-  baseDamage Int
-  multiplier Float
-  scaling    Stat     // STR, INT, etc.
+  id            String   @id      // codename client (CH) ou clé générée (EU)
+  masteryId     String
+  series        String?           // série/ligne (CH: CHAIN, EU: row)
+  book          String?           // A-H (CH) | 1-2 (EU)
+  level         Int               // niveau du skill
+  masteryReq    Int               // maîtrise requise (paliers +2)
+  castTime      Float?            // secondes (skills.txt)
+  cooldown      Float?            // secondes (skills.txt)
+  effectFlags   String[]          // burn/freeze/shock/stun/kd/...
+  spCost        Int               // table à maîtrise+1
 }
 ```
 
----
-
-## 🎯 Guide d'Optimisation
-
-### Stratégies de SP Farming
-
-1. **Monstres Recommandés** :
-   - Niveau 1-40 : Loups, Tigres (Jangan)
-   - Niveau 40-70 : Yeti, Ogres (Donwhang)
-   - Niveau 70-100 : Démons, Dragons (Hotan)
-   - Niveau 100+ : Boss Uniques (Forgotten World)
-
-2. **Spots Populaires** :
-   - **Jangan** : Bon pour les débutants (SP bas mais sûr)
-   - **Donwhang** : SP moyen, bon équilibre
-   - **Hotan** : SP élevé, danger modéré
-   - **Forgotten World** : SP maximum, haut risque
-
-3. **Équipement Recommandé** :
-   - Armes +7 minimum pour efficacité
-   - Armure complète (set) pour survie
-   - Bijoux avec bonus SP (anneaux, colliers)
-
-> 📍 **Voir aussi:** [Guide SP Farming](26_SP_FARMING.md) | [PvE Builds](34_PVE_BUILDS.md)
+> 📡 Les dégâts min/max et coûts MP par niveau **ne sont pas dans `skills.txt`** : à extraire de `skilldata_5000.txt` / `_RefSkill` (colonnes d'effets + codes Param documentés — voir [TECHNICAL_SPECIFICATIONS.md](TECHNICAL_SPECIFICATIONS.md)) et les « Skill Power » Origin Mobile ne sont que des proxys relatifs.
 
 ---
 
 ## ❓ FAQ
 
-### Questions Fréquentes
+**Q: Combien de maîtrises peut-on monter ?**
+R: Chinois : jusqu'à 3 efficacement (total 300 points au cap historique). Européens : **2 maximum** (total ≤ 2 × niveau). Les skills sont verrouillés par race.
 
-**Q: Combien de SP faut-il pour maxer une compétence ?**
-R: Environ 500,000 SP pour une compétence niveau 20, selon la classe. Les compétences européennes nécessitent généralement 10-15% de SP en plus que les chinoises.
+**Q: Quelle est la clé de référence pour les skills CH ?**
+R: Le **codename client** (`SKILL_CH_…`) : identique sur toutes les versions (KSRO/iSRO/vSRO), contrairement aux noms affichés qui varient.
 
 **Q: Peut-on réinitialiser ses compétences ?**
-R: Oui, via les NPCs "Skill Master" dans les grandes villes (coût : 100,000 gold par réinitialisation). Attention, cela réinitialise TOUTES vos compétences.
+R: Oui — quête **Skill Resuscitation** (CH, lvl 20+, rembourse **80 % du SP**) ; les nuances EU dépendent du serveur (l'ancien « NPC Skill Master à 100k gold » de ce hub n'était pas sourcé).
 
-**Q: Quelles sont les meilleures compétences pour le PvP ?**
-R: Cela dépend de votre classe. Consultez [PvP Builds](33_PVP_BUILDS.md) pour des recommandations détaillées par classe et style de jeu.
+**Q: Pourquoi mes skills EU partagent-ils des cooldowns ?**
+R: Certaines lignes EU ont des **groupes de CD partagés** (ex. Meteor ↔ Fire Bolt : l'ordre de cast détermine le CD restant). C'est un mécanisme officiel documenté, pas un bug.
 
-**Q: Comment obtenir des SP rapidement ?**
-R: Farming de monstres de votre niveau +5 à +10, en party avec bonus d'expérience. Les zones avec "SP Event" (Hotan, Forgotten World) sont idéales.
+**Q: Les skills « book 2 » EU remplacent-ils le book 1 ?**
+R: Ce sont les rangs supérieurs de la même ligne (`Root → Mesh Root`, `Blaze → Dark Blaze`) — à apprendre à la place du book 1 une fois le palier atteint.
 
-**Q: Les compétences européennes sont-elles meilleures que les chinoises ?**
-R: Non, elles sont équilibrées mais avec des styles différents. Les chinoises sont plus polyvalentes, les européennes plus spécialisées et souvent plus puissantes dans leur domaine.
+**Q: Où sont les chiffres exacts (dégâts/MP) ?**
+R: Non publiés de façon fiable et absents de `skills.txt` — voir les sections « Données Manquantes »/« Incertitudes » des deux bases pour l'état exact de ce qui est vérifiable.
 
-**Q: Peut-on apprendre des compétences des deux races ?**
-R: Non, les compétences sont verrouillées par race. Vous devez choisir entre chinois et européen lors de la création du personnage.
+**Q: Meilleures compétences PvP ?**
+R: Voir [33_PVP_BUILDS.md](33_PVP_BUILDS.md) ; les interrupts (Sprint Assault, Scorn, Soul Spear) et les debuffs nommés (Division) dominent le meta documenté.
 
 ---
 
 ## 🔗 Voir aussi
 
-### Guides Connexes
-- [Système de Combat](04_COMBAT_SYSTEM.md) - Mécaniques de combat et formules
-- [Builds PvP](33_PVP_BUILDS.md) - Optimisation PvP par classe
-- [Builds PvE](34_PVE_BUILDS.md) - Optimisation PvE et farming
-- [SP Farming](26_SP_FARMING.md) - Stratégies avancées de gain de SP
+### Bases de Données
+- [Skills Chinois — SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md) · [Skills Européens — SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md)
 
-### Bases de Données Spécifiques
-- [Compétences Chinoises](SKILLS_DATABASE_CHINESE.md) - Liste complète avec détails
-- [Compétences Européennes](SKILLS_DATABASE_EUROPEAN.md) - Liste complète avec détails
-- [Classes Chinoises](02_CHINESE_CLASSES.md) - Guide des classes et builds
-- [Classes Européennes](03_EUROPEAN_CLASSES.md) - Guide des classes et builds
+### Guides de Classes
+- [Classes Chinoises](02_CHINESE_CLASSES.md) · [Classes Européennes](03_EUROPEAN_CLASSES.md) · [Hub Classes](HUB_CLASSES.md)
 
-### Hubs Thématiques
-- [Hub Classes](HUB_CLASSES.md) - Navigation centralisée pour les classes
-- [Hub Combat](HUB_COMBAT.md) - Systèmes de combat et mécaniques
-- [Index des Builds](INDEX_BUILDS.md) - Tous les builds disponibles
+### Mécaniques & Builds
+- [Système de Combat](04_COMBAT_SYSTEM.md) · [Mécaniques Avancées](28_ADVANCED_MECHANICS.md)
+- [SP Farming](26_SP_FARMING.md) · [Builds PvP](33_PVP_BUILDS.md) · [Builds PvE](34_PVE_BUILDS.md) · [Index des Builds](INDEX_BUILDS.md)
 
-### Outils de Développement
-- [Development Technical Guide](DEVELOPMENT_TECHNICAL_GUIDE.md) - Architecture SRObro
-- [Technical Specifications](TECHNICAL_SPECIFICATIONS.md) - Spécifications techniques
+### Technique
+- [Technical Specifications](TECHNICAL_SPECIFICATIONS.md) — formules, protocole officiel, `_RefSkill`
+- [Development Technical Guide](DEVELOPMENT_TECHNICAL_GUIDE.md) — architecture SRObro
 
 ---
 
-## 📊 Statistiques des Compétences
-
-### Distribution par Race
-
-```
-Classes Chinoises: 7 maîtrises × ~15 compétences = ~105 compétences
-Classes Européennes: 8 classes × ~12 compétences = ~96 compétences
-Total: ~201 compétences uniques dans SRO (version 1.188)
-```
-
-### Répartition par Type
-
-- **Combat** : 65% (attaques, buffs, débuffs)
-- **Support** : 20% (soins, protections)
-- **Job** : 10% (trader, thief, hunter)
-- **Spéciales** : 5% (uniques, ultimes)
-
-### Répartition par Niveau
-
-- **Niveau 1-10** : 40% (compétences de base)
-- **Niveau 11-20** : 35% (compétences avancées)
-- **Niveau 21+** : 25% (compétences ultimes)
-
----
-
-## 🎓 Conseils Avancés
-
-### Optimisation par Classe
-
-**Chinois:**
-- **Épée** : Polyvalent, bon pour PvE et PvP débutant
-- **Lance** : Meilleur pour PvP et tanking
-- **Arc** : Farming et PvE à distance
-- **Magie** : DPS magique puissant pour boss
-
-**Européens:**
-- **Guerrier** : Tank ultime pour fortress wars
-- **Rôdeur** : Assassin PvP, excellent 1v1
-- **Mage** : DPS magique AOE pour PvE
-- **Prêtre** : Support indispensable en guilde
-
-### Combinaisons Gagnantes
-
-1. **PvP Chinois** : Lance (DPS) + Méditation (support)
-2. **PvP Européen** : Rôdeur (DPS) + Prêtre (support)
-3. **Farming** : Arc Chinois ou Mage Européen
-4. **Fortress War** : Guerrier Européen + Lance Chinois
-
----
-
-**Dernière mise à jour :** 2025-01-20
-**Base de données Skills** - Hub central des compétences SRO
-**Fichier #30** - Complété et enrichi
+**Dernière mise à jour : 2026-10-01**
+*Hub resynchronisé avec les bases CH/EU révisées (noms iSRO réels, codenames, structure séries/livres et book 1-2 ; correction : 6 maîtrises EU, pas 8 « classes »). Les listes de skills non sourcés de l'ancienne version ont été remplacées par les skills vérifiés des bases détaillées.*

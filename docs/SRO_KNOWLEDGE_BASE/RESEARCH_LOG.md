@@ -5,6 +5,30 @@ This is the central tracking document for all multilingual research conducted to
 
 ---
 
+## 🔬 Session 2026-10-01 — Campagne exhaustive (14 recherches parallèles, ~250 requêtes)
+
+> Révision majeure de la base : vérification/correction de ~40 fichiers, suppression des données inventées, ajout de chiffres sourcés. Détail complet : [CHANGELOG.md](CHANGELOG.md) (entrée 2026-10-01).
+
+| # | Campagne | Fichiers | Découvertes clés | Sources principales |
+|---|----------|----------|------------------|---------------------|
+| 1 | Combat / Mécaniques / PvP-PK | 04, 20, 28 | Formule dégâts complète + constantes (1.2767/1.2870), crit = 2×PHY+MAG, nukes CH ne critent pas, death penalty PK décompilée (5→100% drop selon points), seuils murderer 500/1000/2000 | elitepvpers 412387, florian0, silkroaddoc |
+| 2 | Alchimie / Seals / Degrés / Consommables | 05, 06, 07, 21 | Taux réels dépackés DB (50/40/30/19/17...+powder), échec = reset +0, dès +5 : 50% destruction, formule de heal officielle décompilée, FGW tier→seal (Togui=SoSun D8...Sereness=SoN D11) | HyperbotDoc/SandSnip3r, opensro, dumps ItemData |
+| 3 | Armures / Armes / Items DB | 08, ITEMS_DATABASE, 31 | Dump _RefItem complet (14 318 items) parsé, tous les noms de sets 1D-13D CH+EU, vitesses : écarts relatifs Garment↔Armor 20%, accessoires = absorption (≠ STR/INT), restrictions EU par arme | nBot parse_items.txt, sro-world, openroad |
+| 4 | Classes chinoises | 02, SKILLS_DATABASE_CHINESE | skills.txt client (3 355 entrées CH) : vrais noms des séries Bicheon/Heuksal/Pacheon/Fire/Cold/Lightning/Force, Force = heal/rez (≠ knockdown), GAP 0-9 (~20× à 9), caps mastery 300→360 | skills.txt (SilkroadBot), sromobile, UnKnoWnCheaTs |
+| 5 | Classes européennes | 03, SKILLS_DATABASE_EUROPEAN | 6 masteries librement combinables par 2 (plafond 2×lvl), vrais skills (Dare Devil, Meteor, Pain Quota...), pot delay EU 15s, cooldown groups (Meteor/Fire Bolt) | elitepvpers 2008 (6 threads), SilkroadForums, eSRO |
+| 6 | Jobs (Trader/Thief/Hunter) | 09, 10, 11, 12, 35 | Étoiles = valeur de goods (≠ distance), transports cheval ~16k/chameau ~21k, Wanted 3000+ points/60k amende/3h lockout, 3 ères du système (classique/Legend VII 2011/moderne), taux 162-313% vérifiés | guides 2006-2011 archivés, Origin |
+| 7 | Économie / Stalls | 22, 23 | Consignation par NPC Juel (Hotan) : 10 items/3 jours, ratios revente NPC mesurés (1D 48%→7D 7,4%), monnaies complètes (silk, arena coins, Egy coins), historique 2 ères stalls→consignation | IGN 2007, Fandom, phBot |
+| 8 | Zones / Villes / NPCs | 13, CITIES_01-05, MAP_*, NPCS_*, 32 | 697 NPCs + 161 téléporteurs officiels xSROMap convertis (formule client), vrais noms de NPCs, Jangan (6460,1100), Alexandria (-16400,0), Hotan sans NPC thief | xSROMap/JellyBitz, SRO Info 2009 |
+| 9 | Monstres / Uniques | 14, 15, MONSTERS_* | HP client exacts (Tiger Girl 598 720 → Medusa 183 535 199), vrais niveaux (Cerberus 24, Ivy 30, Isyutaru 60, Yarkan 80, Shaitan 90), faune Alexandria MOB_SD_* réelle, multiplicateurs types (Champion 2x, Party 10x, Giant 5-10x) | silkroadonline.wiki, elitepvpers, rev6 |
+| 10 | Quêtes / Leveling / SP / Intro | 16, 25, 26, 01 | Table XP 1-140 officielle (leveldata.txt), Repeat Limit ×1/2/3/5/7, quêtes titre Blue Zerk, +30% XP à +10 niveaux, historique complet 2005→2026 (Wemade 2010, U1 Interactive 2026) | leveldata.txt local, Origin, IGN, Wikipedia |
+| 11 | Guilde / Party / Fortress War | 17, 18, 19 | Guild levels 1-5 (L5=50 membres), Each Get (4) vs Auto Share (8), Union scroll ~32 joueurs, FW Legend II 2008 : Heart/Tours/Camps/Command Post, taxes ±20% | guide Joymax traduit, IGN 2008, RaGEZONE |
+| 12 | Builds PvP / PvE | 33, 34, INDEX_BUILDS | SP exacts par build (glaive 1,88-2,47M cap 110), rotations complètes sourcées, tier lists par cap, hybrides ratios 1:2→7:1 (≠ « 1:9 » inventé) | elitepvpers 516942, PlayOrigin, MMORPG.com |
+| 13 | Pets/Mounts + Events | 24, 27 | Taxonomie réelle (growth/fellow/ability pets, Devil Spirit A/S), 10 Awesome Mounts officiels, events historiques datés 2007-2012, Battle Arena lv20+ 4 modes | StrategyWiki, archives presse Joymax |
+| 14 | FGW / Skills hub / Technique | 29, 30, TECHNICAL_SPECIFICATIONS | Shipwreck 91-100/101-110, grades = types + limite party, packets FGW 0x7519-0x351E, handshake Blowfish 0x5000, opcodes Gateway/Agent, ports 15779/15884 | SilkroadDoc (wiki cloné), Fandom API |
+| 📸 | Screenshots | screenshots/ + SCREENSHOTS_INDEX.md | 127 images officielles 2003-2026 (villes, uniques, UI, jobs, FW, FGW, events) | Fandom CDN, YouTube thumbs, janganhub |
+
+---
+
 ## 🔍 Research Status Summary
 
 | Status | Count | Last Updated |

@@ -10,6 +10,7 @@ import { GameDataService } from '../data/GameDataService';
 import { ClientManager } from '../network/ClientManager';
 import { WorldManager } from '../game/WorldManager';
 import { CombatBridge } from '../game/CombatBridge';
+import { ItemHandlers } from '../network/ItemHandlers';
 import { SystemHandlers } from '../network/SystemHandlers';
 import { AuthHandlers } from '../network/AuthHandlers';
 import { GameLoop } from './GameLoop';
@@ -35,6 +36,7 @@ export class GameServer {
   private worldManager: WorldManager | null = null;
   private systemHandlers: SystemHandlers | null = null;
   private authHandlers: AuthHandlers | null = null;
+  private itemHandlers: ItemHandlers | null = null;
   private combatBridge: CombatBridge | null = null;
   private gameLoop: GameLoop;
   private isRunning = false;
@@ -99,10 +101,14 @@ export class GameServer {
     // reçoit le WorldManager quand il est prêt (spawn du joueur)
     this.authHandlers = new AuthHandlers(this.clientManager);
 
+    // Item handlers (inventaire, équipement, boutiques — phase 3)
+    this.itemHandlers = new ItemHandlers(this.clientManager);
+
     // Initialize world manager
     this.worldManager = new WorldManager(this.dbManager);
     await this.worldManager.initialize();
     this.authHandlers?.setWorldManager(this.worldManager);
+    this.itemHandlers?.setWorldManager(this.worldManager);
 
     // Spawn manager: source de vérité unique des monstres (WorldManager
     // partage sa map d'entités)
@@ -115,9 +121,15 @@ export class GameServer {
     this.worldManager.combatBridge = this.combatBridge;
 
     // Route les envois du WorldManager vers les sockets réels
-    this.worldManager.on('sendToClient', ({ playerId, packet }: { playerId: string; packet: S2CPacket }) => {
+    this.worldManager.on('sendToClient', (msg: unknown) => {
+      const { playerId, packet, event, data } = msg as {
+        playerId: string; packet?: S2CPacket; event?: string; data?: unknown;
+      };
       const client = this.clientManager?.getClientByCharacterId(playerId);
-      if (client) {
+      if (!client) return;
+      if (event) {
+        client.send(event, data ?? {});
+      } else if (packet) {
         client.send(packet.type, packet);
       }
     });
@@ -148,6 +160,9 @@ export class GameServer {
       if (this.authHandlers) {
         this.authHandlers.registerHandlers(socket);
       }
+
+      // Item handlers (inventaire/boutiques, phase 3)
+      this.itemHandlers?.registerHandlers(socket);
 
       // Register system handlers (guild, quest, fortress, mount)
       if (this.systemHandlers) {

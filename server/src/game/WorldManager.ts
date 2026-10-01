@@ -389,8 +389,8 @@ export class WorldManager {
       }
 
       // Broadcast attack to nearby clients
-      this.broadcastToNearbyClients(characterId, {
-        type: 'attack',
+      const attackPacket = {
+        type: 'attack' as const,
         timestamp: packet.timestamp,
         data: {
           attackerId: characterId,
@@ -401,7 +401,11 @@ export class WorldManager {
           isBlocked: result.isBlocked,
           remainingHp: result.targetHp,
         },
-      });
+      };
+      this.broadcastToNearbyClients(characterId, attackPacket);
+      // L'ATTAQUANT doit aussi recevoir son attaque (dégâts affichés, HP cible):
+      // broadcastToNearbyClients exclut explicitement la source.
+      this.sendToClient(characterId, attackPacket);
     }
   }
 

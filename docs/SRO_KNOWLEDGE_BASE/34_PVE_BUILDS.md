@@ -1,861 +1,375 @@
 # Builds PvE - Guide Complet
 
+> ⚠️ **Révision majeure (2026-10)** : document réécrit après recherche communautaire (elitepvpers, SilkroadForums, PlayOrigin, GamersDecide, UnKnoWnCheaTs, ExaySRO, ZsZC wiki, IGN/MMORPG.com pour les donjons). Correction principale vs ancienne version : les rendements « 300-500 k SP/heure » étaient **absurdes** (le réel est ~1 000 SP/h en GAP 9 classique, jusqu'à 3 000+/h avec tickets — voir [26_SP_FARMING.md](26_SP_FARMING.md)) ; les noms de skills inventés (« Lunar Potion », « Meteor Shower », « Fire Force »…) sont remplacés par les vrais noms iSRO, cohérents avec [02_CHINESE_CLASSES.md](02_CHINESE_CLASSES.md) et [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md).
+
 ## 📋 Table des Matières
-- [Introduction](#introduction)
-- [Meilleurs Builds PvE](#meilleurs-builds-pve)
-- [Builds Européens](#builds-européens)
-- [Builds Chinois](#builds-chinois)
-- [SP Farming Builds](#sp-farming-builds)
-- [Power Leveling](#power-leveling)
-- [Spots de Farming par Level](#spots-de-farming-par-level)
-- [Gear et Équipement](#gear-et-équipement)
-- [Sources](#sources)
+- [Introduction](#-introduction)
+- [Mécaniques PvE à connaître](#-mécaniques-pve-à-connaître)
+- [Tier List PvE](#-tier-list-pve)
+- [Builds Européens PvE](#-builds-européens-pve)
+- [Builds Chinois PvE](#-builds-chinois-pve)
+- [SP Farming : Builds et Rendements](#-sp-farming--builds-et-rendements)
+- [Power Leveling (PLvL / Taxi)](#-power-leveling-plvl--taxi)
+- [Builds par Donjon (FGW, Qin-Shi, Job Temple)](#-builds-par-donjon-fgw-qin-shi-job-temple)
+- [Spots de Farming par Level](#-spots-de-farming-par-level)
+- [Gear et Équipement PvE](#-gear-et-équipement-pve)
+- [Gold Farming](#-gold-farming)
+- [Erreurs Courantes en PvE](#-erreurs-courantes-en-pve)
+- [FAQ](#-faq)
+- [Resources](#-resources)
 
 ---
 
 ## 🎯 Introduction
 
-Le **PvE (Player versus Environment)** concerne toutes les activités de combat contre les monstres : leveling, farming, SP farming, unique hunting, etc. Choisir le bon build est essentiel pour progresser rapidement et efficacement.
+Le **PvE (Player versus Environment)** couvre le leveling, le SP farming, la chasse d'uniques et les donjons. Deux philosophies s'opposent :
+- **Solo efficace** → le Chinois (pas de délai de potion, imbues, self-heal via Force) ou l'EU avec sub Cleric.
+- **Vitesse pure en party 8/8** → l'Européen (Wizard AoE + Bard mana + Cleric heals) : le meilleur XP/heure du jeu.
 
-### Points Clés
-- ✅ **AoE (Area of Effect)** : Indispensable pour tuer plusieurs mobs à la fois
-- ✅ **Survivabilité** : Moins critique qu'en PvP, mais toujours important
-- ✅ **Efficiency** : Vitesse de kill et gestion du mana
-- ✅ **SP Gain** : Optimisé avec le bon gap (niveau vs mastery)
-- ✅ **Solo vs Party** : Certains builds excellent en solo, d'autres en party
-
----
-
-## 🏆 Meilleurs Builds PvE
-
-### S-Tier (Les Meilleurs pour PvE)
-
-#### 1. Wizard/Bard (INT)
-**Le roi du farming AOE**
-
-- **Masteries** : Wizard 110 / Bard 110
-- **Type** : Pure INT
-- **Niveau optimal** : 50-110
-- **Pourquoi S-Tier PvE** :
-  - ✅ **AOE massives** (tuez 10+ mobs à la fois)
-  - ✅ **Dégâts magiques énormes**
-  - ✅ **Mana Cycle** du Bard pour MP illimités
-  - ✅ **Buffs** (speed, damage, etc.)
-  - ✅ **Fastest leveling** du jeu
-
-**Inconvénients** :
-- ❌ Très fragile en solo
-- ❌ Nécessite des potions MP
-- ❌ Difficile au début (avant les AOE)
+### Points clés
+- ✅ **AoE** : tuer des packs entiers > tuer un mob à la fois
+- ✅ **Kill speed × volume** : le SP-exp ne dépend pas des dégâts, mais du nombre de kills
+- ✅ **GAP** : l'écart niveau/masteries pilote le ratio XP→SP (GAP 9 = ~20× plus de SP par XP)
+- ✅ **Mana** : un farmeur qui s'arrête pour pot est un farmeur lent (Bard/Mana Cycle, Garment, Force Combustion)
+- ✅ **Noise (Bard)** : réduit l'aggro — le buff qui change tout en zone dense
 
 ---
 
-#### 2. INT Spear Nuker (Chinois)
-**Le meilleur solo grinder**
+## ⚙️ Mécaniques PvE à connaître
 
-- **Masteries** : Heuksal 110 / Fire 110 / Lightning 110 / Cold 75
-- **Type** : Pure INT
-- **Niveau optimal** : 30-110
-- **Pourquoi S-Tier PvE** :
-  - ✅ **Excellent solo** (pas besoin de party)
-  - ✅ **Nukes à distance** (safe)
-  - ✅ **Dégâts énormes** (one-shot many mobs)
-  - ✅ **Kiting facile** (hit and run)
-  - ✅ **Très polyvalent**
+### XP, SP et GAP (résumé — détails dans [26_SP_FARMING.md](26_SP_FARMING.md))
+- Chaque mob tué rapporte de l'XP **et** du skill-exp : **400 skill exp = 1 SP** (constante).
+- **GAP = niveau du perso − mastery la plus haute** (0 à 9, plafond utile à 9) : à GAP 9 on gagne ~19-20× plus de SP par point d'XP qu'à GAP 0.
+- SP cumulés (perso) : ~75 k au niveau 30 à GAP 9, ~190 k au niveau 60 à GAP 9.
 
-**Inconvénients** :
-- ❌ Faible HP (glass cannon)
-- ❌ Gourmand en MP
-- ❌ Moins efficace en très dense mob areas
+### Règle des 5 niveaux
+- Monter une mastery **au-delà du niveau des mobs farmés** n'apporte plus de bonus de dégâts → inutile de « sur-monter » les masteries pour PvE.
 
----
+### Aggro et luring
+- Le **Rogue xbow** (Fast/Rapid Shot, portée max) et le **Wizard** sont les lurers natifs ; le **Noise** du Bard réduit l'aggro de toute la party.
+- Le **Warrior 1H** garde l'aggro (Taunting Target, Howling Shout) et la redistribue (Pain Quota, fences, Protect).
 
-#### 3. Pure STR Glaive (Chinois)
-**Le tank farmer**
-
-- **Masteries** : Heuksal 110 / Fire 110 / Lightning 75 / Force 110
-- **Type** : Pure STR
-- **Niveau optimal** : 40-110
-- **Pourquoi S-Tier PvE** :
-  - ✅ **Peut tank** des dizaines de mobs
-  - ✅ **AOE massives** (Ghost Spear, etc.)
-  - ✅ **Heals** de Force pour survivre
-  - ✅ **Très durable**
-  - ✅ **Good pour unique hunting**
-
-**Inconvénients** :
-- ❌ Plus lent que INT pour tuer
-- ❌ Doit être au contact des mobs
-- ❌ Degiâts moins élevés que nuker
+### Zerk (Berserk)
+- La jauge se remplit en attaquant/tuant (orbes) → mode Berserk = boost temporaire. Les **DoT du Warlock accélèrent la jauge** → les « zerk farmers » alternent DoT et kills en chaîne.
+- Farm « en zerk permanent » = technique classique des zones à respawn dense (Ongs, Niyas).
 
 ---
 
-### A-Tier (Très Solides)
+## 🏆 Tier List PvE
 
-#### 4. Rogue/Bard (Pure STR)
-**Le speed farmer**
+### Cap 80 (PlayOrigin — stuff égalisé +5/60 %)
+| Rang | Build | Notes du fil |
+|---|---|---|
+| **S (farm/jobbing)** | **Wizard/Bard** | Meilleur XP/h en party, mobilité, Noise |
+| **S (solo)** | **INT Spear Nuker** | Solo grinder par excellence, one-shot les mobs |
+| **A** | Glaive STR (spin) | Tank AoE autonome, zerk farming |
+| **A** | Wizard/Cleric | Polyvalent solo/party |
+| **B** | Rogue/Bard (xbow), Bower STR | Rapides mais mono-cible |
+| **B** | Warrior/Cleric | Tank incrusable mais lent en solo |
 
-- **Masteries** : Rogue 110 / Bard 110
-- **Type** : Pure STR
-- **Armor** : Garment (speed++)
-- **Pourquoi A-Tier** :
-  - ✅ **Très rapide** avec Garment
-  - ✅ **Crits énormes**
-  - ✅ **Buffs bard** (speed, MP, etc.)
-  - ✅ **Good pour job** (thief/hunter)
+Source : [80 Cap Tier List (PlayOrigin)](https://forum.playorigin.com/showthread.php?1050-80-Cap-Tier-List-for-1v1-PvP-Job-Party-PvP-(Ctf-BA)-and-PvE).
 
-**Inconvénients** :
-- ❌ Pas d'AOE massives comme Wizard
-- ❌ Doit être intelligent avec le positioning
-- ❌ Moins efficace en dense mobs
-
----
-
-#### 5. Warrior/Cleric (Pure STR)
-**Le tank indestructible**
-
-- **Masteries** : Warrior 110 / Cleric 110
-- **Type** : Pure STR
-- **Armor** : Armor
-- **Pourquoi A-Tier** :
-  - ✅ **Impossible à tuer** en PvE
-  - ✅ **Peut tank** des zones entières
-  - ✅ **Heals** pour survivre
-  - ✅ **Good pour uniques**
-
-**Inconvénients** :
-- ❌ Plus lent que les autres builds
-- ❌ Pas d'AOE dévastatrices
-- ❌ Boring à jouer (juste tank and spank)
+### Consensus général (GamersDecide / Reddit)
+- **Le + recommandé pour farm solo** : **sword nuker, Warlock/Bard, Wizard/Bard** (conclusions du [guide Reddit returning players](https://www.reddit.com/r/silkroadonline/comments/1wfn2h6/for_anyone_new_or_returning_to_silkroad_i_put/)).
+- **Le + demandé en party** : Cleric, Bard, Wizard (AoE), Warrior (tank).
+- **Meilleur unique hunter solo** : Bower STR (kite le boss), Glaive STR (le tank).
 
 ---
 
-## 🇪🇺 Builds Européens
+## 🇪🇺 Builds Européens PvE
 
-### Wizard/Bard (Le King du Farming)
+### 1. Wizard/Bard — Le Roi du Farm en Party 👑
 
-#### Stat Distribution (Pure INT - Level 80)
+**Le build d'XP/heure par excellence** (farm 8/8, plvl, Alexandria). Full INT, Robe (ou Light si stuff hybride), staff + harpe.
+
+**Outils Wizard** (détail : [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md#3-wizard)) :
+- **Meteor** (le + gros nuke, 3 cibles proches), **Earth Shock → Earth Quake** (AoE), **Blizzard / Snow Wind** (AoE + frostbite), **Chain Lightning**, **Charged Wind/Squall** (5 hits, 80 % knockback — **repousse les mobs vers le centre de la zone de kill**), Fire Blow/Salamander Blow (mono/burst).
+- **Root/Mesh Root** pour les élites, **Earth Barrier/Fence** (absorption), passifs Natural Spirit (+ % MAG), Magic Bound (portée).
+
+**Outils Bard** :
+- **Mana Cycle → Mana Orbit** : la batterie de mana (rend MP en continu — cible unique puis groupe).
+- **Noise** : réduit l'aggro — **à garder actif en permanence**.
+- **Moving/Swing March** (vitesse), **Guard/Mana Tambour** (+DEF PHY/MAG), **Dance of Magic/Wizardry** (+dégâts MAG groupe), Cure Music, Temptation (charme).
+
+**Boucle de farm type** :
 ```
-INT: 180 (all points)
-STR: 50 (base)
-HP: ~9,000+
-MP: ~16,000+
-MAG ATK: ~9,000+
+1. Noise + marches + tambour actifs ; Mana Cycle sur les Wizards (puis Clerics)
+2. Le lurer (Rogue xbow ou un Wizard) ramène le pack
+3. Charged Squall repousse les mobs au centre → Meteor → Earth Quake → Blizzard
+4. Dance of Wizardry pour les géants ; pickup au grab pet ; repeat
 ```
+⚠️ Fragile en solo (pot delay) : c'est un build de party. Solo → prendre Cleric en sub.
 
-#### Masteries recommandées
-```
-Wizard: 80
-  - Staff Mastery: 80
-  - All AOE spells: Max
-  - Lunar Potion: Max
-  - AOE Series 1-3: Max
+### 2. Wizard/Cleric — Le Polyvalent Solo/Party 🔮
 
-Bard: 80
-  - Mana Cycle: Max
-  - Speed Buff: Max
-  - Moving March: Max
-  - Guard Tambour: Max (optionnel)
-```
+Mêmes nukes, mais **Light Armor + heals** : le meilleur compromis pour joueur solo qui veut aussi party. **C'est LE build de plvler** (voir [Power Leveling](#-power-leveling-plvl--taxi)) : un Wiz/Cleric 80+ peut tenir une party 8/8 d'Ongs à lui seul (nukes AoE + heals).
 
-#### Skills Clés pour Farming
+### 3. Warrior/Cleric 1H — Le Tank de Dungeon 🛡️
 
-**AOE Spells (Wizard)** :
-- **Lunar Potion** : AOE de 6,000-10,000
-- **AOE Series 1-3** : Chaque AOE frappe 5-10 mobs
-- **Meteor Shower** (level 80+) : AOE massive
+- **Taunting Target / Howling Shout** (aggro), **Pain Quota** sur les Clerics, **fences** sur les lurers, **Protect** sur les Wizards, Iron/Mana Skin.
+- Indispensable à partir d'Alexandria/Job Temple : « le tank ultime, auto-suffisant ».
+- En solo c'est **lent** (peu d'AoE vs Wizard) mais **incrurable** — bon pour farner les zones dangereuses.
 
-**Buffs (Bard)** :
-- **Mana Cycle** : Récupère 500 MP/5s (CRITIQUE)
-- **Speed Buff** : +20% movement speed
-- **Moving March** : Another +10% speed
-- **Damage Buff** : +30% MAG ATK
+### 4. Rogue — Le Lurer et le Chasseur 🏹
 
-#### Playstyle de Farming
+- **Rogue/Bard (xbow)** : vitesse + mana → lurer et farm ; le Rogue niveau 10 suffit déjà pour le rôle de lurer en party (Rapid Shot).
+- **Rogue/Cleric (dague)** : burst sur les géants/uniques (Prick, Mortal Wounds) mais mono-cible — moyen en farm de masse.
 
-**Phase 1: Gathering (Round up)**
-1. **Buffez-vous** (Mana Cycle, Speed, Damage)
-2. **Run dans une zone** avec 10-20 mobs
-3. **Laissez les mobs vous suivre** (gathering)
+### 5. Warlock en sub ou 2e mastery 🧿
 
-**Phase 2: AOE Burst**
-4. **Arrêtez-vous** et **Lancez toutes les AOE** :
-   - Meteor Shower
-   - Lunar Potion
-   - AOE Series 1, 2, 3
-5. **Tous les mobs meurent** en 1-2 cycles
+- **Division (Courage Raze)** sur les géants/PTG : +30 % dégâts subis pour toute la party.
+- DoT AoE sur les packs ( Blaze/Toxin/Decayed ) qui **remontent la jauge de zerk** du groupe.
+- Warlock/Bard : cité parmi les meilleurs solos PvE par le guide Reddit.
 
-**Phase 3: Repeat**
-6. **Ramassez le loot** (ou utilisez grab pet)
-7. **Repeat** indéfiniment
+### 6. Bard/Cleric — Le Support Total 🎵
 
-**Efficiency** :
-- **Exp/heure** : 3-5M XP/heure (level 70-80)
-- **SP/heure** : 300-500k SP/heure
-- **Gold/heure** : 200-500k/heure (avec drops)
+Toujours recruté (buffs + heals + rez) mais **ne farm pas seul**. Multicompte typique : un Bard/Cleric suit le farmeur.
+
+### 7. Tri-build Wiz 108 / Warrior 10 / Cleric 102 (cap 110)
+Optimisé « tout-terrain » : nukes complets + utilitaire Warrior (Earth Fence via les 10 premiers rangs, interrupts) + Cleric entier. Voir [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md#-builds-populaires-européens).
 
 ---
 
-### Warrior/Cleric (Le Tank Farmer)
+## 🇨🇳 Builds Chinois PvE
 
-#### Stat Distribution (Pure STR - Level 80)
-```
-STR: 200 (all points)
-INT: 50 (base)
-HP: ~22,000+
-MP: ~7,000+
-PHY ATK: ~7,000+
-PHY DEF: ~3,500+
-```
+### 1. Full STR Glaive — Le Farmeur Autonome 🔥
 
-#### Masteries recommandées
-```
-Warrior: 80
-  - 2H Mastery: 80
-  - Guard Buff: Max
-  - Chain Crash: Max
-  - Flying Dragon: Max
+**Le meilleur farmeur solo CH** (~80 k SP au cap 80 — le moins cher des builds CH) :
+- **Spin permanent** : **Storm Series** (Bloody Fan Storm…) transforme l'attaque de base en tourbillon AoE → on agro 10-20 mobs et on les découpe.
+- **Ghost Spear Attack Series** (AoE tournoyante), Chain Spear (multi-hits), Soul Departs Spear (stun) pour les élites.
+- Passif **Cheolsam Force** (+HP) + **Flame Body** (+ % ATK PHY) + **Fire Protection** (+DEF MAG) ; variante Cold 20 pour **Snow Shield**.
+- **Armor** : HP/DEF max pour tanker les packs.
+- Variantes masteries et SP exacts : voir [33_PVP_BUILDS.md](33_PVP_BUILDS.md#1-full-str-glaive--le-tank-à-dégâts-) (les mêmes builds servent au PvE).
 
-Cleric: 80
-  - Healing Cycle: Max
-  - Healing Division: Max
-  - Bless Spell: Max
-  - Recovery Division: Max
-```
+### 2. INT Nuker (Spear / S-S / Bow) — Le Tueur à Distance 📈
 
-#### Skills Clés
+- **PvE le plus rapide en solo CH** : imbue Fire (Burn finit les mobs) + nukes **Flame Wave** (Fire) / **Thunderbolt Force** (Lightning) — 2-3 nukes par mob, jamais touché.
+- **S/S nuker (Bicheon + Lightning + Cold)** : bouclier + Snow Shield = le nuker « safe » ; **Cold Wave** en opener (ralentit) puis nukes Lightning (guide [Serafelle/ExaySRO](https://forum.exaysro.com/printthread.php?tid=1039)).
+- **Bow nuker** : portée max + Soul Arrow, kitabilité maximale.
+- Faiblesse : le pool de mobs « géants » et les zones très denses où l'aggro multipliée tue un INT.
 
-**Warrior** :
-- **Chain Crash** : AOE knockdown (frappe 5-8 mobs)
-- **2H Flying Dragon** : 6,000-10,000 dégâts
-- **Guard Buff** : +50% PHY DEF
+### 3. Full STR Bow — Le Kiter/Kite Farmer 🏹
 
-**Cleric** :
-- **Healing Cycle** : Hot de 1,500 HP/5s
-- **Healing Division** : Burst heal de 4,000 HP
+- Anti Devil Bow (crit) + imbue Fire (burn pendant le kite) : excellent **unique hunter** et jobber ; plus lent en farm de masse. ~90-100 k SP au cap 80.
+- Build leveling ZsZC : Pacheon 90 / Fire 90 / Lightning 90 ; build crit : Pacheon 105 / Fire 105 / Cold 100.
 
-#### Playstyle de Farming
+### 4. Hybrides et Force support ⚖️
 
-**Phase 1: Tank and Spank**
-1. **Buffez** (Guard, Bless)
-2. **Attaquez** un mob
-3. **Laissez 10-20 mobs** vous aggro
-4. **Chain Crash AOE** pour les frapper tous
-
-**Phase 2: Survive**
-5. **Heal** avec Healing Cycle
-6. **Continuez à AOE** jusqu'à mort
-7. **Healing Division** si urgence
-
-**Avantages** :
-- ✅ **Peut tank** indéfiniment
-- ✅ **Bon pour uniques** (tank pendant que party DPS)
-- ✅ **Good pour SP farming** avec gap
-
-**Inconvénients** :
-- ❌ Très lent
-- ❌ Pas rentable en gold/heure
+- **Hybrid spear 4:1** (guide Kerelious) : nukes + coups PHY → très bon farmer solo polyvalent (SP : ~105 k à 42, ~170 k à 60, ~312 k à 72).
+- **Force hybrid (arme + Force + Cold/Fire)** : heal/rez/cure en party (job parties, FW), économise les potions en farm — les Vital Spot (Decay/Weaken/Impotent/Division) accélèrent aussi les géants.
 
 ---
 
-### Rogue/Bard (Le Speed Farmer)
+## 📚 SP Farming : Builds et Rendements
 
-#### Stat Distribution (Pure STR - Level 80)
-```
-STR: 200 (all points)
-INT: 50 (base)
-HP: ~16,000+
-MP: ~6,000+
-PHY ATK: ~7,500+
-Speed: Très élevée avec Garment
-```
+> Le guide complet (GAP, tableaux, spots, méthode PLvL) est dans **[26_SP_FARMING.md](26_SP_FARMING.md)** — cette section ne couvre que les **builds**.
 
-#### Masteries recommandées
-```
-Rogue: 80
-  - Dagger Mastery: 80
-  - Fatal Storm: Max
-  - Chain Attacks: Max
+### Les builds SP farmers de référence
+| Build | Pourquoi c'est le bon build pour farmer | Référence |
+|---|---|---|
+| **Glaive STR (spin)** | Agro massif + AoE permanente + pas de pots HP grâce à l'armor ; tourne sans downtime | Elitepvpers 516942 |
+| **Nuker INT (bow/spear)** | Kill rapide à distance : maximise les kills/h (le SP dépend du volume) | Reddit/Guides |
+| **Wizard (party plvl)** | Le plvler type : AoE decimate une party 8/8 d'Ongs | Elitepvpers 2461754 |
+| **Bow STR** | Farm à GAP 9 possible dès le niveau 5+ selon les joueurs | [Reddit 6j0klc](https://www.reddit.com/r/silkroadonline/comments/6j0klc/just_came_back_to_sro_got_some_questions_about_sp) |
 
-Bard: 80
-  - Speed Buff: Max
-  - Moving March: Max
-  - Mana Cycle: Max
-  - Damage Buff: Max
-```
+### Rendements réels (corrigés)
+- **~1 000 SP/h** en méthode classique (party 8/8 + plvler, GAP 9, Ongs) ; **3 000+ SP/h** avec tickets ST/PT sur les serveurs qui en proposent ; ~**10 k SP/jour** en session longue (KB 26).
+- Le guide [Ultimate Ong Farming (Elitepvpers)](https://www.elitepvpers.com/forum/sro-guides-templates/2127736-silkroad-ulitmate-ong-farming-guide-updated-2012-a.html) revendique **50 k+ SP/jour** « si fait correctement » (haut de fourchette, à prendre avec prudence).
+- Paliers utiles : viser **20-30 k SP** pendant la fenêtre 13-32 (bandits puis Ongs) ; ~**90-100 k SP** pour un build CH complet au cap 80 (glaive) ; **1,9-2,5 M** pour 3 masteries au cap 110 (elitepvpers 516942).
 
-#### Playstyle
-
-**Kiting Style** :
-1. **Buffez speed** (Speed + Moving March)
-2. **Run et hit** les mobs un par un
-3. **Critical hits** one-shot la plupart des mobs
-4. **Continuez moving**, jamais stay still
-
-**Efficiency** :
-- **Très bon pour job** (thief/hunter)
-- **Excellent pour uniques** (burst énorme)
-- **Bon pour farming épars** (solo mobs)
+### La fenêtre classique (rappel KB 26)
+| Niveaux | GAP | Spots |
+|---|---|---|
+| 1-13 | 0-5 | Quêtes, bandits léger |
+| **13-32** | **9** | Bandits (13-17) puis **Ongs/Sonars (31-34, Karakoram)** — meilleur ratio du jeu |
+| 32-45 | 5-9 | Sonars/Ongs, Bunwangs/Mujigis |
+| 45-60 | 5-9 | Penon (26-28) / Niyas |
+| 60-80 | 9 (+plvl) | **Niyas du Taklamakan** en 8/8 |
 
 ---
 
-## 🇨🇳 Builds Chinois
+## 🚀 Power Leveling (PLvL / Taxi)
 
-### INT Spear Nuker (Le Meilleur Solo Grinder)
+**Principe** : un haut niveau (le « plvler », typiquement **Wizard/Cleric 80+**) tue en masse pendant que la party « passengers » récolte l'XP partagée (party EXP auto-share).
 
-#### Stat Distribution (Pure INT - Level 80)
-```
-INT: 200 (all points)
-STR: 50 (base)
-HP: ~9,000+
-MP: ~18,000+
-MAG ATK: ~11,000+
-```
+- **Méthode 8/8 + Ongs** (guide [How to farm SP — Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/2461754-guide-how-farm-sp-skillpoints.html)) : c'est LA méthode historique de SP farming.
+- **Taxi payants** : spots « wings » (Jangan/Hotan), tarifs en gold selon serveur ; le plvl payant a longtemps été un business sur officiels.
+- ⚠️ L'« afk complet » n'existe pas : il faut au moins rejoindre la party et rester à portée ; certains serveurs imposent une activité.
 
-#### Masteries recommandées
-```
-Heuksal: 80 (Spear)
-  - Spear Nuke Series: Max
-  - Ghost Spear Attack: Max
-  - Flying Dragon: Max
-
-Fire: 80
-  - Fire Nuke Series: Max
-  - Fire Force: Max
-
-Lightning: 80
-  - Lightning Nuke Series: Max
-  - Lightning Speed Buff: Max
-  - Parry Buff: Max
-
-Cold: 60 (imbue only)
-  - Cold Imbue: Max
-```
-
-#### Skills Clés
-
-**Heuksal (Spear)** :
-- **Spear Nuke 1-4** : 8,000-15,000 MAG ATK
-- **Ghost Spear Attack** : AOE 5,000-8,000 (5 mobs)
-- **Flying Dragon** : Finisher 12,000-18,000
-
-**Fire** :
-- **Fire Nuke 1-4** : 6,000-12,000 MAG ATK
-- **Fire Force** : +40% MAG ATK
-
-**Lightning** :
-- **Lightning Nuke 1-4** : 5,000-10,000 MAG ATK
-- **Lightning Speed** : +20% movement speed
-
-#### Playstyle de Farming
-
-**Kiting Style (Distance)** :
-1. **Buffez** (Fire Force, Lightning Speed, Cold Armor)
-2. **Trouvez un mob**
-3. **Nuke** de loin (Spear Nuke)
-4. **Le mob avance vers vous**
-5. **Nuke again** avant qu'il arrive
-6. **Mob meurt** avant de vous toucher
-
-**AOE Style (Multiple Mobs)** :
-1. **Laissez 3-5 mobs** vous suivre
-2. **Ghost Spear AOE** pour tous les frapper
-3. **Continuez nuking** jusqu'à mort
-
-**SP Farming (avec gap)** :
-- **Level 40, Mastery 31** (9-gap)
-- **SP Gain** : ~300-500 SP/heure
-- **Spots** : Bandit Stronghold, Niya Spies
-
-**Efficiency** :
-- **Solo efficiency** : ★★★★★ (meilleur solo)
-- **Exp/heure** : 2-4M XP/heure (level 70-80)
-- **SP/heure** : 200-400k SP/heure
-- **Gold/heure** : 150-400k/heure
+**Builds concernés** :
+- **Plvler** : Wizard/Cleric (AoE + heals) de loin le plus efficace ; glaive STR spin possible.
+- **Passenger** : n'importe quel build — c'est la phase idéale pour GAP 9 (monter les masteries après).
 
 ---
 
-### Pure STR Glaive (Le Tank AOE Farmer)
+## 🏛️ Builds par Donjon (FGW, Qin-Shi, Job Temple)
 
-#### Stat Distribution (Pure STR - Level 80)
-```
-STR: 200 (all points)
-INT: 50 (base)
-HP: ~20,000+
-MP: ~10,000+
-PHY ATK: ~7,500+
-PHY DEF: ~3,200+
-```
+### Forgotten World (FGW) — les 6 ailes
+> Détails complets : [29_FORGOTTEN_WORLD.md](29_FORGOTTEN_WORLD.md). Chaque aile = tranche de niveau + collection de **8 talismans** → récompenses (armes FGW du degré correspondant).
 
-#### Masteries recommandées
-```
-Heuksal: 80
-  - Glaive Mastery: 80
-  - Ghost Spear Attack: Max (AOE)
-  - Flying Dragon: Max
-  - Body Champ: Max (+DEF)
+| Aile | Niveaux | Degré | Party type |
+|---|---|---|---|
+| Togui Village | 51-60 | 8D | Party mixte 8, AoE utile |
+| Flame Mountain | 61-70 | 9D | Party 8 + lurer |
+| Green Abyss | 71-80 | 10D | Party 8 EU classique |
+| Sea of Resentment | 81-90 | 11D | EU 8/8 (war/cler/wiz/bard) |
+| Shipwreck Dimension | 91-100 | 12D | EU 8/8 + burst |
+| Temple of Egypt | 101-110 | 13D | EU 8/8 opti + Warlock (Division) |
 
-Fire: 80
-  - Fire Nuke: Max
-  - Fire Force: Max
+**Builds FGW** : la party EU standard (1 War 1H, 2 Clerics, 1 Bard, 3-4 Wizards, ± Warlock) ; côté CH, glaive STR (tank/AoE) + nukers + force hybrid (cure/rez — les statuts ne se pilulent pas). Le **Rogue xbow** lure efficacement les chambres.
 
-Force: 80
-  - Healing Series: Max
-  - Resurrection: Max
-  - Debuffs: Max
+### Qin-Shi Tomb (Jangan Cave) — le donjon 70+
+> Uniques détaillés dans [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md#-uniques-du-qin-shi-tomb-medusa).
 
-Lightning: 60 (speed buff only)
-  - Lightning Speed: Max
-```
+- 6 étages (B1-B6), mobs 71+ jusqu'aux **Gardiens 98-99, Shinmoo/Soso 100**, boss final **BeakYung the White Viper « Medusa » (105, B6)**.
+- **Tout aggro** (« everything attacks » — [MMORPG.com](https://www.mmorpg.com/general-articles/exploring-the-tomb-of-the-qin-shi-emperor-2000116769)) : party quasi obligatoire, guide [IGN Qin-Shi Guidebook](https://www.ign.com/articles/2009/04/07/the-qin-shi-tomb-silkroad-guidebook-58).
+- **Builds** : party CH forte (glaive front + nukers + force) ou EU 8/8 ; le **stun/knockdown** aide beaucoup sur les serpents/généraux.
 
-#### Skills Clés
+### Job Temple (Alexandrie sud) — le PvPvE 105+
+> Uniques : Apis 103, Selket 105, Neith 106, Anubis 107, Isis 108, Haroeris 109, Seth 110 — accès selon les **Activity Points (AP)** de l'union de job, **costume de job obligatoire** ([15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md#-uniques-du-job-temple-alexandrie)).
 
-**Heuksal** :
-- **Ghost Spear Attack** : AOE 6,000-9,000 (5-8 mobs)
-- **Flying Dragon** : 9,000-14,000 single target
-- **Body Champ** : +30% PHY DEF
+- PvPvE : on farm les chambres en costume de job — les autres unions aussi. Prévoir du PvP.
+- **Builds** : parties EU 8/8 optimisées (war/cler ×2/bard/wiz) OU parties CH de guild ; Warlock très utile (Division sur les uniques) ; les drops incluent items Egypt 11D.
 
-**Force** :
-- **Healing Orbit** : Heals 3,000-5,000 HP
-- **Resurrection** : Revive party members
-- **Debuffs** : -20% ATK/DEF on mobs
-
-#### Playstyle de Farming
-
-**Tank AOE Style** :
-1. **Buffez** (Body Champ, Fire Force, Lightning Speed)
-2. **Run dans une zone** avec 10-15 mobs
-3. **Laissez-les vous aggro**
-4. **Ghost Spear AOE** → tous les mobs frappés
-5. **Heal** avec Force si besoin
-6. **Repeat** jusqu'à mort
-
-**Unique Hunting** :
-- **Tank l'unique** pendant que party DPS
-- **Heal les teammates** avec Force
-- **Resurrect** si quelqu'un meurt
-
-**Efficiency** :
-- **Survivabilité** : ★★★★★ (très tanky)
-- **Exp/heure** : 1.5-3M XP/heure
-- **SP/heure** : 150-300k SP/heure
-- **Gold/heure** : 100-300k/heure
-
----
-
-### Pure STR Bow (Le Kiting Farmer)
-
-#### Stat Distribution (Pure STR - Level 80)
-```
-STR: 200 (all points)
-INT: 50 (base)
-HP: ~16,000+
-MP: ~9,000+
-PHY ATK: ~7,000+
-Range: Très longue
-```
-
-#### Masteries recommandées
-```
-Pacheon: 80 (Bow)
-  - Bow Mastery: 80
-  - Arrow Rain: Max (AOE)
-  - Strong Bow: Max
-  - Anti-Devil Arrow: Max
-
-Fire: 80
-  - Fire Nuke: Max
-  - Fire Force: Max
-
-Lightning: 60
-  - Lightning Speed: Max
-```
-
-#### Playstyle
-
-**Extreme Kiting** :
-1. **Buffez** (Fire Force, Lightning Speed)
-2. **Trouvez un mob**
-3. **Shoot** de très loin
-4. **Le mob avance**, vous **reculez**
-5. **Shoot again**
-6. **Jamais let mob touch you**
-
-**Efficiency** :
-- **Très safe** (jamais touché)
-- **Excellent pour job** (thief/hunter)
-- **Good pour uniques** (kiter le boss)
-- **Plus lent** que glaive/nuker
-
----
-
-## 📚 SP Farming Builds
-
-### Qu'est-ce que le SP Farming?
-
-Le **SP Farming** (Skill Point Farming) consiste à optimiser le gain de points de compétence en maintenant un **écart (gap)** entre votre niveau de personnage et vos maîtrises.
-
-### La Règle du 9-Gap
-
-**Le gap optimal** est de **9 niveaux** :
-- **Niveau perso** : 50
-- **Maîtrises max** : 41 (50 - 9 = 41)
-- **SP Gain** : Maximal (~400-500 SP/heure)
-
-### Meilleurs Builds pour SP Farming
-
-#### 1. INT Spear Nuker (9-Gap)
-**Le meilleur SP farmer**
-
-**Masteries à level 50** :
-```
-Heuksal: 41
-Fire: 41
-Lightning: 41
-Cold: 30 (imbue only)
-```
-
-**Level 70** (9-gap continued) :
-```
-Heuksal: 61
-Fire: 61
-Lightning: 61
-Cold: 40
-```
-
-**Spot recommandé : Bandit Stronghold**
-- **Level mobs** : 45-50
-- **Density** : Très élevée
-- **SP/heure** : ~400-500 SP/heure
-- **Gold/heure** : ~200k/heure
-
-**Gear SP Farming** :
-- **Armor Set** : Garment (MP++, speed++)
-- **Weapon** : SOS/SOM +5-7
-- **Accessoires** : INT rings, MP earrings
-
-#### 2. Pure STR Glaive (9-Gap)
-**Le tank SP farmer**
-
-**Masteries à level 50** :
-```
-Heuksal: 41
-Fire: 41
-Force: 41
-Lightning: 30 (speed only)
-```
-
-**Avantages** :
-- ✅ **Peut tank** beaucoup de mobs
-- ✅ **Heals** pour survivre
-- ✅ **Good en party**
-
-**Inconvénients** :
-- ❌ **Plus lent** que INT nuker
-- ❌ **Moins de SP/heure**
-
----
-
-### SP Farming Spots par Level
-
-| Level Range | Spot | Mobs | Density | Recommanded |
-|-------------|------|------|---------|-------------|
-| **20-30** | Donwhang Hills | Bandits, Chargers | Moyenne | INT Nuker |
-| **30-40** | Karakoram | Ongs, Bonies | Élevée | STR Glaive, INT Nuker |
-| **40-50** | **Bandit Stronghold** | Shia Geeks, Bandits | **Très élevée** | **INT Nuker (best)** |
-| **50-60** | Niya Soldiers | Niya Spies, Guards | Très élevée | INT Nuker |
-| **60-70** | Takla Makan | Mummies, Scorpions | Moyenne | INT Nuker, Wizard |
-| **70-80** | Temple (Hotan) | Roc, Ixis | Élevée | Wizard/Bard |
-| **80-90** | Alexandria | Egypt mobs | Très élevée | Wizard/Bard, INT Nuker |
-| **90-100** | Egypt Dungeon | Tomb mobs | Très élevée | Wizard/Bard, STR Glaive |
-| **100-110** | Doom Ship | Ship mobs | Très élevée | Wizard/Bard |
-
----
-
-## ⚡ Power Leveling
-
-### Qu'est-ce que le Power Leveling?
-
-Le **Power Leveling** consiste à monter de niveau **le plus vite possible**, généralement en **party** avec des personnages de haut niveau qui **kill les mobs pour vous**.
-
-### Taxi System
-
-**Comment fonctionne le Taxi** :
-1. Vous rejoignez une **party avec des haut levels**
-2. **Vous ne faites rien** (vous êtes "passenger")
-3. **Les haut levels tuent** les mobs
-4. **Vous gagnez de l'EXP partage** (party exp share)
-
-**Où trouver des Taxi** :
-- **Wings** (Hotan wings, Jangan wings)
-- **Tarif** : 500k-2M gold/jour (selon serveur)
-- **Durée** : 2-3 jours pour level 1-80
-
-### Meilleures Spots pour Power Level
-
-| Level Range | Spot | Party Type | Exp/Heure |
-|-------------|------|------------|-----------|
-| **1-20** | Jangan West | Solo/small party | 500k-1M |
-| **20-40** | Donwhang | Party 4-8 | 1-2M |
-| **40-60** | Bandit Stronghold | Full party 8/8 | 2-4M |
-| **60-80** | Takla Makan | Full party 8/8 | 3-5M |
-| **80-100** | Temple | Full party 8/8 | 4-6M |
-| **100-110** | Alexandria/Dungeon | Full party + 110 buffs | 5-8M |
-
-### Power Leveling Builds
-
-**En tant que Passenger** :
-- **Aucun build nécessaire** (vous êtes AFK)
-- Juste **prenez l'EXP** et **SP**
-
-**En tant que Driver (haut level)** :
-- **Wizard/Bard** (best pour AOE fast kills)
-- **INT Spear Nuker** (bon solo driver)
-- **STR Glaive** (tank driver)
+### Roc Mountain / raids
+- **Roc (100)** : HP ~1,45 milliard — **raid de guilde multi-parties** avec shot-caller ; Demon Shaitan (90) pour parties fortes.
+- **Builds raid** : 2-3 parties + tanks dédiés + Clerics par party + un appel pour les rez.
 
 ---
 
 ## 🗺️ Spots de Farming par Level
 
-### Level 1-20: Jangan Area
+> Tableau de synthèse aligné sur [25_LEVELING_GUIDE.md](25_LEVELING_GUIDE.md) et [26_SP_FARMING.md](26_SP_FARMING.md) — la version détaillée (coordonnées, mobs) y figure.
 
-**Jangan West** (Level 1-10)
-- **Mobs** : Yeoha, Mangyang
-- **Density** : Faible
-- **Recommended** : Nouveau joueurs
+| Niveaux | Zone | Mobs clés | Build conseillé |
+|---|---|---|---|
+| 1-13 | Jangan ouest | Yeoha, Mangyang | Tout (quêtes) |
+| 13-17 | Bandit Stronghold | Bandits 10-17 | Nuker, bow (GAP 9) |
+| **16-32** | **Habitat des Ongs (Karakoram)** | **Ongs/Blood Ongs 33-34** | **Party plvl ou glaive spin** (SP farming) |
+| 24-28 | Penon Castle | Penon Fighters | Party mixte |
+| 31-32 | Plaines de Samarkand | Sonars | Suite des Ongs |
+| 32-45 | Bunwangs/Mujigis | — | Nuker/glaive |
+| 62-80 | **Ruines Niya (Taklamakan)** | Niya Soldiers→Royals | **Party 8/8 + plvl (SP)** |
+| 70+ | Qin-Shi Tomb | Tomb mobs/uniques | Party 8 |
+| 80-90 | Roc Mountain | Demons | Party forte |
+| 90-100 | Alexandria ouest/est | Mobs Egypte | Wiz/Bard 8/8 |
+| 100-110 | Egypt/FGW Temple/Job Temple | Egypt mobs | EU 8/8 opti |
+| 105-110 | Job Temple | Uniques égyptiens | Guild PvPvE |
 
-**Jangan North** (Level 10-20)
-- **Mobs** : Tigers, Bears
-- **Density** : Moyenne
-- **Recommended** : Solo grinder
-
----
-
-### Level 20-30: Donwhang Area
-
-**Donwhang Hills** (Level 20-30)
-- **Mobs** : Bandit Archers, Chargers
-- **Density** : Moyenne
-- **Recommended** : INT Nuker, Bow
+> ⚠️ Correction vs ancienne version : les « Ongs niveau 45-55 à Bandit Stronghold » étaient faux — les Ongs sont **niveaux 33-34 au Karakoram** et Bandit Stronghold héberge des bandits **10-17** (déjà corrigé dans KB 26).
 
 ---
 
-### Level 30-40: Karakoram
+## 🛡️ Gear et Équipement PvE
 
-**Karakoram** (Level 30-40)
-- **Mobs** : Ong-Bak, Bonie-C
-- **Density** : Élevée
-- **Recommended** : STR Glaive, INT Nuker
+### Priorités par famille
+| Famille | Priorités |
+|---|---|
+| **INT (nukers, Wizard)** | MAG ATK → MP (pool + regen) → MAG DEF → attack rating (pas de miss) → HP minimal |
+| **STR (glaive, blader, warrior)** | PHY ATK → HP → PHY DEF → attack rating → crit (rogue/bow/blader) |
+| **Support (Bard/Cleric)** | Survie (HP/DEF) → MP → rien d'autre : vous ne tuez pas |
 
----
+### Armures (voir [08_ARMOR_TYPES.md](08_ARMOR_TYPES.md))
+| Build | Armure | Pourquoi |
+|---|---|---|
+| Nuker INT / Wizard | **Garment** | +20 % vitesse (kite/farm), −20 % coût MP, MAG DEF |
+| Glaive/Blader STR | **Armor** | HP/DEF PHY pour tanker les packs |
+| Hybrides | Protector | Équilibré, −10 % MP |
+| Warrior/Cleric | Heavy (ou Light) | Tank |
+| Wizard/Cleric | Light Armor | Défenses mixtes en solo |
 
-### Level 40-50: Bandit Stronghold ⭐
-**LE MEILLEUR SP FARMING SPOT**
+### Armes et degrés
+- Un **SoS du bon degré suffit largement en PvE** (+3 à +5) ; le SoM/SoSun et les + élevés sont un confort PvP (voir [06_SEAL_EQUIPMENT.md](06_SEAL_EQUIPMENT.md), [07_ITEM_DEGREES.md](07_ITEM_DEGREES.md)).
+- Exemples de gear de farm cité par les guides : spear 64 +5 avec blues (GameFAQs), protector +8/60 % pour du dungeon cap 90 (Seidenkraft).
 
-**Bandit Stronghold** (Level 40-50)
-- **Mobs** : Shia Geeks, Bandit Warriors
-- **Density** : **TRÈS ÉLEVÉE**
-- **SP/heure** : 400-500 (9-gap)
-- **Recommended** : **INT Spear Nuker** (best)
-
-**Pourquoi c'est le meilleur** :
-- ✅ Mobs **très denses**
-- ✅ **Fast respawn**
-- ✅ **Good drops**
-- ✅ **Safe** (pas de mobs agressifs level 60+)
-
----
-
-### Level 50-60: Niya Area
-
-**Niya Soldiers** (Level 50-60)
-- **Mobs** : Niya Spies, Niya Guards
-- **Density** : Très élevée
-- **SP/heure** : 350-450 (9-gap)
-- **Recommended** : INT Nuker
+### Outils de farm
+- **Grab pet** : ramasse automatiquement — le premier achat rentable d'un farmeur ([24_MOUNTS_PETS.md](24_MOUNTS_PETS.md)).
+- **Fellow pet** : bonus passifs/actifs selon le pet.
+- **Potions MP en masse** (CH), **Mana Cycle** (Bard), **Fire Combustion** (CH Fire, MP sur cd 180 s) : le downtime mana est le vrai frein.
+- **Avatars** : cosmétique uniquement.
 
 ---
 
-### Level 60-70: Takla Makan
+## 💰 Gold Farming
 
-**Takla Makan** (Level 60-70)
-- **Mobs** : Earth Ghosts, Mummies
-- **Density** : Moyenne-Élevée
-- **Recommended** : Wizard/Bard, INT Nuker
-
----
-
-### Level 70-80: Temple Hotan
-
-**Temple Hotan** (Level 70-80)
-- **Mobs** : Roc, Ixis
-- **Density** : Élevée
-- **Recommended** : Wizard/Bard (AOE massive)
+1. **Farm de mobs + drops** : gold brut, éléments d'alchimie (eld/dis/elements à revendre), SOX revente.
+2. **Uniques** : Tiger Girl, Uruchi, Isyutaru, Demon Shaitan… → SOX du degré correspondant ([15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md)).
+3. **FGW** : talismans + récompenses de collection (armes FGW très valorisées).
+4. **Job Temple** : coins/uniques → items Egypt.
+5. **Job system** : trade runs (trader), thieving (vol), hunter (escorte) — voir [HUB_JOBS.md](HUB_JOBS.md).
+6. **Stall network** : buy low/sell high (voir [23_STALL_NETWORK.md](23_STALL_NETWORK.md)).
 
 ---
 
-### Level 80-90: Alexandria
+## ⚠️ Erreurs Courantes en PvE
 
-**Alexandria West** (Level 80-90)
-- **Mobs** : Egypt Soldiers
-- **Density** : Très élevée
-- **Recommended** : Wizard/Bard, STR Glaive
-
----
-
-### Level 90-100: Egypt Dungeon
-
-**Pharaoh's Tomb** (Level 90-100)
-- **Mobs** : Tomb Mobs, Ghosts
-- **Density** : Très élevée
-- **Recommended** : Full party
-
----
-
-### Level 100-110: Doom Ship/High Level Areas
-
-**Doom Ship** (Level 100-110)
-- **Mobs** : Ship Mobs
-- **Density** : Très élevée
-- **Recommended** : Wizard/Bard, STR Glaive, Full party
-
----
-
-## 🛡️ Gear et Équipement
-
-### Priority Stats pour PvE
-
-#### INT Builds (Nukers, Wizard)
-1. **MAG ATK** (plus important)
-2. **MP** (16,000+ pour nukers)
-3. **MAG DEF** (3,000+)
-4. **Attack Rating** (200+ pour pas miss)
-5. **HP** (8,000+ minimum)
-
-#### STR Builds (Glaive, Blader, Warrior)
-1. **PHY ATK** (plus important)
-2. **HP** (18,000+)
-3. **PHY DEF** (3,000+)
-4. **Parry Ratio** (140+)
-5. **Critical Rate** (15-20%)
-
-### Armor Sets pour PvE
-
-| Build | Armor Type | Pourquoi |
-|-------|-----------|----------|
-| **INT Nuker** | **Garment** | MP++, MAG DEF++, speed++ |
-| **Wizard/Bard** | **Garment** | MP++, MAG DEF++, speed++ |
-| **STR Glaive** | **Armor** | HP++, PHY DEF++ (tank) |
-| **STR Bow** | **Garment** | Speed++ (kiting) |
-| **Warrior/Cleric** | **Armor** | HP++, PHY DEF++ |
-
-### Weapons
-
-#### INT Nuker
-- **Spear** : SOS/SOM +7-9 suffisant
-- **Staff** (Wizard) : SOS/SOM +7-9
-
-#### STR Builds
-- **Glaive/Spear** : SOS/SOM +7-9
-- **Bow** : SOS/SOM +7-9
-- **2H Sword** : SOS/SOM +7-9
-
-### Accessories
-
-#### INT
-- **2x INT Rings** (+15-20 INT chacun)
-- **Necklace MAG DEF**
-- **Earrings MP** (+500-1000 MP)
-
-#### STR
-- **2x STR Rings** (+15-20 STR chacun)
-- **Necklace PHY DEF**
-- **Earrings HP** (+500-1000 HP)
-
----
-
-## 💰 Gold Farming Tips
-
-### Meilleures Méthodes
-
-#### 1. SP Farming + Selling
-- **Farm des SP** avec 9-gap
-- **Vendez les SP** à des joueurs (prix varie)
-- **Similaire** à vendre des services de power level
-
-#### 2. Stall Network Reselling
-- **Buy low, sell high**
-- **Focus** sur les items 10D-13D
-- **SOX items** (SOS/SOM/SOSun) → profit énorme
-
-#### 3. Unique Hunting
-- **Farm des uniques** (Tiger Girl, Cerberus, etc.)
-- **Drop SOX** → vendez pour millions
-- **Risk** : competition avec autres joueurs
-
-#### 4. Job Thieving
-- **Vol aux traders**
-- **Sell les goods** volés
-- **High risk, high reward**
+1. **Disperser les masteries** (l'erreur n°1 — [Nostalgic.gg](https://nostalgic.gg/en/blog/silkroad-online-beginners-guide-en)) : 2-3 masteries max, pas 5.
+2. **Gasper l'alchimie sur du stuff temporaire** : immortal/lucky se gardent pour le set final.
+3. **Farmer à GAP 0 puis manquer de SP au cap** : planifier le GAP dès le niveau 13 ([26_SP_FARMING.md](26_SP_FARMING.md)).
+4. **Maxer tous les skills** : le wiki Fandom le déconseille formellement — monter les séries utiles, pas tout.
+5. **Jouer l'EU en solo sans sub Cleric/Bard** : le pot delay 15 s rend le solo EU pénible.
+6. **Négliger Noise/Mana Cycle en party** : sans mana, le Wizard n'est qu'un décor.
+7. **Over-master pour PvE** : au-delà du niveau des mobs, la mastery n'apporte plus rien (règle des 5 niveaux).
+8. **Aller au Qin-Shi/Job Temple sans party** : donjons pensés pour 8 joueurs.
+9. **Ignorer le job system** : c'est une source de revenus ET de gameplay ([Nostalgic.gg](https://nostalgic.gg/en/blog/silkroad-online-beginners-guide-en)).
 
 ---
 
 ## ❓ FAQ
 
-### Q: Quel est le meilleur build pour leveling solo?
-**R:** **INT Spear Nuker** est largement le meilleur pour solo leveling. Il peut tuer les mobs à distance safely et n'a pas besoin de party.
+**Q : Quel est le meilleur build pour leveler solo ?**
+R : **INT Nuker** (spear ou S/S) côté CH ; **Wizard/Cleric** côté EU. Pour le farm d'XP pur en party, rien ne bat **Wizard/Bard + party 8/8**.
 
-### Q: Le Wizard/Bard est-il bon pour solo?
-**R:** **Non**, il est très faible en solo. Il excelle en **party** où il peut AOE plusieurs mobs. En solo, il est trop fragile.
+**Q : Combien de SP faut-il prévoir ?**
+R : ~20-30 k pendant la fenêtre Ongs ; ~80-100 k pour un build CH complet au cap 80 ; jusqu'à **1,9-2,5 M** pour 3 masteries au cap 110 (selon variante — [33_PVP_BUILDS.md](33_PVP_BUILDS.md#1-full-str-glaive--le-tank-à-dégâts-)).
 
-### Q: Quel gap pour SP farming?
-**R:** **9-gap** est optimal pour la plupart des cas. Certains utilisent **0-gap** pour level fast, mais vous aurez moins de SP au final.
+**Q : GAP 9 ou GAP 0 ?**
+R : GAP 9 pour stocker des SP (XP ralenti), GAP 0 pour rusher le niveau. Le compromis classique : GAP 9 aux paliers 13-32 et 60-80, GAP léger (0-5) entre.
 
-### Q: Combien de temps pour level 1-110?
-**R:** Avec **power leveling (taxi)** : 2-3 jours
-En **solo grinding** : 2-3 semaines
-En **casual play** : 1-2 mois
+**Q : Le Warrior/Cleric est-il bon pour farmer ?**
+R : C'est le **plus safe et le plus lent**. Excellent en dungeon/job temple, moyen en XP/heure solo.
 
-### Q: Est-ce que le STR Bow est bon pour PvE?
-**R:** **Oui**, mais c'est plus lent. Il est excellent pour **kiter** et pour **job** (thief/hunter). Pour pure farming, INT nuker est meilleur.
+**Q : Quelle armure pour un nuker ?**
+R : **Garment** (vitesse + MP + MAG DEF) — sauf le S/S nuker qui peut préférer Protector selon le stuff.
 
-### Q: Quel armor pour INT nuker?
-**R:** **Garment** sans hésitation. MP++, MAG DEF++, et speed++ sont critiques pour le kiting et le farming efficiency.
+**Q : Peut-on SP farmer en party ?**
+R : Oui — la méthode 8/8 + plvler est justement LA méthode de référence (le volume de kills compense le partage).
 
-### Q: Puis-je SP farm en party?
-**R:** **Oui**, mais c'est **moins efficace** qu'en solo. L'EXP partagée réduit votre SP gain. Le meilleurs SP farming est en **solo avec 9-gap**.
+**Q : C'est quoi un « plvler » ?**
+R : Le haut niveau (souvent Wizard/Cleric) qui tue pour la party — voir [Power Leveling](#-power-leveling-plvl--taxi).
 
-### Q: Le Warrior/Cleric est-il bon pour farming?
-**R:** C'est **très lent**, mais **très safe**. Si vous voulez juste survivre et ne pas mourir, c'est bon. Si vous voulez du **speed**, choisissez INT nuker ou Wizard/Bard.
+**Q : Que faire à_stuff égal pour accélérer le farm ?**
+R : Grab pet, potions MP en volume, Noise/Mana Cycle, tuer **vite et beaucoup** (le SP dépend des kills, pas des dégâts), zerk sur les orbes.
 
 ---
 
-## 🔗 Sources
+## 🔗 Resources
 
-### Guides PvE et Farming
-- [Top 5 SilkRoad Best PvE Class - GamersDecide](https://www.gamersdecide.com/articles/silkroad-best-pve-class)
-- [Top 3 SilkRoad Best Wizard Builds - GamersDecide](https://www.gamersdecide.com/articles/silkroad-best-wizard-builds)
-- [Builds for PvE (Eldorado) - PlayOrigin Forum](https://forum.playorigin.com/showthread.php?5439-Builds-for-PvE-(Eldorado))
-- [QUICK BUILDS GUIDE - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?t=34322)
+### Guides PvE et farm
+- [80 Cap Tier List (PvE inclus) — PlayOrigin](https://forum.playorigin.com/showthread.php?1050-80-Cap-Tier-List-for-1v1-PvP-Job-Party-PvP-(Ctf-BA)-and-PvE)
+- [Top 10 SilkRoad Best Builds — GamersDecide](https://www.gamersdecide.com/articles/silkroad-best-builds)
+- [Full European Character Guide — Reddit r/silkroadonline](https://www.reddit.com/r/silkroadonline/comments/1wfn2h6/for_anyone_new_or_returning_to_silkroad_i_put/)
+- [The Full Wizard/Bard Guide — SilkroadForums](http://www.silkroadforums.com/viewtopic.php?f=5&t=100199)
+- [Nuker Build Sword/Shield — Serafelle (ExaySRO)](https://forum.exaysro.com/printthread.php?tid=1039)
+- [Silkroad Online Beginner's Guide — Fandom Wiki](https://silkroadonline.fandom.com/wiki/Beginner%27s_Guide)
+- [Silkroad Online Beginner's Guide 2026 — Nostalgic.gg](https://nostalgic.gg/en/blog/silkroad-online-beginners-guide-en)
 
-### SP Farming Guides
-- [MASS MODS ULTIMATE SP FARMING GUIDE - Elitepvpers](https://www.elitepvpers.com/forum/silkroad-guides-templates/721030-mass-mods-ultimate-sp-farming-guide.html)
-- [SP farming guide at the bandit stronghold - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?t=29046)
-- [Newbie Guide to level up to 50+ with SP FARMING - Facebook](https://www.facebook.com/groups/1409435159966231/posts/1515788339330912/)
+### SP farming / PLvL
+- [How to farm SP (Skill Points) — Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/2461754-guide-how-farm-sp-skillpoints.html)
+- [Silkroad Ultimate Ong Farming Guide — Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/2127736-silkroad-ulitmate-ong-farming-guide-updated-2012-a.html)
+- [Masteries and SP Farming — UnKnoWnCheaTs Wiki](https://www.unknowncheats.me/wiki/Silkroad:Masteries_and_SP_Farming)
+- [Questions SP farming — Reddit](https://www.reddit.com/r/silkroadonline/comments/6j0klc/just_came_back_to_sro_got_some_questions_about_sp/)
+- Interne : [26_SP_FARMING.md](26_SP_FARMING.md), [25_LEVELING_GUIDE.md](25_LEVELING_GUIDE.md)
 
-### Power Leveling
-- [Fastest way to level up? - PlayOrigin Forum](https://forum.playorigin.com/showthread.php?2872-Fastest-way-to-level-up)
-- [Silkroad Online Level Boosting Methods - YouTube](https://www.youtube.com/watch?v=IsgQP9y3LOY)
-- [How to powerlevel euro characters - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=5&t=57665)
-
-### Vidéos
-- [Level 125 Full INT Spear Nuker PvE - YouTube](https://www.youtube.com/watch?v=hPer4VcjBAE)
-- [Silkroad Origin Mobile Fast EXP Tips - YouTube](https://www.youtube.com/watch?v=dFALPffgT8I)
-
-### Tier Lists
-- [80 Cap Tier List for PvE - PlayOrigin](https://forum.playorigin.com/showthread.php?1050-80-Cap-Tier-List-for-1v1-PvP-Job-Party-PvP-(Ctf-BA)-and-PvE)
+### Donjons
+- [Forgotten World — Fandom Wiki](https://silkroadonline.fandom.com/wiki/Forgotten_World) et interne [29_FORGOTTEN_WORLD.md](29_FORGOTTEN_WORLD.md)
+- [The Qin Shi Tomb: Silkroad Guidebook #58 — IGN](https://www.ign.com/articles/2009/04/07/the-qin-shi-tomb-silkroad-guidebook-58)
+- [Exploring the Tomb of the Qin-Shi Emperor — MMORPG.com](https://www.mmorpg.com/general-articles/exploring-the-tomb-of-the-qin-shi-emperor-2000116769)
+- [Tomb Qin-Shi Uniques — Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/259810-guide-tomb-qin-shi-uniques.html)
+- [Job Temple Unique Guide — ExaySRO](https://forum.exaysro.com/showthread.php?tid=3875) et interne [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md)
+- [A complete guide to great partying — HX Community](http://hx-community.net/index.php?page=Thread&postID=8187) et [Party Guide — SRO Valkyria](http://srovalkyria.blog.fc2.com/blog-entry-2.html)
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
-*Sources: GamersDecide, Elitepvpers, PlayOrigin, Silkroad Forums, YouTube, Facebook*
+*Dernière mise à jour : 2026-10-01 (révision majeure : rendements SP réalistes, noms iSRO, donjons sourcés, suppression des données fabriquées)*
+*Sources : Elitepvpers, SilkroadForums, PlayOrigin, GamersDecide, UnKnoWnCheaTs, ExaySRO, ZsZC Wiki, IGN, MMORPG.com, Fandom Wiki, Nostalgic.gg, Reddit r/silkroadonline.*

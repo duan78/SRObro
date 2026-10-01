@@ -1,1098 +1,316 @@
 # Mounts et Pets - Guide Complet
 
+> ⚠️ **Révision majeure (2026-10)** : fichier reconstruit à partir de StrategyWiki, des guides elitepvpers (Fellow-Pet System, Devil Spirit), des guides officiels silkroadforever.com (Awesome Mount), de silkroadforums et de la base silkroadonline.wiki. La version précédente contenait de **nombreux pets inventés** (« Rabbit » et « Crow » en attack pets avec skill trees et évolutions en Phoenix/Moon Rabbit, « Fairy Cat »/« Fox »/« Pig » en grab pets, « Camel Lv20 » et « Elephant Lv40 » en transports du Stable) — tout est corrigé ci-dessous avec la taxonomy réelle d'iSRO.
+
 ## 📋 Table des Matières
-- [Introduction](#introduction)
-- [Mounts de Transport](#mounts-de-transport)
-- [Attack Pets](#attack-pets)
-- [Grab Pets](#grab-pets)
-- [Système de Soins et Gestion](#système-de-soins-et-gestion)
-- [Compétences de Pets](#compétences-de-pets)
-- [Acquisition et Coûts](#acquisition-et-coûts)
-- [Notes de Développement](#notes-de-développement)
+- [Introduction — Taxonomie réelle des pets](#-introduction--taxonomie-réelle-des-pets)
+- [Transports de Marchandises (Job)](#-transports-de-marchandises-job)
+- [Montures de Déplacement](#-montures-de-déplacement)
+- [Growth Pets (Pets d'Attaque)](#-growth-pets-pets-dattaque)
+- [Le Système Fellow](#-le-système-fellow)
+- [Ability Pets / Pickup Pets (COS)](#-ability-pets--pickup-pets-cos)
+- [Devil Spirit et Angel Spirit](#-devil-spirit-et-angel-spirit)
+- [Gestion et Soins (Stable-Keeper)](#-gestion-et-soins-stable-keeper)
+- [Acquisition et Coûts](#-acquisition-et-coûts)
+- [FAQ](#-faq)
+- [Notes de Développement (SRObro)](#-notes-de-développement-srobro)
+- [Incertitudes / Données Manquantes](#-incertitudes--données-manquantes)
+- [Sources](#-sources)
 
 ---
 
-## 📚 Introduction
+## 📚 Introduction — Taxonomie réelle des pets
 
-Silkroad Online dispose de **trois types de pets** qui jouent des rôles différents dans le gameplay:
+Contrairement à ce que disait l'ancienne version, Silkroad Online (iSRO) n'a **pas** de « Rabbit/Crow/Fairy Cat ». Les familles réelles sont :
 
-1. **Mounts (Transport Pets)** - Montures pour le déplacement et le transport de marchandises
-2. **Attack Pets** - Pets de combat qui aident à tuer des monstres
-3. **Grab Pets** - Pets de collecte qui ramassent le loot automatiquement
+| Famille | Exemples | Rôle | Acquisition |
+|---|---|---|---|
+| **Transports** | Horse, Ox | Porter les marchandises du Job Trader | Stable (gold) |
+| **Montures (mounts)** | Basic Horse, Awesome Mounts (White Tiger, Phoenix...) | Déplacement (certaines permettent d'attaquer) | Stable (gold) / Item Mall (Silk) |
+| **Growth Pets** (attack) | White Wolf, Grey Wolf, Penguin, Three-Footed Crow, Bear | Combattent aux côtés du joueur, gagnent de l'XP et grandissent | Stable (Grey Wolf : 1M gold) / Item Mall |
+| **Fellow Pets** | évolution d'un growth pet | Attaquent **et** servent de monture | Potion of Evolution (Silk) |
+| **Ability/Pickup Pets (COS)** | Myowon (singe), Seowon (écureuil), Toto (lapin) | Ramassent le loot automatiquement | Item Mall (Silk uniquement) |
+| **Spirits (transformation)** | Devil Spirit (A/S), Angel Spirit | Transforment le joueur, buffs puissants | Item Mall / donjons |
 
-Ce guide couvre en détail chaque type, leurs utilisations, et stratégies.
-
----
-
-## 🐪 Mounts de Transport
-
-### Types de Mounts
-
-#### Horse (Cheval)
-```
-Level Requis: 1
-Capacité de Transport: 1 slot (trading)
-Vitesse: +20% (monté), +0% (à pied)
-Points de Vie: 5000
-Prix: ~50,000 gold
-Durabilité: 1000
-
-Utilisation:
-  - Déplacement de base
-  - Trading débutant
-  - Tous les personnages level 1+
-
-Avantages:
-  ✅ Pas de prérequis
-  ✅ Peu coûteux
-  ✅ Vitesse modérée
-
-Inconvénients:
-  ❌ Capacité de trading limitée
-  ❌ Vulnérable aux attaques
-```
-
-#### Camel (Chameau)
-```
-Level Requis: 20
-Capacité de Transport: 2 slots (trading)
-Vitesse: +15% (monté), -5% (à pied)
-Points de Vie: 8000
-Prix: ~150,000 gold
-Durabilité: 1500
-
-Utilisation:
-  - Trading intermédiaire
-  - Transport de plus grandes quantités
-  - Routes plus longues
-
-Avantages:
-  ✅ Plus de capacité de trading
-  ✅ Plus de HP (survit mieux aux attaques)
-  ✅ Rentable pour le trading
-
-Inconvénients:
-  ❌ Plus lent que le cheval
-  ❌ Pénalité de vitesse à pied
-```
-
-#### Elephant (Éléphant)
-```
-Level Requis: 40
-Capacité de Transport: 3 slots (trading)
-Vitesse: +10% (monté), -10% (à pied)
-Points de Vie: 12000
-Prix: ~500,000 gold
-Durabilité: 2000
-
-Utilisation:
-  - Trading avancé
-  - High-level trading
-  - Routes très longues ou dangereuses
-
-Avantages:
-  ✅ Capacité de trading maximale
-  ✅ HP très élevé (très résistant)
-  ✅ Profit optimal pour les longues distances
-
-Inconvénients:
-  ❌ Très lent
-  ❌ Très cher
-  ❌ Pénalité de vitesse significative
-```
-
-### Mounts Spéciaux (Event/Item Shop)
-
-```
-Mounts rares disponibles via:
-  - Item Mall (Silk)
-  - Events saisonniers
-  - Promotions spéciales
-
-Exemples:
-  - Unicorn (Speed +25%)
-  - Dragon Mount (Speed +30%, special abilities)
-  - Robo Mount (Special effects)
-  - Event Mounts (Limited time)
-
-Ces mounts offrent généralement:
-  - Meilleure vitesse
-  - Apparences uniques
-  - Parfois des capacités spéciales
-  - Pas de durabilité (infinis)
-```
-
-### Soins et Entretien des Mounts
-
-#### HUNGER System
-```
-Tous les mounts ont une barre de "Faim" (Hunger):
-
-- Full Hunger: Performance 100%
-- 75% Hunger: Performance 75%
-- 50% Hunger: Performance 50%
-- 25% Hunger: Performance 25% (très lent)
-- 0% Hunger: Le mount ne bouge plus
-
-Régénération de la Faim:
-  - Diminue avec le temps et distance parcourue
-  - Doit être nourri pour restaurer
-
-Nourriture:
-  - Fodder (Nourriture basique)
-  - Special Fodder (Restaure plus)
-  - Prix: ~1,000-5,000 par unité
-```
-
-#### Durability System
-```
-Les mounts perdent de la durabilité quand:
-  - Attaqués par des monstres
-  - Attaqués par des thieves
-  - Tombent à 0 HP
-
-Réparation:
-  - Stable Master dans les villes
-  - Coût: Proportionnel aux dégâts
-  - À 0 durabilité: Le mount meurt (réanimable)
-
-Repair Costs:
-  - Horse: ~1,000 per 100 durability
-  - Camel: ~2,000 per 100 durability
-  - Elephant: ~5,000 per 100 durability
-```
-
-### Mounts pour Job System
-
-#### Trader Mounts
-```
-Utilisés par les Traders pour transporter des marchandises:
-
-Horse Trader (1-star):
-  - Capacité: 1 slot
-  - HP: 5000
-  - Vitesse: +20%
-  - Level requis: 20 (job level)
-
-Camel Trader (2-star):
-  - Capacité: 2 slots
-  - HP: 8000
-  - Vitesse: +15%
-  - Level requis: 30
-
-Elephant Trader (3-star):
-  - Capacité: 3 slots
-  - HP: 12000
-  - Vitesse: +10%
-  - Level requis: 40
-
-Special Transport Mounts (Events):
-  - Ostrich (4-star): Capacité 4, Speed +5%
-  - Royal Carriage: Capacité 5, Speed 0%, HP 20000
-```
-
-#### Hunter Mounts
-```
-Les Hunters n'utilisent généralement pas de mounts spéciaux:
-  - Se déplacent souvent à pied pour chasser
-  - Peuvent utiliser des montures normales pour rejoindre traders
-
-Certains Hunter mounts existent via events:
-  - Hunter Horse (Plus rapide, moins de HP)
-  - Falcon Mount (Air transport, rare)
-```
-
-#### Thief Mounts
-```
-Les thieves utilisent des mounts spécialisés:
-
-Robe/Flying mount:
-  - Invisibilité passive
-  - Vitesse améliorée
-  - Capacité de vol (certains serveurs)
-
-Standard Thief Mount:
-  - Version modifiée du Camel
-  - Plus de vitesse
-  - Moins de capacité
-```
+> ❌ **Corrigé :** l'ancienne version listait « Camel (Lv20) », « Elephant (Lv40) », « Ostrich 4-star », « Royal Carriage », « Falcon Mount » comme mounts/transport du Stable. **Aucun de ces items n'existe dans iSRO classique** (pas de palanquin non plus). Les transports réels du Stable sont le **cheval** et le **bœuf (ox)**.
 
 ---
 
-## ⚔️ Attack Pets
+## 🐴 Transports de Marchandises (Job)
 
-### Overview
+Les transports sont les animaux de bât utilisés par les **Traders** (et volés par les Thieves). Ils s'achètent au **Stable-Keeper** quand le costume de job Trader est équipé, et s'invoquent comme un pet.
 
-Les **Attack Pets** sont des compagnons de combat qui:
-- Attaquent les monstres automatiquement
-- Aident au farming
-- Ont des compétences spéciales
-- Gagnent de l'expérience et level up
+| Transport | Vitesse | Capacité | Notes |
+|---|---|---|---|
+| **Horse (cheval de bât)** | Rapide | Capacité standard | Meilleur rapport vitesse/capacité, choix par défaut |
+| **Ox (bœuf)** | Lent | Capacité supérieure | Plus de marchandises par trajet, mais caravan plus lente = plus vulnérable aux thieves |
 
-### Types d'Attack Pets
-
-#### Wolf (Loup)
-```
-Level Requis: 1
-Type: Physical DPS
-Apprentissage: Rapide
-Coût: Low
-
-Statistiques de base (Level 1):
-  - HP: 500
-  - ATK: 50-80
-  - Attack Speed: Moyen
-  - Crit Rate: 5%
-
-Évolution:
-  - Baby Wolf → Wolf → Giant Wolf → Dire Wolf
-
-Utilisation:
-  - PvE grinding
-  - Tank pet modéré
-  - DPS consistent
-
-Avantages:
-  ✅ Bon DPS
-  ✅ Tank correctement
-  ✅ Facile à obtenir
-
-Inconvénients:
-  ❌ Pas de capacités spéciales fortes
-  ❌ Meilleur au milieu des pets avancés
-```
-
-#### Rabbit (Lapin)
-```
-Level Requis: 10
-Type: Magical/Support
-Apprentissage: Rapide
-Coût: Low
-
-Statistiques de base (Level 1):
-  - HP: 400
-  - MAG ATK: 60-90
-  - Attack Speed: Rapide
-  - Special: Buffs
-
-Évolution:
-  - Baby Rabbit → Rabbit → Giant Rabbit → Moon Rabbit
-
-Utilisation:
-  - Support
-  - Buffs pour le joueur
-  - DPS magique
-
-Compétences:
-  - Physical Attack Boost (+10% PHY ATK)
-  - Mana Regeneration
-  - Magic Damage
-
-Avantages:
-  ✅ Excellents buffs
-  ✅ DPS magique respectable
-  ✅ Très utile en party
-
-Inconvénients:
-  ❌ Faible physiquement
-  ❌ Ne tank pas bien
-```
-
-#### Crow (Corbeau)
-```
-Level Requis: 20
-Type: Ranged/Debuffer
-Apprentissage: Lent
-Coût: Medium
-
-Statistiques de base (Level 1):
-  - HP: 350
-  - ATK: 70-100 (ranged)
-  - Range: Long
-  - Special: Debuffs
-
-Évolution:
-  - Baby Crow → Crow → Giant Crow → Phoenix (ultime)
-
-Utilisation:
-  - Ranged DPS
-  - Debuff des ennemis
-  - Support de distance
-
-Compétences:
-  - Poison (DoT)
-  - Attack Speed Reduction
-  - Defense Reduction (armor break)
-
-Avantages:
-  ✅ Portée excellente
-  ✅ Debuffs puissants
-  ✅ DPS constant à distance
-
-Inconvénients:
-  ❌ Très fragile
-  ❌ Nécessite micro-management
-  ❌ Difficile à obtenir
-```
-
-### Pet Growth System
-
-#### Leveling
-```
-Les Attack Pets gagnent de l'expérience en:
-  - Tuant des monstres (avec le joueur)
-  - Participant aux kills
-  - Blessés en combat
-
-Formule d'XP:
-  - XP Monster × (Pet Level / Player Level)
-  - Bonus XP si le pet porte le coup fatal
-
-Level Ranges:
-  - Level 1-20: Baby phase
-  - Level 21-40: Teen phase
-  - Level 41-60: Adult phase
-  - Level 61+: Evolution possible
-```
-
-#### Évolution (Evolution)
-```
-Conditions pour évolution:
-  - Level maximum atteint
-  - Items d'évolution (Evolution Stones)
-  - Quête complétée
-
-Stones d'évolution:
-  - Evolution Stone (Basic)
-  - Advanced Evolution Stone
-  - Ultimate Evolution Stone
-
-Drop rate:
-  - Monstres Champion/Giant: 5-10%
-  - Uniques: 20-30%
-  - Dungeons: 15-20%
-```
-
-#### Pet Skills
-```
-Chaque pet apprend des compétences à certains levels:
-
-Wolf Skills:
-  - Lv 10: Bite (Active attack)
-  - Lv 20: Growl (Taunt/aggro)
-  - Lv 30: Pack Hunting (Damage boost)
-  - Lv 40: Furious Bite (Critical attack)
-  - Lv 50: Alpha Howl (Party buff)
-
-Rabbit Skills:
-  - Lv 10: Buff (PHY +10%)
-  - Lv 20: Heal (HP recovery)
-  - Lv 30: Mana Regen (MP recovery)
-  - Lv 40: Buff MAG (+10%)
-  - Lv 50: Party Buff (All stats +5%)
-
-Crow Skills:
-  - Lv 10: Poison Shot (DoT)
-  - Lv 20: Armor Break (DEF -20%)
-  - Lv 30: Attack Speed Slow (-15%)
-  - Lv 40: Poison Cloud (AOE DoT)
-  - Lv 50: Fatal Mark (Crit chance +20%)
-```
-
-### Pet Management
-
-#### Hunger et Health
-```
-Hunger:
-  - Diminue avec le temps
-  - Diminue quand le pet attaque
-  - À 0%: Le pet ne bouge plus
-  - Doit être nourri avec Pet Food
-
-Health:
-  - Perd des HP en combat
-  - Peut mourir si HP = 0
-  - Doit être rez (Pet Resurrection Scroll)
-  - Réparable auprès du Stable Master
-
-Pet Food:
-  - Basic Pet Food (Restaure 30%)
-  - Advanced Pet Food (Restaure 60%)
-  - Special Pet Food (Restaure 100% + buffs)
-
-Pet Healing:
-  - Pet Potion (Small): 500 HP
-  - Pet Potion (Medium): 1000 HP
-  - Pet Potion (Large): 2000 HP
-  - Pet Resurrection Scroll: Rez pet mort
-```
-
-#### Pet Inventory
-```
-Les pets peuvent équiper des items:
-
-Slots disponibles:
-  - 1 Weapon slot (pet weapons)
-  - 1 Armor slot (pet armor)
-  - 1 Accessory slot (pet rings/necklaces)
-
-Pet Equipment:
-  - Claws/Teeth (Weapons)
-  - Pet Armor (Defense)
-  - Pet Jewelry (Stats)
-
-Sources:
-  - Drops de monstres
-  - Pet Shop NPCs
-  - Events
-```
+Points clés (vérifiés) :
+- ✅ On achète le bien de trade au **Merchant Guild**, on l'équipe dans le **slot d'event item**, puis on achète le transport au Stable (UnKnoWnCheaTs trading guide).
+- ✅ La **vitesse du transport diminue avec la charge** : plus le transport est chargé de marchandises, plus il est lent.
+- ✅ Le **trade rating (1-5 étoiles)** dépend de la valeur totale des marchandises transportées (Silkroad Mans).
+- ✅ Un transport qui meurt (HP à 0) fait perdre les marchandises ; les Thieves droppent les biens volés sur leur propre transport.
+- ❌ Pas de « durabilité » chiffrée publique : le transport a des **HP**, pas de barre de durabilité séparée.
 
 ---
 
-## 🤲 Grab Pets
+## 🏇 Montures de Déplacement
 
-### Overview
+### Basic Horse (cheval de selle)
+- ✅ Acheté au **Stable-Keeper** pour quelques milliers de gold (très accessible) — une **quête de niveau 5 (Jangan)** offre même un **horse scroll Lv10** en récompense.
+- ✅ Vitesse : le cheval de base rend le déplacement **~2× plus rapide** qu'à pied (GameFAQs : « the horse is 100% faster than walking »).
+- ✅ Possède **9 slots d'inventaire propres** : le cheval de selle sert aussi de « mule » pour transporter des items (Neoseeker/GameFAQs).
+- ⚠️ Impossible d'utiliser la plupart des skills en montant un cheval classique (les montures de combat de l'Item Mall lèvent cette limitation).
 
-Les **Grab Pets** (aussi appelés Loot Pets ou Pickup Pets) sont des pets qui:
-- Ramassent automatiquement le loot (gold, items)
-- Libèrent le joueur de devoir cliquer sur chaque item
-- Sont très populaires pour le farming intensif
+### Awesome Mounts (Item Mall)
+Le guide officiel « Awesome Mount » (silkroadforever.com) recense **10 montures**, dont : **Yellow Horse, Donkey, White Tiger, Sugar Loaf, Kamaitachi, Flame Tiger, Elk, Phoenix** (+2 non identifiées, voir Incertitudes).
 
-### Types de Grab Pets
-
-#### Pig (Cochon)
-```
-Level Requis: 1
-Vitesse: Normal
-Range: 10 unités
-Slots d'inventaire: 5
-
-Capacité:
-  - Ramasse tous les types d'items
-  - Range modérée
-  - Inventaire limité
-
-Prix: ~100,000 gold (7 jours) ou via Item Mall
-
-Avantages:
-  ✅ Automatise le farming
-  ✅ Économise du temps
-  ✅ Très abordable
-
-Inconvénients:
-  ❌ Inventaire limité
-  ❌ Vitesse de ramassage moyenne
-```
-
-#### Fox (Renard)
-```
-Level Requis: 1
-Vitesse: Rapide
-Range: 15 unités
-Slots d'inventaire: 7
-
-Améliorations vs Pig:
-  - Plus de range
-  - Plus rapide
-  - Plus de slots
-
-Prix: Via Item Mall (Silk) ou events
-
-Avantages:
-  ✅ Meilleur ramassage
-  ✅ Plus efficace
-  ✅ Inventaire plus grand
-
-Inconvénients:
-  ❌ Plus cher
-  ❌ Nécessite Silk (real money)
-```
-
-#### Fairy Cat (Chat Féerique)
-```
-Level Requis: 1
-Vitesse: Très rapide
-Range: 20 unités
-Slots d'inventaire: 10
-
-Grab Pet ultime:
-  - Meilleure vitesse
-  - Meilleur range
-  - Plus grand inventaire
-
-Special:
-  - Peut filtrer les items (ex: ignore les low-level drops)
-  - Auto-sell trash items (certains serveurs)
-
-Prix: Via Item Mall (cher)
-
-Avantages:
-  ✅ Performance maximale
-  ✅ Filtres intelligents
-  ✅ Inventaire spacieux
-
-Inconvénients:
-  ❌ Très cher
-  ❌ Luxe/End-game seulement
-```
-
-### Grab Pet Mechanics
-
-#### Ramassage Automatique
-```
-Fonctionnement:
-  1. Un mob meurt et drop du loot
-  2. Le grab pet detecte le drop (dans son range)
-  3. Le pet se déplace vers l'item
-  4. Le pet ramasse l'item
-  5. L'item va dans l'inventaire du pet
-  6. Le joueur peut transférer les items du pet à son inventaire
-
-Priorité de ramassage:
-  - Gold (priorité 1)
-  - SOX items (priorité 2)
-  - Équipements (priorité 3)
-  - Mats/Consumables (priorité 4)
-  - Trash items (dernier)
-```
-
-#### Inventaire du Pet
-```
-Slots disponibles:
-  - Pig: 5 slots
-  - Fox: 7 slots
-  - Fairy Cat: 10 slots
-
-Gestion:
-  - Transfert manuel au joueur
-  - Auto-transfert quand plein (option)
-  - Filtres (keep/sell/auto-drop)
-
-Quand l'inventaire est plein:
-  - Le pet arrête de ramasser
-  - Doit être vidé par le joueur
-  - Certains pets ont "Auto-Sell" (vend trash)
-```
-
-#### Durée et Limites
-```
-Durée:
-  - Grab Pets sont généralement time-limited
-  - Durées: 7 jours, 30 jours, permanent (rare)
-
-Coût:
-  - Pig (7 days): ~100,000 gold
-  - Fox (30 days): ~500,000 gold
-  - Fairy Cat (Permanent): Item Mall seulement
-
-Limitations:
-  - Ne peut pas ramasser pendant:
-    * Combat player (optionnel)
-    * Job activity (trading)
-    * PvP
-  - Certains zones interdisent les grab pets
-```
+- ✅ Montures achetées avec du **Silk** (Item Mall) ; les montures « de combat » (White Tiger, Kamaitachi, Flame Tiger...) permettent **d'attaquer tout en étant monté**.
+- ✅ La plupart sont permanentes et n'ont **pas de faim** contrairement aux growth pets.
+- ℹ️ Des montures d'event temporaires (Noël, anniversaires...) ont aussi été distribuées ponctuellement par Joymax.
 
 ---
 
-## 🏥 Système de Soins et Gestion
+## 🐺 Growth Pets (Pets d'Attaque)
 
-### Stable Master Services
+Les **growth pets** sont les véritables « attack pets » d'iSRO. Ils commencent **niveau 1** (bébé), gagnent de l'**expérience en combattant avec le joueur** et **grandissent physiquement** avec les niveaux.
 
-Dans chaque ville, le **Stable Master** offre:
+### Liste vérifiée (iSRO)
 
-#### Mount Services
-```
-Soins (Healing):
-  - Restaure les HP du mount
-  - Coût: Proportionnel aux HP manquants
-  - Ex: Mount à 3000/5000 HP = ~2,000 gold
+| Pet | Type | Acquisition | Croissance visuelle |
+|---|---|---|---|
+| **White Wolf** | Loup blanc | Item Mall (Silk) | Bébé louveteau → **loup adulte au niveau 40** |
+| **Grey Wolf** | Loup gris | **Stable-Keeper : 1,000,000 gold** | Idem White Wolf |
+| **Penguin** | Pingouin | Item Mall | Bébé → adulte (revivable avec Grass of Life) |
+| **Three-Footed Crow** | Corbeau à trois pattes | Item Mall | Bébé → adulte |
+| **Bear (Oso)** | Ours | Item Mall | Bébé → adulte |
 
-Réparation (Repair):
-  - Restaure la durabilité du mount
-  - Coût: Proportionnel aux dégâts
-  - Ex: 500 durability perdu = ~5,000 gold
+> 📌 StrategyWiki : « Wolves and Grey Wolves are combat-oriented pets with the ability to grow, starting as a puppy and maturing into a full-grown wolf that can attack alongside you. » La « growth phase » culmine au **level 40** où le louveteau devient un loup adulte.
+> ❌ **Corrigé :** il n'existe **pas** de chaîne « Baby Wolf → Giant Wolf → Dire Wolf », ni d'« Evolution Stones », ni de skill trees « Bite/Growl/Alpha Howl ». Les growth pets d'iSRO ont une **attaque automatique de mêlée sans compétences actives** (les skills de pet n'existent que via le système Fellow ou sur des serveurs privés).
 
-Nourriture (Food):
-  - Vend Fodder pour les mounts
-  - Fodder (Basique): 1,000 gold
-  - Special Fodder: 5,000 gold
-```
+### Mécaniques principales
 
-#### Pet Services
-```
-Attack Pet Healing:
-  - Pet potions disponibles
-  - Resurrection scrolls
+**1. XP et leveling**
+- Le pet gagne de l'XP en tuant des monstres **avec** son maître (il doit être invoqué).
+- Le pet a son **propre inventaire** (il peut porter des items — utile en farm).
+- La **Potion of Growth** augmente la taille de l'inventaire du growth pet (silkroadforums).
 
-Grab Pet Maintenance:
-  - Extension de durée (pay-to-extend)
-  - Repair (si endommagé)
+**2. HGP (Hunger Gauge Point)**
+- Jauge de faim qui **baisse avec le temps** pendant que le pet est invoqué.
+- Restaurée avec des **HGP Potions** (vendues au Stable / Item Mall).
+- À **0 HGP**, le pet refuse de se battre et **perd progressivement des HP** — toujours garder des HGP potions (silkroadforums « Wolf help »).
+- ℹ️ Le user note parfois « HGP = Horse Grass Powder » : **non confirmé**. HGP désigne la jauge (*Hunger Gauge Point*) ; la « Grass of Life » est l'herbe de **résurrection**, pas de nourriture.
 
-Pet Inventory:
-  - Achats d'équipement pour pets
-  - Pet weapons, armor, jewelry
-```
+**3. Mort et résurrection**
+- Un growth pet **peut mourir** en combat (wolf : « wolves can be killed during combat »).
+- Résurrection : item **Grass of Life** vendu par le **Stable-Keeper** de chaque ville, **ou** service de résurrection du Stable (~**50,000 gold** rapporté pour le wolf sur les forums MMORPG.com).
+- Le pet ne disparaît jamais définitivement : c'est un item permanent (une fois nommé).
+
+**4. Nom**
+- On nomme le pet à la première invocation ; le nom est **définitif**.
+- Un **Naming Scroll** (Item Mall) permet de le réinitialiser (guide Fellow-Pet elitepvpers).
+
+**5. Aggro / party**
+- Le pet **génère de la menace** sur les monstres qu'il attaque (il peut servir de semi-tank en early game).
+- Le pet **ne rejoint pas la party** en tant que membre : il suit son maître. Une seule invocation de pet actif à la fois par personnage (growth pet OU ability pet OU monture).
 
 ---
 
-## 🎯 Compétences de Pets
+## 🧬 Le Système Fellow
 
-### Attack Pet Skills Overview
+Introduit pour les pets plus évolués, le **Fellow System** (guide elitepvpers complet) transforme un growth pet en **Fellow** :
 
-Les pets ont des compétences actives et passives:
+- ✅ Le growth pet (ex. wolf) utilise une **Potion of Evolution** (Item Mall) → devient un **Fellow** adulte.
+- ✅ Le Fellow **attaque les cibles désignées** par son maître **et peut être monté** (attack pet + monture en un).
+- ✅ Items dédiés : **Potion of Mana** (MP du Fellow), potions de soin Fellow, Naming Scroll.
+- ✅ Il continue de gagner des niveaux et des stats avec l'XP.
+- ℹ️ Sur les serveurs privés et Silkroad Origin Mobile, ce système a été étendu (pets « Silk Pet » montables et attaquants, taille croissant jusqu'au Lv130).
 
-#### Actives ( doivent être activées)
-```
-Attack Commands:
-  - "Attack" : Le pet attaque la cible du joueur
-  - "Stop" : Le pet arrête d'attaquer
-  - "Come" : Le pet revient vers le joueur
-  - "Stay" : Le pet reste sur place
+---
 
-Special Skills:
-  - Skill 1: Compétence principale (damage)
-  - Skill 2: Compétice secondaire (buff/debuff)
-  - Ultimate: Compétice ultime (level 50+)
-```
+## 🐒 Ability Pets / Pickup Pets (COS)
 
-#### Passives (Toujours actives)
-```
-Auto-Attack:
-  - Le pet attaque automatiquement les ennemis proches
-  - Priorité: Cible du joueur, puis plus proche
+Les **ability pets** (appelés **COS** dans les fichiers du jeu — pets invoqués) ramassent **automatiquement le loot** (gold et items) autour du joueur. Ils ne combattent pas.
 
-Buffs:
-  - Certains pets donnent des buffs passifs
-  - Ex: Rabbit donne +10% PHY ATK passivement
+### Liste vérifiée (iSRO)
 
-Auras:
-  - AOE effects autour du pet
-  - Ex: Wolf donne +5% crit aura dans un rayon de 10m
-```
+| Pet | Animal | Acquisition | Durée |
+|---|---|---|---|
+| **Pet Myowon** | Singe | Item Mall (Silk) — ~10 $ | **28 jours** |
+| **Pet Seowon** | Écureuil | Item Mall (Silk) | **28 jours** |
+| **Pet Toto** | Lapin | Item Mall (Silk) | **28 jours** |
 
-### Skill Management
+D'autres modèles (cat, penguin, tiger, rhinoceros...) ont été annoncés/distribués au fil des mises à jour de l'Item Mall (annonce 2007 : « Cat, Penguin, Tiger, Rhinoceros »).
 
-#### Skill Tree
-```
-Chaque pet a un skill tree:
+### Mécaniques (vérifiées)
 
-Points de compétence:
-  - Gagnés à chaque level up
-  - Habituellement 1 point par level
+- ✅ **Silk uniquement** : les pickup pets ne s'achètent pas avec du gold (contrairement au Grey Wolf). Prix rapporté : **~10 $** pour 28 jours (silkroadforums).
+- ✅ **Location de 28 jours** : le pet expire après 28 jours. Un **Renewal/Revival Clock** (~5 $ rapporté) **prolonge de 28 jours supplémentaires** (StrategyWiki).
+- ✅ Possèdent leur **propre inventaire** dans lequel le loot est ramassé (le joueur transfère ensuite dans son inventaire). Des expansions d'inventaire séparées existent pour les pickup pets (silkroadforums).
+- ✅ Si le pet meurt/expire, il se réactive avec les items adéquats (**Grass of Life** cité par StrategyWiki pour les faire revivre ; le mécanisme exact dépend de l'état mort vs expiré).
+- ❌ **Corrigé :** pas de « Pig 5 slots / Fox 7 slots / Fairy Cat 10 slots avec auto-sell » — ce sont des inventions. Les différences entre pickup pets sont surtout **cosmétiques** (vitesse/animation identiques par défaut).
+- ℹ️ Le ramassage filtre par défaut certains items ; le pet ne ramasse **pas** en état de mort et s'arrête quand son inventaire est plein.
 
-Distribution:
-  - Peut être reset (Skill Reset Scroll)
-  - Coût: ~1,000,000 gold ou via Item Mall
+---
 
-Builds courants:
-  - Full DPS (Toutes les compétences offensives)
-  - Support/Buff (Compétices de buff)
-  - Hybrid (Mix DPS et support)
-```
+## 😈 Devil Spirit et Angel Spirit
+
+Le **Devil Spirit** n'est pas un pet mais un item de **transformation** (Item Mall / drops de donjons) :
+
+| Grade | Effets rapportés | Sources |
+|---|---|---|
+| **Devil Spirit (normal)** | Transformation diable + skill dédié, bonus modérés | Item Mall iSRO |
+| **Devil Spirit A grade** | **+20 % dégâts, +10 % vitesse** en transformation, **+15 % HP/MP** constants (rapporté) | elitepvpers, silkroadforums |
+| **Devil Spirit S grade** | Grade supérieur, obtenu via donjons (talisman drops sur certains serveurs) | ExaySRO wiki (privé) |
+
+- ✅ L'upgrade suit des **paliers (+0 → +10)** : le skill du diable **change à +3/+5** (rapporté : +25 % dégâts, +15 % vitesse), et monte encore au-delà de +6 (Seidenkraft tutorial, basé sur le système officiel).
+- ✅ La transformation donne un modèle de personnage unique avec **skills de transformation** propres.
+- ℹ️ **Angel Spirit** (Amalrun) : équivalent « angélique » ajouté plus tard ; obtenu/activé par **4 fragments du même type** sur Silkroad Origin Mobile (idem **NASRUN**). Sur iSRO PC, « Nasrun » n'existe pas en tant que tel — c'est le nom mobile des transformations de type diable.
+
+---
+
+## 🏥 Gestion et Soins (Stable-Keeper)
+
+Le **Stable-Keeper** (étable) de chaque ville centralise tous les services pets :
+
+| Service | Détail |
+|---|---|
+| **Vente de montures/transports** | Basic horse, cheval de bât, ox, Grey Wolf (1M gold) |
+| **Résurrection de pet** | Growth pets morts (≈50k gold rapporté) ou via **Grass of Life** |
+| **Grass of Life** | Herbe de résurrection vendue au Stable (pets morts) |
+| **HGP Potions** | Nourriture des growth pets (jauge de faim) |
+| **Pet HP potions** | Soins du pet en combat |
+| **Prolongation pickup pet** | Renewal/Revival Clock pour +28 jours |
+
+Conseils pratiques :
+1. Toujours transporter **HGP potions + pet HP potions + un Grass of Life** quand on farm avec un wolf.
+2. Ne pas laisser le pet mourir en zone dangereuse : les items du pet inventaire restent sur le pet, mais un pet mort ne combat plus.
+3. Ne nommer son pet qu'une fois sûr du nom (Naming Scroll payant sinon).
 
 ---
 
 ## 💰 Acquisition et Coûts
 
-### Mounts
-
-| Mount | Méthode | Coût | Durabilité |
-|-------|---------|------|------------|
-| Horse | Stable Master | 50,000 gold | 1000 |
-| Camel | Stable Master | 150,000 gold | 1500 |
-| Elephant | Stable Master | 500,000 gold | 2000 |
-| Special Mounts | Item Mall/Events | Silk | Infini |
-
-### Attack Pets
-
-| Pet | Méthode | Coût Approximatif | Notes |
-|-----|---------|-------------------|-------|
-| Wolf | Drop/Buy | 100,000 gold | Level 1 |
-| Rabbit | Drop/Buy | 200,000 gold | Level 10 requis |
-| Crow | Drop/Buy | 1,000,000 gold | Level 20 requis |
-
-### Grab Pets
-
-| Pet | Méthode | Coût | Durée |
-|-----|---------|------|-------|
-| Pig | NPC Gold/Item Mall | 100,000 gold | 7 jours |
-| Fox | Item Mall | 300 Silk | 30 jours |
-| Fairy Cat | Item Mall | 1000 Silk | Permanent |
+| Item | Méthode | Coût (rapporté iSRO) | Durée |
+|---|---|---|---|
+| Basic Horse | Stable (gold) | ~10,000 gold + scroll Lv10 via quête | Permanent |
+| Transport Horse / Ox | Stable (gold, job Trader actif) | Quelques dizaines de milliers de gold | Par trajet |
+| Grey Wolf | Stable (gold) | **1,000,000 gold** | Permanent |
+| White Wolf / Penguin / Crow / Bear | Item Mall (Silk) | Silk | Permanent |
+| Potion of Evolution (Fellow) | Item Mall (Silk) | Silk | Consommable |
+| Pickup pet (Myowon/Seowon/Toto) | Item Mall (Silk) | ~10 $ | **28 jours** (+Renewal ~5 $/28 j) |
+| Devil Spirit A | Item Mall / events | Silk | Permanent (+upgrades) |
+| Awesome Mounts (White Tiger...) | Item Mall (Silk) | Silk | Permanent |
 
 ---
 
-## 📝 Notes de Développement
+## ❓ FAQ
 
-### Pour SRObro Browser Clone
+**Q : Le wolf évolue-t-il en serpent/phoenix ?**
+R : Non. Le growth pet loup passe de louveteau à **loup adulte au niveau 40** — c'est une croissance visuelle, pas une métamorphose en une autre créature.
 
-#### Système de Mounts
+**Q : Peut-on attaquer monté ?**
+R : Sur le basic horse, non (déplacement seulement). Les **Awesome Mounts** de combat (White Tiger, Flame Tiger, Kamaitachi...) et les **Fellows** montables le permettent.
 
-```javascript
-// Classe pour gérer les mounts
-class MountSystem {
-  constructor(player) {
-    this.player = player;
-    this.currentMount = null;
-    this.mounts = new Map();
-  }
+**Q : Le pickup pet ramasse-t-il directement dans mon inventaire ?**
+R : Non — il ramasse dans **son propre inventaire**, qu'il faut transférer manuellement (des expansions d'inventaire existent).
 
-  summonMount(mountId) {
-    const mountData = this.mounts.get(mountId);
-    if (!mountData) return;
+**Q : Que se passe-t-il quand mon pickup pet de 28 jours expire ?**
+R : Il reste dans l'inventaire sous forme de scroll inutilisable ; un **Renewal/Revival Clock** le réactive 28 jours de plus. Le pet lui-même n'est pas perdu.
 
-    if (this.currentMount) {
-      this.dismount();
-    }
+**Q : HGP, c'est quoi exactement ?**
+R : *Hunger Gauge Point* — la jauge de faim du growth pet. Elle baisse avec le temps invoqué et se recharge avec des **HGP Potions**. À 0, le pet perd des HP.
 
-    this.currentMount = new Mount(mountData);
-    this.player.mount(this.currentMount);
+**Q : Les pets peuvent-ils porter des équipements ?**
+R : Non, pas d'armes/armures de pet dans iSRO classique (inventions de l'ancienne version). Le pet a juste **son propre inventaire de transport**.
 
-    // Appliquer les buffs de vitesse
-    this.applySpeedBuff(mountData.speedBonus);
-  }
+**Q : Un pet peut-il m'aider en party ?**
+R : Il combat à vos côtés et génère son propre aggro, mais il n'occupe **pas de slot de party**.
 
-  dismount() {
-    if (!this.currentMount) return;
+---
 
-    this.player.dismount();
-    this.removeSpeedBuff(this.currentMount.speedBonus);
-    this.currentMount = null;
-  }
+## 🛠️ Notes de Développement (SRObro)
 
-  applySpeedBuff(bonus) {
-    this.player.speed *= (1 + bonus / 100);
-  }
-
-  removeSpeedBuff(bonus) {
-    this.player.speed /= (1 + bonus / 100);
-  }
-
-  // Trading
-  loadGoodsForTrading(goods) {
-    if (!this.currentMount) return false;
-
-    const slotsRequired = goods.length;
-    if (slotsRequired > this.currentMount.capacity) {
-      return false; // Trop de marchandises
-    }
-
-    this.currentMount.goods = goods;
-    return true;
-  }
-}
-```
-
-#### Système d'Attack Pets
+### Modèle de données suggéré (basé sur les données vérifiées)
 
 ```javascript
-// Système de pet de combat
-class AttackPetSystem {
-  constructor(owner) {
-    this.owner = owner;
-    this.activePet = null;
-    this.pets = [];
-  }
-
-  summonPet(petId) {
-    const pet = this.pets.find(p => p.id === petId);
-    if (!pet || pet.isDead) return;
-
-    this.activePet = pet;
-    this.spawnPet(pet);
-    this.setupAI(pet);
-  }
-
-  spawnPet(pet) {
-    // Créer le modèle 3D du pet
-    pet.mesh = this.createPetMesh(pet.type);
-    pet.mesh.position.copy(this.owner.position);
-    pet.mesh.position.add(new Vector3(1, 0, 1)); // Offset
-
-    scene.add(pet.mesh);
-  }
-
-  setupAI(pet) {
-    // AI pour attaquer automatiquement
-    pet.update = (deltaTime) => {
-      if (!this.activePet) return;
-
-      // Trouver la cible la plus proche
-      const target = this.findNearestEnemy();
-
-      if (target && this.isInRange(target)) {
-        this.attack(target);
-      } else if (target) {
-        this.moveTo(target);
-      } else {
-        this.followOwner();
-      }
-    };
-
-    // Enregistrer la boucle de mise à jour
-    this.registerUpdate(pet.update);
-  }
-
-  findNearestEnemy() {
-    const enemies = this.world.getEnemiesInRange(this.owner.position, 50);
-
-    return enemies.sort((a, b) => {
-      const distA = a.position.distanceTo(this.activePet.mesh.position);
-      const distB = b.position.distanceTo(this.activePet.mesh.position);
-      return distA - distB;
-    })[0];
-  }
-}
-```
-
-#### Système de Grab Pets
-
-```javascript
-// Système de grab pet (ramassage auto)
-class GrabPetSystem {
-  constructor(owner) {
-    this.owner = owner;
-    this.activePet = null;
-    this.pickupRange = 10;
-  }
-
-  enable(petType) {
-    this.activePet = {
-      type: petType,
-      inventory: [],
-      inventorySize: this.getInventorySize(petType),
-      pickupSpeed: this.getPickupSpeed(petType),
-      pickupRange: this.getPickupRange(petType)
-    };
-
-    this.startAutoPickup();
-  }
-
-  startAutoPickup() {
-    // Vérifier périodiquement les drops à ramasser
-    setInterval(() => {
-      if (!this.activePet) return;
-
-      const drops = this.world.getDropsInRange(
-        this.owner.position,
-        this.activePet.pickupRange
-      );
-
-      drops.forEach(drop => {
-        if (this.shouldPickup(drop)) {
-          this.pickupItem(drop);
-        }
-      });
-    }, 500); // Check every 500ms
-  }
-
-  shouldPickup(drop) {
-    // Filtres basés sur les paramètres du pet
-    if (this.activePet.inventory.length >= this.activePet.inventorySize) {
-      return false; // Inventaire plein
-    }
-
-    // Priorité par type d'item
-    return true; // Pour l'instant, ramasse tout
-  }
-
-  pickupItem(drop) {
-    // Animation de ramassage
-    this.playPickupAnimation();
-
-    // Ajouter à l'inventaire du pet
-    this.activePet.inventory.push(drop.item);
-
-    // Retirer du monde
-    this.world.removeDrop(drop);
-  }
-}
-```
-
-#### Données des Pets
-
-```javascript
-// Fichier: data/pets.json
+// data/pets.json — structure réaliste iSRO
 {
+  "transports": [
+    { "id": "TRANSPORT_HORSE", "name": "Horse", "speed": "fast", "capacity": "medium", "buyer": "stable" },
+    { "id": "TRANSPORT_OX", "name": "Ox", "speed": "slow", "capacity": "high", "buyer": "stable" }
+  ],
   "mounts": [
+    { "id": "MOUNT_BASIC_HORSE", "name": "Horse", "cost": 10000, "speedBonusPct": 100, "inventorySlots": 9 },
+    { "id": "MOUNT_WHITE_TIGER", "name": "White Tiger", "currency": "SILK", "canAttackMounted": true },
+    { "id": "MOUNT_PHOENIX", "name": "Phoenix", "currency": "SILK", "canAttackMounted": true }
+  ],
+  "growth_pets": [
     {
-      "id": "MOUNT_HORSE",
-      "name": "Horse",
-      "level_requirement": 1,
-      "speed_bonus": 20,
-      "capacity": 1,
-      "hp": 5000,
-      "durability": 1000,
-      "cost": 50000,
-      "model": "horse",
-      "texture": "horse_brown"
-    },
-    {
-      "id": "MOUNT_CAMEL",
-      "name": "Camel",
-      "level_requirement": 20,
-      "speed_bonus": 15,
-      "capacity": 2,
-      "hp": 8000,
-      "durability": 1500,
-      "cost": 150000,
-      "model": "camel",
-      "texture": "camel_desert"
-    },
-    {
-      "id": "MOUNT_ELEPHANT",
-      "name": "Elephant",
-      "level_requirement": 40,
-      "speed_bonus": 10,
-      "capacity": 3,
-      "hp": 12000,
-      "durability": 2000,
-      "cost": 500000,
-      "model": "elephant",
-      "texture": "elephant_gray"
+      "id": "PET_GREY_WOLF", "name": "Grey Wolf",
+      "cost": 1000000, "currency": "GOLD", "seller": "STABLE_KEEPER",
+      "adultModelAtLevel": 40,
+      "hunger": { "gauge": "HGP", "decaysOverTime": true, "refill": "HGP_POTION" },
+      "revival": { "item": "GRASS_OF_LIFE", "serviceCost": 50000 },
+      "inventoryExpansion": "POTION_OF_GROWTH"
     }
   ],
-
-  "attack_pets": [
-    {
-      "id": "PET_WOLF",
-      "name": "Wolf",
-      "type": "WOLF",
-      "level_requirement": 1,
-      "stats": {
-        "hp": 500,
-        "atk": 65,
-        "attack_speed": 1.5,
-        "crit_rate": 5
-      },
-      "skills": ["BITE", "GROWL", "PACK_HUNTING"],
-      "model": "wolf",
-      "evolution": ["BABY_WOLF", "WOLF", "GIANT_WOLF", "DIRE_WOLF"]
-    },
-    {
-      "id": "PET_RABBIT",
-      "name": "Rabbit",
-      "type": "RABBIT",
-      "level_requirement": 10,
-      "stats": {
-        "hp": 400,
-        "atk": 75,
-        "attack_speed": 2.0,
-        "mag_atk": 75
-      },
-      "skills": ["BUFF_PHY", "HEAL", "MANA_REGEN", "BUFF_MAG"],
-      "model": "rabbit",
-      "evolution": ["BABY_RABBIT", "RABBIT", "GIANT_RABBIT", "MOON_RABBIT"]
-    },
-    {
-      "id": "PET_CROW",
-      "name": "Crow",
-      "type": "CROW",
-      "level_requirement": 20,
-      "stats": {
-        "hp": 350,
-        "atk": 85,
-        "attack_speed": 1.8,
-        "range": 15
-      },
-      "skills": ["POISON", "ARMOR_BREAK", "ATK_SLOW", "POISON_CLOUD"],
-      "model": "crow",
-      "evolution": ["BABY_CROW", "CROW", "GIANT_CROW", "PHOENIX"]
-    }
+  "ability_pets": [
+    { "id": "PET_MYOWON", "name": "Pet Myowon", "currency": "SILK", "rentalDays": 28,
+      "renewalItem": "REVIVAL_CLOCK", "autoPickup": true }
   ],
-
-  "grab_pets": [
-    {
-      "id": "GRAB_PIG",
-      "name": "Pig",
-      "pickup_speed": 1.0,
-      "pickup_range": 10,
-      "inventory_size": 5,
-      "model": "pig"
-    },
-    {
-      "id": "GRAB_FOX",
-      "name": "Fox",
-      "pickup_speed": 1.5,
-      "pickup_range": 15,
-      "inventory_size": 7,
-      "model": "fox"
-    },
-    {
-      "id": "GRAB_FAIRY_CAT",
-      "name": "Fairy Cat",
-      "pickup_speed": 2.0,
-      "pickup_range": 20,
-      "inventory_size": 10,
-      "model": "fairy_cat",
-      "features": ["AUTO_SELL", "FILTERING"]
-    }
+  "fellow": {
+    "requires": "POTION_OF_EVOLUTION",
+    "features": ["ATTACK_TARGET", "RIDEABLE", "LEVELS_UP"]
+  },
+  "spirits": [
+    { "id": "DEVIL_SPIRIT_A", "transform": true, "reportedBuffs": { "damagePct": 20, "speedPct": 10, "hpMpPct": 15 } }
   ]
 }
 ```
 
----
-
-## 📊 Résumé des Pets
-
-### Tableau Comparatif des Mounts
-
-| Mount | Vitesse | Capacité | HP | Coût | Level | Recommandé pour |
-|-------|---------|----------|-------|------|-------|----------------|
-| Horse | +20% | 1 | 5000 | 50k | 1 | Débutants |
-| Camel | +15% | 2 | 8000 | 150k | 20 | Trading intermédiaire |
-| Elephant | +10% | 3 | 12000 | 500k | 40 | Trading avancé |
-
-### Tableau Comparatif des Attack Pets
-
-| Pet | DPS | Tank | Support | Difficulté | Level | Recommandé pour |
-|-----|-----|------|---------|------------|-------|----------------|
-| Wolf | ⭐⭐⭐ | ⭐⭐⭐ | ⭐ | Facile | 1 | Tous les joueurs |
-| Rabbit | ⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ | Facile | 10 | Solo/Support |
-| Crow | ⭐⭐⭐⭐ | ⭐ | ⭐⭐⭐ | Difficile | 20 | Advanced players |
-
-### Tableau Comparatif des Grab Pets
-
-| Pet | Vitesse | Range | Inventaire | Coût | Recommandé pour |
-|-----|---------|-------|------------|------|----------------|
-| Pig | Normal | 10 | 5 | Low | Farming casual |
-| Fox | Rapide | 15 | 7 | Medium | Farming intensif |
-| Fairy Cat | Très rapide | 20 | 10 | High | Power farming |
+### Points d'implémentation clés
+- Un seul pet invoqué à la fois (growth / ability / mount / transport selon contexte).
+- La jauge HGP doit décroître **avec le temps réel passé invoqué** (tick), pas avec la distance.
+- Le pickup pet ramasse dans **son** inventaire → prévoir une UI de transfert pet→joueur.
+- Le loup change de modèle au **level 40** (2 modèles par growth pet : bébé/adulte).
 
 ---
 
-## 🎯 Conseils d'Utilisation
+## ⚠️ Incertitudes / Données Manquantes
 
-### Pour les Débutants
-
-1. **Mount:**
-   - Commencez avec un Horse (level 1)
-   - Upgradez vers Camel quand vous commencez le trading (level 20+)
-
-2. **Attack Pet:**
-   - Obtenez un Wolf dès que possible (level 1)
-   - Aide énormément pour le leveling solo
-
-3. **Grab Pet:**
-   - Pas essentiel au début, mais très utile
-   - Investissez dans un Pig quand vous commencez à farm intensivement
-
-### Pour les Joueurs Avancés
-
-1. **Mount:**
-   - Elephant pour le trading haut niveau
-   - Mounts spéciaux (events) si disponibles
-
-2. **Attack Pet:**
-   - Élevez un pet jusqu'à l'évolution ultime
-   - Skills optimisés pour votre playstyle
-
-3. **Grab Pet:**
-   - Fairy Cat pour le farming optimal
-   - Configurez les filtres intelligemment
+- **Les 2 montures manquantes** de la liste officielle « 10 kinds of Mount » : le snippet officiel n'expose que 8 noms (Yellow Horse, Donkey, White Tiger, Sugar Loaf, Kamaitachi, Flame Tiger, Elk, Phoenix). La page officielle est dynamique et ne se laisse pas archiver facilement.
+- **HGP max exact** (360 ?) : non confirmé par les sources ; seuls le mécanisme et les HGP Potions sont attestés.
+- **Slots exacts des transports** (horse vs ox) : le « 9 slots » attesté concerne le cheval de selle ; la capacité de bât des transports n'a pas de chiffre officiel publié.
+- **Coût exact du revival** (50k gold) : rapporté par des joueurs (MMORPG.com), non documenté officiellement.
+- **Prix Silk exacts** : varient selon les époques de l'Item Mall ; seules les équivalences en dollars (~10 $/28 j pickup) sont rapportées.
+- **Devil Spirit : valeurs de buffs** (+20 %/10 %/15 %) rapportées par des threads communautaires et un serveur privé fidèle au système officiel — à traiter comme « valeurs rapportées ».
+- **Niveau minimum pour invoquer un growth pet** : non confirmé (le wiki Fandom suggère un prérequis bas, possiblement Lv5 personnage).
 
 ---
 
-*Dernière mise à jour: 20 Janvier 2026*
+## 🔗 Sources
 
-*Sources: Silkroad Online Wiki, Community Guides, SRObro Project Documentation*
+- StrategyWiki — Silkroad Online/Pets : https://strategywiki.org/wiki/Silkroad_Online/Pets (growth/pickup pets, 28 jours, Revival Clock, Grass of Life)
+- Elitepvpers — [Guide] The Fellow-Pet System : https://www.elitepvpers.com/forum/sro-guides-templates/1802274-guide-fellow-pet-system.html (Potion of Evolution, naming, attack/mount)
+- Elitepvpers — Devil's Spirit A grade transformation : https://www.elitepvpers.com/forum/silkroad-online/193879-devils-spirit-grade-transformation.html (+20 % dmg / +10 % speed)
+- Silkroad Forums — Devil spirit grade A : http://www.silkroadforums.com/viewtopic.php?f=29&t=114721 (+15 % HP/MP)
+- Seidenkraft — Devil Spirit Upgrade Tutorial : https://seidenkraftblog.wordpress.com/2012/09/17/devil-spirit-upgrade-tutorial/ (paliers +3/+5/+6)
+- Site officiel — Awesome Mount : http://www.silkroadforever.com/en-us/m/guideShow.html?f=Awesome_Mount&t=0 (10 montures)
+- Silkroad Forums — Wolf help : http://www.silkroadforums.com/viewtopic.php?f=2&t=55131 (HGP potions, Grass of Life)
+- Silkroad Forums — How do you increase pet's inventory : http://www.silkroadforums.com/viewtopic.php?f=4&t=71671 (Potion of Growth)
+- MMORPG.com — Pet Wolf is it worth it : https://forums.mmorpg.com/discussion/99898/pet-wolf-is-it-worth-it (1M gold, 50k revive)
+- Silkroad Forums — pickup pets silk : http://www.silkroadforums.com/viewtopic.php?f=4&t=26835 (~10 $/28 j, renewal ~5 $)
+- GameFAQs — Guide & Walkthrough (Sintaku, 2008) : https://gamefaqs.gamespot.com/pc/930711-silkroad-online/faqs/44908 (cheval 2× vitesse, 9 slots)
+- Neoseeker — Silkroad Online tips : https://www.neoseeker.com/silkroad-online/cheats/pc (horse transport 9 slots, ox)
+- UnKnoWnCheaTs — Quick Guide to Trading : https://www.unknowncheats.me/wiki/Silkroad:Quick_Guide_to_Trading (horse/ox au stable, trade goods)
+- Silkroad Mans — Trade System : https://silkroadmans.tr.gg/Game-System.htm (trade rating 1-5)
+- IGN — Silkroad Online Peek #2 (2008) : https://www.ign.com/articles/2008/08/26/silkroad-online-peek-2 (bears/wolves adultes, ability pets)
+- kmkm forum (annonce 2007) : https://kmkm.forumotion.com/t3147-silkroad-online-pets-to-arrive-soon-in-an-item-mall-near-you (Cat, Penguin, Tiger, Rhinoceros)
+- Silkroad Origin Mobile — Pet System : https://sromobile.com/en/guide/features-guide/new-feature-update-pet-system (système Fellow mobile, Nasrun/Amalrun)
+
+---
+
+*Dernière mise à jour : 1er octobre 2026*
+
+*Sources : StrategyWiki, elitepvpers, silkroadforums, site officiel silkroadforever.com, MMORPG.com, GameFAQs — voir section Sources.*

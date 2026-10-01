@@ -125,6 +125,26 @@ export class PlayerEntity extends Entity {
   }
 
   /**
+   * Recalcule les stats de combat en intégrant l'arme équipée (phase 3).
+   * attackPower de base (calculé par calculateStats selon STR) + bonus arme.
+   */
+  applyWeaponStats(weapon: { attackMin: number; attackMax: number } | null): void {
+    this.equippedWeapon = weapon;
+    this.stats = this.calculateStats();
+    if (weapon) {
+      // Les dégâts de l'arme REMPLACENT la frappe à mains nues (officiel SRO)
+      this.stats.attackPower = {
+        min: weapon.attackMin,
+        max: Math.max(weapon.attackMin, weapon.attackMax),
+      };
+    }
+    logger.info(`Stats recalculées pour ${this.name}: atk ${this.stats.attackPower.min}-${this.stats.attackPower.max}`);
+  }
+
+  /** Arme équipée (stats officielles de l'item). */
+  equippedWeapon: { attackMin: number; attackMax: number } | null = null;
+
+  /**
    * Set HP
    */
   setHp(hp: number): void {

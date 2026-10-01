@@ -26,6 +26,7 @@ import { NetworkManager } from './network/NetworkManager';
 import { UIManager } from './ui/UIManager';
 import { AuthScreen } from './ui/dom/AuthScreen';
 import { NetworkCombat } from './game/NetworkCombat';
+import { InventoryPanel } from './ui/dom/InventoryPanel';
 
 // Collecte des erreurs console pour diagnostic navigateur (window.__errors)
 (function installErrorCollector(): void {
@@ -153,8 +154,18 @@ async function init(): Promise<void> {
     if (!singlePlayer && game.getScene() && game.getAssetLoader()) {
       netCombat = new NetworkCombat(game.getScene()!, network, game.getAssetLoader()!, hud, game.getJanganZone());
       netCombat.playerName = character?.name ?? 'Aventurier';
+      network.rememberCharacter(character?.id ?? '');
       (window as unknown as { netCombat: NetworkCombat }).netCombat = netCombat;
       game.getScene()!.onBeforeRenderObservable.add(() => netCombat!.update());
+    }
+
+    // Inventaire + boutique (phase 3): I = inventaire, B = marchand de Jangan
+    if (!singlePlayer) {
+      const invPanel = new InventoryPanel(network);
+      (window as unknown as { invPanel: InventoryPanel }).invPanel = invPanel;
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'b' || e.key === 'B') void invPanel.openShop();
+      });
     }
     const g = game as unknown as {
       progression?: {

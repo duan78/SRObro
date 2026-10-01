@@ -372,3 +372,50 @@ mode hors-ligne explicite de repli).
   cooldown rejeté, respawn 15 s, aggro bandits, mort joueur, résurrection.
 - Navigateur: Kaiser cible un Mangnyang (clic réel), skill « Frappe », kill,
   chat « +54 XP », HUD 108 XP / 10011 or, mob respawn, 60 FPS.
+
+---
+
+## Session du 1er Octobre 2026 (5/2) : PHASE 3 — Inventaire, items, boutique
+
+### Convertisseur d'icônes (fix majeur)
+- Icônes SRO = DDS **non compressé 16/32 bpp** (A1R5G5B5, masques génériques)
+  que la crate `image` ne décode pas → décodage manuel par masques dans
+  `jmx_converter --mode ddj`. **7 893/7 893 icônes converties** (fiole HP
+  vérifiée visuellement, alpha propre).
+
+### Données items corrigées
+- Colonnes itemdata vérifiées empiriquement: **prix = col 26** (potion 60,
+  lame degré 1 = 890 or — la col 13 est une constante), types = cols 9-12,
+  **attaque min/max = cols 95/96** (BLADE_01 21/22 → BLADE_10 1452/1542),
+  restauration potions = col 57. items.json + import DB régénérés (21 529).
+- Défense monstres : la valeur seedée (27 pour un lvl 1) annihilait les
+  dégâts → courbe def = 2 + niveau×2 (Mangnyang 4, Bandit 34).
+
+### Serveur
+- `ItemHandlers.ts`: inventaire 45 slots (list/use/equip/unequip), potions
+  (cooldown 2 s, effet réel HP/MP), équipement avec **stats officielles
+  appliquées au combat** (PlayerEntity.applyWeaponStats), kit de départ
+  (10 potions HP + 5 MP + lame), boutique (achat prix officiels, vente au
+  tiers), MonsterDrop seedée (26 lignes potions).
+- Arme équipée rechargée à la sélection de perso (stats persistées).
+- Fix: l'attaquant reçoit maintenant SES packets d'attaque
+  (broadcastToNearbyClients l'excluait — dégâts invisibles côté client).
+- Fix: monstres fantômes après reconnexion — purge client au 'connected'.
+
+### Client
+- `InventoryPanel.ts`: panneau DOM 45 slots (touche I), **icônes officielles**,
+  tooltips avec stats, clic = utiliser/équiper, Maj+clic = vendre, colonne
+  équipement. Boutique (touche B): liste marchand, achat ×1/×10.
+- Reconnexion Socket.io infinie + **ré-authentification automatique** (token
+  + re-sélection du perso + re-snapshot monde) après redémarrage serveur.
+- Visuel d'arme: GLB officiel attaché au perso sur équipement.
+- Résurrection: téléportation du mesh client à la position de respawn.
+
+### Preuves (navigateur)
+- Achat 10 potions HP débutant (1 or) + lame BLADE_01_A_DEF: or 10 020 → 10 009.
+- Inventaire: 3 slots remplis avec icônes, tooltip « Attaque 21 ~ 22 ».
+- Équipement lame: colonne « Arme » + message chat.
+- 32 attaques capturées (formule atk−def), kill Mangnyang +54 XP, or +11.
+- Mort → écran de résurrection → ville: HP restaurés, « Résurrection réussie ».
+- Reconnexion auto après restart serveur: session ré-authentifiée, monstres
+  re-synchronisés, combat repris — Kaiser niveau 4 en fin de session.
