@@ -5,12 +5,13 @@
  * autoritaire, ce module n'est qu'une vue + entrées.
  */
 
-import { Scene, Vector3, MeshBuilder, StandardMaterial, Color3 } from '@babylonjs/core';
+import { Scene, Vector3, MeshBuilder, StandardMaterial, Color3, DynamicTexture, Mesh } from '@babylonjs/core';
 import type { NetworkManager } from '../network/NetworkManager';
 import type { AssetLoader } from '../core/AssetLoader';
 import type { DomHud } from '../ui/dom/DomHud';
 import { AnimationService } from '../animation/BanAnimationService';
 import { DamageNumberManager, DamageType } from '../combat/DamageNumberManager';
+import { gameAudio } from '../ui/dom/GameAudio';
 import type { JanganZone } from '../zones/jangan/JanganZone';
 
 interface ServerMonster {
@@ -201,6 +202,14 @@ export class NetworkCombat {
         // Anim d'attaque de l'attaquant si c'est un monstre visible
         const attacker = this.monsters.get(d.attackerId);
         if (attacker) this.switchMonsterAnim(attacker, 'attack01', true);
+        // SFX (phase 7): coup porté/reçu (le son de mort est dans playMonsterDeath)
+        if (d.damage > 0 && d.remainingHp > 0) {
+          if (this.monsters.has(d.attackerId)) gameAudio.monsterHurt();
+          else gameAudio.swordHit();
+        }
+        // Anim de dégâts + mort de la cible monstre
+        if (d.remainingHp > 0 && d.damage > 0) this.switchMonsterAnim(m, 'damage01', true);
+        if (d.remainingHp <= 0) this.playMonsterDeath(m);
       } else if (d.targetId === 'player' || this.isLocalPlayerTarget(d)) {
         // Dégâts sur le joueur: nombre au-dessus du perso
         const player = this.scene.getTransformNodeByName('player_root')
@@ -461,7 +470,9 @@ export class NetworkCombat {
     }
     if (skeletons.length === 0) return;
     const stem = (m.data as any).modelId ?? m.data.name.toLowerCase();
-    const clip = AnimationService.monsterClip(stem, state === 'attack01' ? 'attack01' : 'walk');
+    // walk/idle ↔ boucle; attack01/damage01 ponctuels
+    const action = state === 'attack01' || state === 'damage01' ? state : 'walk';
+    const clip = AnimationService.monsterClip(stem, action as 'attack01' | 'damage01' | 'walk');
     AnimationService.loadAndPlay(this.scene, skeletons, clip, !once, once ? 1.4 : 1.0)
       .then((groups: any[]) => {
         if (once) {
@@ -473,6 +484,47 @@ export class NetworkCombat {
         }
       })
       .catch(() => undefined);
+  }
+
+  /** Mort d'un monstre (phase 7): anim die01 si dispo, sinon affaissement. */
+  private dyingMonsters = new Set<string>();
+  private playMonsterDeath(m: { data: ServerMonster; root: any; proxy: any; animState: string | null }): void {
+    if (this.dyingMonsters.has((m.data as any).id)) return;
+    this.dyingMonsters.add((m.data as any).id);
+    gameAudio.monsterDie();
+    const skeletons: any[] = [];
+    for (const mesh of m.root.getChildMeshes()) {
+      const sk = (mesh as any).skeleton;
+      if (sk && !skeletons.includes(sk)) skeletons.push(sk);
+    }
+    const stem = (m.data as any).modelId ?? m.data.name.toLowerCase();
+    if (skeletons.length > 0) {
+      const dieClip = AnimationService.monsterClip(stem, 'die');
+      AnimationService.loadAndPlay(this.scene, skeletons, dieClip, false, 1.0)
+        .then((groups: any[]) => {
+          // Fin de l'anim: affaissement, le despawn serveur (~3 s) nettoie
+          setTimeout(() => {
+            for (const g of groups) { g.stop(); g.dispose(); }
+            this.sinkMonster(m);
+          }, 1500);
+        })
+        .catch(() => this.sinkMonster(m));
+    } else {
+      this.sinkMonster(m);
+    }
+  }
+
+  /** Affaissement du corps sous le terrain (fallback mort). */
+  private sinkMonster(m: { root: any }): void {
+    const root = m.root;
+    const start = root.position.y;
+    const t0 = performance.now();
+    const sink = (): void => {
+      const k = Math.min(1, (performance.now() - t0) / 900);
+      root.position.y = start - k * 2.2;
+      if (k < 1 && !root.isDisposed()) requestAnimationFrame(sink);
+    };
+    requestAnimationFrame(sink);
   }
 
   // ============================================
@@ -571,6 +623,7 @@ export class NetworkCombat {
     this.targetId = monsterId;
     this.hud.showTarget({ name: m.data.name, level: m.data.level, hp: m.data.hp, maxHp: m.data.maxHp });
     this.hud.addChatMessage(`Cible: ${m.data.name} (niv. ${m.data.level})`, 'combat');
+    this.attachTargetLabel(m);
     this.startAutoAttack();
   }
 
@@ -578,6 +631,56 @@ export class NetworkCombat {
     this.targetId = null;
     this.stopAutoAttack();
     this.hud.showTarget(null);
+    this.detachTargetLabel();
+  }
+
+  /** Étiquette flottante nom + niveau au-dessus de la cible (phase 7). */
+  private targetLabel: { plane: any; texture: any } | null = null;
+  private attachTargetLabel(m: { data: ServerMonster; root: any }): void {
+    this.detachTargetLabel();
+    try {
+      const dt = new DynamicTexture(`target_label_${(m.data as any).id}`, { width: 512, height: 128 }, this.scene, false);
+      dt.hasAlpha = true;
+      const c = dt.getContext();
+      c.clearRect(0, 0, 512, 128);
+      c.fillStyle = 'rgba(10,12,18,0.72)';
+      c.fillRect(56, 34, 400, 60);
+      c.strokeStyle = 'rgba(220,190,120,0.9)';
+      c.lineWidth = 3;
+      c.strokeRect(56, 34, 400, 60);
+      c.font = 'bold 34px sans-serif';
+      c.fillStyle = '#f0e6d2';
+      (c as any).textAlign = 'center';
+      (c as any).textBaseline = 'middle';
+      c.fillText(`${m.data.name}  Lv.${m.data.level}`, 256, 64);
+      dt.update();
+
+      const mat = new StandardMaterial(`target_label_mat_${(m.data as any).id}`, this.scene);
+      mat.diffuseTexture = dt;
+      mat.emissiveTexture = dt;
+      mat.opacityTexture = dt;
+      mat.disableLighting = true;
+      mat.backFaceCulling = false;
+
+      const plane = MeshBuilder.CreatePlane(`target_label_plane_${(m.data as any).id}`, { width: 3.2, height: 0.8 }, this.scene);
+      plane.material = mat;
+      plane.billboardMode = Mesh.BILLBOARDMODE_ALL;
+      plane.position.y = 2.4;
+      plane.isPickable = false;
+      m.root.addChild(plane);
+      this.targetLabel = { plane, texture: dt };
+    } catch {
+      // L'étiquette est cosmétique: jamais bloquante
+    }
+  }
+
+  private detachTargetLabel(): void {
+    if (!this.targetLabel) return;
+    try {
+      this.targetLabel.plane.dispose(false, true);
+      this.targetLabel.texture.dispose();
+    } catch { /* déjà nettoyée */ }
+    this.targetLabel = null;
   }
 
   private startAutoAttack(): void {
@@ -595,6 +698,7 @@ export class NetworkCombat {
       const now = Date.now();
       if (now - this.lastAttackSent < 1100) return; // ~1 attaque/s
       this.lastAttackSent = now;
+      gameAudio.swordSwing();
       this.network.sendAttack(this.targetId);
     }, 1000);
   }

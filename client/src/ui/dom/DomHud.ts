@@ -8,6 +8,8 @@
  * Surcharge CSS dans index.html (style #hud).
  */
 
+import { Minimap } from './Minimap';
+
 export interface HudStats {
   name: string;
   level: number;
@@ -46,6 +48,7 @@ export class DomHud {
   private targetName: HTMLElement;
   private coordsText: HTMLElement;
   private hotbarSlots: HTMLElement[] = [];
+  private minimap: Minimap;
 
   constructor() {
     this.root = document.createElement('div');
@@ -96,6 +99,9 @@ export class DomHud {
     this.targetName = byId('hud-target-name');
     this.coordsText = byId('hud-coords');
 
+    // Minimap réelle (phase 7): tuiles officielles + flèche joueur orientée
+    this.minimap = new Minimap(byId('hud-minimap'));
+
     // Hotbar F1..F10
     const hotbar = byId('hud-hotbar');
     for (let i = 1; i <= 10; i++) {
@@ -121,6 +127,13 @@ export class DomHud {
 
   setCoords(x: number, z: number): void {
     this.coordsText.textContent = `X: ${Math.round(x)} Z: ${Math.round(z)}`;
+    this.minimap.update(x, z, this.lastPlayerRot);
+  }
+
+  /** Cap du joueur (anims/move) pour orienter la flèche minimap. */
+  private lastPlayerRot = 0;
+  setPlayerRotation(rot: number): void {
+    this.lastPlayerRot = rot;
   }
 
   showTarget(t: HudTarget | null): void {

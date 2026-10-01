@@ -29,6 +29,7 @@ import { NetworkCombat } from './game/NetworkCombat';
 import { InventoryPanel } from './ui/dom/InventoryPanel';
 import { CharacterPanel } from './ui/dom/CharacterPanel';
 import { QuestSystem } from './ui/dom/QuestPanel';
+import { gameAudio } from './ui/dom/GameAudio';
 
 // Collecte des erreurs console pour diagnostic navigateur (window.__errors)
 (function installErrorCollector(): void {
@@ -154,6 +155,7 @@ async function init(): Promise<void> {
     // Combat réseau (monstres serveur, ciblage, skills, HUD, mort, loot)
     let netCombat: NetworkCombat | null = null;
     if (!singlePlayer && game.getScene() && game.getAssetLoader()) {
+      game.legacyEntities = false; // NetworkCombat gère les entités réseau
       netCombat = new NetworkCombat(game.getScene()!, network, game.getAssetLoader()!, hud, game.getJanganZone());
       netCombat.playerName = character?.name ?? 'Aventurier';
       network.rememberCharacter(character?.id ?? '');
@@ -185,7 +187,7 @@ async function init(): Promise<void> {
         getCurrentLevelXP(): number; getNextLevelXP(): number;
       };
       combat?: { currentTarget?: { name?: string; level?: number; hp: number; maxHp: number; isDead: boolean } | null };
-      scene?: { activeCamera?: { position: { x: number; z: number } } };
+      scene?: { activeCamera?: { position: { x: number; z: number } }; meshes?: Array<{ name: string; parent?: unknown; position: { x: number; y: number; z: number }; rotation: { x: number; y: number; z: number } }> };
     };
     const refreshHud = (): void => {
       // En mode réseau, l'état serveur est la source (HUD exact)
@@ -209,14 +211,27 @@ async function init(): Promise<void> {
           });
         }
       }
-      const t = g.combat?.currentTarget;
-      if (t && !t.isDead && t.hp > 0) {
-        hud.showTarget({ name: t.name ?? 'Monster', level: t.level ?? 1, hp: t.hp, maxHp: t.maxHp || t.hp });
-      } else {
-        hud.showTarget(null);
+      // Cible: en mode réseau le NetworkCombat possède le target frame
+      // (refreshHud ci-dessus l'actualise; le combat legacy ne doit pas
+      // l'écraser toutes les 400 ms)
+      if (!netCombat?.playerState) {
+        const t = g.combat?.currentTarget;
+        if (t && !t.isDead && t.hp > 0) {
+          hud.showTarget({ name: t.name ?? 'Monster', level: t.level ?? 1, hp: t.hp, maxHp: t.maxHp || t.hp });
+        } else {
+          hud.showTarget(null);
+        }
       }
-      const cam = g.scene?.activeCamera;
-      if (cam) hud.setCoords(cam.position.x, cam.position.z);
+      // Minimap (phase 7): position et cap du JOUEUR (pas de la caméra)
+      const playerMesh = g.scene?.meshes?.find((mm) => mm.name.startsWith('chinaman_'));
+      if (playerMesh) {
+        const root = (playerMesh.parent ?? playerMesh) as { position: { x: number; z: number }; rotation: { y: number } };
+        hud.setPlayerRotation(root.rotation.y);
+        hud.setCoords(root.position.x, root.position.z);
+      } else {
+        const cam = g.scene?.activeCamera;
+        if (cam) hud.setCoords(cam.position.x, cam.position.z);
+      }
     };
     refreshHud();
     window.setInterval(refreshHud, 400);
@@ -228,6 +243,16 @@ async function init(): Promise<void> {
         loadingScreen.classList.add('hidden');
       }
     }, 500);
+
+    // Audio de zone (phase 7): musique de Jangan en boucle + touche M (couper)
+    gameAudio.startZoneMusic();
+    (window as unknown as { gameAudio: typeof gameAudio }).gameAudio = gameAudio; // observabilité/test
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'm' || e.key === 'M') {
+        const on = gameAudio.toggleMusic();
+        hud.addChatMessage(on ? 'Musique activée' : 'Musique coupée', 'system');
+      }
+    });
 
   } catch (error) {
     console.error('Failed to initialize game:', error);

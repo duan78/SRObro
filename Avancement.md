@@ -539,3 +539,43 @@ victimId sans FK Character + victimName).
 - `scripts/test-phase6.ts` **31/31**: refus rôle, 22 commandes, taux mesuré
   ×5 vs ×1 SANS reboot, ban→login refusé, unban, kick déconnecte, console
   HTTP (401/200, items/monstres/killlog, giveItem, taux POST Redis).
+
+---
+
+## Session du 1er Octobre 2026 (9/2) : PHASE 7 — Finitions
+
+### Minimap réelle (phase 7.1)
+`client/src/ui/dom/Minimap.ts`: mosaïque 3×3 des tuiles officielles
+Media/minimap (256 px = région 1920 u, ancre RealTerrain 69×71), fenêtre
+centrée sur le joueur, flèche ORIENTÉE (cap du perso), Nord, grille des
+régions. Redessin seulement si déplacement ≥2 px / rotation ≥0.06 rad.
+Validée navigateur: tuile officielle rendue, flèche, X:19 Z:505 affichés.
+
+### Mort/aggro monstres (7.2)
+- anim `damage01` sur coup reçu, `die` puis affaissement (sink) sur mort
+  (clips officiels des BAN: mangnyang_die.json etc.)
+- étiquette flottante nom + niveau au-dessus de la cible (DynamicTexture
+  billboard, attachée au monstre ciblé, disposable au déciblage)
+- barre de vie cible fluide (transition CSS 0.25 s déjà en place) — fix du
+  « flapping »: en mode réseau le NetworkCombat possède le target frame,
+  le combat legacy ne l'écrase plus toutes les 400 ms.
+
+### Audio (7.3)
+`GameAudio.ts`: musique de zone jangan_town.ogg en boucle (démarrée à
+l'entrée en jeu, reprise au retour d'onglet, touche M) + SFX combat (swing,
+coup porté, blessure et mort de monstre — wav officiels, anti-spam 60 ms,
+pool de clones). musicOn vérifié true en jeu.
+
+### Stabilité/perf (7.4/7.5)
+- Fix ~200 warns/min « Entity not found for update: undefined »: les
+  packets serveur sont ENVELOPPÉS; Game.ts déballe maintenant, et en mode
+  réseau l'EntityManager legacy ne double-gère plus les entités réseau
+  (flag legacyEntities) — 0 erreur console en jeu (1 warn bénin de
+  reconnexion manuelle).
+- 60-61 FPS mesurés en ville (rAF), freezeWorldMatrix déjà en place sur
+  bâtiments/terrain, écran de chargement 10→100 % déjà instrumenté.
+
+### Preuves navigateur
+Combat filmé: ciblage Mangnyang (étiquette+barre), dégâts 15/24→7/24→mort
+(+54 XP chat, despawn). Captures: minimap officielle+flèche, étiquette
+« MOB_CH_MANGNYANG Lv. 1 » au-dessus du monstre.

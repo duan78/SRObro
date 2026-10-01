@@ -70,6 +70,9 @@ export class Game {
   private renderErrorCount = 0;
   // Vitesse de déplacement (modifiable par /speed GM via évènement srobro:speed)
   private moveSpeed = 5.0;
+  // En mode réseau, les monstres/joueurs distants sont gérés par NetworkCombat:
+  // l'EntityManager legacy (monstres locaux) ne doit rien recréer (warns + meshes en double)
+  legacyEntities = true;
   private progression: ProgressionSystem | null = null;
   private equipment: EquipmentSystem | null = null;
   private combat: CombatSystem | null = null;
@@ -499,25 +502,34 @@ export class Game {
       console.error('Network error:', error);
     });
 
-    // Game events
-    this.network.on('spawn', (data) => {
-      this.entityManager?.spawnEntity(data);
+    // Game events — le serveur envoie le packet ENVELOPPÉ {type,timestamp,data}:
+    // déballer avant usage (sinon data.id est undefined et spamme les warns)
+    this.network.on('spawn', (raw) => {
+      const data = raw?.data ?? raw;
 
       // Set up client prediction for local player
       if (data.isLocalPlayer) {
         this.playerId = data.id;
         this.setupClientPrediction(data);
       }
+
+      if (this.legacyEntities) {
+        this.entityManager?.spawnEntity(data);
+      }
     });
 
-    this.network.on('despawn', (data) => {
-      this.entityManager?.despawnEntity(data.id);
+    this.network.on('despawn', (raw) => {
+      const data = raw?.data ?? raw;
+      if (this.legacyEntities) {
+        this.entityManager?.despawnEntity(data.id);
+      }
 
       // Remove from interpolation
       this.interpolation.removeEntity(data.id);
     });
 
-    this.network.on('update', (data) => {
+    this.network.on('update', (raw) => {
+      const data = raw?.data ?? raw;
       // Update entity interpolation
       if (data.entities) {
         this.interpolation.onServerUpdate(data.entities);
@@ -528,7 +540,9 @@ export class Game {
         this.prediction.onServerUpdate(data, this.playerId);
       }
 
-      this.entityManager?.updateEntity(data);
+      if (this.legacyEntities && data.id && this.entityManager?.getEntity?.(data.id)) {
+        this.entityManager.updateEntity(data);
+      }
     });
   }
 
