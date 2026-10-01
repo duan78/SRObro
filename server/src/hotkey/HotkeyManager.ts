@@ -4,7 +4,6 @@
  */
 
 import { HotkeySlotType, HotkeyBinding, Item, Skill } from '../database/types';
-import { HotkeyBindingHelpers, ItemHelpers, SkillHelpers } from '../database/helpers';
 import { query } from '../database/sql';
 
 export interface HotkeyBindingData {
@@ -95,7 +94,7 @@ export class HotkeyManager {
 
     // Validate item/skill exists
     if (itemId) {
-      const itemResult = await query<Item>('SELECT * FROM items WHERE "id" = $1', [itemId]);
+      const itemResult = await query<Item>('SELECT * FROM "Item" WHERE "id" = $1', [itemId]);
       if (!itemResult.rows[0]) {
         console.error(`Item not found: ${itemId}`);
         return false;

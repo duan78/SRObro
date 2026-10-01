@@ -3,10 +3,13 @@
 // Manages guild creation, management, storage, and unions
 // ============================================
 
-import { PrismaClient, Guild, GuildMember, GuildRank, Prisma } from '@prisma/client';
+import { Guild, GuildMember, GuildRank } from '@prisma/client';
 import { EventEmitter } from 'events';
+import { prisma } from '../database/prisma';
 
-const prisma = new PrismaClient();
+// Re-export for the guild module index
+export { GuildRank };
+
 
 export interface GuildCreateOptions {
   name: string;
@@ -19,9 +22,18 @@ export interface GuildStorageAccess {
   reason?: string;
 }
 
+/** Shape of an item stored in guild storage (GuildStorage.items JSON column) */
+type StoredStorageItem = {
+  itemId: string;
+  quantity: number;
+  slot: number;
+};
+
 export class GuildManager extends EventEmitter {
   private static instance: GuildManager;
   private storageLocks: Map<string, string> = new Map(); // guildId -> characterId
+  // Invitations en attente: characterId -> Set<guildId>
+  private pendingInvitations: Map<string, Set<string>> = new Map();
 
   private constructor() {
     super();
@@ -139,6 +151,13 @@ export class GuildManager extends EventEmitter {
       throw new Error('Character is already in a guild');
     }
 
+    // Enregistrer l'invitation: sans registre, acceptInvitation ne peut pas
+    // vérifier qu'une invitation existe et n'importe qui rejoint (exploit).
+    if (!this.pendingInvitations.has(targetCharacterId)) {
+      this.pendingInvitations.set(targetCharacterId, new Set());
+    }
+    this.pendingInvitations.get(targetCharacterId)!.add(guildId);
+
     // Send invitation (stored in memory for now, could use Redis in production)
     this.emit('guildInvitation', {
       guildId,
@@ -148,7 +167,12 @@ export class GuildManager extends EventEmitter {
     });
   }
 
-  async acceptInvitation(guildId: string, characterId: string, accountId: string): Promise<GuildMember> {
+  async acceptInvitation(guildId: string, characterId: string, accountId?: string | null): Promise<GuildMember> {
+    // L'invitation doit exister (émise par un membre autorisé via inviteToGuild)
+    if (!this.pendingInvitations.get(characterId)?.has(guildId)) {
+      throw new Error('No pending invitation for this guild');
+    }
+
     // Check if character is already in a guild
     const existingMembership = await prisma.guildMember.findUnique({
       where: { characterId }
@@ -177,12 +201,18 @@ export class GuildManager extends EventEmitter {
     const member = await prisma.guildMember.create({
       data: {
         guildId,
-        accountId,
+        accountId: accountId ?? characterId,
         characterId,
         rank: GuildRank.member, // New members start as "member"
         contribution: 0n
       }
     });
+
+    // Consommer l'invitation
+    this.pendingInvitations.get(characterId)?.delete(guildId);
+    if (this.pendingInvitations.get(characterId)?.size === 0) {
+      this.pendingInvitations.delete(characterId);
+    }
 
     this.emit('guildMemberJoined', { guildId, member });
     return member;
@@ -264,7 +294,7 @@ export class GuildManager extends EventEmitter {
       throw new Error('Target is not in this guild');
     }
 
-    const rankProgression = [GuildRank.junior, GuildRank.member, GuildRank.senior, GuildRank.assistant];
+    const rankProgression: GuildRank[] = [GuildRank.junior, GuildRank.member, GuildRank.senior, GuildRank.assistant];
     const currentRankIndex = rankProgression.indexOf(targetMember.rank);
 
     if (currentRankIndex >= rankProgression.length - 1) {
@@ -302,7 +332,7 @@ export class GuildManager extends EventEmitter {
       throw new Error('Member is already at the lowest rank');
     }
 
-    const rankProgression = [GuildRank.junior, GuildRank.member, GuildRank.senior, GuildRank.assistant];
+    const rankProgression: GuildRank[] = [GuildRank.junior, GuildRank.member, GuildRank.senior, GuildRank.assistant];
     const currentRankIndex = rankProgression.indexOf(targetMember.rank);
 
     const newRank = rankProgression[currentRankIndex - 1];
@@ -502,6 +532,81 @@ export class GuildManager extends EventEmitter {
     this.emit('guildGoldWithdrawn', { guildId, characterId, amount });
   }
 
+  /** Guilde du personnage (null si sans guilde) — utilisée pour dériver
+   *  l'appartenance côté handlers réseau au lieu de truster un guildId client. */
+  async getGuildIdForCharacter(characterId: string): Promise<string | null> {
+    const membership = await prisma.guildMember.findUnique({
+      where: { characterId },
+      select: { guildId: true }
+    });
+    return membership?.guildId ?? null;
+  }
+
+  async depositToStorage(guildId: string, itemId: string, quantity: number, characterId?: string): Promise<void> {
+    if (characterId) {
+      // Seuls les membres peuvent déposer (sinon n'importe qui alimente/vide
+      // le stock de n'importe quelle guilde)
+      const membership = await prisma.guildMember.findUnique({
+        where: { characterId }
+      });
+      if (!membership || membership.guildId !== guildId) {
+        throw new Error('You are not in this guild');
+      }
+    }
+
+    const storage = await this.getGuildStorage(guildId);
+
+    const items: StoredStorageItem[] = Array.isArray(storage.items)
+      ? [...(storage.items as StoredStorageItem[])]
+      : [];
+
+    const existing = items.find(i => i.itemId === itemId);
+    if (existing) {
+      existing.quantity += quantity;
+    } else {
+      items.push({ itemId, quantity, slot: items.length });
+    }
+
+    await prisma.guildStorage.update({
+      where: { guildId },
+      data: { items, lastAccess: new Date() }
+    });
+
+    this.emit('guildItemDeposited', { guildId, itemId, quantity });
+  }
+
+  async withdrawFromStorage(guildId: string, itemId: string, quantity: number, characterId?: string): Promise<void> {
+    if (characterId) {
+      const membership = await prisma.guildMember.findUnique({
+        where: { characterId }
+      });
+      if (!membership || membership.guildId !== guildId) {
+        throw new Error('You are not in this guild');
+      }
+    }
+
+    const storage = await this.getGuildStorage(guildId);
+
+    const items: StoredStorageItem[] = Array.isArray(storage.items)
+      ? [...(storage.items as StoredStorageItem[])]
+      : [];
+
+    const existing = items.find(i => i.itemId === itemId);
+    if (!existing || existing.quantity < quantity) {
+      throw new Error('Insufficient items in guild storage');
+    }
+
+    existing.quantity -= quantity;
+    const remaining = items.filter(i => i.quantity > 0);
+
+    await prisma.guildStorage.update({
+      where: { guildId },
+      data: { items: remaining, lastAccess: new Date() }
+    });
+
+    this.emit('guildItemWithdrawn', { guildId, itemId, quantity });
+  }
+
   // ============================================
   // UNION SYSTEM
   // ============================================
@@ -539,7 +644,7 @@ export class GuildManager extends EventEmitter {
     const union = await prisma.union.create({
       data: {
         name: unionName,
-        leaderGuild,
+        leaderGuild: leaderGuildId,
         maxMembers: 8
       }
     });
@@ -592,15 +697,18 @@ export class GuildManager extends EventEmitter {
 
   async acceptUnionInvitation(unionId: string, guildId: string): Promise<void> {
     const union = await prisma.union.findUnique({
-      where: { id: unionId },
-      include: { members: true }
+      where: { id: unionId }
     });
 
     if (!union) {
       throw new Error('Union not found');
     }
 
-    if (union.members.length >= union.maxMembers) {
+    const memberCount = await prisma.unionMember.count({
+      where: { unionId }
+    });
+
+    if (memberCount >= union.maxMembers) {
       throw new Error('Union is full');
     }
 

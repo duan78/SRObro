@@ -40,7 +40,7 @@ export class XPSPBars {
     this.container.cornerRadius = 8;
     this.container.color = '#4a3728'; // Dark brown border
     this.container.thickness = 2;
-    this.container.background = 'rgba(0, 0, 0, 0.85)';
+    this.container.background = 'rgba(0,0,0,0.85)';
     this.container.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     this.container.verticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
     this.container.top = '60px'; // Below the stats panel
@@ -76,7 +76,7 @@ export class XPSPBars {
     xpContainer.cornerRadius = 4;
     xpContainer.color = '#000000';
     xpContainer.thickness = 1;
-    xpContainer.background = 'rgba(30, 30, 30, 0.9)';
+    xpContainer.background = 'rgba(30,30,30,0.9)';
     this.container!.addControl(xpContainer);
 
     // XP label
@@ -97,7 +97,7 @@ export class XPSPBars {
     xpBg.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
     xpBg.color = '#00000000';
     xpBg.thickness = 0;
-    xpBg.background = 'rgba(50, 50, 50, 0.8)';
+    xpBg.background = 'rgba(50,50,50,0.8)';
     xpContainer.addControl(xpBg);
 
     // XP fill (yellow)
@@ -138,7 +138,7 @@ export class XPSPBars {
     spContainer.cornerRadius = 4;
     spContainer.color = '#000000';
     spContainer.thickness = 1;
-    spContainer.background = 'rgba(30, 30, 30, 0.9)';
+    spContainer.background = 'rgba(30,30,30,0.9)';
     this.container!.addControl(spContainer);
 
     // SP label
@@ -159,7 +159,7 @@ export class XPSPBars {
     spBg.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
     spBg.color = '#00000000';
     spBg.thickness = 0;
-    spBg.background = 'rgba(50, 50, 50, 0.8)';
+    spBg.background = 'rgba(50,50,50,0.8)';
     spContainer.addControl(spBg);
 
     // SP fill (blue)

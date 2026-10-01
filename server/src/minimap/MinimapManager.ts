@@ -25,7 +25,6 @@ export class MinimapManager {
   private zoneEntities: Map<string, Map<string, EntityData>> = new Map();
 
   // Configuration
-  private readonly updateRate = 10; // Hz (10 updates per second)
   private readonly playerRange = 200; // Send entities within 200m
 
   private constructor() {}
@@ -93,7 +92,7 @@ export class MinimapManager {
    * Remove entity from all zones
    */
   removeEntityFromAllZones(entityId: string): void {
-    this.zoneEntities.forEach((zoneEntities, zoneId) => {
+    this.zoneEntities.forEach((zoneEntities, _zoneId) => {
       zoneEntities.delete(entityId);
     });
   }

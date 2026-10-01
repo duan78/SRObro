@@ -331,7 +331,7 @@ export class ChatManager extends EventEmitter {
   /**
    * Check if player can use channel
    */
-  canUseChannel(channel: ChatChannel, playerLevel: number = 1): boolean {
+  canUseChannel(_channel: ChatChannel, _playerLevel: number = 1): boolean {
     // All channels available to all players for now
     // Could add level restrictions later
     return true;

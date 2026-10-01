@@ -3,7 +3,7 @@
  * Gère le chargement intelligent des modèles 3D basé sur les modelIds
  */
 
-import { Scene, Mesh, Vector3, SceneLoader, TransformNode } from '@babylonjs/core';
+import { Scene, Mesh, Vector3, SceneLoader, TransformNode, MeshBuilder, StandardMaterial, Color3 } from '@babylonjs/core';
 
 interface ModelMapping {
     modelId: number;
@@ -153,8 +153,6 @@ export class GLModelLoader {
      * Crée un marqueur placeholder (cube coloré) pour les modelId inconnus
      */
     private createPlaceholder(modelId: number, position: Vector3): Mesh {
-        const { MeshBuilder, StandardMaterial, Color3 } = require('@babylonjs/core');
-
         const placeholder = MeshBuilder.CreateBox(
             `placeholder_${modelId}`,
             { size: 2 },

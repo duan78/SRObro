@@ -40,7 +40,7 @@ export class SkillBar {
     this.panel.cornerRadius = 8;
     this.panel.color = '#4a3728'; // Dark brown
     this.panel.thickness = 2;
-    this.panel.background = 'rgba(0, 0, 0, 0.9)';
+    this.panel.background = 'rgba(0,0,0,0.9)';
     this.panel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     this.panel.verticalAlignment = Control.VERTICAL_ALIGNMENT_BOTTOM;
     this.panel.paddingTop = '5px';
@@ -73,7 +73,7 @@ export class SkillBar {
     slot.cornerRadius = 5;
     slot.color = '#6B5344';
     slot.thickness = 2;
-    slot.background = 'rgba(0, 0, 0, 0.5)';
+    slot.background = 'rgba(0,0,0,0.5)';
     slot.paddingLeft = '5px';
     slot.paddingRight = '5px';
     slot.paddingTop = '5px';
@@ -96,7 +96,7 @@ export class SkillBar {
     icon.cornerRadius = 3;
     icon.color = '#00000000';
     icon.thickness = 1;
-    icon.background = 'rgba(100, 100, 100, 0.3)';
+    icon.background = 'rgba(100,100,100,0.3)';
     icon.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     icon.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
     slot.addControl(icon);
@@ -108,7 +108,7 @@ export class SkillBar {
     cooldownOverlay.cornerRadius = 5;
     cooldownOverlay.color = '#00000000';
     cooldownOverlay.thickness = 0;
-    cooldownOverlay.background = 'rgba(0, 0, 0, 0.7)';
+    cooldownOverlay.background = 'rgba(0,0,0,0.7)';
     cooldownOverlay.alpha = 0;
     cooldownOverlay.isVisible = false;
     slot.addControl(cooldownOverlay);
@@ -186,7 +186,7 @@ export class SkillBar {
     const icon = this.guiTexture.getControlByName(`skill_icon_${index}`) as Rectangle;
     if (icon) {
       icon.color = '#8B0000'; // Dark red for skills
-      icon.background = 'rgba(139, 0, 0, 0.5)';
+      icon.background = 'rgba(139,0,0,0.5)';
     }
 
     // Add skill name tooltip on hover
@@ -202,7 +202,7 @@ export class SkillBar {
 
     const icon = this.guiTexture.getControlByName(`skill_icon_${index}`) as Rectangle;
     if (icon) {
-      icon.background = 'rgba(100, 100, 100, 0.3)';
+      icon.background = 'rgba(100,100,100,0.3)';
     }
 
     this.skillData.delete(index);

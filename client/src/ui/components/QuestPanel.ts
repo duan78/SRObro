@@ -70,7 +70,7 @@ export class QuestPanel {
     this.panel.cornerRadius = 10;
     this.panel.color = '#8B7355'; // Brown/SRO style
     this.panel.thickness = 3;
-    this.panel.background = 'rgba(20, 10, 5, 0.95)';
+    this.panel.background = 'rgba(20,10,50,0.95)';
     this.panel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
     this.panel.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
     this.panel.paddingTop = '10px';
@@ -112,7 +112,7 @@ export class QuestPanel {
     header.cornerRadius = 5;
     header.color = '#D4AF37'; // Gold
     header.thickness = 2;
-    header.background = 'rgba(0, 0, 0, 0.5)';
+    header.background = 'rgba(0,0,0,0.5)';
 
     const title = new TextBlock('questTitle');
     title.text = 'QUESTS';
@@ -146,7 +146,7 @@ export class QuestPanel {
       button.width = '32%';
       button.height = '100%';
       button.color = '#4a3728';
-      button.background = 'rgba(0, 0, 0, 0.5)';
+      button.background = 'rgba(0,0,0,0.5)';
       button.fontSize = 11;
       button.onPointerUpObservable.add(() => {
         this.switchTab(tab.id);
@@ -215,7 +215,7 @@ export class QuestPanel {
     row.cornerRadius = 5;
     row.color = '#6B5344';
     row.thickness = 2;
-    row.background = 'rgba(0, 0, 0, 0.3)';
+    row.background = 'rgba(0,0,0,0.3)';
     row.paddingLeft = '10px';
     row.paddingRight = '10px';
     row.paddingTop = '5px';
@@ -303,7 +303,7 @@ export class QuestPanel {
       detailsBtn.width = '100px';
       detailsBtn.height = '25px';
       detailsBtn.color = '#6B5344';
-      detailsBtn.background = 'rgba(0, 0, 0, 0.3)';
+      detailsBtn.background = 'rgba(0,0,0,0.3)';
       detailsBtn.fontSize = 11;
       detailsBtn.onPointerUpObservable.add(() => {
         this.showQuestDetails(quest);
@@ -356,7 +356,7 @@ export class QuestPanel {
     popup.cornerRadius = 10;
     popup.color = '#D4AF37';
     popup.thickness = 3;
-    popup.background = 'rgba(20, 10, 5, 0.98)';
+    popup.background = 'rgba(20,10,50,0.98)';
     popup.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     popup.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
 

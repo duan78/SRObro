@@ -3,10 +3,13 @@
 // Manages mount (horse) system with inventory and feeding
 // ============================================
 
-import { PrismaClient, Mount, MountInventory } from '@prisma/client';
+import { Mount, MountInventory, Prisma } from '@prisma/client';
 import { EventEmitter } from 'events';
+import { prisma } from '../database/prisma';
+import { createLogger } from '../core/Logger';
 
-const prisma = new PrismaClient();
+const logger = createLogger('MountManager');
+
 
 const MOUNT_TYPES = {
   horse_a: { name: 'Horse', baseSpeed: 5, baseHp: 100, level: 1 },
@@ -16,7 +19,6 @@ const MOUNT_TYPES = {
 
 export class MountManager extends EventEmitter {
   private static instance: MountManager;
-  private hungerTimers: Map<string, NodeJS.Timeout> = new Map();
 
   private constructor() {
     super();
@@ -180,26 +182,30 @@ export class MountManager extends EventEmitter {
   private startHungerSystem(): void {
     // Decrease mount hunger every minute
     setInterval(async () => {
-      const mounts = await prisma.mount.findMany({
-        where: { isActive: true }
-      });
-
-      for (const mount of mounts) {
-        const newHunger = Math.max(0, mount.hunger - 1);
-
-        await prisma.mount.update({
-          where: { id: mount.id },
-          data: {
-            hunger: newHunger
-          }
+      try {
+        const mounts = await prisma.mount.findMany({
+          where: { isActive: true }
         });
 
-        // Auto-dismount if hunger reaches 0
-        if (newHunger === 0 && mount.isActive) {
-          await this.dismissMount(mount.characterId);
+        for (const mount of mounts) {
+          const newHunger = Math.max(0, mount.hunger - 1);
+
+          await prisma.mount.update({
+            where: { id: mount.id },
+            data: {
+              hunger: newHunger
+            }
+          });
+
+          // Auto-dismount if hunger reaches 0
+          if (newHunger === 0 && mount.isActive) {
+            await this.dismissMount(mount.characterId);
+          }
         }
+      } catch (error) {
+        logger.error('Mount hunger system error:', error);
       }
-    }, 60000); // Every minute
+    }, 60000).unref?.(); // Every minute
   }
 
   // ============================================
@@ -251,11 +257,71 @@ export class MountManager extends EventEmitter {
   // UTILITY METHODS
   // ============================================
 
-  async getMountByCharacter(characterId: string): Promise<Mount | null> {
+  async getMountByCharacter(characterId: string): Promise<Prisma.MountGetPayload<{ include: { inventory: true } }> | null> {
     return await prisma.mount.findUnique({
       where: { characterId },
       include: { inventory: true }
     });
+  }
+
+  /**
+   * Deposit an item into the mount's inventory
+   */
+  async depositItem(characterId: string, itemId: string, quantity: number = 1): Promise<MountInventory> {
+    const mount = await prisma.mount.findUnique({
+      where: { characterId }
+    });
+
+    if (!mount) {
+      throw new Error('Mount not found');
+    }
+
+    const existingInventory = await prisma.mountInventory.findMany({
+      where: { mountId: mount.id }
+    });
+
+    // Find first free slot
+    const usedSlots = existingInventory.map(inv => inv.slot);
+    let slot = 0;
+    while (usedSlots.includes(slot)) {
+      slot++;
+    }
+
+    return await prisma.mountInventory.create({
+      data: {
+        mountId: mount.id,
+        itemId,
+        slot,
+        quantity
+      }
+    });
+  }
+
+  /**
+   * Withdraw an item from the mount's inventory
+   */
+  async withdrawItem(characterId: string, mountInventoryId: string): Promise<void> {
+    const mount = await prisma.mount.findUnique({
+      where: { characterId }
+    });
+
+    if (!mount) {
+      throw new Error('Mount not found');
+    }
+
+    const inventoryItem = await prisma.mountInventory.findUnique({
+      where: { id: mountInventoryId }
+    });
+
+    if (!inventoryItem || inventoryItem.mountId !== mount.id) {
+      throw new Error('Item not found in mount inventory');
+    }
+
+    await prisma.mountInventory.delete({
+      where: { id: mountInventoryId }
+    });
+
+    this.emit('mountItemWithdrawn', { characterId, mountInventoryId });
   }
 
   async getMountSpeedBonus(characterId: string): Promise<number> {

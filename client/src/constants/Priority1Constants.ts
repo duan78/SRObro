@@ -106,7 +106,7 @@ export const XPSP_CONFIG = {
   // Colors
   XP_COLOR: '#FFD700',    // Gold/Yellow
   SP_COLOR: '#4169E1',    // Royal Blue
-  BG_COLOR: 'rgba(30, 30, 30, 0.9)',
+  BG_COLOR: 'rgba(30,30,30,0.9)',
 
   // Animation
   FLASH_DURATION: 200,     // milliseconds

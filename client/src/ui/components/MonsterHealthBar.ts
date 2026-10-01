@@ -4,7 +4,7 @@
  */
 
 import type { Scene, AbstractMesh } from '@babylonjs/core';
-import { Vector3, DynamicTexture, StandardMaterial, Color3, Color4 } from '@babylonjs/core';
+import { Vector3, DynamicTexture, StandardMaterial, Color3, Color4, MeshBuilder } from '@babylonjs/core';
 
 export interface HealthBarOptions {
   width: number;
@@ -52,8 +52,6 @@ export class MonsterHealthBar {
    * Create the health bar plane and texture
    */
   private createHealthBar(): void {
-    const { MeshBuilder, Plane, StandardMaterial, Color3, DynamicTexture } = require('@babylonjs/core');
-
     // Create plane for health bar
     this.plane = MeshBuilder.CreatePlane(`${this.mesh.name}_hp_bar`, {
       width: this.options.width / 20, // Scale down for world space

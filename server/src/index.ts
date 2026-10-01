@@ -11,6 +11,7 @@ import cors from 'cors';
 import { GameServer } from './core/GameServer';
 import { DatabaseManager } from './database/DatabaseManager';
 import { createLogger } from './core/Logger';
+import prisma from './database/prisma';
 
 // Load environment variables
 dotenv.config();
@@ -18,13 +19,23 @@ dotenv.config();
 // Create logger
 const logger = createLogger('Server');
 
+// Node >= 15: une promesse rejetée non gérée crash le process par défaut.
+// On log et on continue — le serveur de jeu doit survivre à un incident
+// ponctuel (timeout DB, asset manquant...).
+process.on('unhandledRejection', (reason) => {
+  logger.error('Unhandled promise rejection:', reason);
+});
+process.on('uncaughtException', (error) => {
+  logger.error('Uncaught exception (process kept alive):', error);
+});
+
 // Create Express app
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 // Health check endpoint
-app.get('/health', (req, res) => {
+app.get('/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
@@ -99,6 +110,8 @@ function setupGracefulShutdown(
 
       // Close database connections
       await dbManager.disconnect();
+      // Ferme aussi le pool du singleton Prisma (sinon fuite de connexions)
+      await prisma.$disconnect();
       logger.info('Database connections closed');
 
       // Close HTTP server

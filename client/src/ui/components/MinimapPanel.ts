@@ -50,10 +50,10 @@ export class MinimapPanel {
     this.container.cornerRadius = 10;
     this.container.color = '#4a3728';
     this.container.thickness = 2;
-    this.container.background = 'rgba(0, 0, 0, 0.85)';
+    this.container.background = 'rgba(0,0,0,0.85)';
     this.container.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
     this.container.verticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
-    this.container.right = '10px';
+    this.container.paddingRight = '10px';
     this.container.top = '10px';
     this.container.paddingLeft = '10px';
     this.container.paddingRight = '10px';
@@ -78,7 +78,7 @@ export class MinimapPanel {
     this.mapCanvas.cornerRadius = this.mapSize / 2; // Make it circular
     this.mapCanvas.color = '#6B5344';
     this.mapCanvas.thickness = 2;
-    this.mapCanvas.background = 'rgba(30, 40, 30, 0.9)';
+    this.mapCanvas.background = 'rgba(30,40,30,0.9)';
     this.mapCanvas.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     this.container.addControl(this.mapCanvas);
 
@@ -249,8 +249,8 @@ export class MinimapPanel {
     this.markers.forEach((marker, id) => {
       marker.dispose();
 
-      // Also remove name label if exists
-      const nameLabel = this.mapCanvas?.getControlByName(`marker_name_${id}`);
+      // Also remove name label if exists (getControlByName est sur l'ADT)
+      const nameLabel = (this.guiTexture as any).getControlByName?.(`marker_name_${id}`);
       if (nameLabel) {
         nameLabel.dispose();
       }

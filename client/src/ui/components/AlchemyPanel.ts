@@ -9,9 +9,13 @@ import {
   TextBlock,
   Button,
   StackPanel,
-  Control,
-  ComboBox
+  Control
 } from '@babylonjs/gui';
+
+// NB: @babylonjs/gui n'exporte pas de contrôle ComboBox. Ce panneau est
+// désactivé dans UIManager — stub typé any tant qu'un vrai contrôle
+// déroulant n'est pas implémenté (boutons ou InputText).
+const ComboBox: any = class ComboBoxStub {};
 
 export interface AlchemyItem {
   id: string;
@@ -29,8 +33,8 @@ export class AlchemyPanel {
 
   // UI elements
   private itemSlot: Rectangle | null = null;
-  private elixirSelector: ComboBox | null = null;
-  private luckyPowderSelector: ComboBox | null = null;
+  private elixirSelector: any = null;
+  private luckyPowderSelector: any = null;
   private successRateText: TextBlock | null = null;
   private enhanceButton: Button | null = null;
 
@@ -49,7 +53,7 @@ export class AlchemyPanel {
     this.panel.cornerRadius = 10;
     this.panel.color = '#8B7355';
     this.panel.thickness = 3;
-    this.panel.background = 'rgba(20, 10, 5, 0.95)';
+    this.panel.background = 'rgba(20,10,50,0.95)';
     this.panel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     this.panel.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
     this.panel.paddingTop = '10px';
@@ -64,7 +68,7 @@ export class AlchemyPanel {
     header.cornerRadius = 5;
     header.color = '#D4AF37';
     header.thickness = 2;
-    header.background = 'rgba(0, 0, 0, 0.5)';
+    header.background = 'rgba(0,0,0,0.5)';
 
     const title = new TextBlock('alchemyTitle');
     title.text = 'ALCHEMY';
@@ -121,7 +125,7 @@ export class AlchemyPanel {
     section.cornerRadius = 5;
     section.color = '#4a3728';
     section.thickness = 2;
-    section.background = 'rgba(0, 0, 0, 0.3)';
+    section.background = 'rgba(0,0,0,0.3)';
     section.paddingLeft = '10px';
     section.paddingRight = '10px';
     section.paddingTop = '10px';
@@ -140,7 +144,7 @@ export class AlchemyPanel {
     this.itemSlot.cornerRadius = 3;
     this.itemSlot.color = '#6B5344';
     this.itemSlot.thickness = 2;
-    this.itemSlot.background = 'rgba(0, 0, 0, 0.3)';
+    this.itemSlot.background = 'rgba(0,0,0,0.3)';
     this.itemSlot.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     section.addControl(this.itemSlot);
 
@@ -218,7 +222,7 @@ export class AlchemyPanel {
     section.cornerRadius = 5;
     section.color = '#4a3728';
     section.thickness = 2;
-    section.background = 'rgba(0, 0, 0, 0.3)';
+    section.background = 'rgba(0,0,0,0.3)';
     section.paddingLeft = '10px';
     section.paddingRight = '10px';
     section.paddingTop = '10px';
@@ -288,7 +292,7 @@ export class AlchemyPanel {
     // Update item slot visual
     if (this.itemSlot) {
       this.itemSlot.color = '#8B0000'; // Red for item
-      this.itemSlot.background = 'rgba(139, 0, 0, 0.3)';
+      this.itemSlot.background = 'rgba(139,0,0,0.3)';
 
       // Show item info
       const itemText = new TextBlock('alchemyItemName');
@@ -410,23 +414,6 @@ export class AlchemyPanel {
 
   dispose(): void {
     this.panel?.dispose();
-  }
-
-  private showNotification(message: string, color: string): void {
-    // Reuse UIManager's notification or create simple popup
-    console.log(`[Alchemy] ${message}`);
-    // TODO: Show in-game notification
-  }
-
-  private clearItemSlot(): void {
-    if (!this.itemSlot) return;
-
-    const children = [...this.itemSlot.children];
-    children.forEach(child => {
-      if (child.name !== 'alchemyItemSlot') {
-        child.dispose();
-      }
-    });
   }
 }
 

@@ -78,7 +78,7 @@ export class GuildPanel {
     this.panel.cornerRadius = 10;
     this.panel.color = '#8B7355'; // Brown/SRO style
     this.panel.thickness = 3;
-    this.panel.background = 'rgba(20, 10, 5, 0.95)';
+    this.panel.background = 'rgba(20,10,50,0.95)';
     this.panel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_LEFT;
     this.panel.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
     this.panel.paddingTop = '10px';
@@ -120,7 +120,7 @@ export class GuildPanel {
     header.cornerRadius = 5;
     header.color = '#D4AF37'; // Gold
     header.thickness = 2;
-    header.background = 'rgba(0, 0, 0, 0.5)';
+    header.background = 'rgba(0,0,0,0.5)';
 
     const title = new TextBlock('guildTitle');
     title.text = 'GUILD';
@@ -164,7 +164,7 @@ export class GuildPanel {
       button.width = '23%';
       button.height = '100%';
       button.color = '#4a3728';
-      button.background = 'rgba(0, 0, 0, 0.5)';
+      button.background = 'rgba(0,0,0,0.5)';
       button.fontSize = 12;
       button.onPointerUpObservable.add(() => {
         this.switchTab(tab.id);
@@ -256,7 +256,7 @@ export class GuildPanel {
     noticeBox.width = '100%';
     noticeBox.height = '80px';
     noticeBox.color = '#6B5344';
-    noticeBox.background = 'rgba(0, 0, 0, 0.3)';
+    noticeBox.background = 'rgba(0,0,0,0.3)';
     noticeBox.text = '';
     // noticeBox.isMultiline = true; // InputText doesn't have isMultiline, InputTextArea might but it's not standard
     content.addControl(noticeBox);
@@ -330,7 +330,7 @@ export class GuildPanel {
     row.cornerRadius = 3;
     row.color = '#6B5344';
     row.thickness = 1;
-    row.background = 'rgba(0, 0, 0, 0.3)';
+    row.background = 'rgba(0,0,0,0.3)';
     row.paddingLeft = '10px';
     row.paddingRight = '10px';
 
@@ -418,7 +418,7 @@ export class GuildPanel {
     gridContainer.height = '350px';
     gridContainer.color = '#4a3728';
     gridContainer.thickness = 2;
-    gridContainer.background = 'rgba(0, 0, 0, 0.3)';
+    gridContainer.background = 'rgba(0,0,0,0.3)';
     content.addControl(gridContainer);
 
     const grid = new StackPanel('storageGrid');
@@ -485,7 +485,7 @@ export class GuildPanel {
     slot.cornerRadius = 2;
     slot.color = '#6B5344';
     slot.thickness = 1;
-    slot.background = 'rgba(0, 0, 0, 0.3)';
+    slot.background = 'rgba(0,0,0,0.3)';
 
     slot.onPointerClickObservable.add(() => {
       this.onStorageSlotClick(slotIndex);
@@ -647,7 +647,7 @@ export class GuildPanel {
         itemBg.cornerRadius = 2;
         itemBg.color = '#6B5344';
         itemBg.thickness = 1;
-        itemBg.background = 'rgba(0, 0, 0, 0.5)';
+        itemBg.background = 'rgba(0,0,0,0.5)';
         slot.addControl(itemBg);
 
         const qtyText = new TextBlock(`storage_qty_${item.slot}`);

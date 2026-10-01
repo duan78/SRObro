@@ -10,6 +10,7 @@ import type { SpawnedMonster } from '../zones/jangan/JanganZone';
 import type { JanganZone } from '../zones/jangan/JanganZone';
 import type { ProgressionSystem } from './ProgressionSystem';
 import type { DamageNumberManager } from '../combat/DamageNumberManager';
+import { DamageType } from '../combat/DamageNumberManager';
 import type { EquipmentSystem } from './EquipmentSystem';
 import type { MonsterHealthBarManager } from '../ui/components/MonsterHealthBar';
 
@@ -91,15 +92,14 @@ export class CombatSystem {
   performAttack(attackerPosition: Vector3): boolean {
     const now = Date.now();
 
-    // Check cooldown
+    // Check cooldown — retour silencieux: l'auto-attaque appelle performAttack
+    // à chaque frame, un warn par frame spamme la console et tue les FPS.
     if (now - this.lastAttackTime < this.attackCooldown) {
-      console.warn('[CombatSystem] Attack on cooldown');
       return false;
     }
 
     // Check if target exists and is in range
     if (!this.currentTarget || this.currentTarget.isDead) {
-      console.warn('[CombatSystem] No valid target');
       return false;
     }
 
@@ -110,7 +110,6 @@ export class CombatSystem {
     );
 
     if (distance > 3) { // 3 unit attack range
-      console.warn('[CombatSystem] Target out of range');
       return false;
     }
 
@@ -145,7 +144,6 @@ export class CombatSystem {
         2, // Above monster
         this.currentTarget.position.z
       );
-      const { DamageType } = require('../combat/DamageNumberManager');
       const damageType = isCritical ? DamageType.CRITICAL : DamageType.PHYSICAL;
       this.damageNumberManager.showDamage(finalDamage, targetPosition, damageType);
     }

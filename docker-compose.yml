@@ -14,7 +14,7 @@ services:
       # Connection pooling (Prisma 7 optimization)
       POSTGRES_HOST_AUTH_METHOD: trust
     ports:
-      - "5432:5432"
+      - "5544:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./server/database/init:/docker-entrypoint-initdb.d

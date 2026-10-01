@@ -6,7 +6,8 @@
 
 import type { Scene } from '@babylonjs/core';
 import { Vector3, TransformNode, MeshBuilder, StandardMaterial, Color3, AbstractMesh } from '@babylonjs/core';
-import type { Entity, EntityType } from '@srobro/shared';
+import type { Entity } from '@srobro/shared';
+import { EntityType } from '@srobro/shared';
 import { AssetLoader } from '../core/AssetLoader';
 
 export interface EntityData extends Entity {
@@ -72,19 +73,19 @@ export class EntityManager {
       let modelId: string | undefined;
 
       switch (data.type) {
-        case 'monster':
+        case EntityType.MONSTER:
           // Use monster ID from data (e.g., 'mangyang_01')
           modelId = data.modelId || `monster_${data.id}`;
           break;
-        case 'npc':
+        case EntityType.NPC:
           // Use NPC model ID
           modelId = data.modelId || `npc_${data.id}`;
           break;
-        case 'player':
+        case EntityType.PLAYER:
           // Use character model ID
           modelId = data.modelId || 'CH_M_01';
           break;
-        case 'transport':
+        case EntityType.TRANSPORT:
           // Use transport model ID
           modelId = data.modelId || `transport_${data.id}`;
           break;
@@ -116,19 +117,19 @@ export class EntityManager {
     let size: Vector3;
 
     switch (data.type) {
-      case 'player':
+      case EntityType.PLAYER:
         color = new Color3(0, 0.5, 1); // Blue
         size = new Vector3(1, 2, 1);
         break;
-      case 'npc':
+      case EntityType.NPC:
         color = new Color3(0, 1, 0); // Green
         size = new Vector3(1, 2, 1);
         break;
-      case 'monster':
+      case EntityType.MONSTER:
         color = new Color3(1, 0, 0); // Red
         size = new Vector3(1.5, 1.5, 1.5);
         break;
-      case 'transport':
+      case EntityType.TRANSPORT:
         color = new Color3(1, 0.5, 0); // Orange
         size = new Vector3(3, 3, 4);
         break;

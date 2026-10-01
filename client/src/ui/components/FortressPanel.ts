@@ -56,7 +56,7 @@ export class FortressPanel {
     this.panel.cornerRadius = 10;
     this.panel.color = '#8B7355'; // Brown/SRO style
     this.panel.thickness = 3;
-    this.panel.background = 'rgba(20, 10, 5, 0.95)';
+    this.panel.background = 'rgba(20,10,50,0.95)';
     this.panel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_LEFT;
     this.panel.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
     this.panel.paddingTop = '10px';
@@ -103,7 +103,7 @@ export class FortressPanel {
     header.cornerRadius = 5;
     header.color = '#D4AF37'; // Gold
     header.thickness = 2;
-    header.background = 'rgba(0, 0, 0, 0.5)';
+    header.background = 'rgba(0,0,0,0.5)';
 
     const title = new TextBlock('fortressTitle');
     title.text = 'FORTRESS WAR';
@@ -124,7 +124,7 @@ export class FortressPanel {
     section.color = '#4a3728';
     section.thickness = 2;
     section.cornerRadius = 5;
-    section.background = 'rgba(0, 0, 0, 0.3)';
+    section.background = 'rgba(0,0,0,0.3)';
     section.paddingTop = '5px';
     section.paddingBottom = '5px';
 
@@ -160,7 +160,7 @@ export class FortressPanel {
     row.cornerRadius = 3;
     row.color = this.selectedFortressId === fortress.id ? '#D4AF37' : '#6B5344';
     row.thickness = 2;
-    row.background = 'rgba(0, 0, 0, 0.3)';
+    row.background = 'rgba(0,0,0,0.3)';
     row.paddingLeft = '10px';
     row.paddingRight = '10px';
 
@@ -211,7 +211,7 @@ export class FortressPanel {
     section.color = '#4a3728';
     section.thickness = 2;
     section.cornerRadius = 5;
-    section.background = 'rgba(0, 0, 0, 0.3)';
+    section.background = 'rgba(0,0,0,0.3)';
     section.paddingTop = '10px';
     section.paddingBottom = '10px';
 
@@ -289,7 +289,7 @@ export class FortressPanel {
     section.color = '#4a3728';
     section.thickness = 2;
     section.cornerRadius = 5;
-    section.background = 'rgba(0, 0, 0, 0.3)';
+    section.background = 'rgba(0,0,0,0.3)';
     section.paddingTop = '10px';
     section.paddingBottom = '10px';
 
@@ -465,7 +465,7 @@ export class FortressPanel {
     row.cornerRadius = 2;
     row.color = '#6B5344';
     row.thickness = 1;
-    row.background = 'rgba(0, 0, 0, 0.2)';
+    row.background = 'rgba(0,0,0,0.2)';
 
     const text = new TextBlock(`reg_text_${reg.guildId}`);
     text.text = reg.guildName;

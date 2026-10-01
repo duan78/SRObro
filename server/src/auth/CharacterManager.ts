@@ -11,6 +11,13 @@ import { CharacterRace } from '@srobro/shared';
 const logger = createLogger('CharacterManager');
 
 /**
+ * Convert a Prisma CharacterRace ('chinese' | 'european') to the shared enum
+ */
+function toSharedRace(race: string): CharacterRace {
+  return race === 'european' ? CharacterRace.EUROPEAN : CharacterRace.CHINESE;
+}
+
+/**
  * Character creation data
  */
 export interface CharacterCreationData {
@@ -212,7 +219,7 @@ export class CharacterManager extends EventEmitter {
         character: {
           id: character.id,
           name: character.name,
-          race: character.race,
+          race: toSharedRace(character.race),
           level: character.level,
         },
       };

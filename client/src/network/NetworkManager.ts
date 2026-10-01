@@ -39,6 +39,8 @@ export class NetworkManager {
   private reconnectAttempts = 0;
   private maxReconnectAttempts = 5;
   private reconnectDelay = 5000;
+  // Le mode single-player appelle send() à chaque frame: ne warn qu'une fois
+  private sendNotConnectedWarned = false;
 
   // Event handlers
   private eventHandlers: Map<keyof NetworkEvents, Set<Function>> = new Map();
@@ -201,7 +203,10 @@ export class NetworkManager {
    */
   send<T extends C2SPacket>(packet: T): void {
     if (!this.socket || !this.isConnected) {
-      console.warn('Cannot send packet: not connected');
+      if (!this.sendNotConnectedWarned) {
+        this.sendNotConnectedWarned = true;
+        console.warn('Cannot send packet: not connected (single-player mode? further warnings suppressed)');
+      }
       return;
     }
 

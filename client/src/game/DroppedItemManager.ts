@@ -3,6 +3,7 @@
  * Manages visualization and interaction with dropped items on the ground
  */
 
+import { MeshBuilder, Vector3, StandardMaterial, Color3 } from '@babylonjs/core';
 import type {
   DroppedItem,
   Position,
@@ -253,47 +254,27 @@ export class DroppedItemManager {
     const itemData = visual.droppedItem.itemData;
 
     // Create box as placeholder
-    const mesh = any as any; // Placeholder for Babylon.js Mesh
-    // mesh = BABYLON.MeshBuilder.CreateBox(`dropped_${visual.id}`, { size: 0.5 }, scene);
+    const mesh = MeshBuilder.CreateBox(`dropped_${visual.id}`, { size: 0.5 }, scene);
 
     // Set position
-    // mesh.position = new BABYLON.Vector3(
-    //   visual.droppedItem.position.x,
-    //   visual.droppedItem.position.y + 0.25,
-    //   visual.droppedItem.position.z
-    // );
+    mesh.position = new Vector3(
+      visual.droppedItem.position.x,
+      visual.droppedItem.position.y + 0.25,
+      visual.droppedItem.position.z
+    );
 
     // Set color based on rarity
     const color = this.getRarityColor(itemData.rarity);
-    // const material = new BABYLON.StandardMaterial(`item_mat_${visual.id}`, scene);
-    // material.diffuseColor = BABYLON.Color3.FromHexString(color);
-    // mesh.material = material;
+    const material = new StandardMaterial(`item_mat_${visual.id}`, scene);
+    material.diffuseColor = Color3.FromHexString(color);
+    mesh.material = material;
 
     visual.mesh = mesh;
   }
 
-  private createItemLabel(visual: DroppedItemVisual, scene: any): void {
-    // Create text label showing item name and rarity
-    const itemData = visual.droppedItem.itemData;
-
-    // TODO: Create Babylon.js GUI label
-    // const label = new BABYLON.GUI.Rectangle();
-    // label.width = '150px';
-    // label.height = '30px';
-    // label.cornerRadius = 5;
-    // label.color = this.getRarityColor(itemData.rarity);
-    // label.thickness = 2;
-    // label.background = 'rgba(0, 0, 0, 0.7)';
-
-    // const text = new BABYLON.GUI.TextBlock();
-    // text.text = itemData.name;
-    // text.color = this.getRarityColor(itemData.rarity);
-    // text.fontSize = 12;
-
-    // label.addControl(text);
-    // scene.addControl(label);
-
-    visual.label = {} as any; // Placeholder
+  private createItemLabel(visual: DroppedItemVisual, _scene: any): void {
+    // TODO: Create Babylon.js GUI label (visual.label stays undefined until then)
+    void visual;
   }
 
   private getDistance(pos1: Position, pos2: Position): number {

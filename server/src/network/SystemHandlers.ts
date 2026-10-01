@@ -1,6 +1,12 @@
 // ============================================
 // SRObro - System Network Handlers
 // Socket.IO handlers for guild, quest, fortress, mount systems
+//
+// RÈGLE DE SÉCURITÉ: l'identité de l'ACTEUR (characterId/accountId) est
+// TOUJOURS dérivée de la session authentifiée du socket (via
+// ClientManager), jamais du payload client — sinon n'importe quel client
+// peut agir au nom de n'importe quel personnage. Les IDs présents dans le
+// payload ne désignent que des CIBLES (ex: membre à exclure).
 // ============================================
 
 import type { Socket } from 'socket.io';
@@ -9,20 +15,52 @@ import { GuildManager } from '../guild/GuildManager';
 import { QuestManager } from '../quest/QuestManager';
 import { FortressManager } from '../fortress/FortressManager';
 import { MountManager } from '../mount/MountManager';
+import type { ClientManager } from './ClientManager';
 
 const logger = createLogger('SystemHandlers');
+
+interface SessionIdentity {
+  characterId: string;
+  accountId: string | null;
+}
 
 export class SystemHandlers {
   private guildManager: GuildManager;
   private questManager: QuestManager;
   private fortressManager: FortressManager;
   private mountManager: MountManager;
+  private clientManager: ClientManager;
 
-  constructor() {
+  constructor(clientManager: ClientManager) {
+    this.clientManager = clientManager;
     this.guildManager = GuildManager.getInstance();
     this.questManager = QuestManager.getInstance();
     this.fortressManager = FortressManager.getInstance();
     this.mountManager = MountManager.getInstance();
+  }
+
+  /**
+   * Résout l'identité authentifiée du socket (characterId sélectionné),
+   * ou null si le client n'a pas chargé de personnage.
+   */
+  private getSession(socket: Socket): SessionIdentity | null {
+    const client = this.clientManager.getClient(socket.id);
+    if (!client || !client.getIsAuthenticated()) {
+      return null;
+    }
+    const characterId = client.getCharacterId();
+    if (!characterId) {
+      return null;
+    }
+    return { characterId, accountId: client.getPlayerId() };
+  }
+
+  private requireSession(socket: Socket): SessionIdentity | null {
+    const session = this.getSession(socket);
+    if (!session) {
+      socket.emit('error', { message: 'Not authenticated (no character selected)' });
+    }
+    return session;
   }
 
   /**
@@ -47,13 +85,15 @@ export class SystemHandlers {
     socket.on('guild:leave_union', (data) => this.handleGuildLeaveUnion(socket, data));
 
     // Quest handlers
+    // NB: pas de 'quest:update_objective' — la progression des objectifs est
+    // calculée par le serveur (events kill/pickup via QuestManager), jamais
+    // déclarée par le client (exploit de compteur).
     socket.on('quest:get_available', (data) => this.handleQuestGetAvailable(socket, data));
     socket.on('quest:get_in_progress', (data) => this.handleQuestGetInProgress(socket, data));
     socket.on('quest:get_completed', (data) => this.handleQuestGetCompleted(socket, data));
     socket.on('quest:accept', (data) => this.handleQuestAccept(socket, data));
     socket.on('quest:abandon', (data) => this.handleQuestAbandon(socket, data));
     socket.on('quest:complete', (data) => this.handleQuestComplete(socket, data));
-    socket.on('quest:update_objective', (data) => this.handleQuestUpdateObjective(socket, data));
 
     // Fortress handlers
     socket.on('fortress:get_list', (data) => this.handleFortressGetList(socket, data));
@@ -80,15 +120,17 @@ export class SystemHandlers {
   // ============================================
 
   private async handleGuildCreate(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId, name } = data;
+      const { name } = data;
       const guild = await this.guildManager.createGuild({
         name,
-        leaderAccountId: socket.data.accountId,
-        leaderCharacterId: characterId
+        leaderAccountId: session.accountId ?? session.characterId,
+        leaderCharacterId: session.characterId
       });
       socket.emit('guild:created', guild);
-      logger.info(`Guild created: ${name} by ${socket.data.accountId}`);
+      logger.info(`Guild created: ${name} by ${session.characterId}`);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
       logger.error('Guild create error:', error);
@@ -96,9 +138,11 @@ export class SystemHandlers {
   }
 
   private async handleGuildInvite(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { guildId, characterId, targetCharacterId } = data;
-      await this.guildManager.inviteToGuild(guildId, characterId, targetCharacterId);
+      const { guildId, targetCharacterId } = data;
+      await this.guildManager.inviteToGuild(guildId, session.characterId, targetCharacterId);
       socket.emit('guild:invited', { guildId, targetCharacterId });
       logger.info(`Guild invite sent: ${guildId} -> ${targetCharacterId}`);
     } catch (error: any) {
@@ -107,20 +151,24 @@ export class SystemHandlers {
   }
 
   private async handleGuildAcceptInvite(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { guildId, characterId } = data;
-      await this.guildManager.acceptInvitation(guildId, characterId, socket.data.accountId);
+      const { guildId } = data;
+      await this.guildManager.acceptInvitation(guildId, session.characterId, session.accountId ?? undefined);
       socket.emit('guild:joined', { guildId });
-      logger.info(`Character ${characterId} joined guild ${guildId}`);
+      logger.info(`Character ${session.characterId} joined guild ${guildId}`);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
   private async handleGuildKick(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { guildId, kickerId, characterId } = data;
-      await this.guildManager.kickMember(guildId, kickerId, characterId);
+      const { guildId, characterId } = data; // characterId = CIBLE (à exclure)
+      await this.guildManager.kickMember(guildId, session.characterId, characterId);
       socket.emit('guild:kicked', { guildId, characterId });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -128,29 +176,35 @@ export class SystemHandlers {
   }
 
   private async handleGuildPromote(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { guildId, characterId, newRank } = data;
-      await this.guildManager.promoteMember(guildId, characterId, newRank);
-      socket.emit('guild:promoted', { guildId, characterId, newRank });
+      const { guildId, characterId } = data; // characterId = CIBLE
+      await this.guildManager.promoteMember(guildId, session.characterId, characterId);
+      socket.emit('guild:promoted', { guildId, characterId });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
   private async handleGuildDemote(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { guildId, characterId, newRank } = data;
-      await this.guildManager.demoteMember(guildId, characterId, newRank);
-      socket.emit('guild:demoted', { guildId, characterId, newRank });
+      const { guildId, characterId } = data; // characterId = CIBLE
+      await this.guildManager.demoteMember(guildId, session.characterId, characterId);
+      socket.emit('guild:demoted', { guildId, characterId });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
   private async handleGuildLeave(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { guildId, characterId } = data;
-      await this.guildManager.leaveGuild(guildId, characterId);
+      const { guildId } = data;
+      await this.guildManager.leaveGuild(session.characterId);
       socket.emit('guild:left', { guildId });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -158,9 +212,10 @@ export class SystemHandlers {
   }
 
   private async handleGuildGetInfo(socket: Socket, data: any): Promise<void> {
+    if (!this.requireSession(socket)) return;
     try {
       const { guildId } = data;
-      const guild = await this.guildManager.getGuild(guildId);
+      const guild = await this.guildManager.getGuildById(guildId);
       socket.emit('guild:info', guild);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -168,6 +223,7 @@ export class SystemHandlers {
   }
 
   private async handleGuildGetMembers(socket: Socket, data: any): Promise<void> {
+    if (!this.requireSession(socket)) return;
     try {
       const { guildId } = data;
       const members = await this.guildManager.getGuildMembers(guildId);
@@ -178,6 +234,7 @@ export class SystemHandlers {
   }
 
   private async handleGuildGetStorage(socket: Socket, data: any): Promise<void> {
+    if (!this.requireSession(socket)) return;
     try {
       const { guildId } = data;
       const storage = await this.guildManager.getGuildStorage(guildId);
@@ -188,9 +245,11 @@ export class SystemHandlers {
   }
 
   private async handleGuildDepositStorage(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
       const { guildId, itemId, quantity } = data;
-      await this.guildManager.depositToStorage(guildId, itemId, quantity);
+      await this.guildManager.depositToStorage(guildId, session.characterId, itemId, quantity);
       socket.emit('guild:deposited', { guildId, itemId, quantity });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -198,9 +257,11 @@ export class SystemHandlers {
   }
 
   private async handleGuildWithdrawStorage(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
       const { guildId, itemId, quantity } = data;
-      await this.guildManager.withdrawFromStorage(guildId, itemId, quantity);
+      await this.guildManager.withdrawFromStorage(guildId, session.characterId, itemId, quantity);
       socket.emit('guild:withdrawn', { guildId, itemId, quantity });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -208,9 +269,11 @@ export class SystemHandlers {
   }
 
   private async handleGuildUpdateNotice(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
       const { guildId, notice } = data;
-      await this.guildManager.updateNotice(guildId, notice);
+      await this.guildManager.updateNotice(guildId, session.characterId, notice);
       socket.emit('guild:notice_updated', { guildId, notice });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -218,9 +281,11 @@ export class SystemHandlers {
   }
 
   private async handleGuildCreateUnion(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
       const { guildId, unionName } = data;
-      const union = await this.guildManager.createUnion(guildId, unionName);
+      const union = await this.guildManager.createUnion(unionName, guildId, session.characterId);
       socket.emit('guild:union_created', union);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -228,6 +293,7 @@ export class SystemHandlers {
   }
 
   private async handleGuildLeaveUnion(socket: Socket, data: any): Promise<void> {
+    if (!this.requireSession(socket)) return;
     try {
       const { guildId } = data;
       await this.guildManager.leaveUnion(guildId);
@@ -241,30 +307,33 @@ export class SystemHandlers {
   // QUEST HANDLERS
   // ============================================
 
-  private async handleQuestGetAvailable(socket: Socket, data: any): Promise<void> {
+  private async handleQuestGetAvailable(socket: Socket, _data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId } = data;
-      const quests = await this.questManager.getAvailableQuests(characterId);
+      const quests = await this.questManager.getAvailableQuests(session.characterId);
       socket.emit('quest:available_list', quests);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
-  private async handleQuestGetInProgress(socket: Socket, data: any): Promise<void> {
+  private async handleQuestGetInProgress(socket: Socket, _data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId } = data;
-      const quests = await this.questManager.getQuestProgress(characterId);
+      const quests = await this.questManager.getQuestProgress(session.characterId);
       socket.emit('quest:in_progress_list', quests);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
-  private async handleQuestGetCompleted(socket: Socket, data: any): Promise<void> {
+  private async handleQuestGetCompleted(socket: Socket, _data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId } = data;
-      const quests = await this.questManager.getCompletedQuests(characterId);
+      const quests = await this.questManager.getCompletedQuests(session.characterId);
       socket.emit('quest:completed_list', quests);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -272,20 +341,24 @@ export class SystemHandlers {
   }
 
   private async handleQuestAccept(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId, questId } = data;
-      const progress = await this.questManager.acceptQuest(characterId, questId);
+      const { questId } = data;
+      const progress = await this.questManager.acceptQuest(session.characterId, questId);
       socket.emit('quest:accepted', progress);
-      logger.info(`Quest accepted: ${questId} by ${characterId}`);
+      logger.info(`Quest accepted: ${questId} by ${session.characterId}`);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
   private async handleQuestAbandon(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId, questId } = data;
-      await this.questManager.abandonQuest(characterId, questId);
+      const { questId } = data;
+      await this.questManager.abandonQuest(session.characterId, questId);
       socket.emit('quest:abandoned', { questId });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -293,21 +366,15 @@ export class SystemHandlers {
   }
 
   private async handleQuestComplete(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId, questId } = data;
-      const rewards = await this.questManager.completeQuest(characterId, questId);
+      const { questId } = data;
+      // completeQuest vérifie côté serveur: statut in_progress + objectifs
+      // remplis (les récompenses ne sont PAS distribuables à la demande)
+      const rewards = await this.questManager.completeQuest(session.characterId, questId);
       socket.emit('quest:completed', { questId, rewards });
-      logger.info(`Quest completed: ${questId} by ${characterId}`);
-    } catch (error: any) {
-      socket.emit('error', { message: error.message });
-    }
-  }
-
-  private async handleQuestUpdateObjective(socket: Socket, data: any): Promise<void> {
-    try {
-      const { characterId, questId, objectiveIndex, count } = data;
-      const progress = await this.questManager.updateObjective(characterId, questId, objectiveIndex, count);
-      socket.emit('quest:objective_updated', progress);
+      logger.info(`Quest completed: ${questId} by ${session.characterId}`);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
@@ -317,7 +384,8 @@ export class SystemHandlers {
   // FORTRESS HANDLERS
   // ============================================
 
-  private async handleFortressGetList(socket: Socket, data: any): Promise<void> {
+  private async handleFortressGetList(socket: Socket, _data: any): Promise<void> {
+    if (!this.requireSession(socket)) return;
     try {
       const fortresses = await this.fortressManager.getAllFortresses();
       socket.emit('fortress:list', fortresses);
@@ -327,9 +395,10 @@ export class SystemHandlers {
   }
 
   private async handleFortressGetDetails(socket: Socket, data: any): Promise<void> {
+    if (!this.requireSession(socket)) return;
     try {
       const { fortressId } = data;
-      const fortress = await this.fortressManager.getFortress(fortressId);
+      const fortress = await this.fortressManager.getFortressById(fortressId);
       socket.emit('fortress:details', fortress);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -337,9 +406,10 @@ export class SystemHandlers {
   }
 
   private async handleFortressGetRegistrations(socket: Socket, data: any): Promise<void> {
+    if (!this.requireSession(socket)) return;
     try {
       const { fortressId } = data;
-      const registrations = await this.fortressManager.getRegistrations(fortressId);
+      const registrations = await this.fortressManager.getFortressRegistrations(fortressId);
       socket.emit('fortress:registrations', registrations);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -347,9 +417,17 @@ export class SystemHandlers {
   }
 
   private async handleFortressRegister(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { fortressId, guildId } = data;
-      await this.fortressManager.registerForWar(fortressId, guildId);
+      const { fortressId } = data;
+      // La guilde est celle du personnage authentifié — pas un guildId client
+      const guildId = await this.guildManager.getGuildIdForCharacter(session.characterId);
+      if (!guildId) {
+        socket.emit('error', { message: 'Character has no guild' });
+        return;
+      }
+      await this.fortressManager.registerForFortress(fortressId, guildId);
       socket.emit('fortress:registered', { fortressId, guildId });
       logger.info(`Guild ${guildId} registered for fortress ${fortressId}`);
     } catch (error: any) {
@@ -358,8 +436,15 @@ export class SystemHandlers {
   }
 
   private async handleFortressUnregister(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { fortressId, guildId } = data;
+      const { fortressId } = data;
+      const guildId = await this.guildManager.getGuildIdForCharacter(session.characterId);
+      if (!guildId) {
+        socket.emit('error', { message: 'Character has no guild' });
+        return;
+      }
       await this.fortressManager.unregisterFromWar(fortressId, guildId);
       socket.emit('fortress:unregistered', { fortressId, guildId });
     } catch (error: any) {
@@ -368,6 +453,7 @@ export class SystemHandlers {
   }
 
   private async handleFortressGetTax(socket: Socket, data: any): Promise<void> {
+    if (!this.requireSession(socket)) return;
     try {
       const { fortressId } = data;
       const tax = await this.fortressManager.getTaxRevenue(fortressId);
@@ -378,8 +464,15 @@ export class SystemHandlers {
   }
 
   private async handleFortressCollectTax(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { fortressId, guildId } = data;
+      const { fortressId } = data;
+      const guildId = await this.guildManager.getGuildIdForCharacter(session.characterId);
+      if (!guildId) {
+        socket.emit('error', { message: 'Character has no guild' });
+        return;
+      }
       const revenue = await this.fortressManager.collectTax(fortressId, guildId);
       socket.emit('fortress:tax_collected', { fortressId, revenue });
       logger.info(`Tax collected for fortress ${fortressId}: ${revenue}`);
@@ -392,10 +485,11 @@ export class SystemHandlers {
   // MOUNT HANDLERS
   // ============================================
 
-  private async handleMountGet(socket: Socket, data: any): Promise<void> {
+  private async handleMountGet(socket: Socket, _data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId } = data;
-      const mount = await this.mountManager.getMountByCharacter(characterId);
+      const mount = await this.mountManager.getMountByCharacter(session.characterId);
       socket.emit('mount:info', mount);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -403,31 +497,35 @@ export class SystemHandlers {
   }
 
   private async handleMountPurchase(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId, mountType } = data;
-      const mount = await this.mountManager.purchaseMount(characterId, mountType);
+      const { mountType } = data;
+      const mount = await this.mountManager.purchaseMount(session.characterId, mountType);
       socket.emit('mount:purchased', mount);
-      logger.info(`Mount purchased: ${mountType} by ${characterId}`);
+      logger.info(`Mount purchased: ${mountType} by ${session.characterId}`);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
-  private async handleMountSummon(socket: Socket, data: any): Promise<void> {
+  private async handleMountSummon(socket: Socket, _data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId } = data;
-      const mount = await this.mountManager.summonMount(characterId);
+      const mount = await this.mountManager.summonMount(session.characterId);
       socket.emit('mount:summoned', mount);
-      logger.info(`Mount summoned by ${characterId}`);
+      logger.info(`Mount summoned by ${session.characterId}`);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
-  private async handleMountDismiss(socket: Socket, data: any): Promise<void> {
+  private async handleMountDismiss(socket: Socket, _data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId } = data;
-      const mount = await this.mountManager.dismissMount(characterId);
+      const mount = await this.mountManager.dismissMount(session.characterId);
       socket.emit('mount:dismissed', mount);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -435,19 +533,22 @@ export class SystemHandlers {
   }
 
   private async handleMountFeed(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId, foodItemId } = data;
-      const mount = await this.mountManager.feedMount(characterId, foodItemId);
+      const { foodItemId } = data;
+      const mount = await this.mountManager.feedMount(session.characterId, foodItemId);
       socket.emit('mount:fed', mount);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
-  private async handleMountGetInventory(socket: Socket, data: any): Promise<void> {
+  private async handleMountGetInventory(socket: Socket, _data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId } = data;
-      const mount = await this.mountManager.getMountByCharacter(characterId);
+      const mount = await this.mountManager.getMountByCharacter(session.characterId);
       socket.emit('mount:inventory', mount?.inventory);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -455,20 +556,24 @@ export class SystemHandlers {
   }
 
   private async handleMountDepositItem(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId, itemId, quantity } = data;
-      await this.mountManager.depositItem(characterId, itemId, quantity);
-      socket.emit('mount:item_deposited', { characterId, itemId, quantity });
+      const { itemId, quantity } = data;
+      await this.mountManager.depositItem(session.characterId, itemId, quantity);
+      socket.emit('mount:item_deposited', { characterId: session.characterId, itemId, quantity });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
   private async handleMountWithdrawItem(socket: Socket, data: any): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) return;
     try {
-      const { characterId, mountInventoryId } = data;
-      await this.mountManager.withdrawItem(characterId, mountInventoryId);
-      socket.emit('mount:item_withdrawn', { characterId, mountInventoryId });
+      const { mountInventoryId } = data;
+      await this.mountManager.withdrawItem(session.characterId, mountInventoryId);
+      socket.emit('mount:item_withdrawn', { characterId: session.characterId, mountInventoryId });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }

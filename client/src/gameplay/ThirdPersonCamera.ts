@@ -10,9 +10,8 @@ import {
   UniversalCamera,
   Vector3,
   Ray,
-  AbstractMesh,
-  Node,
-  PointerEventTypes
+  TransformNode,
+  Observer
 } from '@babylonjs/core';
 
 /**
@@ -54,7 +53,7 @@ const DEFAULT_CONFIG: ThirdPersonCameraConfig = {
  */
 export class ThirdPersonCamera {
   private scene: Scene;
-  private target: Node | null = null;
+  private target: TransformNode | null = null;
   private camera: UniversalCamera;
   private config: ThirdPersonCameraConfig;
 
@@ -70,6 +69,21 @@ export class ThirdPersonCamera {
   private isRightMouseDown: boolean = false;
   private lastMouseX: number = 0;
   private lastMouseY: number = 0;
+
+  // Update observer (retiré au dispose)
+  private updateObserver: Observer<Scene> | null = null;
+
+  // Vecteurs de travail pré-alloués: la boucle d'update ne doit allouer
+  // aucun objet (GC churn à 60 FPS).
+  private readonly _desired = new Vector3();
+  private readonly _look = new Vector3();
+  private readonly _direction = new Vector3();
+  private readonly _ray = new Ray(new Vector3(0, 0, 0), new Vector3(0, 1, 0), 1);
+
+  // Mémo du dernier raycast de collision: inutile de re-raycaster ~2900 meshes
+  // si ni l'orbite ni le zoom ni la cible n'ont bougé depuis le dernier frame.
+  private _lastCollisionResult = new Vector3();
+  private _lastRaycastKey = '';
 
   constructor(
     scene: Scene,
@@ -88,7 +102,9 @@ export class ThirdPersonCamera {
     // Camera setup
     this.camera.setTarget(Vector3.Zero());
     this.camera.minZ = 0.1;
-    this.camera.maxZ = 1000;
+    // Far plane élargi pour inclure la skybox (rayon ~9000) et les bâtiments
+    // chargés jusqu'à 2600 m — sinon tout est clippé à 1000 m.
+    this.camera.maxZ = 12000;
     this.camera.fov = 1.0;
     this.camera.inertia = 0;
 
@@ -109,64 +125,82 @@ export class ThirdPersonCamera {
    * Setup mouse/touch controls
    */
   private setupControls(): void {
-    const canvas = this.scene.getEngine().getRenderingCanvas()!;
+    const canvas = this.scene.getEngine().getRenderingCanvas();
     if (!canvas) return;
 
-    // Mouse down - right click for rotation
-    canvas.addEventListener('mousedown', (e) => {
-      if (e.button === 2) { // Right click
-        this.isRightMouseDown = true;
-        this.lastMouseX = e.clientX;
-        this.lastMouseY = e.clientY;
-      }
-    });
+    // Mouse down - right click for rotation (avec capture du pointeur pour
+    // que le drag continue même si la souris quitte le canvas)
+    canvas.addEventListener('pointerdown', this.handlePointerDown);
 
     // Mouse up
-    canvas.addEventListener('mouseup', (e) => {
-      if (e.button === 2) {
-        this.isRightMouseDown = false;
-      }
-    });
+    canvas.addEventListener('pointerup', this.endDrag);
+    canvas.addEventListener('pointercancel', this.endDrag);
 
     // Mouse move - rotate camera
-    canvas.addEventListener('mousemove', (e) => {
-      if (this.isRightMouseDown) {
-        const deltaX = e.clientX - this.lastMouseX;
-        const deltaY = e.clientY - this.lastMouseY;
+    canvas.addEventListener('pointermove', this.handlePointerMove);
 
-        this.yaw += deltaX * this.config.rotationSpeed;
-        this.pitch -= deltaY * this.config.rotationSpeed;
-
-        // Clamp pitch
-        this.pitch = Math.max(0.1, Math.min(Math.PI / 2 - 0.1, this.pitch));
-
-        this.lastMouseX = e.clientX;
-        this.lastMouseY = e.clientY;
-      }
-    });
-
-    // Mouse wheel - zoom
-    canvas.addEventListener('wheel', (e) => {
-      e.preventDefault();
-
-      const delta = e.deltaY * this.config.zoomSpeed;
-      this.currentDistance = Math.max(
-        this.config.minDistance,
-        Math.min(this.config.maxDistance, this.currentDistance + delta)
-      );
-    });
+    // Mouse wheel - zoom (permissif: de très près à vue de ville)
+    canvas.addEventListener('wheel', this.handleWheel, { passive: false });
 
     // Prevent context menu on right click
-    canvas.addEventListener('contextmenu', (e) => {
-      e.preventDefault();
-    });
+    canvas.addEventListener('contextmenu', this.preventContextMenu);
   }
+
+  private handlePointerDown = (e: PointerEvent): void => {
+    if (e.button === 2) { // Right click
+      this.isRightMouseDown = true;
+      this.lastMouseX = e.clientX;
+      this.lastMouseY = e.clientY;
+      const canvas = this.scene.getEngine().getRenderingCanvas();
+      try { canvas?.setPointerCapture(e.pointerId); } catch { /* non critique */ }
+    }
+  };
+
+  private endDrag = (e: PointerEvent): void => {
+    if (e.button === 2) {
+      this.isRightMouseDown = false;
+      const canvas = this.scene.getEngine().getRenderingCanvas();
+      try { canvas?.releasePointerCapture(e.pointerId); } catch { /* non critique */ }
+    }
+  };
+
+  private handlePointerMove = (e: PointerEvent): void => {
+    if (this.isRightMouseDown) {
+      const deltaX = e.clientX - this.lastMouseX;
+      const deltaY = e.clientY - this.lastMouseY;
+
+      this.yaw += deltaX * this.config.rotationSpeed;
+      // Convention MMO (SRO/WoW): glisser vers le BAS élève la caméra
+      // (vue plongeante), glisser vers le HAUT la descend (vue rasante).
+      this.pitch += deltaY * this.config.rotationSpeed;
+
+      // Clamp pitch: légèrement au-dessus de l'horizon jusqu'à la verticale
+      this.pitch = Math.max(-0.25, Math.min(1.52, this.pitch));
+
+      this.lastMouseX = e.clientX;
+      this.lastMouseY = e.clientY;
+    }
+  };
+
+  private handleWheel = (e: WheelEvent): void => {
+    e.preventDefault();
+
+    const factor = e.deltaY > 0 ? 1.15 : 1 / 1.15;
+    this.currentDistance = Math.max(
+      this.config.minDistance,
+      Math.min(this.config.maxDistance, this.currentDistance * factor)
+    );
+  };
+
+  private preventContextMenu = (e: Event): void => {
+    e.preventDefault();
+  };
 
   /**
    * Start camera update loop
    */
   private startUpdate(): void {
-    this.scene.onBeforeRenderObservable.add(() => {
+    this.updateObserver = this.scene.onBeforeRenderObservable.add(() => {
       this.update();
     });
   }
@@ -185,64 +219,107 @@ export class ThirdPersonCamera {
     const offsetZ = Math.cos(this.yaw) * Math.cos(this.pitch) * this.currentDistance;
     const offsetY = Math.sin(this.pitch) * this.currentDistance + this.currentHeight;
 
-    // Desired camera position
-    const desiredPosition = new Vector3(
+    // Desired camera position (vecteur pré-alloué)
+    this._desired.set(
       targetPos.x - offsetX,
       targetPos.y + offsetY,
       targetPos.z - offsetZ
     );
 
     // Check collision if enabled
-    let finalPosition = desiredPosition;
     if (this.config.enableCollision) {
-      finalPosition = this.checkCollision(targetPos, desiredPosition);
+      this.checkCollision(targetPos, this._desired, this._desired);
     }
 
-    // Smooth camera movement
-    this.camera.position = Vector3.Lerp(
+    // Smooth camera movement (sans allocation)
+    Vector3.LerpToRef(
       this.camera.position,
-      finalPosition,
-      this.config.smoothness
+      this._desired,
+      this.config.smoothness,
+      this.camera.position
     );
 
-    // Look at target
-    this.camera.setTarget(targetPos);
+    // Look at target (tête du personnage, pas les pieds)
+    this._look.set(targetPos.x, targetPos.y + 1.2, targetPos.z);
+    this.camera.setTarget(this._look);
   }
 
   /**
-   * Check collision between target and camera
+   * Check collision between target and camera.
+   * Écrit le résultat dans outPosition (aucune allocation).
    */
   private checkCollision(
     targetPos: Vector3,
-    desiredPos: Vector3
-  ): Vector3 {
-    const direction = desiredPos.subtract(targetPos);
-    const distance = direction.length();
-    direction.normalize();
+    desiredPos: Vector3,
+    outPosition: Vector3
+  ): void {
+    this._direction.set(
+      desiredPos.x - targetPos.x,
+      desiredPos.y - targetPos.y,
+      desiredPos.z - targetPos.z
+    );
+    const distance = this._direction.length();
+    if (distance < 1e-6) {
+      outPosition.copyFrom(desiredPos);
+      return;
+    }
+    this._direction.scaleInPlace(1 / distance);
 
-    const ray = new Ray(targetPos, direction, distance);
+    // Ne re-raycast que si l'état caméra/cible a changé depuis le dernier
+    // frame: le pick parcourt les bounding boxes de ~2900 meshes de scène.
+    const key = `${this.yaw.toFixed(3)}|${this.pitch.toFixed(3)}|${this.currentDistance.toFixed(2)}|${targetPos.x.toFixed(1)}|${targetPos.y.toFixed(1)}|${targetPos.z.toFixed(1)}`;
+    if (key === this._lastRaycastKey) {
+      outPosition.copyFrom(this._lastCollisionResult);
+      return;
+    }
 
-    const hit = this.scene.pickWithRay(ray, (mesh) => {
+    this._ray.origin.copyFrom(targetPos);
+    this._ray.direction.copyFrom(this._direction);
+    this._ray.length = distance;
+
+    const hit = this.scene.pickWithRay(this._ray, (mesh) => {
+      // Tests bon marché d'abord: la plupart des meshes sortent ici.
+      if (!mesh.isPickable || !mesh.checkCollisions) return false;
       // Filter out target mesh
       if (this.target && (mesh === this.target || mesh.isDescendantOf(this.target))) {
         return false;
       }
-      return mesh.isPickable && mesh.checkCollisions;
+      return true;
     });
 
-    if (hit?.hit && hit.pickedPoint) {
-      // Move camera closer to avoid clipping
-      const collisionDistance = hit.distance - 0.5;
-      return targetPos.add(direction.scale(Math.max(1, collisionDistance)));
+    // Ignorer les contacts immédiats (< 0.9 m): le point de départ du rayon
+    // peut être à l'intérieur d'un mesh (couture de terrain, propre corps)
+    // et écraserait la caméra contre le personnage.
+    if (hit?.hit && hit.pickedPoint && hit.distance > 0.9) {
+      const collisionDistance = Math.max(1.2, hit.distance - 0.5);
+      const d = Math.min(collisionDistance, distance);
+      outPosition.set(
+        targetPos.x + this._direction.x * d,
+        targetPos.y + this._direction.y * d,
+        targetPos.z + this._direction.z * d
+      );
+    } else {
+      outPosition.copyFrom(desiredPos);
     }
 
-    return desiredPos;
+    this._lastRaycastKey = key;
+    this._lastCollisionResult.copyFrom(outPosition);
+  }
+
+  /** Caméra interne (pour définir comme caméra active de la scène). */
+  public get sceneCamera(): UniversalCamera {
+    return this.camera;
+  }
+
+  /** Cible suivie (pour resynchroniser quand le modèle joueur est remplacé). */
+  public getTarget(): TransformNode | null {
+    return this.target;
   }
 
   /**
    * Set the target to follow
    */
-  public setTarget(target: Node | null): void {
+  public setTarget(target: TransformNode | null): void {
     this.target = target;
 
     if (target) {
@@ -281,7 +358,8 @@ export class ThirdPersonCamera {
    * Set camera pitch
    */
   public setPitch(pitch: number): void {
-    this.pitch = Math.max(0.1, Math.min(Math.PI / 2 - 0.1, pitch));
+    // Même plage que le clamp du drag (cohérence orbite programmatique/souris)
+    this.pitch = Math.max(-0.25, Math.min(1.52, pitch));
   }
 
   /**
@@ -298,6 +376,19 @@ export class ThirdPersonCamera {
    * Dispose camera
    */
   public dispose(): void {
+    if (this.updateObserver) {
+      this.scene.onBeforeRenderObservable.remove(this.updateObserver);
+      this.updateObserver = null;
+    }
+    const canvas = this.scene.getEngine().getRenderingCanvas();
+    if (canvas) {
+      canvas.removeEventListener('pointerdown', this.handlePointerDown);
+      canvas.removeEventListener('pointerup', this.endDrag);
+      canvas.removeEventListener('pointercancel', this.endDrag);
+      canvas.removeEventListener('pointermove', this.handlePointerMove);
+      canvas.removeEventListener('wheel', this.handleWheel);
+      canvas.removeEventListener('contextmenu', this.preventContextMenu);
+    }
     this.camera.dispose();
     console.log('ThirdPersonCamera disposed');
   }

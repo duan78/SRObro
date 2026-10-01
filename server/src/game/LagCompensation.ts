@@ -85,7 +85,7 @@ export class LagCompensation {
   /**
    * Validate hit with lag compensation
    */
-  public validateHit(request: HitRequest, worldManager: any): HitResult {
+  public validateHit(request: HitRequest, _worldManager: any): HitResult {
     const now = Date.now();
     const rewindTime = now - request.timestamp;
 
@@ -153,7 +153,7 @@ export class LagCompensation {
   private validateHitByDistance(
     distance: number,
     angle: number,
-    skillId?: string
+    _skillId?: string
   ): boolean {
     // TODO: Implement skill-specific ranges
     // For now, use default melee range

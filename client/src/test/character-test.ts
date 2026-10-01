@@ -169,8 +169,9 @@ function createEnvironment(): void {
   }
   gridTexture.update();
   groundMat.diffuseTexture = gridTexture;
-  groundMat.diffuseTexture.uScale = 10;
-  groundMat.diffuseTexture.vScale = 10;
+  const groundTex = groundMat.diffuseTexture as import('@babylonjs/core').Texture;
+  groundTex.uScale = 10;
+  groundTex.vScale = 10;
 
   ground.material = groundMat;
 

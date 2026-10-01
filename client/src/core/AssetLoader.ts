@@ -111,6 +111,11 @@ export class AssetLoader {
 
     // Caches
     private containerCache: Map<string, AssetContainer> = new Map();
+    // Chargements GLB en cours (dédup: deux appels concurrents → un seul fetch)
+    private loadingGlbs: Map<string, Promise<AssetContainer>> = new Map();
+    // Matériaux partagés par URL de texture (sinon N instances d'un même
+    // bâtiment = N textures GPU identiques)
+    private materialCache: Map<string, StandardMaterial> = new Map();
     private skeletonDataCache: Map<string, BSKData> = new Map();
     private resourceCache: Map<string, ResourceEntry> = new Map();
 
@@ -235,7 +240,7 @@ export class AssetLoader {
             if (itemCode) {
                 const itemResult = await this.loadItemByCode(itemCode);
                 if (itemResult) {
-                    await character.equip(slot, itemResult.root.name);
+                    await character.equip(slot as 'head' | 'chest' | 'legs' | 'hands' | 'feet' | 'weapon' | 'shield', itemResult.root.name);
                     parts.set(slot, itemResult.root);
                 }
             }
@@ -293,6 +298,14 @@ export class AssetLoader {
             return null;
         }
 
+        // 1b. Chemin moderne: le manifest liste directement les GLB skinés
+        // (multi-parties: corps + accessoires) générés depuis les .bsr officiels.
+        const glbs = (resourceEntry as { glbs?: string[] }).glbs;
+        if (Array.isArray(glbs) && glbs.length > 0) {
+            const textures = (resourceEntry as { textures?: string[] }).textures;
+            return this.loadMultiPartGlb(resourceId, glbs, textures);
+        }
+
         // 2. Identify the main mesh (BMS)
         // BSR files can have multiple meshes, but usually the first one is the main body
         let meshName = "";
@@ -325,7 +338,8 @@ export class AssetLoader {
 
         // Instantiate models into the scene
         const instance = container.instantiateModelsToScene(name => `${resourceId}_${name}`);
-        const rootMesh = instance.rootNodes[0];
+        // rootNodes sont des TransformNode — l'API historique retourne un AbstractMesh
+        const rootMesh = instance.rootNodes[0] as AbstractMesh;
 
         // 4. Load and Apply Skeleton (if applicable)
         let skeleton: Skeleton | undefined;
@@ -375,6 +389,95 @@ export class AssetLoader {
 
         return { root: rootMesh, skeleton };
     }
+
+  /**
+   * Charge une ressource multi-parties (corps, accessoires, armes) décrite
+   * par la liste de GLB skinés du manifest, l'assemble sous un root unique
+   * et applique les textures officielles (PNG convertis des .ddj).
+   */
+  private async loadMultiPartGlb(
+    resourceId: string,
+    glbPaths: string[],
+    textures?: string[],
+  ): Promise<{ root: AbstractMesh, skeleton?: Skeleton } | null> {
+    const { TransformNode } = await import('@babylonjs/core/Meshes/transformNode');
+    const { StandardMaterial } = await import('@babylonjs/core/Materials/standardMaterial');
+    const { Texture } = await import('@babylonjs/core/Materials/Textures/texture');
+    const root = new TransformNode(`${resourceId}_root`, this.scene);
+    let skeleton: Skeleton | undefined;
+    const skeletons: Skeleton[] = [];
+    let loadedAny = false;
+
+    // Matériau texturé: une texture par partie quand le manifest en fournit
+    // plusieurs (l'ordre BSR des matériaux correspond à celui des meshes),
+    // sinon une seule partagée. Cache par URL: les instances multiples d'un
+    // même modèle partagent la texture GPU au lieu de la dupliquer.
+    const partMats: StandardMaterial[] = [];
+    if (textures && textures.length > 0) {
+      const { Color3 } = await import('@babylonjs/core/Maths/math.color');
+      for (let i = 0; i < Math.max(glbPaths.length, 1); i++) {
+        const tex = textures[Math.min(i, textures.length - 1)];
+        const texUrl = this.resolvePath(`textures/${tex}`);
+        let mat = this.materialCache.get(texUrl);
+        if (!mat) {
+          mat = new StandardMaterial(`${resourceId}_mat${i}`, this.scene);
+          const diffuse = new Texture(texUrl, this.scene);
+          diffuse.hasAlpha = false;
+          mat.diffuseTexture = diffuse;
+          mat.specularColor = new Color3(0.05, 0.05, 0.05);
+          mat.backFaceCulling = false; // certains meshes SRO ont des faces inversées
+          this.materialCache.set(texUrl, mat);
+        }
+        partMats.push(mat);
+      }
+    }
+
+    for (let pIdx = 0; pIdx < glbPaths.length; pIdx++) {
+      const relPath = glbPaths[pIdx];
+      let container: Awaited<ReturnType<AssetLoader['loadGlb']>> = null;
+      try {
+        container = await this.loadGlb(relPath);
+      } catch (e) {
+        // Une partie illisible (ex. GLB trondu) ne doit pas casser la ressource
+        console.warn(`[AssetLoader] Partie illisible ${relPath}:`, e instanceof Error ? e.message : e);
+        continue;
+      }
+      if (!container) continue;
+      loadedAny = true;
+
+      // cloneMaterials=false: les matériaux du GLB ne sont pas clonés par
+      // instance (ils sont de toute façon écrasés par partMats ci-dessous —
+      // les clones seraient des orphelins jamais disposés dans la scène).
+      const instance = container.instantiateModelsToScene(name => `${resourceId}_${name}`, false);
+      for (const node of instance.rootNodes) {
+        node.parent = root;
+        for (const mesh of node.getChildMeshes()) {
+          const m = mesh as Mesh;
+          // Les GLB skinés embarquent leur squelette: réutiliser le premier
+          if (!skeleton && m.skeleton) skeleton = m.skeleton;
+          if (m.skeleton && !skeletons.includes(m.skeleton)) skeletons.push(m.skeleton);
+          if (partMats.length > 0) m.material = partMats[pIdx % partMats.length];
+        }
+      }
+    }
+
+    if (!loadedAny) {
+      root.dispose();
+      console.warn(`[AssetLoader] Aucune partie chargée pour ${resourceId}`);
+      return null;
+    }
+
+    // Le "root" retourné doit se comporter comme un mesh positionnable.
+    // On prend le premier mesh réel trouvé comme ancre, parenté au TransformNode.
+    const firstMesh = root.getChildMeshes()[0] ?? null;
+    if (firstMesh) {
+      // Copie de VALEUR: si root.position référençait firstMesh.position,
+      // déplacer le root déplacerait aussi l'enfant (objet décalé en double).
+      root.position.copyFrom(firstMesh.position);
+    }
+    const result = { root: (root as unknown as AbstractMesh), skeleton, skeletons };
+    return result;
+  }
 
     private async applyMaterial(mesh: AbstractMesh, bmtPath: string): Promise<void> {
         if (!this.manifest) return;
@@ -441,8 +544,16 @@ export class AssetLoader {
         const path = this.resolvePath(relativePath);
         const cacheKey = path;
 
-        if (this.containerCache.has(cacheKey)) {
-            return this.containerCache.get(cacheKey)!;
+        const cached = this.containerCache.get(cacheKey);
+        if (cached) {
+            return cached;
+        }
+
+        // Dédup des chargements en vol: deux appels concurrents pour le même
+        // GLB ne doivent pas le télécharger/parser deux fois.
+        const inFlight = this.loadingGlbs.get(cacheKey);
+        if (inFlight) {
+            return inFlight;
         }
 
         // SceneLoader.LoadAssetContainerAsync(rootUrl, fileName, scene)
@@ -453,14 +564,33 @@ export class AssetLoader {
 
         console.log(`[AssetLoader] Loading GLB: folder="${folder}", file="${file}"`);
 
-        try {
-            const container = await SceneLoader.LoadAssetContainerAsync(folder, file, this.scene);
-            this.containerCache.set(cacheKey, container);
-            return container;
-        } catch (e) {
-            console.error(`Failed to load GLB: ${path}`, e);
-            throw e;
-        }
+        const promise = SceneLoader.LoadAssetContainerAsync(folder, file, this.scene)
+            .then((container) => {
+                this.containerCache.set(cacheKey, container);
+                this.loadingGlbs.delete(cacheKey);
+                return container;
+            })
+            .catch((e) => {
+                this.loadingGlbs.delete(cacheKey);
+                console.error(`Failed to load GLB: ${path}`, e);
+                throw e;
+            });
+        this.loadingGlbs.set(cacheKey, promise);
+        return promise;
+    }
+
+    /**
+     * Libère les caches de ressources (fin de vie de la scène uniquement:
+     * les instances instanciées partagent les matériaux du container).
+     */
+    public dispose(): void {
+        this.containerCache.forEach((container) => container.dispose());
+        this.containerCache.clear();
+        this.loadingGlbs.clear();
+        this.materialCache.forEach((mat) => mat.dispose());
+        this.materialCache.clear();
+        this.skeletonDataCache.clear();
+        this.resourceCache.clear();
     }
 
     /**
@@ -569,22 +699,25 @@ export class AssetLoader {
         }
 
         // Check if mesh is skinned
+        // Babylon n'a pas de propriété isSkinnedMesh: un mesh est skiné
+        // s'il porte un squelette (JOINTS_0/WEIGHTS_0 résolus à l'import GLB).
         const meshAsMesh = mesh as Mesh;
-        if (meshAsMesh.isSkinnedMesh === true) {
+        if (meshAsMesh.skeleton) {
             isSkinnedMesh = true;
             hasSkinningData = true;
             console.log(`  ✅ Skinned mesh: Vertices WILL deform with animation`);
 
             // Check for bone influencers (JOINTS_0 and WEIGHTS_0 in glTF)
-            if (meshAsMesh.numBoneInfluencers !== undefined) {
-                hasVertexGroups = meshAsMesh.numBoneInfluencers > 0;
-                console.log(`  ✅ Bone influencers: ${meshAsMesh.numBoneInfluencers} per vertex`);
+            const numInfluencers = (meshAsMesh as unknown as { numBoneInfluencers?: number }).numBoneInfluencers;
+            if (numInfluencers !== undefined) {
+                hasVertexGroups = numInfluencers > 0;
+                console.log(`  ✅ Bone influencers: ${numInfluencers} per vertex`);
                 console.log(`  ✅ JOINTS_0 and WEIGHTS_0 present in glTF data`);
             } else {
                 issues.push('Skinned mesh but numBoneInfluencers is undefined');
             }
         } else {
-            issues.push('Mesh is NOT skinned (isSkinnedMesh = false)');
+            issues.push('Mesh is NOT skinned (no skeleton bound)');
             issues.push('Vertices will NOT deform - missing JOINTS_0/WEIGHTS_0');
         }
 
@@ -623,7 +756,7 @@ export class AssetLoader {
     }> {
         console.log(`Loading character model: ${modelPath}`);
 
-        const result = await this.scene.importMeshAsync(null, this.baseUrl + modelPath);
+        const result = await SceneLoader.ImportMeshAsync(null, this.baseUrl + modelPath, '', this.scene);
 
         if (!result.meshes || result.meshes.length === 0) {
             throw new Error(`No meshes found in model: ${modelPath}`);
@@ -635,10 +768,8 @@ export class AssetLoader {
         console.log('Validating skinning data...');
         const validation = this.validateSkinnedMesh(mesh);
 
-        // Count skinned meshes
-        const skinnedMeshCount = result.meshes.filter(m =>
-            (m as Mesh).isSkinnedMesh === true
-        ).length;
+        // Count skinned meshes (un mesh skiné porte un squelette)
+        const skinnedMeshCount = result.meshes.filter(m => m.skeleton != null).length;
 
         console.log(`Skinned meshes: ${skinnedMeshCount}/${result.meshes.length}`);
 

@@ -121,9 +121,11 @@ export class ClientPrediction {
   }
 
   /**
-   * Process local input (prediction)
+   * Process local input (prediction).
+   * Retourne l'input séquencé à envoyer au serveur (le type de retour n'était
+   * pas déclaré alors que la fonction retourne pendingInput).
    */
-  public onInput(input: PlayerInput): void {
+  public onInput(input: PlayerInput): PendingInput {
     // 1. Predict local state immediately
     const predictedState = this.predictState(this.localState, input);
 

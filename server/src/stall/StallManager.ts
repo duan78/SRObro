@@ -524,7 +524,7 @@ export class StallManager {
   /**
    * Get cached inventory item (helper)
    */
-  private getCachedInventoryItem(inventoryItemId: string): any {
+  private getCachedInventoryItem(_inventoryItemId: string): any {
     // This would need a proper cache implementation
     return null;
   }

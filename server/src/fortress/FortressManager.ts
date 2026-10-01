@@ -3,10 +3,16 @@
 // Manages fortress wars, registration, and tax collection
 // ============================================
 
-import { PrismaClient, Fortress, FortressState, Guild } from '@prisma/client';
+import { Fortress, FortressState } from '@prisma/client';
 import { EventEmitter } from 'events';
+import { prisma } from '../database/prisma';
+import { createLogger } from '../core/Logger';
 
-const prisma = new PrismaClient();
+// Re-export for the fortress module index
+export { FortressState };
+
+const logger = createLogger('FortressManager');
+
 
 export const FORTRESS_CONFIG = {
   jangan: {
@@ -56,7 +62,11 @@ export class FortressManager extends EventEmitter {
 
   private constructor() {
     super();
-    this.initializeFortresses();
+    // Promesse flottante catchée: un échec DB à l'init ne doit pas devenir
+    // une unhandledRejection
+    this.initializeFortresses().catch((error) =>
+      logger.error('Fortress initialization failed:', error)
+    );
     this.startWarScheduler();
   }
 
@@ -132,7 +142,7 @@ export class FortressManager extends EventEmitter {
   // FORTRESS REGISTRATION
   // ============================================
 
-  async registerForFortress(fortressId: string, guildId: string, characterId: string): Promise<void> {
+  async registerForFortress(fortressId: string, guildId: string, characterId?: string): Promise<void> {
     const fortress = await prisma.fortress.findUnique({
       where: { id: fortressId }
     });
@@ -189,23 +199,38 @@ export class FortressManager extends EventEmitter {
     this.emit('fortressRegistered', { fortressId, guildId, characterId });
   }
 
+  /**
+   * Remove a guild's registration for a fortress war
+   */
+  async unregisterFromWar(fortressId: string, guildId: string): Promise<void> {
+    await prisma.fortressRegistration.deleteMany({
+      where: {
+        fortressId,
+        guildId
+      }
+    });
+
+    this.emit('fortressUnregistered', { fortressId, guildId });
+  }
+
   // ============================================
   // FORTRESS WAR EXECUTION
   // ============================================
 
   async startFortressWar(fortressId: string): Promise<void> {
     const fortress = await prisma.fortress.findUnique({
-      where: { id: fortressId },
-      include: {
-        registrations: true
-      }
+      where: { id: fortressId }
     });
 
     if (!fortress) {
       throw new Error('Fortress not found');
     }
 
-    if (fortress.registrations.length === 0) {
+    const registrations = await prisma.fortressRegistration.findMany({
+      where: { fortressId }
+    });
+
+    if (registrations.length === 0) {
       // No registrations, skip war
       await this.scheduleNextWar(fortressId);
       return;
@@ -232,10 +257,7 @@ export class FortressManager extends EventEmitter {
 
   async endFortressWar(fortressId: string): Promise<void> {
     const fortress = await prisma.fortress.findUnique({
-      where: { id: fortressId },
-      include: {
-        registrations: true
-      }
+      where: { id: fortressId }
     });
 
     if (!fortress) {
@@ -244,7 +266,10 @@ export class FortressManager extends EventEmitter {
 
     // Determine winner (simplified - in reality would track points)
     // For now, first guild registered wins
-    const winnerGuildId = fortress.registrations[0]?.guildId;
+    const registrations = await prisma.fortressRegistration.findMany({
+      where: { fortressId }
+    });
+    const winnerGuildId = registrations[0]?.guildId;
 
     if (winnerGuildId) {
       // Update fortress owner
@@ -341,10 +366,7 @@ export class FortressManager extends EventEmitter {
 
   async collectTaxes(fortressId: string): Promise<bigint> {
     const fortress = await prisma.fortress.findUnique({
-      where: { id: fortressId },
-      include: {
-        registrations: true
-      }
+      where: { id: fortressId }
     });
 
     if (!fortress || !fortress.ownerGuildId) {
@@ -401,24 +423,55 @@ export class FortressManager extends EventEmitter {
     this.emit('fortressTaxRateChanged', { fortressId, taxRate });
   }
 
+  /**
+   * Collect taxes on behalf of the owning guild (ownership-checked wrapper around collectTaxes)
+   */
+  async collectTax(fortressId: string, guildId: string): Promise<bigint> {
+    const fortress = await prisma.fortress.findUnique({
+      where: { id: fortressId }
+    });
+
+    if (!fortress || fortress.ownerGuildId !== guildId) {
+      throw new Error('Your guild does not own this fortress');
+    }
+
+    return this.collectTaxes(fortressId);
+  }
+
+  /**
+   * Get the current tax revenue rate of a fortress (0 if unknown)
+   */
+  async getTaxRevenue(fortressId: string): Promise<number> {
+    const fortress = await prisma.fortress.findUnique({
+      where: { id: fortressId }
+    });
+
+    return fortress ? fortress.taxRate : 0;
+  }
+
   // ============================================
   // SCHEDULING
   // ============================================
 
-  private startWarScheduler(): Promise<void> {
+  private startWarScheduler(): void {
     // Check every minute if a fortress war needs to start
     setInterval(async () => {
-      const fortresses = await prisma.fortress.findMany();
+      try {
+        const fortresses = await prisma.fortress.findMany();
 
-      for (const fortress of fortresses) {
-        const now = new Date();
+        for (const fortress of fortresses) {
+          const now = new Date();
 
-        // Check if it's time for the next war
-        if (fortress.state === FortressState.peace && fortress.nextWarTime <= now) {
-          await this.startFortressWar(fortress.id);
+          // Check if it's time for the next war
+          if (fortress.state === FortressState.peace && fortress.nextWarTime <= now) {
+            await this.startFortressWar(fortress.id);
+          }
         }
+      } catch (error) {
+        // Une erreur DB ponctuelle ne doit pas tuer le process
+        logger.error('Fortress war scheduler error:', error);
       }
-    }, 60000); // Check every minute
+    }, 60000).unref?.(); // Check every minute
   }
 
   // ============================================
@@ -450,26 +503,30 @@ export class FortressManager extends EventEmitter {
   }
 
   async getFortressRegistrations(fortressId: string): Promise<any[]> {
-    return await prisma.fortressRegistration.findMany({
-      where: { fortressId },
-      include: {
-        guild: {
-          include: {
-            members: {
-              include: {
-                character: {
-                  select: {
-                    id: true,
-                    name: true,
-                    level: true
-                  }
+    const registrations = await prisma.fortressRegistration.findMany({
+      where: { fortressId }
+    });
+
+    // Guild/Members/Character relations live on their own models, so enrich each registration
+    return Promise.all(registrations.map(async (registration) => ({
+      ...registration,
+      guild: await prisma.guild.findUnique({
+        where: { id: registration.guildId },
+        include: {
+          members: {
+            include: {
+              character: {
+                select: {
+                  id: true,
+                  name: true,
+                  level: true
                 }
               }
             }
           }
         }
-      }
-    });
+      })
+    })));
   }
 }
 

@@ -25,6 +25,15 @@ pub struct BanHeader {
 
     /// Nom de l'animation
     pub animation_name: String,
+
+    /// Durée en millisecondes
+    pub duration_ms: u32,
+
+    /// Images par seconde
+    pub fps: u32,
+
+    /// 0 = OneShot, 1 = Cyclic
+    pub cyclic: u32,
 }
 
 impl fmt::Display for BanHeader {

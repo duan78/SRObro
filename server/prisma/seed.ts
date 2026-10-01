@@ -131,7 +131,7 @@ async function seedMasteries() {
       update: {},
       create: {
         name: mastery.name,
-        tree: key.toLowerCase() as any,
+        tree: key as any,
         maxLevel: mastery.maxLevel,
         description: `${mastery.nameKr} (${mastery.name})`,
       },
@@ -145,7 +145,7 @@ async function seedMasteries() {
       update: {},
       create: {
         name: mastery.name,
-        tree: key.toLowerCase() as any,
+        tree: key as any,
         maxLevel: mastery.maxLevel,
         description: mastery.name,
       },
@@ -858,12 +858,35 @@ async function seedQuests() {
     }
   ];
 
-  // Insert all quests
-  for (const quest of [...tutorialQuests, ...dailyQuests, ...storyQuests]) {
+  // Insert all quests (normalize field names + BigInts for the Json columns)
+  const slug = (name: string) =>
+    'quest_' + name.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+  const jsonSafe = (v: unknown): unknown =>
+    typeof v === 'bigint' ? Number(v) : Array.isArray(v) ? v.map(jsonSafe)
+      : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, jsonSafe(x)]))
+      : v;
+
+  for (const q of [...tutorialQuests, ...dailyQuests, ...storyQuests] as any[]) {
     await prisma.quest.upsert({
-      where: { id: quest.id },
+      where: { id: q.id ?? slug(q.name) },
       update: {},
-      create: quest as any
+      create: {
+        id: q.id ?? slug(q.name),
+        name: q.name,
+        description: q.description ?? null,
+        type: q.type,
+        minLevel: q.minLevel,
+        maxLevel: q.maxLevel ?? null,
+        prerequisite: jsonSafe(q.prerequisite ?? []),
+        objectives: jsonSafe(q.objectives),
+        rewards: jsonSafe(q.rewards),
+        startsAt: q.startsAt,
+        endsAt: q.endsAt,
+        repeatable: q.repeatable ?? q.canRepeat ?? false,
+        repeatCooldownHrs: q.repeatCooldown != null ? Math.max(1, Math.round(q.repeatCooldown / 3600)) : null,
+        timeLimitSec: q.timeLimit ?? null,
+        isDaily: q.type === 'daily',
+      },
     });
   }
 

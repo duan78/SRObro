@@ -29,7 +29,8 @@ import { HotkeyBar } from './components/HotkeyBar';
 import { ControlsHelpPanel } from './components/ControlsHelpPanel';
 
 export class UIManager {
-  private guiTexture: AdvancedDynamicTexture | null = null;
+  // Public: main.ts y accède pour markAsDirty() après resize
+  public guiTexture: AdvancedDynamicTexture | null = null;
   private uiElements: Map<string, Control> = new Map();
   private isInitialized: boolean = false;
 
@@ -70,11 +71,6 @@ export class UIManager {
 
   // Stat allocation observables
   public onStatAllocateObservable = new Observable<{ stat: 'STR' | 'INT' }>();
-
-  // Keyboard shortcut handlers
-  public toggleInventory?: () => void;
-  public toggleCharacter?: () => void;
-  public toggleControlsHelp?: () => void;
 
   constructor() {
     // Don't initialize in constructor - wait for scene to be ready
@@ -143,7 +139,7 @@ export class UIManager {
     this.mainPanel.cornerRadius = 20;
     this.mainPanel.color = '#C0C0C0';
     this.mainPanel.thickness = 2;
-    this.mainPanel.background = 'rgba(0, 0, 0, 0.5)';
+    this.mainPanel.background = 'rgba(0,0,0,0.5)';
     this.mainPanel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
     this.mainPanel.verticalAlignment = Control.VERTICAL_ALIGNMENT_BOTTOM;
     this.mainPanel.paddingLeft = '10px';
@@ -166,7 +162,7 @@ export class UIManager {
     stackPanel.width = '100%';
     stackPanel.height = '100%';
     stackPanel.isVertical = false;
-    stackPanel.spacing = '5px';
+    stackPanel.spacing = 5;
 
     // Create 5 quick slot buttons
     for (let i = 1; i <= 5; i++) {
@@ -187,7 +183,7 @@ export class UIManager {
     slot.cornerRadius = 5;
     slot.color = '#C0C0C0';
     slot.thickness = 1;
-    slot.background = 'rgba(0, 0, 0, 0.3)';
+    slot.background = 'rgba(0,0,0,0.3)';
     slot.paddingLeft = '5px';
     slot.paddingRight = '5px';
     slot.paddingTop = '5px';
@@ -216,7 +212,7 @@ export class UIManager {
     this.chatPanel.cornerRadius = 10;
     this.chatPanel.color = '#C0C0C0';
     this.chatPanel.thickness = 2;
-    this.chatPanel.background = 'rgba(0, 0, 0, 0.5)';
+    this.chatPanel.background = 'rgba(0,0,0,0.5)';
     this.chatPanel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_LEFT;
     this.chatPanel.verticalAlignment = Control.VERTICAL_ALIGNMENT_BOTTOM;
     this.chatPanel.paddingLeft = '10px';
@@ -251,7 +247,7 @@ export class UIManager {
     chatInput.cornerRadius = 5;
     chatInput.color = '#808080';
     chatInput.thickness = 1;
-    chatInput.background = 'rgba(0, 0, 0, 0.3)';
+    chatInput.background = 'rgba(0,0,0,0.3)';
     chatInput.verticalAlignment = Control.VERTICAL_ALIGNMENT_BOTTOM;
     this.chatPanel.addControl(chatInput);
 
@@ -273,7 +269,7 @@ export class UIManager {
     this.statsPanel.cornerRadius = 10;
     this.statsPanel.color = '#C0C0C0';
     this.statsPanel.thickness = 2;
-    this.statsPanel.background = 'rgba(0, 0, 0, 0.5)';
+    this.statsPanel.background = 'rgba(0,0,0,0.5)';
     this.statsPanel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_LEFT;
     this.statsPanel.verticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
     this.statsPanel.paddingLeft = '10px';
@@ -309,7 +305,7 @@ export class UIManager {
     bar.cornerRadius = 3;
     bar.color = '#000000';
     bar.thickness = 1;
-    bar.background = 'rgba(0, 0, 0, 0.5)';
+    bar.background = 'rgba(0,0,0,0.5)';
 
     // Label
     const labelBlock = new TextBlock(`${name}_label`, label);
@@ -328,7 +324,7 @@ export class UIManager {
     background.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
     background.color = '#00000000';
     background.thickness = 0;
-    background.background = 'rgba(50, 50, 50, 0.8)';
+    background.background = 'rgba(50,50,50,0.8)';
     bar.addControl(background);
 
     // Fill
@@ -380,7 +376,7 @@ export class UIManager {
     notification.cornerRadius = 10;
     notification.color = '#FFD700';
     notification.thickness = 2;
-    notification.background = 'rgba(0, 0, 0, 0.8)';
+    notification.background = 'rgba(0,0,0,0.8)';
     notification.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     notification.verticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
     notification.top = '100px';
@@ -531,7 +527,7 @@ export class UIManager {
     statPanel.cornerRadius = 10;
     statPanel.color = '#FFD700';
     statPanel.thickness = 2;
-    statPanel.background = 'rgba(0, 0, 0, 0.8)';
+    statPanel.background = 'rgba(0,0,0,0.8)';
     statPanel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_LEFT;
     statPanel.verticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
     statPanel.top = '140px'; // Below stats panel
@@ -553,7 +549,7 @@ export class UIManager {
     strButton.height = '30px';
     strButton.color = '#C0C0C0';
     strButton.cornerRadius = 5;
-    strButton.background = 'rgba(0, 100, 0, 0.5)';
+    strButton.background = 'rgba(0,100,0,0.5)';
     strButton.top = '30px';
     strButton.left = '10px';
     strButton.onPointerUpObservable.add(() => {
@@ -568,7 +564,7 @@ export class UIManager {
     intButton.height = '30px';
     intButton.color = '#C0C0C0';
     intButton.cornerRadius = 5;
-    intButton.background = 'rgba(0, 0, 100, 0.5)';
+    intButton.background = 'rgba(0,0,100,0.5)';
     intButton.top = '30px';
     intButton.left = '100px';
     intButton.onPointerUpObservable.add(() => {

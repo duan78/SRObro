@@ -70,7 +70,7 @@ export abstract class Entity extends EventEmitter {
   /**
    * Update entity (called every tick)
    */
-  update(deltaTime: number): void {
+  update(_deltaTime: number): void {
     this.lastUpdate = Date.now();
   }
 

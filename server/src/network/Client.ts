@@ -5,7 +5,7 @@
 
 import type { Socket } from 'socket.io';
 import type { DatabaseManager } from '../database/DatabaseManager';
-import type { C2SPacket, S2CPacket, Character, Position } from '@srobro/shared';
+import type { Character, Position } from '@srobro/shared';
 import { createLogger } from '../core/Logger';
 
 const logger = createLogger('Client');
@@ -78,7 +78,7 @@ export class Client {
     try {
       // Load character from database
       const result = await this.dbManager.query(
-        'SELECT * FROM characters WHERE id = $1',
+        'SELECT * FROM "Character" WHERE id = $1',
         [characterId]
       );
 
@@ -89,7 +89,8 @@ export class Client {
       this.characterData = result.rows[0];
       this.characterId = characterId;
       this.playerId = this.characterData.accountId;
-      this.zoneId = this.characterData.position ? 'zone_jangan' : 'zone_jangan';
+      this.zoneId =
+        (this.characterData as { zoneId?: string }).zoneId ?? 'zone_jangan';
       this.position = this.characterData.position || { x: 0, y: 0, z: 0 };
       this.isAuthenticated = true;
 
@@ -182,9 +183,16 @@ export class Client {
   }
 
   /**
+   * Signal network activity (resets the inactivity timeout)
+   */
+  touch(): void {
+    this.lastUpdateTime = Date.now();
+  }
+
+  /**
    * Update client (called each tick)
    */
-  update(delta: number): void {
+  update(_delta: number): void {
     // Update last activity time
     const now = Date.now();
     if (now - this.lastUpdateTime > 30000) { // 30 seconds timeout

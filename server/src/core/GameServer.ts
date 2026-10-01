@@ -6,6 +6,7 @@
 import type { Server as IOServer, Socket } from 'socket.io';
 import type { DatabaseManager } from '../database/DatabaseManager';
 import { createLogger } from './Logger';
+import { GameDataService } from '../data/GameDataService';
 import { ClientManager } from '../network/ClientManager';
 import { WorldManager } from '../game/WorldManager';
 import { SystemHandlers } from '../network/SystemHandlers';
@@ -21,6 +22,7 @@ import { HotkeyManager } from '../hotkey/HotkeyManager';
 import { CastingManager } from '../casting/CastingManager';
 import { MinimapManager } from '../minimap/MinimapManager';
 import { DropManager } from '../drop/DropManager';
+import { globalSpawnManager } from '../ai/SpawnManager';
 
 const logger = createLogger('GameServer');
 
@@ -70,9 +72,6 @@ export class GameServer {
 
     // Start cleanup interval for dropped items
     this.dropManager.startCleanupInterval(60000); // Every minute
-
-    // Initialize system handlers
-    this.systemHandlers = new SystemHandlers();
   }
 
   /**
@@ -81,19 +80,44 @@ export class GameServer {
   async initialize(): Promise<void> {
     logger.info('Initializing game server...');
 
+    // Load imported official game data (items/monsters/skills from Media.pk2)
+    GameDataService.getInstance().load();
+
     // Initialize client manager
     this.clientManager = new ClientManager(this.io, this.dbManager);
     await this.clientManager.initialize();
+
+    // System handlers (besoin du ClientManager pour résoudre l'identité
+    // authentifiée de chaque socket)
+    this.systemHandlers = new SystemHandlers(this.clientManager);
 
     // Initialize world manager
     this.worldManager = new WorldManager(this.dbManager);
     await this.worldManager.initialize();
 
+    // Spawn manager: source de vérité unique des monstres (WorldManager
+    // partage sa map d'entités)
+    await globalSpawnManager.initialize();
+    globalSpawnManager.start();
+
+    // Route les envois du WorldManager vers les sockets réels
+    this.worldManager.on('sendToClient', ({ playerId, packet }: { playerId: string; packet: S2CPacket }) => {
+      const client = this.clientManager?.getClientByCharacterId(playerId);
+      if (client) {
+        client.send(packet.type, packet);
+      }
+    });
+
     // Set up Socket.IO handlers
     this.setupSocketHandlers();
 
+    // Boucle de jeu unique (GameLoop émet 'tick' à tickRate Hz).
+    // Historique: un double mécanisme GameLoop + setInterval existait — les
+    // deux appelaient tick() → le monde tickait deux fois par intervalle.
+    this.gameLoop.start();
+
     this.isRunning = true;
-    logger.info('Game server initialized');
+    logger.info(`Game server initialized (tick ${this.tickRate} Hz)`);
   }
 
   /**
@@ -114,6 +138,21 @@ export class GameServer {
       // Handle disconnection
       socket.on('disconnect', () => {
         logger.info(`Client disconnected: ${socket.id}`);
+
+        // Nettoyage complet AVANT la suppression du ClientManager:
+        // sauvegarde + retrait du monde, cache hotkeys, casts actifs
+        const client = this.clientManager?.getClient(socket.id);
+        if (client) {
+          const characterId = client.getCharacterId();
+          if (characterId) {
+            this.hotkeyManager.unloadCharacterBindings(characterId);
+            this.castingManager.removeEntity(characterId);
+            this.worldManager
+              ?.handlePlayerLogout(client, characterId)
+              .catch((err) => logger.error(`Logout cleanup failed for ${characterId}:`, err));
+          }
+        }
+
         this.clientManager?.handleClientDisconnection(socket.id);
       });
 
@@ -146,6 +185,9 @@ export class GameServer {
       logger.warn(`Received packet from unregistered client: ${socket.id}`);
       return;
     }
+
+    // Toute activité réseau repousse le timeout d'inactivité du client
+    client.touch();
 
     const packet: C2SPacket = {
       type: type as any,
@@ -208,47 +250,22 @@ export class GameServer {
   }
 
   /**
-   * Start game loop
-   */
-  startGameLoop(): void {
-    if (this.tickInterval) {
-      return;
-    }
-
-    const tickDuration = 1000 / this.tickRate;
-
-    this.tickInterval = setInterval(() => {
-      const delta = tickDuration / 1000;
-      this.tick(delta);
-    }, tickDuration);
-
-    logger.info(`Game loop started at ${this.tickRate} Hz`);
-  }
-
-  /**
-   * Stop game loop
-   */
-  stopGameLoop(): void {
-    if (this.tickInterval) {
-      clearInterval(this.tickInterval);
-      this.tickInterval = null;
-      logger.info('Game loop stopped');
-    }
-  }
-
-  /**
-   * Game tick
+   * Game tick — protégé: une exception dans un sous-système ne doit jamais
+   * tuer la boucle (setInterval + exception non catchée = crash du process).
    */
   private tick(delta: number): void {
-    // Update world
-    this.worldManager?.update(delta);
+    try {
+      // Update world
+      this.worldManager?.update(delta);
 
-    // Update clients
-    this.clientManager?.update(delta);
+      // Update clients
+      this.clientManager?.update(delta);
 
-    // Update all active casts
-    const castingUpdates = this.castingManager.updateAllActiveCasts();
-    // TODO: Broadcast casting updates to relevant clients
+      // Update all active casts
+      this.castingManager.updateAllActiveCasts();
+    } catch (error) {
+      logger.error('Game tick error:', error);
+    }
   }
 
   // ============================================
@@ -366,7 +383,7 @@ export class GameServer {
   /**
    * Handle pickup all nearby items
    */
-  private async handlePickupAll(client: any, packet: C2SPacket): Promise<void> {
+  private async handlePickupAll(client: any, _packet: C2SPacket): Promise<void> {
     const characterId = client.getCharacterId();
 
     if (!characterId) {
@@ -408,7 +425,10 @@ export class GameServer {
     this.isRunning = false;
 
     // Stop game loop
-    this.stopGameLoop();
+    this.gameLoop.stop();
+
+    // Stop spawn manager
+    await globalSpawnManager.shutdown();
 
     // Disconnect all clients
     await this.clientManager?.shutdown();

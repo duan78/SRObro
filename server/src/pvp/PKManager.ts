@@ -201,9 +201,13 @@ export class PKManager {
   /**
    * Handle PK death (drop items, apply penalties)
    */
-  async handlePKDeath(characterId: string) {
+  async handlePKDeath(characterId: string): Promise<{
+    shouldDropItems: boolean;
+    droppedItems: string[];
+    expPenalty: number;
+  } | undefined> {
     const status = await this.getPKStatus(characterId);
-    if (!status) return;
+    if (!status) return undefined;
 
     const penalties = this.getPenalties(status.murdererLevel);
 
@@ -222,7 +226,7 @@ export class PKManager {
       include: { item: true }
     });
 
-    const equippedItems = await this.prisma.equipment.findUnique({
+    await this.prisma.equipment.findUnique({
       where: { characterId }
     });
 

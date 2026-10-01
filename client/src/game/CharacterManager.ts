@@ -21,7 +21,8 @@ export class CharacterManager {
   private assetLoader: AssetLoader;
   private combat: CombatSystem | null = null;
 
-  private player: TransformNode | null = null;
+  // Public: Game pilote click-to-move, caméra et normalisation dessus
+  public player: TransformNode | null = null;
   private playerMesh: AbstractMesh | null = null;
   private playerData: CharacterData | null = null;
   private playerCharacter: Character | null = null;
@@ -30,6 +31,8 @@ export class CharacterManager {
   private currentMoveSpeed = 0;
   private targetRotation = 0;
   private isMoving = false;
+  // Envoi réseau du mouvement throttlé (10 Hz suffit; pas de warn par frame)
+  private lastMoveSendTime = 0;
 
   // Animation state
   private currentAnimation: string = 'idle';
@@ -95,9 +98,34 @@ export class CharacterManager {
   }
 
   /**
-   * Load character 3D model directly without strict validation
+   * Load character 3D model: assemblage multi-parties officiel
+   * (chinaman_adventurer: visage, cheveux, bras, jambes...) avec textures,
+   * puis repli sur le GLB simple historique si indisponible.
    */
   private async loadCharacterModel(characterId: string, position: Vector3): Promise<void> {
+    // 1) Vrai modèle officiel multi-parties via l'AssetLoader
+    try {
+      const resourceId = characterId.toUpperCase().startsWith('CH_W')
+        ? 'chinawoman_adventurer'
+        : 'chinaman_adventurer';
+      const loaded = await this.assetLoader.loadGameObject(resourceId);
+      if (loaded && loaded.root) {
+        loaded.root.position = position.clone();
+        if (this.player) {
+          this.player.dispose();
+        }
+        this.player = loaded.root;
+        this.playerMesh = loaded.root;
+        console.log(`✓ Personnage officiel assemblé: ${resourceId} (${loaded.root.getChildMeshes().length} meshes)`);
+        // Les animations du personnage sont pilotées par Game (walk/idle)
+        return;
+      }
+      console.warn(`[CharacterManager] Modèle officiel indisponible: ${resourceId}, essai GLB simple`);
+    } catch (e) {
+      console.warn('[CharacterManager] Assemblage multi-parties échoué, repli GLB simple:', e);
+    }
+
+    // 2) Repli: GLB simple historique
     try {
       const assetMapping = getPlayerAssetPath(characterId);
       console.log(`[CharacterManager] Loading model: ${assetMapping.modelPath}`);
@@ -169,7 +197,7 @@ export class CharacterManager {
 
       // Load the GLB model directly
       const { SceneLoader } = await import('@babylonjs/core');
-      const result = await SceneLoader.ImportMeshAsync(null, assetMapping.modelPath, this.scene);
+      const result = await SceneLoader.ImportMeshAsync(null, assetMapping.modelPath, '', this.scene);
 
       if (result.meshes && result.meshes.length > 0) {
         console.log(`✓ Loaded character model: ${result.meshes.length} meshes`);
@@ -393,7 +421,6 @@ export class CharacterManager {
 
     // Debug: Log input state once when movement starts
     if ((inputState.forward || inputState.backward || inputState.left || inputState.right) && !this.isMoving) {
-      console.log('[CharacterManager] Movement detected:', inputState);
       this.isMoving = true;
     } else if (!inputState.forward && !inputState.backward && !inputState.left && !inputState.right) {
       this.isMoving = false;
@@ -434,7 +461,6 @@ export class CharacterManager {
       // TODO: Get camera rotation and apply to movement
 
       this.player.position.addInPlace(movement);
-      console.log('[CharacterManager] Moving to:', this.player.position.toString());
 
       // Update state
       this.currentMoveSpeed = moveSpeed;
@@ -442,16 +468,21 @@ export class CharacterManager {
       // Update animation
       this.setAnimation(isRunning ? 'run' : 'walk');
 
-      // Send movement to server
-      this.network.sendMove(
-        {
-          x: this.player.position.x,
-          y: this.player.position.y,
-          z: this.player.position.z,
-        },
-        this.player.rotation.y,
-        isRunning
-      );
+      // Send movement to server (throttle 10 Hz — un envoi par frame est inutile
+      // et déclenche un warn réseau par frame en mode single-player)
+      const now = performance.now();
+      if (now - this.lastMoveSendTime >= 100) {
+        this.lastMoveSendTime = now;
+        this.network.sendMove(
+          {
+            x: this.player.position.x,
+            y: this.player.position.y,
+            z: this.player.position.z,
+          },
+          this.player.rotation.y,
+          isRunning
+        );
+      }
     } else {
       this.isMoving = false;
       this.currentMoveSpeed = 0;
@@ -484,8 +515,8 @@ export class CharacterManager {
   /**
    * Update character animations
    */
-  private updateAnimations(deltaTime: number): void {
-    if (!this.playerCharacter?.skeleton) return;
+  private updateAnimations(_deltaTime: number): void {
+    if (!this.playerCharacter) return;
 
     // Babylon.js handles animation updates automatically
     // This is where you would add animation blending logic
@@ -505,7 +536,7 @@ export class CharacterManager {
    * Play an animation
    */
   private playAnimation(animationName: string): void {
-    if (!this.playerCharacter?.skeleton) return;
+    if (!this.playerCharacter) return;
 
     // TODO: Implement animation playback
     // For now, this is a placeholder
@@ -585,14 +616,14 @@ export class CharacterManager {
   /**
    * Set player character data
    */
-  setPlayerData(data: Character): void {
+  setPlayerData(data: CharacterData): void {
     this.playerData = data;
   }
 
   /**
    * Get player character data
    */
-  getPlayerData(): Character | null {
+  getPlayerData(): CharacterData | null {
     return this.playerData;
   }
 

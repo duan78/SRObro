@@ -193,7 +193,7 @@ export class CastingManager {
   updateAllActiveCasts(): Map<string, CastingState> {
     const updates = new Map<string, CastingState>();
 
-    this.activeCasts.forEach((castData, entityId) => {
+    this.activeCasts.forEach((_castData, entityId) => {
       const state = this.updateCasting(entityId);
       if (state) {
         updates.set(entityId, state);

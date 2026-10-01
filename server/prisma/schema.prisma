@@ -932,6 +932,7 @@ model FortressHistory {
 model Quest {
   id          String   @id @default(uuid())
   name        String
+  description String?
   type        QuestType
   minLevel    Int
   maxLevel    Int?
@@ -942,6 +943,7 @@ model Quest {
   endsAt      String[]  // NPC IDs
   repeatable  Boolean  @default(false)
   repeatCooldownHrs Int?  // Hours before repeatable
+  timeLimitSec Int?     // Quest time limit in seconds
   isDaily     Boolean  @default(false)
   createdAt   DateTime @default(now())
 

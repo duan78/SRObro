@@ -18,6 +18,7 @@ import {
 // Import GLB loader for .glb file support
 import { GLTFFileLoader } from '@babylonjs/loaders/glTF';
 import { Game } from './core/Game';
+import { DomHud } from './ui/dom/DomHud';
 
 // Register GLTF loader
 SceneLoader.RegisterPlugin(new GLTFFileLoader());
@@ -72,6 +73,8 @@ async function init(): Promise<void> {
   // Set up window resize handler
   window.addEventListener('resize', () => {
     engine.resize();
+    // Re-layout the GUI after a canvas resize
+    appState.ui?.guiTexture?.markAsDirty();
   });
 
   // Show loading progress
@@ -86,15 +89,58 @@ async function init(): Promise<void> {
     updateLoadingProgress(40, 'Loading game assets...');
     await game.initialize();
 
-    // Initialize UI after scene is created
-    updateLoadingProgress(60, 'Creating user interface...');
-    ui.initialize();
-
     updateLoadingProgress(80, 'Preparing game world...');
 
     // Start the game loop
     updateLoadingProgress(100, 'Ready!');
     await game.start();
+
+    // Initialize UI AFTER the render loop runs: une ADT fullscreen créée avant
+    // le premier render() peut rester vierge (texture jamais redessinée).
+    updateLoadingProgress(90, 'Creating user interface...');
+    ui.initialize();
+    ui.guiTexture?.markAsDirty();
+
+    // HUD DOM overlay (fiable) branché sur l'état du jeu
+    const hud = new DomHud();
+    (window as unknown as { hud: DomHud }).hud = hud;
+    const g = game as unknown as {
+      progression?: {
+        getLevel(): number; getHP(): number; getMaxHP(): number;
+        getMP(): number; getMaxMP(): number; getCurrentXP(): number;
+        getCurrentLevelXP(): number; getNextLevelXP(): number;
+      };
+      combat?: { currentTarget?: { name?: string; level?: number; hp: number; maxHp: number; isDead: boolean } | null };
+      scene?: { activeCamera?: { position: { x: number; z: number } } };
+    };
+    const refreshHud = (): void => {
+      const p = g.progression;
+      if (p) {
+        const cur = p.getCurrentLevelXP();
+        const next = p.getNextLevelXP();
+        hud.setStats({
+          name: 'Adventurer',
+          level: p.getLevel(),
+          hp: p.getHP(),
+          maxHp: p.getMaxHP(),
+          mp: p.getMP(),
+          maxMp: p.getMaxMP(),
+          exp: Math.max(0, p.getCurrentXP() - cur),
+          maxExp: Math.max(1, next - cur),
+          gold: 0,
+        });
+      }
+      const t = g.combat?.currentTarget;
+      if (t && !t.isDead && t.hp > 0) {
+        hud.showTarget({ name: t.name ?? 'Monster', level: t.level ?? 1, hp: t.hp, maxHp: t.maxHp || t.hp });
+      } else {
+        hud.showTarget(null);
+      }
+      const cam = g.scene?.activeCamera;
+      if (cam) hud.setCoords(cam.position.x, cam.position.z);
+    };
+    refreshHud();
+    window.setInterval(refreshHud, 400);
 
     // Hide loading screen
     setTimeout(() => {
@@ -107,6 +153,13 @@ async function init(): Promise<void> {
   } catch (error) {
     console.error('Failed to initialize game:', error);
     updateLoadingProgress(0, 'Failed to load. Please refresh.');
+    // Ne pas laisser l'engine consommer le contexte WebGL après un échec d'init
+    try {
+      appState.game?.dispose();
+    } catch { /* la scène a pu ne jamais être créée */ }
+    appState.engine?.dispose();
+    appState.engine = null;
+    appState.game = null;
   }
 }
 
@@ -135,3 +188,6 @@ if (document.readyState === 'loading') {
 
 // Export for debugging
 export default appState;
+
+// Expose for live diagnostics (browser console / tests)
+(window as unknown as { appState: typeof appState }).appState = appState;

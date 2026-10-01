@@ -4,7 +4,7 @@
 // ============================================
 
 import { PrismaClient } from '@prisma/client';
-import { JOB_SYSTEM, TRADE_GOODS } from '../../../shared/src/constants';
+import { TRADE_GOODS } from '../../../shared/src/constants';
 
 export type JobType = 'trader' | 'thief' | 'hunter' | 'none';
 
@@ -179,7 +179,8 @@ export class JobManager {
     }
 
     // Get transport config
-    const transportType = `${starLevel}_star` as const;
+    // (validated against TRANSPORT_CONFIGS below, so the template string maps to a valid star type)
+    const transportType = `${starLevel}_star` as TransportConfig['type'];
     const config = TRANSPORT_CONFIGS[transportType];
 
     if (!config) {
@@ -270,7 +271,7 @@ export class JobManager {
 
     // Get transport config
     const config = TRANSPORT_CONFIGS[transport.transportType];
-    const currentGoods = JSON.parse(transport.inventorySlots || '[]') as TradeGoodData[];
+    const currentGoods = JSON.parse((transport.inventorySlots || '[]') as string) as TradeGoodData[];
 
     if (currentGoods.length >= config.slots) {
       throw new Error('Transport is full');
@@ -330,7 +331,7 @@ export class JobManager {
       throw new Error('No active transport found');
     }
 
-    const currentGoods = JSON.parse(transport.inventorySlots || '[]') as TradeGoodData[];
+    const currentGoods = JSON.parse((transport.inventorySlots || '[]') as string) as TradeGoodData[];
     const goodIndex = currentGoods.findIndex(g => g.id === itemId);
 
     if (goodIndex === -1) {
@@ -378,7 +379,7 @@ export class JobManager {
       throw new Error('No active transport found');
     }
 
-    const goods = JSON.parse(transport.inventorySlots || '[]') as TradeGoodData[];
+    const goods = JSON.parse((transport.inventorySlots || '[]') as string) as TradeGoodData[];
 
     if (goods.length === 0) {
       throw new Error('No goods to sell');
@@ -461,7 +462,7 @@ export class JobManager {
       throw new Error('Trader has no active transport');
     }
 
-    const goods = JSON.parse(transport.inventorySlots || '[]') as TradeGoodData[];
+    const goods = JSON.parse((transport.inventorySlots || '[]') as string) as TradeGoodData[];
 
     if (goods.length === 0) {
       throw new Error('No goods to steal');
@@ -615,7 +616,7 @@ export class JobManager {
   /**
    * Get trade goods available in a zone
    */
-  getTradeGoodsForZone(zoneId: string): Array<{
+  getTradeGoodsForZone(zoneId: string): ReadonlyArray<{
     id: string;
     name: string;
     buyPrice: number;
@@ -688,7 +689,7 @@ export class JobManager {
         z: transport.positionZ
       },
       zoneId: transport.zoneId,
-      goods: JSON.parse(transport.inventorySlots || '[]'),
+      goods: JSON.parse((transport.inventorySlots || '[]') as string) as TradeGoodData[],
       isActive: transport.isActive
     };
   }

@@ -3,7 +3,7 @@
  * Handles skill casting, cooldowns, queues, and validation
  */
 
-import { Skill, SkillType, Element } from '@srobro/shared';
+import { Skill } from '@srobro/shared';
 import { createLogger } from '../core/Logger';
 
 const logger = createLogger('SkillManager');

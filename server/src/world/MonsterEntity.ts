@@ -6,7 +6,6 @@
 import { Entity, EntityState } from './Entity';
 import { Position, EntityType } from '@srobro/shared';
 import { createLogger } from '../core/Logger';
-import { EventEmitter } from 'events';
 
 const logger = createLogger('MonsterEntity');
 
@@ -79,7 +78,6 @@ export class MonsterEntity extends Entity {
   public aggroTime: number = 0;
 
   private patrolTimer: NodeJS.Timeout | null = null;
-  private respawnTimer: NodeJS.Timeout | null = null;
 
   constructor(options: MonsterEntityOptions) {
     super({
@@ -144,7 +142,7 @@ export class MonsterEntity extends Entity {
         this.handlePatrol(deltaTime);
         break;
       case MonsterAIState.AGGRO:
-        this.handleAggro();
+        this.handleAggro(deltaTime);
         break;
       case MonsterAIState.ATTACK:
         this.handleAttack();
@@ -196,8 +194,15 @@ export class MonsterEntity extends Entity {
   /**
    * Handle aggro state
    */
-  private handleAggro(): void {
+  private handleAggro(deltaTime: number): void {
     if (!this.target) {
+      this.aiState = MonsterAIState.RETURN;
+      return;
+    }
+
+    // Cible morte ou disparue: libérer l'aggro
+    if (!this.target.isAlive()) {
+      this.target = null;
       this.aiState = MonsterAIState.RETURN;
       return;
     }
@@ -215,8 +220,8 @@ export class MonsterEntity extends Entity {
     if (distance <= this.attackRange) {
       this.aiState = MonsterAIState.ATTACK;
     } else {
-      // Move towards target
-      this.moveTowards(this.target.position, 100); // 100ms tick
+      // Move towards target (deltaTime en secondes)
+      this.moveTowards(this.target.position, deltaTime);
     }
   }
 
@@ -283,6 +288,7 @@ export class MonsterEntity extends Entity {
 
   /**
    * Move towards a position
+   * @param deltaTime en SECONDES (le tick serveur fournit des secondes)
    */
   private moveTowards(target: Position, deltaTime: number): void {
     const dx = target.x - this.position.x;
@@ -292,7 +298,7 @@ export class MonsterEntity extends Entity {
     if (distance < 0.1) return;
 
     // Calculate movement distance
-    const moveDistance = (this.moveSpeed * deltaTime) / 1000;
+    const moveDistance = this.moveSpeed * deltaTime;
 
     // Normalize and apply
     const nx = dx / distance;
@@ -380,6 +386,9 @@ export class MonsterEntity extends Entity {
 
   /**
    * Handle death
+   * Le respawn est possédé par le SpawnManager (il retire l'entité et en
+   * recrée une quand des joueurs sont proches) — un timer interne de
+   * résurrection dupliquerait les monstres.
    */
   private handleDeath(): void {
     logger.info(`Monster died: ${this.name}`, { level: this.level });
@@ -390,47 +399,14 @@ export class MonsterEntity extends Entity {
       this.patrolTimer = null;
     }
 
+    // Libérer la cible
+    this.target = null;
+
     // Emit death event
     this.emit('death', {
       monsterId: this.id,
       spawnId: this.spawnId,
       position: this.position,
-    });
-
-    // Schedule respawn
-    this.scheduleRespawn();
-  }
-
-  /**
-   * Schedule respawn
-   */
-  private scheduleRespawn(): void {
-    this.setState(EntityState.RESPawning);
-
-    this.respawnTimer = setTimeout(() => {
-      this.respawn();
-    }, this.respawnTime * 1000);
-  }
-
-  /**
-   * Respawn
-   */
-  private respawn(): void {
-    this.hp = this.maxHp;
-    this.mp = this.maxMp;
-    this.setPosition(this.spawnPosition);
-    this.setState(EntityState.IDLE);
-    this.aiState = MonsterAIState.IDLE;
-    this.target = null;
-
-    logger.info(`Monster respawned: ${this.name}`, {
-      position: this.spawnPosition,
-    });
-
-    this.emit('respawn', {
-      monsterId: this.id,
-      spawnId: this.spawnId,
-      position: this.spawnPosition,
     });
   }
 
@@ -468,9 +444,6 @@ export class MonsterEntity extends Entity {
   destroy(): void {
     if (this.patrolTimer) {
       clearTimeout(this.patrolTimer);
-    }
-    if (this.respawnTimer) {
-      clearTimeout(this.respawnTimer);
     }
     super.destroy();
   }

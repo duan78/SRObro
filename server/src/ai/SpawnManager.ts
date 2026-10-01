@@ -25,6 +25,8 @@ export interface ActiveSpawn {
   patrolRange: number;
   currentMonsters: Map<string, MonsterEntity>;
   lastSpawnCheck: number;
+  /** Garde anti double-spawn: checkSpawn est async et appelée en fire-and-forget */
+  isChecking: boolean;
 }
 
 /**
@@ -85,6 +87,7 @@ export class SpawnManager extends EventEmitter {
           patrolRange: spawn.patrolRange,
           currentMonsters: new Map(),
           lastSpawnCheck: Date.now(),
+          isChecking: false,
         };
 
         this.activeSpawns.set(spawn.id, activeSpawn);
@@ -137,15 +140,21 @@ export class SpawnManager extends EventEmitter {
   private update(): void {
     const now = Date.now();
 
-    for (const [spawnId, activeSpawn] of this.activeSpawns.entries()) {
-      // Check if it's time to respawn
-      if (now - activeSpawn.lastSpawnCheck >= activeSpawn.respawnTime * 1000) {
-        activeSpawn.lastSpawnCheck = now;
-        this.checkSpawn(activeSpawn);
-      }
+    for (const [_spawnId, activeSpawn] of this.activeSpawns.entries()) {
+      try {
+        // Check if it's time to respawn
+        if (now - activeSpawn.lastSpawnCheck >= activeSpawn.respawnTime * 1000) {
+          activeSpawn.lastSpawnCheck = now;
+          void this.checkSpawn(activeSpawn).catch((err) =>
+            logger.error(`Spawn check failed for ${activeSpawn.spawnId}:`, err)
+          );
+        }
 
-      // Check for despawn (no players nearby)
-      this.checkDespawn(activeSpawn);
+        // Check for despawn (no players nearby)
+        this.checkDespawn(activeSpawn);
+      } catch (error) {
+        logger.error(`Spawn update error for ${activeSpawn.spawnId}:`, error);
+      }
     }
   }
 
@@ -153,37 +162,42 @@ export class SpawnManager extends EventEmitter {
    * Check and spawn monsters for a spawn point
    */
   private async checkSpawn(activeSpawn: ActiveSpawn): Promise<void> {
-    const currentCount = activeSpawn.currentMonsters.size;
-
-    // Remove dead monsters from count
-    let aliveCount = 0;
-    for (const [monsterId, monster] of activeSpawn.currentMonsters) {
-      if (monster.hp > 0) {
-        aliveCount++;
-      } else {
-        activeSpawn.currentMonsters.delete(monsterId);
-      }
-    }
-
-    // Check if we need to spawn more monsters
-    if (aliveCount < activeSpawn.maxCount) {
-      const neededCount = activeSpawn.maxCount - aliveCount;
-
-      // Check if there are players nearby (don't spawn if no players)
-      const nearbyPlayers = globalSpatialManager.getEntitiesByType(
-        'player',
-        activeSpawn.position,
-        100 // 100m radius
-      );
-
-      if (nearbyPlayers.length === 0) {
-        return; // Don't spawn if no players nearby
+    // Garde: deux checks concurrents (latence DB) feraient doubler les spawns
+    if (activeSpawn.isChecking) return;
+    activeSpawn.isChecking = true;
+    try {
+      // Remove dead monsters from count
+      let aliveCount = 0;
+      for (const [monsterId, monster] of activeSpawn.currentMonsters) {
+        if (monster.hp > 0) {
+          aliveCount++;
+        } else {
+          activeSpawn.currentMonsters.delete(monsterId);
+        }
       }
 
-      // Spawn needed monsters
-      for (let i = 0; i < neededCount; i++) {
-        await this.spawnMonster(activeSpawn);
+      // Check if we need to spawn more monsters
+      if (aliveCount < activeSpawn.maxCount) {
+        const neededCount = activeSpawn.maxCount - aliveCount;
+
+        // Check if there are players nearby (don't spawn if no players)
+        const nearbyPlayers = globalSpatialManager.getEntitiesByType(
+          'player',
+          activeSpawn.position,
+          100 // 100m radius
+        );
+
+        if (nearbyPlayers.length === 0) {
+          return; // Don't spawn if no players nearby
+        }
+
+        // Spawn needed monsters
+        for (let i = 0; i < neededCount; i++) {
+          await this.spawnMonster(activeSpawn);
+        }
       }
+    } finally {
+      activeSpawn.isChecking = false;
     }
   }
 
@@ -244,14 +258,20 @@ export class SpawnManager extends EventEmitter {
         zoneId: monsterEntity.zoneId,
       });
 
-      // Set up death event listener
+      // Set up death event listener: le SpawnManager est l'unique
+      // propriétaire du cycle de vie — on retire le corps après un court
+      // délai, et le respawn est un NOUVEL spawn via checkSpawn (jamais un
+      // timer de résurrection interne à l'entité, qui dupliquerait les mobs).
       monsterEntity.on('death', (data: unknown) => {
+        setTimeout(() => this.despawnMonster(monsterId), 3000).unref?.();
         this.emit('monsterDeath', data);
       });
 
-      // Set up respawn event listener
-      monsterEntity.on('respawn', (data: unknown) => {
-        this.emit('monsterRespawn', data);
+      // Réindexation spatiale quand le monstre bouge (patrouille/aggro):
+      // une entité qui change de cellule sans être réindexée fausse AOI,
+      // aggro et diffusion.
+      monsterEntity.on('positionChanged', () => {
+        globalSpatialManager.updateEntityPosition(monsterId, monsterEntity.position);
       });
 
       logger.debug(`Monster spawned: ${monsterEntity.name}`, {

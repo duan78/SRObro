@@ -31,7 +31,7 @@ export class ControlsHelpPanel {
     this.panel.cornerRadius = 10;
     this.panel.color = '#FFD700'; // Gold
     this.panel.thickness = 2;
-    this.panel.background = 'rgba(0, 0, 0, 0.85)';
+    this.panel.background = 'rgba(0,0,0,0.85)';
     this.panel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_LEFT;
     this.panel.verticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
     this.panel.paddingLeft = '15px';
@@ -52,7 +52,7 @@ export class ControlsHelpPanel {
     const stackPanel = new StackPanel('controls_stack');
     stackPanel.width = '100%';
     stackPanel.isVertical = true;
-    stackPanel.spacing = '8px';
+    stackPanel.spacing = 8;
     stackPanel.paddingTop = '15px';
     this.panel.addControl(stackPanel);
 

@@ -31,142 +31,138 @@ export interface ZoneBoundaries {
 }
 
 // Jangan zone configuration
+// Monde centré sur l'origine: le sol 2000x2000 de JanganZone s'étend de
+// -1000 à +1000. Les monsterId correspondent aux vrais monstres importés
+// du client officiel (server/data/game/characters.json) et seedés en base
+// avec le préfixe `mob_` (le stem BSR sert de modelId).
 export const JANGAN_CONFIG: JanganZoneConfig = {
   id: 'jangan',
   name: 'Jangan',
   levelRange: { min: 1, max: 20 },
 
-  // Player spawn point (near city entrance)
+  // Player spawn point (centre de la ville réelle, anneau des bâtiments cj_*)
   playerSpawnPoint: {
-    x: 1000,
+    x: 0,
     y: 0,
-    z: 1000,
+    z: 500,
   },
 
   // Zone boundaries (for collision and respawn)
   zoneBoundaries: {
-    minX: 0,
-    maxX: 2000,
-    minZ: 0,
-    maxZ: 2000,
+    minX: -1000,
+    maxX: 1000,
+    minZ: -1000,
+    maxZ: 1000,
   },
 
   // Monster spawn areas
   monsterSpawns: [
-    // Level 1-5: Young Yaks (tutorial mobs near spawn)
+    // Level 1-5: Mangnyang (tutorial mobs near spawn)
     {
-      monsterId: 'monster_maiden_lv1',
-      position: { x: 1050, y: 0, z: 1050 },
+      monsterId: 'mob_mangnyang',
+      position: { x: 50, y: 0, z: 550 },
       rotation: 0,
       maxCount: 10,
       respawnTime: 30,
       levelRange: [1, 5],
     },
     {
-      monsterId: 'monster_maiden_lv1',
-      position: { x: 950, y: 0, z: 1050 },
+      monsterId: 'mob_mangnyang',
+      position: { x: -50, y: 0, z: 550 },
       rotation: 0,
       maxCount: 10,
       respawnTime: 30,
       levelRange: [1, 5],
     },
     {
-      monsterId: 'monster_yeoha_lv4',
-      position: { x: 1100, y: 0, z: 1000 },
+      monsterId: 'mob_bigeyeghost',
+      position: { x: 100, y: 0, z: 500 },
       rotation: 0,
       maxCount: 8,
       respawnTime: 45,
       levelRange: [3, 6],
     },
 
-    // Level 5-10: Wolves and Spiders (further from city)
+    // Level 5-10: Gyo et Waterghost
     {
-      monsterId: 'monster_yeoha_lv4',
-      position: { x: 1200, y: 0, z: 1200 },
+      monsterId: 'mob_gyo',
+      position: { x: 200, y: 0, z: 700 },
       rotation: 0,
       maxCount: 12,
       respawnTime: 40,
       levelRange: [5, 10],
     },
     {
-      monsterId: 'monster_spider_lv7',
-      position: { x: 800, y: 0, z: 1200 },
+      monsterId: 'mob_waterghost',
+      position: { x: -200, y: 0, z: 700 },
       rotation: 0,
       maxCount: 10,
       respawnTime: 50,
       levelRange: [7, 10],
     },
     {
-      monsterId: 'monster_spider_lv7',
-      position: { x: 1200, y: 0, z: 800 },
+      monsterId: 'mob_stoneghost',
+      position: { x: 200, y: 0, z: 300 },
       rotation: 0,
       maxCount: 10,
       respawnTime: 50,
       levelRange: [7, 10],
     },
 
-    // Level 10-15: Bandits (around city perimeter)
+    // Level 10-15: Yeoha et tigres (plus loin du spawn)
     {
-      monsterId: 'monster_bandit_lv10',
-      position: { x: 1300, y: 0, z: 1300 },
+      monsterId: 'mob_yeoha',
+      position: { x: 300, y: 0, z: 800 },
       rotation: 0,
       maxCount: 8,
       respawnTime: 60,
       levelRange: [10, 15],
     },
     {
-      monsterId: 'monster_bandit_lv10',
-      position: { x: 700, y: 0, z: 1300 },
+      monsterId: 'mob_banditarcher',
+      position: { x: -300, y: 0, z: 800 },
       rotation: 0,
       maxCount: 8,
       respawnTime: 60,
       levelRange: [10, 15],
     },
     {
-      monsterId: 'monster_bandit_lv10',
-      position: { x: 1300, y: 0, z: 700 },
-      rotation: 0,
-      maxCount: 8,
-      respawnTime: 60,
-      levelRange: [10, 15],
-    },
-    {
-      monsterId: 'monster_bandit_lv10',
-      position: { x: 700, y: 0, z: 700 },
+      monsterId: 'mob_tiger',
+      position: { x: 300, y: 0, z: 200 },
       rotation: 0,
       maxCount: 8,
       respawnTime: 60,
       levelRange: [10, 15],
     },
 
-    // Level 15-20: Ghosts and stronger mobs (deeper areas)
+    // Level 15-20: Bandits (zones profondes)
     {
-      monsterId: 'monster_ghost_lv15',
-      position: { x: 1500, y: 0, z: 1500 },
+      monsterId: 'mob_bandit',
+      position: { x: 500, y: 0, z: 1000 },
       rotation: 0,
       maxCount: 6,
       respawnTime: 90,
       levelRange: [15, 20],
     },
     {
-      monsterId: 'monster_ghost_lv15',
-      position: { x: 500, y: 0, z: 1500 },
+      monsterId: 'mob_bandit',
+      position: { x: -500, y: 0, z: 1000 },
       rotation: 0,
       maxCount: 6,
       respawnTime: 90,
       levelRange: [15, 20],
     },
     {
-      monsterId: 'monster_ghost_lv15',
-      position: { x: 1500, y: 0, z: 500 },
+      monsterId: 'mob_bandit',
+      position: { x: 500, y: 0, z: 0 },
       rotation: 0,
       maxCount: 6,
       respawnTime: 90,
       levelRange: [15, 20],
     },
     {
-      monsterId: 'monster_ghost_lv15',
-      position: { x: 500, y: 0, z: 500 },
+      monsterId: 'mob_bandit',
+      position: { x: -500, y: 0, z: 0 },
       rotation: 0,
       maxCount: 6,
       respawnTime: 90,

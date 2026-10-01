@@ -49,7 +49,7 @@ export class InventoryPanel {
     this.panel.cornerRadius = 10;
     this.panel.color = '#8B7355'; // Brown/SRO style
     this.panel.thickness = 3;
-    this.panel.background = 'rgba(20, 10, 5, 0.95)';
+    this.panel.background = 'rgba(20,10,50,0.95)';
     this.panel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
     this.panel.verticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
     this.panel.paddingTop = '10px';
@@ -64,7 +64,7 @@ export class InventoryPanel {
     header.cornerRadius = 5;
     header.color = '#D4AF37'; // Gold
     header.thickness = 2;
-    header.background = 'rgba(0, 0, 0, 0.5)';
+    header.background = 'rgba(0,0,0,0.5)';
 
     const title = new TextBlock('inventoryTitle');
     title.text = 'INVENTORY';
@@ -166,7 +166,7 @@ export class InventoryPanel {
     slot.cornerRadius = 3;
     slot.color = '#6B5344'; // Darker brown
     slot.thickness = 2;
-    slot.background = 'rgba(0, 0, 0, 0.3)';
+    slot.background = 'rgba(0,0,0,0.3)';
     slot.paddingLeft = '5px';
     slot.paddingRight = '5px';
     slot.paddingTop = '5px';
@@ -204,7 +204,7 @@ export class InventoryPanel {
     menu.cornerRadius = 5;
     menu.color = '#8B7355';
     menu.thickness = 2;
-    menu.background = 'rgba(0, 0, 0, 0.95)';
+    menu.background = 'rgba(0,0,0,0.95)';
     menu.isVisible = false;
 
     const menuStack = new StackPanel('contextMenuStack');
@@ -332,15 +332,14 @@ export class InventoryPanel {
     };
     itemBg.color = rarityColors[item.rarity as keyof typeof rarityColors] || rarityColors.common;
     itemBg.thickness = 1;
-    itemBg.background = 'rgba(0, 0, 0, 0.5)';
+    itemBg.background = 'rgba(0,0,0,0.5)';
     slot.addControl(itemBg);
 
     // Quantity text
     if (item.quantity > 1) {
-      const qtyText = new TextBlock(`item_qty_${slotIndex}`, `${item.quantity}`, {
-        color: '#FFFFFF',
-        fontSize: 12
-      });
+      const qtyText = new TextBlock(`item_qty_${slotIndex}`, `${item.quantity}`);
+      qtyText.color = '#FFFFFF';
+      qtyText.fontSize = 12;
       qtyText.textHorizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
       qtyText.textVerticalAlignment = Control.VERTICAL_ALIGNMENT_BOTTOM;
       slot.addControl(qtyText);
@@ -348,11 +347,10 @@ export class InventoryPanel {
 
     // Plus indicator
     if (item.plus > 0) {
-      const plusText = new TextBlock(`item_plus_${slotIndex}`, `+${item.plus}`, {
-        color: '#FFD700',
-        fontSize: 10,
-        fontStyle: 'bold'
-      });
+      const plusText = new TextBlock(`item_plus_${slotIndex}`, `+${item.plus}`);
+      plusText.color = '#FFD700';
+      plusText.fontSize = 10;
+      plusText.fontWeight = 'bold';
       plusText.textHorizontalAlignment = Control.HORIZONTAL_ALIGNMENT_LEFT;
       plusText.textVerticalAlignment = Control.VERTICAL_ALIGNMENT_BOTTOM;
       slot.addControl(plusText);

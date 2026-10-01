@@ -34,7 +34,7 @@ export class CastingBar {
     this.container.cornerRadius = 6;
     this.container.color = '#4a3728';
     this.container.thickness = 2;
-    this.container.background = 'rgba(0, 0, 0, 0.9)';
+    this.container.background = 'rgba(0,0,0,0.9)';
     this.container.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     this.container.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
     this.container.top = '-100px'; // Above center
@@ -60,7 +60,7 @@ export class CastingBar {
     this.timeText.fontSize = 10;
     this.timeText.textHorizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
     this.timeText.textVerticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
-    this.timeText.right = '5px';
+    this.timeText.paddingRight = '5px';
     this.timeText.top = '3px';
     this.container.addControl(this.timeText);
 
@@ -73,7 +73,7 @@ export class CastingBar {
     barContainer.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     barContainer.color = '#000000';
     barContainer.thickness = 1;
-    barContainer.background = 'rgba(30, 30, 30, 0.9)';
+    barContainer.background = 'rgba(30,30,30,0.9)';
     this.container.addControl(barContainer);
 
     // Progress fill (changes color based on progress)
@@ -94,7 +94,7 @@ export class CastingBar {
     this.interruptOverlay.cornerRadius = 6;
     this.interruptOverlay.color = '#00000000';
     this.interruptOverlay.thickness = 0;
-    this.interruptOverlay.background = 'rgba(255, 0, 0, 0.5)';
+    this.interruptOverlay.background = 'rgba(255,0,0,0.5)';
     this.interruptOverlay.isVisible = false;
     this.interruptOverlay.isHitTestVisible = false;
     this.container.addControl(this.interruptOverlay);

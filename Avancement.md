@@ -1,36 +1,285 @@
 # Avancement du Projet SRObro
 
-## État au 20 Janvier 2026 (Fin de session)
+## Session du 1er Octobre 2026 (8/8) : AUDIT & CONSOLIDATION DES FONDATIONS
 
-Le projet a été stabilisé et assaini. La structure monorepo est maintenant cohérente et la majorité des erreurs de compilation bloquantes ont été résolues.
+Audit complet (4 sous-systèmes en parallèle) puis corrections par priorité.
+**Vérifié en jeu après corrections : 60 FPS stables (2559 meshes, 40 anims),
+zéro erreur console serveur, caméra alignée à 0° sur le perso, terrain texturé
+(variance 32), spawn Jangan, tsc 0 erreur client ET serveur, build Vite OK.**
 
-### ✅ Travaux Terminé (Session du jour)
+### Serveur — logique et câblage (le monde était FIGÉ)
+- **Boucle de tick démarrée** : `gameLoop.start()` dans `initialize()` (aucune
+  boucle ne tournait !). Double mécanisme supprimé (GameLoop + setInterval) ;
+  tick à 20 Hz protégé par try/catch (un crash de tick ne tue plus le process).
+- **SpawnManager câblé** : `globalSpawnManager.initialize()+start()` au boot
+  (26 points de spawn chargés), `WorldManager.monsterEntities` partage sa map.
+  Résurrection interne des monstres supprimée (le SpawnManager est l'unique
+  propriétaire: mort → despawn 3 s → nouveau spawn si joueurs à 100 m).
+- **Combat réellement effectif** : les HP calculés par CombatManager sont
+  réécrits sur les entités (`setHp`) — avant, les monstres ne perdaient
+  jamais de HP. Validations d'attaque ajoutées : cible vivante, portée
+  (max(attackRange×3, 15 m)), anti-spam 400 ms.
+- **Unités de temps normalisées** (le tick fournit des SECONDES) : régénération
+  HP/MP avec accumulateurs fractionnaires (était ÷1000 + floor → toujours 0),
+  vitesse des monstres `moveSpeed × dt` (était ÷1000 → quasi immobiles).
+- **Grille spatiale corrigée** : séparateur de cellule `,` au lieu de `-`
+  (les coordonnées négatives produisaient "-1--2" → mauvaise cellule →
+  AOI/aggro faux sur la moitié du monde).
+- **Déconnexion complète** : sauvegarde + retrait du monde, hotkeys et casts
+  purgés, autosave stoppé (`destroy()`), `isOnline: false`.
+- **Sécurité** : `SystemHandlers` dérive l'identité de la session authentifiée
+  (plus aucun characterId/guildId d'acteur trusté du payload) ;
+  `quest:update_objective` supprimé (progression serveur uniquement) ;
+  `completeQuest` vérifie statut in_progress + objectifs remplis ;
+  invitations de guilde enregistrées et vérifiées ; stockage de guilde
+  réservé aux membres ; guildId dérivé du personnage pour les forteresses.
+- **Prisma unique** : 4 `new PrismaClient()` locaux (guild/fortress/quest/
+  mount) remplacés par le singleton `database/prisma` + `$disconnect()` au
+  shutdown ; handlers `unhandledRejection`/`uncaughtException` ajoutés ;
+  timers de fond try/catchés (+ `.unref()`) ; index clients par characterId
+  (les diffusions AOI arrivaient dans le vide) ; `sendToClient` du
+  WorldManager routé vers les sockets réels.
+- Divers : multi-level-up (`while`), skillPoints/statPoints lus de la base,
+  anti double-spawn (`isChecking`), réindexation spatiale des monstres en
+  mouvement, SpatialManager mort (`game/`) et fichier `server/1` supprimés.
 
-#### 1. Consolidation & Nettoyage
-- **Architecture Standardisée** : Toute la logique est dans `src/`. Suppression des doublons et des fichiers temporaires à la racine.
-- **Assets Web-Ready** : Migration de ~100 000 assets vers `client/public/assets` pour un service direct via Vite.
-- **Types Partagés** : Conversion des types critiques (`EntityType`, `CharacterRace`) en **Enums** pour une utilisation cohérente entre client et serveur.
-
-#### 2. Serveur (Backend)
-- **Moteur de Temps** : Nouvelle classe `GameLoop.ts` fonctionnelle.
-- **Base de données** : Réparation de `prisma.ts` et création de wrappers de compatibilité SQL.
-- **Handlers** : Alignement de `SystemHandlers.ts` avec les managers de Guilde, Quest et Fortress.
-
-#### 3. Client (Frontend)
-- **Babylon.js 8.0 Upgrade** :
-    - Migration massive des composants GUI vers `@babylonjs/gui`.
-    - Correction des constructeurs `TextBlock` et des types de propriétés (`StackPanel.spacing`).
-    - Résolution des conflits de noms avec le type `Character` de Prisma.
-- **Connectivité** : Correction des ports et URLs de connexion Socket.io.
+### Client — stabilité et performances
+- **3 `require()` ESM supprimés** (CombatSystem, MonsterHealthBar,
+  GLModelLoader) : la première attaque réussie tuait la render loop.
+- **Render loop protégée** (try/catch + compteur, stop après 30 erreurs),
+  race des animations walk/idle corrigée (token de génération).
+- **`InputManager`** : blur corrigé (`this.keys` → `this.state`, TypeError à
+  chaque Alt-Tab), dispose depuis `window` (les listeners fuyaient).
+- **Caméra** : raycast de collision mémoïsé (seulement si orbite/zoom/cible
+  ont bougé), prédicat réordonné (tests bon marché d'abord), zéro allocation
+  par frame (vecteurs pré-alloués, LerpToRef), observateur/listeners retirés
+  au dispose, far plane 12000 (skybox enfin visible).
+- **Assets** : matériaux/textures partagés par URL (15 instances d'un bâtiment
+  = 1 texture GPU au lieu de 15), chargements GLB en vol dédupliqués,
+  `cloneMaterials=false` (finit les matériaux orphelins), aliasing
+  `root.position`/`firstMesh.position` supprimé (bâtiments décalés en double),
+  "proto" fantôme de WorldObjects éliminé, world matrices des bâtiments
+  gelées (~1500 meshes), `dispose()` complet.
+- **Tue-FPS éliminés** (trouvés en test réel : 60 → 3 FPS au premier clic) :
+  warns console par frame de l'auto-attaque, scan des 2559 meshes par frame
+  dans `getPlayerPosition` (cache), logs par frame (déplacement, keydown),
+  warn réseau par frame (taire après le 1er, sendMove throttlé 10 Hz).
+- **Zone procédurale doublon supprimée** (`worldManager.loadZone` superposait
+  sol 2000² + 50 arbres + 30 rochers + skybox à JanganZone) ; monstres
+  placeholders posés sur le relief (y=0 → heightAt) ; projection 3D→écran
+  des dégâts corrigée (Matrix.Identity + viewport global) ; dispose de Game
+  complet (caméra, boucle, ordre scène/systèmes).
+- **TypeScript vert** : 110+ erreurs → **0** (`tsc --noEmit` client et
+  serveur). Fichiers morts supprimés : SceneBuilder, Engine, TextureManager,
+  AssetViewer, systems/AnimationManager, systems/MapLoader. Corrections de
+  types dans UIManager, panels GUI (ComboBox inexistant, spacing numérique,
+  buttonIndex, EntityType enum…).
 
 ---
 
-### 🚀 État de Compilation
-- **Shared** : Compilation OK.
-- **Serveur** : Compilation OK (quelques warnings de types mineurs restants).
-- **Client** : Compilation en cours de finalisation (90% des erreurs GUI résolues).
+## Session du 1er Octobre 2026 (7/7) : CAMÉRA JOUABLE (retours utilisateur)
 
-### 🛠️ Prochaines étapes
-1. **Lancement de la Boucle** : Démarrer le serveur et le client simultanément pour valider la première connexion "Saine".
-2. **Chargement d'Assets** : Valider le rendu d'un personnage complet dans la nouvelle structure.
-3. **UI Polishing** : Réactiver les panels complexes (Alchemy) une fois les types Babylon 8 totalement stabilisés.
+- **Perso décentré corrigé**: la cible caméra est resynchronisée quand le
+  modèle remplace le placeholder (la caméra suivait un noeud périmé).
+  Vérifié: angle vue↔perso = **0,0°** (parfaitement centré).
+- **Vue plongeante**: convention MMO (glisser BAS = caméra monte, HAUT = rasante),
+  plage de pitch −0.25 → 1.52 rad. Vérifié: camY +11 m après drag bas.
+- **Zoom permissif**: multiplicatif (×1.15/cran), bornes **1,5 → 150 m**.
+- **Collision caméra intelligente**: les contacts < 0,9 m (rayon démarrant
+  dans un mesh: couture de terrain, corps du perso) sont ignorés — finie la
+  caméra écrasée à 1 m du crâne. Bâtiments rendus collisionnables.
+- **Orbite fiabilisée**: événements pointer + capture du pointeur (le drag
+  continue hors canvas).
+- **Spawn**: évite les coutures de régions (±10 m) et les bâtiments (25 m).
+
+---
+
+## Session du 1er Octobre 2026 (6/6) : JOUABILITÉ — CAMÉRA, DÉPLACEMENT, VISIBILITÉ
+
+- **Squelettes des personnages réparés** : `find_skeleton` résout désormais le
+  squelette unique partagé (`prim/skel/char/china/chinaman_skel.bsk`, 39 os)
+  pour toutes les parties `man_*`/`woman_*` → le perso complet est skiné.
+- **Recalage du personnage** (`normalizePlayerScale`): échelle normalisée à
+  **1,8 m exactement**, pieds posés au sol (l'origine du squelette SRO est en
+  hauteur), réappliqué automatiquement quand le modèle remplace le placeholder.
+  Vérifié: bbox [0.00, 1.80], 9/9 parties dans le frustum.
+- **Caméra troisième personne orbitale** (`ThirdPersonCamera`) enfin branchée:
+  **clic droit = rotation**, **molette = zoom** (4-60 m), suivi lissé du perso,
+  visée à hauteur de tête. Vérifié: zoom 19→65 m, orbite latérale.
+- **Click-to-move** (`Game.setupClickToMove`/`updateClickToMove`): clic gauche
+  sur le terrain → le perso s'y rend (5 m/s), orienté vers sa direction, posé
+  sur le relief, avec **bascule automatique walk/idle** des animations
+  officielles (9 groupes en syntonie). Vérifié: cycle complet
+  clic → marche animée → arrivée → idle.
+- **Spawn sûr** (`getSafeSpawnPoint`): spirale de recherche autour du spawn
+  configuré jusqu'à trouver une position sans bâtiment à 14 m (fini le mur).
+
+---
+
+## Session du 1er Octobre 2026 (5/5) : ANIMATIONS OFFICIELLES + SKYBOX
+
+- **Parseur BAN réécrit** (`ban-re/src/parser.rs`) selon la spec JMXVBAN publique
+  (header: nom, durée ms, fps, type cyclique ; table des temps ; os séquentiels ;
+  keyframes 28 octets quat+vec3). Nouveau binaire **`ban2json`** :
+  **4 304 animations officielles converties** en JSON (`client/public/assets/anims/`,
+  chemins conservés: mob/china/mangnyang_walk.json, char/china/man/...).
+- **Squelettes embarqués dans les GLB** : l'exporteur Rust écrit désormais les
+  skins glTF complets depuis les .bsk (nodes hiérarchiques Bip01, matrices locales,
+  inverse bind matrices, résolution du squelette partagé `prim/skel/` vs parties
+  `_partN`) → **1 501 GLB skinés**.
+- **AnimationService client** (`client/src/animation/BanAnimationService.ts`) :
+  clips BAN → AnimationGroups Babylon (os appariés par nom), lecture bouclée.
+  Monstres: cycle `walk` à l'apparition; personnage: `standcity` (attente).
+  **Preuve en scène: 216 squelettes, 40 groupes en lecture, quaternions des os
+  Bip01 Spine2/R UpperArm variant dans le temps** — le monde est vivant.
+- **Skybox officiel** : textures `Map.pk2/skybox` converties (cloud1 PNG + BMP
+  pour les non-DXT) → cube infini dans `setupEnvironment`.
+
+---
+
+## Session du 1er Octobre 2026 (4/4) : TEXTURES DE TERRAIN OFFICIELLES + MAPO EXACT
+
+- **Index de textures** : `Map.pk2/tile2d.ifo` (719 entrées TextureID → fichier ddj)
+  parsé → `tile-index.json` ; **752 textures de tuile converties en PNG** (0 échec).
+- **Tilemaps NVM** : extraction du champ TextureID u16 de chaque tuile 96×96
+  (8 octets/tuile: CellID+Flag+TextureID) → `<x>_<z>.tiles` pour les 110 régions.
+  Validation: la région du spawn est pavée de `c_marble_jang_*` (marbre de Jangan ✓).
+- **RealTerrain réécrit** : par région, les quads sont **groupés par texture** →
+  1 325 meshes terrain, 107 matériaux de tuiles officielles, relief réel conservé
+  (4 M vertex). Preuve par pixels: variance du sol ±50 (texturé) vs ±0-3 avant.
+- **Format MAPO décodé exactement** (28 octets):
+  `[u32 assetId][f32 xyz][u16 0xFFFF][f32 yaw radians][u16 uid][u16][u8][u8]`
+  + extensions de 8 octets ; validation stricte (marqueur 0xFFFF + yaw plausible)
+  → **864 placements au mètre près, 0 suspects** (ex: `cj_mili_horse01` à
+  (362.95, -775.34) yaw -90° — positions décimales et orientations cardinales).
+
+---
+
+## Session du 1er Octobre 2026 (3/3) : BÂTIMENTS OFFICIELS DE JANGAN
+
+- **Localisation de la vraie ville** : scan des 6 178 navmesh + corrélation avec les
+  placements `.o` → Jangan = régions navmesh **69-70 × 69-73** (cœur plat à (69,71)).
+  L'ancre monde est passée de (35,39) à **(69,71)**, 110 heightmaps ré-extraits.
+- **Parseur MAPO** (`server/scripts/parse-map-objects.ts`) : table `object.ifo`
+  (AssetID→BSR, 3 307 modèles) + scan glissant des enregistrements 24 octets des
+  `Map.pk2/<X>/<Z>.o` → **1 466 placements** dans objects.json (bâtiments `cj_*`,
+  temples, palais, camps, nature), filtrés sur les GLB disponibles.
+- **WorldObjects** (`client/src/zones/jangan/WorldObjects.ts`) : instancie les
+  bâtiments officiels avec textures (budget 200 objets, max 15/modèle, rayon 2 600 m,
+  ferry exclu), **posés sur le relief** via `terrain.heightAt()`.
+  → **1 534 meshes de bâtiments** en scène, 60 FPS.
+- Spawn/caméra déplacés au centre-ville (0, 500), anneaux de monstres décalés en conséquence.
+- **Limite connue** : la précision du parse glissant MAPO quantifie les positions aux
+  coins de régions (±1920) — un parse exact du format (champs optionnels échelle/yaw)
+  affinerait le placement rue par rue.
+
+---
+
+## Session du 1er Octobre 2026 (2/2) : VRAIS GRAPHISMES INTÉGRÉS
+
+Monstres, personnage et terrain utilisent désormais **les graphismes officiels du client** :
+
+### Textures (pipeline complet)
+- `jmx_converter --mode ddj` : **14 627 DDJ → PNG** (crate image, DXT1/3/5).
+- `scripts/convert-ddj-bmp.ts` : **193 DDS RGB non-compressés → BMP** (minimap des villes).
+- Manifest régénéré avec **6 910 ressources texturées** (parseur BMT Node + résolution
+  des références de textures relatives aux dossiers BSR/BMT).
+
+### Modèles (2 bugs du convertisseur corrigés)
+- **Accessor counts** JOINTS_0/WEIGHTS_0 : `weights.len()*4` → `weights.len()` (VEC4/sommet).
+- **Alignement chunk JSON du GLB** : la longueur du chunk inclut désormais le padding
+  (Babylon place le chunk binaire sans réaligner → RangeError avant le fix).
+- **Personnage** : assemblage officiel `chinaman_adventurer` — 9 parties (visage, cheveux,
+  bras, jambes, torse, bassin) chacune avec sa texture (`CharacterManager.loadCharacterModel`).
+- **Monstres** : GLB skinés multi-parties + textures officielles par partie
+  (`AssetLoader.loadMultiPartGlb`), 275 matériaux texturés vérifiés en scène.
+- Chargement **résilient** : une partie illisible ne casse plus la ressource.
+
+### Terrain réel (heightmaps officiels .nvm)
+- `scripts/extract-region-heightmaps.ts` : heightmap 97×97 f32 par région depuis
+  `Data.pk2/navmesh/nv_*.nvm` (offset: `taille - 37816`, spec JMXVNVM publique).
+- **131 régions** autour de Jangan (grille 30-40 × 32-48), 4,8 M vertex,
+  relief coloré par altitude, ville plate ancrée à l'origine (`RealTerrain.ANCHOR = 35x39`).
+- `RealTerrain.heightAt()` place les monstres sur le relief.
+
+### Corrections de la session (1/2 rappel)
+- Crash rendu `box.material = box` (placeholder), touches bloquées (handler `blur`),
+  monde recentré sur l'origine, HUD DOM overlay complet, rgba() sans espaces
+  (parseur couleurs Babylon), 13 monstres officiels seedés en base.
+
+### Reste à faire (graphismes)
+- Bâtiments de la ville : les placements sont dans `Map.pk2/<region>/*.o` (MAPO binaire)
+  + `objectstring.ifo` (textuel, 384 grandes structures).
+- Textures de terrain par tuile (tilemap TextureID → Tile2D.ifo).
+- Skybox, animations `.ban` sur les squelettes.
+
+---
+
+## Session du 1er Octobre 2026 (1/2) : remise en route complète
+
+**Le jeu tourne de bout en bout sur cette machine** : serveur Node (port 3001) + client
+BabylonJS (port 3000), base PostgreSQL/Redis Docker (port hôte **5544**), et rendu 3D
+vérifié dans le navigateur (terrain + personnage + monstres NPC, état "niveau de test").
+
+### ✅ Travaux terminés (session du jour)
+
+#### 1. Infrastructure réparée (transfert de machine)
+- **Dépendances** : `npm install` racine + client + server + shared.
+- **Docker** : Postgres mappé sur **5544** (un PostgreSQL local occupe le 5432/5433) ;
+  volume recréé ; `docker-compose.yml` mis à jour ; `server/.env` créé.
+- **Prisma** : client régénéré, schéma poussé, **seed complet** (quêtes, forteresses,
+  NPC, spawns, téléports). Bugs de seed corrigés (enum MasteryTree en casse, champs
+  Quest manquants `description`/`timeLimitSec`, BigInt→Number pour les colonnes Json).
+- **Serveur** : les 122 erreurs TypeScript corrigées (0 erreur). Bug runtime `sql.ts`
+  corrigé (`query()` retourne désormais un vrai `{rows, rowCount}` ; `transaction()`
+  donne un client query fonctionnel). Bug `createUnion` (variable inexistante) corrigé.
+
+#### 2. Pipeline d'assets complet (le vrai client comme source)
+- `tools/veykril-pk2` (MIT) cloné/compilé → extraction PK2 fonctionnelle :
+  - **Media.pk2** → `assets/pk2_media` (29 292 fichiers)
+  - **Data.pk2** → `assets/pk2_data` (64 861 fichiers, 18 725 meshes .bms)
+  - **Map.pk2** → `assets/pk2_map` (19 587 fichiers par région)
+- `tools/rust-jmx-converter` compilé → **17 312 GLB régénérés en 12 s** dans
+  `client/public/assets/glb_blender` (le dossier avait été perdu, non versionné).
+- `client/public/assets/` restauré depuis `assets.old_no_skinning` (99 055 fichiers,
+  manifest.json + mappings.json inclus).
+
+#### 3. Données de jeu officielles importées
+- **`server/scripts/import-textdata.ts`** : parse les TSV UTF-16LE de Media.pk2,
+  suit les loaders, résout les noms via `textdata_object_*.txt` (clé SN_ en col. 3).
+- Colonnes **vérifiées empiriquement** (MANGNYANG lvl 1 : HP 24, exp 54, atk 7-10 ✓).
+- Sortie `server/data/game/` : **21 529 items, 7 825 monstres, 612 NPC, 36 008 skills**.
+- **`server/src/data/GameDataService.ts`** : chargé au boot du GameServer, lookups
+  par id/code + `getMonsterTemplate()` prêt à nourrir MonsterEntity avec les vraies stats.
+
+### 🚀 Pour démarrer
+```bash
+docker compose up -d postgres redis          # DB (Postgres sur le port hôte 5544)
+cd server && npm run dev                     # serveur :3001
+cd client && npm run dev                     # client :3000
+```
+Importer/rafraîchir les données : `cd server && npx tsx scripts/import-textdata.ts`
+
+### 🛠️ Prochaines étapes (voir RECHERCHE.md §5 pour le détail)
+1. **Brancher les vraies stats** : SpawnManager → GameDataService.getMonsterTemplate()
+   pour remplacer les 5 types de monstres seedés par les vrais (code `MOB_*`, bsr réel).
+2. **Spawns réels** : parser les `.ifo` de Map.pk2 (placements objets/NPC par région).
+3. **Navmesh** : parser les `.nvm` de Data.pk2 (spec publique très bonne).
+4. **Textures** : convertir les `.ddj` → DDS/PNG (le convertisseur Rust a déjà la crate `image`).
+5. **Skills** : compléter le mapping des 118 colonnes de skilldata (cooldown, MP, effets).
+6. **UI** : réactiver les panels (l'UI ne s'affiche pas encore au boot).
+7. Mode MMO : dé-commenter `network.connect()` dans `client/src/main.ts:83`.
+
+### ⚠️ Dettes signalées (à traiter)
+- `GameServer` a une double boucle de tick (GameLoop + setInterval).
+- Plusieurs `new PrismaClient()` éparpillés (forteresse/guilde/quest/mount).
+- `SystemHandlers` fait confiance au `characterId` envoyé par le client.
+- 126 erreurs TS côté **client** (drift BabylonJS 8) — non bloquantes sous Vite mais à nettoyer.
+
+---
+
+## Historique : État au 20 Janvier 2026
+
+Le projet a été stabilisé et assaini. La structure monorepo est maintenant cohérente et
+la majorité des erreurs de compilation bloquantes ont été résolues : migration Babylon.js 8,
+types partagés en Enums, GameLoop restauré, ports client/serveur alignés.

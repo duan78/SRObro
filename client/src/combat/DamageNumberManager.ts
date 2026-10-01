@@ -191,7 +191,7 @@ export class DamageNumberManager {
         rect.cornerRadius = 5;
         rect.color = color.toHexString();
         rect.thickness = 0;
-        rect.background = 'rgba(0, 0, 0, 0.3)';
+        rect.background = 'rgba(0,0,0,0.3)';
 
         // Create text block
         const textBlock = new TextBlock();
@@ -249,19 +249,26 @@ export class DamageNumberManager {
      * Update rectangle position based on 3D position
      */
     private updateRectPosition(rect: Rectangle, position: Vector3): void {
-        // Project 3D position to screen space
+        // Projection 3D → écran: (world, worldMatrix, transform, viewport)
+        // NB: le 2e arg doit être une Matrix (identité monde) et le 4e un
+        // Viewport global — pas la projection seule (coordonnées NaN avant).
+        const engine = this.scene.getEngine();
+        const camera = this.scene.activeCamera;
+        if (!camera) return;
+        const viewport = camera.viewport.toGlobal(engine.getRenderWidth(), engine.getRenderHeight());
         const screenPos = Vector3.Project(
             position,
-            Vector3.Zero(),
+            Matrix.Identity(),
             this.scene.getTransformMatrix(),
-            this.scene.activeCamera!.getProjectionMatrix()
+            viewport
         );
 
-        // Convert to GUI coordinates
-        const canvas = this.scene.getEngine().getRenderingCanvas();
+        // Convert to GUI coordinates (pixels CSS, pas pixels device)
+        const canvas = engine.getRenderingCanvas();
         if (canvas) {
-            const x = (screenPos.x + 1) * canvas.width / 2;
-            const y = (1 - screenPos.y) * canvas.height / 2;
+            const rect0 = canvas.getBoundingClientRect();
+            const x = (screenPos.x + 1) / 2 * rect0.width;
+            const y = (1 - screenPos.y) / 2 * rect0.height;
 
             rect.left = `${x - 50}px`; // Offset by half width
             rect.top = `${y - 20}px`;  // Offset by half height

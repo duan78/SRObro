@@ -7,9 +7,9 @@ import {
   AdvancedDynamicTexture,
   Rectangle,
   TextBlock,
-  Control,
-  Observable
+  Control
 } from '@babylonjs/gui';
+import { Observable } from '@babylonjs/core';
 
 import type {
   ItemTooltipData,
@@ -18,6 +18,7 @@ import type {
   ItemRarity,
   ItemType
 } from '@srobro/shared';
+import { EntityType } from '@srobro/shared';
 
 export class TooltipManager {
   private currentTooltip: Rectangle | null = null;
@@ -55,11 +56,7 @@ export class TooltipManager {
     potion: '#FF8000',
     skill: '#800080',
     material: '#9D9D9D',
-    quest: '#FFFF00',
-    amm: '#9D9D9D',
-    arrow: '#9D9D9D',
-    bolt: '#9D9D9D',
-    general: '#FFFFFF'
+    quest: '#FFFF00'
   };
 
   constructor(private guiTexture: AdvancedDynamicTexture) {}
@@ -309,11 +306,11 @@ export class TooltipManager {
 
     // Entity name (color by type)
     let nameColor = '#FFFFFF';
-    if (data.type === 'monster') {
+    if (data.type === EntityType.MONSTER) {
       nameColor = data.isAggressive ? '#FF0000' : '#FFFF00';
-    } else if (data.type === 'npc') {
+    } else if (data.type === EntityType.NPC) {
       nameColor = '#00FF00';
-    } else if (data.type === 'player') {
+    } else if (data.type === EntityType.PLAYER) {
       nameColor = data.pkStatus ? this.getPKColor(data.pkStatus.murdererLevel) : '#FFFFFF';
     }
 
@@ -351,7 +348,7 @@ export class TooltipManager {
     yOffset += 16;
 
     // Monster special status
-    if (data.type === 'monster') {
+    if (data.type === EntityType.MONSTER) {
       let statusText = '';
       if (data.isUnique) {
         statusText = '[UNIQUE]';
@@ -378,7 +375,7 @@ export class TooltipManager {
     hpContainer.height = '12px';
     hpContainer.top = `${yOffset}px`;
     hpContainer.cornerRadius = 2;
-    hpContainer.background = 'rgba(0, 0, 0, 0.8)';
+    hpContainer.background = 'rgba(0,0,0,0.8)';
     hpContainer.color = '#000000';
     hpContainer.thickness = 1;
     tooltip.addControl(hpContainer);
@@ -431,7 +428,7 @@ export class TooltipManager {
     tooltip.cornerRadius = 6;
     tooltip.color = '#4a3728';
     tooltip.thickness = 2;
-    tooltip.background = 'rgba(10, 10, 20, 0.95)';
+    tooltip.background = 'rgba(10,10,200,0.95)';
     tooltip.paddingLeft = `${this.config.padding}px`;
     tooltip.paddingRight = `${this.config.padding}px`;
     tooltip.paddingTop = `${this.config.padding}px`;

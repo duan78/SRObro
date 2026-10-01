@@ -4,7 +4,7 @@
  */
 
 import type { Scene } from '@babylonjs/core';
-import { Vector3, Color3, StandardMaterial, MeshBuilder } from '@babylonjs/core';
+import { Vector3, Color3, StandardMaterial, MeshBuilder, Mesh, DynamicTexture } from '@babylonjs/core';
 import { NetworkManager } from '../network/NetworkManager';
 import { EntityManager } from './EntityManager';
 
@@ -210,7 +210,7 @@ export class WorldManager {
   /**
    * Create a single tree mesh
    */
-  private createTreeMesh(): BABYLON.Mesh {
+  private createTreeMesh(): Mesh {
     // Trunk
     const trunk = MeshBuilder.CreateCylinder('trunk', {
       height: 4,
@@ -348,7 +348,7 @@ export class WorldManager {
   private createGrassTexture(): void {
     // Create a dynamic texture for grass pattern
     const grassSize = 512;
-    const grassTexture = new BABYLON.DynamicTexture('grassTexture', grassSize, this.scene, true);
+    const grassTexture = new DynamicTexture('grassTexture', grassSize, this.scene, true);
 
     const ctx = grassTexture.getContext();
 

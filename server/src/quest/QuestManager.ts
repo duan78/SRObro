@@ -3,10 +3,13 @@
 // Manages quest system, objectives, and rewards
 // ============================================
 
-import { PrismaClient, Quest, QuestProgress, QuestStatus, QuestType } from '@prisma/client';
+import { Quest, QuestProgress, QuestStatus, QuestType } from '@prisma/client';
 import { EventEmitter } from 'events';
+import { prisma } from '../database/prisma';
 
-const prisma = new PrismaClient();
+// Re-export for the quest module index
+export { QuestStatus };
+
 
 export interface QuestObjective {
   type: 'kill' | 'collect' | 'talk' | 'delivery' | 'explore';
@@ -72,7 +75,7 @@ export class QuestManager extends EventEmitter {
     });
   }
 
-  async getQuestsByLevel(minLevel: number, maxLevel: number): Promise<Quest[]> {
+  async getQuestsByLevel(minLevel: number, _maxLevel?: number): Promise<Quest[]> {
     return await prisma.quest.findMany({
       where: {
         minLevel: { lte: minLevel },
@@ -136,8 +139,8 @@ export class QuestManager extends EventEmitter {
 
       // Check prerequisites
       if (quest.prerequisite && Array.isArray(quest.prerequisite)) {
-        const hasAllPrerequisites = quest.prerequisite.every(prereqId =>
-          completedQuestIds.includes(prereqId)
+        const hasAllPrerequisites = quest.prerequisite.every((prereqId: unknown) =>
+          completedQuestIds.includes(prereqId as string)
         );
         if (!hasAllPrerequisites) {
           return false;
@@ -172,6 +175,17 @@ export class QuestManager extends EventEmitter {
         currentCount: (progress.progress as any)[index] || 0
       }))
     }));
+  }
+
+  /**
+   * Get all completed quests for a character
+   */
+  async getCompletedQuests(characterId: string): Promise<any[]> {
+    return await prisma.questProgress.findMany({
+      where: { characterId, status: QuestStatus.completed },
+      include: { quest: true },
+      orderBy: { completedAt: 'desc' }
+    });
   }
 
   // ============================================
@@ -242,15 +256,16 @@ export class QuestManager extends EventEmitter {
 
     // Check prerequisites
     if (quest.prerequisite && Array.isArray(quest.prerequisite)) {
+      const prerequisiteIds = quest.prerequisite as string[];
       const completedQuests = await prisma.questProgress.count({
         where: {
           characterId,
-          questId: { in: quest.prerequisite },
+          questId: { in: prerequisiteIds },
           status: QuestStatus.completed
         }
       });
 
-      if (completedQuests < quest.prerequisite.length) {
+      if (completedQuests < prerequisiteIds.length) {
         throw new Error('You have not completed the prerequisite quests');
       }
     }
@@ -304,7 +319,7 @@ export class QuestManager extends EventEmitter {
     const newProgress = currentProgress + increment;
 
     const updatedProgressData: any = {
-      ...progress.progress,
+      ...(progress.progress as Record<string, number>),
       [objectiveIndex]: newProgress
     };
 
@@ -327,7 +342,34 @@ export class QuestManager extends EventEmitter {
     return updatedProgress;
   }
 
-  async completeQuest(progressId: string): Promise<QuestProgress> {
+  /**
+   * Complete a quest by quest-progress ID
+   */
+  async completeQuest(progressId: string): Promise<QuestProgress>;
+  /**
+   * Complete a quest by character ID + quest ID
+   */
+  async completeQuest(characterId: string, questId: string): Promise<QuestProgress>;
+  async completeQuest(idOrCharacterId: string, questId?: string): Promise<QuestProgress> {
+    let progressId = idOrCharacterId;
+
+    if (questId !== undefined) {
+      const existingProgress = await prisma.questProgress.findUnique({
+        where: {
+          characterId_questId: {
+            characterId: idOrCharacterId,
+            questId
+          }
+        }
+      });
+
+      if (!existingProgress) {
+        throw new Error('Quest progress not found');
+      }
+
+      progressId = existingProgress.id;
+    }
+
     const progress = await prisma.questProgress.findUnique({
       where: { id: progressId },
       include: { quest: true, character: true }
@@ -338,7 +380,22 @@ export class QuestManager extends EventEmitter {
     }
 
     const quest = progress.quest as any;
-    const character = progress.character;
+
+    // GARDE ANTI-EXPLOIT: récompenses distribuables seulement si la quête
+    // est in_progress ET ses objectifs réellement remplis. Sans ceci, un
+    // simple appel réseau accept→complete donne exp/sp/gold à volonté.
+    if (progress.status !== QuestStatus.in_progress) {
+      throw new Error(`Quest cannot be completed (status: ${progress.status})`);
+    }
+
+    const objectives = (quest.objectives ?? []) as QuestObjective[];
+    const progressData = (progress.progress ?? {}) as Record<string, number>;
+    const objectivesComplete = objectives.every((obj, index) => {
+      return (progressData[index] ?? 0) >= obj.count;
+    });
+    if (!objectivesComplete) {
+      throw new Error('Quest objectives are not complete');
+    }
 
     // Grant rewards
     if (quest.rewards.exp) {
@@ -470,7 +527,10 @@ export class QuestManager extends EventEmitter {
     }
   }
 
-  async onNPCInteract(characterId: string, npcId: string): Promise<any[]> {
+  async onNPCInteract(characterId: string, npcId: string): Promise<{
+    startable: Quest[];
+    completable: any[];
+  }> {
     // Get quests that start or end at this NPC
     const availableQuests = await this.getAvailableQuests(characterId);
     const progressList = await this.getQuestProgress(characterId);

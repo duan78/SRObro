@@ -19,6 +19,8 @@ export class TargetingSystem {
   private currentTarget: SpawnedMonster | null = null;
   private targetMarker: AbstractMesh | null = null;
   private healthBarManager: MonsterHealthBarManager;
+  // Mesh joueur résolu une fois (évite un scan de scène par frame)
+  private cachedPlayerMesh: import('@babylonjs/core').AbstractMesh | null = null;
 
   // Callbacks
   private onTargetChangeCallback?: (target: SpawnedMonster | null) => void;
@@ -206,18 +208,28 @@ export class TargetingSystem {
 
   /**
    * Get player position (helper method)
+   * Le mesh joueur est mis en cache: sinon chaque frame scanne les ~2500
+   * meshes de la scène à la recherche d'un nom contenant "player".
    */
   private getPlayerPosition(): Vector3 | null {
+    if (this.cachedPlayerMesh) {
+      if (!this.cachedPlayerMesh.isDisposed()) {
+        return this.cachedPlayerMesh.position;
+      }
+      this.cachedPlayerMesh = null;
+    }
+
     // Try to get player position from scene
     const playerMesh = this.scene.getMeshByName('player_placeholder');
     if (playerMesh) {
+      this.cachedPlayerMesh = playerMesh;
       return playerMesh.position;
     }
 
-    // Try alternative player mesh names
-    const meshes = this.scene.meshes;
-    for (const mesh of meshes) {
-      if (mesh.name.includes('player') || mesh.name.includes('Player')) {
+    // Try alternative player mesh names (vrai modèle: chinaman_adventurer_*)
+    for (const mesh of this.scene.meshes) {
+      if (mesh.name.includes('player') || mesh.name.includes('Player') || mesh.name.includes('adventurer')) {
+        this.cachedPlayerMesh = mesh;
         return mesh.position;
       }
     }

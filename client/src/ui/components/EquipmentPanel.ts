@@ -55,7 +55,7 @@ export class EquipmentPanel {
     this.panel.cornerRadius = 10;
     this.panel.color = '#8B7355'; // Brown/SRO style
     this.panel.thickness = 3;
-    this.panel.background = 'rgba(20, 10, 5, 0.95)';
+    this.panel.background = 'rgba(20,10,50,0.95)';
     this.panel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_RIGHT;
     this.panel.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
     this.panel.paddingTop = '10px';
@@ -70,7 +70,7 @@ export class EquipmentPanel {
     header.cornerRadius = 5;
     header.color = '#D4AF37'; // Gold
     header.thickness = 2;
-    header.background = 'rgba(0, 0, 0, 0.5)';
+    header.background = 'rgba(0,0,0,0.5)';
 
     const title = new TextBlock('equipmentTitle');
     title.text = 'EQUIPMENT';
@@ -175,7 +175,7 @@ export class EquipmentPanel {
     slot.cornerRadius = 3;
     slot.color = '#6B5344'; // Darker brown
     slot.thickness = 2;
-    slot.background = 'rgba(0, 0, 0, 0.3)';
+    slot.background = 'rgba(0,0,0,0.3)';
     slot.paddingLeft = '5px';
     slot.paddingRight = '5px';
     slot.paddingTop = '5px';
@@ -220,7 +220,7 @@ export class EquipmentPanel {
     section.cornerRadius = 5;
     section.color = '#4a3728'; // Dark brown
     section.thickness = 2;
-    section.background = 'rgba(0, 0, 0, 0.5)';
+    section.background = 'rgba(0,0,0,0.5)';
     section.paddingLeft = '10px';
     section.paddingRight = '10px';
     section.paddingTop = '10px';
@@ -366,7 +366,7 @@ export class EquipmentPanel {
     itemBg.cornerRadius = 2;
     itemBg.color = '#6B5344';
     itemBg.thickness = 1;
-    itemBg.background = 'rgba(0, 0, 0, 0.5)';
+    itemBg.background = 'rgba(0,0,0,0.5)';
     slot.addControl(itemBg);
 
     // Plus indicator
@@ -383,11 +383,11 @@ export class EquipmentPanel {
 
     // Hover tooltip (simplified - would show full item stats)
     slot.onPointerEnterObservable.add(() => {
-      itemBg.background = 'rgba(255, 215, 0, 0.3)';
+      itemBg.background = 'rgba(255,215,0,0.3)';
     });
 
     slot.onPointerOutObservable.add(() => {
-      itemBg.background = 'rgba(0, 0, 0, 0.5)';
+      itemBg.background = 'rgba(0,0,0,0.5)';
     });
   }
 
@@ -399,7 +399,7 @@ export class EquipmentPanel {
       }
     });
 
-    slot.background = 'rgba(0, 0, 0, 0.3)';
+    slot.background = 'rgba(0,0,0,0.3)';
   }
 
   private onSlotClick(slotName: string): void {

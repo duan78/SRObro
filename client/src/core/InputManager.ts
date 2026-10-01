@@ -80,32 +80,54 @@ export class InputManager {
     window.addEventListener('keydown', this.handleKeyDown);
     window.addEventListener('keyup', this.handleKeyUp);
 
+    // Si la fenêtre perd le focus pendant qu'une touche est enfoncée, le keyup
+    // n'arrive jamais: sans ce reset le personnage continue d'avancer seul.
+    window.addEventListener('blur', this.handleWindowBlur);
+
     // Mouse events - keep on canvas for position tracking
     this.canvas.addEventListener('mousemove', this.handleMouseMove);
     this.canvas.addEventListener('mousedown', this.handleMouseDown);
     this.canvas.addEventListener('mouseup', this.handleMouseUp);
 
     // Prevent context menu
-    this.canvas.addEventListener('contextmenu', (e) => {
-      e.preventDefault();
-    });
+    this.canvas.addEventListener('contextmenu', this.handleContextMenu);
 
     console.log('[InputManager] Event listeners set up on window and canvas');
   }
+
+  private handleContextMenu = (e: Event): void => {
+    e.preventDefault();
+  };
+
+  /**
+   * Reset all input state when the window loses focus
+   */
+  private handleWindowBlur = (): void => {
+    this.state.forward = false;
+    this.state.backward = false;
+    this.state.left = false;
+    this.state.right = false;
+    this.state.jump = false;
+    this.state.attack = false;
+    this.state.shift = false;
+    this.state.ctrl = false;
+    this.state.alt = false;
+    this.state.mouseButtonLeft = false;
+    this.state.mouseButtonRight = false;
+    this.state.mouseButtonMiddle = false;
+  };
 
   /**
    * Handle key down event
    */
   private handleKeyDown = (event: KeyboardEvent): void => {
     const key = event.code;
-    console.log('[InputManager] Key down:', key); // Debug
 
     // Update state
     switch (key) {
       case 'KeyW':
       case 'ArrowUp':
         this.state.forward = true;
-        console.log('[InputManager] Forward = true');
         break;
       case 'KeyS':
       case 'ArrowDown':
@@ -373,10 +395,13 @@ export class InputManager {
    * Clean up event listeners
    */
   dispose(): void {
-    this.canvas.removeEventListener('keydown', this.handleKeyDown);
-    this.canvas.removeEventListener('keyup', this.handleKeyUp);
+    // Les listeners clavier/blur sont sur window (voir setupEventListeners)
+    window.removeEventListener('keydown', this.handleKeyDown);
+    window.removeEventListener('keyup', this.handleKeyUp);
+    window.removeEventListener('blur', this.handleWindowBlur);
     this.canvas.removeEventListener('mousemove', this.handleMouseMove);
     this.canvas.removeEventListener('mousedown', this.handleMouseDown);
     this.canvas.removeEventListener('mouseup', this.handleMouseUp);
+    this.canvas.removeEventListener('contextmenu', this.handleContextMenu);
   }
 }

@@ -69,6 +69,12 @@ export class PlayerEntity extends Entity {
   private autoSaveInterval: NodeJS.Timeout | null = null;
   private readonly AUTO_SAVE_INTERVAL = 30000; // 30 seconds
 
+  // Accumulateurs de régénération fractionnaire (le tick de 50 ms donne des
+  // deltas trop petits pour un floor() direct — sans accumulation la régén
+  // resterait à 0 pour toujours)
+  private hpRegenAccumulator = 0;
+  private mpRegenAccumulator = 0;
+
   constructor(options: PlayerEntityOptions) {
     super({
       id: options.id,
@@ -149,13 +155,20 @@ export class PlayerEntity extends Entity {
     const oldExp = this.exp;
     this.exp += amount;
 
-    // Check for level up
-    const expNeeded = this.getExpNeededForLevel(this.level + 1);
-    if (this.exp >= expNeeded) {
+    // Un gros gain d'XP peut franchir plusieurs niveaux d'un coup
+    let leveled = false;
+    while (this.exp >= this.getExpNeededForLevel(this.level + 1)) {
       this.levelUp();
+      leveled = true;
     }
 
-    this.emit('expGained', { entityId: this.id, amount, oldExp, newExp: this.exp });
+    this.emit('expGained', {
+      entityId: this.id,
+      amount,
+      oldExp,
+      newExp: this.exp,
+      leveledUp: leveled,
+    });
   }
 
   /**
@@ -252,6 +265,7 @@ export class PlayerEntity extends Entity {
 
   /**
    * Regenerate HP/MP
+   * @param deltaTime en SECONDES (le tick serveur fournit des secondes)
    */
   private regenerate(deltaTime: number): void {
     if (this.state === EntityState.DEAD || this.state === EntityState.RESPawning) {
@@ -260,16 +274,28 @@ export class PlayerEntity extends Entity {
 
     // HP regen: 1% per 10 seconds
     const hpRegenRate = this.maxHp * 0.001; // per second
-    const hpRegen = Math.floor(hpRegenRate * (deltaTime / 1000));
-    if (hpRegen > 0 && this.hp < this.maxHp) {
-      this.setHp(Math.min(this.maxHp, this.hp + hpRegen));
+    if (this.hp < this.maxHp) {
+      this.hpRegenAccumulator += hpRegenRate * deltaTime;
+      if (this.hpRegenAccumulator >= 1) {
+        const regen = Math.floor(this.hpRegenAccumulator);
+        this.hpRegenAccumulator -= regen;
+        this.setHp(Math.min(this.maxHp, this.hp + regen));
+      }
+    } else {
+      this.hpRegenAccumulator = 0;
     }
 
     // MP regen: 1% per 5 seconds
     const mpRegenRate = this.maxMp * 0.002; // per second
-    const mpRegen = Math.floor(mpRegenRate * (deltaTime / 1000));
-    if (mpRegen > 0 && this.mp < this.maxMp) {
-      this.setMp(Math.min(this.maxMp, this.mp + mpRegen));
+    if (this.mp < this.maxMp) {
+      this.mpRegenAccumulator += mpRegenRate * deltaTime;
+      if (this.mpRegenAccumulator >= 1) {
+        const regen = Math.floor(this.mpRegenAccumulator);
+        this.mpRegenAccumulator -= regen;
+        this.setMp(Math.min(this.maxMp, this.mp + regen));
+      }
+    } else {
+      this.mpRegenAccumulator = 0;
     }
   }
 
@@ -411,8 +437,11 @@ export class PlayerEntity extends Entity {
 
 /**
  * Create a PlayerEntity from database character
+ * `zoneId` is provided by the server-side character record
  */
-export async function createPlayerEntityFromDb(character: Character): Promise<PlayerEntity> {
+export async function createPlayerEntityFromDb(
+  character: SharedCharacter & { zoneId: string; skillPoints?: number }
+): Promise<PlayerEntity> {
   return new PlayerEntity({
     id: character.id,
     name: character.name,
@@ -432,7 +461,7 @@ export async function createPlayerEntityFromDb(character: Character): Promise<Pl
     gold: character.gold,
     zoneId: character.zoneId,
     modelId: 'char_chinese_male', // Default model
-    skillPoints: 0, // TODO: Load from DB
-    statPoints: 0, // TODO: Load from DB
+    skillPoints: character.skillPoints ?? 0,
+    statPoints: character.statPoints,
   });
 }

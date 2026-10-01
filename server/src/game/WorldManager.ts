@@ -6,9 +6,10 @@
 import type { DatabaseManager } from '../database/DatabaseManager';
 import { createLogger } from '../core/Logger';
 import type { Client } from '../network/Client';
-import { C2SPacket, S2CPacket, Zone, Monster, Position, Entity, EntityType } from '@srobro/shared';
+import { C2SPacket, S2CPacket, Zone, Monster, Position, Entity, EntityType, CharacterRace, PacketType } from '@srobro/shared';
 import { globalCombatManager } from '../combat/CombatManager';
 import { globalSpatialManager } from '../world/SpatialManager';
+import { globalSpawnManager } from '../ai/SpawnManager';
 import { PlayerEntity } from '../world/PlayerEntity';
 import { MonsterEntity } from '../world/MonsterEntity';
 import { NPCEntity } from '../world/NPCEntity';
@@ -16,8 +17,14 @@ import { prisma } from '../database/prisma';
 
 const logger = createLogger('WorldManager');
 
+/**
+ * Convert a Prisma CharacterRace ('chinese' | 'european') to the shared enum
+ */
+function toSharedRace(race: string): CharacterRace {
+  return race === 'european' ? CharacterRace.EUROPEAN : CharacterRace.CHINESE;
+}
+
 export class WorldManager {
-  private dbManager: DatabaseManager;
   private zones: Map<string, Zone> = new Map();
   private monsters: Map<string, Monster> = new Map();
   private npcs: Map<string, Entity> = new Map();
@@ -25,9 +32,7 @@ export class WorldManager {
   private monsterEntities: Map<string, MonsterEntity> = new Map();
   private npcEntities: Map<string, NPCEntity> = new Map();
 
-  constructor(dbManager: DatabaseManager) {
-    this.dbManager = dbManager;
-  }
+  constructor(_dbManager: DatabaseManager) {}
 
   /**
    * Initialize world manager
@@ -43,6 +48,10 @@ export class WorldManager {
 
     // Load NPCs from Prisma
     await this.loadNPCs();
+
+    // Le SpawnManager est la source de vérité des monstres: on partage sa
+    // map pour que update()/getEntityById() voient les spawns qu'il crée.
+    this.monsterEntities = globalSpawnManager.getMonsterEntities();
 
     logger.info('World manager initialized');
   }
@@ -108,7 +117,7 @@ export class WorldManager {
       for (const monster of monsters) {
         this.monsters.set(monster.id, {
           id: monster.id,
-          type: 'monster',
+          type: EntityType.MONSTER,
           name: monster.name,
           level: monster.level,
           position: { x: 0, y: 0, z: 0 }, // Will be set by spawn manager
@@ -157,7 +166,7 @@ export class WorldManager {
   /**
    * Handle player login
    */
-  async handlePlayerLogin(client: Client, characterId: string): Promise<void> {
+  async handlePlayerLogin(_client: Client, characterId: string): Promise<void> {
     try {
       const character = await prisma.character.findUnique({
         where: { id: characterId },
@@ -182,7 +191,7 @@ export class WorldManager {
         id: character.id,
         name: character.name,
         accountId: character.accountId,
-        race: character.race,
+        race: toSharedRace(character.race),
         level: character.level,
         exp: Number(character.exp),
         sp: Number(character.sp),
@@ -231,7 +240,7 @@ export class WorldManager {
   /**
    * Handle player logout
    */
-  async handlePlayerLogout(client: Client, characterId: string): Promise<void> {
+  async handlePlayerLogout(_client: Client, characterId: string): Promise<void> {
     const playerEntity = this.players.get(characterId);
     if (!playerEntity) {
       return;
@@ -251,6 +260,9 @@ export class WorldManager {
 
     // Remove from world
     this.players.delete(characterId);
+
+    // Stoppe l'autosave et les timers de l'entité (sinon ils tournent à jamais)
+    playerEntity.destroy();
 
     logger.info(`Player logged out: ${playerEntity.name}`, { id: playerEntity.id });
 
@@ -314,8 +326,25 @@ export class WorldManager {
       return;
     }
 
+    // Validation serveur-autoritaire: cible vivante, à portée, anti-spam.
+    if (!targetEntity.isAlive()) {
+      return;
+    }
+    const attackRange = 'attackRange' in targetEntity ? (targetEntity as MonsterEntity).attackRange : 3;
+    const distance = playerEntity.distanceTo(targetEntity);
+    if (distance > Math.max(attackRange * 3, 15)) {
+      logger.warn(`Attack out of range: ${characterId} -> ${data.targetId} (${distance.toFixed(1)}m)`);
+      return;
+    }
+    const now = Date.now();
+    const lastAttack = this.lastPlayerAttack.get(characterId) ?? 0;
+    if (now - lastAttack < 400) {
+      return; // anti-spam réseau (400ms entre attaques de base)
+    }
+    this.lastPlayerAttack.set(characterId, now);
+
     // Process attack through combat manager
-    const combatId = globalCombatManager.startCombat(
+    globalCombatManager.startCombat(
       this.toCombatParticipant(playerEntity),
       this.toCombatParticipant(targetEntity)
     );
@@ -323,6 +352,13 @@ export class WorldManager {
     const result = globalCombatManager.processAttack(characterId, data.targetId);
 
     if (result) {
+      // Écriture des HP réels: le CombatManager travaille sur une copie de
+      // session — sans cette écriture les entités ne perdent jamais de HP
+      // et les monstres ne meurent jamais.
+      if (targetEntity instanceof PlayerEntity || targetEntity instanceof MonsterEntity) {
+        targetEntity.setHp(result.targetHp);
+      }
+
       // Broadcast attack to nearby clients
       this.broadcastToNearbyClients(characterId, {
         type: 'attack',
@@ -487,7 +523,7 @@ export class WorldManager {
     const interaction = npcEntity.interact(playerId);
 
     this.sendToClient(playerId, {
-      type: 'npc_interaction',
+      type: 'npc_interaction' as PacketType,
       timestamp: Date.now(),
       data: {
         npcId,
@@ -501,6 +537,13 @@ export class WorldManager {
    */
   getEntityById(entityId: string): PlayerEntity | MonsterEntity | NPCEntity | undefined {
     return this.players.get(entityId) || this.monsterEntities.get(entityId) || this.npcEntities.get(entityId);
+  }
+
+  /**
+   * Get a logged-in player entity by character ID
+   */
+  async getCharacter(characterId: string): Promise<PlayerEntity | undefined> {
+    return this.players.get(characterId);
   }
 
   /**
@@ -567,12 +610,13 @@ export class WorldManager {
       player.update(delta);
     }
 
-    // Update all monsters
+    // Update all monsters + aggro. Sans joueur connecté, on saute les
+    // requêtes spatiales d'aggro (sinon 1 requête par monstre par tick).
     for (const monster of this.monsterEntities.values()) {
       monster.update(delta);
 
       // Check for aggro
-      if (monster.aiState === 'idle' || monster.aiState === 'patrol') {
+      if (this.players.size > 0 && (monster.aiState === 'idle' || monster.aiState === 'patrol')) {
         const nearbyPlayers = globalSpatialManager.getEntitiesByType('player', monster.position, monster.aggroRange);
         for (const player of nearbyPlayers) {
           const playerEntity = this.players.get(player.id);
@@ -617,6 +661,9 @@ export class WorldManager {
    * EventEmitter methods (simple implementation)
    */
   private eventListeners: Map<string, Array<(...args: unknown[]) => void>> = new Map();
+
+  // Anti-spam d'attaque par personnage (timestamp de la dernière attaque)
+  private lastPlayerAttack: Map<string, number> = new Map();
 
   on(event: string, listener: (...args: unknown[]) => void): void {
     if (!this.eventListeners.has(event)) {

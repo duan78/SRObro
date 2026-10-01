@@ -15,6 +15,9 @@ export class ClientManager {
   private dbManager: DatabaseManager;
   private clients: Map<string, Client> = new Map();
   private clientsByPlayerId: Map<string, Client> = new Map();
+  // Les entités monde (WorldManager) sont indexées par characterId — c'est
+  // cette clé qu'utilisent les diffusions AOI, pas l'accountId.
+  private clientsByCharacterId: Map<string, Client> = new Map();
 
   constructor(io: IOServer, dbManager: DatabaseManager) {
     this.io = io;
@@ -48,11 +51,19 @@ export class ClientManager {
     // Set up client event handlers
     client.on('authenticated', (playerId) => {
       this.clientsByPlayerId.set(playerId, client);
+      const characterId = client.getCharacterId();
+      if (characterId) {
+        this.clientsByCharacterId.set(characterId, client);
+      }
       logger.info(`Client authenticated: ${socket.id} -> ${playerId}`);
     });
 
     client.on('disconnected', () => {
       this.clientsByPlayerId.delete(client.getPlayerId() || '');
+      const characterId = client.getCharacterId();
+      if (characterId) {
+        this.clientsByCharacterId.delete(characterId);
+      }
     });
   }
 
@@ -68,6 +79,11 @@ export class ClientManager {
     const playerId = client.getPlayerId();
     if (playerId) {
       this.clientsByPlayerId.delete(playerId);
+    }
+
+    const characterId = client.getCharacterId();
+    if (characterId) {
+      this.clientsByCharacterId.delete(characterId);
     }
 
     this.clients.delete(socketId);
@@ -86,6 +102,13 @@ export class ClientManager {
    */
   getClientByPlayerId(playerId: string): Client | undefined {
     return this.clientsByPlayerId.get(playerId);
+  }
+
+  /**
+   * Get client by character ID (clé utilisée par les entités du monde)
+   */
+  getClientByCharacterId(characterId: string): Client | undefined {
+    return this.clientsByCharacterId.get(characterId);
   }
 
   /**
@@ -150,6 +173,7 @@ export class ClientManager {
 
     this.clients.clear();
     this.clientsByPlayerId.clear();
+    this.clientsByCharacterId.clear();
 
     logger.info('All clients disconnected');
   }

@@ -51,14 +51,13 @@ export class HotkeyBar {
     this.panel.cornerRadius = 10;
     this.panel.color = '#4a3728'; // Dark brown
     this.panel.thickness = 2;
-    this.panel.background = 'rgba(0, 0, 0, 0.9)';
+    this.panel.background = 'rgba(0,0,0,0.9)';
     this.panel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     this.panel.verticalAlignment = Control.VERTICAL_ALIGNMENT_BOTTOM;
-    this.panel.bottom = '70px'; // Above the old skill bar
+    this.panel.paddingBottom = '78px'; // 8px marge + 70px au-dessus de l'ancienne barre
     this.panel.paddingLeft = '10px';
     this.panel.paddingRight = '10px';
     this.panel.paddingTop = '8px';
-    this.panel.paddingBottom = '8px';
 
     this.guiTexture.addControl(this.panel);
 
@@ -77,7 +76,7 @@ export class HotkeyBar {
     row.width = '100%';
     row.height = '32px';
     row.isVertical = false;
-    row.spacing = '4px';
+    row.spacing = 4;
 
     // Create slots for this row
     for (let i = 0; i < rowConfig.count; i++) {
@@ -97,7 +96,7 @@ export class HotkeyBar {
     slot.cornerRadius = 4;
     slot.color = '#6B5344';
     slot.thickness = 1;
-    slot.background = 'rgba(0, 0, 0, 0.5)';
+    slot.background = 'rgba(0,0,0,0.5)';
 
     // Hotkey label
     let hotkeyLabel = '';
@@ -125,7 +124,7 @@ export class HotkeyBar {
     icon.cornerRadius = 2;
     icon.color = '#00000000';
     icon.thickness = 1;
-    icon.background = 'rgba(100, 100, 100, 0.3)';
+    icon.background = 'rgba(100,100,100,0.3)';
     icon.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
     icon.verticalAlignment = Control.VERTICAL_ALIGNMENT_CENTER;
     slot.addControl(icon);
@@ -137,7 +136,7 @@ export class HotkeyBar {
     cooldownOverlay.cornerRadius = 4;
     cooldownOverlay.color = '#00000000';
     cooldownOverlay.thickness = 0;
-    cooldownOverlay.background = 'rgba(0, 0, 0, 0.7)';
+    cooldownOverlay.background = 'rgba(0,0,0,0.7)';
     cooldownOverlay.alpha = 0;
     cooldownOverlay.isVisible = false;
     cooldownOverlay.isHitTestVisible = false;
@@ -152,7 +151,7 @@ export class HotkeyBar {
 
     slot.onPointerDownObservable.add((info) => {
       // Left click = use, Right click = clear
-      if (info.type === 2) { // Right click
+      if (info.buttonIndex === 2) { // Right click
         this.clearSlot(slotKey);
       }
     });
@@ -180,7 +179,7 @@ export class HotkeyBar {
 
     const icon = this.guiTexture.getControlByName(`hotkey_icon_${slotKey}`) as Rectangle;
     if (icon) {
-      icon.background = 'rgba(100, 100, 100, 0.3)';
+      icon.background = 'rgba(100,100,100,0.3)';
     }
 
     console.log(`Cleared slot: ${slotKey}`);
@@ -227,15 +226,16 @@ export class HotkeyBar {
     }
 
     // Use item/skill
+    const guiAny = this.guiTexture as any;
     if (data.skillId) {
       console.log(`Using skill: ${data.skillName} (${data.skillId})`);
-      this.guiTexture.onSkillUseObservable?.notifyObservers({
+      guiAny.onSkillUseObservable?.notifyObservers({
         skillId: data.skillId,
         name: data.skillName
       });
     } else if (data.itemId) {
       console.log(`Using item: ${data.itemName} (${data.itemId})`);
-      this.guiTexture.onInventoryUseObservable?.notifyObservers({
+      guiAny.onInventoryUseObservable?.notifyObservers({
         itemId: data.itemId,
         name: data.itemName
       });
@@ -293,10 +293,10 @@ export class HotkeyBar {
 
     // Update icon background based on type
     if (data.skillId) {
-      icon.background = 'rgba(139, 0, 0, 0.5)'; // Red for skills
+      icon.background = 'rgba(139,0,0,0.5)'; // Red for skills
       icon.color = '#8B0000';
     } else if (data.itemId) {
-      icon.background = 'rgba(0, 100, 0, 0.5)'; // Green for items
+      icon.background = 'rgba(0,100,0,0.5)'; // Green for items
       icon.color = '#006400';
     }
   }

@@ -3,7 +3,7 @@
  * Represents a non-player character (shop, storage, stable, etc.)
  */
 
-import { Entity, EntityState } from './Entity';
+import { Entity } from './Entity';
 import { Position, EntityType, NPC } from '@srobro/shared';
 import { createLogger } from '../core/Logger';
 

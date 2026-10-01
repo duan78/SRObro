@@ -3,7 +3,8 @@
  * Manages combat cycles, damage application, death, and respawn
  */
 
-import { DamageCalculator, AttackerStats, DefenderStats, DamageCalculationResult, DamageType } from './DamageCalculator';
+import { DamageCalculator, DamageCalculationResult } from './DamageCalculator';
+import { DamageType } from '@srobro/shared';
 import { createLogger } from '../core/Logger';
 import { EventEmitter } from 'events';
 
@@ -173,7 +174,11 @@ export class CombatManager extends EventEmitter {
     // Calculate damage
     const result = DamageCalculator.calculateDamage(
       attacker.stats,
-      defender.stats,
+      {
+        ...defender.stats,
+        hp: defender.hp,
+        maxHp: defender.maxHp,
+      },
       { damageType, skillBonus }
     );
 

@@ -326,9 +326,11 @@ export class SpatialManager extends EventEmitter {
 
   /**
    * Parse sector ID to coordinates
+   * Séparateur ',' (et pas '-'): les coordonnées négatives produiraient
+   * "−1--2" → split('-') = ['','1','','2'] → mauvaise cellule.
    */
   private parseSectorId(sectorId: string): { x: number; z: number } {
-    const [x, z] = sectorId.split('-').map(Number);
+    const [x, z] = sectorId.split(',').map(Number);
     return { x, z };
   }
 
@@ -336,13 +338,13 @@ export class SpatialManager extends EventEmitter {
    * Format sector ID from coordinates
    */
   private formatSectorId(x: number, z: number): string {
-    return `${x}-${z}`;
+    return `${x},${z}`;
   }
 
   /**
    * Create a new sector
    */
-  private createSector(sectorId: string, position: SpatialPosition): Sector {
+  private createSector(sectorId: string, _position: SpatialPosition): Sector {
     const { x, z } = this.parseSectorId(sectorId);
     const sector: Sector = {
       id: sectorId,

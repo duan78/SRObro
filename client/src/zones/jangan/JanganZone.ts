@@ -4,9 +4,12 @@
 // ============================================
 
 import type { Scene } from '@babylonjs/core';
-import { Vector3, Color3, Color4, MeshBuilder, StandardMaterial } from '@babylonjs/core';
+import { Vector3, Color3, Color4, MeshBuilder, StandardMaterial, Texture } from '@babylonjs/core';
 import type { Position } from '@srobro/shared';
 import { JANGAN_CONFIG, getJanganSpawnPoint, isWithinZoneBoundaries } from './JanganConfig';
+import { RealTerrain } from './RealTerrain';
+import { WorldObjects } from './WorldObjects';
+import { AnimationService } from '../../animation/BanAnimationService';
 import type { AssetLoader } from '../../core/AssetLoader';
 import { getMonsterAssetPath } from '../../config/AssetMapping';
 import { MonsterHealthBarManager } from '../../ui/components/MonsterHealthBar';
@@ -26,7 +29,7 @@ export interface SpawnedMonster {
 
 export class JanganZone {
   private scene: Scene;
-  // private assetLoader: AssetLoader; // Unused - remove for MVP
+  private assetLoader?: AssetLoader;
   private config = JANGAN_CONFIG;
 
   // Loaded state
@@ -42,7 +45,7 @@ export class JanganZone {
 
   constructor(scene: Scene, assetLoader?: AssetLoader) {
     this.scene = scene;
-    // this.assetLoader = assetLoader; // Unused for now
+    this.assetLoader = assetLoader;
     this.healthBarManager = new MonsterHealthBarManager(scene);
   }
 
@@ -58,8 +61,25 @@ export class JanganZone {
     console.log('[JanganZone] Loading Jangan zone...');
 
     try {
+      // Stats officielles des monstres (avant tout spawn)
+      await JanganZone.loadMonsterStats();
+
       // Load ground/heightmap
       await this.loadGround();
+
+      // Bâtiments et décors officiels (placements Map.pk2), posés sur le relief
+      try {
+        const terrainRef = this.terrain;
+        this.worldObjects = new WorldObjects(
+          this.scene,
+          this.assetLoader!,
+          terrainRef ? (x, z) => terrainRef.heightAt(x, z) : undefined,
+        );
+        const n = await this.worldObjects.load(0, 500);
+        console.log(`[JanganZone] ${n} objets du monde officiel placés`);
+      } catch (e) {
+        console.warn('[JanganZone] Objets du monde non chargés:', e);
+      }
 
       // Set up environment
       this.setupEnvironment();
@@ -84,11 +104,27 @@ export class JanganZone {
   /**
    * Load the ground/heightmap
    */
+  private terrain: RealTerrain | null = null;
+  private worldObjects: WorldObjects | null = null;
+
+  /** Terrain réel (heightmaps officiels) si chargé, pour placer les objets. */
+  get realTerrain(): RealTerrain | null {
+    return this.terrain;
+  }
+
   private async loadGround(): Promise<void> {
     console.log('[JanganZone] Loading ground...');
 
-    // Create a simple ground for MVP
-    // In production, this would load the actual heightmap
+    // Terrain réel depuis les heightmaps .nvm du client officiel
+    this.terrain = new RealTerrain(this.scene);
+    const loaded = await this.terrain.load();
+    if (loaded) {
+      this.groundMesh = this.terrain;
+      console.log('[JanganZone] Terrain réel chargé');
+      return;
+    }
+
+    // Repli: sol plat MVP
     const { Mesh } = await import('@babylonjs/core');
 
     this.groundMesh = Mesh.CreateGround('jangan_ground', 2000, 2000, 100, this.scene);
@@ -102,13 +138,33 @@ export class JanganZone {
     groundMaterial.specularColor = new Color3(0.1, 0.1, 0.1);
     this.groundMesh.material = groundMaterial;
 
-    console.log('[JanganZone] Ground loaded');
+    console.log('[JanganZone] Ground loaded (fallback plat)');
   }
 
   /**
    * Set up environment (sky, fog, etc.)
    */
   private setupEnvironment(): void {
+    // Skybox officiel (texture cloud de Map.pk2/skybox)
+    try {
+      const skybox = MeshBuilder.CreateBox('skyBox', { size: 9000 }, this.scene);
+      const skyMat = new StandardMaterial('skyMat', this.scene);
+      skyMat.backFaceCulling = false;
+      skyMat.disableLighting = true;
+      const skyTex = new Texture('/assets/textures/skybox/cloud1.png', this.scene);
+      skyTex.uScale = 3;
+      skyTex.vScale = 3;
+      skyMat.diffuseTexture = null;
+      skyMat.emissiveTexture = skyTex;
+      skyMat.specularColor = new Color3(0, 0, 0);
+      skybox.material = skyMat;
+      skybox.infiniteDistance = true;
+      skybox.isPickable = false;
+      console.log('[JanganZone] Skybox officiel chargé');
+    } catch (e) {
+      console.warn('[JanganZone] Skybox non chargé:', e);
+    }
+
     // Set scene clear color (sky) - use Color4 with alpha
     this.scene.clearColor = new Color4(0.53, 0.8, 0.92, 1.0);
     console.log('[JanganZone] Scene clear color set to:', this.scene.clearColor.toString());
@@ -157,8 +213,41 @@ export class JanganZone {
   ): Promise<void> {
     const uniqueId = `monster_${spawnIndex}_${Date.now()}_${Math.random()}`;
 
-    // MVP: Use simple placeholders instead of GLB files (which have header errors)
-    await this.createPlaceholderMonster(uniqueId, monsterId, position, rotation);
+    // Tente le vrai modèle officiel (mob_<stem BSR> => GLB skiné via manifest)
+    const bsrStem = monsterId.replace(/^mob_/, '');
+    const monsterData = this.getMonsterData(monsterId);
+    const groundY = this.terrain ? this.terrain.heightAt(position.x, position.z) : 0;
+    try {
+      const loaded = await this.assetLoader?.loadGameObject(bsrStem);
+      if (loaded && loaded.root) {
+        loaded.root.position.set(position.x, groundY, position.z);
+        loaded.root.rotation.y = rotation;
+
+        // Animations officielles .ban sur chaque squelette des parties
+        const animRoots = (loaded as { skeletons?: import('@babylonjs/core').Skeleton[] }).skeletons;
+        if (animRoots && animRoots.length > 0) {
+          AnimationService.loadAndPlay(this.scene, animRoots, AnimationService.monsterClip(bsrStem, 'walk'), true, 1.0)
+            .catch(() => undefined);
+        }
+        this.activeMonsters.set(uniqueId, {
+          id: uniqueId,
+          monsterId,
+          mesh: loaded.root,
+          position,
+          level: monsterData?.level || 1,
+          hp: monsterData?.hp || 50,
+          maxHp: monsterData?.hp || 50,
+          respawnTime: 30,
+          isDead: false,
+        });
+        return;
+      }
+    } catch (e) {
+      console.warn(`[JanganZone] Modèle réel indisponible pour ${monsterId} (${bsrStem}), repli placeholder:`, e);
+    }
+
+    // Repli: placeholder procédural (posé sur le relief réel, pas à y=0)
+    this.createPlaceholderMonster(uniqueId, monsterId, { ...position, y: groundY }, rotation);
   }
 
   /**
@@ -222,7 +311,7 @@ export class JanganZone {
       const mat = new StandardMaterial(`${uniqueId}_mat`, this.scene);
       mat.diffuseColor = new Color3(0.8, 0.2, 0.2);
       mat.emissiveColor = new Color3(0.2, 0.05, 0.05);
-      box.material = box;
+      box.material = mat;
 
       mesh = box;
     }
@@ -444,20 +533,38 @@ export class JanganZone {
 
   /**
    * Get monster data from monster ID
+   * Utilise les stats officielles exportées du client (monster-stats.json).
    */
   private getMonsterData(monsterId: string): any {
-    // This would import from shared data
-    // For MVP, return basic data
-    const levelMatch = monsterId.match(/lv(\d+)/);
-    const level = levelMatch ? parseInt(levelMatch[1]) : 1;
+    const stats = JanganZone.monsterStats.get(monsterId);
+    if (stats) return stats;
 
+    // Repli heuristique si les stats n'ont pas encore été chargées
     return {
-      level,
-      hp: level * 100,
-      attackPower: { min: level * 5, max: level * 8 },
-      defense: level * 2,
-      exp: level * 50,
+      level: 1,
+      hp: 50,
+      attackPower: { min: 5, max: 8 },
+      defense: 10,
+      exp: 50,
     };
+  }
+
+  /** Stats officielles chargées depuis /assets/data/monster-stats.json */
+  private static monsterStats: Map<string, any> = new Map();
+
+  static async loadMonsterStats(): Promise<void> {
+    if (JanganZone.monsterStats.size > 0) return;
+    try {
+      const res = await fetch('/assets/data/monster-stats.json');
+      if (!res.ok) return;
+      const data = await res.json();
+      for (const [id, stats] of Object.entries(data)) {
+        JanganZone.monsterStats.set(id, stats);
+      }
+      console.log(`[JanganZone] ${JanganZone.monsterStats.size} monstres officiels chargés`);
+    } catch (e) {
+      console.warn('[JanganZone] monster-stats.json indisponible:', e);
+    }
   }
 
   /**
@@ -494,6 +601,7 @@ export class JanganZone {
 
     // Set up respawn timer
     const respawnTimer = setTimeout(() => {
+      this.monsterRespawnTimers.delete(monsterUniqueId);
       this.respawnMonster(monsterUniqueId);
     }, monster.respawnTime * 1000);
 
@@ -553,6 +661,44 @@ export class JanganZone {
    */
   getPlayerSpawnPoint(): Position {
     return getJanganSpawnPoint();
+  }
+
+  /**
+   * Point d'apparition dégagé: cherche autour du spawn configuré une position
+   * sans bâtiment officiel à moins de `clearRadius` mètres (spirale de recherche).
+   */
+  getSafeSpawnPoint(clearRadius = 25): Position {
+    const base = getJanganSpawnPoint();
+    const placements = this.worldObjects?.allPlacements ?? [];
+    // Éviter les coutures entre régions (1920 m): le rayon caméra y démarre
+    // à l'intérieur des maillages de bord.
+    const nearSeam = (x: number, z: number): boolean => {
+      const dx = Math.abs(((x % 1920) + 1920) % 1920);
+      const dz = Math.abs(((z % 1920) + 1920) % 1920);
+      return dx < 10 || dx > 1910 || dz < 10 || dz > 1910;
+    };
+    const isClear = (x: number, z: number): boolean => {
+      if (nearSeam(x, z)) return false;
+      for (const p of placements) {
+        if (Math.hypot(p.x - x, p.z - z) < clearRadius) return false;
+      }
+      return true;
+    };
+    if (isClear(base.x, base.z)) return base;
+    // Spirale de recherche par pas de 8 m jusqu'à 400 m
+    for (let r = 8; r <= 400; r += 8) {
+      const steps = Math.max(8, Math.round((2 * Math.PI * r) / 12));
+      for (let i = 0; i < steps; i++) {
+        const a = (i / steps) * Math.PI * 2;
+        const x = base.x + Math.cos(a) * r;
+        const z = base.z + Math.sin(a) * r;
+        if (isClear(x, z)) {
+          console.log(`[JanganZone] Spawn sûr trouvé à (${x.toFixed(0)}, ${z.toFixed(0)})`);
+          return { x, y: base.y, z };
+        }
+      }
+    }
+    return base;
   }
 
   /**

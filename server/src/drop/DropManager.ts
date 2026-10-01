@@ -13,6 +13,7 @@ export interface DropOptions {
 
 export class DropManager {
   private static instance: DropManager | null = null;
+  private cleanupInterval: NodeJS.Timeout | null = null;
 
   private constructor() {}
 
@@ -37,7 +38,7 @@ export class DropManager {
     options: DropOptions = {}
   ): Promise<string> {
     // Get item data
-    const itemResult = await query<Item>('SELECT * FROM items WHERE "id" = $1', [itemId]);
+    const itemResult = await query<Item>('SELECT * FROM "Item" WHERE "id" = $1', [itemId]);
     const item = itemResult.rows[0];
 
     if (!item) {
@@ -51,7 +52,7 @@ export class DropManager {
 
     // Create dropped item
     const droppedItemResult = await query<DroppedItem>(
-      `INSERT INTO dropped_items ("zoneId", "itemId", "itemData", "positionX", "positionY", "positionZ", "ownerId", "expiresAt", "createdAt")
+      `INSERT INTO "DroppedItem" ("zoneId", "itemId", "itemData", "positionX", "positionY", "positionZ", "ownerId", "expiresAt", "createdAt")
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, NOW())
        RETURNING *`,
       [
@@ -96,10 +97,6 @@ export class DropManager {
     const droppedIds: string[] = [];
 
     for (const item of items) {
-      const quantity = item.quantity || (item.min && item.max
-        ? Math.floor(Math.random() * (item.max - item.min + 1)) + item.min
-        : 1);
-
       // Random offset for each item to prevent stacking
       const offset = {
         x: position.x + (Math.random() - 0.5) * 2,
@@ -125,7 +122,7 @@ export class DropManager {
   }> {
     // Get dropped item
     const droppedItemResult = await query<DroppedItem>(
-      'SELECT * FROM dropped_items WHERE "id" = $1',
+      'SELECT * FROM "DroppedItem" WHERE "id" = $1',
       [droppedItemId]
     );
     const droppedItem = droppedItemResult.rows[0];
@@ -136,7 +133,7 @@ export class DropManager {
 
     // Check if expired
     if (droppedItem.expiresAt < new Date()) {
-      await query('DELETE FROM dropped_items WHERE "id" = $1', [droppedItemId]);
+      await query('DELETE FROM "DroppedItem" WHERE "id" = $1', [droppedItemId]);
       return { success: false, message: 'Item has expired' };
     }
 
@@ -151,7 +148,7 @@ export class DropManager {
 
     // Check if player has inventory space
     const characterResult = await query<Character>(
-      'SELECT * FROM characters WHERE "id" = $1',
+      'SELECT * FROM "Character" WHERE "id" = $1',
       [characterId]
     );
     const character = characterResult.rows[0];
@@ -162,7 +159,7 @@ export class DropManager {
 
     // Get inventory items to find empty slot
     const inventoryResult = await query<InventoryItem>(
-      'SELECT * FROM inventory_items WHERE "characterId" = $1',
+      'SELECT * FROM "InventoryItem" WHERE "characterId" = $1',
       [characterId]
     );
 
@@ -186,7 +183,7 @@ export class DropManager {
     await transaction(async (client) => {
       // Add to inventory
       await client.query(
-        `INSERT INTO inventory_items ("characterId", "itemId", "slot", "quantity", "plus", "durability", "createdAt", "updatedAt")
+        `INSERT INTO "InventoryItem" ("characterId", "itemId", "slot", "quantity", "plus", "durability", "createdAt", "updatedAt")
          VALUES ($1, $2, $3, $4, $5, $6, NOW(), NOW())`,
         [
           characterId,
@@ -199,7 +196,7 @@ export class DropManager {
       );
 
       // Remove dropped item
-      await client.query('DELETE FROM dropped_items WHERE "id" = $1', [droppedItemId]);
+      await client.query('DELETE FROM "DroppedItem" WHERE "id" = $1', [droppedItemId]);
     });
 
     console.log(`Character ${characterId} picked up item ${droppedItem.itemId}`);
@@ -223,7 +220,7 @@ export class DropManager {
     expiresAt: Date;
   }>> {
     const result = await query<DroppedItem>(
-      'SELECT * FROM dropped_items WHERE "zoneId" = $1 AND "expiresAt" > NOW()',
+      'SELECT * FROM "DroppedItem" WHERE "zoneId" = $1 AND "expiresAt" > NOW()',
       [zoneId]
     );
 
@@ -245,7 +242,7 @@ export class DropManager {
    * Clean up expired items
    */
   async cleanupExpiredItems(): Promise<number> {
-    const result = await query('DELETE FROM dropped_items WHERE "expiresAt" < NOW()');
+    const result = await query('DELETE FROM "DroppedItem" WHERE "expiresAt" < NOW()');
 
     const count = result.rowCount || 0;
     if (count > 0) {
@@ -259,11 +256,28 @@ export class DropManager {
    * Start cleanup interval
    */
   startCleanupInterval(intervalMs: number = 60000): void {
-    setInterval(() => {
-      this.cleanupExpiredItems();
+    if (this.cleanupInterval) {
+      return; // déjà démarré
+    }
+    this.cleanupInterval = setInterval(() => {
+      this.cleanupExpiredItems().catch((error) => {
+        // Une erreur DB ponctuelle ne doit pas devenir une unhandledRejection
+        console.error('[DropManager] Cleanup error:', error);
+      });
     }, intervalMs);
+    this.cleanupInterval.unref?.();
 
     console.log(`Drop item cleanup interval started: ${intervalMs}ms`);
+  }
+
+  /**
+   * Stop cleanup interval
+   */
+  stopCleanupInterval(): void {
+    if (this.cleanupInterval) {
+      clearInterval(this.cleanupInterval);
+      this.cleanupInterval = null;
+    }
   }
 }
 
