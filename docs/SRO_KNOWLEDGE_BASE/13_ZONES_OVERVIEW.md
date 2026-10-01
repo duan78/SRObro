@@ -390,7 +390,7 @@ La Corée numérotait ses mises à jour « Legend » (전설) **indépendamment 
 
 | Donjon (KR attesté / TW / EN) | Entrées | Règles | Boss | Drops | Sources |
 |---|---|---|---|---|---|
-| **경배의 전당** (Hall of Worship / 敬拜的殿堂) — Temple de Jupiter A | **초급 106 (solo)** · **중급 111 (groupe)** · **상급 113 (groupe)** | 3 entrées/jour/difficulté ; **2 h** ; progression zone par zone ; le mode 초급 est un **mode farm sans boss** (respawn continu) — « premier donjon solo du jeu » (Legend XII KR, 22/06/2011) | **Jupiter (朱庇特) / Yuno (柳諾) / Deus (帝厄斯)** | 12D épique/légendaire/divin | DiGeam [敬拜的殿堂](https://srowiki.digeam.com/%E6%95%AC%E6%8B%9C%E7%9A%84%E6%AE%BF%E5%A0%82/) |
+| **경배의 전당** (Hall of Worship / 敬拜的殿堂) — Temple de Jupiter A | **초급 106 (solo)** · **중급 111 (groupe)** · **상급 113 (groupe)** | 3 entrées/jour/difficulté ; **2 h** ; progression zone par zone ; le mode 초급 est un **mode farm sans boss** (respawn continu) — « premier donjon solo du jeu » (Legend XII KR, 22/06/2011) | **Jupiter (朱庇特) / Yuno (柳諾) / Deus (帝厄斯)** — l'annonce officielle EN Legend VIII nomme le trio **Jupiter / Yuno / The Earth** (✅ recherche gameplay 2026-10) | 12D épique/légendaire/divin | DiGeam [敬拜的殿堂](https://srowiki.digeam.com/%E6%95%AC%E6%8B%9C%E7%9A%84%E6%AE%BF%E5%A0%82/) |
 | **광신도의 은신처** (Zealots Hideout / 狂信徒的藏身處) — Temple de Jupiter B | **초급 106 (solo)** · **중급 116 (groupe)** · **상급 118 (groupe)** | 3 entrées/jour ; **2 h** ; mêmes règles de nettoyage | **바알 (Baal) / 바빌리온 (Babilion) / Zielkiaxe (吉爾其厄斯)** | 12D épique/légendaire/divin | Nom KR attesté officiellement (gamedata + AreaNpc) ; DiGeam |
 | **바그다드 지하** (Bagdad Underground / 巴格達地下城) | **121+** | **groupe obligatoire** ; **3 entrées/jour** ; **50 min max** ; progression **antihoraire** | **巨大魔神 (Grand Démon)** et **沙勒軍大將軍** (Général en chef de « l'armée de la vengeance » 萬眾復仇軍) | **13D** (chance faible) | DiGeam [巴格達地下城](https://srowiki.digeam.com/%E5%B7%B4%E6%A0%BC%E9%81%94%E5%9C%B0%E4%B8%8B%E5%9F%8E/) |
 | **카일리아의 은신처** (Repaire de Kailia / 凱麗亞的藏身處) | **121+** | groupe ; **3 entrées/jour** ; **50 min** | cheffe bandite **Kailia (盜賊頭目凱麗亞)** | 13D (chance faible) | DiGeam |
@@ -405,6 +405,35 @@ La Corée numérotait ses mises à jour « Legend » (전설) **indépendamment 
 - **Timers** : instances Jupiter **2 h** ; Bagdad/Kailia **50 min** (3 entrées/jour) ; Secret Tomb et chambre des boss **30 min** ; boss final du Temple of Destruction **despawn 3 h**.
 - Les modes **초급 (106)** des donjons Jupiter sont des **modes d'entraînement solo** sans boss — c'est le « premier donjon solo » annoncé par Legend XII KR (2011).
 - 🇰🇷 Chronologie d'ajout : Jupiter 22/06/2011 (Legend XII) → Bagdad mai 2014 → Arabian Shore 27/05/2015 → Shambhala 27/03/2018 → 파멸의 성전/비밀의 무덤 ~16/05/2023 (Legend 23). Détail : [01_INTRODUCTION.md — section KSRO](./01_INTRODUCTION.md).
+
+### 🎮 Précisions d'entrée et de gameplay (guides de serveurs privés — ✅ recherche gameplay 2026-10)
+
+> Sources : base client **v1.657** ([silkroadonline.wiki — teleports](https://silkroadonline.wiki/teleports/temple-of-jupiter-entrance-209), crédit Joymax/Wemade) · [SroLobby (admin Burak Yoğun, 2024)](https://www.srolobby.com/konular/silkroad-online-jupiter-unique.3840) · [ProjectHax — Baghdad Dungeon (déc. 2019)](https://forum.projecthax.com/t/baghdad-dungeon/5562) · guides Seidenkraft. Rapport : [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md).
+
+**🏛️ Temple de Jupiter — structure d'entrée précisée (gates du client v1.657)**
+
+| Zone (client v1.657) | Beginner | Intermediate | Advanced |
+|---|---|---|---|
+| **Hall of Worship** (gate 220) | gate 221 | **111** (gate 210) | **113** (gate 211) |
+| **Zealots Hideout** | gate 221 | **116** (gate 212) | **118** (gate 214) |
+
+- Accès global : téléport client **« Temple of Jupiter Entrance » (ID 209, région 22219)** — l'entrée (13 138, −972) ci-dessus — atteint via le réseau de téléports (flux général documenté depuis Alexandrie). Un NPC **« Elder »** à l'entrée donne les quêtes d'accès (guides TR : lv 80+ recommandé pour la chaîne d'ouverture — [silkroadlobby](https://silkroadlobby.com/konu/silkroad-online-jupiter-temple-gorevleri-ve-hwt.37950)).
+- **Salles des dieux (Jupiter / Yuno / Earth)** : accès réservé aux personnages **113+ via une section de la Mirror Dimension**, avec **quête de kill liée** ; **Jupiter spawne niveau 120 dans sa propre salle « Jupiter's Room »** du Hall of Worship ([SroLobby — Jupiter unique, 12/09/2024](https://www.srolobby.com/konular/silkroad-online-jupiter-unique.3840)).
+- **Zealots Hideout Advanced 118** : les uniques de la section sont **Zielkiaxe, Babilion et Baal** (vidéo iSRO — [« Jupiter Temple Zealots Hideout 118 Lvl »](https://www.youtube.com/watch?v=hmpGhkEAucU)).
+- **Limite d'entrées/jour** : aucune valeur officielle publiée — côté privés : 1/jour (Sailor Online [CUSTOM]) ; témoignage « comme Jupiter 3-5×/jour » ([ProjectHax](https://forum.projecthax.com/t/baghdad-dungeon/5562), non confirmé).
+- **Tables de quêtes complètes** : [Seidenkraft — Hall of Worship (111-115)](https://seidenkraftblog.wordpress.com/2012/09/13/the-hall-of-worship-jupiter-temple-quest) et [Seidenkraft — Mirror Dimension (111-117)](https://seidenkraftblog.wordpress.com/2012/09/13/the-secret-of-the-mirror-dimension-jupiter-temple-quest) cartographient toutes les familles de mobs via les objectifs chiffrés (kills 150-500, collectes 40-500) — la Mirror Dimension est la zone 111-117 qui **prépare** Zealots Hideout (familles « Zealot/Hell/Baal »).
+
+**🕌 Bagdad — cycle des 9 essences et boss final**
+
+- Le donjon fonctionne en **cycle de quêtes répétables** ([ProjectHax — Baghdad Dungeon, déc. 2019](https://forum.projecthax.com/t/baghdad-dungeon/5562)) : route scriptée Samarkand → Hotan → **Baghdad** → Portal (C) → Portal (S) → « Baghdad(Dungeon) » ; NPC interne **« Village Old Man Kerim »** (entrée + quêtes).
+- **9 essences à rendre** (une par famille de mobs) : essences de **Nassabun, Padjaitun, Steel Archer, Heavy Footman, Wolan, Steel Soldier, Armored Soldier, Royal Officer, High General** — le donjon est un **mob-clear structuré autour des 9 familles de soldats**, l'essence « High General » venant du boss.
+- Largement **scriptable en bot** (walk + AttackArea — « mostly mob-clearing », pas de mécanique de boss bloquante) ; **level gating interne** : un joueur lv 123 signale des passages fermés tant qu'on n'a pas le niveau.
+- **Abshad Force High General = l'unique final, spawn niveau 125** ([SroLobby, 21/09/2024](https://www.srolobby.com/konular/silkroad-online-abshad-force-high-general-unique.3862)) ; **Giant Overlord et General Abshad droppent des légendaires 13D « mais c'est très dur »** ([elitepvpers](https://www.elitepvpers.com/forum/silkroad-online/4578392-12-13-magic-rare-lenegd-drop.html)) — le path D13 officiel confirmé par la communauté. HP 99 000 000 sur ExaySRO **[CUSTOM]** (cf. [39_PRIVATE_SERVERS.md](./39_PRIVATE_SERVERS.md)).
+
+**🏔️ Shambhala — téléports d'entrée confirmés dans le client**
+
+- Téléports client **Shambhala (Ice Temple) ID 349** (`GATE_OTHER_SKYTEMPLE_A`, région 25567) et **Shambhala (Fire Temple) ID 350**, tous deux liés au téléport **Taklamakan 348** — l'entrée par le NPC **Mortifying Monk** au Taklamakan (annonces officielles cap 140) est **dans les données du client** ([silkroadonline.wiki — Shambhala Ice Temple](https://silkroadonline.wiki/teleports/shambhala-ice-temple-349)).
+- ⚠️ Aucun guide écrit des mécaniques de boss des Ice/Fire Temple trouvé (seulement les niveaux 131-135/136-140, l'entrée et des vidéos sans transcription) — incertitude documentée.
 
 ### 🈶 Noms coréens des nouvelles zones (glossaire)
 
@@ -500,9 +529,16 @@ La Corée numérotait ses mises à jour « Legend » (전설) **indépendamment 
 - [Facebook officiel iSRO — New City: Baghdad](https://www.facebook.com/officialsilkroad/photos/new-city-baghdad-baghdad-is-the-center-and-the-main-city-of-arabiait-is-characte/10152657798903549) · [Lv.140 Shambhala / Mortifying Monk](https://www.facebook.com/officialsilkroad/posts/1502299075272015) · [Lv.130 Arabian Shore](https://www.facebook.com/officialsilkroad/photos/10158125904163549)
 - Gamedata officielle kSRO : [monstres Jupiter](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Europe_Monster_Jupiter.html) · [AreaNpc Jupiter](https://krsilkroadcp.joymax.com/gamedata/AreaNpc/iframe_AreaNpc/Europe_Jupiter.html)
 
+### Sources gameplay haut-niveau (✅ recherche gameplay 2026-10)
+- [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md) — rapport source de la section « 🎮 Précisions d'entrée et de gameplay » (guides Jupiter/Bagdad/FGW des serveurs privés)
+- Base client v1.657 : [Temple of Jupiter Entrance (209)](https://silkroadonline.wiki/teleports/temple-of-jupiter-entrance-209) · [Zealots Hideout Intermediate (116)](https://silkroadonline.wiki/teleports/zealots-hideout-intermediate-116lv-212) · [Shambhala Ice Temple (349)](https://silkroadonline.wiki/teleports/shambhala-ice-temple-349) · [Shambhala Fire Temple (350)](https://silkroadonline.wiki/teleports/shambhala-fire-temple-350)
+- [SroLobby — Jupiter unique / Jupiter's Room (12/09/2024)](https://www.srolobby.com/konular/silkroad-online-jupiter-unique.3840) · [SroLobby — Abshad Force High General (21/09/2024)](https://www.srolobby.com/konular/silkroad-online-abshad-force-high-general-unique.3862) · [silkroadlobby — quêtes Jupiter Temple + HWT](https://silkroadlobby.com/konu/silkroad-online-jupiter-temple-gorevleri-ve-hwt.37950)
+- [ProjectHax — Baghdad Dungeon (cycle des 9 essences, NPC Kerim)](https://forum.projecthax.com/t/baghdad-dungeon/5562) · [Seidenkraft — quêtes Hall of Worship (111-115)](https://seidenkraftblog.wordpress.com/2012/09/13/the-hall-of-worship-jupiter-temple-quest) · [Seidenkraft — quêtes Mirror Dimension (111-117)](https://seidenkraftblog.wordpress.com/2012/09/13/the-secret-of-the-mirror-dimension-jupiter-temple-quest)
+
 ---
 
 *Dernière mise à jour : 2026-10-01*
 *Sources : données client officielles extraites de xSROMap (697 NPCs, 161 téléporteurs), StrategyWiki, Rev6, SRO Info, Fandom Wiki, press releases Joymax*
 *Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (chronologie Legend KR vs iSRO, cap 105 KR, noms KR) · [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (noms ZH régions/villes, FGW, Job Temple) · [ML_RESEARCH/RESEARCH_PT.md](ML_RESEARCH/RESEARCH_PT.md) (dates iSRO fines) · rapports KO2 (sections 🇰🇷 KSRO 2011-2026 : Dimension Miroir, Bagdad, Shambhala, donjons Legend 23)*
+*Enrichi par [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md) (✅ recherche gameplay 2026-10) : gates d'entrée du Temple de Jupiter (client v1.657 — Hall of Worship 111/113, Zealots Hideout 116/118, accès 113+ via Mirror Dimension, Jupiter's Room lv 120) · Bagdad cycle des 9 essences via NPC Kerim + Abshad Force High General lv 125 + 13D Giant Overlord · téléports Shambhala 349/350 liés à Taklamakan*
 *Système de coordonnées : PosX/PosY officiel (voir section Système de Coordonnées)*

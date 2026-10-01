@@ -3,6 +3,8 @@
 > ⚠️ **Révision majeure (2026-10)** : base reconstruite à partir de données extraites du client (`skills.txt`, dépôt GitHub *tarekwiz/SilkroadBot*, données vSRO/iSRO cap 120) croisée avec les noms de séries officiels (Silkroad Origin Mobile) et les guides communautaires. Les listes précédentes contenaient des skills inventés ; tout est remplacé ci-dessous par les **vraies séries iSRO**.
 >
 > 🌏 **Enrichissement (recherche multilingue 2026-10)** : ajout des **noms originels coréens** (liste officielle open beta 2004, presse GameAbout 2005, guides KR) et **chinois** (wiki officiel TW DiGeam, archives CSRO Sina/17173 2005-2007) — voir la section [Noms originels des maîtrises (KR/ZH)](#-noms-originels-des-maîtrises-krzh) et les rapports [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) / [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md).
+>
+> 📊 **Valeurs chiffrées ✅ (extraction skilldata 2026-10)** : les **dégâts, MP, SP, cooldowns et probabilités par niveau** ont été extraits du vrai `skilldata_5000.txt` (fichiers serveur vSRO 1.188 + extension cap 120, repo *joaoldematejr/server_files_sro*) — **3 272 skills CH**, 47 colonnes par niveau, CSV : [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv). Loi clé : **% de dégâts FIXE par série, seule la part fixe min~max monte**. Section dédiée : [Valeurs chiffrées par niveau](#-valeurs-chiffrées-par-niveau-extraction-skilldata-2026-10) · rapport : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md).
 
 ## 📋 Table des Matières
 - [Conventions et Sources](#-conventions-et-sources)
@@ -15,6 +17,7 @@
 - [Fire Mastery](#-fire-mastery)
 - [Force Mastery](#-force-mastery-water)
 - [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026)
+- [Valeurs chiffrées par niveau (extraction skilldata 2026-10)](#-valeurs-chiffrées-par-niveau-extraction-skilldata-2026-10)
 - [Puissances de Skills (Origin Mobile)](#-puissances-de-skills-origin-mobile)
 - [Statuts et Imbues](#-statuts-et-imbues)
 - [Coûts SP et Progression](#-coûts-sp-et-progression)
@@ -79,6 +82,8 @@ Coups simples lourds mono-cible. CD 3 s.
 | D | Flying Stone Smash | 71 | 0,8 s | 12 |
 | E | Twin Energy Smash | 96 | 0,2 s | 13 |
 | F | Destruction Smash | 120 | 0,2 s | 1 |
+
+> 📊 ✅ (extraction skilldata 2026-10) **Strike Smash** (livre A, 9 niveaux, maîtrise 5→21) : **143 % + 15~18 → 143 % + 47~57** ; MP 19→60 ; SP 2→62 ; cast 411 ms ; CD 3 s — le **% est fixe sur toute la série**, seule la part fixe monte. Source : [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv).
 
 ### 2. Chain Sword Attack Series — `SKILL_CH_SWORD_CHAIN_*` · KR : 연환검 계열
 Chaînes multi-hits (3 à 5 hits). CD 8 s. Deux livres débloquent ensemble aux paliers 29/51/…
@@ -225,6 +230,8 @@ Enchaînements frontaux (multi-cibles devant). CD 3 s.
 | E | Soul Spear - Destruction | 102 | 7 | — |
 | F | Soul Spear - Emptiness | 120 | 1 | — |
 
+> 📊 ✅ (extraction skilldata 2026-10) **Soul Spear - Move** : **250 % + 37~48 → + 90~115** (lv1→lv9) ; MP 92→222 ; SP 21→144 ; cast ~1,1 s ; la série porte le tag `st` (stun : durée/prob/niveau par niveau dans le CSV). **Ghost Spear - Prince** (ROUNDAREA_B) : knockback [35, 50]. Source : [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv).
+
 ### 5. Ghost Spear Attack Series — `SKILL_CH_SPEAR_ROUNDAREA_*` (AoE 360°) · KR : 창귀술 계열
 Le grand AoE tournoyant de la lance. CD 5 s.
 
@@ -284,6 +291,8 @@ Tirs mono-cible à forte chance de **critical**. CD 4 s.
 | E | Anti Devil Bow - Annihilate | 90 | 9 |
 | F | Anti Devil Bow - Demolition | 109 | 5 |
 | G | Anti Devil Bow - Moon light | 120 | 1 |
+
+> 📊 ✅ (extraction skilldata 2026-10) Le nom de code est vérifié : la série porte le **tag critique `cr` (+20 constant)** — **Anti Devil Bow - Missile** : 150 % + 13~18 → + 42~57 ; MP 21→68 ; SP 2→62 ; préparation 670 ms + tir 300 ms ; projectile (`flying_speed` 400) ; CD 4 s. Strong Bow C/D/E portent aussi `cr` (ex. **Strong Bow - Spirit** : 350 % + 70~95 → + 136~185, CD 8 s). Source : [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv).
 
 ### 2. Arrow Combo Attack Series — `SKILL_CH_BOW_CHAIN_*`
 Volées simultanées de N flèches. CD 4 s.
@@ -387,6 +396,8 @@ Imbue glace : dégâts magiques ajoutés aux attaques + **Frostbite** (~40%) / *
 | E | Ice Air Force | 98 | 18 s | 9 | — |
 | F | Ice final Force | 120 | 21 s | 1 | — |
 
+> 📊 ✅ (extraction skilldata 2026-10) **Ice River Force** (livre A) : **100 % + 14~21 → + 45~67** ; durée d'effet **6 s**, CD 6 s ; freeze **32 % → 65 %** et frostbite **32 % → 65 %** du lv1 au lv9 ; niveau d'effet = 2×niveau−1. Les « ~40 %/~20 % » communautaires = premiers niveaux. Source : [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv).
+
 ### 2. Frost Guard Series — `SKILL_CH_COLD_GANGGI_*` · KR : 빙 호신강기
 Buff **défense physique** (quasi permanent). CD 2 s.
 
@@ -430,6 +441,8 @@ AoE de gel autour du lanceur (« Blizzard », attaque principale des Ice avec l'
 | C | Frost Nova - Storm | 63 | 12 |
 | D | Frost Nova - Ice Field | 83 | 12 |
 | E | Frost Nova - destruction | 114 | 3 |
+
+> 📊 ✅ (extraction skilldata 2026-10) **Frost Nova - Wind** (12 niveaux, maîtrise 23→56) : freeze **66 % → 132 %** et frostbite 66 % → 132 % ; MP 232→936 ; SP 80→623 ; cast ~1,1 s ; CD 6 s (l'effet imbriqué `tant` suit la courbe MP : 232→936). Source : [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv).
 
 ### 6. Snow Storm Series — `SKILL_CH_COLD_GIGONGSUL_*` (nuke) · KR : 설풍지결 (probable)
 Le nuke Cold : dégâts les plus faibles des 3 éléments, mais **grosse AoE** + gel.
@@ -533,6 +546,8 @@ Le nuke Lightning : dégâts intermédiaires, cast rapide. CD 6 s. (« 번개 �
 | D | Crane's Thunderbolt | 90 | 9 |
 | E | God's Thunderbolt | 116 | 3 |
 
+> 📊 ✅ (extraction skilldata 2026-10) **God's Thunderbolt** (maîtrise 116→120, 3 niveaux) : **300 % + 2 099~4 356** ; MP **13 388→14 972** ; SP 23 138→27 050 ; préparation 1 000 ms ; CD 6 s. Source : [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv).
+
 ### 7. Passif — Heaven's Force Series — `SKILL_CH_LIGHTNING_PASSIVE_A` (maîtrise 10, 12 niveaux) · KR : 뇌천지공 (probable)
 + **parry ratio** permanent. (« 공격력과 무관 » — sans lien avec l'attaque, guide KR ; mapping incertain, famille « 지공 » non départagée.)
 
@@ -613,6 +628,8 @@ Mur de feu : absorbe + bloque le passage (comme Frost Wall). CD 5 s.
 | G | Flame Wave - God | 118 | 4 s | 2 | — |
 
 \* Les guides KR regroupent Wide et Bomb sous 광폭폭염파. Autre nomenclature KR rencontrée pour le nuke feu : **화마지공** (les guides KR mélangent les deux découpages — voir incertitudes).
+
+> 📊 ✅ (extraction skilldata 2026-10) **Flame Wave - Arrow** (livre A, 18 niveaux, maîtrise 30→64) : **250 % + 123~205 → 250 % + 464~773** ; MP 348→1 310 ; SP 144→1 079 ; **préparation 1 000 ms + cast 500 ms** (la fameuse « longue incantation » = colonne `PreparingTime`, pas le cast) ; portée 150 ; CD 4 s. **Flame Wave - Disintegrate** : 9 541 MP au lv1 (parmi les plus chers du jeu). Source : [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv).
 
 ### 7. Fire Combustion Series — `SKILL_CH_FIRE_DESCRY_*` / `SKILL_CH_FIRE_DETECT_*`
 Buffs de récupération de MP (CD 180 s), en deux lignes.
@@ -844,9 +861,53 @@ Récupération HP (Move/Strength) et MP (Intellect/Circulate). CD 5 s.
 
 ---
 
+## 📊 Valeurs chiffrées par niveau (extraction skilldata 2026-10)
+
+> ✅ **Extraction skilldata 2026-10** : 3 272 skills CH décodés depuis `skilldata_5000.txt` (fichiers serveur **vSRO 1.188 + extension cap 120**, repo [joaoldematejr/server_files_sro](https://github.com/joaoldematejr/server_files_sro) → `SMC/SR_GameRefData/`) ; noms croisés à 100 % avec `skills.txt` ([tarekwiz/SilkroadBot](https://github.com/tarekwiz/SilkroadBot)) ; colonnes nommées d'après `RawRefSkill.cs` ([hnguyenaa/MySilkroad](https://github.com/hnguyenaa/MySilkroad)) ; tags d'effets décodés via [ferdoran/openroad](https://github.com/ferdoran/openroad) + corrections mesurées. Rapport complet : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md).
+>
+> ⚠️ **Usage SRObro** : ne pas recopier les tables ici — **importer les CSV** [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv) (un niveau = une ligne, 47 colonnes : `att_pct/att_min/att_max`, `mp_cost`, `req_sp`, `prepare_ms/cast_ms/cooldown_ms`, `range`, `req_mastery_lv`, `weapon1/2`, `status`…) et [skills_series.csv](ML_RESEARCH/data/skills_series.csv) (une série = une ligne). Ci-dessous : la loi de progression + échantillons représentatifs seulement.
+
+### 1. Le % de dégâts est FIXE par série
+Sur toutes les séries d'attaque testées, `att_pct` ne change **jamais** avec le niveau — seule la fourchette fixe min~max progresse (facteur ×3-4 du lv1 au lv max), avec les coûts MP/SP :
+
+| Série (maîtrise, niveaux) | % (fixe) | Part fixe lv1 → lv max | MP lv1 → max |
+|---|---|---|---|
+| Strike Smash (Bicheon 5→21, 9 lv) | 143 % | +15~18 → **+47~57** | 19→60 |
+| Soul Spear - Move (Heuksal 14→30, 9 lv) | 250 % | +37~48 → **+90~115** | 92→222 |
+| Strong Bow - Spirit (Pacheon 31→47, 9 lv) | 350 % | +70~95 → **+136~185** | 230→449 |
+| Flame Wave - Arrow (Fire 30→64, 18 lv) | 250 % | +123~205 → **+464~773** | 348→1 310 |
+| God's Thunderbolt (Lightning 116→120, 3 lv) | 300 % | +2 099~4 356 | 13 388→14 972 |
+
+### 2. La « longue incantation » des nukes = `PreparingTime` (1 000 ms)
+Colonne `Action_PreparingTime` = **1 000 ms sur les nukes CH** (Flame Wave : 1 000 ms de préparation **+** 500 ms de cast), distincte du cast (`Action_CastingTime`, ex. 411 ms Strike Smash), de l'animation (`Action_ActionDuration` = la valeur « cast » de skills.txt, vérifiée) et du cooldown (`Action_ReuseDelay`). Les timers par niveau sont dans le CSV : `prepare_ms`, `cast_ms`, `action_ms`, `cooldown_ms`, `cooltime_ms`.
+
+### 3. Le critique n'existe que sur 14 séries du jeu entier
+Tag `cr` présent uniquement sur : **Anti Devil Bow** (7 livres, **+20 constant**), **Strong Bow C/D/E**, **SWORD_DOWNATTACK_D/E** (Killing Heaven Blade D « Dragon Sore Blade » +5 / E « Asura Cut Blade » +10) et **1 passif Warrior EU**. **Aucun nuke** (Flame Wave, Frost Nova, Snow Storm, Lion Shout, Thunderbolt) **ni aucune imbue** ne porte `cr` — ✅ l'incertitude « les nukes CH ne critiquent pas » est tranchée : le critique ne vient jamais du skill nuke lui-même.
+
+### 4. Imbues : le modèle économique complet
+Durée **6 s** / CD **6 s** (recast permanent), dégâts magiques `att kind 8` à **100 % + part fixe** ; probabilité de statut **32 % (lv1) → 65 % (lv9)** ; **niveau d'effet = 2 × niveau du skill − 1** :
+
+| Série (livre A, lv1 → lv9) | Dégâts ajoutés | Statut lv1 → lv9 | MP |
+|---|---|---|---|
+| **River Fire Force** (feu) | 100 % + 17~29 → + 55~92 | burn **32 % → 65 %** [25, niveau 1→17] | 52→166 |
+| **Thunder Tiger Force** (foudre) | 100 % + 14~25 → + 44~81 | shock **32 % → 65 %** [20, 50] | 52→166 |
+| **Ice River Force** (glace) | 100 % + 14~21 → + 45~67 | freeze + frostbite **32 % → 65 %** chacun | 52→166 |
+
+Livres tardifs : **God Fire Force** (livre F, maîtrise 120) : 100 % + **1 769~2 949**, MP 5 361, CD 12 s ; **Ice final Force** : 100 % + 1 445~2 167.
+
+### 5. SP cumulés pour tout apprendre (cap 120)
+Coût SP total pour apprendre **toutes les séries d'une maîtrise** dans les fichiers serveur cap 120 : **Bicheon 2 751 184** · Heuksal 2 049 327 · Pacheon 1 783 462 · Fire 1 811 697 · Cold 1 883 926 · **Lightning 1 215 885** (la moins chère) · Force 1 482 143. → Réconcilie avec les ~80-200k SP « fully farmed » cap 80 : ces derniers sont des **builds avec sélection de séries**, pas l'arbre complet.
+
+### 6. Structure des lignes (pour l'import)
+`Basic_Activity` : **0 = passif · 1 = instant/toggle (imbues) · 2 = castable** · `Basic_ChainCode` : segment suivant d'un combo (0 = fin, continuations à MP = 0) · `Action_Range` : 150 = nukes distance, 50 = AoE mêlée, 0 = portée de l'arme (projectiles : `flying_speed` 400) · `ReqCommon_Mastery1/Level1` : maîtrise requise · `ReqLearn_SP` : coût SP · `Consume_MP/HP` : coûts par cast · `ReqCast_Weapon1/2` : armes requises (2 sword, 3 blade, 4 spear, 5 glaive, 6 bow ; 255 = libre). Côté EU : mêmes colonnes dans [skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv).
+
+---
+
 ## 📊 Puissances de Skills (Origin Mobile)
 
 Valeurs « Skill Power » officielles (Silkroad Origin Mobile, base iSRO — **valeurs relatives de dégâts**, retouchées par Joymax pour mobile ; à utiliser comme ordre de grandeur, pas comme données client) :
+
+> 📊 ✅ (extraction skilldata 2026-10) Les **valeurs client réelles** sont désormais disponibles par niveau (% fixe + part fixe min~max, MP, SP) : voir [Valeurs chiffrées par niveau](#-valeurs-chiffrées-par-niveau-extraction-skilldata-2026-10) et les CSV — la table ci-dessous reste utile comme **proxy relatif** pour comparer les séries entre elles.
 
 | Skill | Puissance | Skill | Puissance |
 |---|---|---|---|
@@ -885,10 +946,10 @@ Valeurs « Skill Power » officielles (Silkroad Origin Mobile, base iSRO — **v
 
 | Statut | Source | Effet | Données |
 |---|---|---|---|
-| **Burn** | Imbue Fire, Flame Wave | DoT feu (ticks aléatoires, montent avec le niveau du skill) | 25% de prob. au lv1 livre A, ~6 s (70 unités) ; tick HP toutes les ~2 s d'après la communauté TR (SroCave, via [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md)) |
-| **Frostbite** | Imbue Cold | Réduit vitesse d'attaque ET de déplacement | ~40% de prob. |
-| **Freezing** | Imbue Cold, Cold Wave, Frost Nova | Immobilise totalement | ~20% de prob. |
-| **Shock** | Imbue Lightning | Réduit le **parry ratio** de la cible | % variable par niveau |
+| **Burn** | Imbue Fire, Flame Wave | DoT feu (ticks aléatoires, montent avec le niveau du skill) | 25% de prob. au lv1 livre A, ~6 s (70 unités) ; tick HP toutes les ~2 s d'après la communauté TR (SroCave, via [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md)) · ✅ skilldata : burn **32 % → 65 %** par livre (lv1→lv9), niveau d'effet 2×niveau−1 |
+| **Frostbite** | Imbue Cold | Réduit vitesse d'attaque ET de déplacement | ~40% de prob. · ✅ skilldata : **32 % → 65 %** par livre (lv1→lv9) |
+| **Freezing** | Imbue Cold, Cold Wave, Frost Nova | Immobilise totalement | ~20% de prob. · ✅ skilldata : **32 % → 65 %** par livre ; Frost Nova - Wind : **66 % → 132 %** |
+| **Shock** | Imbue Lightning | Réduit le **parry ratio** de la cible | ✅ skilldata : **32 % → 65 %** (lv1→lv9) [20, 50] |
 | **Stun** | Soul Departs Spear (chance) | État (pas un « effet ») : **aucune pilule** ne le retire | % par niveau du skill |
 | Decay / Weaken / Impotent / Division | Vital Spot (Force) | Debuffs nommés (−ATK PHY/MAG etc.) | 100% (80% ajusté Origin) |
 | Poison / Zombie | Monstres | DoT / soins inversés | nettoyés par pilules ou Force Cure |
@@ -920,19 +981,21 @@ Valeurs « Skill Power » officielles (Silkroad Origin Mobile, base iSRO — **v
 - Palier de déverrouillage d'un niveau de skill : **+2 niveaux de maîtrise** (ex. Strike Smash : lv1@5, lv2@7, lv3@9… lv9@21 ; un guide GameFAQs 2008 mentionne « Illusion Chain lvl 9 vers le niveau 61 », cohérent avec les paliers +2 des livres successifs de la série Chain).
 - SP cumulé (guide UnKnoWnCheaTs) : lvl 30 → 3 911 SP (GAP 0) à 75 074 SP (GAP 9) ; lvl 60 → 9 884 à 189 675 SP.
 - Estimations « fully farmed » cap 80 : glaive ~80k, bow ~90-100k, blader ~200k SP.
+- ✅ (extraction skilldata 2026-10) **SP cumulés pour TOUT apprendre au cap 120** (fichiers serveur vSRO 1.188 + extension 120) : Bicheon **2 751 184** · Heuksal 2 049 327 · Pacheon 1 783 462 · Fire 1 811 697 · Cold 1 883 926 · Lightning 1 215 885 · Force 1 482 143 — les ~80-200k cap 80 correspondent à des builds avec **sélection de séries**. Le `req_sp` exact de chaque niveau est dans [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv). Source : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md §4.5](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md).
 - Reskill : quête Skill Resuscitation (lvl 20+, 10 cœurs maudits → potion, **80% du SP remboursé**).
 
 ---
 
 ## ⚠️ Données Manquantes / Incertitudes
 
-1. **Dégâts min/max exacts et coûts MP par niveau** : non présents dans `skills.txt` (le fichier ne porte que cast/CD/niveaux). À extraire de `skilldata_5000.txt` ou de la table `_RefSkill` (colonnes `InitialMinDamage/InitialMaxDamage`, `ConsumeMP`, `DownBySP`…). Les « Skill Power » Origin Mobile ci-dessus sont des **proxy relatifs**, pas les valeurs client.
-2. **% exacts d'imbue par palier** : seuls Burn 25%/lv1, Frostbite ~40%, Freeze ~20% sont documentés ; la courbe par niveau reste à extraire.
-3. **SP exact par skill** : formule confirmée (table à maîtrise+1) mais la table complète n'est pas reproduite ici.
-4. **Effets des séries tardives** — partiellement résolu : ✅ **Résolu (recherche ZH 2026-10)** pour la ligne Fire `DESCRY/DETECT` — **发火术** est documenté « détecte les ennemis invisibles » par le [wiki officiel TW DiGeam](https://srowiki.digeam.com/%E5%B1%AC%E6%80%A7%E6%B0%A3%E5%8A%9F) (confiance 5). Restent à confirmer : Bicheon Force `SHIELDPD`, Vital Flow, Cure Therapy - Heaven (rôles déduits des cooldowns/noms et de guides partiels — à valider via skilldata).
+1. **Dégâts min/max exacts et coûts MP par niveau** : ✅ **Résolu (extraction skilldata 2026-10)** — extraits de `skilldata_5000.txt` (vSRO 1.188 + cap 120) vers [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv) (47 colonnes par niveau : `att_pct/att_min/att_max`, `mp_cost`, `req_sp`, timers ms, portée, armes, statuts). Les « Skill Power » Origin Mobile restent des proxys relatifs. Limite résiduelle : tags imbriqués non décodés (~4 800/6 909 lignes joueurs ont des valeurs brutes dans `params_raw`, souvent des ID d'effets visuels) ; sémantique exacte des `att` kinds 6/9 (EU) à confirmer en jeu.
+2. **% exacts d'imbue par palier** : ✅ **Résolu (extraction skilldata 2026-10)** — probabilité **32 % (lv1) → 65 % (lv9)** par livre, niveau d'effet = 2×niveau−1 (burn lv9 = niveau d'effet 17) ; les anciennes valeurs (Burn 25 %, Frostbite ~40 %, Freeze ~20 %) correspondaient aux premiers niveaux. Courbe complète dans le CSV (`status` par niveau).
+3. **SP exact par skill** : ✅ **Résolu (extraction skilldata 2026-10)** — `req_sp` par niveau dans le CSV ; totaux par maîtrise au cap 120 : Bicheon 2 751 184 · Heuksal 2 049 327 · Pacheon 1 783 462 · Fire 1 811 697 · Cold 1 883 926 · Lightning 1 215 885 · Force 1 482 143.
+4. **Effets des séries tardives** — partiellement résolu : ✅ **Résolu (recherche ZH 2026-10)** pour la ligne Fire `DESCRY/DETECT` — **发火术** est documenté « détecte les ennemis invisibles » par le [wiki officiel TW DiGeam](https://srowiki.digeam.com/%E5%B1%AC%E6%80%A7%E6%B0%A3%E5%8A%9F) (confiance 5). Restent à confirmer : Bicheon Force `SHIELDPD`, Vital Flow, Cure Therapy - Heaven (rôles déduits des cooldowns/noms et de guides partiels — les données brutes sont dans le CSV `params_raw` pour aller plus loin).
 5. **Noms de séries Pierce/Storm** : ✅ **Résolu (recherche KO/ZH 2026-10)** — côté KR : **멸절결 계열** (Pierce) et **선풍창 계열** (Storm), livres attestés 낭아창/잔월창/유혼창 et 혈선풍/혈랑풍/혈사풍 ([Tistory vivia2020](https://vivia2020.tistory.com/20), confiance 4) ; côté ZH : 破轮枪 / 鬼枪术 / 血轮舞 (correspondances exactes encore inférentielles, confiance 4 — cf. note de la section Heuksal).
 6. **Noms KSRO** : ✅ **Résolu (recherche KO 2026-10)** — noms officiels 2004 des 7 maîtrises + ~30 séries/livres KR collectés (Inven 20/12/2004, GameAbout 2005, guides KR — confiance 5) : voir la section [Noms originels des maîtrises (KR/ZH)](#-noms-originels-des-maîtrises-krzh) et les colonnes « Nom KR ». Les **codenames restent la clé de référence** recommandée pour SRObro.
-7. La colonne « Cast » des chaînes multi-hits correspond à la valeur client du premier hit (interprétation probable : fenêtre de temps/animation) — à re-vérifier avec skilldata_5000 (colonnes `ActionPeriod`/`CastTime`).
+7. La colonne « Cast » des chaînes multi-hits : ✅ **Élucidé (extraction skilldata 2026-10)** — la valeur « cast » de `skills.txt` = colonne `Action_ActionDuration` (vérifié sur 4 skills témoins) ; le vrai cast est `Action_CastingTime` (ex. Strike Smash 411 ms, Meteor 1 334 ms), la préparation est `Action_PreparingTime` (**1 000 ms sur les nukes CH**). Les 5 timers par niveau (`prepare/cast/action/cooldown/cooltime` en ms) sont dans le CSV.
+8. **Reste non décodé** (rapport §5) : tags imbriqués (`setv`/`lks2`/`tnt2` avec args fourcc — Pain Quota, invocations), colonnes 6/15/67-68, `att` kinds 6/9 (EU), et les skills du client iSRO post-2010 (format `Param1..Param12` différent, non couvert).
 
 ---
 
@@ -957,7 +1020,13 @@ Valeurs « Skill Power » officielles (Silkroad Origin Mobile, base iSRO — **v
 - [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) — tick Burn ~2 s (SroCave)
 - Simulateur officiel TW des skills CH : [sro.digeam.com/cal_china](https://sro.digeam.com/cal_china)
 
+### Valeurs chiffrées par niveau (extraction skilldata 2026-10)
+- [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md) — décodage complet de `skilldata_5000.txt` : 118 colonnes, tags fourcc (dont les tags de statut `kb/ko/bu/fb/fz/es/bl/sl/tnt2` et les corrections openroad `cr`=2, `heal`=4, `defp`=3), découvertes chiffrées
+- [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv) — 3 272 lignes (un niveau = une ligne), 47 colonnes décodées + `params_raw`
+- [ML_RESEARCH/data/skills_series.csv](ML_RESEARCH/data/skills_series.csv) · [ML_RESEARCH/data/skills_masteries.csv](ML_RESEARCH/data/skills_masteries.csv) — vues par série et par maîtrise
+- Sources primaires : [joaoldematejr/server_files_sro](https://github.com/joaoldematejr/server_files_sro) (`SMC/SR_GameRefData/skilldata_*.txt`, UTF-16LE, 8 shards) · [tarekwiz/SilkroadBot — skills.txt](https://github.com/tarekwiz/SilkroadBot) (noms EN) · [hnguyenaa/MySilkroad — RawRefSkill.cs](https://github.com/hnguyenaa/MySilkroad) (nommage des colonnes) · [ferdoran/openroad](https://github.com/ferdoran/openroad) (table des tags fourcc « corpus-verified v1.188 »)
+
 ---
 
-*Dernière mise à jour : 2026-10-01 (enrichie le même jour des noms originels KR/ZH — recherche multilingue ML_RESEARCH ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : base officielle 64 séries / 296 skills — rapport ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §3)*
-*Sources : skills.txt client (GitHub SilkroadBot), Silkroad Origin Mobile (officiel), UnKnoWnCheaTs, SilkroadForums, Fandom, StrategyWiki, elitepvpers, Reddit r/silkroadonline ; noms KR/ZH : Inven 2004, GameAbout 2005, guides KR, wiki TW DiGeam, archives CSRO Sina/17173, Bahamut. Voir section « Données Manquantes » avant d'utiliser les chiffres comme références absolues.*
+*Dernière mise à jour : 2026-10-01 (enrichie le même jour des noms originels KR/ZH — recherche multilingue ML_RESEARCH ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : base officielle 64 séries / 296 skills — rapport ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §3 ; ajout des **valeurs chiffrées par niveau** (loi % fixe, timers, imbues 32→65 %, critique 14 séries, SP cap 120) — extraction skilldata 2026-10, rapport ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md, CSV ML_RESEARCH/data/skills_detail_CH.csv)*
+*Sources : skills.txt client (GitHub SilkroadBot), Silkroad Origin Mobile (officiel), UnKnoWnCheaTs, SilkroadForums, Fandom, StrategyWiki, elitepvpers, Reddit r/silkroadonline ; noms KR/ZH : Inven 2004, GameAbout 2005, guides KR, wiki TW DiGeam, archives CSRO Sina/17173, Bahamut ; chiffres par niveau : skilldata_5000.txt (fichiers serveur vSRO 1.188 + cap 120, repo joaoldematejr/server_files_sro), colonnes RawRefSkill.cs (hnguyenaa), tags fourcc openroad — valeurs vérifiées marquées ✅ (extraction skilldata 2026-10). Voir section « Données Manquantes » avant d'utiliser les autres chiffres comme références absolues.*

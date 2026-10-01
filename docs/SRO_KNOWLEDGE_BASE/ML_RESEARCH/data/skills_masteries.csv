@@ -1,0 +1,15 @@
+mastery_id,name,name_kr,race,n_series,n_skill_levels,id_min,id_max
+1,Character,캐릭터,ETC,2,2,21228,21229
+257,Bicheon (Sword),비천검법,CH,50,946,2,33382
+258,Heuksal (Spear),흑살창법,CH,44,785,40,30167
+259,Pacheon (Bow),파천신궁,CH,46,386,70,29693
+273,Cold,한빙면공,CH,38,339,90,8122
+274,Lightning,풍뢰비공,CH,33,246,107,8207
+275,Fire,화령신공,CH,37,311,124,21218
+276,Force (Water),기혈대법,CH,39,258,143,20501
+513,Warrior (One-handed),워리어,EU,50,938,8419,31117
+514,Wizard,위저드,EU,41,679,9944,10624
+515,Rogue,로그,EU,50,590,9354,9943
+516,Warlock,워락,EU,45,561,10625,30194
+517,Bard,바드,EU,42,396,11162,30251
+518,Cleric,클레릭,EU,49,472,11526,11999

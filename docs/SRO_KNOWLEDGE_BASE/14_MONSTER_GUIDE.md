@@ -464,12 +464,14 @@ Par rapport à VOTRE niveau (couleur du nom du monstre):
 | **Roc** | 100 | 1,451,891,045 | très espacé | Roc Mountain | Raid de guilde |
 | **Medusa (BeakYung)** | 105 | 183,535,199 | très espacé | Qin-Shi Tomb B6 | Extrême |
 | **Job Temple (Apis→Seth)** | 103-110 | 21M-440M | variable | Job Temple (Alexandrie) | Extrême |
+| **Boss Jupiter (Jupiter, Baal, Yuno, Dark Dog…)** | 111-120 | 15,9M-83,1M | salles 2x/jour | Temple de Jupiter (retrofit D12) | Extrême+ |
 
 > ❌ **Corrigé (2026):** « Lady Lyn », « Beithy », « Bunny », « Rooster », « Monkey », « Spider Queen » — **introuvables dans les données client iSRO**, ne pas implémenter tels quels (uniques de serveurs privés ou inventions). L'ancien tableau « Cerberus 20 / Yarkan 70+ / Shaitan 80+ » était erroné.
 
 > ⏱️ **Timers précis par unique (✅ Résolu — recherche TR 2026-10)** : Tiger Girl **~210-390 min** · Cerberus **~200-400 min** · Captain Ivy **~200-450 min** (jusqu'à 700 min !) · Uruchi **~230-450 min** ; règle générique DonanımHaber : « 3,5-5 h », « **minimum 2 h après le dernier kill, ensuite aléatoire** ». Sources : [Extraloob](https://www.extraloob.com/threads/silkroad-1-100-level-unique-hakkinda-bilgiler-234754) · [DonanımHaber](https://forum.donanimhaber.com/unique-spawn-saatleri--14339078).
 > ⚠️ **Conflit FR non tranché** : spawn ressenti **~4 h** (guide FR GMS Temple 2010) vs **~6 h** ([Wikipédia FR](https://fr.wikipedia.org/wiki/Silkroad_Online)) — les fenêtres TR englobent les deux.
 > ✅ **HP validés en croisé (recherche TR/FR/DE 2026-10)** : les HP des 7 uniques classiques sont confirmés par 2 sources TR indépendantes, le guide FR 2010 et les forums DE — identiques aux données client.
+> ✅ **Validation finale côté SERVEUR (extraction DB vSRO 2026-10)** : les HP des uniques classiques (Roc compris) sont confirmés **8/8 sur une vraie DB de serveur** (backup `SRO_VT_SHARD` vSRO 1.188 rétrofitée D12 parsé binairement — 7 157 monstres extraits) ; **EXP officielles par unique publiées pour la première fois** (TG 451 200 → Roc 1 157 701 880) et **HP des boss Jupiter 111-120 chiffrés** (Jupiter 40,1 M · Baal 55,4 M · Yuno 24,2 M — OFFICIEL-DÉRIVÉ retrofit D12). Voir [15_UNIQUE_BOSSES.md](./15_UNIQUE_BOSSES.md) · [MONSTERS_DATABASE.md — Extraction DB vSRO](./MONSTERS_DATABASE.md) · rapport [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md).
 
 ### 🎯 Détails par Unique
 
@@ -537,25 +539,62 @@ Zone: Roc Mountain (world boss)
 - **Stratégie:** raid de guilde multi-parties
 - Boss ultime de la chaîne classique
 
-#### MEDUSA / BEAKYUNG THE WHITE VIPER (Level 105)
+#### MEDUSA / BEAKYUNG THE WHITE VIPER (Level 100/105)
 ```
-HP: 183,535,199
-Zone: Qin-Shi Tomb B6 — White Viper Chamber (accès par Serin Gate, B4, ouvertes 04h/10h/16h/22h)
+HP: 183,535,199 | Code serveur: MOB_TQ_WHITESNAKE (✅ extraction DB vSRO 2026-10)
+Zone: Qin-Shi Tomb B6 — White Viper Chamber (accès par Serin Gate, B4, ouvertes 04h/10h/16h/22h, 10 min)
 ```
-- Nécessite de clear B5 (4 gardiens 98-99: Black Tortoise, Red Hawk, Blue Dragon, White Tiger — ✅ noms ZH officiels : 玄武颛顼/朱雀炎帝/青龙太皥/白虎小昊, recherche ZH 2026-10)
-- Sous-uniques: Shinmoo (100), Soso the Black Viper (100, **HP 27 655 068** — ✅ recherche TR 2026-10), Snake Generals (95)
-- B6 = 4 salles dont 2 à uniques ; accès rapporté (Extraloob) : B5 = 5 uniques à tuer, B6 = tuer 4× l'unique 95 puis salle Medusa (⚠️ divergent du protocole mmorpg.com, non tranché)
-- ⚠️ **Conflit de niveau non tranché** : BeakYung **Lv 100** selon les sources TR (SroLobby/Extraloob) vs **105** selon le client iSRO et le wiki TW DiGeam (HP identiques)
+- Nécessite de clear B5 (4 gardiens 98-99: Black Tortoise, Red Hawk, Blue Dragon, White Tiger — ✅ noms ZH officiels : 玄武颛顼/朱雀炎帝/青龙太皥/白虎小昊, recherche ZH 2026-10 ; **HP résolus** : JeonUk 22 052 265 · YumJae 16 793 318 · TaeHo/SoHaow 17 604 232 — Extraloob + DB vSRO 2026-10)
+- Sous-uniques: Shinmoo (100, 46 091 779 HP), Soso the Black Viper (100, **HP 27 655 068** — ✅ recherche TR 2026-10), Snake Generals (95, 7 242 389 HP chacun — DB vSRO 2026-10)
+- B6 = 4 salles dont 2 à uniques ; accès rapporté (Extraloob, **corroboré par la route SroTURK** — recherche PS 2026-10) : B5 = 5 uniques à tuer, B6 = tuer 4× l'unique 95 puis salle Medusa (⚠️ divergent du protocole mmorpg.com, non tranché)
+- ⚠️ **Conflit de niveau** : BeakYung **Lv 100** selon les sources TR (SroLobby/Extraloob) **et la row serveur DB vSRO** vs **105** selon le client iSRO et le wiki TW DiGeam (HP identiques) — non tranché
 - Skills officiels (TW) : AoE magique à distance, ligature frontale, **pétrification 100 %** en rayon, fortes attaques
 - Top guilds uniquement
 
+##### 🐍 Guide Medusa pas-à-pas — ✅ Résolu (guides TR 2013, recherche PS 2026-10)
+
+> **[OFFICIEL-DÉRIVÉ]** Le seul boss Silkroad documenté **pas à pas de bout en bout** — sources : [TurkHackTeam « Medusa Rehberi »](https://www.turkhackteam.org/konular/medusa-rehberi.872217) (mécaniques chiffrées) + [SroTURK « Medusa Nasıl Kesilir »](https://www.sroturk.com/serverler/medusa-nasil-kesilir-medusa-eventi-silkroad-sabah-sporu.333) (route) · rapport [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md).
+
+**1. Fenêtre de spawn** : 04:00 / 10:00 / 16:00 / 22:00 (4x/jour). À son spawn, « **Gate of Sarin Tribe open** » s'affiche → la porte B4→B5 reste ouverte **10 minutes seulement** ; si vous mourez et retournez en ville, **impossible de revenir** → partez **en party**.
+
+**2. Route (camps de garde → B6)** :
+1. **Military Camp 1** → tout droit **Camp 2** → cercle de téléport à droite → **Camp 9** → encore à droite → **Camp 10** → à gauche → **Camp 11** → à gauche → **Camp 12** → tout droit → **Camp 13** (des deux téléports, prendre le droit) → tout droit **Camps 14-15-16** → **B3**
+2. **B3** : passage nord (minimap en haut à droite), puis « **toujours à droite** » jusqu'au téléport B4
+3. **B4** (mobs dangereux 97-99 — **se buffer avant**) : chemin gauche (sud) ; au 2e double passage prendre la gauche ; au carrefour à 4 prendre la droite → **téléport serpent**. Si « Gate Of Sarin Tribe open » s'affiche : Medusa a spawn, **se dépêcher (10 min)**
+4. **B5** : **5 uniques à tuer** pour activer les téléports vers B6
+5. **B6** : un **unique niveau 95 doit être tué 4 fois** (il respawn à chaque mort) avant de pouvoir téléporter dans la salle de Medusa
+
+**3. Mécaniques chiffrées** : sorts magiques ~**12 633-13 983 dégâts** à **390-780 %** de multiplieur, jusqu'à **20 cibles** sur **15 m** (cône frontal) ; **Bind 50 %/10 s · Petrify 5 %/5 s · Poison 50 % · Fear (niv 12) 100 %/10 s** ; défense magique, pas d'invocation d'élites — ce sont ses **AoE** qui tuent.
+**Esquive clé** : quand Medusa « frotte ses mains » + **lueur blanche** → **s'éloigner vite** (boule de neige qui **gèle** : sans coéquipier buffer, c'est la mort — feu/foudre jouables, gel non).
+
+**4. Compositions de party 8 joueurs documentées (3)** :
+| Compo | Détail |
+|---|---|
+| « Méthode bug » (~3 h) | Wizard · Cleric · Warrior · Cleric · Bard · Bard + 2 amis (EXP) — le warrior **pull Medusa puis recule → elle se coince** ; les buffers stackent sur le wizard (**Life Turnover**) ; contesté (« le bug ne marche plus ») |
+| « Exotic » | 3 wizards 98+ full forge · 2 bards full forge · 2 warriors · 1 cleric |
+| Minimum requis | membres **95+/98+** (recommandation turkmmo) |
+
 #### JOB TEMPLE UNIQUES (103-110)
 ```
-Apis (103, 21M HP) → Selket (105) / Neith (106) → Anubis (107) / Isis (108) → Haroeris (109) / Seth (110, 440M HP)
+Apis (103, 21M HP) → Selket (105) / Neith (106) → Anubis (107) / Isis (108) → Haroeris (109) / Seth (110)
+HP: client iSRO 21M→440M ; DB vSRO 1.188 = Extraloob: 21M → 57,7M → 94M → 244,9M (Haroeris) / 236,4M (Seth)
 Zone: Job Temple, sud d'Alexandrie (accès selon AP de l'union de job)
 ```
 - Selket/Neith libres, Anubis/Isis nécessitent des AP, Haroeris/Seth en zone profonde
-- Drops 11D+, Immortal/Astral stones (rapporté)
+- Drops 11D+, Immortal/Astral stones (rapporté) ; Gold/Silver Coins → set Egy B (officiel-dérivé)
+
+##### 🔑 Job Temple — guide AP (accès et ouverture des salles) — ✅ Résolu (recherche PS 2026-10)
+
+> **[OFFICIEL réutilisé — guide ExaySRO corrigé GM](https://forum.exaysro.com/showthread.php?tid=3875)** · [SeaSRO](https://cap110.seasro.com/guide/job-temple) · détail complet : [15_UNIQUE_BOSSES.md — Guide AP](./15_UNIQUE_BOSSES.md)
+
+1. **Accès** : niveau **105+** et **costume de job obligatoire** ; deux entrées aux extrémités du **Salt Desert** — **Red Eggre** (Hunters/Traders) et **Black Eggre** (Thieves) ; zone **PvP job ouverte** (pas une instance)
+2. **Spawns** : salles ouvertes uniquement **pendant le spawn des uniques, 2x/jour à heure fixe** (cycle 12 h, alertes in-game 10/5 min avant)
+3. **Ouverture des salles selon l'AP (Area Points) des unions** :
+   - **Selket** (Sanctum of Restriction) & **Neith** (Sanctum of Blue Eye) : aucun prérequis
+   - **Anubis** (Sanctum of Punishment) & **Isis** (Sanctum of Atonement) : l'union avec le **plus d'AP** entre ; si aucune union n'a d'AP, les deux camps peuvent entrer
+   - **Haroeris** (Sanctum of Immorality) & **Seth** (Sanctum of Dark) : plus haut AP obligatoire — **« si aucun AP n'a été gagné, personne n'entre jusqu'au prochain spawn »**
+4. **Gagner des AP** : quêtes job répétables de NPCs dédiés dans le temple (+ NPC commun au **Sanctum of Audience** pour Haroeris/Seth) ; suivi via la fenêtre **Area Point**
+5. **Ordre imposé** : tuer **Haroeris avant Seth** ; « Seth = 8/8 party, possibly more »
 
 ### 📈 Unique Dungeons & Events
 
@@ -575,6 +614,16 @@ Zone: Job Temple, sud d'Alexandrie (accès selon AP de l'union de job)
 Sources: [wiki DiGeam — Flame Mountain](https://srowiki.digeam.com/%E7%87%83%E7%87%92%E6%B7%B1%E6%B7%B1-%E7%81%B0%E5%B1%B1) · [iccgame — Shipwreck](https://silkroad.iccgame.com/content-667-49139.html)
 
 **Uniques du Green Abyss 91-100 (✅ Résolu — recherche TR 2026-10):** **Ghost Beast** (navires 1-2), **Ghost Gultton** (dernier navire), boss final **Ghost Serenes** (invoque 2 Gultton à bas HP). Types par grade (guides SroLobby) : mobs 1★ = **General**, Envies = **Champion**, 2★ = Champion/Elite, 3★-4★ = **Elite** ; party 4 joueurs (1★-2★) / 8 joueurs (3★-4★). Source: [SroLobby — Shipwreck 91-100](https://www.srolobby.com/konular/silkroad-online-shipwreck-91-100-forgotten-world-map-rehberi.2251)
+
+**🎯 Spots & mécaniques d'instance FGW (✅ Résolu — recherche PS 2026-10):**
+> **[OFFICIEL réutilisé/dérivé]** Sources : [Origin — Togui Village Instance](https://forum.playorigin.com/showthread.php/73) (guide le plus détaillé) · [Seidenkraft — FGW Tutorial](https://seidenkraftblog.wordpress.com/2012/09/14/the-fgw-tutorial) · [Guild Algarb — FGW](https://guildalgarb.wordpress.com/games/sro/maps/forgotten-world) · rapport [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md).
+
+- **Dimension Hole** : obtenu en tuant les **Envies** (apparus quand on attaque un **Dimension Pillar** en monde ouvert) ou **achetable en grocery** ; invocation **en ville uniquement** (clic droit) → cristal bleu **visible par l'invocateur seul** ; choix des **étoiles (1-4)** à l'achat, « Teleport inside » pour la party
+- **Timers d'instance** : **durée 2 h** dès la création · **cooldown de ré-entrée 3 h** · le cristal disparaît au bout de ~**15 min** ; les trous de dimension se rouvrent toutes les 30 min
+- **Recall Tower** : le master de party peut **rappeler des amis** (depuis la ville uniquement, sans costume de job) — le point de ralliement de l'instance
+- **Togui Village (35-70)** : **3 camps à clear** → chaque camp clear fait spawn un **mini-unique qui le représente** ; boss final **Elder Earth Ghost** : forte magie + debuffs, **spawn ses adds à 15 % de sa vie** → les tuer ou les offtank ; quête Asaman **500 k SP**
+- **Shipwreck (91-110)** : **3 navires** — tuer tous les monstres + **1 élite en bout de pont** par navire pour ouvrir la grille ; après le 1er élite, un **ghost curse** apparaît → **ne pas le tuer** (il suit et debuff) ; **Ghost Sereness** : pétrification fréquente **esquivable en se décalant pendant son cast**, **2 vagues d'adds (~60 % et ~20 % HP)**, DPS à distance conseillé, astuce : la lurer loin de son spawn pour qu'elle cherche à revenir
+- **Étoiles** : 1★ = solo facile ; 2★ = « n'importe quel 120 stuffé correct » ; 3★ = parties ; 4★ = « hardcore, full party buffée, wipe facile » — **plus d'étoiles = meilleur taux de talismans** ; astuce : ouvrir les coffres avec le perso au **collection book le moins rempli**
 
 **Utilisation Stratégique:**
 1. **Préparez votre team** à l'avance (spots connus d'avance pour la Serin Gate)
@@ -639,7 +688,15 @@ Sources: [wiki DiGeam — Flame Mountain](https://srowiki.digeam.com/%E7%87%83%E
 - [StrategyWiki - Bosses](https://strategywiki.org/wiki/Silkroad_Online/Bosses)
 - [xSROMap](https://jellybitz.github.io/xSROMap/)
 
+### Guides boss/donjons détaillés (recherche PS 2026-10)
+- [TurkHackTeam — Medusa Rehberi](https://www.turkhackteam.org/konular/medusa-rehberi.872217) (mécaniques Medusa chiffrées) · [SroTURK — Medusa Nasıl Kesilir](https://www.sroturk.com/serverler/medusa-nasil-kesilir-medusa-eventi-silkroad-sabah-sporu.333) (route camps→B6) · [Extraloob — Roc & Medusa strategies](https://www.extraloob.com/threads/roc-medusa-kesilme-strategiler-165766) (compos de party)
+- [ExaySRO — Job Temple Unique Guide](https://forum.exaysro.com/showthread.php?tid=3875) (système AP) · [SeaSRO — Job Temple](https://cap110.seasro.com/guide/job-temple)
+- [Origin — FGW Togui Village Instance](https://forum.playorigin.com/showthread.php/73) · [Seidenkraft — FGW Tutorial](https://seidenkraftblog.wordpress.com/2012/09/14/the-fgw-tutorial) · [Guild Algarb — FGW](https://guildalgarb.wordpress.com/games/sro/maps/forgotten-world)
+- [Extraloob — Liste HP 1-110](https://www.extraloob.com/threads/silkroad-1-110-lvl-monster-unique-hpleri-246312)
+- 🗄️ Extraction DB vSRO 2026-10 : [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) (7 157 monstres, CSV) · [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md) (guides gameplay)
+
 ---
 
 *Dernière mise à jour: 2026-10-01 (uniques et types corrigés d'après les données client silkroadonline.wiki + elitepvpers/rev6/mmorpg.com)*
 *Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (timers par unique, Qin-Shi B6, couleurs mobs/SoX) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (noms ZH FGW, gardiens B5, skills Medusa) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md)*
+*Extraction DB vSRO + gameplay PS 2026-10 ([RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) + [RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md)) : ✅ guide Medusa pas-à-pas (route camps→B3→B4→B5→B6, mécaniques chiffrées, 3 compos de party, boule de neige/gel) ; ✅ guide AP du Job Temple (Red/Black Eggre, salles selon AP, ordre Haroeris→Seth, cycle 12 h) ; ✅ spots FGW (Dimension Hole, timers 2 h/3 h, Recall Tower, Elder Earth Ghost adds à 15 % HP, Sereness 60/20 %) ; ✅ HP Jupiter 111-120 résolus + EXP officielles des uniques + HP gardiens Qin-Shi ; ✅ boss Jupiter ajoutés au tableau des uniques*

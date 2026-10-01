@@ -58,6 +58,7 @@ Cette page fusionne et organise le contenu de :
 | 80-90 | Wing Tribe, Antinoke, Shaur (Roc Mountain) | Aggro | Roc Mountain | Medium | [→](MONSTERS_DATABASE.md#️-level-80-100) |
 | 90-100 | Qin-Shi Tomb B3-B4, Roc Mountain high | Aggro | Tomb / Roc Mtn | Dense | [→](MONSTERS_DATABASE.md#️-level-80-100) |
 | 100-110 | Uneg, Weneg, Dark Khepri, Blood Hyena | Aggro | Alexandrie / Job Temple | Dense | [→](MONSTERS_DATABASE.md#-level-100-110-alexandrie--job-temple--données-client-vérifiées) |
+| 111-120 | Boss Jupiter + élites du temple (`MOB_JUPITER_*`, retrofit D12) | Uniques/élites | Temple de Jupiter | — | [→](MONSTERS_DATABASE.md#️-extraction-db-vsro-2026-10--7-157-monstres-avec-stats-serveur) |
 
 ---
 
@@ -126,7 +127,7 @@ Cette page fusionne et organise le contenu de :
 9. BeakYung « Medusa » (105) — Qin-Shi Tomb B6
 10. Apis (103) / Selket (105) / Neith (106) / Anubis (107) / Isis (108) / Haroeris (109) / Seth (110) — Job Temple
 
-> ✅ **Validation croisée ML 2026-10** : HP des 7 uniques classiques confirmés par 2 sources TR indépendantes (DonanımHaber + MMSRN), le guide FR GMS Temple 2010 et les forums DE — identiques aux données client.
+> ✅ **Validation croisée ML 2026-10** : HP des 7 uniques classiques confirmés par 2 sources TR indépendantes (DonanımHaber + MMSRN), le guide FR GMS Temple 2010 et les forums DE — identiques aux données client. **Re-validés ensuite côté SERVEUR (extraction DB vSRO 2026-10)** : 8/8 identiques sur une vraie DB de shard (backup `SRO_VT_SHARD` vSRO 1.188 rétrofitée D12 parsé binairement), **Roc compris** — rapport [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md).
 > 🌐 **Noms ZH/KR des uniques** (✅ recherche ZH/KO 2026-10 — Tiger Girl = 虎女/호녀, Uruchi = 乌鲁齐/우르치, Isyutaru = 冰神之女/이슈타르, Roc = 洛克/괴조로크, Medusa = 白蛇白灵/백령...) : voir [15_UNIQUE_BOSSES.md — Noms multilingues](15_UNIQUE_BOSSES.md#-noms-multilingues-des-uniques-zh--kr).
 > ⚠️ **Conflits non tranchés** : BeakYung **Lv 100** (sources TR : SroLobby/Extraloob) vs **105** (client iSRO + wiki TW DiGeam — HP identiques) ; Roc **107** (presse KR Legend 8 + Wikipédia FR) vs **100** (client iSRO).
 
@@ -305,6 +306,14 @@ Cette page fusionne et organise le contenu de :
 | 14 | Isis | 108 | 154,677,234 | Job Temple (AP requis) | — |
 | 15 | Haroeris | 109 | 440,747,010 | Job Temple (zone profonde) | — |
 | 16 | Seth | 110 | 425,505,853 | Job Temple (zone profonde) | — |
+| 17+ | Boss Jupiter (Jupiter, Baal, Babylion, Dark Dog, Yuno, The Earth) | 111-120 | 15,9 M - 83,1 M | Temple de Jupiter (retrofit D12) | salles 2x/jour |
+
+> ✅ **Extraction DB serveur vSRO 2026-10** ([ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md)) — synchro des points clés :
+> - **HP Jupiter 111-120 résolus** : Jupiter 120 = 40 116 151 · Baal 120 = 55 404 408 (version arme 83 106 612) · Yuno 115 = 24 168 318 · Dark Dog 118 = 26 234 941 — **[OFFICIEL-DÉRIVÉ retrofit D12, à recouper vs vrai 1.274]** (rows `MOB_JUPITER_*`, `Service=0`)
+> - **HP Job Temple côté serveur + liste Extraloob** : Selket 57,7 M → Anubis 94 M → **Haroeris 244,9 M / Seth 236,4 M** (Haroeris > Seth) — divergent des valeurs client iSRO du tableau (divergence non tranchée) ; Eris 109 = 87,8 M
+> - **EXP officielles par unique (jamais publiées)** : TG 451 200 · Cerberus 569 630 · Uruchi 1 316 197 · Isyutaru 2 748 260 · Yarkan 4 963 664 · Shaitan 6 670 749 · Medusa 62 356 860 · Roc 1 157 701 880
+> - **Codenames serveur révélés** : Medusa = `MOB_TQ_WHITESNAKE` · Yarkan = `MOB_TK_BONELORD` · Ivy = `MOB_QT_01_IVY` · boss Jupiter = `MOB_JUPITER_*` ; Roc 1 451 891 045 confirmé côté serveur
+> - **CSV de référence** : [monsters_vsro188.csv](ML_RESEARCH/data/monsters_vsro188.csv) (7 157 monstres, stats serveur) · [uniques_vsro188.csv](ML_RESEARCH/data/uniques_vsro188.csv) (830) · [monsters_cap120.csv](ML_RESEARCH/data/monsters_cap120.csv) (1 442, ≥ 111) · [zones_vsro188.csv](ML_RESEARCH/data/zones_vsro188.csv) — section dédiée : [MONSTERS_DATABASE.md — Extraction DB vSRO](MONSTERS_DATABASE.md)
 
 **Boss de donjons FGW** (level selon bracket/grade): Togui General (A1=39), Ghost Sereness (A1=93, pétrification). ✅ Uniques du Green Abyss résolus (recherche TR 2026-10) : **Ghost Beast**, **Ghost Gultton**, boss final **Ghost Serenes** ; noms ZH officiels des donjons : 血灵地狱-土鬼村 (Togui), 燃烧深渊-火焰山 (Flame Mtn), 永恒之海-船舶墓地 (Shipwreck) — voir [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md#-boss-du-forgotten-world-fgw).
 
@@ -450,7 +459,7 @@ Cette page fusionne et organise le contenu de :
 - **Jangan:** Mangyang → Bandit → Tiger
 - **Donwhang:** Mouse → Spider → Ghost
 - **Hotan:** Uruniger → Ong → Bunwang → Shedim
-- **Alexandria:** Naga → Harpy → Mummy → Djinn → Sphinx
+- **Alexandria:** Uneg → Weneg → Dark Khepri → Dark Scout → Blood Hyena (famille `MOB_SD_*` — les « Naga/Harpy/Mummy/Djinn/Sphinx » d'anciennes listes n'existent pas dans le client)
 
 ### Par Type
 - **Normal:** Standard mobs, easy kills
@@ -528,8 +537,9 @@ model MonsterDrop {
 - [xSROMap](https://jellybitz.github.io/xSROMap/)
 
 ### Bases de Données Primaires
-- [MONSTERS_DATABASE.md](MONSTERS_DATABASE.md) - Base complète + high-level (fusionnés)
+- [MONSTERS_DATABASE.md](MONSTERS_DATABASE.md) - Base complète + high-level (fusionnés) + **section « Extraction DB vSRO (2026-10) »** (7 157 monstres, stats serveur, CSV)
 - [MONSTERS_SPAWN_LOCATIONS.md](MONSTERS_SPAWN_LOCATIONS.md) - Coordonnées
+- 🗄️ CSV extraits de la DB serveur vSRO 2026-10 : [monsters_vsro188.csv](ML_RESEARCH/data/monsters_vsro188.csv) (7 157) · [uniques_vsro188.csv](ML_RESEARCH/data/uniques_vsro188.csv) (830) · [monsters_cap120.csv](ML_RESEARCH/data/monsters_cap120.csv) (1 442) · [zones_vsro188.csv](ML_RESEARCH/data/zones_vsro188.csv) — rapport : [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) · guides Medusa/Job Temple/FGW : [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md)
 
 ### Guides
 - [14_MONSTER_GUIDE.md](14_MONSTER_GUIDE.md) - Guide joueur
@@ -549,6 +559,7 @@ model MonsterDrop {
 
 **Dernière mise à jour :** 2026-10-01 (uniques corrigés d'après données client; liens MONSTERS_HIGHLEVEL corrigés)
 *Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md)*
+*Extraction DB vSRO 2026-10 ([RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) + [RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md)) : ✅ HP boss Jupiter 111-120 résolus (retrofit D12) + HP Job Temple serveur (Selket 57,7 M → Haroeris 244,9 M) + EXP officielles des uniques + codenames `MOB_TQ_WHITESNAKE`/`MOB_JUPITER_*` + validation serveur 8/8 ; ✅ référence des CSV `ML_RESEARCH/data/` ajoutée ; ✅ faune Alexandria corrigée (MOB_SD_)*
 **Monstres - Référence Complète** - Consolidation de 4 fichiers → 1 hub centralisé
 
 ---

@@ -96,7 +96,24 @@ Ce document track toutes les modifications apportées à la documentation SRO_KN
 - **Abshad Force High General = 얍샤드 대장군** (boss Bagdad KSRO confirmé via DB vSRO ; HP 99 M = custom)
 - Architecture officielle : 9 modules + ordre de démarrage, certification port 32000, ExpRatio 1000 = ×1, 1000 joueurs/AgentServer
 
-**Scène arabe documentée** : silkroad4arab (313 016 membres fin 2015, record 17 621 connectés), 18 serveurs arabes caps 120-140 (tableau), glossaire arabe 72+ termes (avec le piège « Medusa = BeakYung »), service arabe officiel 02/02/2010 = portail web (jamais de client PC arabe), Silkroad Origin Mobile Arabia (2026).
+---
+
+## 🧬 2026-10-02 — Extraction de données vSRO/KSRO (DB binaire + skilldata) & doc serveur
+
+### 4 rapports, 5 CSV de données extraites, 14 fichiers enrichis
+
+**Méthode :** au-delà du web — **extraction directe des dumps publics GitHub** : (1) backup MSSQL `SRO_VT_SHARD.bak` (74 Mo, repo joaodematejr/private_server, vSRO 1.188 rétrofitée D12) **parsé en binaire** sans SQL Server ; (2) `skilldata_5000.txt` serveur (repo joaodematejr/server_files_sro) parsé intégralement. Rapports dans `ML_RESEARCH/` (RESEARCH_VSRO_DB_MONSTERS / SKILLDATA_EXTRACT / VSRO_SERVER / PS_GAMEPLAY), données CSV dans `ML_RESEARCH/data/`.
+
+**Nouvelles données extraites (jamais publiées avant) :**
+- **7 157 monstres** avec stats serveur complètes (niveau, HP, MP, EXP, attaque, parade, rareté) — `monsters_vsro188.csv` + `uniques_vsro188.csv` (830) + `monsters_cap120.csv` (1 442) + `zones_vsro188.csv` — validation parfaite des 8 uniques classiques (zéro écart, Roc 1,45 Md confirmé)
+- **HP des boss Jupiter 111-120 résolus** : Jupiter 40 116 151 · Baal 55 404 408 (arme 83,1 M) · Yuno 24 168 318 · Dark Dog 26,2 M (marqués OFFICIEL-DÉRIVÉ retrofit D12)
+- **EXP par unique** (Tiger Girl 451 200 → Roc 1,16 Md) et courbe d'EXP par mob — inédit
+- **6 909 skills joueurs parsés** (3 272 CH / 3 637 EU, cap 120) : 47+ colonnes décodées, tags fourcc d'effets (kb/ko/bu/fb/fz/es/bl/sl/tnt2), corrections de la doc openroad — découvertes : **% de dégâts FIXE par série** (seule la part fixe monte), **crit sur 14 séries seulement** (aucun nuke/imbue — confirmation définitive), « longue incantation » nukes = PreparingTime 1 000 ms, imbues 32→65 %, SP totaux cap 120 (Bicheon 2,75 M, Warrior 4,2 M)
+- **server.cfg complet de la 1.188** : IBUV = CAPTCHA officiel (20 000 images), AutomatedPunisher, fees stall/consignation, topologie officielle 48 nœuds (srNodeType.ini), capacity 2300, ~40 commandes GM, procédures DB (_AddLogItem, _AddTimedJob...), anti-cheat reconstitué (GameGuard → HackShield → XTrap)
+- **BlackRogue clarifié** : package thaï incomplet, rates hardcodés dans les binaires (vs server.cfg) → pourquoi la scène préfère 1.188 ; émulateurs inventoriés (opensro = meilleure source ; « cfemu » n'existe pas)
+- **Guides gameplay détaillés** : Medusa pas-à-pas (mécaniques chiffrées, 3 compos de party), système AP du Job Temple, structure d'entrée Jupiter (gates client), Bagdad (cycle 9 essences, Kerim), timers/récompenses FGW formalisés
+
+**Fichiers enrichis :** 15, 14, MONSTERS_×3, 02, 03, 30, SKILLS_×2, TECHNICAL_SPECIFICATIONS, 39, 13, 29. **Lacunes restantes :** HP boss 121+ (Bagdad/Shambhala), divergence HP Job Temple 1.188 vs client, tags skill imbriqués, format iSRO post-2010.
 
 ---
 

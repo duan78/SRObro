@@ -38,6 +38,8 @@ Ce document a été corrigé à partir de **données extraites du client officie
 
 > ✅ **Validation croisée multilingue (recherche ML 2026-10)** : les HP/niveaux des 7 uniques classiques (Tiger Girl → Demon Shaitan) sont confirmés par **deux sources turques indépendantes** ([DonanımHaber](https://forum.donanimhaber.com/yaratiklarin-canlari-cin-avrupa-ve-unique--28889841) + [MMSRN](https://www.mmsrn.com/silkroad-online-tum-unique-isimleri-levelleri-ve-hpleri-kactir)), par le **guide FR « Les Uniques » (GMS Temple, 2010** — [source](https://forum.gmstemple.com/index.php?showtopic=8106)) et par les forums **allemands** ([StageTwo](https://www.stagetwo.eu/gaming/rollenspiele/153328-silkroad-uniques), elitepvpers) — valeurs strictement identiques aux données client. Rapports : [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md)
 
+> ✅ **Validation finale côté SERVEUR (extraction DB vSRO 2026-10)** : les HP des uniques classiques ont été re-validés directement sur une **vraie base de données de serveur** — backup MSSQL `SRO_VT_SHARD` (vSRO 1.188 rétrofitée D12, [repo joaodematejr/private_server](https://github.com/joaodematejr/private_server)), tables `_RefObjCommon`/`_RefObjChar` parsées binairement : **8/8 strictement identiques** aux valeurs client ci-dessus (Tiger Girl → Roc), **y compris Roc = 1 451 891 045** → confirmé comme valeur de la row serveur (`MOB_RM_ROC`), pas une version raid/événement. Codenames serveur révélés : Lord Yarkan = `MOB_TK_BONELORD` (aucune row `MOB_TK_YARKAN` n'existe), Medusa/BeakYung = `MOB_TQ_WHITESNAKE` (ID 14997), Captain Ivy (row de base) = `MOB_QT_01_IVY` (les rows Asie Mineure `MOB_AM_IVY_L2/L3` sont les variantes d'event ×10/×3 HP), Selket = `MOB_SD_SELKIS`. Rapport : [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) · CSV : [ML_RESEARCH/data/monsters_vsro188.csv](ML_RESEARCH/data/monsters_vsro188.csv) (7 157 monstres)
+
 > ❌ **Corrigé :** les anciennes versions de ce fichier listaient « Cerberus niveau 40 », « Captain Ivy 60 », « Isyutaru 80 », « Lady Lyn », « Beithy », « Bunny/Rooster/Monkey », « Spider Queen », « Sphinx/Osiris/Ra » comme uniques de terrain. **Lady Lyn, Beithy, Bunny, Rooster, Monkey, Spider Queen n'existent pas dans les données client iSRO** — ce sont des inventions ou des uniques de serveurs privés. Sphinx/Osiris/Neith/Isis/Serket/Seth existent mais sont les uniques du **Job Temple** (voir sections dédiées).
 
 ---
@@ -56,7 +58,7 @@ Ce document a été corrigé à partir de **données extraites du client officie
 | 6 | **Lord Yarkan** | `MOB_TK_BONELORD` | 3810 | 80 | 9,353,045 | 559-1047 | 6,452,763 | Taklamakan |
 | 7 | **Demon Shaitan** | `MOB_RM_TAHOMET` | 3875 | 90 | 12,732,060 | 898-1528 | 8,671,974 | Roc Mountain |
 | 8 | **Roc** | `MOB_RM_ROC` | 3877 | 100 | **1,451,891,045** | 2052-3283 | 1,157,701,880 | Roc Mountain |
-| 9 | **BeakYung the White Viper** (« Medusa ») | `MOB_QT_*` | — | 105 | 183,535,199 | — | — | Qin-Shi Tomb B6 |
+| 9 | **BeakYung the White Viper** (« Medusa ») | `MOB_TQ_WHITESNAKE` | 14997 | 105 | 183,535,199 | — | — | Qin-Shi Tomb B6 |
 | 10 | **Apis** | `MOB_SD_APIS` | 32751 | 103 | 21,068,995 | 1775-2925 | 12,735,087 | Job Temple |
 | 11 | **Selket** | `MOB_SD_SELKISID` | 32767 | 105 | 80,811,919 | 2907-4785 | 32,264,851 | Job Temple |
 | 12 | **Neith** | `MOB_SD_NEITH` | 32768 | 106 | 83,077,174 | 2991-4923 | 33,232,797 | Job Temple |
@@ -69,6 +71,25 @@ Ce document a été corrigé à partir de **données extraites du client officie
 
 **Boss de donjons FGW** (voir section dédiée) : Togui General (bracket 35-50, version A1 = lvl 39), Ghost Sereness (bracket 91-100, version A1 = lvl 93) — le level des boss FGW dépend du bracket et du grade (A1-A4).
 
+### 🎓 EXP officielles par unique (extraction DB vSRO 2026-10) — ✅ Résolu (jamais publiées auparavant)
+
+> ✅ **Résolu (extraction DB vSRO 2026-10)** : la colonne `ExpToGive` de `_RefObjChar` — **donnée serveur exclusive**, jamais publiée par aucune source publique (wiki, guides — silkroadonline.wiki la mentionne comme « server-side ») — a été extraite pour tous les monstres. Valeurs officielles 1x **[OFFICIEL-DÉRIVÉ]**. Source : [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) §4 · colonne `exp_to_give` du CSV [monsters_vsro188.csv](ML_RESEARCH/data/monsters_vsro188.csv).
+
+| Unique | EXP officielle 1x | (Gold client, pour comparaison) |
+|---|---|---|
+| Tiger Girl (20) | **451 200** | 586 560 |
+| Cerberus (24) | **569 630** | 740 519 |
+| Uruchi (40) | **1 316 197** | 1 711 056 |
+| Isyutaru (60) | **2 748 260** | 3 572 738 |
+| Lord Yarkan (80) | **4 963 664** | 6 452 763 |
+| Demon Shaitan (90) | **6 670 749** | 8 671 974 |
+| Medusa/BeakYung (100) | **62 356 860** | — |
+| Roc (100) | **1 157 701 880** | 1 157 701 880 |
+
+- **Courbe des mobs normaux** (mêmes sources) : 24 EXP (lvl 1) → ~470 (lvl 20) → ~2 029 (lvl 50) → ~9 338 (lvl 100) → ~12 550 (lvl 110).
+- **Observation de cohérence interne** : sur toute la série classique, la colonne « Gold » du client = **EXP × 1,3 exactement** (586 560 = 451 200 × 1,3, etc.) — la valeur « Gold » de Roc (1 157 701 880) correspond en réalité à l'**EXP brute**, ce qui suggère une erreur d'étiquetage dans les extractions client précédentes.
+- EXP des boss du Job Temple et de Jupiter : voir les sections dédiées ci-dessous.
+
 ### ✅ HP officiels des boss 111+ (tracker m3stat) — Résolu (recherche PS 2026-10)
 
 > ✅ **Résolu (recherche PS 2026-10)** : les HP des boss 111+ — la plus grosse lacune de ce document — sont désormais **mesurés sur les serveurs officiels iSRO** (Minerva, Palmyra…) par le tracker **M3 Stats**, qui collecte les données en jeu. Valeurs **[OFFICIEL-DÉRIVÉ]** (valeurs officielles, mesure tierce). Source : [m3stat.com/uniques](https://www.m3stat.com/uniques) · rapport : [ML_RESEARCH/RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md)
@@ -79,10 +100,30 @@ Ce document a été corrigé à partir de **données extraites du client officie
 | **Karkadann** | **123** | **15 023 129** | ✅ officiel (ère cap 120-125, uniques « 12-13D ») |
 | **Merikh** | **125** | **18 372 504** | ✅ officiel (ère cap 125) |
 
-- **Chaîne classique revalidée par la même source** : Tiger Girl 598 720 · Cerberus 693 072 · Captain Ivy 1 094 835 · Uruchi 1 779 528 · Isyutaru 4 324 612 · Lord Yarkan 9 353 045 · Demon Shaitan 12 732 060 · **Medusa/BeakYung 183 535 199** — **strictement identiques** aux données client du tableau ci-dessus (validation croisée supplémentaire, après TR/FR/DE/ZH/KO). Le tracker donne aussi **Roc = 1 451 891 045** (même ordre de grandeur atypique que le client — à recouper, possiblement version raid/événement).
+- **Chaîne classique revalidée par la même source** : Tiger Girl 598 720 · Cerberus 693 072 · Captain Ivy 1 094 835 · Uruchi 1 779 528 · Isyutaru 4 324 612 · Lord Yarkan 9 353 045 · Demon Shaitan 12 732 060 · **Medusa/BeakYung 183 535 199** — **strictement identiques** aux données client du tableau ci-dessus (validation croisée supplémentaire, après TR/FR/DE/ZH/KO). Le tracker donne aussi **Roc = 1 451 891 045** — ✅ **confirmé côté serveur** par l'extraction DB vSRO 2026-10 (voir la note de validation en tête de document) : c'est bien la valeur de la row serveur, pas une version raid/événement.
 - Cross-validation serveur privé : le wiki ExaySRO **republie à l'identique** les HP du client officiel (dont **Apis 21 068 995**) — seule sa ligne « boss custom » diffère (voir Abshad/Bagdad ci-dessous). Source : [wiki ExaySRO — Unique Locations](https://wiki.exaysro.com/books/guides/page/unique-locations) · [ML_RESEARCH/RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md)
-- ⚠️ **Toujours manquants** : HP des boss Jupiter 111-118 (Jupiter/Yuno/Deus/Baal/Babilion/Zielkiaxe) et des boss 130+ (Benephika, Giant Overlord, Thief Boss Kalia) — le tracker s'arrête à Merikh 125 ; l'extraction `_RefObjChar`/`characterdata` des files vSRO 1.193+/BR120 reste la voie (cf. [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) §1).
+- ⚠️→✅ **HP des boss Jupiter 111-118 : RÉSOLUS (extraction DB vSRO 2026-10)** — voir la section juste ci-dessous. **Toujours manquants** : HP des boss 130+ (Giant Overlord, Thief Boss Kalia/Kailia, boss Shambhala) — le tracker s'arrête à Merikh 125 et la DB rétrofitée s'arrête au cap 120 ; l'extraction `_RefObjChar`/`characterdata` de files vSRO 1.193+/BR120/1.274 reste la voie (cf. [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) §1).
 - Exemple de HP custom à ne pas confondre avec l'officiel : InPanic (cap 120) affiche Medusa à **367 070 398 HP** — le **doublement** de la valeur officielle **[CUSTOM]** ([elitepvpers 1849004](https://www.elitepvpers.com/forum/sro-pserver-advertising/1849004-inpanic-silkroad-level-120-cap-privat-server-deutsch-english-6.html)).
+
+### 🌩 Boss Jupiter 111-120 — ✅ RÉSOLUTION TOTALE (extraction DB vSRO 2026-10)
+
+> ✅ **Résolu (extraction DB vSRO 2026-10)** : la dernière grande lacune de ce document — les HP des boss du Temple de Jupiter (111-120) — est comblée par les rows **`MOB_JUPITER_*`** de la DB vSRO 1.188 rétrofitée D12 (103 rows, toutes avec stats ; `Service=0` = désactivées dans ce retrofit « Jupiter Fixed » standard, données officielles KSRO importées). Marquage **[OFFICIEL-DÉRIVÉ — retrofit D12, à recouper vs vrai 1.274]** : le préfixe réel est **`MOB_JUPITER_`** (et non `MOB_RM_`). Sources : [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) §5 · CSV [monsters_cap120.csv](ML_RESEARCH/data/monsters_cap120.csv) (1 442 rows ≥ 111).
+
+| Boss | Codename | Lvl | HP | ATK | EXP |
+|---|---|---|---|---|---|
+| **Jupiter** (boss éponyme) | `MOB_JUPITER_JUPITER` | 120 | **40 116 151** | 2882-4875 | 13 155 722 |
+| **Baal** | `MOB_JUPITER_BAAL` | 120 | **55 404 408** | 2882-4875 | 20 239 573 |
+| Baal (arme) | `MOB_JUPITER_BAAL_WEAPON` | 120 | **83 106 612** | 2882-4875 | 28 335 402 |
+| Babylion/Babilion | `MOB_JUPITER_BABILION` | 120 | 40 116 151 | 2882-4875 | 13 493 048 |
+| Dark Dog II | `MOB_JUPITER_DARK_DOG2` | 120 | 31 395 831 | 2882-4875 | 12 143 744 |
+| Dark Dog | `MOB_JUPITER_DARK_DOG` | 118 | **26 234 941** | 2725-4611 | 9 920 425 |
+| **Yuno** | `MOB_JUPITER_YUNO` | 115 | **24 168 318** | 2505-4240 | 9 078 594 |
+| The Earth II | `MOB_JUPITER_THE_EARTH2` | 115 | 18 028 193 | 2650-4007 | 5 936 004 |
+| The Earth I | `MOB_JUPITER_THE_EARTH1` | 115 | 15 907 229 | 2650-4007 | 5 237 650 |
+
+- **Lecture** : Jupiter et Babylion partagent exactement 40 116 151 HP ; la « version arme » de Baal est le row le plus dur du temple (83,1 M) ; Dark Dog (118) et Yuno (115) sont les uniques intermédiaires chiffrés. Les mécaniques officielles (vent/foudre pour Jupiter, nature/invocations pour Yuno, etc. — annonce Legend VIII) restent dans la [section KSRO](#️-boss-ksro-post-medusa-2011-2023) ; les guides de quêtes Jupiter (Hall of Worship / Mirror Dimension) dans [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md).
+- **Élites du temple** (rareté 6, HP de mob normal) : Griffin 113 (47 657 HP), Minotaure 113, Anatu Lion 114 (64 478)… — ensemble complet dans `monsters_cap120.csv`. La même DB contient aussi des **boss de Fortress War 111-140** (`MOB_FW_TAESE_111`→`_140`, ~43-166 M HP — ex. TAESE_111 = 75,9 M ; `MOB_FW_BATTLEGOLEM/MUJIGI/HYEONGCHEON` par niveau), dénotant un contenu FW étendu/moddé **[CUSTOM retrofit]**.
+- ⚠️ **Incohérence d'échelle documentée** : Kidemonas 120 = 13,8 M HP (m3stat, mesure live officielle) vs Jupiter 120 = 40,1 M HP (DB retrofit) — les deux étant [OFFICIEL-DÉRIVÉ], le recoupement contre une DB 1.274/iSRO-R originale reste nécessaire (Kidemonas est un unique *de champ* de la Dimension Miroir, pas un boss de salle : la comparaison directe est indicative).
 
 ### Codes de région dans les noms internes
 | Préfixe | Région |
@@ -94,9 +135,12 @@ Ce document a été corrigé à partir de **données extraites du client officie
 | `MOB_KK_` | Karakoram |
 | `MOB_TK_` | Taklamakan |
 | `MOB_RM_` | Roc Mountain |
-| `MOB_QT_` | Qin-Shi Tomb (donjon de Jangan) |
+| `MOB_QT_` | Qin-Shi Tomb — clones/rows de quête (ex. `MOB_QT_01_IVY`) |
+| `MOB_TQ_` | Qin-Shi Tomb — uniques/boss (✅ extraction DB 2026-10 : `MOB_TQ_WHITESNAKE`, gardiens, généraux) |
 | `MOB_SD_` | Désert d'Alexandrie / Job Temple |
 | `MOB_GOD_` | Forgotten World (donjons) |
+| `MOB_JUPITER_` | Temple de Jupiter 111-120 (✅ révélé par l'extraction DB 2026-10 — retrofit D12, `Service=0`) |
+| `MOB_FW_` | Fortress War (boss d'event 111-140 dans la DB rétrofitée) |
 | `MOB_EV_` | Événements |
 
 ---
@@ -315,12 +359,26 @@ Position: centre du B4
 ```
 
 ### Les 4 Gardiens (B5, niveaux 98-99)
-| Gardien | Animal | Position | Level | Nom ZH officiel (TW/CN) |
-|---------|--------|----------|-------|--------------------------|
-| JeonUk The Black Tortoise | Tortue noire | Nord | 98 | 玄武颛顼 (Xuánwǔ Zhuānxū) |
-| YumJae The Red Hawk | Faucon rouge | Sud | 98 | 朱雀炎帝 (Zhūquè Yándì) — « Phénix vermillon » |
-| TaeHo The Blue Dragon | Dragon bleu | Ouest | 99 | 青龙太皥 (Qīnglóng Tàihào) |
-| SoHaow The White Tiger | Tigre blanc | Est | 99 (le plus dur) | 白虎小昊 (Báihǔ Xiǎohǎo) |
+| Gardien | Animal | Position | Level | HP | Nom ZH officiel (TW/CN) |
+|---------|--------|----------|-------|----|--------------------------|
+| JeonUk The Black Tortoise | Tortue noire | Nord | 98 | **22 052 265** | 玄武颛顼 (Xuánwǔ Zhuānxū) |
+| YumJae The Red Hawk | Faucon rouge | Sud | 98 | **16 793 318** ⚠️ | 朱雀炎帝 (Zhūquè Yándì) — « Phénix vermillon » |
+| TaeHo The Blue Dragon | Dragon bleu | Ouest | 99 | **17 604 232** | 青龙太皥 (Qīnglóng Tàihào) |
+| SoHaow The White Tiger | Tigre blanc | Est | 99 (le plus dur) | **17 604 232** | 白虎小昊 (Báihǔ Xiǎohǎo) |
+
+> ✅ **HP des gardiens résolus (recherche PS 2026-10 + extraction DB vSRO 2026-10)** : valeurs de la liste client turque Extraloob ([S5](https://www.extraloob.com/threads/silkroad-1-110-lvl-monster-unique-hpleri-246312)), **confirmées à l'identique par les rows serveur** `MOB_TQ_NORTH/SOUTH/EAST/WESTGUARDIAN` de la DB vSRO (rapport [RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md) §Qin-Shi + [RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) §7). ⚠️ Divergence non tranchée : TurkHackTeam ([A11](https://www.turkhackteam.org/konular/medusa-rehberi.872217)) annonce ~167 933 118 HP pour YumJae (facteur 10) ; la liste Extraloob l'écrit « Blue Hawk » alors que le ZH 朱雀 (vermillon) penche pour « Red Hawk ».
+
+**Autres sous-uniques chiffrés (✅ extraction DB vSRO 2026-10 — rows `MOB_TQ_*`, recoupées Extraloob S5)** :
+
+| Sous-unique | Lvl | HP | EXP |
+|---|---|---|---|
+| Tomb General Hyun | 85 | 6 196 043 | 2 877 123 |
+| Tomb General Bi / Ho / Jin | 88 / 89 / 90 | 6 794 561 / 7 005 004 / 7 221 147 | — |
+| Snake Generals (Hew/Yul/Jung/Ki) | 95 | 7 242 389 chacun | 3 866 613 |
+| Gardiens N/S/E/O | 98-99 | 16,8 M → 22,1 M | 8 450 305-8 703 815 |
+| SoSo, The Black Viper | 100 | 27 655 068 (L2 : 276 550 675) | 13 447 394 |
+| ShinMoo, The Man of Flames | 100 | 46 091 779 | — |
+| **BeakYung / Medusa** | 100 | **183 535 199** | **62 356 860** |
 
 > ✅ **Résolu (recherche ZH 2026-10)** : les « 4 gardiens 98-99 » sont **nommés** dans les sources chinoises officielles — **玄武颛顼** (Tortue Noire/Zhuanxu), **白虎小昊** (Tigre Blanc/Xiaohao), **青龙太皥** (Dragon Azur/Taihao), **朱雀炎帝** (Phénix Vermillon/Yandi), plus un cinquième nom cité : **炎火客神武**. La correspondance exacte JeonUk↔玄武颛顼, TaeHo↔青龙太皥, SoHaow↔白虎小昊, YumJae↔朱雀炎帝 est **probable** (mêmes animaux cardinaux) mais non garantie mot pour mot. Protocole officiel TW : nettoyer les 4 mini-boss cardinaux → un **pré-boss central** apparaît (probablement Shinmoo) → ouvre l'accès au B6. Sources : [DiGeam](https://sro.digeam.com/intro/20200212) · [iccgame B5/B6](http://silkroad.iccgame.com/content-667-84551.html)
 
@@ -332,37 +390,86 @@ Position: centre du B4
 - Black Viper Chamber (B6) — drop du stuff 10D level 100
 - **HP : 27 655 068** ; attaques physique **et** magique (✅ Résolu, recherche TR 2026-10 — [SroLobby — Qin-Shi Tomb B6](https://www.srolobby.com/konular/silkroad-online-qin-shi-tomb-b6-monsters-mob-hp-saldiri-tipleri.1780))
 
-### BEAKYUNG THE WHITE VIPER « MEDUSA » (Level 105)
+### BEAKYUNG THE WHITE VIPER « MEDUSA » (Level 100/105)
 ```
 HP: 183,535,199 | Zone: White Viper Chamber (pièce nord du B6)
+Code serveur: MOB_TQ_WHITESNAKE (ID 14997) — ✅ révélé (extraction DB vSRO 2026-10)
+Spawn: 04:00 / 10:00 / 16:00 / 22:00 (4x/jour) — à son spawn, « Gate of Sarin Tribe open »
 ```
 - Le boss final du tombeau, la « Snake Lady / Medusa » de la communauté
 - **Structure B6 (recherche TR 2026-10)** : 4 salles, dont **2 avec uniques** — attaques physique et magique (SroLobby)
-- ⚠️ **Conflit de niveau non tranché** : les sources TR (SroLobby + Extraloob) indiquent **Lv 100** ; le client iSRO (KB) et le wiki TW DiGeam indiquent **105**. Les HP sont identiques des deux côtés (183 535 199) — à trancher via le client
-- **Accès rapporté (Extraloob)** : B5 = **5 uniques** à tuer, puis B6 = tuer **4 fois** l'unique 95 avant la salle Medusa — **divergent** du protocole « 4 gardiens + Shinmoo » du guide mmorpg.com (non tranché)
+- ⚠️ **Conflit de niveau** : les sources TR (SroLobby + Extraloob) indiquent **Lv 100** ; le client iSRO (KB) et le wiki TW DiGeam indiquent **105**. **Nouveau point de données (extraction DB vSRO 2026-10)** : la row serveur `MOB_TQ_WHITESNAKE` est au **niveau 100** — rejoint les sources TR ; les HP sont identiques des deux côtés (183 535 199). Conflit toujours non tranché formellement (le 105 reste dans les données client iSRO).
+- **Accès (protocole corroboré)** : B5 = **5 uniques** à tuer, puis B6 = tuer **4 fois** l'unique 95 (il respawn à chaque mort) avant la salle Medusa — rapporté par Extraloob **et corroboré par la route pas-à-pas SroTURK (recherche PS 2026-10)** ; reste divergent du protocole « 4 gardiens + Shinmoo » du guide mmorpg.com (non tranché)
 - **Skills officiels (TW DiGeam)** : AoE magique à distance, ligature frontale, **pétrification 100 %** en rayon, fortes attaques — voir la section [Noms multilingues](#-noms-multilingues-des-uniques-zh--kr)
 - Sur iSRO son spawn est partiellement **codé en dur dans le GameServer** (source : guide elitepvpers « Fixing Medusa duplicated spawn »)
 - Considérée comme le unique le plus difficile du jeu classique — top guilds uniquement
+
+### 🐍 Mécaniques détaillées de Medusa — ✅ Résolu (guides TR 2013, recherche PS 2026-10)
+
+**[OFFICIEL-DÉRIVÉ]** TurkHackTeam « Medusa Rehberi » (25/05/2013, [A11](https://www.turkhackteam.org/konular/medusa-rehberi.872217)) — le seul boss Silkroad documenté chiffré de bout en bout :
+
+**Attaques (chiffrées) :**
+- Sorts magiques multiples à **~12 633-13 983 dégâts**, multiplieurs **390-780 %**, jusqu'à **20 cibles** dans un cône frontal / périmètre de **15 m**
+- **Effets** : **Bind 50 % / 10 s** · **Petrify 5 % / 5 s** · **Poison 50 %** · **Fear (niveau 12) : 100 % / 10 s**
+- Défense magique ; n'invoque pas de géants élite — ce sont ses propres **AoE dévastatrices** qui tuent
+
+**Fenêtre de spawn :**
+- Spawn **04:00 / 10:00 / 16:00 / 22:00** (4x/jour) — l'annonce « **Gate of Sarin Tribe open** » s'affiche : la porte B4→B5 reste ouverte **10 minutes seulement**
+- Si vous mourez et retournez en ville, **impossible de revenir** → « vous DEVEZ y aller en party »
+
+**Esquive clé (SroTURK, [A12](https://www.sroturk.com/serverler/medusa-nasil-kesilir-medusa-eventi-silkroad-sabah-sporu.333)) :**
+- Quand Medusa « frotte ses mains » et qu'une **lueur blanche** apparaît → **s'éloigner vite** : elle lance une **boule de neige qui gèle** (sans coéquipier buffer, c'est la mort — les dégâts feu/foudre sont jouables, le gel non)
+
+**Compositions de party 8 joueurs documentées (Extraloob ~2009, [A13](https://www.extraloob.com/threads/roc-medusa-kesilme-strategiler-165766)) :**
+1. **Méthode « bug » (~3 h)** : Wizard · Cleric · Warrior · Cleric · Bard · Bard + 2 amis pour l'EXP — le cleric buff le warrior, qui **pull Medusa puis recule → elle se coince et cesse d'agir** → les buffers stackent sur le wizard qui **Life Turnover** et DPS (contesté : « le bug ne marche plus »)
+2. **Alternative « exotic »** : 3 wizards 98+ full forge · 2 bards full forge · 2 warriors · 1 cleric
+3. **Recommandation turkmmo** : membres **95+/98+** minimum
+
+La **route pas-à-pas complète** (camps militaires → B3 → B4 → B5 → B6) est détaillée dans [14_MONSTER_GUIDE.md — Guide Medusa pas-à-pas](./14_MONSTER_GUIDE.md).
 
 ---
 
 ## 🏺 Uniques du Job Temple (Alexandrie)
 
-Le **Job Temple** (donjon de job au sud d'Alexandrie, cap 120) contient 6+ uniques égyptiens. Accès selon l'**Activity Points (AP)** de votre union de job :
+Le **Job Temple** (donjon de job au sud d'Alexandrie, cap 120) contient 6+ uniques égyptiens. Accès selon l'**Area Points (AP)** de votre union de job :
 
-| Unique | Level | HP | Accès |
-|--------|-------|-----|-------|
-| **Apis** | 103 | 21,068,995 | Spawn conditionnel (après la mort d'Isis et Anubis) |
-| **Selket** | 105 | 80,811,919 | Libre (aucun AP requis) |
-| **Neith** | 106 | 83,077,174 | Libre (aucun AP requis) |
-| **Anubis** | 107 | 150,486,799 | AP requis (zone Anubis/Isis) |
-| **Isis** | 108 | 154,677,234 | AP requis (zone Anubis/Isis) |
-| **Haroeris** | 109 | 440,747,010 | Zone profonde, haut AP d'union |
-| **Seth** | 110 | 425,505,853 | Zone profonde, haut AP d'union |
+| Unique | Level | HP (client iSRO — KB) | HP (DB vSRO 1.188 = Extraloob) | EXP (DB vSRO) | Sanctuaire | Accès |
+|--------|-------|-----|-----|-----|-----|-------|
+| **Apis** | 103 | 21,068,995 | **21 068 995** (identique) | 9 796 221 | — | Spawn conditionnel (après la mort d'Isis et Anubis) |
+| **Selket** | 105 | 80,811,919 | **57 722 800** (`MOB_SD_SELKIS`) | 24 819 116 | Sanctum of Restriction | Libre (aucun AP requis) |
+| **Neith** | 106 | 83,077,174 | **59 340 839** (`MOB_SD_NEITH`) | 25 563 690 | Sanctum of Blue Eye | Libre (aucun AP requis) |
+| **Anubis** | 107 | 150,486,799 | **94 054 249** (`MOB_SD_ANUBIS`) | 40 680 779 | Sanctum of Punishment | AP requis (zone Anubis/Isis) |
+| **Isis** | 108 | 154,677,234 | **96 673 272** (Extraloob) | — | Sanctum of Atonement | AP requis (zone Anubis/Isis) |
+| **Haroeris** | 109 | 440,747,010 | **244 859 450** (`MOB_SD_HAROERIS`) | 76 310 958 | Sanctum of Immorality | Zone profonde, haut AP d'union |
+| **Seth** | 110 | 425,505,853 | **236 392 140** (`MOB_SD_SETH`) | 77 719 959 | Sanctum of Dark | Zone profonde, haut AP d'union |
 
-**Monstres du temple (SD) :** Uneg (100), Weneg (101), Dark Khepri (101), Dark Scout (102), Blood Hyena (104).
+> ✅ **HP Job Temple résolus côté serveur (extraction DB vSRO 2026-10)** : les rows `MOB_SD_*` de la DB vSRO 1.188 donnent **Selket 57,7 M → Anubis 94 M → Haroeris 244,9 M / Seth 236,4 M**, valeurs **strictement identiques à la liste client turque Extraloob** ([S5](https://www.extraloob.com/threads/silkroad-1-110-lvl-monster-unique-hpleri-246312) — les deux sources se recoupent à l'unité près). ⚠️ Elles divergent des valeurs « client iSRO » du tableau KB (~×1,4-1,8 — p. ex. Haroeris 440,7 M vs 244,9 M) : **divergence 1.188 vs client iSRO non tranchée** (les deux jeux de valeurs étant [OFFICIEL-DÉRIVÉ], possibles buff iSRO ultérieurs — à recouper contre une DB 1.274). **Haroeris a plus de HP que Seth** dans les deux jeux. Sources : [RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) §6 · [RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md) · CSV [uniques_vsro188.csv](ML_RESEARCH/data/uniques_vsro188.csv). Autres uniques de la zone (mêmes sources) : **Eris 109 = 87 783 966 HP** · Osiris III 110 = 48 336 636 · Horus III 110 = 35 270 343 — les dieux du Holy Water Temple (Sphinx/Sekhmet/Nephthys/Horus/Osiris ×3 difficultés, 8,2 M → 48,3 M) sont dans le même CSV.
 
-**Drops signalés** (non vérifiés sur iSRO, confirmés sur serveurs type ExaySRO) : Immortal/Astral stones par les uniques, items de job, Iron Coins.
+### 🔑 Guide du système AP (Area Points) — ✅ Résolu (recherche PS 2026-10)
+
+**[OFFICIEL réutilisé — guide ExaySRO corrigé GM, [A4](https://forum.exaysro.com/showthread.php?tid=3875)]** complété par SeaSRO ([A6](https://cap110.seasro.com/guide/job-temple)) et Guild Algarb ([A8](https://guildalgarb.wordpress.com/games/sro/maps/monster-areas)) :
+
+**Accès :**
+- **Niveau 105 minimum + costume de job obligatoire** (Hunter/Trader ou Thief) — « you cannot enter without wearing it »
+- Deux entrées aux extrémités du **Salt Desert** (au large d'Alexandrie) : **Red Eggre** et **Black Eggre** — l'entrée dépend de la classe de job
+- Zone **PvP ouverte** entre jobs rivaux (THIEVES vs HUNTERS/TRADERS) ; **pas une instance** : « ouverte pendant que les uniques spawn, 2x par jour à heure fixe » (cycle **12 h**, alertes in-game 10 min et 5 min avant)
+
+**Ouverture des salles selon l'AP des unions :**
+- **Selket & Neith** : aucun prérequis AP — salles libres
+- **Anubis & Isis** : « **Your Job Union needs to have the higher amount of AP to enter!** » — si aucune union n'a d'AP, **les deux** camps peuvent entrer
+- **Haroeris & Seth** : règle du plus haut AP, mais « **si aucun AP n'a été gagné par Hunters/Traders ou Thieves, personne n'entre jusqu'au prochain spawn** »
+- Les AP se gagnent via **quêtes job répétables** de NPCs dédiés (un NPC Hunters/Traders + un NPC Thieves pour Anubis/Isis ; un NPC **commun dans le Sanctum of Audience** pour Haroeris/Seth) ; consultation par la fenêtre **Area Point** (icône visible après au moins une entrée dans le temple)
+- **Ordre de kill imposé : « You must kill Haroeris before you can move onto Seth. »**
+- **Difficulté : « Seth is an extremely powerful Unique, you will need a 8/8 party possibly more for this! »**
+
+**Horaires des 6 sanctuaires (cycle 12 h) — ⚠️ [CUSTOM ExaySRO]** basés sur le cycle officiel 2x/jour : Selket/Neith **03:30 & 15:30** · Anubis/Isis **09:30 & 21:30** · Haroeris/Seth **12:30 & 00:30** (l'officiel ne publie que « 2x/jour à heure fixe »).
+
+**Monstres du temple (SD) :** Uneg (100), Weneg (101), Dark Khepri (101), Dark Scout (102), Blood Hyena (104) — stats serveur complètes dans [monsters_vsro188.csv](ML_RESEARCH/data/monsters_vsro188.csv) ; bon spot de **farm de SP** (quêtes internes « collecting bags »).
+
+**Drops signalés** :
+- **[OFFICIEL-DÉRIVÉ]** (SeaSRO A6) : les uniques droppent **Gold Coin et Silver Coin**, échangeables contre l'équipement exclusif du temple (set arcane/Egy B)
+- **[CUSTOM privés]** : ExaySRO — pièces Gold/Silver/Iron/Copper + 100 % de chance d'1 pierre Immortelle 12D ; DemonRoad — « EGY B Armor set » ; ExaySRO DG15 — le Glass of Darkness se farm au Job Temple
+- Immortal/Astral stones par les uniques (rapporté, non vérifié iSRO)
 
 **Mécanique:** le temple est un PvP-job zone — tradez/portez la cape de job ; les unions se disputent les chambres.
 
@@ -374,7 +481,7 @@ Le **Job Temple** (donjon de job au sud d'Alexandrie, cap 120) contient 6+ uniqu
 
 > ⚠️ **Périmètre** : chaîne de boss du **service coréen (KSRO, jamais fermé)** au-delà du contenu classique iSRO. **Ne pas fusionner avec les tableaux classiques ci-dessus** (les niveaux/HP classiques restent ceux du client iSRO). Rapport source : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) · chronologie : [RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md).
 >
-> ⚠️ **HP indisponibles** : aucune source officielle (KR ou TW) ne publie les HP/niveaux de ces boss — le site officiel KR ne donne que noms/niveaux (pour les monstres) et conditions d'entrée (pour les donjons). ✅ **Partiellement résolu (recherche PS 2026-10)** : le tracker [m3stat](https://www.m3stat.com/uniques) (serveurs officiels iSRO) fournit désormais les HP de **Kidemonas 120 / Karkadann 123 / Merikh 125** (table ci-dessus) ; pour les boss Jupiter (111-118) et Bagdad/Shambhala (130+), l'**extraction du client** (`characterdata`/`_RefObjChar`) reste la seule voie.
+> ⚠️ **HP indisponibles** : aucune source officielle (KR ou TW) ne publie les HP/niveaux de ces boss — le site officiel KR ne donne que noms/niveaux (pour les monstres) et conditions d'entrée (pour les donjons). ✅ **Partiellement résolu (recherche PS 2026-10)** : le tracker [m3stat](https://www.m3stat.com/uniques) (serveurs officiels iSRO) fournit désormais les HP de **Kidemonas 120 / Karkadann 123 / Merikh 125** (table ci-dessus). ✅ **Résolu pour Jupiter (extraction DB vSRO 2026-10)** : les rows `MOB_JUPITER_*` de la DB vSRO 1.188 rétrofitée D12 fournissent les HP/ATK/EXP des boss Jupiter/Yuno/Earth/Baal/Babilion/Dark Dog 111-120 (table dédiée ci-dessus) — à recouper contre un vrai 1.274. Restent sans HP chiffrés : **Bagdad/Shambhala (130+)** — l'extraction `characterdata`/`_RefObjChar` de files 1.193+/BR120 reste la voie.
 
 ### Chaîne chronologique post-Medusa
 
@@ -429,7 +536,7 @@ Les donjons FGW (accessibles lvl 35-110 via les **Dimension Holes** ouverts par 
   - Green Abyss → arme **10D Seal of Moon** (confirmé : récompense rendue à Hotan au Guild Manager **Musai** = 武萨伊, contre 第十套月亮印章 — [iccgame](https://silkroad.iccgame.com/content-667-49139.html))
   - Sea of Resentment → arme **11D Seal of Nova** (Power)
 - Les talismans tombent dans les trésoreries et sur les boss ; les **Faded Beads** rapportent 200-20,000 SP
-- ⚠️ **HP FGW divergents (non tranché)** : les guides TR (SroLobby) listent des HP **1000× supérieurs** aux valeurs client de la KB (ex. Togui General 1★ : 143 131 000 ; Ghost Serenes 1★ : 11 307 269 000) — probablement extraits de fichiers vSRO, à recouper avec `_RefObjCommon` ; niveaux et structure concordent en revanche
+- ⚠️ **HP FGW divergents (non tranché)** : les guides TR (SroLobby) listent des HP **1000× supérieurs** aux valeurs client de la KB (ex. Togui General 1★ : 143 131 000 ; Ghost Serenes 1★ : 11 307 269 000) — probablement extraits de fichiers vSRO, à recouper avec `_RefObjCommon` ; niveaux et structure concordent en revanche. 📌 L'extraction DB vSRO 2026-10 fournit désormais les rows `MOB_GOD_*` (84 mobs actifs 35-107 — ex. `MOB_GOD_TOGUI_TOGUIELDER_A1` lvl 39 = **1 275 761 HP**, à distinguer du « Togui General » ; capitaines/généraux/ainés par paliers dans [uniques_vsro188.csv](ML_RESEARCH/data/uniques_vsro188.csv)) — la comparaison systématique General/Elder/Sereness reste à faire.
 
 > 👉 Guide dédié : [29_FORGOTTEN_WORLD.md](./29_FORGOTTEN_WORLD.md)
 
@@ -448,6 +555,8 @@ Les fichiers client contiennent des variantes d'uniques utilisées pour les even
 | **MOB_EV_*** (ex. Young Bear `MOB_EV_BEAR_A_050`) | — | Events saisonniers |
 
 **Attention :** « Cerberus Strong / Captain Ivy Strong » (ex-« Cerberus King ») cités dans d'anciens documents correspondent à ces variantes d'event, pas à des uniques officiels de terrain.
+
+> ✅ **Confirmé côté serveur (extraction DB vSRO 2026-10)** : les rows `_L2/_L3` existent bien — ex. `MOB_CH_TIGERWOMAN_L2` = 5 987 197 HP (×10) / `_L3` = 1 796 159 (×3) ; `MOB_KK_ISYUTARU_L2` = 43 246 117 (×10) ; `MOB_AM_IVY_L2` = 10 948 346 (×10) / `_L3` = 3 284 504 (×3) ; `MOB_TQ_BLACKSNAKE_L2` = 276 550 675. La DB révèle aussi **90 rows `MOB_EVE_STRONG_*` de rareté 7** (« event strong » — champions d'événement itinérants, ex. `MOB_EVE_STRONG_KT_BUNWANG`) en plus des raretés 0/1/2/3/8 déjà documentées, et des rows parasites `_DROP` (HP=1, pour loots) et `_CLON` (clones d'instance) à ne pas confondre avec les vraies rows. Source : [RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) §3/§10.
 
 ---
 
@@ -474,6 +583,8 @@ StrategyWiki (2006)  : "spawn 1-2 fois par jour dans des zones spéciales" (anci
 > Sources : [RaGEZONE — Dev: Unique Spawn Time](https://forum.ragezone.com/threads/dev-unique-spawn-time.820175) · [elitepvpers — How to change unique spawn time](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/1773490-guide-how-change-unique-spawn-time.html) · rapport [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md)
 >
 > 📌 **Affinement** : l'ancienne formulation « 4 h par défaut vSRO » est remplacée par les valeurs réelles par type d'unique (**6 h pour la plupart, 3 h Uruchi, 4 h Medusa/Jupiter**) ; l'unique re-spawn **à un point aléatoire** après un délai tiré entre min et max (d'où les fenêtres ressenties « 3-6 h » de l'iSRO).
+>
+> ⚠️ **Nuance (extraction DB vSRO 2026-10)** : la table `Tab_RefNest` n'a pas pu être joinée de façon fiable au scan binaire (rows de nid trouvées avec `dwDelayTime=10800 s` = 3 h standardisés — signe de **timers édités par le serveur privé**, non vanilla). **On conserve donc les timers forum 6 h/3 h/4 h ci-dessus**, conformes aux défauts vSRO documentés ; ne pas utiliser les 3 h de cette DB rétrofitée. Source : [RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) §10.
 
 - ⏱️ **Le timer démarre à la mort** de l'unique
 - 🎲 **Le point de spawn est aléatoire** parmi plusieurs spots prédéfinis (points bleus des maps communautaires)
@@ -679,7 +790,14 @@ Détails complets : [MONSTERS_SPAWN_LOCATIONS.md](./MONSTERS_SPAWN_LOCATIONS.md)
 - [Wiki ExaySRO — Unique Locations](https://wiki.exaysro.com/books/guides/page/unique-locations) — HP officiels republiés à l'identique + « Abshad Force High General » (99 M HP custom) = 얍샤드 대장군
 - Rapports : [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) · [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) · [RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md) · [RESEARCH_AR_DEV.md](ML_RESEARCH/RESEARCH_AR_DEV.md) · voir [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md)
 
+### 🗄️ Extraction DB serveur vSRO (2026-10) — la source la plus complète à ce jour
+- **Rapport** : [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) — 7 157 monstres extraits d'un backup MSSQL `SRO_VT_SHARD` (vSRO 1.188 rétrofitée D12) parsé binairement, triple validation (KB + silkroadonline.wiki + cohérence interne)
+- **Source du backup** : [joaodematejr/private_server](https://github.com/joaodematejr/private_server) (`Tools/DB/SRO_VT_SHARD.bak`, 74 Mo) — schémas : [ducksoup-sro/ducksoup](https://github.com/ducksoup-sro/ducksoup/tree/main/Database/VSRO188)
+- **CSV livrés** : [monsters_vsro188.csv](ML_RESEARCH/data/monsters_vsro188.csv) (7 157 monstres, HP/MP/EXP/ATK/parété/rareté/vitesses) · [uniques_vsro188.csv](ML_RESEARCH/data/uniques_vsro188.csv) (830 rows rareté 3/6/8) · [monsters_cap120.csv](ML_RESEARCH/data/monsters_cap120.csv) (1 442 rows ≥ 111, boss Jupiter + FW) · [zones_vsro188.csv](ML_RESEARCH/data/zones_vsro188.csv)
+- **Guides gameplay (PS 2026-10)** : [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md) — Medusa pas-à-pas (TurkHackTeam A11 / SroTURK A12 / Extraloob A13), Job Temple AP (ExaySRO A4), FGW (Origin A9, Seidenkraft A1, Guild Algarb A7), liste HP Extraloob (S5)
+
 ---
 
 *Dernière mise à jour: 2026-10-01 (recherche web exhaustive — données client vérifiées via silkroadonline.wiki, elitepvpers, rev6, mmorpg.com, strategywiki)*
 *Fusion multilingue 2026-10 : rapports [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) (timers TR, noms ZH/KR, gardiens B5, skills Medusa, FGW) · rapports KO2 (section 🇰🇷 boss KSRO 2011-2023, validation Job Temple KR, correction Hebe/Kali/Rhea) · recherche PS/AR 2026-10 ([RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md), [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md), [RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md), [RESEARCH_AR_DEV.md](ML_RESEARCH/RESEARCH_AR_DEV.md) : ✅ HP officiels 111+ via m3stat — Kidemonas 13 851 102 / Karkadann 15 023 129 / Merikh 18 372 504 ; ✅ timers vSRO par défaut 6 h/3 h/4 h (Tab_RefNest) ; ✅ confirmation 얍샤드 대장군 = « Abshad Force High General » de Bagdad)*
+*Extraction DB vSRO 2026-10 ([RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) + [RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md)) : ✅ RÉSOLUTION TOTALE des HP Jupiter 111-120 (Jupiter 40 116 151 · Baal 55 404 408 / arme 83,1 M · Yuno 24 168 318 · Dark Dog 26,2 M — OFFICIEL-DÉRIVÉ retrofit D12, à recouper vs 1.274) ; ✅ HP Job Temple côté serveur + liste Extraloob (Selket 57,7 M → Anubis 94 M → Haroeris 244,9 M / Seth 236,4 M, divergence vs client iSRO documentée) ; ✅ EXP officielles par unique jamais publiées (TG 451 200 → Roc 1 157 701 880) ; ✅ codenames serveur (MOB_TQ_WHITESNAKE, MOB_QT_01_IVY, MOB_JUPITER_*) ; ✅ Roc 1 451 891 045 confirmé côté serveur ; ✅ mécaniques Medusa chiffrées + guide AP du Job Temple ; ✅ HP gardiens Qin-Shi*

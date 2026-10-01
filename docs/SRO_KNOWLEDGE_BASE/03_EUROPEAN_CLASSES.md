@@ -58,6 +58,8 @@ La race européenne (introduite avec **Legend I: Europe**, 2007) offre un systè
 
 Sources : [Guide Chinese vs Europe (Temptation)](https://silkroadtemptation.wordpress.com/2010/03/02/guide-chinese-vs-europe/), [MMORPG.com – Skill Farming](https://forums.mmorpg.com/discussion/234430/silkroad-online-skill-farming), [Fandom Wiki – Skills](https://silkroadonline.fandom.com/wiki/Skills)
 
+> 📊 **Valeurs chiffrées ✅ (extraction skilldata 2026-10)** : **3 637 skills EU** décodés depuis `skilldata_5000.txt` (fichiers serveur vSRO 1.188 + extension cap 120, repo *joaoldematejr/server_files_sro*) — dégâts, MP, SP, durées et cooldowns **par niveau** disponibles dans [ML_RESEARCH/data/skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv) (47 colonnes). Loi structurante : **le % de dégâts est FIXE par série**, seule la part fixe min~max monte avec le niveau. Rapport : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md). Échantillons chiffrés dans les sections Warrior/Wizard/Bard/Cleric ci-dessous.
+
 ---
 
 ## 🏛️ Système de Classes
@@ -134,6 +136,8 @@ Armures EU (mêmes 3 familles que CH) : **Heavy Armor** (STR), **Light Armor** (
 - **Buffs self :** **Vital Increase** (+HP, −35% ATK — à annuler pour burst), **Iron Skin** (+DEF PHY, obligatoire), **Mana Skin** (+DEF MAG, obligatoire), Warcry (2H)
 - **Buffs party (haut niveau) :** **Pain Quota** (partage les dégâts de 2 membres, 5 min), **Physical/Magical Fence** (transfert une partie des dégâts vers le Warrior), **Protect** (absorbe l'aggro de 2 joueurs), **Physical/Magical/Ultimate Screen** (+DEF massive 1 min, ne pas stack les trois)
 
+> 📊 ✅ (extraction skilldata 2026-10) Échantillon Warrior — **Dare Devil** (2H, maîtrise 80→120, 11 niveaux) : **305 % + 702~858 → 305 % + 2 262~2 765**, **2 hits**, CD 5 s, MP 1 311→4 063, knockback [30, 50] + taunt. **Pain Quota** : durée **5 min confirmée** (`dura` 300 000 ms), CD 2 s, MP 17→256, maîtrise 20→100. **Iron Skin** : absorption **238 → 2 972**, 14 rangs (maîtrise 40→118), CD 2 min, SP 280→25 094. Source : [ML_RESEARCH/data/skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv).
+
 ### Builds
 - **1H/Cleric** : le tank ultime (dungeons, Alexandria). Stats full STR, Light Armor.
 - **2H/Cleric** : burst melee + survie, très fort en 1v1.
@@ -207,6 +211,8 @@ Armures EU (mêmes 3 familles que CH) : **Heavy Armor** (STR), **Light Armor** (
 - **Buffs :** **Life Control** (+25% dégâts MAG, −50% HP) et **Life Turnover** (+25% supplémentaires, cumulables) ; **Invisible → Crystal Invisible** (invisibilité, version groupe) ; **Detect → Sprawl Detect** (révèle les stealth)
 - **Passifs :** Natural Spirit (+10% MAG ATK/rang), Force Mental (+10% MP, +1 INT/rang), **Magic Bound** (+1 m de portée/rang — portée de base 18 m)
 
+> 📊 ✅ (extraction skilldata 2026-10) Échantillon Wizard — **Fire Bolt** (maîtrise 4→120, **30 niveaux**) : **366 % + 32~39 → 366 % + 3 438~4 202** (le % ne bouge jamais) ; MP 37→**5 799** ; SP 2→**27 050** ; burn 28→260 ; CD 4 s. **Meteor** (maîtrise 60→116, 15 niveaux) : **439 % + 582~711 → 439 % + 3 076~3 760**, **2 hits**, **CD 10,5 s** (10 500 ms), MP 2 189→12 444. Source : [ML_RESEARCH/data/skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv).
+
 ### Builds
 - **Wizard/Cleric** : le build polyvalent numéro 1 (Light Armor, soins, combo Offering+Teleport).
 - **Wizard/Bard** : le farm party par excellence (mana + speed), très mauvais solo.
@@ -268,6 +274,8 @@ Armures EU (mêmes 3 familles que CH) : **Heavy Armor** (STR), **Light Armor** (
 - **Danses (haut niveau) :** **Dance of Magic / Dance of Wizardry** (+dégâts magiques du groupe), Dance of Healing, danse warrior (PHY), danse rogue — interrompues si le Bard est touché ; **Awesome World** permet de danser seul (effet réduit de moitié)
 - **Passifs :** Beautiful Life (danses), Bards Dream, passifs de base
 
+> 📊 ✅ (extraction skilldata 2026-10) **Mana Orbit** est le **skill le plus cher du jeu en MP au lv1** : **15 896 MP** (jusqu'à 30 000 au dernier rang, maîtrise 90→120) — la « batterie de mana » se paie au prix fort. Source : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md §4.5](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md) · [ML_RESEARCH/data/skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv).
+
 ### Builds
 - **Bard/Cleric** : support total (buffs + heals + rez), très demandé, très faible solo.
 - **Wizard/Bard** : le farm en party.
@@ -296,6 +304,8 @@ Armures EU (mêmes 3 familles que CH) : **Heavy Armor** (STR), **Light Armor** (
 - **Reflect :** Reverse → Grad Reverse, Group Reverse → Holy Group Reverse, Reverse Oblation/Immolation
 - **Anti-curse :** **Holy Word → Holy Spell** (résistance aux statuts anormaux), Innocent → Integrity (cure)
 - **Attaques :** Trial Cross → Justice Cross, **Overhealing → Glut Healing** (dégâts fixes, aggro), **Offering / Pure Offering** (**consomme 95% des HP du Cleric** — la plus grosse attaque du jeu, nécessite HP > 95%)
+
+> 📊 ✅ (extraction skilldata 2026-10) **Healing Orbit** (maîtrise 80→116, 7 rangs) : soin **1 819 → 4 722** par cycle ; durée 16 s ; CD 10 s ; MP 5 822→15 111 ; SP 2 494→23 138. Source : [ML_RESEARCH/data/skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv).
 
 ### Builds
 - **Cleric/Bard** : support complet (mana + heals + buffs).
@@ -332,6 +342,7 @@ Armures EU (mêmes 3 familles que CH) : **Heavy Armor** (STR), **Light Armor** (
 - **~760 000 SP** pour maxer Wizard+Bard au cap 90 ; bien moins que l'équivalent CH (qui exige des millions et du gap farming).
 - Le gap/farming reste **utile mais optionnel** pour débloquer tous les livres de skills sans attendre.
 - Ordre conseillé : main mastery d'abord (dégâts/rôle), sub ensuite (survie/support), passifs en dernier.
+- 📊 ✅ (extraction skilldata 2026-10) **Réconciliation des ordres de grandeur** (fichiers serveur vSRO 1.188 + cap 120) : le coût SP cumulé pour apprendre **toutes les séries d'une maîtrise complète au cap 120** est **Warrior 4 204 688 SP** · Warlock 3 672 099 · Rogue 2 930 473 · Cleric 2 813 755 · Wizard 2 771 857 · Bard 2 575 210. Les ~760 k du guide (Wizard+Bard cap 90) correspondent à une **sélection de lignes**, pas à l'arbre complet — les deux chiffres sont cohérents. Source : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md §4.5](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md).
 
 ---
 
@@ -468,5 +479,5 @@ Le **calculateur de skills officiel** du site KSRO embarque la table complète `
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (révision majeure : noms de skills iSRO vérifiés, système de masteries corrigé, party builds, sources croisées ; enrichi des noms ZH/TW officiels des classes — recherche multilingue ML_RESEARCH ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : calculateur officiel = 269 noms KR des skills EU — rapport ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §4)*
-*Sources: elitepvpers (traductions 2008), silkroadforums, SRO Valkyria blog, Fandom Wiki, GitHub (PhBot, eSRO), silkroadtemptation, Rev6 ; noms ZH : wiki Bahamut + DiGeam (via ML_RESEARCH/RESEARCH_ZH.md)*
+*Dernière mise à jour: 2026-10-01 (révision majeure : noms de skills iSRO vérifiés, système de masteries corrigé, party builds, sources croisées ; enrichi des noms ZH/TW officiels des classes — recherche multilingue ML_RESEARCH ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : calculateur officiel = 269 noms KR des skills EU — rapport ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §4 ; ajout des **valeurs chiffrées par niveau** — extraction skilldata 2026-10, rapport ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md, CSV ML_RESEARCH/data/skills_detail_EU.csv)*
+*Sources: elitepvpers (traductions 2008), silkroadforums, SRO Valkyria blog, Fandom Wiki, GitHub (PhBot, eSRO), silkroadtemptation, Rev6 ; noms ZH : wiki Bahamut + DiGeam (via ML_RESEARCH/RESEARCH_ZH.md) ; chiffres par niveau : skilldata_5000.txt (fichiers serveur vSRO 1.188 + cap 120, repo joaoldematejr/server_files_sro), noms croisés skills.txt (tarekwiz), colonnes RawRefSkill.cs (hnguyenaa), tags fourcc openroad — marqueur ✅ (extraction skilldata 2026-10)*

@@ -5,6 +5,8 @@
 > ⚠️ **Révision majeure (2026-10)** : ce hub a été resynchronisé avec [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md) et [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md), réécrits à partir des **vraies données iSRO** (fichier `skills.txt` du client, traductions elitepvpers, Silkroad Origin Mobile, PhBot). L'ancienne version du hub contenait des noms de skills **inventés** (« Flying Chain Series », « Two-Handed Warrior » comme classe…) — tout est corrigé ci-dessous.
 >
 > 🌏 **Enrichissement (recherche multilingue 2026-10)** : ajout des **noms originels KR/ZH** des maîtrises et séries CH (rapports [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) / [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md)) — l'incertitude « noms KSRO introuvables » est levée : ✅ **Résolu (recherche KO/ZH 2026-10)**.
+>
+> 📊 **Valeurs chiffrées ✅ (extraction skilldata 2026-10)** : **6 909 skills joueurs (3 272 CH / 3 637 EU)** décodés depuis `skilldata_5000.txt` (fichiers serveur vSRO 1.188 + extension cap 120) — 47+ colonnes par niveau (dégâts %/min/max, MP/HP, SP, timers ms, portée, armes, statuts). CSV exploitables dans `ML_RESEARCH/data/` (`skills_detail_CH.csv`, `skills_detail_EU.csv`, `skills_series.csv`, `skills_masteries.csv`). Rapport : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md) · synthèse ci-dessous : [Loi de progression des dégâts](#-loi-de-progression-des-dégâts-extraction-skilldata-2026-10).
 
 ## 📋 Table des Matières
 - [Introduction](#-introduction)
@@ -109,7 +111,7 @@ Détails complets (buffs par portée, rotations, tips) → [SKILLS_DATABASE_EURO
 
 ### Lacunes documentées & recommandation pour SRObro (rapport KO2 §16-17)
 
-1. **Coûts SP des rangs 96-124 et valeurs chiffrées des skills tardifs : introuvables en ligne** — le site officiel ne publie que noms + niveaux de maîtrise ; l'extraction du client (`skilldata_5000.txt` / `_RefSkill`) reste la voie.
+1. **Coûts SP des rangs 96-124 et valeurs chiffrées des skills tardifs** — 📊 ✅ **Partiellement résolu (extraction skilldata 2026-10)** : les fichiers serveur vSRO 1.188 + extension cap 120 couvrent les rangs jusqu'à **maîtrise 120** avec SP, MP, dégâts et timers par niveau ([ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv) / [skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv)). Restent hors périmètre : les rangs **121-124** spécifiques au service KSRO (ex. 기담요결 122/124).
 2. **Mapping codename ↔ noms KR tardifs non réalisé** (les 296 skills officiels CH n'affichent pas de codenames ; les noms iSRO tardifs ne correspondent pas mot à mot) — croisement avec skilldata à faire.
 3. **Cap total de mastery au-delà de 120 : non publié** (360 au cap 120 côté EN ; 330 sur l'ancien namu.wiki).
 4. **Recommandation du rapport** : importer les tables officielles A8 (296 skills CH) + A9 (269 skills EU) dans une base dédiée (ex. `SKILLS_DATABASE_LATE_KR.md`) — **la source primaire la plus propre jamais trouvée pour les noms KR tardifs**. Méthode de scraping : `curl | iconv -f EUC-KR` (l'encodage EUC-KR du site officiel casse les fetchers standards).
@@ -156,6 +158,28 @@ Détails complets (buffs par portée, rotations, tips) → [SKILLS_DATABASE_EURO
 - Fire = dégâts max + **Burn** (DoT) · Cold = **Frostbite** (~40 %) + **Freeze** (~20 %) · Lightning = **Shock** (réduit le parry ratio) + splash.
 - ⚙️ Mécanique documentée (forum DE, 2006) : le bonus d'imbue est **multiplié par le % de dégâts du skill** (200 % → ×2 ; combo 68 %/coup → proportionnel) et figé côté serveur **à la confirmation d'activation** — [silkroadonline.de — Schadensberechnung](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/4266-schadensberechnung), via [RESEARCH_DE](ML_RESEARCH/RESEARCH_DE.md).
 - 🧪 Chiffres lv1 (officiels KR, 2005) : River Fire = 21 dégâts moyens · Thunder Tiger = 17,5 · splash Lightning = 12,25 (≈ +20 % de vitesse de farm) — [GameAbout](http://www.gameabout.com/news/articleView.html?idxno=615), via [RESEARCH_KO](ML_RESEARCH/RESEARCH_KO.md).
+- 📊 ✅ (extraction skilldata 2026-10) Modèle complet sur un livre : **durée 6 s / CD 6 s** (recast permanent), dégâts `att kind 8` à **100 % + part fixe** (ex. River Fire 100 % + 17~29 → + 55~92 au lv9 ; God Fire Force lv120 : 100 % + 1 769~2 949, CD 12 s) ; probabilité de statut **32 % (lv1) → 65 % (lv9)** ; **niveau d'effet = 2 × niveau du skill − 1** (burn lv9 = niveau d'effet 17). Détail : [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md).
+
+### 📊 Loi de progression des dégâts (extraction skilldata 2026-10)
+
+> ✅ **Découverte structurante** (6 909 skills joueurs, vSRO 1.188 + cap 120) : **le % de dégâts est FIXE par série** — seule la part fixe min~max monte avec le niveau (facteur ×3-4), avec le coût MP/SP. Exemples représentatifs :
+
+| Série | % (fixe) | Part fixe lv1 → lv max | MP lv1 → max | Autres |
+|---|---|---|---|---|
+| Strike Smash (CH, Bicheon, 9 lv) | 143 % | +15~18 → **+47~57** | 19→60 | CD 3 s constant |
+| Flame Wave - Arrow (CH, Fire, 18 lv) | 250 % | +123~205 → **+464~773** | 348→1 310 | préparation 1 000 ms + cast 500 ms, CD 4 s |
+| Fire Bolt (EU, Wizard, 30 lv) | 366 % | +32~39 → **+3 438~4 202** | 37→**5 799** | SP 2→27 050, burn 28→260 |
+| Meteor (EU, Wizard, 15 lv) | 439 % | +582~711 → **+3 076~3 760** | 2 189→12 444 | **2 hits**, CD 10,5 s |
+| Dare Devil (EU, Warrior 2H, 11 lv) | 305 % | +702~858 → **+2 262~2 765** | 1 311→4 063 | 2 hits, CD 5 s, knockback + taunt |
+
+**Corollaires vérifiés dans les données :**
+- **La « longue incantation » des nukes CH = colonne `PreparingTime` (1 000 ms)**, distincte du cast (`CastingTime`, ex. 500 ms) et du cooldown (`ReuseDelay`).
+- **Le critique (`cr`) n'existe que sur 14 séries du jeu entier** : Anti Devil Bow (+20 constant), Strong Bow C/D/E, 2 livres d'épée (Killing Heaven D/E) et 1 passif Warrior EU — **aucun nuke ni imbue** ne porte le tag (réponse définitive à « les nukes CH ne critiquent pas »).
+- Cooldowns les plus fréquents : **4 s** (955 skills), puis 10 s, 5 s, 8 s, 3 s ; portées : **150** nukes distance (1 645 skills), 100 mi-portée EU, 50 AoE mêlée, 200 arcs.
+- Buffs chiffrés : Pain Quota **5 min** (300 000 ms) ; Healing Orbit **1 819 → 4 722**/cycle (16 s, CD 10 s) ; Iron Skin 238→2 972 absorbés ; Frost Nova freeze **66 % → 132 %**.
+- SP cumulés toutes séries au cap 120 : Bicheon **2,75 M** · Fire 1,81 M · Cold 1,88 M · Lightning 1,22 M · Warrior **4,2 M** · Wizard 2,77 M (détail par maîtrise dans les bases CH/EU).
+
+Source : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md) (repo [joaoldematejr/server_files_sro](https://github.com/joaoldematejr/server_files_sro), noms via [skills.txt tarekwiz](https://github.com/tarekwiz/SilkroadBot), colonnes via [RawRefSkill.cs hnguyenaa](https://github.com/hnguyenaa/MySilkroad), tags via [openroad](https://github.com/ferdoran/openroad)) · CSV : [ML_RESEARCH/data/](ML_RESEARCH/data/).
 
 ### Statuts et pilules
 | Statut | Source | Pilule universelle ? |
@@ -267,7 +291,25 @@ model Skill {
 }
 ```
 
-> 📡 Les dégâts min/max et coûts MP par niveau **ne sont pas dans `skills.txt`** : à extraire de `skilldata_5000.txt` / `_RefSkill` (colonnes d'effets + codes Param documentés — voir [TECHNICAL_SPECIFICATIONS.md](TECHNICAL_SPECIFICATIONS.md)) et les « Skill Power » Origin Mobile ne sont que des proxys relatifs.
+> 📡 ✅ **Fait (extraction skilldata 2026-10)** : les dégâts min/max et coûts MP/SP par niveau ont été extraits de `skilldata_5000.txt` (vSRO 1.188 + cap 120) vers [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv) / [skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv) — 47+ colonnes par niveau, directement importables par SRObro (méthodologie : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md)). Les « Skill Power » Origin Mobile restent des proxys relatifs.
+
+### Format skilldata décodé (vSRO 1.188) — pour l'import SRObro
+
+> ✅ (extraction skilldata 2026-10) Une ligne = **un niveau** d'un skill ; 118 colonnes = 69 fixes + flux de paramètres à tags **fourcc**. Noms officiels des colonnes fixes via `RawRefSkill.cs` (hnguyenaa/MySilkroad), tags via openroad + corrections mesurées sur le corpus.
+
+| Champ (CSV) | Colonne skilldata | Signification |
+|---|---|---|
+| `activity` | `Basic_Activity` | **0 = passif, 1 = instant/toggle (imbues), 2 = castable** |
+| `chain_next_id` | `Basic_ChainCode` | segment **suivant** d'un combo (0 = fin) ; les continuations ont MP = 0 (ex. Fire Blow A2…A7 — filtrer sur `mp_cost > 0`) |
+| `prepare_ms` / `cast_ms` / `action_ms` / `cooldown_ms` / `cooltime_ms` | `Action_PreparingTime` / `CastingTime` / `ActionDuration` / `ReuseDelay` / `CoolTime` | timers en **ms** — préparation 1 000 ms sur les nukes CH, `CoolTime` (2ᵈ timer, 0 sur la plupart) non interprété |
+| `att_kind` / `att_pct` / `att_min` / `att_max` | tag `att` (5 args) | kinds : **5** = physique % (armes), **8** = magique imbue, **10** = magique % (nukes, Fire Bolt), 6/9 = variantes EU |
+| `range` | `Action_Range` | 150 nukes distance · 100 mi-portée EU · 50 AoE mêlée · 200 arcs · 0 = portée de l'arme |
+| `req_mastery_lv` / `req_sp` | `ReqCommon_Mastery1` / `ReqLearn_SP` | maîtrise requise + **coût SP d'apprentissage** |
+| `mp_cost` / `hp_cost` | `Consume_MP` / `Consume_HP` | coûts par cast (0 sur passifs et continuations de combo) |
+| `weapon1/2` | `ReqCast_Weapon1/2` | codes armes (255 = libre) : 2 sword, 3 blade, 4 spear, 5 glaive, 6 bow, 12 crossbow, 13 dagger, 14 harp, 11/10 staff, 8 = 2H EU |
+| `mc_hits`, `dura_ms`, `cr`, `heal`, `defp`, `status` | tags `mc`, `dura`, `cr`, `heal`, `defp`, … | hits d'un combo, durée d'effet ms, crit, soin, défense, statuts |
+
+**Tags d'effets de statut décodés** (contribution originale du rapport) : `kb` knockback · `ko` knockdown · `bu` burn · `fb` frostbite · `fz` freeze · `es` shock/electrocution · `bl` bleed · `sl` sleep · `ds` drain de vie · `tnt2` taunt · `st` stun · `da` down attack. **Corrections openroad mesurées** : `cr` = **2** args (crit), `heal` = **4**, `defp` = **3**, `getv` = 0.
 
 ---
 
@@ -289,7 +331,7 @@ R: Certaines lignes EU ont des **groupes de CD partagés** (ex. Meteor ↔ Fire 
 R: Ce sont les rangs supérieurs de la même ligne (`Root → Mesh Root`, `Blaze → Dark Blaze`) — à apprendre à la place du book 1 une fois le palier atteint.
 
 **Q: Où sont les chiffres exacts (dégâts/MP) ?**
-R: Non publiés de façon fiable et absents de `skills.txt` — voir les sections « Données Manquantes »/« Incertitudes » des deux bases pour l'état exact de ce qui est vérifiable.
+R: ✅ **Extraction faite (skilldata 2026-10)** : 6 909 skills joueurs décodés (47+ colonnes par niveau) → [ML_RESEARCH/data/skills_detail_CH.csv](ML_RESEARCH/data/skills_detail_CH.csv) / [skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv) ; rapport [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md). Loi clé : **% de dégâts fixe par série, seule la part fixe min~max monte avec le niveau**.
 
 **Q: Meilleures compétences PvP ?**
 R: Voir [33_PVP_BUILDS.md](33_PVP_BUILDS.md) ; les interrupts (Sprint Assault, Scorn, Soul Spear) et les debuffs nommés (Division) dominent le meta documenté.
@@ -314,5 +356,5 @@ R: Voir [33_PVP_BUILDS.md](33_PVP_BUILDS.md) ; les interrupts (Sprint Assault, S
 
 ---
 
-**Dernière mise à jour : 2026-10-01 (enrichi des noms originels KR/ZH et de la mécanique des imbues — recherche multilingue ML_RESEARCH ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : tables officielles 64 séries/296 skills CH + 269 skills EU, systèmes 2025 — rapports ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md et RESEARCH_KO2_CHRONO.md)**
+**Dernière mise à jour : 2026-10-01 (enrichi des noms originels KR/ZH et de la mécanique des imbues — recherche multilingue ML_RESEARCH ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : tables officielles 64 séries/296 skills CH + 269 skills EU, systèmes 2025 — rapports ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md et RESEARCH_KO2_CHRONO.md ; ajout des **valeurs chiffrées par niveau** (loi % fixe, imbues, critique, timers, format skilldata) — extraction skilldata 2026-10, rapport ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md, CSV ML_RESEARCH/data/)**
 *Hub resynchronisé avec les bases CH/EU révisées (noms iSRO réels, codenames, structure séries/livres et book 1-2 ; correction : 6 maîtrises EU, pas 8 « classes »). Les listes de skills non sourcés de l'ancienne version ont été remplacées par les skills vérifiés des bases détaillées.*

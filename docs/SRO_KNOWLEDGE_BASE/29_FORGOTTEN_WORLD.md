@@ -63,6 +63,8 @@
 ### Aider les autres joueurs
 Le **leader de party** entre avec sa propre Dimension Hole ; les autres membres (bon niveau) sont téléportés dans **la même instance** via le **Pillar of Party Member Recall**. On peut toujours rejoindre l'instance d'un autre joueur.
 
+> ✅ **Confirmations croisées (recherche gameplay 2026-10)** : le guide Origin « The Forgotten World – Togui Village Instance » (~55 k vues) confirme **instance 2 h / cooldown de ré-entrée 3 h** et précise le **Recall Tower/Pillar** — le master peut rappeler des amis **depuis la ville uniquement, sans costume de job** ; le cristal bleu ne disparaît pas si l'invocateur TP en ville, mais **disparaît après ~15 min** ([guide Origin](https://forum.playorigin.com/showthread.php?73) · [archive intégrale](https://forum.playorigin.com/archive/index.php/t-73.html)).
+
 ---
 
 ## 🗺️ Les 4 Donjons (noms et niveaux VÉRIFIÉS)
@@ -333,6 +335,8 @@ Chaque donjon possède **une collection de 8 talismans** (noms officiels iSRO, c
 | **Série one-time** (~7 quêtes par tranche de niveau) | 1 fois | La plus longue, les plus grosses récompenses XP ; certaines donnent des items scellés |
 | **Quêtes journalières** | Toutes les **24 h** | Petites tâches (kill ou collect), faisables en 1-2 sessions, plusieurs disponibles simultanément |
 
+> ✅ **Ajout (recherche gameplay 2026-10)** : le guide Origin Togui documente par ailleurs une **quête de 500 000 SP** liée au village (donnée par **Asaman**, le NPC de quête D8 de Hotan) — la plus grosse récompense SP du donjon, corroborée par les runs vidéo PT-BR « Togui completo 500k SP » ([guide Origin](https://forum.playorigin.com/showthread.php?73) · [vidéo](https://www.youtube.com/watch?v=iCgAU8icRoU)).
+
 ---
 
 ## 🏆 Récompenses
@@ -347,9 +351,11 @@ Chaque donjon possède **une collection de 8 talismans** (noms officiels iSRO, c
 
 ### Items FGW
 - **Talismen** : droppés par Treasure Boxes et boss ; **vendables**.
-- **Faded Beads** : droppées par Treasure Boxes, mini-boss et boss. À l'usage : **200 à 20 000 SP aléatoires**. Vendables aussi.
+- **Faded Beads** : droppées par Treasure Boxes, mini-boss et boss. À l'usage : **200 à 20 000 SP aléatoires** (constats pratiques ~**14-20 k SP** — PrincessJane, ✅ recherche gameplay 2026-10). Vendables aussi.
 - **Drops rares de Ghost Sereness** : armes D11 Nova B Fight, boucliers Nova A Protection / Nova B Guard.
 - Le boss du dernier camp peut aussi dropper une **arme égyptienne B-grade** (D11, extrêmement rare — rapporté par Algarb).
+
+> ✅ **Récompenses formalisées (recherche gameplay 2026-10)** : le cheminement documenté de bout en bout est **D8 Sun → D9 Sun → D10 Moon → D11 Nova** (Guild Algarb : « D8 Sun → D11 Nova » par donjon), et selon le récit détaillé PrincessJane (Sea of Resentment, 2011), la **collection complète s'échange contre une arme égyptienne degré A au choix**, tandis que **Ghost Sereness peut dropper une Egyptian Weapon Degré B** « meilleure qu'une Nova normale ou qu'une Egy A » — l'astuce du **collection book le moins rempli** (ouvrir les coffres avec le perso le moins avancé = meilleur taux) est confirmée par les deux guides ([Guild Algarb](https://guildalgarb.wordpress.com/games/sro/maps/forgotten-world) · [PrincessJane](https://princessjane25.wordpress.com/2011/03/18/legend-vi-forgotten-world-shipwreck-dimension-ii)).
 
 > ❌ L'ancienne version listait des récompenses par étoile (SP fixes, Arena Coins, SOS/SOM par grade) : **non documentées sur officiel** — les grades n'influencent que le taux de talismans, pas la nature de l'arme.
 
@@ -375,6 +381,10 @@ Chaque donjon possède **une collection de 8 talismans** (noms officiels iSRO, c
 ## 💰 Forgotten Coins (variante private servers)
 
 ⚠️ Le système « Forgotten Coins » (shop NPC qui échange des coins contre talismans) **n'existe pas sur les serveurs officiels** — c'est une mécanique récurrente des **private servers** modernes pour supprimer le RNG. Le principe : les coffres/boss droppent des coins, un NPC permet d'acheter le talisman manquant (prix croissant avec la rareté). Pour SRObro : à traiter comme **option de design** (réduit la frustration), pas comme donné officielle. Les taux chiffrés de l'ancienne version de ce fichier (coins par coffre, etc.) étaient **inventés** et ont été retirés.
+
+**Taux de drop chiffrés publiés par des privés — toujours [CUSTOM], jamais officiels** (✅ recherche gameplay 2026-10) :
+- **ExaySRO** ([DG15 Crafting Guide](https://forum.exaysro.com/showthread.php?tid=4005)) : talismans FGW — Flame Mountain mobs **5 %**, « Envy Drop rate 100 % », Flame Captain 5 / Flame Adjutant Honghaeah 5, **Flame Cow King 10** ; Shipwreck mobs **10 %**, Envy 1, uniques intermédiaires 5-8, **Sereness 10** ; le **Fire Crystal** (composant DG15, 30 000 unités nécessaires) se farm dans le FGW et les events GM.
+- **Devil's Garden** (donjon privé de Legends Online — [playlegends.online](https://playlegends.online/news-8.html)) : chaque monstre **100 %** de drop garanti en version party / **50 %** en version solo (2 pierres aléatoires + élixir + Jewel Box ; Devil Baal & Devil Shaitan : Immortelle 10D + 5 Faded Beads ; The Devil : Astrale 10D, SoM 10D 5-10 %) — exemple type du format « entrée payante en gold + drops garantis en % » des guides privés.
 
 ---
 
@@ -428,6 +438,8 @@ Donjon d'Alexandria à progression par quêtes (Pharaon/temple égyptien) :
 | Ice Temple / Fire Temple (Shambhala) | 131-135 / 136-140 | 27/03/2018 | donjons Shambhala (accès NPC Mortifying Monk au Taklamakan) |
 
 Sources : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) · [RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md) · wiki DiGeam.
+
+> ✅ **Tables de quêtes Jupiter 111-117 (recherche gameplay 2026-10)** — les guides Seidenkraft documentent la totalité des quêtes du **Hall of Worship 111-115** ([lien](https://seidenkraftblog.wordpress.com/2012/09/13/the-hall-of-worship-jupiter-temple-quest)) et de la **Mirror Dimension 111-117** ([lien](https://seidenkraftblog.wordpress.com/2012/09/13/the-secret-of-the-mirror-dimension-jupiter-temple-quest)) : objectifs chiffrés (kills 150-500, collectes 40-500) cartographiant toutes les familles de mobs Jupiter. **Hors périmètre FGW** (pas de Dimension Hole ni talismans) → intégrées à [13_ZONES_OVERVIEW.md — section « 🎮 Précisions d'entrée et de gameplay »](./13_ZONES_OVERVIEW.md) avec les gates d'entrée du client v1.657.
 
 ---
 
@@ -639,13 +651,17 @@ R: Le boss doit être tué dans les 2 h, sinon le donjon disparaît et vous ête
 - [Silkroad Online Wiki — Accueil](https://silkroadonline.fandom.com/wiki/Silkroad_Online_Wiki)
 
 ### Guides communautaires
-- [The Forgotten World – Togui Village Instance (Origin Guides)](https://forum.playorigin.com/showthread.php?73-The-Forgotten-World-Togui-Village-Instance-Origin-Guide) — Elder Earth Ghost + adds à 15 %
+- [The Forgotten World – Togui Village Instance (Origin Guides)](https://forum.playorigin.com/showthread.php?73-The-Forgotten-World-Togui-Village-Instance-Origin-Guide) — Elder Earth Ghost + adds à 15 % · quête 500 k SP · timers 2 h/3 h + Recall Tower (✅ confirmé recherche gameplay 2026-10 · [archive intégrale](https://forum.playorigin.com/archive/index.php/t-73.html))
 - [The Forgotten World – Flame Mountain Instance (Origin Guides)](https://forum.playorigin.com/showthread.php?78-The-Forgotten-World-Flame-Mountain-Instance-Origin-Guide) — Flame Cow King, structure en 3 areas
 - [The FGW Tutorial — Seidenkraft Blog](https://seidenkraftblog.wordpress.com/2012/09/14/the-fgw-tutorial/) — grades, envies, Ghost Sereness (pétrification, adds 60 %/20 %), récompenses Nova
 - [Tutorial Forgotten World — Elitepvpers](http://www.elitepvpers.com/forum/sro-guides-templates/1147804-tutorial-forgotten-world.html)
 - [Forgotten World (FGW) Community Scripts — ProjectHax](https://forum.projecthax.com/t/forgotten-world-fgw-community-scripts/22648) — noms des talismans, Ghost Curse, plugins xAutoDungeon/FGW Helper
 - [Forgotten World — Guild Algarb](https://guildalgarb.wordpress.com/games/sro/maps/forgotten-world/) — talismans par donjon, NPC de quête SUN, grades
-- [Legend VI: Forgotten World Shipwreck Dimension II — PrincessJane](https://princessjaneblog.wordpress.com/2011/03/18/legend-vi-forgotten-world-shipwreck-dimension-ii/)
+- [Legend VI: Forgotten World Shipwreck Dimension II — PrincessJane](https://princessjaneblog.wordpress.com/2011/03/18/legend-vi-forgotten-world-shipwreck-dimension-ii/) — Egy A au choix pour la collection / Egy B sur le boss, Faded Beads ~14-20 k SP (✅ recherche gameplay 2026-10)
+
+### Taux privés [CUSTOM] (✅ recherche gameplay 2026-10)
+- [ExaySRO — DG15 Crafting Guide](https://forum.exaysro.com/showthread.php?tid=4005) — taux de talismans chiffrés par mob/unique (Flame Cow King 10, Sereness 10…), Fire Crystal DG15
+- [Legends Online — Devil's Garden](https://playlegends.online/news-8.html) — donjon privé 100 % party / 50 % solo, cooldowns 8 h
 
 ### Série turque complète des 7 guides FGW (SroLobby, Burak Yoğun — recherche TR 2026-10)
 - [Togui Village 35-50](https://www.srolobby.com/konular/silkroad-online-togui-village-35-50-forgotten-world-map-rehberi.2684) · [51-60](https://www.srolobby.com/konular/silkroad-online-togui-village-51-60-forgotten-world-map-rehberi.2688) · [61-70](https://www.srolobby.com/konular/silkroad-online-togui-village-61-70-forgotten-world-map-rehberi.2689)
@@ -685,3 +701,4 @@ R: Le boss doit être tué dans les 2 h, sinon le donjon disparaît et vous ête
 *Dernière mise à jour : 2026-10-01*
 *Révision majeure : noms de donjons/tranches corrigés (Fandom wikitext), grades re-documentés (types + party, pas d'HP scaling), boss par donjon vérifiés (Origin/Seidenkraft/YouTube), collections complétées (8 talismans chacune), section donjons liés ajoutée (Job Temple/Qin-Shi/HWT), packets FGW officiels ajoutés. Chiffres non sourcés de l'ancienne version supprimés — voir « Incertitudes ».*
 *Enrichi par la recherche multilingue ML_RESEARCH 2026-10 : uniques du Green Abyss + tables HP 7 tranches × 4 grades + types Elite G3/G4 + raretés talismans (SroLobby/vSRO.org TR) ; noms ZH officiels, règle des 7 niveaux, cooldown 3 h confirmé (DiGeam/iccgame ZH) ; note 🇰🇷 KSRO (Legend X KR 28/07/2010, Rebirth 2012, renvoi donjons tardifs — rapports KO2).*
+*Enrichi par [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md) (✅ recherche gameplay 2026-10) : timers Origin confirmés (instance 2 h / cooldown 3 h / Recall Tower depuis la ville) · quête 500 k SP Togui (Asaman) · récompenses formalisées D8 Sun → D11 Nova + Egy A au choix / Egy B sur le boss final (PrincessJane) · renvoi des tables de quêtes Jupiter 111-117 vers 13_ZONES_OVERVIEW · taux FGW privés marqués [CUSTOM] (ExaySRO 5-10 %, Devil's Garden 100 %/50 %)*

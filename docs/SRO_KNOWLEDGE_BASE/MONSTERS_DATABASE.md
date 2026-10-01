@@ -2,6 +2,7 @@
 
 ## 📋 Table des Matières
 - [Index par Level](#-index-par-level)
+- [🗄️ Extraction DB vSRO (2026-10) — 7 157 monstres](#️-extraction-db-vsro-2026-10--7-157-monstres-avec-stats-serveur)
 - [Monstres Level 1-20](#-monstres-level-1-20)
 - [Monstres Level 20-40](#-monstres-level-20-40)
 - [Monstres Level 40-60](#-monstres-level-40-60)
@@ -64,10 +65,63 @@
 | 105 | BeakYung « Medusa » | **UNIQUE** | Qin-Shi Tomb B6 — **vérifié** |
 | 98-105 | 현무 전욱 · 주작 염제 · 백호 소호 · 청룡 태호 · 염화객 신무 · 백사 백령 | **Gardiens + boss (noms KR officiels)** | Qin-Shi Tomb B5-B6 — 🇰🇷 gamedata KSRO |
 | 111-116 | 45 monstres du Temple de Jupiter (신전 수호병, 그리핀, 바알 광신도…) | Aggressive | 🇰🇷 Dimension Miroir / Temple de Jupiter — gamedata KSRO |
+| 111-120 | Boss Jupiter (`MOB_JUPITER_*`, 103 rows) + boss FW 111-140 (`MOB_FW_*`) | **UNIQUES/élites** | retrofit D12 — ✅ **extraction DB vSRO 2026-10** (HP/ATK/EXP chiffrés) |
 | 120 | 키데모나스 (Kidemonas) | **UNIQUE de champ** | 🇰🇷 거울 차원 (Dimension Miroir) — notice KR 25/04/2012 |
 | 121-140 | monstres de Bagdad / Shambhala | — | 🇰🇷 **non documentés officiellement** (gamedata s'arrête en 2011) |
 
 > ⚠️ **Note (2026):** les lignes « vérifié client » proviennent des données iSRO (silkroadonline.wiki). Les entrées anciennes non marquées (Shedim, Dark Devil, Bhima, Mu jun, Hang-A, Huang, Nightmare, Kujo, Petal, Castor, Jarad) n'ont pas pu être confirmées dans les données client — à traiter comme non vérifiées. Les anciennes lignes « Naga 80 / Harpy 82 / Mummy 85 / Ghole 88 / Djinn 90 / Ifrit 92 / Neith 95 / Isis 98 / Anubis 100 / Sphinx 102 / Serket 105 / Osiris 108 / Ra 110 » comme mobs de terrain ont été **supprimées** (noms introuvables dans le client — Neith/Isis/Anubis/Serket/Seth sont les uniques du Job Temple).
+
+---
+
+## 🗄️ Extraction DB vSRO (2026-10) — 7 157 monstres avec stats SERVEUR
+
+> ✅ **Nouvelle source primaire (2026-10)** : un backup MSSQL **`SRO_VT_SHARD.bak`** (74 Mo) de files **vSRO 1.188 rétrofitée D12/cap 120** — hébergé dans le repo GitHub [joaodematejr/private_server](https://github.com/joaodematejr/private_server) — a été **parsé binairement** (aucun MSSQL requis) : tables `_RefObjCommon` (34 722 rows) et `_RefObjChar` (13 931 IDs) décodées puis joinées (`_RefObjCommon.Link = _RefObjChar.ID`) → **7 157 monstres avec stats complètes** (niveau, HP, MP, **EXP**, dégâts min/max, parade, rareté, vitesses). Marquage **[OFFICIEL-DÉRIVÉ]** : contenu ≤ 110 validé conforme aux données officielles ; contenu Jupiter/FW 111-140 = retrofit communautaire standard « Jupiter Fixed » (données KSRO importées, rows `Service=0`). Rapport complet : [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md).
+
+### Validation croisée (zéro écart)
+
+- **8/8 uniques classiques strictement identiques** à notre KB : Tiger Girl 598 720 · Cerberus 693 072 · Captain Ivy 1 094 835 · Uruchi 1 779 528 · Isyutaru 4 324 612 · Yarkan 9 353 045 · Shaitan 12 732 060 · Medusa 183 535 199 — **plus Roc 1 451 891 045 confirmé** (valeur de la row serveur, pas une version raid/event).
+- Recoupement externe : [silkroadonline.wiki](https://silkroadonline.wiki/monsters) (client v1_657) — Tiger Girl ID 1954, HP/ATK 42-51/parade 65/vitesse 20-90 identiques.
+- Codenames serveur révélés : Yarkan = `MOB_TK_BONELORD` · Medusa = `MOB_TQ_WHITESNAKE` (ID 14997, **Lv 100** dans la row serveur) · Ivy (base) = `MOB_QT_01_IVY` (les `MOB_AM_IVY_L2/L3` sont les variantes d'event ×10/×3) · boss Jupiter = préfixe **`MOB_JUPITER_`**.
+- ⚠️ **Bunwang divergent** : la DB donne `MOB_KT_BUNWANG` **lvl 45, 3 454 HP** (Strong : 103 611) — la fiche locale « lvl 48, 15 000 HP » (déjà marquée non vérifiée) diverge ; à recouper.
+
+### CSV livrés (ML_RESEARCH/data/)
+
+| Fichier | Contenu | Rows |
+|---|---|---|
+| [`monsters_vsro188.csv`](ML_RESEARCH/data/monsters_vsro188.csv) | **Tous les monstres** : id, codename, zone, level, max_hp, max_mp, **exp_to_give**, atk_min/max, par, mar, er_parry, hr, chr, rarity(+desc), service, country, speed_walk/run, link | **7 157** |
+| [`uniques_vsro188.csv`](ML_RESEARCH/data/uniques_vsro188.csv) | Rows rareté 3/6/8 (uniques, élites, boss FW) — Job Temple/HWT complet, gardiens Qin-Shi, FGW `MOB_GOD_*` | 830 |
+| [`monsters_cap120.csv`](ML_RESEARCH/data/monsters_cap120.csv) | Tout le contenu ≥ 111 + `MOB_JUPITER_*` (boss Jupiter 111-120 chiffrés, boss FW 111-140) | 1 442 |
+| [`zones_vsro188.csv`](ML_RESEARCH/data/zones_vsro188.csv) | Agrégats par zone (niveaux, HP max, atk max, exp max) | 17 |
+
+### Données inédites de l'extraction
+
+1. **Colonne EXP (`ExpToGive`) — jamais publiée** : aucune source publique (wiki, guides) ne listait l'EXP par monstre (« exp per kill — server-side », silkroadonline.wiki). Courbe des mobs normaux : **24 (lvl 1) → ~470 (lvl 20) → ~2 029 (lvl 50) → ~9 338 (lvl 100) → ~12 550 (lvl 110)** ; EXP des uniques : tableau dédié dans [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md) (TG 451 200 → Roc 1 157 701 880). Calibrage par triple recoupement, confiance ~90 %.
+2. **Raretés étendues** : en plus des 0 (normal) / 1 (champion) / 2 (giant) / 3 (unique à notice) / 8 (unique silencieux), la DB révèle **rareté 6 = élites de quête/instance** (99 rows, HP de mob normal — ex. Griffin 113 = 47 657 HP, Minotaure 113, Anatu Lion 114 = 64 478 : les « gardes d'élite » Jupiter sont des élites, pas des boss) et **rareté 7 = « event strong »** (90 rows `MOB_EVE_STRONG_*`, champions d'événement itinérants).
+3. **Boss Jupiter 111-120 chiffrés** (Jupiter 120 = 40 116 151 HP · Baal 55 404 408 · arme de Baal 83 106 612 · Yuno 24 168 318 · Dark Dog 26 234 941…) et **boss FW 111-140** (`MOB_FW_TAESE_111` = 75,9 M → `MOB_FW_TAESE_140` = 166,1 M HP) : [15_UNIQUE_BOSSES.md — Boss Jupiter](15_UNIQUE_BOSSES.md).
+4. **HP médians des mobs normaux** (zoologie « réelle », après filtre des clones) : lvl 20 ≈ 1 031 · lvl 50 ≈ 3 969 · lvl 81 ≈ 13 068 · lvl 100 ≈ 28 807 · lvl 110 ≈ 43 864 — utile pour calibrer les fiches non vérifiées ci-dessous.
+
+### Agrégats par zone (mobs normaux actifs)
+
+| Zone (préfixe) | Mobs | Lvl | HP max |
+|---|---|---|---|
+| Chine `MOB_CH_` | 27 | 2-90 | 676 983 (TG incluse) |
+| Chine de l'Ouest `MOB_WC_` | 18 | 21-30 | 57 255 |
+| Oasis `MOB_OA_` (Uruchi) | 18 | 31-42 | 3 038 |
+| Karakoram `MOB_KK_` (Isyutaru) | 15 | 51-60 | 229 030 |
+| Taklamakan `MOB_TK_` (Yarkan) | 19 | 61-80 | 438 424 |
+| Rock Mountain `MOB_RM_` (Shaitan/Roc) | 26 | 70-100 | 6 054 980 |
+| Désert d'Alexandrie / Job Temple `MOB_SD_` | 67 | 96-110 | 175 454 |
+| Tombe Qin-Shi `MOB_TQ_`/`MOB_QT_` | 97 | 11-100 | 183 535 199 |
+| Forgotten World `MOB_GOD_` | 84 | 35-107 | 102 398 |
+| Temple de Jupiter `MOB_JUPITER_` | 103 | 112-120 | rows désactivées (retrofit) |
+| Europe `MOB_EU_` + événements/caravanes | ~4 300 | 1-140 | gonflés par des clones numérotés |
+
+### ⚠️ Limites documentées (ne pas sur-interpréter)
+
+- **Timers de spawn non extraits** : `Tab_RefNest` n'a pas pu être joinée de façon fiable (la DB privée semble avoir **standardisé des délais à 3 h** — timers édités, non vanilla). On conserve les timers documentés 6 h/3 h/4 h ([15_UNIQUE_BOSSES.md — Spawn Times](15_UNIQUE_BOSSES.md)).
+- **Rows parasites** à filtrer pour toute moyenne : clones d'instance (`_CLON`), caravanes numérotées (`*_00010001`), rows de test (`MOB_AUTOMOB` 9 999 999 HP lvl 1), `_DROP` (HP=1, pour loots), `_L2/_L3` (variantes amplifiées d'events ×10/×3).
+- **Noms affichables absents** : la DB ne contient que les codenames (noms FR/EN côté client) — mapping via notre KB.
+- Contenu 121+ (Bagdad, Shambhala) **absent** de ce dump (le retrofit s'arrête à 120) ; `ExpToGive` et PAR/MAR/HR/CHR exportées brutes (sémantique partielle pour HR).
 
 ---
 
@@ -1126,7 +1180,7 @@ La table officielle KR ([China_Monster_Dungeon](https://krsilkroadcp.joymax.com/
 | **바그다드 (Bagdad)** | vidéos KR de chasse party et d'uniques (2020-2021, S34) — **aucune liste officielle publiée** ; boss : 얍샤드 대장군 ?, Grand Démon, Général, Kailia | ⚠️ non documenté officiellement |
 | **샴발라 (Shambhala, 131-140)** | « nouvelle carte + nouveaux monstres » (notice K9) — **noms non publiés** | ⚠️ non documenté officiellement |
 
-> ⚠️ **La gamedata officielle kSRO s'arrête au Temple de Jupiter (2011)** : les monstres 121+ n'existent publiquement que dans les fichiers client/serveur (dumps vSRO — RaGEZone/Extraloob — à traiter comme extraction privée, fiabilité 2, non consultables) → l'extraction `characterdata` reste la voie pour HP/niveaux.
+> ⚠️ **La gamedata officielle kSRO s'arrête au Temple de Jupiter (2011)** : les monstres 121+ n'existent publiquement que dans les fichiers client/serveur (dumps vSRO — RaGEZone/Extraloob). ✅ **Premier jalon (extraction DB vSRO 2026-10)** : les rows `MOB_JUPITER_*` (103 monstres 112-120 du retrofit D12, `Service=0`) et les boss FW 111-140 sont désormais chiffrés — voir la section [Extraction DB vSRO](#️-extraction-db-vsro-2026-10--7-157-monstres-avec-stats-serveur) et [15_UNIQUE_BOSSES.md — Boss Jupiter](./15_UNIQUE_BOSSES.md). Pour Bagdad/Shambhala (121+), l'extraction `characterdata` de files 1.193+/BR120 reste la voie.
 
 ---
 
@@ -1157,7 +1211,9 @@ La table officielle KR ([China_Monster_Dungeon](https://krsilkroadcp.joymax.com/
 
 **Boss FGW (MOB_GOD_*):** Togui General (A1=39, HP 143,131), Ghost Sereness (A1=93, HP 11,307,269, Petrify) — level variable selon bracket/grade (A1-A4). ✅ Noms des uniques du Green Abyss résolus (recherche TR 2026-10) : **Ghost Beast** (navires 1-2), **Ghost Gultton** (dernier navire), boss final **Ghost Serenes** — ⚠️ les guides TR (SroLobby) listent des HP 1000× les valeurs client (ex. Serenes 1★ : 11 307 269 000), probablement des valeurs vSRO, non tranché.
 
-**Spawn:** 3-5h après mort (iSRO; 4h par défaut vSRO), point aléatoire. Détails complets : [15_UNIQUE_BOSSES.md](./15_UNIQUE_BOSSES.md)
+**Spawn:** 3-5h après mort (iSRO; défauts vSRO : 6 h la plupart / 3 h Uruchi / 4 h Medusa), point aléatoire. Détails complets : [15_UNIQUE_BOSSES.md](./15_UNIQUE_BOSSES.md)
+
+> ✅ **Extraction DB vSRO 2026-10 — compléments serveur** : (1) les HP ci-dessus sont **confirmés 8/8 côté serveur** (backup `SRO_VT_SHARD` vSRO 1.188 parsé — cf. section [Extraction DB vSRO](#️-extraction-db-vsro-2026-10--7-157-monstres-avec-stats-serveur)), **Roc compris** ; (2) **HP Job Temple divergents** : la DB + la liste client Extraloob donnent **Selket 57 722 800 · Neith 59 340 839 · Anubis 94 054 249 · Isis 96 673 272 · Haroeris 244 859 450 · Seth 236 392 140** (Haroeris > Seth), contre 80,8 M → 440,7 M dans les valeurs client iSRO du tableau — divergence 1.188 vs client iSRO non tranchée, détail dans [15_UNIQUE_BOSSES.md — Job Temple](./15_UNIQUE_BOSSES.md) ; (3) **EXP officielles par unique** (jamais publiées) : TG 451 200 · Cerberus 569 630 · Uruchi 1 316 197 · Isyutaru 2 748 260 · Yarkan 4 963 664 · Shaitan 6 670 749 · Medusa 62 356 860 · Roc 1 157 701 880 ; (4) **boss Jupiter 111-120 chiffrés** (Jupiter 40,1 M · Baal 55,4 M · Yuno 24,2 M HP…) : [15_UNIQUE_BOSSES.md — Boss Jupiter](./15_UNIQUE_BOSSES.md). Source : [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md).
 
 > ✅ **Validation croisée (recherche ML 2026-10)** : les HP/niveaux des 7 uniques classiques ci-dessus sont confirmés par **2 sources turques indépendantes** ([DonanımHaber](https://forum.donanimhaber.com/yaratiklarin-canlari-cin-avrupa-ve-unique--28889841) + [MMSRN](https://www.mmsrn.com/silkroad-online-tum-unique-isimleri-levelleri-ve-hpleri-kactir)), le guide FR [GMS Temple 2010](https://forum.gmstemple.com/index.php?showtopic=8106) et les forums DE ([StageTwo](https://www.stagetwo.eu/gaming/rollenspiele/153328-silkroad-uniques)) — valeurs identiques au client.
 >
@@ -1270,7 +1326,7 @@ La table officielle KR ([China_Monster_Dungeon](https://krsilkroadcp.joymax.com/
 ### ✅ Taux de spawn réels — fichiers serveur (recherche PS 2026-10)
 
 - **`GiantMonster_SpawnRatio` = 14 % par défaut, hardcodé dans `sr_gameserver.exe`** (patchable par éditeur binaire/OllyDbg) : le spawn champion/giant repose sur un **RNG interne du GameServer** — la DB ne contrôle que **quels** monstres et **combien** (`Tab_RefNest`). Corrige l'ancienne estimation « giants ~1 % » (fausse d'un ordre de grandeur). Source : [elitepvpers — Modify VSRO 188 Party Monster Spawn Limitation](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/4231757-release-modify-vsro-188-party-monster-spawn-limitation-sr_gameserver.html) · [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md)
-- **Type d'un monstre = colonne `Rarity` de `_RefObjCommon`** : **0 = normal · 1 = Champion · 2 = Giant · 3 = unique avec notice globale · 8 = unique sans notice** ([ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) §3-§4, threads RaGEZONE « Unique Summon Scrolls » n°838305 / elitepvpers « Change MOB type General to Unique »).
+- **Type d'un monstre = colonne `Rarity` de `_RefObjCommon`** : **0 = normal · 1 = Champion · 2 = Giant · 3 = unique avec notice globale · 8 = unique sans notice** ([ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) §3-§4, threads RaGEZONE « Unique Summon Scrolls » n°838305 / elitepvpers « Change MOB type General to Unique »). ✅ **Étendu (extraction DB vSRO 2026-10)** : **6 = élite de quête/instance** (99 rows, HP de mob normal — ex. gardes Jupiter Griffin/Minotaure 113-114) et **7 = event strong** (90 rows `MOB_EVE_STRONG_*`, champions d'événement itinérants) — cf. section [Extraction DB vSRO](#️-extraction-db-vsro-2026-10--7-157-monstres-avec-stats-serveur).
 
 ### Examples
 
@@ -1323,8 +1379,14 @@ La table officielle KR ([China_Monster_Dungeon](https://krsilkroadcp.joymax.com/
 - [Monstres Égypte — terrain](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Egypt_Monster_Field.html) · [donjons (uniques KR)](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Egypt_Monster_Dungeon.html) · [donjon Qin-Shi (gardiens 98-105)](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/China_Monster_Dungeon.html)
 - [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) — rapport source (tables décodées EUC-KR, lacunes 121+ documentées)
 
+### 🗄️ Extraction DB serveur vSRO (2026-10)
+- [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) — rapport d'extraction (méthode binaire, validations, limites)
+- [joaodematejr/private_server](https://github.com/joaodematejr/private_server) — source du backup `SRO_VT_SHARD.bak` · schémas : [ducksoup-sro/ducksoup](https://github.com/ducksoup-sro/ducksoup/tree/main/Database/VSRO188)
+- CSV : [monsters_vsro188.csv](ML_RESEARCH/data/monsters_vsro188.csv) (7 157) · [uniques_vsro188.csv](ML_RESEARCH/data/uniques_vsro188.csv) (830) · [monsters_cap120.csv](ML_RESEARCH/data/monsters_cap120.csv) (1 442) · [zones_vsro188.csv](ML_RESEARCH/data/zones_vsro188.csv)
+
 ---
 
 *Dernière mise à jour: 2026-10-01 (uniques corrigés d'après données client silkroadonline.wiki; faune Alexandria/Roc Mountain corrigée)*
 *Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (validation HP, timers, Qin-Shi B6) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) · rapports KO2 (section 🇰🇷 monstres KSRO 100-140 : 45 monstres Jupiter officiels, gardiens Qin-Shi KR, monstres d'Égypte KR) · [RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) + [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) (recherche PS 2026-10 : ✅ taux de spawn champion/giant résolus — GiantMonster_SpawnRatio 14 % hardcodé + types via colonne Rarity de _RefObjCommon ; ✅ HP officiels Kidemonas/Karkadann/Merikh via m3stat)*
+*Extraction DB vSRO 2026-10 ([RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md)) : ✅ nouvelle section « Extraction DB vSRO » — 7 157 monstres avec stats serveur (source : backup MSSQL SRO_VT_SHARD.bak vSRO 1.188 rétrofitée D12 parsé binairement), validation parfaite des uniques classiques, CSV `monsters_vsro188.csv`/`uniques_vsro188.csv`/`monsters_cap120.csv`/`zones_vsro188.csv`, colonne EXP jamais publiée, raretés 6/7 (élites/event strong), boss Jupiter 111-120 chiffrés*
 *Prochaine mise à jour: Monstres 60-110*

@@ -99,6 +99,17 @@ Fiabilité : 5 = leaker/dump inspecté · 4 = forum de référence multi-sources
 
 **Lecture pour la base SRObro** : les HP/niveaux des monstres sont dans la table `_RefObjChar` de chaque DB. La **1.188 s'arrête au contenu cap 110** (Job Temple/Seth 110) → **elle ne contient PAS les boss 111+** (Jupiter 111-118, Kidemonas 120, Bagdad 121+, Shambhala 131+). Ceux-ci existent dans : **vSRO 1.193/1.274** (Jupiter 110-120), **BR120**, **tSRO 1.258**, **cSRO-R/iSRO-R** (D13), et **iSRO/KSRO leakées** (cap 125+, 14DG — les plus complètes).
 
+### 🐯 BlackRogue en détail (✅ recherche VSRO 2026-10)
+
+**Contenu exact du package BR120** ([RZ 1107257 — release MeGaMaX, 07/2016](https://forum.ragezone.com/threads/blackrouge-official-cap-120-server-files.1107257), fiabilité 5) :
+- Archive `SRO_Thailand_CS_106.zip` de **42 136 640 octets** — `MD5 A2FF18A325A55527533B8B72B1C6630D`, `SHA-1 F8D1FB26A11EE8B9BC7482CCFEDEA284D39E78C6` (« check before you extract »).
+- « **The update package was the latest that was sent to Thailand publisher** » : c'est un **package de mise à jour officiel** (pas les files complètes) — dossiers `Config/`, `InitialDB/` (shard DB initiale), `Query/`, `ServerBinary/`, `SMC/` ; binaires AgentServer.exe, GlobalManager.exe, SR_GameServer.exe, SR_ShardManager.exe + `SRCommonDataLoader.dll` (ni MachineManager ni FarmManager dans ce package update) ; **cap 120, D12** (Jupiter).
+- ⚠️ **État brut incomplet** : DB de comptes **à reconstruire**, **procédures stockées manquantes** dans la shard DB (le releaseur liste le travail restant) ; **client BR v1.040 « packed »** — workaround documenté : client vSRO 120 cap clean + dossier `server_dep` + exes sro_client BR (archive.org ~8 Mo). Commentaire de SnapPop dans le thread : « **hacked ini3 before they closed** » — cohérent avec l'origine ini3.
+- **Rates hardcodés dans les binaires** : « Blackrogue rates hidden in **ShardManager and Gameserver**. On vsro only in gameserver. But the way is the same, edit the 100 » ([epvp — BR 110 Rates fix](https://www.elitepvpers.com/forum/sro-private-server/3308860-blackrogue-110-rates-fix.html)) ; des SR_ShardManager BR **pré-patchés** circulent (Exp Rate / Party Exp / Extra Exp — [RZ 1068146](https://forum.ragezone.com/threads/blackrogue-110lv-shard-rate-fix.1068146)).
+- **Offsets incompatibles** : les offsets BR diffèrent de vSRO → « almost all offsets of the regular vSRO files have been listed [mais pas BR] » — tout l'outillage (patchers, filtres, mods hexa) est à refaire ([RZ 1054626](https://forum.ragezone.com/threads/list-of-all-offsets-of-110cap-blackrogue-serverfiles-and-client.1054626)).
+
+**Pourquoi la scène préfère massivement la 1.188 malgré le contenu natif de BR** ([débat epvp — vSRO 1.188 vs BR 110](https://www.elitepvpers.com/forum/sro-private-server/2510919-do-you-prefer-vsro-1-188-blackrogue-110-cap-files-2.html) · [epvp — what server files to choose](https://www.elitepvpers.com/forum/sro-pserver-questions-answers/5174796-what-server-files-choose.html)) : vSRO 1.188 = « **clean, bugless** », exchange/avatars/pets OK, **90 % des outils/guides ciblent 1.188** ; BR garde une niche (« original BlackRogue files », contenu 110/120 **natif** sans rétrofit, systèmes de l'ère 2012) au prix de l'adaptation de tout l'outillage vSRO et de l'état incomplet du package (DB comptes, procédures). Question ouverte du thread : « 11D BR client have new job? » (système de job de l'ère BR — non confirmé).
+
 ---
 
 ## 🏗️ Architecture Serveur Officielle
@@ -141,6 +152,7 @@ SilkOwnTime / SilkPerHour / SilkDropRate = paramètres silk
 ```
 
 - Les valeurs se chargent en mémoire au démarrage → **restart complet du GameServer requis** pour tout changement.
+- ⚠️ **Unités contradictoires (✅ recherche VSRO 2026-10)** : le modèle /1000 ci-dessus vient des **guides** ; or le **dump réel d'une config 1.188** (page 33 du thread du leaker) montre `ExpRatio 100` / `DropItemRatio 0,1` — lisible comme « **100 = ×1** », et le fix des rates BlackRogue dit « edit the 100 ». Les deux conventions coexistent dans les sources (possiblement selon les générations de files) — **non tranché, à trancher par mesure en jeu**. Détail complet : [TECHNICAL_SPECIFICATIONS.md — Configuration serveur officielle §4](TECHNICAL_SPECIFICATIONS.md).
 - ⚠️ **Corrigé pour les privés eux-mêmes** : un privé type affiche 3x-999x (Origin Online 3x solo/5x party ; DemonRoad 200-300x ; Venus 350x ; annuaire « EXP 999x »). Les files **non modifiées** reproduisent les taux officiels 1x.
 
 ### 🐉 Spawns champion/giant — hardcodé dans le binaire
@@ -191,6 +203,15 @@ Le repo **ducksoup** ([GitHub — Database/VSRO188](https://github.com/ducksoup-
 | `_RefSkill` | skills ≤ 110 | skills 120 + mobs Jupiter | 120 | 120+ | 125+ |
 | `_RefMagicOpt*` (blues) | D1-D11 | D12 (patchs) | D12 | D13 | D14 |
 | `Tab_RefNest` (spawns) | monde complet ≤ Alexandrie/FGW | + Jupiter | monde identique (Thaïlande) | + contenu local | le plus complet |
+
+### 📦 Dumps publics exploitables supplémentaires (✅ recherche VSRO 2026-10)
+
+| Repo GitHub | Contenu | Exploitabilité |
+|---|---|---|
+| **[joaodematejr/private_server](https://github.com/joaodematejr/private_server)** (31 Mo) | `Tools/DB/SRO_VT_SHARD.bak` — **74 291 712 octets**, backup MSSQL **non compressé** (format MTF) d'une **1.188 rétrofitée D12/cap 120** (items D12 + contenu Jupiter `MOB_JUPITER_*` présents, rows Jupiter `Service=0` comme dans tout rétrofit « Jupiter Fixed ») ; fichiers frères `SRO_VT_ACCOUNT.bak` (14 Mo), `SRO_VT_LOG.bak` (4 Mo), `SRO_CERTIFICATION.bak` (0,5 Mo) | **Parsé en binaire avec succès** (pages MDF quasi brutes, enregistrements SQL Server auto-descriptifs décodés empiriquement) : HP/EXP extraits de `_RefObjChar` — les 8 uniques classiques **validés identiques** aux valeurs officielles recoupées par la KB ; source des **EXP officielles 1x** (`ExpToGive`, jusqu'ici absentes de toute source publique). Rapport : [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) |
+| **[joaodematejr/server_files_sro](https://github.com/joaodematejr/server_files_sro)** (1,1 Go) | Binaires serveur complets **+ `SMC/SR_GameRefData/skilldata_*.txt`** : les **skilldatas côté SERVEUR déjà en clair** (8 shards `skilldata_5000.txt`…`skilldata_40000.txt`, ~32 700 lignes, UTF-16LE, TSV, 118 colonnes) — inventaire du tree vérifié : **aucun** `.sql`/`.bak` | Meilleure source publique de `_RefSkill` complet sans extraction PK2. Rapport : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md) |
+
+> Ces deux repos confirment la règle structurelle : **la DB circule uniquement en `.bak` MSSQL, jamais en `.sql` versionné** (recherche de code GitHub exhaustive : aucun dump INSERT public de la shard n'existe).
 
 ---
 
@@ -380,6 +401,21 @@ Toutes specs = publiées par le serveur lui-même. **« cap 140 arabe » = moteu
 | vSRO-ServerAddon | https://github.com/JellyBitz/vSRO-ServerAddon | Injection DLL SR_GameServer/ShardManager 1.188 |
 | SRO_DevKit (florian0) | https://gitlab.com/florian0/sro_devkit (+ miroir iSRO-R : [artuuro/ISRO-R-DEVKIT](https://github.com/artuuro/ISRO-R-DEVKIT)) | Framework C++ vers les composants du jeu |
 
+### 🧭 Émulateurs open source — inventaire 2026 (✅ recherche VSRO 2026-10)
+
+> État vérifié sur GitHub/GitLab. Complément de [../fr/PRIVATE_SERVERS_ANALYSIS.md](../fr/PRIVATE_SERVERS_ANALYSIS.md) (Phoenix, comparatif files vs émulateurs).
+
+| Projet | Langue / Plateforme | Cible | Implémenté (documenté) | Licence | Statut 2026 |
+|---|---|---|---|---|---|
+| **[opensro](https://github.com/opensro-dev/opensro)** ⭐ | **Go** + client navigateur **WebGPU** (TypeScript/Vite) | **v1.150 (Legend III)** | Packages game : `abnormal`, `action` (dont **potionrecovery/potionamount** — formules officielles décompilées, déjà intégrées à [05_ALCHEMY_SYSTEM.md](05_ALCHEMY_SYSTEM.md) et [21_CONSUMABLES.md](21_CONSUMABLES.md)), `combat`, `enterworld`, **`gmcommand`** (commandes GM réimplémentées), `item` (**alchemy**), `linkedpulse`, `paramkeeper`, `progression`, `quest`, `restriction`, **`siege`**, `social`, `world` + asset pipeline et observatoire d'ops | **AGPL-3.0-or-later** (NOTICE.md : aucun média du jeu commité) | actif — **la meilleure source de formules serveur open source** (portage décompilé du comportement) |
+| [go-sro-agent-server](https://github.com/ferdoran/go-sro-agent-server) (+ go-sro-framework, go-sro-fileutils) | Go | **files vSRO 1.88** | lobby perso, mouvement click + collision terrain (« object collision almost perfect »), **spawn/despawn par range** (objets/joueurs/monstres/NPC), chat + notices + commandes GM custom, party + **party matching**, inventaire, **stalls** ; navmesh + viewer raylib | DBAD (« Don't Be A Dick ») | **archivé 10/2022** |
+| [SilkroadProject](https://github.com/tanisman/SilkroadProject) | C# (VS2015, Asio 1.10.6, MSSQL 2008+) | client **Open Beta** | GatewayServer/SR_GameServer/SCore/SCommon ; DB `_ServerConfig` ; client piloté via GATEIP.txt/DIVISIONINFO.txt du Media.pk2 | non spécifiée | dormant (6 commits) |
+| [DarkEmu](https://github.com/CarlosX/DarkEmu) | C++ | — | lignée **csremu/sremu/sro-emulator/srevolution**, base **MaNGOS** (« Massive Network Game Object Server ») | **GPLv2** | dormant |
+| [skrillax](https://github.com/kumpelblase2/skrillax) | **Rust/ECS** | — | projet d'apprentissage (exploration Rust/ECS/lifetimes) ; écosystème skrillax-dev (patch server iSRO) | — | learning project |
+| Phoenix ([RZ 1159736](https://forum.ragezone.com/threads/phoenix-open-source-silkroad-online-emulator-c-net-core.1159736/)) | C#/.NET Core | — | déjà documenté dans [../fr/PRIVATE_SERVERS_ANALYSIS.md](../fr/PRIVATE_SERVERS_ANALYSIS.md) | — | — |
+
+> ⚠️ **« cfemu » introuvable** : aucune trace d'un émulateur Silkroad nommé « cfemu » (recherches dédiées vides) — probablement confusion ou projet privé/disparu. Le nom n'apparaissait dans aucun fichier de la KB avant ce constat : rien à corriger.
+
 ### 🤖 Bots, API et trackers
 
 | Outil | Où | Usage extraction |
@@ -395,6 +431,19 @@ Toutes specs = publiées par le serveur lui-même. **« cap 140 arabe » = moteu
 | ISRORCertBill | https://github.com/kahme247/ISRORCertBill | Réimplémente le serveur de certification iSRO-R |
 
 **Méthode documentée pour extraire les données soi-même** : client → `pk2_mate extract Media.pk2` → parser `itemdata.txt` / `skilldata.txt` / `characterdata.txt` (formats documentés dans SilkroadDoc) — ou passer par une base SQL publique avec SR_Db2Media ; l'inspection visuelle passe par SRO Archive Explorer.
+
+### 📚 Bots comme documentation (✅ recherche VSRO 2026-10)
+
+Les grands bots sont des **bases de connaissances vérifiées du jeu officiel** — leurs configs et scripts encodent des données mesurées :
+
+| Bot | Connaissances encodées |
+|---|---|
+| **phBot** ([doc officielle des commandes script](https://guide.phbot.org/phbot/script-commands) · [onglet Trade](https://guide.phbot.org/phbot/trade)) | **~35 commandes documentées** : `walk,[region,]x,y,z` (le paramètre région n'est requis **que dans les grottes** → documente le système de coordonnées des donjons), `teleport,source,destination` = **le graphe officiel des téléports NPC**, `DoBlacksmith/DoHerbalist/DoStable/DoStorage/DoGuildStorage/DoGroceryTrader/DoProtectorTrader/`**`DoJupiter`** (le Jupiter Temple a un **NPC combiné forgeron+herboriste** — détail d'architecture du contenu), `DoConsignment/DoStall`, `quest,npc,quest name,[safe|danger]` (noms exacts des NPC + quêtes ; `safe/danger` = variantes des quêtes de job), **`oldtrade,buy,star|quantity`** (ancien système vSRO : 0 = remplir le transport, 1-5 = nombre d'étoiles, >5 = quantité exacte) vs `begintargettrading/settletargettrading` (nouveau système cible iSRO/SilkroadR) — **les deux généalogies des systèmes de job co-documentées dans un seul bot**, `mount`, `recall` (rappel du pick pet), `disconnect` (utile pour **rafraîchir le classement de trade** — mécanique officielle) |
+| **SBot** ([Bot-Cave — changelog officiel](https://www.bot-cave.net/index.php?articles/page-7) · [SRO Info — tutorial](https://sroinfo.forumotion.com/t10-bot-sbot-tutorial)) | **alarme de spawn des uniques** (« Never miss a unique again » — le bot joue une alarme au spawn → détection réseau de l'event, opcode 0x300C côté phBot), auto-party (accept/join), auto-res, auto-lure warrior, **Auto Stall** |
+| **mBot** ([wiki Silkroad Latino](https://wiki.silkroadlatino.com/en/faq/mbot-guia) · [tuto trade](https://www.elitepvpers.com/forum/sro-guides-templates/4105202-tutorial-setting-up-mbot-trade-automaticly-video-tutorial-voice.html)) | **mode clientless** (bot sans client = la stack réseau complète du jeu réimplémentée), leveling/gold/quêtes automatiques, **trade automatisé** |
+| **RSBot / Lobot** | RSBot (déjà KB ci-dessus) ; **Lobot** ([GitLab — topic Silkroad Online](https://gitlab.com/explore/projects/topics/Silkroad+Online)) = bot « light » pour privés **VSRO 1.188** — lecture utile des packets 1.188 |
+
+**Valeur documentaire** : les scripts/coords de walk = données de monde ; les téléports source→destination = graphe officiel ; les noms NPC/quêtes = contenu ; les commandes `oldtrade`/`targettrading` = généalogie des systèmes de job ; les alarmes d'uniques = opcodes de spawn. La boucle Trade phBot (enregistrer un script → spawn du transport → achat → marche vers l'autre ville → vente → `killhorse` → return scroll) = **une route de trade officielle complète encodée en coordonnées**.
 
 ---
 
@@ -459,6 +508,7 @@ Toutes specs = publiées par le serveur lui-même. **« cap 140 arabe » = moteu
 - [ML_RESEARCH/RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) — scène high-cap 120-140, chronologie officielle, outillage (~30 requêtes)
 - [ML_RESEARCH/RESEARCH_AR_DEV.md](ML_RESEARCH/RESEARCH_AR_DEV.md) — communauté/dev arabes, glossaire 72 termes (~50 requêtes)
 - [ML_RESEARCH/RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md) — serveurs privés arabes, HP/boss, monétisation (~40 requêtes)
+- [ML_RESEARCH/RESEARCH_VSRO_SERVER.md](ML_RESEARCH/RESEARCH_VSRO_SERVER.md) — config serveur clé par clé, SMC, ~40 commandes GM, procédures DB, BlackRogue détaillé, émulateurs 2026, anti-cheat, bots comme documentation (~26 requêtes)
 
 ### Histoire et fuites (forums fondateurs)
 - [RaGEZONE — Guide du leaker Chernobyl (13/09/2011)](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273) — architecture officielle, fiabilité 5
@@ -513,6 +563,6 @@ PK2 : [pk2_mate (Rust)](https://github.com/veykril/pk2) · [SRO.PK2API](https://
 
 ---
 
-*Dernière mise à jour : 2026-10-01 — consolidation de 4 rapports ML_RESEARCH (~155 requêtes web cumulées)*
-*Rapports sources : [RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) · [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) · [RESEARCH_AR_DEV.md](ML_RESEARCH/RESEARCH_AR_DEV.md) · [RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md)*
-*Corrections apportées à la KB via cette recherche : ECSRO = files cSRO de test (pas un émulateur) · BlackRogue = Thaïlande/ini3 (pas RSRO) · timers uniques 6 h/3 h/4 h (pas « 4 h ») · taux Giant = 14 % hardcodé (pas « ~1 % ») · `_RefMagicOptByItemOptLevel` = dump public disponible · D12-D15 = officiels, D16+ = custom*
+*Dernière mise à jour : 2026-10-01 — consolidation de 5 rapports ML_RESEARCH (~181 requêtes web cumulées)*
+*Rapports sources : [RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) · [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) · [RESEARCH_AR_DEV.md](ML_RESEARCH/RESEARCH_AR_DEV.md) · [RESEARCH_AR_SERVERS.md](ML_RESEARCH/RESEARCH_AR_SERVERS.md) · [RESEARCH_VSRO_SERVER.md](ML_RESEARCH/RESEARCH_VSRO_SERVER.md)*
+*Corrections apportées à la KB via cette recherche : ECSRO = files cSRO de test (pas un émulateur) · BlackRogue = Thaïlande/ini3 (pas RSRO) · timers uniques 6 h/3 h/4 h (pas « 4 h ») · taux Giant = 14 % hardcodé (pas « ~1 % ») · `_RefMagicOptByItemOptLevel` = dump public disponible · D12-D15 = officiels, D16+ = custom · BR120 = package update thaï incomplet, rates hardcodés dans SR_ShardManager ET SR_GameServer (pourquoi la scène préfère 1.188) · émulateurs 2026 : opensro (AGPL) = meilleure source open source · dumps publics joaodematejr (.bak 74 Mo parsé en binaire + skilldatas serveur) · contradiction des unités de rates (100 vs 1000) documentée*

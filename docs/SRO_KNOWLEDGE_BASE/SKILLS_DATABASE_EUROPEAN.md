@@ -25,6 +25,7 @@ Cette base remplace l'ancienne version (noms inventés, chiffres non sourcés). 
 3. **Coûts MP / dégâts exacts** : ils varient fortement selon le rang du skill, le cap du serveur (90→140) et la version (iSRO/vSRO/SilkroadR). Les chiffres donnés ici sont des **valeurs documentées à un rang donné** et des **règles structurelles** (durations, chances, ratios) qui restent stables.
 4. **Deux masteries max** : total plafonné à 2 × niveau du perso (220 au cap 110, 240 au cap 120) — voir [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md).
 5. **Noms ZH (TW officiel)** — les 6 masteries EU ont des noms chinois officiels côté service taïwanais (DiGeam) : Warrior **聖戰士** · Rogue **刺客** · Wizard **元素使** · Warlock **魔元素使** · Bard **吟遊詩人** · Cleric **聖職者**. Armes : 單手劍 (épée 1H), 雙手劍 (épée 2H), 雙斧 (double hache), 匕首 (dagues), 十字弓 (arbalète), 法杖 (staff), 術杖 (dark staff), 豎琴 (harpe), 牧杖 (clerical rod) ; armures : 重盔甲 (Heavy Armor), 轻铠甲 / TR 輕鎧甲 (Light Armor), 法袍 (Robe). Sources : [wiki Bahamut](https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山) + [DiGeam](https://srowiki.digeam.com/), via [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (recherche ZH 2026-10). Aucun nom officiel FR/TR/DE des skills EU : le client n'a jamais été localisé dans ces langues ([RESEARCH_FR](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_TR](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_DE](ML_RESEARCH/RESEARCH_DE.md)).
+6. **Valeurs chiffrées par niveau ✅ (extraction skilldata 2026-10)** : **3 637 skills EU** décodés depuis `skilldata_5000.txt` (fichiers serveur vSRO 1.188 + extension cap 120, repo [joaoldematejr/server_files_sro](https://github.com/joaoldematejr/server_files_sro)) — 47 colonnes par niveau (dégâts %/min/max, MP/HP, SP, timers ms, portée, armes, statuts) dans [ML_RESEARCH/data/skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv). Loi structurante : **le % de dégâts est FIXE par série**, seule la part fixe min~max monte avec le niveau. Rapport : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md). ⚠️ Certaines séries (ex. Fire Blow) ont **plusieurs lignes par niveau** (segments de combo A2…A7 à MP = 0, chaînés par `Basic_ChainCode`) : filtrer sur `mp_cost > 0` selon l'usage.
 
 ---
 
@@ -53,8 +54,8 @@ Cette base remplace l'ancienne version (noms inventés, chiffres non sourcés). 
 | **Turn Rising** | Attaque | Attaque rapide, chance de knockdown | Ouvre les combos au sol |
 | **Charge Swing** | Attaque | Frappe chargée | — |
 | **Triple Swing** | Attaque | Dégâts bonus sur cibles **au sol** | Combo après knockdown |
-| **Maddening** | Attaque | Frappe lourde | — |
-| **Dare Devil** | Attaque ultime | **La plus forte attaque du Warrior** | Le burst signature 2H |
+| **Maddening** | Attaque | Frappe lourde | ✅ skilldata : 487 % fixe, +172 (lv1) → +665 (lv9), MP 377→1 097 ; knockback [50, 30] + taunt |
+| **Dare Devil** | Attaque ultime | **La plus forte attaque du Warrior** | ✅ skilldata 2026-10 : **305 % + 702~858 → 305 % + 2 262~2 765** (maîtrise 80→120, 11 rangs), **2 hits**, CD 5 s, MP 1 311→4 063, knockback [30, 50] + taunt |
 
 ### Ligne Dual Axe
 
@@ -72,10 +73,10 @@ Cette base remplace l'ancienne version (noms inventés, chiffres non sourcés). 
 | Skill | Portée | Effet documenté | Durée/CD |
 |-------|--------|-----------------|----------|
 | **Vital Increase** | Self | +HP massif, **−35% ATK** | Annulable pour burst après avoir pris l'aggro |
-| **Iron Skin** | Self | **+DEF physique** | « MUST have » (tous guides) |
+| **Iron Skin** | Self | **+DEF physique** | « MUST have » (tous guides) · ✅ skilldata : absorption **238 → 2 972** (14 rangs, maîtrise 40→118), CD 2 min, MP 77→842 |
 | **Mana Skin** | Self | **+DEF magique** | « MUST have » (tous guides) |
 | Warcry | Self (2H) | Buff offensif 2H | Réservé à la ligne deux-mains |
-| **Pain Quota** | 2 membres | **Partage les dégâts des 2 cibles sur toute la party** | **5 min** — le buff party n°1 ; à poser sur les 2 Clerics |
+| **Pain Quota** | 2 membres | **Partage les dégâts des 2 cibles sur toute la party** | **5 min** (300 000 ms `dura`) — le buff party n°1 ; à poser sur les 2 Clerics · ✅ skilldata : CD 2 s, MP 17→256, maîtrise 20→100 |
 | **Physical Fence** | 1 membre | Transfert d'un % des dégâts PHY de la cible vers vous | Ne pas max si trop dangereux |
 | **Magical Fence** | 1 membre | Idem dégâts MAG | Sur lurers + wizard le plus bas |
 | **Protect** | 2 membres | Absorbe l'aggro des cibles | Sur les 2 plus gros DPS |
@@ -130,8 +131,8 @@ Cette base remplace l'ancienne version (noms inventés, chiffres non sourcés). 
 
 | Skill | Type | Effet documenté | Notes |
 |-------|------|-----------------|-------|
-| **Fire Bolt** | Nuke | Mono-cible, bon pour le solo | Partage son **groupe de cooldown** avec Meteor |
-| **Meteor** | Nuke ultime | **Le plus gros nuke du Wizard, jusqu'à 3 cibles très proches** | **CD 10 s** ; ordre de cast change le CD partagé (Meteor→Fire Bolt 10 s ; Fire Bolt→Meteor 3 s) |
+| **Fire Bolt** | Nuke | Mono-cible, bon pour le solo | ✅ skilldata 2026-10 : **366 % + 32~39 → 366 % + 3 438~4 202** (maîtrise 4→120, **30 rangs**), MP 37→**5 799**, SP 2→**27 050**, burn 28→260, CD 4 s. Partage son **groupe de cooldown** avec Meteor |
+| **Meteor** | Nuke ultime | **Le plus gros nuke du Wizard, jusqu'à 3 cibles très proches** | ✅ skilldata : **439 % + 582~711 → 439 % + 3 076~3 760** (maîtrise 60→116, 15 rangs), **2 hits**, **CD 10,5 s** (10 500 ms), MP 2 189→12 444 ; ordre de cast change le CD partagé (Meteor→Fire Bolt 10 s ; Fire Bolt→Meteor 3 s) |
 | **Fire Blow → Salamander Blow** | Nuke multi-hits | **7-9 coups** sur 3 cibles (souvent derrière le caster) | Animation ~9 s **annulable** (Detect, Earth Barrier) — cœur du burst |
 | Fire Trap → Lava Trap | Piège | Piège de feu à poser | Dégâts de zone à déclenchement |
 | Detect → Sprawl Detect | Utilitaire | Révèle les invisibles | Anti-Stealth/Invisible |
@@ -258,7 +259,7 @@ Autres curses confirmés dans les données serveur (eSRO) et forums : **Dull** (
 | Skill | Effet documenté | Notes |
 |-------|-----------------|-------|
 | **Mana Cycle** | Rend un montant **fixe de MP chaque seconde pendant 16 s** (cible unique) | Priorité : Clerics → DPS → soi |
-| **Mana Orbit** | Régénère le MP de toute la party | Sans ciblage |
+| **Mana Orbit** | Régénère le MP de toute la party | ✅ skilldata : **15 896 → 30 000 MP** (maîtrise 90→120) — le skill le plus cher du jeu en MP au lv1 |
 | **Noise** | Réduit l'aggro des monstres | **À garder actif en permanence** |
 | Mana Switch | Gestion de mana de groupe | Utilisé en script party |
 | Mana Wind → Mana Breeze | Variantes régén | — |
@@ -303,7 +304,7 @@ Autres curses confirmés dans les données serveur (eSRO) et forums : **Dull** (
 
 | Skill | Type | Effet documenté | Notes |
 |-------|------|-----------------|-------|
-| **Healing Cycle → Healing Orbit** | HoT | Soin **toutes les 3 secondes** | **N'attire AUCUNE aggro** — soin de fond principal |
+| **Healing Cycle → Healing Orbit** | HoT | Soin **toutes les 3 secondes** | **N'attire AUCUNE aggro** — soin de fond principal · ✅ skilldata 2026-10 : Healing Orbit **1 819 → 4 722** par cycle (maîtrise 80→116, 7 rangs), durée 16 s, CD 10 s, MP 5 822→15 111 |
 | Healing Division → Healing Favor | Heal direct | Heal mono-cible, CD court | Bon pour *prendre* l'aggro |
 | **Group Healing → Group Healing Breath** | Heal groupe | Jusqu'à 8 membres, cast plus long | — |
 | **Group Recovery → Holy Group Recovery** | Heal burst | Soin instantané de zone | Grosse aggro, gros coût MP |
@@ -364,11 +365,11 @@ Autres curses confirmés dans les données serveur (eSRO) et forums : **Dull** (
 
 | Skill/Phénomène | Valeur documentée | Source |
 |-----------------|-------------------|--------|
-| **Meteor** | CD 10 s ; **groupe de cooldown partagé avec Fire Bolt** (FB→Meteor : 3 s ; Meteor→FB : 10 s) | Silkroad Forums (Wizard/Bard Guide) |
+| **Meteor** | CD **10,5 s** (10 500 ms) ; **groupe de cooldown partagé avec Fire Bolt** (FB→Meteor : 3 s ; Meteor→FB : 10 s) | Silkroad Forums + ✅ skilldata 2026-10 |
 | **Earth Barrier / Earth Fence** | 20 s de durée, **CD 60 s** → cycle permanent avec 3 Wizards | Silkroad Forums |
 | **Fire Blow / Salamander Blow** | Animation ~9 s, **7-9 hits**, annulable par Detect / Earth Barrier | Silkroad Forums + SRO Valkyria |
 | **Délai de potion EU** | **15 s** entre chaque potion | Silkroad Temptation |
-| **Pain Quota** | Durée **5 min** | SRO Valkyria |
+| **Pain Quota** | Durée **5 min** — ✅ **confirmée** par skilldata (300 000 ms), CD 2 s | SRO Valkyria + ✅ skilldata 2026-10 |
 | **Screens (Physical/Magical/Ultimate)** | Durée **1 min**, non stackables | SRO Valkyria |
 | **Raze/Ravage (Warlock)** | ~80% de chance, 30 s, CD court | SRO Valkyria + forums |
 | **Reflect Warlock** | 35% de chance, ratio 135%, **ignore la distribution de dégâts** | SRO Valkyria |
@@ -380,12 +381,15 @@ Autres curses confirmés dans les données serveur (eSRO) et forums : **Dull** (
 
 **Règle générale EU :** gros burst ⇒ long cooldown et/ou longue animation ; d'où l'importance des **rotations** et du **weapon switch** (ex: Warrior qui swap 1H↔2H, Rogue dague↔arbalète).
 
+> 📊 ✅ (extraction skilldata 2026-10) Statistiques client (6 909 skills joueurs CH+EU) : cooldown le plus fréquent **4 s** (955 skills castables), puis 10 s, 5 s, 8 s, 3 s ; portées codées : **150** = nukes distance (1 645 skills), **100** = mi-portée EU, **50** = AoE mêlée. La colonne `Action_CoolTime` (2ᵉ timer, 0 sur la plupart) est présente mais non interprétée — candidate naturelle pour les **groupes de CD partagés** (Meteor↔Fire Bolt, Lion Shout), à confirmer. Source : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md).
+
 ---
 
 ## 📊 Progression SP
 
 - **~760 000 SP** pour maxer une combinaison **Wizard + Bard au cap 90** (guide Wizard/Bard, silkroadforums).
 - Extrapolation communautaire : **~1,2-1,5 M SP** pour 2 masteries complètes au cap 110-120 (vs plusieurs millions côté chinois — d'où le « no SP farming requis » côté EU, le gap restant **optionnel**).
+- ✅ (extraction skilldata 2026-10) **Ordres de grandeur réconciliés** : le coût SP cumulé pour apprendre **toutes les séries d'une maîtrise complète au cap 120** (fichiers serveur vSRO 1.188 + extension 120) est **Warrior 4 204 688 SP** · Warlock 3 672 099 · Rogue 2 930 473 · Cleric 2 813 755 · Wizard 2 771 857 · Bard 2 575 210 — les ~760 k du guide (cap 90, sélection de lignes) et ces totaux (cap 120, arbre complet) sont cohérents entre eux. Le `req_sp` exact de chaque rang est dans [ML_RESEARCH/data/skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv). Source : [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md §4.5](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md).
 - Les paliers de mastery (achat des niveaux via SP) suivent une courbe croissante (ex: ~15 SP pour passer 13→14 dans les bas niveaux, bien plus haut ensuite — cf. [UnKnoWnCheaTs – Complete Guide to Skill Points](https://www.unknowncheats.me/wiki/Silkroad:Complete_Guide_to_Skill_Points)).
 
 ### Ordre d'apprentissage conseillé
@@ -402,7 +406,7 @@ Autres curses confirmés dans les données serveur (eSRO) et forums : **Dull** (
 |-------|--------|
 | Noms exacts des skills d'entrée (Slash, Bash, Spinning, Power Shot...) | Confirmés par listes in-game (PhBot) et guides |
 | Double Stab / Cunning Stab (Warrior 1H), Axis Quiver | Présents dans les listes in-game ; orthographe/contenu exacts à vérifier en jeu |
-| Chiffres exacts de dégâts et coûts MP par rang | Non publiés de façon fiable — dépendent du rang, du cap (90→140) et de la version (iSRO/vSRO/SilkroadR) ; non inventés ici |
+| Chiffres exacts de dégâts et coûts MP par rang | ✅ **Résolu (extraction skilldata 2026-10)** : 3 637 skills EU décodés (47 colonnes par rang) — [ML_RESEARCH/data/skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv) ; % fixe par série, seule la part fixe min~max monte. Limites résiduelles : tags imbriqués non décodés (Pain Quota, DoT Warlock, invocations — bruts dans `params_raw`) et sémantique exacte des `att` kinds 6/9 à confirmer en jeu. Les valeurs iSRO officielles post-2010 (format `Param1..12`) restent hors périmètre |
 | Paliers de mastery exacts de déblocage de chaque skill | Structure « book 1 tôt / book 2 plus haut » confirmée ; paliers précis variables selon le cap du serveur |
 | « Transparent » (Rogue) / noms des curses mineurs Warlock (Slow/Dull/Stiffen) | Sources divergentes (guides turcs/japonais) — marqués comme incertains |
 | Versions cap 121-140 (Aura of Blood, skills Rogue+) | Documentés par le guide SRO Valkyria ; noms exacts iSRO non croisés avec d'autres sources |
@@ -456,7 +460,13 @@ Autres curses confirmés dans les données serveur (eSRO) et forums : **Dull** (
 - [elitepvpers – Cleric heal skills (Healing Orbit/aggro)](https://www.elitepvpers.com/forum/silkroad-online/1289296-cleric-heal-skills.html)
 - [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) — noms ZH (TW) officiels des 6 masteries EU, armes et armures ([wiki Bahamut](https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山) · [DiGeam](https://srowiki.digeam.com/))
 
+### Valeurs chiffrées par niveau (extraction skilldata 2026-10)
+- [ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md) — décodage complet de `skilldata_5000.txt` (vSRO 1.188 + cap 120) : colonnes, tags fourcc, loi « % fixe par série », stats cooldowns/portées
+- [ML_RESEARCH/data/skills_detail_EU.csv](ML_RESEARCH/data/skills_detail_EU.csv) — 3 637 lignes (un rang = une ligne), 47 colonnes décodées + `params_raw` (⚠️ segments de combo type Fire Blow : filtrer `mp_cost > 0`)
+- [ML_RESEARCH/data/skills_series.csv](ML_RESEARCH/data/skills_series.csv) · [ML_RESEARCH/data/skills_masteries.csv](ML_RESEARCH/data/skills_masteries.csv) — vues par série et par maîtrise
+- Sources primaires : [joaoldematejr/server_files_sro](https://github.com/joaoldematejr/server_files_sro) (`SMC/SR_GameRefData/skilldata_*.txt`) · [tarekwiz/SilkroadBot — skills.txt](https://github.com/tarekwiz/SilkroadBot) (noms) · [hnguyenaa/MySilkroad — RawRefSkill.cs](https://github.com/hnguyenaa/MySilkroad) (colonnes) · [ferdoran/openroad](https://github.com/ferdoran/openroad) (tags fourcc)
+
 ---
 
-*Dernière mise à jour: 2026-10-01 (révision majeure : remplacement des noms/chiffres non sourcés par les noms iSRO vérifiés et les valeurs documentées ; enrichi des noms ZH/TW officiels des masteries — recherche multilingue ML_RESEARCH ; voir section Incertitudes pour les limites ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : calculateur officiel = table codename → 269 noms KR — rapport ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §4)*
-*Sources: elitepvpers (traductions 2008), silkroadforums, SRO Valkyria, PhBot Plugins (GitHub), eSRO (GitHub), Fandom Wiki, silkroad4arab, silkroadalani ; noms ZH : wiki Bahamut + DiGeam (via ML_RESEARCH/RESEARCH_ZH.md)*
+*Dernière mise à jour: 2026-10-01 (révision majeure : remplacement des noms/chiffres non sourcés par les noms iSRO vérifiés et les valeurs documentées ; enrichi des noms ZH/TW officiels des masteries — recherche multilingue ML_RESEARCH ; voir section Incertitudes pour les limites ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : calculateur officiel = table codename → 269 noms KR — rapport ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §4 ; ajout des **valeurs chiffrées par rang** (Dare Devil, Meteor, Fire Bolt, Pain Quota, Healing Orbit, Mana Orbit, SP cap 120) — extraction skilldata 2026-10, rapport ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md, CSV ML_RESEARCH/data/skills_detail_EU.csv)*
+*Sources: elitepvpers (traductions 2008), silkroadforums, SRO Valkyria, PhBot Plugins (GitHub), eSRO (GitHub), Fandom Wiki, silkroad4arab, silkroadalani ; noms ZH : wiki Bahamut + DiGeam (via ML_RESEARCH/RESEARCH_ZH.md) ; chiffres par rang : skilldata_5000.txt (fichiers serveur vSRO 1.188 + cap 120, repo joaoldematejr/server_files_sro), noms croisés skills.txt (tarekwiz), colonnes RawRefSkill.cs (hnguyenaa), tags fourcc openroad — valeurs vérifiées marquées ✅ skilldata 2026-10*

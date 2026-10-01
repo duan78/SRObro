@@ -68,6 +68,19 @@ This is the central tracking document for all multilingual research conducted to
 
 **Résolutions** : HP boss 111+ (3 valeurs officielles), timers respawn vSRO (6/3/4 h), GiantMonster_SpawnRatio 14 %, _RefMagicOptByItemOptLevel public, règle D12-D15/D16+, ECSRO/BlackRogue/1.188 corrigés, boss Bagdad confirmé. **Restantes** : HP Jupiter 111-118 et 130+, stats D13-15 en texte, constantes formule dégâts, procs d'imbues (→ extraction DB/client).
 
+## 🧬 Session 2026-10-02 — Extraction de données (DB binaire + skilldata) & doc serveur
+
+> 4 rapports dans [ML_RESEARCH/](ML_RESEARCH/) + **5 CSV de données** dans [ML_RESEARCH/data/](ML_RESEARCH/data/). Première passe d'EXTRACTION directe (parsage binaire/TSV) en plus de la recherche web.
+
+| Rapport | Méthode | Contenu clé |
+|---------|---------|-------------|
+| [VSRO_DB_MONSTERS](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) | Backup MSSQL 74 Mo parsé en binaire (repo joaodematejr/private_server) | **7 157 monstres** avec stats serveur, HP Jupiter (40,1 M/55,4 M/24,2 M), EXP par unique (inédit), codenames officiels, validation 8/8 uniques zéro écart |
+| [SKILLDATA_EXTRACT](ML_RESEARCH/RESEARCH_SKILLDATA_EXTRACT.md) | skilldata_5000.txt serveur parsé (repo joaodematejr/server_files_sro, 32 684 lignes) | **6 909 skills** (CH 3 272 + EU 3 637), 47+ colonnes, tags fourcc décodés, % dégâts fixe par série, crit = 14 séries, SP cap 120 |
+| [VSRO_SERVER](ML_RESEARCH/RESEARCH_VSRO_SERVER.md) | ~26 recherches web (RZ/e*pvp/GitHub) | server.cfg complet (IBUV CAPTCHA, fees, topologie 48 nœuds, capacity 2300), ~40 commandes GM, procédures DB, BlackRogue clarifié (rates hardcodés), anti-cheat GameGuard→HackShield→XTrap, émulateurs (opensro) |
+| [PS_GAMEPLAY](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md) | ~25 recherches EN/TR/RU | Medusa pas-à-pas chiffrée, système AP Job Temple, gates client Jupiter, Bagdad (9 essences/Kerim), FGW timers/récompenses |
+
+**Résolues** : HP Jupiter 111-120, EXP uniques/mobs (inédit), HP Job Temple serveur, HP gardiens Qin-Shi, valeurs chiffrées skills par niveau, crit/nuke (définitif), imbus 32-65 %, SP cap 120, config serveur officielle, commandes GM, anti-cheat. **Restantes** : HP boss 121+, divergence HP Job Temple 1.188 vs client, tags skill imbriqués, unités rates (100 vs 1000), format iSRO post-2010.
+
 ---
 
 ## 🔍 Research Status Summary

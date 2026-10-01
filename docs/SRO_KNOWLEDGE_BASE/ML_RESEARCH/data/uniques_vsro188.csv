@@ -1,0 +1,831 @@
+id,codename,zone,level,max_hp,max_mp,exp_to_give,atk_min,atk_max,par,mar,er_parry,hr,chr,rarity,rarity_desc,service,country,speed_walk,speed_run,link
+22519,MOB_FW_BATTLEGOLEM_001,Forteresse (guerre de forteresse),1,82877,0,45120,9,6,1,1,27,27,2,3,unique_notice,1,3,42,56,12073
+22099,MOB_FW_HYEONGCHEON_001,Forteresse (guerre de forteresse),1,52170,0,33840,7,10,1,1,27,27,2,3,unique_notice,1,3,23,74,11653
+22239,MOB_FW_MUJIGI_001,Forteresse (guerre de forteresse),1,62158,0,33840,7,10,1,1,27,27,2,3,unique_notice,1,3,38,399,11793
+21399,MOB_FW_TAESE_001,Forteresse (guerre de forteresse),1,69560,0,45120,9,6,1,1,27,27,2,3,unique_notice,1,3,10,34,10953
+22520,MOB_FW_BATTLEGOLEM_002,Forteresse (guerre de forteresse),2,86466,0,90240,12,8,2,2,29,29,2,3,unique_notice,1,3,42,56,12074
+22240,MOB_FW_MUJIGI_002,Forteresse (guerre de forteresse),2,64850,0,67680,9,14,2,2,29,29,2,3,unique_notice,1,3,38,143,11794
+21400,MOB_FW_TAESE_002,Forteresse (guerre de forteresse),2,70347,0,90240,12,8,2,2,29,29,2,3,unique_notice,1,3,10,34,10954
+22521,MOB_FW_BATTLEGOLEM_003,Forteresse (guerre de forteresse),3,118717,0,135360,12,10,3,3,31,31,2,3,unique_notice,1,3,42,56,12075
+22101,MOB_FW_HYEONGCHEON_003,Forteresse (guerre de forteresse),3,81211,0,101520,9,15,3,3,31,31,2,3,unique_notice,1,3,23,74,11655
+22241,MOB_FW_MUJIGI_003,Forteresse (guerre de forteresse),3,89038,0,101520,9,15,3,3,31,31,2,3,unique_notice,1,3,38,143,11795
+21401,MOB_FW_TAESE_003,Forteresse (guerre de forteresse),3,108282,0,135360,12,10,3,3,31,31,2,3,unique_notice,1,3,10,34,10955
+22522,MOB_FW_BATTLEGOLEM_004,Forteresse (guerre de forteresse),4,120257,0,180480,15,14,4,4,33,33,2,3,unique_notice,1,3,42,56,12076
+22102,MOB_FW_HYEONGCHEON_004,Forteresse (guerre de forteresse),4,79750,0,135360,12,18,4,4,33,33,2,3,unique_notice,1,3,23,74,11656
+22242,MOB_FW_MUJIGI_004,Forteresse (guerre de forteresse),4,90193,0,135360,12,18,4,4,33,33,2,3,unique_notice,1,3,38,143,11796
+21402,MOB_FW_TAESE_004,Forteresse (guerre de forteresse),4,106333,0,180480,15,14,4,4,33,33,2,3,unique_notice,1,3,10,34,10956
+22523,MOB_FW_BATTLEGOLEM_005,Forteresse (guerre de forteresse),5,158795,0,225600,15,15,5,5,35,35,2,3,unique_notice,1,3,42,56,12077
+22103,MOB_FW_HYEONGCHEON_105,Forteresse (guerre de forteresse),5,114299,0,169200,12,19,5,16777221,35,35,2,3,unique_notice,1,3,23,74,11657
+22243,MOB_FW_MUJIGI_005,Forteresse (guerre de forteresse),5,119096,0,169200,12,19,5,5,35,35,2,3,unique_notice,1,3,38,143,11797
+21403,MOB_FW_TAESE_005,Forteresse (guerre de forteresse),5,152399,0,225600,15,15,5,5,35,35,2,3,unique_notice,1,3,10,34,10957
+22524,MOB_FW_BATTLEGOLEM_006,Forteresse (guerre de forteresse),6,156825,0,270720,18,18,6,6,37,37,2,3,unique_notice,1,3,42,56,12078
+22104,MOB_FW_HYEONGCHEON_006,Forteresse (guerre de forteresse),6,109345,0,203040,15,24,6,6,37,37,2,3,unique_notice,1,3,23,74,11658
+22244,MOB_FW_MUJIGI_006,Forteresse (guerre de forteresse),6,117619,0,203040,15,24,6,6,37,37,2,3,unique_notice,1,3,38,143,11798
+21404,MOB_FW_TAESE_006,Forteresse (guerre de forteresse),6,145793,0,270720,18,18,6,6,37,37,2,3,unique_notice,1,3,10,34,10958
+22525,MOB_FW_BATTLEGOLEM_007,Forteresse (guerre de forteresse),7,201621,0,315840,22,19,7,7,39,39,2,3,unique_notice,1,3,42,56,12079
+22105,MOB_FW_HYEONGCHEON_007,Forteresse (guerre de forteresse),7,149962,0,236880,15,24,7,7,39,39,2,3,unique_notice,1,3,23,74,11659
+21405,MOB_FW_TAESE_007,Forteresse (guerre de forteresse),7,199950,0,315840,22,19,7,7,39,39,2,3,unique_notice,1,3,10,34,10959
+22526,MOB_FW_BATTLEGOLEM_008,Forteresse (guerre de forteresse),8,252097,0,360960,22,24,8,8,41,41,2,3,unique_notice,1,3,42,56,12080
+22106,MOB_FW_HYEONGCHEON_008,Forteresse (guerre de forteresse),8,196112,0,270720,18,29,8,8,41,41,2,3,unique_notice,1,3,23,74,11660
+22246,MOB_FW_MUJIGI_008,Forteresse (guerre de forteresse),8,189073,0,270720,18,29,8,8,41,41,2,3,unique_notice,1,3,38,143,11800
+21406,MOB_FW_TAESE_008,Forteresse (guerre de forteresse),8,261483,0,360960,22,24,8,8,41,41,2,3,unique_notice,1,3,10,34,10960
+22527,MOB_FW_BATTLEGOLEM_009,Forteresse (guerre de forteresse),9,245357,0,406080,26,24,9,9,43,43,2,3,unique_notice,1,3,42,56,12081
+22107,MOB_FW_HYEONGCHEON_009,Forteresse (guerre de forteresse),9,186384,0,304560,22,35,9,9,43,43,2,3,unique_notice,1,3,23,74,11661
+22247,MOB_FW_MUJIGI_009,Forteresse (guerre de forteresse),9,184018,0,304560,22,35,9,16777225,43,43,2,3,unique_notice,1,3,38,143,11801
+21407,MOB_FW_TAESE_009,Forteresse (guerre de forteresse),9,248512,0,406080,26,24,9,16777225,43,43,2,3,unique_notice,1,3,10,34,10961
+22528,MOB_FW_BATTLEGOLEM_010,Forteresse (guerre de forteresse),10,302264,0,451200,29,29,10,10,45,45,2,3,unique_notice,1,3,42,56,12082
+22108,MOB_FW_HYEONGCHEON_010,Forteresse (guerre de forteresse),10,238770,0,338400,22,34,10,10,45,45,2,3,unique_notice,1,3,23,74,11662
+22248,MOB_FW_MUJIGI_010,Forteresse (guerre de forteresse),10,226698,0,338400,22,34,10,10,45,45,2,3,unique_notice,1,3,38,143,11802
+21408,MOB_FW_TAESE_010,Forteresse (guerre de forteresse),10,318360,0,451200,29,29,10,10,45,45,2,3,unique_notice,1,3,10,34,10962
+22529,MOB_FW_BATTLEGOLEM_011,Forteresse (guerre de forteresse),11,365440,0,496320,32,35,11,11,47,47,2,3,unique_notice,1,3,42,56,12083
+22109,MOB_FW_HYEONGCHEON_011,Forteresse (guerre de forteresse),11,297267,0,372240,26,41,11,11,47,47,2,3,unique_notice,1,3,23,74,11663
+22249,MOB_FW_MUJIGI_011,Forteresse (guerre de forteresse),11,274080,0,372240,26,41,11,11,47,47,2,3,unique_notice,1,3,38,143,11803
+21409,MOB_FW_TAESE_011,Forteresse (guerre de forteresse),11,396356,0,496320,32,35,11,11,47,47,2,3,unique_notice,1,3,10,34,10963
+22530,MOB_FW_BATTLEGOLEM_012,Forteresse (guerre de forteresse),12,414471,0,541440,35,34,12,12,49,49,2,3,unique_notice,1,3,42,56,12084
+22110,MOB_FW_HYEONGCHEON_012,Forteresse (guerre de forteresse),12,344934,0,406080,29,46,12,12,49,49,2,3,unique_notice,1,3,23,74,11664
+22250,MOB_FW_MUJIGI_012,Forteresse (guerre de forteresse),12,310853,0,406080,29,46,12,12,49,49,2,3,unique_notice,1,3,38,143,11804
+21410,MOB_FW_TAESE_012,Forteresse (guerre de forteresse),12,459913,0,541440,35,34,12,12,49,49,2,3,unique_notice,1,3,10,34,10964
+22531,MOB_FW_BATTLEGOLEM_013,Forteresse (guerre de forteresse),13,465317,0,586560,44,41,13,13,51,51,2,3,unique_notice,1,3,42,56,12085
+22111,MOB_FW_HYEONGCHEON_013,Forteresse (guerre de forteresse),13,394389,0,439920,32,51,13,13,51,51,2,3,unique_notice,1,3,23,74,11665
+22251,MOB_FW_MUJIGI_013,Forteresse (guerre de forteresse),13,348987,0,439920,32,51,13,13,51,51,2,3,unique_notice,1,3,38,143,11805
+21411,MOB_FW_TAESE_013,Forteresse (guerre de forteresse),13,525853,0,586560,44,41,13,13,51,51,2,3,unique_notice,1,3,10,34,10965
+22532,MOB_FW_BATTLEGOLEM_014,Forteresse (guerre de forteresse),14,601029,0,631680,42,46,14,14,53,53,2,3,unique_notice,1,3,42,56,12086
+22112,MOB_FW_HYEONGCHEON_014,Forteresse (guerre de forteresse),14,526855,0,473760,35,56,14,14,53,53,2,3,unique_notice,1,3,23,74,11666
+22252,MOB_FW_MUJIGI_014,Forteresse (guerre de forteresse),14,450771,0,473760,35,56,14,14,53,53,2,3,unique_notice,1,3,38,143,11806
+21412,MOB_FW_TAESE_014,Forteresse (guerre de forteresse),14,702473,0,631680,42,46,14,14,53,53,2,3,unique_notice,1,3,10,34,10966
+34053,MOB_EVE_ANGRY_TAHOMET01,Evenement,15,538309,0,169200,35,67,15,15,55,55,2,3,unique_notice,0,3,23,75,17686
+34043,MOB_EVE_HAPPY_TIGERWOMAN01,Evenement,15,493833,0,169200,44,70,15,15,55,55,2,3,unique_notice,0,0,20,90,17676
+22533,MOB_FW_BATTLEGOLEM_015,Forteresse (guerre de forteresse),15,658444,0,676800,51,51,15,15,55,55,2,3,unique_notice,1,3,42,56,12087
+22113,MOB_FW_HYEONGCHEON_015,Forteresse (guerre de forteresse),15,582786,0,507600,44,70,15,15,55,55,2,3,unique_notice,1,3,23,74,11667
+22253,MOB_FW_MUJIGI_015,Forteresse (guerre de forteresse),15,493833,0,507600,44,70,15,15,55,55,2,3,unique_notice,1,3,38,143,11807
+21413,MOB_FW_TAESE_015,Forteresse (guerre de forteresse),15,777048,0,676800,51,51,15,15,55,55,2,3,unique_notice,1,3,10,34,10967
+22534,MOB_FW_BATTLEGOLEM_016,Forteresse (guerre de forteresse),16,803692,0,721920,55,56,16,16,57,57,2,3,unique_notice,1,3,42,56,12088
+22114,MOB_FW_HYEONGCHEON_016,Forteresse (guerre de forteresse),16,724657,0,541440,42,67,16,16,57,57,2,3,unique_notice,1,3,23,74,11668
+22254,MOB_FW_MUJIGI_016,Forteresse (guerre de forteresse),16,602769,0,541440,42,67,16,16,57,57,2,3,unique_notice,1,3,38,143,11808
+21414,MOB_FW_TAESE_016,Forteresse (guerre de forteresse),16,966209,0,721920,55,56,16,16,57,57,2,3,unique_notice,1,3,10,34,10968
+22535,MOB_FW_BATTLEGOLEM_017,Forteresse (guerre de forteresse),17,868135,0,767040,59,70,17,16777233,59,59,2,3,unique_notice,1,3,42,56,12089
+22115,MOB_FW_HYEONGCHEON_017,Forteresse (guerre de forteresse),17,787519,0,575280,51,82,17,17,59,59,2,3,unique_notice,1,3,23,74,11669
+22255,MOB_FW_MUJIGI_017,Forteresse (guerre de forteresse),17,651101,0,575280,51,82,17,17,59,59,2,3,unique_notice,1,3,38,143,11809
+21415,MOB_FW_TAESE_017,Forteresse (guerre de forteresse),17,1050026,0,767040,59,70,17,17,59,59,2,3,unique_notice,1,3,10,34,10969
+22536,MOB_FW_BATTLEGOLEM_018,Forteresse (guerre de forteresse),18,934835,0,812160,64,67,18,18,61,61,2,3,unique_notice,1,3,42,56,12090
+22116,MOB_FW_HYEONGCHEON_018,Forteresse (guerre de forteresse),18,852607,0,609120,55,89,18,18,61,61,2,3,unique_notice,1,3,23,74,11670
+22256,MOB_FW_MUJIGI_018,Forteresse (guerre de forteresse),18,701126,0,609120,55,89,18,18,61,61,2,3,unique_notice,1,3,38,143,11810
+21416,MOB_FW_TAESE_018,Forteresse (guerre de forteresse),18,1136809,0,812160,64,67,18,18,61,61,2,3,unique_notice,1,3,10,34,10970
+22537,MOB_FW_BATTLEGOLEM_019,Forteresse (guerre de forteresse),19,1003855,0,857280,68,82,19,19,63,63,2,3,unique_notice,1,3,42,56,12091
+22117,MOB_FW_HYEONGCHEON_019,Forteresse (guerre de forteresse),19,919982,0,642960,59,95,19,19,63,63,2,3,unique_notice,1,3,23,74,11671
+22257,MOB_FW_MUJIGI_019,Forteresse (guerre de forteresse),19,752891,0,642960,59,95,19,19,63,63,2,3,unique_notice,1,3,38,143,11811
+21417,MOB_FW_TAESE_019,Forteresse (guerre de forteresse),19,1226643,0,857280,68,82,19,19,63,63,2,3,unique_notice,1,3,10,34,10971
+1954,MOB_CH_TIGERWOMAN,Chine (Jangan-Donwhang),20,598720,0,451200,42,51,20,20,65,65,2,3,unique_notice,1,0,20,90,48
+7549,MOB_CH_TIGERWOMAN_L2,Chine (Jangan-Donwhang),20,5987197,0,1804800,42,51,20,20,65,65,2,3,unique_notice,1,0,27,122,2103
+7551,MOB_CH_TIGERWOMAN_L3,Chine (Jangan-Donwhang),20,1796159,0,902400,42,51,20,20,65,65,2,3,unique_notice,1,0,34,153,2104
+28820,MOB_EV_WINTER_PRINCESS_20,Evenement,20,1612894,0,902400,44,140,20,20,65,65,2,3,unique_notice,1,3,20,120,15594
+28812,MOB_EV_WINTER_WHITEKNIGHT_10,Evenement,20,268816,0,451200,44,140,20,20,65,65,2,3,unique_notice,1,3,30,180,15586
+22538,MOB_FW_BATTLEGOLEM_020,Forteresse (guerre de forteresse),20,1075263,0,902400,73,89,20,20,65,65,2,3,unique_notice,1,3,42,56,12092
+22118,MOB_FW_HYEONGCHEON_020,Forteresse (guerre de forteresse),20,989712,0,676800,64,102,20,20,65,65,2,3,unique_notice,1,3,23,74,11672
+22258,MOB_FW_MUJIGI_020,Forteresse (guerre de forteresse),20,806447,0,676800,64,102,20,20,65,65,2,3,unique_notice,1,3,38,143,11812
+21418,MOB_FW_TAESE_020,Forteresse (guerre de forteresse),20,1319616,0,902400,73,89,20,20,65,65,2,3,unique_notice,1,3,10,34,10972
+22539,MOB_FW_BATTLEGOLEM_021,Forteresse (guerre de forteresse),21,1149125,0,956544,77,95,21,21,67,67,2,3,unique_notice,1,3,42,56,12093
+22119,MOB_FW_HYEONGCHEON_021,Forteresse (guerre de forteresse),21,1061863,0,717408,68,109,21,21,67,67,2,3,unique_notice,1,3,23,74,11673
+22259,MOB_FW_MUJIGI_021,Forteresse (guerre de forteresse),21,861843,0,717408,68,109,21,21,67,67,2,3,unique_notice,1,3,38,143,11813
+21419,MOB_FW_TAESE_021,Forteresse (guerre de forteresse),21,1415818,0,956544,77,95,21,21,67,67,2,3,unique_notice,1,3,10,34,10973
+22540,MOB_FW_BATTLEGOLEM_022,Forteresse (guerre de forteresse),22,1225511,0,1013937,82,102,22,22,69,69,2,3,unique_notice,1,3,42,56,12094
+22120,MOB_FW_HYEONGCHEON_022,Forteresse (guerre de forteresse),22,1136504,0,760453,73,116,22,22,69,69,2,3,unique_notice,1,3,23,74,11674
+22260,MOB_FW_MUJIGI_022,Forteresse (guerre de forteresse),22,919133,0,760453,73,116,22,22,69,69,2,3,unique_notice,1,3,38,143,11814
+21420,MOB_FW_TAESE_022,Forteresse (guerre de forteresse),22,1515339,0,1013937,82,102,22,22,69,69,2,3,unique_notice,1,3,10,34,10974
+22541,MOB_FW_BATTLEGOLEM_023,Forteresse (guerre de forteresse),23,1304493,0,1074773,87,109,23,23,71,71,2,3,unique_notice,1,3,42,56,12095
+22121,MOB_FW_HYEONGCHEON_023,Forteresse (guerre de forteresse),23,1213707,0,806080,77,124,23,23,71,71,2,3,unique_notice,1,3,23,74,11675
+22261,MOB_FW_MUJIGI_023,Forteresse (guerre de forteresse),23,978370,0,806080,77,124,23,23,71,71,2,3,unique_notice,1,3,38,143,11815
+21421,MOB_FW_TAESE_023,Forteresse (guerre de forteresse),23,1618275,0,1074773,87,109,23,23,71,71,2,3,unique_notice,1,3,10,34,10975
+5871,MOB_EU_KERBEROS,Europe (Constantinople),24,693072,0,569630,52,70,24,24,73,73,2,3,unique_notice,1,1,30,96,1741
+26666,MOB_EU_KERBEROS_L2,Europe (Constantinople),24,6930722,0,2278519,52,70,24,24,73,73,2,3,unique_notice,1,1,30,96,13472
+23307,MOB_EU_KERBEROS_L3,Europe (Constantinople),24,2079217,0,1139259,52,70,24,24,73,73,2,3,unique_notice,1,1,30,96,12756
+28821,MOB_EV_WINTER_PRINCESS_24,Evenement,24,2079217,0,1139259,59,175,24,24,73,73,2,3,unique_notice,1,3,20,120,15595
+28813,MOB_EV_WINTER_WHITEKNIGHT_24,Evenement,24,346536,0,569630,59,175,24,24,73,73,2,3,unique_notice,1,3,30,180,15587
+22542,MOB_FW_BATTLEGOLEM_024,Forteresse (guerre de forteresse),24,1386144,0,1139259,92,116,24,24,73,73,2,3,unique_notice,1,3,42,56,12096
+22122,MOB_FW_HYEONGCHEON_024,Forteresse (guerre de forteresse),24,1293542,0,854445,82,132,24,24,73,73,2,3,unique_notice,1,3,23,74,11676
+22262,MOB_FW_MUJIGI_024,Forteresse (guerre de forteresse),24,1039608,0,854445,82,132,24,24,73,73,2,3,unique_notice,1,3,38,143,11816
+21422,MOB_FW_TAESE_024,Forteresse (guerre de forteresse),24,1724723,0,1139259,92,116,24,24,73,73,2,3,unique_notice,1,3,10,34,10976
+34054,MOB_EVE_ANGRY_TAHOMET02,Evenement,25,1239495,0,301904,82,148,25,25,75,75,2,3,unique_notice,0,3,23,75,17687
+34044,MOB_EVE_HAPPY_TIGERWOMAN02,Evenement,25,1102905,0,301904,87,140,25,25,75,75,2,3,unique_notice,0,0,20,90,17677
+22543,MOB_FW_BATTLEGOLEM_025,Forteresse (guerre de forteresse),25,1470540,0,1207615,98,124,25,25,75,75,2,3,unique_notice,1,3,42,56,12097
+22263,MOB_FW_MUJIGI_025,Forteresse (guerre de forteresse),25,1102905,0,905711,87,140,25,25,75,75,2,3,unique_notice,1,3,38,141,11817
+21423,MOB_FW_TAESE_025,Forteresse (guerre de forteresse),25,1834781,0,1207615,98,124,25,25,75,75,2,3,unique_notice,1,3,10,34,10977
+22544,MOB_FW_BATTLEGOLEM_026,Forteresse (guerre de forteresse),26,1557757,0,1280072,103,132,26,26,77,77,2,3,unique_notice,1,3,42,56,12098
+22124,MOB_FW_HYEONGCHEON_026,Forteresse (guerre de forteresse),26,1461413,0,960054,92,148,26,26,77,77,2,3,unique_notice,1,3,23,74,11678
+22264,MOB_FW_MUJIGI_026,Forteresse (guerre de forteresse),26,1168318,0,960054,92,148,26,26,77,77,2,3,unique_notice,1,3,38,143,11818
+21424,MOB_FW_TAESE_026,Forteresse (guerre de forteresse),26,1948551,0,1280072,103,132,26,26,77,77,2,3,unique_notice,1,3,10,34,10978
+22545,MOB_FW_BATTLEGOLEM_027,Forteresse (guerre de forteresse),27,1647874,0,1356876,109,140,27,27,79,79,2,3,unique_notice,1,3,42,56,12099
+22125,MOB_FW_HYEONGCHEON_027,Forteresse (guerre de forteresse),27,1549604,0,1017657,98,157,27,27,79,79,2,3,unique_notice,1,3,23,74,11679
+22265,MOB_FW_MUJIGI_027,Forteresse (guerre de forteresse),27,1235906,0,1017657,98,157,27,27,79,79,2,3,unique_notice,1,3,38,143,11819
+21425,MOB_FW_TAESE_027,Forteresse (guerre de forteresse),27,2066139,0,1356876,109,140,27,27,79,79,2,3,unique_notice,1,3,10,34,10979
+22126,MOB_FU_HYEONGCHEON_028,AUTRE,28,1640737,0,1078717,103,165,28,28,81,81,2,3,unique_notice,1,3,23,74,11680
+22546,MOB_FW_BATTLEGOLEM_028,Forteresse (guerre de forteresse),28,1740973,0,1438289,115,148,28,28,81,81,2,3,unique_notice,1,3,42,56,12100
+22266,MOB_FW_MUJIGI_028,Forteresse (guerre de forteresse),28,1305730,0,1078717,103,165,28,28,81,81,2,3,unique_notice,1,3,38,143,11820
+21426,MOB_FW_TAESE_028,Forteresse (guerre de forteresse),28,2187650,0,1438289,115,148,28,28,81,81,2,3,unique_notice,1,3,10,34,10980
+22547,MOB_FW_BATTLEGOLEM_029,Forteresse (guerre de forteresse),29,1837137,0,1524586,121,157,29,29,83,83,2,3,unique_notice,1,3,42,56,12101
+22127,MOB_FW_HYEONGCHEON_029,Forteresse (guerre de forteresse),29,1734896,0,1143440,109,175,29,16777245,83,83,2,3,unique_notice,1,3,23,74,11681
+22267,MOB_FW_MUJIGI_029,Forteresse (guerre de forteresse),29,1377853,0,1143440,109,175,29,29,83,83,2,3,unique_notice,1,3,38,143,11821
+14936,MOB_AM,AUTRE,30,1094835,0,808031,115,184,30,30,85,85,2,3,unique_notice,1,1,20,75,4571
+26667,MOB_AM_IVY_L2,Asia Minor (zone AM),30,10948346,0,3232123,115,184,30,30,85,85,2,3,unique_notice,1,1,20,75,13473
+23308,MOB_AM_IVY_L3,Asia Minor (zone AM),30,3284504,0,1616061,115,184,30,30,85,85,2,3,unique_notice,1,1,20,75,12757
+28822,MOB_EV_WINTER_PRINCESS_30,Evenement,30,2904676,0,1616061,87,236,30,30,85,85,2,3,unique_notice,1,3,20,120,15596
+22548,MOB_FW_BATTLEGOLEM_030,Forteresse (guerre de forteresse),30,1936451,0,1616061,127,165,30,30,85,85,2,3,unique_notice,1,3,42,56,12102
+22128,MOB_FW_HYEONGCHEON_030,Forteresse (guerre de forteresse),30,1832166,0,1212046,115,184,30,30,85,85,2,3,unique_notice,1,3,23,74,11682
+22268,MOB_FW_MUJIGI_030,Forteresse (guerre de forteresse),30,1452338,0,1212046,115,184,30,30,85,85,2,3,unique_notice,1,3,38,143,11822
+21428,MOB_FW_TAESE_030,Forteresse (guerre de forteresse),30,2442887,0,1616061,127,165,30,30,85,85,2,3,unique_notice,1,3,10,34,10982
+22549,MOB_FW_BATTLEGOLEM_031,Forteresse (guerre de forteresse),31,2039003,0,1696864,134,175,31,31,87,87,2,3,unique_notice,1,3,42,56,12103
+22129,MOB_FW_HYEONGCHEON_031,Forteresse (guerre de forteresse),31,1932632,0,1272648,121,194,31,31,87,87,2,3,unique_notice,1,3,23,74,11683
+22269,MOB_FW_MUJIGI_031,Forteresse (guerre de forteresse),31,1529252,0,1272648,121,194,31,31,87,87,2,3,unique_notice,1,3,38,143,11823
+21429,MOB_FW_TAESE_031,Forteresse (guerre de forteresse),31,2576842,0,1696864,134,175,31,31,87,87,2,3,unique_notice,1,3,10,34,10983
+22550,MOB_FW_BATTLEGOLEM_032,Forteresse (guerre de forteresse),32,2144882,0,1781708,141,184,32,32,89,89,2,3,unique_notice,1,3,42,56,12104
+22130,MOB_FW_HYEONGCHEON_032,Forteresse (guerre de forteresse),32,2036383,0,1336281,127,204,32,32,89,89,2,3,unique_notice,1,3,23,74,11684
+22270,MOB_FW_MUJIGI_032,Forteresse (guerre de forteresse),32,1608661,0,1336281,127,204,32,32,89,89,2,3,unique_notice,1,3,38,143,11824
+21430,MOB_FW_TAESE_032,Forteresse (guerre de forteresse),32,2715178,0,1781708,141,184,32,32,89,89,2,3,unique_notice,1,3,10,34,10984
+22551,MOB_FW_BATTLEGOLEM_033,Forteresse (guerre de forteresse),33,2254180,0,1870793,148,194,33,33,91,91,2,3,unique_notice,1,3,42,56,12105
+22131,MOB_FW_HYEONGCHEON_033,Forteresse (guerre de forteresse),33,2143512,0,1403095,134,214,33,33,91,91,2,3,unique_notice,1,3,23,74,11685
+22271,MOB_FW_MUJIGI_033,Forteresse (guerre de forteresse),33,1690635,0,1403095,134,214,33,16777249,91,91,2,3,unique_notice,1,3,38,143,11825
+21431,MOB_FW_TAESE_033,Forteresse (guerre de forteresse),33,2858016,0,1870793,148,194,33,16777249,91,91,2,3,unique_notice,1,3,10,34,10985
+22552,MOB_FW_BATTLEGOLEM_034,Forteresse (guerre de forteresse),34,2366993,0,1964333,155,204,34,34,93,93,2,3,unique_notice,1,3,42,56,12106
+22132,MOB_FW_HYEONGCHEON_034,Forteresse (guerre de forteresse),34,2254111,0,1473250,141,225,34,34,93,93,2,3,unique_notice,1,3,23,74,11686
+22272,MOB_FW_MUJIGI_034,Forteresse (guerre de forteresse),34,1775245,0,1473250,141,225,34,34,93,93,2,3,unique_notice,1,3,38,143,11826
+21432,MOB_FW_TAESE_034,Forteresse (guerre de forteresse),34,3005482,0,1964333,155,204,34,34,93,93,2,3,unique_notice,1,3,10,34,10986
+34055,MOB_EVE_ANGRY_TAHOMET03,Evenement,35,2115420,0,515637,141,248,35,35,95,95,2,3,unique_notice,0,3,23,75,17688
+22553,MOB_FW_BATTLEGOLEM_035,Forteresse (guerre de forteresse),35,2483416,0,2062549,162,214,35,35,95,95,2,3,unique_notice,1,3,42,56,12107
+22133,MOB_FW_HYEONGCHEON_035,Forteresse (guerre de forteresse),35,2368277,0,1546912,148,236,35,35,95,95,2,3,unique_notice,1,3,23,74,11687
+22273,MOB_FW_MUJIGI_035,Forteresse (guerre de forteresse),35,1862562,0,1546912,148,236,35,35,95,95,2,3,unique_notice,1,3,38,143,11827
+21433,MOB_FW_TAESE_035,Forteresse (guerre de forteresse),35,3157703,0,2062549,162,214,35,35,95,95,2,3,unique_notice,1,3,10,34,10987
+22554,MOB_FW_BATTLEGOLEM_036,Forteresse (guerre de forteresse),36,2603550,0,2165677,170,225,36,36,97,97,2,3,unique_notice,1,3,42,56,12108
+22134,MOB_FW_HYEONGCHEON_036,Forteresse (guerre de forteresse),36,2486108,0,1624258,155,248,36,36,97,97,2,3,unique_notice,1,3,23,74,11688
+22274,MOB_FW_MUJIGI_036,Forteresse (guerre de forteresse),36,1952663,0,1624258,155,248,36,36,97,97,2,3,unique_notice,1,3,38,143,11828
+21434,MOB_FW_TAESE_036,Forteresse (guerre de forteresse),36,3314811,0,2165677,170,225,36,36,97,97,2,3,unique_notice,1,3,10,34,10988
+22555,MOB_FW_BATTLEGOLEM_037,Forteresse (guerre de forteresse),37,2727496,0,2273961,178,236,37,37,99,99,2,3,unique_notice,1,3,42,56,12109
+22135,MOB_FW_HYEONGCHEON_037,Forteresse (guerre de forteresse),37,2607705,0,1705471,162,259,37,37,99,99,2,3,unique_notice,1,3,23,74,11689
+22275,MOB_FW_MUJIGI_037,Forteresse (guerre de forteresse),37,2045622,0,1705471,162,259,37,37,99,99,2,3,unique_notice,1,3,38,143,11829
+21435,MOB_FW_TAESE_037,Forteresse (guerre de forteresse),37,3476940,0,2273961,178,236,37,37,99,99,2,3,unique_notice,1,3,10,34,10989
+22556,MOB_FW_BATTLEGOLEM_038,Forteresse (guerre de forteresse),38,2855358,0,2387659,186,248,38,38,101,101,2,3,unique_notice,1,3,42,312,12110
+22136,MOB_FW_HYEONGCHEON_038,Forteresse (guerre de forteresse),38,2733171,0,1790744,170,271,38,38,101,101,2,3,unique_notice,1,3,23,74,11690
+22276,MOB_FW_MUJIGI_038,Forteresse (guerre de forteresse),38,2141518,0,1790744,170,271,38,38,101,101,2,3,unique_notice,1,3,38,143,11830
+21436,MOB_FW_TAESE_038,Forteresse (guerre de forteresse),38,3644228,0,2387659,186,248,38,38,101,101,2,3,unique_notice,1,3,10,34,10990
+22557,MOB_FW_BATTLEGOLEM_039,Forteresse (guerre de forteresse),39,2987243,0,2507042,194,259,39,39,103,103,2,3,unique_notice,1,3,42,56,12111
+22137,MOB_FW_HYEONGCHEON_039,Forteresse (guerre de forteresse),39,2862613,0,1880281,178,284,39,39,103,103,2,3,unique_notice,1,3,23,74,11691
+22277,MOB_FW_MUJIGI_039,Forteresse (guerre de forteresse),39,2240432,0,1880281,178,284,39,39,103,103,2,3,unique_notice,1,3,38,143,11831
+21437,MOB_FW_TAESE_039,Forteresse (guerre de forteresse),39,3816817,0,2507042,194,259,39,39,103,103,2,3,unique_notice,1,3,10,34,10991
+36111,MOB_GOD_TOGUI_TOGUICAPTAIN_A1,Forgotten World (pilliers/uniques),39,143131,0,94014,178,284,39,39,103,103,2,8,unique_silencieux,1,3,13,30,17903
+36321,MOB_GOD_TOGUI_TOGUIELDER_A1,Forgotten World (pilliers/uniques),39,1275761,0,940141,170,297,39,39,103,103,2,3,unique_notice,1,3,15,75,18113
+36105,MOB_GOD_TOGUI_TOGUIGENERAL_A1,Forgotten World (pilliers/uniques),39,143131,0,94014,178,284,39,39,103,103,2,8,unique_silencieux,1,3,13,30,17897
+28823,MOB_EV_WINTER_PRINCESS_40,Evenement,40,4684893,0,2632394,148,368,40,40,105,105,2,3,unique_notice,1,3,20,120,15597
+28815,MOB_EV_WINTER_WHITEKNIGHT_40,Evenement,40,780816,0,1316197,148,368,40,40,105,105,2,3,unique_notice,1,3,30,180,15589
+22138,MOB_FW_HYEONGCHEON_040,Forteresse (guerre de forteresse),40,2996139,0,1974296,186,297,40,40,105,105,2,3,unique_notice,1,3,23,74,11692
+22278,MOB_FW_MUJIEI_040,Forteresse (guerre de forteresse),40,2342447,0,1974296,186,297,40,40,105,105,2,3,unique_notice,1,3,38,143,11832
+21438,MOB_FW_TAESE_040,Forteresse (guerre de forteresse),40,3994852,0,2632394,203,271,40,40,105,105,2,3,unique_notice,1,3,10,34,10992
+36055,MOB_GNGWC_URUCHIGNGWC_,AUTRE,40,1779528,0,1316197,186,297,40,40,105,105,2,3,unique_notice,0,3,28,80,17847
+1982,MOB_OA_URUCHI,Oasis / plages sud (Uruchi),40,1779528,0,1316197,124,149,40,40,105,105,2,3,unique_notice,1,0,28,80,76
+7557,MOB_OA_URUCHI_L2,Oasis / plages sud (Uruchi),40,17795285,0,5264788,124,149,40,16777256,105,105,2,3,unique_notice,1,0,38,108,2105
+7558,MOB_OA_URUCHI_L3,Oasis / plages sud (Uruchi),40,5338585,0,2632394,124,149,40,40,105,105,2,3,unique_notice,1,0,48,136,2106
+22559,MOB_FW_BATTLEGOLEM_041,Forteresse (guerre de forteresse),41,3263527,0,2737690,211,284,41,16777257,107,107,2,3,unique_notice,1,3,42,56,12113
+22139,MOB_FW_HYEONGCHEON_041,Forteresse (guerre de forteresse),41,3133861,0,2053267,194,310,41,41,107,107,2,3,unique_notice,1,3,23,74,11693
+22279,MOB_FW_MUJIGI_041,Forteresse (guerre de forteresse),41,2447645,0,2053267,194,310,41,41,107,107,2,3,unique_notice,1,3,38,143,11833
+21439,MOB_FW_TAESE_041,Forteresse (guerre de forteresse),41,4178481,0,2737690,211,284,41,41,107,107,2,3,unique_notice,1,3,10,34,10993
+22560,MOB_FW_BATTLEGOLEM_042,Forteresse (guerre de forteresse),42,3408153,0,2847197,221,297,42,42,109,109,2,3,unique_notice,1,3,42,56,12114
+22140,MOB_FW_HYEONGCHEON_042,Forteresse (guerre de forteresse),42,3275894,0,2135398,203,324,42,42,109,109,2,3,unique_notice,1,3,23,74,11694
+21440,MOB_FW_TAESE_042,Forteresse (guerre de forteresse),42,4367858,0,2847197,221,297,42,42,109,109,2,3,unique_notice,1,3,10,34,10994
+22561,MOB_FW_AATTLEGOLEM_043,Forteresse (guerre de forteresse),43,3557258,0,2961085,230,310,43,43,111,111,2,3,unique_notice,1,3,42,56,12115
+22141,MOB_FW_HYEONGCHEON_043,Forteresse (guerre de forteresse),43,3422354,0,2220814,211,338,43,43,111,111,2,3,unique_notice,1,3,23,74,11695
+22281,MOB_FW_MUJIGI_043,Forteresse (guerre de forteresse),43,2667944,0,2220814,211,338,43,43,111,111,2,3,unique_notice,1,3,38,143,11835
+22562,MOB_FW_BATTLEGOLEM_044,Forteresse (guerre de forteresse),44,3710965,0,3079529,240,324,44,44,113,113,2,3,unique_notice,1,3,42,56,12116
+22142,MOB_FW_HYEONGCHEON_044,Forteresse (guerre de forteresse),44,3573363,0,2309647,221,353,44,44,113,113,2,3,unique_notice,1,3,23,74,11696
+22282,MOB_FW_MUJIGI_044,Forteresse (guerre de forteresse),44,2783224,0,2309647,221,353,44,44,113,113,2,3,unique_notice,1,3,38,143,11836
+21442,MOB_FW_TAESE_044,Forteresse (guerre de forteresse),44,4764483,0,3079529,240,324,44,44,113,113,2,3,unique_notice,1,3,10,34,10996
+34056,MOB_EVE_ANGRY_TAHOMET04,Evenement,45,3315545,0,800678,221,384,45,45,115,115,2,3,unique_notice,0,3,23,75,17689
+34046,MOB_EVE_HAPPY_TIGERWOMAN04,Evenement,45,2902047,0,800678,230,368,45,45,115,115,2,3,unique_notice,0,0,20,90,17679
+22563,MOB_FW_BATTLEGOLEM_045,Forteresse (guerre de forteresse),45,3869397,0,3202710,250,338,45,45,115,115,2,3,unique_notice,1,3,42,56,12117
+22143,MOB_FW_HYEONGCHEON_045,Forteresse (guerre de forteresse),45,3729042,0,2402033,230,368,45,45,115,115,2,3,unique_notice,1,3,23,74,11697
+22283,MOB_FW_MUJIGI_045,Forteresse (guerre de forteresse),45,2902047,0,2402033,230,368,45,45,115,115,2,3,unique_notice,1,3,38,143,11837
+22564,MOB_FW_BATTLEGOLEM_046,Forteresse (guerre de forteresse),46,4032681,0,3330818,260,353,46,46,117,117,2,3,unique_notice,1,3,42,56,12118
+22144,MOB_FW_HYEONGCHEON_056,Forteresse (guerre de forteresse),46,3889520,0,2498114,240,384,46,46,117,117,2,3,unique_notice,1,3,23,74,11698
+22284,MOB_FW_MUJIGI_046,Forteresse (guerre de forteresse),46,3024511,0,2498114,240,384,46,46,117,117,2,3,unique_notice,1,3,38,143,11838
+21444,MOB_FW_TAESE_046,Forteresse (guerre de forteresse),46,5186027,0,3330818,260,353,46,46,117,117,2,3,unique_notice,1,3,10,34,10998
+22565,MOB_FW_BATTLEGOLEM_047,Forteresse (guerre de forteresse),47,4200950,0,3464051,271,368,47,47,119,119,2,3,unique_notice,1,3,42,56,12119
+22145,MOB_FW_HYEONGCHEON_047,Forteresse (guerre de forteresse),47,4054925,0,2598038,250,400,47,47,119,119,2,3,unique_notice,1,3,23,74,11699
+22285,MOB_FW_MUJIGI_047,Forteresse (guerre de forteresse),47,3150712,0,2598038,250,400,47,47,119,119,2,3,unique_notice,1,3,38,143,11839
+21445,MOB_FW_TAESE_047,Forteresse (guerre de forteresse),47,5406567,0,3464051,271,368,47,47,119,119,2,3,unique_notice,1,3,10,34,10999
+36118,MOB_GOD_TOGUI_ENVY_A2,Forgotten World (pilliers/uniques),47,3282,0,2706,250,400,47,47,119,119,2,6,elite/quest,1,3,23,100,17910
+36112,MOB_GOD_TOGUI_TOGUICAPTAIN_A2,Forgotten World (pilliers/uniques),47,304119,0,259804,250,400,47,47,119,119,2,8,unique_silencieux,1,3,13,30,17904
+36322,MOB_GOD_TOGUI_TOGUIELDER_A2,Forgotten World (pilliers/uniques),47,2702114,0,1948529,240,416,47,47,119,119,2,3,unique_notice,1,3,15,75,18114
+36106,MOB_GOD_TOGUI_TOGUIGENERAL_A2,Forgotten World (pilliers/uniques),47,304119,0,259804,250,400,47,47,119,119,2,8,unique_silencieux,1,3,13,30,17898
+22566,MOB_FW_BATTLEGOLEM_048,Forteresse (guerre de forteresse),48,4374336,0,3602613,282,384,48,48,121,121,2,3,unique_notice,1,3,42,56,12120
+22146,MOB_FW_HYEONGCHEON_048,Forteresse (guerre de forteresse),48,4225391,0,2701960,260,416,48,48,121,121,2,3,unique_notice,1,3,23,74,11700
+22286,MOB_FW_MUJIGI_048,Forteresse (guerre de forteresse),48,3280752,0,2701960,260,416,48,48,121,121,2,3,unique_notice,1,3,38,143,11840
+21446,MOB_FW_TAESE_048,Forteresse (guerre de forteresse),48,5633854,0,3602613,282,384,48,48,121,121,2,3,unique_notice,1,3,10,34,11000
+22567,MOB_FW_BATTLEGOLEM_049,Forteresse (guerre de forteresse),49,4552977,0,3746718,293,400,49,49,123,123,2,3,unique_notice,1,3,42,56,12121
+22147,MOB_FW_HYEONGCHEON_049,Forteresse (guerre de forteresse),49,4401053,0,2810038,271,433,49,49,123,123,2,3,unique_notice,1,3,23,74,11701
+22287,MOB_FW_MUJIGI_049,Forteresse (guerre de forteresse),49,3414733,0,2810038,271,433,49,49,123,123,2,3,unique_notice,1,3,38,143,11841
+21447,MOB_FW_TAESE_049,Forteresse (guerre de forteresse),49,5868071,0,3746718,293,400,49,49,123,123,2,3,unique_notice,1,3,10,34,11001
+22149,MOB_FW_HYEONGCHEON_050,Forteresse (guerre de forteresse),50,4582052,0,2922440,282,451,50,50,125,125,2,3,unique_notice,1,3,23,74,11702
+22288,MOB_FW_MUJIGI_050,Forteresse (guerre de forteresse),50,3552761,0,2922440,282,451,50,50,125,125,2,3,unique_notice,1,3,38,143,11842
+21448,MOB_FW_TAESE_050,Forteresse (guerre de forteresse),50,6109402,0,3896587,305,416,50,50,125,125,2,3,unique_notice,1,3,10,34,11002
+36056,MOB_GNGWC_BOSSSPIDERGNGWC_,AUTRE,50,2368507,0,1948293,282,451,50,50,125,125,2,3,unique_notice,0,3,40,100,17848
+24637,MOB_KT_BOSSSPIDER,AUTRE,50,2368507,0,1948293,282,451,50,50,125,125,2,3,unique_notice,0,3,40,100,13462
+22569,MOB_FW_BATTLEGOLEM_051,Forteresse (guerre de forteresse),51,4926591,0,4032967,317,433,51,51,127,127,2,3,unique_notice,1,3,42,56,12123
+22149,MOB_FW_HYEONGCHEON_051,Forteresse (guerre de forteresse),51,4768530,0,3024725,293,469,51,51,127,127,2,3,unique_notice,1,3,23,74,11703
+22289,MOB_FW_MUJIGI_051,Forteresse (guerre de forteresse),51,3694943,0,3024725,293,469,51,51,127,127,2,3,unique_notice,1,3,38,143,11843
+21449,MOB_FW_TAESE_051,Forteresse (guerre de forteresse),51,6358039,0,4032967,317,433,51,51,127,127,2,3,unique_notice,1,3,10,34,11003
+22570,MOB_FW_BATTLEGOLEM_052,Forteresse (guerre de forteresse),52,5121857,0,4174121,329,451,52,52,129,129,2,3,unique_notice,1,3,42,56,12124
+22150,MOB_FW_HYEONGCHEON_052,Forteresse (guerre de forteresse),52,4960634,0,3130591,305,487,52,52,129,129,2,3,unique_notice,1,3,23,74,11704
+22290,MOB_FW_MUJIGI_052,Forteresse (guerre de forteresse),52,3841393,0,3130591,305,487,52,52,129,129,2,3,unique_notice,1,3,38,141,11844
+21450,MOB_FW_TAESE_052,Forteresse (guerre de forteresse),52,6614179,0,4174121,329,451,52,52,129,129,2,3,unique_notice,1,3,10,34,11004
+22151,MOB,AUTRE,53,5158515,0,3240161,317,507,53,16777269,130,130,2,3,unique_notice,1,3,23,74,11705
+22571,MOB_FW_BATTLEGOLEM_053,Forteresse (guerre de forteresse),53,5322963,0,4320215,342,469,53,53,130,130,2,3,unique_notice,1,3,42,56,12125
+22291,MOB_FW_MUJIGI_053,Forteresse (guerre de forteresse),53,3992222,0,3240161,317,507,53,53,130,130,2,3,unique_notice,1,3,38,143,11845
+21451,MOB_FW_TAESE_053,Forteresse (guerre de forteresse),53,6878020,0,4320215,342,469,53,53,130,130,2,3,unique_notice,1,3,10,34,11005
+36113,MOB_GOD_TOGUI_TOGUICAPTAIN_B1,Forgotten World (pilliers/uniques),53,257926,0,162008,317,507,53,53,130,130,2,8,unique_silencieux,1,3,13,30,17905
+36323,MOB_GOD_TOGUI_TOGUIELDER_B1,Forgotten World (pilliers/uniques),53,2287684,0,1620081,305,526,53,53,130,130,2,3,unique_notice,1,3,15,75,18115
+36107,MOB_GOD_TOGUI_TOGUIGENERAL_B1,Forgotten World (pilliers/uniques),53,257926,0,162008,317,507,53,53,130,130,2,8,unique_silencieux,1,3,13,30,17899
+22572,MOB_FW_BATTLEGOLEM_054,Forteresse (guerre de forteresse),54,5530064,0,4471423,355,487,54,54,131,131,2,3,unique_notice,1,3,42,56,12126
+22152,MOB_FW_HYEONGCHEON_054,Forteresse (guerre de forteresse),54,5362327,0,3353567,329,526,54,54,131,131,2,3,unique_notice,1,3,23,74,11706
+22292,MOB_FW_MUJIGI_054,Forteresse (guerre de forteresse),54,4147548,0,3353567,329,526,54,54,131,131,2,3,unique_notice,1,3,38,143,11846
+21452,MOB_FW_TAESE_054,Forteresse (guerre de forteresse),54,7149770,0,4471423,355,487,54,54,131,131,2,3,unique_notice,1,3,10,34,11006
+34047,MOB_EVE_HAPPY_TIGERWOMAN05,Evenement,55,4511696,0,1156981,342,547,55,55,132,132,2,3,unique_notice,0,0,20,90,17680
+22573,MOB_FW_BATTLEGOLEM_055,Forteresse (guerre de forteresse),55,6015595,0,4627922,368,507,55,55,132,132,2,3,unique_notice,1,3,42,56,12127
+22153,MOB_FW_HYEONGCHEON_055,Forteresse (guerre de forteresse),55,5840546,0,3470942,342,547,55,55,132,132,2,3,unique_notice,1,3,23,74,11707
+22293,MOB_FW_MUJIGI_055,Forteresse (guerre de forteresse),55,4511696,0,3470942,342,547,55,55,132,132,2,3,unique_notice,1,3,38,143,11847
+21453,MOB_FW_TAESE_055,Forteresse (guerre de forteresse),55,7787395,0,4627922,368,507,55,55,132,132,2,3,unique_notice,1,3,10,34,11007
+22574,MOB_FW_BATTLEGOLEM_056,Forteresse (guerre de forteresse),56,6243036,0,4789900,382,526,56,56,133,133,2,3,unique_notice,1,3,42,56,12128
+22154,MOB_FW_HYEONGCHEON_056,Forteresse (guerre de forteresse),56,6064487,0,3592425,355,567,56,56,133,133,2,3,unique_notice,1,3,23,74,11708
+22294,MOB_FW_MUJIGI_056,Forteresse (guerre de forteresse),56,4682277,0,3592425,355,567,56,56,133,133,2,3,unique_notice,1,3,38,143,11848
+21454,MOB_FW_TAESE_056,Forteresse (guerre de forteresse),56,8085983,0,4789900,382,526,56,56,133,133,2,3,unique_notice,1,3,10,34,11008
+22575,MOB_FW_BATTLEGOLEM_057,Forteresse (guerre de forteresse),57,6477170,0,4957546,396,547,57,57,134,134,2,3,unique_notice,1,3,42,56,12129
+22155,MOB_FW_HYEONGCHEON_057,Forteresse (guerre de forteresse),57,6295049,0,3718160,368,589,57,57,134,134,2,3,unique_notice,1,3,23,74,11709
+22295,MOB_FW_MUJIGI_057,Forteresse (guerre de forteresse),57,4857877,0,3718160,368,589,57,16777273,134,134,2,3,unique_notice,1,3,38,143,11849
+22576,MOB_FW_BATTLEGOLEM_058,Forteresse (guerre de forteresse),58,6718171,0,5131060,411,567,58,58,135,135,2,3,unique_notice,1,3,42,56,12130
+22156,MOB_FW_HYEONGCHEON_058,Forteresse (guerre de forteresse),58,6532408,0,3848295,382,611,58,58,135,135,2,3,unique_notice,1,3,23,74,11710
+22296,MOB_FW_MUJIGI_058,Forteresse (guerre de forteresse),58,5038628,0,3848295,382,611,58,58,135,135,2,3,unique_notice,1,3,38,143,11850
+21456,MOB_FW_TAESE_058,Forteresse (guerre de forteresse),58,8709877,0,5131060,411,567,58,58,135,135,2,3,unique_notice,1,3,10,34,11010
+36120,MOB_GOD_TOGUI_ENVY_B2,Forgotten World (pilliers/uniques),58,5249,0,4009,382,611,58,58,135,135,2,6,elite/quest,1,3,23,100,17912
+36114,MOB_GOD_TOGUI_TOGUICAPTAIN_B2,Forgotten World (pilliers/uniques),58,489931,0,384830,382,611,58,58,135,135,2,8,unique_silencieux,1,3,13,30,17906
+36108,MOB_GOD_TOGUI_TOGUIGENERAL_B2,Forgotten World (pilliers/uniques),58,489931,0,384830,382,611,58,58,135,135,2,8,unique_silencieux,1,3,13,30,17900
+22577,MOB_FW_BATTLEGOLEM_059,Forteresse (guerre de forteresse),59,6966221,0,5310647,426,589,59,59,136,136,2,3,unique_notice,1,3,42,56,12131
+22157,MOB_FW_HYEONGCHEON_059,Forteresse (guerre de forteresse),59,6776743,0,3982986,396,634,59,59,136,136,2,3,unique_notice,1,3,23,74,11711
+22297,MOB_FW_MUJIGI_059,Forteresse (guerre de forteresse),59,5224666,0,3982986,396,634,59,59,136,136,2,3,unique_notice,1,3,38,143,11851
+21457,MOB_FW_TAESE_059,Forteresse (guerre de forteresse),59,9035657,0,5310647,426,589,59,59,136,136,2,3,unique_notice,1,3,10,34,11011
+28824,MOB_EV_WINTER_PRINCESS_60,Evenement,60,11289760,0,5496520,342,786,60,60,137,137,2,3,unique_notice,1,3,20,120,15598
+28816,MOB_EV_WINTER_WHITEKNIGHT_60,Evenement,60,1881627,0,2748260,342,786,60,60,137,137,2,3,unique_notice,1,3,30,180,15590
+22578,MOB_FW_BATTLEGOLEM_060,Forteresse (guerre de forteresse),60,7526507,0,5496520,442,611,60,60,137,137,2,3,unique_notice,1,3,42,56,12132
+22158,MOB_FW_HYEONGCHEON_060,Forteresse (guerre de forteresse),60,7328955,0,4122390,411,657,60,60,137,137,2,3,unique_notice,1,3,23,74,11712
+22298,MOB_FW_MUJIGI_060,Forteresse (guerre de forteresse),60,5644880,0,4122390,411,657,60,60,137,137,2,3,unique_notice,1,3,38,143,11852
+21458,MOB_FW_TAESE_060,Forteresse (guerre de forteresse),60,9771940,0,5496520,442,611,60,60,137,137,2,3,unique_notice,1,3,10,34,11012
+36057,MOB_GNGWC_ISYUTARUGNGWC_,AUTRE,60,4324612,0,2748260,411,657,60,60,137,137,2,3,unique_notice,0,3,35,70,17849
+2002,MOB_KK_ISYUTARU,Karakoram (Isyutaru),60,4324612,0,2748260,274,329,60,60,137,137,2,3,unique_notice,1,3,35,70,96
+7559,MOB_KK_ISYUTARU_L2,Karakoram (Isyutaru),60,43246117,0,10993040,274,329,60,60,137,137,2,3,unique_notice,1,3,47,95,2107
+7560,MOB_KK_ISYUTARU_L3,Karakoram (Isyutaru),60,12973835,0,5496520,274,329,60,60,137,137,2,3,unique_notice,1,3,60,119,2108
+22579,MOB_FW_BATTLEGOLEM_061,Forteresse (guerre de forteresse),61,7797938,0,5661415,458,634,61,61,138,138,2,3,unique_notice,1,3,42,56,12133
+22159,MOB_FW_HYEONGCHEON_061,Forteresse (guerre de forteresse),61,7596436,0,4246061,426,682,61,61,138,138,2,3,unique_notice,1,3,23,74,11713
+22299,MOB_FW_MUJIGI_061,Forteresse (guerre de forteresse),61,5848454,0,4246061,426,682,61,61,138,138,2,3,unique_notice,1,3,38,143,11853
+21459,MOB_FW_TAESE_061,Forteresse (guerre de forteresse),61,10128581,0,5661415,458,634,61,61,138,138,2,3,unique_notice,1,3,10,34,11013
+22580,MOB_FW_BATTLEGOLEM_062,Forteresse (guerre de forteresse),62,8077217,0,5831258,474,657,62,62,139,139,2,3,unique_notice,1,3,42,56,12134
+22160,MOB_FW_HYEONGCHEON_062,Forteresse (guerre de forteresse),62,7871684,0,4373443,442,707,62,62,139,139,2,3,unique_notice,1,3,23,74,11714
+22300,MOB_FW_MUJIGI_062,Forteresse (guerre de forteresse),62,6057912,0,4373443,442,707,62,62,139,139,2,3,unique_notice,1,3,38,143,11854
+21460,MOB_FW_TAESE_062,Forteresse (guerre de forteresse),62,10495579,0,5831258,474,657,62,62,139,139,2,3,unique_notice,1,3,10,34,11014
+22581,MOB_FW_BATTLEGOLEM_063,Forteresse (guerre de forteresse),63,8364547,0,6006196,491,682,63,63,140,140,2,3,unique_notice,1,3,42,312,12135
+22161,MOB_FW_HYEONGCHEON_063,Forteresse (guerre de forteresse),63,8154904,0,4504647,458,732,63,63,140,140,2,3,unique_notice,1,3,23,74,11715
+22301,MOB_FW_MUJIGI_063,Forteresse (guerre de forteresse),63,6273410,0,4504647,458,732,63,63,140,140,2,3,unique_notice,1,3,38,143,11855
+21461,MOB_FW_TAESE_063,Forteresse (guerre de forteresse),63,10873205,0,6006196,491,682,63,63,140,140,2,3,unique_notice,1,3,10,34,11015
+36115,MOB_GOD_TOGUI_TOGUICAPTAIN_C1,Forgotten World (pilliers/uniques),63,407745,0,225232,458,732,63,63,140,140,2,8,unique_silencieux,1,3,13,30,17907
+36325,MOB_GOD_TOGUI_TOGUIELDER_C1,Forgotten World (pilliers/uniques),63,3607078,0,2252323,442,758,63,63,140,140,2,3,unique_notice,1,3,15,75,18117
+36109,MOB_GOD_TOGUI_TOGUIGENERAL_C1,Forgotten World (pilliers/uniques),63,407745,0,225232,458,732,63,63,140,140,2,8,unique_silencieux,1,3,13,30,17901
+22582,MOB_FW_BATTLEGOLEM_064,Forteresse (guerre de forteresse),64,8991991,0,6186382,508,707,64,64,141,141,2,3,unique_notice,1,3,42,56,12136
+22162,MOB_FW_HYEONGCHEON_064,Forteresse (guerre de forteresse),64,8773609,0,4639787,474,758,64,64,141,141,2,3,unique_notice,1,3,23,74,11716
+22302,MOB_FW_MUJIGI_064,Forteresse (guerre de forteresse),64,6743993,0,4639787,474,758,64,64,141,141,2,3,unique_notice,1,3,38,143,11856
+21462,MOB_FW_TAESE_064,Forteresse (guerre de forteresse),64,11698145,0,6186382,508,707,64,64,141,141,2,3,unique_notice,1,3,10,34,11016
+34058,MOB_EVE_ANGRY_TAHOMET06,Evenement,65,8030921,0,1592993,474,813,65,65,142,142,2,3,unique_notice,0,3,23,75,17691
+34048,MOB_EVE_HAPPY_TIGERWOMAN06,Evenement,65,6979110,0,1592993,491,786,65,65,142,142,2,3,unique_notice,0,0,20,90,17681
+22163,MOB_FW_HYEONGCHEON_065,Forteresse (guerre de forteresse),65,9082731,0,4778980,491,786,65,65,142,142,2,3,unique_notice,1,3,23,74,11717
+22303,MOB_FW_MUJIGI_065,Forteresse (guerre de forteresse),65,6979110,0,4778980,491,786,65,65,142,142,2,3,unique_notice,1,3,38,143,11857
+21463,MOB_FW_TAESE_065,Forteresse (guerre de forteresse),65,12110308,0,6371973,526,732,65,65,142,142,2,3,unique_notice,1,3,10,34,11017
+22584,MOB_FW_BATTLEGOLEM_066,Forteresse (guerre de forteresse),66,9627913,0,6563132,545,758,66,66,143,143,2,3,unique_notice,1,3,42,56,12138
+22164,MOB_FW_HYEONGCHEON_066,Forteresse (guerre de forteresse),66,9400708,0,4922349,508,813,66,66,143,143,2,3,unique_notice,1,3,23,74,11718
+22304,MOB_FW_MUJIGI_066,Forteresse (guerre de forteresse),66,7220935,0,4922349,508,813,66,66,143,143,2,3,unique_notice,1,3,38,143,11858
+21464,MOB_FW_TAESE_066,Forteresse (guerre de forteresse),66,12534278,0,6563132,545,758,66,66,143,143,2,3,unique_notice,1,3,10,34,11018
+22585,MOB_FW_BATTLEGOLEM_067,Forteresse (guerre de forteresse),67,9959520,0,6760026,564,786,67,67,144,144,2,3,unique_notice,1,3,42,56,12139
+22165,MOB_FW_HYEONGCHEON_067,Forteresse (guerre de forteresse),67,9727772,0,5070020,526,842,67,67,144,144,2,3,unique_notice,1,3,23,74,11719
+22305,MOB_FW_MUJIEI_067,Forteresse (guerre de forteresse),67,7469640,0,5070020,526,842,67,67,144,144,2,3,unique_notice,1,3,38,143,11859
+21465,MOB_FW_TAESE_067,Forteresse (guerre de forteresse),67,12970362,0,6760026,564,786,67,67,144,144,2,3,unique_notice,1,3,10,34,11019
+22586,MOB_FW_AATTLEGOLEM_068,Forteresse (guerre de forteresse),68,10300541,0,6962827,583,813,68,68,145,145,2,3,unique_notice,1,3,42,56,12140
+22166,MOB_FW_HYEONGCHEON_068,Forteresse (guerre de forteresse),68,10064157,0,5222120,545,872,68,68,145,145,2,3,unique_notice,1,3,23,74,11720
+22306,MOB_FW_MUJIGI_068,Forteresse (guerre de forteresse),68,7725406,0,5222120,545,872,68,68,145,145,2,3,unique_notice,1,3,38,143,11860
+21466,MOB_FW_TAESE_068,Forteresse (guerre de forteresse),68,13418876,0,6962827,583,813,68,68,145,145,2,3,unique_notice,1,3,10,34,11020
+36122,MOB_GOD_TOGUI_ENVY_C2,Forgotten World (pilliers/uniques),68,8047,0,5440,545,872,68,68,145,145,2,6,elite/quest,1,3,23,100,17914
+36116,MOB_GOD_TOGUI_TOGUICAPTAIN_C2,Forgotten World (pilliers/uniques),68,754812,0,522212,545,872,68,68,145,145,2,8,unique_silencieux,1,3,13,30,17908
+36326,MOB_GOD_TOGUI_TOGUIELDER_C2,Forgotten World (pilliers/uniques),68,6671086,0,3916590,526,902,68,68,145,145,2,3,unique_notice,1,3,15,75,18118
+36110,MOB_GOD_TOGUI_TOGUIGENERAL_C2,Forgotten World (pilliers/uniques),68,754812,0,522212,545,872,68,68,145,145,2,8,unique_silencieux,1,3,13,30,17902
+22587,MOB_FW_BATTLEGOLEM_069,Forteresse (guerre de forteresse),69,10651219,0,7171712,603,842,69,69,146,146,2,3,unique_notice,1,3,42,56,12141
+22167,MOB_FW_HYEONGCHEON_069,Forteresse (guerre de forteresse),69,10410107,0,5378784,564,902,69,69,146,146,2,3,unique_notice,1,3,23,74,11721
+21467,MOB_FW_TAESE_069,Forteresse (guerre de forteresse),69,13880143,0,7171712,603,842,69,69,146,146,2,3,unique_notice,1,3,10,34,11021
+22588,MOB_FW_BATTLEGOLEM_070,Forteresse (guerre de forteresse),70,11011803,0,7386863,624,872,70,70,147,147,2,3,unique_notice,1,3,42,56,12142
+22168,MOB_FW_HYEONGCHEON_070,Forteresse (guerre de forteresse),70,10765870,0,5540148,583,933,70,70,147,147,2,3,unique_notice,1,3,23,74,11722
+22308,MOB_FW_MUJIGI_070,Forteresse (guerre de forteresse),70,8258852,0,5540148,583,933,70,70,147,147,2,3,unique_notice,1,3,38,143,11862
+21468,MOB_FW_TAESE_070,Forteresse (guerre de forteresse),70,14354493,0,7386863,624,872,70,70,147,147,2,3,unique_notice,1,3,10,34,11022
+22589,MOB_FW_BATTLEGOLEM_071,Forteresse (guerre de forteresse),71,11382551,0,7608469,645,902,71,71,148,148,2,3,unique_notice,1,3,42,56,12143
+22169,MOB_FW_HYEONGCHEON_051,Forteresse (guerre de forteresse),71,11131698,0,5706352,603,965,71,71,148,148,2,3,unique_notice,1,3,23,74,11723
+22309,MOB_FW_MUJIGI_071,Forteresse (guerre de forteresse),71,8536913,0,5706352,603,965,71,71,148,148,2,3,unique_notice,1,3,38,143,11863
+22590,MOB_FW_BATTLEGOLEM_072,Forteresse (guerre de forteresse),72,12166848,0,7836723,667,933,72,72,149,149,2,3,unique_notice,1,3,42,56,12144
+22170,MOB_FW_HYEONGCHEON_072,Forteresse (guerre de forteresse),72,11905757,0,5877542,624,998,72,72,149,149,2,3,unique_notice,1,3,23,74,11724
+22310,MOB_FW_MUJIGI_072,Forteresse (guerre de forteresse),72,9125136,0,5877542,624,998,72,72,149,149,2,3,unique_notice,1,3,38,143,11864
+21470,MOB_FW_TAESE_072,Forteresse (guerre de forteresse),72,15874343,0,7836723,667,933,72,72,149,149,2,3,unique_notice,1,3,10,34,11024
+22591,MOB_FW_BATTLEGOLEM_073,Forteresse (guerre de forteresse),73,12569973,0,8071825,689,965,73,73,150,150,2,3,unique_notice,1,3,42,56,12145
+22171,MOB_FW_HYEONGCHEON_073,Forteresse (guerre de forteresse),73,12303660,0,6053869,645,1032,73,73,150,150,2,3,unique_notice,1,3,23,74,11725
+22311,MOB_FW_MUJIGI_073,Forteresse (guerre de forteresse),73,9427480,0,6053869,645,1032,73,73,150,150,2,3,unique_notice,1,3,38,143,11865
+36201,MOB_GOD_FLAME_ADJUTANT_A1,Forgotten World (pilliers/uniques),73,615183,0,302693,667,998,73,73,150,150,2,8,unique_silencieux,1,3,20,55,17993
+36193,MOB_GOD_FLAME_CAPTAIN_A1,Forgotten World (pilliers/uniques),73,471374,0,302693,624,1067,73,73,150,150,2,8,unique_silencieux,1,3,30,100,17985
+36327,MOB_GOD_FLAME_COWKING_A1,Forgotten World (pilliers/uniques),73,4713740,0,3026934,667,998,73,73,150,150,2,3,unique_notice,1,3,50,120,18119
+22592,MOB_FW_BATTLEGOLEM_074,Forteresse (guerre de forteresse),74,12984356,0,8313980,712,998,74,74,151,151,2,3,unique_notice,1,3,42,56,12146
+22172,MOB_FW_HYEONGCHEON_074,Forteresse (guerre de forteresse),74,12712717,0,6235485,667,1067,74,74,151,151,2,3,unique_notice,1,3,23,74,11726
+22312,MOB_FW_MUJIGI_074,Forteresse (guerre de forteresse),74,9738267,0,6235485,667,1067,74,74,151,151,2,3,unique_notice,1,3,38,143,11866
+21472,MOB_FW_TAESE_074,Forteresse (guerre de forteresse),74,16950289,0,8313980,712,998,74,74,151,151,2,3,unique_notice,1,3,10,34,11026
+36139,MOB_GOD_FLAME_GIANT_A3,Forgotten World (pilliers/uniques),74,13242,0,4330,689,1032,74,74,151,151,2,6,elite/quest,1,3,20,55,17931
+36131,MOB_GOD_FLAME_SALAMANDER_A3,Forgotten World (pilliers/uniques),74,10144,0,4330,645,1103,74,74,151,151,2,6,elite/quest,1,3,63,115,17923
+34049,MOB_EVE_HAPPY_TIGERWOMAN07,Evenement,75,10057715,0,2140850,689,1103,75,75,152,152,2,3,unique_notice,0,0,20,90,17682
+22173,MOB_FW_HYEONGCHEON_075,Forteresse (guerre de forteresse),75,13133214,0,6422549,689,1103,75,75,152,152,2,3,unique_notice,1,3,23,74,11727
+22313,MOB_FW_MUJIGI_075,Forteresse (guerre de forteresse),75,10057715,0,6422549,689,1103,75,75,152,152,2,3,unique_notice,1,3,38,143,11867
+21473,MOB_FW_TAESE_075,Forteresse (guerre de forteresse),75,17510952,0,8563399,736,1032,75,75,152,152,2,3,unique_notice,1,3,10,34,11027
+36155,MOB_GOD_FLAME_ARCHER_A3,Forgotten World (pilliers/uniques),75,10477,0,4460,712,1067,75,75,152,152,2,6,elite/quest,1,3,70,120,17947
+36163,MOB_GOD_FLAME_EVIL_A3,Forgotten World (pilliers/uniques),75,13680,0,4460,667,1140,75,75,152,152,2,6,elite/quest,1,3,15,55,17955
+36147,MOB_GOD_FLAME_GHOST_A3,Forgotten World (pilliers/uniques),75,10477,0,4460,712,1067,75,75,152,152,2,6,elite/quest,1,3,40,100,17939
+22594,MOB_FW_BATTLEGOLEM_076,Forteresse (guerre de forteresse),76,13848060,0,8820301,761,1067,76,76,153,153,2,3,unique_notice,1,3,42,56,12148
+22174,MOB_FW_HYEONGCHEON_076,Forteresse (guerre de forteresse),76,13565447,0,6615226,712,1140,76,76,153,153,2,3,unique_notice,1,3,23,74,11728
+22314,MOB_FW_MUJIGI_076,Forteresse (guerre de forteresse),76,10386045,0,6615226,712,1140,76,76,153,153,2,3,unique_notice,1,3,38,143,11868
+21474,MOB_FW_TAESE_076,Forteresse (guerre de forteresse),76,18087262,0,8820301,761,1067,76,76,153,153,2,3,unique_notice,1,3,10,34,11028
+36194,MOB_GMD_FLAME_CAPTAIN_A2,AUTRE,76,778953,0,661523,689,1178,76,76,153,153,2,8,unique_silencieux,1,3,30,100,17986
+36202,MOB_GOD_FLAME_ADJUTANT_A2,Forgotten World (pilliers/uniques),76,1017408,0,661523,736,1103,76,76,153,153,2,8,unique_silencieux,1,3,20,55,17994
+36203,MOB_GOD_FLAME_ADJUTANT_A3,Forgotten World (pilliers/uniques),76,2713089,0,1323045,736,1103,76,76,153,153,2,8,unique_silencieux,1,3,20,55,17995
+36195,MOB_GOD_FLAME_CAPTAIN_A3,Forgotten World (pilliers/uniques),76,2077209,0,1323045,689,1178,76,76,153,153,2,8,unique_silencieux,1,3,30,100,17987
+36328,MOB_GOD_FLAME_COWKING_A2,Forgotten World (pilliers/uniques),76,7789534,0,4961419,736,1103,76,76,153,153,2,3,unique_notice,1,3,50,120,18120
+36329,MOB_GOD_FLAME_COWKING_A3,Forgotten World (pilliers/uniques),76,10386045,0,6615226,736,1103,76,76,153,153,2,3,unique_notice,1,3,50,120,18121
+36179,MOB_GOD_FLAME_CRAZY_A3,Forgotten World (pilliers/uniques),76,14131,0,4594,712,1140,76,76,153,153,2,6,elite/quest,1,3,20,55,17971
+36210,MOB_GOD_FLAME_ENVY_A2,Forgotten World (pilliers/uniques),76,10819,0,6891,712,1140,76,76,153,153,2,6,elite/quest,1,3,23,100,18002
+36211,MOB_GOD_FLAME_ENVY_A3,Forgotten World (pilliers/uniques),76,21638,0,13782,712,1140,76,76,153,153,2,6,elite/quest,1,3,23,100,18003
+36171,MOB_GOD_FLAME_GIGANTIC_A3,Forgotten World (pilliers/uniques),76,14131,0,4594,736,1103,76,76,153,153,2,6,elite/quest,1,3,20,55,17963
+36187,MOB_GOD_FLAME_WITCH_A3,Forgotten World (pilliers/uniques),76,10819,0,4594,689,1178,76,76,153,153,2,6,elite/quest,1,3,50,120,17979
+22595,MOB_FW_BATTLEGOLEM_077,Forteresse (guerre de forteresse),77,14297981,0,9084910,786,1103,77,77,154,154,2,3,unique_notice,1,3,42,56,12149
+22175,MOB_FW_HYEONGCHEON_077,Forteresse (guerre de forteresse),77,14009715,0,6813683,736,1178,77,16777293,154,154,2,3,unique_notice,1,3,23,74,11729
+22315,MOB_FW_MUJIGI_077,Forteresse (guerre de forteresse),77,10723485,0,6813683,736,1178,77,77,154,154,2,3,unique_notice,1,3,38,143,11869
+21475,MOB_FW_TAESE_077,Forteresse (guerre de forteresse),77,18679620,0,9084910,786,1103,77,77,154,154,2,3,unique_notice,1,3,10,34,11029
+36132,MOB_GOD_FLAME_SALAMANDER_A4,Forgotten World (pilliers/uniques),77,22341,0,9463,712,1217,77,77,154,154,2,6,elite/quest,1,3,63,115,17924
+22176,MOB,AUTRE,78,14466328,0,7018093,761,1217,78,78,155,155,2,3,unique_notice,1,3,23,74,11730
+22596,MOB_FW_BATTLEGOLEM_078,Forteresse (guerre de forteresse),78,14760359,0,9357458,811,1140,78,78,155,155,2,3,unique_notice,1,3,42,56,12150
+22316,MOB_FW_MUJIGI_078,Forteresse (guerre de forteresse),78,11070269,0,7018093,761,1217,78,78,155,155,2,3,unique_notice,1,3,38,143,11870
+21476,MOB_FW_TAESE_078,Forteresse (guerre de forteresse),78,19288437,0,9357458,811,1140,78,78,155,155,2,3,unique_notice,1,3,10,34,11030
+36156,MOB_GOD_FLAME_ARCHER_A4,Forgotten World (pilliers/uniques),78,23063,0,9747,786,1178,78,78,155,155,2,6,elite/quest,1,3,70,120,17948
+36164,MOB_GOD_FLAME_EVIL_A4,Forgotten World (pilliers/uniques),78,30138,0,9747,736,1257,78,78,155,155,2,6,elite/quest,1,3,15,55,17956
+36148,MOB_GOD_FLAME_GHOST_A4,Forgotten World (pilliers/uniques),78,23063,0,9747,786,1178,78,78,155,155,2,6,elite/quest,1,3,40,100,17940
+22597,MOB_FW_BATTLEGOLEM_079,Forteresse (guerre de forteresse),79,15235513,0,9638182,838,1178,79,79,156,156,2,3,unique_notice,1,3,42,56,12151
+22177,MOB_FW_HYEONGCHEON_079,Forteresse (guerre de forteresse),79,14935601,0,7228636,786,1257,79,79,156,156,2,3,unique_notice,1,3,23,74,11731
+22317,MOB_FW_MUJIGI_079,Forteresse (guerre de forteresse),79,11426635,0,7228636,786,1257,79,79,156,156,2,3,unique_notice,1,3,38,141,11871
+21477,MOB_FW_TAESE_079,Forteresse (guerre de forteresse),79,19914135,0,9638182,838,1178,79,79,156,156,2,3,unique_notice,1,3,10,34,11031
+36204,MOB_GOD_FLAME_ADJUTANT_A4,Forgotten World (pilliers/uniques),79,4107290,0,1987875,811,1217,79,79,156,156,2,8,unique_silencieux,1,3,20,55,17996
+36196,MOB_GOD_FLAME_CAPTAIN_A4,Forgotten World (pilliers/uniques),79,3142325,0,1987875,761,1298,79,79,156,156,2,8,unique_silencieux,1,3,30,100,17988
+36330,MOB_GOD_FLAME_COWKING_A4,Forgotten World (pilliers/uniques),79,15235513,0,9638182,811,1217,79,79,156,156,2,3,unique_notice,1,3,50,120,18122
+36180,MOB_GOD_FLAME_CRAZY_A4,Forgotten World (pilliers/uniques),79,31116,0,10040,786,1257,79,79,156,156,2,6,elite/quest,1,3,20,55,17972
+36212,MOB_GOD_FLAME_ENVY_A4,Forgotten World (pilliers/uniques),79,35708,0,20080,786,1257,79,79,156,156,2,6,elite/quest,1,3,23,100,18004
+36172,MOB_GOD_FLAME_GIGANTIC_A4,Forgotten World (pilliers/uniques),79,31116,0,10040,811,1217,79,79,156,156,2,6,elite/quest,1,3,20,55,17964
+36188,MOB_GOD_FLAME_WITCH_A4,Forgotten World (pilliers/uniques),79,23805,0,10040,761,1298,79,79,156,156,2,6,elite/quest,1,3,50,120,17980
+28825,MOB_EV_WINTER_PRINCESS_80,Evenement,80,24318038,0,9927327,689,1522,80,80,157,157,2,3,unique_notice,1,3,20,120,15599
+28817,MOB_EV_WINTER_WHITEKNIGHT_80,Evenement,80,4053006,0,4963664,689,1522,80,80,157,157,2,3,unique_notice,1,3,30,180,15591
+22598,MOB_FW_BATTLEGOLEM_080,Forteresse (guerre de forteresse),80,16212025,0,9927327,865,1217,80,80,157,157,2,3,unique_notice,1,3,42,56,12152
+22178,MOB_FW_HYEONGCHEON_080,Forteresse (guerre de forteresse),80,15900117,0,7445495,811,1298,80,80,157,157,2,3,unique_notice,1,3,23,74,11732
+22318,MOB_FW_MUJIGI_080,Forteresse (guerre de forteresse),80,12159019,0,7445495,811,1298,80,80,157,157,2,3,unique_notice,1,3,38,143,11872
+21478,MOB_FW_TAESE_080,Forteresse (guerre de forteresse),80,21200156,0,9927327,865,1217,80,80,157,157,2,3,unique_notice,1,3,10,34,11032
+3810,MOB_TK_BONELORD,Désert de Taklamakan (Yarkan),80,9353045,0,4963664,559,1047,80,80,157,157,2,3,unique_notice,1,3,30,75,1661
+7561,MOB_TK_BONELORD_L2,Désert de Taklamakan (Yarkan),80,93530455,0,19854654,559,1047,80,80,157,157,2,3,unique_notice,1,3,41,101,2109
+7562,MOB_TK_BONELORD_L3,Désert de Taklamakan (Yarkan),80,28059136,0,9927327,559,1047,80,80,157,157,2,3,unique_notice,1,3,51,128,2110
+22599,MOB_FW_BATTLEGOLEM_081,Forteresse (guerre de forteresse),81,16727154,0,10225147,893,1257,81,81,158,158,2,3,unique_notice,1,3,42,56,12153
+22179,MOB_FW_HYEONGCHEON_081,Forteresse (guerre de forteresse),81,16409007,0,7668860,838,1341,81,81,158,158,2,3,unique_notice,1,3,23,74,11733
+22319,MOB_FW_MUJIGI_081,Forteresse (guerre de forteresse),81,12545365,0,7668860,838,1341,81,16777297,158,158,2,3,unique_notice,1,3,38,143,11873
+21479,MOB_FW_TAESE_081,Forteresse (guerre de forteresse),81,21878677,0,10225147,893,1257,81,16777297,158,158,2,3,unique_notice,1,3,10,34,11033
+22600,MOB_FW_BATTLEGOLEM_082,Forteresse (guerre de forteresse),82,17256402,0,10531901,922,1298,82,82,159,159,2,3,unique_notice,1,3,42,56,12154
+22180,MOB_FW_HYEONGCHEON_082,Forteresse (guerre de forteresse),82,16931893,0,7898926,865,1384,82,82,159,159,2,3,unique_notice,1,3,23,74,11734
+22320,MOB_FW_MUJIGI_082,Forteresse (guerre de forteresse),82,12942302,0,7898926,865,1384,82,82,159,159,2,3,unique_notice,1,3,38,143,11874
+21480,MOB_FW_TAESE_082,Forteresse (guerre de forteresse),82,22575858,0,10531901,922,1298,82,82,159,159,2,3,unique_notice,1,3,10,34,11034
+22601,MOB_FW_BATTLEGOLEM_083,Forteresse (guerre de forteresse),83,17800130,0,10847858,951,1341,83,83,160,160,2,3,unique_notice,1,3,42,56,12155
+22181,MOB_FW_HYEONGCHEON_083,Forteresse (guerre de forteresse),83,17469131,0,8135894,893,1429,83,83,160,160,2,3,unique_notice,1,3,23,74,11735
+22321,MOB_FW_MUJIGI_083,Forteresse (guerre de forteresse),83,13350098,0,8135894,893,1429,83,83,160,160,2,3,unique_notice,1,3,38,143,11875
+21481,MOB_FW_TAESE_083,Forteresse (guerre de forteresse),83,23292174,0,10847858,951,1341,83,83,160,160,2,3,unique_notice,1,3,10,34,11035
+36205,MOB_GOD_FLAME_ADJUTANT_B1,Forgotten World (pilliers/uniques),83,873457,0,406795,922,1384,83,83,160,160,2,8,unique_silencieux,1,3,20,55,17997
+36197,MOB_GOD_FLAME_CAPTAIN_B1,Forgotten World (pilliers/uniques),83,667505,0,406795,865,1475,83,83,160,160,2,8,unique_silencieux,1,3,30,100,17989
+36331,MOB_GOD_FLAME_COWKING_B1,Forgotten World (pilliers/uniques),83,6675049,0,4067947,922,1384,83,83,160,160,2,3,unique_notice,1,3,50,120,18123
+22602,MOB_FW_BATTLEGOLEM_084,Forteresse (guerre de forteresse),84,18358704,0,11173294,982,1384,84,84,161,161,2,3,unique_notice,1,3,42,56,12156
+22182,MOB_FW_HYEONGCHEON_084,Forteresse (guerre de forteresse),84,18021085,0,8379970,922,1475,84,84,161,161,2,3,unique_notice,1,3,23,74,11736
+22322,MOB_FW_MUJIGI_084,Forteresse (guerre de forteresse),84,13769028,0,8379970,922,1475,84,84,161,161,2,3,unique_notice,1,3,38,143,11876
+21482,MOB_FW_TAESE_084,Forteresse (guerre de forteresse),84,24028113,0,11173294,982,1384,84,84,161,161,2,3,unique_notice,1,3,10,34,11036
+36143,MOB_GOD_FLAME_GIANT_B3,Forgotten World (pilliers/uniques),84,18772,0,5819,951,1429,84,84,161,161,2,6,elite/quest,1,3,20,55,17935
+36135,MOB_GOD_FLAME_SALAMANDER_B3,Forgotten World (pilliers/uniques),84,14343,0,5819,893,1522,84,84,161,161,2,6,elite/quest,1,3,63,115,17927
+34060,MOB_EVE_ANGRY_TAHOMET08,Evenement,85,32787506,0,5754246,1198,2042,85,85,162,162,2,3,unique_notice,0,3,23,75,17693
+34050,MOB_EVE_HAPPY_TIGERWOMAN08,Evenement,85,28398752,0,5754246,951,1522,85,85,162,162,2,3,unique_notice,0,0,20,90,17683
+22603,MOB_FW_BATTLEGOLEM_085,Forteresse (guerre de forteresse),85,18932501,0,11508492,1013,1429,85,85,162,162,2,3,unique_notice,1,3,42,56,12157
+22183,MOB_FW_HYEONGCHEON_085,Forteresse (guerre de forteresse),85,18588130,0,8631369,951,1522,85,85,162,162,2,3,unique_notice,1,3,23,74,11737
+22323,MOB_FW_MUJIGI_085,Forteresse (guerre de forteresse),85,14199376,0,8631369,951,1522,85,85,162,162,2,3,unique_notice,1,3,38,143,11877
+36159,MOB_GOD_FLAME_ARCHER_B3,Forgotten World (pilliers/uniques),85,14791,0,5994,982,1475,85,85,162,162,2,6,elite/quest,1,3,70,120,17951
+36167,MOB_GOD_FLAME_EVIL_B3,Forgotten World (pilliers/uniques),85,19363,0,5994,922,1570,85,85,162,162,2,6,elite/quest,1,3,15,55,17959
+36151,MOB_GOD_FLAME_GHOST_B3,Forgotten World (pilliers/uniques),85,14791,0,5994,982,1475,85,85,162,162,2,6,elite/quest,1,3,40,100,17943
+14983,MOB_TQ_TOMBGENERAL,Tombe de Qin-Shi / FGW (101-110),85,6196043,0,2877123,951,1522,85,85,162,162,2,8,unique_silencieux,1,3,28,55,4618
+22604,MOB_FW_BATTLEGOLEM_086,Forteresse (guerre de forteresse),86,19521907,0,11853747,1045,1475,86,86,163,163,2,3,unique_notice,1,3,42,56,12158
+22184,MOB_FW_HYEONGCHEON_086,Forteresse (guerre de forteresse),86,19170648,0,8890310,982,1570,86,86,163,163,2,3,unique_notice,1,3,23,74,11738
+22324,MOB_FW_MUJIGI_086,Forteresse (guerre de forteresse),86,14641430,0,8890310,982,1570,86,86,163,163,2,3,unique_notice,1,3,38,143,11878
+21484,MOB_FW_TAESE_086,Forteresse (guerre de forteresse),86,25560864,0,11853747,1045,1475,86,86,163,163,2,3,unique_notice,1,3,10,34,11038
+36206,MOB_GOD_FLAME_ADJUTANT_B2,Forgotten World (pilliers/uniques),86,1437799,0,889031,1013,1522,86,86,163,163,2,8,unique_silencieux,1,3,20,55,17998
+36207,MOB_GOD_FLAME_ADJUTANT_B3,Forgotten World (pilliers/uniques),86,3834130,0,1778062,1013,1522,86,86,163,163,2,8,unique_silencieux,1,3,20,55,17999
+36198,MOB_GOD_FLAME_CAPTAIN_B2,Forgotten World (pilliers/uniques),86,1098107,0,889031,951,1620,86,86,163,163,2,8,unique_silencieux,1,3,30,100,17990
+36199,MOB_GOD_FLAME_CAPTAIN_B3,Forgotten World (pilliers/uniques),86,2928286,0,1778062,951,1620,86,86,163,163,2,8,unique_silencieux,1,3,30,100,17991
+36332,MOB_GOD_FLAME_COWKING_B2,Forgotten World (pilliers/uniques),86,10981073,0,6667733,1013,1522,86,86,163,163,2,3,unique_notice,1,3,50,120,18124
+36333,MOB_GOD_FLAME_COWKING_B3,Forgotten World (pilliers/uniques),86,14641430,0,8890310,1013,1522,86,16777302,163,163,2,3,unique_notice,1,3,50,120,18125
+36183,MOB_GOD_FLAME_CRAZY_B3,Forgotten World (pilliers/uniques),86,19969,0,6174,982,1570,86,86,163,163,2,6,elite/quest,1,3,20,55,17975
+36214,MOB_GOD_FLAME_ENVY_B2,Forgotten World (pilliers/uniques),86,15251,0,9261,982,1570,86,86,163,163,2,6,elite/quest,1,3,23,100,18006
+36215,MOB_GOD_FLAME_ENVY_B3,Forgotten World (pilliers/uniques),86,30503,0,18521,982,1570,86,86,163,163,2,6,elite/quest,1,3,23,100,18007
+36175,MOB_GOD_FLAME_GIGANTIC_B3,Forgotten World (pilliers/uniques),86,19969,0,6174,1013,1522,86,86,163,163,2,6,elite/quest,1,3,20,55,17967
+36191,MOB_GOD_FLAME_WITCH_B3,Forgotten World (pilliers/uniques),86,15251,0,6174,951,1620,86,86,163,163,2,6,elite/quest,1,3,50,120,17983
+22605,MOB_FW_BATTLEGOLEM_087,Forteresse (guerre de forteresse),87,20127316,0,12209360,1078,1522,87,87,164,164,2,3,unique_notice,1,3,42,56,12159
+22185,MOB_FW_HYEONGCHEON_087,Forteresse (guerre de forteresse),87,19769031,0,9157020,1013,1620,87,87,164,164,2,3,unique_notice,1,3,23,74,11739
+22325,MOB_FW_MUJIGI_087,Forteresse (guerre de forteresse),87,15095487,0,9157020,1013,1620,87,87,164,164,2,3,unique_notice,1,3,38,143,11879
+21485,MOB_FW_TAESE_087,Forteresse (guerre de forteresse),87,26358709,0,12209360,1078,1522,87,87,164,164,2,3,unique_notice,1,3,10,34,11039
+36144,MOB_GOD_FLAME_GIANT_B4,Forgotten World (pilliers/uniques),87,41185,0,12718,1045,1570,87,87,164,164,2,6,elite/quest,1,3,20,55,17936
+36136,MOB_GOD_FLAME_SALAMANDER_B4,Forgotten World (pilliers/uniques),87,31449,0,12718,982,1672,87,87,164,164,2,6,elite/quest,1,3,63,115,17928
+24345,MOB_TQ,AUTRE,87,15724,0,6677,1013,1620,87,87,164,164,2,6,elite/quest,1,3,70,120,13456
+14984,MMB_TQ_TOMBGENERAL_CLON,AUTRE,88,6794561,0,3143910,1045,1672,88,88,165,165,2,8,unique_silencieux,1,3,28,55,4619
+36168,MOA_GOD_FLAME_EVIL_B4,AUTRE,88,42466,0,13100,1013,1724,88,88,165,165,2,6,elite/quest,1,3,15,55,17960
+22606,MOB_FW_BATTLEGOLEM_088,Forteresse (guerre de forteresse),88,20749132,0,12575641,1111,1570,88,88,165,165,2,3,unique_notice,1,3,42,312,12160
+22186,MOB_FW_HYEONGCHEON_088,Forteresse (guerre de forteresse),88,20383682,0,9431731,1045,1672,88,88,165,165,2,3,unique_notice,1,3,23,74,11740
+22326,MOB_FW_MUJIGI_088,Forteresse (guerre de forteresse),88,15561849,0,9431731,1045,1672,88,88,165,165,2,3,unique_notice,1,3,38,143,11880
+21486,MOB_FW_TAESE_088,Forteresse (guerre de forteresse),88,27178243,0,12575641,1111,1570,88,88,165,165,2,3,unique_notice,1,3,10,34,11040
+36160,MOB_GOD_FLAME_ARCHER_B4,Forgotten World (pilliers/uniques),88,32421,0,13100,1078,1620,88,88,165,165,2,6,elite/quest,1,3,70,120,17952
+36152,MOB_GOD_FLAME_GHOST_B4,Forgotten World (pilliers/uniques),88,32421,0,13100,1078,1620,88,88,165,165,2,6,elite/quest,1,3,40,100,17944
+22607,MOB_FW_BATTLEGOLEM_089,Forteresse (guerre de forteresse),89,21387770,0,12952911,1192,1620,89,16777305,166,166,2,3,unique_notice,1,3,42,56,12161
+22187,MOB_FW_HYEONGCHEON_089,Forteresse (guerre de forteresse),89,21015011,0,9714683,1078,1724,89,89,166,166,2,3,unique_notice,1,3,23,74,11741
+22327,MOB_FW_MUJIGI_089,Forteresse (guerre de forteresse),89,16040828,0,9714683,1078,1724,89,89,166,166,2,3,unique_notice,1,3,38,143,11881
+21487,MOB_FW_TAESE_089,Forteresse (guerre de forteresse),89,28020015,0,12952911,1192,1620,89,89,166,166,2,3,unique_notice,1,3,10,34,11041
+36208,MOB_GOD_FLAME_ADJUTANT_B4,Forgotten World (pilliers/uniques),89,5779128,0,2671538,1111,1672,89,89,166,166,2,8,unique_silencieux,1,3,20,55,18000
+36200,MOB_GOD_FLAME_CAPTAIN_B4,Forgotten World (pilliers/uniques),89,4411228,0,2671538,1045,1778,89,89,166,166,2,8,unique_silencieux,1,3,30,100,17992
+36334,MOB_GOD_FLAME_COWKING_B4,Forgotten World (pilliers/uniques),89,21387770,0,12952911,1111,1672,89,89,166,166,2,3,unique_notice,1,3,50,120,18126
+36184,MOB_GOD_FLAME_CRAZY_B4,Forgotten World (pilliers/uniques),89,43781,0,13493,1078,1724,89,89,166,166,2,6,elite/quest,1,3,20,55,17976
+36216,MOB_GOD_FLAME_ENVY_B4,Forgotten World (pilliers/uniques),89,50128,0,26985,1078,1724,89,89,166,166,2,6,elite/quest,1,3,23,100,18008
+36176,MOB_GOD_FLAME_GIGANTIC_B4,Forgotten World (pilliers/uniques),89,43781,0,13493,1111,1672,89,89,166,166,2,6,elite/quest,1,3,20,55,17968
+36192,MOB_GOD_FLAME_WITCH_B4,Forgotten World (pilliers/uniques),89,33418,0,13493,1045,1778,89,89,166,166,2,6,elite/quest,1,3,50,120,17984
+14985,MOB_TQ_TOMBGENERAL_CLON2,Tombe de Qin-Shi / FGW (101-110),89,7005004,0,3238228,1078,1724,89,89,166,166,2,8,unique_silencieux,1,3,28,55,4620
+28826,MOB_EV_WINTER_PRINCESS_90,Evenement,90,33065481,0,13341498,951,2153,90,90,167,167,2,3,unique_notice,1,3,20,120,15600
+28818,MOB_EV_WINTER_WHITEKNIGHT_90,Evenement,90,5510914,0,6670749,951,2153,90,90,167,167,2,3,unique_notice,1,3,30,180,15592
+22188,MOB_FW_HYEONGCHEON_090,Forteresse (guerre de forteresse),90,21663440,0,10006123,1111,1778,90,90,167,167,2,3,unique_notice,1,3,23,74,11742
+22328,MOB_FW_MUJIGI_090,Forteresse (guerre de forteresse),90,16532741,0,10006123,1111,1778,90,90,167,167,2,3,unique_notice,1,3,38,143,11882
+21488,MOB_FW_TAESE_090,Forteresse (guerre de forteresse),90,28884587,0,13341498,1229,1672,90,90,167,167,2,3,unique_notice,1,3,10,34,11042
+3875,MOB_RM_TAHOMET,"Rock Mountain / nord Alexandrie (Shaitan, Roc)",90,12732060,0,6670749,898,1528,90,90,167,167,2,3,unique_notice,1,3,23,75,1685
+7563,MOB_RM_TAHOMET_L2,"Rock Mountain / nord Alexandrie (Shaitan, Roc)",90,127320602,0,26682996,898,1528,90,90,167,167,2,3,unique_notice,1,3,31,101,2111
+7564,MOB_RM_TAHOMET_L3,"Rock Mountain / nord Alexandrie (Shaitan, Roc)",90,38196181,0,13341498,898,1528,90,90,167,167,2,3,unique_notice,1,3,39,128,2112
+14986,MOB_TQ_TOMBGENERAL_CLON3,Tombe de Qin-Shi / FGW (101-110),90,7221147,0,3335374,1111,1778,90,90,167,167,2,8,unique_silencieux,1,3,28,55,4621
+22609,MOB_FW_BATTLEGOLEM_091,Forteresse (guerre de forteresse),91,23356271,0,13741743,1267,1724,91,91,168,168,2,3,unique_notice,1,3,42,56,12163
+22189,MOB_FW_HYEONGCHEON_091,Forteresse (guerre de forteresse),91,22961141,0,10306307,1192,1834,91,91,168,168,2,3,unique_notice,1,3,23,74,11743
+22329,MOB_FW_MUJIGI_091,Forteresse (guerre de forteresse),91,17517203,0,10306307,1192,1834,91,91,168,168,2,3,unique_notice,1,3,38,143,11883
+21489,MOB_FW_TAESE_091,Forteresse (guerre de forteresse),91,30614854,0,13741743,1267,1724,91,91,168,168,2,3,unique_notice,1,3,10,34,11043
+22610,MOB_FW_BATTLEGOLEM_092,Forteresse (guerre de forteresse),92,24704269,0,14153995,1306,1778,92,92,169,169,2,3,unique_notice,1,3,42,56,12164
+22190,MOB_FW_HYEONGCHEON_092,Forteresse (guerre de forteresse),92,24293924,0,10615496,1229,1891,92,92,169,169,2,3,unique_notice,1,3,23,74,11744
+22330,MOB_FW_MUJIGI_092,Forteresse (guerre de forteresse),92,18528201,0,10615496,1229,1891,92,92,169,169,2,3,unique_notice,1,3,38,143,11884
+21490,MOB_FW_TAESE_092,Forteresse (guerre de forteresse),92,32391898,0,14153995,1306,1778,92,92,169,169,2,3,unique_notice,1,3,10,34,11044
+22611,MOB_FW_AATTLEGOLEM_093,Forteresse (guerre de forteresse),93,26088538,0,14578615,1396,1834,93,93,170,170,2,3,unique_notice,1,3,42,56,12165
+22191,MOB_FW_HYEONGCHEON_093,Forteresse (guerre de forteresse),93,25662674,0,10933961,1267,2027,93,93,170,170,2,3,unique_notice,1,3,23,74,11745
+22331,MOB_FW_MUJIGI_093,Forteresse (guerre de forteresse),93,19566403,0,10933961,1267,2027,93,93,170,170,2,3,unique_notice,1,3,38,143,11885
+21491,MOB_FW_TAESE_093,Forteresse (guerre de forteresse),93,34216899,0,14578615,1396,1834,93,93,170,170,2,3,unique_notice,1,3,10,34,11045
+36289,MOB_GOD_GHOST_BEAST_A1,Forgotten World (pilliers/uniques),93,1130727,0,546698,1306,1891,93,93,170,170,2,8,unique_silencieux,1,3,30,75,18081
+36281,MOB_GOD_GHOST_GLUTTONY_A1,Forgotten World (pilliers/uniques),93,1130727,0,546698,1306,1891,93,93,170,170,2,8,unique_silencieux,1,3,15,75,18073
+36335,MOB_GOD_GHOST_UNDINE_A1,Forgotten World (pilliers/uniques),93,11307269,0,5466981,1229,2089,93,93,170,170,2,3,unique_notice,1,3,30,75,18127
+22612,MOB_FW_BATTLEGOLEM_094,Forteresse (guerre de forteresse),94,27509989,0,15015974,1438,1891,94,94,171,171,2,3,unique_notice,1,3,42,56,12166
+22192,MOB_FW_HYEONGCHEON_094,Forteresse (guerre de forteresse),94,27068297,0,11261981,1306,2089,94,94,171,171,2,3,unique_notice,1,3,23,74,11746
+22332,MOB_FW_MUJIEI_094,Forteresse (guerre de forteresse),94,20632492,0,11261981,1306,2089,94,94,171,171,2,3,unique_notice,1,3,38,143,11886
+21492,MOB_FW_TAESE_094,Forteresse (guerre de forteresse),94,36091062,0,15015974,1438,1891,94,94,171,171,2,3,unique_notice,1,3,10,34,11046
+36227,MOB_GOD_GHOST_MARAUDER_A3,Forgotten World (pilliers/uniques),94,28196,0,7821,1267,2153,94,94,171,171,2,6,elite/quest,1,3,15,55,18019
+36235,MOB_GOD_GHOST_SEIREN_A3,Forgotten World (pilliers/uniques),94,28196,0,7821,1267,2153,94,94,171,171,2,6,elite/quest,1,3,30,55,18027
+34051,MOB_EVE_HAPPY_TIGERWOMAN09,Evenement,95,43454336,0,7733227,1396,2153,95,95,172,172,2,3,unique_notice,0,0,20,346,17684
+22613,MOB_FW_BATTLEGOLEM_095,Forteresse (guerre de forteresse),95,28969557,0,15466453,1482,2027,95,95,172,172,2,3,unique_notice,1,3,42,56,12167
+22193,MOB_FW_HYEONGCHEON_095,Forteresse (guerre de forteresse),95,28511719,0,11599840,1396,2153,95,95,172,172,2,3,unique_notice,1,3,23,74,11747
+22333,MOB_FW_MUJIGI_095,Forteresse (guerre de forteresse),95,21727168,0,11599840,1396,2153,95,95,172,172,2,3,unique_notice,1,3,38,143,11887
+21493,MOB_FW_TAESE_095,Forteresse (guerre de forteresse),95,38015625,0,15466453,1482,2027,95,95,172,172,2,3,unique_notice,1,3,10,34,11047
+36259,MOB_GOD_GHOST_COMMANDER_A3,Forgotten World (pilliers/uniques),95,29700,0,8055,1306,2219,95,95,172,172,2,6,elite/quest,1,3,17,55,18051
+36243,MOB_GOD_GHOST_KINGNIPPER_A3,Forgotten World (pilliers/uniques),95,29700,0,8055,1482,2027,95,95,172,172,2,6,elite/quest,1,3,30,55,18035
+36251,MOB_GOD_GHOST_PIRATE_A3,Forgotten World (pilliers/uniques),95,29700,0,8055,1396,2153,95,95,172,172,2,6,elite/quest,1,3,12,55,18043
+14987,MOB_TQ_SNAKEGENERAL,Tombe de Qin-Shi / FGW (101-110),95,7242389,0,3866613,1396,2153,95,95,172,172,2,8,unique_silencieux,1,3,44,138,4622
+14988,MOB_TQ_SNAKEGENERAL_CLON,Tombe de Qin-Shi / FGW (101-110),95,7242389,0,3866613,1396,2153,95,95,172,172,2,8,unique_silencieux,1,3,44,138,4623
+14989,MOB_TQ_SNAKEGENERAL_CLON2,Tombe de Qin-Shi / FGW (101-110),95,7242389,0,3866613,1396,2153,95,95,172,172,2,8,unique_silencieux,1,3,44,138,4624
+14990,MOB_TQ_SNAKEGENERAL_CLON3,Tombe de Qin-Shi / FGW (101-110),95,7242389,0,3866613,1396,2153,95,16777311,172,172,2,8,unique_silencieux,1,3,44,138,4625
+22614,MOB_FW_BATTLEGOLEM_096,Forteresse (guerre de forteresse),96,30468198,0,15930446,1526,2089,96,96,173,173,2,3,unique_notice,1,3,42,56,12168
+22194,MOB_FW_HYEONGCHEON_096,Forteresse (guerre de forteresse),96,29993891,0,11947835,1438,2219,96,96,173,173,2,3,unique_notice,1,3,23,74,11748
+21494,MOB_FW_TAESE_096,Forteresse (guerre de forteresse),96,39991855,0,15930446,1526,2089,96,96,173,173,2,3,unique_notice,1,3,10,34,11048
+36290,MOB_GOD_GHOST_BEAST_A2,Forgotten World (pilliers/uniques),96,1981689,0,1194783,1482,2153,96,96,173,173,2,8,unique_silencieux,1,3,30,75,18082
+36291,MOB_GOD_GHOST_BEAST_A3,Forgotten World (pilliers/uniques),96,5284504,0,2389567,1482,2153,96,96,173,173,2,8,unique_silencieux,1,3,30,75,18083
+36299,MOB_GOD_GHOST_CURSE_A3,Forgotten World (pilliers/uniques),96,22851148,0,24891,838,3011,96,96,173,173,2,6,elite/quest,1,3,20,100,18091
+36307,MOB_GOD_GHOST_ENVY_A3,Forgotten World (pilliers/uniques),96,47607,0,24891,1438,2219,96,96,173,173,2,6,elite/quest,1,3,23,100,18099
+36282,MOB_GOD_GHOST_GLUTTONY_A2,Forgotten World (pilliers/uniques),96,1981689,0,1194783,1482,2153,96,96,173,173,2,8,unique_silencieux,1,3,15,75,18074
+36283,MOB_GOD_GHOST_GLUTTONY_A3,Forgotten World (pilliers/uniques),96,5284504,0,2389567,1482,2153,96,96,173,173,2,8,unique_silencieux,1,3,15,75,18075
+36267,MOB_GOD_GHOST_SPECTER_A3,Forgotten World (pilliers/uniques),96,31244,0,8297,1396,2371,96,96,173,173,2,6,elite/quest,1,3,10,55,18059
+36336,MOB_GOD_GHOST_UNDINE_A2,Forgotten World (pilliers/uniques),96,19816890,0,8960876,1396,2371,96,96,173,173,2,3,unique_notice,1,3,30,75,18128
+36337,MOB_GOD_GHOST_UNDINE_A3,Forgotten World (pilliers/uniques),96,26422520,0,11947835,1396,2371,96,96,173,173,2,3,unique_notice,1,3,30,75,18129
+36275,MOB_GOD_GHOST_WRECK_A3,Forgotten World (pilliers/uniques),96,27523,0,8297,1438,2219,96,96,173,173,2,6,elite/quest,1,3,30,75,18067
+22615,MOB_FW_BATTLEGOLEM_097,Forteresse (guerre de forteresse),97,32006890,0,16408359,1626,2153,97,97,174,174,2,3,unique_notice,1,3,42,56,12169
+22195,MOB_FW_HYEONGCHEON_097,Forteresse (guerre de forteresse),97,31515785,0,12306270,1482,2371,97,97,174,174,2,3,unique_notice,1,3,23,74,11749
+22335,MOB_FW_MUJIGI_097,Forteresse (guerre de forteresse),97,24005168,0,12306270,1482,2371,97,97,174,174,2,3,unique_notice,1,3,38,143,11889
+21495,MOB_FW_TAESE_097,Forteresse (guerre de forteresse),97,42021047,0,16408359,1626,2153,97,97,174,174,2,3,unique_notice,1,3,10,34,11049
+36228,MOB_GOD_GHOST_MARAUDER_A4,Forgotten World (pilliers/uniques),97,65658,0,17092,1438,2442,97,97,174,174,2,6,elite/quest,1,3,15,55,18020
+36236,MOB_GOD_GHOST_SEIREN_A4,Forgotten World (pilliers/uniques),97,65658,0,17092,1438,2442,97,97,174,174,2,6,elite/quest,1,3,30,55,18028
+24346,MOB_TQ_TREASURE_GUARD,Tombe de Qin-Shi / FGW (101-110),97,25005,0,8546,1482,2371,97,16777313,174,174,2,6,elite/quest,1,3,70,120,13457
+22616,MOB_FW_BATTLEGOLEM_098,Forteresse (guerre de forteresse),98,33586637,0,16900611,1675,2219,98,98,175,175,2,3,unique_notice,1,3,42,56,12170
+22196,MOB_FW_HYEONGCHEON_098,Forteresse (guerre de forteresse),98,33078398,0,12675458,1526,2442,98,98,175,175,2,3,unique_notice,1,3,23,74,11750
+22336,MOB_FW_MUJIGI_098,Forteresse (guerre de forteresse),98,25189977,0,12675458,1526,2442,98,98,175,175,2,3,unique_notice,1,3,38,143,11890
+21496,MOB_FW_TAESE_098,Forteresse (guerre de forteresse),98,44104531,0,16900611,1675,2219,98,98,175,175,2,3,unique_notice,1,3,10,34,11050
+36260,MOB_GOD_GHOST_COMMANDER_A4,Forgotten World (pilliers/uniques),98,68913,0,17605,1482,2515,98,98,175,175,2,6,elite/quest,1,3,17,55,18052
+36244,MOB_GOD_GHOST_KINGNIPPER_A4,Forgotten World (pilliers/uniques),98,68913,0,17605,1675,2219,98,98,175,175,2,6,elite/quest,1,3,30,55,18036
+36252,MOB_GOD_GHOST_PIRATE_A4,Forgotten World (pilliers/uniques),98,68913,0,17605,1526,2442,98,98,175,175,2,6,elite/quest,1,3,12,55,18044
+14991,MOB_TQ_NORTHGUARDIAN,Tombe de Qin-Shi / FGW (101-110),98,22052265,0,8450305,1626,2371,98,98,175,175,2,8,unique_silencieux,1,3,14,55,4626
+14992,MOB_TQ_SOUTHGUARDIAN,Tombe de Qin-Shi / FGW (101-110),98,16793318,0,8450305,1482,2515,98,98,175,175,2,8,unique_silencieux,1,3,70,112,4627
+22617,MOB_FW_BATTLEGOLEM_099,Forteresse (guerre de forteresse),99,35208464,0,17407629,1724,2371,99,99,176,176,2,3,unique_notice,1,3,42,56,12171
+22197,MOB_FW_HYEONGCHEON_099,Forteresse (guerre de forteresse),99,34682749,0,13055722,1626,2515,99,99,176,176,2,3,unique_notice,1,3,23,74,11751
+22337,MOB_FW_MUJIGI_099,Forteresse (guerre de forteresse),99,26406348,0,13055722,1626,2515,99,99,176,176,2,3,unique_notice,1,3,38,143,11891
+36276,MOB_GOD,AUTRE,99,63634,0,18133,1626,2515,99,99,176,176,2,6,elite/quest,1,3,30,75,18068
+36292,MOB_GOD_GHOST_BEAST_A4,Forgotten World (pilliers/uniques),99,8399751,0,3590324,1675,2442,99,99,176,176,2,8,unique_silencieux,1,3,30,75,18084
+36300,MOB_GOD_GHOST_CURSE_A4,Forgotten World (pilliers/uniques),99,35208464,0,36266,922,3283,99,99,176,176,2,6,elite/quest,1,3,20,100,18092
+36308,MOB_GOD_GHOST_ENVY_A4,Forgotten World (pilliers/uniques),99,82520,0,36266,1626,2515,99,99,176,176,2,6,elite/quest,1,3,23,100,18100
+36284,MOB_GOD_GHOST_GLUTTONY_A4,Forgotten World (pilliers/uniques),99,8399751,0,3590324,1675,2442,99,99,176,176,2,8,unique_silencieux,1,3,15,75,18076
+36268,MOB_GOD_GHOST_SPECTER_A4,Forgotten World (pilliers/uniques),99,72256,0,18133,1526,2591,99,99,176,176,2,6,elite/quest,1,3,10,55,18060
+36338,MOB_GOD_GHOST_UNDINE_A4,Forgotten World (pilliers/uniques),99,40726064,0,17407629,1526,2591,99,99,176,176,2,3,unique_notice,1,3,30,75,18130
+14994,MOB_TQ_EASTGUARDIAN,Tombe de Qin-Shi / FGW (101-110),99,17604232,0,8703815,1526,2591,99,99,176,176,2,8,unique_silencieux,1,3,60,280,4629
+14993,MOB_TQ_WESTGUARDIAN,Tombe de Qin-Shi / FGW (101-110),99,17604232,0,8703815,1526,2591,99,99,176,176,2,8,unique_silencieux,1,3,60,150,4628
+34063,MOB_EVE_HADES_BLACKSNAKE,Evenement,100,27655068,0,13447394,1626,2759,100,100,177,177,2,3,unique_notice,0,3,100,180,17696
+28827,MOB_EV_WINTER_PRINCESS_100,Evenement,100,55310135,0,17929858,1396,3099,100,100,177,177,2,3,unique_notice,1,3,20,120,15601
+28819,MOB_EV_WINTER_WHITEKNIGHT_100,Evenement,100,9218356,0,8964929,1396,3099,100,100,177,177,2,3,unique_notice,1,3,30,180,15593
+22197,MOB_FW_HYEONGCHEON_100,Forteresse (guerre de forteresse),100,36329882,0,13447394,1675,2591,100,100,177,177,2,3,unique_notice,1,3,23,74,11752
+22338,MOB_FW_MUJIGI_100,Forteresse (guerre de forteresse),100,27655068,0,13447394,1675,2591,100,100,177,177,2,3,unique_notice,1,3,38,143,11892
+21498,MOB_FW_TAESE_100,Forteresse (guerre de forteresse),100,48439843,0,17929858,1775,2442,100,100,177,177,2,3,unique_notice,1,3,10,34,11052
+3877,MOB_RM_ROC,"Rock Mountain / nord Alexandrie (Shaitan, Roc)",100,1451891045,0,1157701880,2052,3283,139,139,184,184,2,3,unique_notice,1,3,50,185,1687
+24156,MOB_RM_SPIRITS,"Rock Mountain / nord Alexandrie (Shaitan, Roc)",100,18436712,0,5976619,1355,2299,100,100,177,177,2,8,unique_silencieux,1,3,30,75,13431
+24157,MOB_RM_SPIRITS_CLON,"Rock Mountain / nord Alexandrie (Shaitan, Roc)",100,18436712,0,5976619,1355,2299,100,100,177,177,2,8,unique_silencieux,1,3,30,75,13432
+24158,MOB_RM_SPIRITS_CLON2,"Rock Mountain / nord Alexandrie (Shaitan, Roc)",100,18436712,0,5976619,1355,2299,100,16777316,177,177,2,8,unique_silencieux,1,3,30,75,13433
+24159,MOB_RM_SPIRITS_CLON3,"Rock Mountain / nord Alexandrie (Shaitan, Roc)",100,18436712,0,5976619,1437,2096,100,100,177,177,2,8,unique_silencieux,1,3,30,75,13434
+24285,MOB_RM_WINGTRIBEKNIGHT,"Rock Mountain / nord Alexandrie (Shaitan, Roc)",100,10664158,0,4482465,1355,2299,100,100,177,177,2,8,unique_silencieux,1,3,30,75,13449
+14995,MOB_TQ_BLACKSNAKE,Tombe de Qin-Shi / FGW (101-110),100,27655068,0,13447394,1626,2759,100,100,177,177,2,8,unique_silencieux,1,3,100,180,4630
+26668,MOB_TQ_BLACKSNAKE_L2,Tombe de Qin-Shi / FGW (101-110),100,276550675,0,53789574,1626,2759,100,100,177,177,2,8,unique_silencieux,1,3,100,180,13474
+24261,MOB_TQ_BLACKSNAKE_L3,Tombe de Qin-Shi / FGW (101-110),100,82965203,0,26894787,1626,2759,100,100,177,177,2,8,unique_silencieux,1,3,100,180,13441
+14997,MOB_TQ_WHITESNAKE,Tombe de Qin-Shi / FGW (101-110),100,183535199,0,62356860,2258,3828,105,105,182,182,2,3,unique_notice,1,3,0,0,4632
+22619,MOB_FW_BATTLEGOLEM_101,Forteresse (guerre de forteresse),101,38582592,0,18467754,1828,2515,101,101,178,178,2,3,unique_notice,1,3,42,56,12173
+22199,MOB_FW_HYEONGCHEON_101,Forteresse (guerre de forteresse),101,38020868,0,13850816,1724,2759,101,16777317,178,178,2,3,unique_notice,1,3,23,74,11753
+22339,MOB_FW_MUJIGI_101,Forteresse (guerre de forteresse),101,28936944,0,13850816,1724,2759,101,101,178,178,2,3,unique_notice,1,3,38,143,11893
+38196,MOB_SD_SPHINX,Temple du Job / désert d'Alexandrie (Seth 101-110),101,8247470,0,3027032,1828,3011,104,104,181,181,2,8,unique_silencieux,1,3,40,75,18584
+22620,MOB_FW_BATTLEGOLEM_102,Forteresse (guerre de forteresse),102,40337071,0,19021787,1882,2591,102,102,179,179,2,3,unique_notice,1,3,42,56,12174
+22200,MOB_FW_HYEONGCHEON_102,Forteresse (guerre de forteresse),102,39756801,0,14266340,1775,2841,102,102,179,179,2,3,unique_notice,1,3,23,74,11754
+22340,MOB_FW_MUJIGI_102,Forteresse (guerre de forteresse),102,30252803,0,14266340,1775,2841,102,102,179,179,2,3,unique_notice,1,3,38,143,11894
+21500,MOB_FW_TAESE_102,Forteresse (guerre de forteresse),102,53009068,0,19021787,1882,2591,102,102,179,179,2,3,unique_notice,1,3,10,34,11054
+38199,MOB_SD_SEKHMET,Temple du Job / désert d'Alexandrie (Seth 101-110),102,8603212,0,3117843,1882,3099,105,105,182,182,2,8,unique_silencieux,1,3,50,55,18587
+22621,MOB_FW_BATTLEGOLEM_103,Forteresse (guerre de forteresse),103,42137990,0,19592441,1937,2759,103,103,180,180,2,3,unique_notice,1,3,42,56,12175
+22201,MOB_FW_HYEONGCHEON_103,Forteresse (guerre de forteresse),103,41538803,0,14694331,1828,2925,103,103,180,180,2,3,unique_notice,1,3,23,74,11755
+22341,MOB_FW_MUJIGI_103,Forteresse (guerre de forteresse),103,31603493,0,14694331,1828,2925,103,103,180,180,2,3,unique_notice,1,3,38,143,11895
+21501,MOB_FW_TAESE_103,Forteresse (guerre de forteresse),103,55385070,0,19592441,1937,2759,103,103,180,180,2,3,unique_notice,1,3,10,34,11055
+36293,MOB_GOD_GHOST_BEAST_B1,Forgotten World (pilliers/uniques),103,1828557,0,734717,1882,2841,103,103,180,180,2,8,unique_silencieux,1,3,30,75,18085
+36285,MOB_GOD_GHOST_GLUTTONY_B1,Forgotten World (pilliers/uniques),103,1828557,0,734717,1882,2841,103,16777319,180,180,2,8,unique_silencieux,1,3,15,75,18077
+36339,MOB_GOD_GHOST_UNDINE_B1,Forgotten World (pilliers/uniques),103,18285574,0,7347165,1775,3011,103,103,180,180,2,3,unique_notice,1,3,30,75,18131
+38195,MOB_SD_APIS,Temple du Job / désert d'Alexandrie (Seth 101-110),103,21068995,0,9796221,1775,2925,103,103,180,180,2,8,unique_silencieux,1,3,30,100,18583
+38225,MOB_SD_DEMONBUG_2,Temple du Job / désert d'Alexandrie (Seth 101-110),103,32920,0,10204,1775,3011,103,103,180,180,2,6,elite/quest,1,3,50,100,18613
+38202,MOB_SD_NEPHTHYS,Temple du Job / désert d'Alexandrie (Seth 101-110),103,8968328,0,3211378,1937,3190,106,16777322,183,183,2,8,unique_silencieux,1,3,40,120,18590
+22622,MOB_FW_BATTLEGOLEM_104,Forteresse (guerre de forteresse),104,43986505,0,20180214,1994,2841,104,104,181,181,2,3,unique_notice,1,3,42,56,12176
+22202,MOB_FW_HYEONGCHEON_104,Forteresse (guerre de forteresse),104,43368022,0,15135161,1882,3011,104,104,181,181,2,3,unique_notice,1,3,23,74,11756
+22342,MOB_FW_MUJIGI_104,Forteresse (guerre de forteresse),104,32989879,0,15135161,1882,3011,104,104,181,181,2,3,unique_notice,1,3,38,143,11896
+21502,MOB_FW_TAESE_104,Forteresse (guerre de forteresse),104,57824030,0,20180214,1994,2841,104,104,181,181,2,3,unique_notice,1,3,10,34,11056
+36231,MOB_GOD_GHOST_MARAUDER_B3,Forgotten World (pilliers/uniques),104,45175,0,10511,1828,3099,104,104,181,181,2,6,elite/quest,1,3,15,55,18023
+38205,MOB_SD_HORUS,Temple du Job / désert d'Alexandrie (Seth 101-110),104,9343050,0,3307720,1994,3283,107,107,184,184,2,8,unique_silencieux,1,3,40,90,18593
+38186,MOB_SD_LLIGHTINGKHEPRI_2,Temple du Job / désert d'Alexandrie (Seth 101-110),104,34364,0,10511,1828,3099,104,104,181,181,2,6,elite/quest,1,3,40,75,18574
+38197,MOB_SD_SPHINX_2,Temple du Job / désert d'Alexandrie (Seth 101-110),104,18686101,0,6615439,2393,3940,107,107,184,184,2,8,unique_silencieux,1,3,40,75,18585
+34062,MOB_EVE_ANGRY_TAHOMET10,Evenement,105,79658485,0,7794608,2446,4147,105,105,182,182,2,3,unique_notice,0,3,23,75,17695
+34065,MOB_EVE_BETRAYER_FLAMEMASTER,Evenement,105,11470950,0,1732135,1937,3099,105,16777321,182,182,2,8,unique_silencieux,0,3,50,108,17698
+34064,MOB_EVE_GAONGIL_APIS,Evenement,105,68825700,0,7794608,2446,4029,105,105,182,182,2,3,unique_notice,0,3,30,100,17697
+34052,MOB_EVE_HAPPY_TIGERWOMAN10,Evenement,105,68825700,0,7794608,1937,3099,105,105,182,182,2,3,unique_notice,0,0,20,90,17685
+22623,MOB_FW_BATTLEGOLEM_105,Forteresse (guerre de forteresse),105,45883800,0,20785620,2052,2925,105,105,182,182,2,3,unique_notice,1,3,42,56,12177
+22203,MOB_FW_HYEONGCHEON_105,Forteresse (guerre de forteresse),105,45245635,0,15589215,1937,3099,105,105,182,182,2,3,unique_notice,1,3,23,74,11757
+22343,MOB_FW_MUJIGI_105,Forteresse (guerre de forteresse),105,34412850,0,15589215,1937,3099,105,16777321,182,182,2,3,unique_notice,1,3,38,143,11897
+21503,MOB_FW_TAESE_105,Forteresse (guerre de forteresse),105,60327514,0,20785620,2052,2925,105,16777321,182,182,2,3,unique_notice,1,3,10,34,11057
+36263,MOB_GOD_GHOST_COMMANDER_B3,Forgotten World (pilliers/uniques),105,47131,0,10826,1882,3190,105,105,182,182,2,6,elite/quest,1,3,17,55,18055
+36247,MOB_GOD_GHOST_KINGNIPPER_B3,Forgotten World (pilliers/uniques),105,47131,0,10826,2052,2925,105,105,182,182,2,6,elite/quest,1,3,30,55,18039
+36255,MOB_GOD_GHOST_PIRATE_B3,Forgotten World (pilliers/uniques),105,47131,0,10826,1937,3099,105,105,182,182,2,6,elite/quest,1,3,12,55,18047
+38173,MOB_SD_BASTET_2,Temple du Job / désert d'Alexandrie (Seth 101-110),105,35847,0,10826,1882,3011,105,105,182,182,2,6,elite/quest,1,3,20,100,18561
+38237,MOB_SD_KEISAS_2,Temple du Job / désert d'Alexandrie (Seth 101-110),105,41489,0,10826,1882,3011,105,105,182,182,2,6,elite/quest,1,3,30,75,18625
+38233,MOB_SD_MONT_2,Temple du Job / désert d'Alexandrie (Seth 101-110),105,41489,0,10826,1882,3011,105,105,182,182,2,6,elite/quest,1,3,23,75,18621
+38208,MOB_SD_OSIRIS,Temple du Job / désert d'Alexandrie (Seth 101-110),105,12970155,0,4542602,2052,3379,108,108,185,185,2,8,unique_silencieux,1,3,40,100,18596
+38166,MOB_SD_SAND_HYENA_2,Temple du Job / désert d'Alexandrie (Seth 101-110),105,35847,0,10826,1882,3099,105,105,182,182,2,6,elite/quest,1,3,30,110,18554
+38200,MOB_SD_SEKHMET_2,Temple du Job / désert d'Alexandrie (Seth 101-110),105,19455233,0,6813902,2462,4055,108,108,185,185,2,8,unique_silencieux,1,3,50,55,18588
+38211,MOB_SD_SELKIS,Temple du Job / désert d'Alexandrie (Seth 101-110),105,57722800,0,24819116,2683,4417,111,114,188,188,2,3,unique_notice,1,3,50,100,18599
+22624,MOB_FW_BATTLEGOLEM_106,Forteresse (guerre de forteresse),106,47831085,0,21409189,2112,3011,106,106,183,183,2,3,unique_notice,1,3,42,56,12178
+22204,MOB_FW_HYEONGCHEON_106,Forteresse (guerre de forteresse),106,47172845,0,16056892,1994,3190,106,106,183,183,2,3,unique_notice,1,3,23,74,11758
+22344,MOB_FW_MUJIGI_106,Forteresse (guerre de forteresse),106,35873314,0,16056892,1994,3190,106,106,183,183,2,3,unique_notice,1,3,38,143,11898
+21504,MOB_FW_TAESE_106,Forteresse (guerre de forteresse),106,62897127,0,21409189,2112,3011,106,106,183,183,2,3,unique_notice,1,3,10,34,11058
+36294,MOB_GOD_GHOST_BEAST_B2,Forgotten World (pilliers/uniques),106,3114231,0,1605689,2052,3099,106,106,183,183,2,8,unique_silencieux,1,3,30,75,18086
+36295,MOB_GOD_GHOST_BEAST_B3,Forgotten World (pilliers/uniques),106,8304616,0,3211378,2052,3099,106,106,183,183,2,8,unique_silencieux,1,3,30,75,18087
+36303,MOB_GOD_GHOST_CURSE_B3,Forgotten World (pilliers/uniques),106,35873314,0,33452,1192,4007,106,106,183,183,2,6,elite/quest,1,3,20,100,18095
+36310,MOB_GOD_GHOST_ENVY_B2,Forgotten World (pilliers/uniques),106,37368,0,16726,1994,3190,106,106,183,183,2,6,elite/quest,1,3,23,100,18102
+36311,MOB_GOD_GHOST_ENVY_B3,Forgotten World (pilliers/uniques),106,74736,0,33452,1994,3190,106,106,183,183,2,6,elite/quest,1,3,23,100,18103
+36287,MOB_GOD_GHOST_GLUTTONY_B3,Forgotten World (pilliers/uniques),106,8304616,0,3211378,2052,3099,106,106,183,183,2,8,unique_silencieux,1,3,15,75,18079
+36271,MOB_GOD_GHOST_SPECTER_B3,Forgotten World (pilliers/uniques),106,49138,0,11151,1937,3283,106,106,183,183,2,6,elite/quest,1,3,10,55,18063
+36340,MOB_GOD_GHOST_UNDINE_B2,Forgotten World (pilliers/uniques),106,31142310,0,12042669,1937,3283,106,106,183,183,2,3,unique_notice,1,3,30,75,18132
+36341,MOB_GOD_GHOST_UNDINE_B3,Forgotten World (pilliers/uniques),106,41523079,0,16056892,1937,3283,106,106,183,183,2,3,unique_notice,1,3,30,75,18133
+36279,MOB_GOD_GHOST_WRECK_B3,Forgotten World (pilliers/uniques),106,43253,0,11151,1994,3190,106,106,183,183,2,6,elite/quest,1,3,30,75,18071
+38176,MOB_SD_BAST_2,Temple du Job / désert d'Alexandrie (Seth 101-110),106,37368,0,11151,1937,3099,106,106,183,183,2,6,elite/quest,1,3,20,100,18564
+38170,MOB_SD_CHIEF_HYENA_2,Temple du Job / désert d'Alexandrie (Seth 101-110),106,37368,0,11151,1937,3190,106,106,183,183,2,6,elite/quest,1,3,30,110,18558
+38226,MOB_SD_DEMONBUG_3,Temple du Job / désert d'Alexandrie (Seth 101-110),106,74736,0,22301,1937,3283,106,16777322,183,183,2,6,elite/quest,1,3,50,100,18614
+38255,MOB_SD_HERON_2,Temple du Job / désert d'Alexandrie (Seth 101-110),106,43253,0,11151,1937,3283,106,106,183,183,2,6,elite/quest,1,3,25,75,18643
+38212,MOB_SD_NEITH,Temple du Job / désert d'Alexandrie (Seth 101-110),106,59340839,0,25563690,2761,4544,112,115,189,189,2,3,unique_notice,1,3,60,140,18600
+38203,MOB_SD_NEPHTHYS_2,Temple du Job / désert d'Alexandrie (Seth 101-110),106,20244541,0,7018319,2534,4172,109,109,186,186,2,8,unique_silencieux,1,3,40,120,18591
+22625,MOB_FW_BATTLEGOLEM_107,Forteresse (guerre de forteresse),107,49829602,0,22051464,2173,3099,107,107,184,184,2,3,unique_notice,1,3,42,56,12179
+22205,MOB_FW_HYEONGCHEON_107,Forteresse (guerre de forteresse),107,49150885,0,16538598,2052,3283,107,107,184,184,2,3,unique_notice,1,3,23,74,11759
+22345,MOB_FW_MUJIGI_107,Forteresse (guerre de forteresse),107,37372201,0,16538598,2052,3283,107,107,184,184,2,3,unique_notice,1,3,38,143,11899
+21505,MOB_FW_TAESE_107,Forteresse (guerre de forteresse),107,65534514,0,22051464,2173,3099,107,107,184,184,2,3,unique_notice,1,3,10,34,11059
+36232,MOB_GOD_GHOST_MARAUDER_B4,Forgotten World (pilliers/uniques),107,102398,0,22970,1994,3379,107,107,184,184,2,6,elite/quest,1,3,15,55,18024
+36240,MOB_GOD_GHOST_SEIREN_B4,Forgotten World (pilliers/uniques),107,102398,0,22970,1994,3379,107,107,184,184,2,6,elite/quest,1,3,30,55,18032
+38213,MOB_SD_ANUBIS,Temple du Job / désert d'Alexandrie (Seth 101-110),107,94054249,0,40680779,2922,4809,114,118,191,191,2,3,unique_notice,1,3,60,120,18601
+38206,MOB_SD_HORUS_2,Temple du Job / désert d'Alexandrie (Seth 101-110),107,21054524,0,7228869,2608,4293,110,110,187,187,2,8,unique_silencieux,1,3,40,90,18594
+38187,MOB_SD_LLIGHTINGKHEPRI_3,Temple du Job / désert d'Alexandrie (Seth 101-110),107,77859,0,22970,1994,3379,107,107,184,184,2,6,elite/quest,1,3,40,75,18575
+38158,MOB_SD_MUMMY_RAGE_2,Temple du Job / désert d'Alexandrie (Seth 101-110),107,38929,0,11485,1994,3190,107,107,184,184,2,6,elite/quest,1,3,20,75,18546
+38198,MOB_SD_SPHINX_3,Temple du Job / désert d'Alexandrie (Seth 101-110),107,32469075,0,11168602,2907,4785,111,111,188,188,2,8,unique_silencieux,1,3,40,75,18586
+22626,MOB_FW_BATTLEGOLEM_108,Forteresse (guerre de forteresse),108,51880621,0,22713008,2236,3190,108,108,185,185,2,3,unique_notice,1,3,42,56,12180
+22206,MOB_FW_HYEONGCHEON_108,Forteresse (guerre de forteresse),108,51181018,0,17034756,2112,3379,108,108,185,185,2,3,unique_notice,1,3,23,74,11760
+22346,MOB_FW_MUJIGI_108,Forteresse (guerre de forteresse),108,38910466,0,17034756,2112,3379,108,108,185,185,2,3,unique_notice,1,3,38,143,11900
+21506,MOB_FW_TAESE_108,Forteresse (guerre de forteresse),108,68241358,0,22713008,2236,3190,108,108,185,185,2,3,unique_notice,1,3,10,34,11060
+36264,MOB_GOD_GHOST_COMMANDER_B4,Forgotten World (pilliers/uniques),108,106627,0,23659,2052,3477,108,108,185,185,2,6,elite/quest,1,3,17,55,18056
+36248,MOB_GOD_GHOST_KINGNIPPER_B4,Forgotten World (pilliers/uniques),108,106627,0,23659,2236,3190,108,108,185,185,2,6,elite/quest,1,3,30,55,18040
+36256,MOB_GOD_GHOST_PIRATE_B4,Forgotten World (pilliers/uniques),108,106627,0,23659,2112,3379,108,108,185,185,2,6,elite/quest,1,3,12,55,18048
+38214,MOB_QD_ISIS,AUTRE,108,96673272,0,41901202,3006,4946,115,119,192,192,2,3,unique_notice,1,3,50,55,18602
+38238,MOB_SD_KEISAS_3,Temple du Job / désert d'Alexandrie (Seth 101-110),108,93845,0,23659,2052,3283,108,108,185,185,2,6,elite/quest,1,3,30,75,18626
+38234,MOB_SD_MONT_3,Temple du Job / désert d'Alexandrie (Seth 101-110),108,93845,0,23659,2052,3283,108,108,185,185,2,6,elite/quest,1,3,23,75,18622
+38209,MOB_SD_OSIRIS_2,Temple du Job / désert d'Alexandrie (Seth 101-110),108,28861400,0,9927647,2683,4417,111,111,188,188,2,8,unique_silencieux,1,3,40,100,18597
+38167,MOB_SD_SAND_HYENA_3,Temple du Job / désert d'Alexandrie (Seth 101-110),108,81063,0,23659,2052,3379,108,108,185,185,2,6,elite/quest,1,3,30,110,18555
+38201,MOB_SD_SEKHMET_3,Temple du Job / désert d'Alexandrie (Seth 101-110),108,33379222,0,11503661,2991,4923,112,112,189,189,2,8,unique_silencieux,1,3,50,55,18589
+38179,MOB_SD_TELBASTA_2,Temple du Job / désert d'Alexandrie (Seth 101-110),108,40532,0,11830,2052,3283,108,108,185,185,2,6,elite/quest,1,3,20,100,18567
+22627,MOB_FW_BATTLEGOLEM_109,Forteresse (guerre de forteresse),109,53985442,0,23394398,2301,3283,109,109,186,186,2,3,unique_notice,1,3,42,56,12181
+22207,MOB_FW_HYEONGCHEON_109,Forteresse (guerre de forteresse),109,53264536,0,17545798,2173,3477,109,109,186,186,2,3,unique_notice,1,3,23,74,11761
+22347,MOB_FW_MUJIGI_109,Forteresse (guerre de forteresse),109,40489082,0,17545798,2173,3477,109,109,186,186,2,3,unique_notice,1,3,38,143,11901
+21507,MOB_FW_TAESE_109,Forteresse (guerre de forteresse),109,71019381,0,23394398,2301,3283,109,109,186,186,2,3,unique_notice,1,3,10,34,11061
+36296,MOB_GOD_GHOST_BEAST_B4,Forgotten World (pilliers/uniques),109,12891122,0,4825094,2236,3379,109,109,186,186,2,8,unique_silencieux,1,3,30,75,18088
+36304,MOB_GOD_GHOST_CURSE_B4,Forgotten World (pilliers/uniques),109,53985442,0,48738,1306,4360,109,109,186,186,2,6,elite/quest,1,3,20,100,18096
+36288,MOB_GOD_GHOST_GLUTTONY_B4,Forgotten World (pilliers/uniques),109,12891122,0,4825094,2236,3379,109,109,186,186,2,8,unique_silencieux,1,3,15,75,18080
+36272,MOB_GOD_GHOST_SPECTER_B4,Forgotten World (pilliers/uniques),109,110968,0,24369,2112,3578,109,109,186,186,2,6,elite/quest,1,3,10,55,18064
+36342,MOB_GOD_GHOST_UNDINE_B4,Forgotten World (pilliers/uniques),109,62502412,0,23394398,2112,3578,109,109,186,186,2,3,unique_notice,1,3,30,75,18134
+38174,MOB_SD_BASTET_3,Temple du Job / désert d'Alexandrie (Seth 101-110),109,84352,0,24369,2112,3379,109,109,186,186,2,6,elite/quest,1,3,20,100,18562
+38171,MOB_SD_CHIEF_HYENA_3,Temple du Job / désert d'Alexandrie (Seth 101-110),109,84352,0,24369,2112,3477,109,109,186,186,2,6,elite/quest,1,3,30,110,18559
+38215,MOB_SD_ERIS,Temple du Job / désert d'Alexandrie (Seth 101-110),109,87783966,0,27120519,2435,4007,114,114,191,191,2,8,unique_silencieux,1,3,100,200,18603
+26736,MOB_SD_HAROERIS,Temple du Job / désert d'Alexandrie (Seth 101-110),109,244859450,0,76310958,3543,5829,118,123,195,195,2,3,unique_notice,1,3,0,0,13542
+38261,MOB_SD_HAROERIS_DROP,Temple du Job / désert d'Alexandrie (Seth 101-110),109,1,0,0,0,0,0,0,0,0,0,8,unique_silencieux,1,3,0,0,18649
+38162,MOB_SD_MUMMY_HUBRIS_3,Temple du Job / désert d'Alexandrie (Seth 101-110),109,84352,0,24369,2112,3379,109,109,186,186,2,6,elite/quest,1,3,20,75,18550
+38256,MOB_SE_HERON_3,AUTRE,109,97660,0,24369,2112,3578,109,109,186,186,2,6,elite/quest,1,3,25,75,18644
+22628,MOB_FW_BATTLEGOLEM_110,Forteresse (guerre de forteresse),110,56145398,0,24096229,2367,3379,110,110,187,187,2,3,unique_notice,1,3,42,56,12182
+22208,MOB_FW_HYEONGCHEON_110,Forteresse (guerre de forteresse),110,55402762,0,18072172,2236,3578,110,110,187,187,2,3,unique_notice,1,3,23,74,11762
+22348,MOB_FW_MUJIGI_110,Forteresse (guerre de forteresse),110,42109049,0,18072172,2236,3578,110,110,187,187,2,3,unique_notice,1,3,38,143,11902
+21508,MOB_FW_TAESE_110,Forteresse (guerre de forteresse),110,73870349,0,24096229,2367,3379,110,110,187,187,2,3,unique_notice,1,3,10,34,11062
+38177,MOB_SD_BAST_3,Temple du Job / désert d'Alexandrie (Seth 101-110),110,87727,0,25100,2173,3477,110,110,187,187,2,6,elite/quest,1,3,20,100,18565
+38207,MOB_SD_HORUS_3,Temple du Job / désert d'Alexandrie (Seth 101-110),110,35270343,0,12204234,3165,5210,114,114,191,191,2,8,unique_silencieux,1,3,40,90,18595
+38159,MOB_SD_MUMMY_RAGE_3,Temple du Job / désert d'Alexandrie (Seth 101-110),110,87727,0,25100,2173,3477,110,110,187,187,2,6,elite/quest,1,3,20,75,18547
+38210,MOB_SD_OSIRIS_3,Temple du Job / désert d'Alexandrie (Seth 101-110),110,48336636,0,16760481,3256,5359,115,115,192,192,2,8,unique_silencieux,1,3,40,100,18598
+26738,MOB_SD_SETH,Temple du Job / désert d'Alexandrie (Seth 101-110),110,236392140,0,77719959,3746,6163,120,125,197,197,2,3,unique_notice,1,3,0,0,13544
+38262,MOB_SD_SETH_DROP,Temple du Job / désert d'Alexandrie (Seth 101-110),110,1,0,0,0,0,0,0,0,0,0,8,unique_silencieux,1,3,0,0,18650
+38180,MOB_SD_TELBASTA_3,Temple du Job / désert d'Alexandrie (Seth 101-110),110,87727,0,25100,2173,3477,110,110,187,187,2,6,elite/quest,1,3,20,100,18568
+22629,MOB_FW_BATTLEGOLEM_111,Forteresse (guerre de forteresse),111,57722800,0,24819116,2435,3477,111,111,188,188,2,3,unique_notice,1,3,42,56,12183
+22209,MOB_FW_HYEONGCHEON_111,Forteresse (guerre de forteresse),111,56965311,0,18614337,2301,3681,111,111,188,188,2,3,unique_notice,1,3,23,74,11763
+22349,MOB_FW_MUJIGI_111,Forteresse (guerre de forteresse),111,43292100,0,18614337,2301,3681,111,111,188,188,2,3,unique_notice,1,3,38,143,11903
+21509,MOB_FW_TAESE_111,Forteresse (guerre de forteresse),111,75953747,0,24819116,2435,3477,111,111,188,188,2,3,unique_notice,1,3,10,34,11063
+22630,MOB_FW_BATTLEGOLEM_112,Forteresse (guerre de forteresse),112,59340839,0,25563690,2505,3578,112,112,189,189,2,3,unique_notice,1,3,42,56,12184
+22210,MOB_FW_HYEONGCHEON_112,Forteresse (guerre de forteresse),112,58568200,0,19172768,2367,3787,112,112,189,189,2,3,unique_notice,1,3,23,74,11764
+21510,MOB_FW_TAESE_112,Forteresse (guerre de forteresse),112,78090933,0,25563690,2505,3578,112,112,189,189,2,3,unique_notice,1,3,10,34,11064
+41354,MOB_JUPITER_APOLLO_LION,"Temple de Jupiter (101-120, retrofit D12)",112,61009,0,19972,2435,3681,112,112,189,189,2,6,elite/quest,0,3,10,40,18731
+22631,MOB_FW_BATTLEGOLEM_113,Forteresse (guerre de forteresse),113,61000511,0,26330601,2576,3681,113,16777329,190,190,2,3,unique_notice,1,3,42,56,12185
+22211,MOB_FW_HYEONGCHEON_113,Forteresse (guerre de forteresse),113,60212419,0,19747950,2435,3896,113,113,190,190,2,3,unique_notice,1,3,23,74,11765
+22351,MOB_FW_MUJIGI_113,Forteresse (guerre de forteresse),113,45750383,0,19747950,2435,3896,113,113,190,190,2,3,unique_notice,1,3,38,143,11905
+21511,MOB_FW_TAESE_113,Forteresse (guerre de forteresse),113,80283225,0,26330601,2576,3681,113,113,190,190,2,3,unique_notice,1,3,10,34,11065
+41367,MOB_JUPITER_GRIFFIN,"Temple de Jupiter (101-120, retrofit D12)",113,47657,0,20571,2367,4007,113,113,190,190,2,6,elite/quest,0,3,40,90,18744
+41359,MOB_JUPITER_MINO,"Temple de Jupiter (101-120, retrofit D12)",113,47657,0,20571,2367,4007,113,113,190,190,2,6,elite/quest,0,3,40,100,18736
+41342,MOB_JUPITER_SOUL_CUTER,"Temple de Jupiter (101-120, retrofit D12)",113,47657,0,20571,2505,3787,113,113,190,190,2,6,elite/quest,0,3,40,100,18719
+22632,MOB_FW_BATTLEGOLEM_114,Forteresse (guerre de forteresse),114,62702833,0,27120519,2650,3787,114,114,191,191,2,3,unique_notice,1,3,42,56,12186
+22212,MOB_FW_HYEONGCHEON_114,Forteresse (guerre de forteresse),114,61898979,0,20340390,2505,4007,114,114,191,191,2,3,unique_notice,1,3,23,74,11766
+22352,MOB_FW_MUJIGI_114,Forteresse (guerre de forteresse),114,47027125,0,20340390,2505,4007,114,114,191,191,2,3,unique_notice,1,3,38,143,11906
+21512,MOB_FW_TAESE_114,Forteresse (guerre de forteresse),114,82531973,0,27120519,2650,3787,114,114,191,191,2,3,unique_notice,1,3,10,34,11066
+41356,MOB_JUPITER_ANATU_LION,"Temple de Jupiter (101-120, retrofit D12)",114,64478,0,21188,2576,3896,114,114,191,191,2,6,elite/quest,0,3,10,40,18733
+22213,MOB_FW_HYEONGCHEON_115,Forteresse (guerre de forteresse),115,63628917,0,20950601,2576,4122,115,115,192,192,2,3,unique_notice,1,3,23,74,11767
+22353,MOB_FW_MUJIGI_115,Forteresse (guerre de forteresse),115,48336636,0,20950601,2576,4122,115,115,192,192,2,3,unique_notice,1,3,38,143,11907
+21513,MOB_FW_TAESE_115,Forteresse (guerre de forteresse),115,84838556,0,27934134,2725,3896,115,115,192,192,2,3,unique_notice,1,3,10,34,11067
+41411,MOB_JUPITER_AUTHORITY_CROWN,"Temple de Jupiter (101-120, retrofit D12)",115,66280,0,14549,2505,4240,115,115,192,192,2,6,elite/quest,0,3,0,0,18788
+41414,MOB_JUPITER_BABILION_CLON,"Temple de Jupiter (101-120, retrofit D12)",115,66280,0,14549,2505,4240,115,115,192,192,2,6,elite/quest,0,3,20,40,18791
+41360,MOB_JUPITER_DESPAIR_MINO,"Temple de Jupiter (101-120, retrofit D12)",115,50351,0,21824,2505,4240,115,115,192,192,2,6,elite/quest,0,3,40,100,18737
+41412,MOB_JUPITER_HEAVENLY_GODS,"Temple de Jupiter (101-120, retrofit D12)",115,66280,0,14549,2505,4240,115,115,192,192,2,6,elite/quest,0,3,0,0,18789
+41370,MOB_JUPITER_IMMOTAL_GRIFFIN,"Temple de Jupiter (101-120, retrofit D12)",115,50351,0,21824,2505,4240,115,115,192,192,2,6,elite/quest,0,3,40,90,18747
+41410,MOB_JUPITER_LIFE_SEED,"Temple de Jupiter (101-120, retrofit D12)",115,66280,0,14549,2505,4240,115,115,192,192,2,6,elite/quest,0,3,0,0,18787
+41415,MOB_JUPITER_PROHIBITION,"Temple de Jupiter (101-120, retrofit D12)",115,66280,0,14549,2505,4240,115,115,192,192,2,6,elite/quest,0,3,0,0,18792
+41413,MOB_JUPITER_REFLECTION_SHIELD,"Temple de Jupiter (101-120, retrofit D12)",115,66280,0,14549,2505,4240,115,115,192,192,2,6,elite/quest,0,3,0,0,18790
+41416,MOB_JUPITER_THE_EARTH1,"Temple de Jupiter (101-120, retrofit D12)",115,15907229,0,5237650,2650,4007,120,120,197,197,2,8,unique_silencieux,0,3,30,40,18793
+41417,MOB_JUPITER_THE_EARTH2,"Temple de Jupiter (101-120, retrofit D12)",115,18028193,0,5936004,2650,4007,121,121,198,198,2,8,unique_silencieux,0,3,32,45,18794
+41418,MOB_JUPITER_YUNO,"Temple de Jupiter (101-120, retrofit D12)",115,24168318,0,9078594,2505,4240,123,123,200,200,2,3,unique_notice,0,3,60,100,18795
+22634,MOB_FW_BATTLEGOLEM_116,Forteresse (guerre de forteresse),116,66239622,0,28772158,2802,4007,116,116,193,193,2,3,unique_notice,1,3,42,56,12188
+22214,MOB_FW_HYEONGCHEON_116,Forteresse (guerre de forteresse),116,65403293,0,21579119,2650,4240,116,116,193,193,2,3,unique_notice,1,3,23,330,11768
+22354,MOB_FW_MUJIGI_116,Forteresse (guerre de forteresse),116,49679717,0,21579119,2650,4240,116,116,193,193,2,3,unique_notice,1,3,38,143,11908
+21514,MOB_FW_TAESE_116,Forteresse (guerre de forteresse),116,87204391,0,28772158,2802,4007,116,116,193,193,2,3,unique_notice,1,3,10,34,11068
+41386,MOB_JUPITER_DEVIL_DARK,"Temple de Jupiter (101-120, retrofit D12)",116,51750,0,22478,2725,4122,116,116,193,193,2,6,elite/quest,0,3,30,100,18763
+22635,MOB_FW_BATTLEGOLEM_117,Forteresse (guerre de forteresse),117,68076248,0,29635324,2882,4122,117,117,194,194,2,3,unique_notice,1,3,42,56,12189
+22215,MOB_FW_HYEONGCHEON_117,Forteresse (guerre de forteresse),117,67223192,0,22226493,2725,4360,117,117,194,194,2,3,unique_notice,1,3,23,74,11769
+22355,MOB_FW_MUJIGI_117,Forteresse (guerre de forteresse),117,51057186,0,22226493,2725,4360,117,117,194,194,2,3,unique_notice,1,3,38,143,11909
+21515,MOB_FW_TAESE_117,Forteresse (guerre de forteresse),117,89630923,0,29635324,2882,4122,117,117,194,194,2,3,unique_notice,1,3,10,34,11069
+41403,MOB_JUPITER_GREED_WATCH,"Temple de Jupiter (101-120, retrofit D12)",117,53185,0,23153,2650,4484,117,117,194,194,2,6,elite/quest,0,3,20,100,18780
+22636,MOB_FW_BATTLEGOLEM_118,Forteresse (guerre de forteresse),118,69959843,0,30524383,2963,4240,118,118,195,195,2,3,unique_notice,1,3,42,56,12190
+22356,MOB_FW_MUJIGI_118,Forteresse (guerre de forteresse),118,52469882,0,22893287,2802,4484,118,118,195,195,2,3,unique_notice,1,3,38,143,11910
+21516,MOB_FW_TAESE_118,Forteresse (guerre de forteresse),118,92119635,0,30524383,2963,4240,118,118,195,195,2,3,unique_notice,1,3,10,34,11070
+41406,MOB_JUPITER_BLOOD_SERPENT,"Temple de Jupiter (101-120, retrofit D12)",118,63312,0,23847,2725,4611,118,118,195,195,2,6,elite/quest,0,3,20,75,18783
+41390,MOB_JUPITER_BLOOD_WITCH2,"Temple de Jupiter (101-120, retrofit D12)",118,54656,0,23847,2725,4611,118,118,195,195,2,6,elite/quest,0,3,50,120,18767
+41375,MOB_JUPITER_CURSING_FANATICISM,"Temple de Jupiter (101-120, retrofit D12)",118,63312,0,23847,2725,4611,118,118,195,195,2,6,elite/quest,0,3,30,75,18752
+41420,MOB_JUPITER_DARK_DOG,"Temple de Jupiter (101-120, retrofit D12)",118,26234941,0,9920425,2725,4611,124,124,201,201,2,8,unique_silencieux,0,3,30,100,18797
+22637,MOB_FW_BATTLEGOLEM_119,Forteresse (guerre de forteresse),119,71891551,0,31440114,3047,4360,119,119,196,196,2,3,unique_notice,1,3,42,56,12191
+22217,MOB_FW_HYEONGCHEON_119,Forteresse (guerre de forteresse),119,71004032,0,23580086,2882,4611,119,119,196,196,2,3,unique_notice,1,3,23,74,11771
+22357,MOB_FW_MUJIGI_119,Forteresse (guerre de forteresse),119,53918663,0,23580086,2882,4611,119,119,196,196,2,3,unique_notice,1,3,38,143,11911
+21517,MOB_FW_TAESE_119,Forteresse (guerre de forteresse),119,94672043,0,31440114,3047,4360,119,119,196,196,2,3,unique_notice,1,3,10,34,11071
+41404,MOB_JUPITER_DESIRE_WATCH,"Temple de Jupiter (101-120, retrofit D12)",119,65064,0,24563,2802,4741,119,119,196,196,2,6,elite/quest,0,3,20,75,18781
+22638,MOB_FW_BATTLEGOLEM_120,Forteresse (guerre de forteresse),120,73872544,0,32383316,3132,4484,120,120,197,197,2,3,unique_notice,1,3,42,56,12192
+22218,MOB_FW_HYEONGCHEON_120,Forteresse (guerre de forteresse),120,72967274,0,24287487,2963,4741,120,120,197,197,2,3,unique_notice,1,3,23,74,11772
+22358,MOB_FW_MUJIGI_120,Forteresse (guerre de forteresse),120,55404408,0,24287487,2963,4741,120,120,197,197,2,3,unique_notice,1,3,38,143,11912
+21518,MOB_FW_TAESE_120,Forteresse (guerre de forteresse),120,97289699,0,32383316,3132,4484,120,120,197,197,2,3,unique_notice,1,3,10,34,11072
+41423,MOB_JUPITER_BAAL,"Temple de Jupiter (101-120, retrofit D12)",120,55404408,0,20239573,2882,4875,132,132,209,209,2,3,unique_notice,0,3,40,110,18800
+41424,MOB_JUPITER_BAAL_WEAPON,"Temple de Jupiter (101-120, retrofit D12)",120,83106612,0,28335402,2882,4875,132,132,209,209,2,3,unique_notice,0,3,40,110,18801
+41422,MOB_JUPITER_BABILION,"Temple de Jupiter (101-120, retrofit D12)",120,40116151,0,13493048,2882,4875,128,128,205,205,2,3,unique_notice,0,3,20,75,18799
+41391,MOB_JUPITER_BLOOD_WITCH,"Temple de Jupiter (101-120, retrofit D12)",120,57713,0,25299,2882,4875,120,120,197,197,2,6,elite/quest,0,3,50,120,18768
+41421,MOB_JUPITER_DARK_DOG2,"Temple de Jupiter (101-120, retrofit D12)",120,31395831,0,12143744,2882,4875,126,126,203,203,2,8,unique_silencieux,0,3,30,100,18798
+41377,MOB_JUPITER_DESPAIR_FANATICISM,"Temple de Jupiter (101-120, retrofit D12)",120,66860,0,25299,2882,4875,120,120,197,197,2,6,elite/quest,0,3,30,75,18754
+41387,MOB_JUPITER_DEVIL_HELL,"Temple de Jupiter (101-120, retrofit D12)",120,57713,0,25299,3047,4611,120,120,197,197,2,6,elite/quest,0,3,30,100,18764
+41419,MOB_JUPITER_JUPITER,"Temple de Jupiter (101-120, retrofit D12)",120,40116151,0,13155722,2882,4875,128,128,205,205,2,3,unique_notice,0,3,60,75,18796
+41408,MOB_JUPITER_NIGHTMARE_SERPENT,"Temple de Jupiter (101-120, retrofit D12)",120,66860,0,25299,2882,4875,120,120,197,197,2,6,elite/quest,0,3,20,75,18785
+22639,MOB_FW_BATTLEGOLEM_121,Forteresse (guerre de forteresse),121,75904020,0,33354818,3220,4611,121,121,198,198,2,3,unique_notice,1,3,42,56,12193
+22219,MOB_FW_IYEONGCHEON_121,Forteresse (guerre de forteresse),121,74980645,0,25016113,3047,4875,121,121,198,198,2,3,unique_notice,1,3,23,74,11773
+21519,MOB_FW_TAESE_121,Forteresse (guerre de forteresse),121,99974193,0,33354818,3220,4611,121,121,198,198,2,3,unique_notice,1,3,10,34,11073
+22640,MOB_FW_BATTLEGOLEM_122,Forteresse (guerre de forteresse),122,77987205,0,34355464,3310,4741,122,122,199,199,2,3,unique_notice,1,3,42,56,12194
+22220,MOB_FW_HYEONGCHEON_122,Forteresse (guerre de forteresse),122,77045363,0,25766598,3132,5012,122,122,199,199,2,3,unique_notice,1,3,23,74,11774
+22360,MOB_FW_MUJIGI_122,Forteresse (guerre de forteresse),122,58490404,0,25766598,3132,5012,122,122,199,199,2,3,unique_notice,1,3,38,143,11914
+21520,MOB_FW_TAESE_122,Forteresse (guerre de forteresse),122,102727151,0,34355464,3310,4741,122,122,199,199,2,3,unique_notice,1,3,10,34,11074
+22641,MOB_FW_BATTLEGOLEM_123,Forteresse (guerre de forteresse),123,80123357,0,35386129,3403,4875,123,123,200,200,2,3,unique_notice,1,3,42,56,12195
+22221,MOB_FW_HYEONGCHEON_123,Forteresse (guerre de forteresse),123,79162678,0,26539597,3220,5152,123,123,200,200,2,3,unique_notice,1,3,23,74,11775
+22361,MOB_FW_MUJIGI_123,Forteresse (guerre de forteresse),123,60092518,0,26539597,3220,5152,123,123,200,200,2,3,unique_notice,1,3,38,143,11915
+21521,MOB_FW_TAESE_123,Forteresse (guerre de forteresse),123,105550237,0,35386129,3403,4875,123,123,200,200,2,3,unique_notice,1,3,10,34,11075
+22642,MOB_FW_BATTLEGOLEM_124,Forteresse (guerre de forteresse),124,82313760,0,36447713,3497,5012,124,124,201,201,2,3,unique_notice,1,3,42,56,12196
+22222,MOB_FW_HYEONGCHEON_124,Forteresse (guerre de forteresse),124,81333867,0,27335784,3310,5296,124,124,201,201,2,3,unique_notice,1,3,23,74,11776
+22362,MOB_FW_MUJIGI_124,Forteresse (guerre de forteresse),124,61735320,0,27335784,3310,5296,124,124,201,201,2,3,unique_notice,1,3,38,143,11916
+21522,MOB_FW_TAESE_124,Forteresse (guerre de forteresse),124,108445156,0,36447713,3497,5012,124,124,201,201,2,3,unique_notice,1,3,10,34,11076
+22643,MOB_FW_BATTLEGOLEM_125,Forteresse (guerre de forteresse),125,84559729,0,37541145,3595,5152,125,125,202,202,2,3,unique_notice,1,3,42,56,12197
+22223,MOB_FW_HYEONGCHEON_125,Forteresse (guerre de forteresse),125,83560239,0,28155859,3403,5444,125,16777341,202,202,2,3,unique_notice,1,3,23,74,11777
+22363,MOB_FW_MUJIGI_125,Forteresse (guerre de forteresse),125,63419797,0,28155859,3403,5444,125,125,202,202,2,3,unique_notice,1,3,38,143,11917
+21523,MOB_FW_TAESE_125,Forteresse (guerre de forteresse),125,111413652,0,37541145,3595,5152,125,125,202,202,2,3,unique_notice,1,3,10,34,11077
+22644,MOB_FW_BATTLEGOLEM_126,Forteresse (guerre de forteresse),126,86862612,0,38667379,3694,5296,126,126,203,203,2,3,unique_notice,1,3,42,56,12198
+22224,MOB_FW_HYEONGCHEON_126,Forteresse (guerre de forteresse),126,85843132,0,29000534,3497,5596,126,126,203,203,2,3,unique_notice,1,3,23,74,11778
+22364,MOB_FW_MUJIGI_126,Forteresse (guerre de forteresse),126,65146959,0,29000534,3497,5596,126,126,203,203,2,3,unique_notice,1,3,38,143,11918
+21524,MOB_FW_TAESE_126,Forteresse (guerre de forteresse),126,114457509,0,38667379,3694,5296,126,126,203,203,2,3,unique_notice,1,3,10,34,11078
+22645,MOB_FW_BATTLEGOLEM_127,Forteresse (guerre de forteresse),127,89223787,0,39827400,3796,5444,127,127,204,204,2,3,unique_notice,1,3,42,56,12199
+22225,MOB_FW_HYEONGCHEON_127,Forteresse (guerre de forteresse),127,88183916,0,29870550,3595,5751,127,127,204,204,2,3,unique_notice,1,3,23,74,11779
+22365,MOB_FW_MUJIGI_127,Forteresse (guerre de forteresse),127,66917840,0,29870550,3595,5751,127,127,204,204,2,3,unique_notice,1,3,38,143,11919
+22646,MOB_FW_BATTLEGOLEM_128,Forteresse (guerre de forteresse),128,91644663,0,41022221,3901,5596,128,128,205,205,2,3,unique_notice,1,3,42,56,12200
+22366,MOB_FW_MUJIGI_128,Forteresse (guerre de forteresse),128,68733497,0,30766666,3694,5911,128,128,205,205,2,3,unique_notice,1,3,38,143,11920
+21526,MOB_FW_TAESE_128,Forteresse (guerre de forteresse),128,120778660,0,41022221,3901,5596,128,128,205,205,2,3,unique_notice,1,3,10,34,11080
+22647,MOB_FW_BATTLEGOLEM_129,Forteresse (guerre de forteresse),129,94126684,0,42252889,4009,5751,129,129,206,206,2,3,unique_notice,1,3,42,56,12201
+22227,MOB_FW_HYEONGCHEON_129,Forteresse (guerre de forteresse),129,93044804,0,31689667,3796,6074,129,129,206,206,2,3,unique_notice,1,3,23,74,11781
+22367,MOB_FW_MUJIGI_129,Forteresse (guerre de forteresse),129,70595013,0,31689667,3796,6074,129,16777345,206,206,2,3,unique_notice,1,3,38,143,11921
+21527,MOB_FW_TAESE_129,Forteresse (guerre de forteresse),129,124059738,0,42252889,4009,5751,129,16777345,206,206,2,3,unique_notice,1,3,10,34,11081
+22648,MOB_FW_BATTLEGOLEM_130,Forteresse (guerre de forteresse),130,96671329,0,43520475,4119,5911,130,130,207,207,2,3,unique_notice,1,3,42,56,12202
+22228,MOB_FW_HYEONGCHEON_130,Forteresse (guerre de forteresse),130,95567811,0,32640356,3901,6242,130,130,207,207,2,3,unique_notice,1,3,23,74,11782
+22368,MOB_FW_MUJIGI_130,Forteresse (guerre de forteresse),130,72503497,0,32640356,3901,6242,130,130,207,207,2,3,unique_notice,1,3,38,143,11922
+21528,MOB_FW_TAESE_130,Forteresse (guerre de forteresse),130,127423748,0,43520475,4119,5911,130,130,207,207,2,3,unique_notice,1,3,10,34,11082
+22649,MOB_FW_BATTLEGOLEM_131,Forteresse (guerre de forteresse),131,99280109,0,44826090,4232,6074,131,131,208,208,2,3,unique_notice,1,3,42,56,12203
+22229,MOB_FW_HYEONGCHEON_131,Forteresse (guerre de forteresse),131,98154520,0,33619568,4009,6414,131,131,208,208,2,3,unique_notice,1,3,23,74,11783
+22369,MOB_FW_MUJIGI_131,Forteresse (guerre de forteresse),131,74460082,0,33619568,4009,6414,131,131,208,208,2,3,unique_notice,1,3,38,143,11923
+21529,MOB_FW_TAESE_131,Forteresse (guerre de forteresse),131,130872694,0,44826090,4232,6074,131,131,208,208,2,3,unique_notice,1,3,10,34,11083
+22650,MOB_FW_BATTLEGOLEM_132,Forteresse (guerre de forteresse),132,101954572,0,46170874,4348,6242,132,132,209,209,2,3,unique_notice,1,3,42,56,12204
+22230,MOB_FW_HYEONGCHEON_132,Forteresse (guerre de forteresse),132,100806471,0,34628155,4119,6591,132,132,209,209,2,3,unique_notice,1,3,23,74,11784
+22370,MOB_FW_MUJIGI_132,Forteresse (guerre de forteresse),132,76465929,0,34628155,4119,6591,132,132,209,209,2,3,unique_notice,1,3,38,143,11924
+21530,MOB_FW_TAESE_132,Forteresse (guerre de forteresse),132,134408628,0,46170874,4348,6242,132,132,209,209,2,3,unique_notice,1,3,10,34,11084
+22651,MOB_FW_BATTLEGOLEM_133,Forteresse (guerre de forteresse),133,104696301,0,47556000,4467,6414,133,133,210,210,2,3,unique_notice,1,3,42,56,12205
+22231,MOB_FW_HYEONGCHEON_133,Forteresse (guerre de forteresse),133,103525238,0,35667000,4232,6772,133,133,210,210,2,3,unique_notice,1,3,23,74,11785
+22371,MOB_FW_MUJIGI_133,Forteresse (guerre de forteresse),133,78522225,0,35667000,4232,6772,133,133,210,210,2,3,unique_notice,1,3,38,143,11925
+21531,MOB_FW_TAESE_133,Forteresse (guerre de forteresse),133,138033651,0,47556000,4467,6414,133,133,210,210,2,3,unique_notice,1,3,10,34,11085
+22652,MOB_FW_BATTLEGOLEM_134,Forteresse (guerre de forteresse),134,107506917,0,48982680,4589,6591,134,134,211,211,2,3,unique_notice,1,3,42,56,12206
+22232,MOB_FW_HYEONGCHEON_134,Forteresse (guerre de forteresse),134,106312433,0,36737010,4348,6957,134,134,211,211,2,3,unique_notice,1,3,23,74,11786
+22372,MOB_FW_MUJIGI_134,Forteresse (guerre de forteresse),134,80630188,0,36737010,4348,6957,134,134,211,211,2,3,unique_notice,1,3,38,143,11926
+21532,MOB_FW_TAESE_134,Forteresse (guerre de forteresse),134,141749911,0,48982680,4589,6591,134,134,211,211,2,3,unique_notice,1,3,10,34,11086
+22653,MOB_FW_BATTLEGOLEM_135,Forteresse (guerre de forteresse),135,110388079,0,50452159,4714,6772,135,135,212,212,2,3,unique_notice,1,3,42,56,12207
+22233,MOB_FW_HYEONGCHEON_135,Forteresse (guerre de forteresse),135,109169706,0,37839119,4467,7147,135,135,212,212,2,3,unique_notice,1,3,23,74,11787
+22373,MOB_FW_MUJIGI_135,Forteresse (guerre de forteresse),135,82791059,0,37839119,4467,7147,135,135,212,212,2,3,unique_notice,1,3,38,143,11927
+21533,MOB_FW_TAESE_135,Forteresse (guerre de forteresse),135,145559608,0,50452159,4714,6772,135,135,212,212,2,3,unique_notice,1,3,10,34,11087
+22654,MOB_FW_BATTLEGOLEM_136,Forteresse (guerre de forteresse),136,113341485,0,51965723,4842,6957,136,136,213,213,2,3,unique_notice,1,3,42,56,12208
+22234,MOB_FW_HYEONGCHEON_136,Forteresse (guerre de forteresse),136,112098744,0,38974292,4589,7343,136,136,213,213,2,3,unique_notice,1,3,23,74,11788
+22374,MOB_FW_MUJIGI_136,Forteresse (guerre de forteresse),136,85006114,0,38974292,4589,7343,136,136,213,213,2,3,unique_notice,1,3,38,143,11928
+21534,MOB_FW_TAESE_136,Forteresse (guerre de forteresse),136,149464993,0,51965723,4842,6957,136,136,213,213,2,3,unique_notice,1,3,10,34,11088
+22655,MOB_FW_BATTLEGOLEM_137,Forteresse (guerre de forteresse),137,116368873,0,53524695,4974,7147,137,16777353,214,214,2,3,unique_notice,1,3,42,56,12209
+22235,MOB_FW_HYEONGCHEON_137,Forteresse (guerre de forteresse),137,115101277,0,40143521,4714,7543,137,137,214,214,2,3,unique_notice,1,3,23,74,11789
+22375,MOB_FW_MUJIGI_137,Forteresse (guerre de forteresse),137,87276654,0,40143521,4714,7543,137,137,214,214,2,3,unique_notice,1,3,38,143,11929
+21535,MOB_FW_TAESE_137,Forteresse (guerre de forteresse),137,153468369,0,53524695,4974,7147,137,137,214,214,2,3,unique_notice,1,3,10,34,11089
+22656,MOB_FW_BATTLEGOLEM_138,Forteresse (guerre de forteresse),138,119472019,0,55130438,5108,7343,138,138,215,215,2,3,unique_notice,1,3,42,56,12210
+22236,MOB_FW_HYEONGCHEON_138,Forteresse (guerre de forteresse),138,118179071,0,41347828,4842,7748,138,138,215,215,2,3,unique_notice,1,3,23,74,11790
+22376,MOB_FW_MUJIGI_138,Forteresse (guerre de forteresse),138,89604014,0,41347828,4842,7748,138,138,215,215,2,3,unique_notice,1,3,38,143,11930
+21536,MOB_FW_TAESE_138,Forteresse (guerre de forteresse),138,157572095,0,55130438,5108,7343,138,138,215,215,2,3,unique_notice,1,3,10,34,11090
+22657,MOB_FW_BATTLEGOLEM_139,Forteresse (guerre de forteresse),139,122652743,0,56784353,5247,7543,139,139,216,216,2,3,unique_notice,1,3,42,56,12211
+22237,MOB_FW_HYEONGCHEON_139,Forteresse (guerre de forteresse),139,121333936,0,42588264,4974,7958,139,139,216,216,2,3,unique_notice,1,3,23,74,11791
+21537,MOB_FW_TAESE_139,Forteresse (guerre de forteresse),139,161778582,0,56784353,5247,7543,139,139,216,216,2,3,unique_notice,1,3,10,34,11091
+22238,MOB_FW_HYEONGCHEON_140,Forteresse (guerre de forteresse),140,124567725,0,43865913,5108,8174,140,140,217,217,2,3,unique_notice,1,3,23,74,11792
+21538,MOB_FW_TAESE_140,Forteresse (guerre de forteresse),140,166090300,0,58487884,5388,7748,140,140,217,217,2,3,unique_notice,1,3,10,34,11092

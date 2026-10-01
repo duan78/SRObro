@@ -28,6 +28,7 @@ Ce document fournit les **coordonnées de spawn précises** pour les monstres im
 - Community guides et databases
 - Rapports multilingues 2026-10 : [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md)
 - Fichiers serveur fuités 2026-10 : [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) (✅ taux de spawn champion/giant résolus — `GiantMonster_SpawnRatio` 14 % hardcodé ; timers `Tab_RefNest` ; colonne `Rarity` de `_RefObjCommon`)
+- 🗄️ **Extraction DB serveur vSRO 2026-10** : [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) — 7 157 monstres avec stats serveur (HP/EXP/atk/rareté) dans [`ML_RESEARCH/data/monsters_vsro188.csv`](ML_RESEARCH/data/monsters_vsro188.csv) (+ [`uniques_vsro188.csv`](ML_RESEARCH/data/uniques_vsro188.csv) 830 uniques/élites, [`monsters_cap120.csv`](ML_RESEARCH/data/monsters_cap120.csv) 1 442 rows ≥ 111, [`zones_vsro188.csv`](ML_RESEARCH/data/zones_vsro188.csv) agrégats par zone) · guides de spawn Medusa/Job Temple : [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md)
 
 **Format des Coordonnées:**
 - X, Y (World coordinates)
@@ -45,6 +46,8 @@ Ce document fournit les **coordonnées de spawn précises** pour les monstres im
 > ✅ **Timers par unique (recherche TR 2026-10)** : fenêtres rapportées en minutes après la mort — **Tiger Girl ~210-390 min · Cerberus ~200-400 min · Captain Ivy ~200-450 min (jusqu'à 700 min !) · Uruchi ~230-450 min** ; règle générique DonanımHaber : « 3,5-5 h », « minimum 2 h après le dernier kill, ensuite aléatoire ». Sources : [Extraloob](https://www.extraloob.com/threads/silkroad-1-100-level-unique-hakkinda-bilgiler-234754) · [DonanımHaber](https://forum.donanimhaber.com/unique-spawn-saatleri--14339078)
 >
 > ✅ **Timers par défaut des fichiers vSRO (recherche PS 2026-10)** — `Tab_RefNest.dwDelayTimeMin/Max` (valeurs en secondes) : **TG/Cerberus/Ivy/Isyutaru/Yarkan/Shaitan = 6 h · Uruchi = 3 h · Medusa = 4 h** (respawn à un point aléatoire après tirage min/max) ; l'ancien « 4 h par défaut vSRO » est affiné en valeurs par unique. Sources : [RaGEZONE — Dev: Unique Spawn Time](https://forum.ragezone.com/threads/dev-unique-spawn-time.820175) · [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md)
+>
+> ⚠️ **Nuance timers (extraction DB vSRO 2026-10)** : la table `Tab_RefNest` n'a **pas** pu être extraite de façon fiable du backup parsé — des rows de nid y présentent des `dwDelayTime` **standardisés à 3 h (10 800 s)**, signe de **timers édités par le serveur privé** (non vanilla). **On conserve les valeurs 6 h/3 h/4 h documentées ci-dessus** (défauts vSRO des threads forum) ; ne pas reprendre les 3 h généralisés de cette DB rétrofitée. Source : [ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) §10.
 >
 > ✅ **HP validés en croisé (recherche TR/FR/DE 2026-10)** : les 7 uniques classiques sont confirmés par 2 sources TR indépendantes (DonanımHaber + MMSRN), le guide FR GMS Temple 2010 et les forums DE — valeurs identiques au client. **Revalidés ensuite par le tracker [m3stat](https://www.m3stat.com/uniques) (serveurs officiels iSRO, recherche PS 2026-10)**, qui fournit aussi les HP des boss 111+ (Kidemonas 120 = 13 851 102, Karkadann 123 = 15 023 129, Merikh 125 = 18 372 504 — voir [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md)).
 >
@@ -157,9 +160,10 @@ ID: 3877 | Code: MOB_RM_ROC (classé "party monster" dans le client)
 Drops: top tier (raid de guilde)
 ```
 
-#### Medusa / BeakYung the White Viper (Level 105)
+#### Medusa / BeakYung the White Viper (Level 100/105)
 ```
 Zone: Qin-Shi Tomb B6 — White Viper Chamber (pièce nord)
+Code serveur: MOB_TQ_WHITESNAKE (ID 14997) — ✅ révélé (extraction DB vSRO 2026-10)
 Accès: Serin Gate (centre du B4), ouvertes 04h00/10h00/16h00/22h00 pendant 10 min
 HP: 183,535,199
 Prérequis: clear du B5 (4 gardiens level 98-99 — noms ZH officiels: 玄武颛顼/白虎小昊/青龙太皥/朱雀炎帝, + 炎火客神武 cité)
@@ -167,8 +171,9 @@ Prérequis: clear du B5 (4 gardiens level 98-99 — noms ZH officiels: 玄武颛
 Drops: équipement 10D-11D (top tier)
 ```
 > ✅ **Résolu (recherche TR 2026-10 — [SroLobby B6](https://www.srolobby.com/konular/silkroad-online-qin-shi-tomb-b6-monsters-mob-hp-saldiri-tipleri.1780))** : le B6 compte **4 salles dont 2 avec uniques** — SoSo The Black Viper **Lv 100, HP 27 655 068** (attaques physique & magique) ; BeakYung the White Viper HP 183 535 199 (physique & magique).
-> ⚠️ **Conflit non tranché** : niveau de BeakYung **100** selon les sources TR (SroLobby + Extraloob) vs **105** selon le client iSRO et le wiki TW DiGeam (HP identiques des deux côtés).
-> **Accès rapporté (Extraloob)** : B5 = **5 uniques** à tuer, B6 = tuer **4× l'unique 95** puis salle Medusa — divergent du protocole « 4 gardiens + Shinmoo » (non tranché). Skills officiels TW : AoE magique, ligature frontale, **pétrification 100 %** en rayon ([DiGeam](https://srowiki.digeam.com/%E7%B5%82%E6%A5%B5boss%E4%BB%8B%E7%B4%B9)).
+> ⚠️ **Conflit non tranché** : niveau de BeakYung **100** selon les sources TR (SroLobby + Extraloob) vs **105** selon le client iSRO et le wiki TW DiGeam (HP identiques des deux côtés) — la row serveur de la DB vSRO 1.188 est au **niveau 100** (extraction DB 2026-10), ce qui rejoint les sources TR.
+> **Accès rapporté (Extraloob)** : B5 = **5 uniques** à tuer, B6 = tuer **4× l'unique 95** puis salle Medusa — corroboré par la route SroTURK (recherche PS 2026-10) ; divergent du protocole « 4 gardiens + Shinmoo » (non tranché). Skills officiels TW : AoE magique, ligature frontale, **pétrification 100 %** en rayon ([DiGeam](https://srowiki.digeam.com/%E7%B5%82%E6%A5%B5boss%E4%BB%8B%E7%B4%B9)).
+> ✅ **Spawns horaires résolus (guides TR 2013, recherche PS 2026-10)** : Medusa spawn **4x/jour à heures fixes — 04:00 / 10:00 / 16:00 / 22:00** ; à son spawn, « **Gate of Sarin Tribe open** » s'affiche et la porte B4→B5 (Sarin Gate) reste ouverte **10 minutes seulement** — si vous mourez et repartez en ville, impossible de revenir : y aller **en party**. Sources : [TurkHackTeam — Medusa Rehberi](https://www.turkhackteam.org/konular/medusa-rehberi.872217) · [SroTURK — route](https://www.sroturk.com/serverler/medusa-nasil-kesilir-medusa-eventi-silkroad-sabah-sporu.333) · [ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md).
 
 #### Uniques du Job Temple (Alexandrie, levels 103-110)
 ```
@@ -242,15 +247,19 @@ Zone de job PvP au sud d'Alexandrie (cap 120). Monstres `MOB_SD_*` :
 ```
 Monstres: Uneg (100), Weneg (101), Dark Khepri (101), Dark Scout (102), Blood Hyena (104)
 
-Uniques (accès selon AP de l'union de job):
-Apis      Level 103 | HP 21,068,995   | spawn après Isis+Anubis (rapporté)
-Selket    Level 105 | HP 80,811,919   | libre
-Neith     Level 106 | HP 83,077,174   | libre
-Anubis    Level 107 | HP 150,486,799  | AP requis
-Isis      Level 108 | HP 154,677,234  | AP requis
-Haroeris  Level 109 | HP 440,747,010  | zone profonde
-Seth      Level 110 | HP 425,505,853  | zone profonde
+Uniques (accès selon AP de l'union de job) — HP client iSRO / HP DB vSRO 1.188 (= Extraloob):
+Apis      Level 103 | HP 21,068,995 / 21,068,995   | spawn après Isis+Anubis (rapporté) | —
+Selket    Level 105 | HP 80,811,919 / 57,722,800   | libre      | Sanctum of Restriction
+Neith     Level 106 | HP 83,077,174 / 59,340,839   | libre      | Sanctum of Blue Eye
+Anubis    Level 107 | HP 150,486,799 / 94,054,249  | AP requis  | Sanctum of Punishment
+Isis      Level 108 | HP 154,677,234 / 96,673,272  | AP requis  | Sanctum of Atonement
+Haroeris  Level 109 | HP 440,747,010 / 244,859,450 | zone profonde | Sanctum of Immorality
+Seth      Level 110 | HP 425,505,853 / 236,392,140 | zone profonde | Sanctum of Dark
 ```
+
+> ✅ **Spawns du temple (recherche PS 2026-10)** : le Job Temple **n'est pas une instance** — salles « ouvertes pendant que les uniques spawn, **2x/jour à heure fixe** » (cycle **12 h**, alertes in-game 10 min et 5 min avant). Entrées aux extrémités du **Salt Desert** selon le job : **Red Eggre** (Hunters/Traders) et **Black Eggre** (Thieves) — niveau **105+ et costume de job obligatoire**. Ordre imposé : **Haroeris avant Seth**. Horaires chiffrés (Selket/Neith 03:30 & 15:30 · Anubis/Isis 09:30 & 21:30 · Haroeris/Seth 12:30 & 00:30) = **[CUSTOM ExaySRO]**. Système AP détaillé : [15_UNIQUE_BOSSES.md — Guide AP](15_UNIQUE_BOSSES.md). Sources : [ExaySRO — Job Temple Unique Guide](https://forum.exaysro.com/showthread.php?tid=3875) · [SeaSRO](https://cap110.seasro.com/guide/job-temple) · [RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md).
+>
+> ✅ **HP Job Temple côté serveur (extraction DB vSRO 2026-10)** : la DB 1.188 et la liste client Extraloob ([S5](https://www.extraloob.com/threads/silkroad-1-110-lvl-monster-unique-hpleri-246312)) concordent à l'unité près (57,7 M → 244,9 M ; **Haroeris > Seth**) — divergence vs client iSRO documentée dans [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md). Également dans la zone : **Eris 109 = 87 783 966 HP** (Temple du Job/désert). Source : [RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) §6.
 
 > 🇰🇷 Validation croisée (recherche KO2 2026-10) : la gamedata officielle coréenne liste les mêmes uniques — 셀키스 105 · 네이트 106 · 아누비스 107 · 이시스 108 · 하로에리스 109 · 세이트 110 — niveaux identiques au client iSRO. Source : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md).
 
@@ -315,7 +324,7 @@ Accès: NPC "Mortifying Monk" situé au 타클라마칸 (Taklamakan) — même l
 Donjons: Ice Temple (寒冰獄) 131-135 · Fire Temple (火焰獄) 136-140 (clé du Secret Tomb)
 ```
 
-> ⚠️ **Lacunes** : niveaux exacts des boss Jupiter/Bagdad/Shambhala non publiés ; HP indisponibles partout (extraction client requise) ; monstres de terrain 121+ non listés officiellement (la gamedata kSRO s'arrête au Jupiter 2011). Détail des donjons : [13_ZONES_OVERVIEW.md — section KSRO](./13_ZONES_OVERVIEW.md).
+> ⚠️ **Lacunes** : niveaux exacts des boss Jupiter/Bagdad/Shambhala non publiés ; ✅ **HP Jupiter résolus (extraction DB vSRO 2026-10)** — rows `MOB_JUPITER_*` du retrofit D12 chiffrées (Jupiter 40,1 M · Baal 55,4 M · Yuno 24,2 M HP…, voir [15_UNIQUE_BOSSES.md — Boss Jupiter](15_UNIQUE_BOSSES.md) et [monsters_cap120.csv](ML_RESEARCH/data/monsters_cap120.csv)) ; HP Bagdad/Shambhala (121+) toujours indisponibles (extraction client requise) ; monstres de terrain 121+ non listés officiellement (la gamedata kSRO s'arrête au Jupiter 2011). Détail des donjons : [13_ZONES_OVERVIEW.md — section KSRO](./13_ZONES_OVERVIEW.md).
 
 ---
 
@@ -860,3 +869,4 @@ class UniqueSpawnNotifier {
 
 *Sources: xSROMap, silkroadonline.wiki (données client), rev6, elitepvpers, mmorpg.com (Qin-Shi Tomb), Monster Area Wiki, Community Guides*
 *Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (timers de spawn par unique, Qin-Shi B6, validation HP) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5 nommés, skills Medusa) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) (conflit spawn 4h/6h) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) · rapports KO2 (section 🇰🇷 zones de spawn KSRO 106-140 : Dimension Miroir, donjons Jupiter, Bagdad, Shambhala) · [RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) + [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md) (recherche PS 2026-10 : ✅ taux de spawn champion/giant résolus — GiantMonster_SpawnRatio 14 % hardcodé ; ✅ timers Tab_RefNest 6 h/3 h/4 h ; ✅ HP 111+ m3stat ; colonne Rarity de _RefObjCommon)*
+*Extraction DB vSRO 2026-10 ([RESEARCH_VSRO_DB_MONSTERS.md](ML_RESEARCH/RESEARCH_VSRO_DB_MONSTERS.md) + [RESEARCH_PS_GAMEPLAY.md](ML_RESEARCH/RESEARCH_PS_GAMEPLAY.md)) : ✅ référence des CSV `monsters_vsro188.csv`/`uniques_vsro188.csv`/`monsters_cap120.csv`/`zones_vsro188.csv` ajoutée aux sources ; ✅ nuance timers (DB rétrofitée éditée à 3 h → on conserve les défauts Tab_RefNest 6/3/4 h) ; ✅ spawns horaires de Medusa (04:00/10:00/16:00/22:00, Sarin Gate 10 min) ; ✅ spawns du Job Temple (2x/jour, cycle 12 h, Red/Black Eggre, sanctuaires) ; ✅ HP Job Temple côté serveur + codename MOB_TQ_WHITESNAKE*

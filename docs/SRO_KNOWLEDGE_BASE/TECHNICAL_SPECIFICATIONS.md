@@ -1,11 +1,13 @@
 # Technical Specifications - Silkroad Online (Spécifications du Jeu Officiel)
 
 > ⚠️ **Révision majeure (2026-10)** : ajout des **spécifications du jeu officiel** extraites de [SilkroadDoc (DummkopfOfHachtenduden)](https://github.com/DummkopfOfHachtenduden/SilkroadDoc/wiki) — protocole client-serveur, handshake de sécurité, opcodes, architecture serveur vSRO, formats de fichiers client (pk2) et structures `_RefSkill`. Les sections « stack navigateur / React » (dupliquées du Development Technical Guide) ont été retirées → voir [DEVELOPMENT_TECHNICAL_GUIDE.md](DEVELOPMENT_TECHNICAL_GUIDE.md) pour l'architecture SRObro.
+> ✅ **Ajout (recherche VSRO 2026-10)** : nouvelle section **« Configuration serveur officielle (vSRO 1.188) »** — `server.cfg` clé par clé (IBUV/CAPTCHA, AutomatedPunisher, fee rates, flags d'événements, LOCALE), `srNodeType.ini`/`srShard.ini`, contradiction des unités de rates documentée, ~40 commandes GM, procédures stockées métier, anti-cheat reconstitué (GameGuard → HackShield → XTrap + défenses serveur). Source : [ML_RESEARCH/RESEARCH_VSRO_SERVER.md](ML_RESEARCH/RESEARCH_VSRO_SERVER.md).
 
 ## 📋 Table des Matières
 - [Overview](#-overview)
 - [Architecture Officielle du Jeu](#-architecture-officielle-du-jeu)
 - [Fichiers Serveur Officiels (Fuités) — Recherche PS 2026-10](#-fichiers-serveur-officiels-fuités--recherche-ps-2026-10)
+- [Configuration serveur officielle (vSRO 1.188) — Recherche VSRO 2026-10](#-configuration-serveur-officielle-vsro-1188--recherche-vsro-2026-10)
 - [Protocole Réseau Officiel (TCP)](#-protocole-réseau-officiel-tcp)
 - [Core Systems](#-core-systems)
 - [Formulas and Calculations](#-formulas-and-calculations)
@@ -130,19 +132,207 @@ SR_MachineManager → SR_GlobalManager → SR_GatewayServer → SR_AgentServer �
 - **Certification** : serveur d'authentification maison sur le **port 32000** + scripts **ASP/IIS** pour le billing ; le **SMC (Server Management Console)** pilote l'ensemble (AUTO START : Gateway/Agent/GlobalManager/GameServer).
 - **Répartition du monde** : la table **`_RefRegionBindAssocServer`** assigne chaque région à un GameServer (**0 = désactivée, 1/2/3 = GS1/2/3**) — **un seul GameServer ne peut pas charger toutes les régions** : le monde officiel tournait en **grille de plusieurs gameservers par régions**.
 
-### Rates serveur (server.cfg) — sémantique officielle
+### Rates serveur (server.cfg) — ⚠️ deux conventions contradictoires documentées
 
 ```
-Taux réel = valeur / 1000
-ExpRatio 1000        = ×1   ← VALEUR PAR DÉFAUT des files = les taux officiels
-ExpRatio 35000       = ×35
-ExpRatioParty        = multiplicateur de party (ex 4500 = ×4.5) · ExpRatioPartyBonus
+Modèle A (guides de rates) : taux réel = valeur / 1000
+ExpRatio 1000        = ×1 · ExpRatio 35000 = ×35
+ExpRatioParty        = multiplicateur de party (ex 4500 = ×4.5) · ExpRatioPartyBonus (ex 3000 = ×3)
 DropItemRatio        = fréquence de drop (même formule /1000)
 DropGoldAmountCoef   = or par monstre (2 = double) · HwanGainFactor = vitesse de gain du Zerk
+
+Modèle B (dump réel d'une config 1.188 — RaGEZONE 780273 page 33) :
+ExpRatio 100 · ExpRatioParty 100 · DropItemRatio 0,1 · DropGoldAmountCoef 0,1
+← lisible comme ×1 / ×1 / 0,1 / 0,1 (le fix BlackRogue dit « edit the 100 »)
 ```
 
-- Les rates se chargent **en mémoire au démarrage** → **restart complet du GameServer** requis pour tout changement. Sources : [TopGameServer — How to Change vSRO EXP and Silk Rates](https://topgameserver.net/drop) · [miroir elitepvpers du guide du leaker](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/1433603-guide-setting-up-server-based-vsro-server-files.html).
+- ⚠️ **Contradiction non tranchée (✅ recherche VSRO 2026-10)** : les **guides** ([TopGameServer](https://topgameserver.net/drop) : « 1000 = x1, 5000 = x5, 35000 = x35 » ; guide elitepvpers) utilisent massivement l'échelle /1000, mais le **dump réel d'une config 1.188 saine** ([RaGEZONE 780273, page 33](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273/page-33)) montre `ExpRatio 100` / `DropItemRatio 0,1` — lisible comme « 100 = ×1 » ; et le fix des rates BlackRogue dit « edit the 100 » ([epvp](https://www.elitepvpers.com/forum/sro-private-server/3308860-blackrogue-110-rates-fix.html)). Possibles conventions différentes selon les générations de files (1.188 vs 1.274 vs BR) ou confusion récurrente des guides. **À trancher par mesure en jeu** (`/mobkill 0` sur un mob de référence + comparaison de l'EXP). Le dump (coefficients décimaux 0,1) plaide pour le modèle « pourcentage/décimal » sur 1.188 — non confirmé.
+- Les rates se chargent **en mémoire au démarrage** → **restart complet du GameServer** requis pour tout changement. Sources : [TopGameServer — How to Change vSRO EXP and Silk Rates](https://topgameserver.net/drop) · [miroir elitepvpers du guide du leaker](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/1433603-guide-setting-up-server-based-vsro-server-files.html) · [dump page 33](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273/page-33).
+- **EXP et SP sont liés en vanilla** — le patcher « EXP/SP Rates splitter » les découple en patchant les floats de `SR_GameServer.exe` ([RaGEZONE — EXP/SP Rates splitter](https://forum.ragezone.com/threads/exp-sp-rates-splitter.870955)).
+- Autres clés de rates documentées : `SilkOwnTime` (délai avant qu'un silk acheté soit « possédé »), `SilkPerHour`, `SilkDropRate`.
 - ⚖️ Rappel : ces files restent la propriété de Joymax/Wemade — recensées ici **à des fins de documentation uniquement** (précédent Joymax c. ECSRO, cf. rapport PS §9).
+
+---
+
+## ⚙️ Configuration serveur officielle (vSRO 1.188) — Recherche VSRO 2026-10
+
+> ✅ **(recherche VSRO 2026-10)** : la **configuration officielle clé par clé**, documentée à partir du dump complet d'une config 1.188 en production posté par l'utilisateur **stefsika** dans le thread du leaker ([RaGEZONE 780273, page 33](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273/page-33) — le document de config le plus complet disponible publiquement), complété par le post principal du guide ([page 1](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273)), la page 4 (SMC/capacité — [RZ page 4](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273/page-4)) et le [Official-vSRO Error Thread](https://forum.ragezone.com/threads/official-vsro-error-thread-solution-collection-please-contribute.812346/). Rapport intégral : [ML_RESEARCH/RESEARCH_VSRO_SERVER.md](ML_RESEARCH/RESEARCH_VSRO_SERVER.md) · écosystème : [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md).
+
+### 1. `server.cfg` — un bloc par module (lu au démarrage, restart requis)
+
+Valeurs littérales du dump (les virgules décimales `0,1` viennent d'un collage par un utilisateur francophone) :
+
+```ini
+Common {
+    debug_option_debugger_present false            ← flags de debug par module
+    debug_option_console_present false
+}
+
+GlobalManager {
+    Certification "10.67.15.85", 32001              ← IP + port du serveur de certification
+    LoginFailureTolerance 3                        ← échecs de login tolérés avant punition
+    IBUVFailureTolerance 3                         ← échecs de CAPTCHA (image) tolérés
+    LoginFailureBlockTimeMin 10                    ← durée de blocage (min) après échecs login
+    IBUVFailureBlockTimeMin 10                     ← idem après échecs CAPTCHA
+    AutomatedPunisher "AutomatedPunisher"          ← module de punition automatique (le blocage était
+                                                    ← autrefois fait par commande GM — commentaire coréen d'origine)
+    LoginPunishmentGuide "Illegal logging detected"        ← messages affichés au joueur
+    IBUVPunishmentGuide "Illegal code string detected"     (+ Login/IBUVPunishmentDescription)
+}
+
+GatewayServer {
+    LastFullVersion_SR_Client 130                  ← version minimale du client acceptée
+    Certification "", 32000
+    IBUVQueueReserveCount 20000                    ← nb d'images de CAPTCHA pré-générées (commentaire coréen d'origine)
+    IBUVQueuePrepareRatio 0.05                     ← ratio de régénération des images en temps d'idle
+    IBUVFailureIPTolerance 0                       ← échecs CAPTCHA tolérés PAR IP (0 = aucun blocage)
+    IBUVStringSize 6                               ← taille du code : 3 si jeu de caractères coréen, 6 si latin
+    IBUVCharacterSet "ABCDEFGHLMNQRTabdehimn2345678"   ← alphabet du CAPTCHA
+}
+
+DownloadServer { Certification "", 32000 }
+FarmManager     { Certification "", 32000 }
+MachineManager  { Certification "", 32000 }
+
+AgentServer {
+    Certification "", 32004                        ← certifié en premier, relais clients
+}                                                 ← LIMITE OFFICIELLE : 1000 utilisateurs/AgentServer
+
+SR_GameServer {
+    Certification "", 32004
+    ExpRatio 100                                   ← taux EXP (⚠️ unités contestées, cf. §4)
+    ExpRatioParty 100                              ← taux EXP en groupe
+    DropItemRatio 0,1                              ← fréquence de drop d'items
+    DropGoldAmountCoef 0,1                         ← coefficient d'or par monstre
+    WINTER_EVENT_2009 0                            ← flags d'événements historiques Joymax (EVENT_ON/EVENT_OFF)
+    EUBUSINESS_EVENT 0
+    GOLDEN_PIG_FEBRUARY_EVENT 0
+    THANKS_GIVING_EVENT 0
+    LIBERATION_EVENT 0
+    LOCALE LOCALE_VIETNAM                          ← locale régionale du service (« for Helper mark »)
+    SET_FEE_RATE "0,5,5,5"                         ← frais de pose (stall), 3 paliers — ifdef OPEN_MARKET_SYSTEM
+    SELL_FEE_RATE "0,10,10,10"                     ← frais de vente en consignation, 3 paliers
+}
+
+SR_ShardManager {
+    UserID "sa" / Password "..."                   ← identifiants MSSQL
+    GlobalManager "IP", 32001 · MachineManager "IP", 32000 · Certificate "IP", 32004
+    BILLING_SERVER_URL "http://<IP>:1337/"         ← billing ASP/IIS (DBConnect.asp)
+    CREST_FTP_URL "ftp://crest:<pass>@<IP>"        ← FTP des crest de guilde
+    ExtraExpRatio 0,1                              ← bonus EXP global du shard
+    ChristmasEvent2007 0                           ← flag événement historique
+    SERVER_EVENT_SYSTEM ON                         ← système d'événements serveur
+    FlagEvent 0/1                                  ← event flags par serveur
+    HourForMeterRateLevelFirst 22 / Second 23      ← « heures pleines » (interprétation plausible non attestée)
+    BattleArenaRandom 1 · BattleArenaParty 1 · BattleArenaGuild 1 · BattleArenaJob 1
+    ArenaMatchOccupy 1 · ArenaMatchFlag 1 · ArenaMatchPoint 1
+}
+```
+
+**Lecture pour SRObro** (✅ recherche VSRO 2026-10) :
+- **`IBUV*` = le CAPTCHA officiel de login** (« Image-Based User Verification » — opcodes 0x2322/0x6323/0xA323 documentés dans la section Protocole) : **20 000 images pré-générées** (régénérées en tâche de fond à hauteur de `IBUVQueuePrepareRatio 0,05`), code de **6 caractères** (3 si jeu de caractères coréen) sur l'alphabet restreint `ABCDEFGHLMNQRTabdehimn2345678`, tolérance d'échecs par IP configurable (0 = pas de blocage), punition automatique — **le système anti-bot de login du jeu officiel, documenté dans ses moindres paramètres**, y compris les commentaires coréens d'origine des ingénieurs Joymax conservés dans les files.
+- **`AutomatedPunisher`** : composant nommé du GlobalManager qui applique les blocages (3 échecs login ou CAPTCHA → 10 min) — preuve d'une architecture punitive officielle anti-abus.
+- **`SET_FEE_RATE "0,5,5,5"` / `SELL_FEE_RATE "0,10,10,10"`** = les frais de l'économie joueur : **5 % de frais de stall (pose), 10 % de frais de consignation** par défaut (3 paliers) — constantes économiques officielles.
+- **Flags d'événements** (Winter 2009, Golden Pig février, Thanksgiving, Liberation, Christmas 2007) : le calendrier événementiel officiel passé est **pilotable par config** (EVENT_ON/EVENT_OFF).
+- **`LOCALE LOCALE_VIETNAM`** gravé dans la config : preuve interne de l'origine vietnamienne du service (cf. fuite vSRO 2011).
+
+### 2. `srNodeType.ini` — la topologie officielle : 48 nœuds, 6 machines × 3 Agents × 2-3 Gateways
+
+| Fichier | Rôle | Clés documentées |
+|---|---|---|
+| **`srNodeType.ini`** | Inventaire des nœuds de la ferme — **48 entrées** | `[entry] id, operation_type, name` — `operation_type 22` = machine physique, `17` = processus serveur, `0` = Certification Manager (`id=133`) ; ids jusqu'à 831 ; `machine_manager_node_id` 1901-1919 pour la 6ᵉ machine |
+| **`srGlobalService.ini`** | Déclare le GlobalManager | `[global] count=1` ; `[entry0] operation_type=22, name="SRO_Vietnam_TestLocal"` (⚠️ 2ᵉ preuve interne d'origine vietnamienne), query ODBC, `global_manager_node_id=697` |
+| **`srShard.ini`** | Déclare un shard | `id=64`, `name=Server1`, `global_operation_id=20`, **`capacity` 2300 dans le dump officiel** (1000 chez stefsika — la capacité est modifiable, [RZ page 4](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273/page-4)), `shard_manager_node_id=705`, `query`/`query_log` (DSN ODBC vers SHARD/LOG), `u1=240 u2=208 u3=17 u4=1 u5=0 u6=0 u7=0` (slots/ratios internes **non documentés**) |
+| **`machine.ini`** | Déclare une machine au MachineManager | nom de machine + IP réseau devant matcher la première carte réseau ([r10dev — MachineManager config](https://r10dev.net/konular/vsro-machinemanager-configuration-guide.16078)) |
+| `cert.ini` (repacks récents) | Config du serveur de certification custom | [r10dev — installation guide](https://r10dev.net/konular/vsro-server-files-installation-guide-full-setup.5504) |
+| `DBConnect.asp` | Script ASP/IIS du billing | chaîne SQL + vérification compte/silk (guide du leaker) |
+
+**🏆 La pépite topologique (S2)** : le dump déclare la **topologie officielle du service vietnamien** — le paquet original porte les machines `Main_machine` et `2nd_machine` (GlobalManager `GWS1`, FarmManager+GameServer `FMGS1`), et la section complétée déclare **6 machines SD (`SDMGS1`..`SDMGS6`)** portant chacune **3 AgentServers (`SDnAGS1-3`)** et **2-3 GatewayServers (`SDnGAS1-3`)**. La base 1.188 était donc un **environnement de test à 6 machines** — cohérent avec la limite « un seul GameServer ne peut pas charger toutes les régions » (`_RefRegionBindAssocServer`).
+
+### 3. Certification — comment un module s'enregistre (rappel opérationnel)
+
+1. Le Certification Manager (nœud `id=133`, `operation_type 0`) écoute sur le **port 32000** ; chaque module déclare `Certification "<IP>", <port>` : **32001** GlobalManager, **32000** Gateway/Download/Farm/MachineManager, **32004** AgentServer/SR_GameServer/SR_ShardManager.
+2. Un module **non déclaré dans `srNodeType.ini` ne peut pas se certifier** (erreur type « Cannot certify server body [IP] ») ; la certification **lit l'IP de la première carte réseau** — les adaptateurs virtuels (Hamachi/VMware) la cassent (outil communautaire `srPatcher_1.0.6` « spoof ip »).
+3. Le GlobalManager affiche « **Max User Count Restriction Per IP : system default(infinite)** » — la limite de connexions par IP est un **réglage officiel du GlobalManager**.
+Sources : guide du leaker (S1) · dump (S2) · [Error Thread](https://forum.ragezone.com/threads/official-vsro-error-thread-solution-collection-please-contribute.812346/) (S6).
+
+### 4. Rates : contradiction des unités documentée (non tranché)
+
+| Modèle | Sources | Détail |
+|---|---|---|
+| **« valeur = pourcentage, 100 = ×1 »** | **Dump réel 1.188** (S2) : `ExpRatio 100`, `ExpRatioParty 100`, `DropItemRatio 0,1`, `DropGoldAmountCoef 0,1` ; fix BlackRogue « edit the 100 » ([epvp — BR 110 Rates fix](https://www.elitepvpers.com/forum/sro-private-server/3308860-blackrogue-110-rates-fix.html)) ; SR_ShardManager BR pré-patchés ([RZ 1068146](https://forum.ragezone.com/threads/blackrogue-110lv-shard-rate-fix.1068146)) | Valeurs par défaut d'une config 1.188 saine lisibles comme ×1/×1/0,1/0,1 |
+| **« valeur = millièmes, 1000 = ×1 »** | [TopGameServer](https://topgameserver.net/drop) (« values stored as integers multiplied by 1000 ; 1000 = x1, 5000 = x5, 35000 = x35 ») + guide elitepvpers ; exemple `ExpRatioPartyBonus 3000` = ×3 | Les guides de rates utilisent massivement l'échelle /1000 |
+
+→ Possibles conventions différentes selon les générations de files (1.188 vs 1.274 vs BR) ou confusion récurrente des guides. **À trancher par mesure en jeu** (`/mobkill 0` sur un mob de référence, comparer l'EXP). Le dump (coefficients décimaux 0,1) plaide pour « pourcentage/décimal » sur 1.188 — non confirmé (cf. §Rates de la section « Fichiers Serveur Officiels » ci-dessus).
+
+### 5. Commandes GM (~40 documentées, syntaxe exacte)
+
+> 📌 Sources : thread RaGEZONE « GM Commands » ([781576](https://forum.ragezone.com/threads/gm-commands.781576) + [page 2](https://forum.ragezone.com/threads/gm-commands.781576/page-2)) — dont plusieurs posts de **Chern0byl, le leaker lui-même** (fiabilité 5) — complété par [r10dev — GM Commands](https://r10dev.net/konular/vsro-gm-commands-list-silkroad-online-gm-codes-guide.5380) et [r10dev — GM Console F1](https://r10dev.net/konular/vsro-gm-console-f1-commands-list-silkroad-gm-command-guide.5384).
+
+**Accès** : niveau GM = colonnes **`sec_primary`/`sec_content` de `TB_User`** (`SRO_VT_ACCOUNT`) — « if you don't set this, no GM features » (leaker). Dans le client GM : **F1 = liste des commandes, F2 = liste des monstres, F3 = liste des items**.
+
+| Commande | Effet documenté |
+|---|---|
+| `/makeitem <ITEM> <plus> <nombre>` | créer un item (ex `/makeitem ITEM_CH_BOW_11_A_RARE 10 1`) ; équivalent SQL `EXEC _ADD_ITEM_EXTERN` |
+| `/loadmonster <MOB> <nombre>` | spawner N monstres (ex `MOB_RM_ROC` — le Roc) |
+| `/zoe <MOB> <nombre>` | **spawner ET tuer N fois** le monstre → drops + EXP + SP (« pure GM greed plugin » — posté par le leaker lui-même, ex `/zoe MOB_RM_ROC 50`) |
+| `/zoe2 <MOB> <nombre>` | variante : **drops seulement**, sans EXP |
+| `/mobkill [0]` | tue le mob sélectionné ; `/mobkill 0` = le tuer **avec EXP et récompenses** |
+| `/recalluser <joueur>` · `/movetouser <joueur>` | téléporte le joueur vers le GM / le GM vers le joueur |
+| `/gotown` | téléporte au retour de ville le plus proche |
+| `/warp <X> <Y>` | téléport visuel aux coordonnées |
+| `/ban <char>` · `/bansel` | ⚠️ **ne fait que kicker/déconnecter** (« /ban just kicks » — [epvp](https://www.elitepvpers.com/forum/sro-private-server/4211945-vsro-make-client-disconnect-without-ban.html)) — pas un vrai ban |
+| `/invisible` · `/invincible` | mode GM invisible / invincible |
+| `/snow` · `/rain` · `/sky <mode>` | déclenchent neige, pluie, changement de ciel |
+| `/day` · `/night` | forcent jour/nuit |
+| `/gachastart` | démarre le système Magic POP |
+| `/spawnunique_all` | fait spawner tous les uniques |
+| `/addwp` · `/showwp` · `/delwp` · `/wp <id>` | ajoute/affiche/supprime un waypoint / s'y téléporte |
+| `/liner_draw` | dessin de ligne (debug/édit) |
+| `/gmskill 0` | retire les skills GM |
+| `/setspeed <valeur>` | vitesse de déplacement |
+| `/hwanmode` | mode Zerk forcé |
+| `/zoom` · `/camera` · `/frame` | zoom caméra illimité / caméra libre / affichage FPS |
+| `/ground` · `/mapobj` · `/window` | état du sol / objets de la carte / fenêtre de debug |
+| `/char` · `/getcurpos` · `/chatclear` | infos perso / position actuelle (région + X/Y/Z — utilisé pour créer des spawns) / vide le chat |
+| `/worldstatus` · `/setoptimizecloth` · `/recallguild` · `/screenshotfull` · `/cursor` | statut monde / optimisation des habits GM / rappel de guilde / capture plein écran / curseur |
+
+- **Vrai ban** : SMC → module dédié **`SR_UserPunishment`** (⚠️ exige le **nom de compte**, pas le nom du perso) ou SQL (`_Punishment` + `_BlockedUser`) ; blocage d'IP : module SMC **IPBlock** (dll `ipblock.dll`). Le ban SQL par nom de personnage est « easier than SMC » ([epvp](https://www.elitepvpers.com/forum/sro-pserver-guides-releases/1876233-release-how-ban-player-character-name-database.html)).
+- **Silk** : aucune commande GM — par SQL uniquement, table **`SK_Silk`** (`SRO_VT_ACCOUNT`, clé = JID de `TB_User`).
+- **Actions temps réel sans commande** : [vSRO-ServerAddon (JellyBitz, MIT)](https://github.com/JellyBitz/vSRO-ServerAddon) — DLL injectée via Stud_PE dans SR_GameServer.exe/SR_ShardManager.exe, **19 actions documentées** (give item avec plus aléatoires, ±gold, set Hwan, téléport, drop près du joueur, spawn mob, body state Berserk/Untouchable/GM Invisible/Stealth, +SP/+EXP, cape PvP, réduction HP/MP…) déclenchées par INSERT SQL dans `_ExeGameServer` (table auto-créée) — l'architecture officielle détournée en file de commandes SQL.
+
+### 6. DB métier — procédures stockées notables (le contrat GameServer ↔ DB)
+
+| Procédure | Base | Rôle documenté |
+|---|---|---|
+| **`_AddLogItem`** | SRO_VT_SHARDLOG | **hook universel des événements d'items** — signature `(CharID int, ItemRefID int, ItemSerial bigint, dwData int, strSecNo varchar(1)…)` ; ⚠️ **`@Operation = 41` = consommation d'item** = le déclencheur standard des scrolls customs (Mercenary Scroll : `@ItemRefID between 47023 and 47037` — [vsro.org](https://www.vsro.org/konular/mercenary-scroll-cozumu.2621)), du model switcher (`EXEC SRO_VT_SHARDLOG.dbo._NOVA_SWITCHER`) et du mod « Plus Auto Notice ». Condition : le GameServer doit réellement écrire dans SHARDLOG, sinon rien ne se déclenche |
+| **`_AddTimedJob`** | SRO_VT_SHARD | écrit les **effets temporisés** (buffs, penalties) — table `_TimedJob` (aussi garbage des buffs premium) ; **JobID 1 = penalty de guilde, JobID 2 = penalty de job** — les privés patchent `if (@JobID=1 or @JobID=2) return -1` pour supprimer les délais de sortie de guilde/job |
+| `_AddTimedJobForPet` | SRO_VT_SHARD | variante COS/pets (ex d'inventaire étendu : 112 ou 196 slots) |
+| **`_AddNewCOS`** | SRO_VT_SHARD | création de pet/COS — modifiée pour l'inventaire 5/7 pages (`@MaxInventorySize`) |
+| `_ADD_ITEM_EXTERN` | SRO_VT_SHARD | donner un item par nom de perso + CodeName + quantité + durabilité (ex avatar GM `ITEM_ETC_AVATAR_M_GM_UNIFORM`) |
+| `_SEEK_N_DESTROY_ITEM` | SRO_VT_SHARD | détruire un item chez tous les joueurs (`_RefObjCommon` ↔ `_Items`) |
+| **`_Guild_Create` / `_Guild_FnAddMember`** | SRO_VT_SHARD | création/ajout membre de guilde — patchées par les privés : guilde niveau 5 d'office, `@LiMiT 24` membres, union élargie (5 guildes factices `guildname_ULimit_1..5`) |
+| `_ManageShardCharName` | SRO_VT_SHARD | **jobs 0/1/2 = ajout/suppression/renommage** de perso — s'appuie sur la table **`SR_CharAppoint`** (absente de la DB par défaut → erreur au premier renommage, fix documenté) |
+| `_TRAINING_CAMP_UPDATEHONORRANK` | SRO_VT_SHARD | recalcule les **honor ranks** d'académie (rangs 1-50 de `_TrainingCampHonorRank`) |
+| `_GetMediaLines` (créée par la communauté) | SRO_VT_SHARD | **exporte les lignes DB au format textdata client** (Type 1 = items, Type 2 = characters) — l'outil maison de synchro DB→PK2 |
+
+**Constantes live documentées** ([TopS4A — VSRO Query Collection](https://www.tops4a.com/2019/08/query.html)) : `_Char.InventorySize` **max 109 slots** · `DailyPK/TotalPK/PKPenaltyPoint` (remise à zéro PK) · `RemainHwanCount` (5 charges Zerk) · `_ItemQuotation` (`BaseQuot`, `Quot_LB/UB`) = **cotations de l'économie de trade** (« job gold rate ») · `_Punishment`/`_BlockedUser` = ban SQL · `_RefGachaItemSet.Ratio` = taux Magic Pop.
+
+### 7. Anti-cheat officiel reconstitué — GameGuard → HackShield → XTrap + défenses serveur
+
+**Chronologie des protections client** (✅ recherche VSRO 2026-10) :
+
+| Période | Protection | Preuves |
+|---|---|---|
+| **2005-2007** | **nProtect GameGuard** (INCA Internet) — dossier `GameGuard/` dans `C:/Program Files/Silkroad/` du client officiel ; codes d'erreur 340/350/360/361 = échecs de mise à jour | [nProtect — FAQ officielle](https://gameguardfaq.nprotect.com/eng/con_02.html) · [Silkroad Forums — erreur 340](http://www.silkroadforums.com/viewtopic.php?f=3&t=3859) · contournements d'époque [epvp](https://www.elitepvpers.com/forum/silkroad-online/53522-gameguard-workaround-how-bypass.html) · [ProjectHax](https://forum.projecthax.com/t/removing-gameguard-from-sro-client/23030) |
+| **~2008-2009 →** | **HackShield** (AhnLab) remplace GameGuard sur iSRO — **mise à jour officielle annoncée avec Legend V Plus Battle Arena (08/2010)** : « a new update to the game's HackShield anti-cheat system » | [GamesIndustry.biz — annonce officielle](https://www.gamesindustry.biz/silkroad-online-legend-v-plus-battle-arena-update-launched-with-prizes-to-be-won) |
+| **2011 (vSRO 1.188)** | **XTrap** — le leaker a publié les « Xtrap update files » avec la fuite ; le client 1.188 demande XTrap au lancement (« using agent server no xtrap » = loader sans XTrap) ; bypass documentés : outil « select 1.188 → remove XTrap » ou **serveur XTrap custom via `silkload.dat`** (IP + chiffrement à reverser) | [epvp — disable x-trap](https://www.elitepvpers.com/forum/sro-private-server/2737981-how-disable-x-trap-1-188-vsro-server-files-client.html) · [vsro.org](https://www.vsro.org/konular/how-to-remove-xtrap-from-sro_client-testin-in-obdg-does-anyone-here-know.4675) · [epvp — XTrap bypass](https://www.elitepvpers.com/forum/sro-coding-corner/1432421-way-create-vsro-xtrap-bypass.html) |
+| Toutes époques | **Couche réseau** (header 6 octets, handshake 0x5000 à 5 seeds, security bytes count/CRC, Blowfish sélectif bit 0x8000) — indépendante du choix GameGuard/HackShield/XTrap | [SilkroadDoc — Silkroad-Security](https://github.com/DummkopfOfHachtenduden/SilkroadDoc/wiki/Silkroad-Security) (cf. section Protocole) |
+
+**Défenses côté serveur révélées par les files** :
+- **`AgentServer` log « WARNING! A SUSPECT DETECTED!!! MsgID[0x6102] »** : le serveur **détecte et rejette un client suspect par MsgID** — une sonde d'intégrité côté serveur, pas seulement client (mécanisme interne exact non documenté) — [Error Thread](https://forum.ragezone.com/threads/official-vsro-error-thread-solution-collection-please-contribute.812346/).
+- **`AutomatedPunisher`** (blocage auto 10 min après 3 échecs login/CAPTCHA) + **CAPTCHA IBUV** (file de 20 000 images, codes 6 caractères, tolérance par IP 0) — cf. §1.
+- **Limite d'utilisateurs par IP** du GlobalManager (« Max User Count Restriction Per IP ») + module SMC **IPBlock** + ban `SR_UserPunishment`/`_Punishment` (cf. §5).
 
 ---
 
@@ -659,6 +849,7 @@ Européens : Warrior tank · Rogue burst/stealth · Wizard AoE · Warlock debuff
 | FGW : Dimension Hole | item 24 h · 30 min entre activations · 15 min de retour après sortie | wiki Fandom |
 | FGW : drop | aucun drop si le joueur dépasse les monstres de **7+ niveaux** (règle anti-carry) | wiki officiel ZH DiGeam (recherche ZH 2026-10) |
 | Job Temple | cycles d'ouverture 12 h (avertissements 10/5 min avant) | guides |
+| Anti-abus login (vSRO 1.188) | blocage **10 min** après **3 échecs** login ou CAPTCHA (`AutomatedPunisher` du GlobalManager) | dump server.cfg — ✅ recherche VSRO 2026-10 |
 | Respawn normaux / champions / uniques | 1-5 min / 5-15 min / 3-24 h | communauté |
 
 ---
@@ -683,6 +874,16 @@ Européens : Warrior tank · Rogue burst/stealth · Wizard AoE · Warlock debuff
 - [ducksoup — schémas SQL des ~200 tables de la shard vSRO 1.188](https://github.com/ducksoup-sro/ducksoup/tree/main/Database/VSRO188)
 - Panorama des serveurs privés : [39_PRIVATE_SERVERS.md](39_PRIVATE_SERVERS.md) · rapports [ML_RESEARCH/RESEARCH_PS_FILES.md](ML_RESEARCH/RESEARCH_PS_FILES.md) / [RESEARCH_PS_HIGHCAP.md](ML_RESEARCH/RESEARCH_PS_HIGHCAP.md)
 
+### Configuration serveur, GM, DB, anti-cheat (✅ recherche VSRO 2026-10)
+- [RaGEZONE — dump complet server.cfg/srNodeType.ini/srShard.ini/srGlobalService.ini (stefsika, page 33 du thread du leaker)](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273/page-33) — IBUV (CAPTCHA 20 000 images), AutomatedPunisher, fee rates 5 %/10 %, topologie 48 nœuds, capacity 2300
+- [RaGEZONE — SMC/capacité du shard (page 4)](https://forum.ragezone.com/threads/setting-up-a-server-based-on-vsro-server-files.780273/page-4) · [Official-vSRO Error Thread](https://forum.ragezone.com/threads/official-vsro-error-thread-solution-collection-please-contribute.812346/) — MsgID 0x6102, srPatcher, SR_CharAppoint, CLAMP 2 Md
+- [RaGEZONE — GM Commands (+ page 2, posts du leaker)](https://forum.ragezone.com/threads/gm-commands.781576) · [r10dev — GM Commands](https://r10dev.net/konular/vsro-gm-commands-list-silkroad-online-gm-codes-guide.5380) · [r10dev — GM Console F1](https://r10dev.net/konular/vsro-gm-console-f1-commands-list-silkroad-gm-command-guide.5384) — ~40 commandes, `/zoe`, `/ban` = simple kick
+- [TopS4A — VSRO Query Collection](https://www.tops4a.com/2019/08/query.html) — procédures `_AddLogItem`/`_AddTimedJob`/`_AddNewCOS`/`_Guild_Create`, `InventorySize` max 109, `_ItemQuotation`
+- [vsro.org — Mercenary Scroll (hook `_AddLogItem` Operation 41)](https://www.vsro.org/konular/mercenary-scroll-cozumu.2621) · [JellyBitz — vSRO-ServerAddon](https://github.com/JellyBitz/vSRO-ServerAddon) — 19 actions temps réel via `_ExeGameServer`
+- [GamesIndustry.biz — Legend V Plus Battle Arena (08/2010, HackShield)](https://www.gamesindustry.biz/silkroad-online-legend-v-plus-battle-arena-update-launched-with-prizes-to-be-won) · [nProtect — FAQ GameGuard officielle](https://gameguardfaq.nprotect.com/eng/con_02.html) · [epvp — disable XTrap 1.188](https://www.elitepvpers.com/forum/sro-private-server/2737981-how-disable-x-trap-1-188-vsro-server-files-client.html) — chronologie anti-cheat
+- [opensro — package gmcommand (code décompilé)](https://github.com/opensro-dev/opensro/tree/main/apps/server/internal/game) — contrepoint implémentation des commandes GM
+- Rapport intégral : [ML_RESEARCH/RESEARCH_VSRO_SERVER.md](ML_RESEARCH/RESEARCH_VSRO_SERVER.md) (77 sources indexées avec fiabilité)
+
 ### Client / pk2 / formats
 - [PK2 Internals — Drew 'pushedx' Benton](http://www.stealthex.org/site/showthread.php?5440-More-about-PK2-Internals)
 - [Silkroad file formats (bsr/bms/bmt/bsk/ban) — elitepvpers](http://www.elitepvpers.com/forum/sro-coding-corner/1992824-wip-silkroad-file-formats-bsr-bms-bmt-bsk-ban.html)
@@ -704,6 +905,6 @@ Merci à la communauté Silkroad (SilkroadDoc, pushedx, florian0, jMerlin, elite
 
 ---
 
-**Version :** 2.1 (ajout « Fichiers serveur officiels fuités » — recherche PS 2026-10 : 9 modules + ordre de démarrage, certification port 32000, 1000 joueurs/AgentServer, `_RefRegionBindAssocServer`, ExpRatio 1000 = ×1)
+**Version :** 2.2 (recherche VSRO 2026-10 : section « Configuration serveur officielle vSRO 1.188 » — `server.cfg` complet avec IBUV/CAPTCHA + AutomatedPunisher + fee rates + flags d'événements + LOCALE, `srNodeType.ini` topologie 48 nœuds/6 machines, `srShard.ini` capacity 2300, contradiction des unités de rates documentée, ~40 commandes GM avec syntaxe, procédures stockées métier (`_AddLogItem` Op.41…), anti-cheat GameGuard→HackShield→XTrap + défenses serveur MsgID 0x6102)
 **Last Updated :** 2026-10-01
 **Maintained By :** SRObro Development Team
