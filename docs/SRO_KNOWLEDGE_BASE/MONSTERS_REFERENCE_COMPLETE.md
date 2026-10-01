@@ -23,11 +23,12 @@ Cette **référence consolidée** centralise toutes les informations sur les mon
 ### Sources Consolidées
 
 Cette page fusionne et organise le contenu de :
-- **[MONSTERS_DATABASE.md](MONSTERS_DATABASE.md)** - Base complète (872 lignes)
-- **[MONSTERS_HIGHLEVEL.md](MONSTERS_HIGHLEVEL.md)** - High-level monsters (766 lignes)
-- **[MONSTERS_SPAWN_LOCATIONS.md](MONSTERS_SPAWN_LOCATIONS.md)** - Coordonnées précises (887 lignes)
-- **[14_MONSTER_GUIDE.md](14_MONSTER_GUIDE.md)** - Guide joueur (427 lignes)
-- **[15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md)** - Unique bosses (461 lignes)
+- **[MONSTERS_DATABASE.md](MONSTERS_DATABASE.md)** - Base complète (inclut l'ancien MONSTERS_HIGHLEVEL, fusionné)
+- **[MONSTERS_SPAWN_LOCATIONS.md](MONSTERS_SPAWN_LOCATIONS.md)** - Coordonnées précises
+- **[14_MONSTER_GUIDE.md](14_MONSTER_GUIDE.md)** - Guide joueur
+- **[15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md)** - Unique bosses
+
+> ⚠️ **Note:** `MONSTERS_HIGHLEVEL.md` a été fusionné dans `MONSTERS_DATABASE.md` — les liens vers ce fichier ont été corrigés (2026).
 
 **Total contenu original :** ~3,400 lignes consolidées ici
 
@@ -50,13 +51,13 @@ Cette page fusionne et organise le contenu de :
 | 10-20 | Bandit, Tiger, Wild Dog | Aggro | Jangan Roads | Medium | [→](MONSTERS_DATABASE.md#monstres-level-1-20) |
 | 20-30 | Penon, Niya | Aggro | Donwhang | Medium | [→](MONSTERS_DATABASE.md#monstres-level-20-40) |
 | 30-40 | Uruniger, Earth Ghost | Aggro | Donwhang-Hotan | Medium | [→](MONSTERS_DATABASE.md#monstres-level-40-60) |
-| 40-50 | Ong, Bunwang | Aggro | Hotan East | **Dense** ⭐ | [→](MONSTERS_DATABASE.md#monstres-level-40-60) |
-| 50-60 | Shedim, Dark Devil | Aggro | Hotan West | Dense | [→](MONSTERS_HIGHLEVEL.md#level-60-80) |
-| 60-70 | Mu Jun, Hang-A | Aggro | Hotan South | Medium | [→](MONSTERS_HIGHLEVEL.md#level-60-80) |
-| 70-80 | Bhima, Huang | Aggro | Hotan South | Medium | [→](MONSTERS_HIGHLEVEL.md#level-80-100) |
-| 80-90 | Nightmare, Kujo | Aggro | Alexandria | Medium | [→](MONSTERS_HIGHLEVEL.md#level-80-100) |
-| 90-100 | Petal, Castor | Aggro | Alexandria | Dense | [→](MONSTERS_HIGHLEVEL.md#level-100-110) |
-| 100-110 | Naga, Harpy, Mummy | Aggro | Alexandria Tomb | Dense | [→](MONSTERS_HIGHLEVEL.md#level-100-110) |
+| 30-45 | Ong (34, Tarim Basin) | Aggro | Tarim Basin | **Dense** ⭐ | [→](MONSTERS_DATABASE.md#monstres-level-40-60) |
+| 50-60 | Shedim, Dark Devil | Aggro | Hotan West | Dense | [→](MONSTERS_DATABASE.md#-monstres-level-40-60) |
+| 60-70 | Spiders/Yeti (Karakoram), Earth Ghosts (Asie Mineure) | Aggro | Karakoram / Asia Minor | Medium | [→](MONSTERS_DATABASE.md#-level-60-80) |
+| 70-80 | Qin-Shi Tomb B1, mobs Europe Ouest | Aggro | Jangan Cave / Europe | Medium | [→](MONSTERS_DATABASE.md#-level-60-80) |
+| 80-90 | Wing Tribe, Antinoke, Shaur (Roc Mountain) | Aggro | Roc Mountain | Medium | [→](MONSTERS_DATABASE.md#️-level-80-100) |
+| 90-100 | Qin-Shi Tomb B3-B4, Roc Mountain high | Aggro | Tomb / Roc Mtn | Dense | [→](MONSTERS_DATABASE.md#️-level-80-100) |
+| 100-110 | Uneg, Weneg, Dark Khepri, Blood Hyena | Aggro | Alexandrie / Job Temple | Dense | [→](MONSTERS_DATABASE.md#-level-100-110-alexandrie--job-temple--données-client-vérifiées) |
 
 ---
 
@@ -64,7 +65,7 @@ Cette page fusionne et organise le contenu de :
 
 ### Base Complète (Levels 1-110)
 
-👉 **[MONSTERS_DATABASE.md](MONSTERS_DATABASE.md)** - Base de données complète (872 lignes)
+👉 **[MONSTERS_DATABASE.md](MONSTERS_DATABASE.md)** - Base de données complète
 
 **Contenu:**
 - ✅ Tous les monstres levels 1-110
@@ -85,7 +86,7 @@ Cette page fusionne et organise le contenu de :
 
 ### High-Level Monsters (Levels 60-110)
 
-👉 **[MONSTERS_HIGHLEVEL.md](MONSTERS_HIGHLEVEL.md)** - Monstres haut niveau (766 lignes)
+👉 **[MONSTERS_DATABASE.md](MONSTERS_DATABASE.md)** - Monstres haut niveau (l'ancien MONSTERS_HIGHLEVEL y a été fusionné)
 
 **Contenu:**
 - ✅ Monstres level 60-110 détaillés
@@ -97,8 +98,8 @@ Cette page fusionne et organise le contenu de :
 **Sections:**
 - Level 60-80
 - Level 80-100
-- Level 100-110
-- Unique Boss Stats
+- Level 100-110 (Alexandrie / Job Temple)
+- Unique Boss Stats (données client vérifiées)
 
 ---
 
@@ -107,21 +108,23 @@ Cette page fusionne et organise le contenu de :
 👉 **[MONSTERS_SPAWN_LOCATIONS.md](MONSTERS_SPAWN_LOCATIONS.md)** - Coordonnées précises (887 lignes)
 
 **Contenu:**
-- ✅ **15 Unique Bosses** avec coordonnées X/Y exactes
+- ✅ **Uniques vérifiés** (7 classiques + Roc + Medusa + 7 du Job Temple + boss FGW)
 - ✅ SP farming spots avec coords
 - ✅ Champion/Giant spawns
 - ✅ Leveling zones
 - ✅ Cartes et repères
 
-**Uniques Documentés:**
-1. Tiger Girl (Level 20) - X: 4853.28, Y: 93.81
-2. Cerberus (Level 24) - X: -1551.74, Y: -93.72
-3. Captain Ivy (Level 30) - X: -6424.71, Y: 2744.64
-4. Isyutaru (Level 40) - X: 9018.05, Y: 8385.60
-5. Lord Yarkan (Level 60) - X: 9677.27, Y: 4115.33
-6. Cerberus King (Level 90) - X: -1169.92, Y: -478.68
-7. Medusa (Level 105) - X: -1126.21, Y: -1849.21
-8. ... et 7 autres uniques
+**Uniques Documentés (données client vérifiées 2026):**
+1. Tiger Girl (20) — Bandit Stronghold / Tiger Mountain
+2. Cerberus (24) — Desperado Hill (Europe)
+3. Captain Ivy (30) — Amphitheater (Asie Mineure)
+4. Uruchi (40) — Black Robber Den (Tarim Basin)
+5. Isyutaru (60) — Karakoram
+6. Lord Yarkan (80) — Taklamakan
+7. Demon Shaitan (90) — Roc Mountain
+8. Roc (100, world boss) — Roc Mountain
+9. BeakYung « Medusa » (105) — Qin-Shi Tomb B6
+10. Apis (103) / Selket (105) / Neith (106) / Anubis (107) / Isis (108) / Haroeris (109) / Seth (110) — Job Temple
 
 ---
 
@@ -167,16 +170,16 @@ Cette page fusionne et organise le contenu de :
 - **Drops:** 4D-5D gear, gold
 - **Utilité:** Good EXP, loot
 
-#### **Ong Habitat (Level 45)** ⭐ SP FARMING
-- **Monstres:** Ong (Level 45)
-- **Coords:** X: 2800-3200, Y: 2800-3200
+#### **Ong Habitat (Ong level 34 — vérifié client)** ⭐ SP FARMING
+- **Monstres:** Ong (Level 34)
+- **Coords:** X: 2800-3200, Y: 2800-3200 (rapportées)
 - **Spawn:** **Très dense**
-- **Drops:** 7D gear, gold, mats
+- **Drops:** 5D gear, gold, mats
 - **Utilité:** ⭐⭐⭐⭐⭐ **THE SP FARMING SPOT**
 - **GAP recommandé:** 9
 - **Build:** INT Spear ou Bow
 
-#### Bunwang (Level 48)
+#### Bunwang (Karakoram — level exact non vérifié)
 - **Monstres:** Bunwang
 - **Coords:** X: 2900-3100, Y: 2900-3100
 - **Spawn:** Dense
@@ -205,12 +208,15 @@ Cette page fusionne et organise le contenu de :
 
 ### End Game (90-110)
 
-#### Alexandria (Levels 90-110)
-- **Monstres:** Naga, Harpy, Mummy, Ghole, Djinn
+#### Alexandria (Levels 100-110)
+- **Monstres:** Uneg (100), Weneg (101), Dark Khepri (101), Dark Scout (102), Blood Hyena (104)
+- **Uniques:** Job Temple — Apis (103), Selket (105), Neith (106), Anubis (107), Isis (108), Haroeris (109), Seth (110)
 - **Coords:** Alexandria outskirts
 - **Spawn:** Dense
-- **Drops:** 10D-13D gear, SOSun drops
+- **Drops:** 10D-11D gear, SOSun drops
 - **Utilité:** End-game content
+
+> ⚠️ Corrigé: l'ancienne liste « Naga, Harpy, Mummy, Ghole, Djinn » n'existe pas dans les données client (2026).
 
 #### Forgotten World Dungeons (Level 80+)
 - **Monstres:** Dungeon-specific mobs
@@ -226,11 +232,11 @@ Cette page fusionne et organise le contenu de :
 
 ### Top SP Farming Locations
 
-#### 1. Ong Habitat (Levels 40-60) ⭐⭐⭐⭐⭐
-- **Location:** Hotan East
-- **Coords:** X: 2800-3200, Y: 2800-3200
-- **Monsters:** Ong (Level 45)
-- **SP Rate:** 20,000-30,000 SP/heure
+#### 1. Ong Habitat (persos 30-45, mobs 34) ⭐⭐⭐⭐⭐
+- **Location:** Tarim Basin (route Donwhang→Hotan)
+- **Coords:** X: 2800-3200, Y: 2800-3200 (rapportées)
+- **Monsters:** Ong (Level 34 — vérifié client)
+- **SP Rate:** 20,000-30,000 SP/heure (rapporté)
 - **GAP:** 9 recommandé
 - **Build:** INT Spear ou Bow nuker
 - **Strategy:** Pull 5-10, AOE down
@@ -252,7 +258,7 @@ Cette page fusionne et organise le contenu de :
 #### 3. Bunwang (Levels 45-55) ⭐⭐⭐⭐
 - **Location:** Hotan East
 - **Coords:** X: 2900-3100, Y: 2900-3100
-- **Monsters:** Bunwang (Level 48)
+- **Monsters:** Bunwang (level exact non vérifié)
 - **SP Rate:** 18,000-25,000 SP/heure
 - **GAP:** 7-9
 - **Strategy:** Dense spawn, good for parties
@@ -271,34 +277,41 @@ Cette page fusionne et organise le contenu de :
 
 ## 👹 Unique Bosses
 
-### Complete List with Coordinates
+### Complete List (données client vérifiées 2026)
 
-👉 **[15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md)** - Guide complet (461 lignes)
+👉 **[15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md)** - Guide complet
 
-**15 Uniques Documentés:**
+**Uniques vérifiés (HP/levels extraits du client iSRO):**
 
-| # | Unique | Level | Zone | Coordonnées | Drop Principale |
-|---|--------|-------|------|-------------|------------------|
-| 1 | Tiger Girl | 20 | Jangan | X: 4853, Y: 94 | SOS 2D-3D |
-| 2 | Cerberus | 24 | Constantinople | X: -1552, Y: -94 | SOS 3D-4D |
-| 3 | Captain Ivy | 30 | Asia Minor | X: -6425, Y: 2745 | SOS 4D-5D |
-| 4 | Isyutaru | 40 | Asia Minor | X: 9018, Y: 8386 | SOM 7D |
-| 5 | Lord Yarkan | 60 | Tarim Basin | X: 9677, Y: 4115 | SOM 9D |
-| 6 | Demon Shaitan | 70 | Tarim Basin | X: 9700+, Y: 4100+ | SOM 9D |
-| 7 | Bunny | 80 | Jangan | X: 800+, Y: 900+ | SOS 9D |
-| 8 | Rooster | 80 | Jangan | X: 850+, Y: 950+ | SOS 9D |
-| 9 | Cerberus King | 90 | Constantinople | X: -1170, Y: -479 | SOSun 11D |
-| 10 | Monkey | 90 | Jangan | X: 900+, Y: 1000+ | SOS 9D |
-| 11 | Spider Queen | 95 | Alexandria | X: -500, Y: -1000 | SOSun 11D |
-| 12 | Neith | 95 | Alexandria | X: 200+, Y: 200+ | SOS 11D |
-| 13 | Isis | 98 | Alexandria | X: -200+, Y: -200+ | SOSun 11D |
-| 14 | Sphinx | 102 | Alexandria | X: 500+, Y: 500+ | SOSun 12D |
-| 15 | Serket | 105 | Alexandria | X: -800+, Y: -1500+ | SOSun 13D |
+| # | Unique | Level | HP | Zone | Spawn |
+|---|--------|-------|-----|------|-------|
+| 1 | Tiger Girl | 20 | 598,720 | Bandit Stronghold / Tiger Mtn (Chine) | 3-5h, aléatoire |
+| 2 | Cerberus | 24 | 693,072 | Desperado Hill (Europe) | 3-5h, aléatoire |
+| 3 | Captain Ivy | 30 | 1,094,835 | Amphitheater (Asie Mineure) | 3-5h, aléatoire |
+| 4 | Uruchi | 40 | 1,779,528 | Black Robber Den (Tarim Basin) | 3-5h, aléatoire |
+| 5 | Isyutaru | 60 | 4,324,612 | Karakoram (glace/Ancient Remains) | 3-5h, aléatoire |
+| 6 | Lord Yarkan | 80 | 9,353,045 | Taklamakan (Niya Remains) | 3-5h, aléatoire |
+| 7 | Demon Shaitan | 90 | 12,732,060 | Roc Mountain (Heart/Claw/Wing Peak) | 3-5h, aléatoire |
+| 8 | Roc | 100 | 1,451,891,045 | Roc Mountain (world boss) | très espacé |
+| 9 | BeakYung « Medusa » | 105 | 183,535,199 | Qin-Shi Tomb B6 (Serin Gate) | très espacé |
+| 10 | Apis | 103 | 21,068,995 | Job Temple | après Isis+Anubis (rapporté) |
+| 11 | Selket | 105 | 80,811,919 | Job Temple (accès libre) | — |
+| 12 | Neith | 106 | 83,077,174 | Job Temple (accès libre) | — |
+| 13 | Anubis | 107 | 150,486,799 | Job Temple (AP requis) | — |
+| 14 | Isis | 108 | 154,677,234 | Job Temple (AP requis) | — |
+| 15 | Haroeris | 109 | 440,747,010 | Job Temple (zone profonde) | — |
+| 16 | Seth | 110 | 425,505,853 | Job Temple (zone profonde) | — |
+
+**Boss de donjons FGW** (level selon bracket/grade): Togui General (A1=39), Ghost Sereness (A1=93, pétrification).
+
+**Sous-uniques Qin-Shi Tomb:** 4 Gardiens (98-99), Shinmoo (100), Soso the Black Viper (100), Snake Generals (95).
+
+> ❌ **Corrigé (2026):** l'ancien tableau listait « Bunny (80), Rooster (80), Monkey (90), Spider Queen (95), Cerberus King (90) » — **introuvables dans les données client iSRO** (inventions ou serveurs privés). « Lady Lyn » et « Beithy » : idem, supprimés partout.
 
 **Spawn Times:**
-- **Low-level (20-40):** 4-8 hours
-- **Mid-level (40-70):** 6-12 hours
-- **High-level (70-110):** 8-24 hours
+- iSRO: **3-5 heures** après mort, point de spawn aléatoire (4h par défaut vSRO)
+- Après crash serveur : spots fixes
+- Qin-Shi Tomb : Serin Gate à heures fixes (04h/10h/16h/22h)
 
 **Strategies:**
 - Full party (8 players) recommended
@@ -312,25 +325,28 @@ Cette page fusionne et organise le contenu de :
 
 ## 💪 Champion/Giant/Elite
 
-### Types Spéciaux
+### Types Spéciaux (valeurs vérifiées/rapportées 2026)
 
 #### Champion Monsters
-- **Apparence:** Aura rouge, taille augmentée
-- **Stats:** ×2 HP, ×1.5 ATK
-- **Drops:** ×2 gold, ×3 drop rate
+- **Apparence:** Taille augmentée, nom jaune
+- **Stats:** **~×2 HP** (vérifié), ATK supérieure
+- **Drops:** Supérieurs au normal
 - **Spawn:** Aléatoire dans zones normales
 
-#### Giant Monsters
-- **Apparence:** Taille massive, aura bleue
-- **Stats:** ×5 HP, ×2 ATK
-- **Drops:** ×5 gold, ×5 drop rate
-- **Loot:** Items rares possibles
+#### Party Monsters
+- **Stats:** **~×10 HP** (vérifié communauté) — packs conçus pour les parties
 
-#### Elite Monsters
-- **Apparence:** Aura dorée, effet spécial
-- **Stats:** ×10 HP, ×3 ATK
-- **Drops:** ×10 gold, rare drops
-- **Loot:** Seal equipment possible
+#### Giant Monsters
+- **Apparence:** Taille massive, nom rouge
+- **Stats:** ×5-10 HP (estimations), ×2-3 ATK
+- **Drops:** ×5 gold (rapporté), items rares possibles
+- **Party Giant:** ~×20 HP (rapporté) — le plus dur des monstres réguliers
+
+#### ⚠️ « Elite » Monsters
+- **NON CONFIRMÉ dans les données client** — probablement variantes Strong (events), party giants, ou serveurs privés. À traiter comme non vérifié.
+
+#### Event Monsters
+- **Codes `MOB_EV_*`** (Young Bear...) + variantes **Strong/Evil** (Strong Ong ~30x HP du normal, Strong Tiger Girl `_L2`, Evil `_L3`) + raiders de trade (bandits qui attaquent les caravanes)
 
 ### Farming Strategies
 
@@ -352,15 +368,15 @@ Cette page fusionne et organise le contenu de :
 
 ### Progression des Stats par Level
 
-#### HP Progression
-| Level Range | Base HP | Champion | Giant | Elite |
+#### HP Progression *(ordres de grandeur — les valeurs exactes sont dans MONSTERS_DATABASE.md)*
+| Level Range | Base HP | Champion (×2) | Giant (×5-10) | Party (×10) |
 |-------------|---------|----------|-------|-------|
-| 1-20 | 50-500 | ×2 | ×5 | ×10 |
-| 20-40 | 500-5,000 | ×2 | ×5 | ×10 |
-| 40-60 | 5,000-20,000 | ×2 | ×5 | ×10 |
-| 60-80 | 20,000-50,000 | ×2 | ×5 | ×10 |
-| 80-100 | 50,000-100,000 | ×2 | ×5 | ×10 |
-| 100-110 | 100,000-200,000 | ×2 | ×5 | ×10 |
+| 1-20 | 50-500 | ×2 | ×5-10 | ×10 |
+| 20-40 | 500-5,000 | ×2 | ×5-10 | ×10 |
+| 40-60 | 5,000-20,000 | ×2 | ×5-10 | ×10 |
+| 60-80 | 20,000-50,000 | ×2 | ×5-10 | ×10 |
+| 80-100 | 50,000-100,000 | ×2 | ×5-10 | ×10 |
+| 100-110 | 30,000-40,000 (SD: Uneg 37,844 / Blood Hyena 34,364 — vérifié) | ×2 | ×5-10 | ×10 |
 
 #### ATK Progression
 | Level Range | PHY ATK | MAG ATK | Crit Rate |
@@ -410,7 +426,7 @@ Cette page fusionne et organise le contenu de :
 - **[Cities Guides](README.md#fichiers-spéciaux)** - Guides villes
 
 ### Uniques et Boss
-- **[Unique Bosses](15_UNIQUE_BOSSES.md)** - 15 Uniques avec coords
+- **[Unique Bosses](15_UNIQUE_BOSSES.md)** - Uniques vérifiés (classiques + Roc + Medusa + Job Temple)
 - **[Monster Guide](14_MONSTER_GUIDE.md)** - Guide joueur
 
 ---
@@ -421,9 +437,9 @@ Cette page fusionne et organise le contenu de :
 - **[Levels 1-20](MONSTERS_DATABASE.md#monstres-level-1-20)** - Jangan area
 - **[Levels 20-40](MONSTERS_DATABASE.md#monstres-level-20-40)** - Donwhang area
 - **[Levels 40-60](MONSTERS_DATABASE.md#monstres-level-40-60)** - Hotan area
-- **[Levels 60-80](MONSTERS_HIGHLEVEL.md#level-60-80)** - Hotan advanced
-- **[Levels 80-100](MONSTERS_HIGHLEVEL.md#level-80-100)** - Alexandria
-- **[Levels 100-110](MONSTERS_HIGHLEVEL.md#level-100-110)** - End-game
+- **[Levels 60-80](MONSTERS_DATABASE.md#-level-60-80)** - Karakoram / Asie Mineure / Tomb B1
+- **[Levels 80-100](MONSTERS_DATABASE.md#️-level-80-100)** - Roc Mountain / Qin-Shi Tomb
+- **[Levels 100-110](MONSTERS_DATABASE.md#-level-100-110-alexandrie--job-temple--données-client-vérifiées)** - Alexandrie / Job Temple
 
 ### Par Zone
 - **Jangan:** Mangyang → Bandit → Tiger
@@ -498,14 +514,21 @@ model MonsterDrop {
 
 ## 📚 Voir aussi
 
+### Sources web (recherche 2026)
+- [Silkroad Online Database - Monsters](https://silkroadonline.wiki/monsters) — données client (IDs, HP, levels)
+- [Elitepvpers - Guide Unique Spawns](https://www.elitepvpers.com/forum/sro-guides-templates/186742-guide-unique-spawns.html)
+- [Rev6 - Unique Spawn Points](https://rev6.org/en/post/silkroad-online-uniq-spawn-noktalari)
+- [StrategyWiki - Bosses](https://strategywiki.org/wiki/Silkroad_Online/Bosses)
+- [MMORPG.com - Unique Monsters Part 1](https://www.mmorpg.com/interviews/unique-monsters-part-one-2000116853) / [Part 2](https://www.mmorpg.com/guides/unique-monsters-part-two-2000116869)
+- [xSROMap](https://jellybitz.github.io/xSROMap/)
+
 ### Bases de Données Primaires
-- [MONSTERS_DATABASE.md](MONSTERS_DATABASE.md) - Base complète (872 lignes)
-- [MONSTERS_HIGHLEVEL.md](MONSTERS_HIGHLEVEL.md) - High-level (766 lignes)
-- [MONSTERS_SPAWN_LOCATIONS.md](MONSTERS_SPAWN_LOCATIONS.md) - Coordonnées (887 lignes)
+- [MONSTERS_DATABASE.md](MONSTERS_DATABASE.md) - Base complète + high-level (fusionnés)
+- [MONSTERS_SPAWN_LOCATIONS.md](MONSTERS_SPAWN_LOCATIONS.md) - Coordonnées
 
 ### Guides
 - [14_MONSTER_GUIDE.md](14_MONSTER_GUIDE.md) - Guide joueur
-- [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md) - 15 Uniques
+- [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md) - Tous les uniques vérifiés
 
 ### Systèmes Connexes
 - [Hub Combat](HUB_COMBAT.md) - Combat et mécaniques
@@ -519,7 +542,7 @@ model MonsterDrop {
 
 ---
 
-**Dernière mise à jour :** 2025-01-20
+**Dernière mise à jour :** 2026-10-01 (uniques corrigés d'après données client; liens MONSTERS_HIGHLEVEL corrigés)
 **Monstres - Référence Complète** - Consolidation de 4 fichiers → 1 hub centralisé
 
 ---

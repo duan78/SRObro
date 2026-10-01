@@ -1,771 +1,323 @@
-# Ville d'Alexandria - Guide Complet
+# 🺺 Alexandria — Guide Complet de la Ville
+
+> 📍 **Vous êtes ici :** [Accueil](README.md) → [Villes](CITIES_04_ALEXANDRIA.md)
 
 ## 📋 Table des Matières
-- [Présentation Générale](#présentation-générale)
-- [Carte et Localisation](#carte-et-localisation)
-- [NPCs et Services](#npcs-et-services)
-- [Commerces et Équipement](#commerces-et-équipement)
-- [Quêtes d'Alexandria](#quêtes-dalexandria)
-- [Zones de Chasse](#zones-de-chasse)
-- [Transport et Accès](#transport-et-accès)
-- [Tomb of Pharaoh](#tomb-of-pharaoh)
-- [Ressources Externes](#ressources-externes)
+- [Présentation Générale](#-présentation-générale)
+- [Carte et Localisation](#-carte-et-localisation)
+- [NPCs Officiels avec Coordonnées](#-npcs-officiels-avec-coordonnées)
+- [Commerces et Équipement](#-commerces-et-équipement)
+- [Accès et Transports](#-accès-et-transports)
+- [Quêtes d'Alexandria](#-quêtes-dalexandria)
+- [Zones de Chasse Égyptiennes](#-zones-de-chasse-égyptiennes)
+- [Le Job Temple (Pharaoh Tomb)](#-le-job-temple-pharaoh-tomb)
+- [Conseils et Astuces](#-conseils-et-astuces)
+- [FAQ](#-faq)
+- [Ressources Externes](#-ressources-externes)
 
 ---
 
 ## 🎯 Présentation Générale
 
-**Alexandria** est la ville égyptienne ajoutée avec la mise à jour Legend 5 (Heroes of Alexandria) de Silkroad Online. C'est une ville majeure pour les joueurs de niveau **80-110+**, offrant:
+**Alexandria** est la ville égyptienne ajoutée avec **Legend V — Heroes of Alexandria (2010)**, qui a porté le cap à **110**. C'est le hub du contenu haut niveau (100+) et la porte d'entrée du **Job Temple**.
 
-- **Niveau recommandé:** 90-110+
-- **Degree d'équipement:** 10D, 11D, 12D, 13D
-- **Localisation:** Nord de la carte, zone égyptienne
-- **Importance:** Hub principal pour le content haut niveau (High-level content)
+| Attribut | Valeur |
+|----------|--------|
+| **Région** | Egypt |
+| **Position (officielle)** | Alexandria **South** ≈ (−16 600, −300) · Alexandria **North** ≈ (−16 200, 50) |
+| **Niveaux** | 100-110+ |
+| **Équipement local** | 10D-11D (12D-13D sur les serveurs cap 120) |
+| **Spécificités** | Ville en deux parties (South = marché, North = palais/port), phare, voie maritime vers l'Europe |
 
-### Caractéristiques Principales
+> ⚠️ Coordonnées officielles PosX/PosY — l'ancienne valeur « X 18000, Y 18000 » de cette doc était erronée. Alexandria est à l'**extrême sud-ouest du monde**.
 
-- **Architecture égyptienne:** Ville inspirée de l'Égypte antique
-- **Pharaon's Tomb:** Donjon instancié pour parties (Level 90+)
-- **Quêtes de faction:** Quêtes uniques avec l'Égypte Viceroy Senmute
-- **Commerce:** Équipements 10D-13D pour progression end-game
-- **Transport:** Ferry vers d'autres zones égyptiennes
+### Les deux Alexandria
+
+| Partie | Rôle | Contenu |
+|--------|------|---------|
+| **Alexandria (South)** | Marché principal | Weapon Trader Hemaka, Armor Trader Sharon, Grocery Melit, Potion Titi, Storage Khamererne, Stable Nefret, arena, events |
+| **Alexandria (North)** | Gouvernement et port | Palais du Governor Senmute, guildes, **unions de jobs** (Trader/Hunter/Thief), deuxième marché (Chunmoo, Viviana...), Harbor Manager Marwa, phare de Snefru |
+
+Les deux parties sont reliées par leurs Dimensional Gates respectifs.
 
 ---
 
 ## 🗺️ Carte et Localisation
 
-### Position dans le Monde
-
-Alexandria est divisée en **deux zones principales:**
-
-1. **Alexandria (North)** - Zone principale de la ville
-2. **Alexandria (South)** - Zone extérieure et zones de chasse
-
-### Accès depuis les autres villes
-
-- **Depuis Hotan:** Téléportation via Portals
-- **Depuis Samarkand:** Route terrestre à travers le désert
-- **Depuis Constantinople:** Route de trading européenne
-
-### Coordonnées Générales
-
 ```
-Alexandria Centre: approx. X: 18000, Y: 18000
-Zone Nord: X: 17500-18500, Y: 17500-18500
-Zone Sud (Delta): X: 17000-19000, Y: 16000-17000
+                 NORD (PosY +)
+   ┌─────────────────────────────────────────┐
+   │  PHARE : Lighthouse Keeper Snefru       │
+   │  (−16 675, 431) + marins égyptiens      │
+   │  PORT : Harbor Manager Marwa (−16 542, 372)
+   │                                         │
+   │  NORTH : palais Senmute (−16 762, −154) │
+   │  guildes, unions jobs, marché north     │
+   │  (Chunmoo, Viviana, Kapra, Thiara...)   │
+   │  ─────── Dimensional Gates ─────────    │
+   │  SOUTH : grand marché                   │
+   │  Hemaka (−16 739, −277) · Sharon        │
+   │  Melit · Titi · Nefret · Khamererne     │
+   │  Doctor Renenutet (−16 724, −386)       │
+   └─────────────────────────────────────────┘
+                 SUD (PosY −)
+     → Delta Area · déserts égyptiens → Job Temple
+     OUEST → voie maritime vers l'Europe (port de Gale)
 ```
 
 ---
 
-## 👥 NPCs et Services
+## 👥 NPCs Officiels avec Coordonnées
 
-### Liste Complète des NPCs d'Alexandria
+> Source : données client officielles (extraction xSROMap). Corrections par rapport aux versions précédentes : « Egypt Viceroy Senmute » → **Governor Senmute** ; « Guild Manager Senepereu » → **Guild Manager Sennefer** (S) / **Elia** (N) ; « Ferry Keeper Marsand » → **Harbor Manager Marwa**.
 
-| NPC | Fonction | Zone | Notes |
-|-----|----------|------|-------|
-| **Blacksmith Hemaka** | Weapon Trader | Ville | Vente d'armes 10D-13D |
-| **Potion Merchant Titi** | Potion Shop | Ville | Potions HP/MP, consommables |
-| **Accessory Merchant Melit** | Accessory Trader | Ville | Bagues, colliers, boucles d'oreilles |
-| **Specialty Merchant Wasdi** | Specialty Trader | Ville | Matériaux, objets spéciaux |
-| **Storage Keeper Khamererne** | Storage | Ville | Entreposage d'items |
-| **Guild Manager Senepereu** | Guild Manager | Ville | Gestion de guilde |
-| **Stable Master Nefret** | Stable Master | Ville | Soins des montures |
-| **Lighthouse Keeper Snefru** | Information/Quest | Ville | NPC de quête principal |
-| **Egypt Viceroy Senmute** | Governor/Quest | Ville | Gouverneur d'Alexandria |
-| **Finance Officer Maneto** | Tax Collector | Ville | NPC de quête (taxes) |
-| **Librarian Ahha** | Librarian/Quest | Ville | NPC de quête |
-| **Doctor Renenuteteu** | Doctor/Quest | Ville | NPC de quête (médicale) |
-| **Palace Guard Musyari** | Guard | Palais | Garde du palais |
-| **Palace Guard Turian** | Guard | Palais | Garde du palais |
-| **Palace Guard Kamori** | Guard | Palais | Garde du palais |
-| **Trader Union Nawoonakeuteu** | Trader Union | Ville | Union des traders |
-| **Hunter Union Carrymer** | Hunter Union | Ville | Union des hunters |
-| **Specialty Merchant Kaelra** | Specialty Trader | Ville | Marchand de spécialités |
-| **Specialty Merchant Hheojaan** | Specialty Trader | Ville | Marchand de spécialités |
-| **Mentuhotep** | Quest NPC | Ville | NPC de quête (tomb) |
-| **Lenenune** | Quest NPC | Ville | NPC de quête |
-| **Ferry Keeper Marsand** | Transport | Port | Transport par ferry |
-| **Berenice** | Quest NPC | Ville | NPC de quête |
-| **Sailor 1** | Sailor | Port | Marin |
-| **Sailor 2** | Sailor | Port | Marin |
+### Alexandria (South) — Marché
 
-### Services Disponibles
+| NPC | Position (X, Y) | Fonction |
+|-----|-----------------|----------|
+| **Weapon Trader Hemaka** | (−16 739, −277) | Armes 10D+ CH & EU |
+| **Armor Trader Sharon** | (−16 723, −296) | Armures 10D+ |
+| **Grocery Trader Melit** | (−16 579, −279) | Consommables |
+| **Potion Merchant Titi** | (−16 624, −358) | Potions |
+| **Storage Keepeer Khamererne** | (−16 478, −304) | Entrepôt |
+| **Stable Master Nefret** | (−16 425, −220) | Montures |
+| **Doctor Renenutet** | (−16 724, −386) | Quêtes médicales |
+| **Trader Dena** | (−16 662, −360) | Trade |
+| **Specialty Trader Wasdi** | (−16 593, 0) | Specialty goods |
+| **Librarian Ahha** | (−16 431, −84) | Quêtes |
+| **Finance Officer Maneto** | (−16 447, −75) | Quêtes de taxes |
+| **Arena Manager** | (−16 626, −289) | Arène |
+| **Magic POP / Guide Gori** | (−16 568, −271) / (−16 625, −258) | Gacha |
+| **Event So-Ok / Homeless Genie / Mysterious Priest / Carnival Jooa / Premium Qing Yu** | (−16 650 à −16 660, −257 à −296) | Événements |
 
-✅ **Vente d'armes** (Weapon Trader Hemaka)
-- 10th Degree Weapons
-- 11th Degree Weapons
-- 12th Degree Weapons
-- 13th Degree Weapons (sur certains serveurs)
+### Alexandria (North) — Palais, guildes et jobs
 
-✅ **Vente d'armures** (via Blacksmith Hemaka)
-- Armour, Protector, Garment sets
-- Shields
-- Équipement 10D-13D
+| NPC | Position (X, Y) | Fonction |
+|-----|-----------------|----------|
+| **Governor Senmute** | (−16 762, −154) | Gouverneur — quêtes principales |
+| **Palace Guard Mushari / Sesilrum** | (−16 752/−16 741, −175/−164) | Gardes du palais |
+| **Guild Manager Sennefer** | (−16 640, −45) | Guildes |
+| **Guild Manager Elia** | (−16 109, −47) | Guildes (2e bureau) |
+| **Trader Union President Naunakt** | (−16 624, 11) | Union Trader |
+| **Hunter Union President Narmer** | (−16 625, −94) | Union Hunter |
+| **Hunter Union Item Exchange manager Bakara** | (−16 590, −31) | Échange de récompenses hunter |
+| **Thief Union President Tausert** | (−16 092, −7) | Union Thief |
+| **Thief Union Item Exchange manager Luresia** | (−16 150, −70) | Échange de récompenses thief |
+| **Weapon Trader Chunmoo** | (−16 255, −19) | Armes (2e marché) |
+| **Armor Trader Viviana** | (−16 256, 9) | Armures (2e marché) |
+| **Grocery Trader Kapra** | (−16 197, 53) | Consommables (2e marché) |
+| **Potion Merchant Thiara** | (−16 237, 35) | Potions (2e marché) |
+| **Storage Keeper Asagon** | (−16 082, 24) | Entrepôt (2e) |
+| **Smuggler Seek** | (−16 105, 66) | Thief (accès direct) |
+| **Egyptian Soldiers** (Aptaru, Kamori, Mobefe, Turian) | (−15 995 à −16 465, −476 à 99) | Garnison |
 
-✅ **Accessoires** (Accessory Merchant Melit)
-- Rings (1 slot, 2 slots pour SOX)
-- Necklaces
-- Earrings
+### Port et phare
 
-✅ **Potions et Consommables** (Potion Merchant Titi)
-- HP Potions (Small, Medium, Large, Universal Pills)
-- MP Potions
-- Vigor Pills
-- Return Scrolls
-- Speed Scrolls
+| NPC | Position (X, Y) | Fonction |
+|-----|-----------------|----------|
+| **Harbor Manager Marwa** | (−16 542, 371) | Voie maritime vers l'Europe |
+| **Lighthouse Keeper Snefru** | (−16 675, 431) | Quêtes |
+| **Egyptian Sailor 1 / 2** | (−16 440 à −16 710, 246 à 440) | Équipage |
 
-✅ **Stockage** (Storage Keeper Khamererne)
-- Entrepôt personnel
-- Espace de 5 pages (de base)
+### Specialty traders des zones égyptiennes (ravitaillement)
 
-✅ **Écurie** (Stable Master Nefret)
-- Soins des montures
-- Achat de Mounts (Horse, Camel, Elephant pour trading)
-
-✅ **Guilde** (Guild Manager Senepereu)
-- Création de guilde (Level 20+, 500,000 gold)
-- Gestion de guilde
-- Guild Storage
-
-✅ **Quêtes**
-- Quêtes principales (Viceroy Senmute)
-- Quêtes secondaires (Tax, Delivery, Collection)
-- Quêtes de Tomb (Hearts series)
+| NPC | Position (X, Y) | Zone |
+|-----|-----------------|------|
+| **Specialty Trader Kaella** | (−13 112, −3 264) | désert de l'Est |
+| **Specialty Trader Hujaan** | (−11 766, −1 314) | route du Job Temple |
+| **Specialty Merchant Kaelra / Hheojaan** | déserts égyptiens | quêtes/matériaux |
 
 ---
 
 ## 🛒 Commerces et Équipement
 
-### Équipement Disponible (10D-13D)
+- **Armes** (Hemaka / Chunmoo) : chinoises (Sword, Blade, Spear, Glaive, Bow) et européennes (Sword, Dagger, Xbow, 2H Sword, Staff, Harp, Rod) en **10D-11D** (12D-13D selon le cap du serveur)
+- **Armures** (Sharon / Viviana) : Armour (lourde), Protector (moyenne), Garment (légère) — sets complets CH et EU
+- **Potions** (Titi / Thiara) : jusqu'aux potions XXL, Universal Pills, Vigor Pills
+- **Consommables d'alchimie** : elixirs, lucky powders (drops/marchands de matériaux)
+- **Seal of Nova / Egypt** : équipements SOX spécifiques à l'ère Alexandria (drops du Job Temple et des déserts)
 
-#### Weapons (Blacksmith Hemaka)
-- **Chinese Weapons:**
-  - Sword, Blade, Spear, Glaive, Bow
-  - 10D: Level 90-99
-  - 11D: Level 100-105
-  - 12D: Level 106-110
-  - 13D: Level 110-120 (certains serveurs)
+---
 
-- **European Weapons:**
-  - Sword, Dagger, Xbow, 2H Sword, Staff, Harp, Rod
-  - Mêmes degrees que les weapons chinoises
+## 🚢 Accès et Transports
 
-#### Armor Sets
-- **Types:** Armour (Heavy), Protector (Medium), Garment (Light)
-- **Degrees:** 10D-13D
-- **Sets:** Complete sets (Head, Chest, Shoulder, Legs, Boots, Gloves)
+### Dimensional Gates
+| Gate | Position | Destinations |
+|------|----------|--------------|
+| **Dimensional Gate (South)** | (−16 643, −275) | Jangan · Hotan · Alexandria (North) · Baghdad |
+| **Dimensional Gate (North)** | (−16 148, 76) | Jangan · Hotan · Alexandria (South) · Baghdad |
 
-#### Accessories
-- **Rings:** +1 à +5 stats (base)
-- **Necklaces:** +1 à +5 stats
-- **Earrings:** +1 à +5 stats
-- **Seal Equipment:** Seal of Star/Moon/Sun available (drops)
+### Voie maritime Europe ↔ Égypte
+- **Harbor Manager Marwa** (−16 542, 371) ↔ **Harbor Manager Gale** (port européen à (−11 424, 1 162)), avec escales aux navires pirates **Morgun** et **Blackbeard** (≈ (−8 700, 1 830-2 210))
+- C'est la traversée « thématique » de la Méditerranée, alternative aux téléporteurs
 
-#### Materials
-- **Alchemy Materials:**
-  - Elixirs (Weapon, Armor, Accessory)
-  - Lucky Powders
-  - Stones (Weapon, Armor, Accessory)
-  - Astral Stones
-
-- **Socket Materials:**
-  - Magic Stones (Blue, Red, Green)
-  - Crystal Symbols
+### Gates de zone (Égypte)
+| Gate | Position | Destination |
+|------|----------|-------------|
+| Dimensional Gate (Delta Area) | (−15 122, 126) | Storm and Cloud Desert |
+| Dimensional Gate (Delta Area) | (−15 842, −1 205) | Kings Valley |
+| Dimensional Gate (Kings Valley) | (−14 950, −3 266) | Forbidden Plain |
+| Dimensional Gate | (−13 391, −1 344) | Abundance Ground |
 
 ---
 
 ## 📜 Quêtes d'Alexandria
 
-### Série Principale: "Overdriving Heart"
+> Les tableaux ci-dessous reprennent la liste officielle des quêtes Alexandria (Silkroad Secrets / client). Coordonnées des donneurs : voir sections NPCs.
 
-Cette série de quêtes est la **quête principale d'Alexandria**, consistant à collecter les cœurs des dieux égyptiens dans le Pharaoh's Tomb (Lesser).
+### Série « Overdriving Heart » (quête principale, Job Temple)
 
-#### Quête 1: Heart of Sphinx
-- **NPC:** Egypt Viceroy Senmute
-- **Mission:** Collect 1 Sphinx Heart
-- **Monster:** Sphinx (Tomb Lesser)
-- **Location:** Pharaoh's Tomb - Lesser
-- **Rewards:**
-  - EXP: 64,955,062
-  - Skill Points: 3,600
-  - Gold: 14,700
+| Quête | Objectif | Monstre | EXP | SP | Gold |
+|-------|----------|---------|-----|----|------|
+| Heart of Sphinx | 1 Sphinx Heart | Sphinx (Temple) | 64 955 062 | 3 600 | 14 700 |
+| Heart of Sekhmet | 1 Sekhmet Heart | Sekhmet | 66 903 714 | 3 700 | 14 831 |
+| Heart of Nephthys | 1 Nephthys Heart | Nephthys | 68 910 826 | 3 800 | 14 962 |
+| Heart of Horus | 1 Horus Heart | Horus | 70 978 148 | 3 900 | 15 093 |
+| Heart of Osiris | 1 Osiris Heart | Osiris | 73 107 492 | 4 000 | 15 225 |
 
-#### Quête 2: Heart of Sekhmet
-- **NPC:** Egypt Viceroy Senmute
-- **Mission:** Collect 1 Sekhmet Heart
-- **Monster:** Sekhmet (Tomb Lesser)
-- **Location:** Pharaoh's Tomb - Lesser
-- **Rewards:**
-  - EXP: 66,903,714
-  - Skill Points: 3,700
-  - Gold: 14,831
+*Donneur : Governor Senmute. Les cœurs se lootent sur les boss du Job Temple.*
 
-#### Quête 3: Heart of Nephthys
-- **NPC:** Egypt Viceroy Senmute
-- **Mission:** Collect 1 Nephthys Heart
-- **Monster:** Nephthys (Tomb Lesser)
-- **Location:** Pharaoh's Tomb - Lesser
-- **Rewards:**
-  - EXP: 68,910,826
-  - Skill Points: 3,800
-  - Gold: 14,962
+### Série « Tax Due Notice » (Finance Officer Maneto)
+- 4 quêtes de remise d'avis d'imposition aux marchands (Hemaka, Melit, Titi, Wasdi)
+- Récompenses : 4 809 311 EXP · 700 SP · 2 362 gold chacune
 
-#### Quête 4: Heart of Horus
-- **NPC:** Egypt Viceroy Senmute
-- **Mission:** Collect 1 Horus Heart
-- **Monster:** Horus (Tomb Lesser)
-- **Location:** Pharaoh's Tomb - Lesser
-- **Rewards:**
-  - EXP: 70,978,148
-  - Skill Points: 3,900
-  - Gold: 15,093
+### Séries « Tax Payment » (suite des taxes)
+| Donneur | Objectif | EXP | SP | Gold |
+|---------|----------|-----|----|------|
+| Weapon Trader Hemaka (1) | 30 Hard Shells (Taten) + 50 Soft Green Leathers (Weneg) | 9 618 622 | 1 200 | 4 725 |
+| Weapon Trader Hemaka (2) | Livrer Sturdy Weapon Chest à Maneto | 4 809 311 | 700 | 2 362 |
+| Grocery Trader Melit (1) | 50 Broken Gold Ornaments (Cruel Raider) | 9 618 622 | 1 200 | 4 725 |
+| Grocery Trader Melit (2) | Livrer Ornate Accessory Chest | 4 809 311 | 700 | 2 362 |
+| Potion Merchant Titi | Livrer Gold Coin Sack | 4 809 311 | 700 | 2 362 |
+| Specialty Trader Wasdi | Parler à Maneto | 4 809 311 | 700 | 2 362 |
 
-#### Quête 5: Heart of Osiris
-- **NPC:** Egypt Viceroy Senmute
-- **Mission:** Collect 1 Osiris Heart
-- **Monster:** Osiris (Tomb Lesser)
-- **Location:** Pharaoh's Tomb - Lesser
-- **Rewards:**
-  - EXP: 73,107,492
-  - Skill Points: 4,000
-  - Gold: 15,225
+### Autres quêtes notables
+| Quête | Donneur | Objectif | EXP | SP | Gold |
+|-------|---------|----------|-----|----|------|
+| Feed for the Horses | Stable Master Nefret | 100 Dark Khepri Weeds | 9 618 622 | 1 200 | 4 725 |
+| The Librarian's Claim | Librarian Ahha | 80 Dark Scouts | 9 907 180 | 1 300 | 3 815 |
+| Wasdi's Plan | Specialty Trader Wasdi | 50 Shiny Spider Webs + 30 Hardened Insect Shells | 9 907 180 | 1 300 | 4 768 |
+| Returning Stored Items | Storage Keeper Khamererne | Livraisons vers Ahha / Wasdi | 4 953 590 | 800 | 2 384 |
+| The Undelivered Book | Lighthouse Keeper Snefru | Parler à Melit | 4 953 590 | 800 | 2 384 |
+| Shiny Bones | Specialty Merchant Kaelra | 50 Shiny Bones (Uraeus) | 10 510 528 | 1 500 | 4 856 |
+| Surgery Tool Maintenance | Doctor Renenutet | 50 Hyena Fangs (Blood Hyena) | 10 510 528 | 1 500 | 4 856 |
+| Prescription (1-3) | Doctor Renenutet → Titi | 100 Uraeus Scales (étape 2) | 5-10 M | 1 000-1 500 | ~2 400-4 900 |
+| Sinmugi Development | Blacksmith Hemaka | 30 Viper Meats (Uraeus) | 10 825 843 | 1 600 | 4 900 |
+| Managing the Harbor | Harbor Manager Marwa | 100 Unegs + 100 Wenegs | 28 015 403 | 1 600 | 9 362 |
+| Meet the Governor (1-2) | Snefru → Senmute | 50 Unegs (étape 2) | 4,7 M puis 9,3 M | 600/1 100 | 2 340 |
 
 ---
 
-### Série "Tax Due Notice"
+## 🐪 Zones de Chasse Égyptiennes
 
-Quêtes de livraison de notifications de taxes aux marchands d'Alexandria.
+| Zone | Niveaux | Monstres |
+|------|---------|----------|
+| **Delta Area** (sud de la ville) | 100-105 | Uneg, Weneg |
+| **Egypt Desert** | 100-107 | Taten, Weneg, Cruel Raider, Dark Khepri, Wind Spider, Desert Bug |
+| **Storm and Cloud Desert** | 105-110 | Dark Scouts, Dark Khepri |
+| **Kings Valley** | 107-110 | Uraeus, Blood Hyena, Viper |
+| **Forbidden Plain / Abundance Ground** | 108-110+ | elites égyptiennes |
 
-#### Tax Due Notice (Weapon Trader)
-- **NPC:** Finance Officer Maneto → Weapon Trader Hemaka
-- **Mission:** Deliver Tax Due Notice
-- **Rewards:**
-  - EXP: 4,809,311
-  - Skill Points: 700
-  - Gold: 2,362
-
-#### Tax Due Notice (Grocery Trader)
-- **NPC:** Finance Officer Maneto → Accessory Trader Melit
-- **Mission:** Deliver Tax Due Notice
-- **Rewards:**
-  - EXP: 4,809,311
-  - Skill Points: 700
-  - Gold: 2,362
-
-#### Tax Due Notice (Potion Merchant)
-- **NPC:** Finance Officer Maneto → Potion Trader Titi
-- **Mission:** Deliver Tax Due Notice
-- **Rewards:**
-  - EXP: 4,809,311
-  - Skill Points: 700
-  - Gold: 2,362
-
-#### Tax Due Notice (Specialty Trader)
-- **NPC:** Finance Officer Maneto → Specialty Trader Wasdi
-- **Mission:** Deliver Tax Due Notice
-- **Rewards:**
-  - EXP: 4,809,311
-  - Skill Points: 700
-  - Gold: 2,362
+> **Medusa** (unique, niv. 105) : l'unique emblématique de l'ère Legend V, associée au contenu du Temple.
 
 ---
 
-### Série "Weapon Trader's Tax Payment"
-
-#### Part 1
-- **NPC:** Weapon Trader Hemaka
-- **Mission:** Collect 30 Hard Shells (Taten) + 50 Soft Green Leathers (Weneg)
-- **Rewards:**
-  - EXP: 9,618,622
-  - Skill Points: 1,200
-  - Gold: 4,725
-
-#### Part 2
-- **NPC:** Weapon Trader Hemaka → Finance Officer Maneto
-- **Mission:** Deliver Sturdy Weapon Chest
-- **Rewards:**
-  - EXP: 4,809,311
-  - Skill Points: 700
-  - Gold: 2,362
-
----
-
-### Série "Grocery Trader's Tax Payment"
-
-#### Part 1
-- **NPC:** Accessory Trader Melit
-- **Mission:** Collect 50 Broken Gold Ornaments (Cruel Raider)
-- **Rewards:**
-  - EXP: 9,618,622
-  - Skill Points: 1,200
-  - Gold: 4,725
-
-#### Part 2
-- **NPC:** Accessory Trader Melit → Finance Officer Maneto
-- **Mission:** Deliver Ornate Accessory Chest
-- **Rewards:**
-  - EXP: 4,809,311
-  - Skill Points: 700
-  - Gold: 2,362
-
----
-
-### Série "Potion Merchant's Tax Payment"
-
-#### Quête Unique
-- **NPC:** Potion Trader Titi → Finance Officer Maneto
-- **Mission:** Deliver Gold Coin Sack for Titi
-- **Rewards:**
-  - EXP: 4,809,311
-  - Skill Points: 700
-  - Gold: 2,362
-
----
-
-### Série "Specialty Trader's Tax Payment"
-
-#### Quête Unique
-- **NPC:** Specialty Trader Wasdi → Finance Officer Maneto
-- **Mission:** Speak to Finance Officer Maneto
-- **Rewards:**
-  - EXP: 4,809,311
-  - Skill Points: 700
-  - Gold: 2,362
-
----
-
-### Quêtes "Feed for the Horses"
-
-- **NPC:** Stable Master Nefret
-- **Mission:** Collect 100 Dark Khepri Weeds
-- **Monster:** Dark Khepri
-- **Rewards:**
-  - EXP: 9,618,622
-  - Skill Points: 1,200
-  - Gold: 4,725
-
----
-
-### Série "Returning Stored Items"
-
-#### Librarian
-- **NPC:** Storage Keeper Khamererne → Librarian Ahha
-- **Mission:** Deliver Stored Item and Invoice
-- **Rewards:**
-  - EXP: 4,953,590
-  - Skill Points: 800
-  - Gold: 2,384
-
-#### Specialty Trader
-- **NPC:** Storage Keeper Khamererne → Specialty Trader Wasdi
-- **Mission:** Deliver Stored Item and Invoice
-- **Rewards:**
-  - EXP: 4,953,590
-  - Skill Points: 800
-  - Gold: 2,384
-
----
-
-### Quête "The Librarian's Claim"
-
-- **NPC:** Librarian Ahha
-- **Mission:** Eliminate 80 Dark Scouts
-- **Monster:** Dark Scout
-- **Rewards:**
-  - EXP: 9,907,180
-  - Skill Points: 1,300
-  - Gold: 3,815
-
----
-
-### Quête "Wasdi's Plan"
-
-- **NPC:** Specialty Trader Wasdi
-- **Mission:** Collect 50 Shiny Spider Webs + 30 Hardened Insect Shells
-- **Monsters:** Wind Spider, Desert Bug
-- **Rewards:**
-  - EXP: 9,907,180
-  - Skill Points: 1,300
-  - Gold: 4,768
-
----
-
-### Série "Collecting Additional Service Fee"
-
-#### Ahha's Fee
-- **NPC:** Librarian Ahha → Storage Keeper Khamererne
-- **Mission:** Deliver Gold Coin Sack
-- **Rewards:**
-  - EXP: 4,953,590
-  - Skill Points: 800
-  - Gold: 2,384
-
-#### Wasdi's Fee
-- **NPC:** Specialty Trader Wasdi → Storage Keeper Khamererne
-- **Mission:** Deliver Gold Coin Sack
-- **Rewards:**
-  - EXP: 4,953,590
-  - Skill Points: 800
-  - Gold: 2,384
-
----
-
-### Quête "The Undelivered Book"
-
-- **NPC:** Lighthouse Keeper Snefru → Accessory Trader Melit
-- **Mission:** Speak to Accessory Trader Melit
-- **Rewards:**
-  - EXP: 4,953,590
-  - Skill Points: 800
-  - Gold: 2,384
-
----
-
-### Quêtes Part 3 (Additionnelles)
-
-#### Shiny Bones
-- **NPC:** Specialty Merchant Kaelra
-- **Mission:** Collect 50 Shiny Bones
-- **Monster:** Uraeus
-- **Rewards:**
-  - EXP: 10,510,528
-  - Skill Points: 1,500
-  - Gold: 4,856
-
-#### Surgery Tool Maintenance
-- **NPC:** Doctor Renenuteteu
-- **Mission:** Collect 50 Hyena Fangs
-- **Monster:** Blood Hyena
-- **Rewards:**
-  - EXP: 10,510,528
-  - Skill Points: 1,500
-  - Gold: 4,856
-
-#### Prescription Series
-1. **Prescription (1)**
-   - NPC: Doctor Renenuteteu → Potion Merchant Titi
-   - Rewards: EXP 5,255,264 / SP 1000 / Gold 2,428
-
-2. **Prescription (2)**
-   - NPC: Potion Merchant Titi
-   - Mission: Collect 100 Uraeus Scales
-   - Rewards: EXP 10,510,528 / SP 1500 / Gold 4,856
-
-3. **Prescription (3)**
-   - NPC: Potion Merchant Titi → Doctor Renenuteteu
-   - Mission: Deliver Prescription Medicine
-   - Rewards: EXP 5,255,264 / SP 1000 / Gold 2,428
-
-#### Sinmugi Development
-- **NPC:** Blacksmith Hemaka
-- **Mission:** Collect 30 Viper Meats
-- **Monster:** Uraeus
-- **Rewards:**
-  - EXP: 10,825,843
-  - Skill Points: 1,600
-  - Gold: 4,900
-
-#### Herb Deliveries
-- **NPC:** Potion Merchant Titi
-  - → Blacksmith Hemaka: EXP 5,412,921 / SP 1100 / Gold 2,450
-  - → Accessory Trader Merit: EXP 5,412,921 / SP 1100 / Gold 2,450
-
----
-
-### Quête "Managing the Harbor"
-
-- **NPC:** Harbor Manager Marwa
-- **Mission:** Eliminate 100 Uneg 100s + 100 Wenegs
-- **Rewards:**
-  - EXP: 28,015,403
-  - Skill Points: 1,600
-  - Gold: 9,362
-
----
-
-### Quête "Meet the Governor"
-
-#### Part 1
-- **NPC:** Lighthouse Keeper Snefru → Egypt Viceroy Senmute
-- **Mission:** Converse with Viceroy Senmute
-- **Rewards:**
-  - EXP: 4,669,234
-  - Skill Points: 600
-  - Gold: 2,340
-
-#### Part 2
-- **NPC:** Egypt Viceroy Senmute
-- **Mission:** Eliminate 50 Unegs
-- **Monster:** Uneg
-- **Rewards:**
-  - EXP: 9,338,467
-  - Skill Points: 1,100
-  - Gold: 2,340
-
----
-
-## 🎯 Zones de Chasse
-
-### Zones Autour d'Alexandria
-
-#### 1. Delta Area (Level 90-95)
-- **Monstres principaux:** Uneg, Weneg
-- **Type:** Zone de niveau moyen
-- **Utilité:** Quêtes de base, farming débutant
-
-#### 2. Egypt Desert (Level 95-100)
-- **Monstres principaux:**
-  - Taten, Weneg (pour matériaux)
-  - Cruel Raider (pour gold ornaments)
-  - Dark Khepri (pour weeds)
-- **Utilité:** Farming matériaux, quêtes de collection
-
-#### 3. Storm Desert (Level 100-105)
-- **Monstres:** Dark Scouts, Dark Khepri
-- **Utilité:** Quêtes avancées, SP farming
-
-#### 4. Pharaoh's Tomb - Exterior (Level 105-110)
-- **Monstres:** Uraeus, Blood Hyena, Viper
-- **Utility:** Préparation au Tomb, farming drops haut niveau
-
-#### 5. Pharaoh's Tomb - Instance (Level 90-110+)
-- **Zones:** B1 à B6
-- **Bosses:** Sphinx, Sekhmet, Nephthys, Horus, Osiris (Lesser)
-- **Bosses Greater:** Versions harder des mêmes boss
-- **Drops:** SOX (Nova, Egypt), 13D equipment, Gold, Rares
-
----
-
-## 🚢 Transport et Accès
-
-### Téléportations
-
-#### Portals dans Alexandria
-- **Vers Hotan:** Portal principal de retour vers les zones chinoises
-- **Vers Samarkand:** Accès vers la route de trading centrale
-- **Vers Constantinople:** Vers la zone européenne
-
-### Ferry System
-- **Ferry Keeper Marsand** propose des transports vers:
-  - Zones égyptiennes adjacentes
-  - Îles spéciales (sur certains serveurs)
-
-### Routes de Trading
-- **Depuis Hotan:**
-  - Route à travers le désert
-  - Durée: ~15-20 minutes avec transport normal
-  - Danger: Zones PK, Thief spawns
-
-- **Depuis Constantinople:**
-  - Route européenne vers l'Égypte
-  - Passage par l'Asia Minor
-  - Durée similaire
-
----
-
-## ⚰️ Tomb of Pharaoh
-
-### Présentation Générale
-
-Le **Pharaoh's Tomb** est un donjon instancié (instance dungeon) conçu pour les parties de 4-8 joueurs, niveau 90+.
-
-### Structure du Donjon
-
-#### Pharaoh's Tomb - Lesser (Level 90-100)
-- **B1:** Level 81-85
-- **B2:** Level 86-90
-- **B3:** Level 90-95
-- **B4:** Level 96-99
-- **B5:** Level 100+
-- **B6:** Level 105+
-
-#### Bosses - Lesser
-1. **Sphinx** - Level 90
-2. **Sekhmet** - Level 92
-3. **Nephthys** - Level 95
-4. **Horus** - Level 98
-5. **Osiris** - Level 100
-
-#### Bosses - Greater (Hard Mode)
-- Versions plus puissantes des mêmes boss
-- Drops améliorés (13D, SOX, Nova Egypt weapons)
-- Niveau 105-110 requis
-
-### Drops du Tomb
-
-#### Équipement
-- **Seal of Nova** (rare)
-- **Seal of Egypt** (unique à certains serveurs)
-- **13D Weapons** (très rare)
-- **13D Armor Sets** (très rare)
-
-#### Matériaux
-- **Socket Stones:** Magic Stones (Blue, Red, Green)
-- **Advanced Alchemy:** Astral Stones, Immortal Stones
-- **Rares:** crystals, jewels
-
-#### Gold et Items
-- **Gold Drop:** 100,000 - 500,000 per boss
-- **Skill Points:** Bonus SP pour completion
-- **Quest Items:** Hearts pour quêtes "Overdriving Heart"
-
-### Stratégies pour le Tomb
-
-#### Party Composition Recommandée
+## ⚱️ Le Job Temple (Pharaoh Tomb)
+
+Le donjon PvPvE d'Alexandria, appelé « Job Cave » par la communauté.
+
+| Élément | Donnée |
+|---------|--------|
+| **Entrée (Dimensional Gate "Entrance of Pharaoh tomb")** | **(−11 351, −3 278)** — désert au sud-est de l'Égypte |
+| **Niveau requis** | 105+ (officiel) |
+| **Condition** | **Costume de job obligatoire** (trader/hunter/thief) |
+| **Difficultés** | Beginner · Intermediate · Advanced |
+| **Structure client** | « Temple » + 5 Sanctuaires : **Sanctum of Anubis, of Isis, of Haroeris, of Seth, of Blue Eye** |
+| **Sorties** | vers **Kings Valley** |
+| **Boss de quête** | Sphinx, Sekhmet, Nephthys, Horus, Osiris (cœurs pour Senmute) |
+| **Drops** | Seal of Nova / Egypt, équipement 10D-11D+ (13D cap 120), matériaux |
+
+### Composition de groupe recommandée
 ```
-1x Tank (Warrior/Cleric ou Spear)
+1x Tank (Warrior ou Spear CH)
 1-2x Healers (Cleric)
 2-3x DPS (Wizard, Nuker, Rogue)
-1x Buffer (Bard)
+1x Support (Bard)
 ```
 
-#### Tactics par Boss
+### Particularité PvP
+Le Temple est **PvPvE** : traders, hunters et thieves s'y croisent — les affrontements entre jobs font partie du design (d'où le costume obligatoire).
 
-**Sphinx:**
-- Tank and spank
-- Watch pour AOE poison
-
-**Sekhmet:**
-- Heavy AOE damage
-- Range attacks recommended
-- Cleric must keep heals up
-
-**Nephthys:**
-- Debuffs (curse, disease)
-- Bring potions/cleanses
-- DPS race
-
-**Horus:**
-- High damage output
-- KD (knockdown) fréquents
-- Tanks besoin de high DEF
-
-**Osiris:**
-- Final boss
-- Multiple phases
-- Full party coordination required
-- Bring resurrection scrolls
+> ⚠️ Ne pas confondre avec le **Tomb of Qin-Shi Emperor** (B1-B6, Chine, 71-100) : les anciennes versions de cette doc mélangeaient les deux structures.
 
 ---
 
 ## 💡 Conseils et Astuces
 
-### Pour les Débutants à Alexandria (Level 90)
+### Débuter à Alexandria (100+)
+1. Faites « Meet the Governor » puis les quêtes de taxes (rapides, bien payées)
+2. Farmez le Delta Area (Uneg/Weneg) pour les quêtes de collection
+3. Regroupez-vous pour le Job Temple — jamais seul
 
-1. **Commencez par les quêtes de base:**
-   - "Meet the Governor" series
-   - Quêtes de taxe (Tax Due Notice)
+### Joueurs avancés (105+)
+1. Enchaînez le Job Temple en party (cœurs + drops Nova)
+2. Optimisez l'alchimie (+7 minimum sur le 10D/11D)
+3. Utilisez Alexandria comme base d'opérations trade : les gates couvrent Jangan, Hotan et Baghdad
 
-2. **Gérez vos ressources:**
-   - Stockez les matériaux (shells, leathers, weeds)
-   - Ne vendez pas tout aux NPCs
+### Développeurs (SRObro)
+- Les téléporteurs d'Alexandria renvoient vers **Baghdad** dans les versions récentes du client — sur un clone cap 90/110, ignorer cette destination
+- Les unions de jobs d'Alexandria utilisent le schéma « President + Item Exchange manager » (différent des « Associate » des villes chinoises)
 
-3. **Rejoignez une partie:**
-   - Le Tomb nécessite un groupe
-   - Trouvez une guilde active
-   - Utilisez le Party Matching
+---
 
-### Pour les Joueurs Avancés (Level 100+)
+## ❓ FAQ
 
-1. **Focus sur le Tomb Greater:**
-   - Meilleurs drops
-   - Plus de challenge
-   - Raids journaliers
+**Q: Quelle différence entre Alexandria South et North ?**
+R: South = grand marché (Hemaka, Titi, stockage, écuries). North = palais du gouverneur, guildes, unions de jobs et port. Les deux sont téléconnectées.
 
-2. **Optimisez votre gear:**
-   - Upgrade vers 12D/13D
-   - Alchemy +11 ou +
-   - Socket system
+**Q: Comment entrer dans le Job Temple ?**
+R: Par le **Dimensional Gate « Entrance of Pharaoh tomb »** à (−11 351, −3 278), niveau 105+, **en costume de job**.
 
-3. **Participez au job system:**
-   - Trader: Routes Alexandria ↔ Hotan
-   - Hunter: Protégez les traders
-   - Thief: Empochez les traders
+**Q: Comment venir à Alexandria depuis l'Europe sans téléporteur ?**
+R: Par la voie maritime : Harbor Manager **Gale** (Europe, (−11 424, 1 162)) → navires pirates → Harbor Manager **Marwa** (Alexandria North).
+
+**Q: Où vendre les marchandises volées (thief) à Alexandria ?**
+R: Au **Thief Union** du North : Thief Union President Tausert (−16 092, −7) et l'Item Exchange manager Luresia.
+
+**Q: Les cœurs (Heart of Sphinx, etc.) servent à quoi ?**
+R: À la série de quêtes principales « Overdriving Heart » du Governor Senmute — EXP massive et accès au lore de l'Égypte.
 
 ---
 
 ## 🔗 Ressources Externes
 
-### Sources Primaires
-- [Silkroad Secrets - Official Alexandria Quest List Part 1](http://silkroadsecrets.blogspot.com/2010/03/official-alexandria-quest-list-part-1.html)
-- [Silkroad Secrets - Alexandria Quest List Part 3](http://silkroadsecrets.blogspot.com/2009/08/alexandria-quest-list-part-3.html)
-- [Silkroad Secrets - Alexandria NPC List](http://silkroadsecrets.blogspot.com/2009/08/alexandria-npc-list.html)
-- [xSROMap - Interactive Map](https://jellybitz.github.io/xSROMap/)
-
-### Communauté
-- [SRO Lobby - Alexandria NPCs Forum](https://www.srolobby.com/konular/silkroad-online-alexandria-npcs.2984/)
-- [Silkroad Forums - 11D Quest Discussion](http://www.silkroadforums.com/viewtopic.php?f=2&t=120633)
+- [xSROMap — carte interactive](https://jellybitz.github.io/xSROMap/)
+- [Silkroad Secrets — Alexandria quest list](http://silkroadsecrets.blogspot.com/2010/03/official-alexandria-quest-list-part-1.html)
+- [Silkroad Secrets — Alexandria NPC list](http://silkroadsecrets.blogspot.com/2009/08/alexandria-npc-list.html)
+- [Guild Algarb — Alexandria Dungeons (Job Temple)](https://guildalgarb.wordpress.com/games/sro/maps/alexandria-dungeons/)
+- [GamesIndustry — Legend V: Heroes of Alexandria (cap 110)](https://www.gamesindustry.biz/silkroad-online-level-cap-hits-110-with-legend-v-heroes-of-alexandria-update)
+- Docs internes : [13_ZONES_OVERVIEW.md](13_ZONES_OVERVIEW.md) · [NPCS_COORDINATES.md](NPCS_COORDINATES.md) · [29_FORGOTTEN_WORLD.md](29_FORGOTTEN_WORLD.md)
 
 ---
 
-## 📝 Notes de Développement
+## 📝 Notes de Développement (SRObro)
 
-### Pour SRObro Browser Clone
-
-#### Données Techniques Requises
-
-**NPCs avec Coordonnées Précises:**
 ```javascript
-// Exemple de structure de données pour NPCs
+// Exemple de structure pour les NPCs d'Alexandria (coordonnées officielles)
 {
-  "npc_id": "ALEX_BLACKSMITH_HEMAKA",
-  "name": "Blacksmith Hemaka",
-  "position": { "x": 18234, "y": 18345 },
+  "npc_id": "ALEX_WEAPON_HEMAKA",
+  "name": "Weapon Trader Hemaka",
+  "city": "Alexandria (South)",
+  "position": { "posX": -16739, "posY": -277 },
   "function": "WEAPON_TRADER",
-  "shop_data": {
-    "weapons_10d": [...],
-    "weapons_11d": [...],
-    "weapons_12d": [...]
-  }
+  "degrees": ["10D", "11D"]
 }
 ```
 
-**Quest Data:**
-```javascript
-// Structure pour les quêtes
-{
-  "quest_id": "ALEX_TAX_WEAPON_1",
-  "name": "Tax Due Notice (Weapon Trader)",
-  "npc_start": "FINANCE_OFFICER_MANETO",
-  "npc_end": "WEAPON_TRADER_HEMAKA",
-  "rewards": {
-    "exp": 4809311,
-    "sp": 700,
-    "gold": 2362
-  },
-  "type": "DELIVERY"
-}
-```
-
-**Monster Spawns:**
-```javascript
-// Structure pour les spawns
-{
-  "monster_id": "DARK_KHEPRI",
-  "name": "Dark Khepri",
-  "level": 95,
-  "spawn_areas": [
-    { "x_min": 17500, "x_max": 18500, "y_min": 16200, "y_max": 16800 }
-  ],
-  "drops": ["DARK_KHEPRI_WEED", "GOLD", "EQUIPMENT_10D"]
-}
-```
-
-#### Modèles 3D et Assets
-
-**Architecture Égyptienne:**
-- Modèles de bâtiments: Temples, palais, pyramides
-- Textures: Sable, pierre, or, hiéroglyphes
-- NPCs: Gardes égyptiens, marchands, scribes
-
-**Monstres Égyptiens:**
-- Dark Khepri (scarabée)
-- Uraeus (serpent)
-- Sphinx (lion-human)
-- Pharaoh Guardians
+- **Nomenclature client** : « Storage Keepeer Khamererne » (faute de frappe officielle), « Governor Senmute » (et non « Egypt Viceroy »)
+- Le port (Marwa, Snefru, sailors) est le point d'ancrage de la traversée maritime Europe ↔ Égypte
 
 ---
 
-*Dernière mise à jour: 20 Janvier 2026*
-
-*Sources: Silkroad Secrets Blog, Silkroad Online Wiki, xSROMap, Community Forums*
+*Dernière mise à jour : 2026-10-01*
+*Sources : données client officielles (xSROMap), Silkroad Secrets, Guild Algarb, press Joymax*

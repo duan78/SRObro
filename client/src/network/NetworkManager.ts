@@ -29,6 +29,12 @@ export interface NetworkEvents {
   pickup_success: (data: any) => void;
   pickup_failed: (data: any) => void;
   pickup_all_response: (data: any) => void;
+  // Phase 2: combat réseau
+  attack: (data: any) => void;
+  'player:state': (data: any) => void;
+  'player:death': (data: any) => void;
+  'player:respawned': (data: any) => void;
+  skill_rejected: (data: any) => void;
 }
 
 export class NetworkManager {
@@ -159,6 +165,23 @@ export class NetworkManager {
     // Damage event
     this.socket.on('damage', (data) => {
       this.emit('damage', data);
+    });
+
+    // Phase 2: packets combat
+    this.socket.on('attack', (data) => {
+      this.emit('attack', data);
+    });
+    this.socket.on('player:state', (data) => {
+      this.emit('player:state', data);
+    });
+    this.socket.on('player:death', (data) => {
+      this.emit('player:death', data);
+    });
+    this.socket.on('player:respawned', (data) => {
+      this.emit('player:respawned', data);
+    });
+    this.socket.on('skill_rejected', (data) => {
+      this.emit('skill_rejected', data);
     });
 
     // Chat message

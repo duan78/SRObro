@@ -1,476 +1,263 @@
-# NPCs Database - Complete
+# 👤 NPCs Database — Référence Fonctionnelle
+
+> 📍 **Vous êtes ici :** [Accueil](README.md) → [NPCs Database](NPCS_DATABASE.md)
 
 ## 📋 Table des Matières
-- [Jangan NPCs](#-jangan-npcs)
-- [Donwhang NPCs](#-donwhang-npcs)
-- [Hotan NPCs](#-hotan-npcs)
-- [Alexandria NPCs](#-alexandria-npcs)
+- [Introduction](#-introduction)
+- [NPCs par Ville (résumé)](#-npcs-par-ville-résumé)
+- [Commerçants](#-commerçants)
+- [Services](#-services)
 - [Job NPCs](#-job-npcs)
-- [Generic NPCs](#-generic-npcs)
+- [Skill NPCs (entraîneurs)](#-skill-npcs-entraîneurs)
+- [Quest NPCs](#-quest-npcs)
+- [NPCs d'Événements et Systèmes](#-npcs-dévénements-et-systèmes)
+- [NPCs de Transport](#-npcs-de-transport)
+- [NPCs Récurrents](#-npcs-récurrents)
+- [Système de Coordonnées](#-système-de-coordonnées)
+- [FAQ](#-faq)
 
 ---
 
-## 🏯 Jangan NPCs
+## 📚 Introduction
 
-### Weapon NPCs
+Cette base documente les **fonctions et services** de tous les types de NPCs de Silkroad Online, avec leurs **noms officiels** et leurs positions (PosX/PosY).
 
-**Blacksmith [Weapon Merchant]**
-- **Coords:** X: 925, Y: 1085
-- **Services:**
-  - Vends weapons 1D-3D
-  - Repair weapons
-  - Durée repair: Instant
-  - Prix repair: 1-5% de valeur de l'item
-- **Stock:**
-  - 1D Weapons: 1,000-1,800 gold
-  - 2D Weapons: 5,000-9,000 gold
-  - 3D Weapons: 15,000-27,000 gold
-- **Special:** Achète vieux weapons
-
-**Senior Blacksmith [Weapon Upgrade]**
-- **Coords:** X: 930, Y: 1080
-- **Services:**
-  - Weapon enhancements (via alchemy)
-  - Socket system (si disponible)
-- **Requirements:** Level 10+
-
-### Armor NPCs
-
-**Armor Merchant**
-- **Coords:** X: 955, Y: 1115
-- **Services:**
-  - Vend armor 1D-3D
-  - Repair armor
-- **Stock:**
-  - Garment sets: 4,300-75,000 gold
-  - Protector sets: 5,400-90,000 gold
-  - Armor sets: 6,600-105,000 gold
-
-### Accessory NPCs
-
-**Jeweler**
-- **Coords:** X: 890, Y: 1090
-- **Services:**
-  - Vend rings, necklaces, earrings 1D-3D
-  - Socket insertion (si disponible)
-- **Stock:**
-  - Rings: 500-7,500 gold
-  - Necklaces: 1,000-15,000 gold
-  - Earrings: 750-11,250 gold
-
-### Potion NPCs
-
-**Potion Merchant**
-- **Coords:** X: 950, Y: 1180
-- **Services:**
-  - Vend potions, scrolls, pills
-- **Stock:**
-  - HP Potions: 50-500 gold
-  - MP Potions: 50-500 gold
-  - Return Scrolls: 500 gold
-  - Speed Scrolls: 5,000-25,000 gold
-
-### Storage
-
-**Storage Keeper**
-- **Coords:** X: 980, Y: 1160
-- **Services:**
-  - Stockage illimité (la plupart des serveurs)
-  - Accès gratuit
-- **Capacité:** Illimitée sur la plupart des serveurs
-- **Organization:** Drag & drop items
-
-### Stable
-
-**Stable Keeper**
-- **Coords:** X: 860, Y: 1060
-- **Services:**
-  - Vend horses
-  - Repair mounts
-  - Mount food
-- **Stock:**
-  - Horse Level 1: 50,000 gold
-  - Horse Level 2: 100,000 gold
-  - Horse Level 3: 150,000 gold
-  - Carrot: 100 gold
-  - Hay: 500 gold
-
-### Job NPCs
-
-**Trader Association Manager**
-- **Coords:** X: 1010, Y: 1140
-- **Services:**
-  - Become Trader (Level 20+)
-  - Buy goods
-  - Sell goods
-- **Goods Prices:**
-  - Medicine: 50,000 gold/unit
-  - Potions: 30,000 gold/unit
-  - Dyes: 40,000 gold/unit
-  - Spices: 35,000 gold/unit
-
-**Hunter Guild Manager**
-- **Coords:** X: 1020, Y: 1120
-- **Services:**
-  - Become Hunter (Level 20+)
-  - Claim rewards
-  - Job level ups
-
-**Thief Guild Manager [Hidden]**
-- **Coords:** X: 1045, Y: 1190
-- **Services:**
-  - Become Thief (Level 20+)
-  - Sell stolen goods
-- **Visibility:** Dans une ruelle sombre
-
-### Quest NPCs
-
-**Village Chief**
-- **Coords:** X: 940, Y: 1100
-- **Quests:**
-  - Welcome to Silkroad (Level 1)
-  - Rewards: 100 EXP, 50 SP
-
-**Guard Captain**
-- **Coords:** X: 970, Y: 1075
-- **Quests:**
-  - Combat Training (Level 2)
-  - Monster Hunt quests
-- **Rewards:** Various EXP, SP, items
-
-**Merchant So**
-- **Coords:** X: 960, Y: 1125
-- **Quests:**
-  - Missing Caravan (Level 10)
-  - Trade quests
-
-**Hunter Jin**
-- **Coords:** X: 1020, Y: 1130
-- **Quests:**
-  - Thief Threat (Level 15)
-  - Bounty quests
-
-**Trader Wang**
-- **Coords:** X: 1000, Y: 1150
-- **Quests:**
-  - First Trade (Level 20)
-  - Job progression
-
-### Skill NPCs
-
-**Chinese Skill Trainer**
-- **Coords:** X: 930, Y: 1095
-- **Services:**
-  - Learn Chinese skills
-  - Reskill (si disponible)
-- **Masteries:** Bicheon, Heuksal, Pacheon, Cold, Lightning, Fire, Force
-- **Cost:** SP (variable)
-
-**European Skill Trainer [Alexandria only]**
-- **Services:**
-  - Learn European skills
-  - Class-specific skills
-
-### Teleport NPC
-
-**Teleport Operator**
-- **Coords:** X: 945, Y: 1105
-- **Services:**
-  - Fast travel
-- **Destinations & Prix:**
-  - Donwhang: 10,000 gold
-  - Hotan: 50,000 gold
-  - Constantinople: 100,000 gold
-- **Cast Time:** Instant
-
-### Union Manager
-
-**Union Manager**
-- **Coords:** X: 975, Y: 1135
-- **Services:**
-  - Create/Join union
-  - Union management
-- **Requirements:** Level 5+ guild
-
-### Event NPCs
-
-**Event Manager [Pendant events]**
-- **Coords:** Variable (près de fountain)
-- **Services:**
-  - Event items
-  - Special rewards
-  - Holiday items
+> 🗺️ Pour les tables complètes ville par ville avec toutes les coordonnées : **[NPCS_COORDINATES.md](NPCS_COORDINATES.md)** (fichier de référence).
+> ⚠️ Refonte 2026-10 : les noms génériques (« Weapon Merchant », « Potion Master ») et prix inventés des versions précédentes ont été remplacés par les données du client officiel.
 
 ---
 
-## 🏛️ Donwhang NPCs
+## 🏙️ NPCs par Ville (résumé)
 
-### Key NPCs
-
-**Weapon Merchant**
-- **Coords:** X: 1350, Y: 1450
-- **Stock:** 3D-5D weapons
-- **Prix:** 15,000-150,000 gold
-
-**Armor Merchant**
-- **Coords:** X: 1380, Y: 1480
-- **Stock:** 3D-5D armor
-
-**Potion Merchant**
-- **Coords:** X: 1400, Y: 1520
-- **Stock:** Medium/Large potions
-
-**Storage Keeper**
-- **Coords:** X: 1420, Y: 1500
-
-**Stable Keeper**
-- **Coords:** X: 1300, Y: 1430
-
-**Trader Association**
-- **Coords:** X: 1480, Y: 1550
-
-**Hunter Guild**
-- **Coords:** X: 1490, Y: 1530
-
-**Thief Guild [Hidden]**
-- **Coords:** X: 1510, Y: 1570 (hidden)
+| Ville | Niveaux | Armes | Armures | Potions | Specialty | Stockage | Écurie | Jobs (T/H/Th) |
+|-------|---------|-------|--------|---------|-----------|----------|--------|----------------|
+| **Jangan** | 1-20 | Blacksmith Chulsan | Protector Trader Mrs Jang | Grocery Jinjin + Dae-Pyeong | Specialty Trader Jodaesan | Sansan/Wangu | Machun | Hwajung / Gwakwi / Smuggler Chao |
+| **Donwhang** | 20-35 | Blacksmith Agol | Protector Trader Yeolah | Grocery Yeosun + Dae-Pyeong | Specialty Shop Elder Leegak | Irina/Paedo | Makgo | Leegeuk / Haraho / Smuggler Chungho |
+| **Hotan** | 30-60 | Blacksmith Soboi | Protector Trader Gonishya | Potion Merchant Manina (+Shadi EU) | Specialty Trader Sanmok | Auisan | — (via regions voisines) | Asaman / Ahmok / — |
+| **Samarkand** | 30-45 | Weapon Trader Tricia | Protector Trader Aryoan | Grocery Saha (+Shadi EU) | Specialty Trader Toson | Saesa | Hoyun | Karen / Shahad / Smuggler Barus |
+| **Constantinople** | 1-20 EU | Weapon Trader Balbardo | Protector Trader Jatomo | Europe Medicine Shadi | Specialty Trader Tina | (inn/auberge) | Treno | Tana / Adria / Smuggler Raul |
+| **Alexandria (S)** | 100+ | Weapon Trader Hemaka | Armor Trader Sharon | Potion Merchant Titi | Specialty Trader Wasdi | Khamererne | Nefret | — |
+| **Alexandria (N)** | 100+ | Weapon Trader Chunmoo | Armor Trader Viviana | Grocery Kapra / Potion Thiara | — | Asagon | — | Naunakt / Narmer / Tausert |
+| **Thief Town** | 20+ | — | — | — | — | — | — | Thief Associate + Stolen Goods Dealer |
+| **Baghdad** *(post-classique)* | 115+ | Repairer Uthman | — | Potion Trader Abubark | Specialty Abutalip | Abdullah | Ali | Hassan / Sami / Obad |
 
 ---
 
-## 🏜️ Hotan NPCs
+## 🛒 Commerçants
 
-### Key NPCs
+### Blacksmith / Weapon Trader
+- **Fonction :** vente d'armes (+ souvent armures de base) et **réparation**
+- **Réparation :** coût proportionnel à la valeur et à l'usure de l'item
+- **Degrees par ville (approximatif, mondes classiques) :**
+  - Jangan : 1D-3D · Donwhang : 3D-5D · Hotan : 5D-8D · Samarkand : 5D-8D · Constantinople : 1D-8D (EU) · Alexandria : 10D-11D+ (12D-13D cap 120)
 
-**Weapon Merchant**
-- **Coords:** X: 1850, Y: 1950
-- **Stock:** 6D-9D weapons
-- **Prix:** 150,000-2,000,000 gold
+### Protector Trader / Armor Trader
+- **Fonction :** armures (Garment/Protector/Armour) et shields
+- Mêmes plages de degrés que les armes par ville
 
-**Armor Merchant**
-- **Coords:** X: 1880, Y: 1980
-- **Stock:** 6D-9D armor
+### Grocery Trader / Potion Merchant / Medicine Supplier
+- **Fonction :** potions HP/MP (Small → XXL), Universal Pills, Vigor Pills, Return Scrolls, Speed Scrolls
+- **Spécificité race :** « China Medicine Supplier » (CH) vs « Europe Medicine Supplier » (EU) — les potions sont identiques, la distinction est cosmétique/commerciale
 
-**Potion Merchant**
-- **Coords:** X: 1900, Y: 2020
-- **Stock:** Large potions, Universal pills
+### Accessory / Valuables Dealer
+- **Fonction :** anneaux, colliers, boucles d'oreilles
+- « China Valuables Dealer » / « Europe Valuables Dealer » selon la race servie
 
-**Storage Keeper**
-- **Coords:** X: 1920, Y: 2000
-
-**Stable Keeper**
-- **Coords:** X: 1800, Y: 1930
-
-**Camel Merchant**
-- **Coords:** X: 1820, Y: 1960
-- **Stock:** Camels (2 slot mounts)
-- **Prix:** 500,000 gold
-
-**Elephant Merchant**
-- **Coords:** X: 1830, Y: 1970
-- **Stock:** Elephants (3 slot mounts)
-- **Prix:** 2,000,000 gold
+### Specialty Trader / Goods Supplier
+- **Fonction :** **specialty goods** (marchandises de trade) et matériaux
+- Le prix d'achat des specialty goods dépend de la ville ; la revente rapporte selon la **distance** parcourue
+- On en trouve aussi **hors des villes** (ravitaillement des caravanes) : ex. Specialty Trader Hounah (Tarim), Osaman (Karakoram), Payi (Taklamakan), Kaella/Hujaan (Égypte)
 
 ---
 
-## 🏛️ Alexandria NPCs
+## 📦 Services
 
-### Key NPCs
+### Storage Keeper
+- **Fonction :** entrepôt partagé entre les personnages du compte
+- Présent dans toutes les villes (parfois en double : Sansan/Wangu à Jangan, Irina/Paedo à Donwhang — doublon officiel du client)
+- Capacité étendue par pages (selon serveur)
 
-**Weapon Merchant**
-- **Coords:** X: 2200, Y: 2300
-- **Stock:** 9D-13D weapons
-- **Prix:** 2,000,000-50,000,000 gold
+### Stable Keeper / Stable Master
+- **Fonction :** achat de montures (cheval), nourriture (carottes/fourrage), réparation des montures
+- Les **transports de trade** (cheval de bât, chameau, éléphant — selon version/serveur) s'achètent auprès des unions/marchands de trade
 
-**Armor Merchant**
-- **Coords:** X: 2230, Y: 2330
+### Guild Manager
+- **Fonction :** création de guilde, gestion, union de guildes
+- Jangan : Leebaek · Donwhang : Ryukang · Hotan : Musai · Samarkand : Hapsa · Constantinople : Gilt · Alexandria : Sennefer/Elia · Baghdad : Nuur
 
-**Potion Merchant**
-- **Coords:** X: 2250, Y: 2360
-
-**Storage Keeper**
-- **Coords:** X: 2280, Y: 2350
-
-**Stable Keeper**
-- **Coords:** X: 2150, Y: 2280
-
-**European Skill Trainer**
-- **Coords:** X: 2300, Y: 2320
-- **Services:**
-  - European class skills
-  - Warrior, Rogue, Wizard, Warlock, Bard, Cleric
+### Inn Master
+- **Fonction :** repos/restauration (Constantinople : Sikeulro)
 
 ---
 
-## 💼 Job NPCs (All Cities)
+## 💼 Job NPCs
 
-### Trader Association
+### Triangle des jobs
 
-**Services:**
-1. **Become Trader** (Level 20+)
-   - Obtient: Trader Suit
-   - Permet: Trading
+| Job | Type de NPC | Rôle |
+|-----|---------|------|
+| **Trader** | Merchant Associate / Trader Union President | Achète des specialty goods, les transporte, les vend au loin |
+| **Hunter** | Hunter Associate / Hunter Union President | Escorte les caravanes, chasse les thieves (PNJ et joueurs) |
+| **Thief** | Smuggler / Thief Union President / Thief Associate | Attaque les caravanes, vole les marchandises |
 
-2. **Buy Goods**
-   - Prix varient par ville
-   - Discount selon reputation
+### Règles importantes
+- **Niveau minimum :** généralement 20 pour rejoindre une union
+- **Costume de job** requis pour participer au jeu de trade/PvP de job
+- Le NPC thief est toujours **dissimulé** dans une ruelle à l'écart (Smuggler)
+- **Hotan n'a pas de NPC thief** (particularité confirmée par les données client)
+- Les marchandises volées se revendent au **Stolen Goods Dealer** de **Thief Town**
 
-3. **Sell Goods**
-   - Prix varient par ville
-   - Profit: 10-100%
-
-### Hunter Guild
-
-**Services:**
-1. **Become Hunter** (Level 20+)
-   - Obtient: Hunter Suit
-
-2. **Claim Rewards**
-   - Pour thief kills
-   - Job XP
-   - Gold
-
-3. **Job Level Up**
-   - Rewards: Gold, items, suit upgrades
-
-### Thief Guild
-
-**Services:**
-1. **Become Thief** (Level 20+)
-   - Obtient: Thief Suit
-
-2. **Sell Stolen Goods**
-   - Prix: 50-80% du prix normal
-   - Anonyme
-
-3. **Job Level Up**
-   - Rewards: Gold, items, suit upgrades
+### Job Temple
+- Alexandria : accès 105+ en costume de job (voir [CITIES_04_ALEXANDRIA.md](CITIES_04_ALEXANDRIA.md))
 
 ---
 
-## 🏪 Generic NPCs
+## 🎓 Skill NPCs (entraîneurs)
 
-### Blacksmith (Repair)
+### Masteries chinoises (Jangan, Donwhang, Hotan...)
+- Bicheon (sword/blade), Heuksal (spear/glaive), Pacheon (bow)
+- Cold, Lightning, Fire, Force
+- Dans les données client modernes, les « Trainers » urbains sont regroupés ; historiquement chaque ville chinoise forme toutes les masteries
 
-**Locations:** Toutes les villes
-**Services:**
-- Repair weapons
-- Repair armor
-- Repair mounts (à l'écurie)
-- Repair shield
-- Repair jewelry
+### Classes européennes (Constantinople, Samarkand, Alexandria)
+- Warrior, Rogue, Wizard, Warlock, Bard, Cleric
+- Chaque personnage EU combine une classe principale + un support
 
-**Durée:** Instant
-**Prix:** 1-5% de la valeur de l'item
-
-### Potion Shop
-
-**Locations:** Toutes les villes
-**Items:**
-- HP Potions (Small, Medium, Large)
-- MP Potions (Small, Medium, Large)
-- Universal Pills (HP+MP)
-- Vigor Pills
-- Return Scrolls
-- Speed Scrolls
-- various consumables
-
-### Storage
-
-**Locations:** Toutes les villes
-**Services:**
-- Stockage items
-- Infinite slots (la plupart des serveurs)
-- Free access
-- No NPC fees (généralement)
-
-### Stable
-
-**Locations:** Toutes les villes
-**Services:**
-- Buy mounts
-- Repair mounts
-- Mount food
-- Mount skills (si disponible)
-
-**Mount Types:**
-- Horse (1 slot)
-- Camel (2 slots)
-- Elephant (3 slots)
+👉 Détail des skills : [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md) · [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md)
 
 ---
 
-## 📍 NPC Coordination System
+## 📜 Quest NPCs
 
-### Format
+| Type | Exemples officiels |
+|------|--------------------|
+| **Guides de départ** | Guide Lipria (Constantinople), Adventurer Flora (Jangan), Guide Riise/Raffy |
+| **Chefs de village / militaires** | Village Chief Hwangno (Jangan), General Sonhyeon (Jangan), General Ratchel (Constantinople) |
+| **Daily Quests** | Daily Quest Manager Wei Yan (Jangan), Bai Man (Donwhang), Dasra (Hotan), Senlaf (Samarkand), Asshur (Constantinople) |
+| **Quêtes de ville** | Baekako, Honmusa (Donwhang), Exorcist Miaoryeong (Jangan), Sunset Witch/Boy Yongso (faubourg de Constantinople) |
+| **Quêtes d'Alexandria** | Governor Senmute (série « Overdriving Heart »), Finance Officer Maneto (taxes), Librarian Ahha, Doctor Renenutet, Lighthouse Keeper Snefru, Harbor Manager Marwa |
+| **Avant-postes (zones)** | Outpost Commanders + Guards (Tarim, Asia Minor, Central Asia, Egypt) — hubs de quêtes de chasse |
 
-**Coords:** X: [horizontal], Y: [vertical]
-
-**Origin (0,0):** Coin supérieur gauche de la map
-
-**X Axis:**
-- Augmente vers l'est (right)
-- Diminue vers l'ouest (left)
-
-**Y Axis:**
-- Augmente vers le sud (down)
-- Diminue vers le nord (up)
-
-**Example:**
-- Jangan Center: Approx X: 950, Y: 1100
-- Donwhang Center: Approx X: 1400, Y: 1500
-- Hotan Center: Approx X: 1900, Y: 2000
-
-### Finding NPCs
-
-**Method 1: Use Map (M key)**
-- Open map
-- Look for NPC icons
-- Click sur NPC pour auto-walk
-
-**Method 2: Coords**
-- Use coordinates pour navigation précise
-- Certains add-ons affichent coords
-
-**Method 3: City Markers**
-- Chaque ville a des landmarks
-- Mémorisez les emplacements
+👉 Détail : [16_QUEST_SYSTEM.md](16_QUEST_SYSTEM.md)
 
 ---
 
-## 🔄 NPC Respawn
+## 🎪 NPCs d'Événements et Systèmes
 
-**Shop NPCs:**
-- **Never respawn** (toujours là)
+| NPC | Fonction | Présence |
+|-----|----------|----------|
+| **Magic POP** (+ Guide Gori) | Gacha (tickets → récompenses) | toutes les villes |
+| **Event So-Ok** | Événements saisonniers | toutes les villes |
+| **Homeless Genie** | Téléportations utilitaires (quête) | toutes les villes |
+| **Mysterious Priest** | Quêtes spéciales | toutes les villes |
+| **Carnival Manager Jooa** | Carnaval | toutes les villes |
+| **Premium Service Manager Qing Yu** | Item mall / services premium | toutes les villes |
+| **Arena Manager / Survival Arena Manager** | Arènes PvP (Arena Coins) | grandes villes |
+| **Casino Guardian Huhoan / Lottery Seller Wangwon / Ticket Seller Gyoun** | Mini-jeux | Jangan |
+| **Gisaengs** (So-Ok, Yumi, Juyeong, Ahjin, Mihyang, Juju) | Quartier des plaisirs (lore/quests) | Jangan |
+| **Dimensional Gate** | Téléporteurs inter-villes | voir Transport |
 
-**Quest NPCs:**
-- **Always present** (sauf pendant events)
+---
 
-**Special NPCs:**
-- **Event NPCs:** Disparaissent après events
-- **Seasonal NPCs:** Apparaissent pendant périodes spécifiques
+## 🚢 NPCs de Transport
+
+### Dimensional Gates (réseau inter-villes)
+Voir le graphe complet : [MAP_COORDINATES_REFERENCE.md — Portails](MAP_COORDINATES_REFERENCE.md#-portails-et-téléporteurs)
+
+| Gate | Position |
+|------|----------|
+| Jangan | (6 461, 1 097) |
+| Donwhang | (3 552, 2 113) |
+| Hotan | (113, 49) |
+| Samarkand | (−5 184, 2 891) |
+| Constantinople | (−10 682, 2 585) |
+| Alexandria (South) | (−16 643, −275) |
+| Alexandria (North) | (−16 148, 76) |
+| Baghdad | (−8 538, −707) |
+
+### Ferries et ports
+
+| NPC | Position | Liaison |
+|-----|----------|---------|
+| Ferry Ticket Seller Doji ↔ Tayun | (5 028, 1 136) ↔ (5 043, 1 664) | rivière de Jangan (N-S) |
+| Ferry Ticket Seller Chau ↔ Hageuk | (4 449, 929) ↔ (4 124, 1 189) | rivière de Jangan (E-O) |
+| Harbor Manager Gale | (−11 424, 1 162) | port Europe (voie maritime) |
+| Pirate Morgun / Blackbeard | (−8 700, 2 210 / 1 828) | escales pirates |
+| Harbor Manager Marwa | (−16 542, 371) | port Alexandria |
+| Harbor Manager Georion | (−10 408, 2 503) | port de Constantinople (origine historique) |
+
+### Gardes téléporteurs
+- **Jangan :** Soldier Choiyoung / Jingyo / Hogang / Sangnam (navettes inter-portes)
+- **Constantinople :** Soldier Kartino → **Thief Town**
+
+---
+
+## 🔁 NPCs Récurrents
+
+Un socle commun de NPCs apparaît dans (presque) toutes les villes — voir la table détaillée dans [NPCS_COORDINATES.md — NPCs Récurrents](NPCS_COORDINATES.md#-npcs-récurrents-présents-dans-plusieurs-villes) : Magic POP, Event So-Ok, Homeless Genie, Mysterious Priest, Carnival Jooa, Premium Qing Yu, Consignment Merchant Juel, Arena Managers, fournisseurs China/Europe.
+
+---
+
+## 📐 Système de Coordonnées
+
+```
+PosX = ((Region & 0xFF) - 135) × 192 + X / 10   → croissant vers l'EST
+PosY = ((Region >> 8) - 92) × 192 + Y / 10      → croissant vers le NORD
+```
+
+| Ville | PosX centre | PosY centre |
+|-------|-------------|-------------|
+| Jangan | ≈ 6 460 | ≈ 1 100 |
+| Donwhang | ≈ 3 550 | ≈ 2 050 |
+| Hotan | ≈ 115 | ≈ 50 |
+| Samarkand | ≈ −5 180 | ≈ 2 890 |
+| Constantinople | ≈ −10 680 | ≈ 2 600 |
+| Alexandria | ≈ −16 400 | ≈ 0 |
+| Thief Town | ≈ 9 130 | ≈ 860 |
+| Baghdad | ≈ −8 540 | ≈ −730 |
 
 ---
 
 ## 💡 Tips
 
-**Storage Strategy:**
-- Utilisez storage dans chaque ville
-- Stockez des matériaux d'alchimie
-- Gardez les items précieux
+**Organisation urbaine (pattern commun aux villes) :**
+1. **Place centrale** : storage, grocery/potions, consignment
+2. **Rangée commerciale** : blacksmith, protector trader, accessory
+3. **Unions de jobs** : autour de la place (trader/hunter visibles, thief caché)
+4. **Périphérie** : gardes, gates, téléporteurs
 
-**Repair Strategy:**
-- Repair avant de partir grind
-- Repair avant trade runs
-- Gardez votre gear en bon état
-
-**Job NPCs:**
-- Mémorisez leurs emplacements
-- Visitez régulièrement pour rewards
-
-**Skill Trainers:**
-- Visitez régulièrement pour nouvelles skills
-- Check skill requirements
+**Trouver un NPC :**
+- Carte du monde (M) avec icônes NPCs
+- Les coords PosX/PosY de cette base
+- Les marqueurs xSROMap (recherche par nom)
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
+## ❓ FAQ
+
+**Q: Les prix des shops sont-ils documentés ici ?**
+R: Non — les prix varient selon les caps/serveurs et les anciens tableaux de prix de cette doc étaient inventés. Seuls les degrees par ville (fiables) sont indiqués.
+
+**Q: Où sont les entraîneurs de skills exactement ?**
+R: Chaque ville de race forme ses masteries ; dans les données client, les trainers urbains sont regroupés sur la place (voir NPCS_COORDINATES.md). Les fortress « Trainer » ne forment pas de skills (garnison FW).
+
+**Q: Pourquoi certains NPCs apparaissent-ils en double ?**
+R: Doublons officiels du client (ex. Storage-Keeper Sansan/Wangu). À traiter comme un seul point de service.
+
+**Q: Que fait le Homeless Genie ?**
+R: NPC de quête récurrent qui propose des téléportations utilitaires une fois les quêtes accomplies.
+
+---
+
+## 🔗 Voir aussi
+
+- **[NPCS_COORDINATES.md](NPCS_COORDINATES.md)** — toutes les coordonnées par ville ⭐
+- **[32_NPCS_DATABASE.md](32_NPCS_DATABASE.md)** — hub NPCs
+- [MAP_COORDINATES_REFERENCE.md](MAP_COORDINATES_REFERENCE.md) — coordonnées monde
+- [09_JOB_SYSTEM_OVERVIEW.md](09_JOB_SYSTEM_OVERVIEW.md) — système de jobs
+- [16_QUEST_SYSTEM.md](16_QUEST_SYSTEM.md) — quêtes
+
+---
+
+*Dernière mise à jour : 2026-10-01*
+*Sources : client officiel via xSROMap (JellyBitz), SRO Lobby, Silkroad Secrets*

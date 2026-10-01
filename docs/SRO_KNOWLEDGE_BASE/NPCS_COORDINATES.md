@@ -1,354 +1,481 @@
-# Base de Données des Coordonnées NPCs
+# 📇 Base de Données des Coordonnées NPCs
+
+> 📍 **Vous êtes ici :** [Accueil](README.md) → [NPCs Coordinates](NPCS_COORDINATES.md)
 
 ## 📋 Table des Matières
-- [Introduction](#introduction)
-- [Format des Données](#format-des-données)
-- [Alexandria NPCs](#alexandria-npcs)
-- [Constantinople NPCs](#constantinople-npcs)
-- [Jangan NPCs](#jangan-npcs)
-- [Donwhang NPCs](#donwhang-npcs)
-- [Hotan NPCs](#hotan-npcs)
-- [Samarkand NPCs](#samarkand-npcs)
-- [Job NPCs par Ville](#job-npcs-par-ville)
-- [Unique Boss Spawn Locations](#unique-boss-spawn-locations)
-- [Notes de Développement](#notes-de-développement)
+- [Introduction](#-introduction)
+- [Format des Données](#-format-des-données)
+- [Jangan NPCs](#-jangan-npcs)
+- [Donwhang NPCs](#-donwhang-npcs)
+- [Hotan NPCs](#-hotan-npcs)
+- [Samarkand NPCs](#-samarkand-npcs)
+- [Constantinople NPCs](#-constantinople-npcs)
+- [Alexandria NPCs](#-alexandria-npcs)
+- [Thief Town NPCs](#-thief-town-npcs)
+- [Baghdad NPCs (post-classique)](#-baghdad-npcs-post-classique)
+- [Job NPCs par Ville](#-job-npcs-par-ville)
+- [Unique Boss Spawn Locations](#-unique-boss-spawn-locations)
+- [NPCs Récurrents (présents dans plusieurs villes)](#-npcs-récurrents-présents-dans-plusieurs-villes)
+- [Notes de Développement](#-notes-de-développement)
+- [FAQ](#-faq)
 
 ---
 
 ## 📚 Introduction
 
-Cette documentation fournit une **base de données exhaustive des NPCs** de Silkroad Online avec leurs coordonnées, fonctions, et données techniques pour le développement du navigateur.
+Cette documentation fournit la **base de données des NPCs de Silkroad Online avec leurs coordonnées officielles** (PosX/PosY), extraite du client via xSROMap (697 NPCs référencés ; les villes ci-dessous couvrent les ~320 NPCs urbains utiles).
 
-**Sources Primaires:**
-- xSROMap (https://jellybitz.github.io/xSROMap/) - Carte interactive
-- Documentation existante du projet SRObro
-- Forums communautaires (SROlobby, Silkroad Forums)
+**Sources Primaires :**
+- **Client officiel** — extraction xSROMap v1.4 (https://jellybitz.github.io/xSROMap/, dépôt JellyBitz/xSROMap, fichier `assets/js/main.js`)
+- Documentation SRObro
+- Forums communautaires (SRO Lobby, Silkroad Secrets)
 
-**Note:** Les coordonnées précises X/Y sont indiquées quand disponibles. Sinon, des emplacements relatifs sont fournis.
+> ⚠️ **Refonte 2026-10 :** les noms génériques inventés (« Weapon Trader So ») et les coordonnées estimées des versions précédentes ont été remplacés par les **noms et positions réels du client**. Ne pas mixer avec l'ancien système.
 
 ---
 
 ## 📐 Format des Données
 
-### Structure Standard
+### Système de coordonnées
+```
+PosX = ((Region & 0xFF) - 135) × 192 + X / 10   → croissant vers l'EST
+PosY = ((Region >> 8) - 92) × 192 + Y / 10      → croissant vers le NORD
+```
+Voir [MAP_COORDINATES_REFERENCE.md](MAP_COORDINATES_REFERENCE.md) pour le détail complet.
 
-Chaque NPC est documenté avec le format suivant:
+### Structure standard (SRObro)
 
 ```json
 {
-  "npc_id": "UNIQUE_ID",
-  "name": "NPC Name",
-  "city": "City Name",
-  "position": {
-    "x": 00000,
-    "y": 00000,
-    "z": 0,
-    "region": "REGION_CODE"
-  },
-  "function": "FUNCTION_TYPE",
-  "services": ["SERVICE_1", "SERVICE_2"],
-  "shop_data": {
-    " sells": true,
-    "categories": ["CATEGORY_1"]
-  },
-  "race": "CHINESE|EUROPEAN|NEUTRAL"
+  "npc_id": "JANGAN_BLACKSMITH_CHULSAN",
+  "name": "Blacksmith Chulsan",
+  "city": "Jangan",
+  "position": { "posX": 6369, "posY": 1101 },
+  "region": 25000,
+  "function": "WEAPON_TRADER",
+  "services": ["SELL_WEAPONS", "SELL_ARMOR", "REPAIR"],
+  "race": "CHINESE"
 }
 ```
 
-### Types de Fonctions
+### Types de fonctions
 
 | Function | Description |
 |----------|-------------|
-| `WEAPON_TRADER` | Vente d'armes |
-| `ARMOR_TRADER` | Vente d'armures |
-| `POTION_TRADER` | Vente de potions/consommables |
-| `ACCESSORY_TRADER` | Vente d'accessoires |
-| `SPECIALTY_TRADER` | Vente de matériaux/spécialités |
+| `WEAPON_TRADER` / `BLACKSMITH` | Armes + réparation |
+| `ARMOR_TRADER` / `PROTECTOR_TRADER` | Armures |
+| `POTION_TRADER` / `MEDICINE_SUPPLIER` / `GROCERY_TRADER` | Consommables |
+| `ACCESSORY_TRADER` / `VALUABLES_DEALER` | Accessoires |
+| `SPECIALTY_TRADER` / `GOODS_SUPPLIER` | Specialty goods / matériaux |
 | `STORAGE_KEEPER` | Entrepôt |
-| `STABLE_MASTER` | Écurie/soins montures |
-| `GUILD_MANAGER` | Gestion de guilde |
-| `GATE_PORTER` | Téléportation |
-| `JOB_UNION` | Union de jobs (Trader/Hunter/Thief) |
+| `STABLE_MASTER` / `STABLE_KEEPER` | Montures |
+| `GUILD_MANAGER` | Guildes |
+| `MERCHANT_ASSOCIATE` / `TRADER_UNION` | Union Trader |
+| `HUNTER_ASSOCIATE` / `HUNTER_UNION` | Union Hunter |
+| `SMUGGLER` / `THIEF_UNION` | Union Thief |
 | `QUEST_NPC` | Quêtes |
-| `FORGE` | Réparation/upgrade |
-
----
-
-## 🏛️ Alexandria NPCs
-
-### Coordinates: Zone Centre (approx. X: 18000, Y: 18000)
-
-| NPC ID | Nom | X | Y | Fonction | Services |
-|--------|-----|---|---|----------|----------|
-| `ALEX_WEAPON_HEMAKA` | Blacksmith Hemaka | 18234 | 18345 | WEAPON_TRADER | Vente armes 10D-13D |
-| `ALEX_POTION_TITI` | Potion Merchant Titi | 18120 | 18230 | POTION_TRADER | Potions, consommables |
-| `ALEX_ACCESSORY_MELIT` | Accessory Trader Melit | 18150 | 18180 | ACCESSORY_TRADER | Bagues, colliers |
-| `ALEX_SPECIALTY_WASDI` | Specialty Trader Wasdi | 18200 | 18250 | SPECIALTY_TRADER | Matériaux |
-| `ALEX_STORAGE_KHAMER` | Storage Keeper Khamererne | 18080 | 18120 | STORAGE_KEEPER | Entrepôt |
-| `ALEX_GUILD_SENEPER` | Guild Manager Senepereu | 18100 | 18300 | GUILD_MANAGER | Guilde |
-| `ALEX_STABLE_NEFRET` | Stable Master Nefret | 18250 | 18150 | STABLE_MASTER | Montures |
-| `ALEX_LIGHTHOUSE_SNEFRU` | Lighthouse Keeper Snefru | 18050 | 18280 | QUEST_NPC | Quêtes |
-| `ALEX_VICEROY_SENMUTE` | Egypt Viceroy Senmute | 18300 | 18400 | GOVERNOR | Quêtes principales |
-| `ALEX_TAX_MANETO` | Finance Officer Maneto | 18130 | 18220 | QUEST_NPC | Quêtes de taxe |
-| `ALEX_LIBRARIAN_AHHA` | Librarian Ahha | 18090 | 18350 | QUEST_NPC | Quêtes |
-| `ALEX_DOCTOR_RENENUT` | Doctor Renenuteteu | 18220 | 18420 | QUEST_NPC | Quêtes médicales |
-| `ALEX_HARBOR_MARWA` | Harbor Manager Marwa | 17980 | 18050 | TRANSPORT | Ferry |
-| `ALEX_TRADER_UNION` | Trader Union Nawoonakeuteu | 18170 | 18090 | TRADER_UNION | Trader job |
-| `ALEX_HUNTER_UNION` | Hunter Union Carrymer | 18210 | 18110 | HUNTER_UNION | Hunter job |
-
-**Palace Guards:**
-- `ALEX_GUARD_MUSYARI` - Palace Guard Musyari (X: 18350, Y: 18380)
-- `ALEX_GUARD_TURIAN` - Palace Guard Turian (X: 18370, Y: 18390)
-- `ALEX_GUARD_KAMORI` - Palace Guard Kamori (X: 18330, Y: 18410)
-
----
-
-## 🏰 Constantinople NPCs
-
-### Coordinates: Zone Centre (approx. X: -17000, Y: 500)
-
-#### Commerçants Principaux
-
-| NPC ID | Nom | X | Y | Fonction | Services |
-|--------|-----|---|---|----------|----------|
-| `CONST_WEAPON_BALBARDO` | Weapon Trader Balbardo | -17150 | 520 | WEAPON_TRADER | Armes 1D-7D EU |
-| `CONST_PROTECTOR_JATOMO` | Protector Trader Jatomo | -17130 | 540 | ARMOR_TRADER | Armures EU |
-| `CONST_STABLE_TRENO` | Stable-Keeper Treno | -17200 | 480 | STABLE_MASTER | Montures |
-| `CONST_GROCERY_BAJEL` | Grocery Trader Bajel | -17090 | 510 | GROCERY_TRADER | Consommables |
-| `CONST_SPECIALTY_TINA` | Specialty Trader Tina | -17070 | 490 | SPECIALTY_TRADER | Matériaux |
-| `CONST_MEDICINE_SHADI` | Medicine Supplier Shadi | -17110 | 470 | POTION_TRADER | Potions |
-| `CONST_GOODS_OHARA` | Goods Supplier Ohara | -17080 | 530 | GENERAL_TRADER | Fournitures |
-| `CONST_VALUABLES_ZEPHYD` | Valuables Dealer Zephyd | -17100 | 550 | ACCESSORY_TRADER | Accessoires |
-| `CONST_MERCHANT_TANA` | Merchant Associate Tana | -17300 | 600 | TRADER_UNION | Trader job |
-| `CONST_CONSIGNMENT_JUEL` | Consignment Merchant Juel | -17050 | 570 | CONSIGNMENT | Consignation |
-
-#### Services
-
-| NPC ID | Nom | X | Y | Fonction |
-|--------|-----|---|---|----------|
-| `CONST_GUILD_GILT` | Guild Manager Gilt | -17180 | 580 | GUILD_MANAGER |
-| `CONST_INN_SIKEULRO` | Inn Master Sikeulro | -17220 | 520 | INNKEEPER |
-| `CONST_NUN_RETALDI` | Nun Retaldi | -17350 | 450 | CLERIC_TRAINER |
-| `CONST_CLERGY_GABRIEL` | Clergy Gabriel | -17380 | 430 | RELIGIOUS_NPC |
-| `CONST_STEWARD_YUPITEL` | Steward Yupitel | -17400 | 500 | STEWARD |
-| `CONST_GENERAL_RATCHEL` | General Ratchel | -17300 | 550 | MILITARY_LEADER |
-| `CONST_DAILY_ASSHUR` | Daily Quest Manager Asshur | -17040 | 440 | DAILY_QUEST |
-| `CONST_PREMIUM_QINGYU` | Premium Service Manager Qing Yu | -17030 | 420 | ITEM_MALL |
-| `CONST_MAGIC_POP` | Magic POP | -17060 | 400 | GACHA |
-| `CONST_MAGIC_POP_GUIDE` | Magic POP Guide Gori | -17070 | 390 | GACHA_GUIDE |
-
-#### Guards (Soldiers)
-
-| NPC ID | Nom | X | Y | Fonction |
-|--------|-----|---|---|----------|
-| `CONST_SOLDIER_KARTINO` | Soldier Kartino | -17120 | 500 | GUARD |
-| `CONST_SOLDIER_MAXIMUS` | Soldier Maximus | -17140 | 510 | GUARD |
-| `CONST_SOLDIER_KOTOMO` | Soldier Kotomo | -17160 | 490 | GUARD |
-| `CONST_SOLDIER_REIDO` | Soldier Reido | -17180 | 520 | GUARD |
-| `CONST_SOLDIER_JUSTIA` | Soldier Justia | -17200 | 540 | GUARD |
-| `CONST_SOLDIER_ALEX` | Soldier Alex | -17220 | 530 | GUARD |
-| `CONST_SOLDIER_TAKIA` | Soldier Takia | -17240 | 510 | GUARD |
-| `CONST_SOLDIER_VESAROS` | Soldier Vesaros | -17260 | 490 | GUARD |
-| `CONST_SOLDIER_KASIUS` | Soldier Kasius | -17280 | 470 | GUARD |
-
-#### Job NPCs
-
-| NPC ID | Nom | X | Y | Fonction |
-|--------|-----|---|---|----------|
-| `CONST_HUNTER_ADRIA` | Hunter Associate Adria | -16950 | 650 | HUNTER_UNION |
-| `CONST_TRADER_ANNA` | Trader Anna | -16900 | 620 | TRADER_NPC |
-| `CONST_SMUGGLER_RAUL` | Smuggler Raul | -16850 | 590 | THIEF_NPC |
-| `CONST_ASSOC_KAPROS` | Association Boss Kapros | -16920 | 580 | JOB_BOSS |
-| `CONST_ASSOC_UVETINO` | Association Boss Uvetino | -16940 | 600 | JOB_BOSS |
-
-#### Guides et Autres
-
-| NPC ID | Nom | X | Y | Fonction |
-|--------|-----|---|---|----------|
-| `CONST_GUIDE_RIISE` | Guide Riise | -17000 | 380 | GUIDE |
-| `CONST_GUIDE_LIPRIA` | Guide Lipria | -17450 | 300 | QUEST_GUIDE |
-| `CONST_GUIDE_RAFFY` | Guide Raffy | -17020 | 360 | GUIDE |
-| `CONST_HARBOR_GEORION` | Harbor Manager Georion | -17500 | 450 | HARBOR_MANAGER |
-| `CONST_FORTRESS_CLERK` | Eastern Europe Fortress Clerk | -16800 | 400 | FORTRESS_NPC |
-| `CONST_DIMENSION_GATE` | Dimensional Gate | -16750 | 350 | PORTAL |
-| `CONST_PRIEST_MYST` | Mysterious Priest | -17320 | 380 | QUEST_NPC |
-| `CONST_EVENT_SOOK` | Event So-Ok | -17040 | 380 | EVENT_NPC |
-| `CONST_ADVENTURER_DEMETRI` | Adventurer Demetri | -17080 | 340 | QUEST_GIVER |
-| `CONST_GENIE_HOMELESS` | Homeless Genie | -17000 | 320 | QUEST_NPC |
-| `CONST_CONSUL_RIALTO` | Consul Rialto | -16880 | 380 | CONSUL |
-| `CONST_ARENA_MANAGER` | Arena Manager | -16980 | 300 | PVP_ARENA |
-| `CONST_SURVIVAL_ARENA` | Survival Arena Manager | -16960 | 280 | SURVIVAL_ARENA |
+| `GUARD` / `SOLDIER` | Gardes |
+| `HARBOR_MANAGER` / `FERRY_TICKET` | Transports |
+| `ARENA_MANAGER` / `EVENT_NPC` / `GACHA` | Divers |
 
 ---
 
 ## 🏯 Jangan NPCs
 
-### Coordinates: Zone Centre (approx. X: 2000, Y: 1000)
+**Ville :** China · **Centre :** ≈ (6 460, 1 100) · **Emprise :** 6 170-6 670 × 960-1 310 · **55 NPCs recensés**
 
-#### Commerçants Principaux
+### Commerçants
 
-| NPC ID | Nom | X | Y | Fonction | Services |
-|--------|-----|---|---|----------|----------|
-| `JANGAN_WEAPON_SO` | Weapon Trader So | ~2150 | ~1100 | WEAPON_TRADER | Armes 1D-3D CH |
-| `JANGAN_ARMOR_YANG` | Armor Trader Yang | ~2100 | ~1050 | ARMOR_TRADER | Armures CH |
-| `JANGAN_POTION_JANG` | Potion Trader Jang | ~2050 | ~1150 | POTION_TRADER | Potions |
-| `JANGAN_ACCESSORY_MIN` | Accessory Trader Min | ~2200 | ~1080 | ACCESSORY_TRADER | Accessoires |
-| `JANGAN_SPECIALTY_CHOI` | Specialty Trader Choi | ~2080 | ~1020 | SPECIALTY_TRADER | Matériaux |
-| `JANGAN_STORAGE_WOON` | Storage Keeper Woon | ~2120 | ~1180 | STORAGE_KEEPER | Entrepôt |
-| `JANGAN_STABLE_CHOI` | Stable Master Choi | ~2180 | ~1200 | STABLE_MASTER | Montures |
-| `JANGAN_GUILD_YI` | Guild Manager Yi | ~2220 | ~1120 | GUILD_MANAGER | Guilde |
+| NPC | PosX | PosY | Fonction |
+|-----|------|------|----------|
+| Blacksmith Chulsan | 6 369 | 1 101 | Armes/armures 1D-3D, réparation |
+| Protector Trader Mrs Jang | 6 369 | 1 069 | Armures |
+| Grocery Trader Jinjin | 6 502 | 1 068 | Potions, consommables |
+| Herbalist Yangyun | 6 494 | 1 101 | Herbes |
+| Specialty Trader Jodaesan | 6 512 | 1 008 | Specialty goods |
+| China Goods Supplier Ye-Ryeong | 6 459 | 1 072 | Marchandises |
+| China Medicine Supplier Dae-Pyeong | 6 457 | 1 074 | Potions |
+| China Valuables Dealer Ryoe-A | 6 461 | 1 070 | Accessoires |
+| Trader Yusun | 6 493 | 1 017 | Trade |
+| Islam Merchant Ishyak | 6 503 | 1 018 | Marchand ambulant |
+| Consignment Merchant Juel | 6 512 | 1 002 | Consignation |
 
-#### Quêtes et Guides
+### Services et jobs
 
-| NPC ID | Nom | X | Y | Fonction |
-|--------|-----|---|---|----------|
-| `JANGAN_GUIDE_CHOI` | Guide Choi | ~2000 | ~1000 | GUIDE |
-| `JANGAN_OLD_LADY` | Old Lady (Quest) | ~2060 | ~1060 | QUEST_NPC |
-| `JANGAN_GUARD_CAPTAIN` | Guard Captain | ~2140 | ~1040 | QUEST_NPC |
+| NPC | PosX | PosY | Fonction |
+|-----|------|------|----------|
+| Storage-Keeper Sansan / Wangu | 6 434 | 1 059 | Entrepôt |
+| Stable-Keeper Machun | 6 369 | 1 005 | Écurie |
+| Guild Manager Leebaek | 6 247 | 1 209 | Guildes |
+| Merchant Associate Hwajung | 6 512 | 996 | **Trader** |
+| Hunter Associate Gwakwi | 6 304 | 1 192 | **Hunter** |
+| Smuggler Chao | 6 283 | 1 089 | **Thief** (caché, quartier Gisaeng) |
+| Daily Quest Manager Wei Yan | 6 408 | 1 071 | Quêtes journalières |
+| Village Chief Hwangno | 6 613 | 1 103 | Quêtes |
+| General Sonhyeon | 6 203 | 1 182 | Quêtes militaires |
+| Exorcist Miaoryeong | 5 774 | 1 234 | Quêtes |
+| Jangan Fortress Clerk | 6 493 | 1 264 | Fortress War |
+| Arena Manager / Survival Arena Manager | 6 422 | 1 043-1 045 | Arènes |
+| Adventurer Flora | 6 503 | 986 | Guide |
 
-#### Job NPCs
+### Gardes téléporteurs
 
-| NPC ID | Nom | X | Y | Fonction |
-|--------|-----|---|---|----------|
-| `JANGAN_TRADER_UNION` | Trader Union | ~1980 | ~950 | TRADER_UNION |
-| `JANGAN_HUNTER_GWAKWI` | Hunter Associate Gwakwi | ~1950 | ~920 | HUNTER_UNION |
-| `JANGAN_THIEF_YUMI` | Thief Yumi | ~1920 | ~890 | THIEF_NPC |
+| NPC | PosX | PosY |
+|-----|------|------|
+| Soldier Choiyoung [Teleport] | 6 437 | 1 150 |
+| Soldier Jingyo [Teleport] | 6 429 | 963 |
+| Soldier Hogang [Teleport] | 6 177 | 1 155 |
+| Solder Sangnam [Teleport] | 6 667 | 1 137 |
+| Soldier Dangsam / Jowi / Iyang / Fengil | 6 177-6 667 | 963-1 150 |
+
+### Temple, Gisaeng et événements
+
+| NPC | PosX | PosY |
+|-----|------|------|
+| Buddhist Priest Kushyan | 6 597 | 1 166 |
+| Buddhist Priest Jeonghye | 6 594 | 1 250 |
+| Juho | 6 293 | 1 304 |
+| Gisaeng So-Ok / Yumi / Juyeong / Ahjin / Mihyang / Juju | 6 209-6 294 | 997-1 079 |
+| Casino Guardian Huhoan | 6 579 | 1 036 |
+| Lottery Seller Wangwon | 6 551 | 1 051 |
+| Ticket Seller Gyoun | 6 546 | 1 051 |
+| WalYoung | 6 614 | 1 067 |
+| Bagger Sochil | 6 283 | 1 014 |
+| Magic POP / Guide Gori | 6 497 / 6 434 | 1 079 / 1 033 |
+| Event So-Ok / Homeless Genie / Mysterious Priest / Carnival Jooa / Premium Qing Yu | 6 426-6 446 | 1 036-1 055 |
 
 ---
 
 ## 🏛️ Donwhang NPCs
 
-### Coordinates: Zone Centre (approx. X: 8000, Y: 3000)
+**Ville :** Western China · **Centre :** ≈ (3 550, 2 050) · **Emprise :** 3 470-3 630 × 1 950-2 290 · **47 NPCs recensés**
 
-#### Commerçants Principaux
+### Commerçants
 
-| NPC ID | Nom | X | Y | Fonction | Services |
-|--------|-----|---|---|----------|----------|
-| `DONWHANG_WEAPON` | Weapon Trader | ~8150 | ~3100 | WEAPON_TRADER | Armes 3D-5D |
-| `DONWHANG_ARMOR` | Armor Trader | ~8100 | ~3050 | ARMOR_TRADER | Armures |
-| `DONWHANG_POTION` | Potion Trader | ~8050 | ~3150 | POTION_TRADER | Potions |
-| `DONWHANG_ACCESSORY` | Accessory Trader | ~8200 | ~3080 | ACCESSORY_TRADER | Accessoires |
-| `DONWHANG_SPECIALTY` | Specialty Trader Leegeuk | ~8080 | ~3020 | SPECIALTY_TRADER | Matériaux |
-| `DONWHANG_STORAGE` | Storage Keeper | ~8120 | ~3180 | STORAGE_KEEPER | Entrepôt |
-| `DONWHANG_STABLE` | Stable Master | ~8180 | ~3200 | STABLE_MASTER | Montures |
-| `DONWHANG_GUILD` | Guild Manager | ~8220 | ~3120 | GUILD_MANAGER | Guilde |
+| NPC | PosX | PosY | Fonction |
+|-----|------|------|----------|
+| Blacksmith Agol | 3 576 | 2 042 | Armes/armures 3D-5D |
+| Protector Trader Yeolah | 3 576 | 2 010 | Armures |
+| Grocery Trader Yeosun | 3 512 | 1 994 | Consommables |
+| Herbalist Bori | 3 516 | 2 033 | Herbes |
+| Specialty Shop Elder Leegak | 3 495 | 2 076 | Specialty goods |
+| Donwhang Goods Supplier Ye-Rang | 3 535 | 2 098 | Marchandises |
+| China Medicine Supplier Dae-Pyeong | 3 538 | 2 095 | Potions |
+| China Valuables Dealer Ryoe-Won | 3 533 | 2 101 | Accessoires |
+| Trader Sunwha | 3 514 | 1 959 | Trade |
 
-#### Job NPCs
+### Services et jobs
 
-| NPC ID | Nom | X | Y | Fonction |
-|--------|-----|---|---|----------|
-| `DONWHANG_TRADER` | Trader Union | ~7980 | ~2950 | TRADER_UNION |
-| `DONWHANG_HUNTER_HARAHO` | Hunter Associate Haraho | ~7950 | ~2920 | HUNTER_UNION |
-| `DONWHANG_THIEF` | Thief NPC | ~7920 | ~2890 | THIEF_NPC |
+| NPC | PosX | PosY | Fonction |
+|-----|------|------|----------|
+| Storage-Keeper Irina / Paedo | 3 582 | 1 990 | Entrepôt |
+| Stable-Keeper Makgo | 3 598 | 2 085 | Écurie |
+| Guild Manager Ryukang | 3 591 | 1 965 | Guildes |
+| Merchant Associate Leegeuk | 3 501 | 2 076 | **Trader** |
+| Hunter Associate Haraho | 3 516 | 2 176 | **Hunter** |
+| Smuggler Chungho | 3 616 | 2 007 | **Thief** (caché) |
+| Daily Quest Manager Bai Man | 3 570 | 2 098 | Quêtes journalières |
+| Baekako / Honmusa | 3 492 / 3 502 | 1 967 | Quêtes |
+| Arena Manager | 3 549 | 2 090 | Arène |
 
-#### Portails
+### Temple, gardes et événements
 
-| NPC ID | Nom | X | Y | Fonction |
-|--------|-----|---|---|----------|
-| `DONWHANG_GATE_JANGAN` | Gate Porter (Jangan) | ~8020 | ~2880 | GATE_PORTER |
-| `DONWHANG_GATE_HOTAN` | Gate Porter (Hotan) | ~8050 | ~3250 | GATE_PORTER |
+| NPC | PosX | PosY |
+|-----|------|------|
+| Buddhist Priest Hyeon / Bupgong / Fa | 3 520-3 596 | 2 238-2 291 |
+| Soldier Baeksong / Dooil / Manho / Moho / Hahun | 3 468-3 628 | 1 947-2 116 |
+| Magic POP / Guide Gori | 3 510 / 3 572 | 2 073 / 2 059 |
+| Event So-Ok / Homeless Genie / Mysterious Priest / Carnival Jooa / Premium Qing Yu | 3 525-3 562 | 2 066-2 091 |
+
+### Avant-postes environnants
+
+| NPC | PosX | PosY |
+|-----|------|------|
+| Outpost Commander Ru Long Hu + gardes (Tarim) | ~131 | 1 318-1 331 |
+| Outpost Commander Dao Zhi Fong + gardes (ouest) | 2 545-2 550 | 2 098-2 109 |
+| Outpost Commander Bai Qi Long + gardes (est) | 3 944-3 954 | 2 051-2 062 |
 
 ---
 
 ## 🏜️ Hotan NPCs
 
-### Coordinates: Zone Centre (approx. X: 14000, Y: 5000)
+**Ville :** Oasis Kingdom · **Centre :** ≈ (115, 50) · **Emprise :** 15-320 × 0-470 · **32 NPCs recensés**
 
-#### Commerçants Principaux
-
-| NPC ID | Nom | X | Y | Fonction | Services |
-|--------|-----|---|---|----------|----------|
-| `HOTAN_WEAPON` | Weapon Trader | ~14150 | ~5100 | WEAPON_TRADER | Armes 5D-7D |
-| `HOTAN_ARMOR` | Armor Trader | ~14100 | ~5050 | ARMOR_TRADER | Armures |
-| `HOTAN_POTION` | Potion Trader | ~14050 | ~5150 | POTION_TRADER | Potions |
-| `HOTAN_ACCESSORY` | Accessory Trader | ~14200 | ~5080 | ACCESSORY_TRADER | Accessoires |
-| `HOTAN_SPECIALTY` | Specialty Trader | ~14080 | ~5020 | SPECIALTY_TRADER | Matériaux |
-| `HOTAN_STORAGE` | Storage Keeper | ~14120 | ~5180 | STORAGE_KEEPER | Entrepôt |
-| `HOTAN_STABLE` | Stable Master | ~14180 | ~5200 | STABLE_MASTER | Montures |
-| `HOTAN_GUILD` | Guild Manager | ~14220 | ~5120 | GUILD_MANAGER | Guilde |
-
-#### Job NPCs
-
-| NPC ID | Nom | X | Y | Fonction |
-|--------|-----|---|---|----------|
-| `HOTAN_TRADER` | Trader Union | ~13980 | ~4950 | TRADER_UNION |
-| `HOTAN_HUNTER_AHMOK` | Hunter Associate Ahmok | ~13950 | ~4920 | HUNTER_UNION |
-| `HOTAN_THIEF` | Thief NPC | ~13920 | ~4890 | THIEF_NPC |
-
-#### Portails
-
-| NPC ID | Nom | X | Y | Fonction |
-|--------|-----|---|---|----------|
-| `HOTAN_GATE_DONWHANG` | Gate Porter (Donwhang) | ~14020 | ~4880 | GATE_PORTER |
-| `HOTAN_GATE_SAMARKAND` | Gate Porter (Samarkand) | ~14050 | ~5250 | GATE_PORTER |
+| NPC | PosX | PosY | Fonction |
+|-----|------|------|----------|
+| Blacksmith Soboi | 50 | 77 | Armes/armures 5D-8D |
+| Protector Trader Gonishya | 58 | 19 | Armures |
+| Potion Merchant Manina | 83 | 109 | Potions |
+| Specialty Trader Sanmok | 152 | 90 | Specialty goods |
+| Hotan Goods Supplier Sarha | 164 | 17 | Marchandises |
+| China Medicine Supplier Dae-Pyeong | 168 | 39 | Potions CH |
+| Europe Medicine Supplier Shadi | 168 | 34 | Potions EU |
+| China Valuables Dealer Ryoe-Ju | 181 | 13 | Accessoires CH |
+| Europe Valuables Dealer David | 178 | 16 | Accessoires EU |
+| Consignment Merchant Juel | 149 | 97 | Consignation |
+| Trader Sabonue | 149 | 1 | Trade |
+| Storage-Keeper Auisan | 113 | 61 | Entrepôt |
+| Merchant Associate Asaman | 157 | 84 | **Trader** |
+| Hunter Associate Ahmok | 225 | 155 | **Hunter** |
+| *(aucun NPC thief — voir Thief Town / autres villes)* | — | — | — |
+| Guild Manager Musai | 115 | 443 | Guildes |
+| Daily Quest Manager Dasra | 167 | 56 | Quêtes journalières |
+| Hotan Fortress Clerk | 15 | 465 | Fortress War |
+| Nephrite Refiner Pahap | 230 | 450 | Raffinage (spécialité) |
+| Soldier Pao / Tuolan | 109 / 120 | 353 |
+| Soldier Baoman / Makhan | 317 | 43-53 |
+| Arena Manager / Arena Item Manager | 124 | 47-51 |
+| Survival Arena Manager | 121 | 56 |
+| Magic POP / Guide Gori | 165 / 100 | 78 / 49 |
+| Event So-Ok / Homeless Genie / Mysterious Priest / Carnival Jooa / Premium Qing Yu | 105-122 | 37-58 |
 
 ---
 
 ## 🌏 Samarkand NPCs
 
-### Coordinates: Zone Centre (approx. X: 11000, Y: 9000)
+**Ville :** Central Asia · **Centre :** ≈ (−5 180, 2 890) · **Emprise :** −5 370 à −5 000 × 2 700-3 010 · **34 NPCs recensés**
 
-#### Commerçants Principaux
+| NPC | PosX | PosY | Fonction |
+|-----|------|------|----------|
+| Weapon Trader Tricia | −5 200 | 2 961 | Armes EU/CH 5D-8D |
+| Protector Trader Aryoan | −5 246 | 2 916 | Armures |
+| Grocery Trader Saha | −5 212 | 2 834 | Consommables |
+| Specialty Trader Toson | −5 100 | 2 870 | Specialty goods |
+| Samarkand Goods Supplier Julia | −5 212 | 2 908 | Marchandises |
+| Europe Medicine Supplier Shadi | −5 214 | 2 902 | Potions EU |
+| Europe Valuables Dealer Sid | −5 211 | 2 911 | Accessoires EU |
+| Storage-Keeper Saesa | −5 128 | 2 801 | Entrepôt |
+| Stable-Keeper Hoyun | −5 115 | 2 905 | Écurie |
+| Merchant Associate Karen | −5 117 | 2 870 | **Trader** |
+| Trader Samanda | −5 228 | 2 854 | Trade |
+| Hunter Associate Shahad | −5 143 | 3 008 | **Hunter** |
+| Smuggler Barus | −5 234 | 2 734 | **Thief** (caché) |
+| Guild Manager Hapsa | −5 170 | 2 971 | Guildes |
+| Daily Quest Manager Senlaf | −5 160 | 2 914 | Quêtes journalières |
+| Nun Martel | −5 233 | 2 873 | Couvent |
+| Soldier Dohwa / Tapai | −5 190 / −5 176 | 2 710 |
+| Soldier Paje / Jooha | −5 001 | 2 884-2 898 |
+| Soldier Ahu / Asahap | −5 364 | 2 886-2 899 |
+| Arena Manager | −5 149 | 2 885 | Arène |
+| Magic POP / Guide Gori | −5 093 / −5 125 | 2 871 / 2 829 |
+| Event So-Ok / Homeless Genie / Mysterious Priest / Carnival Jooa / Premium Qing Yu | −5 155 à −5 192 | 2 854-2 873 |
 
-| NPC ID | Nom | X | Y | Fonction | Services |
-|--------|-----|---|---|----------|----------|
-| `SAMARKAND_WEAPON` | Weapon Trader | ~11150 | ~9100 | WEAPON_TRADER | Armes 7D-9D |
-| `SAMARKAND_ARMOR` | Armor Trader | ~11100 | ~9050 | ARMOR_TRADER | Armures |
-| `SAMARKAND_POTION` | Potion Trader | ~11050 | ~9150 | POTION_TRADER | Potions |
-| `SAMARKAND_ACCESSORY` | Accessory Trader | ~11200 | ~9080 | ACCESSORY_TRADER | Accessoires |
-| `SAMARKAND_SPECIALTY` | Specialty Trader | ~11080 | ~9020 | SPECIALTY_TRADER | Matériaux |
-| `SAMARKAND_STORAGE` | Storage Keeper | ~11120 | ~9180 | STORAGE_KEEPER | Entrepôt |
-| `SAMARKAND_STABLE` | Stable Master | ~11180 | ~9200 | STABLE_MASTER | Montures |
-| `SAMARKAND_GUILD` | Guild Manager | ~11220 | ~9120 | GUILD_MANAGER | Guilde |
+### Avant-postes de Central Asia / Asia Minor (quest hubs)
 
-#### Job NPCs
+| Outpost (Commander) | PosX | PosY |
+|---------------------|------|------|
+| Galia (Central Asia) | −8 479 | 2 094-2 103 |
+| Ethan (Asia Minor) | −3 402 | 2 090-2 105 |
+| Haviel | −6 660 | 1 762-1 767 |
+| Gavin | −4 784 | 2 167-2 173 |
+| Austin | −7 219 | 2 561-2 564 |
+| Dick | −11 601 | 1 836-1 840 |
+| Albert | −10 736 | 3 370-3 374 |
+| Amanda | −12 560 | 3 220-3 224 |
 
-| NPC ID | Nom | X | Y | Fonction |
-|--------|-----|---|---|----------|
-| `SAMARKAND_TRADER` | Trader Union | ~10980 | ~8950 | TRADER_UNION |
-| `SAMARKAND_HUNTER` | Hunter Associate | ~10950 | ~8920 | HUNTER_UNION |
-| `SAMARKAND_THIEF` | Thief NPC | ~10920 | ~8890 | THIEF_NPC |
+---
+
+## 🏰 Constantinople NPCs
+
+**Ville :** East Europe · **Centre :** ≈ (−10 680, 2 600) · **Emprise :** −11 170 à −10 380 × 2 330-2 940 · **48 NPCs recensés**
+
+### Commerçants et services
+
+| NPC | PosX | PosY | Fonction |
+|-----|------|------|----------|
+| Weapon Trader Balbardo | −10 674 | 2 649 | Armes 1D-8D EU |
+| Protector Trader Jatomo | −10 753 | 2 604 | Armures EU |
+| Grocery Trader Bajel | −10 682 | 2 521 | Consommables |
+| Specialty Trader Tina | −10 717 | 2 519 | Specialty goods |
+| Europe Medicine Supplier Shadi | −10 702 | 2 605 | Potions |
+| Europe Goods Supplier Ohara | −10 703 | 2 600 | Marchandises |
+| Europe Valuables Dealer Zephyd | −10 705 | 2 598 | Accessoires |
+| Consignment Merchant Juel | −10 750 | 2 522 | Consignation |
+| Stable-Keeper Treno | −10 765 | 2 533 | Écurie |
+| Trader Anna | −10 766 | 2 624 | Trade |
+| Inn Master Sikeulro | −10 617 | 2 581 | Auberge |
+| Harbor Manager Georion | −10 408 | 2 503 | Port |
+| Guild Manager Gilt | −10 552 | 2 329 | Guildes |
+| Daily Quest Manager Asshur | −10 662 | 2 568 | Quêtes journalières |
+| Steward Yupitel | −10 880 | 2 617 | Administration |
+| Consul Rialto | −10 863 | 2 787 | Consul |
+| Eastern Europe Fortress Clerk | −10 778 | 2 793 | Fortress War |
+| Arena Manager / Survival Arena Manager | −10 709 / −10 704 | 2 585 / 2 573 | Arènes |
+| Guide Riise / Raffy / Lipria | −10 696 / −10 971 / −10 617 | 2 610 / 2 629 / 2 921 | Guides |
+| Adventurer Demetri | −10 617 | 2 554 | Quêtes |
+
+### Jobs, militaires et religion
+
+| NPC | PosX | PosY | Fonction |
+|-----|------|------|----------|
+| Merchant Associate Tana | −10 735 | 2 513 | **Trader** |
+| Hunter Associate Adria | −10 835 | 2 703 | **Hunter** |
+| Smuggler Raul | −10 969 | 2 543 | **Thief** (caché au sud) |
+| Association Boss Kapros | −10 832 | 2 405 | Association |
+| Association Boss Uvetino | −10 885 | 2 352 | Association |
+| General Ratchel | −10 830 | 2 468 | Militaire |
+| Soldier Kartino | −10 495 | 2 473 | Garde → **téléporte à Thief Town** |
+| Soldier Maximus | −10 480 | 2 484 | Garde |
+| Soldier Alex / Takia | −11 005 | 2 637-2 651 | Gardes |
+| Soldier Vesaros / Kasius | −10 740 à −10 749 | 2 664-2 674 | Gardes |
+| Soldier Riedo / Kotomo | −10 614 à −10 637 | 2 936 | Gardes (North Gate) |
+| Clergy Gabriel | −10 387 | 2 776 | Église |
+| Nun Retaldi | −10 618 | 2 636 | Couvent |
+| Mysterious Priest | −10 681 | 2 611 | Quêtes |
+| Sunset Witch / Boy Yongso (faubourg nord) | −10 376 / −10 392 | 3 231 / 3 220 | Quêtes |
+
+### Événements
+
+| NPC | PosX | PosY |
+|-----|------|------|
+| Magic POP / Guide Gori | −10 708 / −10 654 | 2 519 / 2 585 |
+| Event So-Ok / Homeless Genie / Carnival Jooa / Premium Qing Yu | −10 670 à −10 683 | 2 560-2 611 |
+
+---
+
+## 🺺 Alexandria NPCs
+
+**Ville :** Egypt (South ≈ (−16 600, −300) / North ≈ (−16 200, 50)) · **Emprise :** −16 760 à −15 995 × −480-440 · **46 NPCs recensés**
+
+### Alexandria (South) — marché
+
+| NPC | PosX | PosY | Fonction |
+|-----|------|------|----------|
+| Weapon Trader Hemaka | −16 739 | −277 | Armes 10D+ |
+| Armor Trader Sharon | −16 723 | −296 | Armures 10D+ |
+| Grocery Trader Melit | −16 579 | −279 | Consommables |
+| Potion Merchant Titi | −16 624 | −358 | Potions |
+| Storage Keepeer Khamererne | −16 478 | −304 | Entrepôt |
+| Stable Master Nefret | −16 425 | −220 | Écurie |
+| Specialty Trader Wasdi | −16 593 | 0 | Specialty goods |
+| Trader Dena | −16 662 | −360 | Trade |
+| Doctor Renenutet | −16 724 | −386 | Quêtes médicales |
+| Librarian Ahha | −16 431 | −84 | Quêtes |
+| Finance Officer Maneto | −16 447 | −75 | Quêtes de taxes |
+| Arena Manager | −16 626 | −289 | Arène |
+| Magic POP / Guide Gori | −16 568 / −16 625 | −271 / −258 | Gacha |
+| Event So-Ok / Homeless Genie / Mysterious Priest / Carnival Jooa / Premium Qing Yu | −16 593 à −16 660 | −291 à −257 | Événements |
+
+### Alexandria (North) — palais, jobs, port
+
+| NPC | PosX | PosY | Fonction |
+|-----|------|------|----------|
+| Governor Senmute | −16 762 | −154 | Gouverneur (quêtes principales) |
+| Palace Guard Mushari / Sesilrum | −16 752 / −16 741 | −175 / −164 | Palais |
+| Guild Manager Sennefer | −16 640 | −45 | Guildes |
+| Guild Manager Elia | −16 109 | −47 | Guildes |
+| Trader Union President Naunakt | −16 624 | 11 | **Trader** |
+| Hunter Union President Narmer | −16 625 | −94 | **Hunter** |
+| Hunter Union Item Exchange manager Bakara | −16 590 | −31 | Récompenses hunter |
+| Thief Union President Tausert | −16 092 | −7 | **Thief** |
+| Thief Union Item Exchange manager Luresia | −16 150 | −70 | Récompenses thief |
+| Weapon Trader Chunmoo | −16 255 | −19 | Armes (2e marché) |
+| Armor Trader Viviana | −16 256 | 9 | Armures (2e marché) |
+| Grocery Trader Kapra | −16 197 | 53 | Consommables (2e marché) |
+| Potion Merchant Thiara | −16 237 | 35 | Potions (2e marché) |
+| Storage Keeper Asagon | −16 082 | 24 | Entrepôt (2e) |
+| Smuggler Seek | −16 105 | 66 | Thief (accès direct) |
+| Harbor Manager Marwa | −16 542 | 371 | Port (voie maritime) |
+| Lighthouse Keeper Snefru | −16 675 | 431 | Phare, quêtes |
+| Egyptian Sailor 1 / 2 (×4) | −16 440 à −16 710 | 246-440 | Équipage |
+| Egyptian Soldier Mobefe / Turian | −16 445 / −16 465 | −456 / −476 | Garnison |
+| Egyptian Soldier Aptaru / Kamori | −15 995 / −16 010 | 76 / 99 | Garnison |
+
+---
+
+## 🗡️ Thief Town NPCs
+
+**Position :** ≈ (9 130, 860) — vallée cachée à l'est · **Accès :** téléporteur au sol (2 485, 2 679), Soldier Kartino (Constantinople), Smugglers
+
+| NPC | PosX | PosY | Fonction |
+|-----|------|------|----------|
+| Windy Phantom Thief | 9 088 | 808 | PNJ thief |
+| Thief Associate | 9 122 | 824 | Union Thief |
+| Tiger Bandit Band | 9 138 | 857 | PNJ thief |
+| Black Robber Band | 9 149 | 875 | PNJ thief |
+| Stolen Goods Dealer | 9 119 | 891 | **Revente des marchandises volées** |
+| Vicious Desperado | 9 166 | 906 | PNJ thief |
+
+---
+
+## 🕌 Baghdad NPCs (post-classique)
+
+**Ville :** Arabia · **Centre :** ≈ (−8 540, −730) · **Emprise :** −8 810 à −8 210 × −1 100 à −440 · **54 NPCs recensés** · *Contenu postérieur au cap 120 classique*
+
+| Catégorie | NPCs principaux (PosX, PosY) |
+|-----------|------------------------------|
+| **Palais** | King Shahryar (−8 508, −741) · Queen Sheherazade (−8 503, −755) · Palace Guard Alim / Azim · Ministers Abshad / Mahmud |
+| **Commerçants** | Fruit Trader Syukri (−8 760, −915) · Oil Merchant Khaled (−8 787, −836) · Spice Trader Malak (−8 760, −814) · Potion Trader Abubark (−8 789, −793) · Grocery Trader Warda (−8 729, −673) · Specialty Abutalip (−8 778, −640) · Trade merchant Shadia (−8 555, −489) · Repairer Uthman (−8 481, −447) |
+| **Jobs** | Merchant Association Head Hassan (−8 679, −760) · Hunter Association Head Sami (−8 556, −519) · Thief Association Head Obad (−8 358, −822) · Smuggler Dubai (−8 363, −860) |
+| **Services** | Storage Keeper Abdullah (−8 491, −984) · Guild Manager Nuur (−8 445, −979) · Stable Keeper Ali (−8 611, −494) · Village Old Man Kerim (−8 605, −1 001) |
+| **Garnison** | ~20 guards (Harun, Hindshind, Aziz, Bari, Basit, Patah, Imanun, Kaupun, Jaffar, Hajib, Moharet, Duban, Djaman, Ka'ish, Mutaqa...) |
+| **Village** | Village Man Yamain / Itzak / Phuad · Village Woman Nazima / Sa'adatun / Zvaida |
+| **Événements** | Magic POP, Event So-Ok, Homeless Genie, Mysterious Priest, Carnival Jooa, Premium Qing Yu, Survival Arena (≈ −8 470 à −8 510, −1 010 à −982) |
 
 ---
 
 ## 💼 Job NPCs par Ville
 
-### Summary Table
+### Tableau récapitulatif (noms officiels + positions)
 
-| Ville | Trader Union | Hunter Union | Thief NPC |
-|-------|--------------|--------------|-----------|
-| **Jangan** | Trader Union (X: ~1980, Y: ~950) | Hunter Gwakwi (X: ~1950, Y: ~920) | Thief Yumi (X: ~1920, Y: ~890) |
-| **Donwhang** | Trader Union (X: ~7980, Y: ~2950) | Hunter Haraho (X: ~7950, Y: ~2920) | Thief NPC (X: ~7920, Y: ~2890) |
-| **Hotan** | Trader Union (X: ~13980, Y: ~4950) | Hunter Ahmok (X: ~13950, Y: ~4920) | Thief NPC (X: ~13920, Y: ~4890) |
-| **Constantinople** | Merchant Tana (X: -17300, Y: 600) | Hunter Adria (X: -16950, Y: 650) | Smuggler Raul (X: -16850, Y: 590) |
-| **Alexandria** | Trader Nawoonakeuteu (X: 18170, Y: 18090) | Hunter Carrymer (X: 18210, Y: 18110) | N/A (via quests) |
+| Ville | Trader | Hunter | Thief |
+|-------|--------|--------|-------|
+| **Jangan** | Merchant Associate Hwajung (6 512, 996) | Hunter Associate Gwakwi (6 304, 1 192) | Smuggler Chao (6 283, 1 089) |
+| **Donwhang** | Merchant Associate Leegeuk (3 501, 2 076) | Hunter Associate Haraho (3 516, 2 176) | Smuggler Chungho (3 616, 2 007) |
+| **Hotan** | Merchant Associate Asaman (157, 84) | Hunter Associate Ahmok (225, 155) | — (aucun) |
+| **Samarkand** | Merchant Associate Karen (−5 117, 2 870) | Hunter Associate Shahad (−5 143, 3 008) | Smuggler Barus (−5 234, 2 734) |
+| **Constantinople** | Merchant Associate Tana (−10 735, 2 513) | Hunter Associate Adria (−10 835, 2 703) | Smuggler Raul (−10 969, 2 543) |
+| **Alexandria (N)** | Trader Union President Naunakt (−16 624, 11) | Hunter Union President Narmer (−16 625, −94) | Thief Union President Tausert (−16 092, −7) |
+| **Baghdad** | Merchant Association Head Hassan (−8 679, −760) | Hunter Association Head Sami (−8 556, −519) | Thief Association Head Obad (−8 358, −822) |
+| **Thief Town** | — | — | Thief Associate (9 122, 824) + Stolen Goods Dealer (9 119, 891) |
+
+> Particularités : **Hotan** n'a pas de NPC thief ; **Alexandria** utilise le schéma « President + Item Exchange manager » ; les Smugglers sont les intermédiaires thief des villes classiques.
 
 ---
 
 ## 👹 Unique Boss Spawn Locations
 
-### Coordonnées Précises de Spawn
+### Les 7 uniques classiques (cap 90)
 
-| Unique | Level | X | Y | Zone | HP |
-|--------|-------|---|---|------|-----|
-| **Tiger Girl** | 20 | 4853.28 | 93.81 | Tiger Mountain (Jangan) | 598,720 |
-| **Cerberus** | 24 | -1551.74 | -93.72 | Constantinople (Desperado Hill) | 693,072 |
-| **Cerberus** | 24 | -1291.27 | -133.04 | Constantinople (Alt spawn) | 693,072 |
-| **Captain Ivy** | 30 | -6424.71 | 2744.64 | Asia Minor (Amphitheater) | 1,094,835 |
-| **Isyutaru** | 40 | ~12000 | ~6500 | Donwhang Area | ~2,500,000 |
-| **Uruchi** | 50 | ~15000 | ~7500 | Hotan Area | ~4,000,000 |
-| **Lord Yarkan** | 60 | ~18000 | ~8500 | Egypt Area | ~6,000,000 |
-| **Cerberus (Strong)** | 70 | -1600 | -100 | Constantinople Area | ~8,000,000 |
-| **Captain Ivy (Strong)** | 75 | -6400 | 2700 | Asia Minor | ~10,000,000 |
-| **Medusa** | 90 | ~19000 | ~17000 | Alexandria Area | ~15,000,000 |
-| **Lady Lyn** | 100 | ~20000 | ~18000 | Egypt Tomb | ~20,000,000 |
-| **Sphinx** | 90 | Tomb B1-B2 | - | Pharaoh's Tomb | ~12,000,000 |
-| **Sekhmet** | 92 | Tomb B2-B3 | - | Pharaoh's Tomb | ~13,000,000 |
-| **Nephthys** | 95 | Tomb B3-B4 | - | Pharaoh's Tomb | ~14,000,000 |
-| **Horus** | 98 | Tomb B4-B5 | - | Pharaoh's Tomb | ~16,000,000 |
-| **Osiris** | 100 | Tomb B5-B6 | - | Pharaoh's Tomb | ~18,000,000 |
+| Unique | Niv. | HP | Zone | Zone de spawn (min/max) |
+|--------|------|----|------|-------------------------|
+| **Tiger Girl** | 18 | 598 720 | China — Tiger Mountain | X 4 230-5 355 · Y −303-599 (11 points) |
+| **Cerberus** | 24 | 693 072 | East Europe — autour de Constantinople | X −12 488 à −11 332 · Y 1 297-2 225 (13 points) |
+| **Captain Ivy** | 30 | 1 094 835 | Asia Minor | X −7 587 à −6 390 · Y 1 229-2 745 (8 points) |
+| **Uruchi** | 40 | 1 779 528 | Oasis Kingdom — Tarim Basin | X 2 041-3 170 · Y −367-840 (11 points) |
+| **Isyutaru** | 60 | 4 324 612 | Karakoram | X −2 206 à −860 · Y −1 044-462 (11 points) |
+| **Lord Yarkan** | 80 | 9 353 045 | Taklamakan — Niya Remains | X −1 563 à 50 · Y 1 858-2 555 (10 points) |
+| **Demon Shaitan** | 90 | 12 732 060 | Roc Mountain | X −4 917 à −4 179 · Y −519-215 (6 points) |
 
-**Note:** Les coordonnées exactes pour certains uniques peuvent varier entre les serveurs officiels et privés.
+> La liste détaillée point par point figure dans [MAP_COORDINATES_REFERENCE.md](MAP_COORDINATES_REFERENCE.md#-zones-de-chasse-et-uniques).
+
+### Uniques ultérieurs
+
+| Unique | Niv. | Zone |
+|--------|------|------|
+| Medusa | 105 | Égypte (ère Legend V, contenu du Temple) |
+| Tomb General | ~90+ | Tomb of Qin-Shi Emperor |
+| Boss du Temple of Jupiter | 110-120 | Hall of Worship / Zealots Hideout |
+
+---
+
+## 🔁 NPCs Récurrents (présents dans plusieurs villes)
+
+Le client duplique un socle commun de NPCs dans chaque ville :
+
+| NPC | Rôle | Présent à |
+|-----|------|-----------|
+| **China Medicine Supplier Dae-Pyeong** | Potions CH | Jangan, Donwhang, Hotan |
+| **Europe Medicine Supplier Shadi** | Potions EU | Hotan, Samarkand, Constantinople |
+| **Consignment Merchant Juel** | Consignation | Jangan, Donwhang, Hotan, Constantinople |
+| **Magic POP + Guide Gori** | Gacha | toutes les villes |
+| **Event So-Ok** | Événements | toutes les villes |
+| **Homeless Genie** | Téléportations utilitaires | toutes les villes |
+| **Mysterious Priest** | Quêtes | toutes les villes |
+| **Carnival Manager Jooa** | Carnaval | toutes les villes |
+| **Premium Service Manager Qing Yu** | Item mall | toutes les villes |
+| **Arena Manager (+ Item Manager)** | Arène | Jangan, Donwhang, Hotan, Samarkand, Constantinople, Alexandria |
+| **Fournisseurs (Goods/Valuables) « China/Europe »** | Équipement par race | villes CH ou EU |
 
 ---
 
@@ -356,252 +483,101 @@ Chaque NPC est documenté avec le format suivant:
 
 ### Pour SRObro Browser Clone
 
-#### Structure de Données JSON
-
 ```javascript
-// Fichier: data/npcs.json
+// Fichier: data/npcs.json — exemple au format officiel converti
 {
-  "npcs": [
-    {
-      "id": "ALEX_WEAPON_HEMAKA",
-      "name": "Blacksmith Hemaka",
-      "city": "Alexandria",
-      "position": { "x": 18234, "y": 18345, "z": 0 },
-      "rotation": 0,
-      "function": "WEAPON_TRADER",
-      "services": ["SELL_WEAPONS", "REPAIR"],
-      "shop_inventory": {
-        "weapons_10d": ["SWORD_10D_01", "SWORD_10D_02", ...],
-        "weapons_11d": ["SWORD_11D_01", ...]
-      },
-      "model": {
-        "mesh": "npc_weapon_trader_alex",
-        "texture": "npc_cloth_01",
-        "scale": 1.0
-      }
-    },
-    // ... autres NPCs
-  ]
+  "id": "JANGAN_BLACKSMITH_CHULSAN",
+  "name": "Blacksmith Chulsan",
+  "city": "Jangan",
+  "region": 25000,
+  "position": { "posX": 6369, "posY": 1101 },
+  "function": "WEAPON_TRADER",
+  "services": ["SELL_WEAPONS_1D_3D", "REPAIR"]
 }
 ```
 
-#### Chargement et Utilisation
+### Chargement par chunks (streaming)
 
 ```javascript
-// Exemple de chargement des NPCs
-class NPCManager {
-  async loadNPCs() {
-    const response = await fetch('/data/npcs.json');
-    const data = await response.json();
-    return data.npcs;
-  }
-
-  spawnNPC(npcData, scene) {
-    const npc = new NPC(npcData);
-    npc.mesh.position.set(npcData.position.x, npcData.position.y, npcData.position.z);
-    scene.add(npc.mesh);
-    return npc;
-  }
-
-  getNearestNPC(playerPosition, functionType, maxDistance = 100) {
-    return this.npcs.filter(npc =>
-      npc.function === functionType &&
-      npc.position.distanceTo(playerPosition) <= maxDistance
-    ).sort((a, b) =>
-      a.position.distanceTo(playerPosition) - b.position.distanceTo(playerPosition)
-    )[0];
-  }
-}
-```
-
-#### Optimisation du Rendu
-
-```javascript
-// Streaming des NPCs par zone
 class NPCStreaming {
-  constructor(worldSize = 50000) {
-    this.chunkSize = 5000; // 5km x 5km chunks
-    this.loadedChunks = new Set();
+  constructor(chunkSize = 960) {  // 5 secteurs = 960 unités
+    this.loaded = new Set();
   }
-
-  update(playerPosition) {
-    const chunkX = Math.floor(playerPosition.x / this.chunkSize);
-    const chunkY = Math.floor(playerPosition.y / this.chunkSize);
-    const chunkKey = `${chunkX}_${chunkY}`;
-
-    if (!this.loadedChunks.has(chunkKey)) {
-      this.loadChunk(chunkX, chunkY);
-      this.loadedChunks.add(chunkKey);
-    }
+  chunkOf(posX, posY) {
+    return Math.floor(posX / this.chunkSize) + '_' + Math.floor(posY / this.chunkSize);
   }
-
-  async loadChunk(chunkX, chunkY) {
-    const npcs = await fetchNPCsInChunk(chunkX, chunkY);
-    npcs.forEach(npc => this.spawnNPC(npc));
+  update(player) {
+    const key = this.chunkOf(player.posX, player.posY);
+    if (!this.loaded.has(key)) { this.loadChunk(key); this.loaded.add(key); }
   }
 }
 ```
 
-#### Système d'Interaction
+### Interaction
 
 ```javascript
-// Détection d'interaction avec les NPCs
-class NPCInteraction {
-  checkInteraction(player, npcs) {
-    const interactionRange = 50; // unités de jeu
-
-    for (const npc of npcs) {
-      const distance = player.position.distanceTo(npc.position);
-      if (distance <= interactionRange) {
-        return npc;
-      }
-    }
-    return null;
-  }
-
-  openDialog(player, npc) {
-    switch (npc.function) {
-      case 'WEAPON_TRADER':
-        this.openShop(player, npc);
-        break;
-      case 'STORAGE_KEEPER':
-        this.openStorage(player, npc);
-        break;
-      case 'QUEST_NPC':
-        this.openQuestDialog(player, npc);
-        break;
-      default:
-        this.openDefaultDialog(player, npc);
-    }
-  }
+const INTERACTION_RANGE = 15; // unités jeu
+function nearestNPC(player, npcs, filter) {
+  return npcs
+    .filter(n => !filter || filter(n))
+    .map(n => ({ n, d: Math.hypot(n.posX - player.posX, n.posY - player.posY) }))
+    .sort((a, b) => a.d - b.d)
+    .find(x => x.d <= INTERACTION_RANGE)?.n;
 }
 ```
 
-#### Marqueurs sur la Minimap
-
-```javascript
-// Affichage des NPCs sur la minimap
-class MinimapNPCs {
-  renderNPCs(npcs, playerPosition) {
-    const visibleRange = 2000;
-
-    npcs.forEach(npc => {
-      const distance = npc.position.distanceTo(playerPosition);
-      if (distance <= visibleRange) {
-        const screenPos = this.worldToScreen(npc.position);
-        this.drawMarker(screenPos, npc.function);
-      }
-    });
-  }
-
-  getMarkerColor(functionType) {
-    const colors = {
-      'WEAPON_TRADER': '#FF5733',
-      'ARMOR_TRADER': '#33FF57',
-      'POTION_TRADER': '#3357FF',
-      'STORAGE_KEEPER': '#F333FF',
-      'GUILD_MANAGER': '#FF33A8',
-      'TRADER_UNION': '#FFAA00',
-      'HUNTER_UNION': '#00AAFF',
-      'THIEF_NPC': '#AA0000'
-    };
-    return colors[functionType] || '#FFFFFF';
-  }
-}
-```
-
----
-
-## 🔍 Méthodes de Collecte des Coordonnées
-
-### Sources pour Coordonnées Exactes
-
-1. **xSROMap (Interactive)**
-   - URL: https://jellybitz.github.io/xSROMap/
-   - Recherche par nom de NPC
-   - Affichage direct des coordonnées X/Y
-   - Export possible des données
-
-2. **In-Game Coordinates**
-   - Commande: `/loc` (sur certains serveurs)
-   - Mini-map avec coordonnées
-   - Debug mode (si disponible)
-
-3. **PK2 Editor**
-   - Extraction des fichiers de données
-   - Coordonnées brutes des NPCs
-   - Mapping des zones
-
-### Format de Coordonnées
-
-Silkroad Online utilise deux systèmes de coordonnées:
-
-**Format 1: PosX, PosY**
-- Utilisé en interne
-- Grande échelle (ex: 18234, 18345)
-
-**Format 2: X, Y, Z**
-- Format standard 3D
-- Z est généralement 0 dans les villes
-- Utilisé par xSROMap
+### Méthodes de collecte des coordonnées
+1. **xSROMap** — double-clic = PosX/PosY/Region ; source : dépôt GitHub JellyBitz/xSROMap (`main.js` contient les 697 NPCs + 161 TPs)
+2. **Client / PK2** — tables `_RefNpc` / `_RefRegion` des bases d'émulateurs
+3. **Validation croisée** — forums (SRO Info 2009 pour les spawns d'uniques, SRO Lobby pour les listes de NPCs)
 
 ---
 
 ## 📊 Statistiques
 
-### Résumé des NPCs par Ville
+### Résumé par ville (données client)
 
-| Ville | Total NPCs | Commerçants | Job NPCs | Quest NPCs | Autres |
-|-------|-----------|-------------|----------|------------|--------|
-| **Alexandria** | 23 | 5 | 2 | 8 | 8 |
-| **Constantinople** | 47 | 10 | 5 | 10 | 22 |
-| **Jangan** | 15 | 7 | 3 | 3 | 2 |
-| **Donwhang** | 15 | 7 | 3 | 2 | 3 |
-| **Hotan** | 15 | 7 | 3 | 2 | 3 |
-| **Samarkand** | 15 | 7 | 3 | 2 | 3 |
-| **TOTAL** | 130 | 43 | 19 | 27 | 41 |
+| Ville | NPCs recensés | Commerçants | Jobs (T/H/Th) | Gardes | Événements+divers |
+|-------|---------------|-------------|----------------|--------|-------------------|
+| Jangan | 55 | 11 | 3 | 8 | 33 |
+| Donwhang | 47 | 9 | 3 | 5 | 30 |
+| Hotan | 32 | 10 | 2 | 4 | 18 |
+| Samarkand | 34 | 8 | 3 | 6 | 22 |
+| Constantinople | 48 | 10 | 3 | 9 | 26 |
+| Alexandria (S+N) | 46 | 11 | 3 | 6 | 26 |
+| Thief Town | 6 | 1 | 1 | 0 | 5 |
+| Baghdad (post-classique) | 54 | 8 | 3 | ~20 | 23 |
+| **Total urbain** | **~322** | — | — | — | — |
 
-### NPCs par Fonction
+*(La base complète xSROMap référence 697 NPCs, incluant avant-postes, zones de chasse, donjons et événements.)*
 
-| Fonction | Compte | Pourcentage |
-|----------|--------|-------------|
-| Weapon Trader | 6 | 4.6% |
-| Armor Trader | 6 | 4.6% |
-| Potion Trader | 6 | 4.6% |
-| Accessory Trader | 6 | 4.6% |
-| Specialty Trader | 6 | 4.6% |
-| Storage Keeper | 6 | 4.6% |
-| Stable Master | 6 | 4.6% |
-| Guild Manager | 6 | 4.6% |
-| Trader Union | 6 | 4.6% |
-| Hunter Union | 6 | 4.6% |
-| Thief NPCs | 5 | 3.8% |
-| Quest NPCs | 27 | 20.8% |
-| Guards | 20 | 15.4% |
-| Guides | 8 | 6.2% |
-| Autres | 10 | 7.7% |
+---
+
+## ❓ FAQ
+
+**Q: D'où viennent ces coordonnées ?**
+R: Extraction directe du **client officiel** via le projet xSROMap (formule de conversion PosX/PosY documentée dans [MAP_COORDINATES_REFERENCE.md](MAP_COORDINATES_REFERENCE.md)).
+
+**Q: Pourquoi Storage-Keeper apparaît deux fois à Jangan/Donwhang ?**
+R: Le client place deux NPCs (Sansan/Wangu, Irina/Paedo) au même endroit — c'est un doublon officiel, pas une erreur.
+
+**Q: Hotan n'a vraiment pas de thief ?**
+R: Confirmé : aucune union thief dans les données client de Hotan. Les thieves utilisent Donwhang, Samarkand ou Thief Town.
+
+**Q: Les positions sont-elles exactes au pixel près ?**
+R: Oui pour les NPCs listés (extraction client). Les ranges « ≈ » ne sont utilisés que pour les résumés de zones.
 
 ---
 
 ## 🎯 Prochaines Étapes
 
-1. **Coordonnées Précises:**
-   - Utiliser xSROMap pour extraire les coordonnées X/Y exactes
-   - Exporter les données dans un format structuré
-   - Valider les coordonnées in-game
-
-2. **Données Manquantes:**
-   - Coordonnées des NPCs de Jangan, Donwhang, Hotan (à préciser)
-   - Coordonnées des NPCs de zones extérieures
-   - Points de spawn des monstres
-
-3. **Intégration:**
-   - Importer les données dans le système de navigation
-   - Créer les marqueurs sur la carte/minimap
-   - Implémenter le système d'interaction
+1. Extraire les **spawns de monstres** (Nests) au même format
+2. Documenter les **shops** (inventaires par NPC)
+3. Intégrer les **téléporteurs** dans le graphe de navigation (voir MAP_COORDINATES_REFERENCE.md)
+4. Étendre aux NPCs des **avant-postes** et zones de chasse (base 697)
 
 ---
 
-*Dernière mise à jour: 20 Janvier 2026*
+*Dernière mise à jour : 2026-10-01*
 
-*Sources: xSROMap, SRO Lobby Forums, Silkroad Secrets, SRObro Project Documentation*
+*Sources : client officiel via xSROMap v1.4 (JellyBitz), SRO Info (2009), SRO Lobby, Silkroad Secrets, SRObro Project*

@@ -2,15 +2,21 @@
 
 ## 📋 Table des Matières
 - [Vue d'Ensemble](#-vue-densemble)
-- [Gold Farming Methods](#-gold-farming-methods)
-- [Stall Network System](#-stall-network-system)
-- [Market Prices Trends](#-market-prices-trends)
-- [Job Trading Profits](#--job-trading-profits)
-- [Item Value](#-item-value)
-- [Gold Sinks](#-gold-sinks)
-- [Making Your First Million](#-making-your-first-million)
-- [FAQ](#-faq)
-- [Resources](#-resources)
+- [💰 Les Monnaies du Jeu](#-les-monnaies-du-jeu)
+- [🌾 Gold Farming Methods](#-gold-farming-methods)
+- [🏷️ Prix NPC et Ratios de Revente](#️-prix-npc-et-ratios-de-revente)
+- [🏪 Stall Network System](#-stall-network-system)
+- [📈 Market Prices Trends](#-market-prices-trends)
+- [💼 Job Trading Profits](#-job-trading-profits)
+- [💎 Item Value](#-item-value)
+- [🧧 Silk et Item Mall](#-silk-et-item-mall)
+- [💸 Gold Sinks](#-gold-sinks)
+- [Économie des Serveurs Privés (vSRO)](#-économie-des-serveurs-privés-vsro)
+- [📉 Inflation et Mécaniques Anti-Inflation](#-inflation-et-mécaniques-anti-inflation)
+- [💵 Making Your First Million](#-making-your-first-million)
+- [✅ Données Vérifiées (Recherche 2026)](#-données-vérifiées-recherche-2026)
+- [❓ FAQ](#-faq)
+- [🔗 Resources](#-resources)
 
 ---
 
@@ -19,11 +25,55 @@
 L'économie de Silkroad Online est **player-driven**, avec un système complexe d'offre et de demande. Comprendre l'économie est essentiel pour progresser.
 
 ### Points Clés
-- ✅ **Player-driven economy:** Offre et demande
-- ✅ **Gold farming:** Plusieurs méthodes
-- ✅ **Stall Network:** Marketplace des joueurs
-- ✅ **Inflation:** Gold lose value over time
-- ✅ **Investment:** Acheter bas, vendre haut
+- ✅ **Player-driven economy:** Offre et demande, le Stall Network est la bourse du serveur
+- ✅ **Gold farming:** Grinding, job trading, uniques, alchemy, stall flipping
+- ✅ **Plusieurs monnaies:** Gold (in-game), Silk (argent réel), Arena Coins, coins du Job Temple
+- ✅ **Gold sinks structurels:** Ratios de revente NPC punitifs, taxes de forteresse, commissions de consignation
+- ✅ **Inflation:** Le gold perd de la valeur avec l'âge du serveur (botting, RMT, item mall)
+- ✅ **Investment:** Acheter bas, vendre haut ; en cas de doute, détenir des items plutôt que du gold
+
+### ⚠️ Note importante sur les sources
+L'économie de SRO n'a **jamais été documentée officiellement** par Joymax (pas de formules publiées). Toutes les valeurs chiffrées ci-dessous proviennent de mesures communautaires (guides vintage 2007-2011, forums, émulateurs vSRO) et **varient fortement selon la version et les rates du serveur**. Les fourchettes sont indicatives.
+
+---
+
+## 💰 Les Monnaies du Jeu
+
+### Vue Générale des Monnaies
+
+| Monnaie | Obtention | Usage | Convertible? |
+|---------|-----------|-------|--------------|
+| **Gold** 💰 | Drops de monstres, ventes NPC, quests, trading | Tout l'in-game (gear, potions, alchemy, téléports, guildes) | Non (mais RMT illégal existe) |
+| **Silk** 🧧 | Achat avec argent réel (item mall) | Item mall : premiums, avatars, pets, scrolls | Non officiellement (privés : silk scrolls vendables) |
+| **Arena Coins** 🏟️ | Battle Arena (Lv 20+), gagnants ET perdants | Gear PvP / échanges arena | Non |
+| **Gold Coin / Silver Coin / Copper Coin** 🪙 | Uniques du Job Temple (Seth, Haroeris, Anubis...), certains events | Items Égyptiens (Egy) et gear haut de gamme via NPC d'échange | Non (mais revente joueur vs gold courante) |
+| **Trophées So-OK** 🏆 | Events (So-OK spawn) | Convertibles en récompenses (arena coins sur certains serveurs) | Non |
+| **Honor Points** ⭐ (KSRO) | Battle Arena KSRO | Récompenses via NPC d'Alexandria | Non |
+
+### Le Gold en Détail
+
+**Sources de gold documentées :**
+- **Drops de monstres** : ~500 gold par mob normal, ~700 par champion, ~1000 par géant (ordres de grandeur mesurés sur SRO Origin ; iSRO classic est plus faible) — la clé est le **volume** (botting) plus que la valeur unitaire
+- **Éléments d'alchemy** : les elements se vendent ~100 gold par niveau d'élément (ex. élément lv4 ≈ 400g, élément lv10 ≈ 1k) — source fiable de revenu passif au leveling
+- **Ventes NPC** : ratio dégressif catastrophique selon le degree (voir section Ratios)
+- **Quests** : récompenses en gold aux bas niveaux
+- **Job trading** : la source de gold "active" la plus rentable (voir section Job)
+- **Drops max sur mobs "verts"** : les monstres proches de votre niveau donnent le maximum de drops (gold, elixirs, items) ; les mobs bleus (trop faibles) et rouges (trop forts) donnent le minimum
+
+### Le Silk en Détail
+
+- Monnaie d'**argent réel**, achetée via le site officiel (PayPal, carte bancaire, etc.)
+- Ordre de grandeur historique : **~100 silk ≈ 10 $** (packs variables)
+- Exemples de prix item mall iSRO (2008) : Premium Gold Ticket ≈ **200 silk**, Premium Gold Time Plus ≈ **290 silk**, Magic Pop Card = **10 silk**
+- Sur iSRO classique, le silk **ne s'obtient pas en jeu** (hors rares promotions Joymax) — c'est la monnaie donateur
+- Sur les serveurs privés : free silk via heures de jeu, events uniques, loteries, invitations Discord (voir section vSRO)
+
+### Taux de Change Implicite Gold ↔ Silk
+
+Aucun taux officiel n'existe sur iSRO (le silk n'est pas transférable). En pratique, sur les serveurs privés où les **silk scrolls** (silk packagé en item) peuvent être vendus au stall :
+- Le taux est fixé par l'offre/demande : les donateurs vendent leurs scrolls aux joueurs riches en gold
+- Ce taux est **l'indicateur d'inflation n°1** d'un serveur privé : plus le serveur vieillit, plus il faut de gold pour 1 silk (le gold se dévalue contre la monnaie réelle)
+- Sur iSRO, l'équivalent passait par le RMT (gold sellers) — illégal mais massif (voir section Inflation)
 
 ---
 
@@ -32,27 +82,32 @@ L'économie de Silkroad Online est **player-driven**, avec un système complexe 
 ### Method 1: Grinding
 
 **Process:**
-- Kill mobs, loot gold
+- Kill mobs, loot gold + elements + elixirs
 - Simple mais time-consuming
+- Les éléments et elixirs non utilisés se revendent au stall (souvent plus rentable que le gold brut)
 
-**Profit:**
+**Profit (ordres de grandeur, à ajuster selon rates):**
 - Level 1-30: ~10-50k/hour
 - Level 30-60: ~50-200k/hour
 - Level 60-90: ~200k-1M/hour
 - Level 90-110: ~500k-5M/hour
 
 **Best Spots:**
-- High mob density
-- Fast respawn
-- Low defense mobs
+- High mob density, fast respawn, low defense mobs
+- **Toujours des mobs verts** (proches du niveau du perso) pour maximiser les drops
+
+**Tips spécifiques vérifiés:**
+- Au level ~20, farmer les **crabs/megalopas** et vendre leurs drops de matériaux d'alchemy (elements de type mer) est cité comme l'un des meilleurs revenus early game (elitepvpers)
+- Ne jamais acheter de gear aux NPCs : le ratio de revente fait perdre 50-90% de la valeur
 
 ### Method 2: Job System
 
 **Trader:**
-- Profit per trade: ~100k-5M (selon la route)
-- Risk: thieves
+- Profit per trade: ~100k-5M (selon la route, les étoiles et le niveau des marchandises)
+- Risk: thieves (joueurs + NPC)
 - Time: 10-30 minutes per trade
 - **Best gold/hour si réussi**
+- Alternative semi-passive : le **consignment trading** (enregistrer ses specialty goods auprès du NPC de consignation — vente étalée sur ~5h, gold récupéré plus tard)
 
 **Thief:**
 - Profit per heist: ~50k-2M
@@ -68,102 +123,111 @@ L'économie de Silkroad Online est **player-driven**, avec un système complexe 
 ### Method 3: Unique Hunting
 
 **Process:**
-- Kill uniques
-- Loot SOX drops
+- Kill uniques (Tiger Girl, Uruchi, Isyutaru, Demon Shaitan, etc.)
+- Loot SOX drops + items de valeur
 - Sell in stall network
 
 **Profit:**
 - **Huge mais rare**
-- Un SOSun drop = 100M-5B gold
-- Mais le respawn est 4-24 hours
+- Un SOSun drop = 100M-5B gold (selon degree et âge du serveur)
+- Respawn typiquement 4-24h selon l'unique
+- Les uniques du **Job Temple** droppent les Gold/Silver/Copper Coins échangeables contre du stuff Egy
 
 **Best For:**
-- High level players
-- Organized parties
-- Rng lucky people
+- High level players, organized parties, RNG lucky people
 
 ### Method 4: Stall Flipping
 
 **Process:**
-- Buy items low
-- Sell items high
-- Play the market
+- Buy items low, sell items high, play the market
+- Utiliser le Stall Network pour comparer les prix entre villes (arbitrage)
+- Voir [23_STALL_NETWORK.md](23_STALL_NETWORK.md) pour les techniques détaillées (sniping, stall hopping, market making)
 
 **Example:**
-- Buy SOS 9D sword for 100M
-- Resell for 150M
-- Profit: 50M
+- Buy SOS 9D sword for 100M → Resell for 150M → Profit: 50M
 
-**Requires:**
-- Market knowledge
-- Starting capital
-- Patience
+**Requires:** Market knowledge, starting capital, patience
 
-### Method 5: Alchemy Services
+### Method 5: Alchemy Services & Alchemy Profit
 
 **Process:**
-- Offer alchemy services to other players
-- "I will + your weapon to +7 for 10M, or free if it fails"
-- Risk management
+- Vendre des **services d'alchemy** ("je pousse ton arme en +7 pour 10M, ou gratuit si échec")
+- Ou farmer les matériaux (elixirs, powders) et les revendre : les inputs d'alchemy sont souvent **plus liquides que l'item final** (MMODude) — les alchimistes achètent en continu
 
 **Profit:**
-- Charge for successful alchemy
-- Absorb the risk
+- Charge for successful alchemy, absorb the risk
+- Les elixirs/powders/stones high degree ont une demande permanente
+
+---
+
+## 🏷️ Prix NPC et Ratios de Revente
+
+### Le Mécanisme Central (mesures communautaires iSRO)
+
+Les NPCs achètent les items à une **fraction de leur prix de vente**, et ce ratio se dégrade avec le degree — c'est LE gold sink structurel du jeu :
+
+| Degree | Ratio (prix vente NPC / prix achat NPC) | Ce que le NPC paie |
+|---------|------------------------------------------|--------------------|
+| 1D | 2.09 | ~48% |
+| 2D | 2.38 | ~42% |
+| 3D | 2.78 | ~36% |
+| 4D | 2.86 | ~35% |
+| 5D-6D | non mesuré (interpolation ~5-9x) | ~10-20% |
+| 7D | 13.51 | **~7.4%** |
+
+**Règles vérifiées (TaultUnleashed, iSRO) :**
+- Même degree + même type = même ratio, quel que soit le niveau de l'item
+- **Les blues et le + n'affectent PAS le prix de revente NPC** (un SOM +7 se vend au NPC au prix d'un blanc !) → toujours vendre les items bleus/plusés aux joueurs
+- Consommables : potions HP/MP ratio ~2.82 (~35%), small pills ~58%, medium pills ~45%
+
+### Formule de Prix Stall (BIP — "Basic Item Price")
+
+```
+BIP = Prix de vente NPC × modificateur de degree × discount (0.5 à 0.75)
+```
+- Pour les items que le NPC vend aussi, pricer son stall à **50-75% du prix NPC**
+- Potions au stall : prix de vente NPC × 2 (les joueurs paient la commodité)
+- Pills : prix de vente NPC × 1.5
+
+### Valeur des Enhancements (+X)
+
+| Plus | Multiplicateur (approx.) |
+|------|--------------------------|
+| +1 | ×1.25 à ×1.5 |
+| +2 | ×2 |
+| +X | ≈ BIP × X (jusqu'à ×7 vers +6 selon les mesures) |
+
+- Un item +X vaut environ un item **X/2 levels au-dessus** (arrondi supérieur)
+- Le **glow démarre à +3** et apporte une valeur cosmétique réelle sur le marché
 
 ---
 
 ## 🏪 Stall Network System
 
-### Qu'est-ce que le Stall Network?
+> Section résumée — le guide complet est dans [23_STALL_NETWORK.md](23_STALL_NETWORK.md)
 
-**Stall Network** est un système permettant de voir **tous les stalls des joueurs** dans une interface.
+### Les Deux Ères du Commerce Joueur
 
-### Comment Utiliser
+**Ère classique (2006-2010, client vSRO 1.188) :**
+- Stalls joueurs posés **dans les villes** (perso assis, boutique perso, max **10 items**)
+- **Stall Network global** : interface de recherche "qui liste les items en vente dans **toutes les villes** en un clic" (confirmé par l'interview IGN d'octobre 2007)
+- Achat = se rendre physiquement au stall
 
-1. **Ouvrir Stall Network:**
-   - Bouton dans l'interface
-   - Ou NPC "Stall Network"
+**Ère consignation (après l'update Forgotten World, ~2010-2011) :**
+- Joymax **supprime le réseau de stalls player-run** et le remplace par un NPC de **consignation** : *Consignment Merchant Juel* (Hotan Palace, Specialty Shop)
+- 3 fonctions : **Search Item** (recherche sur tout le réseau), **Register Items** (max 10 items, durée ~3 jours), **Calculate Item Settlements** (encaisser ses ventes)
+- **Commission à l'enregistrement + commission sur chaque vente** ; impossible de register avant d'avoir soldé les ventes précédentes
+- Fonctionne dans toutes les villes **sauf Alexandria**
 
-2. **Browse:**
-   - Voir tous les items en vente
-   - Filter par type, degree, price
+### Créer un Stall (ère classique, utile pour SRObro)
 
-3. **Acheter:**
-   - Cliquez sur l'item
-   - Confirm purchase
-   - Item appears dans votre inventory
+1. Appuyez sur "Open Stall" (icône stall / raccourci)
+2. Placez les items à vendre (max 10)
+3. Set prices + titre du stall
+4. Ouvrez le stall — **le perso reste assis, immobile, en ville**
+5. Attendez (vous pouvez être semi-AFK)
 
-### Créer un Stall
-
-**Process:**
-1. Appuyez sur "Open Stall"
-2. Placez items à vendre
-3. Set prices
-4. Set stall title (ex: "Selling SOS 9D!")
-5. Ouvrez le stall
-6. **Attendez!** (vous pouvez ALT-TAB out)
-
-**Limitations:**
-- Max items: Généralement 10-20
-- Must be in town
-- Personnage ne peut pas bouger
-
-### Stall Strategy
-
-**Pricing:**
-- Check Stall Network for current prices
-- Price competitively
-- But don't underprice too much
-
-**Location:**
-- Jangan: Low-level items (1D-5D)
-- Donwhang: Mid-level items (5D-7D)
-- Hotan: High-level items (7D-11D)
-- Constantinople: Top-level items (10D-13D)
-
-**Timing:**
-- Weekend = Plus de buyers = Higher prices
-- Weekday = Less competition = Lower prices
+**Limitations:** max ~10 items, en ville uniquement, perso immobile, pas de fees.
 
 ---
 
@@ -180,16 +244,32 @@ L'économie de Silkroad Online est **player-driven**, avec un système complexe 
 - Si le cap est level 110, 11D items = valuable
 
 **3. Server Age:**
-- **New server:** Prices low (abundance of items)
-- **Old server:** Prices high (gold inflation)
+- **New server:** Prix bas en gold (peu de gold en circulation, items abondants relative)
+- **Old server:** Prix en gold astronomiques (inflation)
 
 **4. Events:**
 - **Double drop events:** Supply up = Prices down
-- **Special events:** Certain items become valuable
+- **Special events:** Certains items deviennent très demandés
 
-### Typical Prices (Approximate)
+### Prix de Référence — Ère Vintage iSRO (2007-2008, bas degrees)
 
-**Note:** Ces prix varient énormément selon le serveur!
+Mesures community (TaultUnleashed) pour les **armes Seal au début d'iSRO** :
+
+| Item | Prix (gold, époque) |
+|------|---------------------|
+| SOS weapon lv 1-5 | 500k - 1M |
+| SOS weapon lv 6-20 | 1.5M - 2M |
+| SOS weapon lv 21+ | 3M+ ("le prix que le vendeur demande") |
+
+### Prix de Référence — iSRO fin de vie (serveur Ares, ~2010-2011, cap Egy)
+
+| Item | Prix constaté |
+|------|----------------|
+| **Gold Coin** (Job Temple → Egy) | 150M - 180M |
+| **Silver Coin** (Job Temple → Egy) | 25M - 40M (autres mesures: ~30M) |
+| Egyptian items | ~30M la pièce |
+
+### Prix de Référence — Économie Mature (approximations communautaires, à ajuster par serveur)
 
 | Item | Price Range (Gold) |
 |------|-------------------|
@@ -199,6 +279,9 @@ L'économie de Silkroad Online est **player-driven**, avec un système complexe 
 | **Elixir 9D** | 100k-500k |
 | **Lucky Powder 9D** | 200k-1M |
 | **+9 9D Weapon** | 500M-2B (si réussi) |
+| **Pet scroll (shop NPC)** | ~1M gold |
+
+**⚠️ Ces fourchettes "matures" sont des ordres de grandeur communautaires, pas des mesures archivées.** Sur un serveur low-rate récent, divisez par 10-100 ; sur un high-rate, multipliez.
 
 ---
 
@@ -210,6 +293,7 @@ L'économie de Silkroad Online est **player-driven**, avec un système complexe 
 ```
 Profit = (Selling Price - Buying Price) x Quantity - Costs
 ```
+Le profit s'accroît avec la **distance de la route** et le **nombre d'étoiles** des marchandises (1★ = profit minimum/très sûr → 5★ = profit maximum/très risqué). Exemple issu d'un calculateur de routes : 106 de distance, **73 250 gold de profit (~14,6% de marge)** sur un run de specialty goods.
 
 **Example (Jangan-Donwhang 1-star):**
 - Buy: 10x Medicine @ 50k each = 500k
@@ -221,19 +305,20 @@ Profit = (Selling Price - Buying Price) x Quantity - Costs
 - Sell: 10x Jewelry @ 12M each = 120M
 - **Profit:** 70M (mais plus de risk!)
 
+### Consignment Trading (variante semi-passive)
+
+Au lieu de vendre directement vos specialty goods au marchand de destination, **enregistrez-les auprès du NPC de consignation** :
+- La vente s'étale dans le temps (~**5 heures** pour atteindre le sell limit)
+- Vous récupérez le gold plus tard via l'option Settlement
+- Utile pour lisser les prix de vente entre les runs
+
 ### Risk vs Reward
 
-**1-Star Trade:**
-- Risk: Low
-- Profit: 100k-500k
-- Time: 10 min
-- **Good for steady income**
-
-**5-Star Trade:**
-- Risk: Very High
-- Profit: 50M-200M
-- Time: 30-60 min
-- **Good for lucky/profitable runs**
+| Trade | Risk | Profit | Time |
+|-------|------|--------|------|
+| **1-Star** | Low | 100k-500k | 10 min |
+| **2-3 Star** | Medium | 500k-5M | 15-30 min |
+| **5-Star** | Very High | 50M-200M | 30-60 min |
 
 ---
 
@@ -245,457 +330,302 @@ Profit = (Selling Price - Buying Price) x Quantity - Costs
 - Higher degree = More valuable
 - Ex: 11D > 9D
 
-**2. Rarity (SOX):**
-- SOSun > SOM > SOS > Normal
-- Huge difference
+**2. Rarity (SOX) — équivalences vérifiées :**
+
+| Seal | Équivalent enhancement | Effet |
+|------|------------------------|-------|
+| **SOS (Seal of Star)** | item **+5** | "up to +5" confirmé par l'interview IGN 2007 |
+| **SOM (Seal of Moon)** | item **+10** | Tier intermédiaire |
+| **SOSun (Seal of Sun)** | item **+15** | Tier maximum, glow distinctif |
+
+- SOSun >>> SOM > SOS > Normal (écart exponentiel)
+- Chaque Seal a son propre glow sur les armes/boucliers
 
 **3. Enhancement:**
-- +12 > +9 > +5
+- +12 > +9 > +5 > +3 (glow)
 - High + = exponentially more valuable
+- La démarche coûte cher : budget d'alchemy documenté de **2+ milliards de gold** pour pousser un item lv98 vers +9/+10 (elixirs + lucky powders + immortal stones)
 
 **4. Stats (Blues):**
-- Items with good "blue" stats = More valuable
-- Ex: +5 STR, +3% crit
+- Items with good "blue" stats = More valuable **aux joueurs** (les NPCs les ignorent totalement !)
+- Ex: +5 STR, +3% crit, immortal, steady, lucky
 
 **5. Demand:**
 - Popular items (Sword, Spear, Bow) = More valuable
-- Unpopular items (2H Sword, etc.) = Less valuable
+- Unpopular items = Less valuable
 
 ### Selling Strategy
 
 **Before Selling:**
-1. **Check Stall Network:**
-   - What are similar items selling for?
-   - Price competitively
+1. **Check Stall Network:** prix des items similaires, toutes villes
+2. **Identify Buyers:** quel level, quelle classe a besoin de cet item ?
+3. **Set Price:** ni sous-pricé, ni sur-pricé
+4. **Be Patient:** les items rares mettent du temps à se vendre
 
-2. **Identify Buyers:**
-   - Who needs this item?
-   - What level?
+---
 
-3. **Set Price:**
-   - Don't underprice
-   - Don't overprice (won't sell)
+## 🧧 Silk et Item Mall
 
-4. **Be Patient:**
-   - Rare items take time to sell
-   - Common items sell fast
+### Qu'est-ce que l'Item Mall ?
+
+Boutique en **argent réel** (micro-paiements) de Joymax, accessible via le site web et en jeu. C'est le modèle économique du free-to-play de SRO — et la source historique du pay-to-win.
+
+### À Quoi Dépenser son Silk (consensus community)
+
+| Catégorie | Items phares | Priorité |
+|-----------|--------------|----------|
+| **Premium Tickets** | Premium Gold Ticket (~200 silk), Premium Gold Time Plus (~290 silk, 2008) : bonus EXP/SP 100%+, périodes de jeu prioritaires | ⭐⭐⭐⭐⭐ le meilleur investissement |
+| **Pets** | Summon/attack/pickup pets (le pet monkey est cité dès 2007), pet scrolls (~1M gold en shop in-game) | ⭐⭐⭐⭐ |
+| **Utility scrolls** | Res scrolls (rendent l'EXP perdue), SP reallocation potions (alternative à la quête lv20) | ⭐⭐⭐⭐ |
+| **Avatars** | Cosmétique + stats bonus | ⭐⭐⭐ |
+| **Magic Pop Cards** | 10 silk/carte, loterie (avril 2009) : SOS 10D etc. — **rewards account-bound** | ⭐⭐ loterie à forte variance |
+| **Décorations de stall** | Cosmétique de boutique | ⭐ |
+
+### Magic Pop (Loterie Item Mall)
+
+- Lancée officiellement en **avril 2009** : "pour les joueurs aventureux qui prennent des risques" (Joymax/IGN)
+- Principe : acheter une Magic Pop Card (10 silk), choisir l'item visé, tenter sa chance
+- Rewards rapportés : SOS 10D etc., **liés au compte**
+- Sur les privés, souvent étendu en "item mall lite" avec des rewards custom
+
+### Free Silk ?
+
+- **iSRO officiel** : pas de silk gratuit en jeu (hors promotions ponctuelles Joymax). Le silk ne se farme pas, il s'achète.
+- **Serveurs privés** : free silk courant — silk/heure d'online (ex. 2-3 silk/h en beta), silk pour uniques tués, events Discord (invitations), loteries, giveaways. Certains serveurs "SSF-style" (self-found, non-P2W) interdisent les silk scrolls.
 
 ---
 
 ## 💸 Gold Sinks
 
-### Qu'est-ce qu'un Gold Sink?
+### Qu'est-ce que le Gold Sink?
 
-**Gold Sink** = Mécanisme qui retire du gold de l'économie pour contrer l'inflation.
+**Gold Sink** = Mécanisme qui retire du gold de l'économie pour contrer l'inflation. SRO en a beaucoup, mais pas assez pour compenser le botting.
 
-### Major Gold Sinks
+### Major Gold Sinks (avec valeurs documentées)
 
-**1. Repairs:**
-- Gear repairs after grinding
-- Cost: 10k-1M per session
+**1. Ratios de revente NPC (le sink géant) :**
+- Vendre un item 7D au NPC n'en récupère que ~7% de sa valeur d'achat
+- "Même sans taxes, vendre puis racheter un item au NPC fait perdre ~20% du gold" (elitepvpers, discussion taxes forteresse)
+- Chaque achat de gear/potion au NPC est un sink irréversible
 
-**2. Potions:**
-- HP/MP potions
-- Cost: 100k-5M per grinding session
+**2. Repairs:**
+- Gear repairs after grinding — 10k-1M per session selon le degree
 
-**3. Alchemy:**
-- Elixirs, Lucky Powders, Stones
-- Cost: 1M-100M per attempt (+10 and above)
+**3. Potions & munitions:**
+- HP/MP potions, pills, arrows/bolts : 100k-5M par session de grind (consommables achetés aux NPCs = gold détruit)
 
-**4. Mounts:**
-- Buying mounts (Horse, Camel, Elephant)
-- Cost: 100k-10M
+**4. Alchemy:**
+- Elixirs, Lucky Powders, Stones achetés aux joueurs, mais les **échecs détruisent de la valeur** (items cassés/downgradés)
+- Budget type : 1M-100M par session, **2B+** pour un push +9/+10 endgame
 
-**5. Skills:**
-- Buying skills costs SP (but also gold for higher levels)
+**5. Mounts / Pets:**
+- Pet scrolls : **~1M gold** en shop NPC (fandom wiki)
+- Horse, Camel, Elephant via stable keepers — 100k-10M selon type/version
 
-**6. Storage:**
-- Storage expansion
-- Cost: Variable
+**6. Guild:**
+- Création de guilde : **500 000 gold** à l'origine (2007, confirmé IGN), **1 000 000 gold** dans les versions récentes (fandom wiki)
+- Level up de guilde : ex. level 2 = 5 400 GP + **3M gold** ; croissant ensuite
+- Les guildes sont financées par les **donations de gold ET de skill points** des membres
 
-**7. Teleportation:**
-- Return scrolls, NPCs
-- Small but adds up
+**7. Téléportation & transports :**
+- Beginner teleports : **10 gold** (jusqu'au level 20)
+- Ferry/bateau pour traverser le fleuve : **~500 gold**
+- Téléports standards : **~5 000 gold par trajet** (~10k aller-retour Jangan-Donwhang)
+- Return scrolls (consommables)
+
+**8. Taxes de forteresse :**
+- La guilde occupant une forteresse lève une taxe (jusqu'à ~**20%+**) sur les **trading centers, ferries, bateaux privés** et achats NPC de la zone
+- Les membres de la guilde occupante et alliés bénéficient d'une remise (**-20% à 0%**)
+- Double effet : sink pour les joueurs ordinaires, revenu pour la guilde
+
+**9. Commissions de consignation (ère Juel) :**
+- Commission par item enregistré + commission sur chaque vente
+- Perte des items non vendus au bout de ~3 jours si non renouvelés
+
+**10. Stockage :**
+- Storage expansion : coût en gold (croissant par page)
+
+---
+
+## 🔧 Économie des Serveurs Privés (vSRO)
+
+### Le Modèle Économique Type (vSRO 1.188)
+
+Les serveurs privés basés sur les fichiers vSRO 1.188 ont une économie structurée autour de :
+
+**1. Silk Scrolls (le pivot de l'économie) :**
+- Les donateurs achètent du silk → le reçoivent en **silk scrolls** (items) → les vendent au stall contre du gold
+- Crée le **taux de change gold↔silk implicite** du serveur
+- Les gros donateurs dominent le marché du gold ; les joueurs "F2P" farment du gold pour acheter les scrolls
+
+**2. Systèmes de coins custom :**
+- **Job coins / coin-based economy** : par ex. serveurs où l'accès à certaines zones requiert une **Copper Coin**, où les Berzekers droppent scrolls/silk/arena coins, progression centrée jobs
+- **Arena coins** farmables via events daily
+- **Gold/Silver coins** pour le stuff Egy (comme iSRO)
+
+**3. Silk Stall (custom) :**
+- Système custom fréquent : stalls où les items se paient en **silk** au lieu de gold — non supporté nativement par vSRO 1.188, développé via filters (MaxiGuard, etc.)
+
+**4. Free silk :**
+- Silk par heure d'online, silk par unique, events Discord/votes — c'est l'arme de recrutement des serveurs
+
+**5. Téléports comme sink volontaire :**
+- Certains serveurs (ex. Electus) standardisent les frais de ferry/event teleport à **1M gold** pour drainer l'inflation
+
+**6. Magic Pop custom :**
+- Étendu en "item mall lite" avec des rewards exclusifs
+
+### Différences Clés vs iSRO Classique
+
+| Aspect | iSRO classique | Serveur privé vSRO typique |
+|--------|----------------|-----------------------------|
+| Silk | Argent réel uniquement | Free silk (events/hours) + donation |
+| Consignation | NPC Juel (officiel) | Souvent désactivée ou custom |
+| Coins | Arena + Job Temple | + job coins, copper coins, custom |
+| Rates | 1x | 5x-100x+ (EXP/gold/drop) |
+| Inflation | Lente puis massive (bots, années) | Rapide (rates élevés, donations) |
+| Sink principal | NPC buyback + taxes | Téléports surtaxés + fees custom |
+
+---
+
+## 📉 Inflation et Mécaniques Anti-Inflation
+
+### Historique de l'Inflation iSRO
+
+L'histoire économique d'iSRO est celle d'une **destruction par le botting et le RMT** (rétrospectives community, MMORPG.com, r/silkroadonline) :
+
+1. **2006-2008** : économie saine, prix bas (SOS lv21+ ≈ 3M gold), gold précieux
+2. **2008-2010** : explosion du botting → des fermes de bots génèrent du gold en masse → les RMT le revendent "à des prix cassés" → les acheteurs s'offrent le top gear → les prix montent pour tout le monde (rapport MMORPG.com "Correspondent - Bots in Silkroad")
+3. **2009+** : l'item mall devient agressivement pay-to-win (Magic Pop, premiums) → inflation s'accélère
+4. **Fin iSRO** : milliers de milliards pour un item top ; le gold ne vaut plus rien en termes réels ; les échanges se font item contre item
+5. **Paradoxe documentaire** : il n'existe presque **aucune archive** des prix historiques ($/billion etc.) — les veterans citent de mémoire (rétrospective r/silkroadonline)
+
+### Les Mécaniques Anti-Inflation du Jeu
+
+| Mécanique | Effet | Suffisant? |
+|-----------|-------|------------|
+| NPC buyback ratios (7D : ~7%) | Détruit massivement du gold à chaque achat NPC | ✅ mais contourné (échanges joueurs) |
+| Taxes de forteresse (0-20%+) | Drain continu sur les activités commerciales | ✅ si bien gérées |
+| Commissions de consignation | Taxe chaque transaction du marché | ✅ modéré |
+| Repairs / potions / arrows | Sink quotidien de tous les joueurs actifs | ✅ |
+| Guild fees (création 500k→1M, levels M) | Sink ponctuel des guildes | ⚠️ ponctuel |
+| Alchemy (échecs) | Détruit des items (valeur), consomme elixirs | ✅ |
+| Death penalty / res scrolls | Sink marginal | ⚠️ faible |
+
+**Conclusion community :** les sinks étaient bien pensés pour une économie 1x humaine, mais **sans défense contre le botting** (Joymax n'a jamais banni efficacement), l'offre de gold a explosé. Sur les serveurs privés low-rate "SSF-style" (pas de silk scrolls), l'économie reste saine plus longtemps.
 
 ---
 
 ## 💵 Making Your First Million
 
 ### Level 1-20 Strategy
-
-**Focus:**
-- Questing (gives gold)
-- Loot everything
-- Sell drops to NPCs
-
-**Expected:**
-- 100k-500k gold by level 20
+**Focus:** Questing (gold rewards), loot everything, vendre les éléments/elixirs au stall (pas aux NPCs !)
+**Expected:** 100k-500k gold by level 20
 
 ### Level 20-40 Strategy
-
-**Focus:**
-- Start jobbing (trading)
-- Or continue grinding
-- Stall low-level items
-
-**Expected:**
-- 500k-5M gold by level 40
+**Focus:** Job trading 1★, farmer les crabs/megalopas (matériaux alchemy), stall low-level items
+**Expected:** 500k-5M gold by level 40
 
 ### Level 40-60 Strategy
-
-**Focus:**
-- Job trading (2-3 star)
-- Stall flipping
-- Better drops
-
-**Expected:**
-- 5M-50M gold by level 60
+**Focus:** Job trading (2-3★), stall flipping low capital, mieux dropper
+**Expected:** 5M-50M gold by level 60
 
 ### Level 60-80 Strategy
-
-**Focus:**
-- High-level trading (4-5 star)
-- Unique hunting (if lucky)
-- Sell SOX drops
-
-**Expected:**
-- 50M-500M gold by level 80
+**Focus:** Trading high-level (4-5★), unique hunting, vendre les SOX drops
+**Expected:** 50M-500M gold by level 80
 
 ### Level 80-110 Strategy
-
-**Focus:**
-- Max level trading
-- Fortress War rewards (if your guild owns)
-- High-level uniques
-
-**Expected:**
-- 500M-5B+ gold by level 110
+**Focus:** Max level trading, Fortress War rewards (si guilde propriétaire), uniques haut niveau, Job Temple coins
+**Expected:** 500M-5B+ gold by level 110
 
 ---
 
-## 🌍 Multilingual Research Findings (2025)
-
-### 🇰🇷 Korean Sources (Original Mechanics & Economic Design)
-
-**Source**: [Korean Silkroad Wiki - Economy System](https://srokorea.com/wiki/economy)
-
-**Formules Économiques Originales**:
-
-**1. Calcul du Prix de Vente NPC**:
-```
-Prix NPC = Prix Base × (1 + (Item Degree × 0.2)) × Rarity Multiplier
-
-Exemple:
-Prix Base épée: 1,000 gold
-Degree 9D: 1 + (9 × 0.2) = 2.8
-Rarity SOS: ×3
-Prix Final: 1,000 × 2.8 × 3 = 8,400 gold
-```
-
-**2. Gold Drop Formula**:
-```
-Gold Drop = Base Gold × Mob Level × Player Level × Zone Multiplier
-
-Exemple:
-Base Gold: 10
-Mob Level: 80
-Player Level: 80
-Zone Multiplier: 1.5 (high-level zone)
-Gold Drop: 10 × 80 × 80 × 1.5 = 96,000 gold
-```
-
-**3. Inflation Mechanic**:
-- **Gold Spawn Rate**: Contrôlé par le serveur
-- **Gold Sink Ratio**: Idéalement 70% du gold spawn est retiré par les sinks
-- **Private Servers**: Beaucoup augmentent le gold spawn rate sans augmenter les sinks = hyperinflation
-
-**Confidence Level**: 5/5 (Tier 1 - Official Game Mechanics)
-
----
-
-### 🇹🇷 Turkish Sources (Meta Économie 2024-2026)
-
-**Source**: [SROForum Turkey - Ekonomi Rehberi 2024](https://sroforum.com/threads/ekonomi-rehberi-2024.123456/)
-
-**Stratégies de Farming 2024-2026**:
-
-**1. Job Trading - Profit Maximisation**:
-
-**Tableau des Routes les Plus Profitables**:
-
-| Route | Stars | Distance | Profit Moyen | Risk | Temps | Profit/Heure |
-|-------|-------|----------|--------------|------|-------|--------------|
-| **Jangan-Donwhang** | 1-2 | Court | 50k-300k | Bas | 8-12 min | **250k-1.5M** |
-| **Donwhang-Hotan** | 2-3 | Moyen | 200k-1M | Moyen | 15-20 min | **600k-3M** |
-| **Hotan-Constantinople** | 4-5 | Long | 5M-50M | Très Haut | 30-45 min | **6M-100M** |
-
-**Méta Trading 2024-2026**:
-- **1-Star Spamm**: Le plus consistant, low risk
-- **5-Star Runs**: Uniquement avec +15 gear et party full
-- **Optimal**: 2-3 stars pour le meilleur ratio risk/reward
-
-**2. Stall Flipping - Techniques Avancées**:
-
-**Stratégie "Buy Low, Sell High"**:
-
-**A. Times d'Achat Optimaux**:
-- **Lundi-Mardi**: Moins de joueurs = Prix bas (20-30% moins cher)
-- **Matin (Server Time)**: Vente forcée avant work = Prix planché
-- **Après Events**: Double drop events = Surplus = Prix crash
-
-**B. Times de Vente Optimaux**:
-- **Vendredi-Samedi**: Plus de joueurs = Prix élevé (20-40% plus cher)
-- **Soir (Server Time)**: Players rentrant du work = Demand peak
-- **Avant Fortress War**: Preparation = Gear demand spike
-
-**C. Items les Plus Profitables à Flip**:
-
-| Item Type | Profit Margin | Risk | Capital Requis |
-|-----------|---------------|------|----------------|
-| **SOX Weapons (SOS/SOM)** | 30-50% | Moyen | 50M-500M |
-| **Elixirs 9D-11D** | 20-40% | Bas | 10M-50M |
-| **Lucky Powders** | 25-45% | Bas | 5M-30M |
-| **+9/+10/+11 Weapons** | 50-100% | Haut | 200M-2B |
-| **Rare Blues (STR/INT)** | 100-200% | Très Haut | 10M-100M |
-
-**3. Gold Farming Optimization par Level**:
-
-**Level 1-30 (Early Game)**:
-- **Meilleure Méthode**: Grinding + Quests
-- **Zones**: Jangan Hills, Bandit Stronghold
-- **Profit**: 50k-200k/hour
-- **Items de Valeur**: 2D-4D gear (NPC drops)
-
-**Level 30-50 (Mid Game)**:
-- **Meilleure Méthode**: Job Trading (1-star)
-- **Zones**: Donwhang, Tomb Raiders
-- **Profit**: 300k-1M/hour
-- **Items de Valeur**: 5D-6D SOS items
-
-**Level 50-70 (Mid-Late Game)**:
-- **Meilleure Méthode**: Trading (2-3 stars) + Unique Hunting
-- **Zones**: Hotan, Niya Staying Dead
-- **Profit**: 1M-5M/hour
-- **Items de Valeur**: 7D-8D SOS/SOM
-
-**Level 70-90 (Late Game)**:
-- **Meilleure Méthode**: 5-Star Trading + Uniques + Stall Flipping
-- **Zones**: Alexandria, Constantinople
-- **Profit**: 5M-50M/hour
-- **Items de Valeur**: 9D SOSun, 10D SOM
-
-**Level 90-110 (Endgame)**:
-- **Meilleure Méthode**: Pure Stall Flipping + Fortress War Rewards
-- **Zones**: Tous (high mobility)
-- **Profit**: 50M-500M+/hour
-- **Items de Valeur**: 11D-13D SOSun, +15 gear
-
-**Confidence Level**: 4/5 (Tier 2 - Community Consensus & Testing)
-
----
-
-### 🇺🇸 English Sources (International Market Analysis)
-
-**Source**: [Silkroad Online Economy Guide 2024-2026](https://elitepvpers.com/forum/silkroad-online/)
-
-**Inflation Patterns & Server Economy Types**:
-
-**1. Server Economy Classification**:
-
-**A. Low-Rate Servers (1x-5x EXP/Gold)**:
-- **Inflation**: Lente et contrôlée
-- **Prix**: 9D SOS ~100M-500M
-- **Gold Value**: Stable, gardé long-terme
-- **Best For**: Hardcore players, économie stable
-
-**B. Mid-Rate Servers (10x-50x EXP/Gold)**:
-- **Inflation**: Modérée
-- **Prix**: 9D SOS ~500M-2B
-- **Gold Value**: Perd valeur progressivement
-- **Best For**: Players casual, économie équilibrée
-
-**C. High-Rate Servers (100x+ EXP/Gold)**:
-- **Inflation**: Hyperinflation rapide
-- **Prix**: 9D SOS ~5B-50B+
-- **Gold Value**: Perd 90%+ valeur en quelques semaines
-- **Best For**: Fun/fast servers, pas d'investissement
-
-**2. Market Cycle Analysis**:
-
-**Phase 1: Server Launch (Week 1-2)**:
-- **Characteristics**: No gold, high demand, low supply
-- **Prices**: Very high relative to gold supply
-- **Strategy**: Farm gold via grinding, sell everything
-- **Profit**: 10x normal rates
-
-**Phase 2: Early Economy (Week 3-6)**:
-- **Characteristics**: Gold supply increases, market stabilizes
-- **Prices**: Starting to drop, market finds equilibrium
-- **Strategy**: Invest in undervalued items, start stall flipping
-- **Profit**: 3x normal rates
-
-**Phase 3: Mature Economy (Week 7-12)**:
-- **Characteristics**: Gold abundance, inflation starts
-- **Prices**: Stable but rising, demand shifts to high-end items
-- **Strategy**: Focus on high-end items (SOM/SOSun), luxury trading
-- **Profit**: Normal rates
-
-**Phase 4: Late Economy (Week 13+)**:
-- **Characteristics**: Hyperinflation, gold devaluation
-- **Prices**: Massive numbers, but low real value
-- **Strategy**: Trade items for items, avoid holding gold
-- **Profit**: Difficult, requires market manipulation
-
-**3. Investment Strategies**:
-
-**Strategy A: "Item Bank" (Inflation Hedge)**:
-```
-Au lieu de garder 1B gold:
-→ Acheter 2x SOS 9D weapons à 500M chacun
-→ Attendre 2-3 semaines
-→ Vendre à 1B chacun
-→ Résultat: 2B gold (100% profit, inflation-proof)
-```
-
-**Strategy B: "Service Provider" (Gold Income)**:
-```
-Offrir des services payants:
-- +7 Enhancement: 10M fee
-- +9 Enhancement: 50M fee
-- Powerleveling: 5M/hour
-- Unique Hunting Service: 10-50M per unique
-- Stall Network Consulting: 1-5M consultation
-
-Avantages: Gold income constant, pas d'investissement
-```
-
-**Strategy C: "Market Maker" (Stall Network Dominance)**:
-```
-Contrôler un segment de marché:
-Ex: Contrôler le marché des Elixirs 9D
-→ Acheter ALL elixirs <300k
-→ Revendre à 400k
-→ Répeter continuellement
-→ Résultat: Monopole, profit 33% per flip
-```
-
-**Confidence Level**: 4/5 (Tier 2 - Community Validated)
-
----
-
-### ✅ Cross-Validated Economic Principles
-
-**Principes Confirmés par 2+ Sources**:
-
-1. **Job Trading > Grinding** (🇰🇷🇹🇷🇺🇸)
-   - Trading 5 étoiles peut générer 50M-200M en 30-60 min
-   - Grinding génère 200k-1M/hour maximum
-   - **Conclusion**: Trading est 50-200x plus profitable
-
-2. **Inflation Inévitable** (🇰🇷🇹🇷🇺🇸)
-   - Gold spawn > Gold sinks = inflation garantie
-   - Private servers: inflation 10x plus rapide
-   - **Conclusion**: Investir en items, pas en gold
-
-3. **Weekend Effect** (🇹🇷🇺🇸)
-   - Prix 20-40% plus élevés le weekend
-   - Meilleur temps pour vendre
-   - **Conclusion**: Vendre vendredi/samedi, acheter lundi/mardi
-
-4. **Market Timing** (🇹🇷🇺🇸)
-   - Prix crash après double drop events
-   - Prix spike avant Fortress War
-   - **Conclusion**: Anticiper les events pour profits maximaux
-
-5. **Item Value Hierarchy** (🇰🇷🇹🇷🇺🇸)
-   - Weapons > Armor (demande plus haute)
-   - SOSun >>> SOM > SOS > Normal (exponential gap)
-   - **Conclusion**: Focus sur les weapons SOX pour profit maximum
-
-**Confidence Level**: 5/5 (Tier 1 - Cross-Language Consensus)
-
----
-
-### ⚠️ Conflicting Information & Resolution
-
-**Dispute 1: Gold Farming Method Priority**
-
-🇹🇷 **Turkish**: Job Trading > Stall Flipping > Uniques > Grinding
-🇺🇸 **English**: Stall Flipping > Job Trading > Uniques > Grinding
-
-**Resolution**: Les deux sont corrects selon le contexte:
-- **Job Trading** = Plus profitable si vous avez un transport et une route safe
-- **Stall Flipping** = Plus profitable si vous avez du capital de départ et une connaissance marché
-- **Recommendation**: Commencer avec Job Trading (capital minimal), transition vers Stall Flipping une fois riche
-
-**Dispute 2: Inflation Rate**
-
-🇰🇷 **Korean**: Inflation linéaire (prévisible)
-🇹🇷 **Turkish**: Inflation exponentielle (chaotique)
-
-**Resolution**: Dépend du type de serveur:
-- **Official/Low-Rate**: Inflation linéaire (prévisible)
-- **Private/High-Rate**: Inflation exponentielle (chaotique)
-- **Recommendation**: Toujours vérifier le serveur-specific economy
-
-**Confidence Level**: 4/5 (Tier 2 - Context-Dependent)
-
----
-
-### 📊 Economic Meta Summary 2024-2026
-
-**Best Gold Farming Methods by Level**:
-
-| Level Range | Primary Method | Secondary Method | Profit/Hour |
-|-------------|----------------|------------------|-------------|
-| **1-20** | Questing + Grinding | Selling low-level drops | 50k-200k |
-| **20-40** | 1-Star Trading | Stall flipping (low capital) | 200k-1M |
-| **40-60** | 2-3 Star Trading | Grinding mid-level zones | 1M-5M |
-| **60-80** | 5-Star Trading | Unique hunting | 5M-50M |
-| **80-110** | Stall Flipping | High-end trading | 50M-500M+ |
-
-**Key Economic Principles**:
-1. **Gold is volatile** → Convert to items ASAP
-2. **Weekend = Sell** → 20-40% price premium
-3. **Weekday = Buy** → 20-30% discount
-4. **Items > Gold** → Inflation-proof investment
-5. **Services = Passive Income** → Enhancement, powerleveling
-
-**Most Profitable Items to Trade**:
-1. **SOSun Weapons** → Highest demand, highest profit
-2. **Elixirs (9D-11D)** → Consistent demand, stable profit
-3. **+9/+10/+11 Gear** → High risk, massive reward
-4. **Rare Blues** → Niche market, expert profit
+## ✅ Données Vérifiées (Recherche 2026)
+
+Recherche web de février-octobre 2026 sur les sources primaires et communautaires. **Remplace l'ancienne section "Multilingual Research Findings" dont les sources (srokorea.com, sroforum.com) n'étaient pas vérifiables et dont les formules étaient non corroborées.**
+
+### 🔎 Sources Vérifiées et Ce Qu'Elles Confirment
+
+| Source | Données |
+|--------|---------|
+| [IGN — Interview Silkroad Online (oct. 2007)](https://www.ign.com/articles/2007/10/20/silkroad-online-interview) | Stall Network **global** ("parcourir les items de chaque ville en un clic"), Seal = "up to +5" (SOS), guilde = 500k gold + donations SP, item mall = micro-paiements |
+| [TaultUnleashed — Pricing & Selling Guide](https://www.taultunleashed.com/silkroad-submissions/sro-pricing-and-selling-guide-t36134.html) | Ratios NPC par degree (2.09 → 13.51), formule BIP, prix des +, potions ×2, prix SOS vintage (500k-3M) |
+| [princessjane25 — How to use the new Stall Network (2011)](https://princessjane25.wordpress.com/2011/01/16/how-to-use-the-new-stall-network) | Consignation Juel : 3 options, max 10 items, ~3 jours, commissions, settlements, "toutes villes sauf Alexandria" |
+| [Silkroad Online Wiki (Fandom) — Stall](https://silkroadonline.fandom.com/wiki/Stall) / [Consignment](https://silkroadonline.fandom.com/wiki/Consignment) | Stall = max 10 items, en ville ; liste des stalls via interface communauté |
+| [Fandom — Pets](https://silkroadonline.fandom.com/wiki/Pets) / [Guild](https://silkroadonline.fandom.com/wiki/Guild) | Pet scrolls ~1M gold ; création guilde 1M gold (lv20+) |
+| [elitepvpers — guild infomation](https://www.elitepvpers.com/forum/silkroad-online/222528-guild-infomation.html) | Guild lvl1 = 500k, lvl2 = 3M gold + GP |
+| [kmkm forumotion — SRO Teleporting](https://kmkm.forumotion.com/t903-sro-teleporting) | Beginner teleport 10g (lv≤20), ferry ~500g |
+| [silkroadforums — teleporting low cash](http://www.silkroadforums.com/viewtopic.php?f=2&t=27657) | Téléports ~5k par trajet |
+| [international-sro forumotion — Fortress War](https://international-sro.forumotion.com/t18-overview-of-fortress-war) | Taxe forteresse, remise -20%..0% pour l'occupant |
+| [elitepvpers — Magic Pop Card](https://www.elitepvpers.com/forum/silkroad-online/302204-magic-pop-card.html) + [IGN Magic Pop (2009)](https://www.ign.com/articles/2009/04/14/joymax-launches-magic-pop-system-in-fantasy-mmorpg-silkroad-online) | Magic Pop = 10 silk/carte, lancé avril 2009, rewards SOS account-bound |
+| [silkroadonline.de — Item Mall Preise](https://www.silkroadonline.de/allgemein/allgemeines-ber-silkroad/26428-neue-item-mall-preise) | Premium Gold Time Plus = 290 silk |
+| [silkroadforums — Egyptian sets' cost](http://www.silkroadforums.com/viewtopic.php?f=2&t=127705) | Ares : gold coins 150-180M, silver 25-40M |
+| [silkroadforums — Tips alchemist](http://www.silkroadforums.com/viewtopic.php?f=7&t=110014) | Budget 2B+ gold pour alchemy lv98 → +9/+10 |
+| [Fandom — Job](https://silkroadonline.fandom.com/wiki/Job) | Marchandises classées par étoiles 1★→5★, profit/risk croissant |
+| [elitepvpers — Bots/RMT + MMORPG.com](https://forums.mmorpg.com/discussion/194604/silkroad-online-correspondent-bots-in-silkroad) | Botting → RMT cheap → inflation |
+| [Facebook SRO Origin group](https://www.facebook.com/groups/srooriginm/posts/1158738178540511) | Gold drops ~500/700/1000 par type de mob |
+| [elitepvpers — drops from monsters](https://www.elitepvpers.com/forum/silkroad-online/150057-recived-drops-monsters.html) | Drops max sur mobs verts, min sur bleus/rouges |
+
+### ⚠️ Incertitudes Restantes
+
+1. **Le pourcentage exact des commissions de consignation** (registration + vente) n'est documenté nulle part en ligne — à mesurer en jeu
+2. **Les formules internes** (gold drop exact par mob level, prix NPC exacts) ne sont pas publiées ; les valeurs ci-dessus sont des mesures communautaires
+3. **Prix historiques $/billion du RMT** : aucune archive indexée ; uniquement témoignages
+4. **Ratios NPC 5D-6D** : non mesurés dans le guide source
+5. Le nombre exact de slots d'un stall joueur (10 selon le wiki Fandom et le système de consignation ; certains serveurs custom l'étendent)
 
 ---
 
 ## ❓ FAQ
 
 ### Q: L'or est-il le plus important?
-**R:** Oui et non. L'or est crucial pour acheter de l'équipement, mais les skills et le level sont aussi importants.
+**R:** Oui et non. L'or est crucial pour acheter de l'équipement, mais les skills et le level sont aussi importants. En période d'inflation, détenir des items vaut mieux que détenir du gold.
 
-### Q: Puis-ai-ai acheter de l'or avec de l'argent réel (RMT)?
-**R:** Officiellement non (contre les ToS). Cependant, le RMT existe dans SRO depuis longtemps.
+### Q: Puis-je acheter de l'or avec de l'argent réel (RMT)?
+**R:** Officiellement non (contre les ToS). Cependant, le RMT a existé massivement dans SRO — c'est même l'une des causes de sa mort économique (botting). Risque de ban + arnaques.
+
+### Q: Le silk peut-il s'obtenir en jeu?
+**R:** Sur iSRO officiel, non (hors rares promotions). Sur les serveurs privés, oui : silk/heure, events, loteries, ou achat de silk scrolls aux joueurs avec du gold.
 
 ### Q: Les prix sont-ils les mêmes sur tous les serveurs?
-**R:** Non! Énormément de variation. Private servers avec "auto-gold" ont des prix très différents.
+**R:** Non! Énormément de variation selon les rates (EXP/gold/drop), l'âge du serveur et la politique silk. Un SOS 9D vaut ~100M sur un low-rate récent, ~5B+ sur un vieux high-rate.
 
-### Q: Quelle est la meilleure méthode pour farm de l'or?
-**R:** Dépend de votre level et style. Généralement: Trading (si chanceux) > Uniques > Grinding > Stall flipping.
+### Q: Quelle est la meilleure méthode pour farmer de l'or?
+**R:** Dépend du level et du style. Généralement: Job trading (actif) > Uniques (RNG) > Stall flipping (capital) > Grinding (base). Le grinding seul ne fait que accompagner le leveling — le vrai gold vient du commerce.
+
+### Q: Pourquoi mon item SOM +7 se vend-il si peu cher au NPC?
+**R:** Par design : **les NPCs ignorent totalement les blues et le +**. Un SOM +7 s'achète au prix d'un item blanc du même degree/type. Les items améliorés ne se vendent qu'aux joueurs via stall.
 
 ### Q: L'inflation est-elle un problème?
-**R:** Oui, énormément. Sur les vieux serveurs, un milliard de gold vaut beaucoup moins qu'avant.
+**R:** Oui, énormément. Sur les vieux serveurs, un milliard de gold vaut beaucoup moins qu'avant. Les mécaniques anti-inflation (NPC buyback, taxes) n'ont jamais suffi contre le botting.
+
+### Q: C'est quoi la différence entre vendre au stall et la consignation?
+**R:** Le stall classique = votre perso s'assoit en ville et vend (gratuit, max 10 items, vous devez rester en ligne). La consignation (NPC Juel, post-2010) = vos items restent en vente ~3 jours même déconnecté, mais avec commissions. Détails dans [23_STALL_NETWORK.md](23_STALL_NETWORK.md).
 
 ---
 
 ## 🔗 Resources
 
-### Resources
-- [Gold Trading Guide](https://www.facebook.com/groups/srooriginm/videos/1587321632124892/)
-- [How to gain gold](http://www.silkroadforums.com/viewtopic.php?f=2&t=129275)
+### Guides et Data
+- [MMODude — Silkroad Online Gold Farming Guide](https://mmodude.com/farming-guides/silkroad-online-gold-farming-guide)
+- [TaultUnleashed — SRO Pricing and Selling Guide](https://www.taultunleashed.com/silkroad-submissions/sro-pricing-and-selling-guide-t36134.html)
+- [princessjane25 — How to use the new Stall Network (2011)](https://princessjane25.wordpress.com/2011/01/16/how-to-use-the-new-stall-network)
+- [GameFAQs — Silkroad Online Guide and Walkthrough (Sintaku, 2007)](https://gamefaqs.gamespot.com/pc/930711-silkroad-online/faqs/44908)
+- [StrategyWiki — Silkroad Online/Items](https://strategywiki.org/wiki/Silkroad_Online/Items)
+
+### Wikis
+- [Silkroad Online Wiki (Fandom) — Gold](https://silkroadonline.fandom.com/wiki/Gold)
+- [Silkroad Online Wiki (Fandom) — Job](https://silkroadonline.fandom.com/wiki/Job)
+- [Silkroad Online Wiki (Fandom) — Guild](https://silkroadonline.fandom.com/wiki/Guild)
+- [Silkroad Online Wiki (Fandom) — Item mall](https://silkroadonline.fandom.com/wiki/Item_mall)
+- [Silkroad Online Wiki (Fandom) — Pets](https://silkroadonline.fandom.com/wiki/Pets)
+- [Silkroad Online Database — Trade Routes calculator](https://silkroadonline.wiki/tools/trade-routes)
 
 ### Communauté
-- [Silkroad Forums - Market Section](http://www.silkroadforums.com/)
+- [Elitepvpers — Silkroad Online Forum](https://www.elitepvpers.com/forum/silkroad-online/)
+- [r/silkroadonline (Reddit)](https://www.reddit.com/r/silkroadonline/)
+- [IGN — Interview Silkroad Online (2007)](https://www.ign.com/articles/2007/10/20/silkroad-online-interview)
+- [MMORPG.com — Bots in Silkroad](https://forums.mmorpg.com/discussion/194604/silkroad-online-correspondent-bots-in-silkroad)
 
 ---
 
@@ -703,7 +633,7 @@ Ex: Contrôler le marché des Elixirs 9D
 
 ### Systèmes Économiques
 - [Hub Économie](HUB_ECONOMIE.md) - Centralise économie et équipement
-- [Stall Network](23_STALL_NETWORK.md) - Marketplace joueur-à-joueur
+- [Stall Network](23_STALL_NETWORK.md) - Marketplace joueur-à-joueur et consignation
 - [Job System](09_JOB_SYSTEM_OVERVIEW.md) - Trading et profits
 
 ### Guides de Farming
@@ -725,4 +655,4 @@ Ex: Contrôler le marché des Elixirs 9D
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
+*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : IGN 2007, TaultUnleashed, Fandom Wiki, elitepvpers, princessjane25, MMODude, forums communautaires)*

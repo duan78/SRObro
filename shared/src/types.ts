@@ -259,7 +259,13 @@ export type PacketType =
   | 'sp_gain'
   | 'level_up'
   | 'drop_item'
-  | 'remove_dropped_item';
+  | 'remove_dropped_item'
+  // Phase 2: combat complet
+  | 'skill_rejected'
+  | 'player:death'
+  | 'player:respawned'
+  | 'player:state'
+  | 'player:respawn';
 
 export interface BasePacket {
   type: PacketType;

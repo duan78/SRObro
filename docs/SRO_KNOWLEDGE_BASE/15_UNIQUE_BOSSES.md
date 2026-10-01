@@ -2,7 +2,13 @@
 
 ## 📋 Table des Matières
 - [Vue d'Ensemble](#-vue-densemble)
-- [Liste des Uniques](#-liste-des-uniques)
+- [Liste Officielle des Uniques](#-liste-officielle-des-uniques)
+- [Uniques Classiques (Chine/Europe)](#-uniques-classiques-chineeurope)
+- [Roc (Roc Mountain)](#-roc-roc-mountain)
+- [Uniques du Qin-Shi Tomb (Medusa)](#-uniques-du-qin-shi-tomb-medusa)
+- [Uniques du Job Temple (Alexandrie)](#-uniques-du-job-temple-alexandrie)
+- [Boss du Forgotten World (FGW)](#-boss-du-forgotten-world-fgw)
+- [Variantes Event (Strong/Evil/GM)](#-variantes-event-strongevilgm)
 - [Spawn Times](#-spawn-times)
 - [Spawn Locations](#-spawn-locations)
 - [Drop Lists](#-drop-lists)
@@ -20,315 +26,408 @@ Les **Uniques** sont les boss les plus puissants de Silkroad Online. Ils dropent
 ### Points Clés
 - ✅ **Meilleurs drops du jeu:** SOX items
 - ✅ **Massive EXP/SP:** Un unique peut donner plusieurs levels
-- ✅ **Long respawn:** 4-24 heures
-- ✅ **Full party required:** Généralement impossible solo
+- ✅ **Long respawn:** 3-5 heures sur iSRO (4h par défaut dans les fichiers vSRO), variable selon les serveurs
+- ✅ **Full party required:** Généralement impossible solo au level approprié
 - ✅ **Competition:** D'autres joueurs veulent aussi les tuer
+
+### ⚠️ Note de fiabilité (recherche 2026)
+
+Ce document a été corrigé à partir de **données extraites du client officiel** (tables `_RefObjCommon`/`characterdata`, publiées sur silkroadonline.wiki) et de guides communautaires anciens (elitepvpers, rev6, mmorpg.com, strategywiki). Les HP/levels ci-dessous sont **vérifiés** sauf mention contraire.
+
+> ❌ **Corrigé :** les anciennes versions de ce fichier listaient « Cerberus niveau 40 », « Captain Ivy 60 », « Isyutaru 80 », « Lady Lyn », « Beithy », « Bunny/Rooster/Monkey », « Spider Queen », « Sphinx/Osiris/Ra » comme uniques de terrain. **Lady Lyn, Beithy, Bunny, Rooster, Monkey, Spider Queen n'existent pas dans les données client iSRO** — ce sont des inventions ou des uniques de serveurs privés. Sphinx/Osiris/Neith/Isis/Serket/Seth existent mais sont les uniques du **Job Temple** (voir sections dédiées).
 
 ---
 
-## 📜 Liste des Uniques
+## 📜 Liste Officielle des Uniques
 
-### Low-Level Uniques (Level 1-40)
+### 📊 Tableau Complet Vérifié (données client iSRO)
 
-#### TIGER GIRL (Level 20)
+| # | Unique | Code client | ID | Level | HP | ATK | Gold | Carte |
+|---|--------|-------------|-----|-------|-----|-----|------|-------|
+| 1 | **Tiger Girl** | `MOB_CH_TIGERWOMAN` | 1954 | 20 | 598,720 | 42-51 | 586,560 | Chine (Jangan) |
+| 2 | **Cerberus** | `MOB_EU_KERBEROS` | 5871 | 24 | 693,072 | 52-70 | 740,519 | Europe (Constantinople) |
+| 3 | **Captain Ivy** | `MOB_AM_IVY` | 14778 | 30 | 1,094,835 | 115-184 | 1,050,440 | Asie Mineure |
+| 4 | **Uruchi** | `MOB_OA_URUCHI` | 1982 | 40 | 1,779,528 | 124-149 | 1,711,056 | Asie Centrale (Tarim Basin) |
+| 5 | **Isyutaru** | `MOB_KK_ISYUTARU` | 2002 | 60 | 4,324,612 | 274-329 | 3,572,738 | Karakoram |
+| 6 | **Lord Yarkan** | `MOB_TK_BONELORD` | 3810 | 80 | 9,353,045 | 559-1047 | 6,452,763 | Taklamakan |
+| 7 | **Demon Shaitan** | `MOB_RM_TAHOMET` | 3875 | 90 | 12,732,060 | 898-1528 | 8,671,974 | Roc Mountain |
+| 8 | **Roc** | `MOB_RM_ROC` | 3877 | 100 | **1,451,891,045** | 2052-3283 | 1,157,701,880 | Roc Mountain |
+| 9 | **BeakYung the White Viper** (« Medusa ») | `MOB_QT_*` | — | 105 | 183,535,199 | — | — | Qin-Shi Tomb B6 |
+| 10 | **Apis** | `MOB_SD_APIS` | 32751 | 103 | 21,068,995 | 1775-2925 | 12,735,087 | Job Temple |
+| 11 | **Selket** | `MOB_SD_SELKISID` | 32767 | 105 | 80,811,919 | 2907-4785 | 32,264,851 | Job Temple |
+| 12 | **Neith** | `MOB_SD_NEITH` | 32768 | 106 | 83,077,174 | 2991-4923 | 33,232,797 | Job Temple |
+| 13 | **Anubis** | `MOB_SD_ANUBIS` | 32769 | 107 | 150,486,799 | 3165-5210 | 52,885,013 | Job Temple |
+| 14 | **Isis** | `MOB_SD_ISIS` | 32770 | 108 | 154,677,234 | 3256-5359 | 54,471,562 | Job Temple |
+| 15 | **Haroeris** | `MOB_SD_HAROERIS` | 26681 | 109 | 440,747,010 | 3815-6277 | 99,204,245 | Job Temple |
+| 16 | **Seth** | `MOB_SD_SETH` | 26683 | 110 | 425,505,853 | 4034-6637 | 101,035,947 | Job Temple |
 
-**Location:** Jangan Area
+**Sous-uniques du Qin-Shi Tomb** (voir section dédiée) : 4 Gardiens (98-99), Shinmoo (100), Soso the Black Viper (100), Snake Generals (95).
 
-**HP:** ~20,000
+**Boss de donjons FGW** (voir section dédiée) : Togui General (bracket 35-50, version A1 = lvl 39), Ghost Sereness (bracket 91-100, version A1 = lvl 93) — le level des boss FGW dépend du bracket et du grade (A1-A4).
 
-**Damage:** Medium
+### Codes de région dans les noms internes
+| Préfixe | Région |
+|---------|--------|
+| `MOB_CH_` | Chine (Jangan → Donwhang → Hotan) |
+| `MOB_EU_` | Europe (Constantinople) |
+| `MOB_AM_` | Asie Mineure |
+| `MOB_OA_` | Asie Centrale (Tarim Basin) |
+| `MOB_KK_` | Karakoram |
+| `MOB_TK_` | Taklamakan |
+| `MOB_RM_` | Roc Mountain |
+| `MOB_QT_` | Qin-Shi Tomb (donjon de Jangan) |
+| `MOB_SD_` | Désert d'Alexandrie / Job Temple |
+| `MOB_GOD_` | Forgotten World (donjons) |
+| `MOB_EV_` | Événements |
 
-**Drops:**
-- SOS 3D-4D items
-- Gold (~500k)
-- Elixirs
+---
 
-**Spawn Time:** 4-6 heures après mort
+## 🐯 Uniques Classiques (Chine/Europe)
 
-**Strategy:**
-- Level 30+ party
-- Tank + DPS
-- Easy
+### TIGER GIRL (Level 20) — le premier unique
 
-#### CERBERUS (Level 40)
+```
+ID: 1954 | Code: MOB_CH_TIGERWOMAN
+HP: 598,720 | ATK: 42-51 | DEF phys: 18 | Gold: 586,560
+```
 
-**Location:** Donwhang Area
+**Carte:** Chine — zone de Jangan
+**Zones de spawn:** Bandit Stronghold (Bijeokdan Mountain) et Tiger Mountain. Le point exact est aléatoire parmi plusieurs spots « bleus ».
 
-**HP:** ~50,000
+**Mécanique:** AOE stun (roar). Cible classique des serveurs privés (spawn souvent réduit à 30-60 min).
 
-**Damage:** Medium-High
+**Stratégie:**
+- Level 30+ en solo possible, 20+ en petite party
+- Tank and spank, attention au stun AOE
 
-**Drops:**
-- SOS 4D-5D items
-- Gold (~1M)
-- Elixirs
+---
 
-**Spawn Time:** 6-8 heures
+### CERBERUS (Level 24)
 
-**Strategy:**
-- Level 50+ party
-- Tank + Healer + DPS
-- Moderate
+```
+ID: 5871 | Code: MOB_EU_KERBEROS
+HP: 693,072 | ATK: 52-70 | DEF phys: 22 | Gold: 740,519
+```
 
-### Mid-Level Uniques (Level 40-70)
+**Carte:** Europe — zone de Constantinople
+**Zones de spawn:** Desperado Hill, Forest of Dusk, Garden of Gods
 
-#### CAPTAIN IVY (Level 60)
+**Mécanique:** Attaques multiples (3 têtes). Monstres europe proches aggro.
 
-**Location:** Hotan Area
+**Stratégie:**
+- Level 30+ recommandé, ranged pratique
+- Après un crash serveur : spawn fixe à l'ouest de Desperado Hill
 
-**HP:** ~150,000
+---
 
-**Damage:** High
+### CAPTAIN IVY (Level 30)
 
-**Drops:**
-- SOS 6D-7D items
-- SOM possible (rare)
-- Gold (~2-5M)
+```
+ID: 14778 | Code: MOB_AM_IVY
+HP: 1,094,835 | ATK: 115-184 | DEF phys: 30 | Gold: 1,050,440
+```
 
-**Spawn Time:** 8-12 heures
+**Carte:** Asie Mineure
+**Zones de spawn:** Amphitheater, Cleopatra's Gate, Haran's Tower
 
-**Strategy:**
-- Level 70+ party
-- Full party (8 players)
-- Hard
+**Mécanique:** Attaques rapides de « pirate », forte ATK pour son level.
 
-#### URUCHI (Level 70)
+**Stratégie:**
+- Level 40+ en petit groupe, full party à level 30-35
+- Après un crash serveur : spawn fixe à l'Amphitheater
 
-**Location:** Hotan Area
+---
 
-**HP:** ~300,000
+### URUCHI (Level 40)
 
-**Damage:** Very High
+```
+ID: 1982 | Code: MOB_OA_URUCHI
+HP: 1,779,528 | ATK: 124-149 | DEF phys: 47 | Gold: 1,711,056
+```
 
-**Drops:**
-- SOS 7D-8D items
-- SOM 7D possible
-- Gold (~5-10M)
+**Carte:** Asie Centrale — Tarim Basin (route Donwhang → Hotan)
+**Zones de spawn:** large zone autour de la forteresse **Black Robber Den** et le long des routes du **Tarim Ferry**
 
-**Spawn Time:** 12-16 heures
+**Mécanique:** Chef des Black Robbers. Bonne source de gold pour son level.
 
-**Strategy:**
-- Level 80+ full party
-- Tank + 2x Healer + DPS
-- Very Hard
+**Stratégie:**
+- Level 50+ party (4-8 joueurs)
+- Après un crash serveur : spawn fixe dans le Black Robber Den
 
-### High-Level Uniques (Level 70-100)
+---
 
-#### ISYUTARU (Level 80)
+### ISYUTARU (Level 60)
 
-**Location:** Alexandria Area
+```
+ID: 2002 | Code: MOB_KK_ISYUTARU
+HP: 4,324,612 | ATK: 274-329 | DEF phys: 101 | Gold: 3,572,738
+```
 
-**HP:** ~500,000
+**Carte:** Karakoram (montagnes enneigées entre Hotan et Samarkand)
+**Zones de spawn:** centre de la carte, zones de glace autour des **Ancient Remains**
 
-**Damage:** Extreme
+**Mécanique:** Reine des glaces — attaques de froid/freeze. DEF élevée (101) pour son époque : le combat dure.
 
-**Drops:**
-- SOS 8D-9D items
-- SOM 8D common
-- SOSun possible (rare)
-- Gold (~10-20M)
+**Stratégie:**
+- Full party 8 joueurs level 70+ recommandé
+- 2 tanks + healer + DPS, attaques de feu privilégiées
+- Après un crash serveur : spawn fixe sur la glace du Karakoram
 
-**Spawn Time:** 16-20 heures
+---
 
-**Strategy:**
-- Level 90+ full party (8 players)
-- 2x Tank + 2x Healer + DPS
-- Extreme
+### LORD YARKAN (Level 80)
 
-#### LORD YARKAN (Level 90)
+```
+ID: 3810 | Code: MOB_TK_BONELORD
+HP: 9,353,045 | ATK: 559-1047 | DEF phys: 197 | Gold: 6,452,763
+```
 
-**Location:** Alexandria Area
+**Carte:** Taklamakan (désert, au-delà de Hotan)
+**Zones de spawn:** ruines de **Niya Remains** et les zones de sable environnantes ; une « arène » de spawn existe dans le désert
 
-**HP:** ~800,000
+**Mécanique:** Seigneur des os — multi-attaques, 9 skills répertoriés dans le client (3501-3509).
 
-**Damage:** Extreme+
+**Stratégie:**
+- Full party 8 joueurs level 90+, coordination obligatoire
+- Zarkan (= Yarkan) est très recherché pour ses drops 9D
 
-**Drops:**
-- SOS 9D-10D items
-- SOM 9D common
-- SOSun 9D possible
-- Gold (~20-50M)
+---
 
-**Spawn Time:** 20-24 heures
+### DEMON SHAITAN (Level 90)
 
-**Strategy:**
-- Level 100+ full party
-- 2x Tank + 2x Healer + DPS
-- Very Extreme
+```
+ID: 3875 | Code: MOB_RM_TAHOMET
+HP: 12,732,060 | ATK: 898-1528 | DEF phys: 268 | Gold: 8,671,974
+```
 
-### Top-Level Uniques (Level 100-110)
+**Carte:** Roc Mountain (chaîne de montagnes à l'ouest, accès par le Taklamakan)
+**Zones de spawn:** **Heart Peak, Claw Peak, Wing Peak** (les 3 sommets)
 
-#### MEDUSA (Level 100)
+**Mécanique:** Démon de feu — 10 skills répertoriés dans le client. Le plus dur des uniques « de terrain » classiques.
 
-**Location:** Advanced Alexandria
+**Stratégie:**
+- Full party 100+ avec tanks solides et heals continus
+- Après un crash serveur : spawn fixe près de Claw Peak
+- Beaucoup de potions — le fight est long
 
-**HP:** ~1,500,000
+---
 
-**Damage:** Insane
+## 🦅 Roc (Roc Mountain)
 
-**Drops:**
-- SOS 10D-11D items
-- SOM 10D common
-- **SOSun 10D possible (very rare!)**
-- Gold (~50-100M)
+```
+ID: 3877 | Code: MOB_RM_ROC
+Level: 100 | HP: 1,451,891,045 (1.45 milliard!) | ATK: 2052-3283 | Gold: 1,157,701,880
+```
 
-**Spawn Time:** 24 heures+
+**Le boss ultime de Roc Mountain.** L'oiseau géant (code `MOB_RM_ROC`, classé « party monster » dans le client). Son HP est ~100x celui de Demon Shaitan : c'est un raid de guilde, pas un unique de party 8.
 
-**Strategy:**
-- Level 105+ full party
-- 3x Tank + 3x Healer + DPS
-- Insane
+**Stratégie:**
+- Raid multi-parties, stuff SOSun minimum
+- Mécanique de type « world boss » (long combat, respawn très espacé)
 
-#### LADY LYN (Level 105)
+> ⚠️ Certains serveurs privés ne l'activent pas ou modifient son HP massivement.
 
-**Location:** Advanced Alexandria
+---
 
-**HP:** ~2,000,000
+## 🐍 Uniques du Qin-Shi Tomb (Medusa)
 
-**Damage:** Insane+
+Le **Qin-Shi Tomb** (donjon « Jangan Cave », à l'est de Jangan) contient un système complet d'uniques, décrit en détail par le guide mmorpg.com (2009, iSRO) :
 
-**Drops:**
-- SOS 11D-13D items
-- SOM 11D common
-- **SOSun 11D possible (legendary!)**
-- Gold (~100-200M)
+### Structure du donjon
+| Étage | Levels des monstres | Particularité |
+|-------|---------------------|---------------|
+| B1-B2 | ~76-89 | Monstres terre/feu |
+| B3 | ~90-95 | Tomb Snake Lady, Snake Generals (95) |
+| B4 | ~96-99 | **Serin Gate** au centre (téléport vers B5) |
+| B5 | 98-99 | Les 4 Gardiens |
+| B6 | 92-99 | Chambres : Guardian / Man-Viper / Black Viper / White Viper |
 
-**Spawn Time:** 24+ heures
+### La Serin Gate (accès à B5/B6)
+```
+Ouverture: 4 fois par jour — 04h00, 10h00, 16h00, 22h00 (heure SRST)
+Durée d'ouverture: 10 minutes
+Position: centre du B4
+```
 
-**Strategy:**
-- Level 110 full party (best gear)
-- Multiple tanks + multiple healers
-- Legendary difficulty
+### Les 4 Gardiens (B5, niveaux 98-99)
+| Gardien | Animal | Position | Level |
+|---------|--------|----------|-------|
+| JeonUk The Black Tortoise | Tortue noire | Nord | 98 |
+| YumJae The Red Hawk | Faucon rouge | Sud | 98 |
+| TaeHo The Blue Dragon | Dragon bleu | Ouest | 99 |
+| SoHaow The White Tiger | Tigre blanc | Est | 99 (le plus dur) |
 
-#### BEITHY (Level 110)
+### SHINMOO, The Man of Flames (Level 100)
+- Spawn dans le coin sud-ouest de la salle centrale du B5 **après la mort des 4 gardiens**
+- Guerrier venu tuer Medusa — un des rares monstres à dropper du stuff level 100
 
-**Location:** Secret Garden (special area)
+### SOSO, The Black Viper (Level 100)
+- Black Viper Chamber (B6) — drop du stuff 10D level 100
 
-**HP:** ~3,000,000
+### BEAKYUNG THE WHITE VIPER « MEDUSA » (Level 105)
+```
+HP: 183,535,199 | Zone: White Viper Chamber (pièce nord du B6)
+```
+- Le boss final du tombeau, la « Snake Lady / Medusa » de la communauté
+- Sur iSRO son spawn est partiellement **codé en dur dans le GameServer** (source : guide elitepvpers « Fixing Medusa duplicated spawn »)
+- Considérée comme le unique le plus difficile du jeu classique — top guilds uniquement
 
-**Damage:** Godly
+---
 
-**Drops:**
-- **SOSun 12D-13D possible (extremely rare!)**
-- SOM 12D-13D
-- Gold (~200-500M)
+## 🏺 Uniques du Job Temple (Alexandrie)
 
-**Spawn Time:** 24+ heures
+Le **Job Temple** (donjon de job au sud d'Alexandrie, cap 120) contient 6+ uniques égyptiens. Accès selon l'**Activity Points (AP)** de votre union de job :
 
-**Strategy:**
-- Level 110 full party (full SOSun gear)
-- Perfect coordination
-- Godly difficulty
+| Unique | Level | HP | Accès |
+|--------|-------|-----|-------|
+| **Apis** | 103 | 21,068,995 | Spawn conditionnel (après la mort d'Isis et Anubis) |
+| **Selket** | 105 | 80,811,919 | Libre (aucun AP requis) |
+| **Neith** | 106 | 83,077,174 | Libre (aucun AP requis) |
+| **Anubis** | 107 | 150,486,799 | AP requis (zone Anubis/Isis) |
+| **Isis** | 108 | 154,677,234 | AP requis (zone Anubis/Isis) |
+| **Haroeris** | 109 | 440,747,010 | Zone profonde, haut AP d'union |
+| **Seth** | 110 | 425,505,853 | Zone profonde, haut AP d'union |
+
+**Monstres du temple (SD) :** Uneg (100), Weneg (101), Dark Khepri (101), Dark Scout (102), Blood Hyena (104).
+
+**Drops signalés** (non vérifiés sur iSRO, confirmés sur serveurs type ExaySRO) : Immortal/Astral stones par les uniques, items de job, Iron Coins.
+
+**Mécanique:** le temple est un PvP-job zone — tradez/portez la cape de job ; les unions se disputent les chambres.
+
+---
+
+## 🐉 Boss du Forgotten World (FGW)
+
+Les donjons FGW (accessibles lvl 35-110 via les **Dimension Holes** ouverts par les **Envies** après destruction des **Dimension Pillars**) ont chacun un boss final. Code client : `MOB_GOD_*`.
+
+### Donjons et brackets
+| Donjon | Brackets de level | Boss |
+|--------|-------------------|------|
+| **Togui Village** | 35-50 / 51-60 / 61-70 | **Togui General** (A1 = lvl 39, HP 143,131) + Togui Elder |
+| **Arab Flame Mountain** | 71-80 / 81-90 | Généraux de la montagne (noms exacts Ipne/Ipilla signalés par la communauté — *non vérifiés dans le client*) |
+| **Green Abyss (Shipwreck)** | 91-100 | **Ghost Sereness** (A1 = lvl 93, HP 11,307,269, **Petrify!**) |
+| **Sea of Resentment (Shipwreck)** | 101-110 | **Ghost Sereness** version 101-110 (drops D11 Nova) |
+
+### Détails
+- **Grades:** chaque donjon existe en grades 1★-4★ ; le level du boss et des mobs monte avec le bracket et le grade (suffixe client A1-A4)
+- **Party:** 4 joueurs max en 1★-2★, 8 en 3★-4★
+- **Timer:** 2h dans le donjon, ré-entrée impossible pendant 3h ; les trous de dimension se rouvrent toutes les 30 min
+- **Ghost Sereness** : boss « Serenity Ghost » présent dans tous les donjons FGW, avec **pétrification** — clez/tuez les adds, purgez la pétrification
+- **Récompenses de collection** (talisans → armes) :
+  - Togui Village → arme **8D Seal of Sun**
+  - Flame Mountain → arme **9D Seal of Sun**
+  - Green Abyss → arme **10D Seal of Moon**
+  - Sea of Resentment → arme **11D Seal of Nova** (Power)
+- Les talismans tombent dans les trésoreries et sur les boss ; les **Faded Beads** rapportent 200-20,000 SP
+
+> 👉 Guide dédié : [29_FORGOTTEN_WORLD.md](./29_FORGOTTEN_WORLD.md)
+
+---
+
+## 🎭 Variantes Event (Strong/Evil/GM)
+
+Les fichiers client contiennent des variantes d'uniques utilisées pour les events (souvent spawnées par GM) :
+
+| Variante | Code client | Usage |
+|----------|-------------|-------|
+| **Strong Tiger Girl** | `MOB_CH_TIGERWOMAN_L2` | Event / serveur privé (boostée) |
+| **Evil Tiger Girl** | `MOB_CH_TIGERWOMAN_L3` | Event / serveur privé (encore plus forte) |
+| **GM's Tiger Girl / GM's Lord Yarkan** | IDs 7550-7564 | Tools GM |
+| **Strong Ong** (lvl 34, HP 62,959 vs 2,099) | `MOB_OA_ONG` variant | Event monsters de zone |
+| **MOB_EV_*** (ex. Young Bear `MOB_EV_BEAR_A_050`) | — | Events saisonniers |
+
+**Attention :** « Cerberus Strong / Captain Ivy Strong » (ex-« Cerberus King ») cités dans d'anciens documents correspondent à ces variantes d'event, pas à des uniques officiels de terrain.
 
 ---
 
 ## ⏰ Spawn Times
 
-### General Rule
+### Règles vérifiées (iSRO / vSRO)
 
-**Tous les uniques:**
-- Respawn **X heures après leur mort**
-- Pas à heure fixe (ex: pas "respawn à 18h00")
-- Variable selon le serveur
+```
+iSRO (officiel)      : spawn toutes les 3-5 heures à un point aléatoire ("blue spots")
+vSRO (fichiers srv)  : timer par défaut = 4 heures après la mort
+StrategyWiki (2006)  : "spawn 1-2 fois par jour dans des zones spéciales" (ancien)
+```
 
-**Typical Spawn Times:**
-- **Low uniques (Tiger Girl, Cerberus):** 4-8 heures
-- **Mid uniques (Ivy, Uruchi):** 8-16 heures
-- **High uniques (Isyutaru, Yarkan):** 16-24 heures
-- **Top uniques (Medusa, Lyn, Beithy):** 24+ heures
+- ⏱️ **Le timer démarre à la mort** de l'unique
+- 🎲 **Le point de spawn est aléatoire** parmi plusieurs spots prédéfinis (points bleus des maps communautaires)
+- 💥 **Après un crash/restart serveur**, les uniques repop aux **spots fixes** :
+  - Tiger Girl → nord du Bandit Stronghold
+  - Cerberus → ouest de Desperado Hill
+  - Captain Ivy → Amphitheater
+  - Uruchi → intérieur du Black Robber Den
+  - Isyutaru → glace du Karakoram
+  - Lord Yarkan → arène
+  - Demon Shaitan → près de Claw Peak
+- 🔗 Sur certains serveurs (ZsZC), Tiger Girl a une chance de spawn **après** la mort de Lord Yarkan ou Uruchi
 
-### Server Variations
+### Variations serveurs privés
+- Low-rate (1x-5x) : souvent timers officiels
+- Mid-rate : 1-4h
+- High-rate (100x+) : 30-60 min, announcements globales
+- Certains serveurs annoncent le spawn (« Unique [Tiger Girl] has spawned! »), d'autres non
 
-**Private Servers:**
-- Certains servs ont des spawn times réduits
-- "x2 Spawn Rate" = respawn 2x plus vite
-- Vérifiez les rates de votre serveur
-
-**Spawn Announcements:**
-- Certains servs annoncent quand un unique spawn
-- "Unique [Cerberus] has spawned!"
-- Permet de rush vers le unique
+### Timer spécial : Qin-Shi Tomb
+- La **Serin Gate** (B4 → B5/B6) ouvre à heure **fixe** : 04h00 / 10h00 / 16h00 / 22h00, pendant 10 minutes seulement
+- Medusa/BeakYung : spawn très espacé, partiellement hardcoded côté serveur
 
 ---
 
 ## 🗺️ Spawn Locations
 
-### Tiger Girl
+### Résumé par carte (zones vérifiées rev6/elitepvpers)
 
-**Location:** Jangan Area
-- **Coords précises:** X: 4853.28, Y: 93.81 (Tiger Mountain)
-- Near Jangan West Gate
-- Landmark: Near a small oasis
+| Unique | Carte | Zones de spawn |
+|--------|-------|----------------|
+| Tiger Girl | Chine | Bandit Stronghold (Bijeokdan Mtn), Tiger Mountain |
+| Cerberus | Europe | Desperado Hill, Forest of Dusk, Garden of Gods |
+| Captain Ivy | Asie Mineure | Amphitheater, Cleopatra's Gate, Haran's Tower |
+| Uruchi | Tarim Basin | Black Robber Den, routes du Tarim Ferry |
+| Isyutaru | Karakoram | centre de la carte (glace), Ancient Remains |
+| Lord Yarkan | Taklamakan | Niya Remains + sables, arène |
+| Demon Shaitan | Roc Mountain | Heart Peak, Claw Peak, Wing Peak |
+| Roc | Roc Mountain | nid du Roc (non publié) |
+| Medusa (BeakYung) | Qin-Shi Tomb | White Viper Chamber (nord du B6) |
+| Job Temple uniques | Alexandrie sud | chambres du temple (instance de job) |
 
-> 📍 **Voir aussi:** [Données complètes de spawn](./MONSTERS_SPAWN_LOCATIONS.md#tiger-girl-level-20) | [Stratégies de hunt](./15_UNIQUE_BOSSES.md#strategies-de-farm)
+### Coordonnées précises (rapportées, non vérifiées)
 
-### Cerberus
+> ⚠️ Les coordonnées exactes monde varient selon la version du client. Les valeurs ci-dessous proviennent de maps communautaires (xSROMap / SilkNoobz) — à valider avant implémentation :
 
-**Location:** Constantinople (Desperado Hill)
-- **Coords précises:** X: -1551.74, Y: -93.72
-- Near Donwhang-Hotan route
-- Landmark: Near some rocks
+- **Tiger Girl :** X ≈ 4853, Y ≈ 94 (Tiger Mountain) *(rapporté)*
+- **Cerberus :** X ≈ -1552, Y ≈ -94 (Desperado Hill) *(rapporté)*
+- **Captain Ivy :** X ≈ -6425, Y ≈ 2745 (Amphitheater) *(rapporté)*
 
-> 📍 **Voir aussi:** [Données complètes de spawn](./MONSTERS_SPAWN_LOCATIONS.md#cerberus-level-24)
-
-### Captain Ivy
-
-**Location:** Asia Minor (Amphitheater)
-- **Coords précises:** X: -6424.71, Y: 2744.64
-- Near Hotan South
-- Landmark: Near a fortress ruin
-
-> 📍 **Voir aussi:** [Données complètes de spawn](./MONSTERS_SPAWN_LOCATIONS.md#captain-ivy-level-30)
-
-### Isyutaru
-
-**Location:** Alexandria
-- Coords: Approximativement [X: 2500, Y: 2500]
-- Near Alexandria East
-- Landmark: Near temple
-
-### Medusa
-
-**Location:** Advanced Alexandria
-- Coords: Approximativement [X: 3000, Y: 3000]
-- Deep in high-level zone
-- Landmark: Near water
-
-**Note:** Pour des coords précis, utilisez [xSROMap](https://jellybitz.github.io/xSROMap/)
+**Outil recommandé :** [xSROMap](https://jellybitz.github.io/xSROMap/) — navigation par zones et coordonnées PosX/Y/Z.
+Détails complets : [MONSTERS_SPAWN_LOCATIONS.md](./MONSTERS_SPAWN_LOCATIONS.md)
 
 ---
 
 ## 💎 Drop Lists
 
-### Drop Rates
+### ⚠️ Ce qui est vérifié vs ce qui ne l'est pas
 
-**General Drop Chances:**
-- **SOS:** ~5-10% chance
-- **SOM:** ~1-3% chance
-- **SOSun:** ~0.1-1% chance (très rare!)
+**Vérifié :**
+- Les tables de drop sont **côté serveur** (aucun dump public fiable pour iSRO)
+- Le **gold yield** ci-dessus vient des données client (ex. Tiger Girl = 586,560)
+- Uniques → équipement du degré correspondant à leur tranche de level (TG: 2D-3D … Shaitan: 9D, tomb: 10D, job temple: 11D+) *(consensus communautaire)*
+- FGW : talismans (boss + trésoreries), armes de collection D8→D11, Faded Beads (SP)
+- Job Temple : Immortal/Astral stones signalés sur les uniques *(serveurs privés, non vérifié iSRO)*
 
-**Better drops on:**
-- Higher level uniques
-- Server avec boosted drop rates
+**Non vérifié (à ne pas présenter comme acquis) :**
+- Les « taux » de SOS/SOM/SOSun par unique (variables par serveur)
+- Les % de drop d'elixirs par unique
 
-### What Drops
+### Ordres de grandeur communautaires (serveurs type officiel)
 
-**Weapons:**
-- Swords, Spears, Bows, etc.
-- Degree correspondant au level de l'unique
+| Type de drop | Chance rapportée |
+|--------------|------------------|
+| SOS (Seal of Star) | ~5-10% par kill d'unique |
+| SOM (Seal of Moon) | ~1-3% |
+| SOSun (Seal of Sun) | ~0.1-0.5% (légendaire) |
 
-**Armor:**
-- Full sets possibles
-- Head, Chest, Shoulders, Legs, Boots
-
-**Accessories:**
-- Rings, Necklaces, Earrings
-- Très valuable
-
-**Other:**
-- Gold (massive amounts)
-- Elixirs
-- Rare materials
+> Sur les serveurs boostés ces taux montent fortement (jusqu'à 30-50% SOS) — **toujours vérifier les rates de votre serveur**.
 
 ---
 
@@ -337,502 +436,95 @@ Les **Uniques** sont les boss les plus puissants de Silkroad Online. Ils dropent
 ### Preparation
 
 **1. Gather Information:**
-- Quand l'unique a-t-il spawn pour la dernière fois?
-- Calculez la fenêtre de spawn probable
+- Notez l'heure de mort de chaque unique (fenêtre de spawn = mort + 3-5h)
+- Placez des scouts sur les différents spots possibles
 
 **2. Assemble Party:**
-- Au moins 8 players (full party)
-- Tanks: Warriors (STR)
-- Healers: Clerics
-- DPS: Wizards, Rogues, Nukers
+- Full party 8 : 2 tanks (Warriors STR), 2 healers (Clerics), 4 DPS (Wizards/Nukers)
+- Pour Roc/Medusa/Haroeris : raid multi-parties coordonné par guilde
 
 **3. Stock Supplies:**
-- HP potions (beaucoup!)
-- MP potions (pour les casters)
-- Res scrolls
-- Speed scrolls
+- HP/MP potions en grande quantité, res scrolls, speed scrolls, buffs
 
-### During the Fight
+### Pendant le combat
 
-**Tanks:**
-- Hold aggro
-- Use defensive skills
-- Potions si nécessaire
+- **Tanks:** tiennent l'aggro, skills défensifs
+- **Healers:** spam heal, watch aggro, resurrection
+- **DPS:** DPS soutenu, attention à l'aggro, pas de pull d'adds
+- **Cas particuliers:** Ghost Sereness (purge pétrification), Isyutaru (résistance froid), Shaitan (résistance feu)
 
-**Healers:**
-- SPAM heals sur les tanks
-- Watch aggro
-- Resurrection si quelqu'un meurt
+### Après le kill
 
-**DPS:**
-- Attack from behind si possible
-- Watch your aggro
-- Don't pull!
-
-**Strategy:**
-- Pull l'unique vers un safe spot
-- Avoid other mobs
-- Kite si nécessaire
-
-### After the Kill
-
-**Looting:**
-- Le leader de party distribue généralement
-- Ou "free for all" (chacun pour soi)
-- Les drops SOX sont très valuable!
-
-**Distribution:**
-- Plusieurs systèmes:
-  - **Leader distributes:** Le leader loot et donne équitablement
-  - **Roll:** /roll pour les items rares
-  - **Need before greed:** Ceux qui peuvent utiliser priorisent
+- Le leader distribue, ou « free for all », ou roll — définissez AVANT le fight
+- Les SOX se vendent très cher ([22_ECONOMY_GOLD.md](./22_ECONOMY_GOLD.md))
 
 ---
 
 ## 👥 Unique Hunting Parties
 
-### Party Composition
+### Composition
 
-**Optimal Setup:**
-- **2x Tanks (Warriors):** Pour轮流 tank
-- **2x Healers (Clerics):** Pour keep tout le monde alive
-- **4x DPS:** Wizards, Rogues, Nukers
+**Standard (8 joueurs):**
+- 2x Tanks (Warriors) — rotation d'aggro
+- 2x Healers (Clerics)
+- 4x DPS (Wizards, Rogues, Nukers)
 
-**Minimum Setup:**
-- **1x Tank + 1x Healer + 2x DPS**
-- Possible pour low uniques
-- Très risky
+**Minimum (4 joueurs):** 1 tank + 1 healer + 2 DPS — pour les uniques bas level uniquement
 
-### Finding Parties
+**Raid (Roc, Medusa, Haroeris/Seth):** 2-3 parties + shot-caller dédié
 
-**Methods:**
-1. **Guild:** Rejoignez une guilde qui fait des unique runs
-2. **Friends:** Formez un groupe régulier
-3. **Public:** "LFG unique run, need tank + heals"
+### Compétition
 
-### Competition
-
-**Other Parties:**
-- D'autres parties vont aussi chasser l'unique
-- **First to hit** = first to claim (généralement)
-- Soyez rapides!
-
-**KS (Kill Stealing):**
-- Si une autre party a déjà commencé, respectez
-- OU "steal" l'unique (communément mal vu)
-- Server rules may vary
-
----
-
-## 🌍 Multilingual Research Findings (2025)
-
-### 🇰🇷 Korean Sources (Original Game Data & Mechanics)
-
-**Source**: [Silkroad Official Korean Wiki - Unique Monsters](https://srokorea.com/wiki/uniques)
-
-**Données Officielles des Uniques**:
-
-**Tableau Complet avec Valeurs Exactes**:
-
-| Unique | Level | HP Exact | Spawn Time (Official) | Zone | Drops | Difficulty |
-|--------|-------|----------|----------------------|------|-------|------------|
-| **Tiger Girl** | 20 | 598,720 | 2-4 heures | Jangan | SOS 3D-4D | ⭐ Facile |
-| **Cerberus** | 24 | 897,504 | 3-5 heures | Constantinople | SOS 4D-5D | ⭐⭐ Facile |
-| **Captain Ivy** | 30 | 1,196,672 | 4-6 heures | Asia Minor | SOS 5D-6D | ⭐⭐⭐ Moyen |
-| **Uruchi** | 40 | 1,795,008 | 6-8 heures | Hotan | SOS 6D-7D, SOM rare | ⭐⭐⭐⭐ Difficile |
-| **Isyutaru** | 60 | 4,324,612 | 8-12 heures | Taklamakan | SOS 7D-8D, SOSun rare | ⭐⭐⭐⭐⭐ Très Difficile |
-| **Lord Yarkan** | 70 | 5,987,200 | 10-16 heures | Alexandria | SOS 8D-9D, SOSun possible | ⭐⭐⭐⭐⭐⭐ Extrême |
-| **Demon Shaitan** | 80 | 8,380,800 | 12-20 heures | Taklamakan | SOM 9D, SOSun possible | ⭐⭐⭐⭐⭐⭐⭐ Boss |
-| **Cerberus_Shaitan** | 90 | 10,380,000 | 16-24 heures | Special Zone | SOS 10D, SOSun rare | ⭐⭐⭐⭐⭐⭐⭐⭐ Very Hard |
-| **Medusa** | 100 | 15,000,000+ | 20-30 heures | Advanced Alex | SOSun 10D possible | ⭐⭐⭐⭐⭐⭐⭐⭐⭐ Insane |
-| **Beithy** | 110 | 25,000,000+ | 24-48 heures | Secret Garden | SOSun 12D-13D | ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ Godly |
-
-**Mécaniques de Spawn Officielles**:
-
-**1. Système de Timer Dynamique**:
-```
-Spawn Time = Base Time ± Random Variance
-
-Exemple Tiger Girl:
-Base Time: 3 heures
-Random Variance: ±1 heure
-Résultat: Spawn entre 2-4 heures après mort
-```
-
-**2. Conditions de Spawn**:
-- Le timer commence **immédiatement après la mort**
-- Pas de spawn si aucun joueur n'est dans la zone
-- Spawn obligatoire dans une fenêtre de 48 heures maximum
-
-**3. HP Scaling (Private Servers)**:
-```
-HP Final = HP Officiel × Server Rate × Unique Multiplier
-
-Exemple (Serveur 10x):
-Tiger Girl: 598,720 × 10 × 1.5 = 8,980,800 HP
-```
-
-**Confidence Level**: 5/5 (Tier 1 - Official Game Data)
-
----
-
-### 🇹🇷 Turkish Sources (Spawn Mechanics & 2024-2026 Strategies)
-
-**Source**: [SROForum Turkey - Unique Hunting Guide 2024](https://sroforum.com/threads/unique-hunting-guide.789012/)
-
-**Spawn Times Actualisés (Private Servers)**:
-
-**Low-Rate Servers (1x-5x)**:
-| Unique | Spawn Time | Remarques |
-|--------|-----------|-----------|
-| **Tiger Girl** | 2-4 heures | Très farming-friendly |
-| **Cerberus** | 3-6 heures | Compet modérée |
-| **Ivy** | 4-8 heures | Commence à être compétitif |
-| **Uruchi** | 6-10 heures | High competition |
-| **Isyutaru** | 8-14 heures | très demandé |
-| **Yarkan** | 12-20 heures | Guild runs |
-| **Shaitan** | 16-24 heures | Organised parties |
-| **Medusa+** | 20-36 heures | Top guilds uniquement |
-
-**Mid-Rate Servers (10x-50x)**:
-| Unique | Spawn Time | Remarques |
-|--------|-----------|-----------|
-| **Tiger Girl** | 1-2 heures | Instant respawn presque |
-| **Cerberus** | 2-3 heures | Fast farming |
-| **Ivy** | 2-4 heures | Daily farm |
-| **Uruchi** | 3-6 heures | Multi runs per day |
-| **Isyutaru** | 4-8 heures | 2-3 runs par jour |
-| **Yarkan** | 6-12 heures | 2 runs par jour |
-| **Shaitan** | 8-16 heures | 1-2 runs par jour |
-| **Medusa+** | 12-24 heures | Daily run |
-
-**High-Rate Servers (100x+)**:
-| Unique | Spawn Time | Remarques |
-|--------|-----------|-----------|
-| **Tiger Girl** | 30-60 min | Spam farming |
-| **Cerberus** | 1-2 heures | Very fast |
-| **Tous uniques** | 1-6 heures | Rapid respawn |
-
-**Stratégies de Farm 2024-2026**:
-
-**Stratégie 1: "Camping Team"**:
-```
-Composition:
-- 1 Scout (repère le spawn)
-- 1 Tank (tient le unique)
-- 2 DPS (burst damage)
-- 1 Healer (support)
-
-Méthode:
-1. Calculer la fenêtre de spawn (ex: Tiger Girl morte à 10h00 + 3h = 13h00)
-2. Arriver 30 min avant (12h30)
-3. Attendre à l'exact point de spawn
-4. Tag immédiatement quand spawn
-5. Kill rapide avant competition
-```
-
-**Stratégie 2: "Steal Team"**:
-```
-Composition:
-- 4-5 High DPS (wizard/rogue)
-- Full damage build
-
-Méthode:
-1. Repérer les autres teams qui campent
-2. Attendre qu'elles engagent l'unique
-3. Burst damage massif pour steal l'aggro
-4. Finish l'unique
-
-Risky mais peut fonctionner sur les servers sans "first hit" rules
-```
-
-**Stratégie 3: "Guild Rotation"**:
-```
-Organisation:
-- Guild de 30+ membres
-- 3 teams de 8 players
-- Rotation 24/7
-
-Méthode:
-Team A: 00:00 - 08:00 (Night shift)
-Team B: 08:00 - 16:00 (Morning shift)
-Team C: 16:00 - 24:00 (Evening shift)
-
-Avantages:
-- Tous les uniques farmés
-- Distribution équitable des drops
-- Domination du server
-```
-
-**Drops Rates Actualisés (2024-2026 Private Servers)**:
-
-**Low-Rate Servers** (Official-like):
-| Drop Type | Chance | Value |
-|-----------|--------|-------|
-| **SOS** | 8-12% | 100M-500M |
-| **SOM** | 2-4% | 500M-2B |
-| **SOSun** | 0.2-0.5% | 2B-10B |
-
-**Mid-Rate Servers** (Boosted):
-| Drop Type | Chance | Value |
-|-----------|--------|-------|
-| **SOS** | 15-25% | 500M-2B |
-| **SOM** | 5-10% | 2B-5B |
-| **SOSun** | 0.5-1% | 5B-20B |
-
-**High-Rate Servers** (Very Boosted):
-| Drop Type | Chance | Value |
-|-----------|--------|-------|
-| **SOS** | 30-50% | 5B-20B |
-| **SOM** | 10-20% | 20B-50B |
-| **SOSun** | 1-3% | 50B-200B |
-
-**Confidence Level**: 4/5 (Tier 2 - Community Tested & Validated)
-
----
-
-### 🇺🇸 English Sources (International Unique Data)
-
-**Source**: [Elitepvpers - Complete Unique Guide 2024-2026](https://elitepvpers.com/forum/silkroad-online/)
-
-**Unique Monster Mechanics**:
-
-**Aggro System**:
-```
-Aggro Radius:
-- Tiger Girl: 30 mètres
-- Cerberus/Ivy: 40 mètres
-- Uruchi/Yarkan: 50 mètres
-- Isyutaru/Shaitan: 60 mètres
-- Medusa/Beithy: 80 mètres
-
-First Hit Rule:
-- Le premier player/friction à hit l'unique = "owner"
-- Durée de l'aggro: 30 secondes
-- Si aucune attaque pendant 30s = aggro reset
-```
-
-**Damage Mechanics**:
-
-**Physical Attack Uniques** (Tiger Girl, Cerberus, Ivy):
-- Damage Type: 100% Physical
-- Defense: Physical defense effective
-- Strategy: High DEF, high HP tanks
-
-**Magical Attack Uniques** (Uruchi, Isyutaru, Yarkan):
-- Damage Type: 70% Magical, 30% Physical
-- Defense: Magical defense (garment) + Snow Shield required
-- Strategy: INT builds with high MP
-
-**Hybrid Attack Uniques** (Shaitan, Medusa, Beithy):
-- Damage Type: 50% Magical, 50% Physical
-- Defense: Balanced DEF + Magical DEF
-- Strategy: Mixed party, multiple tanks
-
-**Spawn Announcements**:
-
-**Type 1: Server-Wide Announcement**:
-```
-"[Unique] Tiger Girl has appeared near Jangan!"
-→ Tous les joueurs voient le message
-→ Massive competition
-→ Race to reach the unique first
-```
-
-**Type 2: Zone-Only Announcement**:
-```
-"[Unique] Cerberus has spawned in Constantinople!"
-→ Seuls les joueurs dans la zone voient
-→ Compétition réduite
-→ Avantage aux locals
-```
-
-**Type 3: No Announcement** (Hardcore servers):
-```
-→ Pas de message
-→ Camping obligatoire
-→ Knowledge = power
-```
-
-**Level Requirements par Unique**:
-
-**Minimum Levels (Solo/Small Party)**:
-| Unique | Minimum Level | Recommended Level | Party Size |
-|--------|---------------|-------------------|------------|
-| **Tiger Girl** | 20 | 30+ | 1-2 |
-| **Cerberus** | 30 | 40+ | 2-3 |
-| **Ivy** | 40 | 55+ | 3-4 |
-| **Uruchi** | 50 | 70+ | 4-6 |
-| **Isyutaru** | 60 | 80+ | 6-8 |
-| **Yarkan** | 70 | 90+ | 8 |
-| **Shaitan** | 80 | 100+ | 8 (full +15) |
-| **Medusa** | 90 | 105+ | 8 (best gear) |
-| **Beithy** | 100 | 110 (full cap) | 8 (SOSun gear) |
-
-**EXP/SP Rewards**:
-
-**EXP Formula**:
-```
-EXP Reward = Base EXP × (1 + (Party Size × 0.1)) × Unique Multiplier
-
-Exemple Isyutaru (Level 60 player):
-Base EXP: 1,000,000
-Party Size: 8 players
-Unique Multiplier: 5x
-EXP: 1,000,000 × 1.8 × 5 = 9,000,000 EXP
-
-→ Presque 1 level complet pour un level 60!
-```
-
-**Best Uniques to Farm for EXP**:
-1. **Isyutaru** (Level 60) - 9M+ EXP per kill
-2. **Yarkan** (Level 70) - 15M+ EXP per kill
-3. **Shaitan** (Level 80) - 25M+ EXP per kill
-4. **Medusa** (Level 90+) - 50M+ EXP per kill
-
-**Confidence Level**: 4/5 (Tier 2 - Community Data Mining)
-
----
-
-### ✅ Cross-Validated Unique Information
-
-**Informations Confirmées par 2+ Sources**:
-
-1. **HP Values** (🇰🇷🇹🇷🇺🇸)
-   - Tiger Girl: ~600,000 HP (official: 598,720)
-   - Isyutaru: ~4.3M HP (official: 4,324,612)
-   - Yarkan: ~6M HP (official: 5,987,200)
-   - **Conclusion**: Official HP data confirmed accurate
-
-2. **Spawn Mechanics** (🇰🇷🇹🇷🇺🇸)
-   - Timer starts immediately after death
-   - Random variance ±25-33% of base time
-   - No spawn if zone empty
-   - **Conclusion**: Confirmed spawn mechanics
-
-3. **Damage Types** (🇰🇷🇺🇸)
-   - Low uniques: Physical damage
-   - Mid uniques: Magical + Physical
-   - High uniques: Hybrid 50/50
-   - **Conclusion**: Damage typing affects build choice
-
-4. **Drop Rates** (🇹🇷🇺🇸)
-   - SOS: 5-15% (varies by server)
-   - SOM: 1-10% (varies by server)
-   - SOSun: 0.1-3% (very rare, varies by server)
-   - **Conclusion**: Drop rates server-dependent, follow same pattern
-
-5. **Level Requirements** (🇹🇷🇺🇸)
-   - Tiger Girl: 20+ (soloable at 30+)
-   - Isyutaru: 60+ (requires party)
-   - Medusa: 90+ (full party required)
-   - **Conclusion**: Progressive difficulty confirmed
-
-**Confidence Level**: 5/5 (Tier 1 - Cross-Language Consensus)
-
----
-
-### ⚠️ Conflicting Information & Resolution
-
-**Dispute 1: SOSun Drop Rate**
-
-🇰🇷 **Korean**: SOSun drop rate = 0.1-0.5% (very rare)
-🇹🇷 **Turkish**: SOSun drop rate = 1-3% (private servers)
-
-**Resolution**: Les deux sont corrects selon le contexte:
-- **Official Servers**: 0.1-0.5% (extremely rare, legendary drops)
-- **Private Servers**: 1-3% (boosted rates, still rare but achievable)
-- **Recommendation**: Always check server-specific drop rates
-
-**Dispute 2: Spawn Timer Reset**
-
-🇺🇸 **English**: Spawn timer resets if server restarts
-🇹🇷 **Turkish**: Spawn timer persists through server restarts
-
-**Resolution**: Dépend de l'implémentation du serveur:
-- **Old iSRO**: Timer persisted (stored in database)
-- **Modern Private Servers**: Variable (some persist, some reset)
-- **Recommendation**: Test with a low unique to confirm behavior
-
-**Dispute 3: First Hit vs Most Damage**
-
-🇺🇸 **English**: First hit = claim
-🇹🇷 **Turkish**: Most damage = claim
-
-**Resolution**: Purement serveur-specific:
-- **Type A Servers**: First hit rule (most common)
-- **Type B Servers**: Most damage rule (less common)
-- **Type C Servers**: Hybrid (first hit + maintain aggro)
-- **Recommendation**: Always check server rules before unique hunting
-
-**Confidence Level**: 4/5 (Tier 2 - Server-Dependent)
-
----
-
-### 📊 Unique Meta Summary 2024-2026
-
-**Best Uniques to Farm by Level Range**:
-
-| Level Range | Target Unique | Time Investment | Profit Potential | Difficulty |
-|-------------|---------------|-----------------|------------------|------------|
-| **20-40** | Tiger Girl, Cerberus | 2-5 hours | 100M-500M | ⭐⭐ |
-| **40-60** | Ivy, Uruchi | 4-10 hours | 500M-2B | ⭐⭐⭐ |
-| **60-80** | Isyutaru, Yarkan | 8-20 hours | 2B-10B | ⭐⭐⭐⭐ |
-| **80-100** | Shaitan, Medusa | 12-30 hours | 10B-50B | ⭐⭐⭐⭐⭐ |
-| **100-110** | Beithy | 24-48 hours | 50B-200B+ | ⭐⭐⭐⭐⭐⭐ |
-
-**Key Unique Hunting Principles**:
-1. **Knowledge = Power** → Know exact spawn windows
-2. **Team Composition** → Tank + Healer + DPS is essential
-3. **Camping Works** → Arrive 30 min before spawn window
-4. **Competition is Real** → Other parties will contest
-5. **Drops are RNG** → No guaranteed SOX, but value potential is massive
-
-**Most Profitable Uniques (ROI)**:
-1. **Isyutaru** (Level 60) - Best ratio difficulty/drops, SOSun very valuable
-2. **Yarkan** (Level 70) - High SOSun drop rate, 9D gear in demand
-3. **Medusa** (Level 90+) - Massive SOSun potential, 10D/11D gear sells for billions
-4. **Beithy** (Level 110) - Best drops possible (12D-13D SOSun) but extremely difficult
-
-**Server Type Impact**:
-- **Low-Rate (1x-5x)**: Uniques are events, not daily farm → High value, high competition
-- **Mid-Rate (10x-50x)**: Uniques are daily content → Medium value, medium competition
-- **High-Rate (100x+)**: Uniques are spammable → Low value (inflation), low competition
+- **First hit / most damage** : la règle d'attribution dépend du serveur — renseignez-vous
+- Le KS (kill stealing) est possible sur la plupart des serveurs anciens : le burst DPS peut « voler » le loot
+- Camp les spots 30 min avant la fenêtre de spawn théorique
 
 ---
 
 ## ❓ FAQ
 
-### Q: Puis-ai-ai solo un unique?
-**R:** Seulement les très bas level uniques (Tiger Girl, Cerberus) si vous êtes très haut level. Les autres nécessitent une party.
+### Q: Quel est le vrai niveau de Tiger Girl ?
+**R:** **20** (données client, ID 1954). Certaines anciennes pages disaient 18 : c'est une confusion avec d'anciennes versions.
 
-### Q: Les uniques spawn-ils à heure fixe?
-**R:** Non, ils spawn X heures après leur mort. Pas d'horaire fixe.
+### Q: « Lady Lyn » et « Beithy » existent-ils ?
+**R:** **Pas dans les données client iSRO.** Ces noms (comme Bunny, Rooster, Monkey, Spider Queen) viennent d'inventions ou de serveurs privés. Les vrais « gros » uniques sont **Roc (100)**, **Medusa/BeakYung (105)** et les uniques du **Job Temple (103-110)**.
 
-### Q: Qu'est-ce que le "camping"?
-**R:** Le camping est le fait d'attendre à l'endroit du spawn d'un unique pour être sûr de le tuer dès qu'il apparaît.
+### Q: Les uniques spawn-ils à heure fixe ?
+**R:** Non — X heures (3-5h sur iSRO) après leur mort, à un point aléatoire. Exceptions : la Serin Gate du Qin-Shi Tomb (heures fixes 04h/10h/16h/22h) et certains events.
 
-### Q: Les drops sont-ils garantis?
-**R:** Non, c'est RNG. Vous pouvez avoir 0 SOX drops ou plusieurs drops d'un coup.
+### Q: Puis-je solo un unique ?
+**R:** Tiger Girl/Cerberus/Ivy/Uruchi se solotent avec 10-20 levels de plus. Isyutaru, Yarkan, Shaitan nécessitent une party. Roc et Medusa = raids de guilde.
 
-### Q: Puis-ai-ai vendre les drops SOX?
-**R:** Oui! Les SOX drops se vendent très cher. C'est une des meilleures façons de faire du profit.
+### Q: Pourquoi le HP de Roc est si énorme ?
+**R:** 1.45 milliard — Roc est un « world boss / party monster » (code MOB_RM_ROC), pas un unique standard. Il est conçu pour des raids entiers.
 
-### Q: Les uniques respawn-ils plus vite sur les private servers?
-**R:** Généralement oui. Certains servs ont "x2 Spawn Rate" ou même plus.
+### Q: Les drops sont-ils garantis ?
+**R:** Non, c'est du RNG. Seul le gold est quasi garanti (montants ci-dessus issus du client).
+
+### Q: Les uniques respawn-ils plus vite sur les serveurs privés ?
+**R:** Généralement oui (30 min à 2h). Le défaut vSRO est 4h.
 
 ---
 
 ## 🔗 Resources
 
-### Guides
-- [Unique Spawn Guide](https://immortalitysro.weebly.com/unique-spawn.html)
-- [Unique Hunting Wiki](https://zszc.fandom.com/wiki/Unique_Hunting)
-- [Uniques-Spawns Origin Guide](https://forum.playorigin.com/showthread.php?9-%2526%25239673%253B-Uniques-Spawns-Origin-Guide)
+### Données client / bases
+- [Silkroad Online Database - Monsters](https://silkroadonline.wiki/monsters) — données extraites du client (IDs, HP, levels)
+- [xSROMap](https://jellybitz.github.io/xSROMap/) — carte interactive (zones + coordonnées)
 
-### Maps
-- [xSROMap](https://jellybitz.github.io/xSROMap/)
+### Guides uniques
+- [Elitepvpers - Guide Unique Spawns](https://www.elitepvpers.com/forum/sro-guides-templates/186742-guide-unique-spawns.html) — HP officiels + mécanique 3-5h
+- [Elitepvpers - Unique Spawn Maps COMPLETE](https://www.elitepvpers.com/forum/silkroad-online/389926-silkroad-unique-spawn-maps-complete.html)
+- [MMORPG.com - Unique Monsters Part 1](https://www.mmorpg.com/interviews/unique-monsters-part-one-2000116853) et [Part 2](https://www.mmorpg.com/guides/unique-monsters-part-two-2000116869) — Qin-Shi Tomb / Medusa en détail
+- [Rev6 - Unique Spawn Points](https://rev6.org/en/post/silkroad-online-uniq-spawn-noktalari) — zones de spawn par unique
+- [StrategyWiki - Silkroad Online/Bosses](https://strategywiki.org/wiki/Silkroad_Online/Bosses) — liste officielle des 7 uniques
+- [ExaySRO Wiki - Unique Locations](https://wiki.exaysro.com/books/guides/page/unique-locations)
+- [ExaySRO Forum - Job Temple Unique Guide](https://forum.exaysro.com/showthread.php?tid=3875)
+
+### Forgotten World
+- [Silkroad Online Wiki (Fandom) - Forgotten World](https://silkroadonline.fandom.com/wiki/Forgotten_World)
+- [Guild Algarb - FGW Maps](https://guildalgarb.wordpress.com/games/sro/maps/forgotten-world)
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
+*Dernière mise à jour: 2026-10-01 (recherche web exhaustive — données client vérifiées via silkroadonline.wiki, elitepvpers, rev6, mmorpg.com, strategywiki)*

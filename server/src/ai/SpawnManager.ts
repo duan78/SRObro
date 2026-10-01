@@ -86,7 +86,10 @@ export class SpawnManager extends EventEmitter {
           respawnTime: spawn.respawnTime,
           patrolRange: spawn.patrolRange,
           currentMonsters: new Map(),
-          lastSpawnCheck: Date.now(),
+          // lastSpawnCheck "échu": le premier cycle de spawn n'attend pas un
+          // respawnTime complet — les monstres apparaissent dès qu'un joueur
+          // entre dans le rayon (100 m) au check suivant (1 s).
+          lastSpawnCheck: Date.now() - spawn.respawnTime * 1000 - 1000,
           isChecking: false,
         };
 
@@ -267,6 +270,12 @@ export class SpawnManager extends EventEmitter {
         this.emit('monsterDeath', data);
       });
 
+      // Les attaques IA remontent au CombatBridge (dégâts autoritaires au
+      // joueur) — l'entité ne touche jamais directement aux HP de sa cible.
+      monsterEntity.on('attack', (data: unknown) => {
+        this.emit('monsterAttack', data);
+      });
+
       // Réindexation spatiale quand le monstre bouge (patrouille/aggro):
       // une entité qui change de cellule sans être réindexée fausse AOI,
       // aggro et diffusion.
@@ -339,6 +348,23 @@ export class SpawnManager extends EventEmitter {
     logger.debug(`Monster despawned: ${monsterEntity.name}`, { id: monsterId });
 
     this.emit('monsterDespawned', { monsterId, monsterEntity });
+  }
+
+  /**
+   * Force un cycle de spawn immédiat pour les points proches d'une position
+   * (arrivée d'un joueur): sans cela, un camp vidé par la déconnexion du
+   * précédent visiteur ne se repeuple qu'après un respawnTime complet.
+   */
+  forceCheckNearby(position: { x: number; y: number; z: number }, radius = 120): void {
+    for (const activeSpawn of this.activeSpawns.values()) {
+      const d = Math.hypot(
+        activeSpawn.position.x - position.x,
+        activeSpawn.position.z - position.z,
+      );
+      if (d <= radius) {
+        activeSpawn.lastSpawnCheck = 0; // éligible dès le prochain check (1 s)
+      }
+    }
   }
 
   /**

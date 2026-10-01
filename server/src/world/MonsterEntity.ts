@@ -283,7 +283,9 @@ export class MonsterEntity extends Entity {
       damage: Math.floor(Math.random() * (this.attackPower.max - this.attackPower.min) + this.attackPower.min),
     });
 
-    logger.debug(`Monster attacked: ${this.name} -> ${this.target.name}`);
+    // La cible peut être une entité détruite (déconnexion): ne jamais crasher
+    // le tick monde pour un log (historique de bug: world update figé).
+    logger.debug(`Monster attacked: ${this.name} -> ${this.target?.name ?? this.target?.id ?? '?'}`);
   }
 
   /**

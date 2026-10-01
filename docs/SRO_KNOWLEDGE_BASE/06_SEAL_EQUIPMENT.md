@@ -2,15 +2,16 @@
 
 ## 📋 Table des Matières
 - [Vue d'Ensemble](#-vue-densemble)
-- [Types de Seal Equipment](#-types-de-seal-equipment)
+- [Équivalences Star / Moon / Sun](#-équivalences-star--moon--sun)
 - [Seal of Star (SOS)](#-seal-of-star-sos)
 - [Seal of Moon (SOM)](#-seal-of-moon-som)
 - [Seal of Sun (SOSun)](#-seal-of-sun-sosun)
-- [Seal Rares (Nova, Honor, etc.)](#-seal-rares-nova-honor-etc)
+- [Seal of Nova (D11)](#-seal-of-nova-d11)
+- [Items Egypt (Class A/B, D11)](#-items-egypt-class-ab-d11)
+- [Set Items (Alexandria)](#-set-items-alexandria)
+- [Tableau des Sources par Degré](#-tableau-des-sources-par-degré)
 - [Comment Obtenir](#-comment-obtenir)
 - [Magic Pop System](#-magic-pop-system)
-- [Socket System](#-socket-system)
-- [Upgrade Crystals](#-upgrade-crystals)
 - [Prix et Valeur](#-prix-et-valeur)
 - [FAQ](#-faq)
 - [Resources](#-resources)
@@ -19,609 +20,265 @@
 
 ## 🎯 Vue d'Ensemble
 
-Le **Seal Equipment** est un tier d'équipement **rare et puissant** dans Silkroad Online, avec des statistiques supérieures aux équipements normaux.
+Le **Seal Equipment** (« SOX ») est un tier d'équipement **rare et puissant** dans Silkroad Online : ce sont des versions « seal » (avec glow doré et label *Seal of …*) des items normaux, avec des statistiques nettement supérieures.
 
 ### Points Clés
-- ✅ **Stats supérieures** aux équipements normaux
-- ✅ **4 Tiers principaux:** Star, Moon, Sun, et Rares
-- ✅ **Très cher** et rare
-- ✅ **Drops limités:** Uniques, events, Magic Pop
+- ✅ **Équivalences :** SoS ≈ item normal **+5 niveaux**, SoM ≈ **+10**, SoSun ≈ **+15** (≈ 1, 2, 3 « sous-degrés » au-dessus)
+- ✅ **Tiers officiels :** Star < Moon < Sun < Nova (D11) < Egypt A/B (D11)
+- ✅ **Drops :** uniques, Forgotten World (FGW), Job Temple, Magic Pop, Battle Arena
+- ✅ **Blues souvent présentes** à la création (les SOX tombent régulièrement avec 1–4 blues)
+- ✅ **Alchimiables** comme les items normaux (+, pierres)
 - ✅ **Essentiel** pour le late game PvP
-- ✅ **Socket-enabled** pour les magic stones
-- ✅ **Can be upgraded:** SOM → SOSun
 
-### Tier System
+### Hiérarchie
 
 ```
-Normal < Seal of Star (SOS) < Seal of Moon (SOM) < Seal of Sun (SOSun) < Nova/Honor
+Normal < Seal of Star < Seal of Moon < Seal of Sun < Seal of Nova (D11) / Egypt A-B (D11) < Set items
 ```
+
+### Glossaire
+- **SOX :** « Seal of X » — terme générique
+- **FB :** Full Blue (item avec toutes ses blues)
+- **EGY A / EGY B :** items Egypt Class A (plus faible) / Class B (plus fort)
+- **SoN :** Seal of Nova
 
 ---
 
-## 🏅 Types de Seal Equipment
+## 📐 Équivalences Star / Moon / Sun
 
-### Les 4 Tiers Principaux
+Règle communautaire confirmée par plusieurs sources (elitepvpers, kmkm guide, silkroadforums) :
 
-| Tier | Abréviation | Stats Bonus | Rarity |
-|------|-------------|-------------|--------|
-| **Seal of Star** | SOS | +5 levels | ⭐⭐⭐ Rare |
-| **Seal of Moon** | SOM | +10 levels | ⭐⭐⭐⭐ Very Rare |
-| **Seal of Sun** | SOSun | +15 levels | ⭐⭐⭐⭐⭐ Extremely Rare |
-| **Nova/Honor** | Nova | +15-20 levels | ⭐⭐⭐⭐⭐⭐ Legendary |
+| Seal | Équivalent | Règle empirique |
+|------|-----------|-----------------|
+| **Seal of Star** | Item normal **+5 niveaux** | SoS D9 ≈ normal D10 |
+| **Seal of Moon** | Item normal **+10 niveaux** | SoM D9 ≈ normal D11 |
+| **Seal of Sun** | Item normal **+15 niveaux** | SoSun D8 ≈ entre D10 et D11 |
 
-### Catégories d'Items
-
-**Weapons:**
-- Swords, Blades, Spears, Glaives, Bows, Xbows, Daggers, 2H Swords, Staffs
-
-**Armor:**
-- Armor (Heavy), Protector (Medium), Garment (Light)
-
-**Accessories:**
-- Rings, Necklaces, Earrings
-
-**Shields:**
-- PHY Shields, MAG Shields
-
-### Termes Courants
-
-- **SOX:** "Seal of X" - Terme générique pour tous les Seal equipment
-- **SOS:** Seal of Star
-- **SOM:** Seal of Moon
-- **SOSun:** Seal of Sun (parfois abrégé SUN)
-- **Full SOX:** Toute l'équipement en Seal
+> 📝 Exemple : un SoS d'un degré donné a des stats proches d'un item **normal du degré suivant** ; un SoSun D8 « vaut » quasiment un normal D10. C'est pourquoi le SOX d'un degré reste souvent meilleur qu'un normal du degré supérieur, et se garde plusieurs niveaux de plus.
 
 ---
 
 ## ⭐ Seal of Star (SOS)
 
-### Caractéristiques
-
-**Stats Bonus:**
-- Équivalent à un équipement normal **+5 levels**
-- Plus de PHY/MAG Attack (weapons)
-- Plus de PHY/MAG DEF (armor)
-- Plus de stats (accessories)
-
-**Example:**
-- **Normal 9D Sword (Level 90):** 100-120 PHY Attack
-- **SOS 9D Sword (Level 85):** ~120-140 PHY Attack (same as level 90+)
-
-**Rarity:**
-- ⭐⭐⭐ **Rare** mais accessible
-- Plus facile à obtenir que SOM/SOSun
-- Prix modéré (quelques millions à centaines de millions)
-
-**Level Range:**
-- Disponible de 1D à 13D
-- Chaque degree a sa version SOS
-
-### Comment Obtenir SOS
-
-1. **Uniques Drops:**
-   - Tiger Girl, Cerberus, Ivy, etc.
-   - Chance modérée
-
-2. **Job Rewards:**
-   - Hunter/Thief level rewards
-   - Occasionnel
-
-3. **Events:**
-   - Holiday events
-   - Special events
-
-4. **Magic Pop:**
-   - NPC Magic Pop
-   - RNG-based
-
-5. **Stall Network:**
-   - Vendu par d'autres joueurs
-   - Prix variable
+- **Le SOX le plus courant** (~60% des drops SOX constatés par la communauté).
+- Stats ≈ normal +5 niveaux ; droppe avec 0 à quelques blues.
+- Disponible dans tous les degrés (1D–11D).
+- **Sources principales :** uniques de bas/mid level (Tiger Girl, Cerberus, Captain Ivy, Uruchi, Isyutaru…), monstres (très rare), events, Magic Pop, Stall Network.
+- Prix historique (iSRO 2008, GameFAQs) : arme SoS niv.32 ≈ 6–8 M (puis 20–30 M à l'apogée du serveur) ; des SoS 3D « clothing » se négociaient en dizaines de millions.
 
 ---
 
 ## 🌙 Seal of Moon (SOM)
 
-### Caractéristiques
-
-**Stats Bonus:**
-- Équivalent à un équipement normal **+10 levels**
-- Significativement plus fort que SOS
-- Statistiques compétitives pour le late game
-
-**Example:**
-- **Normal 9D Sword (Level 90):** 100-120 PHY Attack
-- **SOM 9D Sword (Level 80):** ~130-150 PHY Attack
-
-**Rarity:**
-- ⭐⭐⭐⭐ **Very Rare**
-- Difficile à obtenir
-- Cher (centaines de millions à milliards)
-
-**Level Range:**
-- Disponible de 1D à 13D
-- Plus rare aux degrees élevés
-
-### Comment Obtenir SOM
-
-1. **High-Level Uniques:**
-   - Isyutaru, Medusa, Lady Lyn, etc.
-   - Chance faible
-
-2. **Events Rares:**
-   - GM Events
-   - Special promotions
-
-3. **Magic Pop:**
-   - Très rare
-
-4. **Stall Network:**
-   - Très cher
-   - Vendu par les luckiest players
-
-5. **Upgrade:** SOS → SOM (avec crystals)
+- **Rare** (~30% des drops SOX constatés).
+- Stats ≈ normal +10 niveaux.
+- Sources : uniques mid/high level, FGW (tier 91–100 = **SoM D10**), Magic Pop (très rare), Stall (très cher).
+- Sur officiel tardif, le **D10 Seal of Moon** vient surtout du FGW *Shipwreck: The Green Abyss* (91–100).
 
 ---
 
 ## ☀️ Seal of Sun (SOSun)
 
-### Caractéristiques
-
-**Stats Bonus:**
-- Équivalent à un équipement normal **+15 levels**
-- Meilleures stats possibles (sauf Nova)
-- Équipement **endgame** parfait
-
-**Example:**
-- **Normal 9D Sword (Level 90):** 100-120 PHY Attack
-- **SOSun 9D Sword (Level 75):** ~140-160 PHY Attack
-
-**Rarity:**
-- ⭐⭐⭐⭐⭐ **Extremely Rare**
-- Très difficile à obtenir
-- Extrêmement cher (milliards)
-
-**Level Range:**
-- Disponible de 1D à 13D
-- 10D-13D SOSun est quasi-mythique
-
-### Comment Obtenir SOSun
-
-1. **High-Level Uniques (Rare):**
-   - Medusa, Lady Lyn, Cerberus (rare drop)
-   - Chance très faible (<1%)
-
-2. **Special Events:**
-   - GM Events (très rare)
-   - Anniversary events
-
-3. **Magic Pop (Extrêmement Rare):**
-   - Comme gagner au loto
-
-4. **Stall Network:**
-   - Si vous êtes très riche
-   - Prix astronomiques
-
-5. **Upgrade:** SOM → SOSun (avec crystals)
-
-### Importance en Late Game
-
-**SOSun est le "gold standard" pour:**
-- PvP compétitif
-- Fortress Wars
-- Job wars
-- Uniques hunting
-
-**Player avec full SOSun:**
-- Dominent le PvP
-- Sont très respectés
-- Ont investi énormément de temps/argent
+- **Extrêmement rare** (~10% des drops SOX constatés).
+- Stats ≈ normal +15 niveaux.
+- **Sur officiel (update Forgotten World), le SOSun n'existait qu'en D8 et D9**, via le FGW :
+  - *Togui Village* (tiers 35–50, 51–60, 61–70) → **SOSun D8**
+  - *Flame Mountain* (71–80, 81–90) → **SOSun D9**
+  - Un donjon « grade 4 » (le plus dur) maximise les chances.
+- Avant le FGW (ancienne iSRO), les SoSun dropaient uniquement d'uniques/monstres — quasi mythiques.
+- Un full SOSun +high = « gold standard » du PvP compétitif.
 
 ---
 
-## 💎 Seal Rares (Nova, Honor, etc.)
+## 💫 Seal of Nova (D11)
 
-### Nova Seal
+- Introduit avec l'update **Forgotten World** (Alexandria, cap 110).
+- **Uniquement du 11e degré**, stats supérieures au normal D11.
+- **Sources :**
+  - Boss final **Ghost Sereness** du donjon FGW 101–110 (*Shipwreck: The Sea of Resentment*) — drop très rare.
+  - Certaines « Treasure Box » / uniques du Togui Village instance selon versions.
+  - Magic Pop (selon époque).
+- Variante **Seal of Nova Egypt** (Job Temple / PS) : voir ci-dessous.
 
-**Caractéristiques:**
-- **Stats:** +15-20 levels
-- Plus fort que SOSun
-- Disponible seulement sur certains serveurs
+---
 
-**Rarity:**
-- ⭐⭐⭐⭐⭐⭐ **Legendary**
-- Virtuellement impossible à obtenir
-- Si vu, c'est un événement serveur
+## 🐪 Items Egypt (Class A/B, D11)
 
-**Comment Obtenir:**
-- Events très rares
-- Certains serveurs privés seulement
-- GM giveaways (extrêmement rare)
+- Items « égyptiens » du 11e degré, au-dessus du Seal of Nova : **Class A** (1er palier) et **Class B** (meilleur).
+- **Sources :**
+  - **Job Temple** (temple du travail, Alexandria) : uniques **Anubis, Isis, Haroeris, Seth** (progression conseillée dans cet ordre ; Seth le plus dur). Ils droppent armes/armures Egypt, dont du SOX Egypt B.
+  - Dernier unique du FGW D11 : **Egypt B-grade** (extrêmement rare).
+  - **Battle Arena** : les *Arena Coins* (gagnées même en perdant) s'échangent à l'*Arena Item Manager* contre du Egypt A/B (ex. Bouclier Egy B ≈ 300 coins).
+- Ces items restent **D11** (pas D12/D13).
 
-### Honor Seal
+---
 
-**Caractéristiques:**
-- **Stats:** +15-18 levels
-- Entre SOSun et Nova
-- Server-specific
+## 👑 Set Items (Alexandria)
 
-**Rarity:**
-- ⭐⭐⭐⭐⭐⭐ **Legendary**
+- Système introduit avec **Legend V: Heroes of Alexandria** : items de set avec **bonus de set** quand plusieurs pièces sont équipées.
+- D11, drops Alexandria/uniques high-level. Complètent la gamme SOX/Egypt en fin de jeu.
 
-### Autres Seals
+---
 
-**D'autres variants existent selon le serveur:**
-- Seal of Olympus
-- Seal of Avatar
-- Seal of Divinity
-- Custom seals (serveurs privés)
+## 🗺️ Tableau des Sources par Degré
 
-**Note:** Ces variants sont **custom à chaque serveur**. Tous les serveurs n'ont pas Nova/Honor/etc.
+| Contenu | Niveau | Degré | Seal principal | Source |
+|---------|--------|-------|----------------|--------|
+| Monde ouvert | 1–90 | 1D–8D | SoS/SoM/SoSun (rares) | Monstres, uniques (Tiger Girl, Cerberus, Ivy, Uruchi, Isyutaru, Yarkan, Demon Shaitan…) |
+| FGW — Togui Village | 35–70 | **D8** | **SoSun D8** | Donjon (4 grades) |
+| FGW — Flame Mountain | 71–90 | **D9** | **SoSun D9** | Donjon (4 grades) |
+| FGW — Shipwreck: Green Abyss | 91–100 | **D10** | **SoM D10** | Donjon |
+| FGW — Sea of Resentment | 101–110 | **D11** | **SoN D11** (+ Egypt B très rare) | Ghost Sereness |
+| Job Temple | 100+ | D11 | **Egypt A/B** | Anubis, Isis, Haroeris, Seth |
+| Battle Arena | tous | D11 | Egypt A/B | Arena Coins → Arena Item Manager |
+| Cap 120 (Temple of Jupiter) | 111–120 | D12–D13 | (gear normal/jupiter) | Nouveau donjon |
 
 ---
 
 ## 🎁 Comment Obtenir Seal Equipment
 
-### Method 1: Uniques Drops
+### 1. Uniques (monde ouvert)
+- Uniques = meilleure chance de SOX que les monstres normaux ; le SOX est ~du degré de l'unique.
+- Camper les spawns (Tiger Girl ~lvl 20, Cerberus, Captain Ivy, Uruchi, Isyutaru ~60, Lord Yarkan, Demon Shaitan, Medusa, Lady Lyn…).
 
-**Quels Uniques:**
-- **Low Level:** Tiger Girl, Cerberus, Captain Ivy
-- **Mid Level:** Isyutaru, Lord Yarkan
-- **High Level:** Medusa, Lady Lyn, Beithy, etc.
+### 2. Forgotten World (Togui Village)
+- Instance à 8 joueurs, 4 donjons par tranches de niveau, 4 grades de difficulté.
+- Récolter les **talismans** (collections) — le talisman « arme » complété = quête donnant l'arme seal du tier (D8 Sun / D9 Sun / D10 Moon / D11 Nova selon le donjon).
+- Tuer toutes les Treasure Boxes pour les talismans ; ouvrir les boxes sur un perso avec peu de talismans (meilleur taux).
 
-**Drop Rates (VERIFIED DATA):**
-- **SOS:** ~1-5% chance from uniques (most common SoX, ~60% of all SoX drops)
-- **SOM:** ~0.1-1% chance from uniques (uncommon, ~30% of all SoX drops)
-- **SOSun:** ~0.01-0.1% chance from uniques (rare, ~10% of all SoX drops)
+### 3. Job Temple (Egypt)
+- Uniques à fenêtres de spawn (matin/soir) : Anubis & Isis d'abord, puis Haroeris, puis Seth.
 
-**SoX Drop Rates (Global):**
-- **Normal items:** ~0.001% drop rate (1 item per ~150 monsters killed)
-- **SoX items:** ~0.00001% drop rate (1 SoX per ~20,000 monsters killed)
-- **SoX Rarity Distribution:**
-  - Seal of Star (SOS): 60% of SoX drops
-  - Seal of Moon (SOM): 30% of SoX drops
-  - Seal of Sun (SOSun): 10% of SoX drops
+### 4. Battle Arena
+- Matches d'arène (RTA/CTF) → Arena Coins → Egypt A/B.
 
-**Important:** Les SoX drops sont **extrêmement rares**. Farming uniques est la méthode la plus fiable.
+### 5. Magic Pop
+- Cartes Magic Pop (item mall, ~10 silk ; parfois gold) → loterie pouvant donner du SOX. Voir section dédiée.
 
-**Strategy:**
-- Campez les spawns d'uniques
-- Rejoignez des parties pour farm
-- Check les spawns régulièrement
-
-### Method 2: Job Rewards
-
-**System:**
-- Chaque job (Trader, Thief, Hunter) a des rewards
-- Job levels donnent des drops
-- Chance faible mais régulier
-
-**Rewards:**
-- **SOS:** Occasionnel
-- **SOM:** Rare
-- **SOSun:** Très rare
-
-### Method 3: Events
-
-**Types d'Events:**
-1. **Holiday Events:**
-   - Christmas
-   - Halloween
-   - Valentine's Day
-
-2. **Special Events:**
-   - Double Drop Events
-   - GM Events
-   - Anniversary
-
-3. **Limited-Time Events:**
-   - Robot Event
-   - Battle Arena
-   - Job Temple
-
-**Rewards:**
-- Boxes peuvent contenir SOX
-- Plus fréquent pendant les events
-
-### Method 4: Magic Pop
-
-**Voir section Magic Pop ci-dessous**
-
-### Method 5: Stall Network
-
-**Acheter à d'autres joueurs:**
-- Le plus "easy" way
-- Mais très cher
-- Prix dépend du serveur
-
-**Prix Exemples (Approx):**
-- **SOS 9D:** ~50-200M gold
-- **SOM 9D:** ~200-800M gold
-- **SOSun 9D:** ~1-5B gold
-
-*Note: Ces prix varient énormément selon le serveur!*
+### 6. Stall Network
+- Acheter aux autres joueurs — le plus fiable si l'on est riche.
 
 ---
 
 ## 🎰 Magic Pop System
 
-### Qu'est-ce que Magic Pop?
+### Qu'est-ce que Magic Pop ?
+Un **système de loterie** (gacha) auprès du NPC Magic Pop (présent dans les villes ; ex. « Mortifying Monk » selon les versions) :
 
-**Magic Pop** est un NPC spécial qui permet d'échanger des tickets pour des items aléatoires, y compris du Seal Equipment.
+1. Acheter des **Magic Pop Cards** (item mall, ~10 silk chacune ; parfois achetables en gold sur certaines époques/serveurs).
+2. Parler au NPC → ouvrir la fenêtre Magic Pop.
+3. Insérer une carte, choisir parmi la grille/liste de récompenses proposée.
+4. Le tirage est aléatoire.
 
-### Location
+### Récompenses typiques
+- **Communes :** élixirs, lucky powders, potions, scrolls 1 jour, tickets.
+- **Rares :** SoX (y compris Nova/immortal-astral magic stones selon époques), insignias (Roc), summon scrolls (Red Dragon…), Golden Dragon Flag.
+- **Jackpot :** SOX haut degré, items Egypt, magic stones of Immortal/Astral (ex. `MAGICSTONE_ATHANASIA_09`, `ASTRAL_09` repérées dans les tables).
+- L'exchange Magic Pop permet aussi des **items +4/+5** pré-enhancés selon les époques (« Equipment Exchange System »).
 
-**Où trouver:**
-- Dans toutes les villes principales
-- Jangan, Donwhang, Hotan, Constantinople
-- Look pour le NPC "Magic Pop"
-
-### Comment Ça Marche
-
-1. **Achetez des Tickets Magic Pop:**
-   - Prix: ~1-5M gold par ticket (serveur-dépendant)
-   - Ou via Item Mall (Silk)
-
-2. **Parlez au NPC Magic Pop:**
-   - Ouvrez l'interface
-
-3. **Exchange 1 Ticket pour 1 Random Item:**
-   - Complétez la grille (3 items identiques alignés)
-   - Si vous réussissez, vous gagnez un prize
-
-4. **Prizes:**
-   - **Common:** Potions, élixirs, materials
-   - **Uncommon:** SOX items, rare materials
-   - **Rare:** SOM, SOSun, very rare items
-   - **Jackpot:** SOSun 13D, billions value
-
-### Magic Pop Strategy
-
-**Est-ce que ça vaut le coup?**
-
-**Oui si:**
-- ✅ Vous avez beaucoup de gold à perdre
-- ✅ Vous aimez le gambling
-- ✅ Vous voulez tenter le jackpot
-
-**Non si:**
-- ❌ Vous avez un budget limité
-- ❌ Vous voulez un gain garanti
-- ❌ Vous êtes "risk-averse"
-
-**Expected Value (EV):**
-- En moyenne, vous **perdez** du gold
-- Mais le potentiel de jackpot existe
-- Comme au casino, la maison gagne
-
-**Tips:**
-- Considérez comme du "entertainment budget"
-- Ne misez pas plus que vous pouvez perdre
-- Si vous gagnez SOX, chanceux!
-
----
-
-## 💎 Socket System
-
-### Qu'est-ce que les Sockets?
-
-Les **sockets** sont des emplacements sur les équipements SOX qui permettent d'insérer des **Magic Stones** pour des bonus stats.
-
-### Comment Obtenir des Sockets
-
-1. **Drop naturel:**
-   - Certains SOX items viennent déjà avec des sockets
-   - SOSun a souvent 1-2 sockets
-   - Nova peut avoir 2-3 sockets
-
-2. **Socket System (si disponible sur votre serveur):**
-   - Utilisez des "Socket Scrolls"
-   - Ajoutez des sockets aux items
-
-### Magic Stones
-
-**Types de Magic Stones:**
-1. **Attack Stones:**
-   - +PHY Attack
-   - +MAG Attack
-
-2. **Defense Stones:**
-   - +PHY DEF
-   - +MAG DEF
-
-3. **Stat Stones:**
-   - +STR
-   - +INT
-
-4. **Special Stones:**
-   - +Critical
-   - +Parry
-   - +Attack Rating
-   - +HP/MP
-
-**Stone Levels:**
-- **Level 1-5 Stones:** Low stats
-- **Level 6-10 Stones:** Medium stats
-- **Level 11+ Stones:** High stats (très rare)
-
-### Socket Strategy
-
-**Priorité de Sockets:**
-1. **Weapons:** PHY/MAG Attack stones
-2. **Armor:** DEF stones (PHY or MAG selon votre build)
-3. **Accessories:** Stat stones (STR/INT)
-
-**Combien de Sockets:**
-- 1 socket: Bon début
-- 2 sockets: Optimal pour la plupart
-- 3+ sockets: Min-max, très cher
-
----
-
-## 🔄 Upgrade Crystals
-
-### System de Upgrade
-
-Certains serveurs permettent d'**upgrader** SOX items:
-- SOS → SOM
-- SOM → SOSun
-
-### Comment Upgrader
-
-**Materials:**
-- **Upgrade Crystals:**
-  - Star→Moon Crystal
-  - Moon→Sun Crystal
-
-- **Other Materials:**
-  - Magic stones
-  - Elixirs
-  - Gold
-
-**Process:**
-1. Allez au NPC spécialisé (si disponible)
-2. Placez l'item + materials
-3. Cliquez "Upgrade"
-4. Chance de succès (similaire à l'alchimie)
-
-**Success Rates:**
-- SOS → SOM: ~30-50%
-- SOM → SOSun: ~10-30%
-
-**Risks:**
-- Si échoue, l'item peut **break** (être détruit)
-- Comme l'alchimie, c'est risqué
-
-**Vaut-il le coup?**
-- Parfois oui, parfois non
-- Comparez: acheter SOM directement vs upgrader SOS
-- Faites le calcul
+### Est-ce que ça vaut le coup ?
+- En espérance, **non** (gold/silk sink) — sauf pour les chasseurs de jackpot. Budget « divertissement » uniquement.
 
 ---
 
 ## 💰 Prix et Valeur
 
-### Valeur Relative
+### Ordres de grandeur (très variables selon serveur/époque)
+- **SOS :** ~5–10× un item normal
+- **SOM :** ~20–50×
+- **SOSun / Nova / Egypt B :** ~100–500× et plus
 
-**Règle générale:**
-- SOS = ~5-10x le prix d'un item normal
-- SOM = ~20-50x le prix d'un item normal
-- SOSun = ~100-500x le prix d'un item normal
+### Repères historiques (iSRO 2008, guide GameFAQs/Sintaku)
+- Arme SoS niveau 32 : 6–8 M (early) → 20–30 M (serveur mature)
+- Vêtements SoS 3D : dizaines de millions
 
-**Examples (9D Weapons):**
-| Item | Prix Approx (gold) |
-|------|-------------------|
-| Normal 9D Sword | ~1-5M |
-| SOS 9D Sword | ~50-200M |
-| SOM 9D Sword | ~200-800M |
-| SOSun 9D Sword | ~1-5B |
+### Facteurs de prix
+1. **Degré** (le haut degré coûte exponentiellement plus cher)
+2. **Type** (armes > accessoires > armures)
+3. **Blues** (un FB vaut plusieurs fois l'item clean)
+4. **Le +** (un +5 SOX vaut bien plus que le coût des élixirs)
+5. **Économie du serveur** (inflation gold)
 
-*Note: Ces prix varient énormément selon le serveur, l'offre et la demande!*
-
-### Facteurs Affectant le Prix
-
-1. **Degree:**
-   - Plus le degree est haut, plus cher
-   - 10D-13D est beaucoup plus cher que 1D-5D
-
-2. **Type:**
-   - Weapons sont généralement plus chers
-   - Accessories sont aussi très chers
-   - Armor est un peu moins cher
-
-3. **Stats:**
-   - Plus de stats blues = plus cher
-   - +5 STR, etc.
-
-4. **Server Economy:**
-   - Certains serveurs ont beaucoup de gold (inflation)
-   - Prix varient énormément
-
-5. **Rarity:**
-   - SOSun est extrêmement rare
-   - Nova est quasiment introuvable
-
-### Investment Tips
-
-**Pour les nouveaux joueurs:**
-1. **Ne visez pas SOSun tout de suite**
-2. **SOS est un bon objectif** de mid-game
-3. **SOM est un excellent objectif** de late game
-4. **SOSun est pour les hardcore players**
-
-**Progression typique:**
-- Level 1-40: Normal gear
-- Level 40-70: +5-+7 normal gear
-- Level 70-90: SOS gear
-- Level 90-100: SOM gear
-- Level 100-110: SOSun gear
+### Progression typique
+| Niveau | Objectif |
+|--------|----------|
+| 1–40 | Normal (+0 à +3) |
+| 40–70 | Normal +3/+5, premier SOS possible |
+| 70–90 | SOS (D8), viser SOSun D8 si FGW |
+| 90–100 | SoM D10 (FGW), SOS D10 |
+| 100–110 | SoN D11, Egypt A puis B |
+| 111–120 | D12/D13 (Temple of Jupiter) |
 
 ---
 
 ## ❓ FAQ
 
-### Q: Puis-je jouer sans SOX?
-**R:** Oui, mais vous serez désavantagé en PvP. Pour le PvE, c'est moins grave, mais vous quand même besoin de + gear.
+### Q: Puis-je jouer sans SOX ?
+**R:** Oui en PvE avec du normal bien « plusé » et des blues correctes. En PvP, un SOX d'un degré inférieur bat souvent un normal de degré supérieur.
 
-### Q: Quel SOX viser en premier?
-**R:** Weapon > Armor > Accessories. Une bonne weapon fait la plus grande différence.
+### Q: Quel SOX viser en premier ?
+**R:** L'arme, de loin (plus gros gain de dégâts), puis les pièces défensives.
 
-### Q: Les SOX drops sont-ils plus fréquents sur les serveurs privés?
-**R:** Généralement oui. Les serveurs privés ont souvent des rates boostés pour les SOX drops.
+### Q: Un SOS D8 vaut-il mieux qu'un normal D9 ?
+**R:** Oui en général : SoS ≈ +5 niveaux, et les SOX ont souvent des blues. Le SoM/SoSun D8 dominent clairement le normal D9.
 
-### Q: Puis-je upgrader du SOX avec l'alchimie (+1, +2, etc.)?
-**R:** Oui! Les items SOX peuvent être upgradés comme les items normaux. Un +5 SOM est très puissant!
+### Q: Peut-on transformer un SOS en SOM ?
+**R:** Pas d'upgrade « cristal » officiel — c'est du contenu de serveurs privés. Sur officiel, on obtient les tiers supérieurs par drops (FGW etc.) ou Magic Pop exchange selon les époques.
 
-### Q: Le Magic Pop vaut-il le coup?
-**R:** Pour la plupart, non. C'est un "gold sink". Mais si vous êtes chanceux, vous pouvez gagner gros.
+### Q: Les SOX peuvent-ils être détruits par l'alchimie ?
+**R:** Oui (à partir de +5, comme tout item). Utilisez Immortal/Steady/Astral — c'est encore plus critique vu leur valeur.
 
-### Q: Comment savoir si un item est "vrai" SOX?
-**R:** Les vrais items SOX ont un glow spécial et le label "Seal of [X]" dans le nom. Faites attention aux scams.
+### Q: « Seal of Honor », « Seal of Olympus », « Seal of Divinity » ?
+**R:** « Seal of Honor » est un objet/event (Style Arena, versions tardives/mobile). Les autres noms ne correspondent pas à des items officiels PC — ce sont des variantes de serveurs privés.
 
-### Q: Puis-ai-je vendre du SOX pour du vrai argent?
-**R:** Officiellement non (c'est contre les ToS de la plupart des serveurs). Cependant, le RMT (Real Money Trading) existe dans SRO depuis longtemps.
+### Q: Comment vérifier qu'un item est un vrai SOX ?
+**R:** Nom « Seal of … », glow doré, et stats nettement au-dessus du normal du même degré. Attention aux scams en trade.
 
 ---
 
 ## 🔗 Resources
 
-### Guides et Informations
-- [Star of Seal, Star of Moon Guide](http://www.silkroadforums.com/viewtopic.php?f=29&t=30890)
-- [Silkroad Online Items Wiki](https://strategywiki.org/wiki/Silkroad_Online/Items)
-- [SOX Database](https://silkroadonline.fandom.com/wiki/Items)
+### Guides et données
+- [Elitepvpers — question for SOS and other items (équivalences +5/+10/+15)](https://www.elitepvpers.com/forum/silkroad-online/741991-question-sos-other-items.html)
+- [Fandom — Forgotten World (drops par tier)](https://silkroadonline.fandom.com/wiki/Forgotten_World)
+- [Guild Algarb — Forgotten World (tiers, talismans, quêtes)](https://guildalgarb.wordpress.com/games/sro/maps/forgotten-world/)
+- [Seidenkraft — The FGW Tutorial](https://seidenkraftblog.wordpress.com/2012/09/14/the-fgw-tutorial/)
+- [GameFAQs — Guide Sintaku (prix SOX 2008)](https://gamefaqs.gamespot.com/pc/930711-silkroad-online/faqs/44908)
+- [GamesIndustry — Legend V: Heroes of Alexandria (set items)](https://www.gamesindustry.biz/silkroad-online-legend-v-heroes-of-alexandria-expansion-launched)
+- [Facebook officiel — update Lv.120 / 13th degree](https://www.facebook.com/officialsilkroad/posts/1373349181500339)
+- [eXay — Job Temple Unique Guide (Anubis/Isis/Haroeris/Seth)](https://forum.exaysro.com/showthread.php?tid=3875)
+- [RageZone — Arena Item Manager (prix Egy B)](https://forum.ragezone.com/threads/silkroad-legends-how-tos-questions-discussions.1177591)
+- [Silkroadonline.de — Gambling System (Magic Pop)](https://www.silkroadonline.de/allgemein/allgemeines-ber-silkroad/31148-gambling-system-in-isro)
+- [Elitepvpers — Magic POP Card](https://www.elitepvpers.com/forum/silkroad-online/302204-magic-pop-card.html)
 
-### Communauté
-- [Silkroad Forums - Market Section](http://www.silkroadforums.com/)
-- [Server-Specific Forums](https://forum.playorigin.com/)
-
-### Tools et Databases
-- [SRO DB](https://sro-db.com/) (si disponible)
+### Bases de données
+- [Silkroad Online Database (items, client v1_657)](https://silkroadonline.wiki/items)
 - [xSROMap](https://jellybitz.github.io/xSROMap/)
+- [Rev6 — spawn points des uniques](https://rev6.org/en/post/silkroad-online-uniq-spawn-noktalari)
 
 ---
 
 ## 📚 Voir aussi
 
 ### Systèmes d'Équipement
-- [Item Degrees](07_ITEM_DEGREES.md) - Système 1D-13D
+- [Item Degrees](07_ITEM_DEGREES.md) - Système 1D-13D, noms des sets
 - [Armor Types](08_ARMOR_TYPES.md) - Armor, Protector, Garment
-- [Alchimie](05_ALCHEMY_SYSTEM.md) - Enhancement +1 à +12
+- [Alchimie](05_ALCHEMY_SYSTEM.md) - Enhancement et blues des SOX
 
 ### Économie
 - [Hub Économie](HUB_ECONOMIE.md) - Centralise économie et équipement
 - [Economie et Or](22_ECONOMY_GOLD.md) - Valeur et prix des seal equipment
-- [Stall Network](23_STALL_NETWORK.md) - Acheter/vendre seal equipment
+- [Stall Network](23_STALL_NETWORK.md) - Marché joueur
 
 ### Bases de Données
 - [Index des Items](31_ITEMS_DATABASE.md) - Hub items
-- [Items Database](ITEMS_DATABASE.md) - Tous les items du jeu
-- [Monsters](15_UNIQUE_BOSSES.md) - Uniques qui drop seal equipment
+- [Monsters / Uniques](15_UNIQUE_BOSSES.md) - Uniques qui droppent du seal
 
-### Builds et Progression
-- [PvE Builds](34_PVE_BUILDS.md) - Builds pour obtenir seal equipment
-- [Leveling Guide](25_LEVELING_GUIDE.md) - Où trouver seal equipment
+### Guides et Progression
+- [PvE Builds](34_PVE_BUILDS.md) - Builds pour farmer le seal
+- [Leveling Guide](25_LEVELING_GUIDE.md) - Zones par tranches de niveau
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
-*Sources: Silkroad Forums, Community Guides, Silkroad Online Wiki*
+*Dernière mise à jour: 2026-10-01*
+*Sources: elitepvpers, silkroadonline.fandom.com, guildalgarb, seidenkraft, GameFAQs (Sintaku), eXay forums, RageZone, silkroadonline.de, annonces officielles Facebook Silkroad*

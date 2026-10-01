@@ -2,14 +2,18 @@
 
 ## 📋 Table des Matières
 - [Vue d'Ensemble](#-vue-densemble)
-- [PvP自愿 vs PK](#-pvp-vs-pk)
+- [PvP Consensuel vs PK](#-pvp-consensuel-vs-pk)
 - [Murderer System](#-murderer-system)
-- [PK Penalties](#-pk-penalties)
-- [PK Limits](#-pk-limits)
-- [PvP Arena](#-pvp-arena)
-- [Job Wars](#-job-wars)
+- [PK Penalties (données techniques)](#-pk-penalties-données-techniques)
+- [Décrément des Murder Points](#-décrément-des-murder-points)
+- [PvP Capes](#-pvp-capes)
+- [Arena](#-arena)
+- [Capture the Flag (CTF)](#-capture-the-flag-ctf)
+- [Job PvP (Thief / Hunter / Trader)](#-job-pvp-thief--hunter--trader)
+- [Fortress War](#-fortress-war)
 - [Strategies PvP par Classe](#-strategies-pvp-par-classe)
 - [Tips pour Réussir en PvP](#-tips-pour-réussir-en-pvp)
+- [Différences Classic vs Silkroad-R](#-différences-classic-vs-silkroad-r)
 - [FAQ](#-faq)
 - [Resources](#-resources)
 
@@ -17,229 +21,222 @@
 
 ## ⚔️ Vue d'Ensemble
 
-Le système **PvP (Player vs Player)** et **PK (Player Killing)** de Silkroad Online permet aux joueurs de s'affronter, avec des conséquences pour les comportements "criminels".
+Le système **PvP (Player vs Player)** et **PK (Player Killing)** de Silkroad Online permet aux joueurs de s'affronter, avec des conséquences réelles pour les comportements « criminels » (murderer).
 
 ### Points Clés
-- ✅ **PvP自愿:** Combat d'accord mutuel
-- ✅ **PK (Player Killing):** Tuer des joueurs innocents
-- ✅ **Murderer System:** Conséquences pour les PKers
-- ✅ **Penalties:** Item drop chance, NPC attacks
-- ✅ **Arena PvP:** Combat sans conséquences
+- ✅ **PvP consensuel :** capes, duels, job suits, arène, CTF, Fortress War — aucune pénalité
+- ✅ **PK (Player Killing) :** tuer des joueurs innocents → murder points
+- ✅ **Murderer System :** statut visuel (nom), drop d'items à la mort, perte d'EXP accrue
+- ✅ **Guards** attaquent les murderers en ville
+- ✅ **Décrément :** les murder points diminuent en tuant des monstres
+- ✅ **Arène & CTF :** PvP organisé avec récompenses
 
 ---
 
-## 🤝 PvP自愿 vs PK
+## 🤝 PvP Consensuel vs PK
 
-### PvP自愿 (Consensual PvP)
+### PvP Consensuel
 
-**Qu'est-ce:**
-- Combat où **les deux parties acceptent**
-- Aucune pénalité pour personne
-
-**Examples:**
-- **Job Wars:** Thief vs Hunter (les deux sont en job suit)
-- **Duel:** Les deux joueurs acceptent le duel
-- **Fortress War:** Guild vs Guild (consensuel)
-- **Arena:** PvP sans conséquences
-
-**Caractéristiques:**
-- **No penalties**
-- **Fun, competitive**
-- **Skill-based**
+**Conditions (aucune pénalité) :**
+- **Capes PvP** : les deux joueurs portent une cape de couleurs différentes (voir [PvP Capes](#-pvp-capes))
+- **Job suits** : joueurs en tenues de job opposées (Thief vs Hunter/Trader)
+- **Arena / CTF / Fortress War** : zones/events dédiés
+- **Duel** (party/invitation selon version)
+- **Serveurs PvP dédiés** (ex: « Sky City » chez certains éditeurs) : PvP libre sans pénalité
 
 ### PK (Player Killing)
 
-**Qu'est-ce:**
-- Tuer un joueur **innocent** (qui n'a pas accepté le PvP)
-- Acte "criminel"
+**Définition :** tuer un joueur qui n'a **pas** activé de PvP (pas de cape, pas de job suit, pas en event).
 
-**Examples:**
-- Tuer un joueur qui n'est pas en job suit
-- Tuer un level 1 player quand vous êtes level 100
-- Random killing dans le désert
+**Conséquences :**
+- Gains de **murder/penalty points** (voir ci-dessous)
+- Statut **Murderer** visible (nom)
+- À la mort : **chance de dropper des items**, perte d'EXP accrue
 
-**Caractéristiques:**
-- **Conséquences sévères** (voir Murderer System)
-- **Mal vu** par la communauté
-- **Risqué**
+**Cas particuliers (pas de PK) :**
+- Self-defense : si un joueur vous attaque en premier (flag), le tuer ne compte pas
+- Tuer un **murderer** : aucun murder point (au contraire, chassé légitimement)
 
 ---
 
 ## 👿 Murderer System
 
-### Comment Devenir Murderer
+### Comment devient-on Murderer
 
-**Chaque kill non-consensuel = +1 Murder Point**
+Chaque kill non-consensuel ajoute des **murder points** (PK penalty points). Les seuils (sources communautaires, voir divergences) :
 
-**Murderer Levels:**
+| Murder Points | Statut | Nom affiché | Pénalités |
+|---------------|--------|-------------|-----------|
+| 1 - 499 | Léger | nom légèrement coloré | drop faible possible |
+| **500+** | **Murderer Level 1** | rouge clair | drop items possible, guards hostiles |
+| **1000+** | **Murderer Level 2** | rouge | drop fort, EXP loss accru |
+| **2000+** | **Murderer Level 3** | rouge foncé + icône | drop massif, débuffs |
 
-| Murder Points | Titre | Penalties |
-|---------------|-------|-----------|
-| **1-99** | Normal | None |
-| **100-499** | Murderer Level 1 | Mild penalties |
-| **500-999** | Murderer Level 2 | Moderate penalties |
-| **1000+** | Murderer Level 3 | Severe penalties |
-| **5000+** | Murderer Level 4 | Extreme penalties |
+> ⚠️ **Divergence sources** : le wiki FR silkroad.fandom (via flux) liste 300/500/1000 comme seuils ; le wiki EN liste 500/1000/2000. Les deux décrivent le même système à versions différentes. À traiter comme ~**500/1000/2000** (EN, plus complet) avec réserve.
 
-### Murderer Appearance
+### Apparence du Murderer
 
-**Visual Indication:**
-- **Name turns red**
-- **Skull icon** above head (higher levels)
-- **Visible to everyone**
+- **Nom rouge** (de plus en plus foncé selon le niveau)
+- **Icône de crâne/bandeau** au-dess de la tête (haut niveau)
+- Visible par tous — c'est une cible légitime : **tuer un murderer ne donne pas de murder points**
 
-**Effect:**
-- Players peuvent vous voir comme murderer
-- Guards vous attaquent
+### Conséquences en jeu
 
----
-
-## ⚖️ PK Penalties
-
-### 1. Item Drop Chance
-
-**When you die as Murderer:**
-- **Chance to drop equipped items**
-- Plus votre murderer level est haut, plus la chance est élevée
-
-**Drop Chance:**
-- **Murderer Level 1:** ~5-10% chance
-- **Murderer Level 2:** ~10-20% chance
-- **Murderer Level 3:** ~20-30% chance
-- **Murderer Level 4:** ~30-50% chance
-
-**What Can Drop:**
-- **Equipped items:** Weapons, armor, accessories
-- **Inventory items:** Gold, materials
-- **NOT:** Job suit, warehouse items
-
-**Risk:**
-- Vous pouvez perdre votre **SOSun weapon** si vous mourrez!
-- C'est pourquoi le PK est si risqué
-
-### 2. NPC Attacks
-
-**Guards Attack:**
-- Dans les villes, les guards attaquent les murderers
-- Difficile d'entrer dans les villes
-- Must sneak in or use alts
-
-**Effect:**
-- Cannot safely enter cities
-- Cannot use NPCs (repair, shop, storage)
-- Forced to stay in wilderness
-
-### 3. Exp/SP Loss
-
-**When dying as Murderer:**
-- **Plus de perte d'EXP/SP** que normal
-- Normal death: ~5% EXP loss
-- Murderer death: ~10-20% EXP loss
-
-**Impact:**
-- Délvl possible
-- Perdre des levels
-
-### 4. Social Ostracism
-
-**Community Reaction:**
-- Les murderers sont "mal vu"
-- Les guildes sérieuses n'acceptent pas les murderers
-- Difficile de trouver des parties
+- **Guards de ville** : attaquent à vue les murderers (impossible d'utiliser les NPCs en toute sécurité)
+- **Perte d'EXP à la mort** : ~**2%** de base, **plus élevée en murderer** (selon statut)
+- **Drop d'items à la mort** : voir section suivante (données techniques)
 
 ---
 
-## 🔢 PK Limits
+## ⚖️ PK Penalties (données techniques)
 
-### Daily PK Limit
+### Drop d'items à la mort — décompilation serveur (florian0, 2016)
 
-**Sur certains serveurs:**
-- **15 PKs per day** maximum
-- Après 15 PKs, impossible de tuer plus de joueurs innocents
+Le serveur exécute : `rand() % 101 <= DeathPenaltyRate(player)` — le taux est comparé à un jet 0-100 :
 
-**Reset:**
-- After 24 hours
-- Ou après avoir payé une amende (sur certains serveurs)
+| PK Penalty Points | Chance de drop à la mort |
+|-------------------|--------------------------|
+| **0 (joueur normal)** | **5%** |
+| **> 0** (au moins 1 kill) | **30%** |
+| **≥ 4 000** | **50%** |
+| **≥ 15 000** | **70%** |
+| **≥ 30 000** | **100%** |
 
-**Why:**
-- Pour limiter le "griefing"
-- Empêcher les "PKers" de ruiner le jeu
+> ℹ️ Ces `pk_penalty_point` sont la valeur **interne** du serveur (1 kill ≈ quelques centaines/milliers de points selon le niveau de la victime et le contexte — correspondance exacte non documentée). L'ordre de grandeur : quelques kills = déjà 30% de risque.
 
-### PK Counter
+### Ce qui peut tomber
 
-**Tracking:**
-- Vous pouvez voir votre PK count
-- "/pkcount" command (sur certains serveurs)
-- Shows how many PKs you have
+**Si PK Penalty Status actif (>0 points) :**
+- Un **slot d'équipement aléatoire 0-12** est tiré (`rand % 13`)
+- **Slots protégés** (re-rulés vers 0-5) : arme (6), bouclier/munitions (7), inconnu (8)
+- **Slots droppables** : casque (0), torse (1), épaules (2), gants (3), jambes (4), bottes (5), boucle d'oreille (9), collier (10), anneau G (11), anneau D (12)
 
----
+**Si pas de penalty points (ou rien de droppable) :**
+- Un **item d'inventaire aléatoire** peut tomber (index tiré au hasard)
 
-## 🏟️ PvP Arena
+**Jamais droppables :**
+- Items de **quête/event**
+- Items **Item Mall** (cash shop)
+- Items flaggés non-droppables dans RefObjCommon
 
-### Qu'est-ce que l'Arena?
+### Perte d'EXP
 
-**Arena** est un système de PvP **sans conséquences**.
-
-### Comment Accéder
-
-**Location:**
-- Arena NPC dans les villes principales
-- "Enter Arena" option
-
-**Arena Types:**
-1. **1v1 Arena:** Duel solo
-2. **2v2 Arena:** 2 vs 2
-3. **3v3 Arena:** 3 vs 3
-4. **Free For All:** Tous contre tous
-
-### Arena PvP Benefits
-
-**No Penalties:**
-- **No item drop**
-- **No EXP loss**
-- **No murderer points**
-
-**Rewards:**
-- **Arena Points:** Gagnez des points pour les wins
-- **Titles:** Special titles pour les gagnants
-- **Ranking:** Classement des meilleurs fighters
-
-**Fair Play:**
-- Équilibré (généralement)
-- Fun et compétitif
-- Bon pour practice
+- Mort normale : **~2% d'EXP**
+- Mort en murderer : perte accrue (dé-level possible)
+- Le **de-level** par mort en murderer existe (retours communautaires multiples)
 
 ---
 
-## 💼 Job Wars
+## 🔻 Décrément des Murder Points
 
-### Qu'est-ce que Job Wars?
+**Comment redevenir normal (wiki EN + communauté) :**
+- Tuer des **monstres de niveau proche/supérieur** au votre réduit les murder points
+- Ordre de grandeur communautaire : **−1 à −5 points par monstre** selon le niveau du monstre vs le vôtre (haut niveau = plus de réduction)
+- Décroissance passive par le temps : très lente/non confirmée sur iSRO classic (les FAQ anciennes mentionnaient « attendre », sans chiffre officiel)
+- Sur certaines versions : possibilité de payer une amende (NPC) — variable par serveur
 
-**Job Wars** sont des PvP entre les jobs:
-- **Trader + Hunter** vs **Thief**
-- Ou **Thief** vs **Hunter** (sans trader)
+**Murder count vs PK penalty points :** le `murder count` (nombre de kills) affiché et les `pk_penalty_points` internes peuvent différer (le second pondère par contexte : niveau de la victime, job flags...).
 
-### Caractéristiques
+---
 
-**No Penalties:**
-- Les deux parties sont en job suit
-- Considéré comme "PvP consenti"
-- **No murderer points**
+## 🧣 PvP Capes
 
-**Rewards:**
-- **Job Points:** Pour les kills
-- **Job XP:** Progression de job
-- **Fun:** C'est le heart du job system
+### Fonctionnement
 
-**Strategy:**
-- Hunters protègent les traders
-- Thieves attaquent les traders
-- Massive battles dans le désert
+- Achetées auprès du **Cape Merchant** dans les villes
+- En portant une cape, vous pouvez attaquer (et être attaqué par) **toute cape de couleur différente**
+- **Même couleur = aucune attaque possible** (protection)
+- **Pas de murder points** : combat 100% consensuel
+- Retirer la cape en combat : impossible/interdit (déséquipement)
 
-**Locations:**
-- Principal routes commerciales
-- Désert
-- Near towns
+### Les 4 couleurs (prix indicatifs iSRO)
+
+| Couleur | Prix (or) | Note |
+|---------|-----------|------|
+| **White (Blanche)** | ~5 000 | la plus courante |
+| **Orange** | ~1 500-2 000 | |
+| **Red (Rouge)** | ~2 000 | |
+| **Black (Noire)** | ~1 000 | |
+
+> Organisation type : chaque « armée » de PvP porte une couleur convenue — les couleurs définissent les équipes open-world.
+
+### Sky City (serveurs PvP dédiés)
+
+Sur les serveurs dédiés PvP (ex: Sky City de l'édition occidentale), le port de la cape est **obligatoire** pour toute la map (PvP libre sans pénalité).
+
+---
+
+## 🏟️ Arena
+
+### Arena (zones libres)
+
+- NPC d'accès dans les villes principales
+- PvP **sans pénalités** (pas de drop, pas d'EXP loss, pas de murder points)
+- Formats : libre (FFF), zones de duel
+
+### Arena League (event, données fandom)
+
+- **Entrée : Arena Coin** (10 points par entrée selon version)
+- Récompenses journalières connectées **14 jours consécutifs** (bonus majeurs au terme)
+- Classements et récompenses de fin de saison
+
+---
+
+## 🚩 Capture the Flag (CTF)
+
+### Règles (iSRO classique, données croisées fandom + officiel)
+
+| Paramètre | Valeur |
+|-----------|--------|
+| **Horaires** | Jeudi & Dimanche, 21:00-22:00 |
+| **Inscription** | 20:15 → 20:55 (avant le match) |
+| **Conditions** | Guilde niveau 1+, joueur **niveau 30+** |
+| **Durée du match** | 20 minutes |
+| **Objectif** | Capturer le drapeau ennemi et le ramener à sa base |
+| **Port du drapeau** | Le porteur tient le drapeau **60 secondes** pour valider |
+| **Cooldown du drapeau** | 15 secondes après une capture |
+| **Points** | +5 points par capture d'équipe |
+| **Minimum de joueurs** | 8+ joueurs inscrits (privés : événement annulé sinon) |
+
+### Récompenses (iSRO classique)
+
+- **Luck Stone (pierre de chance)** — alchimie
+- **Elegance/Virtue stones**
+- **Elixir disposants** (dispersers)
+- Sur serveurs privés : monnaies event, Magic Pop cards, etc.
+
+### Notes de jeu
+
+- Les kills en CTF ne donnent **aucun murder point**
+- Les potions/pills sont utilisables (selon règles d'event)
+- Le porteur de drapeau est ralenti — l'escorte est essentielle
+
+---
+
+## 💼 Job PvP (Thief / Hunter / Trader)
+
+### Principe
+
+- Le port d'un **job suit** (acheté ~500 000 or + niveau de job requis) active le PvP de job
+- **Thief** vs **Hunter/Trader** : attaques libres et réciproques, **sans murder points**
+- Seule l'équipe adverse visible via les tenues
+
+### Spécificités
+
+- **Thieves** : attaquent les caravanes, volent le loot des traders morts
+- **Hunters** : protègent les traders, tuent les thieves (récompenses de job XP/points)
+- **Traders** : transportent des marchandises (PvE défensif + risque PvP)
+- Job XP et job points gagnés sur les kills
+- Les pénalités de drop à la mort s'appliquent aussi aux jobs (job flag = facteur aggravant dans le code de death penalty, cf. florian0)
+
+---
+
+## 🏰 Fortress War
+
+- PvP de guilde massif (structuré : sièges, tanks, canons, guardians)
+- Attribution par **enchères** (bid) des guildes
+- Détails complets : voir [19_FORTRESS_WAR.md](19_FORTRESS_WAR.md)
+- Aucun murder point (zone d'event dédiée)
 
 ---
 
@@ -247,122 +244,61 @@ Le système **PvP (Player vs Player)** et **PK (Player Killing)** de Silkroad On
 
 ### Chinese Builds
 
-#### STR Warrior (Sword/Spear)
+#### STR Blader / Glavier (Sword/Blade, Spear/Glaive)
+**Vs INT :**
+- Fermer la distance rapidement (speed passif lightning)
+- KD → stabs (×2 dégâts au sol) avant qu'il ne nuke
+**Vs STR :**
+- Trade de coups, potions, meilleurs crits/gear
+**Key :** rester au contact, enchaîner les KD/stabs avec animation cancelling
 
-**Vs INT:**
-- Close the gap quickly
-- Use speed buffs
-- Burst them down before they nuke
+#### INT Nuker (Sword/Spear + nukes, ou pure)
+**Vs STR :**
+- **Kite** absolu : freeze (Cold imbue), frostbite, movement speed
+- Nuke depuis la max distance
+**Vs INT :**
+- Duel de burst : le premier qui nuke en premier
+**Key :** gérer la distance, Snow Shield (absorbe 50% des dégâts en MP), Universal Pills
 
-**Vs STR:**
-- Trade blows
-- Use potions
-- Better gear wins
-
-**Key:** Get in melee range, stay there
-
-#### INT Nuker (Bow/Spear)
-
-**Vs STR:**
-- Kite! Don't let them close
-- Nuke from range
-- Use speed advantages
-
-**Vs INT:**
-- Who has more MP?
-- Burst them down
-
-**Key:** Range advantage, kite
+#### Bow (Pacheon)
+**Vs tous :**
+- Kite à 10-15 m, Strong Bow + crit
+- Knockback pour interrompre les casts EU
+**Key :** le kiting le plus propre du jeu
 
 ### European Classes
 
 #### Warrior
+- Tanky, burst avec KD chain (Will Turn → stabs)
+- Faible vs : Wizards (kite), Rogues (stealth burst)
+**Key :** encaisser et chain-CC
 
-**Vs Anyone:**
-- Tanky, can survive burst
-- Sustained damage
-- Use potions
-
-**Weak Against:**
-- Wizards (kiting)
-- Rogues (stealth burst)
-
-**Key:** Outlast your opponent
-
-#### Rogue
-
-**Vs Anyone:**
-- **STEALTH** is key
-- Open with burst
-- If they survive, run, restealth, try again
-
-**Strong Against:**
-- Wizards (squishy)
-- Clerics (low DPS)
-
-**Weak Against:**
-- Warriors (tanky)
-- Other Rogues (who stealths first?)
-
-**Key:** Burst, stealth, repeat
+#### Rogue (Daggers / X-Bow)
+- **Stealth** (Sneak : invisible) → ouvertures en burst
+- Sneak Attack : gros dégâts, uniquement depuis la furtivité (l'attaque rompt le stealth)
+- Prick : dot + réduction de heal
+**Key :** burst depuis l'ombre, reset, recommencer
 
 #### Wizard
+- Gros nukes AoE à distance (Meteor, Blizzard)
+- Faible si focus — dépend des CC alliés
+**Key :** range + AoE + kiting
 
-**Vs Anyone:**
-- AOE nukes
-- Keep them at range
-- Kite if they close
-
-**Strong Against:**
-- Warriors (melee, can't reach)
-- Rogues (if you survive their burst)
-
-**Weak Against:**
-- Other Wizards (nuke battle)
-- speedy Rogues
-
-**Key:** Range, AOE, kite
-
-#### Warlock
-
-**Vs Anyone:**
-- Debuff everything
-- DoT them up
-- Let them die slowly
-
-**Strong Against:**
-- Anyone (in 1v1, over time)
-- Especially Warriors (debuff their STR)
-
-**Weak Against:**
-- Burst damage (Rogue)
-- Quick nukers (Wizard)
-
-**Key:** Debuff, DoT, outlast
+#### Warlock (le roi du 1v1 organique)
+- **Débuffs en chaîne** : Physical/Magical Raze (−défenses), Combat Raze (Impotent : −dégâts infligés), Medical Raze (Division : +dégâts subis)
+- **DoT** : Burn/Poison/Decay/Combustion
+- **Hard CC** : Fear (fuite incontrôlée), Sleep (break au dégât), Stun
+- **Anti-heal** : Disease (bloque les soins), Zombie (potions = dégâts), Panic (bloque les consommables)
+**Key :** empiler les débuffs, laisser mourir à petit feu
 
 #### Bard
-
-**Vs Anyone:**
-- You're support, not a fighter
-- Buff your team
-- In 1v1, you'll lose usually
-
-**In PvP:**
-- Be a buffer, not a fighter
+- Support : buffs de vitesse/MP, swich
+- En 1v1 : sous-dominant, mais intuable avec le bon cycle
 
 #### Cleric
-
-**Vs Anyone:**
-- **You can't kill anyone solo**
-- But they can't kill you either
-- Infinite heals
-
-**In 1v1:**
-- Stalemate usually
-- Outlast them
-
-**In Group:**
-- Essential healer
+- Heals, cures (dispel des débuffs), Reverse (résurrection)
+- En 1v1 : stalemate — intuable mais peu de dégâts
+- **En groupe : la classe qui décide les fights**
 
 ---
 
@@ -370,86 +306,92 @@ Le système **PvP (Player vs Player)** et **PK (Player Killing)** de Silkroad On
 
 ### General Tips
 
-**1. Pot Up:**
-- Never be "too proud" to pot
-- Use HP potions liberally
-- It's not shameful, it's smart
-
-**2. Buff Up:**
-- Full buffs before PvP
-- Lightning speed
-- Armor buff
-- Attack buff
-
-**3. Know Your Enemy:**
-- STR vs INT matchup
-- Know what they can do
-- Anticipate their skills
-
-**4. Positioning:**
-- Don't get surrounded
-- Use terrain
-- Line of sight
-
-**5. Timing:**
-- Time your skills
-- Don't waste cooldowns
-- Combo efficiently
-
-**6. Gear Matters:**
-- +9 beats +5
-- SOSun beats normal
-- But skill > gear (sometimes)
+1. **Pill le bon grade :** Universal Pill 1/2/3 selon le status (freeze/frostbite = 1 ; burn/poison/decay = 2 ; curses warlock = 3)
+2. **Buffs complets** avant tout fight (attack %, defense, speed, parry ratio)
+3. **Animation cancelling :** +30-70% de DPS effectif (voir [04_COMBAT_SYSTEM.md](04_COMBAT_SYSTEM.md#-animation-cancelling))
+4. **Positionnement :** ligne de vue, terrain, ne pas se faire surround
+5. **Connaître l'ennemi :** STR vs INT, CD de ses skills, ses cures
+6. **Gear :** +crit (PHY builds), absorb HP/MP, parry ratio, block (bouclier 15-20%+)
 
 ### Class-Specific Tips
 
-**For Melee (STR):**
-- **Close the gap**
-- Use speed buffs
-- Stay in their face
+**Melee (STR) :**
+- Fermer le gap, KD → stabs, rester collé
+- Block avec bouclier vs melee
 
-**For Ranged (INT/Bow/Xbow):**
-- **Kite!**
-- Never let them melee you
-- Use your range advantage
+**Ranged (INT/Bow) :**
+- Kite, slows (Cold), knockback (Bow)
+- Snow Shield pour survivre au switch
 
-**For Stealth (Rogue):**
-- **Open with burst**
-- If it fails, run
-- Restealth and try again
+**Stealth (Rogue) :**
+- Ouvrir du stealth, reset si le burst échoue
+
+**Warlock :**
+- Toujours ouvrir par les Razes (−défenses) avant les DoT
+- Garder Fear/Stun pour interrompre les heals
+
+---
+
+## 🔄 Différences Classic vs Silkroad-R
+
+| Aspect | Classic iSRO | Silkroad-R |
+|--------|--------------|------------|
+| **PK penalties** | Sévères (murderer complet) | Assouplis |
+| **Murderer state** | Drop items possible dès 1 kill (30%) | Réduit |
+| **PvP events** | Arena, CTF, Fortress | Identiques + variants |
+| **Job PvP** | Identique | Identique |
+
+> Le système murderer complet (avec les taux de drop du serveur) caractérise l'expérience classic ; Silkroad-R (2012) l'a adouci pour élargir l'audience. Les serveurs privés « classic » restauraient souvent les taux durs.
 
 ---
 
 ## ❓ FAQ
 
-### Q: Le PK est-il autorisé?
-**R:** Oui, mais avec des conséquences sévères. Vous pouvez PK, mais vous deviendrez un murderer avec des penalties.
+### Q: Le PK est-il autorisé ?
+**R:** Oui, mais chaque kill non-consensuel ajoute des murder points → dès le premier kill vous avez **30% de risque de dropper un item** à votre prochaine mort (données serveur).
 
-### Q: Puis-ai-ai être murderer et quand même jouer?
-**R:** Oui, mais c'est difficile. Vous ne pouvez pas entrer dans les villes sans être attaqué par les guards.
+### Q: Peut-on jouer en murderer ?
+**R:** Difficile : guards hostiles en ville, drop à la mort, chasse des autres joueurs (vous tuer ne les pénalise pas).
 
-### Q: Les murderers peuvent-ils redevenir normaux?
-**R:** Oui, attendez. Les murder points diminuent avec le temps (généralement 1 point par heure ou par jour).
+### Q: Comment retirer les murder points ?
+**R:** Tuer des monstres de votre niveau ou plus (−1 à −5 points/monstre environ). C'est long.
 
-### Q: L'Arena est-elle meilleure que le PvP open world?
-**R:** Oui, pas de conséquences. C'est le meilleur endroit pour practice le PvP.
+### Q: Les murderers peuvent-ils redevenir normaux ?
+**R:** Oui, en farmant des monstres (voir ci-dessus). Le statut tombe quand les points repassent sous les seuils.
 
-### Q: Quel est le meilleur build pour le PvP?
-**R:** Généralement Dagger Rogue (stealth burst) ou INT Nuker (range). Mais ça dépend.
+### Q: Le PK en job compte-t-il ?
+**R:** Non : Thief vs Hunter/Trader en tenue = PvP consensuel, zéro murder point.
 
-### Q: Les jobs PvP count-ils comme PK?
-**R:** Non, Thief vs Hunter (et Trader) sont considérés comme PvP consenti, pas comme PK.
+### Q: Tuer un murderer me pénalise-t-il ?
+**R:** Non, c'est même encouragé (chasse aux murderers).
+
+### Q: Qu'est-ce qui ne peut JAMAIS tomber à la mort ?
+**R:** Les items de quête/event, les items Item Mall (cash), et l'arme/bouclier/munitions équipés (slots protégés dans le code de drop — seules les autres pièces d'équipement et l'inventaire sont exposés, en statut PK penalty).
+
+### Q: Quel build pour débuter en PvP ?
+**R:** Rogue (stealth burst) ou Warlock (débuffs) pour l'impact rapide ; Blader STR pour le gameplay melee technique.
 
 ---
 
 ## 🔗 Resources
 
-### Guides
-- [PK Guide](http://ww1000w.silkroadforums.com/viewtopic.php?f=5&t=29958)
-- [PvP Strategy](https://silkroadonline.fandom.com/wiki/PvP)
+### Documentation technique
+- [florian0 — Silkroad Online Death Penalty Item Drops (reverse engineering du code de drop)](https://florian0.wordpress.com/2016/10/05/silkroad-online-death-penalty-item-drops)
+- [SilkroadDoc (DummkopfOfHachtenduden/DaxterSoul)](https://github.com/DummkopfOfHachtenduden/SilkroadDoc)
 
-### Communauté
-- [Silkroad Forums - PvP Section](http://www.silkroadforums.com/)
+### Wikis
+- [Silkroad Wiki (fandom) — Murderer](https://silkroad.fandom.com/wiki/Murderer)
+- [Silkroad Wiki (fandom) — PvP Cape](https://silkroad.fandom.com/wiki/PvP_Cape)
+- [Silkroad Wiki (fandom) — Capture the Flag](https://silkroad.fandom.com/wiki/Capture_the_Flag)
+- [StrategyWiki — Silkroad Online/Gameplay](https://strategywiki.org/wiki/Silkroad_Online/Gameplay)
+
+### Guides communauté
+- [Silkroad Forums — How To PK](http://www.silkroadforums.com/viewtopic.php?f=5&t=1125)
+- [Silkroad Forums — PvP cape/army tutorial](http://www.silkroadforums.com/viewtopic.php?f=5&t=4759)
+- [Silkroad Forums — Equipped item drops](http://www.silkroadforums.com/viewtopic.php?f=29&t=13245)
+- [Elitepvpers — Silkroad Online Comprehensive Guide (capes)](https://www.elitepvpers.com/forum/sro-guides-templates/169313-silkroad-online-comprehensive-guide.html)
+- [PlayOrigin — CTF Event Guide](https://forum.playorigin.com/showthread.php?47-Capture-The-Flag-(C-T-F-)-Origin-Guide)
+- [Silkroad Forever (officiel) — Guide CTF](https://www.silkroadforever.com/en-us/m/guideShow.html?f=Fortress&t=1)
 
 ---
 
@@ -457,8 +399,9 @@ Le système **PvP (Player vs Player)** et **PK (Player Killing)** de Silkroad On
 
 ### Systèmes de Combat
 - [Hub Combat](HUB_COMBAT.md) - Centralise combat et PvP
-- [Système de Combat](04_COMBAT_SYSTEM.md) - Mécaniques détaillées
+- [Système de Combat](04_COMBAT_SYSTEM.md) - Formules, status effects, KD/stab
 - [Fortress War](19_FORTRESS_WAR.md) - PvP massif guilde
+- [Mécaniques Avancées](28_ADVANCED_MECHANICS.md) - Formules détaillées
 
 ### Classes et Builds
 - [Hub Classes](HUB_CLASSES.md) - Centralise informations classes
@@ -475,13 +418,14 @@ Le système **PvP (Player vs Player)** et **PK (Player Killing)** de Silkroad On
 - [Seal Equipment](06_SEAL_EQUIPMENT.md) - Gear endgame PvP
 - [Item Degrees](07_ITEM_DEGREES.md) - Progression gear
 - [Armor Types](08_ARMOR_TYPES.md) - Choix armures PvP
-- [Alchemy System](05_ALCHEMY_SYSTEM.md) - Enhancer pour PvP
+- [Alchemy System](05_ALCHEMY_SYSTEM.md) - Blues PvP (absorb, crit, block)
 
 ### Guides Associés
-- [Arenes et Tournois](27_EVENTS.md) - Events PvP
+- [Arènes et Tournois](27_EVENTS.md) - Events PvP
 - [Stratégies Jobs](35_JOB_STRATEGIES.md) - PvP job-based
 - [Builds PvE](34_PVE_BUILDS.md) - Comparison PvP vs PvE
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
+*Dernière mise à jour : 2026-10-01*
+*Sources : florian0 (RE serveur), silkroad.fandom.com, strategywiki.org, silkroadforums.com, elitepvpers.com, playorigin.com, silkroadforever.com*

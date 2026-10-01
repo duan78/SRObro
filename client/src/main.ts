@@ -25,6 +25,7 @@ SceneLoader.RegisterPlugin(new GLTFFileLoader());
 import { NetworkManager } from './network/NetworkManager';
 import { UIManager } from './ui/UIManager';
 import { AuthScreen } from './ui/dom/AuthScreen';
+import { NetworkCombat } from './game/NetworkCombat';
 
 // Collecte des erreurs console pour diagnostic navigateur (window.__errors)
 (function installErrorCollector(): void {
@@ -146,6 +147,15 @@ async function init(): Promise<void> {
     // HUD DOM overlay (fiable) branché sur l'état du jeu
     const hud = new DomHud();
     (window as unknown as { hud: DomHud }).hud = hud;
+
+    // Combat réseau (monstres serveur, ciblage, skills, HUD, mort, loot)
+    let netCombat: NetworkCombat | null = null;
+    if (!singlePlayer && game.getScene() && game.getAssetLoader()) {
+      netCombat = new NetworkCombat(game.getScene()!, network, game.getAssetLoader()!, hud, game.getJanganZone());
+      netCombat.playerName = character?.name ?? 'Aventurier';
+      (window as unknown as { netCombat: NetworkCombat }).netCombat = netCombat;
+      game.getScene()!.onBeforeRenderObservable.add(() => netCombat!.update());
+    }
     const g = game as unknown as {
       progression?: {
         getLevel(): number; getHP(): number; getMaxHP(): number;
@@ -156,21 +166,26 @@ async function init(): Promise<void> {
       scene?: { activeCamera?: { position: { x: number; z: number } } };
     };
     const refreshHud = (): void => {
-      const p = g.progression;
-      if (p) {
-        const cur = p.getCurrentLevelXP();
-        const next = p.getNextLevelXP();
-        hud.setStats({
-          name: character?.name ?? 'Adventurer',
-          level: p.getLevel(),
-          hp: p.getHP(),
-          maxHp: p.getMaxHP(),
-          mp: p.getMP(),
-          maxMp: p.getMaxMP(),
-          exp: Math.max(0, p.getCurrentXP() - cur),
-          maxExp: Math.max(1, next - cur),
-          gold: character?.gold ?? 0,
-        });
+      // En mode réseau, l'état serveur est la source (HUD exact)
+      if (netCombat?.playerState) {
+        netCombat.refreshHud();
+      } else {
+        const p = g.progression;
+        if (p) {
+          const cur = p.getCurrentLevelXP();
+          const next = p.getNextLevelXP();
+          hud.setStats({
+            name: character?.name ?? 'Adventurer',
+            level: p.getLevel(),
+            hp: p.getHP(),
+            maxHp: p.getMaxHP(),
+            mp: p.getMP(),
+            maxMp: p.getMaxMP(),
+            exp: Math.max(0, p.getCurrentXP() - cur),
+            maxExp: Math.max(1, next - cur),
+            gold: character?.gold ?? 0,
+          });
+        }
       }
       const t = g.combat?.currentTarget;
       if (t && !t.isDead && t.hp > 0) {

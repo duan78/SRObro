@@ -11,7 +11,7 @@ import { globalCombatManager } from '../combat/CombatManager';
 import { globalSpatialManager } from '../world/SpatialManager';
 import { globalSpawnManager } from '../ai/SpawnManager';
 import { PlayerEntity } from '../world/PlayerEntity';
-import { MonsterEntity } from '../world/MonsterEntity';
+import { MonsterEntity, MonsterAIState } from '../world/MonsterEntity';
 import { NPCEntity } from '../world/NPCEntity';
 import { prisma } from '../database/prisma';
 
@@ -258,6 +258,15 @@ export class WorldManager {
     // Remove from spatial manager
     globalSpatialManager.removeEntity(characterId);
 
+    // Libérer l'aggro des monstres qui ciblaient ce joueur: l'entité va être
+    // détruite, et un monstre réféençant une cible détruite crashe le tick.
+    for (const monster of this.monsterEntities.values()) {
+      if (monster.target && (monster.target as { id?: string }).id === characterId) {
+        monster.target = null;
+        monster.aiState = MonsterAIState.RETURN;
+      }
+    }
+
     // Remove from world
     this.players.delete(characterId);
 
@@ -294,6 +303,15 @@ export class WorldManager {
     playerEntity.setPosition(data.position);
     playerEntity.setRotation(data.rotation);
 
+    // Repeupler les camps autour de la nouvelle position si le joueur a
+    // beaucoup bougé (sinon: zones à +120 m du spawn restent vides jusqu'à
+    // un cycle respawnTime complet après l'arrivée du joueur).
+    const last = this.lastForceCheck.get(characterId);
+    if (!last || Math.hypot(data.position.x - last.x, data.position.z - last.z) > 60) {
+      this.lastForceCheck.set(characterId, { x: data.position.x, z: data.position.z });
+      globalSpawnManager.forceCheckNearby(data.position, 120);
+    }
+
     // Update spatial manager
     globalSpatialManager.updateEntityPosition(characterId, data.position);
 
@@ -328,6 +346,12 @@ export class WorldManager {
 
     if (!targetEntity) {
       logger.warn(`Attack target not found: ${data.targetId}`);
+      return;
+    }
+
+    // Compétence: déléguée au CombatBridge (cooldown, MP, multi-coups)
+    if (data.skillId && this.combatBridge) {
+      this.combatBridge.processSkillCast(client, characterId, data.skillId, data.targetId);
       return;
     }
 
@@ -375,6 +399,7 @@ export class WorldManager {
           damage: result.damage,
           isCritical: result.isCritical,
           isBlocked: result.isBlocked,
+          remainingHp: result.targetHp,
         },
       });
     }
@@ -554,8 +579,7 @@ export class WorldManager {
   /**
    * Convert entity to combat participant
    */
-  private toCombatParticipant(entity: PlayerEntity | MonsterEntity | NPCEntity) {
-    return {
+  toCombatParticipant(entity: PlayerEntity | MonsterEntity | NPCEntity) {    return {
       id: entity.id,
       name: entity.name,
       level: entity.level,
@@ -610,6 +634,9 @@ export class WorldManager {
     // Update combat manager
     globalCombatManager.update();
 
+    // Diffusion des positions/états monstres (throttlée)
+    this.combatBridge?.update(delta);
+
     // Update all players
     for (const player of this.players.values()) {
       player.update(delta);
@@ -618,17 +645,24 @@ export class WorldManager {
     // Update all monsters + aggro. Sans joueur connecté, on saute les
     // requêtes spatiales d'aggro (sinon 1 requête par monstre par tick).
     for (const monster of this.monsterEntities.values()) {
-      monster.update(delta);
+      try {
+        monster.update(delta);
 
-      // Check for aggro
-      if (this.players.size > 0 && (monster.aiState === 'idle' || monster.aiState === 'patrol')) {
-        const nearbyPlayers = globalSpatialManager.getEntitiesByType('player', monster.position, monster.aggroRange);
-        for (const player of nearbyPlayers) {
-          const playerEntity = this.players.get(player.id);
-          if (playerEntity && playerEntity.isAlive() && monster.canAggro(playerEntity)) {
-            monster.aggro(playerEntity);
+        // Check for aggro
+        if (this.players.size > 0 && (monster.aiState === 'idle' || monster.aiState === 'patrol')) {
+          const nearbyPlayers = globalSpatialManager.getEntitiesByType('player', monster.position, monster.aggroRange);
+          for (const player of nearbyPlayers) {
+            const playerEntity = this.players.get(player.id);
+            if (playerEntity && playerEntity.isAlive() && monster.canAggro(playerEntity)) {
+              monster.aggro(playerEntity);
+            }
           }
         }
+      } catch (monsterError) {
+        // Une entité corrompue ne doit JAMAIS figer tout le monde (bug
+        // historique: target null → tick en échec → monde gelé).
+        logger.error(`Monster update error (${monster.name}):`, monsterError);
+        monster.target = null;
       }
     }
   }
@@ -670,6 +704,13 @@ export class WorldManager {
   // Anti-spam d'attaque par personnage (timestamp de la dernière attaque)
   private lastPlayerAttack: Map<string, number> = new Map();
 
+  // Dernière position où un forceCheckNearby a été fait pour ce joueur
+  private lastForceCheck: Map<string, { x: number; z: number }> = new Map();
+
+  // Pont combat (phase 2) — injecté après construction pour éviter le cycle
+  // WorldManager ⇄ CombatBridge.
+  combatBridge: import('./CombatBridge').CombatBridge | null = null;
+
   on(event: string, listener: (...args: unknown[]) => void): void {
     if (!this.eventListeners.has(event)) {
       this.eventListeners.set(event, []);
@@ -684,5 +725,10 @@ export class WorldManager {
         listener(data);
       }
     }
+  }
+
+  /** Joueur connecté par characterId (null si hors ligne). */
+  getPlayer(characterId: string): PlayerEntity | undefined {
+    return this.players.get(characterId);
   }
 }

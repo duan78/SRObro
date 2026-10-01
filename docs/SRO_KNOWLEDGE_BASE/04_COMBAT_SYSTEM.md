@@ -3,14 +3,19 @@
 ## 📋 Table des Matières
 - [Vue d'Ensemble](#-vue-densemble)
 - [Mécaniques de Base](#-mécaniques-de-base)
+- [Vitesses : Attaque / Incantation / Déplacement](#-vitesses--attaque--incantation--déplacement)
 - [Attaques Normales vs Skills](#-attaques-normales-vs-skills)
-- [Animation Cancelling](#-animation-cancelling)
 - [Formules de Dégâts](#-formules-de-dégâts)
 - [Critical Hits et Parry](#-critical-hits-et-parry)
+- [Block et Parry](#-block-et-parry)
+- [Vol de vie : Absorb HP / Absorb MP](#-vol-de-vie--absorb-hp--absorb-mp)
 - [Berserker Mode](#-berserker-mode)
 - [Status Effects](#-status-effects)
+- [Imbues Élémentaires Chinoises](#-imbues-élémentaires-chinoises)
+- [Knockdown / Knockback / Stab System](#-knockdown--knockback--stab-system)
+- [Animation Cancelling](#-animation-cancelling)
 - [PvP vs PvE](#-pvp-vs-pve)
-- [Knockdown System](#-knockdown-system)
+- [Différences Client Classique vs Silkroad-R](#-différences-client-classique-vs-silkroad-r)
 - [FAQ](#-faq)
 - [Resources](#-resources)
 
@@ -18,26 +23,27 @@
 
 ## 🎯 Vue d'Ensemble
 
-Le système de combat de Silkroad Online est un **système tab-target** avec des skills, des combos, et des mécaniques avancées comme le knockdown, le parrying, et le critical hitting.
+Le système de combat de Silkroad Online est un **système tab-target** avec des skills, des combos, et des mécaniques avancées comme le knockdown, le parry, le critical hit et le Berserker (Zerk).
 
 ### Points Clés
-- ✅ **Tab-target combat** (sélection classique)
-- ✅ **Skill-based gameplay** (combos, chains)
-- ✅ **Animation cancelling** possible
-- ✅ **Physical vs Magical damage**
-- ✅ **Critical hits et parry**
-- ✅ **Knockdown system** (CC)
-- ✅ **Status effects** (burn, freeze, poison)
-- ✅ **PvP et PvE different mechanics**
+- ✅ **Tab-target combat** (sélection classique, pas d'action combat)
+- ✅ **Skill-based gameplay** (combos, chains, cooldowns)
+- ✅ **Animation cancelling** possible (technique communautaire majeure)
+- ✅ **Physical vs Magical damage** (deux voies de dégâts cumulables)
+- ✅ **Critical hits** : seule la partie PHY double, la MAG ne critique pas
+- ✅ **Knockdown / Knockback / Stab** (le cœur du PvP melee)
+- ✅ **Status effects** nombreux (burn, freeze, frostbite, shock, poison, zombie, decay, division, impotent, dull, fear, panic, disease, hidden, combustion, bind...)
+- ✅ **Berserker orb** (jauge se remplissant via les kills)
+- ✅ **PvP et PvE** : mêmes formules, différences de contexte (voir [PvP vs PvE](#-pvp-vs-pve))
 
 ### Type de Combat
 
 Silkroad Online utilise un système de combat **traditionnel MMORPG**:
-- Cliquez sur un ennemi pour le target
-- Utilisez des skills (1-9, F1-F8)
-- Entraînez des combos et chains
-- Gérez votre positionnement
-- Utilisez des potions en combat
+- Cliquez sur un ennemi pour le cibler (ou Tab pour le plus proche)
+- Utilisez des skills (barres 1-0, Ctrl+1-0, Alt+1-0)
+- Les skills ont un **temps d'incantation** (EU) ou sont **instantanés avec animation** (CH)
+- Gérez votre positionnement (kiting, distance de skill)
+- Utilisez des potions en combat (HP/MP/pills universels)
 
 ---
 
@@ -45,56 +51,90 @@ Silkroad Online utilise un système de combat **traditionnel MMORPG**:
 
 ### 1. Targeting
 
-**Comment Target:**
+**Comment cibler:**
 - **Click-to-target:** Cliquez sur l'ennemi
-- **Tab-target:** Appuyez sur Tab pour target le plus proche
-- **F1-F8:** Target rapide via quick slots
-- **Esc:** Deselect target
+- **Tab-target:** Appuyez sur Tab pour cibler le plus proche
+- **Esc:** Désélectionne la cible
 
-**Target Display:**
-- **Nom de la cible** affiché
+**Affichage de la cible:**
+- **Nom** de la cible (couleur selon niveau relatif)
 - **HP bar** visible
 - **Level** de la cible
-- **Mode:** Attack (épée) ou Neutral
+- **Mode:** attaque / neutre / PvP (cape, job suit, murderer)
 
-### 2. Attack Range
+### 2. Attack Range (distances de skills)
 
-**Ranges:**
-- **Melee:** 1-3 mètres (Sword, Spear, Dagger)
-- **Short Range:** 4-8 mètres (Claw)
-- **Medium Range:** 10-15 mètres (Bow, Xbow)
-- **Long Range:** 15-25 mètres (Nukes, Staff)
+Les distances sont exprimées en mètres dans les données du client (champ *Distance* de RefSkill) :
 
-**Visual Indicators:**
-- Skill s'illumine si in range
-- "Target too far" message si out of range
-- Utilisez le terrain pour kite
+| Type | Distance typique | Exemples |
+|------|-----------------|----------|
+| **Melee (dague/sword/spear)** | 1-3 m | Stab Chain (2 m), Sword Chain (3 m) |
+| **Claw / Daggers** | 1-2 m | Coup Bas : 2 m |
+| **Scepter / buffs EU** | 0-15 m | Buffs de groupe : 15 m |
+| **Bow / Crossbow** | ~10-15 m+ (selon skill) | Strong Bow, Hawk Series |
+| **Nukes CH** | 10-15 m+ | nukes Fire/Lightning/Cold |
+| **Wizard nukes EU** | 10-20 m+ | Meteor, Blizzard |
+
+**Notes:**
+- La majorité des skills melee EU sont à **2 mètres** (données RefSkill vérifiées)
+- Certains skills de zone (Cri Désespéré etc.) ont **Distance 3 m / Portée 3 m**
+- "Target too far" s'affiche si hors de portée ; le skill ne part pas
 
 ### 3. Auto-Attack
 
 **Attaque automatique:**
-- Activez avec **Ctrl + Auto-Attack** (ou clic droit sur l'ennemi)
-- Personnage attaque automatiquement
-- Dégâts de base (PHY ou MAG selon weapon)
-- Peut être interrompu avec des skills
-
-**Calcul:**
-```
-Auto-Attack Damage = (Weapon Attack * STR/INT multiplier) - Enemy Defense
-```
+- Activez avec **clic droit** sur l'ennemi (ou double-clic)
+- Le personnage attaque automatiquement à la vitesse de l'arme
+- Dégâts de base (PHY ou MAG selon l'arme, les armes CH sword/glaive font les deux)
+- Peut être interrompue par les skills / mouvement
 
 ### 4. Skill Usage
 
-**Utilisation des Skills:**
-- **1-9:** Barre principale
-- **F1-F8:** Quick slots
-- **Ctrl + 1-9:** Secondary bar
-- **Click:** Drag and drop skills dans les slots
+- **1-0:** Barre principale
+- **Ctrl / Alt + touches:** Barres secondaires
+- Chaque skill a un **cooldown** (affiché en secondes sur l'icône)
+- Les skills EU ont un **cast time** (réduit par la stat *haste/casting speed*)
+- Les skills CH sont quasi-instantanés mais avec animations plus longues
 
-**Skill Cooldowns:**
-- Chaque skill a un cooldown
-- Gérez vos rotations
-- Chain skills for continuous DPS
+---
+
+## ⚡ Vitesses : Attaque / Incantation / Déplacement
+
+### Attack Speed (vitesse d'attaque)
+
+Chaque type d'arme a une **vitesse d'attaque de base** (données items communautaires, elitepvpers "The Way Items Work") :
+
+| Arme | Vitesse | Note |
+|------|---------|------|
+| **Dagger / Daggers (Rogue)** | Très rapide | Le plus rapide du jeu |
+| **Sword CH (1 main) / Staff EU (1 main)** | Rapide | 10 (échelle communautaire) |
+| **Harp, Crossbow (visée)** | Moyen | |
+| **Glaive / Spear CH** | Moyen | 11 |
+| **2H: Blade lourde, Axe de guerre, Épée longue EU** | Lent | 13 |
+| **Bow CH** | Très lent | 9 (le plus lent) |
+
+- La stat **"attack speed"** existe en blue sur certaines armes/accessoires
+- **Frostbite** réduit la vitesse d'attaque ET de déplacement de la cible
+- L'échelle exacte (coups/min) varie selon les sources ; l'ordre relatif est confirmé
+
+### Casting Speed (vitesse d'incantation — principalement EU)
+
+- Les skills **européens** ont des temps d'incantation (0,5 à 2+ secondes)
+- La stat **haste / casting speed** réduit ce temps
+- Les données RefSkill contiennent deux colonnes : `Cast` de référence et `Cast (hâte)` — le jeu calcule les deux
+- Les skills **chinois** sont instantanés (Cast 0) mais leur **animation** conditionne le DPS réel → d'où l'animation cancelling
+
+### Movement Speed (vitesse de déplacement)
+
+- **Base:** vitesse de course standard (~50 en unités jeu ; ~5 m/s effective)
+- **Bonus additifs (stack):**
+  - Garment set complet (6 pièces) : **+20%**
+  - Protector set complet : **+10%**
+  - Lightning (passif Wind walk series) : jusqu'à **+50%** au max (selon niveau de skill)
+  - Potions/drugs de vitesse : jusqu'à **+50%**
+  - Blue stats sur stuff
+- **Malus:** Frostbite / Freeze (ralentissement), Heavy armure (pas de bonus set)
+- Cap pratique constaté : environ **2× la vitesse de base**
 
 ---
 
@@ -103,600 +143,457 @@ Auto-Attack Damage = (Weapon Attack * STR/INT multiplier) - Enemy Defense
 ### Auto-Attaques (Normal Attacks)
 
 **Caractéristiques:**
-- ✅ No MP cost
-- ✅ No cooldown
-- ✅ Damage constant
-- ❌ Dégâts plus bas
-- ❌ Pas d'effets spéciaux
+- ✅ Pas de coût MP
+- ✅ Pas de cooldown
+- ❌ Dégâts beaucoup plus bas qu'un skill
+- ❌ Pas d'effets spéciaux (pas de KD, pas de status)
+- ✅ Peuvent **crit** (utile pour les builds crit)
 
-**Damage:**
-- **Physical weapons:** Sword, Spear, Bow, etc. = PHY damage
-- **Staff:** MAG damage
-- **Base damage:** Weapon attack + STR/INT
+**Dégâts:**
+- **Armes physiques** (sword, blade, spear, bow, dagger...) : PHY damage
+- **Armes magiques** (staff, harp...) : MAG damage
+- **Armes hybrides CH** (sword 1M, glaive) : dégâts PHY **et** MAG simultanés (double attaque)
+- Base = weapon damage modulée par le renfort STR/INT et l'AR/PR
 
 ### Skills
 
 **Caractéristiques:**
-- ✅ Dégâts élevés
-- ✅ Effets spéciaux (KD, debuff, etc.)
-- ✅ Chain combos
-- ❌ MP cost
+- ✅ Dégâts élevés (multipliers 100-600%+)
+- ✅ Effets spéciaux (KD, KB, status, buffs, debuffs)
+- ✅ Chains / combos
+- ❌ Coût MP
 - ❌ Cooldowns
 
 **Skill Damage Types:**
-- **Physical Skills:** Bicheon, Heuksal, Pacheon
-- **Magical Skills:** Fire, Lightning, Cold, Wizard
-- **Hybrid:** Force, Warlock
+- **Physical Skills:** Bicheon, Heuksal, Pacheon (CH) ; Warrior, Rogue, Warlock (dot PHY EU)
+- **Magical Skills:** Fire, Lightning, Cold nukes (CH) ; Wizard, Warlock curses (EU)
+- **Hybride:** Force (CH), certaines attacks EU mixtes
 
 ### Skill Chains
 
-Les skills peuvent être **chaînés** ensemble pour des combos:
-
 **Exemple Chinois (Sword):**
-1. Chain Sword Attack I
-2. Chain Sword Attack II
-3. Chain Sword Attack III
-4. Finisher (Killing Heaven Blade)
+1. Chain Sword Attack I → II → III (combos à 3 hits)
+2. Finisher type Killing Heaven Blade
 
 **Exemple Européen (Warrior):**
-1. Bash
-2. Cutdown
-3. Fury Swing
-4. Finisher
+1. Bash / Triple Attack
+2. Will Turn (KD setup)
+3. Sprint Assault / Bloody Storm
 
-**Benefits:**
-- Damage bonus si chain réussi
-- Animation fluid
-- Stunlock potentiel
+**Note importante:** en SRO classique, il n'y a pas de "damage bonus de chain" automatique — les chains existent parce que les skills intermédiaires ont des animations courtes et des KD/KB qui permettent les follow-ups (stabs ×2, etc.).
 
 ---
 
-## 🎬 Animation Cancelling
+## 📊 Formules de Dégâts
 
-### Qu'est-ce que l'Animation Cancelling?
+### Formule Générale (source principale : elitepvpers "Silkroad Damage Formulas")
 
-L'**animation cancelling** est une technique avancée pour **annuler l'animation de fin** d'une skill pour lancer la skill suivante plus vite.
-
-### Comment Faire
-
-**Technique:**
-1. Lancez une skill
-2. Immédiatement après le damage frame
-3. Lancez la skill suivante
-4. L'animation de fin est "cancel"
-
-**Timing:**
-- Pratiquez sur des mobs
-- Apprenez les frames de damage
-- Utilisez sound cues (son d'impact)
-
-**Benefits:**
-- DPS augmenté
-- Plus rapide
-- Perd moins de temps
-
-**Exemple:**
-```
-Chain Attack I → [cancel] → Chain Attack II → [cancel] → Chain Attack III
-```
-
-### Différents Types
-
-**Basic Cancel:**
-- Annule l'animation de fin
-- Passe à la skill suivante
-- DPS increase: ~10-20%
-
-**Advanced Cancel:**
-- Cancel avec des items (potions, scrolls)
-- Switch weapons pour cancel
-- Plus difficile, mais DPS +30%
-
-**Note:** Animation cancelling est **légitime** et pas un exploit. C'est une mécanique avancée du jeu.
-
----
-
-## 📊 Formules de Dégâts (VERIFIED DATA)
-
-### Formule Générale de Dégâts
-
-**Structure de Base:**
+**Structure :**
 ```
 Total Damage = Physical Damage + Magical Damage
+
+Physical Damage = [(base + skill_pow × mastery_incr − Phys def) × balance × skill_mult × buff&passive × multiplier]
+Magical Damage = [((base + imbue_pow) × mastery_incr − Mag def) × balance × skill_mult × buff&passive × multiplier]
 ```
 
-**Détail du calcul (d'après recherche communautaire):**
+**Composants :**
+1. **base** : attaque de base du personnage (weapon + renfort STR/INT, voir ci-dessous)
+2. **skill_pow** : puissance de la skill (valeur min~max du skill)
+3. **mastery_incr** : bonus de mastery (ex: 1.90 pour un mastery 90 vs skill bas niveau)
+4. **Phys/Mag def** : défense de la cible (soustraite)
+5. **balance** : Physical/Magical Balance (voir ci-dessous)
+6. **skill_mult** : multiplier % de la skill (57%, 350%, etc.)
+7. **buff&passive** : multiplicateurs de buffs (+18% attack etc.)
+8. **multiplier** : constantes globales du jeu (voir ci-dessous)
+
+**Constantes de conversion (testées communauté, elitepvpers) :**
+- **Physical Multiplier : 1.276772606**
+- **Magical Multiplier : 1.287004542**
+
+> ⚠️ Ces constantes proviennent de tests joueurs réputés fiables, mais n'ont jamais été confirmées par Joymax. Les serveurs privés les modifient parfois.
+
+### Balance (Physical / Magical)
+
 ```
-Final Damage = [(Weapon Damage + Skill Damage) × Skill Multiplier × Imbue Multiplier] + Attack Rating - Enemy Parry Ratio
-```
-
-**Components:**
-1. **Weapon Damage:** Base damage de l'arme (range: min-max)
-2. **Skill Damage:** Damage additionnel de la skill
-3. **Skill Multiplier:** Pourcentage affiché dans la skill (ex: 57%, 150%, 250%)
-4. **Imbue Multiplier:** Damage élémentaire de l'imbue (Fire/Lightning/Cold imbue)
-5. **Attack Rating:** Chance de hit vers le max du weapon range
-6. **Parry Ratio:** Réduit le damage reçu (enemy defense)
-
-### Physical Damage (PHY)
-
-**Formule Détaillée:**
-```
-PHY Damage = (Weapon PHY Attack + STR Bonus + Skill PHY Damage) × Skill Multiplier - (Enemy Parry Ratio / PHY DEF Reduction)
-```
-
-**Factors:**
-- **Weapon Attack:** Base damage range (ex: 100-120)
-- **STR:** Chaque point STR augmente le PHY damage
-- **Skill Damage:** Additionnel damage de la skill
-- **Skill Multiplier:** 50%-300% selon la skill
-- **Attack Rating:** Détermine si vous hit vers le max ou min de votre range
-- **Enemy Parry:** Plus enemy a de parry, plus vous hit vers votre min damage
-
-**Attack Rating vs Parry Ratio (MÉCANIQUE CONFIRMÉE):**
-- **Attack Rating (AR):** Higher AR = plus de chance de hit le MAX de votre weapon range
-- **Parry Ratio (PR):** Higher PR = plus de chance de faire hit l'attaquant vers son MIN damage
-- **Interaction:** AR vs PR détermine le damage final dans le range
-
-**Exemple:**
-- Weapon: 800-1000 PHY
-- Sans AR/PR: Random entre 800-1000
-- **High AR vs Low PR:** Vous hit souvent 1000 (max)
-- **Low AR vs High PR:** Vous hit souvent 800 (min)
-- **High AR vs High PR:** Damage se balance vers le moyen (~900)
-
-### Magical Damage (MAG)
-
-**Formule Détaillée:**
-```
-MAG Damage = (Staff MAG Attack + INT Bonus + Skill MAG Damage) × Skill Multiplier - Enemy MAG DEF
+Physical Balance = 100 × STR / M
+Magical Balance  = 100 × INT / M
+où  M = max(STR × 1.29, INT)
 ```
 
-**Factors:**
-- **Staff MAG Attack:** Base magical damage de l'arme
-- **INT:** Chaque point INT augmente le MAG damage (~1 damage per INT)
-- **Skill Damage:** Base damage de la skill nuke
-- **Skill Multiplier:** Multiplier de la skill
-- **Enemy MAG DEF:** Réduction directe du MAG damage
+- **1 STR ≈ 1.29 INT** dans le calcul du dénominateur → un full STR a un Physical Balance de 100% et un Magical Balance réduit (~77%)
+- Un full INT : Magical Balance 100%, Physical Balance ~33%
+- Un hybride 1:1 : environ 56%/44%
 
-**Exemple:**
-- Skill: 500-600 MAG
-- INT: 150 (bonus ~150)
-- Staff: 100 MAG
-- Total: 750-850 potential
-- Enemy MAG DEF: 100
-- Final: 650-750 damage
-
-### Critical Hits (FORMULE VÉRIFIÉE)
-
-**Formule Crit Confirmée:**
+**Exemple (source elitepvpers, Pure STR Bow lvl 100):**
 ```
-Normal Damage = Physical Damage + Magical Damage
-Critical Damage = 2 × Physical Damage + Magical Damage
+Stats: STR 442, INT 175
+Base PHY Attack: 2558 ~ 3012 — Base MAG Attack: 2638 (élémentaire)
+Buffs: 18% PHY, 18% MAG
+Skill: Strong Bow-Craft lvl 8 (574 ~ 777, 350%)
+Imbue: Soul Fire Force lvl 11 (658 ~ 1097, 100%)
+
+PHY = (3012 + 777×1.90 − 7) × 1.09 × 3.5 × 1.18 × 1.28 ≈ 25 890
+MAG = ((2638 + 1097) × 1.90 − 10) × 0.45 × 3.5 × 1.18 × 1.28 ≈ 16 897
+Total ≈ 42 787   |   Crit ≈ 68 678
 ```
 
-**Exemples:**
-- **Normal:** 1000 PHY + 200 MAG = 1200 total
-- **Critical:** 2 × 1000 PHY + 200 MAG = **2200 total** (1.83x multiplier)
+### Stats dérivées (HP / MP / attaques / défenses)
 
-**Critical Rate:**
-- **Base:** Calculé basé sur STR (plus de STR = plus de crit damage)
-- **Weapon bonus:** Certaines armes ont +% crit rate
-- **Max rate:** ~30-40% possible avec gear optimal
+Sources croisées : evolex.dev calculator + guides elitepvpers :
 
-**Critical Damage (pas rate):**
-- STR augmente le critical DAMAGE (pas juste la chance)
-- Full STR characters crit beaucoup plus haut que full INT
-
-### Skill Multipliers (DÉTAILS)
-
-**Comment fonctionnent les multipliers:**
-- Le multiplier (%) s'applique à la somme de (Weapon + Skill damage)
-- Multiplier < 100% = moins de damage (swift combo attacks)
-- Multiplier > 100% = plus de damage (finishers, nukes)
-- Multiplier s'applique APRÈS avoir additionné weapon et skill damage
-
-**Exemple:**
-- Weapon: 100-200
-- Skill adds: 300-400
-- Total: 400-600
-- Avec multiplier 57%: 400-600 × 0.57 = **228-342 final**
-- Avec multiplier 250%: 400-600 × 2.5 = **1000-1500 final**
-
-### Parry Ratio et Defense (MÉCANIQUE AVANCÉE)
-
-**Parry Ratio (PR):**
-- Détermine la chance que l'ennemi hit vers son **minimum damage**
-- Plus vous avez de PR, plus vous réduisez le damage reçu
-- PR s'accumule depuis tous vos équipements
-
-**Formule approximative:**
 ```
-Final Damage = Base Damage × (1 - Parry Ratio %)
+Max HP = 20 × Level + STR × 8 + INT × 2  (+ items)
+Max MP = 20 × Level + STR × 2 + INT × 8  (+ items)
+
+Physical Attack = STR × Physical Reinforce (+ weapon)
+Magical Attack  = INT × Magical Reinforce (+ weapon)
+Physical Defense = armure PHY + STR × Physical Reinforce (défense)
+Magical Defense  = armure MAG + INT × Magical Reinforce (défense)
 ```
 
-**Exemple:**
-- Attacker weapon: 800-1200
-- Votre PR: Élevé
-- Résultat: Attacker hit souvent vers 800-900 (au lieu de random 800-1200)
+**Renforts (Reinforce %)** : les passifs/items ajoutent un % qui **multiplie** la contribution STR/INT. Un renfort élevé vaut souvent plus qu'un +weapon brut. (Ex communauté : 500 STR × 276.8% + 2146 base = 3 530 attack total.)
 
-**Sources de Parry:**
-- **Armor types:**
-  - Garment: High PR (40-50%)
-  - Protector: Medium PR (30-40%)
-  - Armor: Low PR (20-30%)
-- **Skills:** Lightning buffs ajoutent du PR
-- **Passives:** Certaines masteries ont +% PR passives
+### Attack Rating vs Parry Ratio (mécanique confirmée)
+
+**⚠️ Mécanique la plus mal comprise du jeu.** L'AR et le PR ne sont PAS des chances de toucher/esquiver type WoW. Il n'y a **pas de miss** sur les attaques normales en SRO (hors rupture de portée) :
+
+- **Attack Rating (attaquant)** : pousse le jet de dégâts vers le **MAX** de la range d'arme
+- **Parry Ratio (défenseur)** : pousse le jet de dégâts reçu vers le **MIN** de la range de l'attaquant
+
+```
+Arme 80 ~ 112 dégâts :
+- Haut AR vs bas PR  → dégâts proches de 112
+- Bas AR vs haut PR  → dégâts proches de 80
+- AR ≈ PR            → dégâts moyens (~96)
+```
+
+**Sources de gain :**
+- AR et PR augmentent de **+1 par niveau** de personnage
+- **+3 par niveau de mastery** (CH et EU)
+- Armes et boucliers apportent des valeurs fixes (hitratio/parry stat)
+- Buffs : Lightning "Concentration" series (parry ratio), certains buffs EU
+
+### Skill Multipliers
+
+- Le multiplier (%) s'applique à l'ensemble (weapon + skill power)
+- Multipliers typiques : 50-150% (skills rapides/combos), 200-350% (nukes/finishers), jusqu'à 600%+ (skills cap élevé)
+- Les skills d'imprégnation (imbues) ont leur propre puissance ajoutée à la partie magique
 
 ---
 
 ## 💥 Critical Hits et Parry
 
-### Critical Hits
+### Formule du Critical (vérifiée multi-sources)
 
-**Qu'est-ce qu'un Crit?**
-Un **critical hit** est un coup qui inflige **plus de dégâts** que la normale.
-
-**Caractéristiques:**
-- **Visual:** Effect spécial, son
-- **Damage:** 1.5x - 3.0x damage
-- **Chance:** Base 5%, jusqu'à ~40% avec gear
-- **Types:**
-  - **PHY Critical:** Physical weapons
-  - **MAG Critical:** Staff, magical weapons
-
-**Comment Augmenter les Crits:**
-
-1. **Weapons:**
-   - Certaines armes ont +Critical%
-   - Surtout Bow, Dagger, Xbow
-
-2. **Accessories:**
-   - Rings avec +Critical
-   - Earrings avec +Critical
-
-3. **Passives:**
-   - Mastery passives
-   - Hawk Training (Pacheon)
-
-4. **Buff Skills:**
-   - Certaines skills augmentent crit rate
-
-### Parry et Block
-
-#### Parry (Esquive Passive)
-
-**Qu'est-ce que Parry?**
-Le **Parry** est une esquive passive qui réduit les dégâts physiques.
-
-**Formule:**
 ```
-Final Damage = Base Damage * (1 - Parry Ratio)
+Dégâts normaux = Physical Damage + Magical Damage
+Dégâts crit    = 2 × Physical Damage + Magical Damage
 ```
 
-**Parry Sources:**
-- **Armor Types:**
-  - **Garment:** High parry (~40-50%)
-  - **Protector:** Medium parry (~30-40%)
-  - **Armor:** Low parry (~20-30%)
+**Exemples:**
+- Normal : 1000 PHY + 200 MAG = 1200
+- **Crit : 2 × 1000 + 200 = 2200** (soit ×1.83 pour un hybride 5:1)
 
-- **Skills:**
-  - Certaines skills ajoutent du parry
-  - Lightning: "Concentration" (ESR + parry)
+**Conséquences :**
+- Seule la **partie physique** double → les builds STR crit beaucoup plus fort
+- Un full INT (nuker) ne bénéficie presque pas du crit (sa partie PHY est minuscule)
 
-- **Passives:**
-  - Mastery passives
+### Qu'est-ce qui peut critiquer ?
 
-#### Block (Block avec Shield)
+- ✅ **Skills d'armes chinois** (Bicheon, Heuksal, Pacheon) : peuvent crit
+- ✅ **Attaques normales**
+- ✅ **Skills EU** (physiques et, selon tests, magiques — sujet débattu)
+- ❌ **Nukes chinois** (Fire/Lightning/Cold) : **ne crit PAS**
+- ❌ **Lion Shout** (Lightning) : ne crit pas
 
-**Qu'est-ce que Block?**
-Le **Block** est une esquive active avec un shield qui **réduit drastiquement** les dégâts.
+### Critical Rate (chance)
 
-**Caractéristiques:**
-- **Nécessite:** Shield equipped
-- **Damage Reduction:** 50-80%
-- **Block Rate:** Basé sur le shield
-- **Active:** Seulement quand block se produit
+- Le **critical rate vient de la stat "Critical" de l'équipement** (weapon surtout, accessoires)
+- **Critical 10 = 10% de chance** (correspondance directe)
+- Valeurs par degree (données items communautaires) : jusqu'à **Crit 11** (D6), **Crit 15** (D7-8), **Crit 20+** (D9-11) sur le meilleur stuff, ~**25%** atteignable avec un très bon set
+- ⚠️ La STR augmente le critical **DAMAGE** (via la formule ci-dessus), **PAS la chance**
 
-**Shields:**
-- **Level 1-30:** 10-20% block rate
-- **Level 31-60:** 20-30% block rate
-- **Level 61-80:** 30-40% block rate
-- **Level 81+:** 40-50% block rate
+---
 
-**Shield Types:**
-- **PHY Shield:** Réduit le PHY damage
-- **MAG Shield:** Réduit le MAG damage
+## 🛡️ Block et Parry
+
+### Block (bouclier uniquement)
+
+- Nécessite un **bouclier équipé** (1 main + bouclier)
+- **Block rate = chance directe de bloquer** (stat du bouclier, en %)
+- Un bouclier correct a un **block ratio ≥ 15** ; 17+ = excellent/PvP (coûteux)
+- Le blocage **annule/reduit fortement** les dégâts de l'attaque bloquée (constaté : dégâts réduits à ~0 ou très faibles)
+- Ne bloque pas la plupart des skills magiques/nuke selon retours joueurs (débattu ; vSRO : block s'applique aux attaques PHY)
+
+### Parry (passif, tout le monde)
+
+- Voir [Attack Rating vs Parry Ratio](#formules-de-dégâts) : déplace le jet de dégâts vers le min de la range adverse
+- Sources de parry ratio : niveau, masteries, boucliers, armures, buff Lightning Concentration
+- **Il n'y a pas de "cap 80%"** — le parry ne réduit pas en %, il déplace le jet dans la range
+
+### Armures et parry/défense (correction d'une erreur fréquente)
+
+Les types d'armure ne donnent PAS un % de parry. Ils diffèrent par :
+
+| Type d'armure | PHY DEF | MAG DEF | Bonus set (complet) |
+|---|---|---|---|
+| **Armor (heavy)** | Maximum | Faible | aucun |
+| **Protector** | Moyen | Moyen | +10% speed, −10% MP cost |
+| **Garment** | Faible | Élevé | +20% speed, −20% MP cost |
+
+---
+
+## 🩸 Vol de vie : Absorb HP / Absorb MP
+
+- **Stats bleues d'équipement** : "Absorb HP" / "Absorb MP" (accessoires jusqu'à ~20%, armes 10-35% selon degré)
+- Chaque attaque/dégâts infligés rendent un % en HP ou MP
+- S'obtient par alchimie (blues) — se retire uniquement par destrction totale de l'item
+- **Skills :** certains skills ont un effet Absorb natif (ex. données RefSkill : « Baiser du Vampire » : dégâts + **absorb 50%** des dégâts infligés ; Warlock Leech-type skills)
+- Le **Zerk** ne vole pas de vie ; par contre les dégâts absolus (% HP) existent via certains skills
 
 ---
 
 ## 🔥 Berserker Mode
 
-### Qu'est-ce que le Berserker Mode?
+### La jauge Berserk (orb)
 
-Le **Berserker Mode** est un état spécial de combat qui offre des dégâts considérablement augmentés en échange d'une défense réduite. C'est une mécanique clé pour les situations de "burst damage".
+- Une **orb (losange doré)** tombe parfois des monstres tués (~1 kill sur 3, monstres de niveau proche ou supérieur recommandés)
+- Il faut **5 orbs** pour remplir la jauge (4 slots + 1)
+- La jauge se remplit aussi en frappant/recevant des coups (lentement)
+- **Berserk Regeneration Pill** (« Energy of Life ») : remplit instantanément la jauge — cooldown ~20 minutes
 
-### Activation
+### Effets exacts
 
-**Comment Activer:**
-- **Condition:** La barre bleue (Berserk Bar) doit être pleine
-- **Remplissage:** La barre se remplit progressivement en combat
-- **Activation:** Appuyez sur la touche de raccourci (configurable) ou cliquez sur l'icône
+- Le personnage prend son **mode Berserker** (« Destructeur de masse » → « Démoniaque » → « Dieu » selon le rang du titre)
+- **Dégâts multipliés (~×2)** et animations accélérées pendant la durée
+- ⚠️ Contrairement à une idée reçue répandue, le Zerk **n'augmente pas la défense** dans le client classique — il booste l'offensif (les variantes mobiles/privées ajoutent parfois des stats)
+- **Blue Zerk** (iSRO, quête titre lvl 95 « Captain » puis 100 « Senior General ») : même dégâts que le zerk rouge mais **+10% de défense** (15% pour la version lvl 100) pour tout le groupe si plusieurs membres l'utilisent
 
-**Caractéristiques:**
-- La barre bleue se remplit en donnant et recevant des dégâts
-- Plus vous combattez, plus vite elle se remplit
-- Une fois pleine, le mode Berserker devient disponible
+### Stratégies
 
-### Effets du Berserker Mode
-
-**Bonus when Active:**
-- ✅ **Dégâts augmentés:** +20-50% damage (selon sources)
-- ✅ **Vitesse d'attaque:** Attaques plus rapides
-- ✅ **Effet visuel:** Aura rouge autour du personnage
-- ✅ **Durée:** Environ 30-60 secondes (variable)
-
-**Malus when Active:**
-- ❌ **Défense réduite:** -20-30% DEF PHY/MAG
-- ❌ **Vulnérabilité:** Vous prenez plus de dégâts
-- ❌ **Aggro:** Les monstres vous targetent plus facilement
-
-### Stratégies d'Utilisation
-
-**Quand Utiliser:**
-✅ **PvE - Boss fights:**
-- Burst phase pour finish rapidement un boss
-- Quand le tank a solid aggro et vous pouvez DPS librement
-- SP farming pour tuer les mobs plus vite
-
-✅ **PvP - Burst damage:**
-- Quand vous avez l'opportunité de kill
-- Contre un adversaire déjà low HP
-- En combinaison avec vos skills les plus puissantes
-
-**Quand Éviter:**
-❌ **Solo farming:** Vous prendrez trop de dégâts
-❌ **Tanking:** La défense réduite est trop risquée
-❌ **Contre beaucoup d'ennemis:** Vous serez focus rapidement
-
-**Tips Avancés:**
-- ⭐ **Combo timing:** Activez Berserker → Lancez vos plus grosses skills → Sortez du mode une fois les skills lancées
-- ⭐ **Potions:** Ayez toujours des potions prêtes (vous prendrez plus de dégâts)
-- ⭐ **Positionnement:** Restez près du healer/en groupe pour survivre
-- ⭐ **PvP:** Utilisez comme surprise attack pour maximiser l'impact
-
-### Synergies
-
-**Meilleures Classes pour Berserker:**
-- **STR Warriors:** Benefit énorme du PHY damage boost
-- **INT Nukers:** Burst MAG dévastateur
-- **Rogues:** Burst damage synergise bien avec stealth
-
-**Moins Efficace:**
-- **Tanks:** La défense réduite est contre-productive
-- **Supports (Bard/Cleric):** Vous n'êtes pas là pour DPS
-
-### Comparaison avec d'autres Buffs
-
-| Buff | Damage | Defense | Duration | Cooldown |
-|------|--------|---------|----------|----------|
-| **Berserker** | +20-50% | -20-30% | 30-60s | Variable |
-| **Attack buffs** | +5-15% | 0% | Variable | Variable |
-| **DEF buffs** | 0% | +10-30% | Variable | Variable |
-
-**Note:** Le Berserker Mode offre le plus grand boost de damage du jeu, mais avec le plus grand malus de défense. À utiliser avec précaution!
+- **PvP burst :** zerk + plus gros skills + stabs sur KD
+- **PvE :** nettoyage de packs de mobs, boss
+- La jauge zerk est **conservée** en changeant de zone (mais pas toujours après mort selon version)
 
 ---
 
 ## 🌡️ Status Effects
 
-### Types de Status Effects
+### Vue d'ensemble
 
-#### 1. BURN (Fire)
-- **Effet:** Damage over time (DoT)
-- **Damage:** ~100-500 per tick (basé sur INT)
-- **Duration:** 5-15 seconds
-- **Source:** Fire skills
-- **Counter:** Potions, wait out
+Les status (« bad states ») sont appliqués par skills et imbues. Structure de données (RefSkill) : chaque skill a des effets avec **Type**, **Valeur**, **Durée**, **Chance**. Types documentés : `Damage` (DoT), `KnockDown`, `KnockBack`, `Stun`, `Sleep`, `Fear`, `Root`, `Dull`, `Weaken`, `Curse` (Disease, Panic, Hidden, Combustion, Decay...), `Absorb`, `Specialized` (Stab).
 
-#### 2. FREEZE (Cold/Ice)
-- **Effet:** Ralentit mouvement et attaque
-- **Slow:** 20-80% slow
-- **Duration:** 3-10 seconds
-- **Source:** Cold skills
-- **Counter:** Cleansing skills, pots
+### Tableau des status
 
-#### 3. POISON (Warlock)
-- **Effet:** DoT + debuff
-- **Damage:** Variable
-- **Duration:** 5-20 seconds
-- **Source:** Warlock skills
-- **Counter:** Cleansing
+| Status | Effet | Durée typique | Source | Cure |
+|---|---|---|---|---|
+| **Burn** 🔥 | DoT feu (tick toutes les ~2 s) | 5-10 s | Fire imbue/skills, Warlock | Universal pill 2 |
+| **Freeze** ❄️ | Cible **immobile** (root complet) | ~4-6 s | Cold imbue/skills | Universal pill 1, Anti-cold |
+| **Frostbite (Frost)** ❄️ | Ralentit déplacement + vitesse d'attaque | variable | Cold imbue/skills | Universal pill 1 |
+| **Shock** ⚡ | Réduit le **parry ratio** de la cible | 4-11 s | Lightning imbue/skills | Universal pill ? |
+| **Poison** ☠️ | DoT (tick ~2 s) | ~8 s | Rogue (Prick), mobs | Universal pill 2 |
+| **Zombie** 🧟 | Les **soins/potions HP infligent des dégâts** à la place de soigner | variable | Warlock (Bloodthirst?) | Universal pill 3 |
+| **Bleeding** 🩸 | DoT physique | variable | Rogue/Warrior skills | Universal pill 2 |
+| **Decay** 🪦 | DoT qui **brûle le MP** en dégâts | ~10 s | Warlock (Décomposition) | pill 2 |
+| **Combustion** 🔥💬 | Brûle le MP de la cible en dégâts | ~10 s | Warlock | pill 3 |
+| **Disease (Maladie)** 🤢 | **Bloque les soins** (heal = 0) | ~10 s | Warlock | pill 3 |
+| **Panic** 😱 | **Dissipe les consommables** (potion/pill désactivés) | ~10 s | Warlock | pill 3 |
+| **Hidden** 👻 | Rend la cible **invisible** (contre-intuitif : débuff utilisé contre l'ennemi) | ~10 s | Warlock | pill 3 / AoE |
+| **Fear (Peur)** 💀 | La cible **fuit sans contrôle** | ~3-5 s | Warlock Fear | aucun (hard CC) |
+| **Sleep (Sommeil)** 😴 | Cible endormie, **se réveille si touchée** | ~5-10 s | Warlock / Wizard | dégât = break |
+| **Stun (Étourdi)** ⭐ | Ne peut rien faire | ~1-3 s | Rogue stun, mobs | aucun (hard CC) |
+| **Dull (Cri Désespéré)** | Réduit l'attaque (hit) de la cible | variable | Warlock | pill 3 |
+| **Weaken** | **−16% Magical Defense** (valeur RefSkill vérifiée) | ~8 s | Warlock (Bénédiction de Faiblesse) | pill 3 |
+| **Decayed (Raze PHY)** | Réduit la défense physique | ~30 s | Warlock Physical Raze | pill 3 |
+| **Impotent** | La cible **inflige moins de dégâts** | ~20-30 s | Warlock Combat Raze | pill 3 |
+| **Division** | La cible **subit plus de dégâts** | ~20-30 s | Warlock Medical Raze | pill 3 |
+| **Bind/Root (Prison)** ⛓️ | Cible immobile (peut attaquer) | ~5-8 s | Warlock Prison Terrestre | aucun/pill 3 |
+| **Knockdown** 🌀 | Cible au sol | ~2-4 s | skills melee | aucune (attente) |
+| **Knockback** ↔️ | Cible repoussée | instant | skills melee | — |
 
-#### 4. KNOCKDOWN (KD)
-- **Effet:** Enemy tombe au sol
-- **Duration:** 1-3 seconds
-- **Source:** Melee skills, Force
-- **Counter:** Stand up quickly
+> ℹ️ Les seuils « pill 1/2/3 » correspondent aux **Universal Pill (Purification) grades** : grade 1 retire Freeze/Frostbite, grade 2 retire Burn/Poison/Decay, grade 3 retire Panic/Dull/Fear-type et curses supérieurs. Les **hard CC** (Stun, KD, Sleep avant break, Fear) ne se soignent pas aux pills — il faut attendre.
 
-#### 5. SLEEP
-- **Effet:** Ne peut pas agir
-- **Duration:** 3-8 seconds
-- **Source:** Certaines skills
-- **Counter:** Damage breaks sleep
+### Résistances aux status
 
-#### 6. FEAR
-- **Effet:** Fuit aléatoirement
-- **Duration:** 3-5 seconds
-- **Source:** Warlock
-- **Counter:** Wait, dispell
+- **Accessoires** : stats de résistance par élément (ex: accessoires D8 jusqu'à **+20% résistance Ice**), cumulables
+- **Skills CH** : Fire Shield series (réduit durée des status ice), passifs de résistance
+- La **réduction de durée** fonctionne par % sur chaque status reçu
 
-#### 7. STUN
-- **Effet:** Ne peut pas bouger/attaquer
-- **Duration:** 1-2 seconds
-- **Source:** Critical hits, skills
-- **Counter:** Wait, immunity skills
+### Stacking des status
 
-#### 8. BLEED
-- **Effet:** DoT physique
-- **Damage:** Basé sur PHY
-- **Duration:** 5-10 seconds
-- **Source:** Rogue, Warrior skills
-- **Counter:** Potions, heals
+- **Même status** : refresh de la durée (pas de stack)
+- **Status différents** : cumulables (burn + poison + division + impotent...)
+- Les **hard CC partagent souvent un timer d'immunité** interne (anti chain-stun) — comportement variable selon version (vSRO : aucun, d'où les chain-KD)
 
-### Status Stacking
+---
 
-**Règles:**
-- **Same status:** Refresh duration (no stack)
-- **Different status:** Can stack (burn + poison + freeze)
-- **Max debuffs:** Généralement 8-10 slots
+## ❄️ Imbues Élémentaires Chinoises
+
+Les imbues ajoutent des dégâts magiques élémentaires à chaque attaque et peuvent appliquer un status. Le choix dépend du build :
+
+| Imbue | Dégâts | Status | Chance (constatée) | Durée |
+|---|---|---|---|---|
+| **Fire (Soul Fire Force)** | Les plus élevés | **Burn** (DoT) | ~20-30% par hit | ~6 s |
+| **Lightning (Thunder)** | 2e | **Shock** (−parry ratio) | variable (par hit) | 4-11 s |
+| **Cold (Ice)** | Les plus faibles | **Frostbite** (slow) + **Freeze** (root) | 20-60% selon skill | 4-6 s |
+
+**Notes détaillées (guide Origin/community) :**
+- **Fire imbue** : le plus de dégâts bruts, burn ~20-30% de chance — le meilleur pour le pure DPS/PvE
+- **Lightning imbue** : dégâts proches de Fire, shock réduit le parry adverse (plus de dégâts effectifs)
+- **Cold imbue** : deux status (frostbite + freeze), le **freeze root complet** est le "roi du PvP 1v1" ; les skills Cold dédiés ont 20 à 60% de chance de freeze selon le skill et son niveau
+- Le status d'imbue se déclenche par **hit** → les armes rapides (sword/dagger) proc plus souvent
+
+---
+
+## 💥 Knockdown / Knockback / Stab System
+
+### Les trois états physiques
+
+1. **Knockdown (KD)** : la cible **tombe au sol**, ne peut ni bouger ni attaquer (~2-4 s). Certaines attaques font des dégâts bonus aux cibles au sol.
+2. **Knockback (KB)** : la cible est **repoussée** de quelques mètres (interrupt de cast).
+3. **Stab (coups bas)** : attaques spéciales qui font **×2 dégâts contre une cible au sol** (données RefSkill : effet `Specialized: Stab — x2 contre cibles au sol`).
+
+### Le combo cœur du PvP melee
+
+```
+Skill KD (ex: Balayage/Sweep — KnockDown 100%)
+        ↓ (cible au sol)
+Stab 1 → Stab 2 → Stab 3  (chacun ×2 dégâts)
+        ↓
+Repeat quand la cible se relève (anti-refresh KD : ~variable)
+```
+
+- Le **Blader** chinois peut enchainer **3 stabs** sur un seul KD avec un animation cancel parfait (technique avancée emblématique)
+- Certaines skills ont **65% de chance de KD** (ex données RefSkill : Frappe Empoisonnée : DoT poison + KnockDown 65%)
+- **Immunisation** : après relevée, une courte immunité au KD existe sur certains clients (à verifier par version) — le chain-KD infini est possible sur vSRO, bridé sur iSRO tardif
+
+### Skills KD/KB typiques
+
+- **CH** : Bicheon Smashing Series, Heuksal (spear knockdown), Flying Dragon
+- **EU Warrior** : Will Turn (KD), Cutdown, Sprint Assault ; Bash chain
+- **EU Rogue** : Coup Bas (KnockBack 100% selon données RefSkill EU)
+- **EU Warlock** : certains dots avec KD 65% en bonus
+
+---
+
+## 🎬 Animation Cancelling
+
+### Qu'est-ce que l'Animation Cancelling ?
+
+Technique consistant à **interrompre l'animation de fin** d'une skill pour enchaîner la suivante plus vite. Légitime, appris par la pratique, **essentiel en PvP compétitif CH**.
+
+### Méthodes connues (communauté 2010-2026)
+
+1. **Skill-chain cancel** : lancer la skill suivante dès la frame d'impact (le start-up suivant annule la recovery précédente)
+2. **Potion cancel** : boire une potion juste après le hit pour couper l'animation
+3. **Weapon switch cancel** : switcher d'arme (ex: sword ↔ blade, rod ↔ weapon) coupe l'animation instantanément
+4. **Mouvement** : un ordre de déplacement bref peut couper certaines animations (moins fiable)
+
+### Gains constatés
+
+- DPS effectif : +30 à +70% selon la maîtrise (les chiffres exacts varient selon les skills/builds)
+- **Blader triple-stab** sur un seul KD (voir ci-dessus)
+- Rogue : enchainement X-Bow → daggers
+
+### Où apprendre
+
+- Vidéos « Silkroad animation cancelling technique » (YouTube, shorts 2023-2025)
+- Guides elitepvpers / projecthax
 
 ---
 
 ## ⚔️ PvP vs PvE
 
-### PvP (Player vs Player)
+### ⚠️ Correction d'une erreur répandue
 
-**Caractéristiques:**
-- **Damage réduit:** ~50-70% de base
-- **Defense augmentée:** Players ont plus de DEF
-- **Kiting essentiel:** Range advantage
-- **Potions autorisées:** HP pots, MP pots
-- **Skills:** CC plus important
-
-**PvP Damage:**
-```
-PvP Damage = Base Damage * 0.5-0.7 (PvP reduction)
-```
-
-**PvP Types:**
-1. **Job Wars:** Thief vs Hunter
-2. **Arena PvP:** 1v1, 2v2, 3v3
-3. **Open World PvP:** PK, PKers
-4. **Fortress Wars:** Guild vs Guild (300 players)
-5. **CTF:** Capture the Flag (events)
-
-### PvE (Player vs Environment)
-
-**Caractéristiques:**
-- **Damage normal:** 100% de base
-- **Mobs plus faibles:** Moins de DEF
-- **AoE important:** Pull multiple mobs
-- **Grinding focus:** Kill fast, efficient
-
-**PvE Damage:**
-```
-PvE Damage = Base Damage * 1.0 (no reduction)
-```
-
-**PvE Types:**
-1. **Grinding:** Solo farming
-2. **Party Grinding:** Group farming
-3. **Dungeon:** Instance PvE
-4. **Unique Hunting:** Boss hunting
-5. **Job PvE:** Thieving, Trading
-
-### Différences Clés
+Il n'existe **pas de réduction globale des dégâts PvP documentée** dans le client classique iSRO (l'ancienne valeur « ×0.5-0.7 » de ce document était une invention). Les dégâts PvP utilisent les **mêmes formules** que le PvE. Les différences réelles :
 
 | Aspect | PvP | PvE |
 |--------|-----|-----|
-| **Damage** | Réduit (50-70%) | Normal (100%) |
-| **Focus** | CC, Burst | AoE, Sustained |
-| **Kiting** | Très important | Less important |
-| **Potions** | Autorisées | Autorisées |
-| **Defense** | Plus important | Less important |
-| **Skills** | CC focus | Damage focus |
+| **Formules** | Identiques | Identiques |
+| **Défense adverse** | Joueurs : DEF/stuff + parry ratio élevés | Mobs : DEF fixe par niveau/type |
+| **Statuts** | Diminishing returns/immunités certaines | Mobs souvent immuns aux hard CC (boss) |
+| **Potions** | Autorisées (sauf events) | Autorisées |
+| **Pills universels** | Cruciaux (cure des débuffs) | Utiles |
+| **Focus builds** | CC (KD/stun/freeze), burst, absorb | AoE, sustain, DPS |
+
+**N.B.** : certains serveurs privés et versions tardives appliquent un coefficient PvP maison (ex: Fortress War reductions) — à vérifier par serveur.
 
 ---
 
-## 💥 Knockdown System
+## 🔄 Différences Client Classique vs Silkroad-R
 
-### Qu'est-ce que Knockdown (KD)?
+| Mécanique | Classic iSRO | Silkroad-R (2012) |
+|---|---|---|
+| **Engine** | Base | Identique (même client) |
+| **EXP/SP** | Grind lent, gap SP farming nécessaire | Rates accélérés, leveling plus rapide |
+| **Skills** | Masteries libres (330 total au cap) | Système restructuré plus guidé (classes) |
+| **SP gap farming** | Cœur du meta classic | Largement supprimé |
+| **PvP/PK** | Système murderer complet | Assoupli (moins de perte, PK plus accessible) |
+| **Balance classes** | Original | Ajustements de balance réguliers |
+| **Job system** | Identique | Identique en structure |
 
-Le **Knockdown** est un **crowd control** qui fait tomber l'ennemi au sol, l'empêchant d'agir pendant 1-3 secondes.
-
-### Mechanics
-
-**KD Skills:**
-- **Chinese:**
-  - Sword: Smashing series
-  - Spear: Heuksal Spear
-  - Force: Flying Dragon
-
-- **European:**
-  - Warrior: Bash, Cutdown
-  - Rogue: Some skills
-  - Wizard: Freeze (similar)
-
-**KD Chain:**
-- Chain KDs pour stunlock
-- Difficile mais possible
-- Requires timing parfait
-
-**KD Immunity:**
-- After KD, short immunity (0.5-1s)
-- Can't chain infinitely
-- Must alternate with other CC
-
-### KD Strategies
-
-**1v1 PvP:**
-- KD to heal
-- KD to burst
-- KD to escape
-- KD chain (si possible)
-
-**PvE:**
-- KD dangerous mobs
-- KD to reduce damage taken
-- KD to setup AoE
+> Les formules de dégâts restent structurellement les mêmes ; les serveurs privés « classic » recréent l'iSRO d'époque, les serveurs « R » suivent les règles Silkroad-R.
 
 ---
 
 ## ❓ FAQ
 
-### Q: Comment augmenter mes dégâts?
-**R:** Améliorez votre weapon, ajoutez STR/INT, utilisez des buffs, et optimisez vos skills.
+### Q: Comment augmenter mes dégâts ?
+**R:** Arme (degré/enhancement), STR ou INT selon le build, masteries à jour (mastery_incr), buffs d'attack %, imbues, crit (pour les builds PHY), et l'animation cancelling.
 
-### Q: Qu'est-ce que le "kiting"?
-**R:** Le kiting est une technique où vous attaquez à distance et reculez pour éviter de prendre des dégâts.
+### Q: Le nuke Fire peut-il crit ?
+**R:** **Non.** Seuls les skills d'armes CH (Bicheon/Heuksal/Pacheon) et les attaques normales critiquent. Les nukes Fire/Lightning/Cold ne critiquent pas.
 
-### Q: L'animation cancelling est-il autorisé?
-**R:** Oui, c'est une mécanique légitime du jeu, pas un cheat.
+### Q: Attack Rating vs Parry Ratio — qui gagne ?
+**R:** Ce n'est pas toucher/rater : l'AR pousse vos jets vers le max de votre range, le PR adverse les tire vers le min. Un PR très supérieur à l'AR adverse réduit fortement les dégâts moyens reçus.
 
-### Q: Comment contrer les debuffs?
-**R:** Utilisez des potions de cleansing, des skills de dispell (Bard, Cleric), ou attendez que ça passe.
+### Q: Combien d'orbs pour le Zerk ?
+**R:** 5 orbs (chute ~1 mob sur 3 au niveau approprié), ou Berserk Regeneration Pill (cooldown ~20 min).
 
-### Q: Qu'est-ce qui fait le plus de dégâts?
-**R:** Généralement les nukes INT (Fire, Lightning) ou les crits PHY (Spear, Xbow) ont les dégâts les plus élevés.
+### Q: Les potions peuvent-elles aggraver mon état ?
+**R:** Oui sous **Zombie** (les potions HP infligent des dégâts) — c'est le but du débuff Warlock. Utilisez le bon grade d'Universal Pill à la place.
 
-### Q: Le PvP est-il équilibré?
-**R:** Approximativement. Chaque classe a des avantages et inconvénients. Le skill du joueur compte énormément.
+### Q: L'animation cancelling est-il un cheat ?
+**R:** Non, c'est une technique légitime apprise et partagée par la communauté depuis 2006.
+
+### Q: Pourquoi mon Block ne fonctionne jamais contre les nukes ?
+**R:** Le block s'applique prioritairement aux attaques physiques ; contre les nukes magiques son effet est réduit ou nul (comportement variable selon version).
+
+### Q: Le kiting, c'est quoi ?
+**R:** Attaquer à distance tout en gardant l'ennemi hors de portée melee (movement speed + slows = cœur du kiting SRO).
 
 ---
 
 ## 🔗 Resources
 
-### Guides
-- [Silkroad Online Wiki - Combat](https://silkroadonline.fandom.com/wiki/Skills)
-- [PvP Strategy Guides](http://www.silkroadforums.com/)
-- [Damage Calculation Guide](https://silkroadtemptation.wordpress.com/)
+### Documentation technique
+- [SilkroadDoc (DummkopfOfHachtenduden/DaxterSoul) — formats de fichiers & packets](https://github.com/DummkopfOfHachtenduden/SilkroadDoc)
+- [silkroaddoc.github.io — données skills/RefSkill (types d'effets)](https://silkroaddoc.github.io/)
+- [florian0 — Death Penalty Item Drops (reverse engineering)](https://florian0.wordpress.com/2016/10/05/silkroad-online-death-penalty-item-drops)
 
-### Communauté
-- [Silkroad Forums - PvP Section](http://www.silkroadforums.com/)
-- [Reddit - r/silkroad](https://www.reddit.com/r/silkroad/)
+### Guides communauté
+- [Elitepvpers — Silkroad Damage Formulas](https://www.elitepvpers.com/forum/silkroad-online/412387-silkroad-damage-formulas.html)
+- [Elitepvpers — The Way Items Work (attack speeds, absorb, block)](https://www.elitepvpers.com/forum/sro-guides-templates/2545845-guide-way-items-work.html)
+- [Elitepvpers — Physical & Magical Reinforce explained](https://www.elitepvpers.com/forum/sro-guides-templates/807866-explaination-physical-magical-reinforce.html)
+- [UnKnoWnCheaTs — SRO General Tips and Stats](https://www.unknowncheats.me/forum/silkroad/38774-sro-tips-stats.html)
+- [PlayOrigin — Chinese Race Guide (imbues/status)](https://forum.playorigin.com/archive/index.php/t-26.html)
+- [StrategyWiki — Silkroad Online/Gameplay](https://strategywiki.org/wiki/Silkroad_Online/Gameplay)
+- [Silkroad Forums — What is Parry Ratio](http://www.silkroadforums.com/viewtopic.php?f=2&t=49338)
+
+### Calculateurs
+- [evolex.dev — SRO Character Stats Calculator (HP/MP/balance)](https://evolex.dev/sro-char-stats)
 
 ---
 
 ## 📚 Voir aussi
 
 ### Mécaniques Avancées
-- [Mécaniques Avancées](28_ADVANCED_MECHANICS.md) - Formules détaillées avec code TypeScript
-- [Attack Rating & Parry Ratio](28_ADVANCED_MECHANICS.md#attack-rating-et-parry-ratio) - Système de toucher et blocage
-- [Formules de Dégâts](28_ADVANCED_MECHANICS.md#formules-de-dégâts) - Calculs complets
+- [Mécaniques Avancées](28_ADVANCED_MECHANICS.md) - Formules détaillées, balance, reinforce
+- [Attack Rating & Parry Ratio](28_ADVANCED_MECHANICS.md#attack-rating-et-parry-ratio) - Système détaillé
 
 ### Combat et PvP
-- [PvP et PK](20_PVP_PK_SYSTEM.md) - Système PvP, murder, duels
+- [PvP et PK](20_PVP_PK_SYSTEM.md) - Murderer, capes, CTF, arène
 - [Hub Combat](HUB_COMBAT.md) - Centralise toute l'information combat
 - [PvP Builds](33_PVP_BUILDS.md) - Tier list et builds optimisés
 
@@ -706,9 +603,9 @@ Le **Knockdown** est un **crowd control** qui fait tomber l'ennemi au sol, l'emp
 - [Hub Classes](HUB_CLASSES.md) - Centralise classes et builds
 
 ### Équipement
-- [Alchimie](05_ALCHEMY_SYSTEM.md) - Enhancement +1 à +12
+- [Alchimie](05_ALCHEMY_SYSTEM.md) - Enhancement +1 à +12, blues (absorb, crit)
 - [Seal Equipment](06_SEAL_EQUIPMENT.md) - SOS, SOM, SOSun
-- [Armor Types](08_ARMOR_TYPES.md) - Armor, Protector, Garment
+- [Armor Types](08_ARMOR_TYPES.md) - Armor, Protector, Garment (bonus de set)
 
 ### Guides Stratégiques
 - [Fortress War](19_FORTRESS_WAR.md) - Mass PvP 300+
@@ -716,266 +613,33 @@ Le **Knockdown** est un **crowd control** qui fait tomber l'ennemi au sol, l'emp
 
 ---
 
-## 🌍 Multilingual Research Findings (2025)
+## 🌍 Multilingual Research Findings (2025-2026)
 
-### 📊 Research Methodology
+### Sources croisées et validation
 
-This section contains combat mechanics information gathered from multilingual research across Korean (original game), Turkish (meta community), and English (international consensus) sources.
+| Mécanique | Formule/Valeur | Sources | Confiance |
+|-----------|---------------|---------|-----------|
+| **Formule dégâts PHY/MAG** | elitepvpers multi-composants | elitepvpers + calculs vérifiés | 4/5 |
+| **Critical** | 2×PHY + MAG | Consensus KR + EN | 4/5 |
+| **Nukes ne critiquent pas** | oui | silkroadforums + guides | 4/5 |
+| **Physical Multiplier** | 1.276772606 | elitepvpers (testing) | 3/5 (non officiel) |
+| **Magical Multiplier** | 1.287004542 | elitepvpers (testing) | 3/5 (non officiel) |
+| **Balance** | 100×STR/M, M=max(STR×1.29, INT) | evolex.dev + communauté | 4/5 |
+| **AR/PR : jet dans la range** | AR→max, PR→min | UnKnoWnCheaTs + silkroadforums | 4/5 |
+| **Block = % direct du bouclier** | 15-20 = bon/PvP | elitepvpers Way Items Work | 4/5 |
+| **Absorb HP/MP blues** | armes 10-35%, acc. ~20% | elitepvpers | 3/5 |
+| **Stab ×2 vs cibles au sol** | effet Specialized | silkroaddoc (RefSkill) | 5/5 (données client) |
+| **DoT burn/poison : tick 2 s** | ex: 560/2s pendant 8 s | silkroaddoc (RefSkill) | 5/5 (données client) |
+| **Weaken : −16% MAG DEF** | 8 s | silkroaddoc (RefSkill) | 5/5 (données client) |
+| **Zerk : 5 orbs, ~×2 dégâts** | ~1 drop/3 mobs | guides Origin + forums | 4/5 |
 
-**Cross-Validation Status**: ✅ Partially Verified (2/3 languages agree)
-- Korean and English sources confirm critical damage formula
-- Turkish sources require deeper investigation
-- Confidence levels: 3-5/5 depending on specific mechanic
+### Divergences connues entre sources
 
----
-
-### 🇰🇷 Korean Sources (Original Mechanics)
-
-#### Source: Korean Web Search & Community (실크로드 온라인)
-
-**Verified Formulas**:
-```
-크리티컬 총 데미지 = 2 × 물리 데미지 + 마법 데미지
-Critical Total Damage = 2 × Physical Damage + Magical Damage
-```
-
-**Balance Formulas**:
-```
-물리 밸런스 = 100 × STR / M
-Physical Balance = 100 × STR / M
-
-마법 밸런스 = 100 × INT / M
-Magical Balance = 100 × INT / M
-```
-
-**Key Findings**:
-- ✅ STR-based characters have higher critical damage (confirmed by English sources)
-- ✅ Attack speed increases critical opportunities (more attacks = more crit chances)
-- ✅ Balance formulas match English sources
-
-**Validation**: ✅ Cross-verified with English sources (2/3 languages agree)
-**Confidence**: 4/5
+1. **Chance exacte de Burn par imbue** : « ~20-30% » (guide Origin) vs valeurs par niveau de skill non publiées → utiliser les tooltips in-game par pallier
+2. **Cap block / immunités KD** : variables selon client (iSRO tardif vs vSRO)
+3. **L'effet exact du Zerk sur la défense** : aucune défense en classic ; +10-15% en Blue Zerk (quête 95+)
 
 ---
 
-### 🇺🇸 English Sources (Community Consensus)
-
-#### Source 1: elitepvpers.com - Silkroad Damage Formulas
-
-**Complete Damage Formula System**:
-```
-Physical Damage = [(base + skill_pow × mastery_incr - Phys def) × balance × skill_mult × buff&passive × multiplier]
-Magical Damage = [((base + imbue_pow) × mastery_incr - Mag def) × balance × skill_mult × buff&passive × multiplier]
-
-Total Damage = Physical Damage + Magical Damage
-Critical Damage = 2 × Physical Damage + Magical Damage
-```
-
-**Game Multipliers** (Verified by Gameplay Testing):
-- **Physical Multiplier**: 1.276772606
-- **Magical Multiplier**: 1.287004542
-
-**Example Calculation** (Pure STR Bow Level 100):
-```
-Stats: STR: 442, INT: 175
-Base PHY Attack: 3012 ~ 2558
-Base MAG Attack: 2638
-PHY Balance: 1.09%, MAG Balance: 0.45%
-Buffs: 18% MAG, 18% PHY
-
-Skill: Strong Bow-Craft lvl 8 (574 ~ 777, 350%)
-Imbue: Soul Fire Force (658 ~ 1097, 100%)
-
-PHY Damage = (3012 + (777 × 1.90) - 7) × 1.09 × 3.5 × 1.18 × 1.28 = 25,890.3
-MAG Damage = ((2638 + 1097) × 1.9 - 10) × 0.45 × 3.5 × 1.18 × 1.28 = 16,897.3
-Total = 25,890.3 + 16,897.3 = 42,787.6
-Critical = (25,890.3 × 2) + 16,897.3 = 68,678
-```
-
-**Validation**: ⚠️ Requires official Korean source for Tier 1 status
-**Confidence**: 4/5 (Tier 2 community source, detailed math)
-
----
-
-#### Source 2: silkroadforums.com - Critical Hit Mechanics
-
-**Critical System Mechanics**:
-- **STR Dependency**: Critical is calculated based on STR stat
-- **Weapon Critical Value** = % chance to crit (e.g., Critical 10 = 10% chance)
-- **Chinese Weapon Skills Only**: Heuksal, Pacheon, and Bicheon can crit
-- **Non-Critting Skills**: Nukes and Lion Shout do NOT crit
-- **STR vs INT**: Pure STR always crits higher than INT-based
-
-**Important Notes**:
-- STR affects critical **DAMAGE**, not critical **CHANCE**
-- Critical chance comes from weapon stats, not character stats
-
-**Validation**: ✅ Confirmed by Korean sources
-**Confidence**: 4/5 (Tier 2 forum, community consensus)
-
----
-
-#### Source 3: elitepvpers.com - Parry Ratio & Attack Rating
-
-**Parry Ratio Mechanics**:
-- Higher parry = less chance of taking **maximum** damage from opponent
-- Pushes received damage toward **minimum** of attacker's range
-
-**Attack Rating Mechanics**:
-- Higher attack rating = higher chance of dealing **maximum** damage
-- Pushes dealt damage toward **maximum** of weapon range
-
-**Interaction**:
-```
-High Attack Rating vs Low Parry Ratio → Damage near MAX
-Low Attack Rating vs High Parry Ratio → Damage near MIN
-High Attack Rating vs High Parry Ratio → Damage balances to middle
-```
-
-**Physical & Magical Reinforce Formulas**:
-```
-Physical Defense = Str × Physical reinforce + Total Physical defense
-Magical Defense = Int × Physical reinforce + Total Physical defense
-Physical Attack = Str × Physical reinforce + Physical damage
-Magical Attack = Int × Magical reinforce + Magical damage
-```
-
-**Critical Insight**: Reinforce percentages act as **multipliers**, making them MORE important than base attack/defense values.
-
-**Example**: 500 STR × 276.8% + 2146 base = 3,530 total attack power
-
-**Validation**: ⚠️ Requires Korean source verification
-**Confidence**: 4/5 (Tier 2 guide, detailed explanation)
-
----
-
-#### Source 4: silkroadonline.de (German) - Parry/Hitratio
-
-**Damage Range Example**:
-- Weapon damage: 80-112
-- Higher hit rate/attack rating = more likely to deal **112 (max)**
-- Higher parry ratio (defender) = more likely to receive **80 (min)**
-
-**Stat Progression**:
-- Hit/parry rates increase by **1 point per level**
-- Each level gives **5 stat points** total:
-  - 2 auto-distributed (1 STR, 1 INT)
-  - 3 free points
-
-**Validation**: ✅ Confirms elitepvpers information
-**Confidence**: 3/5 (Tier 3 source, German community)
-
----
-
-### 🇹🇷 Turkish Sources (Meta Community)
-
-#### Current Status: ⚠️ Insufficient Data
-
-**Preliminary Search Results**:
-- Turkish search returned limited specific formula information
-- Found references to general SRO mechanics discussions
-- **Gap Identified**: Deeper investigation needed in Turkish SRO forums (sroforum.com)
-
-**Action Required**: Direct access to Turkish forums for:
-- Current PvP meta strategies
-- Private server modifications to formulas
-- Job system optimizations
-
----
-
-### ✅ Cross-Validated Information
-
-The following mechanics have been confirmed by **2+ languages**:
-
-#### 1. Critical Damage Formula ✅ VERIFIED
-```
-Critical Damage = 2 × Physical Damage + Magical Damage
-```
-- **Confirmed by**: Korean (🇰🇷) + English (🇺🇸)
-- **Pending**: Turkish verification
-- **Confidence**: 4/5
-
-#### 2. STR-Based Critical Damage ✅ VERIFIED
-- More STR = higher critical damage
-- Pure STR crits higher than INT builds
-- **Confirmed by**: Korean (🇰🇷) + English (🇺🇸)
-- **Confidence**: 4/5
-
-#### 3. Balance Formulas ✅ VERIFIED
-```
-Physical Balance = 100 × STR / M
-Magical Balance = 100 × INT / M
-```
-- **Confirmed by**: Korean (🇰🇷) + English (🇺🇸)
-- **Confidence**: 4/5
-
----
-
-### ⚠️ Conflicting Information
-
-No major conflicts found between Korean and English sources. Turkish sources require investigation.
-
----
-
-### 📊 Confidence Levels by Mechanic
-
-| Mechanic | Formula | Confidence | Sources |
-|----------|---------|------------|---------|
-| **Critical Damage Formula** | 2×PHY + MAG | 4/5 | KR + EN |
-| **STR Critical Dependency** | STR-based | 4/5 | KR + EN |
-| **Balance Formulas** | 100×STAT/M | 4/5 | KR + EN |
-| **Parry Ratio Mechanics** | Push to min | 3/5 | EN only |
-| **Attack Rating Mechanics** | Push to max | 3/5 | EN only |
-| **Complete Damage Formula** | Multiplier system | 4/5 | EN only |
-| **Physical Reinforce** | STR×%+base | 4/5 | EN only |
-| **Magical Reinforce** | INT×%+base | 4/5 | EN only |
-| **Attack Speed Breakpoints** | Unknown | 1/5 | Not found |
-
----
-
-### 🔍 Research Gaps Identified
-
-1. **Attack Speed Breakpoints** (Priority: HIGH)
-   - No specific numerical formulas found (64, 86, 110 speeds)
-   - Requires Korean source investigation
-   - Animation mechanics not fully documented
-
-2. **Turkish Community Knowledge** (Priority: MEDIUM)
-   - Private server formula modifications
-   - Current PvP meta strategies
-   - Job system optimizations
-
-3. **Official Multipliers** (Priority: LOW)
-   - Current multipliers (1.276772606, 1.287004542) from community testing
-   - Official patch notes would provide Tier 1 validation
-
----
-
-### 📝 Sources
-
-#### Korean (🇰🇷)
-- Korean web search: "실크로드 온라인 데미지 공식 크리티컬 공격 속도 계산"
-
-#### English (🇺🇸)
-- [Silkroad Damage Formulas - elitepvpers.com](https://www.elitepvpers.com/forum/silkroad-online/412387-silkroad-damage-formulas.html)
-- [Critical hit damage - silkroadforums.com](http://www.silkroadforums.com/viewtopic.php?f=4&t=70642)
-- [Physical & Magical Reinforce - elitepvpers.com](https://www.elitepvpers.com/forum/sro-guides-templates/807866-explaination-physical-magical-reinforce.html)
-- [Parry/Hitratio - silkroadonline.de](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/67-parry-hitratio/)
-
-#### Turkish (🇹🇷)
-- Preliminary search only - deeper investigation required
-
----
-
-### 🔄 Next Research Steps
-
-1. **Korean**: Search for official patch notes confirming damage multipliers
-2. **Turkish**: Access sroforum.com for current meta and private server formulas
-3. **English**: Find attack speed breakpoint formulas or data mining information
-4. **Cross-validation**: Get community feedback on Discord servers and forums
-
----
-
-*Dernière mise à jour: 2025-01-20*
-*Multilingual Research Update: 2025-01-22*
-*Sources: Silkroad Online Wiki, Community Guides, Personal Experience, Multilingual Research (KR/TR/EN)*
+*Dernière mise à jour : 2026-10-01*
+*Sources : elitepvpers, silkroadforums, UnKnoWnCheaTs, florian0 (RE), silkroaddoc.github.io, PlayOrigin, StrategyWiki, evolex.dev, silkroad.fandom.com*

@@ -1,754 +1,437 @@
 # Skills Database - European Classes
 
 ## 📋 Table des Matières
-- [Warrior Skills](#-warrior-skills)
-- [Rogue Skills](#-rogue-skills)
+- [Notes de Structure des Skills EU](#-notes-de-structure-des-skills-eu)
+- [Warrior Skills](#️-warrior-skills)
+- [Rogue Skills](#️-rogue-skills)
 - [Wizard Skills](#-wizard-skills)
 - [Warlock Skills](#-warlock-skills)
 - [Bard Skills](#-bard-skills)
-- [Cleric Skills](#-cleric-skills)
+- [Cleric Skills](#⛪-cleric-skills)
+- [Cooldowns et Animations Notoires](#-cooldowns-et-animations-notoires)
+- [Progression SP](#-progression-sp)
+- [Incertitudes et Versions](#-incertitudes-et-versions)
+- [Tips par Classe](#-tips-par-classe)
+
+---
+
+## ⚠️ Notes de Structure des Skills EU
+
+Cette base remplace l'ancienne version (noms inventés, chiffres non sourcés). Les noms sont désormais les **noms iSRO officiels** (vérifiés croisés : traductions elitepvpers 2008, guides Silkroad Forums/SRO Valkyria, listes in-game PhBot, effets serveur eSRO).
+
+1. **Organisation** : chaque mastery EU est une grille de lignes (R1, R2, R3...) débloquées par paliers de mastery ; chaque ligne possède un skill **book 1** (précoce) et un skill **book 2** amélioré (plus haut dans l'arbre). Ex: `Moving March → Swing March`, `Healing Cycle → Healing Orbit`, `Root → Mesh Root`, `Blaze → Dark Blaze`.
+2. **Niveaux de skills** : chaque skill s'achète avec des SP une fois le palier de mastery atteint, et se monte sur plusieurs rangs (dégâts/effets croissants). Le mastery cap = niveau du perso.
+3. **Coûts MP / dégâts exacts** : ils varient fortement selon le rang du skill, le cap du serveur (90→140) et la version (iSRO/vSRO/SilkroadR). Les chiffres donnés ici sont des **valeurs documentées à un rang donné** et des **règles structurelles** (durations, chances, ratios) qui restent stables.
+4. **Deux masteries max** : total plafonné à 2 × niveau du perso (220 au cap 110, 240 au cap 120) — voir [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md).
 
 ---
 
 ## 🛡️ Warrior Skills
 
-### Overview
-**Masteries:** Warrior (main) + Cleric (sub)
-**Focus:** Melee DPS, tanking, knockdowns
-**Playstyle:** Frontline fighter
+**Stats :** full STR · **Armes :** épée 1H + bouclier, épée 2H, double hache · **Rôles :** tank, party buffer, interrupteur melee
 
-### Warrior Mastery Skills
+### Ligne One-Handed (épée + bouclier)
 
-#### 1H Sword Skills
+| Skill | Type | Effet documenté | Notes |
+|-------|------|-----------------|-------|
+| **Slash** | Attaque | Coup de base 1H | Skill d'entrée de ligne |
+| **Shield Trash** | Attaque bouclier | Knockback avec probabilité élevée | Plus rapide que Shield Crush — repousse les mobs dans la zone de kill |
+| **Shield Crush** | Attaque bouclier | Knockback avancé | Rang supérieur de la ligne bouclier |
+| **Berserker → Daring Berserker** | Attaque burst | Grosse frappe 1H, book 2 amélioré | Finisher 1H |
+| Double Stab / Cunning Stab | Attaque | Frappes rapides 1H | Noms relevés dans les listes in-game (PhBot) — à confirmer en jeu |
+| **Taunting Target** | Aggro | Force 3 cibles à vous cibler | Taunt mono/petit groupe |
+| **Howling Shout** | Aggro | Aggro de zone sur 5 cibles | Taunt de pack |
+| **Sprint Assault** | Charge | Ruée + chance knockback et/ou stun | **L'interrupteur clé** (casse l'Offering ennemi, les casts) |
 
-**Bash**
-- **Level:** 1
-- **SP Cost:** 60
-- **Cast:** 0.5s
-- **Cooldown:** 2s
-- **Damage:** 100-180 PHY
-- **Effect:** Knockdown 10%
-- **Description:** Coup de bouclier basique
+### Ligne Two-Handed (épée 2H)
 
-**Cutdown**
-- **Level:** 5
-- **SP Cost:** 100
-- **Cast:** 1.0s
-- **Cooldown:** 5s
-- **Damage:** 200-350 PHY (AOE)
-- **Effect:** Knockdown 30%, AOE 3m
-- **Prerequisite:** Bash
-- **Description:** Coup balayant
+| Skill | Type | Effet documenté | Notes |
+|-------|------|-----------------|-------|
+| **Bash** | Attaque | Coup de base 2H | — |
+| **Turn Rising** | Attaque | Attaque rapide, chance de knockdown | Ouvre les combos au sol |
+| **Charge Swing** | Attaque | Frappe chargée | — |
+| **Triple Swing** | Attaque | Dégâts bonus sur cibles **au sol** | Combo après knockdown |
+| **Maddening** | Attaque | Frappe lourde | — |
+| **Dare Devil** | Attaque ultime | **La plus forte attaque du Warrior** | Le burst signature 2H |
 
-**Shield Smash**
-- **Level:** 10
-- **SP Cost:** 150
-- **Cast:** 1.2s
-- **Cooldown:** 6s
-- **Damage:** 300-500 PHY
-- **Effect:** Stun 2s (requires shield)
-- **Prerequisite:** Cutdown
-- **Description:** Écrase avec bouclier
+### Ligne Dual Axe
 
-**Sword Force**
-- **Level:** 15
-- **SP Cost:** 200
-- **Cast:** Instant
-- **Cooldown:** 60s
-- **Duration:** 300s
-- **Effect:** PHY ATK +15%, Attack rating +10%
-- **Prerequisite:** Shield Smash
-- **Description:** Buff d'épée
+| Skill | Type | Effet documenté | Notes |
+|-------|------|-----------------|-------|
+| Down Cross | Attaque | Croisé de base | — |
+| Double Twist | Attaque | Double frappe | — |
+| **Sudden Twist** | Attaque | **Stun et/ou bleed** | Le contrôle de la ligne |
+| Axis Quiver | Attaque | Frappe de zone hache | Orthographe exacte parfois « Axle Quiver » |
+| Dual Counter → Deadly Counter | Attaque | Contres | — |
+| Crisis Rush → Crucial Rush | Attaque | Rush offensive | « Crutial Rush » (typo PhBot) |
 
-**Shield Protection**
-- **Level:** 20
-- **SP Cost:** 250
-- **Cast:** Instant
-- **Cooldown:** 120s
-- **Duration:** 180s
-- **Effect:** Block rate +15%, PHY DEF +10%
-- **Prerequisite:** Sword Force
-- **Description:** Protection de bouclier
+### Buffs Warrior
 
-**Rage**
-- **Level:** 25
-- **SP Cost:** 300
-- **Cast:** Instant
-- **Cooldown:** 180s
-- **Duration:** 60s
-- **Effect:** **ATK +30%, DEF -20%**
-- **Prerequisite:** Shield Protection
-- **Description:** Rage berserk
-
-**Fury Swing**
-- **Level:** 30
-- **SP Cost:** 400
-- **Cast:** 2.0s
-- **Cooldown:** 15s
-- **Damage:** 800-1,400 PHY (AOE large)
-- **Effect:** Knockdown 50%, AOE 5m
-- **Prerequisite:** Rage
-- **Description:** Swing enragé massive
-
-#### 2H Sword/Axe Skills
-
-**Power Attack**
-- **Level:** 1
-- **SP Cost:** 80
-- **Damage:** 150-250 PHY
-- **Effect:** Bleed (DoT)
-- **Description:** Attaque puissante
-
-**Sword Sweep**
-- **Level:** 8
-- **SP Cost:** 150
-- **Damage:** 300-500 PHY (AOE)
-- **Effect:** Knockback 3m
-- **Description:** Sweep AOE
-
-**Crush**
-- **Level:** 15
-- **SP Cost:** 250
-- **Damage:** 600-900 PHY
-- **Effect:** Armor penetration 30%
-- **Description:** Écrase
-
-**2H Force**
-- **Level:** 20
-- **SP Cost:** 300
-- **Duration:** 300s
-- **Effect:** PHY ATK +20%
-- **Description:** Buff 2H
-
-**Berserk**
-- **Level:** 30
-- **SP Cost:** 500
-- **Duration:** 60s
-- **Effect:** **ATK +50%, DEF -30%**
-- **Description:** Berserk mode
-
-### Cleric Sub Skills
-
-**Healing Cycle**
-- **Level:** 1 (Cleric)
-- **SP Cost:** 50
-- **Cast:** 1.0s
-- **Heal:** 300-500 HP
-- **Description:** Self-heal
-
-**Bless Spell**
-- **Level:** 5 (Cleric)
-- **SP Cost:** 100
-- **Duration:** 300s
-- **Effect:** PHY DEF +20%, MAG DEF +10%
-- **Description:** Blessing
-
-**Recovery Division**
-- **Level:** 10 (Cleric)
-- **SP Cost:** 200
-- **Heal:** 500-800 HP (AOE party)
-- **Cast:** 2.0s
-- **Cooldown:** 10s
-- **Description:** Group heal
-
-**Resurrection**
-- **Level:** 15 (Cleric)
-- **SP Cost:** 300
-- **Cast:** 5.0s
-- **Cooldown:** 60s
-- **Effect:** Resurrect dead player
-- **Description:** Rez
+| Skill | Portée | Effet documenté | Durée/CD |
+|-------|--------|-----------------|----------|
+| **Vital Increase** | Self | +HP massif, **−35% ATK** | Annulable pour burst après avoir pris l'aggro |
+| **Iron Skin** | Self | **+DEF physique** | « MUST have » (tous guides) |
+| **Mana Skin** | Self | **+DEF magique** | « MUST have » (tous guides) |
+| Warcry | Self (2H) | Buff offensif 2H | Réservé à la ligne deux-mains |
+| **Pain Quota** | 2 membres | **Partage les dégâts des 2 cibles sur toute la party** | **5 min** — le buff party n°1 ; à poser sur les 2 Clerics |
+| **Physical Fence** | 1 membre | Transfert d'un % des dégâts PHY de la cible vers vous | Ne pas max si trop dangereux |
+| **Magical Fence** | 1 membre | Idem dégâts MAG | Sur lurers + wizard le plus bas |
+| **Protect** | 2 membres | Absorbe l'aggro des cibles | Sur les 2 plus gros DPS |
+| **Physical / Magical / Ultimate Screen** | Cible | **+DEF massive** | **1 min** — ne pas stack les trois ni les simultaner |
 
 ---
 
 ## 🗡️ Rogue Skills
 
-### Overview
-**Masteries:** Rogue (main) + Bard (sub)
-**Focus:** Stealth, critical hits, burst
-**Playstyle:** Assassin
+**Stats :** full STR · **Armes :** dague, arbalète · **Rôles :** assassin burst, lurer
 
-### Rogue Mastery Skills
+### Ligne Dagger
 
-#### Dagger Skills
+| Skill | Type | Effet documenté | Notes |
+|-------|------|-----------------|-------|
+| Spinning | Attaque | Coup de base tournant | — |
+| Wounds → **Mortal Wounds** | Attaque | **Bonus dégâts sur cibles au sol** + bleed | Coeur du combo après knockdown |
+| Scud | Buff | Vitesse de déplacement (dague équipée) | Trick : potion de vitesse → Scud → cancel → re-potion (stack) |
+| Screw | Attaque | Chance de **stun** | — |
+| Combo Blow | Attaque | Combo rapide | — |
+| **Butterfly Blow** | Attaque | **5 hits rapides**, 20% chance **Dull 20 s** par usage | Séquence visuelle « papillon » |
+| **Prick** | Attaque | **La plus forte attaque dague**, bleed et/ou stun | Finisher |
 
-**Stealth**
-- **Level:** 1
-- **SP Cost:** 100
-- **Cast:** Instant
-- **Cooldown:** 30s
-- **Duration:** 60s (max)
-- **Effect:** **Invisible** (vanishes from sight)
-- **Break:** Attack or take damage
-- **Description:** Stealth mode
+### Ligne Crossbow
 
-**Stab Attack**
-- **Level:** 3
-- **SP Cost:** 60
-- **Damage:** 150-250 PHY
-- **Effect:** +50% crit chance
-- **Description:** Stab critique
+| Skill | Type | Effet documenté | Notes |
+|-------|------|-----------------|-------|
+| Power Shot | Attaque | Tir de base | — |
+| Intense Shot | Attaque | Tir renforcé | — |
+| **Fast Shot → Rapid Shot** | Attaque | **Plus longue portée + CD court** | L'outil de lure par excellence |
+| Long Shot → **Distance Shot** | Attaque | **La plus forte attaque arbalète** | Boostée par Crossbow Extreme |
+| Blast Shot | Attaque | Tir explosif | — |
+| **Hurricane Shot** | Attaque | Chance de **knockdown** | Combo knockdown → Mortal Wounds |
 
-**Backstab**
-- **Level:** 8
-- **SP Cost:** 120
-- **Damage:** 300-500 PHY
-- **Effect:** **+200% damage if from behind**
-- **Prerequisite:** Stab Attack
-- **Description:** Backstab massive
+### Buffs et Utilitaire Rogue
 
-**Assassination**
-- **Level:** 15
-- **SP Cost:** 200
-- **Damage:** 500-900 PHY
-- **Effect:** Instant kill possible si enemy <10% HP
-- **Prerequisite:** Backstab
-- **Description:** Assassination
-
-**Mortal Wound**
-- **Level:** 20
-- **SP Cost:** 250
-- **Damage:** 700-1,000 PHY
-- **Effect:** Bleed (100 HP/sec pour 10 sec)
-- **Prerequisite:** Assassination
-- **Description:** Blessure mortelle
-
-**Envenom**
-- **Level:** 25
-- **SP Cost:** 300
-- **Duration:** 180s
-- **Effect:** **Poison** sur weapon (50 HP/sec)
-- **Prerequisite:** Mortal Wound
-- **Description:** Envenimer weapon
-
-**Shadow Slash**
-- **Level:** 30
-- **SP Cost:** 400
-- **Damage:** 1,000-1,800 PHY
-- **Effect:** 100% crit, AOE 3m
-- **Prerequisite:** Envenom
-- **Description:** Shadow slash ultime
-
-#### Crossbow Skills
-
-**Power Xbow**
-- **Level:** 1
-- **SP Cost:** 60
-- **Damage:** 100-180 PHY (range)
-- **Range:** 20m
-- **Description:** Tir crossbow
-
-**Shadow Shot**
-- **Level:** 5
-- **SP Cost:** 100
-- **Damage:** 200-350 PHY
-- **Effect:** -20% enemy DEF (5s)
-- **Prerequisite:** Power Xbow
-- **Description:** Tir shadow
-
-**Trap Shot**
-- **Level:** 10
-- **SP Cost:** 150
-- **Damage:** 350-600 PHY
-- **Effect:** Places trap (slow 50%)
-- **Prerequisite:** Shadow Shot
-- **Description:** Tir piège
-
-**Explosion Arrow**
-- **Level:** 15
-- **SP Cost:** 200
-- **Damage:** 600-900 PHY (AOE)
-- **Effect:** AOE explosion 3m
-- **Prerequisite:** Trap Shot
-- **Description:** Arrow explosive
-
-**Xbow Mastery (Passive)**
-- **Level:** 20
-- **Effect:** +20% crossbow damage, +10% crit
-- **Description:** Mastery passif
-
-**Snipe**
-- **Level:** 25
-- **SP Cost:** 300
-- **Damage:** 900-1,400 PHY
-- **Range:** 30m
-- **Effect:** +100% crit chance
-- **Prerequisite:** Explosion Arrow
-- **Description:** Snipe à distance
-
-**Rain of Arrows**
-- **Level:** 30
-- **SP Cost:** 500
-- **Damage:** 1,200-2,000 PHY (AOE massive)
-- **Effect:** AOE 10m, 10 arrows
-- **Prerequisite:** Snipe
-- **Description:** Pluie de flèches
-
-### Bard Sub Skills
-
-**Moving March**
-- **Level:** 1 (Bard)
-- **SP Cost:** 50
-- **Duration:** 300s
-- **Effect:** **Movement speed +20%**
-- **Description:** Speed buff essentiel!
-
-**Noise**
-- **Level:** 5 (Bard)
-- **SP Cost:** 100
-- **Duration:** 300s
-- **Effect:** **MP +20%**
-- **Description:** Mana buff
-
-**Dispell**
-- **Level:** 10 (Bard)
-- **SP Cost:** 150
-- **Cast:** Instant
-- **Effect:** Removes 2 debuffs
-- **Description:** Cleanse
-
-**Dance of Wizardry**
-- **Level:** 15 (Bard)
-- **SP Cost:** 200
-- **Duration:** 60s
-- **Effect:** Cast speed +30%
-- **Description:** Cast speed buff
+| Skill | Effet documenté | Notes |
+|-------|-----------------|-------|
+| **Crossbow Extreme** | Sacrifie **~50% HP et DEF** pour +dégâts PHY drastiques | Le « GO » burst xbow |
+| **Dagger Desperate** | Sacrifie DEF PHY/MAG pour +dégâts PHY | Version dague |
+| **Stealth** | Invisible aux autres joueurs, vitesse réduite (moins ralenti avec dague) | Rompu par attaque ; certains guides décrivent une variante « Transparent » (immobile, visible de la party) |
+| **Scorn → Gross Scorn** | Taunt ~7 s (1 → 3 cibles) : la cible ne peut viser personne d'autre | Interrupt de rez/buffs ennemis, protection de cast allié |
+| Passif R1 | Crossbow Physical Attack +10% | Première case de la mastery |
 
 ---
 
 ## 🔮 Wizard Skills
 
-### Overview
-**Masteries:** Wizard (main) + Warlock (sub)
-**Focus:** AOE magic damage, nukes
-**Playstyle:** Ranged AOE DPS
+**Stats :** full INT (hybride possible) · **Arme :** staff (2H) · **Portée de base : 18 m** (+1 m/rang du passif Magic Bound)
 
-### Wizard Mastery Skills
+### Ligne Fire
 
-**Meteor**
-- **Level:** 1
-- **SP Cost:** 80
-- **Cast:** 1.5s
-- **Damage:** 200-400 MAG (AOE)
-- **Radius:** 5m
-- **Description:** Météore basique
+| Skill | Type | Effet documenté | Notes |
+|-------|------|-----------------|-------|
+| **Fire Bolt** | Nuke | Mono-cible, bon pour le solo | Partage son **groupe de cooldown** avec Meteor |
+| **Meteor** | Nuke ultime | **Le plus gros nuke du Wizard, jusqu'à 3 cibles très proches** | **CD 10 s** ; ordre de cast change le CD partagé (Meteor→Fire Bolt 10 s ; Fire Bolt→Meteor 3 s) |
+| **Fire Blow → Salamander Blow** | Nuke multi-hits | **7-9 coups** sur 3 cibles (souvent derrière le caster) | Animation ~9 s **annulable** (Detect, Earth Barrier) — cœur du burst |
+| Fire Trap → Lava Trap | Piège | Piège de feu à poser | Dégâts de zone à déclenchement |
+| Detect → Sprawl Detect | Utilitaire | Révèle les invisibles | Anti-Stealth/Invisible |
 
-**Blast**
-- **Level:** 3
-- **SP Cost:** 60
-- **Cast:** 0.8s
-- **Damage:** 150-300 MAG
-- **Range:** 20m
-- **Description:** Nuke rapide
+### Ligne Cold
 
-**Freeze**
-- **Level:** 8
-- **SP Cost:** 120
-- **Cast:** 1.0s
-- **Duration:** 3s
-- **Effect:** **Freeze** enemy (cannot move/act)
-- **Cooldown:** 10s
-- **Description:** Freeze spell
+| Skill | Type | Effet documenté | Notes |
+|-------|------|-----------------|-------|
+| **Ice Bolt** | Nuke | Mono-cible + gel | — |
+| **Frozen Spear** | Nuke | **3 hits, 20% frostbite par hit** | Contrôle doux mono-cible |
+| **Snow Wind → Blizzard** | Nuke AoE | Jusqu'à 5 cibles, grande portée | **80% frostbite, 20% freeze** |
+| Invisible → Crystal Invisible | Utilitaire | Invisibilité (version groupe au book 2), vitesse réduite | Escape, traverse les zones aggro |
+| Mana Drain → Mana Drought | Utilitaire | Draine le MP de la cible | Outil anti-casters |
 
-**Meteor Storm**
-- **Level:** 15
-- **SP Cost:** 200
-- **Cast:** 2.0s
-- **Damage:** 500-900 MAG (AOE large)
-- **Radius:** 10m
-- **Effect:** Burn 50 HP/sec
-- **Description:** Tempête de météores
+### Ligne Lightning
 
-**Flame Body**
-- **Level:** 20
-- **SP Cost:** 250
-- **Duration:** 120s
-- **Effect:** **Reflect 30% damage** as fire
-- **Description:** Reflect fire
+| Skill | Type | Effet documenté | Notes |
+|-------|------|-----------------|-------|
+| Lightning Bolt | Nuke | Jusqu'à 2 cibles | — |
+| **Chain Lightning** | Nuke | Jusqu'à 3 cibles | Book 2 |
+| **Lightning Shock** | Contrôle | **80% Fear pendant 20 s** | La cible fuit sans contrôle |
+| **Charged Wind → Charged Squall** | Nuke AoE | **5 hits, 80% knockback par hit** | Repousse les packs vers le cleric (kiting de zone) |
+| Charged Lightning / Lightning Impact | Nuke | Variantes de la ligne | — |
+| **Teleport → Aerial Teleport** | Mobilité | Téléporte instantanément à la position du curseur | Repositionnement PvP/PvE |
 
-**Mana Shield**
-- **Level:** 25
-- **SP Cost:** 300
-- **Duration:** 180s
-- **Effect:** Absorb damage with MP (1:2 ratio)
-- **Description:** Shield de MP
+### Ligne Earth
 
-**Teleport**
-- **Level:** 30
-- **SP Cost:** 400
-- **Cast:** Instant
-- **Distance:** 25m
-- **Cooldown:** 10s
-- **Effect:** **Teleport** forward
-- **Description:** Teleportation
+| Skill | Type | Effet documenté | Notes |
+|-------|------|-----------------|-------|
+| Ground Charge → **Ground Rave** | Nuke AoE | 5 cibles **autour du caster**, très courte portée | Base du rôle « Wall WIZ » |
+| **Earth Shock → Earth Quake** | Nuke AoE | 5 cibles **autour de la cible**, longue portée | Le meilleur nuke de zone ciblée |
+| **Root → Mesh Root** | Contrôle | Immobilise la cible 10 s | **20% d'échec** |
+| **Earth Barrier → Earth Fence** | Buff party | **+30% absorption/défense PHY** (rang moyen) | **20 s / CD 60 s** — cycle permanent avec 3 Wizards |
 
-**Meteor Shower (Ultimate)**
-- **Level:** 35
-- **SP Cost:** 600
-- **Cast:** 3.0s
-- **Damage:** 1,500-2,500 MAG (AOE massive)
-- **Radius:** 15m
-- **Effect:** Devastating AOE
-- **Description:** Pluie de météores ultime
+### Buffs et Passifs Wizard
 
-### Warlock Sub Skills
+| Skill | Effet documenté | Notes |
+|-------|-----------------|-------|
+| **Life Control (LC)** | **+25% dégâts magiques, −50% HP** | Vulnérable aux dégâts absolus sous LC |
+| **Life Turnover (LTO)** | **+25% dégâts magiques supplémentaires** | Cumulable avec LC pour le burst |
+| **Natural Spirit** (passif) | +10% MAG ATK par rang | — |
+| **Force Mental** (passif) | +10% MP, +1 INT par rang | — |
+| **Magic Bound** (passif) | **+1 m de portée par rang** | Portée de base 18 m |
 
-**Life Drain**
-- **Level:** 1 (Warlock)
-- **SP Cost:** 100
-- **Damage:** 300-500 MAG
-- **Effect:** Heal 50% of damage
-- **Description:** Drain life
-
-**Curse**
-- **Level:** 5 (Warlock)
-- **SP Cost:** 150
-- **Duration:** 30s
-- **Effect:** **Enemy DEF -20%**
-- **Description:** Curse debuff
-
-**Weaken**
-- **Level:** 10 (Warlock)
-- **SP Cost:** 200
-- **Duration:** 20s
-- **Effect:** **Enemy ATK -30%**
-- **Description:** Weaken
-
-**Disease**
-- **Level:** 15 (Warlock)
-- **SP Cost:** 250
-- **Duration:** 15s
-- **Effect:** **DoT 200 HP/sec**, -20% movement
-- **Description:** Disease
-
-**Fear**
-- **Level:** 20 (Warlock)
-- **SP Cost:** 300
-- **Duration:** 5s
-- **Effect:** **Enemy runs randomly**
-- **Description:** Fear
-
-**Paralysis Nova**
-- **Level:** 25 (Warlock)
-- **SP Cost:** 350
-- **Radius:** 10m
-- **Effect:** Paralyze (cannot act) 3s
-- **Description:** Paralyze AOE
+### Rotations de référence
+- **Lv 20 :** Lightning Bolt → Earth Shock → Lightning Bolt → Snow Wind
+- **Lv 60 :** Meteor → Lightning Bolt → Earth Shock → Snow Wind
+- **Lv 80 :** Meteor → Chain Lightning → Earth Quake → Blizzard
+- **Wall WIZ :** Ground Rave → Earth Quake → Ground Rave → Blizzard → Ground Rave
+- **PvP :** auto → clic sol → Frozen Spear → Charged Squall → Salamander Blow (cancel animation)
 
 ---
 
 ## 🎭 Warlock Skills
 
-### Overview
-**Masteries:** Warlock (main) + Wizard (sub)
-**Focus:** Debuffs, DoT, crowd control
-**Playstyle:** Support DPS
+**Stats :** full INT · **Arme :** dark staff (warlock rod) + bouclier · **Armure :** robe · **Rôle :** debuffer/DoT/contrôle
 
-### Warlock Mastery Skills
+### DoT — book 1 (mono-cible) et book 2 (AoE 3 cibles)
 
-**Decay**
-- **Level:** 1
-- **SP Cost:** 80
-- **Damage:** 150-300 MAG
-- **Effect:** Curse -10% all stats
-- **Duration:** 20s
-- **Description:** Decay curse
+| DoT (statut) | Book 1 | Book 2 (AoE) | Effet |
+|--------------|--------|--------------|-------|
+| **Burn** (Combustion) | R2C1 | **Blaze → Dark Blaze** | Dégâts feu périodiques |
+| **Poison** (Venom) | R2C2 | **Toxin → Toxin Invasion** | Dégâts poison périodiques |
+| **Bleed/Decay** (hémorragie) | R2C3 | **Decayed → Dark Decayed** | Dégâts physiques périodiques + synergy avec la réduc DEF |
+| **Disease** | — | via **Vampire Touch/Kiss** | Réduit les soins reçus |
 
-**Dot**
-- **Level:** 5
-- **SP Cost:** 120
-- **Damage:** 100-200 MAG
-- **Effect:** **DoT 100 HP/sec** pour 15 sec
-- **Stackable:** Oui
-- **Description:** Damage over time
+Les DoT **accélèrent la jauge berserk** du lanceur. Consensus communauté : Decay (Decayed) et Curse Breath dépassent Blaze/Toxin en utilité à haut niveau.
 
-**Mana Burn**
-- **Level:** 10
-- **SP Cost:** 180
-- **Damage:** 200-400 MAG
-- **Effect:** Burn 500 MP
-- **Description:** Burn enemy mana
+### Débuffs — série « Raze / Ravage » (~80% de réussite, 30 s, CD court)
 
-**Weakness**
-- **Level:** 15
-- **SP Cost:** 220
-- **Duration:** 30s
-- **Effect:** **PHY DEF -30%, MAG DEF -30%**
-- **Description:** Massive DEF debuff
+| Skill (book 1 → book 2) | Statut infligé | Effet du statut |
+|------------------------|----------------|-----------------|
+| Physical Raze → Physical Ravage | **Decay** | −DEF physique |
+| Medical Raze → Magical Ravage | **Weaken** | −défense |
+| Combat Raze → Combat Ravage | **Impotent** | **−ATK physique ET magique** |
+| **Courage Raze → Courage Ravage** | **Division** | **+30% dégâts subis** — le plus utile (géants, PTG, Pandora) |
 
-**Lifesteal**
-- **Level:** 20
-- **SP Cost:** 280
-- **Damage:** 400-700 MAG
-- **Effect:** Heal 100% of damage
-- **Description:** Massive lifesteal
+Autres curses confirmés dans les données serveur (eSRO) et forums : **Dull** (−puissance magique, ~50% 30 s), Panic, **Short Sight** (−portée d'attaque), **Darkness** (vision), Disease (soins réduits), Fear, Confuse, Bind, Bleed.
 
-**Confuse**
-- **Level:** 25
-- **SP Cost:** 350
-- **Duration:** 10s
-- **Effect:** **Enemy attacks randomly**
-- **Description:** Confuse
+### Contrôle
 
-**Curse Field**
-- **Level:** 30
-- **SP Cost:** 500
-- **Radius:** 15m
-- **Duration:** 20s
-- **Effect:** All enemies in field get -20% stats
-- **Description:** AOE curse field
+| Skill | Effet documenté | Notes |
+|-------|-----------------|-------|
+| **Stun** (mono) | **80% chance de stun** | La cible ne peut utiliser que des potions |
+| **Daze → Wrath Daze** (AoE) | Stun jusqu'à 3 cibles | Noms PvP rapportés par le guide Valkyria |
+| **Slumber → Deep Slumber** | Sommeil 1 → 3 cibles | Brisé si la cible est attaquée |
+| Curse Breath → Dark Breath | Multi-curse de zone | — |
 
-**Body Enslave**
-- **Level:** 35
-- **SP Cost:** 600
-- **Duration:** 15s
-- **Effect:** **Control enemy** (attacks your enemies)
-- **Description:** Mind control
+### Ligne « Sang »
 
-### Wizard Sub Skills
+| Skill | Effet | Notes |
+|-------|-------|-------|
+| **Vampire Touch → Vampire Kiss** | Dégâts + **vol de vie** + inflige Disease (augmente la réussite des debuffs) | Sustain signature du Warlock |
+| Blood Flower → Death Flower | Nukes magiques | — |
+| Bloody Trap → Death Trap | Pièges | — |
 
-**Blast** (voir Wizard skills)
-- **Level:** 1
-- Nuke rapide
+### Buffs Warlock
 
-**Teleport** (voir Wizard skills)
-- **Level:** 30
-- Escape tool
+| Skill | Effet documenté | Notes |
+|-------|-----------------|-------|
+| **Reflect → Advanced Reflect** | **35% de chance de renvoyer les dégâts à 135%** | **Ignore Pain Quota / fences** — punit les bursts |
+| Mirage / Phantasma | Utilitaires (illusions) | — |
+| **Scream Mask** | Buff 2 alliés : chance de **stun l'attaquant** qui les touche | CD court, refresh constant ; n'affecte pas les dégâts absolus |
+| Nuke « LTO-like » (cap 124+) | −DEF perso / +dégâts | Équivalent warlock du Life Turnover |
+| **Aura of Blood** (cap 124+) | +30% dégâts berserk (self + party) | — |
 
 ---
 
 ## 🎵 Bard Skills
 
-### Overview
-**Masteries:** Bard (main) + Cleric (sub)
-**Focus:** Buffs, heals, mana
-**Playstyle:** Support buffer
+**Stats :** INT à STR · **Arme :** harpe (robe uniquement, pas de bouclier) · **Rôle :** buffer, batterie de mana
 
-### Bard Mastery Skills
+### Marches et Tambours
 
-**Moving March**
-- **Level:** 1
-- **SP Cost:** 50
-- **Duration:** 300s
-- **Effect:** **Movement speed +20%**
-- **Description:** Speed buff essentiel!
+| Skill | Effet documenté | Notes |
+|-------|-----------------|-------|
+| **Moving March → Swing March** | +vitesse de déplacement du groupe | À recaster régulièrement (surtout lurers + après rez) |
+| **Hit March → Clout March** | +hit ratio du groupe | Complète les marches |
+| **Guard Tambour** | +DEF **physique** du groupe | **Non cumulable avec Mana Tambour** ; interrompu si le Bard prend des dégâts |
+| **Mana Tambour** | +DEF **magique** du groupe | Idem — choisir selon les mobs |
 
-**Noise**
-- **Level:** 5
-- **SP Cost:** 100
-- **Duration:** 300s
-- **Effect:** **MP +20%**
-- **Description:** Mana buff
+### Mana et Anti-aggro
 
-**Tuning**
-- **Level:** 10
-- **SP Cost:** 150
-- **Duration:** 300s
-- **Effect:** **PHY ATK +10%** (AOE party)
-- **Description:** Attack buff AOE
+| Skill | Effet documenté | Notes |
+|-------|-----------------|-------|
+| **Mana Cycle** | Rend un montant **fixe de MP chaque seconde pendant 16 s** (cible unique) | Priorité : Clerics → DPS → soi |
+| **Mana Orbit** | Régénère le MP de toute la party | Sans ciblage |
+| **Noise** | Réduit l'aggro des monstres | **À garder actif en permanence** |
+| Mana Switch | Gestion de mana de groupe | Utilisé en script party |
+| Mana Wind → Mana Breeze | Variantes régén | — |
 
-**Vibrate**
-- **Level:** 15
-- **SP Cost:** 200
-- **Duration:** 300s
-- **Effect:** **Attack rating +10%**
-- **Description:** Hit buff
+### Cures et Contrôle
 
-**Dispell**
-- **Level:** 20
-- **SP Cost:** 250
-- **Effect:** Removes 2 debuffs
-- **Cooldown:** 5s
-- **Description:** Cleanse
+| Skill | Effet | Notes |
+|-------|-------|-------|
+| Cure Melody | Cure 1 statut d'1 cible | — |
+| **Cure Music** | Cure toute la party | Le cleanse de zone |
+| Holding Calmor / Patter Calmor | Sommeil/contrôle | — |
+| Temptation → Curious Temptation | Charme un monstre | — |
 
-**Guardian**
-- **Level:** 25
-- **SP Cost:** 300
-- **Duration:** 180s
-- **Effect:** **DEF +15%** (AOE party)
-- **Description:** Defense buff AOE
+### Attaques (Bard « battle »)
 
-**Dance of Wizardry**
-- **Level:** 30
-- **SP Cost:** 400
-- **Duration:** 60s
-- **Effect:** **Cast speed +30%**
-- **Description:** Cast speed buff
+| Skill | Effet | Notes |
+|-------|-------|-------|
+| Horror Chord / Weird Chord | Attaques de harpe | — |
+| Booming Chord → **Booming Wave** | Attaque de zone | — |
+| **Tuning Noise → Tuning Sound** | **Dégâts absolus** | Ignore les réductions |
+| Discord Wave | Attaque de zone | — |
 
-**Battle Drum**
-- **Level:** 35
-- **SP Cost:** 500
-- **Duration:** 120s
-- **Effect:** **ATK +25%, Movement speed +10%** (AOE party)
-- **Description:** Massive buff AOE
+### Danses (haut niveau)
 
-### Cleric Sub Skills
+| Skill | Effet | Notes |
+|-------|-------|-------|
+| **Dance of Magic / Dance of Wizardry** | +dégâts **magiques** de la party | Interrompue si le Bard est touché |
+| Dance of Healing | Soins de zone en dansant | Alternative PvP |
+| Danse warrior / danse rogue | Buffs physiques respectifs | — |
+| **Awesome World** | Permet de **danser seul** | **Effet réduit de moitié** |
+| Passifs Beautiful Life / Bards Dream | Améliorent danses/mana | — |
 
-**Healing Cycle**
-- **Level:** 1 (Cleric)
-- **Heal:** 300-500 HP
-- **Description:** Self-heal
-
-**Bless Spell**
-- **Level:** 5 (Cleric)
-- **Duration:** 300s
-- **Effect:** DEF +20%
-- **Description:** Defense buff
-
-**Recovery Division**
-- **Level:** 10 (Cleric)
-- **Heal:** 500-800 HP (AOE party)
-- **Description:** Group heal
-
-**Resurrection**
-- **Level:** 15 (Cleric)
-- **Effect:** Resurrect dead
-- **Description:** Rez
-
-**Reverse**
-- **Level:** 20 (Cleric)
-- **Duration:** 60s
-- **Effect:** Reflect 30% damage
-- **Description:** Reflect damage
+⚠️ Deux Bards dans la même party : le 2e doit attendre l'annulation du tambour/danse du 1er.
 
 ---
 
 ## ⛪ Cleric Skills
 
-### Overview
-**Masteries:** Cleric (main) + Bard (sub)
-**Focus:** Healing, support, defense
-**Playstyle:** Healer
+**Stats :** full INT à full STR · **Arme :** cleric rod + bouclier · **Armure :** robe (bonus heal) ou light armor (bonus buffs) · **Rôle :** healer, buffs défensifs
 
-### Cleric Mastery Skills
+### Soins
 
-**Healing Cycle**
-- **Level:** 1
-- **SP Cost:** 50
-- **Heal:** 400-600 HP
-- **Cast:** 1.0s
-- **Description:** Self-heal
+| Skill | Type | Effet documenté | Notes |
+|-------|------|-----------------|-------|
+| **Healing Cycle → Healing Orbit** | HoT | Soin **toutes les 3 secondes** | **N'attire AUCUNE aggro** — soin de fond principal |
+| Healing Division → Healing Favor | Heal direct | Heal mono-cible, CD court | Bon pour *prendre* l'aggro |
+| **Group Healing → Group Healing Breath** | Heal groupe | Jusqu'à 8 membres, cast plus long | — |
+| **Group Recovery → Holy Group Recovery** | Heal burst | Soin instantané de zone | Grosse aggro, gros coût MP |
+| **Recovery Division → Holy Recovery Division** | Buff HoT party | **300 s**, soigne périodiquement le membre le plus blessé — ~**445 HP/s** à haut rang | « Must max » ; posé en script sur toute la party |
+| Overhealing → Glut Healing | Attaque | Dégâts fixes + aggro | Outil de tanking/aggro, pas de DPS |
 
-**Healing Division**
-- **Level:** 5
-- **SP Cost:** 100
-- **Heal:** 600-900 HP
-- **Cast:** 2.0s
-- **Target:** Single target ally
-- **Description:** Ally heal
+### Résurrection
 
-**Recovery Division**
-- **Level:** 10
-- **SP Cost:** 200
-- **Heal:** 800-1,200 HP (AOE party)
-- **Cast:** 2.5s
-- **Description:** Group heal
+| Skill | Effet | Notes |
+|-------|-------|-------|
+| **Resurrection** | Résuscite un allié | Runes/XP loss selon rang et version |
 
-**Bless Spell**
-- **Level:** 15
-- **SP Cost:** 250
-- **Duration:** 300s
-- **Effect:** **PHY DEF +25%, MAG DEF +15%**
-- **Description:** Blessing buff
+### Buffs
 
-**Skin of Resonance**
-- **Level:** 20
-- **SP Cost:** 300
-- **Duration:** 180s
-- **Effect:** **PHY DEF +30%, MAG DEF +20%, HP +500**
-- **Description:** Massive defensive buff
+| Skill | Effet documenté | Notes |
+|-------|-----------------|-------|
+| **Bless Spell** | **+DEF PHY et MAG du groupe** (fort) | Le buff défensif signature, posé en cycle |
+| **Body Blessing / Body Deity** | +DEF physique | **30 min** |
+| **Soul Blessing / Soul Deity** | +DEF magique | **30 min** |
+| **Force Blessing / Force Deity** | **+STR** (→ HP + ATK PHY) | Sur warriors/lurers ; buff « limité » (1 par perso) |
+| **Mental Blessing / Mental Deity** | **+INT** (→ MP + ATK MAG) | Sur les DPS INT |
+| **Holy Word → Holy Spell** | Résistance aux **statuts anormaux** (curses Warlock...) | Contre-mesure clé |
+| Innocent → Integrity | Cure un statut | — |
+| **Reverse → Grad Reverse** (+ Group/Holy Group Reverse, Reverse Oblation/Immolation) | Renvoi de dégâts | Série reflect du Cleric |
 
-**Resurrection**
-- **Level:** 25
-- **SP Cost:** 400
-- **Cast:** 5.0s
-- **Cooldown:** 60s
-- **Effect:** Resurrect with 50% HP
-- **Description:** Resurrect ally
+### Attaques
 
-**Healing Orbit**
-- **Level:** 30
-- **SP Cost:** 500
-- **Heal:** 1,500-2,500 HP (AOE party)
-- **Cast:** 3.0s
-- **Cooldown:** 15s
-- **Description:** Massive group heal
-
-**Turn Undead**
-- **Level:** 35
-- **SP Cost:** 600
-- **Damage:** 1,000-2,000 HOLY (AOE)
-- **Effect:** Extra damage vs undead
-- **Description:** Holy damage AOE
-
-### Bard Sub Skills
-
-**Moving March** (voir Bard)
-- **Level:** 1
-- Speed buff
-
-**Noise** (voir Bard)
-- **Level:** 5
-- Mana buff
-
-**Dispell** (voir Bard)
-- **Level:** 20
-- Cleanse
+| Skill | Effet documenté | Notes |
+|-------|-------|-------|
+| Trial Cross → Justice Cross | Nukes holy | — |
+| **Offering / Pure Offering** | **La plus forte attaque du jeu — consomme 95% des HP du Cleric** (cast possible seulement si HP > 95%) | « Cleric bomb » — redoutable vs INT low-HP et LTO Wizards |
 
 ---
 
-## 📊 Skill Progression Costs
+## ⏱️ Cooldowns et Animations Notoires
 
-### European SP Costs
+| Skill/Phénomène | Valeur documentée | Source |
+|-----------------|-------------------|--------|
+| **Meteor** | CD 10 s ; **groupe de cooldown partagé avec Fire Bolt** (FB→Meteor : 3 s ; Meteor→FB : 10 s) | Silkroad Forums (Wizard/Bard Guide) |
+| **Earth Barrier / Earth Fence** | 20 s de durée, **CD 60 s** → cycle permanent avec 3 Wizards | Silkroad Forums |
+| **Fire Blow / Salamander Blow** | Animation ~9 s, **7-9 hits**, annulable par Detect / Earth Barrier | Silkroad Forums + SRO Valkyria |
+| **Délai de potion EU** | **15 s** entre chaque potion | Silkroad Temptation |
+| **Pain Quota** | Durée **5 min** | SRO Valkyria |
+| **Screens (Physical/Magical/Ultimate)** | Durée **1 min**, non stackables | SRO Valkyria |
+| **Raze/Ravage (Warlock)** | ~80% de chance, 30 s, CD court | SRO Valkyria + forums |
+| **Reflect Warlock** | 35% de chance, ratio 135%, **ignore la distribution de dégâts** | SRO Valkyria |
+| **Healing Cycle/Orbit** | Tick **3 s**, zéro aggro | elitepvpers (Bard/Cleric) |
+| **Recovery Division** | **300 s**, tick périodique | silkroadalani + elitepvpers |
+| **Scorn (taunt Rogue)** | ~**7 s** | SRO Valkyria |
+| **Butterfly Blow Dull** | 20% × 20 s | silkroad4arab |
+| **Life Control** | +25% MAG / **−50% HP** (LTO +25% cumulé) | Silkroad Forums |
 
-**Par Mastery:**
-- Total skills ~100-120 skills per mastery
-- **Total SP to max:** ~6,000,000 SP per mastery
-- **Total for 2 masteries:** ~12,000,000 SP
-
-### Recommendation
-
-**SP Farming:**
-- **Not required** for Europeans
-- Earned naturally through leveling
-- **No GAP system**
-
-### Skill Learning Order
-
-**Recommended:**
-1. **Main mastery first** (Warrior, Rogue, Wizard, etc.)
-2. **Sub mastery second** (Cleric, Bard, Warlock, etc.)
-3. **Balance** between les deux
+**Règle générale EU :** gros burst ⇒ long cooldown et/ou longue animation ; d'où l'importance des **rotations** et du **weapon switch** (ex: Warrior qui swap 1H↔2H, Rogue dague↔arbalète).
 
 ---
 
-## 💡 Tips
+## 📊 Progression SP
 
-**Warrior:**
-- Max 1H ou 2H first
-- Cleric sub for heals
-- Use buffs before combat
+- **~760 000 SP** pour maxer une combinaison **Wizard + Bard au cap 90** (guide Wizard/Bard, silkroadforums).
+- Extrapolation communautaire : **~1,2-1,5 M SP** pour 2 masteries complètes au cap 110-120 (vs plusieurs millions côté chinois — d'où le « no SP farming requis » côté EU, le gap restant **optionnel**).
+- Les paliers de mastery (achat des niveaux via SP) suivent une courbe croissante (ex: ~15 SP pour passer 13→14 dans les bas niveaux, bien plus haut ensuite — cf. [UnKnoWnCheaTs – Complete Guide to Skill Points](https://www.unknowncheats.me/wiki/Silkroad:Complete_Guide_to_Skill_Points)).
 
-**Rogue:**
-- Stealth is key
-- Backstab for massive damage
-- Use Bard sub for speed
-
-**Wizard:**
-- AOE everything
-- Mana management critical
-- Use Warlock debuffs
-
-**Bard:**
-- Buffs sont votre force
-- Stay in party
-- Mana buff essential
-
-**Cleric:**
-- Heals first priority
-- Buffs second
-- Stay with party
+### Ordre d'apprentissage conseillé
+1. **Main mastery** d'abord : lignes de dégâts/rôle + le book 1 de chaque ligne clé
+2. **Sub mastery** : survie/support (Cleric heals, Bard mana...)
+3. **Books 2** des skills clés (Meteor, Dare Devil, Guard Tambour, Recovery Division...)
+4. **Passifs** en dernier (Natural Spirit, Magic Bound, Beautiful Life...)
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
+## ❓ Incertitudes et Versions
+
+| Point | Statut |
+|-------|--------|
+| Noms exacts des skills d'entrée (Slash, Bash, Spinning, Power Shot...) | Confirmés par listes in-game (PhBot) et guides |
+| Double Stab / Cunning Stab (Warrior 1H), Axis Quiver | Présents dans les listes in-game ; orthographe/contenu exacts à vérifier en jeu |
+| Chiffres exacts de dégâts et coûts MP par rang | Non publiés de façon fiable — dépendent du rang, du cap (90→140) et de la version (iSRO/vSRO/SilkroadR) ; non inventés ici |
+| Paliers de mastery exacts de déblocage de chaque skill | Structure « book 1 tôt / book 2 plus haut » confirmée ; paliers précis variables selon le cap du serveur |
+| « Transparent » (Rogue) / noms des curses mineurs Warlock (Slow/Dull/Stiffen) | Sources divergentes (guides turcs/japonais) — marqués comme incertains |
+| Versions cap 121-140 (Aura of Blood, skills Rogue+) | Documentés par le guide SRO Valkyria ; noms exacts iSRO non croisés avec d'autres sources |
+
+---
+
+## 💡 Tips par Classe
+
+**Warrior :**
+- Iron Skin + Mana Skin = obligatoires sur tout build
+- Vital Increase pour prendre l'aggro, **annulez-le** pour burst
+- Pain Quota sur les 2 Clerics, fences sur les lurers, Protect sur les Wizards
+- Équipez l'épée 1H **avant** le bouclier (sinon buffs party annulés)
+
+**Rogue :**
+- Combo knockdown (Hurricane Shot) → Mortal Wounds → Prick
+- Crossbow Extreme seulement en situation de kill garanti (−50% HP/DEF)
+- Rapid Shot = lure ; Scorn = interrupt de rez/buffs
+
+**Wizard :**
+- Ouvrez avec **Meteor avant Fire Bolt** pour maîtriser le cooldown partagé
+- Earth Barrier entre deux nukes (annule l'animation de Fire Blow)
+- LC+LTO pour le burst, mais vous êtes « one-shot » — gézrez la position (Teleport)
+
+**Warlock :**
+- Courage Raze (Division) sur chaque géant : +30% de dégâts pour toute la party
+- Chaîne : debuff → stun/sleep → DoT AoE → Vampire Kiss
+- Reflect punit les bursts et **ignore Pain Quota**
+
+**Bard :**
+- Noise actif en permanence ; Mana Cycle sur les Clerics d'abord
+- Ne vous faites pas toucher : tambours et danses tombent sinon
+- Deux Bards : coordonnez les tambours (annulation)
+
+**Cleric :**
+- Healing Orbit (zéro aggro) en fond + Group Healing en burst
+- Recovery Division sur toute la party avant chaque pull
+- Offering uniquement à HP > 95% — le finisher le plus dur du jeu
+
+---
+
+## 🔗 Resources (skills)
+
+- **Traductions des 6 masteries EU (elitepvpers, structure grille R/C)** : [Warrior](https://www.elitepvpers.com/forum/sro-guides-templates/87726-silkroad-europe-warrior-skills-translation.html) · [Rogue](https://www.elitepvpers.com/forum/sro-guides-templates/87728-silkroad-europe-rogue-skills-translation.html) · [Wizard](https://www.elitepvpers.com/forum/sro-guides-templates/87730-silkroad-europe-wizard-skills-translation.html) · [Warlock](https://www.elitepvpers.com/forum/sro-guides-templates/87731-silkroad-europe-warlock-skills-translation.html) · [Bard](https://www.elitepvpers.com/forum/sro-guides-templates/87735-silkroad-europe-bard-skills-translation.html) · [Cleric](https://www.elitepvpers.com/forum/sro-guides-templates/87737-silkroad-europe-cleric-skills-translation.html)
+- [The Full Wizard/Bard Guide (silkroadforums t=100199)](http://www.silkroadforums.com/viewtopic.php?f=5&t=100199) — cooldowns, groupes de CD, rotations
+- [SRO Valkyria Beginner Guides (Warrior/Rogue/Wizard/Warlock/Bard/Cleric)](https://srovalkyria.blog.fc2.com/blog-category-1.html)
+- [PhBot AutoParty.py — noms in-game des skills EU](https://github.com/Day4Date/PhBot-Plugins/blob/master/AutoParty.py)
+- [eSRO skill_builder.cpp — effets/curses côté serveur](https://github.com/myildirimofficial/eSRO/blob/master/SOL/src/skill_builder.cpp)
+- [Fandom Wiki – Skills](https://silkroadonline.fandom.com/wiki/Skills) · [Weapons](https://silkroadonline.fandom.com/wiki/Weapons)
+- [Silkroad4Arab – explication des skills Rogue (Butterfly Blow/Dull)](https://www.silkroad4arab.com/vb/showthread.php?t=407416)
+- [elitepvpers – Cleric heal skills (Healing Orbit/aggro)](https://www.elitepvpers.com/forum/silkroad-online/1289296-cleric-heal-skills.html)
+
+---
+
+*Dernière mise à jour: 2026-10-01 (révision majeure : remplacement des noms/chiffres non sourcés par les noms iSRO vérifiés et les valeurs documentées ; voir section Incertitudes pour les limites)*
+*Sources: elitepvpers (traductions 2008), silkroadforums, SRO Valkyria, PhBot Plugins (GitHub), eSRO (GitHub), Fandom Wiki, silkroad4arab, silkroadalani*

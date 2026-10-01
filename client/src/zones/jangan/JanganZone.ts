@@ -43,6 +43,9 @@ export class JanganZone {
   // Health bars
   private healthBarManager: MonsterHealthBarManager;
 
+  /** Vrai en mode réseau: les monstres sont pilotés par le serveur. */
+  disableLocalMonsters = false;
+
   constructor(scene: Scene, assetLoader?: AssetLoader) {
     this.scene = scene;
     this.assetLoader = assetLoader;
@@ -59,6 +62,12 @@ export class JanganZone {
     }
 
     console.log('[JanganZone] Loading Jangan zone...');
+
+    // En mode réseau, les monstres viennent du serveur (spawn packets):
+    // ne pas peupler localement (sinon doublons visuels).
+    if (this.disableLocalMonsters) {
+      console.log('[JanganZone] Monstres locaux désactivés (mode réseau)');
+    }
 
     try {
       // Stats officielles des monstres (avant tout spawn)
@@ -181,6 +190,8 @@ export class JanganZone {
    * Spawn all monsters in the zone
    */
   private spawnMonsters(): void {
+    // Mode réseau: le serveur est la source des monstres (NetworkCombat)
+    if (this.disableLocalMonsters) return;
     console.log('[JanganZone] Spawning monsters...');
 
     this.config.monsterSpawns.forEach((spawnConfig, index) => {

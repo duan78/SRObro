@@ -1,13 +1,16 @@
 # Monster Spawn Locations - Coordonnées et Zones
 
 ## 📋 Table des Matières
-- [Introduction](#introduction)
-- [Unique Bosses](#unique-bosses)
-- [Champion/Giant Spawns](#championgiant-spawns)
-- [SP Farming Spots](#sp-farming-spots)
-- [Leveling Zones](#leveling-zones)
-- [Monster Types](#monster-types)
-- [Notes de Développement](#notes-de-développement)
+- [Introduction](#-introduction)
+- [Unique Bosses](#-unique-bosses)
+- [Qin-Shi Tomb (Jangan Cave)](#-qin-shi-tomb-jangan-cave--uniques--structure)
+- [Job Temple (Alexandrie)](#-job-temple-alexandrie--uniques--monstres)
+- [Champion/Giant Spawns](#-championgiant-spawns)
+- [SP Farming Spots](#-sp-farming-spots)
+- [Leveling Zones](#️-leveling-zones)
+- [Monster Types](#-monster-types)
+- [Notes de Développement](#-notes-de-développement)
+- [Statistiques de Spawn](#-statistiques-de-spawn)
 
 ---
 
@@ -17,6 +20,9 @@ Ce document fournit les **coordonnées de spawn précises** pour les monstres im
 
 **Sources Primaires:**
 - xSROMap (https://jellybitz.github.io/xSROMap/)
+- Silkroad Online Database - données client (https://silkroadonline.wiki/monsters)
+- Rev6 Unique Spawn Points (https://rev6.org/en/post/silkroad-online-uniq-spawn-noktalari)
+- Elitepvpers Unique Spawns (https://www.elitepvpers.com/forum/sro-guides-templates/186742-guide-unique-spawns.html)
 - Monster Area Wiki
 - Community guides et databases
 
@@ -29,334 +35,204 @@ Ce document fournit les **coordonnées de spawn précises** pour les monstres im
 
 ## 👹 Unique Bosses
 
-### Unique Spawns avec Coordonnées Précises
+### Unique Spawns — Données vérifiées (client iSRO + rev6/elitepvpers)
+
+> ✅ **HP/levels = données client** (silkroadonline.wiki). Zones = guides rev6/elitepvpers. Coordonnées X/Y précises = **rapportées, non vérifiées**.
 
 #### Tiger Girl (Level 20)
 ```
-Zone: Tiger Mountain (Jangan Area)
-Coordinates:
-  - Primary Spawn: X: 4853.28, Y: 93.81
-  - Secondary Spawn: X: 4900, Y: 120
+Zone: Bandit Stronghold (Bijeokdan Mountain) / Tiger Mountain — Chine, Jangan
+Coordonnées (rapportées): X: 4853.28, Y: 93.81 (Tiger Mountain)
+Spawn Time: 3-5 heures après mort (4h défaut vSRO), point aléatoire
+HP: 598,720 | ATK: 42-51 | DEF: 18 | Gold: 586,560
+ID: 1954 | Code: MOB_CH_TIGERWOMAN
+Special: AOE stun (roar)
+Après crash serveur: spawn fixe au nord du Bandit Stronghold
 
-Spawn Time: 4-8 hours after death
-HP: 598,720
-Damage: Medium
-Special: AOE roar
+Drops: équipement 2D-3D, gold, SOX rare
 
-Drops:
-  - Seal of Star (SOS) 2D-3D
-  - Gold: 50,000-100,000
-  - Tiger Girl Weapon (rare)
-  - HP/MP Spikes
-
-Strategy:
-  - Tank and spank
-  - Watch for AOE stun
-  - Level 20+ party of 4-6 recommended
+Strategy: solo possible à 30+; sinon party 4-6 joueurs level 20+
 ```
 
 #### Cerberus (Level 24)
 ```
-Zone: Constantinople Area (Desperado Hill)
-Coordinates:
-  - Spawn 1: X: -1551.74, Y: -93.72
-  - Spawn 2: X: -1291.27, Y: -133.04
-  - Spawn 3: X: -1400, Y: -110
+Zone: Desperado Hill / Forest of Dusk / Garden of Gods — Europe (Constantinople)
+Coordonnées (rapportées): X: -1551.74, Y: -93.72 (Desperado Hill)
+Spawn Time: 3-5 heures, point aléatoire
+HP: 693,072 | ATK: 52-70 | DEF: 22 | Gold: 740,519
+ID: 5871 | Code: MOB_EU_KERBEROS
+Special: attaques multiples (3 têtes)
+Après crash serveur: spawn fixe à l'ouest de Desperado Hill
 
-Spawn Time: 4-8 hours
-HP: 693,072
-Damage: Medium-High
-Special: Fire AOE, multiple heads
+Drops: équipement 3D, gold
 
-Drops:
-  - Seal of Star (SOS) 3D-4D
-  - Gold: 75,000-150,000
-  - Cerberus Weapon (rare)
-  - Fire crystals
-
-Strategy:
-  - Range recommended
-  - Watch for fire breath AOE
-  - Level 25+ party of 6-8 recommended
+Strategy: 2-4 joueurs level 25+, ranged pratique
 ```
 
 #### Captain Ivy (Level 30)
 ```
-Zone: Asia Minor (Amphitheater Area)
-Coordinates:
-  - Main Spawn: X: -6424.71, Y: 2744.64
-  - Alt Spawn 1: X: -6380, Y: 2780
-  - Alt Spawn 2: X: -6460, Y: 2710
+Zone: Amphitheater / Cleopatra's Gate / Haran's Tower — Asie Mineure
+Coordonnées (rapportées): X: -6424.71, Y: 2744.64 (Amphitheater)
+Spawn Time: 3-5 heures, point aléatoire
+HP: 1,094,835 | ATK: 115-184 | DEF: 30 | Gold: 1,050,440
+ID: 14778 | Code: MOB_AM_IVY
+Après crash serveur: spawn fixe à l'Amphitheater
 
-Spawn Time: 6-10 hours
-HP: 1,094,835
-Damage: High
-Special: Poison, summons minions
+Drops: équipement 4D-5D, gold
 
-Drops:
-  - Seal of Star (SOS) 4D-5D
-  - Seal of Moon (SOM) 3D (rare)
-  - Gold: 100,000-200,000
-  - Captain Ivy Dagger
-  - Poison ingredients
-
-Strategy:
-  - Clear adds first
-  - Tank must have high poison resist
-  - Cleric essential for cleansing
-  - Level 30+ party of 8 recommended
+Strategy: party 4-6 joueurs level 35+
 ```
 
-#### Isyutaru (Level 40)
+#### Uruchi (Level 40)
 ```
-Zone: Donwhang Area
-Coordinates:
-  - Spawn 1: X: 12000, Y: 6500
-  - Spawn 2: X: 12150, Y: 6450
-  - Spawn 3: X: 11850, Y: 6550
+Zone: Black Robber Den (forteresse) + routes du Tarim Ferry — Tarim Basin (Asie Centrale)
+Spawn Time: 3-5 heures, point aléatoire
+HP: 1,779,528 | ATK: 124-149 | DEF: 47 | Gold: 1,711,056
+ID: 1982 | Code: MOB_OA_URUCHI
+Après crash serveur: spawn fixe à l'intérieur du Black Robber Den
 
-Spawn Time: 6-12 hours
-HP: ~2,500,000
-Damage: High
-Special: Ice attacks, freeze
+Drops: équipement 5D-6D, gold (très bon rendement gold)
 
-Drops:
-  - Seal of Star (SOS) 5D-6D
-  - Seal of Moon (SOM) 4D-5D
-  - Gold: 200,000-400,000
-  - Ice equipment
-
-Strategy:
-  - Fire attacks recommended
-  - Watch for freeze AOE
-  - Level 40+ full party (8) required
+Strategy: party 4-8 joueurs level 50+
 ```
 
-#### Uruchi (Level 50)
+#### Isyutaru (Level 60)
 ```
-Zone: Hotan Area
-Coordinates:
-  - Spawn 1: X: 15000, Y: 7500
-  - Spawn 2: X: 15100, Y: 7450
-  - Spawn 3: X: 14900, Y: 7550
+Zone: centre du Karakoram (zones de glace) + Ancient Remains — entre Hotan et Samarkand
+Spawn Time: 3-5 heures, point aléatoire
+HP: 4,324,612 | ATK: 274-329 | DEF: 101 | Gold: 3,572,738
+ID: 2002 | Code: MOB_KK_ISYUTARU
+Special: attaques de froid/freeze
+Après crash serveur: spawn fixe sur la glace du Karakoram
 
-Spawn Time: 8-12 hours
-HP: ~4,000,000
-Damage: Very High
-Special: Lightning AOE
+Drops: équipement 6D-7D, SOM possible
 
-Drops:
-  - Seal of Star (SOS) 6D-7D
-  - Seal of Moon (SOM) 6D
-  - Gold: 300,000-500,000
-  - Lightning weapons
-
-Strategy:
-  - High lightning resistance required
-  - 2 tanks recommended
-  - Level 50+ 2 parties (16 players) ideal
+Strategy: full party (8) level 70+; 2 tanks + heals + DPS
 ```
 
-#### Lord Yarkan (Level 60)
+#### Lord Yarkan (Level 80)
 ```
-Zone: Egypt Area (pre-Alexandria)
-Coordinates:
-  - Spawn 1: X: 18000, Y: 8500
-  - Spawn 2: X: 18100, Y: 8450
-  - Spawn 3: X: 17900, Y: 8550
+Zone: Niya Remains + sables environnants (arène) — Taklamakan
+Spawn Time: 3-5 heures, point aléatoire
+HP: 9,353,045 | ATK: 559-1047 | DEF: 197 | Gold: 6,452,763
+ID: 3810 | Code: MOB_TK_BONELORD
+Après crash serveur: spawn fixe à l'arène
 
-Spawn Time: 8-16 hours
-HP: ~6,000,000
-Damage: Very High
-Special: Multi-element attacks
+Drops: équipement 8D-9D, SOM fréquent, SOSun possible
 
-Drops:
-  - Seal of Star (SOS) 7D-8D
-  - Seal of Moon (SOM) 7D
-  - Seal of Sun (SOSun) 6D (very rare)
-  - Gold: 500,000-1,000,000
-
-Strategy:
-  - Full raid (2-3 parties)
-  - Balanced element resistance
-  - Level 60+ mandatory
+Strategy: full party level 90+
 ```
 
-#### Cerberus Strong (Level 70)
+#### Demon Shaitan (Level 90)
 ```
-Zone: Constantinople Area
-Coordinates:
-  - Spawn: Same as regular Cerberus
+Zone: Heart Peak / Claw Peak / Wing Peak — Roc Mountain
+Spawn Time: 3-5 heures, point aléatoire
+HP: 12,732,060 | ATK: 898-1528 | DEF: 268 | Gold: 8,671,974
+ID: 3875 | Code: MOB_RM_TAHOMET
+Special: démon de feu, 10 skills client
+Après crash serveur: spawn fixe près de Claw Peak
 
-Spawn Time: 12-24 hours
-HP: ~8,000,000
-Damage: Extreme
-Special: Enhanced fire attacks
+Drops: équipement 9D, meilleurs drops des uniques classiques
 
-Drops:
-  - Seal of Moon (SOM) 7D-8D
-  - Seal of Sun (SOSun) 7D
-  - Gold: 1,000,000-2,000,000
-
-Strategy:
-  - Full raid required
-  - Fire protection essential
-  - Level 70+ recommended
+Strategy: full party 100+, potions en masse
 ```
 
-#### Captain Ivy Strong (Level 75)
+#### Roc (Level 100)
 ```
-Zone: Asia Minor
-Coordinates:
-  - Spawn: Same as regular Captain Ivy
+Zone: Roc Mountain (world boss)
+HP: 1,451,891,045 (1.45 milliard) | ATK: 2052-3283 | DEF: 441
+ID: 3877 | Code: MOB_RM_ROC (classé "party monster" dans le client)
 
-Spawn Time: 12-24 hours
-HP: ~10,000,000
-Damage: Extreme
-Special: Enhanced poison, mass summons
-
-Drops:
-  - Seal of Moon (SOM) 8D
-  - Seal of Sun (SOSun) 7D-8D
-  - Gold: 1,500,000-2,500,000
-
-Strategy:
-  - Full raid required
-  - Poison immunity potions
-  - Level 75+ recommended
+Drops: top tier (raid de guilde)
 ```
 
-#### Medusa (Level 90)
+#### Medusa / BeakYung the White Viper (Level 105)
 ```
-Zone: Alexandria Area (Egypt Desert)
-Coordinates:
-  - Spawn 1: X: 19000, Y: 17000
-  - Spawn 2: X: 19100, Y: 16950
-  - Spawn 3: X: 18900, Y: 17050
+Zone: Qin-Shi Tomb B6 — White Viper Chamber (pièce nord)
+Accès: Serin Gate (centre du B4), ouvertes 04h00/10h00/16h00/22h00 pendant 10 min
+HP: 183,535,199
+Prérequis: clear du B5 (4 gardiens level 98-99)
 
-Spawn Time: 16-24 hours
-HP: ~15,000,000
-Damage: Extreme
-Special: Petrify gaze, poison AOE
-
-Drops:
-  - Seal of Moon (SOM) 9D-10D
-  - Seal of Sun (SOSun) 9D
-  - Seal of Nova (rare)
-  - Gold: 2,000,000-5,000,000
-
-Strategy:
-  - Major raid (3+ parties)
-  - Don't look at Medusa (petrify)
-  - Level 90+ mandatory
+Drops: équipement 10D-11D (top tier)
 ```
 
-#### Lady Lyn (Level 100)
+#### Uniques du Job Temple (Alexandrie, levels 103-110)
 ```
-Zone: Pharaoh's Tomb Exterior
-Coordinates:
-  - Spawn 1: X: 20000, Y: 18000
-  - Spawn 2: X: 20100, Y: 17950
+Zone: Job Temple (sud d'Alexandrie) — zone de job, accès selon AP de l'union
 
-Spawn Time: 24-48 hours
-HP: ~20,000,000
-Damage: Extreme
-Special: Dark magic, resurrection
+Apis      Level 103 | HP 21,068,995  | spawn conditionnel (après Isis+Anubis)
+Selket    Level 105 | HP 80,811,919  | accès libre
+Neith     Level 106 | HP 83,077,174  | accès libre
+Anubis    Level 107 | HP 150,486,799 | AP requis
+Isis      Level 108 | HP 154,677,234 | AP requis
+Haroeris  Level 109 | HP 440,747,010 | zone profonde
+Seth      Level 110 | HP 425,505,853 | zone profonde
 
-Drops:
-  - Seal of Sun (SOSun) 10D-11D
-  - Seal of Nova 10D
-  - 11D Weapons (rare)
-  - Gold: 5,000,000-10,000,000
+Drops: 11D+, Immortal/Astral stones (rapporté, non vérifié iSRO)
+```
 
-Strategy:
-  - Massive raid required
-  - Can resurrect once
-  - Level 100+ with good gear
+#### Variantes Event (ex "Cerberus Strong" / "Captain Ivy Strong")
+```
+Les anciens documents mentionnaient "Cerberus Strong (70)" et "Captain Ivy Strong (75)".
+=> Ce sont des VARIANTES D'EVENT, pas des uniques officiels de terrain:
+   - Strong Tiger Girl: MOB_CH_TIGERWOMAN_L2
+   - Evil Tiger Girl:   MOB_CH_TIGERWOMAN_L3
+   - Strong Ong: level 34, 62,959 HP (vs 2,099 normal)
+   - Variantes "GM's *": IDs 7550-7564
+```
+
+> ❌ **Supprimé (non vérifié):** « Lady Lyn (100) » — introuvable dans les données client iSRO (unique de serveur privé).
+
+---
+
+## 🏆 Qin-Shi Tomb (Jangan Cave) — Uniques & Structure
+
+> ⚠️ **Corrigé (2026):** l'ancienne section « Pharaoh's Tomb Bosses » (Sphinx 90, Sekhmet, Nephthys, Horus, Osiris 100...) ne correspond à **aucune donnée client iSRO**. Le vrai donjon à étages avec gardiens et boss final est le **Qin-Shi Tomb** (Jangan Cave), décrit ci-dessous d'après le guide mmorpg.com (2009). Les noms égyptiens réels (Selket, Neith, Anubis, Isis, Haroeris, Seth) sont ceux du **Job Temple** (section suivante).
+
+### Structure par étage (vérifié)
+| Étage | Levels | Contenu |
+|-------|--------|---------|
+| B1-B2 | ~76-89 | Monstres terre/feu |
+| B3 | ~90-95 | Tomb Snake Lady, **Snake Generals (95)** |
+| B4 | ~96-99 | **Serin Gate** (centre) — ouvre 04h/10h/16h/22h pendant 10 min |
+| B5 | 98-99 | **Les 4 Gardiens** |
+| B6 | 92-100 | Guardian Chamber / Man-Viper Chamber / Black Viper Chamber / White Viper Chamber |
+
+### Les 4 Gardiens (B5)
+```
+JeonUk The Black Tortoise  (Nord)  Level 98
+YumJae The Red Hawk        (Sud)   Level 98
+TaeHo  The Blue Dragon     (Ouest) Level 99
+SoHaow The White Tiger     (Est)   Level 99 (le plus dur)
+```
+
+### Boss du tombeau
+```
+Shinmoo, The Man of Flames    Level 100 — spawn coin SW de la salle centrale du B5
+                              après la mort des 4 gardiens; drop stuff lvl 100
+Soso, The Black Viper         Level 100 — Black Viper Chamber (B6); drop 10D
+BeakYung, The White Viper     Level 105 — White Viper Chamber (B6 nord)
+                              "Medusa" — HP: 183,535,199 — boss final
 ```
 
 ---
 
-## 🏆 Pharaoh's Tomb Bosses
+## 🏺 Job Temple (Alexandrie) — Uniques & Monstres
 
-### Tomb Lesser (Level 90-100)
+Zone de job PvP au sud d'Alexandrie (cap 120). Monstres `MOB_SD_*` :
 
-#### Sphinx (Level 90)
 ```
-Zone: Pharaoh's Tomb - Lesser (B1-B2)
-Coordinates: Instance dungeon (no world coords)
-Spawn: Triggered by quest/instance
-HP: ~12,000,000
-Damage: Very High
+Monstres: Uneg (100), Weneg (101), Dark Khepri (101), Dark Scout (102), Blood Hyena (104)
 
-Drops:
-  - Sphinx Heart (quest item)
-  - Seal of Nova (rare)
-  - 10D equipment
-  - Socket stones
+Uniques (accès selon AP de l'union de job):
+Apis      Level 103 | HP 21,068,995   | spawn après Isis+Anubis (rapporté)
+Selket    Level 105 | HP 80,811,919   | libre
+Neith     Level 106 | HP 83,077,174   | libre
+Anubis    Level 107 | HP 150,486,799  | AP requis
+Isis      Level 108 | HP 154,677,234  | AP requis
+Haroeris  Level 109 | HP 440,747,010  | zone profonde
+Seth      Level 110 | HP 425,505,853  | zone profonde
 ```
-
-#### Sekhmet (Level 92)
-```
-Zone: Pharaoh's Tomb - Lesser (B2-B3)
-HP: ~13,000,000
-Damage: Very High
-Special: Military buff AOE
-
-Drops:
-  - Sekhmet Heart (quest item)
-  - 10D-11D equipment
-  - Alchemy materials
-```
-
-#### Nephthys (Level 95)
-```
-Zone: Pharaoh's Tomb - Lesser (B3-B4)
-HP: ~14,000,000
-Damage: Very High
-Special: Death/recovery magic
-
-Drops:
-  - Nephthys Heart (quest item)
-  - 11D equipment
-  - Curse/debuff items
-```
-
-#### Horus (Level 98)
-```
-Zone: Pharaoh's Tomb - Lesser (B4-B5)
-HP: ~16,000,000
-Damage: Extreme
-Special: Hero powers, KD spam
-
-Drops:
-  - Horus Heart (quest item)
-  - 11D-12D equipment
-  - Rare accessories
-```
-
-#### Osiris (Level 100)
-```
-Zone: Pharaoh's Tomb - Lesser (B5-B6)
-HP: ~18,000,000
-Damage: Extreme
-Special: Multiple phases, hell magic
-
-Drops:
-  - Osiris Heart (quest item)
-  - Seal of Sun 12D
-  - 13D equipment (very rare)
-  - Best drops in Lesser Tomb
-```
-
-### Tomb Greater (Level 105-110+)
-
-**Enhanced versions of all above bosses with:**
-- 2-3x HP
-- Higher damage
-- Better drops (13D, Nova A&B)
-- Level 105+ required
-- Full party of 110+ recommended
 
 ---
 
@@ -365,10 +241,10 @@ Drops:
 ### Champions (Elite Monsters)
 
 Champions spawn randomly in regular monster zones and have:
-- **3-5x HP** of normal monsters
-- **Enhanced damage** (~2x)
+- **~2x HP** of normal monsters (vérifié)
+- **Enhanced damage**
 - **Better drops** (SOX chance, more gold)
-- **Distinctive appearance** (larger, glowing aura)
+- **Distinctive appearance** (larger, nom jaune)
 
 #### Jangan Area Champions (Level 1-20)
 ```
@@ -588,11 +464,17 @@ Taklamakan Desert:
   - Niya Assassin (Level 56-59)
 ```
 
-#### Level 60-70: East Asia
-``
-East China:
-  - Rocky Spider (Level 62-65)
-  - Dark Spider (Level 65-68)
+#### Level 60-70: Karakoram (Chine) / Asia Mineure (Europe)
+```
+Karakoram (données client — famille MOB_KK_*):
+  - Spiders: White / Golden / Big White (Level ~59-64)
+  - Yeti, Evil Yeti (Level ~59-66)
+  - Sona (Level ~63-66)
+  - Unique: Isyutaru (Level 60)
+
+Asia Mineure (famille MOB_AM_*):
+  - Soil Ghost Bug (61) / Strong Earth Ghost (62) / Earth Ghost Bug (63)
+  - Power Earth Ghost (64) / Earth Ghost Warrior (65)
 ```
 
 #### Level 70-80: Europe
@@ -602,27 +484,24 @@ Asia Minor:
   - Outlaw (Level 75-78)
 ```
 
-#### Level 80-90: Egypt
+#### Level 80-90: Roc Mountain / Egypt (selon version)
 ```
-Egypt Delta:
-  - Uneg (Level 82-85)
-  - Weneg (Level 85-88)
-  - Dark Scout (Level 88-90)
-```
-
-#### Level 90-100: Alexandria Area
-```
-Storm Desert:
-  - Dark Khepri (Level 92-95)
-  - Uraeus (Level 95-98)
-  - Blood Hyena (Level 98-100)
+Roc Mountain:
+  - Feather Cloak / Wing Tribe (Level 80+)
+  - Shaur, Rocky, Antinoke (Level 82-90)
 ```
 
-#### Level 100-110: Tomb & Beyond
+#### Level 90-110: Alexandrie / Egypt (données client vérifiées)
 ```
-Pharaoh's Tomb:
-  - Tomb Guards (Level 100-105)
-  - Anubis Warriors (Level 105-110)
+Désert d'Alexandrie + Job Temple (MOB_SD_*):
+  - Uneg (Level 100)        HP 37,844
+  - Weneg (Level 101)       HP 39,605
+  - Dark Khepri (Level 101) HP 30,143
+  - Dark Scout (Level 102)  HP 31,513
+  - Blood Hyena (Level 104) HP 34,364
+
+Qin-Shi Tomb B1-B6 (donjon Jangan):
+  - Monstres 76-100 par étage (voir section Qin-Shi Tomb)
 ```
 
 ---
@@ -636,32 +515,39 @@ Pharaoh's Tomb:
 - **Drops:** Common items, gold
 
 ### Champion Monsters
-- **Spawn rate:** Low (~5% of spawns)
-- **HP:** 3-5x normal
-- **Damage:** 2x normal
+- **Spawn rate:** Aléatoire dans les packs de monstres normaux (fréquence exacte non publiée — ~5% rapporté, non vérifié)
+- **HP:** **~2x normal** (vérifié, guides communautaires Origin)
+- **Damage:** supérieur au normal
 - **Drops:** Better items, SOX chance
-- **Appearance:** Larger, glowing aura
+- **Appearance:** Larger, nom jaune
+
+### Party Monsters (groupe)
+- **HP:** **~10x normal** (vérifié communauté)
+- Apparaissent en groupes, conçus pour les parties
+- **Party giants:** HP encore supérieur (~20x rapporté), les plus durs des monstres réguliers
 
 ### Giant Monsters
-- **Spawn rate:** Very rare (~1% of spawns)
-- **HP:** 10-15x normal
-- **Damage:** 3-4x normal
-- **Drops:** Guaranteed rare drops, SOX common
-- **Appearance:** Massive size, distinctive
+- **Spawn rate:** Rare (~1% rapporté, non vérifié)
+- **HP:** ~5-10x normal (estimations communautaires)
+- **Damage:** 2-3x normal
+- **Drops:** Rare drops plus fréquents, SOX possible
+- **Appearance:** Massive size, nom rouge
 
 ### Elite Monsters
-- **Spawn rate:** Special locations only
-- **HP:** 20-30x normal
-- **Damage:** 5x normal
-- **Drops:** High-tier SOX, rare items
+- **⚠️ Non vérifié:** l'ancienne description (« 20-30x HP, locations spéciales ») ne correspond pas aux données client — probablement une confusion avec les géants de party ou les variantes d'event Strong/Evil
 - **Locations:** Dungeons, special areas
 
 ### Unique Monsters
-- **Spawn rate:** One per server, timed spawns
-- **HP:** Millions
+- **Spawn rate:** Un par serveur (ou très peu), timers 3-5h (iSRO)
+- **HP:** 598,720 (Tiger Girl) → 1,451,891,045 (Roc)
 - **Damage:** Extreme
 - **Drops:** Best SOX, massive gold
 - **Behavior:** Boss mechanics, special abilities
+
+### Event Monsters
+- **Codes `MOB_EV_*`** (ex: Young Bear `MOB_EV_BEAR_A_050`) — events saisonniers
+- **Variantes Strong** (ex: Strong Ong lvl 34, 62,959 HP vs 2,099 normal; Strong Tiger Girl `_L2`), **Evil** (`_L3`), **GM's ***
+- **Raiders de trade:** bandits/thieves qui spawnent pour attaquer les caravanes pendant les trade runs
 
 ---
 
@@ -840,13 +726,14 @@ class UniqueSpawnNotifier {
 
 ### Taux de Spawn par Type
 
-| Monster Type | Spawn Rate | HP Multiplier | Damage Multiplier | SOX Chance |
-|--------------|------------|---------------|-------------------|------------|
-| Normal | 94% | 1x | 1x | 0% |
-| Champion | 5% | 3-5x | 2x | 1-5% |
-| Giant | 1% | 10-15x | 3-4x | 10-20% |
-| Elite | Special | 20-30x | 5x | 30-50% |
-| Unique | Timed | 1000x+ | 10x+ | 100% (rare tier) |
+| Monster Type | Spawn Rate | HP Multiplier | SOX Chance |
+|--------------|------------|---------------|------------|
+| Normal | Majorité | 1x | ~0.01% (possible mais très rare) |
+| Champion | ~5% (rapporté) | ~2x | faible |
+| Party | par packs | ~10x | faible |
+| Giant | ~1% (rapporté) | ~5-10x | plus élevée |
+| Party Giant | rare | ~20x (rapporté) | élevée |
+| Unique | Timed (3-5h) | 598K → 1.45Md | Best (SOS ~5-10% rapporté) |
 
 ### Distribution des Zones
 
@@ -882,6 +769,6 @@ class UniqueSpawnNotifier {
 
 ---
 
-*Dernière mise à jour: 20 Janvier 2026*
+*Dernière mise à jour: 1 Octobre 2026*
 
-*Sources: xSROMap, Monster Area Wiki, Community Guides, Immortality SRO, ZsZC Wiki*
+*Sources: xSROMap, silkroadonline.wiki (données client), rev6, elitepvpers, mmorpg.com (Qin-Shi Tomb), Monster Area Wiki, Community Guides*

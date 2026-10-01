@@ -328,3 +328,47 @@ mode hors-ligne explicite de repli).
 - Navigateur : compte « arnaud » créé via l'UI, perso « Kaiser » (CH/M), re-login
   → respawn exact (39.5, 499.1), marche 39 m cliquée → autosave 30 s → reload →
   respawn à la position marchée. 60 FPS, connecté, 0 erreur console.
+
+---
+
+## Session du 1er Octobre 2026 (4/2) : PHASE 2 — Boucle de combat complète
+
+**Combat serveur-autoritaire de bout en bout** (script 13/13 + navigateur).
+
+### Serveur
+- `CombatBridge.ts` : colle SpawnManager (IA) ↔ CombatManager (dégâts) ↔ DropManager
+  (loot) ↔ PlayerEntity (XP/or) ↔ réseau. Snapshot monde à la connexion ET à la
+  demande (`world:snapshot` — le client charge le monde des minutes durant).
+- Skills phase 2: 3 attaques (codes officiels skilldata, paramètres réalistes),
+  cooldown/MP/anti-spam serveur + packets `skill_rejected` explicites.
+- Récompenses: XP/SP/or (taux `config/rates.ts`, futurs overrides Redis phase 6),
+  KillLog en base, loot depuis la table MonsterDrop.
+- Mort joueur: écran de résurrection (ville gratuite / sur place −2% XP),
+  packets player:death/respawned.
+- Fixes critiques:
+  - **Monde gelé**: `MonsterEntity.performAttack` crashait le tick quand la
+    cible était une entité détruite → try-catch par monstre + libération
+    d'aggro au logout du joueur.
+  - **Spawn retardé**: premier cycle de spawn attendait un respawnTime complet
+    → `lastSpawnCheck` échu au chargement + `forceCheckNearby(position)` à
+    l'arrivée/déplacement (>60 m) d'un joueur.
+  - Spawn points DB recâblés sur les anneaux client (ville (0,500), 13 camps).
+- Broadcast `attack` enrichi de `remainingHp` (barres de vie client).
+
+### Client
+- `NetworkCombat.ts` : monstres serveur rendus avec les modèles officiels
+  (multi-parties + anims BAN par état), **proxy de picking invisible** (les
+  meshes skinées se pickent en bind pose — bug Babylon classique), ciblage clic,
+  auto-attaque ~1/s, skills touches 1-3 avec cooldown local + messages chat,
+  nombres de dégâts, HUD piloté par `player:state`, écran de mort DOM, loot au
+  sol cliquable.
+- Perf: anims chargées **par transition d'état** (pas par packet update —
+  sinon fetch+groups ×45/s = 9 FPS). 60 FPS avec 28 monstres officiels.
+- JanganZone: monstres locaux désactivés en mode réseau.
+
+### Preuves
+- `server/scripts/test-combat-flow.ts` **13/13**: spawns reçus, dégâts
+  (26-34), kill Mangnyang +54 XP (valeur officielle), or +9-12, MP 100→95,
+  cooldown rejeté, respawn 15 s, aggro bandits, mort joueur, résurrection.
+- Navigateur: Kaiser cible un Mangnyang (clic réel), skill « Frappe », kill,
+  chat « +54 XP », HUD 108 XP / 10011 or, mob respawn, 60 FPS.

@@ -9,6 +9,7 @@ import { createLogger } from './Logger';
 import { GameDataService } from '../data/GameDataService';
 import { ClientManager } from '../network/ClientManager';
 import { WorldManager } from '../game/WorldManager';
+import { CombatBridge } from '../game/CombatBridge';
 import { SystemHandlers } from '../network/SystemHandlers';
 import { AuthHandlers } from '../network/AuthHandlers';
 import { GameLoop } from './GameLoop';
@@ -34,6 +35,7 @@ export class GameServer {
   private worldManager: WorldManager | null = null;
   private systemHandlers: SystemHandlers | null = null;
   private authHandlers: AuthHandlers | null = null;
+  private combatBridge: CombatBridge | null = null;
   private gameLoop: GameLoop;
   private isRunning = false;
 
@@ -106,6 +108,11 @@ export class GameServer {
     // partage sa map d'entités)
     await globalSpawnManager.initialize();
     globalSpawnManager.start();
+
+    // Pont combat: dégâts IA, récompenses, loot, résurrection (phase 2)
+    this.combatBridge = new CombatBridge(this.worldManager);
+    this.combatBridge.initialize();
+    this.worldManager.combatBridge = this.combatBridge;
 
     // Route les envois du WorldManager vers les sockets réels
     this.worldManager.on('sendToClient', ({ playerId, packet }: { playerId: string; packet: S2CPacket }) => {
@@ -192,7 +199,41 @@ export class GameServer {
       socket.on('hotkey_bind', (data) => this.handlePacket(socket, 'hotkey_bind', data));
       socket.on('pickup_item', (data) => this.handlePacket(socket, 'pickup_item', data));
       socket.on('pickup_all', (data) => this.handlePacket(socket, 'pickup_all', data));
+
+      // Résurrection (phase 2): écran client → serveur autoritaire
+      socket.on('player:respawn', (data) => this.handleRespawnRequest(socket, data));
+
+      // Snapshot du monde à la demande (le client charge le monde 3D en
+      // plusieurs minutes: les spawn packets initiaux sont perdus avant que
+      // son module de rendu réseau existe)
+      socket.on('world:snapshot', () => {
+        try {
+          const client = this.clientManager?.getClient(socket.id);
+          const characterId = client?.getCharacterId();
+          if (characterId) {
+            this.combatBridge?.sendWorldSnapshot(characterId);
+            this.combatBridge?.sendPlayerState(characterId);
+          }
+        } catch (error) {
+          logger.error('World snapshot error:', error);
+        }
+      });
     });
+  }
+
+  /**
+   * Résurrection demandée par le client (ville / sur place avec pénalité).
+   */
+  private handleRespawnRequest(socket: Socket, data: unknown): void {
+    try {
+      const client = this.clientManager?.getClient(socket.id);
+      const characterId = client?.getCharacterId();
+      if (!client || !characterId || !this.combatBridge) return;
+      const mode = (data as { mode?: string })?.mode === 'here' ? 'here' : 'town';
+      void this.combatBridge.handleRespawnRequest(client, characterId, mode);
+    } catch (error) {
+      logger.error('Respawn request error:', error);
+    }
   }
 
   /**

@@ -1,28 +1,34 @@
-# Base de données NPCs - Référence Complète
+# 🗂️ Base de données NPCs — Hub Central
 
 > 📍 **Vous êtes ici :** [Accueil](README.md) → [Hub Technique](HUB_TECHNIQUE.md) → [NPCs Database](32_NPCS_DATABASE.md)
 
 ---
 
 ## 📋 Table des Matières
-- [Introduction](#introduction)
-- [Référence Rapide](#référence-rapide)
-- [NPCs par Ville](#npcs-par-ville)
-- [Catégories de NPCs](#catégories-de-npcs)
-- [NPCs avec Coordonnées](#npcs-avec-coordonnées)
-- [Recherche par Type](#recherche-par-type)
+- [Introduction](#-introduction)
+- [Référence Rapide](#-référence-rapide)
+- [NPCs par Ville](#-npcs-par-ville)
+- [Catégories de NPCs](#-catégories-de-npcs)
+- [NPCs avec Coordonnées](#-npcs-avec-coordonnées)
+- [Recherche par Type](#-recherche-par-type)
+- [Recherche par Level Range](#-recherche-par-level-range)
+- [Implémentation Technique](#-implémentation-technique)
+- [Guide d'Interaction](#-guide-dinteraction)
+- [FAQ](#-faq)
 
 ---
 
 ## 🎯 Introduction
 
-Cette **base de données centralise tous les NPCs** de Silkroad Online avec leurs rôles, emplacements, et coordonnées précises.
+Cette page centrale référence **toutes les ressources NPCs** du projet SRObro.
 
 ### Points Clés
-- 👤 **130+ NPCs** documentés
-- 📍 **Coordonnées X/Y** précises pour chaque NPC
-- 🏰 **5 villes** couvertes (Jangan, Donwhang, Hotan, Alexandria, Constantinople)
-- 🎮 **Essentiel pour** le développement SRObro
+- 👤 **~322 NPCs urbains** documentés (sur **697 NPCs** au total dans la base client extraite de xSROMap)
+- 📍 **Coordonnées PosX/PosY officielles** pour chaque NPC (système client converti)
+- 🏰 **8 villes** couvertes : Jangan, Donwhang, Hotan, Samarkand, Constantinople, Alexandria (S+N), Thief Town, Baghdad
+- 🎮 **Essentiel pour** le développement SRObro (spawns, interactions, shops)
+
+> ⚠️ **Refonte 2026-10 :** refonte complète des données NPCs — noms officiels du client, coordonnées réelles PosX/PosY, suppression des NPCs/prix inventés des versions précédentes. Les numéros de lignes ci-dessous sont indicatifs.
 
 ---
 
@@ -30,204 +36,155 @@ Cette **base de données centralise tous les NPCs** de Silkroad Online avec leur
 
 ### Bases de Données Principales
 
-| Fichier | Contenu | Lignes |
+| Fichier | Contenu | Statut |
 |---------|---------|--------|
-| **[NPCS_DATABASE.md](NPCS_DATABASE.md)** | Base NPCs générale | 476 |
-| **[NPCS_COORDINATES.md](NPCS_COORDINATES.md)** | **NPCs avec coordonnées X/Y** | 607 ⭐ |
-| **[CITIES_01_JANGAN.md](CITIES_01_JANGAN.md)** | NPCs Jangan | 559 |
-| **[CITIES_02_DONWHANG.md](CITIES_02_DONWHANG.md)** | NPCs Donwhang | 270 |
-| **[CITIES_03_HOTAN.md](CITIES_03_HOTAN.md)** | NPCs Hotan | 165 |
-| **[CITIES_04_ALEXANDRIA.md](CITIES_04_ALEXANDRIA.md)** | NPCs Alexandria | 771 ⭐ |
-| **[CITIES_05_CONSTANTINOPLE.md](CITIES_05_CONSTANTINOPLE.md)** | NPCs Constantinople | 610 ⭐ |
+| **[NPCS_COORDINATES.md](NPCS_COORDINATES.md)** | **NPCs avec coordonnées X/Y par ville** ⭐ | Refondu 2026-10 |
+| **[NPCS_DATABASE.md](NPCS_DATABASE.md)** | Référence fonctionnelle (rôles/services) | Refondu 2026-10 |
+| **[CITIES_01_JANGAN.md](CITIES_01_JANGAN.md)** | Guide Jangan (55 NPCs) | Refondu 2026-10 |
+| **[CITIES_02_DONWHANG.md](CITIES_02_DONWHANG.md)** | Guide Donwhang (47 NPCs) | Refondu 2026-10 |
+| **[CITIES_03_HOTAN.md](CITIES_03_HOTAN.md)** | Guide Hotan (32 NPCs) | Refondu 2026-10 |
+| **[CITIES_04_ALEXANDRIA.md](CITIES_04_ALEXANDRIA.md)** | Guide Alexandria (46 NPCs + quêtes) ⭐ | Refondu 2026-10 |
+| **[CITIES_05_CONSTANTINOPLE.md](CITIES_05_CONSTANTINOPLE.md)** | Guide Constantinople (48 NPCs) ⭐ | Refondu 2026-10 |
+| **[MAP_COORDINATES_REFERENCE.md](MAP_COORDINATES_REFERENCE.md)** | Téléporteurs, ferries, uniques | Refondu 2026-10 |
+
+### Source primaire des données
+- **xSROMap v1.4** (https://jellybitz.github.io/xSROMap/) — dépôt GitHub `JellyBitz/xSROMap`, fichier `assets/js/main.js` (697 NPCs + 161 téléporteurs)
+- Conversion : `PosX = ((Region & 0xFF) − 135) × 192 + X/10` · `PosY = ((Region >> 8) − 92) × 192 + Y/10`
 
 ---
 
 ## 🏰 NPCs par Ville
 
-### Jangan (Level 1-20)
+### Jangan (Level 1-20) — China — ≈ (6 460, 1 100)
 
-👉 **[CITIES_01_JANGAN.md](CITIES_01_JANGAN.md)** - Guide complet Jangan (559 lignes)
+👉 **[CITIES_01_JANGAN.md](CITIES_01_JANGAN.md)** — 55 NPCs documentés
 
-**NPCs Importants:**
-- **Weapon Smith** - Armes 1D-3D
-- **Armor Smith** - Armures 1D-3D
-- **Trader Union** - Rejoindre job Trader
-- **Thief Union** - Rejoindre job Thief
-- **Hunter Union** - Rejoindre job Hunter
-- **Stable Keeper** - Acheter mounts
-- **Storage Keeper** - Stockage
-- **Teleport** - Téléportation vers d'autres zones
-
-**Coords principales:**
-- Center: X: 850, Y: 980
-- West Gate: X: 780, Y: 950
-- South Gate: X: 900, Y: 1050
+**NPCs clés :**
+- **Blacksmith Chulsan** (6 369, 1 101) — armes/armures 1D-3D
+- **Protector Trader Mrs Jang** · **Grocery Trader Jinjin** · **Specialty Trader Jodaesan**
+- **Storage-Keeper Sansan/Wangu** · **Stable-Keeper Machun** · **Guild Manager Leebaek**
+- **Jobs :** Merchant Associate Hwajung / Hunter Associate Gwakwi / **Smuggler Chao** (caché)
+- **Gardes téléporteurs :** Choiyoung, Jingyo, Hogang, Sangnam
+- **Quartier Gisaeng** (6 NPCs Gisaeng) + casino/loterie
 
 ---
 
-### Donwhang (Level 20-40)
+### Donwhang (Level 20-35) — Western China — ≈ (3 550, 2 050)
 
-👉 **[CITIES_02_DONWHANG.md](CITIES_02_DONWHANG.md)** - Guide Donwhang (270 lignes)
+👉 **[CITIES_02_DONWHANG.md](CITIES_02_DONWHANG.md)** — 47 NPCs documentés
 
-**NPCs Importants:**
-- **Weapon Smith** - Armes 4D-5D
-- **Armor Smith** - Armures 4D-5D
-- **Potion Shop** - Consommables
-- **Job Unions** - Trader/Thief/Hunter
-- **Storage** - Stockage
-- **Stable** - Mounts
-
----
-
-### Hotan (Level 31-80+)
-
-👉 **[CITIES_03_HOTAN.md](CITIES_03_HOTAN.md)** - Guide Hotan (165 lignes)
-
-**NPCs Importants:**
-- **Weapon Smith** - Armes 7D-9D
-- **Armor Smith** - Armures 7D-9D
-- **Potion Shop** - Large HP/MP
-- **Camel Merchant** - Transport 2 slot
-- **Elephant Merchant** - Transport 3 slot
-- **Job Unions** - Tous les jobs
+**NPCs clés :**
+- **Blacksmith Agol** (3 576, 2 042) — 3D-5D
+- **Grocery Trader Yeosun** · **Specialty Shop Elder Leegak** · **Herbalist Bori**
+- **Storage-Keeper Irina/Paedo** · **Stable-Keeper Makgo** · **Guild Manager Ryukang**
+- **Jobs :** Merchant Associate Leegeuk / Hunter Associate Haraho / **Smuggler Chungho** (caché)
+- Temple bouddhiste (3 Priests), avant-postes militaires aux alentours
 
 ---
 
-### Alexandria (Level 10D-13D)
+### Hotan (Level 30-60) — Oasis Kingdom — ≈ (115, 50)
 
-👉 **[CITIES_04_ALEXANDRIA.md](CITIES_04_ALEXANDRIA.md)** - Guide Alexandria (771 lignes) ⭐
+👉 **[CITIES_03_HOTAN.md](CITIES_03_HOTAN.md)** — 32 NPCs documentés
 
-**23 NPCs Documentés:**
-- **Weapon Smith** - Armes 10D-13D
-- **Armor Smith** - Armures 10D-13D
-- **Accessory Shop** - Anneaux, boucles
-- **Potion Shop** - XXL HP/MP
-- **Job Unions** - Level 100+
-- **Teleport** - Vers toutes les zones
-- **Storage** - Stockage étendu
-- **Stable** - High-level mounts
-
-**27 Quêtes Documentées**
-- Story quests
-- Daily quests
-- Job quests
-- Dungeon quests
+**NPCs clés :**
+- **Blacksmith Soboi** (50, 77) — 5D-8D
+- **Potion Merchant Manina** · **Specialty Trader Sanmok** · **Nephrite Refiner Pahap**
+- **Ville des deux races :** China + Europe suppliers (Dae-Pyeong/Shadi, Ryoe-Ju/David)
+- **Jobs :** Merchant Associate Asaman / Hunter Associate Ahmok / **aucun thief**
+- **Hotan Fortress Clerk** (15, 465)
 
 ---
 
-### Constantinople (Level 70-110+)
+### Samarkand (Level 30-45) — Central Asia — ≈ (−5 180, 2 890)
 
-👉 **[CITIES_05_CONSTANTINOPLE.md](CITIES_05_CONSTANTINOPLE.md)** - Guide Constantinople (610 lignes) ⭐
+👉 **[NPCS_COORDINATES.md — Samarkand](NPCS_COORDINATES.md#-samarkand-npcs)** — 34 NPCs documentés
 
-**47 NPCs Documentés:**
-- **Weapon Smith** - Armes 9D-11D
-- **Armor Smith** - Armures 9D-11D
-- **Consommables** - Tous types
-- **Forge** - Amélioration équipement
-- **Job Unions** - High-level jobs
-- **Event NPCs** - Events spéciaux
+**NPCs clés :**
+- **Weapon Trader Tricia** (−5 200, 2 961) · **Protector Trader Aryoan**
+- **Storage-Keeper Saesa** · **Stable-Keeper Hoyun** · **Guild Manager Hapsa**
+- **Jobs :** Merchant Associate Karen / Hunter Associate Shahad / **Smuggler Barus**
+- Nun Martel, avant-postes d'Asia Minor/Central Asia aux alentours
+
+---
+
+### Constantinople (Level 1-20 EU) — East Europe — ≈ (−10 680, 2 600)
+
+👉 **[CITIES_05_CONSTANTINOPLE.md](CITIES_05_CONSTANTINOPLE.md)** — 48 NPCs documentés
+
+**NPCs clés :**
+- **Weapon Trader Balbardo** (−10 674, 2 649) — armes EU 1D-8D
+- **Protector Trader Jatomo** · **Grocery Trader Bajel** · **Specialty Trader Tina**
+- **Stable-Keeper Treno** · **Inn Master Sikeulro** · **Guild Manager Gilt** · **Harbor Manager Georion**
+- **Jobs :** Merchant Associate Tana / Hunter Associate Adria / **Smuggler Raul**
+- **Soldier Kartino** (−10 495, 2 473) : téléporteur vers **Thief Town**
+- Église (Clergy Gabriel), guides (Lipria, Riise, Raffy), Fortress Clerk
+
+---
+
+### Alexandria (Level 100-110+) — Egypt — South ≈ (−16 600, −300) / North ≈ (−16 200, 50)
+
+👉 **[CITIES_04_ALEXANDRIA.md](CITIES_04_ALEXANDRIA.md)** — 46 NPCs + 27 quêtes documentés ⭐
+
+**NPCs clés :**
+- **South :** Weapon Trader Hemaka · Armor Trader Sharon · Potion Merchant Titi · Storage Khamererne · Stable Master Nefret
+- **North :** Governor Senmute (palais) · Weapon Trader Chunmoo · Armor Trader Viviana
+- **Jobs (schéma « President ») :** Trader Naunakt / Hunter Narmer / Thief Tausert (+ Item Exchange managers)
+- **Port :** Harbor Manager Marwa (voie maritime Europe) · Lighthouse Keeper Snefru
+- 27+ quêtes officielles (séries « Overdriving Heart », « Tax Due Notice », ...)
+
+---
+
+### Thief Town — vallée cachée ≈ (9 130, 860)
+
+👉 **[NPCS_COORDINATES.md — Thief Town](NPCS_COORDINATES.md#-thief-town-npcs)** — 6 NPCs
+
+- **Thief Associate** (9 122, 824) — union thief
+- **Stolen Goods Dealer** (9 119, 891) — revente des marchandises volées
+- Accès : téléporteur au sol (2 485, 2 679) · Soldier Kartino (Constantinople) · Smugglers
+
+---
+
+### Baghdad (Level 115+, post-classique) — Arabia — ≈ (−8 540, −730)
+
+👉 **[NPCS_COORDINATES.md — Baghdad](NPCS_COORDINATES.md#-baghdad-npcs-post-classique)** — 54 NPCs
+
+- Palais du **King Shahryar** et de la **Queen Sheherazade**
+- Marchés (fruit/épices/huile), Repairer Uthman, associations de jobs
+- Contenu postérieur au cap 120 classique — optionnel pour SRObro
 
 ---
 
 ## 🗂️ Catégories de NPCs
 
 ### Entraîneurs (Trainers)
+- **Masteries chinoises :** Bicheon, Heuksal, Pacheon, Cold, Lightning, Fire, Force
+- **Classes européennes :** Warrior, Rogue, Wizard, Warlock, Bard, Cleric
 
-#### Chinese Trainers
-- **Bicheon Trainer** - Maîtrise Sword/Blade
-- **Heuksal Trainer** - Maîtrise Spear/Glaive
-- **Pacheon Trainer** - Maîtrise Bow
-- **Cold Trainer** - Maîtrise Ice
-- **Lightning Trainer** - Maîtrise Lightning
-- **Fire Trainer** - Maîtrise Fire
-- **Force Trainer** - Maîtrise Force
-
-#### European Trainers
-- **Warrior Trainer** - Classe Warrior
-- **Rogue Trainer** - Classe Rogue
-- **Wizard Trainer** - Classe Wizard
-- **Warlock Trainer** - Classe Warlock
-- **Cleric Trainer** - Classe Cleric
-- **Bard Trainer** - Classe Bard
-
-👉 **Details:** [02_CHINESE_CLASSES.md](02_CHINESE_CLASSES.md) | [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md)
-
----
+👉 **Details :** [02_CHINESE_CLASSES.md](02_CHINESE_CLASSES.md) | [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md)
 
 ### Marchands (Merchants)
-
-#### Weapon Shops
-- **1D-3D Weapons** - Jangan
-- **4D-5D Weapons** - Donwhang
-- **7D-9D Weapons** - Hotan
-- **10D-13D Weapons** - Alexandria
-
-#### Armor Shops
-- **1D-3D Armor** - Jangan
-- **4D-5D Armor** - Donwhang
-- **7D-9D Armor** - Hotan
-- **10D-13D Armor** - Alexandria
-
-#### Accessory Shops
-- **Rings** - +stats
-- **Earrings** - +def
-- **Necklaces** - +atk/def
-
-#### Potion Shops
-- **HP Potions** - Small, Medium, Large, XXL
-- **MP Potions** - Small, Medium, Large, XXL
-- **Grains** - Instant HP/MP
-- **Universal Pills** - HP+MP
-- **Elixirs** - Alchimie
-- **Lucky Powders** - Alchimie
-
-👉 **Details:** [07_ITEM_DEGREES.md](07_ITEM_DEGREES.md) | [05_ALCHEMY_SYSTEM.md](05_ALCHEMY_SYSTEM.md)
-
----
-
-### Donneurs de Quêtes (Quest NPCs)
-
-#### Story Quests
-- **Main Quest NPCs** - Scénario principal
-- **Story Quests** - Level 1-110
-
-#### Daily Quests
-- **Daily Quest NPCs** - Quêtes journalières
-- **Event Quests** - Events spéciaux
-
-#### Job Quests
-- **Trader Quests** - Quests Trader
-- **Thief Quests** - Quests Thief
-- **Hunter Quests** - Quests Hunter
-
-👉 **Details:** [16_QUEST_SYSTEM.md](16_QUEST_SYSTEM.md)
-
----
+| Type | Par ville (noms officiels) |
+|------|---------------------------|
+| Armes | Chulsan (Jangan) → Agol (Donwhang) → Soboi (Hotan) / Tricia (Samarkand) → Balbardo (Const.) → Hemaka/Chunmoo (Alex.) |
+| Armures | Mrs Jang → Yeolah → Gonishya / Aryoan → Jatomo → Sharon/Viviana |
+| Potions | Jinjin/Dae-Pyeong → Yeosun → Manina+Shadi → Saha+Shadi → Bajel/Shadi → Titi/Thiara |
+| Accessoires | Ryoe-A → Ryoe-Won → Ryoe-Ju/David → Sid → Zephyd → (loot/drops à Alex.) |
+| Specialty | Jodaesan → Leegak → Sanmok → Toson → Tina → Wasdi |
 
 ### Services
+- **Storage Keepers** — toutes les villes
+- **Stable Keepers** — toutes les villes (sauf variantes)
+- **Guild Managers** — toutes les villes
+- **Harbor Managers / Ferry Ticket Sellers** — transport maritime et fluvial
 
-#### Storage
-- **Storage Keeper** - Stockage
-- **Capacity** : 5 pages (100 slots)
-- **Cost** : Gold par slot
+### Job Unions (T/H/Th)
+Voir le tableau récapitulatif : **[NPCS_COORDINATES.md — Job NPCs par Ville](NPCS_COORDINATES.md#-job-npcs-par-ville)**
 
-#### Teleport
-- **Teleport NPC** - Téléportation
-- **Destinations** : Toutes les villes
-- **Cost** : Gold selon distance
+### Donneurs de Quêtes
+- Daily Quest Managers (une par ville), guides, chefs militaires, avant-postes (Outposts)
+- Série Alexandria : Governor Senmute, Finance Officer Maneto, etc.
 
-#### Stable
-- **Stable Keeper** - Mounts
-- **Camel** - 2 slot transport
-- **Elephant** - 3 slot transport
-- **Horse** - Mount rapide
-
-#### Job Unions
-- **Trader Union** - Job Trader
-- **Thief Union** - Job Thief
-- **Hunter Union** - Job Hunter
-
-👉 **Details:** [HUB_JOBS.md](HUB_JOBS.md)
+👉 **Details :** [16_QUEST_SYSTEM.md](16_QUEST_SYSTEM.md)
 
 ---
 
@@ -235,44 +192,32 @@ Cette **base de données centralise tous les NPCs** de Silkroad Online avec leur
 
 ### Base de Données Coordonnées
 
-👉 **[NPCS_COORDINATES.md](NPCS_COORDINATES.md)** - **130+ NPCs avec X/Y** (607 lignes) ⭐
+👉 **[NPCS_COORDINATES.md](NPCS_COORDINATES.md)** — ~322 NPCs urbains + liens vers la base complète (697) ⭐
 
-**Format:**
+**Format :**
 ```
 NPC Name
-  - Zone: [Ville/Zone]
-  - Coordinates: X: XXXX, Y: YYYY
-  - Type: [Trainer/Merchant/Service/Quest]
-  - Services: [Liste des services]
+  - Ville/Zone: [Jangan]
+  - PosX/PosY: 6369, 1101   (officiel client)
+  - Region: 25000
+  - Type: Merchant/Service/Job/Quest/Guard/Event
+  - Services: [liste]
 ```
 
-**Exemples:**
+**Exemples réels (client officiel) :**
 
-#### Jangan
 ```
-Weapon Smith (Jangan)
-  - Zone: Jangan West
-  - Coordinates: X: 812, Y: 965
-  - Type: Merchant
-  - Services: Weapons 1D-3D
-```
+Blacksmith Chulsan (Jangan)
+  - Position: PosX 6369, PosY 1101
+  - Type: Merchant (armes/armures 1D-3D + repair)
 
-#### Hotan
-```
-Camel Merchant
-  - Zone: Hotan South
-  - Coordinates: X: 1820, Y: 1960
-  - Type: Service
-  - Services: Camel (2 slot) - 500,000 gold
-```
+Hunter Associate Ahmok (Hotan)
+  - Position: PosX 225, PosY 155
+  - Type: Job (union Hunter)
 
-#### Alexandria
-```
-Weapon Smith (Alexandria)
-  - Zone: Alexandria Center
-  - Coordinates: X: 145, Y: 1023
-  - Type: Merchant
-  - Services: Weapons 10D-13D
+Stolen Goods Dealer (Thief Town)
+  - Position: PosX 9119, PosY 891
+  - Type: Job (revente marchandises volées)
 ```
 
 ---
@@ -281,66 +226,49 @@ Weapon Smith (Alexandria)
 
 ### Par Service
 
-#### Pour Apprendre des Skills
-→ **Trainers** dans chaque ville
-
-#### Pour Acheter Équipement
-→ **Weapon/Armor Shops** selon level
-
-#### Pour Consommables
-→ **Potion Shops** dans toutes les villes
-
-#### Pour Stockage
-→ **Storage Keeper** - Toutes les villes
-
-#### Pour Téléportation
-→ **Teleport NPC** - Toutes les villes
-
-#### Pour Jobs
-→ **Job Unions** - Toutes les villes
-
----
+| Besoin | NPC à consulter |
+|--------|-----------------|
+| Apprendre des skills | Trainers (place centrale des villes de sa race) |
+| Acheter équipement | Blacksmith/Protector Trader de la ville correspondant au degree |
+| Consommables | Grocery/Potion Traders |
+| Stockage | Storage Keeper (toutes villes) |
+| Téléportation | Dimensional Gates + gardes téléporteurs + Homeless Genie |
+| Jobs | Unions (trader/hunter visibles, thief caché) |
+| Montures | Stable Keeper |
+| Guilde | Guild Manager |
 
 ### Par Level Range
 
-#### Level 1-20
-→ **Jangan NPCs** - Armes 1D-3D
-
-#### Level 20-40
-→ **Donwhang NPCs** - Armes 4D-5D
-
-#### Level 40-80
-→ **Hotan NPCs** - Armes 7D-9D
-
-#### Level 80-110
-→ **Alexandria NPCs** - Armes 10D-13D
-
-#### Level 100+
-→ **Constantinople NPCs** - Armes 9D-11D
+| Level | Ville recommandée | Degrees |
+|-------|-------------------|---------|
+| 1-20 | Jangan (CH) / Constantinople (EU) | 1D-3D |
+| 20-35 | Donwhang (CH) / Asia Minor (EU) | 3D-5D |
+| 30-60 | Hotan (les deux races) | 5D-8D |
+| 30-45 | Samarkand (les deux races) | 5D-8D |
+| 60-90 | Zones ouvertes (Karakoram, Taklamakan, Roc) — shops via Specialty Traders de zone | 8D-9D |
+| 100-110 | Alexandria | 10D-11D |
+| 110-120 | Alexandria / Temple of Jupiter | 11D-13D |
+| 115+ | Baghdad *(post-classique)* | 13D+ |
 
 ---
 
 ## 📚 Voir aussi
 
 ### Coordonnées et Positions
-- [NPCs Coordinates](NPCS_COORDINATES.md) - 130+ NPCs avec X/Y ⭐
-- [Map Coordinates Reference](MAP_COORDINATES_REFERENCE.md) - Toutes coordonnées
-- [Monsters Spawn Locations](MONSTERS_SPAWN_LOCATIONS.md) - 15 Uniques
+- [NPCs Coordinates](NPCS_COORDINATES.md) — toutes les tables ⭐
+- [Map Coordinates Reference](MAP_COORDINATES_REFERENCE.md) — téléporteurs, ferries, uniques, zones
+- [Monsters Spawn Locations](MONSTERS_SPAWN_LOCATIONS.md) — spawns de monstres
 
 ### Guides de Villes
-- [Jangan](CITIES_01_JANGAN.md) - Ville level 1-20
-- [Donwhang](CITIES_02_DONWHANG.md) - Ville level 20-40
-- [Hotan](CITIES_03_HOTAN.md) - Ville level 31-80+
-- [Alexandria](CITIES_04_ALEXANDRIA.md) - Ville level 10D-13D ⭐
-- [Constantinople](CITIES_05_CONSTANTINOPLE.md) - Ville européenne ⭐
+- [Jangan](CITIES_01_JANGAN.md) · [Donwhang](CITIES_02_DONWHANG.md) · [Hotan](CITIES_03_HOTAN.md)
+- [Alexandria](CITIES_04_ALEXANDRIA.md) · [Constantinople](CITIES_05_CONSTANTINOPLE.md)
+- [Zones Overview](13_ZONES_OVERVIEW.md) — toutes les régions du monde
 
 ### Base de Données
-- [Items Database](ITEMS_DATABASE.md) - Tous les items
-- [Monsters Database](MONSTERS_DATABASE.md) - Tous les monstres
+- [Items Database](ITEMS_DATABASE.md) · [Monsters Database](MONSTERS_DATABASE.md)
 
 ### Technique
-- [Hub Technique](HUB_TECHNIQUE.md) - Documentation développeur
-- [Development Technical Guide](DEVELOPMENT_TECHNICAL_GUIDE.md) - Architecture SRObro
+- [Hub Technique](HUB_TECHNIQUE.md) · [Development Technical Guide](DEVELOPMENT_TECHNICAL_GUIDE.md)
 
 ---
 
@@ -349,68 +277,58 @@ Weapon Smith (Alexandria)
 ### Database Schema (SRObro)
 
 ```typescript
-// Prisma schema
 model NPC {
   id           String   @id
-  name         String
+  name         String          // nom officiel client
   zoneId       String
   zone         Zone     @relation(fields: [zoneId], references: [id])
-  position     Position // { x: number, y: number, z: number }
-  type         NPCType  // TRAINER, MERCHANT, SERVICE, QUEST
+  position     Position        // { posX, posY } — coordonnées monde officielles
+  region       Int             // secteur 192×192 du client
+  type         NPCType         // TRAINER, MERCHANT, SERVICE, QUEST, JOB, GUARD, EVENT
   services     NPCService[]
   levelRange   LevelRange?
   description  String?
 }
 
 enum NPCType {
-  TRAINER      // Entraîneur de skills
-  MERCHANT     // Vendeur
-  SERVICE      // Stockage, téléport, etc.
-  QUEST        // Donneur de quêtes
-}
-
-model NPCService {
-  id       String  @id
-  npcId    String
-  npc      NPC     @relation(fields: [npcId], references: [id])
-  type     ServiceType
-  details  Json?   // Détails spécifiques
-}
-
-enum ServiceType {
-  WEAPON_SHOP
-  ARMOR_SHOP
-  POTION_SHOP
-  STORAGE
-  TELEPORT
-  STABLE
-  JOB_UNION
-  SKILL_TRAINER
+  TRAINER
+  MERCHANT
+  SERVICE
+  QUEST
+  JOB
+  GUARD
+  EVENT
 }
 ```
 
 ### API Endpoint
 
 ```typescript
-// GET /api/data/npcs
-interface GetNPCsOptions {
-  zone?: string;
-  type?: NPCType;
-  minLevel?: number;
-  maxLevel?: number;
-}
-
+// GET /api/data/npcs?zone=Jangan&type=MERCHANT
 interface NPCResponse {
   id: string;
   name: string;
-  position: { x: number; y: number; z: number };
+  position: { posX: number; posY: number };
+  region: number;
   type: NPCType;
   services: string[];
 }
+```
 
-// Example usage
-GET /api/data/npcs?zone=Jangan&type=MERCHANT
-// Returns: All merchant NPCs in Jangan with coordinates
+### Import depuis la source xSROMap
+
+```javascript
+// Pipeline d'import (main.js de JellyBitz/xSROMap → npcs.json)
+function convert(raw) {
+  const r = raw.region < 0 ? raw.region + 65536 : raw.region;
+  return {
+    name: raw.name,
+    region: raw.region,
+    posX: ((r & 0xff) - 135) * 192 + raw.x / 10,
+    posY: (((r >> 8) & 0xff) - 92) * 192 + raw.y / 10,
+    teleport: raw.teleport?.map(t => t.name) ?? []
+  };
+}
 ```
 
 ---
@@ -419,28 +337,17 @@ GET /api/data/npcs?zone=Jangan&type=MERCHANT
 
 ### Comment Interagir avec les NPCs
 
-1. **Approche** : Cliquez sur le NPC
-2. **Dialogue** : Sélectionnez l'option souhaitée
-3. **Quêtes** : Acceptez/refusez les quêtes
-4. **Commerce** : Achetez/vendez des items
-5. **Services** : Utilisez les services disponibles
+1. **Approche** : cliquez sur le NPC (distance d'interaction ~15 unités)
+2. **Dialogue** : sélectionnez l'option souhaitée
+3. **Quêtes** : acceptez/refusez (icônes « ! » et « ? »)
+4. **Commerce** : achetez/vendez des items
+5. **Services** : storage, téléportation, guilde...
 
 ### Conseils d'Interaction
 
-1. **Quêtes** :
-   - Toujours accepter les quêtes principales
-   - Faire les quêtes secondaires pour gold/exp bonus
-   - Utiliser les quêtes pour monter rapidement
-
-2. **Commerce** :
-   - Comparer les prix entre NPCs
-   - Acheter en gros pour économiser
-   - Vendre les items inutiles régulièrement
-
-3. **Services** :
-   - Utiliser la téléportation pour gagner du temps
-   - Réparer l'équipement régulièrement
-   - Utiliser la banque pour stocker les items rares
+1. **Quêtes** : accepter les chaînes principales (guides), faire les dailies (Daily Quest Managers)
+2. **Commerce** : comparer les degrees par ville ; vendre les drops inutiles aux marchands
+3. **Services** : définir sa résidence, utiliser les Dimensional Gates (≈5 000 gold)
 
 ---
 
@@ -449,52 +356,26 @@ GET /api/data/npcs?zone=Jangan&type=MERCHANT
 ### Questions Fréquentes sur les NPCs
 
 **Q: Comment trouver un NPC spécifique ?**
-R: Utilisez les fichiers de ville spécifiques ou [NPCS_COORDINATES.md](NPCS_COORDINATES.md) pour les coordonnées exactes. Vous pouvez aussi utiliser la commande /find dans le jeu.
+R: Utilisez [NPCS_COORDINATES.md](NPCS_COORDINATES.md) (par ville) ou la recherche xSROMap (par nom). En jeu, la carte (M) affiche les icônes NPCs.
 
-**Q: Quel NPC donne les meilleures quêtes pour monter de niveau ?**
-R: Pour les niveaux 1-40 : Maître Chen (Jangan). Pour les niveaux 40-70 : Maître Li (Donwhang). Pour les niveaux 70+ : Maître Wang (Hotan).
+**Q: Les NPCs listés existent-ils vraiment sous ces noms ?**
+R: Oui — tous les noms de cette base sont les **noms officiels du client** (« Blacksmith Chulsan », « Merchant Associate Hwajung »...). Les anciennes versions utilisaient des noms génériques inventés.
 
-**Q: Où trouver les NPCs qui vendent des items rares ?**
-R: Les meilleurs NPCs pour les items rares sont :
-- Marchand d'Items Rares (Hotan)
-- Marchand d'Items Uniques (Alexandria)
-- Spécialiste PvP (Constantinople)
+**Q: Quel NPC pour débuter le trade ?**
+R: Le **Merchant Associate** de votre ville (Hwajung à Jangan, Tana à Constantinople...) — achetez ensuite les specialty goods au Specialty Trader local.
 
-**Q: Comment interagir avec les NPCs de boss ?**
-R: Les NPCs de boss sont généralement hostiles. Vous devez les combattre pour obtenir leurs drops spéciaux. Utilisez [MONSTERS_SPAWN_LOCATIONS.md](MONSTERS_SPAWN_LOCATIONS.md) pour leurs emplacements.
+**Q: Où vendre des marchandises volées ?**
+R: Au **Stolen Goods Dealer** de **Thief Town** (9 119, 891).
 
 **Q: Les NPCs peuvent-ils être tués ?**
-R: Non, les NPCs amicaux (marchands, quêteurs) ne peuvent pas être tués. Seuls les NPCs hostiles (boss, monstres) peuvent être combattus.
+R: Non — les NPCs amicaux sont invulnérables. Seuls les monstres/uniques (documentés dans [MONSTERS_SPAWN_LOCATIONS.md](MONSTERS_SPAWN_LOCATIONS.md)) sont combattables.
 
-**Q: Comment savoir si un NPC a une quête disponible ?**
-R: Les NPCs avec des quêtes disponibles ont une icône spéciale au-dessus de leur tête (point d'exclamation jaune pour les quêtes principales, point d'interrogation bleu pour les quêtes secondaires).
-
----
-
-## 🏆 Top 10 NPCs les Plus Importants
-
-### Pour les Débutants
-
-1. **Maître Chen** (Jangan) - Quêtes principales 1-40
-2. **Marchand d'Armes** (Jangan) - Équipement de base
-3. **Téléporteur** (Jangan) - Déplacement rapide
-4. **Alchimiste** (Jangan) - Services d'enhancement
-
-### Pour les Intermédiaires
-
-5. **Maître Li** (Donwhang) - Quêtes 40-70
-6. **Marchand Spécialisé** (Donwhang) - Items rares
-7. **Réparateur** (Donwhang) - Réparation d'items
-
-### Pour les Avancés
-
-8. **Maître Wang** (Hotan) - Quêtes 70-100
-9. **Marchand d'Items Rares** (Hotan) - Équipement 7D-9D
-10. **Alchimiste Avancé** (Hotan) - Enhancement +7+
+**Q: Comment savoir si un NPC a une quête ?**
+R: Icône au-dessus de sa tête : « ! » jaune (quête principale), « ? » bleu (secondaire), sablier (quête en cours).
 
 ---
 
-**Dernière mise à jour :** 2025-01-20
-**Base de données NPCs** - Hub central des NPCs SRO
-**Fichier #32** - Complété et enrichi
-**Statut :** Fichier manquant créé et documenté
+**Dernière mise à jour :** 2026-10-01
+**Base de données NPCs** — Hub central des NPCs SRO
+**Fichier #32** — Refondu et synchronisé avec les données client officielles
+**Statut :** Documentation complète (source : xSROMap v1.4 / JellyBitz)

@@ -18,7 +18,7 @@
 Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et drops**. Comprendre les différents types de monstres et où les trouver est essentiel pour un leveling efficace.
 
 ### Points Clés
-- ✅ **5 Types:** Normal, Champion, Giant, Elite, Unique
+- ✅ **Types principaux:** Normal, Champion, Party, Giant, Unique (+ variantes Event)
 - ✅ **Level-graded:** Chaque zone a un level range
 - ✅ **Loot variables:** Différents drops selon le type
 - ✅ **Aggression mechanics:** Certains monstres sont agressifs
@@ -38,28 +38,20 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 
 **Pour:** Grinding régulier, quests
 
-### CHAMPION
+### PARTY (monstres de groupe)
 
-**Caractéristiques:**
-- **2x HP** d'un normal
-- **1.5x damage**
-- **Better drops**
-- Plus d'EXP/SP
-
-**Color:** Jaune
-
-**Identification:**
-- Nom du monstre en jaune
-- Plus grand que les normaux
-
-**Pour:** Farming plus efficace, better drops
+**Caractéristiques (données vérifiées):**
+- **~10x HP** d'un normal
+- Apparaissent en groupes serrés
+- Pensés pour les parties (EXP efficace en groupe)
+- Signalés par la communauté comme plus rentables en party qu'en solo
 
 ### GIANT
 
-**Caractéristiques:**
-- **5-10x HP** d'un normal
+**Caractéristiques (estimations communautaires):**
+- **5-10x HP** d'un normal (jusqu'à ~20x pour les géants de party)
 - **2-3x damage**
-- **Best drops** (SOX possible!)
+- **Best drops** des monstres réguliers (SOX possible, très rare)
 - Beaucoup plus d'EXP/SP
 
 **Color:** Rouge
@@ -70,52 +62,57 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 
 **Pour:** Boss hunting, rare drops
 
-**Spawn Time (VERIFIED DATA):**
-- Respawn après **~5 minutes** dans les zones à spawn rapide (ex: Ong Habitat)
-- Respawn après **5-15 minutes** dans les zones normales
-- Respawn après **15-30 minutes** dans les zones à spawn lent
-- **Note:** Certaines zones (comme Ong) ont un taux de spawn très élevé, permettant des giants toutes les 5 minutes environ
+**Spawn Time (données rapportées):**
+- Les géants remplacent aléatoirement un monstre normal à son respawn (~1% des spawns, non vérifié précisément)
+- Respawn de zone standard: **quelques minutes** (les géants n'ont pas de timer dédié sur iSRO)
 
-### ELITE
+### CHAMPION
 
-**Caractéristiques:**
-- **10-20x HP** d'un normal
-- **3-5x damage**
-- **Excellent drops**
-- Massive EXP/SP
+**Caractéristiques (vérifié):**
+- **~2x HP** d'un normal (confirmé par guides communautaires Origin)
+- Plus de dégâts et d'EXP/SP que le normal
+- **Better drops**
 
-**Color:** Orange
+**Color:** Jaune
 
 **Identification:**
-- Nom du monstre en orange
-- Très grand
+- Nom du monstre en jaune
+- Plus grand que les normaux
 
-**Pour:** Group hunting, dungeon bosses
+**Pour:** Farming plus efficace, better drops
+
+> ⚠️ **Note « Elite »:** l'ancienne version de ce guide décrivait un type « Elite » (nom orange, 10-20x HP). Ce type n'est **pas confirmé** par les données client — il s'agirait plutôt des variantes **Strong** (events), des **géants de party** ou d'ajouts de serveurs privés. À traiter comme non vérifié.
 
 ### UNIQUE
 
 **Caractéristiques:**
-- **100-1000x HP** d'un normal
+- **Des centaines de milliers à des milliards de HP** (Tiger Girl: 598,720 … Roc: 1,451,891,045)
 - **Massive damage**
 - **Best drops du jeu** (SOS, SOM, SOSun!)
 - Gigantesque EXP/SP
 
-**Color:** Vert (ou unique color)
-
 **Identification:**
 - Nom unique (ex: "Tiger Girl")
 - Immense
-- Visible sur la map
+- Un seul (ou très peu) par serveur
 
 **Pour:** Full parties, rare item hunting
 
-**Spawn Time (VERIFIED DATA):**
-- Respawn après **3-8 heures** pour les low-level uniques (Tiger Girl, Cerberus)
-- Respawn après **8-16 heures** pour les mid-level uniques (Captain Ivy, Isyutaru)
-- Respawn après **16-24 heures** pour les high-level uniques (Medusa, Lady Lyn, Beithy)
-- **Note:** Le timer commence après la mort de l'unique
-- **Spawn random:** L'unique peut spawn dans plusieurs zones prédéfinies
-- Voir section "Unique Bosses" pour les détails
+**Spawn Time (données vérifiées):**
+- **3-5 heures** sur iSRO (4h par défaut dans les fichiers vSRO) — timer qui démarre à la mort
+- Spawn à un **point aléatoire** parmi plusieurs spots prédéfinis (points bleus)
+- Après un **crash serveur**: repop aux spots fixes
+- Exception Qin-Shi Tomb: la Serin Gate ouvre à heures fixes (04h/10h/16h/22h)
+- **Note:** Les uniques « 8-24 heures » des anciennes versions de ce guide n'étaient pas vérifiés
+- Voir [15_UNIQUE_BOSSES.md](./15_UNIQUE_BOSSES.md) pour la liste complète vérifiée
+
+### EVENT (monstres d'événement)
+
+**Caractéristiques (vérifié dans les données client):**
+- Codes `MOB_EV_*` (ex: Young Bear `MOB_EV_BEAR_A_050`) — events saisonniers
+- Variantes **Strong** (ex: Strong Ong lvl 34, 62,959 HP vs 2,099 pour le normal; Strong Tiger Girl `MOB_CH_TIGERWOMAN_L2`)
+- Variantes **Evil** (`_L3`) encore plus fortes, variantes `GM's *`
+- **Raiders de trade:** des bandits/thieves spawnent pour attaquer les caravanes pendant les trade runs (voir [10_TRADER_GUIDE.md](./10_TRADER_GUIDE.md))
 
 ---
 
@@ -124,7 +121,6 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 ### JANGAN AREA (Level 1-20)
 
 **Level 1-10:**
-- Mangyangs
 - Mangyangs
 - Weasels
 
@@ -173,7 +169,7 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 **Level 35-40:**
 - Urunigers
 - Stone Warriors
-- Ong
+- Ong (34 — Tarim Basin, route vers Hotan)
 
 **Level 40-50:**
 - Bunwangs
@@ -187,31 +183,45 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 
 **Farming Spots:**
 - **Hotan Cave:** X: 13500, Y: 4800 (Level 40-60)
-- **Ong Habitat:** X: 13000, Y: 5500 (Level 45-55) ⭐ *Giants fréquents*
+- **Ong Habitat:** X: 13000, Y: 5500 (Ong level 34 — vérifié client; spot gap 5-9) ⭐ *Giants fréquents*
 - **Takla Makan:** X: 12000, Y: 6000 (Level 50-60)
 
 > 📍 **Coordonnées précises:** Voir [MONSTERS_SPAWN_LOCATIONS.md](./MONSTERS_SPAWN_LOCATIONS.md)
 
-### ALEXANDRIA AREA (Level 60-90+)
+### KARAKORAM / EUROPE / ROC MOUNTAIN (Level 59-100)
 
-**Level 60-70:**
-- Castor
-- Jarad
-- Tomb mobs
+**Level 59-66 (Karakoram — vérifié client, famille MOB_KK_*):**
+- Spiders (White / Golden / Big White), Yeti, Evil Yeti, Sona
+- Bunwang — **Unique du Karakoram: Isyutaru (60)**
 
-**Level 70-80:**
-- Naga
-- Harpy
-- Mummy
+**Level 60-65 (Asie Mineure — côté Europe):**
+- Soil Ghost Bug (61), Strong Earth Ghost (62), Earth Ghost Bug (63), Power Earth Ghost (64), Earth Ghost Warrior (65)
+- **Unique: Captain Ivy (30)** (Amphitheater, Cleopatra's Gate, Haran's Tower)
 
-**Level 80-90:**
-- Djinn
-- Ifrit
-- Advanced tomb mobs
+**Level 76-99 (Qin-Shi Tomb, donjon est de Jangan):**
+- B1-B2 (76-89), B3 (90-95), B4 (96-99), B5-B6 (92-105 avec uniques)
+- **Uniques:** Gardiens (98-99), Shinmoo (100), Soso (100), Medusa/BeakYung (105)
+
+**Level 80-95 (Roc Mountain — vérifié client, famille MOB_RM_*):**
+- Wing Tribe, Feather Cloak/Mask (80-84), Antinoke, Antelope, Shaur, Rocky (85-92)
+- **Uniques: Demon Shaitan (90)** (Heart/Claw/Wing Peak), **Roc (100, world boss)**
+
+**Level 80 (Taklamakan):** **Unique: Lord Yarkan (80)** (Niya Remains)
+
+### ALEXANDRIA / EGYPT AREA (Level 100-110+, cap 120)
+
+**Level 100-104 (désert d'Alexandrie & Job Temple — vérifié client):**
+- Uneg (100), Weneg (101), Dark Khepri (101), Dark Scout (102), Blood Hyena (104)
+
+**Level 103-110 (uniques du Job Temple):**
+- Apis (103), Selket (105), Neith (106), Anubis (107), Isis (108), Haroeris (109), Seth (110)
 
 **Farming Spots:**
-- Alexandria dungeons
-- Tomb Raids
+- Désert au sud d'Alexandrie (Storm Desert)
+- Job Temple (zone de job PvP, accès selon AP d'union)
+- Qin-Shi Tomb B1-B6 (76-100+)
+
+> ⚠️ **Corrigé:** l'ancienne version listait « Naga, Harpy, Mummy, Ghole, Djinn, Ifrit, Sphinx, Osiris, Ra » comme mobs d'Alexandria — **ces noms n'existent pas dans les données client** iSRO. La vraie faune égyptienne utilise les codes `MOB_SD_*` ci-dessus.
 
 ---
 
@@ -248,7 +258,7 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 **Location:** Hotan area
 
 **Monstres:**
-- Ong (Level 45-50)
+- Ong (Level 34 — vérifié client)
 
 **Pourquoi:**
 - High spawn rate
@@ -265,6 +275,23 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 - Best drops
 - Party play
 - challenging but rewarding
+
+### Level 60-100: Karakoram / Tomb / Roc Mountain
+
+**Monstres:**
+- Karakoram spiders/yetis (59-66), Qin-Shi Tomb B1-B6 (76-99), Roc Mountain (80-95)
+
+**Pourquoi:**
+- Qin-Shi Tomb: dense, parties, uniques internes
+- Roc Mountain: route vers Demon Shaitan (90) et Roc (100)
+
+### Level 100+: Alexandrie / Job Temple
+
+**Monstres:**
+- Uneg (100), Weneg (101), Dark Khepri (101), Dark Scout (102), Blood Hyena (104)
+
+**Pourquoi:**
+- End-game farming, uniques du Job Temple (103-110)
 
 ---
 
@@ -331,19 +358,22 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 
 ### Drop Rates
 
-**General Rule:**
+**General Rule (estimations communautaires — les tables réelles sont côté serveur):**
 - Normal: Bas drop rate
-- Champion: 2x drop rate
-- Giant: 5x drop rate
-- Elite: 10x drop rate
+- Champion: ~2x drop rate
+- Giant: ~5x drop rate
+- Party: drops partagés, meilleur rendement en groupe
 - Unique: Best drop rate
 
-**SOX Drop Chance:**
-- Normal: ~0.01%
+**SOX Drop Chance (ordres de grandeur rapportés, non vérifiés):**
+- Normal: ~0.01% (le SoX peut tomber de N'IMPORTE QUEL monstre, mais extrêmement rare)
 - Champion: ~0.05%
-- Giant: ~0.1%
-- Elite: ~0.5%
-- Unique: ~1-5%
+- Giant: ~0.1-0.5%
+- Unique: ~5-10% SOS, 1-3% SOM, 0.1-0.5% SOSun
+
+**Repères de farm rapportés (iSRO-like):**
+- ~10 elixirs/heure aux Earth Ghosts en solo (avec pickup pet)
+- 9-12 items utiles en ~6h de grind
 
 ---
 
@@ -397,279 +427,160 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 
 ---
 
-## 🏆 Unique Monsters - Guide Complet (Recherche 2025)
+## 🏆 Unique Monsters - Guide Complet (Recherche 2026)
 
-### Recherche Multilingue - Spawn Times & HP
+### Système de Spawn des Uniques (vérifié)
 
-**Source**: [Multiple Private Server Guides](unique spawn research) + Community Sources
+**Mécanique Générale:**
+- **Spawn Interval:** 3-5 heures sur iSRO (4h par défaut dans les fichiers vSRO), timer démarré à la mort
+- **Spawn Locations:** Points de spawn aléatoires (marqués en bleu sur les maps communautaires)
+- **Après crash serveur:** repop aux points fixes (nord Bandit Stronghold pour Tiger Girl, ouest Desperado Hill pour Cerberus, etc.)
+- **Unique Dungeons / Events:** certains events ouvrent des donjons 2x par jour à heures fixes (ex: la Serin Gate du Qin-Shi Tomb à 04h/10h/16h/22h)
 
-**Note Importante**: Les spawn times varient significativement entre les serveurs officiels et les serveurs privés. Les informations ci-dessous sont des **moyennes basées sur la communauté**.
+### 📊 Tableau Complet des Uniques (données client vérifiées)
 
-### Système de Spawn des Uniques
+| Unique | Level | HP | Spawn Time | Zone | Difficulté |
+|--------|-------|-----|------------|------|------------|
+| **Tiger Girl** | 20 | 598,720 | 3-5 heures | Jangan (Bandit Stronghold / Tiger Mtn) | Facile |
+| **Cerberus** | 24 | 693,072 | 3-5 heures | Europe (Desperado Hill, Forest of Dusk, Garden of Gods) | Facile |
+| **Captain Ivy** | 30 | 1,094,835 | 3-5 heures | Asie Mineure (Amphitheater, Cleopatra's Gate, Haran's Tower) | Facile-Moyen |
+| **Uruchi** | 40 | 1,779,528 | 3-5 heures | Tarim Basin (Black Robber Den, Tarim Ferry) | Moyen |
+| **Isyutaru** | 60 | 4,324,612 | 3-5 heures | Karakoram (centre, Ancient Remains) | Difficile |
+| **Lord Yarkan** | 80 | 9,353,045 | 3-5 heures | Taklamakan (Niya Remains) | Difficile |
+| **Demon Shaitan** | 90 | 12,732,060 | 3-5 heures | Roc Mountain (Heart/Claw/Wing Peak) | Très Difficile |
+| **Roc** | 100 | 1,451,891,045 | très espacé | Roc Mountain | Raid de guilde |
+| **Medusa (BeakYung)** | 105 | 183,535,199 | très espacé | Qin-Shi Tomb B6 | Extrême |
+| **Job Temple (Apis→Seth)** | 103-110 | 21M-440M | variable | Job Temple (Alexandrie) | Extrême |
 
-**Mécanique Générale**:
-- **Spawn Interval**: 3-6 heures sur la plupart des serveurs
-- **Private Servers**: Peuvent réduire à 1-2 heures ou moins
-- **Spawn Locations**: Points de spawn aléatoires (marqués en bleu sur la map)
-- **Unique Dungeons**: Ouvrent 2x par jour à heures fixes pendant les events uniques
-- **Timer Commence**: Après la mort de l'unique
-
-### 📊 Tableau Complet des Uniques
-
-| Unique | Level | HP | Spawn Time | Zone | Drops | Difficulté |
-|--------|-------|-----|------------|------|-------|------------|
-| **Tiger Girl** | 20 | 598,720 | 1-2 heures | Jangan area | SOS/SOM gear | Facile |
-| **Cerberus** | 20 | 693,072 | 3-5 heures | Hotan area | SOE/SOM | Facile-Moyen |
-| **Captain Ivy** | 30 | 1,094,835 | 3-5 heures | Donwhang | SOM/SOSun | Moyen |
-| **Uruchi** | 40 | 1,779,528 | 60+ min (variable) | Hotan | SOM/SOSun | Moyen |
-| **Isyutaru** | 60 | 4,324,612 | 3-6 heures | Taklamakan | SOSun (best) | Difficile |
-| **Lord Yarkan** | 70+ | High HP | 3-6 heures | Taklamakan | SOSun/SOS | Difficile |
-| **Demon Shaitan** | 80+ | Highest HP | 3-6 heures | Alexandria | Best drops | Très Difficile |
-| **Medusa** | 90+ | Extreme HP | 6-12 heures | Alexandria | Top tier drops | Extrême |
-| **Lady Lyn** | 100+ | Massive HP | 6-12 heures | Alexandria | SOSun+ | Extrême |
-| **Beithy** | 110 | Maximum HP | 8-24 heures | Alexandria | Best items | Boss Final |
+> ❌ **Corrigé (2026):** « Lady Lyn », « Beithy », « Bunny », « Rooster », « Monkey », « Spider Queen » — **introuvables dans les données client iSRO**, ne pas implémenter tels quels (uniques de serveurs privés ou inventions). L'ancien tableau « Cerberus 20 / Yarkan 70+ / Shaitan 80+ » était erroné.
 
 ### 🎯 Détails par Unique
 
 #### TIGER GIRL (Level 20)
-
-**Informations**:
 ```
-HP: 598,720
-Spawn Time: 1-2 heures (serveurs privés: 30-60 min)
-Level Requis: 15+
-Nombre de Joueurs: 1-2 players suffisent
+HP: 598,720 | ATK: 42-51 | DEF: 18 | Gold: 586,560
+Zone: Bandit Stronghold (Bijeokdan Mountain) / Tiger Mountain
 ```
+- **Stratégie:** solo possible à 30+, sinon 2-4 joueurs level 20+
+- **Drops:** stuff 2D-3D, gold, SOX rare
 
-**Stratégie**:
-- **Build**: Full STR lvl 20+ peut le solo
-- **Position**: Tank et span
-- **Drops**: SOS (Seal of Star), rare gear
-- **Gold**: 50,000-100,000 gold
-
-**Spawn Locations**:
-- Près de Jangan South Gate
-- Bandit Stronghold area
-- Plusieurs points possibles
-
----
-
-#### CERBERUS (Level 20)
-
-**Informations**:
+#### CERBERUS (Level 24)
 ```
-HP: 693,072
-Spawn Time: 3-5 heures
-Level Requis: 20+
-Nombre de Joueurs: 2-4 players recommandé
+HP: 693,072 | ATK: 52-70 | DEF: 22 | Gold: 740,519
+Zone: Desperado Hill / Forest of Dusk / Garden of Gods (Constantinople)
 ```
-
-**Stratégie**:
-- **Build**: Full STR ou INT avec Snow Shield
-- **Position**: Kiting pour INT, tanking pour STR
-- **Drops**: SOE (Seal of Star), SOM, weapons
-- **Spécial**: Triple attack (têtes multiples)
-
----
+- **Stratégie:** 2-4 joueurs level 25+, ranged pratique
+- **Drops:** stuff 3D, gold, SOX rare
 
 #### CAPTAIN IVY (Level 30)
-
-**Informations**:
 ```
-HP: 1,094,835
-Spawn Time: 3-5 heures
-Level Requis: 25+
-Nombre de Joueurs: 3-6 players recommandé
+HP: 1,094,835 | ATK: 115-184 | DEF: 30 | Gold: 1,050,440
+Zone: Amphitheater / Cleopatra's Gate / Haran's Tower (Asie Mineure)
 ```
-
-**Stratégie**:
-- **Build**: Full STR avec healer
-- **Position**: Full party avec tank + DPS + heals
-- **Drops**: SOM, Shield SOMun, weapons
-- **Note**: Plus difficile que Cerberus, require coordination
-
----
+- **Stratégie:** party 4-6 joueurs level 35+
+- **Drops:** stuff 4D-5D, gold
 
 #### URUCHI (Level 40)
-
-**Informations**:
 ```
-HP: 1,779,528
-Spawn Time: 60+ minutes (variable selon serveur)
-Level Requis: 35+
-Nombre de Joueurs: 4-8 players recommandé
+HP: 1,779,528 | ATK: 124-149 | DEF: 47 | Gold: 1,711,056
+Zone: Black Robber Den / routes du Tarim Ferry (Tarim Basin)
 ```
-
-**Stratégie**:
-- **Build**: Full party avec 2 tanks + heals
-- **Drops**: SOMun weapons, armor
-- **Note**: Premier unique "vraiement" challenge
-
----
+- **Stratégie:** party 4-8 joueurs level 50+
+- **Drops:** stuff 5D-6D, gold — très bon farming gold
 
 #### ISYUTARU (Level 60)
-
-**Informations**:
 ```
-HP: 4,324,612
-Spawn Time: 3-6 heures
-Level Requis: 55+
-Nombre de Joueurs: 6-8 players OBLIGATOIRE
+HP: 4,324,612 | ATK: 274-329 | DEF: 101 | Gold: 3,572,738
+Zone: centre du Karakoram (glace, Ancient Remains)
 ```
+- **Stratégie:** full party 8 joueurs level 70+, 2 tanks + heals + DPS
+- **Drops:** stuff 6D-7D, SOM possible — **UNIQUE FARMING CRITIQUE**
 
-**Stratégie**:
-- **Build**: 2 tanks (full STR) + 2 healers + 4 DPS
-- **Drops**: **SOSun** (Seal of Sun) - TOP TIER
-- **Armor**: SOSun chest, legs, etc.
-- **Weapons**: SOSun weapons (best in game)
-- **Importance**: **UNIQUE FARMING CRITIQUE** pour gear
-
----
-
-#### LORD YARKAN (Level 70+)
-
-**Informations**:
+#### LORD YARKAN (Level 80)
 ```
-HP: High (variable)
-Spawn Time: 3-6 heures
-Level Requis: 65+
-Nombre de Joueurs: 8 players full party
+HP: 9,353,045 | ATK: 559-1047 | DEF: 197 | Gold: 6,452,763
+Zone: Niya Remains (Taklamakan)
 ```
+- **Stratégie:** full party level 90+, coordination (multi-skills)
+- **Drops:** stuff 8D-9D, SOM fréquent, SOSun possible
 
-**Stratégie**:
-- **Build**: Full party optimisé avec CC (crowd control)
-- **Drops**: SOSun armor, weapons
-- **Difficulty**: Très élevée, require coordination parfaite
-
----
-
-#### DEMON SHAITAN (Level 80+)
-
-**Informations**:
+#### DEMON SHAITAN (Level 90)
 ```
-HP: Highest HP des uniques standard
-Spawn Time: 3-6 heures
-Level Requis: 75+
-Nombre de Joueurs: 8 players + pots spam
+HP: 12,732,060 | ATK: 898-1528 | DEF: 268 | Gold: 8,671,974
+Zone: Heart Peak / Claw Peak / Wing Peak (Roc Mountain)
 ```
+- **Stratégie:** full party 100+, potions en masse
+- **Drops:** stuff 9D, meilleurs drops des uniques classiques
 
-**Stratégie**:
-- **Build**: Full party max level
-- **Preparation**: HUNDREDS de potions (HP/MP)
-- **Drops**: **BEST drops du jeu**
-- **Difficulty**: EXTREME, souvent impossible sans guild coordonnée
-
----
-
-#### MEDUSA (Level 90+)
-
-**Informations**:
+#### ROC (Level 100)
 ```
-HP: Extreme
-Spawn Time: 6-12 heures
-Level Requis: 85+
-Nombre de Joueurs: Full max level party (8x lvl 100+)
+HP: 1,451,891,045 | ATK: 2052-3283 | Gold: 1,157,701,880
+Zone: Roc Mountain (world boss)
 ```
+- **Stratégie:** raid de guilde multi-parties
+- Boss ultime de la chaîne classique
 
-**Stratégie**:
-- **Build**: Seuls les joueurs lvl 100+ avec best gear peuvent participer
-- **Drops**: Top tier items, rare materials
-- **Difficulty**: NEAR IMPOSSIBLE sans guild
-
----
-
-#### LADY LYN (Level 100+)
-
-**Informations**:
+#### MEDUSA / BEAKYUNG THE WHITE VIPER (Level 105)
 ```
-HP: Massive
-Spawn Time: 6-12 heures
-Level Requis: 95+
-Nombre de Joueurs: 8x lvl 100+ with PERFECT gear
+HP: 183,535,199
+Zone: Qin-Shi Tomb B6 — White Viper Chamber (accès par Serin Gate, B4, ouvertes 04h/10h/16h/22h)
 ```
+- Nécessite de clear B5 (4 gardiens 98-99: Black Tortoise, Red Hawk, Blue Dragon, White Tiger)
+- Sous-uniques: Shinmoo (100), Soso the Black Viper (100), Snake Generals (95)
+- Top guilds uniquement
 
-**Stratégie**:
-- **Build**: Full max level, best gear possible
-- **Drops**: SOSun++ (best seal items)
-- **Difficulty**: ONLY pour les top guilds
-
----
-
-#### BEITHY (Level 110)
-
-**Informations**:
+#### JOB TEMPLE UNIQUES (103-110)
 ```
-HP: Maximum HP du jeu
-Spawn Time: 8-24 heures
-Level Requis: 105+
-Nombre de Joueurs: 8x lvl 110 with PERFECT gear
+Apis (103, 21M HP) → Selket (105) / Neith (106) → Anubis (107) / Isis (108) → Haroeris (109) / Seth (110, 440M HP)
+Zone: Job Temple, sud d'Alexandrie (accès selon AP de l'union de job)
 ```
+- Selket/Neith libres, Anubis/Isis nécessitent des AP, Haroeris/Seth en zone profonde
+- Drops 11D+, Immortal/Astral stones (rapporté)
 
-**Stratégie**:
-- **Build: Full party maxed, best gear
-- **Drops**: **BEST ITEMS DU JEU** (rarety extrême)
-- **Difficulty**: FINAL BOSS - seul 1% des joueurs peuvent le tuer
+### 📈 Unique Dungeons & Events
 
----
+**Système:**
+- La **Serin Gate** (Qin-Shi Tomb B4) ouvre 4x/jour à heures fixes (04h00, 10h00, 16h00, 22h00) pendant 10 minutes
+- Le **FGW** (Forgotten World) propose des boss de donjon (Togui General lvl 39+, Ghost Sereness lvl 93+) par brackets de level avec grades 1★-4★
+- Des events serveur spawnent des variantes **Strong/Evil** (ex: Strong Tiger Girl `MOB_CH_TIGERWOMAN_L2/L3`)
 
-### 📈 Unique Dungeons
-
-**Système**:
-- Ouvrent **2x par jour** à heures fixes
-- Accessibles depuis des zones spécifiques
-- Contiennent des uniques avec **drops boostés**
-- Duration: ~30 minutes par ouverture
-
-**Utilisation Stratégique**:
-1. **Préparez votre team** à l'avance
-2. **Farmez les clés/craft** si requis
+**Utilisation Stratégique:**
+1. **Préparez votre team** à l'avance (spots connus d'avance pour la Serin Gate)
+2. **Farmez les talismans/clés** si requis (FGW)
 3. **Entrez IMMÉDIATEMENT** à l'ouverture
 4. **Focus l'unique** avant les autres mobs
 5. **Loot fast** avant la fermeture
 
 ### 💡 Tips pour Unique Hunting
 
-**Pour Organisers**:
+**Pour Organisers:**
 
-1. **Timers Tracking**:
+1. **Timers Tracking:**
    - Notez l'heure de mort de chaque unique
-   - Créez un calendar avec les spawn times estimés
-   - Alertez votre guild 30 min avant le spawn
+   - Fenêtre de spawn = mort + 3-5 heures (iSRO)
+   - Alertez votre guild 30 min avant la fenêtre
 
-2. **Spawn Points Camping**:
-   - Apprenez tous les points de spawn possibles
+2. **Spawn Points Camping:**
+   - Apprenez les zones de spawn (points bleus des maps rev6/elitepvpers)
    - Placez des scouts aux points stratégiques
    - Soyez les premiers à tag l'unique
 
-3. **Kill Stealing Protection**:
-   - Sur certains serveurs, le team qui tag en premier a le loot
+3. **Kill Stealing Protection:**
+   - Selon le serveur: first hit = claim, ou most damage = claim
    - Organisez-vous pour être first
-   - Ayez des "taggers" dédiés
 
-**Pour Participants**:
+**Pour Participants:**
 
-1. **Come Prepared**:
-   - Full potions (HP/MP)
-   - Resurrect scrolls
-   - Buffs max
-   - Repair votre gear
-
-2. **Listen to Leader**:
-   - Suivez les instructions du raid leader
-   - Ne pas ninja loot
-   - Focus sur le target appelé
-
-3. **Loot Rules**:
-   - Établissez les règles AVANT le fight
-   - "Need before greed"
-   - Faire confiance au leader pour la distribution
+1. **Come Prepared:** full potions, res scrolls, buffs, gear repaired
+2. **Listen to Leader:** focus le target appelé, pas de ninja loot
+3. **Loot Rules:** règles établies AVANT le fight (« need before greed », roll, ou distribution leader)
 
 ---
 
 ## ❓ FAQ
 
 ### Q: Quel monstre donne le plus d'EXP?
-**R:** Les Uniques donnent le plus d'EXP, mais ont un très long respawn. Pour du farming régulier, les Giants et Elites sont les meilleurs.
+**R:** Les Uniques donnent le plus d'EXP, mais ont un très long respawn. Pour du farming régulier, les Giants et Champions sont les meilleurs (les monstres de party sont efficaces en groupe).
 
 ### Q: Les Champions/Giants respawn-ils plus vite?
 **R:** Non, ils ont le même respawn que les normaux (~3-5 minutes). Mais ils sont plus rares.
@@ -690,7 +601,12 @@ Nombre de Joueurs: 8x lvl 110 with PERFECT gear
 ### Resources
 - [Monster Area Maps](https://guildalgarb.wordpress.com/games/sro/maps/monster-areas/)
 - [Silkroad Online Wiki - Monsters](https://silkroadonline.fandom.com/wiki/Monsters)
+- [Silkroad Online Database - Monsters (données client)](https://silkroadonline.wiki/monsters)
+- [Elitepvpers - Guide Unique Spawns](https://www.elitepvpers.com/forum/sro-guides-templates/186742-guide-unique-spawns.html)
+- [Rev6 - Unique Spawn Points](https://rev6.org/en/post/silkroad-online-uniq-spawn-noktalari)
+- [StrategyWiki - Bosses](https://strategywiki.org/wiki/Silkroad_Online/Bosses)
+- [xSROMap](https://jellybitz.github.io/xSROMap/)
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
+*Dernière mise à jour: 2026-10-01 (uniques et types corrigés d'après les données client silkroadonline.wiki + elitepvpers/rev6/mmorpg.com)*

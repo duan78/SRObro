@@ -7,7 +7,7 @@
 - [Monstres Level 40-60](#-monstres-level-40-60)
 - [Monstres Level 60-80](#-monstres-level-60-80)
 - [Monstres Level 80-100](#-monstres-level-80-100)
-- [Monstres Level 100+](#-monstres-level-100)
+- [Monstres Level 100+](#-level-100-110-alexandrie--job-temple--données-client-vérifiées)
 - [Champion/Giant/Elite Stats](#-championgiantelite-stats)
 
 ---
@@ -36,8 +36,8 @@
 | 38 | Earth Taoist | Aggressive | Donwhang area |
 | 40 | Uruniger | Aggressive | Hotan area |
 | 42 | Stone Warrior | Aggressive | Hotan area |
-| 45 | Ong | Aggressive | Ong Habitat |
-| 48 | Bunwang | Aggressive | Hotan area |
+| 34 | Ong | Aggressive | Tarim Basin (Ong Habitat) — **vérifié client** |
+| 48 | Bunwang | Aggressive | Karakoram |
 | 50 | Shedim | Aggressive | Hotan area |
 | 52 | Dark Devil | Aggressive | Hotan area |
 | 55 | Bhima | Aggressive | Hotan area |
@@ -47,22 +47,22 @@
 | 65 | Nightmare | Aggressive | Hotan area |
 | 68 | Kujo | Aggressive | Hotan area |
 | 70 | Petal | Aggressive | Hotan area |
-| 72 | Castor | Aggressive | Alexandria |
-| 75 | Jarad | Aggressive | Alexandria |
-| 78 | Water Ghost | Aggressive | Alexandria |
-| 80 | Naga | Aggressive | Alexandria |
-| 82 | Harpy | Aggressive | Alexandria |
-| 85 | Mummy | Aggressive | Alexandria Tomb |
-| 88 | Ghole | Aggressive | Alexandria |
-| 90 | Djinn | Aggressive | Alexandria |
-| 92 | Ifrit | Aggressive | Alexandria |
-| 95 | Neith | Aggressive | Alexandria |
-| 98 | Isis | Aggressive | Alexandria |
-| 100 | Anubis | Aggressive | Alexandria |
-| 102 | Sphinx | Aggressive | Alexandria |
-| 105 | Serket | Aggressive | Alexandria |
-| 108 | Osiris | Aggressive | Alexandria |
-| 110 | Ra | Aggressive | Alexandria |
+| 72 | Castor | Aggressive | Asia Minor (non vérifié) |
+| 75 | Jarad | Aggressive | Asia Minor (non vérifié) |
+| 78 | Water Ghost (EU) | Aggressive | Asia Minor |
+| 80-84 | Wing Tribe / Feather Cloak | Aggressive | Roc Mountain — **vérifié client** |
+| 85-92 | Antinoke / Shaur / Rocky | Aggressive | Roc Mountain — **vérifié client** |
+| 76-99 | Qin-Shi Tomb B1-B4 | Aggressive | Jangan Cave — **vérifié** |
+| 90 | Demon Shaitan | **UNIQUE** | Roc Mountain — **vérifié client** |
+| 100 | Uneg | Aggressive | Alexandrie/Job Temple — **vérifié client** |
+| 100 | Roc | **UNIQUE/world boss** | Roc Mountain — **vérifié client** |
+| 101 | Weneg / Dark Khepri | Aggressive | Alexandrie/Job Temple — **vérifié client** |
+| 102 | Dark Scout | Aggressive | Alexandrie/Job Temple — **vérifié client** |
+| 104 | Blood Hyena | Aggressive | Alexandrie/Job Temple — **vérifié client** |
+| 103-110 | Apis, Selket, Neith, Anubis, Isis, Haroeris, Seth | **UNIQUES Job Temple** | **vérifié client** |
+| 105 | BeakYung « Medusa » | **UNIQUE** | Qin-Shi Tomb B6 — **vérifié** |
+
+> ⚠️ **Note (2026):** les lignes « vérifié client » proviennent des données iSRO (silkroadonline.wiki). Les entrées anciennes non marquées (Shedim, Dark Devil, Bhima, Mu jun, Hang-A, Huang, Nightmare, Kujo, Petal, Castor, Jarad) n'ont pas pu être confirmées dans les données client — à traiter comme non vérifiées. Les anciennes lignes « Naga 80 / Harpy 82 / Mummy 85 / Ghole 88 / Djinn 90 / Ifrit 92 / Neith 95 / Isis 98 / Anubis 100 / Sphinx 102 / Serket 105 / Osiris 108 / Ra 110 » comme mobs de terrain ont été **supprimées** (noms introuvables dans le client — Neith/Isis/Anubis/Serket/Seth sont les uniques du Job Temple).
 
 ---
 
@@ -652,36 +652,31 @@
 
 ---
 
-### ONG (Level 45) ⭐ SP FARMING SPOT
+### ONG (Level 34 — vérifié client) ⭐ SP FARMING SPOT
 
 **Appearance:** Créatures ong, fourrure brune, ressemblent à des ours
 
-**Stats:**
-- HP: 12,000
-- PHY ATK: 400-650
-- PHY DEF: 220
-- MAG DEF: 190
+**Stats (données client iSRO):**
+- **Level: 34** (corrigé — l'ancienne fiche indiquait 45 à tort)
+- HP: 2,099
+- PHY ATK: 141-225
+- PHY DEF: 37
+- Gold: 1,023
+- ID: 1978 | Code: `MOB_OA_ONG`
+
+**Variantes:**
+- **Strong Ong** (event): Level 34, HP 62,959 (~30x le normal), ATK 141-225
 
 **Behavior:**
 - **Aggressive**
 - Medium movement
-- **Roar attack** (debuff)
 
 **Location:**
-- **Ong Habitat** (spot LEGENDAIRE!)
-- Coords: X: 2400-2600, Y: 2600-2800
-
-**Drops:**
-- Gold: 6,000-15,000
-- 5D Weapon (10%)
-- 5D Armor piece (8%)
-- Ong Fur (quest item, 25%)
-
-**EXP:** 18,000
-**SP:** 1,800
+- **Ong Habitat** (Tarim Basin, route Donwhang→Hotan) — spot LEGENDAIRE de SP farming
+- Les Ong peuplent le Tarim Basin avec les Scorpions et Blood Death Flowers
 
 **Special:**
-- **⭐ THE SP FARMING SPOT ⭐**
+- **⭐ THE SP FARMING SPOT ⭐** (gap 9, parties)
 - Dense spawn
 - Good HP pour SP
 - **GAP 9 recommandé** ici!
@@ -987,502 +982,124 @@
 
 ---
 
-### NAGA (Level 80)
+### WING TRIBE / FEATHER CLOAK (Level ~80-84) *(vérifié client — famille MOB_RM_*)*
 
-**Appearance:** Serpent naga, green-blue scales
-
-**Stats:**
-- HP: 160,000
-- PHY ATK: 2,200-3,500
-- PHY DEF: 700
-- MAG DEF: 600
-- **Special:** Poison bite (DoT)
+**Appearance:** Hommes-oiseaux de Roc Mountain (Wing Tribe Scout, Feather Cloak, Feather Mask)
 
 **Location:**
-- Alexandria desert
-- Coords: X: 3400-3600, Y: 3600-3800
+- Roc Mountain (accès par le Taklamakan)
+- Zone 80-90 de la chaîne de montagnes
 
-**Drops:**
-- Gold: 400,000-800,000
-- 10D Weapon (5%)
-- 10D Armor piece (5%)
-
-**EXP:** 500,000
-**SP:** 50,000
-
-**Special:**
-- **Good for:** Parties level 80+
-- High HP, good SP
+**Drops:** équipement 8D-9D, gold
 
 ---
 
-### HARPY (Level 82)
-
-**Appearance:** Harpy, bird-woman, wings
-
-**Stats:**
-- HP: 180,000
-- PHY ATK: 2,400-3,800
-- PHY DEF: 750
-- MAG DEF: 650
-- **Special:** Fly, swoop attacks
+### ANTINOKE / ANTELOPE / SHAUR / ROCKY (Level ~85-92) *(vérifié client)*
 
 **Location:**
-- Alexandria mountains
-- Coords: X: 3500-3700, Y: 3700-3900
+- Roc Mountain (slopes et plateaux — familles MOB_RM_*)
 
-**EXP:** 580,000
-**SP:** 58,000
+**Notes:**
+- Ces familles peuplent la montée vers les pics de Demon Shaitan
+- Champion/Giant versions existent
 
 ---
 
-### MUMMY (Level 85)
+### QIN-SHI TOMB B1-B3 MOBS (Level 76-95) *(vérifié client/guides)*
 
-**Appearance:** Momie égyptienne, bandages
+**Location:** Qin-Shi Tomb (donjon à l'est de Jangan)
+- B1-B2: monstres terre/feu ~76-89
+- B3: Tomb Snake Lady + Snake Generals (95, sous-uniques)
 
-**Stats:**
-- HP: 200,000
-- PHY ATK: 2,600-4,000
-- MAG ATK: 2,000-3,000 (curse attacks)
-- PHY DEF: 800
-- MAG DEF: 700
-- **Special:** Curse debuff, disease
-
-**Location:**
-- **Alexandria Tomb** (dungeon)
-- Coords: X: 3600-3800, Y: 3800-4000
-
-**Drops:**
-- Gold: 600,000-1,200,000
-- 10D Weapon (8%)
-- **Tomb drops** (rare items)
-
-**EXP:** 700,000
-**SP:** 70,000
-
-**Special:**
-- **Dungeon mob**
-- **Best drops in game** (possible SOX)
-- Party required
+**Notes:**
+- Accès au tomb par le téléporteur de Jangan
+- Les monstres B4+ (96-99) gardent la Serin Gate
 
 ---
 
-### GHOLE (Level 88)
-
-**Appearance:** Ghole, sand creature
-
-**Stats:**
-- HP: 230,000
-- PHY ATK: 2,800-4,300
-- PHY DEF: 850
-- MAG DEF: 750
-
-**Location:**
-- Alexandria desert (deep)
-
-**EXP:** 850,000
-**SP:** 85,000
-
----
-
-### DJINN (Level 90)
-
-**Appearance:** Djinn, smoke, purple, flying
-
-**Stats:**
-- HP: 250,000
-- PHY ATK: 3,000-4,800
-- MAG ATK: 2,500-3,500 (fire)
-- PHY DEF: 900
-- MAG DEF: 800
-
-**Location:**
-- Alexandria (high-level zones)
-- Coords: X: 3700-3900, Y: 3900-4100
-
-**Drops:**
-- Gold: 800,000-1,600,000
-- 11D Weapon (5%)
-- **SOS possible** (rare!)
-
-**EXP:** 1,000,000
-**SP:** 100,000
-
-**Special:**
-- **Champion/Giant versions** exist
-- **Very good for SP** if can kill efficiently
-
----
-
-### IFRIT (Level 92)
-
-**Appearance:** Ifrit, fire demon, red/orange
-
-**Stats:**
-- HP: 280,000
-- PHY ATK: 3,200-5,000
-- MAG ATK: 3,000-4,000 (massive fire)
-- PHY DEF: 950
-- MAG DEF: 850
-- **Special:** Fire aura, burn
-
-**Location:**
-- Alexandria (fire zones)
-
-**EXP:** 1,150,000
-**SP:** 115,000
-
----
-
-### NEITH (Level 95)
-
-**Appearance:** Déesse neith, égyptienne, blue
-
-**Stats:**
-- HP: 320,000
-- PHY ATK: 3,500-5,500
-- MAG ATK: 3,500-5,000 (holy)
-- PHY DEF: 1,000
-- MAG DEF: 900
-
-**Location:**
-- Alexandria (temple areas)
-
-**EXP:** 1,350,000
-**SP:** 135,000
-
----
-
-### ISIS (Level 98)
-
-**Appearance:** Déesse isis, égyptienne
-
-**Stats:**
-- HP: 360,000
-- PHY ATK: 3,800-6,000
-- MAG ATK: 4,000-5,500 (water)
-
-**Location:**
-- Alexandria (sacred areas)
-
-**EXP:** 1,550,000
-**SP:** 155,000
-
----
-
-## 👑 Level 100-110
-
-### ANUBIS (Level 100)
-
-**Appearance:** Dieu anubis, jackal head, black
-
-**Stats:**
-- HP: 400,000
-- PHY ATK: 4,200-6,500
-- MAG ATK: 4,500-6,500 (death)
-- PHY DEF: 1,100
-- MAG DEF: 1,000
-- **Special:** Death attacks (instant kill chance if low HP)
-
-**Location:**
-- Alexandria (death zones)
-
-**Drops:**
-- Gold: 1,500,000-3,000,000
-- 12D Weapon (3%)
-- **SOS common, SOM possible**
-
-**EXP:** 2,000,000
-**SP:** 200,000
-
-**Special:**
-- **High difficulty**
-- **Party required**
-- **Good for:** Level 100 SP farming (if can kill)
-
----
-
-### SPHINX (Level 102)
-
-**Appearance:** Sphinx, lion-human, énigme
-
-**Stats:**
-- HP: 450,000
-- PHY ATK: 4,500-7,000
-- MAG ATK: 5,000-7,000 (riddle)
-
-**Location:**
-- Alexandria (sphinx zone)
-
-**EXP:** 2,300,000
-**SP:** 230,000
-
----
-
-### SERKET (Level 105)
-
-**Appearance:** Dieu serket, scorpion, gold
-
-**Stats:**
-- HP: 500,000
-- PHY ATK: 5,000-8,000
-- MAG ATK: 5,500-8,000 (poison)
-- PHY DEF: 1,300
-- MAG DEF: 1,200
-- **Special:** Poison deadly
-
-**Location:**
-- Alexandria (desert深处)
-
-**Drops:**
-- Gold: 2,500,000-5,000,000
-- 13D Weapon (2%)
-- **SOS possible, SOM rare**
-
-**EXP:** 3,000,000
-**SP:** 300,000
-
----
-
-### OSIRIS (Level 108)
-
-**Appearance:** Dieu osiris, égyptien, green
-
-**Stats:**
-- HP: 600,000
-- PHY ATK: 6,000-9,500
-- MAG ATK: 6,500-9,500 (life)
-
-**Location:**
-- Alexandria (temple of osiris)
-
-**EXP:** 4,000,000
-**SP:** 400,000
-
----
-
-### RA (Level 110) ⭐
-
-**Appearance:** Dieu ra, sun god, radiant gold
-
-**Stats:**
-- HP: 800,000
-- PHY ATK: 7,000-11,000
-- MAG ATK: 8,000-12,000 (sun fire)
-- PHY DEF: 1,500
-- MAG DEF: 1,400
-- **Special:** Sun aura (burns nearby)
-
-**Location:**
-- Alexandria (highest level zone)
-- **Coords:** X: 4000-4200, Y: 4200-4400
-
-**Drops:**
-- Gold: 5,000,000-10,000,000
-- 13D Weapon (5%)
-- **SOM common, SOSun possible (very rare!)**
-
-**EXP:** 6,000,000
-**SP:** 600,000
-
-**Special:**
-- **Highest level monster in game**
-- **Requires full party**
-- **Best SP per kill** (if can kill)
+### DEMON SHAITAN (Level 90 UNIQUE) — voir section Unique Boss Stats
+
+*(unique de Roc Mountain — Heart/Claw/Wing Peak)*
+
+## 👑 Level 100-110 (Alexandrie / Job Temple — données client vérifiées)
+
+> ⚠️ **Corrigé (2026):** les anciennes fiches « Anubis 100, Sphinx 102, Serket 105, Osiris 108, Ra 110 » comme monstres de terrain d'Alexandria étaient **erronées** — aucun de ces noms n'existe comme mob de terrain dans le client iSRO. Les vrais monstres 100+ (famille `MOB_SD_*`) et les vrais uniques égyptiens (Job Temple) sont ci-dessous.
+
+### UNEG (Level 100)
+```
+Code: MOB_SD_UNEG | HP: 37,844 | ATK: 1626-2515
+Zone: désert d'Alexandrie / Job Temple
+```
+
+### WENEG (Level 101)
+```
+Code: MOB_EVE_STRONG_SD_WENEG | HP: 39,605 | ATK: 1438-3190
+Zone: désert d'Alexandrie / Job Temple
+```
+
+### DARK KHEPRI (Level 101)
+```
+Code: MOB_SD_DARKKHEPRI | HP: 30,143 | ATK: 1675-2841
+Zone: désert d'Alexandrie / Job Temple
+```
+
+### DARK SCOUT (Level 102)
+```
+Code: MOB_SD_DARKSCOUT | HP: 31,513 | ATK: 1724-2841
+Zone: désert d'Alexandrie / Job Temple
+```
+
+### BLOOD HYENA (Level 104)
+```
+Code: MOB_SD_BLOOD_HYENA | HP: 34,364 | ATK: 1828-3011
+Zone: désert d'Alexandrie / Job Temple
+```
+
+### UNIQUES DU JOB TEMPLE (Level 103-110)
+```
+Apis (103, HP 21M) | Selket (105, HP 80M) | Neith (106, HP 83M)
+Anubis (107, HP 150M) | Isis (108, HP 154M) | Haroeris (109, HP 440M) | Seth (110, HP 425M)
+```
+→ Voir [15_UNIQUE_BOSSES.md](./15_UNIQUE_BOSSES.md#-uniques-du-job-temple-alexandrie) pour accès/drops
+
+### ROC (Level 100 — world boss)
+```
+Code: MOB_RM_ROC | HP: 1,451,891,045 | ATK: 2052-3283
+Zone: Roc Mountain — raid de guilde
+```
 
 ---
 
 ## 👑 Unique Boss Stats
 
-### CERBERUS (Level 40 Unique)
+### 📊 Tableau Vérifié (données client iSRO — silkroadonline.wiki)
 
-**Appearance:** Cerbère à 3 têtes, red
+| Unique | Level | HP | ATK | DEF | Gold | ID | Code | Zone |
+|--------|-------|-----|-----|-----|------|-----|------|------|
+| **Tiger Girl** | 20 | 598,720 | 42-51 | 18 | 586,560 | 1954 | MOB_CH_TIGERWOMAN | Bandit Stronghold / Tiger Mtn |
+| **Cerberus** | 24 | 693,072 | 52-70 | 22 | 740,519 | 5871 | MOB_EU_KERBEROS | Desperado Hill (Europe) |
+| **Captain Ivy** | 30 | 1,094,835 | 115-184 | 30 | 1,050,440 | 14778 | MOB_AM_IVY | Amphitheater (Asie Mineure) |
+| **Uruchi** | 40 | 1,779,528 | 124-149 | 47 | 1,711,056 | 1982 | MOB_OA_URUCHI | Black Robber Den (Tarim) |
+| **Isyutaru** | 60 | 4,324,612 | 274-329 | 101 | 3,572,738 | 2002 | MOB_KK_ISYUTARU | Karakoram |
+| **Lord Yarkan** | 80 | 9,353,045 | 559-1047 | 197 | 6,452,763 | 3810 | MOB_TK_BONELORD | Taklamakan (Niya Remains) |
+| **Demon Shaitan** | 90 | 12,732,060 | 898-1528 | 268 | 8,671,974 | 3875 | MOB_RM_TAHOMET | Roc Mountain |
+| **Roc** | 100 | 1,451,891,045 | 2052-3283 | 441 | 1,157,701,880 | 3877 | MOB_RM_ROC | Roc Mountain (world boss) |
+| **BeakYung « Medusa »** | 105 | 183,535,199 | — | — | — | — | MOB_QT_* | Qin-Shi Tomb B6 |
+| **Apis** | 103 | 21,068,995 | 1775-2925 | 393 | 12,735,087 | 32751 | MOB_SD_APIS | Job Temple |
+| **Selket** | 105 | 80,811,919 | 2907-4785 | 495 | 32,264,851 | 32767 | MOB_SD_SELKISID | Job Temple |
+| **Neith** | 106 | 83,077,174 | 2991-4923 | 509 | 33,232,797 | 32768 | MOB_SD_NEITH | Job Temple |
+| **Anubis** | 107 | 150,486,799 | 3165-5210 | 538 | 52,885,013 | 32769 | MOB_SD_ANUBIS | Job Temple |
+| **Isis** | 108 | 154,677,234 | 3256-5359 | 554 | 54,471,562 | 32770 | MOB_SD_ISIS | Job Temple |
+| **Haroeris** | 109 | 440,747,010 | 3815-6277 | — | 99,204,245 | 26681 | MOB_SD_HAROERIS | Job Temple |
+| **Seth** | 110 | 425,505,853 | 4034-6637 | — | 101,035,947 | 26683 | MOB_SD_SETH | Job Temple |
 
-**Stats:**
-- **HP:** 500,000 (unique!)
-- PHY ATK: 800-1,200
-- **PHY DEF:** 250
-- **MAG DEF:** 200
-- **Special:** 3-headed attacks
+**Sous-uniques du Qin-Shi Tomb:** Gardiens 98-99 (Black Tortoise, Red Hawk, Blue Dragon, White Tiger), Shinmoo (100), Soso the Black Viper (100), Snake Generals (95).
 
-**Spawn Time:**
-- **Respawn:** 6-8 hours après mort
+**Boss FGW (MOB_GOD_*):** Togui General (A1=39, HP 143,131), Ghost Sereness (A1=93, HP 11,307,269, Petrify) — level variable selon bracket/grade (A1-A4).
 
-**Location:**
-- Donwhang area
-- **Coords:** Approx X: 1700, Y: 1900
+**Spawn:** 3-5h après mort (iSRO; 4h par défaut vSRO), point aléatoire. Détails complets : [15_UNIQUE_BOSSES.md](./15_UNIQUE_BOSSES.md)
 
-**Drops:**
-- **SOS 4D-5D items** (5%)
-- **SOM 4D** (1%)
-- Gold: 1,000,000
-- Elixirs
-
-**Strategy:**
-- **Party:** Level 50+ full party
-- **Setup:** 2 tanks, 2 heals, 4 DPS
-- **Time:** 5-10 minutes to kill
-
----
-
-### CAPTAIN IVY (Level 60 Unique)
-
-**Appearance:** Capitaine ivy, female pirate, green
-
-**Stats:**
-- **HP:** 1,500,000
-- PHY ATK: 1,500-2,200
-- **PHY DEF:** 400
-- **MAG DEF:** 350
-- **Special:** Dagger attacks, stealth
-
-**Spawn Time:**
-- **Respawn:** 8-12 hours
-
-**Location:**
-- Hotan area
-- **Coords:** X: 2100-2300, Y: 2300-2500
-
-**Drops:**
-- **SOS 7D-8D** (8%)
-- **SOM 7D** (2%)
-- Gold: 3,000,000
-
-**Strategy:**
-- **Party:** Level 70+ required
-- **Setup:** 3 tanks, 3 heals, 2 DPS
-- **Difficulty:** Hard
-
----
-
-### ISYUTARU (Level 80 Unique)
-
-**Appearance:** Déesse isyutaru, japanese goddess, pink
-
-**Stats:**
-- **HP:** 5,000,000
-- PHY ATK: 2,500-3,800
-- **PHY DEF:** 700
-- **MAG DEF:** 600
-- **Special:** AOE attacks, teleports
-
-**Spawn Time:**
-- **Respawn:** 16-20 hours
-
-**Location:**
-- Alexandria area
-- **Coords:** X: 3200-3400, Y: 3400-3600
-
-**Drops:**
-- **SOS 9D-10D** (10%)
-- **SOM 9D** (3%)
-- **SOSun 9D** (0.5%!)
-- Gold: 10,000,000
-
-**Strategy:**
-- **Party:** Level 90+ full party
-- **Setup:** Multiple tanks, multiple heals
-- **Difficulty:** Very Hard
-
----
-
-### MEDUSA (Level 100 Unique) ⭐
-
-**Appearance:** Méduse, snake hair, petrifying gaze
-
-**Stats:**
-- **HP:** 10,000,000
-- PHY ATK: 4,000-6,000
-- **MAG ATK:** 5,000-7,000 (petrify)
-- **PHY DEF:** 1,000
-- **MAG DEF:** 900
-- **Special:** **Petrifying gaze** (instant paralyze)
-
-**Spawn Time:**
-- **Respawn:** 24+ hours
-
-**Location:**
-- Advanced Alexandria
-- **Coords:** X: 3600-3800, Y: 3800-4000 (tomb)
-
-**Drops:**
-- **SOS 11D-12D** (10%)
-- **SOM 11D** (5%)
-- **SOSun 11D** (1%!)
-- Gold: 50,000,000
-
-**Strategy:**
-- **Party:** Level 105+ required
-- **Setup:** 4+ tanks, 4+ heals
-- **Difficulty:** Extreme
-- **Time:** 30-60 minutes to kill
-
-**Warning:**
-- **Don't look at her!** (petrify gaze)
-- **Attack from behind**
-
----
-
-### LADY LYN (Level 105 Unique)
-
-**Appearance:** Lady lyn, spirit, white/blue
-
-**Stats:**
-- **HP:** 15,000,000
-- PHY ATK: 5,000-7,500
-- **MAG ATK:** 6,000-8,000 (spirit)
-
-**Spawn Time:**
-- **Respawn:** 24+ hours
-
-**Location:**
-- Secret Garden (special area)
-- **Coords:** X: 3800-4000, Y: 4000-4200
-
-**Drops:**
-- **SOS 12D-13D** (12%)
-- **SOM 12D** (6%)
-- **SOSun 12D** (2%!)
-- Gold: 100,000,000
-
-**Strategy:**
-- **Full max level party required**
-- **Best gear mandatory**
-- **Difficulty:** Legendary
-
----
-
-### BEITHY (Level 110 Unique) 👑
-
-**Appearance:** Déesse beithy, divine, rainbow
-
-**Stats:**
-- **HP:** 30,000,000
-- PHY ATK: 7,000-11,000
-- **MAG ATK:** 8,000-12,000 (divine)
-
-**Spawn Time:**
-- **Respawn:** 24+ hours (sometimes longer!)
-
-**Location:**
-- Secret Garden (最深)
-- **Coords:** X: 4000-4200, Y: 4200-4400
-
-**Drops:**
-- **SOS 13D** (15%)
-- **SOM 13D** (8%)
-- **SOSun 13D** (3%!)
-- Gold: 500,000,000
-
-**Strategy:**
-- **Requires:** Server's best players
-- **Full SOSun +12+ gear**
-- **Perfect coordination**
-- **Time:** 1-2 hours to kill
-
-**Rewards:**
-- **Best drops in entire game**
-- **Possibility of SOSun 13D** (extremely rare!)
+> ❌ **Corrigé (2026):** l'ancienne section listait « Cerberus 40 / Captain Ivy 60 / Isyutaru 80 / Medusa 100 / Lady Lyn 105 / Beithy 110 » avec des stats inventées — voir historique. Les HP/levels ci-dessus sont extraits des données client.
 
 ---
 
@@ -1503,23 +1120,18 @@
 - Water Ghost (78)
 
 **Level 80-90:**
-- Naga (80)
-- Harpy (82)
-- Mummy (85) - **Dungeon**
-- Ghole (88)
+- Wing Tribe / Feather Cloak (80-84) - Roc Mountain
+- Antinoke / Shaur / Rocky (85-92) - Roc Mountain
+- Qin-Shi Tomb B1-B2 (76-89)
 
 **Level 90-100:**
-- Djinn (90)
-- Ifrit (92)
-- Neith (95)
-- Isis (98)
+- Qin-Shi Tomb B3-B4 (90-99)
+- Roc Mountain high zones (jusqu'au Demon Shaitan)
 
 **Level 100-110:**
-- Anubis (100)
-- Sphinx (102)
-- Serket (105)
-- Osiris (108)
-- Ra (110)
+- Uneg (100), Weneg (101), Dark Khepri (101)
+- Dark Scout (102), Blood Hyena (104)
+- Qin-Shi Tomb B5-B6 (98-105, uniques inclus)
 
 ---
 
@@ -1530,20 +1142,22 @@
 - **Best EXP:** Nightmare (65)
 
 **For Level 80-100:**
-- **Best SP:** Mummy (85) dungeon runs
-- **Best EXP:** Naga (80), Harpy (82)
+- **Best SP:** Qin-Shi Tomb B2-B3 (groups)
+- **Best EXP:** Roc Mountain mobs (85-92)
 
 **For Level 100+:**
-- **Best SP:** Ra (110) si possible
-- **Best EXP:** Serket (105), Osiris (108)
+- **Best SP:** Blood Hyena (104) / Dark Scout (102) au Job Temple
+- **Best EXP:** Uneg/Weneg (100-101)
 
-**Unique Hunting:**
-- **Cerberus (40):** Level 50+
-- **Captain Ivy (60):** Level 70+
-- **Isyutaru (80):** Level 90+
-- **Medusa (100):** Level 105+
-- **Lady Lyn (105):** Level 110
-- **Beithy (110):** Level 110 with best gear
+**Unique Hunting (levels vérifiés):**
+- **Tiger Girl (20):** solo à 30+
+- **Cerberus (24):** party 25+
+- **Captain Ivy (30):** party 35+
+- **Uruchi (40):** party 50+
+- **Isyutaru (60):** party 70+
+- **Lord Yarkan (80):** party 90+
+- **Demon Shaitan (90):** party 100+
+- **Roc (100) / Medusa (105) / Job Temple (103-110):** raids de guilde
 
 ---
 
@@ -1556,54 +1170,46 @@
 
 ---
 
-## ⚔️ Champion/Giant/Elite Stats
+## ⚔️ Champion/Giant/Party Stats
 
-### Stat Multipliers
+### Stat Multipliers (valeurs vérifiées/community)
 
 **Normal Monster:**
 - HP: 100%
 - ATK: 100%
 - DEF: 100%
 
-**Champion (Yellow name):**
-- HP: 200% (2x)
-- ATK: 150% (1.5x)
-- DEF: 120%
-- **Drops:** 2x normal
-- **EXP:** 2x normal
-- **SP:** 2x normal
+**Champion (nom jaune):**
+- HP: **~200% (2x)** — vérifié (guides Origin/community)
+- ATK: ~150% (rapporté)
+- DEF: légèrement supérieur
+- **Drops/EXP:** supérieurs au normal
 
-**Giant (Red name, bigger):**
-- HP: 800% (8x)
-- ATK: 250% (2.5x)
-- DEF: 150%
-- **Drops:** 5x normal
-- **EXP:** 10x normal
-- **SP:** 10x normal
-- **Special:** **SOX possible!** (1-5% chance)
-- **Respawn:** 5-15 minutes
+**Party Monster (monstres de groupe):**
+- HP: **~1000% (10x)** — vérifié communauté
+- Conçus pour les parties (packs)
+- EXP rentable en groupe uniquement
 
-**Elite (Orange name, very big):**
-- HP: 1500% (15x)
-- ATK: 350% (3.5x)
-- DEF: 200%
-- **Drops:** 10x normal
-- **EXP:** 20x normal
-- **SP:** 20x normal
-- **Special:** **SOS common, SOM possible**
-- **Respawn:** 30-60 minutes
+**Giant (nom rouge, plus grand):**
+- HP: ~500-1000% (5-10x) — estimations communautaires
+- ATK: ~250% (2.5x)
+- **Drops:** ~5x normal, SOX possible (rare)
+- **EXP/SP:** très supérieurs au normal
+
+**Party Giant:**
+- HP: ~2000% (20x) — rapporté communauté, le plus dur des monstres réguliers
+
+**⚠️ « Elite » (nom orange):** NON CONFIRMÉ dans les données client — probablement une confusion (variantes Strong d'event, party giants, ou serveurs privés).
 
 ### Examples
 
-**Giant Tiger (Level 12 Giant):**
-- HP: 4,000 (vs 500 normal)
-- ATK: 175 (vs 70 normal)
-- **Drops:** **SOS 2D weapon possible!**
+**Strong Ong vs Ong (données client, vérifié):**
+- Ong (34): HP 2,099
+- Strong Ong (34): HP 62,959 → ~30x (variante d'EVENT, pas un champion géant standard)
 
-**Elite White Tiger (Level 15 Elite):**
-- HP: 12,000
-- ATK: 350
-- **Drops:** **SOS 3D weapon common, SOM possible**
+**Giant Tiger (Level 12 Giant, rapporté):**
+- HP: ~4,000 (vs ~500 normal)
+- Drops: SOS 2D possible
 
 ---
 
@@ -1632,5 +1238,16 @@
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
+## 🔗 Resources
+
+- [Silkroad Online Database - Monsters](https://silkroadonline.wiki/monsters) — données client (IDs, HP, levels, codes MOB_*)
+- [Elitepvpers - Monster HP Charts](https://www.elitepvpers.com/forum/sro-guides-templates/170796-monster-hp-charts-updated.html)
+- [Elitepvpers - Guide Unique Spawns](https://www.elitepvpers.com/forum/sro-guides-templates/186742-guide-unique-spawns.html)
+- [Rev6 - Unique Spawn Points](https://rev6.org/en/post/silkroad-online-uniq-spawn-noktalari)
+- [xSROMap](https://jellybitz.github.io/xSROMap/) — carte interactive
+- [Monster Area Maps](https://guildalgarb.wordpress.com/games/sro/maps/monster-areas/)
+
+---
+
+*Dernière mise à jour: 2026-10-01 (uniques corrigés d'après données client silkroadonline.wiki; faune Alexandria/Roc Mountain corrigée)*
 *Prochaine mise à jour: Monstres 60-110*

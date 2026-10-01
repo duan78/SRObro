@@ -5,11 +5,15 @@
 - [Devenir Hunter](#-devenir-hunter)
 - [Protéger les Traders](#-protéger-les-traders)
 - [Chasser les Thieves](#-chasser-les-thieves)
+- [Chasse de NPC Thieves (Thief Monsters)](#-chasse-de-npc-thieves-thief-monsters)
+- [Thieves Wanted et Primes](#-thieves-wanted-et-primes)
 - [Hunter Suit et Équipement](#-hunter-suit-et-équipement)
-- [Système de Rewards](#-système-de-rewards)
+- [Système de Récompenses](#-système-de-récompenses)
 - [Stratégies de Protection](#-stratégies-de-protection)
 - [PvP contre les Thieves](#-pvp-contre-les-thieves)
-- [Chasse de NPC Thieves](#-chasse-de-npc-thieves)
+- [Hunter en Legend VII+](#-hunter-en-legend-vii)
+- [Hunter sur Origin Mobile](#-hunter-sur-origin-mobile)
+- [Hunter Level et Progression](#-hunter-level-et-progression)
 - [FAQ](#-faq)
 - [Resources](#-resources)
 
@@ -17,455 +21,287 @@
 
 ## 🎯 Vue d'Ensemble
 
-Le **Hunter** est le défenseur de la route de la soie. En protégeant les traders et en chassant les thieves, vous gagnez de l'or et la gratitude de la communauté.
+Le **Hunter** est le défenseur de la route de la soie. En protégeant les caravanes et en chassant les thieves, vous gagnez de l'or, de la job XP et la reconnaissance de la communauté — avec la licence de tuer les thieves **sans pénalité**.
 
 ### Points Clés
-- ✅ **Rôle de protecteur** : Défendez les traders contre les thieves
-- ✅ **PvP actif** : Combattez les player thieves
-- ✅ **Revenus stables** : Les traders vous paient pour votre protection
-- ✅ **Respect de la communauté** : Vous êtes du "côté de la loi"
-- ✅ **Gameplay varié** : PvE (NPC thieves) et PvP (player thieves)
+- ✅ **Tuer les thieves SANS pénalité** de meurtre (contrairement au PK normal)
+- ✅ **Job XP double source** : les ventes des traders escortés ET les kills de thieves
+- ✅ **Revenus réguliers** : pourcentage des trades escortés
+- ✅ **Gameplay varié** : PvE (thief monsters) et PvP (player thieves)
+- ✅ **Conseillé à partir du level 60+** (il faut être assez fort pour les thieves — wiki Fandom)
 
 ### Le Gameplay du Hunter
 
 **Loop Principal:**
-1. Un trader vous engage (ou vous chassez des NPC thieves)
-2. Escortez le trader pendant son voyage
-3. Si des thieves attaquent, défendez le trader
-4. Une fois arrivé, le trader vous paie
-5. Ou: Tuez des thieves, retournez en ville pour claim vos rewards
+1. Se faire engager par un trader (ou patrouiller)
+2. Escorter la caravane : tuer les **thief monsters** qui spawn selon les étoiles
+3. Défendre le **transport** (si le transport meurt, les goods tombent)
+4. Se faire payer à l'arrivée (pourcentage négocié)
+5. En bonus : chasser les player thieves et les thieves *wanted*
 
 ---
 
 ## 🛡️ Devenir Hunter
 
-### Requirements
+### Requirements (ancien système / vSRO 1.188)
+- **Level 20 minimum** (mais 60+ recommandé pour escorter sérieusement)
+- Frais selon le niveau auprès de la **Hunter Guild** ; 7 jours d'attente après avoir quitté une guilde de job
 
-**Minimum Level:** 20
+### Où s'inscrire
 
-**Location:** Toute ville principale
-- Jangan
-- Donwhang
-- Hotan
-- Constantinople
-
-### Process
-
-1. Allez au **Hunter Guild NPC**
-2. Choisissez "Become Hunter"
-3. Recevez votre **Hunter Suit**
-4. Équipez le suit
-5. Vous êtes maintenant officiellement un Hunter!
+| Ère | Comment |
+|-----|---------|
+| **Classique** | Hunter Guild NPC en ville ; équipement de la **hunter card/suit** (alias créé au premier équipement) |
+| **Legend VII+** | Chez le **Trader NPC** (ex. *Trader Anna* à Constantinople, *Trader Yusun* à Jangan) : « Create Alias » puis achat de la **job cape** (non équipable en party !) |
+| **Origin Mobile** | Job au level 20, équilibrage automatique des factions |
 
 ### Hunter Suit
-
-**Slots:** Head, Chest, Legs, Boots
-
-**Stats per Slot:**
-- +HP (very important!)
-- +Attack
-- +Defense
-- +Hunter-specific abilities
-
-**Plus de slots remplis = Meilleures stats**
+- **Hunter card / suit** : marque votre job, remplace votre nom par votre **alias**
+- Vous pouvez attaquer thieves et thief monsters **sans pénalité** ; les thieves peuvent vous attaquer
+- Cooldown **10 min** à l'équipement/retrait (reset par téléport/déco)
+- Ère moderne : pièces de suit (Head/Chest/Legs/Boots) avec stats/blue activées seulement quand portées
 
 ---
 
 ## 🚚 Protéger les Traders
 
-### Comment Être Engagé
+### Comment être engagé
 
 **Méthode 1: Répondre aux annonces**
-- Les traders annoncent souvent: "LFG hunters for Jangan-Donwhang, 30% cut"
-- Répondez: "Lvl 80 Warrior, can join"
-- Joignez la party
+- Les traders annoncent : « LFG hunters Jangan→Donwhang, 30% cut »
+- Répondez avec niveau/build, joignez le groupe
 
 **Méthode 2: Proactive**
-- Annoncez vous-même: "Lvl 80 Hunter looking for trader, Jangan-Donwhang"
-- Les traders vous contacteront
+- « Lvl 80 Hunter looking for trader, Hotan→Samarkand » au chat global
 
 **Méthode 3: Guilde**
-- Rejoignez une guilde de hunters
-- Les traders contacteront votre guilde directement
+- Rejoignez une guilde de hunters ; les traders réguliers contactent la guilde directement
 
-### Pendant le Voyage
+### Pendant le voyage — vos vraies cibles
 
-**Role:**
-- Suivez le trader
-- Scannez pour les thieves
-- Si des thieves apparaissent, engagez-les
-- Protect le mount (si le mount meurt, le trader perd les goods)
+**Règle d'or : le TRANSPORT est la cible des thieves.** Votre travail n'est pas de « gagner le PvP », c'est d'empêcher qu'on tue la monture chargée.
 
-**Positioning:**
-- Ne restez pas trop loin du trader
-- Mais ne soyez pas collé non plus (pour voir venir les threats)
-- Idéalement, 5-10 mètres devant ou derrière
+- **Thief monsters** : spawn par vagues selon les étoiles du trade — ils attaquent « le plus proche » (vous !) ; éliminez-les vite (c'est de la job XP directe)
+- **Player thieves** : engagent seulement les trades 2★+ ; vérifiez leur nombre avant de contre-attaquer
+- **Positionnement** : en tête (scout) pour les tanks, en arrière-garde pour les ranged ; jamais loin du transport
+- **Communication** : « thief spotted », « demi-tour », « focus le dagger »
 
-**Communication:**
-- Parlez avec le trader
-- "Thief à 3 heures!"
-- "Je vois un groupe de thieves, on fait demi-tour?"
-- Coordination is key!
+### Positioning (détail)
+
+| Poste | Rôle | Build adapté |
+|-------|------|--------------|
+| Scout (devant) | Détecter les embuscades | Rapide, mobile |
+| Bodyguard (au transport) | Défendre la marchandise | Tank (Warrior) |
+| Rear guard (derrière) | Couvrir la fuite, voir les chasseurs de butin | Ranged (Bow/Nuker) |
 
 ---
 
 ## ⚔️ Chasser les Thieves
 
 ### Player Thieves
+1. Repérez le thief (suit/alias de voleur)
+2. Évaluez : seul vs groupe ? Un thief qui transporte du butin est **ralenti et occupé** — cible idéale
+3. Engagez — vous ne subissez **aucune pénalité** en le tuant
+4. Si le thief meurt : son **transport lâche le butin** au sol → récupérez-le (à rendre au trader volé : très bon pour la réputation — ou à garder, à vos risques et périls éthiques)
 
-**Quand vous voyez un thief (red dot sur la map):**
-1. Approchez cautiously
-2. S'il y a plusieurs thieves, évaluez si vous pouvez win
-3. Engagez si vous avez l'avantage
-4. Si vous êtes outnumbered, appelez du renfort
+> ⚠️ Un thief **sans butin** n'a rien à perdre et tout son stuff offensif ; un thief **chargé** fuit plus qu'il ne fight. Choisissez vos combats.
 
-**Killing Player Thieves:**
-- Tuez un thief → Il drop ses goods volés
-- Ramassez les goods → Return au trader pour les lui rendre (optionnel)
-- Ou gardez-les (mais c'est mal vu)
+### Vos avantages légaux
+- Aucune pénalité à tuer thieves (et thief monsters)
+- Les thieves s'attirent des **arrange points** en vous tuant → *wanted* → vous êtes payé pour les chasser
+- Les **hunter monsters** (NPC) apparaissent contre les thieves chargés : la map travaille pour vous
 
-### NPC Thieves
+---
 
-**Qu'est-ce:**
-- Des thieves contrôlés par l'IA
-- Ils attaquent les NPC traders
-- Les hunters chassent ces pour des rewards
+## 🤡 Chasse de NPC Thieves (Thief Monsters)
 
-**Comment:**
-1. Allez dans le désert
-2. Trouvez des NPC thieves attaquant des NPC traders
-3. Tuez les thieves
-4. Retournez en ville
-5. Parlez au Hunter Guild NPC pour claim vos rewards
+### Pourquoi ?
+- Job XP **directe** par kill (pas de « claim » à aller faire en ville — l'XP est attribuée sur le kill)
+- Revenu sûr, sans dépendre d'un trader
+- En escorte, c'est votre pain quotidien : les vagues suivent les étoiles du trade
 
-**Avantages:**
-- Plus safe (vs PvP)
-- Revenus stables
-- Bon pour leveling
+### Où ?
+- Les **routes commerciales** (Jangan↔Donwhang, Donwhang↔Hotan, Hotan↔Samarkand, etc.) là où passent des trades
+- Les vagues spawn **autour des caravanes en mouvement** — collez aux trades (même d'inconnus) pour l'action
 
-**Inconvénients:**
-- Moins de profit que le PvP
-- Moins excitant
+### Scaling des vagues (rappel étoiles)
+| Étoiles du trade escorté | Vagues |
+|--------------------------|--------|
+| 1★ | Quasi aucune |
+| 2★ | Petits groupes faibles |
+| 3★ | Groupes moyens |
+| 4★ | Groupes puissants + élites |
+| 5★ | Groupes massifs, niveau rouge — full party requise |
+
+---
+
+## 🎯 Thieves Wanted et Primes
+
+- Les thieves accumulent des **arrange points** en tuant hunters/merchants/transports
+- À **3 000+ points** : statut **WANTED** — visible par les hunters, avec un **bonus** au kill
+- Chasser les wanted est le « bounty hunting » de SRO : suivez les annonces de guilde et le karma de serveur
+- Il n'existe **pas de système d'arrêt formel** (pas de prison) : la prime se matérialise par le bonus de kill et le butin lâché
 
 ---
 
 ## 👕 Hunter Suit et Équipement
 
-### Hunter Suit
-
-**Purpose:**
-- Identifie que vous êtes un hunter
-- Donne des stats bonus
-- Parfois des skills spéciaux (serveur-dépendant)
-
-**Stats:**
-- +HP (très important pour survivre en PvP)
-- +Attack
-- +Defense
-- +Movement Speed (parfois)
-
-**Upgrade:**
-- Plus vous êtes high level hunter, plus vous pouvez acheter des suits avec des slots supplémentaires
+### Le suit
+- Voir [Devenir Hunter](#-devenir-hunter) — hunter card/suit classique, job cape en Legend VII+ (jamais en party)
 
 ### Gear pour Hunters
-
-**Weapons:**
-- **STR:** Spear, Sword, Bow, Xbow, 2H Sword/Axe
-- **INT:** Spear, Bow (nukers)
-
-**Armor:**
-- **Armor (Heavy):** Si vous tank en frontline
-- **Protector:** Équilibré
-- **Garment:** Si vous êtes INT nuker
-
-**Recommended:**
-- **STR Hunter:** Armor or Protector (plus tanky)
-- **INT Hunter:** Garment (MAG DEF + MP reduction)
-
-**Accessories:**
-- HP rings pour la survie
-- MP accessories si INT
-- STR/INT selon votre build
+- **STR tank:** Blade + Shield, Armor/Protector — le build d'escorte de référence
+- **Ranged:** Bow/Xbow ou nuker INT (Garment) — kite et rear guard
+- **Accessoires:** HP en priorité (vous êtes la ligne de front des thief monsters)
 
 ---
 
-## 💰 Système de Rewards
+## 💰 Système de Récompenses
 
 ### Payment des Traders
+- **20-40% du profit** du trade (négociation joueur à joueur, AVANT le départ)
+- Variantes : paiement fixe, fixe + %, ou horaire (pratiques de serveur)
+- Exemple : trade 10M de goods à 162% → 6,2M de profit → votre cut 30% ≈ **1,86M**
 
-**Pour escorter un trader:**
-- Le trader vous paie un pourcentage du profit
-- Généralement 20-40%
-- Négociez avant de partir!
+### Job XP (mécanique réelle, ancien système)
+| Source | XP |
+|--------|-----|
+| Vente des specialties par un merchant **de votre groupe** | ✅ XP (comme le trader) |
+| Kill de player thieves | ✅ XP |
+| Kill de thief monsters | ✅ XP |
+| Mort contre un thief/thief monster | ❌ Perte d'XP |
 
-**Example:**
-- Trader fait 1M de profit
-- Vous avez négocié 30%
-- Vous recevez 300k
-
-**Tips:**
-- Négociez toujours le pourcentage AVANT de partir
-- Si le trader refuse de payer, notez son nom (ne le revoyez jamais)
-- Les traders fiables méritent d'être recommandés
-
-### Job Rewards
-
-**En plus du payment des traders:**
-- Gagnez des **Job Points** pour chaque thief tué
-- Job Points = Job Level up
-- Job Level up = Rewards du Hunter Guild
-
-**Types de Rewards:**
-- Gold
-- Équipement
-- Consommables
-- Titres
-
-**NPC Thief Hunting:**
-- Chassez des NPC thieves
-- Return au Hunter Guild
-- Claim vos rewards
-- Plus vous tuez, plus vous gagnez
+**Bonus:** job level plus élevé = **dégâts accrus** contre les ennemis de job (joueurs et NPCs).
 
 ---
 
 ## 🎯 Stratégies de Protection
 
 ### Stratégie 1: Frontline Protection
-
-**Approche:**
-- Restez devant le trader
-- Scannez pour les thieves
-- Si des thieves apparaissent, engagez-les avant qu'ils n'atteignent le trader
-
-**Avantages:**
-- Le trader est safe derrière vous
-- Vous contrôlez l'engagement
-
-**Inconvénients:**
-- Vous prenez tous les dégâts
-- Risky si vous êtes seul
-
-**Pour:** Hunters tanky (Warriors)
+- Restez devant le trader, engagez les vagues avant qu'elles n'atteignent le transport
+- **Pour:** tanks STR (Warrior)
 
 ### Stratégie 2: Rear Guard
+- Derrière le trader, couvrez les flancs et interceptez les thieves qui veulent fuir avec le butin
+- **Pour:** ranged (Bow, nukers)
 
-**Approche:**
-- Restez derrière le trader
-- Protégez contre les thieves qui flanquent
+### Stratégie 3: Surround (groupe)
+- Triangle : 1 devant, 1 au transport, 1 derrière
+- Protection maximale pour les 4★-5★
 
-**Avantages:**
-- Moins de dégâts initiaux
-- Bon pour les ranged hunters
+### Stratégie 4: Reactive
+- Proche mais pas collé ; n'intervenez qu'au spawn/attack
+- **Pour:** hunters expérimentés, routes calmes
 
-**Inconvénients:**
-- Le trader peut être attaqué de devant
-- Moins de contrôle
-
-**Pour:** Hunters ranged (Bow, Xbow, Nukers)
-
-### Stratégie 3: Surround Protection
-
-**Approche:**
-- Si vous êtes plusieurs hunters, entourez le trader
-- Un devant, un derrière, un sur le côté
-
-**Avantages:**
-- Protection maximale
-- Le trader est très safe
-
-**Inconvénients:**
-- Nécessite plusieurs hunters
-- Difficile à coordonner
-
-**Pour:** Groupes de hunters
-
-### Stratégie 4: Reactive Protection
-
-**Approche:**
-- Restez proche mais pas trop proche
-- Réagissez seulement quand des thieves apparaissent
-
-**Avantages:**
-- Moins fatigant
-- Conserve votre energy
-
-**Inconvénients:**
-- Réaction time peut être trop lent
-- Le trader peut prendre des hits
-
-**Pour:** Hunters expérimentés
+### Stratégie 5: Chasse au butin (après-vol)
+- Un trade s'est fait casser ? Les thieves fuient LENTS avec leur transport chargé + des hunter monsters sur le dos
+- Interceptez : butin récupéré + primes
 
 ---
 
 ## ⚔️ PvP contre les Thieves
 
-### Thief Matchups
+### vs STR Thief (Warrior/Rogue)
+- Frappent fort, lents ; kite si ranged, trade intelligent si tank
+- Attention au burst des daggers en ouverture
 
-#### vs STR Thief (Warrior/Rogue)
-
-**Difficulty:** Medium
-
-**Strategy:**
-- STR thieves frappent fort mais sont plus lents
-- Kite si vous êtes ranged
-- Si melee, trade blows intelligemment
-
-**Build Advantages:**
-- **Bow/Xbow:** Kite for days
-- **Nuker:** Range advantage
-- **Warrior:** Tanky, peut survivre
-
-#### vs INT Thief (Nuker)
-
-**Difficulty:** Medium
-
-**Strategy:**
-- INT thieves frappent fort mais sont squishy
-- Close the gap rapidement
-- Burst them down
-
-**Build Advantages:**
-- **Dagger Rogue:** Stealth burst
-- **Warrior:** Tanky vs nukes
-- **Nuker:** Trade nukes
+### vs INT Thief (nuker, ex. hybrid 1:9)
+- Gros dégâts à distance, squishy au contact ; collez-le vite
+- Le Snow Shield les rend très tanky 1v1 — ne les engagez pas isolément en égalité
 
 ### General PvP Tips
-
-**1. Protection First:**
-- Votre priorité est de protéger le trader
-- Ne chasez pas un thief si ça laisse le trader exposé
-
-**2. Target Priority:**
-- Tuez le thief le plus dangereux d'abord
-- Généralement: Rogue > Nuker > Warrior
-
-**3. Use Terrain:**
-- Utilisez les rochers, etc. pour line of sight
-- Forcez les thieves à venir à vous
-
-**4. Call for Backup:**
-- Si vous êtes outnumbered, appelez du renfort
-- "3 thieves attacking, need help!"
-
-**5. Don't Be Greedy:**
-- Si le fight tourne mal, advise le trader de retreat
-- Mieux vaut un trader vivant que mort
+1. **Le transport d'abord**: ne chasez pas un thief si ça expose le transport
+2. **Priorité des cibles:** le plus proche du TRANSPORT, pas le plus faible
+3. **Terrain:** forcez les thieves à venir à vous (line of sight)
+4. **Renforts:** appelez la guilde — les thieves attaquent rarement seuls
+5. **Pas de greed:** un trader en vie > un kill de plus
 
 ---
 
-## 🤡 Chasse de NPC Thieves
+## 🆕 Hunter en Legend VII+
 
-### Pourquoi Chasser des NPC Thieves?
+- Les hunters s'inscrivent toujours chez le **Trader NPC** et reçoivent une **job cape** (impossible en party)
+- Objectif : attaquer les **caravanes de contrebandiers NPC** (consignation) — icône **épée** = attaquable, **bouclier** = protégé
+- Progression par **quêtes de job** (Safe Mode = bouclier blanc au-dessus de la tête, immunité vs ennemis 5+ niveaux supérieurs mais XP réduite / Danger Mode) et **job rank** (kills de thieves, ~3 kills/h par joueur)
+- Récompenses : **tickets + Blue Stones** → craft au **Magic Pop NPC** ; l'or se farme en **job caves**
+- Le rank s'affiche en nom jaune à côté du nom de job
 
-**Avantages:**
-- Plus safe que le PvP
-- Revenus stables
-- Bon pour practice
-- Job XP
+---
 
-**Inconvénients:**
-- Moins de profit
-- Moins excitant
-- Répétitif
+## 📱 Hunter sur Origin Mobile
 
-### Comment Trouver des NPC Thieves
-
-**Locations:**
-- Les routes commerciales principales
-- Jangan-Donwhang
-- Donwhang-Hotan
-- Hotan-Constantinople
-
-**Process:**
-1. Voyagez dans le désert
-2. Vous verrez des NPC thieves attaquant des NPC traders
-3. Tuez les thieves
-4. Return en ville
-5. Claim rewards au Hunter Guild
-
-### Rewards
-
-**Per Thief Kill:**
-- Job XP
-- Gold (modeste)
-- Job Points
-
-**Accumulation:**
-- Plus vous tuez, plus vous gagnez
-- Job Level up = better rewards
+- Pendant les **caravanes événementielles**, les hunters connectés reçoivent des **compétences temporaires de détection de furtivité** (anti-stealth thief) — utilisez ces fenêtres
+- Bonus de job : Hunter inflige **+3%** de dégâts aux Thieves (jusqu'à +7% avec les buffs d'équilibrage de faction)
+- Buffs de soutien si les Trader/Hunter sont sous-représentés (profit +4/7/10% en free trade, puissance +3/5/7%)
+- **Job Ranking Board** séparé par job — visibilité/réputation pour décrocher des contrats
 
 ---
 
 ## 📈 Hunter Level et Progression
 
-### Job Levels
+### Les 7 rangs (titres chinois / européens)
 
-**Gagner des Job Points:**
-- Tuez des thieves (player ou NPC)
-- Protégez des traders
-- Plus d'action = plus de points
+| Rang | Chinois | Européen |
+|------|---------|----------|
+| 1 | Beginner Hunter | Hunter Beginner |
+| 2 | Training Hunter | Trainee |
+| 3 | Guarding Hunter | Bodyguard |
+| 4 | Hunter Commander | Hunter Leader |
+| 5 | Secret Hunter | Guardian |
+| 6 | Master Hunter | Expert Hunter |
+| 7 | Legendary Hunter | Great Guardian |
 
-**Job Levels:**
-- Level 1-2: Débutant
-- Level 3-4: Intermédiaire
-- Level 5-6: Avancé
-- Level 7: Master
+- Le rang 7 continue d'accumuler de l'XP
+- Rang plus élevé = **dégâts accrus** contre les ennemis de job
+- Classement hebdomadaire de contribution par guilde de job (reset maintenance)
 
-### Rewards per Level
-
-| Job Level | Rewards |
-|-----------|---------|
-| **1-2** | Basic gold, small items |
-| **3-4** | Medium gold, better items |
-| **5-6** | High gold, rare items |
-| **7** | Maximum rewards, very rare items |
-
-### Hunter Reputation
-
-**Plus vous êtes actif:**
-- Plus votre reputation monte
-- Les traders vous connaîtront
-- Vous serez demandé
-- Meilleures opportunités
+### Réputation de hunter
+- Rendez les butins récupérés, honorez vos contrats : les traders réguliers = revenus réguliers
+- Une guilde de hunters connue = contrats de guilde (caravanes 5★)
 
 ---
 
 ## ❓ FAQ
 
-### Q: Combien les traders paient-ils généralement?
-**R:** Ça dépend, mais généralement 20-40% du profit. Négociez toujours avant de partir!
+### Q: Combien les traders paient-ils ?
+**R:** 20-40% du profit négocié avant le départ (pratiques communautaires — aucun système de paiement intégré dans l'ancien système).
 
-### Q: Puis-ai-ai faire du job solo comme hunter?
-**R:** C'est difficile. Un hunter seul peut protéger un trader solo contre 1-2 thieves, mais pas contre un groupe.
+### Q: Puis-je faire du hunter solo ?
+**R:** Escorter un trader solo contre 1-2 thieves: oui. Contre un gang: non. La chasse aux thief monsters est par contre très jouable solo.
 
-### Q: Les hunters peuvent-ils se battre entre eux?
-**R:** Non, hunters ne peuvent pas fight d'autres hunters (sauf en PvP自愿).
+### Q: Les hunters peuvent-ils se battre entre eux ?
+**R:** Non — pas de PvP hunter vs hunter via le système de job (les kills entre hunters passent par les règles PK normales).
 
-### Q: Quel est le meilleur build pour hunter?
-**R:** STR Warrior est très bon pour tank. INT Nuker est bon pour le DPS. Bow/Xbow sont bons pour kiter.
+### Q: Dois-je « claim » mes récompenses en ville après avoir tué des NPC thieves ?
+**R:** Non — dans l'ancien système la job XP est accordée directement au kill. (L'ancienne version de ce guide se trompait sur ce point.)
 
-### Q: Puis-ai-ai chasser des thieves même si je ne suis pas engagé par un trader?
-**R:** Oui! Les player thieves sont toujours "killable" et vous gagnez des job points.
+### Q: Quel est le meilleur build hunter ?
+**R:** STR Blader Cold/Fire en tank d'escorte ; Bow/nuker en soutien. Voir la section Méta de [09_JOB_SYSTEM_OVERVIEW.md](09_JOB_SYSTEM_OVERVIEW.md).
 
-### Q: Les NPC thieves donnent-ils des rewards?
-**R:** Oui, mais moins que les player thieves. C'est plus safe mais moins profitable.
+### Q: Un thief peut-il m'attaquer n'importe où ?
+**R:** Quand vous portez le suit, vous êtes une cible légitime partout en monde ouvert (le job est un consentement de PvP). Hors suit, les règles PK normales s'appliquent.
+
+### Q: Comment repérer un thief déguisé ?
+**R:** Le suit remplace le nom par l'alias — repérez les alias connus, les joueurs qui suivent les caravanes sans job, et utilisez les détections de furtivité (caravanes Origin).
 
 ---
 
 ## 🔗 Resources
 
 ### Guides
-- [Hunter Guide](https://silkroadonline.fandom.com/wiki/Job)
-- [PvP Strategy](http://www.silkroadforums.com/)
+- [Hunter - Silkroad Online Wiki (Fandom)](https://silkroadonline.fandom.com/wiki/Hunter)
+- [Job - Silkroad Online Wiki (Fandom)](https://silkroadonline.fandom.com/wiki/Job) — scaling des étoiles, NPCs
+- [Job Ranks - Hanf_Hunter fan site](https://hanfhunter-online.de.tl/%3D%3EJobs.htm) — mécanique d'XP hunter par confirmation d'époque
+- [Legend VII Tutorial (Princess Jane, 2011)](https://princessjane25.wordpress.com/2011/04/12/silkroad-online-legend-vii-rise-of-the-thief-hunter-some-simple-tutorial-guide/)
 
-### Communauté
-- [Silkroad Forums - Hunter Section](http://www.silkroadforums.com/)
+### Origin Mobile
+- [Caravan Guide - sromobile.com](https://sromobile.com/en/guide/job-system/caravan-guide) — skills temporaires hunters
+- [Job System Adjustments - sromobile.com](https://sromobile.com/en/news/features-news/job-system-adjustments)
 
 ### Outils
 - [xSROMap](https://jellybitz.github.io/xSROMap/)
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
-*Sources: Silkroad Forums, Community Guides*
+*Dernière mise à jour: 2026-10-01*
+*Sources: Silkroad Online Wiki (Fandom), Hanf_Hunter fan site, Princess Jane (Legend VII), sromobile.com, Silkroad Forums (via Wayback)*

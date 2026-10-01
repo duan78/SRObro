@@ -160,6 +160,8 @@ export class Game {
 
     // Initialize Jangan zone
     this.janganZone = new JanganZone(this.scene, this.assetLoader);
+    // En mode réseau, les monstres viennent du serveur (NetworkCombat)
+    this.janganZone.disableLocalMonsters = this.network.getIsConnected();
     await this.janganZone.load();
     console.log('✓ JanganZone loaded');
 
@@ -759,6 +761,13 @@ export class Game {
    */
   getJanganZone(): JanganZone | null {
     return this.janganZone;
+  }
+
+  /**
+   * Asset loader (pour les systèmes externes: NetworkCombat...)
+   */
+  getAssetLoader(): AssetLoader | null {
+    return this.assetLoader;
   }
 
   /**

@@ -3,13 +3,17 @@
 ## 📋 Table des Matières
 - [Vue d'Ensemble](#-vue-densemble)
 - [Devenir Thief](#-devenir-thief)
-- [Voler les Traders](#-voler-les-traders)
-- [Bandit Gameplay](#-bandit-gameplay)
+- [La Mécanique du Vol (Pas à Pas)](#-la-mécanique-du-vol-pas-à-pas)
+- [La Thief Town (Camp de Bandits)](#-la-thief-town-camp-de-bandits)
+- [Vendre les Goods Volées](#-vendre-les-goods-volées)
+- [Arrange Points, Wanted et Pénalités](#-arrange-points-wanted-et-pénalités)
 - [NPC Thieves vs Player Thieves](#-npc-thieves-vs-player-thieves)
+- [Hunter Monsters](#-hunter-monsters)
 - [Stratégies d'Ambuscade](#-stratégies-dembuscade)
 - [PvP contre les Hunters](#-pvp-contre-les-hunters)
 - [Thief Suit et Équipement](#-thief-suit-et-équipement)
-- [Vendre les Goods Volés](#-vendre-les-goods-volés)
+- [Thief en Legend VII+](#-thief-en-legend-vii)
+- [Thief sur Origin Mobile](#-thief-sur-origin-mobile)
 - [FAQ](#-faq)
 - [Resources](#-resources)
 
@@ -17,259 +21,178 @@
 
 ## 🎯 Vue d'Ensemble
 
-Le **Thief** est le job le plus **excitant et risqué** de Silkroad Online. En volant les traders et leurs marchandises, vous pouvez générer des profits énormes - mais les hunters vous chassent activement.
+Le **Thief** est le job le plus **risqué et rentable** de Silkroad Online. En volant les traders, vous récupérez des marchandises revendables **sans aucun investissement initial** — mais les hunters vous chassent, les monstres « hunters » vous traquent, et la mort coûte cher.
 
 ### Points Clés
-- ✅ **Gameplay PvP intense** : Combat contre hunters et traders
-- ✅ **Profit élevé** : Les goods volés peuvent valoir très cher
-- ✅ **Bad guy roleplay** : Jouez le criminel
-- ✅ **Skill-based** : Le succès dépend de votre skill en PvP
-- ✅ **High risk, high reward** : Si vous mourez, vous perdez tout
+- ✅ **Profit pur** : les goods volées se revendent à leur **valeur faciale** à la Thief Town (aucun achat initial)
+- ✅ **Gameplay PvP intense** : contre hunters et traders
+- ✅ **Bad guy roleplay** : alias, suit noir, camp de bandits secret
+- ✅ **Skill-based** : repérage, timing, escape planifiée
 
 ### Le Gameplay du Thief
 
 **Loop Principal:**
-1. Scout pour trouver des traders
-2. Attaquez la caravane
-3. Tuez le trader et les guards
-4. Looter les marchandises
-5. Escape avant que les hunters n'arrivent
-6. Vendez les goods volés
+1. Scout les routes commerciales
+2. Trouver une cible (trade **2★+** seulement)
+3. Tuer le trader, puis **tuer le transport** → les goods **tombent au sol**
+4. Charger le butin sur **votre propre transport**
+5. Activer un **Bandit Den Return Scroll** (~5 min d'activation) et survivre
+6. Vendre à la Thief Town → profit + job XP
 
 ---
 
 ## 🗡️ Devenir Thief
 
-### Requirements
+### Requirements (ancien système / vSRO 1.188)
+- **Level 20 minimum** (mais voler sérieusement avant le **level 30-40** est très difficile — conseil des guides d'époque)
+- Frais d'inscription selon le niveau ; 7 jours d'attente après avoir quitté une guilde de job
 
-**Minimum Level:** 20
+### Où s'inscrire
 
-**Location:** Toute ville principale
-- Jangan
-- Donwhang
-- Hotan
-- Constantinople
-
-**Note:** Le Thief Guild NPC est souvent caché ou dans une zone spécifique.
-
-### Process
-
-1. Trouvez le **Thief Guild NPC** (souvent caché)
-2. Choisissez "Become Thief"
-3. Recevez votre **Thief Suit**
-4. Équipez le suit
-5. Vous êtes maintenant un Thief!
+| Ère | Comment |
+|-----|---------|
+| **Classique (vSRO 1.188)** | Se téléporter à la **Thief Town** : parler à **Gisaeng Yumi**, quartier rouge de Jangan (Barrom Street, ~coord. 6203,993), téléport **~2-3k gold**. Acheter le suit sur place |
+| **Legend VII+** | **Smuggler NPC** en ville : *Smuggler Chao* (Jangan), *Smuggler Chungho* (Donwhang), *Smuggler Raul* (Constantinople), *Smuggler Barus* (Samarkand) — puis « Create Alias » et achat de la job cape |
+| **Origin Mobile** | Job choisi au level 20, avec équilibrage automatique des factions |
 
 ### Thief Suit
-
-**Slots:** Head, Chest, Legs, Boots
-
-**Stats per Slot:**
-- +HP
-- +Attack
-- +Movement Speed (sur certains serveurs)
-- +Thief-specific abilities
-
-**Plus de slots remplis = Meilleures stats**
+- **Suit noire basique : ~10k gold** ; version « **Black Devil » : ~1M** (différence purement cosmétique selon Joymax)
+- Spécifique au **genre** du personnage
+- En portant le suit : votre nom devient votre **alias**, les traders/hunters peuvent vous attaquer et vous pouvez les attaquer
+- **Cooldown 10 min** à l'équipement/retrait (reset par téléport/déco)
+- Ère moderne : sets de job craftables (jambes, épaules, bottes…) pouvant porter des blues
 
 ---
 
-## 💰 Voler les Traders
+## 💰 La Mécanique du Vol (Pas à Pas)
 
-### Trouver des Traders
+D'après les guides d'époque (Hellsharpt 2006, silkroadforums t=4888), la séquence canonique est :
 
-**1. Surveillance:**
-- Restez sur les routes populaires (Jangan-Donwhang, Donwhang-Hotan)
-- Utilisez votre map pour repérer les traders (yellow dots)
+1. **Repérer** une caravane (trade **2★ minimum** — un 1★ est protégé)
+2. **Vérifier les étoiles** : double-cliquez sur le trader/le transport en suit — un **message bleu** = trade 1★ (impossible à voler), des **dégâts** = trade multi-étoiles attaquable
+3. **Engager** : tuez le **trader** (et ses hunters si présents) — « dead men tell no tales », ne laissez pas de témoins
+4. **Tuer le TRANSPORT** (pas seulement le trader !) : c'est la mort du transport qui fait **tomber les goods au sol**
+5. **Looter** : les goods s'empilent au sol, cliquez-les pour les ramasser ; vous ne pouvez PAS invoquer de transport pendant ~20 s après un combat → invoquez-le **avant** le fight final si possible, ou loottez puis invoquez
+6. **Charger** le butin sur votre transport
+7. **Escape** : activez un **Bandit Den Return Scroll** (canal ~5 min, vous pouvez FIGHT pendant l'activation — c'est voulu) ; utilisez la fausse piste (partez dans une direction, changez à la fin), cachez-vous (montagnes, eau, buissons) pendant que les spawns NPC vous cherchent
+8. **Monter sur le transport** dans les 30-45 dernières secondes du scroll pour le sprint final
+9. À la Thief Town : **désuitez immédiatement** (reset du cooldown par la téléportation), vendez, resuitez
 
-**2. Patience:**
-- Attendez qu'un trader passe
-- Parfois ça prend du temps
-- Soyez patient!
+### Quelles cibles ?
 
-**3. Scouting:**
-- Avant d'attaquer, vérifiez s'il y a des hunters
-- Si le trader a beaucoup de hunters, réfléchissez à deux fois
+| Cible | Difficulté | Butin |
+|-------|------------|-------|
+| Trader solo 2★-3★ | Facile/Moyenne | Moyen |
+| Trader + 1-2 hunters | Moyenne | Moyen+ |
+| Caravane 4★-5★ full hunters | Très difficile | Énorme |
+| Trades 1★ | **Impossible** (protégés) | — |
 
-### Attaquer un Trader
-
-**Process:**
-
-1. **Approche:**
-   - Sneak up sur le trader
-   - Ne les alertez pas trop tôt
-
-2. **Engage:**
-   - Attaquez le mount d'abord
-   - Si le mount meurt, le trader ne peut plus escape
-
-3. **Tuez le Trader:**
-   - Focus le trader player
-   - Ignorez les guards NPC (si possible)
-
-4. **Loot:**
-   - Une fois le trader mort, les goods tombent au sol
-   - Ramassez-les rapidement!
-
-5. **Escape:**
-   - Les hunters arrivent bientôt
-   - Fuyez vers une "Thief Town"
-
-### Types de Traders
-
-**Solo Trader (Sans Hunters):**
-- **Difficulty:** Easy
-- **Risk:** Low
-- **Reward:** Low-Medium (moins de goods)
-
-**Trader + 1-2 Hunters:**
-- **Difficulty:** Medium
-- **Risk:** Medium
-- **Reward:** Medium
-
-**Trader + 3-5 Hunters (Full Caravan):**
-- **Difficulty:** Very Hard
-- **Risk:** Very High
-- **Reward:** Very High (beaucoup de goods!)
+> 💡 Les **4★ sont durs solo, les 5★ quasi impossibles** (retours de guides d'époque) — les thief monsters de haut niveau tapent tout le monde.
 
 ---
 
-## 🎭 Bandit Gameplay
+## 🏴 La Thief Town (Camp de Bandits)
 
-### Solo Thief
+- **Accès (classique):** téléporteur **Gisaeng Yumi** à Jangan (~2-3k gold) ; chaque ville a son accès équivalent
+- **NPCs sur place:**
+  - Un marchand de **gear de thief** (suits, scrolls)
+  - Un **acheteur de butin** (vendez les goods volées ici)
+  - Un **téléporteur gratuit** vers votre point de respawn (astuce: désuiter avant de l'utiliser pour reset le cooldown du suit)
+- **Bandit Den Return Scrolls:** scrolls dédiés (≠ return scrolls normaux), **~5 min d'activation**, achetez-en **plusieurs** avant chaque sortie
+- Les **field trade centers** type *Secret Bandits Den* (lv20+) et *Hukmak Bandits Den* (lv30+) sont des comptoirs de bandits où s'échapper/recommercer
 
-**Playstyle:**
-- Chassez les traders solos
-- Attaquez rapidement
-- Escape rapidement
+> ⚠️ Un thief **ne peut pas invoquer de transport dans les villages** ni y amener son transport — planifiez l'escape hors des murs.
 
-**Avantages:**
-- Tout le profit est pour vous
-- Plus discret
+---
 
-**Inconvénients:**
-- Difficile de voler des traders protégés
-- Riské si vous êtes seul
+## 💵 Vendre les Goods Volées
 
-**Build Recommandé:**
-- STR Dagger Rogue (stealth burst)
-- STR Bow (kiting)
-- STR Warrior (tanky)
+- Les goods volées se vendent à la Thief Town **à leur valeur faciale** (le prix de référence de la marchandise)
+- C'est du **profit pur** : vous n'avez rien payé — l'équivalent du taux de trade du trader, sans investissement
+- **Job XP** gagnée à la vente (montant vendu) + aux kills de merchants/hunters
+- ⚠️ **Vendre des goods volées EFFACE votre XP de Trader** — le système empêche de jouer les deux côtés
 
-### Group Thieves
+### Risque: la mort
+- Si vous mourez (hunters, hunter monsters), vous **perdez le butin** (le transport lâche tout)
+- Amendes, arrange points et statut *wanted* s'accumulent (voir ci-dessous)
+- Mourir peut faire **dropper vos items**, y compris équipés
 
-**Playstyle:**
-- Formez un groupe de 3-5+ thieves
-- Attaquez les caravanes protégées
-- Partagez le loot
+---
 
-**Avantages:**
-- Peut attaquer les traders avec hunters
-- Plus safe (strength in numbers)
-- Plus de fun social
+## ☠️ Arrange Points, Wanted et Pénalités
 
-**Inconvénients:**
-- Partage du profit
-- Nécessite coordination
+Le système de pénalités spécifique aux thieves (vérifié sur guide 2006) :
 
-**Composition Idéale:**
-- 2x STR Warriors (tanks)
-- 1x INT Nuker (range DPS)
-- 1x Rogue (stealth/assassin)
-- 1x Buffer (Bard/Cleric) - optionnel
+| Action / État | Effet |
+|---------------|-------|
+| Tuer un hunter / merchant / transport | **Arrange points** |
+| **3 000+ arrange points** | Statut **WANTED** — visible par tous les hunters, **bonus pour qui vous tue** |
+| Mourir en job | **Amende** (~60k gold au lv40, croissante) |
+| Mourir en statut *wanted* | **3 heures sans activité de job** possible |
+| Mourir tué par hunters/merchants | **Drop d'items possible** (y compris équipés) |
+| Être tué | Perte de **job XP** |
+
+**Contre-mesures:**
+- Ne tuez que ce qui est nécessaire (chaque kill inutile = points)
+- Surveillez vos arrange points — « arrester » de tuer les fait retomber avec le temps
+- Les hunters tuent les thieves **sans aucune pénalité** : le rapport de force légal est contre vous
 
 ---
 
 ## 🤖 NPC Thieves vs Player Thieves
 
-### NPC Thieves
+| Type | Comportement | Intérêt pour vous |
+|------|--------------|-------------------|
+| **Thief Monsters (NPC)** | Spawn contre les caravanes de merchants, attaquent le plus proche (merchants/hunters), force selon les étoiles | Diversion gratuite : ils occupent les hunters pendant que vous frappez le transport |
+| **Player Thieves** | Vous. Attaquez les caravanes 2★+ | — |
 
-**Ce sont:**
-- Des thieves contrôlés par l'IA
-- Spawn sur les routes et attaquent les NPC traders
-- Ne drop pas de goods (ils volent pour eux-mêmes)
+> 💣 **Astuce d'époque:** vos spawns de thief monsters peuvent être tués par des amis **non-suited ou en hunter card** pour de l'XP hunter — et leur présence décourage les hunters de vous attaquer.
 
-**Role:**
-- Les hunters chassent les NPC thieves pour des rewards
-- Ne sont pas pertinents pour les player thieves
+> ℹ️ En Legend VII+, ce sont des **caravanes NPC** (consignation) que les thieves attaquent (icône épée = attaquable, bouclier = protégé).
 
-### Player Thieves
+---
 
-**Ce sont:**
-- Des vrais joueurs comme vous
-- Volent les player traders
-- C'est ce que vous êtes!
+## 🏹 Hunter Monsters
 
-**Vs NPC Thieves:**
-- Vous êtes un player thief
-- Vous attaquez les player traders
-- Les hunters vous chassent
-
-**Note:** Les NPC thieves existent pour donner du content aux hunters quand il n'y a pas de player thieves.
+- Quand VOUS transportez du butin, des **hunter monsters** (NPC) peuvent spawn **contre vous**
+- Ils n'attaquent QUE les thieves
+- Ils s'ajoutent aux player hunters pendant votre escape
+- C'est pourquoi l'escape planifiée (scroll 5 min, cachettes, fausse direction) est vitale
 
 ---
 
 ## 🎯 Stratégies d'Ambuscade
 
 ### Stratégie 1: Route Camping
+- Postez-vous à un **bottleneck** d'une route populaire (pont, défilé du désert)
+- Vérifiez les étoiles par double-clic avant d'engager
+- **Faiblesse:** les hunters connaissent ces spots
 
-**Approche:**
-- Choisissez une route populaire (ex: Jangan-Donwhang)
-- Cachez-vous à un bottleneck
-- Attendez qu'un trader passe
-- Attaquez rapidement
+### Stratégie 2: Scouting à deux
+- Un thief low-level scout les routes et compte les hunters
+- Le gang n'engage que les cibles à leur portée
 
-**Avantages:**
-- Simple et efficace
-- Beaucoup de traders passent par là
-
-**Inconvénients:**
-- Les hunters connaissent ces spots
-- Peut être prévisible
-
-### Stratégie 2: Mobile Patrol
-
-**Approche:**
-- Patrouillez sur plusieurs routes
-- Cherchez activement les traders
-- Attaquez dès que vous en trouvez un
-
-**Avantages:**
-- Moins prévisible
-- Couvre plus de terrain
-
-**Inconvénients:**
-- Plus fatigant
-- Peut manquer des traders
-
-### Stratégie 3: Hit-and-Run
-
-**Approche:**
-- Attaquez très rapidement
-- Tuez le trader, lootez, escape
-- Ne restez pas pour fight les hunters
-
-**Avantages:**
-- Réduit le risk
-- Efficace
-
-**Inconvénients:**
-- Nécessite beaucoup de DPS
-- Timing critique
+### Stratégie 3: Hit-and-Run (la base du métier)
+- Attaquez, tuez le transport, loottez, partez
+- **Ne restez JAMAIS pour le fight gratuit** — chaque seconde expose le butin
 
 ### Stratégie 4: Diversion
+- 1-2 thieves occupent les hunters (ou utilisent les thief monsters comme diversion naturelle)
+- Le reste du groupe fond sur le transport
 
-**Approche:**
-- Envoyez 1-2 thieves comme distraction
-- Pendant que les hunters sont occupés, le reste du groupe attaque le trader
+### Stratégie 5: Scavenger (débutants)
+- Sous le lv30, attendez les **restes de batailles** : goods au sol après qu'un autre thief/gang a cassé une caravane
+- Ou suivez les NPC thieves qui cassent des trades
 
-**Avantages:**
-- Peut diviser les forces ennemies
-- Stratégique
-
-**Inconvénients:**
-- Nécessite coordination
-- Complex
+### L'escape parfaite (checklist d'époque)
+```
+☐ Bandit Den Return Scroll activé DÈS le loot
+☐ Transport invoqué AVANT le combat final (sinon 20 s de délai)
+☐ Fausse direction initiale, vraie direction en fin de canal
+☐ Cachette (montagne/eau/buissons) pendant les 5 min
+☐ Monter sur le transport pour les 30-45 dernières secondes
+☐ À l'arrivée: désuiter (reset cooldown), vendre, resuiter
+```
 
 ---
 
@@ -278,204 +201,113 @@ Le **Thief** est le job le plus **excitant et risqué** de Silkroad Online. En v
 ### Hunter Matchups
 
 #### vs Warrior Hunter
-
-**Difficulty:** Medium
-
-**Strategy:**
-- Kite si vous êtes ranged
-- Si melee, trade blows
-- Warrior est tanky mais frappe moins fort
-
-**Build Advantages:**
-- **Bow/Xbow:** Kite for days
-- **Nuker:** Range advantage
-- **Dagger Rogue:** Burst si vous pouvez stealth
+- Tanky, moins de dégâts ; kite si ranged, trade si melee STR
 
 #### vs Rogue Hunter
-
-**Difficulty:** Hard
-
-**Strategy:**
-- Rogue a beaucoup de burst
-- Ne le laissez pas stealth
-- Focus quickly
-
-**Build Advantages:**
-- **Warrior:** Tanky, peut survivre au burst
-- **Nuker:** Range avant qu'il ne close
+- Gros burst ; ne le laissez pas ouvrir en stealth ; focus rapide
 
 #### vs Wizard Hunter
-
-**Difficulty:** Easy-Medium
-
-**Strategy:**
-- Wizard est squishy
-- Close the gap quickly
-- Burst him down
-
-**Build Advantages:**
-- **Dagger Rogue:** Burst avant qu'il n'AOE
-- **Warrior:** Tanky vs AOE
+- Squishy ; collez-le et burst avant l'AOE
 
 #### vs Warlock Hunter
-
-**Difficulty:** Medium
-
-**Strategy:**
-- Warlock a des debuffs
-- Cleanse si possible
-- Burst quickly
+- Debuffs ; cleanse, burst vite
 
 #### vs Bard/Cleric Hunter
-
-**Difficulty:** Easy
-
-**Strategy:**
-- Soutien, pas de DPS
-- Tuez-les en dernier
-- Ils healent mais ne font pas mal
+- Support ; cible secondaire mais soigne — tuez-le quand isolé
 
 ### General PvP Tips
+1. **Potions:** jammer le clavier potion, il n'y a pas de honte
+2. **Buffs:** speed Lightning, armure, attaque — fully buffed avant le contact
+3. **Positionnement:** jamais encerclé, restez mobile, utilisez le terrain
+4. **Priorité des cibles:** healer → DPS → tank
+5. **Escape > greed:** un petit butin vivant vaut mieux qu'un gros butin au sol… en votre nom du moins
 
-**1. Potions:**
-- Utilisez des HP pots
-- Ne soyez pas trop proud pour pot
-
-**2. Buffs:**
-- Lightning speed buff
-- Armor buff
-- Attack buff
-- Fully buffed avant le fight
-
-**3. Positioning:**
-- Ne get pas surrounded
-- Stay mobile
-- Use terrain
-
-**4. Target Priority:**
-- Tuez le healer d'abord (Cleric/Bard)
-- Puis le DPS (Wizard/Rogue)
-- Enfin le tank (Warrior)
-
-**5. Escape:**
-- Si le fight tourne mal, escape
-- Mieux vaut fuir que mourir et perdre les goods
+> ⚠️ Les hunters vous tuent **sans pénalité** ; chaque kill de votre côté ajoute des arrange points. Le PvP de thief est une gestion du risque, pas une deathmatch.
 
 ---
 
 ## 👕 Thief Suit et Équipement
 
-### Thief Suit
+### Le suit
+- Voir [Devenir Thief](#-devenir-thief) : ~10k (noir) / ~1M (Black Devil, cosmétique)
+- Alias créé au premier suit ; racheter un suit = nouvelle identité
+- En ère moderne : sets craftables avec stats/blue
 
-**Purpose:**
-- Identifie que vous êtes un thief
-- Donne des stats bonus
-- Parfois des skills spéciaux (serveur-dépendant)
-
-**Slots:** Head, Chest, Legs, Boots
-
-**Stats:**
-- +HP (very important!)
-- +Attack
-- +Defense
-- +Movement Speed (parfois)
-
-**Upgrade:**
-- Plus vous êtes high level thief, plus vous pouvez acheter des suits avec des slots supplémentaires
-
-### Gear pour Thieves
-
-**Weapons:**
-- STR: Spear, Sword, Bow, Xbow, Dagger
-- INT: Spear, Bow (nukers)
-
-**Armor:**
-- **Armor (Heavy):** Si vous fight souvent
-- **Protector:** Équilibré
-- **Garment:** Si vous êtes INT nuker
-
-**Recommended:**
-- STR: Armor or Protector
-- INT: Garment (MAG DEF + MP reduction)
+### Gear recommandé
+- **STR (dagger/xbow/warrior):** Armor/Protector, burst ou tank
+- **INT nuker:** Garment, nukes à distance
+- **Accessoires:** HP en priorité (vous encaissez des caravanes entières)
+- **Consommables:** potions perso + **transport health pills** (Large/XL selon votre transport) + plusieurs Bandit Den scrolls
 
 ---
 
-## 💵 Vendre les Goods Volés
+## 🆕 Thief en Legend VII+
 
-### Où Vendre?
+En mars 2011 (« Rise of the Thief-Hunter »), le rôle change radicalement :
+- Plus de traders joueurs : les thieves attaquent des **caravanes de traders NPC** (consignation)
+- Les caravanes affichent **bouclier** (intouchable) ou **épée** (attaquable) ; les caravanes détruites lâchent des **Specialty Goods Boxes**
+- Progression par **quêtes de job** (Safe/Danger mode) et par **job rank** (kills de hunters, ~3 kills/h comptabilisés par joueur)
+- Récompenses : **tickets + Black Stones** → craft au **Magic Pop NPC** ; **plus d'or direct** → le revenu or passe par les **job caves**
+- Skill **Merchant Pipe**: invoque un transport de job gratuit (20 s de délai après avoir été attaqué)
+- Trader Pouch: conteneur de goods boxes dont la capacité suit le job level
 
-**Thief Towns:**
-- Il y a des villes "thief-only" où vous pouvez vendre
-- Ces villes sont accessibles seulement aux thieves
-- Les NPCs vous achètent les goods volés
+---
 
-**Process:**
-1. Escape vers une thief town
-2. Trouvez le Thief NPC
-3. Vendez les goods
-4. Profitez!
+## 📱 Thief sur Origin Mobile
 
-### Prix des Goods Volés
-
-**Généralement:**
-- Les goods volés se vendent moins cher que les goods normaux
-- Cependant, c'est du profit pur (vous n'avez rien payé!)
-
-**Example:**
-- Trader achète des goods pour 100k
-- Trader pourrait les vendre pour 150k (50k profit)
-- Vous volez les goods
-- Vous les vendez pour 80-100k (profit pur!)
-
-### Risk: Death
-
-**Si vous mourez:**
-- Vous perdez tous les goods volés
-- Les thieves (ou hunters) peuvent les ramasser
-- Tout est perdu!
-
-**C'est pourquoi:**
-- Escapez vite après avoir volé
-- Ne restez pas pour fight si c'est risqué
-- Mieux vaut un petit profit que pas de profit
+- Le vol redevient central : **steal** des caravanes/trades de joueurs, revente aux NPC d'activité
+- Le guide officiel détaille : **Infiltration, sélection de cible, stealth (obtenue via des sources externes, pas native), restrictions de zone**
+- **Wanted** toujours présent : voler vous expose
+- Bonus de job : Thief inflige **+3%** de dégâts aux Traders/Hunters (jusqu'à +7% avec les buffs d'équilibrage)
+- Les caravanes événementielles donnent aux hunters une **détection de furtivité temporaire** — méfiez-vous des events
+- Changement de job bridé quand la population de thieves est trop haute (équilibrage ±15% top 500 / ±50% serveur)
 
 ---
 
 ## ❓ FAQ
 
-### Q: Puis-je voler des NPC traders?
-**R:** Oui, mais les NPC traders ne drop pas de goods. Seuls les player traders drop des goods quand ils meurent.
+### Q: Puis-je voler un trade 1★?
+**R:** Non — les trades 1★ sont protégés du PvP de job (au moins sous le niveau 40 du trader). Vérifiez par double-clic : message bleu = 1★.
 
-### Q: Les hunters peuvent-ils me voir quand je suis thief?
-**R:** Oui, vous apparaissez comme un red dot sur leur map. Ils peuvent vous tracker activement.
+### Q: Pourquoi tuer le transport et pas juste le trader?
+**R:** Les goods sont sur le transport. Tant qu'il vit (même sans son maître), le butin ne tombe pas. Tuer le transport fait tomber les goods au sol.
 
-### Q: Puis-ai-je changer de job si je meurs trop souvent?
-**R:** Oui, vous pouvez changer de job à tout moment en parlant au Thief Guild NPC.
+### Q: À combien se revendent les goods volées?
+**R:** À leur **valeur faciale** à la Thief Town — pas le taux complet du trade, mais 100% de profit puisque vous n'avez rien investi.
 
-### Q: Quel est le meilleur moment pour voler des traders?
-**R:** Pendant les heures de pointe (soirs, week-ends) il y a plus de traders, mais aussi plus de hunters. C'est un trade-off.
+### Q: Les hunters peuvent-ils me voir sur la map?
+**R:** Vous apparaissez comme une cible de job identifiable (suit/alias). En statut *wanted*, vous êtes **explicitement signalé** aux hunters.
 
-### Q: Les goods volés expirent-ils?
-**R:** Non, mais vous ne pouvez pas les stocker indéfiniment. Vous devez les vendre vite avant de mourir.
+### Q: Que se passe-t-il si je meurs avec le butin?
+**R:** Votre transport lâche les goods au sol (récupérables par tous), amende (~60k au lv40), arrange points/wanted en cascade, et possiblement drop d'items.
 
-### Q: Puis-ai-ai être thief et trader en même temps?
-**R:** Non, vous ne pouvez être qu'un seul job à la fois.
+### Q: Les NPC thieves m'aident-ils?
+**R:** Indirectement oui : les thief monsters attaquent les caravanes et occupent les hunters — mais ils peuvent aussi casser le trade avant vous (butin au sol à scavenge).
+
+### Q: Puis-je être thief et trader?
+**R:** Pas simultanément — et vendre des goods volées **efface votre XP de trader** (anti double-game).
+
+### Q: « Transform pills » ?
+**R:** Non vérifié. Aucune source fiable ne documente de « pilule de transformation » de job dans SRO classique ; les pills confirmées en thief town sont les **transport health pills**. Les items « transform » connus sont des items d'événement/esthétiques. À traiter comme rumeur tant que non confirmé en client.
 
 ---
 
 ## 🔗 Resources
 
 ### Guides
-- [Thief Guide](https://silkroadonline.fandom.com/wiki/Job)
-- [PvP Strategy](http://www.silkroadforums.com/)
+- [Complete Thief's Guide (Hellsharpt, 2006) — Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=5&t=8457) (via Wayback Machine) — LA référence d'époque : arrange points, scrolls, tactics
+- [Thief Guide - Silkroad Forums (t=4888)](http://www.silkroadforums.com/viewtopic.php?f=5&t=4888) — règles d'étoiles, bandit den scrolls
+- [Thief - Silkroad Online Wiki (Fandom)](https://silkroadonline.fandom.com/wiki/Thief)
+- [Legend VII: Rise of the Thief-Hunter Tutorial (Princess Jane, 2011)](https://princessjane25.wordpress.com/2011/04/12/silkroad-online-legend-vii-rise-of-the-thief-hunter-some-simple-tutorial-guide/)
 
-### Communauté
-- [Silkroad Forums - Thief Section](http://www.silkroadforums.com/)
+### Origin Mobile
+- [Thief Guide - sromobile.com](https://sromobile.com/en/guide/job-system/thief-guide)
+- [Job System Adjustments - sromobile.com](https://sromobile.com/en/news/features-news/job-system-adjustments)
 
 ### Outils
-- [xSROMap](https://jellybitz.github.io/xSROMap/)
+- [xSROMap](https://jellybitz.github.io/xSROMap/) — routes et repères
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
-*Sources: Silkroad Forums, Community Guides*
+*Dernière mise à jour: 2026-10-01*
+*Sources: Hellsharpt Thief Guide 2006 (Wayback), Silkroad Forums, Silkroad Online Wiki (Fandom), Hanf_Hunter fan site, Princess Jane (Legend VII), sromobile.com*

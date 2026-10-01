@@ -1,559 +1,295 @@
-# Jangan City - Complete Guide
+# 🏯 Jangan — Guide Complet de la Ville
+
+> 📍 **Vous êtes ici :** [Accueil](README.md) → [Villes](CITIES_01_JANGAN.md)
 
 ## 📋 Table des Matières
 - [Vue d'Ensemble](#-vue-densemble)
-- [Carte et Zones](#-carte-et-zones)
-- [NPCs Complets](#-npcs-complets)
+- [Carte et Quartiers](#-carte-et-quartiers)
+- [NPCs Officiels avec Coordonnées](#-npcs-officiels-avec-coordonnées)
 - [Services](#-services)
-- [Quêtes Disponibles](#-quêtes-disponibles)
-- [Shops et Prix](#-shops-et-prix)
-- [Routes de Sortie](#-routes-de-sortie)
+- [Téléportation depuis Jangan](#-téléportation-depuis-jangan)
+- [Quartier des Gisaeng et Jeux](#-quartier-des-gisaeng-et-jeux)
+- [Zones Environnantes](#-zones-environnantes)
+- [Fortress War : Jangan Fortress](#-fortress-war--jangan-fortress)
+- [Routes Commerciales](#-routes-commerciales)
+- [Tips](#-tips)
+- [FAQ](#-faq)
+- [Resources](#-resources)
 
 ---
 
 ## 🏯 Vue d'Ensemble
 
-**Jangan** est la première ville du jeu pour les joueurs chinois. C'est un hub essentiel pour les levels 1-20.
+**Jangan** est la ville de départ des personnages **chinois** et la première ville du jeu (2005). C'est le hub des niveaux 1-20 et le point de départ de la Route de la Soie côté est.
 
-**Level Range:** 1-20
+| Attribut | Valeur |
+|----------|--------|
+| **Région** | China |
+| **Position (officielle)** | ≈ X **6 460**, Y **1 100** (PosX/PosY monde) |
+| **Niveaux** | 1-20 (ville de départ chinoise) |
+| **Architecture** | Chinoise impériale, toits rouges, temple bouddhiste |
+| **Safe zone** | ✅ Oui (gardes en ville) |
+| **Fonction économique** | Achat de specialty goods, départ des caravanes vers Donwhang |
 
-**Population:** Humains chinois, marchands, aventuriers
-
-**Architecture:** Style chinois traditionnel, bâtiments en bois, toits rouges
-
-**Importance:**
-- Point de départ des nouveaux joueurs
-- Centre de trading pour la région
-- Accès au désert par l'ouest
+> ⚠️ Les coordonnées utilisées ici sont les **PosX/PosY officiels du client** (cf. [MAP_COORDINATES_REFERENCE.md](MAP_COORDINATES_REFERENCE.md)). Les anciennes valeurs « X 2000, Y 1000 » de cette doc étaient erronées.
 
 ---
 
-## 🗺️ Carte et Zones
-
-### Layout de Jangan
+## 🗺️ Carte et Quartiers
 
 ```
-┌─────────────────────────────────────┐
-│   NORTH (Fortress & Residential)    │
-│                                     │
-│   ┌───────┐  ┌──────────┐          │
-│   │Fortress│  │Guild Hall│          │
-│   └───────┘  └──────────┘          │
-│                                     │
-├───────────────┬─────────────────────┤
-│   WEST        │      CENTER         │
-│   (Gates)     │    (Market)         │
-│               │                     │
-│   ┌────┐     │  ┌────┐  ┌────┐   │
-│   │Stables│  │  │Weapons││Armor│   │
-│   └────┘     │  └────┘  └────┘   │
-│               │                     │
-├───────────────┴─────────────────────┤
-│   SOUTH (Residential & Shops)       │
-│                                     │
-│   ┌────┐  ┌────┐  ┌────┐          │
-│   │Potions││Storage││Job NPCs│   │
-│   └────┘  └────┘  └────┘          │
-└─────────────────────────────────────┘
+                NORD (PosY +)
+     ┌─────────────────────────────────────┐
+     │  Temple bouddhiste (Priests)        │
+     │  Jangan Fortress Clerk (6 493,1264) │
+     │                                     │
+     │  OUEST          CENTRE          EST │
+     │  Stable         Grande place     South Gate
+     │  Blacksmith      Marché         (soldiers
+     │  (6 369,1101)   (Storage,       téléporteurs)
+     │  Protector      Grocery,
+     │  Trader         Herbalist)
+     │  Gisaeng district (ouest, 6 220-6 290)
+     │  Smuggler Chao (ruelle, 6 283,1089) │
+     │                                     │
+     │  Guild/Hunter NPCs (sud-ouest)      │
+     │  Village Chief Hwangno (6 613,1103) │
+     └─────────────────────────────────────┘
+                SUD (PosY −)
+        → vers Donwhang (route + ferries)
 ```
 
-### Districts
-
-**North District:**
-- Fortress (inaccessible pour les joueurs)
-- Guild Hall (non implémenté sur tous les serveurs)
-- Residential area
-
-**Center District (Market):**
-- Weapon Shop
-- Armor Shop
-- Accessory Shop
-- Potion Shop
-- Principal trading area
-
-**South District:**
-- Storage
-- Job NPCs (Trader, Hunter, Thief)
-- Stable
-- Residential
-
-**West Gate:**
-- Sortie vers le désert
-- Route vers Hotan
-
-**South Gate:**
-- Route vers Donwhang
+### Quartiers clés
+- **Grande place centrale** (≈ 6 440-6 510, 1 030-1 080) : storage, grocery, herbaliste, fournisseurs, Magic POP, arena managers
+- **Quartier commercial ouest** (≈ 6 370, 1 070-1 100) : forgeron Chulsan, Protector Trader Mrs Jang, écurie
+- **Quartier des Gisaeng** (≈ 6 220-6 290, 1 000-1 080) : maisons de thé, casino, contrebandier
+- **Zone temples/guildes** (≈ 6 200-6 300, 1 180-1 310) : General Sonhyeon, Hunter Associate, Guild Manager, Buddhist Priests
+- **Portes gardées** : 4 soldiers [Teleport] autour de la ville
 
 ---
 
-## 👤 NPCs Complets
-
-### Weapon Shop NPCs
-
-**Location:** Center District, Northeast building
-
-**NPC: Weapon Merchant [Blacksmith]**
-- **Coords:** X: 925, Y: 1085
-- **Fonction:** Vend des weapons 1D-3D
-- **Services:**
-  - Vente d'armes
-  - Repair d'armes
-
-**Weapons Disponibles (1D):**
-- Sword: 1,000 gold
-- Blade: 1,200 gold
-- Spear: 1,500 gold
-- Glaive: 1,800 gold
-- Bow: 1,300 gold
-
-**Weapons Disponibles (2D):**
-- Sword: 5,000 gold
-- Blade: 6,000 gold
-- Spear: 7,500 gold
-- Glaive: 9,000 gold
-- Bow: 6,500 gold
-
-**Weapons Disponibles (3D):**
-- Sword: 15,000 gold
-- Blade: 18,000 gold
-- Spear: 22,500 gold
-- Glaive: 27,000 gold
-- Bow: 19,500 gold
-
-**Repair Cost:**
-- 1D weapons: 100-200 gold per repair
-- 2D weapons: 500-1,000 gold per repair
-- 3D weapons: 1,500-3,000 gold per repair
-
----
-
-### Armor Shop NPCs
-
-**Location:** Center District, Southeast building
-
-**NPC: Armor Merchant**
-- **Coords:** X: 955, Y: 1115
-- **Fonction:** Vend armor 1D-3D
-
-**Armor Sets Disponibles (1D):**
-
-**Garment (Light):**
-- Head: 800 gold
-- Chest: 1,200 gold
-- Shoulders: 600 gold
-- Legs: 1,000 gold
-- Boots: 700 gold
-- **Full Set:** 4,300 gold
-
-**Protector (Medium):**
-- Head: 1,000 gold
-- Chest: 1,500 gold
-- Shoulders: 800 gold
-- Legs: 1,200 gold
-- Boots: 900 gold
-- **Full Set:** 5,400 gold
-
-**Armor (Heavy):**
-- Head: 1,200 gold
-- Chest: 1,800 gold
-- Shoulders: 1,000 gold
-- Legs: 1,500 gold
-- Boots: 1,100 gold
-- **Full Set:** 6,600 gold
-
-**Armor Sets (2D):**
-- Garment Full Set: ~25,000 gold
-- Protector Full Set: ~30,000 gold
-- Armor Full Set: ~35,000 gold
-
-**Armor Sets (3D):**
-- Garment Full Set: ~75,000 gold
-- Protector Full Set: ~90,000 gold
-- Armor Full Set: ~105,000 gold
-
----
-
-### Accessory Shop NPCs
-
-**Location:** Center District, Northwest building
-
-**NPC: Accessory Merchant**
-- **Coords:** X: 890, Y: 1090
-- **Fonction:** Vend rings, necklaces, earrings
-
-**Accessoires (1D):**
-- Ring (STR/INT +1): 500 gold
-- Necklace (STR/INT +2): 1,000 gold
-- Earring (HP +50): 750 gold
-
-**Accessoires (2D):**
-- Ring (STR/INT +2): 2,500 gold
-- Necklace (STR/INT +4): 5,000 gold
-- Earring (HP +100): 3,750 gold
-
-**Accessoires (3D):**
-- Ring (STR/INT +3): 7,500 gold
-- Necklace (STR/INT +6): 15,000 gold
-- Earring (HP +150): 11,250 gold
-
----
-
-### Potion Shop NPCs
-
-**Location:** South District
-
-**NPC: Potion Merchant**
-- **Coords:** X: 950, Y: 1180
-- **Fonction:** Vend potions, consumables
-
-**Potions:**
-
-**HP Potions:**
-- Small HP Potion (restore +100 HP): 50 gold
-- Medium HP Potion (restore +300 HP): 200 gold
-- Large HP Potion (restore +600 HP): 500 gold
-
-**MP Potions:**
-- Small MP Potion (restore +50 MP): 50 gold
-- Medium MP Potion (restore +200 MP): 200 gold
-- Large MP Potion (restore +500 MP): 500 gold
-
-**Autres Consumables:**
-- Return Scroll (teleport to nearest town): 500 gold
-- Haste Scroll (+10% speed, 10 min): 5,000 gold
-- Speed Scroll (+20% speed, 30 min): 25,000 gold
-- Vigor Pill (restore stamina): 1,000 gold
-
----
-
-### Storage NPC
-
-**Location:** South District
-
-**NPC: Storage Keeper**
-- **Coords:** X: 980, Y: 1160
-- **Fonction:** Warehouse pour stocker des items
-
-**Services:**
-- Stockage d'items (slots illimités sur la plupart des serveurs)
-- Retrait d'items
-- **Gratuit** sur la plupart des serveurs
-
-**Utilisation:**
-1. Cliquez sur le Storage Keeper
-2. "Open Storage"
-3. Drag items de votre inventory vers le storage
-4. Close storage
-
----
-
-### Stable NPCs
-
-**Location:** West District
-
-**NPC: Stable Keeper**
-- **Coords:** X: 860, Y: 1060
-- **Fonction:** Vend et repair des mounts
-
-**Mounts Disponibles:**
-
-**Horse (Normal):**
-- Level 1 Horse: 50,000 gold
-- Level 2 Horse: 100,000 gold
-- Level 3 Horse: 150,000 gold
-
-**Horse Stats:**
-- Speed: +40% movement speed
-- Capacity: 1 slot de goods
-- HP: Variable (selon level)
-
-**Mount Food:**
-- Carrot: 100 gold (heals mount HP)
-- Hay: 500 gold (heals mount HP fully)
-
-**Repair:**
-- 1,000-5,000 gold selon les dégâts
-
----
-
-### Job NPCs
-
-#### Trader Association
-
-**Location:** South District
-
-**NPC: Trader Association Manager**
-- **Coords:** X: 1010, Y: 1140
-- **Fonction:** Devenir Trader, acheter/revendre goods
-
-**Services:**
-1. **Become Trader:**
-   - Requirements: Level 20+
-   - Cost: Free (first time)
-   - Obtient: Trader Suit
-
-2. **Buy Goods:**
-   - Medicine: 50,000 gold per unit
-   - Potions: 30,000 gold per unit
-   - Dyes: 40,000 gold per unit
-   - Spices: 35,000 gold per unit
-
-3. **Sell Goods:**
-   - Prix variables selon la ville de destination
-
-#### Hunter Guild
-
-**Location:** South District
-
-**NPC: Hunter Guild Manager**
-- **Coords:** X: 1030, Y: 1120
-- **Fonction:** Devenir Hunter, recevoir des rewards
-
-**Services:**
-1. **Become Hunter:**
-   - Requirements: Level 20+
-   - Cost: Free
-   - Obtient: Hunter Suit
-
-2. **Claim Rewards:**
-   - Pour avoir tué des thieves
-   - Job XP
-   - Gold rewards
-
-#### Thief Guild (Hidden!)
-
-**Location:** Dans une ruelle sombre, South District
-
-**NPC: Thief Guild Manager**
-- **Coords:** X: 1045, Y: 1190 (caché)
-- **Fonction:** Devenir Thief
-
-**Services:**
-1. **Become Thief:**
-   - Requirements: Level 20+
-   - Cost: Free
-   - Obtient: Thief Suit
-
-2. **Sell Stolen Goods:**
-   - Vend des goods volés
-   - Prix: ~50-80% du prix normal
-
----
-
-### Quest NPCs
-
-#### Tutorial NPCs
-
-**NPC: Village Chief**
-- **Coords:** X: 940, Y: 1100
-- **Quest:** Welcome to Silkroad (Level 1)
-- **Rewards:** 100 EXP, 50 SP, Small HP Potion x10
-
-**NPC: Blacksmith's Assistant**
-- **Coords:** X: 925, Y: 1085
-- **Quest:** Your First Weapon (Level 1)
-- **Rewards:** 1D Weapon, 200 EXP, 100 SP
-
-**NPC: Guard Captain**
-- **Coords:** X: 970, Y: 1075
-- **Quest:** Combat Training (Level 2)
-- **Objective:** Kill 5 Mangyangs
-- **Rewards:** 500 EXP, 200 SP, Return Scroll x2
-
-#### Story Quest NPCs (Level 10-20)
-
-**NPC: Merchant So**
-- **Coords:** X: 960, Y: 1125
-- **Quest:** Missing Caravan (Level 10)
-- **Objective:** Find missing merchant near Bandit Stronghold
-- **Rewards:** 5,000 EXP, 1,000 SP, 2D Weapon
-
-**NPC: Hunter Jin**
-- **Coords:** X: 1020, Y: 1130
-- **Quest:** Thief Threat (Level 15)
-- **Objective:** Kill 20 Bandits
-- **Rewards:** 10,000 EXP, 3,000 SP, 3D Armor piece
-
-**NPC: Trader Wang**
-- **Coords:** X: 1000, Y: 1150
-- **Quest:** First Trade (Level 20)
-- **Objective:** Complete 1-star trade to Donwhang
-- **Rewards:** 20,000 EXP, 5,000 SP, 50,000 gold
-
----
-
-### Skill NPCs
-
-**NPC: Skill Trainer (Chinese)**
-- **Coords:** X: 930, Y: 1095
-- **Fonction:** Apprendre des skills chinois
-
-**Skills Disponibles:**
-
-**Bicheon Mastery:**
-- Level 1: Free (first point)
-- Levels 2-30: SP cost (variable)
-
-**Heuksal Mastery:**
-- Level 1: Free
-- Levels 2-30: SP cost
-
-**Pacheon Mastery:**
-- Level 1: Free
-- Levels 2-30: SP cost
-
-**Elemental Masteries:**
-- Cold, Lightning, Fire, Force
-- Level 1: Free (chaque)
-- Levels 2-30: SP cost
-
----
-
-### Other Important NPCs
-
-**Teleport NPC (si disponible sur votre serveur):**
-- **Coords:** X: 945, Y: 1105
-- **Destinations:**
-  - Donwhang: 10,000 gold
-  - Hotan: 50,000 gold
-  - Constantinople: 100,000 gold
-
-**Event NPC (pendant events):**
-- **Coords:** Variable (près de la fountain)
-- **Items spéciaux:** Event items, costumes, etc.
-
-**Union Manager (si votre guilde a une union):**
-- **Coords:** X: 975, Y: 1135
-- **Services:** Union management
+## 👤 NPCs Officiels avec Coordonnées
+
+> Source : données client officielles (extraction xSROMap). Les noms génériques des anciennes versions (« Weapon Trader So », etc.) sont remplacés par les noms réels du client.
+
+### 🛠️ Commerçants
+
+| NPC | Position (X, Y) | Fonction |
+|-----|-----------------|----------|
+| **Blacksmith Chulsan** | (6 369, 1 101) | Armes/armures 1D-3D, réparation |
+| **Protector Trader Mrs Jang** | (6 369, 1 069) | Armures 1D-3D |
+| **Grocery Trader Jinjin** | (6 502, 1 068) | Potions, consommables |
+| **Herbalist Yangyun** | (6 494, 1 101) | Herbes, médicaments |
+| **Specialty Trader Jodaesan** | (6 512, 1 008) | Specialty goods (trade) |
+| **China Goods Supplier Ye-Ryeong** | (6 459, 1 072) | Marchandises générales |
+| **China Medicine Supplier Dae-Pyeong** | (6 457, 1 074) | Potions/meds |
+| **China Valuables Dealer Ryoe-A** | (6 461, 1 070) | Accessoires |
+| **Trader Yusun** | (6 493, 1 017) | Union des traders |
+| **Islam Merchant Ishyak** | (6 503, 1 018) | Marchand ambulant |
+| **Consignment Merchant Juel** | (6 512, 1 002) | Vente/consignation entre joueurs |
+
+### 📦 Services
+
+| NPC | Position (X, Y) | Fonction |
+|-----|-----------------|----------|
+| **Storage-Keeper Sansan / Wangu** | (6 434, 1 059) | Entrepôt |
+| **Stable-Keeper Machun** | (6 369, 1 005) | Montures, nourriture, réparation |
+| **Guild Manager Leebaek** | (6 247, 1 209) | Création/gestion de guilde |
+| **Daily Quest Manager Wei Yan** | (6 408, 1 071) | Quêtes journalières |
+| **Village Chief Hwangno** | (6 613, 1 103) | Chef du village, quêtes |
+| **General Sonhyeon** | (6 203, 1 182) | Militaire, quêtes |
+| **Exorcist Miaoryeong** | (5 774, 1 234) | Quêtes (chasse aux esprits) |
+| **Jangan Fortress Clerk** | (6 493, 1 264) | Inscriptions Fortress War |
+
+### ⚔️ Jobs
+
+| NPC | Position (X, Y) | Fonction |
+|-----|-----------------|----------|
+| **Merchant Associate Hwajung** | (6 512, 996) | Union Trader (devenir trader) |
+| **Hunter Associate Gwakwi** | (6 304, 1 192) | Union Hunter (devenir hunter) |
+| **Smuggler Chao** | (6 283, 1 089) | Thief (ruelle du quartier Gisaeng) |
+
+> 🕵️ Comme dans toutes les villes, le NPC thief est **dissimulé** — à Jangan il se trouve dans une ruelle du quartier des Gisaeng.
+
+### 🚪 Gardes téléporteurs (navettes inter-portes)
+
+| NPC | Position (X, Y) | Liaisons |
+|-----|-----------------|----------|
+| **Soldier Choiyoung [Teleport]** | (6 437, 1 150) | ↔ Sangnam, Jingyo, Hogang |
+| **Soldier Jingyo [Teleport]** | (6 429, 963) | ↔ Choiyoung, Sangnam, Hogang |
+| **Soldier Hogang [Teleport]** | (6 177, 1 155) | ↔ Choiyoung, Sangnam, Jingyo |
+| **Solder Sangnam [Teleport]** | (6 667, 1 137) | ↔ Choiyoung, Jingyo, Hogang |
+
+Autres gardes : Soldier Dangsam (6 440, 963), Soldier Jowi (6 177, 1 145), Soldier Iyang (6 667, 1 147), Soldier Fengil (6 430, 1 150).
+
+### 🎪 NPCs d'événements / divers
+
+| NPC | Position (X, Y) | Fonction |
+|-----|-----------------|----------|
+| **Arena Manager / Survival Arena Manager** | (6 422, 1 043-1 045) | Arène PvP |
+| **Magic POP / Magic POP Guide Gori** | (6 497, 1 079) / (6 434, 1 033) | Gacha |
+| **Event So-Ok** | (6 446, 1 045) | Événements |
+| **Homeless Genie** | (6 426, 1 036) | Quête (téléportations) |
+| **Mysterious Priest** | (6 443, 1 055) | Quêtes |
+| **Carnival Manager Jooa** | (6 446, 1 048) | Carnaval |
+| **Premium Service Manager Qing Yu** | (6 443, 1 037) | Item Mall / premium |
+| **Adventurer Flora** | (6 503, 986) | Guide |
+
+### ⛩️ Temple bouddhiste
+
+| NPC | Position (X, Y) |
+|-----|-----------------|
+| **Buddhist Priest Kushyan** | (6 597, 1 166) |
+| **Buddhist Priest Jeonghye** | (6 594, 1 250) |
+| **Juho** | (6 293, 1 304) |
 
 ---
 
 ## 🛒 Services
 
-### Repair Services
+### Réparation
+- **Blacksmith Chulsan** : armes/armures, coût proportionnel à la valeur et à l'usure
 
-**Weapons & Armor:**
-- Blacksmith repair: 1-5% de l'item's value
-- Mount repair: 1,000-5,000 gold
+### Stockage
+- **Storage-Keeper Sansan/Wangu** : entrepôt partagé entre personnages du compte
 
-### Storage Services
-
-**Infinite slots** sur la plupart des serveurs
-**Free access**
-
-### Teleportation
-
-**Return Scrolls:**
-- 500 gold par scroll
-- Téléporte vers la ville la plus proche
-
-**Teleport NPC (si disponible):**
-- Vers Donwhang: 10,000 gold
-- Vers Hotan: 50,000 gold
+### Écurie
+- **Stable-Keeper Machun** : montures (chevaux), carottes/fourrage, réparation des montures
 
 ---
 
-## 🎯 Quêtes Disponibles
+## 🚪 Téléportation depuis Jangan
 
-### Level 1-10 Quests
+### Dimensional Gate (grande porte dimensionnelle)
+- **Position :** (6 461, 1 097) — au centre de la ville
+- **Destinations :** Donwhang · Alexandria (South) · Alexandria (North)
+- **Coût :** ~5 000 gold par trajet (≈ 10 gold avant le level 20) sur iSRO classique — variable selon serveur
 
-1. **Welcome to Silkroad** (Level 1)
-   - NPC: Village Chief
-   - Rewards: 100 EXP, 50 SP
+### Ferries (traversées de rivière à l'ouest/sud-ouest)
+| Vendeur | Position | Liaison |
+|---------|----------|---------|
+| Ferry Ticket Seller **Doji** | (5 028, 1 136) | ↔ Tayun |
+| Ferry Ticket Seller **Tayun** | (5 043, 1 664) | ↔ Doji |
+| Ferry Ticket Seller **Chau** | (4 449, 929) | ↔ Hageuk |
+| Ferry Ticket Seller **Hageuk** | (4 124, 1 189) | ↔ Chau |
 
-2. **Your First Weapon** (Level 1)
-   - NPC: Blacksmith's Assistant
-   - Rewards: 1D Weapon, 200 EXP
-
-3. **Combat Training** (Level 2)
-   - NPC: Guard Captain
-   - Objective: Kill 5 Mangyangs
-   - Rewards: 500 EXP, 200 SP
-
-4. **Skill Usage** (Level 3)
-   - NPC: Skill Trainer
-   - Objective: Use a skill 5 times
-   - Rewards: 800 EXP, 300 SP
-
-5. **First Monster Hunt** (Level 5)
-   - NPC: Guard Captain
-   - Objective: Kill 10 Weasels
-   - Rewards: 1,500 EXP, 500 SP
-
-### Level 10-20 Quests
-
-6. **Missing Caravan** (Level 10)
-   - NPC: Merchant So
-   - Objective: Find missing merchant
-   - Rewards: 5,000 EXP, 1,000 SP, 2D Weapon
-
-7. **Bandit Threat** (Level 15)
-   - NPC: Hunter Jin
-   - Objective: Kill 20 Bandits
-   - Rewards: 10,000 EXP, 3,000 SP
-
-8. **First Trade** (Level 20)
-   - NPC: Trader Wang
-   - Objective: Complete trade to Donwhang
-   - Rewards: 20,000 EXP, 5,000 SP
+### Return Scroll
+- Rappel instantané au point de résurrection (à définir auprès du « Residence » en ville)
 
 ---
 
-## 🚪 Routes de Sortie
+## 🎎 Quartier des Gisaeng et Jeux
 
-### West Gate
+Le quartier ouest de Jangan (unique en son genre) accueille :
 
-**Destination:** Désert vers Hotan
-**Route:** Jangan → Bandit Stronghold → Desert → Hotan
-**Time:** 15-20 minutes à pied
-**Danger:** Medium-High (thieves, désert)
-
-### South Gate
-
-**Destination:** Route vers Donwhang
-**Route:** Jangan → Fields → Donwhang
-**Time:** 10-15 minutes à pied
-**Danger:** Low (quelques bandits)
-
-### Transport Options
-
-**Walking:**
-- Gratuit
-- Lent
-
-**Horse:**
-- 50,000+ gold (achat)
-- Rapide
-
-**Teleport (si disponible):**
-- Vers Donwhang: 10,000 gold
-- Vers Hotan: 50,000 gold
-- Instantané
+| NPC | Position (X, Y) | Rôle |
+|-----|-----------------|------|
+| **Gisaeng So-Ok** | (6 234, 1 022) | Animatrice |
+| **Gisaeng Yumi** | (6 209, 997) | Animatrice |
+| **Gisaeng Juyeong** | (6 294, 1 057) | Animatrice |
+| **Gisaeng Ahjin** | (6 223, 1 063) | Animatrice |
+| **Gisaeng Mihyang** | (6 221, 1 065) | Animatrice |
+| **Gisaeng Juju** | (6 285, 1 079) | Animatrice |
+| **Casino Guardian Huhoan** | (6 579, 1 036) | Mini-jeux |
+| **Lottery Seller Wangwon** | (6 551, 1 051) | Loterie |
+| **Ticket Seller Gyoun** | (6 546, 1 051) | Billets |
+| **WalYoung** | (6 614, 1 067) | Divers |
+| **Bagger Sochil** | (6 283, 1 014) | Quête (portage) |
 
 ---
 
-## 💡 Tips pour Jangan
+## 🐯 Zones Environnantes
 
-**Pour Nouveaux Joueurs:**
-1. Faites toutes les quêtes de level 1-10
-2. Achetez un 1D weapon et armor set
-3. Stockez des potions avant de partir
-4. Rejoignez une guilde dès level 20
+### Tiger Mountain (sud-ouest, niveaux 1-20)
+- Mangyangs, Yeohas, Small/Big-Eye Ghosts, Tigers
+- **Tiger Girl (unique, niv. 18, 598 720 HP)** — 11 points de spawn officiels :
+  `4853/94 · 4733/−34 · 4840/−123 · 5039/−28 · 4230/201 · 4418/599 · 4744/414 · 5335/360 · 5355/−224 · 4544/−303 · 4309/−151`
 
-**Pour Traders:**
-- Achetez Medicine/Potions pour le trading
-- Route 1-star: Jangan → Donwhang (safest)
-- Engagez des hunters pour la protection
+### Bandit Stronghold (sud)
+- Bandits, Bandit Archers — bon spot de farming bas niveau
 
-**Pour Hunters:**
-- Offrez vos services près du South Gate
-- Beaucoup de traders débutants ici
+### Route de Donwhang (ouest → nord-ouest)
+- Traversée des rivières par **ferry** (Doji↔Tayun, Chau↔Hageuk)
+- Earth Ghosts en approche de Donwhang
 
-**Pour Thieves:**
-- Attendez les traders sortant par South Gate
-- Route vers Donwhang est populaire
+### Tomb of Qin-Shi Emperor (nord-est)
+- Entrée du donjon 70-100 : **(7 200, 2 086)** — voir [14_MONSTER_GUIDE.md](14_MONSTER_GUIDE.md)
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
-*Prochaine mise à jour: Ajout de Donwhang*
+## 🏰 Fortress War : Jangan Fortress
+
+| Élément | Donnée |
+|---------|--------|
+| **Portes d'accès (I-III)** | (6 159, 54) · (6 348, 50) · (6 609, 52) — au sud de la ville |
+| **Intérieur du fort** | zone dédiée (≈ −12 560, −4 751 en coordonnées d'instance) |
+| **Clerk** | Jangan Fortress Clerk (6 493, 1 264) |
+| **Cycle** | hebdomadaire (créneau serveur) |
+| **Bénéfices** | taxes sur les transactions de Jangan, buffs de guilde, prestige |
+
+> En Fortress War : **Gate of Charge / Gate of Glory / Gate of Resurrection** gèrent les flux attaquants/défenseurs ; la **Gate of Resurrection** ramène à Jangan.
+
+---
+
+## 🐪 Routes Commerciales
+
+### Jangan → Donwhang (route « 1 étoile » débutante)
+- **Distance :** ≈ 3 500 unités (route + ferry)
+- **Danger :** faible-moyen (thieves PNJ de bas niveau, quelques joueurs)
+- **Profit :** modéré — la route d'apprentissage du trade
+
+### Jangan → Hotan (grande traversée)
+- Via Donwhang ou directement par les fermes et le bassin de Tarim
+- Danger croissant (Earth Ghosts, Uruchi possible dans le Tarim)
+
+---
+
+## 💡 Tips
+
+**Nouveaux joueurs :**
+1. Suivez la chaîne de quêtes des guides (Adventurer Flora, Village Chief Hwangno)
+2. Achetez l'équipement 1D-2D chez Blacksmith Chulsan / Mrs Jang
+3. Mettez votre point de résurrence à Jangan avant d'explorer
+4. Le raccourci vers Donwhang passe par les ferries (-ticket peu cher)
+
+**Traders :**
+- Achetez vos specialty goods chez **Specialty Trader Jodaesan**
+- Partez par la porte ouest, traversez en ferry, evitez les bottlenecks
+- 1 étoile = pas de vol de marchandise par les thieves joueurs (règle classique : les thieves PNJ attaquent dès 1 étoile, les joueurs à partir de 2+ selon serveur)
+
+**Hunters / Thieves :**
+- Hunter Associate Gwakwi au sud-ouest ; Smuggler Chao caché dans le quartier Gisaeng
+- Les caravanes sortant de Jangan sont les cibles les plus faciles du jeu — terrain d'entraînement des thieves
+
+---
+
+## ❓ FAQ
+
+**Q: Où est le NPC pour devenir thief à Jangan ?**
+R: **Smuggler Chao** (6 283, 1 089), dans une ruelle du quartier des Gisaeng (ouest de la ville).
+
+**Q: Comment aller à Donwhang ?**
+R: Dimensional Gate au centre-ville (6 461, 1 097) ou à pied par la porte ouest + ferry (Doji↔Tayun).
+
+**Q: Où acheter un cheval ?**
+R: **Stable-Keeper Machun** (6 369, 1 005).
+
+**Q: Où se trouve Tiger Girl ?**
+R: Tiger Mountain, au sud-ouest de la ville — points de spawn listés plus haut, le plus fréquenté étant ≈ (4 853, 94).
+
+**Q: Pourquoi les noms de NPCs ont-ils changé dans cette doc ?**
+R: Les versions précédentes utilisaient des noms inventés. Cette version utilise les **noms officiels du client** (Blacksmith Chulsan, Grocery Trader Jinjin, etc.).
+
+---
+
+## 🔗 Resources
+
+- [xSROMap — carte interactive](https://jellybitz.github.io/xSROMap/)
+- [StrategyWiki — Silkroad Online/Locations](https://strategywiki.org/wiki/Silkroad_Online/Locations)
+- [Fandom Wiki — Town](https://silkroadonline.fandom.com/wiki/Town)
+- Docs internes : [NPCS_COORDINATES.md](NPCS_COORDINATES.md) · [MAP_COORDINATES_REFERENCE.md](MAP_COORDINATES_REFERENCE.md) · [13_ZONES_OVERVIEW.md](13_ZONES_OVERVIEW.md)
+
+---
+
+*Dernière mise à jour : 2026-10-01*
+*Sources : données client officielles (xSROMap), StrategyWiki, Fandom Wiki*
