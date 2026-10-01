@@ -22,9 +22,13 @@ export interface Character {
   sp: number;
   hp: number;
   mp: number;
+  maxHp: number;
+  maxMp: number;
   stats: CharacterStats;
+  statPoints: number;  // Available stat points to allocate
   masteries: Mastery[];
   equipment: EquipmentSlot[];
+  inventory: InventoryItem[];
   skills: Skill[];
   position: Position;
   rotation: number;
@@ -124,6 +128,17 @@ export interface EquipmentSlot {
     durability: number;
     maxDurability: number;
   };
+}
+
+export interface InventoryItem {
+  id: string;
+  item: Item & {
+    plus?: number;
+    durability?: number;
+    maxDurability?: number;
+    quantity?: number;
+  };
+  slot: number;
 }
 
 // ============================================

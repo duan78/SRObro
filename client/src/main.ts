@@ -13,8 +13,14 @@ import {
   MeshBuilder,
   StandardMaterial,
   Color3,
+  SceneLoader,
 } from '@babylonjs/core';
+// Import GLB loader for .glb file support
+import { GLTFFileLoader } from '@babylonjs/loaders/glTF';
 import { Game } from './core/Game';
+
+// Register GLTF loader
+SceneLoader.RegisterPlugin(new GLTFFileLoader());
 import { NetworkManager } from './network/NetworkManager';
 import { UIManager } from './ui/UIManager';
 
@@ -72,9 +78,9 @@ async function init(): Promise<void> {
   updateLoadingProgress(10);
 
   try {
-    // Connect to server
-    updateLoadingProgress(20, 'Connecting to server...');
-    await network.connect();
+    // MVP: Skip server connection for single-player testing
+    updateLoadingProgress(20, 'Starting in single-player mode...');
+    // await network.connect();
 
     // Initialize game scene
     updateLoadingProgress(40, 'Loading game assets...');

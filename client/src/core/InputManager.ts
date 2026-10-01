@@ -76,11 +76,11 @@ export class InputManager {
    * Set up event listeners
    */
   private setupEventListeners(): void {
-    // Keyboard events
-    this.canvas.addEventListener('keydown', this.handleKeyDown);
-    this.canvas.addEventListener('keyup', this.handleKeyUp);
+    // Keyboard events - attach to window to capture all keyboard input
+    window.addEventListener('keydown', this.handleKeyDown);
+    window.addEventListener('keyup', this.handleKeyUp);
 
-    // Mouse events
+    // Mouse events - keep on canvas for position tracking
     this.canvas.addEventListener('mousemove', this.handleMouseMove);
     this.canvas.addEventListener('mousedown', this.handleMouseDown);
     this.canvas.addEventListener('mouseup', this.handleMouseUp);
@@ -89,6 +89,8 @@ export class InputManager {
     this.canvas.addEventListener('contextmenu', (e) => {
       e.preventDefault();
     });
+
+    console.log('[InputManager] Event listeners set up on window and canvas');
   }
 
   /**
@@ -96,12 +98,14 @@ export class InputManager {
    */
   private handleKeyDown = (event: KeyboardEvent): void => {
     const key = event.code;
+    console.log('[InputManager] Key down:', key); // Debug
 
     // Update state
     switch (key) {
       case 'KeyW':
       case 'ArrowUp':
         this.state.forward = true;
+        console.log('[InputManager] Forward = true');
         break;
       case 'KeyS':
       case 'ArrowDown':

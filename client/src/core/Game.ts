@@ -9,6 +9,7 @@ import {
   Vector3,
   Color4,
   FreeCamera,
+  FollowCamera,
   HemisphericLight,
   DirectionalLight,
   ShadowGenerator,
@@ -27,7 +28,14 @@ import { EntityInterpolation } from './EntityInterpolation';
 import { CharacterFactory } from '../gameplay/CharacterFactory';
 import { DamageNumberManager } from '../combat/DamageNumberManager';
 import { SkillEffectManager } from '../effects/SkillEffectManager';
-import { initializeTestInterface } from '../test';
+// import { initializeTestInterface } from '../test';
+import { JanganZone } from '../zones/jangan/JanganZone';
+import { ProgressionSystem } from '../systems/ProgressionSystem';
+import { EquipmentSystem } from '../systems/EquipmentSystem';
+import { CombatSystem } from '../systems/CombatSystem';
+import { TargetingSystem } from '../systems/TargetingSystem';
+import type { Character } from '@srobro/shared';
+import { CharacterRace } from '@srobro/shared';
 
 export class Game {
   private engine: Engine;
@@ -42,10 +50,18 @@ export class Game {
   private inputManager: InputManager | null = null;
   private entityManager: EntityManager | null = null;
 
-  // New Phase 3 & 4A systems
+  // Phase 3 & 4A systems
   private characterFactory: CharacterFactory | null = null;
   private damageNumberManager: DamageNumberManager | null = null;
   private skillEffectManager: SkillEffectManager | null = null;
+
+  // MVP Systems
+  private janganZone: JanganZone | null = null;
+  private progression: ProgressionSystem | null = null;
+  private equipment: EquipmentSystem | null = null;
+  private combat: CombatSystem | null = null;
+  private targeting: TargetingSystem | null = null;
+  private playerCharacter: Character | null = null;
 
   // Network synchronization systems
   private prediction: ClientPrediction | null = null;
@@ -56,6 +72,9 @@ export class Game {
   private hemisphericLight: HemisphericLight | null = null;
   private directionalLight: DirectionalLight | null = null;
   private shadowGenerator: ShadowGenerator | null = null;
+
+  // Camera (FollowCamera for third-person view)
+  private camera: FreeCamera | FollowCamera | null = null;
 
   // State
   private isRunning = false;
@@ -82,6 +101,8 @@ export class Game {
     // Create scene
     this.scene = new Scene(this.engine);
     this.scene.clearColor = new Color4(0.53, 0.8, 0.92, 1.0); // Sky blue
+    this.scene.autoClear = true; // Ensure scene clears every frame
+    console.log('[Scene] Scene created with clear color:', this.scene.clearColor.toString());
 
     // Enable collision
     this.scene.collisionsEnabled = true;
@@ -97,25 +118,32 @@ export class Game {
     this.setupShadows();
 
     // Initialize asset loader
-    this.assetLoader = new AssetLoader(this.scene, './assets');
+    this.assetLoader = new AssetLoader(this.scene);
     await this.assetLoader.initialize();
     console.log('AssetLoader initialized');
 
-    // TEST: Load a monster (Mangnyang)
-    console.log("Testing AssetLoader: Loading Mangnyang...");
-    const entity = await this.assetLoader.loadGameObject('mangnyang');
-    if (entity) {
-        console.log("Mangnyang loaded successfully!", entity);
-        entity.root.position = new Vector3(0, 0, 0);
-    } else {
-        console.error("Failed to load Mangnyang.");
-    }
+    // Create player character data
+    this.playerCharacter = this.createPlayerCharacter();
+
+    // Initialize MVP systems
+    this.progression = new ProgressionSystem(this.playerCharacter);
+    this.equipment = new EquipmentSystem(this.playerCharacter);
+    console.log('✓ ProgressionSystem initialized');
+    console.log('✓ EquipmentSystem initialized');
+
+    // Initialize Jangan zone
+    this.janganZone = new JanganZone(this.scene, this.assetLoader);
+    await this.janganZone.load();
+    console.log('✓ JanganZone loaded');
 
     // Initialize core systems
     this.entityManager = new EntityManager(this.scene, this.assetLoader);
     this.worldManager = new WorldManager(this.scene, this.network, this.entityManager);
     this.inputManager = new InputManager(this.scene);
     this.characterManager = new CharacterManager(this.scene, this.network, this.inputManager, this.assetLoader);
+
+    // Set up keyboard shortcuts for UI panels
+    this.setupKeyboardShortcuts();
 
     // Initialize Phase 3 & 4A systems
     this.characterFactory = new CharacterFactory(this.scene, this.assetLoader);
@@ -126,8 +154,25 @@ export class Game {
     console.log('✓ DamageNumberManager initialized');
     console.log('✓ SkillEffectManager initialized');
 
+    // Initialize combat system
+    this.combat = new CombatSystem(this.scene, this.progression, this.equipment);
+    this.combat.setDamageNumberManager(this.damageNumberManager);
+    this.combat.setJanganZone(this.janganZone); // Connect to JanganZone for health bars
+    console.log('✓ CombatSystem initialized');
+
+    // Initialize targeting system (after combat and jangan zone)
+    this.targeting = new TargetingSystem(this.scene, this.janganZone, this.combat);
+    console.log('✓ TargetingSystem initialized');
+
+    // Connect combat system to character manager
+    this.characterManager.setCombatSystem(this.combat);
+
+    // Connect system events
+    this.setupSystemEvents();
+
     // Initialize test interface (for Chrome DevTools)
-    await initializeTestInterface(this.scene, this.assetLoader);
+    // TODO: Fix export issue
+    // await initializeTestInterface(this.scene, this.assetLoader);
 
     // Set up network event handlers
     this.setupNetworkHandlers();
@@ -140,28 +185,183 @@ export class Game {
   }
 
   /**
+   * Create player character data
+   */
+  private createPlayerCharacter(): Character {
+    return {
+      id: 'player_1',
+      accountId: 'account_1',
+      name: 'Player',
+      race: CharacterRace.CHINESE,
+      level: 1,
+      exp: 0,
+      sp: 0,
+      hp: 200,
+      mp: 100,
+      maxHp: 200,
+      maxMp: 100,
+      stats: {
+        str: 10,
+        int: 10,
+      },
+      statPoints: 0,
+      masteries: [],
+      equipment: [],
+      inventory: [],
+      skills: [],
+      position: { x: 1000, y: 0, z: 1000 },
+      rotation: 0,
+      gold: 10000,
+      createdAt: new Date(),
+      lastLoginAt: new Date(),
+    };
+  }
+
+  /**
+   * Set up system events
+   */
+  private setupSystemEvents(): void {
+    if (!this.progression || !this.combat || !this.equipment || !this.ui) {
+      return;
+    }
+
+    // XP gain event -> update UI
+    this.progression.onXPGain.add((data) => {
+      this.ui.updateXPSP({
+        level: this.progression!.getLevel(),
+        currentExp: data.currentXP,
+        nextLevelExp: data.nextLevelXP,
+        currentSP: 0, // Not used in MVP
+        maxSP: 100,
+      });
+    });
+
+    // Level up event -> show notification
+    this.progression.onLevelUp.add((data) => {
+      this.ui.showNotification(`Level Up! You are now level ${data.newLevel}`);
+      this.ui.animateLevelUp();
+    });
+
+    // Stat allocation event -> update UI
+    this.progression.onStatAllocation.add((stats) => {
+      this.ui.updateCharacterStats({
+        str: stats.str,
+        int: stats.int,
+        statPoints: this.progression!.getStatPoints(),
+        level: this.progression!.getLevel(),
+        hp: this.progression!.getHP(),
+        maxHp: this.progression!.getMaxHP(),
+        mp: this.progression!.getMP(),
+        maxMp: this.progression!.getMaxMP(),
+      });
+    });
+
+    // Monster death event -> handle drops
+    this.combat.onMonsterDeath.add((data) => {
+      console.log(`Monster killed! Gained ${data.xpReward} XP`);
+      // TODO: Handle item drops
+    });
+
+    // Combat events
+    this.combat.onCombatEvent.add((event) => {
+      if (event.type === 'death') {
+        // Player died
+        this.combat!.respawnPlayer();
+        this.ui.showNotification('You died! Respawning...');
+      }
+    });
+
+    // Equipment change event -> update UI
+    this.equipment.onEquipmentChange.add((data) => {
+      this.ui.updateEquipment(this.equipment!.getEquipment());
+    });
+
+    // Inventory change event -> update UI
+    this.equipment.onInventoryChange.add((data) => {
+      this.ui.updateInventory(this.equipment!.getInventory());
+    });
+
+    // UI stat allocation -> progression system
+    this.ui.onStatAllocateObservable.add((data) => {
+      const success = this.progression!.allocateStat(data.stat);
+      if (success) {
+        // Update UI with new stats
+        this.ui.updateCharacterStats({
+          str: this.progression!.getStats().str,
+          int: this.progression!.getStats().int,
+          statPoints: this.progression!.getStatPoints(),
+          level: this.progression!.getLevel(),
+          hp: this.progression!.getHP(),
+          maxHp: this.progression!.getMaxHP(),
+          mp: this.progression!.getMP(),
+          maxMp: this.progression!.getMaxMP(),
+        });
+
+        // Hide buttons if no more points
+        if (this.progression!.getStatPoints() === 0) {
+          this.ui.hideStatAllocationButtons();
+        }
+      }
+    });
+  }
+
+  /**
+   * Set up keyboard shortcuts for UI panels
+   */
+  private setupKeyboardShortcuts(): void {
+    if (!this.inputManager) return;
+
+    // Handle key down events
+    this.inputManager.onKeyDown((key) => {
+      switch (key) {
+        case 'KeyH':
+          // Toggle help panel
+          this.ui.toggleControlsHelp?.();
+          console.log('[Game] Toggled controls help');
+          break;
+        case 'KeyI':
+          // Toggle inventory panel
+          this.ui.toggleInventory?.();
+          console.log('[Game] Toggled inventory');
+          break;
+        case 'KeyC':
+          // Toggle character panel
+          this.ui.toggleCharacter?.();
+          console.log('[Game] Toggled character panel');
+          break;
+      }
+    });
+
+    console.log('[Game] Keyboard shortcuts configured');
+  }
+
+  /**
    * Set up the camera
    */
   private async setupCamera(): Promise<void> {
     if (!this.scene) return;
 
-    // Create camera - positioned higher and further back for better view
-    const camera = new FreeCamera('camera', new Vector3(0, 50, -100), this.scene);
-    camera.setTarget(new Vector3(0, 0, 0));
+    // Create camera - positioned to see the Jangan zone
+    const camera = new FreeCamera('camera', new Vector3(1000, 50, 900), this.scene);
+    camera.setTarget(new Vector3(1000, 0, 1000)); // Look at player spawn point
 
-    // Camera controls
-    camera.attachControl(this.engine.getRenderingCanvas()!, true);
-    camera.speed = 1;
-    camera.angularSensibility = 1000;
-    camera.applyGravity = true;
-    camera.checkCollisions = true;
-    camera.ellipsoid = new Vector3(1, 1, 1);
+    // Disable Babylon camera controls - we use our own InputManager
+    camera.attachControl(this.engine.getRenderingCanvas()!, false);
+    camera.speed = 0;
+    camera.angularSensibility = 0;
+    camera.keysUp = []; // Clear default WASD controls
+    camera.keysDown = [];
+    camera.keysLeft = [];
+    camera.keysRight = [];
 
     // Camera collision
-    camera.collisionsEnabled = true;
+    camera.checkCollisions = false;
+    camera.collisionsEnabled = false;
 
     // Set as main camera
     this.scene.activeCamera = camera;
+    this.camera = camera;
+    console.log('[Camera] Camera positioned at Jangan zone, looking at spawn point');
   }
 
   /**
@@ -303,11 +503,15 @@ export class Game {
       return;
     }
 
-    // Load initial zone
-    await this.worldManager?.loadZone('zone_jangan');
+    // Spawn player at Jangan zone spawn point
+    if (this.janganZone && this.characterManager) {
+      const spawnPoint = this.janganZone.getPlayerSpawnPoint();
+      await this.characterManager.spawnPlayer('CH_M_01', new Vector3(spawnPoint.x, spawnPoint.y, spawnPoint.z));
+      console.log(`Player spawned at Jangan zone (${spawnPoint.x}, ${spawnPoint.y}, ${spawnPoint.z})`);
+    }
 
-    // Spawn player character
-    await this.characterManager?.spawnPlayer();
+    // Load initial zone (for compatibility with existing systems)
+    await this.worldManager?.loadZone('zone_jangan');
 
     this.isRunning = true;
 
@@ -330,6 +534,11 @@ export class Game {
         this.inputManager?.update(deltaTime);
         this.worldManager?.update(deltaTime);
         this.entityManager?.update(deltaTime);
+
+        // Update MVP systems
+        this.janganZone?.update();
+        this.combat?.update();
+        this.targeting?.update();
 
         // Render scene
         this.scene.render();
@@ -385,6 +594,41 @@ export class Game {
     this.damageNumberManager?.dispose();
     this.skillEffectManager?.dispose();
 
+    // Dispose MVP systems
+    this.janganZone?.dispose();
+    this.progression?.dispose();
+    this.equipment?.dispose();
+    this.combat?.dispose();
+    this.targeting?.dispose();
+
     console.log('Game disposed');
+  }
+
+  /**
+   * Get progression system (for external access)
+   */
+  getProgression(): ProgressionSystem | null {
+    return this.progression;
+  }
+
+  /**
+   * Get equipment system (for external access)
+   */
+  getEquipment(): EquipmentSystem | null {
+    return this.equipment;
+  }
+
+  /**
+   * Get combat system (for external access)
+   */
+  getCombat(): CombatSystem | null {
+    return this.combat;
+  }
+
+  /**
+   * Get Jangan zone (for external access)
+   */
+  getJanganZone(): JanganZone | null {
+    return this.janganZone;
   }
 }

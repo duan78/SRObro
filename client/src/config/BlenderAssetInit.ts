@@ -5,7 +5,7 @@
  * avec skinning activé.
  */
 
-import { AssetConfigManager } from './config/AssetConfig';
+import { AssetConfigManager } from './AssetConfig';
 
 /**
  * Configuration du client pour utiliser les assets Blender

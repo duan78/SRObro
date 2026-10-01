@@ -26,6 +26,7 @@ import { TooltipManager } from './components/TooltipManager';
 import { CastingBar } from './components/CastingBar';
 import { MinimapPanel } from './components/MinimapPanel';
 import { HotkeyBar } from './components/HotkeyBar';
+import { ControlsHelpPanel } from './components/ControlsHelpPanel';
 
 export class UIManager {
   private guiTexture: AdvancedDynamicTexture | null = null;
@@ -52,6 +53,7 @@ export class UIManager {
   private castingBar: CastingBar | null = null;
   private minimapPanel: MinimapPanel | null = null;
   private hotkeyBar: HotkeyBar | null = null;
+  private controlsHelpPanel: ControlsHelpPanel | null = null;
 
   // Observables for game events
   public onInventoryUseObservable = new Observable<any>();
@@ -65,6 +67,14 @@ export class UIManager {
   public onQuestAbandonObservable = new Observable<any>();
   public onQuestCompleteObservable = new Observable<any>();
   public onFortressActionObservable = new Observable<any>();
+
+  // Stat allocation observables
+  public onStatAllocateObservable = new Observable<{ stat: 'STR' | 'INT' }>();
+
+  // Keyboard shortcut handlers
+  public toggleInventory?: () => void;
+  public toggleCharacter?: () => void;
+  public toggleControlsHelp?: () => void;
 
   constructor() {
     // Don't initialize in constructor - wait for scene to be ready
@@ -103,6 +113,7 @@ export class UIManager {
       this.castingBar = new CastingBar(this.guiTexture);
       this.minimapPanel = new MinimapPanel(this.guiTexture);
       this.hotkeyBar = new HotkeyBar(this.guiTexture);
+      this.controlsHelpPanel = new ControlsHelpPanel(this.guiTexture);
 
       // Attach observables to GUI texture for easy access
       const guiAny = this.guiTexture as any;
@@ -449,6 +460,20 @@ export class UIManager {
     this.hotkeyBar?.toggle();
   }
 
+  /**
+   * Toggle controls help panel
+   */
+  toggleControlsHelp(): void {
+    this.controlsHelpPanel?.toggle();
+  }
+
+  /**
+   * Toggle character panel (alias for equipment)
+   */
+  toggleCharacter(): void {
+    this.equipmentPanel?.toggle();
+  }
+
   // ============================================
   // PANEL UPDATE METHODS
   // ============================================
@@ -477,6 +502,90 @@ export class UIManager {
   updateCharacterStats(stats: any): void {
     if (this.equipmentPanel) {
       this.equipmentPanel.updateStats(stats);
+    }
+
+    // Update stats panel with HP/MP
+    this.updateStatusBar('hpBar', stats.hp || 100, stats.maxHp || 100);
+    this.updateStatusBar('mpBar', stats.mp || 100, stats.maxMp || 100);
+
+    // Show stat allocation notification if points available
+    if (stats.statPoints > 0) {
+      this.showStatAllocationButtons(stats);
+    }
+  }
+
+  /**
+   * Show stat allocation buttons
+   */
+  private showStatAllocationButtons(stats: any): void {
+    // Remove existing stat buttons if any
+    const existingPanel = this.uiElements.get('statAllocationPanel');
+    if (existingPanel) {
+      existingPanel.dispose();
+    }
+
+    // Create stat allocation panel
+    const statPanel = new Rectangle('statAllocationPanel');
+    statPanel.width = '200px';
+    statPanel.height = '100px';
+    statPanel.cornerRadius = 10;
+    statPanel.color = '#FFD700';
+    statPanel.thickness = 2;
+    statPanel.background = 'rgba(0, 0, 0, 0.8)';
+    statPanel.horizontalAlignment = Control.HORIZONTAL_ALIGNMENT_LEFT;
+    statPanel.verticalAlignment = Control.VERTICAL_ALIGNMENT_TOP;
+    statPanel.top = '140px'; // Below stats panel
+    statPanel.left = '10px';
+
+    this.guiTexture!.addControl(statPanel);
+    this.uiElements.set('statAllocationPanel', statPanel);
+
+    // Title
+    const title = new TextBlock('statAllocationTitle', `Stat Points: ${stats.statPoints}`);
+    title.color = '#FFD700';
+    title.fontSize = 16;
+    title.textHorizontalAlignment = Control.HORIZONTAL_ALIGNMENT_CENTER;
+    statPanel.addControl(title);
+
+    // STR button
+    const strButton = Button.CreateSimpleButton('strButton', '+ STR');
+    strButton.width = '80px';
+    strButton.height = '30px';
+    strButton.color = '#C0C0C0';
+    strButton.cornerRadius = 5;
+    strButton.background = 'rgba(0, 100, 0, 0.5)';
+    strButton.top = '30px';
+    strButton.left = '10px';
+    strButton.onPointerUpObservable.add(() => {
+      this.onStatAllocateObservable.notifyObservers({ stat: 'STR' });
+      this.showNotification('Allocated 1 point to STR', 1000);
+    });
+    statPanel.addControl(strButton);
+
+    // INT button
+    const intButton = Button.CreateSimpleButton('intButton', '+ INT');
+    intButton.width = '80px';
+    intButton.height = '30px';
+    intButton.color = '#C0C0C0';
+    intButton.cornerRadius = 5;
+    intButton.background = 'rgba(0, 0, 100, 0.5)';
+    intButton.top = '30px';
+    intButton.left = '100px';
+    intButton.onPointerUpObservable.add(() => {
+      this.onStatAllocateObservable.notifyObservers({ stat: 'INT' });
+      this.showNotification('Allocated 1 point to INT', 1000);
+    });
+    statPanel.addControl(intButton);
+  }
+
+  /**
+   * Hide stat allocation buttons
+   */
+  hideStatAllocationButtons(): void {
+    const existingPanel = this.uiElements.get('statAllocationPanel');
+    if (existingPanel) {
+      existingPanel.dispose();
+      this.uiElements.delete('statAllocationPanel');
     }
   }
 

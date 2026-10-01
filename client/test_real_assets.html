@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRObro - Real Assets Test</title>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            max-width: 400px;
+        }
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: #ffd700;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .success {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .error {
+            color: #f44336;
+            font-weight: bold;
+        }
+        .warning {
+            color: #ff9800;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <div id="loading">
+        <div>Loading SRObro Real Assets Test...</div>
+        <div style="font-size: 14px; margin-top: 10px; color: #aaa;">Please wait while models load</div>
+    </div>
+    <div id="info">
+        <h2>SRObro - Real Assets MVP Test</h2>
+        <div style="margin-top: 10px;">
+            <strong>Status:</strong> <span id="status">Initializing...</span>
+        </div>
+        <div style="margin-top: 10px;">
+            <strong>Player Model:</strong> <span id="playerStatus">Loading...</span>
+        </div>
+        <div style="margin-top: 10px;">
+            <strong>Monster Models:</strong> <span id="monsterStatus">Loading...</span>
+        </div>
+        <div style="margin-top: 10px;">
+            <strong>Controls:</strong><br>
+            • WASD: Move camera<br>
+            • Mouse drag: Rotate view<br>
+            • Scroll: Zoom in/out
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('renderCanvas');
+        const engine = new BABYLON.Engine(canvas, true);
+        const statusEl = document.getElementById('status');
+        const playerStatusEl = document.getElementById('playerStatus');
+        const monsterStatusEl = document.getElementById('monsterStatus');
+        const loadingEl = document.getElementById('loading');
+
+        let playerLoaded = false;
+        let monstersLoaded = 0;
+        const totalMonsters = 5;
+
+        function updateStatus() {
+            if (playerLoaded && monstersLoaded >= totalMonsters) {
+                statusEl.innerHTML = '<span class="success">✓ All assets loaded successfully!</span>';
+                loadingEl.style.display = 'none';
+            }
+        }
+
+        const createScene = async function() {
+            const scene = new BABYLON.Scene(engine);
+            scene.clearColor = new BABYLON.Color4(0.53, 0.8, 0.92, 1.0);
+
+            // Camera
+            const camera = new BABYLON.ArcRotateCamera(
+                'camera',
+                -Math.PI / 2,
+                Math.PI / 3,
+                50,
+                new BABYLON.Vector3(0, 0, 0),
+                scene
+            );
+            camera.attachControl(canvas, true);
+            camera.lowerRadiusLimit = 10;
+            camera.upperRadiusLimit = 200;
+
+            // Light
+            const light = new BABYLON.HemisphericLight('light', new BABYLON.Vector3(0, 1, 0), scene);
+            light.intensity = 0.8;
+
+            const dirLight = new BABYLON.DirectionalLight('dirLight', new BABYLON.Vector3(-1, -2, -1), scene);
+            dirLight.position = new BABYLON.Vector3(20, 40, 20);
+            dirLight.intensity = 0.6;
+
+            // Ground
+            const ground = BABYLON.MeshBuilder.CreateGround('ground', { width: 200, height: 200 }, scene);
+            const groundMat = new BABYLON.StandardMaterial('groundMat', scene);
+            groundMat.diffuseColor = new BABYLON.Color3(0.2, 0.5, 0.1);
+            ground.material = groundMat;
+
+            // Asset paths
+            const playerPath = '../assets/glb_blender/prim/avatar_m_nasrun.glb';
+            const monsterPaths = [
+                { path: '../assets/glb Converted/prim/mesh/mob/china/mangnyang_part1.glb', name: 'Mangnyang (Lv 1)', pos: new BABYLON.Vector3(-10, 0, -10) },
+                { path: '../assets/glb Converted/prim/mesh/mob/china/bandit_part1.glb', name: 'Bandit (Lv 5)', pos: new BABYLON.Vector3(10, 0, -10) },
+                { path: '../assets/glb Converted/prim/mesh/mob/china/tiger_part1.glb', name: 'Tiger (Lv 10)', pos: new BABYLON.Vector3(-10, 0, 10) },
+                { path: '../assets/glb Converted/prim/mesh/mob/china/chakji_part1.glb', name: 'Chakji (Lv 15)', pos: new BABYLON.Vector3(10, 0, 10) },
+                { path: '../assets/glb Converted/prim/mesh/mob/china/bluetiger_part1.glb', name: 'Blue Tiger (Lv 20)', pos: new BABYLON.Vector3(0, 0, -20) }
+            ];
+
+            // Load player character
+            try {
+                console.log('[Test] Loading player character from:', playerPath);
+                const playerResult = await BABYLON.SceneLoader.ImportMeshAsync(null, playerPath, scene);
+
+                if (playerResult.meshes.length > 0) {
+                    const playerRoot = playerResult.meshes[0];
+                    playerRoot.position = new BABYLON.Vector3(0, 0, 0);
+                    playerRoot.scaling = new BABYLON.Vector3(1, 1, 1);
+
+                    // Enable shadows
+                    playerResult.meshes.forEach(mesh => {
+                        mesh.receiveShadows = true;
+                    });
+
+                    console.log(`[Test] Player loaded: ${playerResult.meshes.length} meshes`);
+                    if (playerResult.skeletons.length > 0) {
+                        console.log(`[Test] Player skeleton: ${playerResult.skeletons[0].bones.length} bones`);
+                        playerStatusEl.innerHTML = `<span class="success">✓ Loaded (${playerResult.meshes.length} meshes, ${playerResult.skeletons[0].bones.length} bones)</span>`;
+                    } else {
+                        playerStatusEl.innerHTML = `<span class="warning">⚠ Loaded but no skeleton (${playerResult.meshes.length} meshes)</span>`;
+                    }
+                    playerLoaded = true;
+                    updateStatus();
+                } else {
+                    playerStatusEl.innerHTML = '<span class="error">✗ Failed to load</span>';
+                }
+            } catch (error) {
+                console.error('[Test] Player loading error:', error);
+                playerStatusEl.innerHTML = `<span class="error">✗ Error: ${error.message}</span>`;
+
+                // Create placeholder
+                const placeholder = BABYLON.MeshBuilder.CreateBox('player_placeholder', { width: 1, height: 2, depth: 1 }, scene);
+                placeholder.position.y = 1;
+                const placeholderMat = new BABYLON.StandardMaterial('player_mat', scene);
+                placeholderMat.diffuseColor = new BABYLON.Color3(0, 0.5, 1);
+                placeholder.material = placeholderMat;
+                playerLoaded = true;
+                updateStatus();
+            }
+
+            // Load monsters
+            for (const monster of monsterPaths) {
+                try {
+                    console.log(`[Test] Loading monster ${monster.name} from:`, monster.path);
+                    const result = await BABYLON.SceneLoader.ImportMeshAsync(null, monster.path, scene);
+
+                    if (result.meshes.length > 0) {
+                        const root = result.meshes[0];
+                        root.position = monster.pos;
+                        root.scaling = new BABYLON.Vector3(1.2, 1.2, 1.2);
+
+                        // Enable shadows
+                        result.meshes.forEach(mesh => {
+                            mesh.receiveShadows = true;
+                        });
+
+                        console.log(`[Test] ${monster.name} loaded: ${result.meshes.length} meshes`);
+                        monstersLoaded++;
+                        updateStatus();
+                    }
+                } catch (error) {
+                    console.error(`[Test] Monster ${monster.name} loading error:`, error);
+
+                    // Create placeholder
+                    const placeholder = BABYLON.MeshBuilder.CreateBox(`${monster.name}_placeholder`, { size: 2 }, scene);
+                    placeholder.position = monster.pos;
+                    placeholder.position.y = 1;
+                    const placeholderMat = new BABYLON.StandardMaterial(`${monster.name}_mat`, scene);
+                    placeholderMat.diffuseColor = new BABYLON.Color3(1, 0.2, 0.2);
+                    placeholder.material = placeholderMat;
+                    monstersLoaded++;
+                    updateStatus();
+                }
+            }
+
+            monsterStatusEl.textContent = `${monstersLoaded}/${totalMonsters} loaded`;
+
+            // Shadow generator
+            const shadowGenerator = new BABYLON.ShadowGenerator(1024, dirLight);
+            shadowGenerator.useBlurExponentialShadowMap = true;
+
+            scene.meshes.forEach(mesh => {
+                if (mesh.name !== 'ground') {
+                    shadowGenerator.addShadowCaster(mesh);
+                }
+            });
+
+            return scene;
+        };
+
+        createScene().then(scene => {
+            engine.runRenderLoop(() => {
+                scene.render();
+            });
+        }).catch(error => {
+            console.error('[Test] Scene creation error:', error);
+            statusEl.innerHTML = `<span class="error">✗ Failed to create scene: ${error.message}</span>`;
+            loadingEl.style.display = 'none';
+        });
+
+        window.addEventListener('resize', () => {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>

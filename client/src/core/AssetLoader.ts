@@ -107,6 +107,7 @@ export class AssetLoader {
     private manifest: AssetManifest | null = null;
     private mappings: any | null = null;
     private textureMaterialManager: TextureMaterialManager;
+    private _baseUrl: string;
 
     // Caches
     private containerCache: Map<string, AssetContainer> = new Map();
@@ -118,7 +119,13 @@ export class AssetLoader {
         this.textureMaterialManager = new TextureMaterialManager(scene);
 
         const config = AssetConfigManager.getConfig();
+        this._baseUrl = config.baseUrl;
         console.log(`📦 AssetLoader: Initialized with ${config.source} asset source`);
+    }
+
+    // Getter for baseUrl
+    private get baseUrl(): string {
+        return this._baseUrl;
     }
 
     /**
@@ -441,8 +448,10 @@ export class AssetLoader {
         // SceneLoader.LoadAssetContainerAsync(rootUrl, fileName, scene)
         // We split the path into folder and filename
         const lastSlash = path.lastIndexOf('/');
-        const folder = this.baseUrl + path.substring(0, lastSlash + 1);
+        const folder = path.substring(0, lastSlash + 1); // Full path including baseUrl
         const file = path.substring(lastSlash + 1);
+
+        console.log(`[AssetLoader] Loading GLB: folder="${folder}", file="${file}"`);
 
         try {
             const container = await SceneLoader.LoadAssetContainerAsync(folder, file, this.scene);

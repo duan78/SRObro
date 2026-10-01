@@ -142,7 +142,16 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(then cat \"C:/Users/duan7/Desktop/SRObro/client/tsconfig.json\")",
-      "Bash(else echo \"Fichier n''existe pas\")"
+      "Bash(else echo \"Fichier n''existe pas\")",
+      "mcp__chrome-devtools__select_page",
+      "Bash(exit:*)",
+      "Skill(ralph-wiggum:ralph-loop)",
+      "Bash(then grep '^completion_promise:' .claude/ralph-loop.local.md)",
+      "Bash(npx vite build:*)",
+      "Bash(npx serve:*)",
+      "Bash(npx vite preview:*)",
+      "mcp__chrome-devtools__get_network_request",
+      "mcp__chrome-devtools__close_page"
     ]
   }
 }
