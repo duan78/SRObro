@@ -25,6 +25,12 @@ const NEW_CHARACTER_SPAWN = { x: 0, y: 0, z: 500 };
 const MAX_CHARACTERS_PER_ACCOUNT = 4;
 
 const USERNAME_RE = /^[a-zA-Z0-9_]{3,16}$/;
+
+// Coût SP pour amener une maîtrise AU niveau n (formule croissante classique
+// 2n² — doc 26_SP_FARMING: coûts croissants, centaines/milliers en 70+).
+function masterySpCost(level: number): number {
+  return Math.max(1, 2 * level * level);
+}
 const PASSWORD_MIN = 4;
 const CHARACTER_NAME_RE = /^[a-zA-Z0-9]{3,12}$/;
 
@@ -49,6 +55,139 @@ export class AuthHandlers {
     socket.on('character:create', (data, ack) => this.handleCharacterCreate(socket, data, ack));
     socket.on('character:select', (data, ack) => this.handleCharacterSelect(socket, data, ack));
     socket.on('character:delete', (data, ack) => this.handleCharacterDelete(socket, data, ack));
+    socket.on('character:allocate', (data, ack) => this.handleCharacterAllocate(socket, data, ack));
+    socket.on('character:masteries', (_d, ack) => this.handleMasteriesList(socket, ack));
+    socket.on('mastery:levelup', (data, ack) => this.handleMasteryLevelUp(socket, data, ack));
+  }
+
+  /**
+   * Masteries du personnage (arbre CH pour les chinois, EU pour les européens)
+   * avec le coût SP du prochain niveau.
+   */
+  private async handleMasteriesList(socket: Socket, ack?: (r: any) => void): Promise<void> {
+    try {
+      const client = this.clientManager.getClient(socket.id);
+      const characterId = client?.getCharacterId();
+      if (!characterId) { this.ack(ack, { success: false, error: 'Non authentifié' }); return; }
+      const character = await prisma.character.findUnique({ where: { id: characterId } });
+      if (!character) { this.ack(ack, { success: false, error: 'Perso introuvable' }); return; }
+
+      const isChinese = character.race === 'chinese';
+      const trees = isChinese
+        ? ['BICHEON', 'HEUKSAL', 'PACHEON', 'FIRE', 'COLD', 'LIGHTNING', 'FORCE']
+        : ['WARRIOR', 'ROGUE', 'WIZARD', 'WARLOCK', 'CLERIC', 'BARD'];
+      const masteries = await prisma.mastery.findMany({ where: { tree: { in: trees as any[] } } });
+      const mine = await prisma.characterMastery.findMany({ where: { characterId } });
+      const byMastery = new Map(mine.map((m) => [m.masteryId, m.level]));
+
+      const list = masteries.map((m) => {
+        const level = byMastery.get(m.id) ?? 0;
+        const nextCost = masterySpCost(level + 1);
+        return {
+          masteryId: m.id,
+          name: m.name,
+          tree: m.tree,
+          level,
+          nextCost,
+          canUp: level < character.level && character.sp >= nextCost,
+        };
+      });
+      this.ack(ack, { success: true, masteries: list, sp: Number(character.sp), level: character.level });
+    } catch (error: any) {
+      logger.error('Masteries list error:', error);
+      this.ack(ack, { success: false, error: 'Erreur serveur' });
+    }
+  }
+
+  /**
+   * Monter une maîtrise d'un niveau (dépense de SP, cap = niveau du perso).
+   */
+  private async handleMasteryLevelUp(socket: Socket, data: any, ack?: (r: any) => void): Promise<void> {
+    try {
+      const client = this.clientManager.getClient(socket.id);
+      const characterId = client?.getCharacterId();
+      const player = this.worldManager?.getPlayer(characterId ?? '');
+      if (!characterId || !player) { this.ack(ack, { success: false, error: 'Non authentifié' }); return; }
+
+      const masteryId = String(data?.masteryId ?? '');
+      const mastery = await prisma.mastery.findUnique({ where: { id: masteryId } });
+      if (!mastery) { this.ack(ack, { success: false, error: 'Maîtrise inconnue' }); return; }
+
+      const existing = await prisma.characterMastery.findUnique({
+        where: { characterId_masteryId: { characterId, masteryId } },
+      });
+      const level = existing?.level ?? 0;
+      if (level >= player.level) {
+        this.ack(ack, { success: false, error: `Cap atteint (niveau ${player.level})` });
+        return;
+      }
+      const cost = masterySpCost(level + 1);
+      if (player.sp < cost) {
+        this.ack(ack, { success: false, error: `SP insuffisants (${cost} requis)` });
+        return;
+      }
+
+      player.sp -= cost;
+      if (existing) {
+        await prisma.characterMastery.update({
+          where: { id: existing.id },
+          data: { level: level + 1 },
+        });
+      } else {
+        await prisma.characterMastery.create({
+          data: { characterId, masteryId, level: 1 },
+        });
+      }
+      void player.saveToDatabase().catch(() => undefined);
+      this.worldManager?.combatBridge?.sendPlayerState(characterId);
+      this.ack(ack, { success: true, level: level + 1, spent: cost, sp: player.sp });
+    } catch (error: any) {
+      logger.error('Mastery levelup error:', error);
+      this.ack(ack, { success: false, error: 'Erreur serveur' });
+    }
+  }
+
+  /**
+   * Répartition d'un point de statistique (STR/INT) — phase 4.
+   */
+  private async handleCharacterAllocate(socket: Socket, data: any, ack?: (r: any) => void): Promise<void> {
+    try {
+      const client = this.clientManager.getClient(socket.id);
+      const characterId = client?.getCharacterId();
+      if (!client || !characterId || !this.worldManager) {
+        this.ack(ack, { success: false, error: 'Non authentifié' });
+        return;
+      }
+      const stat = data?.stat === 'int' ? 'int' : data?.stat === 'str' ? 'str' : null;
+      if (!stat) {
+        this.ack(ack, { success: false, error: 'Stat invalide' });
+        return;
+      }
+      const player = this.worldManager.getPlayer(characterId);
+      if (!player) {
+        this.ack(ack, { success: false, error: 'Joueur hors ligne' });
+        return;
+      }
+      const ok = player.addStatPoint(stat);
+      if (!ok) {
+        this.ack(ack, { success: false, error: 'Aucun point disponible' });
+        return;
+      }
+      // Persistance immédiate + état HUD
+      void player.saveToDatabase().catch(() => undefined);
+      this.worldManager.combatBridge?.sendPlayerState(characterId);
+      this.ack(ack, {
+        success: true,
+        str: player.str,
+        int: player.int,
+        statPoints: player.statPoints,
+        attackMin: player.stats.attackPower.min,
+        attackMax: player.stats.attackPower.max,
+      });
+    } catch (error: any) {
+      logger.error('Allocate error:', error);
+      this.ack(ack, { success: false, error: 'Erreur serveur' });
+    }
   }
 
   // ============================================

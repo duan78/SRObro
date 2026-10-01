@@ -16,6 +16,8 @@ import { PlayerEntity } from '../world/PlayerEntity';
 import { MonsterEntity } from '../world/MonsterEntity';
 import { globalSpatialManager } from '../world/SpatialManager';
 import { rates } from '../config/rates';
+import { QuestManager } from '../quest/QuestManager';
+import { cumulativeXpForLevel } from '@srobro/shared';
 import type { S2CPacket } from '@srobro/shared';
 
 const logger = createLogger('CombatBridge');
@@ -90,6 +92,21 @@ export class CombatBridge {
       } else {
         this.onPlayerDeath(d.victimId, d.killerId);
       }
+    });
+
+    // Quêtes: toute complétion (auto au dernier objectif OU rendu PNJ)
+    // crédite les récompenses à l'ENTITÉ vivante — le QuestManager n'écrit
+    // qu'en base, l'entité en jeu écraserait ces valeurs à la sauvegarde.
+    QuestManager.getInstance().on('questCompleted', (ev: unknown) => {
+      const { characterId, rewards } = ev as { characterId: string; rewards: { exp?: number; sp?: number; gold?: number } };
+      const player = this.worldManager.getPlayer(characterId);
+      if (!player) return;
+      if (rewards?.exp) player.addExp(Math.round(rewards.exp * rates.exp));
+      if (rewards?.sp) player.sp += Math.round(rewards.sp * rates.sp);
+      if (rewards?.gold) player.addGold(Math.round(rewards.gold * rates.gold));
+      this.sendToPlayerRaw(characterId, 'quest:completed', { rewards });
+      this.sendPlayerState(characterId);
+      logger.info(`Quête complétée: +${rewards?.exp ?? 0} XP pour ${player.name}`);
     });
 
     // Level-up + snapshot monde des joueurs connectés
@@ -339,6 +356,11 @@ export class CombatBridge {
       // Loot: table MonsterDrop officielle si remplie, sinon rien (l'or est auto)
       await this.dropMonsterLoot(monster, killerId);
 
+      // Quêtes: faire avancer les objectifs de kill du tueur
+      if (killer) {
+        void this.trackQuestKills(killerId, monster.name).catch(() => undefined);
+      }
+
       // Le SpawnManager gère despawn (3 s) + respawn via son propre cycle
       logger.info(`Monstre tué: ${monster.name} par ${killer?.name ?? killerId} (+${killer ? Math.round(monster.exp * rates.exp) : 0} XP)`);
     } catch (error) {
@@ -454,22 +476,135 @@ export class CombatBridge {
   sendPlayerState(characterId: string): void {
     const player = this.worldManager.getPlayer(characterId);
     if (!player) return;
-    // nextLevelExp: courbe officielle branchée en phase 4 — approximation
-    // linéaire basée sur le niveau courant pour la barre d'XP du HUD.
-    const nextLevelExp = 100 + (player.level * player.level * 40);
+    // Courbe OFFICIELLE (leveldata.txt): seuils cumulés. Le HUD affiche
+    // la progression dans le niveau courant: (exp − levelBase)/(next − levelBase).
+    const nextLevelExp = cumulativeXpForLevel(player.level + 1);
+    const levelBaseExp = cumulativeXpForLevel(player.level);
     this.sendToPlayer(characterId, {
       type: 'player:state',
       timestamp: Date.now(),
       data: {
         hp: player.hp, maxHp: player.maxHp,
         mp: player.mp, maxMp: player.maxMp,
-        level: player.level, exp: player.exp, nextLevelExp,
+        level: player.level, exp: player.exp, nextLevelExp, levelBaseExp,
         sp: player.sp, gold: player.gold,
         str: player.str, int: player.int,
         statPoints: player.statPoints,
         position: player.position,
       },
     });
+  }
+
+  // ============================================
+  // QUÊTES (phase 4): kills, PNJ, récompenses
+  // ============================================
+
+  /** Fait avancer les objectifs « kill » des quêtes en cours du joueur. */
+  private async trackQuestKills(characterId: string, monsterName: string): Promise<void> {
+    const qm = QuestManager.getInstance();
+    const inProgress = await qm.getQuestProgress(characterId);
+    for (const progress of inProgress) {
+      const quest = (progress as any).quest;
+      const objectives = (quest?.objectives ?? []) as Array<{ type: string; count: number; targetId?: string; targetName?: string }>;
+      for (let i = 0; i < objectives.length; i++) {
+        const obj = objectives[i];
+        if (obj.type !== 'kill') continue;
+        const done = ((progress.progress as any)?.[i] ?? 0) >= obj.count;
+        if (done) continue;
+        // Cible: « monster_yeoha » ou nom direct (« Yeoha »)
+        const matches = obj.targetId === `monster_${monsterName.toLowerCase()}`
+          || obj.targetName?.toLowerCase() === monsterName.toLowerCase();
+        if (matches) {
+          await qm.updateQuestProgress(characterId, quest.id, i, 1);
+          this.sendToPlayerRaw(characterId, 'quest:progress', {
+            questName: quest.name, objective: obj.targetName ?? obj.targetId, monster: monsterName,
+          });
+          break;
+        }
+      }
+    }
+  }
+
+  /**
+   * Interaction avec un PNJ (proximité vérifiée): avance les objectifs
+   * « talk », rend les quêtes complètes, distribue les récompenses à
+   * l'entité vivante (le QuestManager écrit déjà en base).
+   */
+  async handleNpcInteract(client: { getCharacterId(): string | null }, npcId: string): Promise<{
+    success: boolean; error?: string; completed?: string[]; startedDialogue?: string;
+  }> {
+    try {
+      const characterId = client.getCharacterId();
+      const player = characterId ? this.worldManager.getPlayer(characterId) : null;
+      if (!characterId || !player) return { success: false, error: 'Non authentifié' };
+
+      // Proximité au PNJ (30 m) — données NPC depuis la base (cache 60 s)
+      const npc = await this.loadNpc(npcId);
+      if (!npc) return { success: false, error: 'PNJ inconnu' };
+      const d = Math.hypot(npc.positionX - player.position.x, npc.positionZ - player.position.z);
+      if (d > 30) return { success: false, error: `Trop loin du PNJ (${Math.round(d)} m)` };
+
+      const qm = QuestManager.getInstance();
+      const completed: string[] = [];
+
+      // 1) Avancer les objectifs « talk » visant ce PNJ
+      const inProgress = await qm.getQuestProgress(characterId);
+      for (const progress of inProgress) {
+        const quest = (progress as any).quest;
+        const objectives = (quest?.objectives ?? []) as Array<{ type: string; count: number; targetId?: string }>;
+        for (let i = 0; i < objectives.length; i++) {
+          const obj = objectives[i];
+          if (obj.type === 'talk' && obj.targetId === npcId) {
+            const done = ((progress.progress as any)?.[i] ?? 0) >= obj.count;
+            if (!done) {
+              await qm.updateQuestProgress(characterId, quest.id, i, 1);
+            }
+          }
+        }
+      }
+
+      // 2) Rendre les quêtes dont les objectifs sont remplis et qui se
+      // terminent chez ce PNJ (récompenses vers l'entité vivante)
+      const refreshed = await qm.getQuestProgress(characterId);
+      for (const progress of refreshed) {
+        const quest = (progress as any).quest;
+        const endsAt = (quest?.endsAt ?? []) as string[];
+        if (!endsAt.includes(npcId)) continue;
+        const objectives = (quest?.objectives ?? []) as Array<{ count: number }>;
+        const allDone = objectives.every((_o, i) => ((progress.progress as any)?.[i] ?? 0) >= _o.count);
+        if (!allDone) continue;
+        try {
+          const rewards = (quest.rewards ?? {}) as { exp?: number; sp?: number; gold?: number };
+          await qm.completeQuest(characterId, quest.id);
+          // Miroir vers l'entité en jeu (le QuestManager a écrit en base)
+          if (rewards.exp) player.addExp(Math.round(rewards.exp * rates.exp));
+          if (rewards.sp) player.sp += Math.round(rewards.sp * rates.sp);
+          if (rewards.gold) player.addGold(Math.round(rewards.gold * rates.gold));
+          completed.push(quest.name);
+          this.sendToPlayerRaw(characterId, 'quest:completed', {
+            questName: quest.name, rewards,
+          });
+        } catch { /* déjà complétée ou non éligible */ }
+      }
+      this.sendPlayerState(characterId);
+      return { success: true, completed, startedDialogue: npc.dialogue ?? undefined };
+    } catch (error) {
+      logger.error('handleNpcInteract error:', error);
+      return { success: false, error: 'Erreur serveur' };
+    }
+  }
+
+  private npcCache: Map<string, { positionX: number; positionZ: number; dialogue: string | null; at: number }> = new Map();
+
+  private async loadNpc(npcId: string): Promise<{ positionX: number; positionZ: number; dialogue: string | null } | null> {
+    const cached = this.npcCache.get(npcId);
+    if (cached && Date.now() - cached.at < 60000) {
+      return { positionX: cached.positionX, positionZ: cached.positionZ, dialogue: cached.dialogue };
+    }
+    const npc = await prisma.nPC.findUnique({ where: { id: npcId } });
+    if (!npc) return null;
+    this.npcCache.set(npcId, { positionX: npc.positionX, positionZ: npc.positionZ, dialogue: npc.dialogue, at: Date.now() });
+    return { positionX: npc.positionX, positionZ: npc.positionZ, dialogue: npc.dialogue };
   }
 
   // ============================================

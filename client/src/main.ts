@@ -27,6 +27,8 @@ import { UIManager } from './ui/UIManager';
 import { AuthScreen } from './ui/dom/AuthScreen';
 import { NetworkCombat } from './game/NetworkCombat';
 import { InventoryPanel } from './ui/dom/InventoryPanel';
+import { CharacterPanel } from './ui/dom/CharacterPanel';
+import { QuestSystem } from './ui/dom/QuestPanel';
 
 // Collecte des erreurs console pour diagnostic navigateur (window.__errors)
 (function installErrorCollector(): void {
@@ -166,6 +168,15 @@ async function init(): Promise<void> {
       window.addEventListener('keydown', (e) => {
         if (e.key === 'b' || e.key === 'B') void invPanel.openShop();
       });
+
+      // Panneau personnage (phase 4): C = répartition des statPoints
+      const charPanel = new CharacterPanel(network);
+      (window as unknown as { charPanel: CharacterPanel }).charPanel = charPanel;
+
+      // Quêtes + PNJ (phase 4): L = journal, clic PNJ = dialogue/quêtes
+      const quests = new QuestSystem(network, game.getScene()!, game.getJanganZone());
+      (window as unknown as { questSystem: QuestSystem }).questSystem = quests;
+      void quests.loadNpcs();
     }
     const g = game as unknown as {
       progression?: {

@@ -419,3 +419,42 @@ mode hors-ligne explicite de repli).
 - Mort → écran de résurrection → ville: HP restaurés, « Résurrection réussie ».
 - Reconnexion auto après restart serveur: session ré-authentifiée, monstres
   re-synchronisés, combat repris — Kaiser niveau 4 en fin de session.
+
+---
+
+## Session du 1er Octobre 2026 (6/2) : PHASE 4 — Progression officielle
+
+### Courbe XP officielle (4a)
+- `shared/src/xpcurve.ts`: table complète extraite de
+  `leveldata.txt` (colonne 2, 150 niveaux — lvl 1→2 = 118 XP, seuils cumulés).
+- `PlayerEntity.getExpNeededForLevel` + `CombatBridge.sendPlayerState`
+  utilisent les seuils officiels (`levelBaseExp`/`nextLevelExp` cumulés);
+  le HUD affiche la progression dans le niveau courant.
+
+### Stats & masteries (4b, 4c)
+- `character:allocate`: répartition STR/INT serveur-autoritaire (persistée);
+  la STR ajoute +1 dégât par tranche de 10 à l'arme équipée
+  (`PlayerEntity.recalculateAttackPower`) → effet mesurable immédiat.
+- `character:masteries` / `mastery:levelup`: arbres CH (7) / EU (6) depuis la
+  table Mastery, coût SP croissant (2n²), cap = niveau du perso, persistance
+  CharacterMastery.
+- Client `CharacterPanel.ts` (touche C): STR/INT + boutons +, attaque
+  affichée, 7 maîtrises avec coûts SP et montée au clic.
+
+### Quêtes (4d)
+- Colle `CombatBridge.trackQuestKills` (objectifs kill auto-avancés) +
+  `handleNpcInteract` (proximité 30 m, objectifs talk, rendu au PNJ,
+  vérification anti-exploit du QuestManager conservée).
+- `questCompleted` (event) → récompenses créditées à l'ENTITÉ vivante (le
+  QuestManager n'écrivait qu'en base — l'autosave les aurait écrasées).
+- NPC déplacés en ville (x −35..35, z 505-510) + `npc_jangan_guard` ajouté;
+  rendus client (bornes cliquables), `npc:list`/`quest:interact`/acks sur les
+  handlers quête.
+
+### Preuves
+- `scripts/test-phase4.ts` **18/18**: seuil 118 officiel, niveau 2 à 162 XP,
+  SP 27, statPoints 3, STR 21 → atk 35→38 (mesuré), Bicheon 1-2 + cap,
+  quête Welcome acceptée/rendue au garde (dialogue), +1000 XP → 1162,
+  « First Steps » débloquée.
+- Navigateur: 7 PNJ rendus, journal L (3 quêtes), panneau C (STR, 7
+  maîtrises), 60 FPS.

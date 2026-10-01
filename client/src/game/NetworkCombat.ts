@@ -32,7 +32,7 @@ interface GroundItem {
 
 interface PlayerNetworkState {
   hp: number; maxHp: number; mp: number; maxMp: number;
-  level: number; exp: number; nextLevelExp: number;
+  level: number; exp: number; nextLevelExp: number; levelBaseExp?: number;
   sp: number; gold: number; str: number; int: number; statPoints: number;
 }
 
@@ -409,6 +409,13 @@ export class NetworkCombat {
         this.network.sendPickupItem(lootId);
         return;
       }
+      // PNJ (quêtes phase 4): interagit via QuestSystem
+      const npcId = (pick.pickedMesh.metadata as any)?.npcId;
+      if (npcId) {
+        const qs = (window as unknown as { questSystem?: { interact(id: string): Promise<void> } }).questSystem;
+        void qs?.interact(npcId);
+        return;
+      }
       // Clic sol sans cible: déciblage (le click-to-move est géré par Game)
       this.clearTarget();
     });
@@ -509,6 +516,10 @@ export class NetworkCombat {
   refreshHud(): void {
     const ps = this.playerState;
     if (!ps) return;
+    // XP cumulative (courbe officielle): la barre montre la progression
+    // dans le niveau courant (exp − base) / (next − base).
+    const base = ps.levelBaseExp ?? 0;
+    const next = ps.nextLevelExp ?? (base + 100);
     this.hud.setStats({
       name: this.playerName,
       level: ps.level,
@@ -516,8 +527,8 @@ export class NetworkCombat {
       maxHp: ps.maxHp,
       mp: ps.mp,
       maxMp: ps.maxMp,
-      exp: ps.exp,
-      maxExp: ps.nextLevelExp,
+      exp: Math.max(0, ps.exp - base),
+      maxExp: Math.max(1, next - base),
       gold: ps.gold,
     });
     // Cible: HP à jour depuis les attaques (null force le cadre à disparaître

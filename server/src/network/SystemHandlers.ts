@@ -88,12 +88,12 @@ export class SystemHandlers {
     // NB: pas de 'quest:update_objective' — la progression des objectifs est
     // calculée par le serveur (events kill/pickup via QuestManager), jamais
     // déclarée par le client (exploit de compteur).
-    socket.on('quest:get_available', (data) => this.handleQuestGetAvailable(socket, data));
-    socket.on('quest:get_in_progress', (data) => this.handleQuestGetInProgress(socket, data));
-    socket.on('quest:get_completed', (data) => this.handleQuestGetCompleted(socket, data));
-    socket.on('quest:accept', (data) => this.handleQuestAccept(socket, data));
-    socket.on('quest:abandon', (data) => this.handleQuestAbandon(socket, data));
-    socket.on('quest:complete', (data) => this.handleQuestComplete(socket, data));
+    socket.on('quest:get_available', (data, ack) => this.handleQuestGetAvailable(socket, data, ack));
+    socket.on('quest:get_in_progress', (data, ack) => this.handleQuestGetInProgress(socket, data, ack));
+    socket.on('quest:get_completed', (data, ack) => this.handleQuestGetCompleted(socket, data, ack));
+    socket.on('quest:accept', (data, ack) => this.handleQuestAccept(socket, data, ack));
+    socket.on('quest:abandon', (data, ack) => this.handleQuestAbandon(socket, data, ack));
+    socket.on('quest:complete', (data, ack) => this.handleQuestComplete(socket, data, ack));
 
     // Fortress handlers
     socket.on('fortress:get_list', (data) => this.handleFortressGetList(socket, data));
@@ -307,29 +307,31 @@ export class SystemHandlers {
   // QUEST HANDLERS
   // ============================================
 
-  private async handleQuestGetAvailable(socket: Socket, _data: any): Promise<void> {
+  private async handleQuestGetAvailable(socket: Socket, _data: any, ack?: (r: any) => void): Promise<void> {
     const session = this.requireSession(socket);
     if (!session) return;
     try {
       const quests = await this.questManager.getAvailableQuests(session.characterId);
       socket.emit('quest:available_list', quests);
+      if (typeof ack === 'function') ack({ success: true, quests });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
-  private async handleQuestGetInProgress(socket: Socket, _data: any): Promise<void> {
+  private async handleQuestGetInProgress(socket: Socket, _data: any, ack?: (r: any) => void): Promise<void> {
     const session = this.requireSession(socket);
     if (!session) return;
     try {
       const quests = await this.questManager.getQuestProgress(session.characterId);
       socket.emit('quest:in_progress_list', quests);
+      if (typeof ack === 'function') ack({ success: true, quests });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
-  private async handleQuestGetCompleted(socket: Socket, _data: any): Promise<void> {
+  private async handleQuestGetCompleted(socket: Socket, _data: any, _ack?: (r: any) => void): Promise<void> {
     const session = this.requireSession(socket);
     if (!session) return;
     try {
@@ -340,20 +342,22 @@ export class SystemHandlers {
     }
   }
 
-  private async handleQuestAccept(socket: Socket, data: any): Promise<void> {
+  private async handleQuestAccept(socket: Socket, data: any, ack?: (r: any) => void): Promise<void> {
     const session = this.requireSession(socket);
     if (!session) return;
     try {
       const { questId } = data;
       const progress = await this.questManager.acceptQuest(session.characterId, questId);
       socket.emit('quest:accepted', progress);
+      if (typeof ack === 'function') ack({ success: true, progress });
       logger.info(`Quest accepted: ${questId} by ${session.characterId}`);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
   }
 
-  private async handleQuestAbandon(socket: Socket, data: any): Promise<void> {
+  private async handleQuestAbandon(socket: Socket, data: any, ack?: (r: any) => void): Promise<void> {
+    void ack;
     const session = this.requireSession(socket);
     if (!session) return;
     try {
@@ -365,7 +369,8 @@ export class SystemHandlers {
     }
   }
 
-  private async handleQuestComplete(socket: Socket, data: any): Promise<void> {
+  private async handleQuestComplete(socket: Socket, data: any, ack?: (r: any) => void): Promise<void> {
+    void ack;
     const session = this.requireSession(socket);
     if (!session) return;
     try {

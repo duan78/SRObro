@@ -4,7 +4,7 @@
  */
 
 import { Entity, EntityState } from './Entity';
-import { Position, EntityType, CharacterRace, Character as SharedCharacter } from '@srobro/shared';
+import { Position, EntityType, CharacterRace, Character as SharedCharacter, cumulativeXpForLevel } from '@srobro/shared';
 import { prisma } from '../database/prisma';
 import { createLogger } from '../core/Logger';
 
@@ -130,15 +130,24 @@ export class PlayerEntity extends Entity {
    */
   applyWeaponStats(weapon: { attackMin: number; attackMax: number } | null): void {
     this.equippedWeapon = weapon;
+    this.recalculateAttackPower();
+    logger.info(`Stats recalculées pour ${this.name}: atk ${this.stats.attackPower.min}-${this.stats.attackPower.max}`);
+  }
+
+  /**
+   * Attaque effective: dégâts de l'arme (officiel) + bonus de force
+   * (1 point de dégât par tranche de 10 STR) — la répartition de points a
+   * ainsi un effet visible même armé.
+   */
+  recalculateAttackPower(): void {
     this.stats = this.calculateStats();
-    if (weapon) {
-      // Les dégâts de l'arme REMPLACENT la frappe à mains nues (officiel SRO)
+    if (this.equippedWeapon) {
+      const strBonus = Math.floor(this.str / 10);
       this.stats.attackPower = {
-        min: weapon.attackMin,
-        max: Math.max(weapon.attackMin, weapon.attackMax),
+        min: this.equippedWeapon.attackMin + strBonus,
+        max: Math.max(this.equippedWeapon.attackMin, this.equippedWeapon.attackMax) + strBonus,
       };
     }
-    logger.info(`Stats recalculées pour ${this.name}: atk ${this.stats.attackPower.min}-${this.stats.attackPower.max}`);
   }
 
   /** Arme équipée (stats officielles de l'item). */
@@ -233,14 +242,15 @@ export class PlayerEntity extends Entity {
     this.statPoints--;
     if (stat === 'str') {
       this.str++;
+      this.recalculateAttackPower();
       this.maxHp += 20; // HP per STR
     } else {
       this.int++;
       this.maxMp += 15; // MP per INT
     }
 
-    // Recalculate stats
-    this.stats = this.calculateStats();
+    // Recalcul complet (y compris bonus STR sur l'arme équipée)
+    this.recalculateAttackPower();
 
     this.emit('statAdded', { entityId: this.id, stat, value: this[stat] });
     return true;
@@ -277,10 +287,9 @@ export class PlayerEntity extends Entity {
    * Get exp needed for a level
    */
   private getExpNeededForLevel(level: number): number {
-    // SRO exp formula: base * (multiplier ^ (level - 1))
-    const base = 100;
-    const multiplier = 1.15;
-    return Math.floor(base * Math.pow(multiplier, level - 1));
+    // Courbe OFFICIELLE (leveldata.txt du client): seuil cumulé pour
+    // atteindre ce niveau. L'XP du perso est cumulative.
+    return cumulativeXpForLevel(level);
   }
 
   /**

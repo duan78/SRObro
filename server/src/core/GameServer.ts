@@ -6,6 +6,7 @@
 import type { Server as IOServer, Socket } from 'socket.io';
 import type { DatabaseManager } from '../database/DatabaseManager';
 import { createLogger } from './Logger';
+import { prisma } from '../database/prisma';
 import { GameDataService } from '../data/GameDataService';
 import { ClientManager } from '../network/ClientManager';
 import { WorldManager } from '../game/WorldManager';
@@ -217,6 +218,52 @@ export class GameServer {
 
       // Résurrection (phase 2): écran client → serveur autoritaire
       socket.on('player:respawn', (data) => this.handleRespawnRequest(socket, data));
+
+      // Interaction PNJ: quêtes (donner/rendre) avec vérification de proximité
+      socket.on('quest:interact', (data: unknown, ack?: (r: unknown) => void) => {
+        try {
+          const client = this.clientManager?.getClient(socket.id);
+          const characterId = client?.getCharacterId();
+          const npcId = String((data as { npcId?: string })?.npcId ?? '');
+          if (!client || !characterId || !npcId) {
+            if (typeof ack === 'function') ack({ success: false, error: 'Requête invalide' });
+            return;
+          }
+          void this.combatBridge?.handleNpcInteract(client, npcId).then((r) => {
+            if (typeof ack === 'function') ack(r);
+          });
+        } catch (error) {
+          logger.error('quest:interact error:', error);
+          if (typeof ack === 'function') ack({ success: false, error: 'Erreur serveur' });
+        }
+      });
+
+      // Liste des PNJ de la zone (rendu client + interactions)
+      socket.on('npc:list', (_d: unknown, ack?: (r: unknown) => void) => {
+        try {
+          const client = this.clientManager?.getClient(socket.id);
+          if (!client?.getCharacterId()) {
+            if (typeof ack === 'function') ack({ success: false, error: 'Non authentifié' });
+            return;
+          }
+          void prisma.nPC.findMany({ where: { zoneId: 'zone_jangan' } }).then((npcs) => {
+            if (typeof ack === 'function') {
+              ack({
+                success: true,
+                npcs: npcs.map((n) => ({
+                  id: n.id, name: n.name,
+                  position: { x: n.positionX, y: n.positionY, z: n.positionZ },
+                  rotation: n.rotation,
+                  dialogue: n.dialogue,
+                })),
+              });
+            }
+          });
+        } catch (error) {
+          logger.error('npc:list error:', error);
+          if (typeof ack === 'function') ack({ success: false, error: 'Erreur serveur' });
+        }
+      });
 
       // Snapshot du monde à la demande (le client charge le monde 3D en
       // plusieurs minutes: les spawn packets initiaux sont perdus avant que
