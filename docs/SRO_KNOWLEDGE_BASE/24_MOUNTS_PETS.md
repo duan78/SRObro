@@ -10,6 +10,7 @@
 - [Le Système Fellow](#-le-système-fellow)
 - [Ability Pets / Pickup Pets (COS)](#-ability-pets--pickup-pets-cos)
 - [Devil Spirit et Angel Spirit](#-devil-spirit-et-angel-spirit)
+- [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026)
 - [Gestion et Soins (Stable-Keeper)](#-gestion-et-soins-stable-keeper)
 - [Acquisition et Coûts](#-acquisition-et-coûts)
 - [FAQ](#-faq)
@@ -177,6 +178,36 @@ Le **Devil Spirit** n'est pas un pet mais un item de **transformation** (Item Ma
 
 ---
 
+---
+
+## 🇰🇷 Contenu KSRO (2011-2026)
+
+> Données du **service coréen courant** (item mall officiel + recoupements communautaires) — rapport : [ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §9](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md). Les fellows sont apparus côté KR en décembre 2011 (notice officielle « 펠로우즈 탑승 » du 21/12/2011, cf. [RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md) K27).
+
+### Les 12 fellows officiels (item mall PET/GROWTH)
+
+**12 펠로우즈 en vente à 55 silk (필) chacun**, utilisables dès le **niveau 1**, **non-invocables simultanément** (source officielle : https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?Shoptype1=PET&Shoptype2=GROWTH) :
+
+> 블러드 아머 다이노 (Blood Armor Dino) · 에이션트 트라브 베어 (Ancient Trab Bear) · 옐로우 스파클 오트리슈 (Yellow Sparkle Ostrich) · 루비노 피닉스 (Rubino Phoenix) · 라바 로어 하운드 (Lava Roar Hound) · 하프문 재규어 (Halfmoon Jaguar) · 실버 백 (Silverback) · 다크 그리핀 (Dark Griffin) · 크록스 (Crocs) · 나이트 팽 (Night Fang) · 골드 혼 (Gold Horn) · 소울 테일 (Soul Tail)
+
+Mécaniques (communauté EN, fiabilité 2-3) : le fellow **combat la cible désignée** et peut servir de **monture** ; les growth pets classiques **évoluent en fellows** auprès du **PNJ de l'écurie (Stable NPC)** avec une **Potion of Evolution (진화의 물약)** ; le fellow gagne des niveaux et des **buffs propres** (transfert de niveau entre fellows documenté en vidéo). Sources : [elitepvpers — Fellow-Pet System](https://www.elitepvpers.com/forum/sro-guides-templates/1802274-guide-fellow-pet-system.html) · [MMORPG.com — Updated Fellow System](https://forums.mmorpg.com/discussion/335076/).
+
+### Devil spirits côté KR — grades et paliers chiffrés
+
+| Grade | Obtention | Effets (base) |
+|---|---|---|
+| **B** | en jeu (Forgotten World / talismans) | identique au grade A |
+| **A** | item mall (silk) | skill actif : **+20 % dégâts phys./mag., +10 % vitesse** (usage périodique ~20-30 min, durée ~10 min) |
+| **S** | donjon (Dimension Hole) / **Magic Pop coupon rouge** | **+5 % HP/MP mini, +1 block ratio** ; renforcable **jusqu'à +15** (attesté sur miroir privé) ; blues type « dégâts vs uniques +10 % » |
+
+**Upgrade (alchimie — Elixir of Devil Spirit + poudres), paliers chiffrés** : chaque palier **+1 : +1 % HP/MP** ; **+3 à +5 ⇒ skill à 25 % dégâts / 15 % vitesse** ; **+6 et au-delà ⇒ 30 % dégâts**. Sources : [Seidenkraft — Devil Spirit Upgrade Tutorial (2012)](https://seidenkraftblog.wordpress.com/2012/09/17/devil-spirit-upgrade-tutorial/) · [Silkroad Forums — Devil Spirit S-Grade](http://www.silkroadforums.com/viewtopic.php?f=2&t=118765) · [GamesIndustry.biz — Magic Pop (coupon rouge → Devil S)](https://www.gamesindustry.biz/silkroad-online-magic-pop-card-game-launched).
+
+Le **Magic Pop coréen** s'appelle **요술팡** : la **팡카드** (« carte Fang », 10 silk, item mall CONSUME/SPECIAL) s'y insère — même gacha que la Magic Pop iSRO ; grille de récompenses complète non publiée.
+
+> ⚠️ Le système fellow tardif (évolution/transfert de niveau) n'a **pas de page guide officielle KR** (vidéos/forums EN uniquement) ; le **+15 du grade S** provient d'un wiki de serveur privé (miroir du système officiel, fiabilité 2).
+
+---
+
 ## 🏥 Gestion et Soins (Stable-Keeper)
 
 Le **Stable-Keeper** (étable) de chaque ville centralise tous les services pets :
@@ -324,6 +355,6 @@ R : Il combat à vos côtés et génère son propre aggro, mais il n'occupe **pa
 
 ---
 
-*Dernière mise à jour : 1er octobre 2026 (enrichi par la recherche multilingue ML_RESEARCH — guide pets DE juin 2006, confirmations FR/PT)*
+*Dernière mise à jour : 1er octobre 2026 (enrichi par la recherche multilingue ML_RESEARCH — guide pets DE juin 2006, confirmations FR/PT ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : 12 fellows officiels à 55 silk + devil spirits A/B/S chiffrés — rapport ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §9)*
 
 *Sources : StrategyWiki, elitepvpers, silkroadforums, site officiel silkroadforever.com, MMORPG.com, GameFAQs, silkroadonline.de (DE), JeuxOnline (FR), Wikipédia PT — voir section Sources.*

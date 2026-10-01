@@ -300,6 +300,46 @@ export class SpawnManager extends EventEmitter {
   }
 
   /**
+   * Spawn ponctuel à la demande (commande GM /spawn, console admin):
+   * ActiveSpawn détaché — jamais re-vérifié par checkSpawn, donc ni respawn
+   * ni maintien d'effectif. Le corps est retiré 3 s après la mort comme
+   * pour tout monstre (listener de spawnMonster).
+   */
+  async spawnMonsterAt(monsterId: string, position: { x: number; y: number; z: number }, zoneId = 'jangan'): Promise<MonsterEntity | null> {
+    const before = new Set(this.monsterEntities.keys());
+    const adHoc: ActiveSpawn = {
+      spawnId: `gm_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+      monsterId,
+      zoneId,
+      position,
+      rotation: Math.random() * Math.PI * 2,
+      maxCount: 1,
+      respawnTime: Number.MAX_SAFE_INTEGER,
+      patrolRange: 5,
+      currentMonsters: new Map(),
+      lastSpawnCheck: 0,
+      isChecking: false,
+    };
+    await this.spawnMonster(adHoc);
+    const newId = [...this.monsterEntities.keys()].find((id) => !before.has(id));
+    return newId ? this.monsterEntities.get(newId) ?? null : null;
+  }
+
+  /** Monstre vivant le plus proche d'une position (commande /mobinfo, /kill). */
+  getNearestMonster(position: { x: number; y?: number; z: number }, maxDistance = 50): MonsterEntity | null {
+    let best: MonsterEntity | null = null;
+    let bestD = maxDistance;
+    for (const m of this.monsterEntities.values()) {
+      const d = Math.hypot(m.position.x - position.x, m.position.z - position.z);
+      if (d < bestD) {
+        bestD = d;
+        best = m;
+      }
+    }
+    return best;
+  }
+
+  /**
    * Check for despawning (no players nearby)
    */
   private checkDespawn(activeSpawn: ActiveSpawn): void {

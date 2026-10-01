@@ -35,6 +35,8 @@
 - ✅ **Collections de 8 talismans** → arme scellée (SUN D8/D9, MOON D10, NOVA D11)
 - ✅ La jauge **berserker est rechargée après chaque unique tué**
 
+> 🇰🇷 **Note KSRO (recherche KO2 2026-10)** : en Corée, le Forgotten World est arrivé **5 mois plus tôt** — **Legend X « 잊혀진 세계 », 28/07/2010** (cap 110, avec la vente en consignation 위탁 판매), contre Legend VI le 20/12/2010 sur iSRO. Le patch coréen **Rebirth (27/06/2012)** a ensuite **retravaillé le 잊혀진 세계** (avec suppression des quêtes obsolètes et révision des positions de monstres — notices KR K20/K22). Le FGW n'est **pas** le système des donjons tardifs coréens (Jupiter 2011, Bagdad 2014, Shambhala 2018, Legend 23) : ceux-ci sont des donjons/donjons de champ séparés — voir le renvoi en fin de fiche. Sources : [ML_RESEARCH/RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md) · [RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md).
+
 ---
 
 ## 🔑 Conditions d'Entrée (Dimension Hole)
@@ -412,6 +414,21 @@ Donjon d'Alexandria à progression par quêtes (Pharaon/temple égyptien) :
 - Les runs typiques enchaînent ~5 uniques ; drops d'Arena Coins / scrolls selon serveur.
 - Système de **titres** lié (voir guide titres Silkroad Latino : Knight-Captain → Chief General).
 
+### 🇰🇷 Donjons KSRO tardifs (Jupiter / Bagdad / Shambhala / Legend 23) — renvoi
+
+> ⚠️ Ces donjons **ne font PAS partie du système Forgotten World** (pas de Dimension Hole, pas de talismans) : ce sont des donjons instanciés et des donjons de champ séparés, ajoutés par le service coréen entre 2011 et 2023. Ils n'ont **pas leur place détaillée dans cette fiche** — documentation complète dans [13_ZONES_OVERVIEW.md — section « 🇰🇷 Contenu KSRO (2011-2026) »](./13_ZONES_OVERVIEW.md) (accès, paliers, timers, boss, drops) et [15_UNIQUE_BOSSES.md — section KSRO](./15_UNIQUE_BOSSES.md) (boss).
+
+| Donjon (KR / EN) | Entrées | Ajout KR | Type |
+|---|---|---|---|
+| 경배의 전당 (Hall of Worship) | 106 solo / 111 / 113 | 22/06/2011 (Legend XII) | instance Jupiter (2 h) |
+| 광신도의 은신처 (Zealots Hideout) | 106 solo / 116 / 118 | 22/06/2011 (Legend XII) | instance Jupiter (2 h) |
+| 바그다드 지하 (Bagdad Underground) + 카일리아의 은신처 (Kailia) | 121+ | mai 2014 | instances (3×50 min/jour) |
+| 파멸의 성전 (Temple of Destruction) | 125+ | ~16/05/2023 (Legend 23) | **donjon de champ** (entrées NPC Hotan/Bagdad, boss final despawn 3 h) |
+| 비밀의 무덤 (Secret Tomb) | 125+ | ~16/05/2023 (Legend 23) | instance à étages (30 min, clé du Fire Temple de Shambhala) |
+| Ice Temple / Fire Temple (Shambhala) | 131-135 / 136-140 | 27/03/2018 | donjons Shambhala (accès NPC Mortifying Monk au Taklamakan) |
+
+Sources : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) · [RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md) · wiki DiGeam.
+
 ---
 
 ## 🛠️ Implémentation Technique
@@ -649,6 +666,11 @@ R: Le boss doit être tué dans les 2 h, sinon le donjon disparaît et vous ête
 - [Guide Titres — Silkroad Latino Wiki](https://wiki.silkroadlatino.com/en/faq/guia-titulos)
 - [xSROMap — carte interactive](https://jellybitz.github.io/xSROMap/)
 
+### 🇰🇷 Sources KSRO (recherche KO2 2026-10)
+- [ML_RESEARCH/RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md) — Legend X KR 잊혀진 세계 28/07/2010 (cap 110), Rebirth 27/06/2012 (FGW retravaillé)
+- [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) — donjons tardifs Jupiter/Bagdad/Shambhala/Legend 23 (renvoi)
+- [GameMeca — Legend 10 잊혀진 세계 (28/07/2010)](https://www.gamemeca.com/view.php?gid=87353)
+
 ### Technique (packets FGW)
 - [SilkroadDoc (DummkopfOfHachtenduden) — wiki GitHub](https://github.com/DummkopfOfHachtenduden/SilkroadDoc/wiki) — opcodes FGW 0x7519-0x351E, mouvement 0x7021 + flag donjon
 
@@ -662,4 +684,4 @@ R: Le boss doit être tué dans les 2 h, sinon le donjon disparaît et vous ête
 
 *Dernière mise à jour : 2026-10-01*
 *Révision majeure : noms de donjons/tranches corrigés (Fandom wikitext), grades re-documentés (types + party, pas d'HP scaling), boss par donjon vérifiés (Origin/Seidenkraft/YouTube), collections complétées (8 talismans chacune), section donjons liés ajoutée (Job Temple/Qin-Shi/HWT), packets FGW officiels ajoutés. Chiffres non sourcés de l'ancienne version supprimés — voir « Incertitudes ».*
-*Enrichi par la recherche multilingue ML_RESEARCH 2026-10 : uniques du Green Abyss + tables HP 7 tranches × 4 grades + types Elite G3/G4 + raretés talismans (SroLobby/vSRO.org TR) ; noms ZH officiels, règle des 7 niveaux, cooldown 3 h confirmé (DiGeam/iccgame ZH).*
+*Enrichi par la recherche multilingue ML_RESEARCH 2026-10 : uniques du Green Abyss + tables HP 7 tranches × 4 grades + types Elite G3/G4 + raretés talismans (SroLobby/vSRO.org TR) ; noms ZH officiels, règle des 7 niveaux, cooldown 3 h confirmé (DiGeam/iccgame ZH) ; note 🇰🇷 KSRO (Legend X KR 28/07/2010, Rebirth 2012, renvoi donjons tardifs — rapports KO2).*

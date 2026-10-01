@@ -10,6 +10,7 @@
 - [GM Events](#-gm-events)
 - [Events iSRO 2010-2013 documentés côté FR](#-events-isro-2010-2013-documentés-côté-fr)
 - [Events Permanents](#-events-permanents)
+- [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026)
 - [Magic Pop](#-magic-pop)
 - [Events Item Mall et Promotions](#-events-item-mall-et-promotions)
 - [Events des Serveurs Privés vSRO 1.188](#-events-des-serveurs-privés-vsro-1188)
@@ -156,6 +157,7 @@ Introduite en 2011 (events guilde CTF documentés dès mars 2011). Système PvP 
 - ✅ **Arena Coins** attribuées **aux gagnants ET aux perdants** (montant supérieur aux vainqueurs).
 - ✅ Inscriptions à des **créneaux horaires fixes** (schedule quotidien affiché en jeu).
 - ✅ Boutique de récompenses contre les coins (gear PvP / items) ; les **Honor Points** de la boutique Alexandria sont liés aux activités PvP incluant la Battle Arena.
+- 🇰🇷 Côté KR : lancement documenté dès **12/2009** (presse GG게임) et ouverture board **03-04/2010**, toujours active en 2026 → voir la section [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026) ci-dessous.
 - ❌ **Corrigé :** pas de « Solo Arena 1v1 best of 3 » ni de « saisons mensuelles » documentées sur iSRO classique.
 
 ### Job Temple (PvPvE de job)
@@ -166,6 +168,56 @@ Système de donjons instanciés 35-110 avec talismans → armes scellées. Voir 
 
 ### Fortress War (siège de forteresse)
 Guerre de forteresses hebdomadaire guildes — voir [`19_FORTRESS_WAR.md`](19_FORTRESS_WAR.md). Ce n'est pas un « event » ponctuel mais une institution permanente du calendrier.
+
+---
+
+---
+
+## 🇰🇷 Contenu KSRO (2011-2026)
+
+> **Le service coréen anime toujours un cycle annuel d'events récurrents** — dépouillement d'**~100 notices officielles 2022-2026** du board `krsilkroadcp.joymax.com` (pages EUC-KR décodées). Rapport : [ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §13](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md) · chronologie officielle : [ML_RESEARCH/RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md).
+
+### Calendrier récurrent officiel (modèle stable 2022-2026)
+
+| Période | Event (nom KR officiel) | Mécanique / récompenses marquantes |
+|---|---|---|
+| Janvier | **신년 이벤트** (2023 계묘년 · 2024 갑진년 · 2025 을사년 · 2026 병오년) | drop de **복주머니** (pochette de nouvel an) sur tous les monstres ; buff-foods coréens (떡국 XP+30 %, 전통주 sxp+30 %, 수정과/만두 +20 %, 식혜/약식 +10 %) |
+| Février | **돌아온 알리바바와 40인의 도적** (« Le retour d'Ali Baba et les 40 voleurs ») | event récurrent 2023-2026 avec **tirage au sort** (당첨자 발표) |
+| Mars-avril | 부활절 (Pâques) · **실크로드 Thanks** (spring thanks) | — |
+| Avril-mai | **세 개의 달** (« Les Trois Lunes », 2022-2026) | NPC **소옥 (So-Ok)** ; collecte de **마정석** ×10 dans une **수정 항아리** (jarre de cristal) ; fragments **붉은 달/검은 달** → 인핸서/속성석 15-17차 |
+| Juin-août | **아이스크림 이벤트** (ice cream) · 더위 타파 · 경험치 보상 (XP compensation serveur) | — |
+| Août-septembre | **유령 사냥** (« Chasse aux fantômes ») / variantes 할로윈 | donjon cimetière, 2 équipes de 8-40 joueurs |
+| Septembre-octobre | **풍선불기 축제** (« Festival du gonflage de ballons ») | ballons à gonfler par paliers, uniquement 장안/콘스탄티노플 |
+| Octobre | **할로윈 이벤트** (오싹오싹) — édition 2022 écourtée (deuil national Itaewon : « 국가 애도 기간에 따른 조기 종료 ») | — |
+| Décembre | **겨울공주** (« Le retour de la Princesse d'hiver ») | — |
+
+Récompenses transverses récurrentes : **인핸서 15-17차** (enhancers d'advance alchemy par degré), **속성석 15-17차** (pierres d'attribut, 10 types), **판도라의 상자**, **스킬포인트 스크롤** (SP scroll), **두루마리** (rouleaux STR/INT/AGI), **슈퍼스크롤** (hit/dodge/vitesse 100 %), **몬스터 소환 주문서**. Ponctuels : 황금 증표 수집 (2023), 강화 확률 events, screenshot/GM events, XP serveur +30 % lors d'incidents.
+
+### Les 4 events 2026 documentés intégralement (notices officielles)
+
+1. **2026 병오년 신년 이벤트** (13/01 → 10/02/2026) — drops de **복주머니** sur tous les monstres ; buff-foods du nouvel an (XP/sxp +10 à +30 %) ; 인핸서 16-17차. Notice : https://krsilkroadcp.joymax.com/news/news_view.asp?sID=1&Page=2&Num=5087&List_Ref=1598
+2. **세 개의 달** (12/05 → 16/06/2026) — NPC **소옥** ; collecte de **마정석** (pierres magiques) ×10 dans une **수정 항아리** (jarre de cristal) ; fragments **붉은 달/검은 달** (lune rouge/noire) échangeables contre **인핸서 15-17차**, **속성석 15-17차** (10 types), 팡카드, 판도라의 상자, 스킬포인트 스크롤. Notice : https://krsilkroadcp.joymax.com/news/news_view.asp?sID=1&Page=1&Num=5104&List_Ref=1606
+3. **유령 사냥** (11/08 → 08/09/2026) — inscription auprès de **So-Ok** ; donjon **공동묘지** (cimetière) ; achat de **퇴마 부적** (talisman exorciste : 100 = 1 000 or OU 1 pièce each **수행자의/병사의/장군의 주화**) ; **2 équipes de 8 à 40 joueurs**, sessions de **10 minutes** ; victoire = **유령 호리병 ×10** (gourde fantôme ; nul 3, défaite 1), 20 gourdes = coffre ; chance d'obtenir un **유령 펫** (pet fantôme) ; **le calendrier de la Battle Arena est suspendu pendant l'event**. Notice : https://krsilkroadcp.joymax.com/news/news_view.asp?sID=1&Page=1&Num=5116&List_Ref=1611
+4. **풍선불기 축제** (08/09 → 13/10/2026) — **2 ballons/heure** (10 dernières minutes de chaque heure, 4 types aléatoires : 무지개 10 pts, 보물상자 8, UFO 6, 왕포션 4) ; **유니콘** (licorne) via 10 **고무조각** ; clic droit pour **gonfler par 6 étapes** — succès = récompense du palier, éclate = retour au palier 1 ; **uniquement à 장안 (Jangan) et 콘스탄티노플 (Constantinople)** ; paliers 4-6 : **인핸서 15-16-17차**, 주문서 +10 % dégâts, herbes (마향초/환영초/생명초/활력초/비설초), 판도라의 상자, 스킬포인트 스크롤. Notice : https://krsilkroadcp.joymax.com/news/news_view.asp?sID=1&Page=1&Num=5138&List_Ref=1620
+
+### Battle Arena (배틀 아레나) côté KR
+
+- **Lancement coréen documenté par la presse GG게임 (02/12/2009)** : contenu PVP d'équipe (« 팀 배틀 컨텐츠 ») à **4 modes de matchmaking** — **랜덤 (aléatoire) · 파티 (groupe) · 길드 (guilde) · 직업 (métier)** ; jusqu'à **64 participants** selon le mode ; inscription auprès du **PNJ Battle Arena** dans chaque village ; **2 sessions/jour à 14 h et 23 h, de 20 minutes** ; event de lancement récompensé en **sets 11차** et **인장 10차** (sceaux 10D) + bons Caribbean Bay — https://www.ggemguide.com/news_view.htm?uid=134213. Le board officiel montre l'ouverture effective **mars-avril 2010** (mode PARTY/대련 — [RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md) K34).
+- **Toujours active en 2026** : la notice 유령 사냥 précise « 이벤트 기간 동안 **배틀 아레나 스케줄은 진행되지 않습니다** » (le planning d'arène est suspendu pendant l'event) — preuve d'un **emploi du temps récurrent d'arène** (planning 2026 non publié en ligne).
+- **Monnaies d'arène coréennes** : trio **수행자의/병사의/장군의 주화** (« pièces du disciple / du soldat / du général ») — mêmes dénominations que les médailles d'arène trainee/soldier/general, utilisées comme monnaie d'event (cf. 유령 사냥) ; échange d'arena coins à Jangan/Constantinople (communauté).
+- **CTF (깃발 뺏기)** : aucune documentation officielle coréenne trouvée (modes, scores, récompenses) — à traiter comme système global iSRO non documenté côté KR.
+
+### Monétisation officielle 2026 (item mall)
+
+| Produit | Prix | Détail officiel |
+|---|---|---|
+| **프리미엄 골드타임 4주** | **250 silk** | 3 h/j **XP+sxp +100 %** ; résurrection 100 % 1×/j ; 3×/j retour arrière & instantané ; **+5 % dégâts et absorption** ; +5 % hit/dodge ; **+5 % probabilité d'enhancement** ; +5 % succès alchimie ; stall avatar ; quêtes premium |
+| **실크로드 상자 (Silkroad Box)** | **15 silk** | random : **15-17차 장비**, 인핸서 15-17차, **비밀의 열쇠**, **파멸의 원소**, scrolls de résurrection, boosters XP — **lv 101+** |
+| Autres | — | 골드/실버 타임 (10/92 · 7/65 silk), 스킬회수약 ×5 (15 silk), resets par tranches 1-100/101-120/121-125 (299/399/499 silk), 팡카드 (10 silk), 지니의 램프 (14 silk), fellows (55 silk) |
+
+Sources : https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?Shoptype1=PREMIUM&Shoptype2=PREMIUM · https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?shoptype1=CONSUME&Shoptype2=SPECIAL
+
+> Systèmes de rétention 2025 liés au quotidien de jeu : **유물 reliques** (3 slots dédiés, craft 131+) et **자동 전투 auto-combat** — détail dans [30_SKILLS_DATABASE.md](30_SKILLS_DATABASE.md) (section KSRO).
 
 ---
 
@@ -333,6 +385,6 @@ R : Mécaniques custom : silk/heure en ligne, events automatiques (Trivia, Lucky
 
 ---
 
-*Dernière mise à jour : 1er octobre 2026 (enrichi par la recherche multilingue ML_RESEARCH — events FR datés 2010-2013 via JeuxOnline, events 2026 du service coréen kSRO)*
+*Dernière mise à jour : 1er octobre 2026 (enrichi par la recherche multilingue ML_RESEARCH — events FR datés 2010-2013 via JeuxOnline, events 2026 du service coréen kSRO ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : calendrier récurrent sur ~100 notices, 4 events 2026 détaillés, Battle Arena KR, monétisation — rapports ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md et RESEARCH_KO2_CHRONO.md)*
 
 *Sources : annonces Joymax archivées (IGN, GamesIndustry.biz, MMORPG.com), silkroadforums, silkroad4arab, wikis communautaires, JeuxOnline (FR), krsilkroadcp.joymax.com (KO) — voir section Sources.*

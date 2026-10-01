@@ -10,6 +10,7 @@
 - [Introduction](#-introduction)
 - [Skills Chinois (vue d'ensemble)](#-skills-chinois-vue-densemble)
 - [Skills Européens (vue d'ensemble)](#-skills-européens-vue-densemble)
+- [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026)
 - [Arbres de Mastery](#-arbres-de-mastery)
 - [Mécaniques de Skills](#-mécaniques-de-skills)
 - [Recherche par Type](#-recherche-par-type)
@@ -93,6 +94,30 @@ L'ancienne version du hub listait « 8 classes européennes » dont **Two-Handed
 | ⛪ **Cleric** | Healer / buffs défensifs | **Healing Cycle → Healing Orbit** (HoT tick 3 s, **zéro aggro**), Group Healing/Recovery, **Recovery Division** (HoT party 300 s), Bless Spell (DEF PHY+MAG), Body/Soul/Force/Mental Blessing (30 min), Holy Word/Spell (anti-curses), Resurrection, **Offering** (attaque la plus forte du jeu, consomme 95 % HP) |
 
 Détails complets (buffs par portée, rotations, tips) → [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md)
+
+---
+
+## 🇰🇷 Contenu KSRO (2011-2026)
+
+> Le service coréen **n'a jamais fermé** (opérateur Wemade Max, ex-Joymax ; serveur unique 초원길 depuis 2012 ; cap 140 depuis 2018). Chaîne officielle des caps : 105 (2009) → 110 (2010) → 120 (2011) → 125 (2014) → 130 (2015) → **140 (2018, inchangé en 2026)** — [ML_RESEARCH/RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md). Les sections ci-dessus décrivent le jeu classique ; voici l'état documenté des skills côté KR tardif — rapport principal : [ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md).
+
+### Les tables officielles KSRO (source primaire)
+
+- 🇨🇳 **Skills CH** : le site officiel KSRO héberge la **base de skills complète** — **64 séries / 296 skills** avec **noms KR officiels**, séries actives de 5-7 livres jusqu'aux maîtrises **96-120**, et jusqu'à **122/124** (기담요결, Force). Répartition : Bicheon ×10 · Heuksal ×9 · Pacheon ×10 · Cold ×8 · Lightning ×7 · Fire ×8 · **Force ×12** (contre 4-5 séries classiques : l'arbre Force a explosé — soins de zone 치료술, vraie résurrection 부활심결, séries tardives 121+). Structure par maîtrise → section [🇰🇷 Contenu KSRO](SKILLS_DATABASE_CHINESE.md) de [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md) · table intégrale → [RESEARCH_KO2_SYSTEMS.md §3](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md) · accès : https://krsilkroadcp.joymax.com/gamedata/skill/asiaskill.asp?Mastery=1&Category=1
+- 🇪🇺 **Skills EU** : le **calculateur officiel** embarque la table codename → nom KR (**269 skills**, + `skillRank` niveaux max par skill) → section [🇰🇷 Contenu KSRO](SKILLS_DATABASE_EUROPEAN.md) de [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md) · https://krsilkroadcp.joymax.com/gamedata/skill/skillCalculator.asp
+- Les notices officielles attestent des **skills étendus à 130 (2015) puis 140 (2018)** — les tables affichées du site s'arrêtent à 120 (+122/124) : les paliers 121-140 restent à extraire du client.
+
+### Lacunes documentées & recommandation pour SRObro (rapport KO2 §16-17)
+
+1. **Coûts SP des rangs 96-124 et valeurs chiffrées des skills tardifs : introuvables en ligne** — le site officiel ne publie que noms + niveaux de maîtrise ; l'extraction du client (`skilldata_5000.txt` / `_RefSkill`) reste la voie.
+2. **Mapping codename ↔ noms KR tardifs non réalisé** (les 296 skills officiels CH n'affichent pas de codenames ; les noms iSRO tardifs ne correspondent pas mot à mot) — croisement avec skilldata à faire.
+3. **Cap total de mastery au-delà de 120 : non publié** (360 au cap 120 côté EN ; 330 sur l'ancien namu.wiki).
+4. **Recommandation du rapport** : importer les tables officielles A8 (296 skills CH) + A9 (269 skills EU) dans une base dédiée (ex. `SKILLS_DATABASE_LATE_KR.md`) — **la source primaire la plus propre jamais trouvée pour les noms KR tardifs**. Méthode de scraping : `curl | iconv -f EUC-KR` (l'encodage EUC-KR du site officiel casse les fetchers standards).
+
+### Systèmes 2025 associés (méta KSRO)
+
+- **유물 — reliques** (maj du 10/06/2025) : **3 emplacements d'équipement dédiés** ; 18 reliques fabriquées (recette **auto-apprise au niveau 131+**) à partir de **파멸의 원소** (« Élément de Ruine », monstres de 파멸의 성전 / 실크로드 상자) ; renforcement alchimie avec sauts massifs à **+5/+10/+15**, **échec = relique ET matériau détruits**. Notice : https://krsilkroadcp.joymax.com/news/news_view.asp?sID=1&Page=2&Num=5043&List_Ref=1583
+- **자동 전투 — combat automatique** (appliqué le 15/04/2025) : modules **auto-potion / auto-skill / auto-chasse** (fenêtre d'actions touche **A**, icône sous la minimappe touche **T**), **interdit en ville** ; encore itéré en 10/2025 (amélioration du ciblage). Notice : https://krsilkroadcp.joymax.com/news/news_view.asp?sID=1&Page=3&Num=5036&List_Ref=1577
 
 ---
 
@@ -289,5 +314,5 @@ R: Voir [33_PVP_BUILDS.md](33_PVP_BUILDS.md) ; les interrupts (Sprint Assault, S
 
 ---
 
-**Dernière mise à jour : 2026-10-01 (enrichi des noms originels KR/ZH et de la mécanique des imbues — recherche multilingue ML_RESEARCH)**
+**Dernière mise à jour : 2026-10-01 (enrichi des noms originels KR/ZH et de la mécanique des imbues — recherche multilingue ML_RESEARCH ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : tables officielles 64 séries/296 skills CH + 269 skills EU, systèmes 2025 — rapports ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md et RESEARCH_KO2_CHRONO.md)**
 *Hub resynchronisé avec les bases CH/EU révisées (noms iSRO réels, codenames, structure séries/livres et book 1-2 ; correction : 6 maîtrises EU, pas 8 « classes »). Les listes de skills non sourcés de l'ancienne version ont été remplacées par les skills vérifiés des bases détaillées.*

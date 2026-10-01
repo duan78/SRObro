@@ -10,6 +10,7 @@
 - [Élixirs](#-élixirs)
 - [Lucky Powders](#-lucky-powders)
 - [Advanced Elixirs (+1/+2 garantis)](#-advanced-elixirs-12-garantis)
+- [🇰🇷 Alchimie KSRO 12D+ (2011-2026) : 인핸서, 보호석, montée de degré](#-alchimie-ksro-12d-2011-2026--인핸서-보호석-montée-de-degré)
 - [Tablettes, Éléments et Pierres](#-tablettes-éléments-et-pierres)
 - [Blues (Magic Options) — Catalogue Complet](#-blues-magic-options--catalogue-complet)
 - [Stratégies d'Alchimie](#-stratégies-dalchimie)
@@ -32,6 +33,7 @@ Le système d'**alchimie** de Silkroad Online permet d'améliorer votre équipem
 - ✅ **Risque réel :** à partir de +5, un échec peut **détruire** l'item (50% des échecs)
 - ✅ **Blues de protection :** Lucky, Immortal, Astral, Steady (consommés à l'usage)
 - ✅ **Luck-based :** RNG important, chaque tentative est indépendante
+- 🇰🇷 **KSRO 12D+** : au-delà du 11차, le service coréen remplace ce système par les **인핸서 (Enhancers)** — échec = **destruction de l'item ET de l'enhancer**, sauf **보호석 (protection stone, -1)** — voir [🇰🇷 Alchimie KSRO 12D+](#-alchimie-ksro-12d-2011-2026--인핸서-보호석-montée-de-degré)
 
 ### Les 3 volets de l'alchimie
 
@@ -234,6 +236,78 @@ Ajoutés avec les mises à jour tardives (items mall « +1/+2 enhancement scroll
 - **Un seul par item** (pas de stack), permanent, **non retirable**.
 - Si l'enhancement échoue ensuite, l'item retombe au minimum au niveau du bonus (ex. +2 avec un Adv. B) — le bonus protège donc partiellement.
 - **Obtention :** destruction d'équipement de haut niveau/full blue (le « destroying +5 FB equipment » donne des B-grade), Magic Pop, item mall.
+- 🇰🇷 **Noms officiels KR** (site officiel KSRO) : **고급 강화 엘릭시르 A급** (+1, « 100 % 장비가 강화된다 ») et **B급** (+2, 100 %), **par degré** (« 차수별로 존재합니다 »), en 4 familles arme/armure/bouclier/accessoire, à utiliser via la 연금상자 (boîte d'alchimie), onglet 조합 — [page officielle alchemy_item](https://krsilkroadcp.joymax.com/gamedata/item/alchemy_item.asp) (détail : section [🇰🇷 ci-dessous](#-alchimie-ksro-12d-2011-2026--인핸서-보호석-montée-de-degré)).
+
+---
+
+## 🇰🇷 Alchimie KSRO 12D+ (2011-2026) : 인핸서, 보호석, montée de degré
+
+> Issu du rapport `ML_RESEARCH/RESEARCH_KO2_ITEMS.md` (2026-10-01, §8-§13). Sources primaires : **site officiel KSRO** `krsilkroadcp.joymax.com`, pages 연금술 (alchimie) en EUC-KR converties manuellement (fiabilité 5) — portail : [alchemy.asp](https://krsilkroadcp.joymax.com/gamesystem/alchemy/alchemy.asp). Cette section décrit le **service coréen vivant** : l'alchimie y **bifurque officiellement** entre items ≤ 11차 et items ≥ 12차.
+
+### La bifurcation officielle : deux systèmes
+
+| | **≤ 11차 (système « classique »)** | **≥ 12차 (nouvel onglet 강화)** |
+|---|---|---|
+| Matériau | **강화 엘릭시르** (élixir) + **행운의 가루** (lucky powder par degré) | **인핸서 (Enhancer)** |
+| Échec | reset à +0 ; dès +5 : perte de durabilité max **ou destruction** | **« 아이템과 사용한 인핸서 모두 소멸된다 » — l'item ET l'enhancer sont détruits** |
+| Protections | blues 행운/견고/불멸/아스트랄 (Lucky/Steady/Immortal/Astral) | **보호석 (Protection Stone)** — évite la destruction mais **-1** |
+| Options d'aide au mall | 아스트랄/불멸의 연금석 vendus **par 차수 1→11** (5/11/14/19/24/30/38/46/51/62/**70 실크**) | **aucune** (le mall n'en vend plus au-delà du 11차) |
+
+Sources : [equipmentstrength_2.html](https://krsilkroadcp.joymax.com/gamesystem/alchemy/iframe_alchemy/equipmentstrength_2.html) (officiel, « 12차 이상 아이템만 강화가 가능하다 ») · [mall ARCHEMY/ASTRAL & ATHANASIA](https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?shoptype1=ARCHEMY&Shoptype2=ASTRAL) (prix 2026).
+
+### 인핸서 (Enhancers) — l'enhancement 12차+
+
+- **4 types** (무기/방어구/방패/악세서리 = arme/armure/bouclier/accessoire), **obtenus par la chasse** (« 인핸서는 사냥을 통해 획득할 수 있다 »).
+- **Succès :** +1 (강화등급 +1). **Échec : destruction de l'item ET de l'enhancer** — fini le reset à +0 du système classique.
+- Texte officiel intégral : [equipmentstrength_2.html](https://krsilkroadcp.joymax.com/gamesystem/alchemy/iframe_alchemy/equipmentstrength_2.html).
+
+### 보호석 (Protection Stones) — l'anti-destruction 12-17차
+
+- « 보호석을 사용할 경우 아이템이 소멸되지 않는 대신 **강화등급이 -1 하락한다** » — avec protection stone, l'échec **ne détruit plus l'item** mais lui fait **perdre 1 niveau** d'enhancement.
+- **Spécifiques au degré ET à la rareté** : une pierre par 차수 (12/13/14/15/16/17차) et par grade (**매직/레어/레전드**).
+- Prix mall 2026 ([mall ARCHEMY/ETC](https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?shoptype1=ARCHEMY&Shoptype2=ETC)) : **매직 8 실크 · 레어 16 실크 · 레전드 32 실크** (identique pour chaque degré 12→17차).
+
+### Montée de degré : 각석 / 특수각석 (Awakening Stones)
+
+Onglet « 업그레이드 » de la fenêtre d'alchimie [Y] — [page officielle itemupgrade.asp](https://krsilkroadcp.joymax.com/gamesystem/alchemy/itemupgrade.asp) :
+
+- **Condition :** « **11차 +7 강화 등급 이상 아이템만** 업그레이드가 가능 » — seuls les items 11차 **+7 ou plus** peuvent monter d'un degré (les items avec « 옵 레벨 강화 주문서 » (scroll d'option-level) en sont exclus).
+- **각석 (Awakening Stone)** : 4 types (arme/armure/bouclier/accessoire), **droppées en chasse**, taux < 100 %.
+- **Succès :** l'item monte d'**un degré** (« 연금한 아이템 차수 +1 아이템으로 성장 »).
+- **Échec :** « 장비는 소멸되지 않고, **각석만 소멸된다** » — **l'objet survit, seule la pierre est perdue**.
+- **특수 각석 (Special Awakening Stone)** : upgrade **« 100 % 확률 »** — mall 2026 : **11차 45 실크 · 12차 50 실크 · 13차 55 실크** (par type, descriptions officielles « 11차 → 12차 », « 12차 → 13차 », « 13차 → 14차 ») — le cycle upgrade 12→14차 était **toujours actif en 2026**.
+- ⚠️ **Héritage — texte officiel précieux :** « 아이템이 가지고 있던 **속성/매직속성은 승계되지 않으며, 소켓석만 승계된다** » — lors d'une montée de degré, **les stats/blues ne sont PAS conservées ; seuls les socket stones sont hérités**.
+- *(Recoupement EN, fiabilité 2-3 — [elitepvpers](https://www.elitepvpers.com/forum/silkroad-online/1264143-guide-upgrading-11d-items-12d.html))* : la conversion des grades serait 11D normal → 12D 매직, 11D rare (Nova/혜성) → 12D 레어, 11D « Legend » → 12D 레전드 — non officiel.
+- namu.wiki (extrait) : **avant Legend 23 (05/2023), on montait ses pièces 12→13→14→15차 par ce système** ; depuis, les 16-17차 s'obtiennent par drops/box.
+
+### Sockets : 소켓석 (3 emplacements max)
+
+[Page officielle sokect.asp](https://krsilkroadcp.joymax.com/gamesystem/alchemy/sokect.asp) :
+
+- « 하나의 아이템의 최대 **3개의 소켓**까지 만들 수 있다 » — **3 sockets max par item** ; pas 2 fois la même 소켓석 sur un même item.
+- **6 types de 소켓석**, chacune porte **un skill propre** : **신속** (회피율 +, durée limitée), **마력** (MP +), **회복** (auto-soin), **정신력** (chance que le prochain skill ne consomme pas de mana), **체력** (HP +), **집중** (명중률 +).
+- Le grade de la pierre doit être **≥ au grade de l'item** (« 소켓석 등급이 아이템 등급보다 낮은 경우에는 사용할 수 없다 »).
+- Rappel : les 소켓석 sont **les seules choses héritées** lors d'une montée de degré (ci-dessus) — d'où leur importance au haut-niveau.
+
+### 연금약 : les potions d'alchimie (고급 연금술)
+
+[Page officielle medical.asp](https://krsilkroadcp.joymax.com/gamesystem/alchemy/medical.asp) — le « 고급 연금술 » du menu KR correspond aux **연금약** (potions, craft 가공) :
+
+| 연금약 | Effet officiel |
+|---|---|
+| **미풍의 단약** | +25 % vitesse de déplacement, 30 min |
+| **강풍의 단약** | +50 %, 30 min |
+| **질풍의 단약** | +75 %, 30 min |
+| **태풍의 단약** | +100 %, 30 min |
+
+- Fabriquées à partir de **청옥서판/적옥서판** (tablettes droppées) + **4대 원소** (éléments terre/feu/eau/vent) ; « **속성석을 제작할 때에는 실패확률이 없다** » (fabrication des 속성석 **sans échec possible**).
+- ⚠️ Le folklore web « 청마노/정수 » apparu dans un résumé automatique est **erroné** (mojibake du résumeur) — le texte officiel parle bien de 서판 et 원소 (mise en garde du rapport KO2 §13).
+
+### ⚠️ Taux : rien d'officiel côté KR (classique comme 12차+)
+
+- **Aucune table de probabilités officielle** n'est publiée côté coréen — ni pour l'enhancement, ni pour l'upgrade 각석, ni pour les sockets. Les taux documentés plus haut dans ce fichier proviennent de la **DB vSRO dépackée** (HyperbotDoc/SroCave).
+- Conflit signalé : les guides communautaires KR citent **+1 : 70 % → +7 : 10 %** (avec 행운의 가루 — [café Daum kkndfs](https://m.cafe.daum.net/kkndfs/3un1/6), fiabilité 3), chiffres **incompatibles** avec les totaux DB vSRO (100/70/50/27/25…) — les deux jeux de valeurs décrivent des époques/services différents ou des mesures divergentes ; à traiter comme communautaire, non officiel.
+- Pour le 12차+ (인핸서), **aucun % n'a été trouvé nulle part** — extraction client seule voie (confirme le constat ZH du rapport RESEARCH_ZH Trouvaille 6).
 
 ---
 
@@ -456,6 +530,9 @@ Le site turc SroCave a décompressé les mêmes valeurs `Param` 32-bit (4 octets
 ### Q: Lucky Powder obligatoire ?
 **R:** Quasi — elle est bon marché et double quasiment les taux bas (+50% en +1). Ne jamais alchimier sans powder au-delà de +2.
 
+### Q: 🇰🇷 Comment fonctionne l'alchimie sur les items 12차+ du service coréen ?
+**R:** Autre système : **인핸서 (Enhancers)** obtenus en chasse ; succès = +1 ; **échec = l'item ET l'enhancer sont détruits** (« 모두 소멸된다 »). La **보호석 (protection stone)**, spécifique au degré (12→17차) et à la rareté (매직/레어/레전드), évite la destruction mais l'item **perd 1 niveau**. Les options Lucky/Immortal/Astral n'existent que ≤ 11차. La **montée de degré (각석)** exige un item 11차 +7 minimum ; à l'échec seule la pierre est perdue, et **seuls les socket stones sont hérités** (les blues se perdent). Voir [🇰🇷 Alchimie KSRO 12D+](#-alchimie-ksro-12d-2011-2026--인핸서-보호석-montée-de-degré).
+
 ---
 
 ## 🔗 Resources
@@ -486,6 +563,16 @@ Le site turc SroCave a décompressé les mêmes valeurs `Param` 32-bit (4 octets
 - [SroLobby — taux d'alchimie : le mythe du RNG pur (TR)](https://www.srolobby.com/konular/alchemy-basari-oranlari.273)
 - [Fúria Brazil — Guia Básico do Silkroad (PT-BR, ~2011)](https://furia-brazil.forumeiros.com/t9-guia-basico-do-silkroad)
 
+### 🇰🇷 Officiel KSRO — alchimie 12차+ (recherche KO2 2026-10)
+- [Portail officiel 연금술 (장비강화/마법속성/속성변경/고급연금술/분해/아이템업그레이드/소켓)](https://krsilkroadcp.joymax.com/gamesystem/alchemy/alchemy.asp)
+- [장비 강화 part 2 — 인핸서/보호석 12차+ (« 모두 소멸된다 », « 강화등급이 -1 하락한다 »)](https://krsilkroadcp.joymax.com/gamesystem/alchemy/iframe_alchemy/equipmentstrength_2.html)
+- [아이템 업그레이드 — 각석/특수각석 (11차+7, héritage des seuls 소켓석)](https://krsilkroadcp.joymax.com/gamesystem/alchemy/itemupgrade.asp)
+- [고급 연금술 — 연금약 (미풍/강풍/질풍/태풍의 단약)](https://krsilkroadcp.joymax.com/gamesystem/alchemy/medical.asp) · [소켓 — 소켓석 (3 max, 6 types)](https://krsilkroadcp.joymax.com/gamesystem/alchemy/sokect.asp)
+- [고급 강화 엘릭시르 A/B급 par degré](https://krsilkroadcp.joymax.com/gamedata/item/alchemy_item.asp)
+- [Item mall ARCHEMY/ETC — 보호석 12→17차 (8/16/32 실크), 특수각석 11→14차](https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?shoptype1=ARCHEMY&Shoptype2=ETC) · [ARCHEMY/ASTRAL & ATHANASIA — 연금석 1→11차 (5→70 실크)](https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?shoptype1=ARCHEMY&Shoptype2=ASTRAL)
+- [Café Daum kkndfs — taux communautaires KR 70→10 % (fiabilité 3)](https://m.cafe.daum.net/kkndfs/3un1/6)
+- Rapport : `ML_RESEARCH/RESEARCH_KO2_ITEMS.md` (§8-§13, §17)
+
 ### Données d'items (codenames)
 - [ItemData vSRO — ClientLibGUII ItemDataGenerated.h](https://github.com/aloneanqel1453/ClientLibGUII/blob/master/source/libs/ClientLib/src/ItemDataGenerated.h)
 - [RSBot — RefMagicOptExtension (libellés des blues)](https://github.com/myildirimofficial/RSBot/blob/master/Botbases/RSBot.Alchemy/Extension/RefMagicOptExtension.cs)
@@ -515,4 +602,4 @@ Le site turc SroCave a décompressé les mêmes valeurs `Param` 32-bit (4 octets
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: DB vSRO dépackée (HyperbotDoc/SandSnip3r), opensro (logique décompilée), elitepvpers, silkroadforums, DonanımHaber, Silkroadmania, ItemData vSRO, SroCave + vSRO.org + SroLobby (validation TR), GMS Temple (superstitions FR 2007), silkroadonline.de (DE), Fúria Brazil (PT-BR) — rapports ML_RESEARCH 2026-10*
+*Sources: DB vSRO dépackée (HyperbotDoc/SandSnip3r), opensro (logique décompilée), elitepvpers, silkroadforums, DonanımHaber, Silkroadmania, ItemData vSRO, SroCave + vSRO.org + SroLobby (validation TR), GMS Temple (superstitions FR 2007), silkroadonline.de (DE), Fúria Brazil (PT-BR) — rapports ML_RESEARCH 2026-10 ; site officiel KSRO krsilkroadcp.joymax.com (인핸서/보호석/각석/소켓석/연금약 12차+) — rapport ML_RESEARCH/RESEARCH_KO2 (2026-10)*

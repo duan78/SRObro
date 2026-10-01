@@ -8,6 +8,7 @@
 - [Warlock Skills](#-warlock-skills)
 - [Bard Skills](#-bard-skills)
 - [Cleric Skills](#⛪-cleric-skills)
+- [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026)
 - [Cooldowns et Animations Notoires](#-cooldowns-et-animations-notoires)
 - [Progression SP](#-progression-sp)
 - [Incertitudes et Versions](#-incertitudes-et-versions)
@@ -337,6 +338,28 @@ Autres curses confirmés dans les données serveur (eSRO) et forums : **Dull** (
 
 ---
 
+---
+
+## 🇰🇷 Contenu KSRO (2011-2026)
+
+> **Noms coréens officiels (269 skills)** — le **calculateur de skills officiel** du site KSRO (https://krsilkroadcp.joymax.com/gamedata/skill/skillCalculator.asp) embarque la table complète `skillName["CODENAME"] = "nom coréen"` de la race européenne : **269 skills** codename ↔ nom KR, exploitable pour un extract complet (il inclut aussi `skillRank`, le nombre de niveaux par skill, jusqu'à 30 pour certains rangs de buff). Rapport : [ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §4](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md). Caps KR : 120 (2011) → 125/130 (2014/2015) → 140 (2018, inchangé 2026) — le plafond EU « 2 × niveau » n'est pas re-publié au-delà de 240.
+
+Échantillon représentatif par classe (extrait de la table officielle, codename → nom KR) :
+
+| Classe | Codename → nom KR officiel |
+|---|---|
+| Warrior | WARRIOR_ONEHANDA_STRIKE_A **슬래쉬** · WARRIOR_ONEHANDA_CRITICAL_A **버서커** · WARRIOR_TWOHANDA_CHARGE_A **차지 스윙** · WARRIOR_DUALA_WHIRLWIND_B **크루셜 러쉬** · WARRIOR_FRENZYA_TOUNT_AREA_A **하울링 샤우트** |
+| Rogue | ROG_STEALTHA_HIDING_A **스텔스** · ROG_BOWA_POWER_A **파워 샷** · ROG_DAGGERA_CHAIN_A **스피닝** · ROG_POISONA_FIELD_B **베인 트랩** · ROG_TRANSFORMA_MASK_A **몬스터 마스크** |
+| Wizard | WIZARD_COLDA_POINT_A **아이스 볼트** · WIZARD_FIREA_POINT_B **메테오** · WIZARD_PSYCHICA_LIGHT_B **체인라이트닝** · WIZARD_EARTHA_AREA_B **어스 퀘이크** · WIZARD_SPIRITP_FIRE_A **파이어 스피릿** |
+| Warlock | WARLOCK_DOTA_POISON_B **톡신 인베이젼** · WARLOCK_BLOODA_LIFEDRAIN_B **뱀파이어 키스** · WARLOCK_SOULA_MEZ_B **딥 슬럼버** · WARLOCK_RAZEA_STR_B **컴뱃 레비지** |
+| Bard | BARD_BATTLAA_DAMAGE_B **위어드 코드 3** · BARD_DANCEA_WARRIOR_B **댄싱 오브 파이트** · BARD_RECOVERA_MANATRANS_B **마나 브리즈 6** · BARD_SPEEDUPA_MSPEED_B **스윙 마치** |
+| Cleric | CLERIC_HEALA_GROUP_B **그룹 힐링 브리즈** · CLERIC_REBIRTHA_SPECIAL_A **리버스 오블레이션-부활** · CLERIC_BLESSA_STR_A **포스 블레싱** · CLERIC_SAINTA_ABNORMAL_A **홀리 워드** |
+
+- 💡 Les skills EU portent en Corée des **transcriptions anglo-coréennes** (파이어 볼트 = Fire Bolt), à l'exception des séries numérotées (코드 0-4 du Bard) — cohérent avec l'origine « anglaise » de la race EU.
+- ⚠️ Les codenames ci-dessus sont la **clé universelle** (identique KSRO/iSRO/vSRO) : la table officielle KR offre la couche display coréenne manquante pour les 6 masteries EU (cf. noms ZH côté TW, section Notes de structure).
+
+---
+
 ## ⏱️ Cooldowns et Animations Notoires
 
 | Skill/Phénomène | Valeur documentée | Source |
@@ -435,5 +458,5 @@ Autres curses confirmés dans les données serveur (eSRO) et forums : **Dull** (
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (révision majeure : remplacement des noms/chiffres non sourcés par les noms iSRO vérifiés et les valeurs documentées ; enrichi des noms ZH/TW officiels des masteries — recherche multilingue ML_RESEARCH ; voir section Incertitudes pour les limites)*
+*Dernière mise à jour: 2026-10-01 (révision majeure : remplacement des noms/chiffres non sourcés par les noms iSRO vérifiés et les valeurs documentées ; enrichi des noms ZH/TW officiels des masteries — recherche multilingue ML_RESEARCH ; voir section Incertitudes pour les limites ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : calculateur officiel = table codename → 269 noms KR — rapport ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §4)*
 *Sources: elitepvpers (traductions 2008), silkroadforums, SRO Valkyria, PhBot Plugins (GitHub), eSRO (GitHub), Fandom Wiki, silkroad4arab, silkroadalani ; noms ZH : wiki Bahamut + DiGeam (via ML_RESEARCH/RESEARCH_ZH.md)*

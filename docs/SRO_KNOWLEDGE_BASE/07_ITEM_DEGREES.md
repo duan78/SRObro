@@ -12,6 +12,7 @@
 - [Accessories](#-accessories)
 - [Degree Progression](#-degree-progression)
 - [Nomenclature Multilingue des Degrés](#-nomenclature-multilingue-des-degrés)
+- [🇰🇷 Contenu KSRO (2011-2026) : les degrés 11차 → 17차](#-contenu-ksro-2011-2026--les-degrés-11차--17차)
 - [FAQ](#-faq)
 - [Resources](#-resources)
 
@@ -28,6 +29,7 @@ Le système de **Degrees** classifie les équipements de Silkroad Online selon l
 - ✅ **3 skins par pièce** (variants A/B/C, ex. Copper / Wrought Copper / Refining Copper)
 - ✅ **Versions seal** (SoS/SoM/SoSun, Nova, Egypt) pour chaque degré pertinent
 - ✅ **Enhancement :** alchimiable (+1 à +12) — voir [Alchimie](05_ALCHEMY_SYSTEM.md)
+- 🇰🇷 **KSRO (service coréen, jamais fermé) :** degrés jusqu'au **17차 (17D)** — et dès le **12차 le niveau d'équipement est FIXÉ à 101** avec pénalité de maîtrise → voir la section [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026--les-degrés-11차--17차)
 
 ### Pourquoi le système de degrés ?
 - **Progression naturelle :** changer régulièrement d'équipement, look unique par degré.
@@ -55,6 +57,7 @@ Le système de **Degrees** classifie les équipements de Silkroad Online selon l
 
 > ⚠️ Les items **Egypt restent du 11e degré** (Class A/B). Le 12D/13D arrive avec le cap 120. Les niveaux exacts des pièces 12D/13D (autour de 111–120) ne sont pas publiés de façon fiable — les listes communautaires les affichent souvent « Lv 101 » par défaut.
 > ✅ **Partiellement résolu (recherche KO 2026-10)** : le **13D existait en Corée dès le 07/03/2012** (sets 13차 offerts lors de l'event « comeback » du serveur unifié 초원길) — voir [Nomenclature Multilingue](#-nomenclature-multilingue-des-degrés). Les niveaux exacts des pièces restent non publiés.
+> 🇰🇷 **Résolu côté KSRO (recherche KO2 2026-10)** : le « Lv 101 » des items 12차/13차 n'est **pas un défaut d'affichage communautaire** — le site officiel KR énonce « **12차 이상의 무기 아이템들은 착용 레벨이 101Lv로 고정** » (niveau fixe à 101 dès le 12차, remplacé par une pénalité de maîtrise) et ses tables listent bien **tous les items 11/12/13차 à Lv 101**. Le « Lv 111/114/118 » des tiers 12D du dump client iSRO/vSRO (voir [ITEMS_DATABASE.md](ITEMS_DATABASE.md)) et le « Lv 101 » officiel KSRO correspondent donc à **deux implémentations réellement différentes** du haut-niveau. Détail dans la section [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026--les-degrés-11차--17차).
 
 ---
 
@@ -78,7 +81,7 @@ Le système de **Degrees** classifie les équipements de Silkroad Online selon l
 | **12D** | ~111 → 115 | Lv 111* | Temple of Jupiter (cap 120) |
 | **13D** | ~116 → 120 | Lv 116* | Temple of Jupiter (cap 120) |
 
-\* Niveaux des sets 12D/13D non confirmés officiellement. ✅ **10D « dès le niveau 90 » confirmé** par la presse KR de 07/2007 et **13D attesté en Corée dès 03/2012** (recherche KO 2026-10) — voir [Nomenclature Multilingue](#-nomenclature-multilingue-des-degrés).
+\* Niveaux des sets 12D/13D non confirmés officiellement. ✅ **10D « dès le niveau 90 » confirmé** par la presse KR de 07/2007 et **13D attesté en Corée dès 03/2012** (recherche KO 2026-10) — voir [Nomenclature Multilingue](#-nomenclature-multilingue-des-degrés). 🇰🇷 Côté KSRO, les tables officielles listent **11차/12차/13차 tous à Lv 101** (règle du niveau fixe 12차+) — voir la section [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026--les-degrés-11차--17차).
 
 **⚠️ Corrections fréquentes à retenir :**
 - 5D ≠ niveaux 40–49 (c'est 32–37). 9D ≠ 80–89 (c'est 76–81). 11D ≠ 105–110 (c'est 101+).
@@ -322,6 +325,92 @@ Les guides chinois récents (《丝路传说手游》, 《寻梦丝路》, « �
 
 ---
 
+## 🇰🇷 Contenu KSRO (2011-2026) : les degrés 11차 → 17차
+
+> Fusion des rapports `ML_RESEARCH/RESEARCH_KO2_ITEMS.md` + `RESEARCH_KO2_CHRONO.md` (2026-10-01). Sources primaires : **site officiel KSRO** `krsilkroadcp.joymax.com` (pages EUC-KR converties manuellement — fiabilité 5), board officiel de notices, presse KR, namu.wiki (extraits, 403). Tout ce qui suit décrit le **service coréen vivant**, qui dépasse le jeu classique (iSRO cap 90-120) documenté dans le reste de ce fichier.
+
+### ⚠️ Règle majeure : dès le 12차, le niveau d'équipement est FIXÉ à 101
+
+Texte officiel de la page « système d'items » ([itemsystem_1.html](https://krsilkroadcp.joymax.com/gamedata/item/Iframe_item/itemsystem_1.html), sous [itemsystem.asp](https://krsilkroadcp.joymax.com/gamedata/item/itemsystem.asp)) :
+
+- **« 12차 이상의 무기 아이템들은 착용 레벨이 101Lv로 고정 »** — toutes les armes 12차 et au-delà ont un **niveau d'équipement fixé à 101** (un personnage 101 peut en théorie porter du 17차).
+- **« 아이템 숙련 패널티 » (pénalité de maîtrise d'item)** : les stats de l'item reçoivent une **pénalité** fonction du niveau du personnage et du 차수 porté (affichée dans le tooltip) — c'est ce système qui **remplace les anciens prérequis de niveau**.
+- **« 12차 이상의 무기는 스킬이 존재 »** : les armes 12차+ portent des **skills d'item** (UI de skill dédié, activation par clic droit / quickslot).
+- Les tables officielles d'armes/armures/bijoux confirment : **tous les items 11차, 12차 et 13차 listés sont Lv 101** ([armes CH](https://krsilkroadcp.joymax.com/gamedata/item/asia_item.asp) · [armes EU](https://krsilkroadcp.joymax.com/gamedata/item/europe_item.asp)).
+
+> 💡 **Conséquence structurelle** : le concept « degré = tranche de niveaux » (ex. 10D = 90/94/98) **meurt au 11차 côté KSRO**. À partir de là, **degré ≠ niveau** — c'est la pénalité de maîtrise qui régule la puissance.
+> ⚠️ **Conflit cross-service signalé** : le dump client iSRO/vSRO ([ITEMS_DATABASE.md](ITEMS_DATABASE.md)) montre un 12D à **111/114/118** (tiers A/B/C) et un 13D seal « Lv 121 » ; les tables officielles KR montrent 12차/13차 **Lv 101**. Les deux échelles décrivent des implémentations réellement différentes du haut-niveau — **ne pas les fusionner**.
+
+### Cartographie : jusqu'où va le KSRO ? → 17차 (D17)
+
+*(K# = index des sources du rapport `RESEARCH_KO2_ITEMS.md` §1 — toutes officielles sauf mention contraire.)*
+
+| Degré | Statut KSRO | Preuve | Source |
+|---|---|---|---|
+| 1차-10차 | Ancien jeu (tables officielles complètes 1→10) | tables armes/armures | officiel KR (K8/K9) |
+| **11차** | Socle du haut-niveau : **3 tiers par item** (normal / 무신 / 투신 — panthéon égyptien), rare unifié **혜성의 인장** | tables officielles + itemsystem_1 | officiel KR (K2/K8/K9) |
+| **12차** | **Nouveau régime** : Lv 101 fixe, item skills, enhancement **인핸서**, upgrade depuis 11차+7 | tables officielles + pages alchimie | officiel KR (K4/K5/K8/K9) |
+| **13차** | Dernier degré détaillé dans les tables officielles (armes/armures/bijoux) | tables officielles | officiel KR (K8-K11) |
+| 14차 / 15차 | **Existants** (le mall vend des 보호석 14차/15차) ; non détaillés dans la gamedata officielle | item mall | officiel KR (K13) |
+| **16차 / 17차** | **Introduits par Legend 23** (annoncé 08/05/2023, déployé ~16/05/2023) ; 보호석 16/17차 + 봉인구 16/17차 (32 실크) au mall | item mall + accueil officiel + namu | officiel KR (K1/K13) + namu (K19) |
+| 18차+ | **Aucune trace** côté officiel | — | item mall (K13) |
+
+### Timeline des degrés côté KSRO (rapport CHRONO)
+
+| Degré | Date KR | Preuve |
+|---|---|---|
+| 11차 | **Date exacte non publiée** — associé à l'ère Legend 9/10 (Legend 9 KR du 09/09/2009, cap 105, Alexandrie et **sets 11차 égyptisants**) | board KR + RESEARCH_KO §2.3 ; l'hypothèse « 2011 ? » reste ouverte |
+| **12차** | **04-05/2011** : « 아이템 성장 시스템 » ouvert le 27/04/2011, puis events « 12차 아이템 성장 체험 » (mai 2011) | board officiel KR (notices N°3862/3869/3874, réf 1060-1064, 2011-04/05 — [news_list](https://krsilkroadcp.joymax.com/news/news_list.asp?sID=1)) |
+| **13차** | **12/2011** : event « [13차 아이템 업데이트] 기념 » (notice du 28/12/2011) ; sets 13차 offerts au comeback de 초원길 (07/03/2012) | board KR (N°4031, réf 1145) + [경향게임스](https://www.khgames.co.kr/news/articleView.html?idxno=45796) |
+| **14차** | **07-08/2014** : event « 14차 아이템 업데이트 기념 » (notice du 14/08/2014, avec items 14D été 2014) | board KR (N°4491, réf 1339) |
+| 15차 | **Non daté précisément** — 보호석 15차 vendus au mall ; l'annonce détaillée de Legend 23 évoque le cycle « 15→17차 » (⚠️ incertitude signalée : namu attribue les 16-17차 à Legend 23) | item mall + [srolobby](https://www.srolobby.com/konular/silkroad-online-legend-23-update.3038) + namu |
+| **16차 / 17차** | **Legend 23 (05/2023)** : 파멸의 성전 + 비밀의 무덤 + items 16-17차 + Ultimate items | annonce kSRO 08/05/2023 (reprise [elitepvpers](https://www.elitepvpers.com/forum/silkroad-online/5137882-…-legend-23-a.html)) + namu ~16/05/2023 |
+
+> 📜 namu.wiki (extrait) : « 레전드23이 업데이트 되면서 16~17차 장비가 나왔는데 과거 실크로드는 12-13-14-15차 장비를 일정 강화 수치가 되면 업그레이드 할 수 있는 방식으로 [운영했다] » — **avant Legend 23, on montait ses pièces 12→13→14→15차 par upgrade** (montée de degré, voir [05_ALCHEMY_SYSTEM.md](05_ALCHEMY_SYSTEM.md)) ; depuis Legend 23, les 16-17차 s'obtiennent par drops/box.
+
+### 11차 = 3 tiers avec noms de dieux égyptiens (normal / 무신 / 투신)
+
+Chaque type d'arme 11차 existe en **3 versions** (toutes Lv 101), les 2 supérieures portant des noms de dieux égyptiens — ordre de puissance vérifié : **normal < 무신 < 투신** ([tables officielles CH](https://krsilkroadcp.joymax.com/gamedata/item/asia_item.asp) / [EU](https://krsilkroadcp.joymax.com/gamedata/item/europe_item.asp)) :
+
+| Type | 11차 normal | 11차 **무신** (« dieu martial ») | 11차 **투신** (« dieu du combat ») |
+|---|---|---|---|
+| CH sword (한손검) | 혼령 추혼검 | **아슈(무신)** — Shu, dieu de l'air | **아조스(투신)** — Anubis |
+| CH blade (한손도) | 풍신 진천 금강도 | **몬트센(무신)** — Montu, dieu de la guerre | **수테크(투신)** — Set |
+| CH spear (창) | 전사의 비전창 | **브레커스(무신)** | **라그니우스(투신)** — Selket |
+| CH glaive (대도) | 호력 봉인도 | **세크메티아(무신)** — Sekhmet | **티폰(투신)** — Typhon/Haroeris |
+| CH bow (활) | 황풍 비호대궁 | **누트리타(무신)** — Nut | **수낙트라(투신)** — Neith |
+| CH shield (방패) | (normal) | **세드온(보호)** — Sed | **세이케스(수호)** — Selket |
+| EU (panthéon) | — | Shu, Montu, Nut, Geb, Imutes, Ma'at, Isis, Sed, Bastet… | Anubis, Set, Selket, Sekhmet, Neith, Horus, Nephtys, Apepi… |
+
+> ⚠️ **Interprétation à signaler** : la nomenclature iSRO « Egyptian A/B » n'existe pas telle quelle côté KR ; l'équivalent fonctionnel **probable** est la paire de tiers **무신/투신** (dieux égyptiens + ordre de puissance + bestiaire du Job Temple). **Inférence, pas un texte officiel** — aucun document bilingue trouvé.
+
+### Noms KR officiels : armes et sets 12차/13차 (thèmes dragon / tempête)
+
+Toutes **Lv 101** (règle ci-dessus). Format armes : attaque physique ~ / magique ~. Tableaux complets (armes EU incluses, stats détaillées, bijoux) dans [ITEMS_DATABASE.md](ITEMS_DATABASE.md#-noms-officiels-coréens-11-13-service-ksro).
+
+**Armes 12차 — thème DRAGON** : CH sword **마신검** (1720~1939 / 3577~4112), blade **용비도** (2236~2570 / 2752~3102), spear **황룡뇌극** (1795~2137 / 3761~4596), glaive **참장봉신비도** (2351~2873 / 2872~3419), bow **용왕장궁** (1933~2369 / 3093~3790), shield **룡 두갑 방패** ; EU **세이튼스피리트** (1H), **데모고르곤** (2H), **데빌스레이닝** (dual axe), **인페르노토쳐** (dague), **어비스 레인** (arbalète), **이블 소울 라이징** (staff), **카오틱어비스** (warlock), **헤븐스셀베이션** (cleric), **데몬즈하울** (harpe).
+
+**Armes 13차 — thème TEMPÊTE / dragon céleste** : CH sword **청룡검** (2275~2565 / 4733~5441), blade **참룡도**, spear **용섬극**, glaive **폭참마도**, bow **용마궁** ; EU **드래곤 페나**, **디스트로이어**, **그레이트 듀엘**, **드래곤 피어**, **드래곤 브레스**, **드래고닉 소울**, **어비스 타이푼**, **허리케인 랩소디**.
+
+**Sets** (voir [06_SEAL_EQUIPMENT.md](06_SEAL_EQUIPMENT.md) pour les grades et [ITEMS_DATABASE.md](ITEMS_DATABASE.md#-noms-officiels-coréens-11-13차-service-ksro) pour les stats) :
+
+| Degré | Sets CH | Sets EU | Bijoux |
+|---|---|---|---|
+| **11차** (effets « 파멸 2/4/6 ») | **아주라이트** (Azurite, armor) · **케프타** (Khepri) · **아페피타** (Apepi) | idem par ligne (Azurite→heavy, Khepri→light, Apepi→robe) + accessoires **텍타이트/아문** (CH), **플레나이트/이시스** (EU) | échangeables contre des **진은주화** |
+| **12차** (dragon) | **룡위 보문** (armor) · **봉황룡** (protector) · **천 촉룡** (garment) | **헤븐** (heavy) · **엔젤** (light) · **디보션** (robe) | **여의주반지/귀걸이** (CH), **드래곤링/이어링** (EU) |
+| **13차** (tempête) | **템페스트** (armor) · **프로셀라** (protector) · **브리즈** (garment) | **템페스트** · **프로셀라** · **브리즈** | **폭풍석 반지/귀걸이** (CH), **블루 스톰 링/이어링** (EU) |
+
+- Les sets 11차 portent des **effets de set « 파멸 (2/4/6) »** (« Perdition ») : 2 pièces = 세트 강화 +1 (bonus d'enhancement +1) ; 4 pièces = 세트 강화 +1 et **올저항 +10** (+10 toutes résistances) ; 6 pièces = 세트 강화 +2 et 올저항 +10 (page officielle [set_item.asp](https://krsilkroadcp.joymax.com/gamedata/item/set_item.asp)).
+- Les tables officielles s'arrêtent au **13차** ; les noms KR des sets 14-17차 ne sont pas publiés (seuls des noms EN communautaires existent pour le 17차 : Platina/Orbis/Tonitrus… — non officiel, voir [ITEMS_DATABASE.md](ITEMS_DATABASE.md)).
+
+### Pour aller plus loin (KSRO)
+
+- **Seals et raretés 12차+** (혜성의 인장, 매직/레어/레전드) → [06_SEAL_EQUIPMENT.md](06_SEAL_EQUIPMENT.md)
+- **Alchimie 12차+** (인핸서, 보호석, montée de degré 각석) → [05_ALCHEMY_SYSTEM.md](05_ALCHEMY_SYSTEM.md)
+- Rapports sources : `ML_RESEARCH/RESEARCH_KO2_ITEMS.md` (§2-§7) et `ML_RESEARCH/RESEARCH_KO2_CHRONO.md` (§3, §5.8)
+
+---
+
 ## ❓ FAQ
 
 ### Q: Puis-je porter un équipement d'un degré supérieur à mon niveau ?
@@ -331,7 +420,10 @@ Les guides chinois récents (《丝路传说手游》, 《寻梦丝路》, « �
 **R:** Non — ~6 niveaux de pièces par degré, avec des trous entre degrés (38–41, 48–51, 58–63, 70–75, 82–89, 96–100). C'est pour ça qu'un SOX du degré inférieur reste pertinent dans les trous.
 
 ### Q: Tous les degrés existent-ils sur tous les serveurs ?
-**R:** Non : cap 80 → jusqu'à 8D ; cap 110 → jusqu'à 11D (+Egypt) ; cap 120 → 12D/13D (Temple of Jupiter).
+**R:** Non : cap 80 → jusqu'à 8D ; cap 110 → jusqu'à 11D (+Egypt) ; cap 120 → 12D/13D (Temple of Jupiter). 🇰🇷 Sur le service coréen (toujours actif), les degrés vont jusqu'au **17차** (Legend 23, 05/2023) — voir la section [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026--les-degrés-11차--17차).
+
+### Q: 🇰🇷 Pourquoi les items 12차+ KSRO sont-ils tous « Lv 101 » ?
+**R:** Par règle officielle : dès le 12차, le niveau d'équipement est **fixé à 101** (« 착용 레벨이 101Lv로 고정 ») et la puissance est régulée par la **pénalité de maîtrise d'item (아이템 숙련 패널티)** — plus le 차수 est élevé face à un personnage de niveau modeste, plus la pénalité est forte. Les armes 12차+ portent en outre des **skills d'item**. Le degré ne « vaut » donc plus une tranche de niveaux.
 
 ### Q: Les items Egypt sont-ils du 12e degré ?
 **R:** Non : Egypt = **D11** (Class A/B), au-dessus du Seal of Nova D11. Le 12D/13D vient ensuite avec le cap 120.
@@ -378,6 +470,17 @@ Les guides chinois récents (《丝路传说手游》, 《寻梦丝路》, « �
 - [wiki DiGeam — 16套装備 : le service TW est allé jusqu'au 16e set (TW)](https://srowiki.digeam.com/16%E5%A5%97%E8%A3%9D%E5%82%99)
 - [17173 — 暗金篇 : seal d'arme = 1er tier (CN, 2006)](http://sro.17173.com/content/2006-05-13/1147524473.shtml)
 
+### 🇰🇷 Officiel KSRO — degrés 11-17차 (recherche KO2 2026-10)
+- [Site officiel KSRO — système d'items : Lv 101 fixe 12차+, pénalité de maîtrise, item skills](https://krsilkroadcp.joymax.com/gamedata/item/Iframe_item/itemsystem_1.html) (page iframe de [itemsystem.asp](https://krsilkroadcp.joymax.com/gamedata/item/itemsystem.asp))
+- [Officiel — armes CH 1차→13차 (stats complètes)](https://krsilkroadcp.joymax.com/gamedata/item/asia_item.asp) · [armes EU 1차→13차](https://krsilkroadcp.joymax.com/gamedata/item/europe_item.asp)
+- [Officiel — sets 11차 et effets 파멸 2/4/6](https://krsilkroadcp.joymax.com/gamedata/item/set_item.asp)
+- [Officiel — item mall ARCHEMY/ETC : 보호석 12→17차, 특수각석 11→14차 (prix en 실크)](https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?shoptype1=ARCHEMY&Shoptype2=ETC)
+- [Officiel — accueil : 봉인구 16/17차 « 봉인 해제용 » 32 실크](https://krsilkroadcp.joymax.com/)
+- [Officiel — board de notices : events 12차 (04-05/2011), 13차 (12/2011), 14차 (08/2014)](https://krsilkroadcp.joymax.com/news/news_list.asp?sID=1)
+- [경향게임스 — sets 13차 offerts au comeback 초원길 (KO, 2012)](https://www.khgames.co.kr/news/articleView.html?idxno=45796)
+- [SroLobby — Legend 23 Update : 16D/17D, Ultimate items (EN, reprenant l'annonce KR)](https://www.srolobby.com/konular/silkroad-online-legend-23-update.3038) · [elitepvpers — annonce kSRO du 08/05/2023](https://www.elitepvpers.com/forum/silkroad-online/5137882-…-legend-23-a.html)
+- Rapports : `ML_RESEARCH/RESEARCH_KO2_ITEMS.md` (§2-§7) · `ML_RESEARCH/RESEARCH_KO2_CHRONO.md` (§3, §5.8)
+
 ---
 
 ## 📚 Voir aussi
@@ -398,4 +501,4 @@ Les guides chinois récents (《丝路传说手游》, 《寻梦丝路》, « �
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: silkroadonline.fandom.com (Armor), guildalgarb.wordpress.com (sets CH), silkroadonline.wiki (DB items v1_657), annonces officielles Lv.120, elitepvpers, IGN Guidebook, Inven/TGDaily/Ruliweb/GameMeca (KO), 新浪/九游/17173/DiGeam (ZH) — rapports ML_RESEARCH 2026-10*
+*Sources: silkroadonline.fandom.com (Armor), guildalgarb.wordpress.com (sets CH), silkroadonline.wiki (DB items v1_657), annonces officielles Lv.120, elitepvpers, IGN Guidebook, Inven/TGDaily/Ruliweb/GameMeca (KO), 新浪/九游/17173/DiGeam (ZH) — rapports ML_RESEARCH 2026-10 ; site officiel KSRO krsilkroadcp.joymax.com (degrés 11-17차, Lv 101 fixe, noms KR) — rapport ML_RESEARCH/RESEARCH_KO2 (2026-10)*

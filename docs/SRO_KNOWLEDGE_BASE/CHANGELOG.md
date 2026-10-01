@@ -62,7 +62,23 @@ Ce document track toutes les modifications apportées à la documentation SRO_KN
 - Formules empiriques serveur Troy 2006 + mesures XP/SP par gap au monstre près (DE)
 - Pets : HGP <30% → stats ÷2, prix Silk d'époque, max 2 pets (DE) ; mythes d'alchimie FR/DE documentés et débunkés
 
-**Nouveaux contenus :** noms ZH/KR des villes, uniques, régions, sets et armes ; glossaires multilingues enrichis (~430 entrées sourcées : 73 KO, 117 ZH, 69 TR, 74 DE, 43 PT, 35 FR) ; chronologie coréenne distincte (cap 105 KR inédit) ; services régionaux documentés (BR, CN, TW) ; 4 conflits de sources signalés sans trancher.
+---
+
+## 🇰🇷 2026-10-01 (3) — Deep-Dive KSRO (service coréen 2009-2026)
+
+### 4 rapports KO2 + fusion dans 20 fichiers (sections marquées « 🇰🇷 KSRO »)
+
+**Méthode :** 4 campagnes coréennes (~70 requêtes + décodage EUC-KR du site officiel krsilkroadcp.joymax.com, 37 notices officielles indexées) → rapports `ML_RESEARCH/RESEARCH_KO2_CHRONO/WORLD/ITEMS/SYSTEMS.md`, fusionnés dans la base sous sections dédiées (le contenu classique iSRO reste intouché).
+
+**Chronologie complète reconstituée :** Legend IX Alexandrie (09/09/2009, cap 105) → Legend X FGW (28/07/2010, cap 110) → Legend XI renouveau métiers (19/01/2011) → items 12차 (05/2011) → Legend XII Temple de Jupiter (22/06/2011, cap 120) → fusion serveurs 초원길 (07/03/2012) → Rebirth (27/06/2012) → Arabie + Bagdad (05/2014, cap 125) → 14차 (2014) → Arabian Shore (2015, cap 130) → Shambhala (2018, cap 140 — conflit avec mall 121-125 documenté) → renommage Wemade Max (25/03/2021) → Legend 23 파멸과 비밀 (05/2023, 16/17차) → auto-combat (2025) → reliques 유물 (2025). Service toujours actif en 2026.
+
+**Corrections majeures :**
+- « Silkroad R » coréen = le patch **Rebirth (2012)**, pas un service séparé
+- **« Seal of Nova » = nom iSRO** ; le rare 11D coréen = **혜성의 인장 (Seal of Comet)** ; « Aquila » n'existe pas côté KR (banni)
+- Dès le **12차, niveau d'équipement fixé à 101** + pénalité de maîtrise (pas un défaut du dump)
+- « Hebe/Arges/Kali/Rhea » = serveurs iSRO, pas des uniques (note préventive)
+
+**Ajouts clés :** degrés jusqu'au **17차** ; alchimie 12D+ (인핸서 Enhancers, 보호석, 각석 upgrade de degré, blues non hérités) ; hiérarchie Magic/Rare/Legend au 12D+ ; zones 106-140 (Dimension Miroir, Bagdad, Shambhala Ice/Fire Temple) et 8 donjons ; chaîne de boss post-Medusa (Job Temple → Jupiter → Bagdad → raid 2023) ; 45 monstres officiels du Temple de Jupiter ; **base skills officielle : 64 séries/296 skills CH** (Force passée à 12 séries) + 269 noms KR EU ; 12 fellows ; calendrier events 2022-2026 ; 5 forteresses KR ; academy system ; monétisation 2026.
 
 ---
 

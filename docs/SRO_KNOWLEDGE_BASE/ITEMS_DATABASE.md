@@ -2,12 +2,14 @@
 
 > 📦 Base de données des items de Silkroad Online reconstruite à partir d'un **dump `_RefItem` de client v1.188+ (14 318 items, CH + EU, 1D-13D)**, des stats brutes par pièce (sro-world.de.tl, silkroadkopat.tr.gg), du wiki Fandom et des docs techniques (openroad / SilkroadDoc).
 > Toutes les tables ci-dessous donnent : degré, niveaux des 3 tiers (A/B/C), noms officiels des tiers, et **ID `_RefItem` du tier A**.
+> 🇰🇷 Le service coréen (jamais fermé, degrés jusqu'au 17차) n'est pas dans ce dump : ses noms officiels 11-13차 sont dans la section [🇰🇷 Noms officiels coréens 11-13차](#-noms-officiels-coréens-11-13차-service-ksro) ; les 14-17차 exigent une extraction client.
 
 ## 📋 Table des Matières
 - [Structure _RefItem (TypeID, pays, IDs)](#-structure-refitem)
 - [Armes Chinoises](#-armes-chinoises)
 - [Caractéristiques de Combat des Armes](#-caractéristiques-de-combat-des-armes)
 - [Noms Originels des Armes et Accessoires (ZH/KR)](#-noms-originels-des-armes-et-accessoires-zhkr)
+- [🇰🇷 Noms officiels coréens 11-13차 (service KSRO)](#-noms-officiels-coréens-11-13차-service-ksro)
 - [Armes Européennes](#-armes-européennes)
 - [Boucliers](#-boucliers)
 - [Accessoires (Anneaux / Colliers / Boucles)](#-accessoires)
@@ -237,6 +239,108 @@ SRO n'expose pas de stat « vitesse d'attaque » par item : chaque type d'arme a
 - Ordre physique → magique des 5 armes CN selon la communauté : **大刀 → 小刀 → 弓 → 剑 → 枪**.
 - Noms d'items 10D attestés côté KR : **파천검** = la série « …Break Heaven Sword » (sword CH 10D, motif tigre du zodiaque) ; **다크모나크** = « Taurus Dark Monarch » (épée 1M EU 10D, motif Taureau).
 - Sources : https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山 (Bahamut, TW) · https://www.inven.co.kr/webzine/news/?news=2285 (Inven, KO) · https://www.tgdaily.co.kr/news/articleView.html?idxno=127275 (TGDaily, KO).
+
+---
+
+## 🇰🇷 Noms officiels coréens 11-13차 (service KSRO)
+
+> Rapport `ML_RESEARCH/RESEARCH_KO2_ITEMS.md` (2026-10-01, §5-§7) — extraction des **tables officielles du site KSRO** (`krsilkroadcp.joymax.com`, EUC-KR converti, fiabilité 5) : [armes CH](https://krsilkroadcp.joymax.com/gamedata/item/asia_item.asp) · [armes EU](https://krsilkroadcp.joymax.com/gamedata/item/europe_item.asp) · [sets](https://krsilkroadcp.joymax.com/gamedata/item/set_item.asp) · protecteurs/accessoires 12-13차 (iframes `Iframe_item/asia_protector…`, `europe_accessory…` — source K11 du rapport). ⚠️ Ces tables décrivent le **service coréen vivant** : **tous les items 11/12/13차 y sont Lv 101** (règle du niveau fixe 12차+, voir [07_ITEM_DEGREES.md](07_ITEM_DEGREES.md#-contenu-ksro-2011-2026--les-degrés-11차--17차)) — à ne pas confondre avec les niveaux 111-121 du dump iSRO/vSRO ci-dessus.
+
+### Armes chinoises 11차 — 3 tiers, panthéon égyptien (toutes Lv 101)
+
+Format : attaque physique ~ / attaque magique ~. Ordre de puissance vérifié : **normal < 무신 < 투신**.
+
+| Type | 11차 normal | 11차 **무신** | 11차 **투신** |
+|---|---|---|---|
+| 한손검 (sword) | 혼령 추혼검 (1434~1616 / 2440~2804) | **아슈** — Shu, dieu de l'air (1754~1978 / 2986~3432) | **아조스** — Anubis (1857~2094 / 3161~3633) |
+| 한손도 (blade) | 풍신 진천 금강도 | **몬트센** — Montu, dieu de la guerre | **수테크** — Set |
+| 창 (spear) | 전사의 비전창 | **브레커스** | **라그니우스** — Selket |
+| 대도 (glaive) | 호력 봉인도 | **세크메티아** — Sekhmet | **티폰** — Typhon/Haroeris |
+| 활 (bow) | 황풍 비호대궁 | **누트리타** — Nut | **수낙트라** — Neith |
+| 방패 (shield) | (normal) bloc 213.7 / 342.0 | **세드온(보호)** — Sed | **세이케스(수호)** — Selket |
+
+> ⚠️ **Interprétation signalée** : 무신/투신 = équivalent **probable** des couches iSRO « 11D normal / Seal of Nova / Egyptian A-B » (dieux égyptiens + ordre de puissance + Job Temple) — inférence, pas un texte officiel. Les armes EU 11차 suivent le même schéma (무신 : Shu, Montu, Nut, Geb, Imutes, Ma'at, Isis, Sed, Bastet… ; 투신 : Anubis, Set, Selket, Sekhmet, Neith, Horus, Nephtys, Apepi…).
+
+### Armes 12차 — thème DRAGON (« 청룡의 뼈 », « 용왕 », « 마왕석 ») — Lv 101
+
+| Race | Type | Nom KR | Stats (phys / mag) |
+|---|---|---|---|
+| CH | 한손검 | **마신검** (épée-démon céleste, os de dragon bleu) | 1720~1939 / 3577~4112 |
+| CH | 한손도 | **용비도** (« le dragon recrache une lame tous les 100 ans ») | 2236~2570 / 2752~3102 |
+| CH | 창 | **황룡뇌극** (os du dragon jaune du Huang He) | 1795~2137 / 3761~4596 |
+| CH | 대도 | **참장봉신비도** (os du 광룡 de 육합도인) | 2351~2873 / 2872~3419 |
+| CH | 활 | **용왕장궁** (os du dragon des mers du palais du Dragon) | 1933~2369 / 3093~3790 |
+| CH | 방패 | **룡 두갑 방패** (crâne du dragon des eaux) | bloc 284.9 / 455.8 |
+| EU | 원핸드소드 | **세이튼스피리트** | 2564~3134 |
+| EU | 투핸드소드 | **데모고르곤** | 2564~3134 |
+| EU | 듀얼액스 | **데빌스레이닝** | 2564~3134 |
+| EU | 대거 | **인페르노토쳐** | 2564~3134 |
+| EU | 크로스보우 | **어비스 레인** | 2564~3134 |
+| EU | 스태프 | **이블 소울 라이징** | 4103~5014 (mag) |
+| EU | 워락로드 | **카오틱어비스** | 4103~5014 (mag) |
+| EU | 클레릭로드 | **헤븐스셀베이션** | 4103~5014 (mag) |
+| EU | 하프 | **데몬즈하울** | 4103~5014 (mag) |
+
+### Armes 13차 — thème TEMPÊTE / dragon céleste (« 승천하는 용 ») — Lv 101
+
+| Race | Type | Nom KR | Stats (phys / mag) |
+|---|---|---|---|
+| CH | 한손검 | **청룡검** (« le vent fait danser le dragon ») | 2275~2565 / 4733~5441 |
+| CH | 한손도 | **참룡도** (« coupe même les dragons ») | 2958~3400 / 3641~4104 |
+| CH | 창 | **용섬극** (dragon ascendant) | 2375~2827 / 4976~6082 |
+| CH | 대도 | **폭참마도** | 3110~3801 / 3800~4524 |
+| CH | 활 | **용마궁** (flèche sortie de la gueule du dragon) | 2558~3135 / 4092~5015 |
+| EU | 원핸드소드 | **드래곤 페나** | 3393~4147 |
+| EU | 투핸드소드 | **디스트로이어** | 3393~4147 |
+| EU | 듀얼액스 | **그레이트 듀엘** | 3393~4147 |
+| EU | 대거 | **드래곤 피어** (dent de dragon) | 3393~4147 |
+| EU | 크로스보우 | **드래곤 브레스** | 3393~4147 |
+| EU | 스태프 | **드래고닉 소울** | 5428~6635 (mag) |
+| EU | 워락로드 | **어비스 타이푼** | 5428~6635 (mag) |
+| EU | 하프 | **허리케인 랩소디** | 5428~6635 (mag) |
+
+> Ordre de puissance vérifié : **11차 normal < 12차 normal < 11차 투신 (phys)** — le 12차 normal dépasse le 11차 normal en magie mais reste sous le tier 투신 en physique (ex. sword : 마신검 1720~1939 phys vs 아조스 1857~2094). Cohérent avec le constat iSRO « 12D plus fort que 11D normal, plus faible que certains EGY 11D ».
+
+### Sets et bijoux 11-13차
+
+**11차** (échangeables contre des **진은주화**, « pièces d'argent véritable » — monnaie dédiée ni achetable ni droppée) :
+
+| Set | Cible | Thème officiel | Set effect officiel |
+|---|---|---|---|
+| **아주라이트** (Azurite) | CH 갑옷 + EU 중갑 (heavy) | « pierre sacrée de 폭풍의 사막 » | **파멸(2/6)** : 세트 강화 +1 · **파멸(4/6)** : 세트 강화 +1, 올저항 +10 · **파멸(6/6)** : 세트 강화 +2, 올저항 +10 |
+| **케프타** (Khepri) | EU 경갑 (light) | carapace du scarabée Khepri | 파멸 2/4/6 (idem) |
+| **아페피타** (Apepi/Apophis) | EU 로브 (robe) | peau du serpent Apepi | 파멸 2/4/6 (idem) |
+| **텍타이트** (Tektite) | accessoires CH | « roche mère de l'univers » | (2/4) 세트 강화 +1 · (4/4) +2 |
+| **아문** (Amun) | accessoires CH | Amun, dieu du ciel/créateur | (2/4) 세트 강화 +2 · (4/4) +4 |
+| **플레나이트** | accessoires EU | « lucidité qui transperce le vrai » | (2/4) +1 · (4/4) +2 |
+| **이시스** (Isis) | accessoires EU | bénédiction d'Isis | (2/4) +2 · (4/4) +4 |
+
+*(세트 강화 = niveaux d'enhancement offerts par le set ; 올저항 +10 = +10 toutes résistances. Exemples : 아주라이트 아머 (EU heavy chest) 274.1/358.8, 케프타 메일 249.2/398.7, 아페피타 로브 224.3/438.6, 텍타이트/아문 반지 absorb 23.0/23.0.)*
+
+**12차 (dragon) et 13차 (tempête)** — exemples de plastrons (pdef/mdef) :
+
+| Race/type | 12차 | Exemple chest 12차 | 13차 | Exemple chest 13차 |
+|---|---|---|---|---|
+| CH 갑옷 (armor) | **룡위 보문** | 상갑 364.8 / 477.5 | **템페스트** | 상갑 482.0 / 631.0 |
+| CH 호구 (protector) | **봉황룡** (dragon-phénix) | — | **프로셀라** (Procella, « vent impétueux ») | — |
+| CH 도복 (garment) | **천 촉룡** (dragon du Shu) | 상의 298.5 / 636.7 | **브리즈** (Breeze) | 상의 394.4 / 841.4 |
+| EU 중갑 (heavy) | **헤븐** (Heaven) | 플루티드아머 364.8 / 477.5 | **템페스트** | 아머 482 / 631 |
+| EU 경갑 (light) | **엔젤** (Angel) | 플루티드메일 331.6 / 530.6 | **프로셀라** | 메일 438.2 / 701.2 |
+| EU 로브 (robe) | **디보션** (Devotion) | 로브 298.5 / 583.7 | **브리즈** | 로브 394.4 / 771.3 |
+| Bijoux CH | **여의주반지 / 여의주귀걸이** (perle du dragon ; 반지 absorb 25.3/25.3) | — | **폭풍석 반지/귀걸이** (« pierre de tempête ») | — |
+| Bijoux EU | **드래곤링 / 드래곤이어링** | — | **블루 스톰 링/이어링** (Blue Storm) | — |
+
+### ⚠️ 14-17차 : extraction client requise
+
+- Les tables officielles KSRO s'arrêtent au **13차**. Au-delà, l'existence des degrés est prouvée par l'[item mall](https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?shoptype1=ARCHEMY&Shoptype2=ETC) (보호석 14→17차, 특수각석 11→14차) et l'[accueil officiel](https://krsilkroadcp.joymax.com/) (봉인구 16/17차, 32 실크) — **mais aucun nom/stat officiel des items 14-17차 n'est publié** : extraction du client requise.
+- Les noms EN des sets 17차 qui circulent (CH **Platina/Orbis/Tonitrus**, armes « Tiger Divine Sword… », EU « Draco Cornu, Packers Ictus, Atrox Afer… », accessoires **Gold Lion/Holy Lord**) viennent d'un post [SroLobby](https://www.srolobby.com/konular/silkroad-online-silkroad-box-17-degree-item-drop-rates.4434) (fiabilité 3) — **non officiel**, à ne pas importer comme données KR.
+- Taux de la Silkroad Box 17차 (armes Legend 0,0003 % / Rare 0,0009 % / Magic 0,003 %) : mêmes réserves — dérivés KR selon le post, non officiels.
+
+### 🐾 Devil spirits tardifs (item mall KSRO 2026)
+
+- **12 소환 스크롤** (devil spirits / growling) vendus au [mall PET/GROWTH](https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?Shoptype1=PET&Shoptype2=GROWTH), **55 실크 chacun** : **블러드 아머 다이노, 에이션트 트라브 베어, 옐로우 스파클 오트리슈, 루비노 피닉스, 라바 로어 하운드, 하프문 재규어, 실버 백, 다크 그리핀, 크록스, 나이트 팽, 골드 혼, 소울 테일**.
+- Recoupement EN (fiabilité 2) : quête Devil Spirit liée au Roc lv 100 ; **+3~+5 change le devil skill** (+25 % dégâts / +15 % MS au +5) ; Devil vs Angel = mêmes stats, look différent. Voir aussi les grades A/S documentés plus haut.
+- Le mall statique 2026 ne vend **aucun avatar d'apparence** (stands de stall uniquement) — les avatars passent par les box/événements (incertitude : aucune liste officielle KR d'avatars tardifs).
 
 ---
 
@@ -677,6 +781,13 @@ Les prix « marché » (stalls) dépendent du serveur et de la rareté (Seal, +X
 - [Kopazar — Silkroad Online Gold (marché RMT TR)](https://www.kopazar.com/silkroad-online-gold)
 - [SilkroadPazar — annonces items/gold TR](https://www.silkroadpazar.com)
 
+### 🇰🇷 Officiel KSRO — tables d'items 11-13차 (recherche KO2 2026-10)
+- [Armes CH 1차→13차 (stats complètes, 6 pages)](https://krsilkroadcp.joymax.com/gamedata/item/asia_item.asp) · [Armes EU 1차→13차 (9 pages)](https://krsilkroadcp.joymax.com/gamedata/item/europe_item.asp)
+- [Sets 11차 + accessoires (effets 파멸 2/4/6)](https://krsilkroadcp.joymax.com/gamedata/item/set_item.asp) · [Système d'items : Lv 101 fixe 12차+, tiers 무신/투신](https://krsilkroadcp.joymax.com/gamedata/item/Iframe_item/itemsystem_1.html)
+- [Item mall — devil spirits tardifs (PET/GROWTH, 55 실크)](https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?Shoptype1=PET&Shoptype2=GROWTH) · [Item mall — 보호석 12→17차 / 특수각석](https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?shoptype1=ARCHEMY&Shoptype2=ETC)
+- [SroLobby — noms EN sets 17D + taux box (NON officiel)](https://www.srolobby.com/konular/silkroad-online-silkroad-box-17-degree-item-drop-rates.4434)
+- Rapport : `ML_RESEARCH/RESEARCH_KO2_ITEMS.md` (§5-§7, §14-§15, §17)
+
 ---
 
 ## 📚 Voir aussi
@@ -689,4 +800,4 @@ Les prix « marché » (stalls) dépendent du serveur et de la rareté (Seal, +X
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: dump _RefItem client v1.188+ (14 318 items CH+EU 1D-13D), sro-world.de.tl, silkroadkopat.tr.gg, Fandom wiki, openroad (docs formats v1.188), SilkroadDoc, elitepvpers, Bahamut (ZH), Inven/TGDaily (KO), Klasgame/Kopazar/SilkroadPazar (marché TR) — rapports ML_RESEARCH 2026-10*
+*Sources: dump _RefItem client v1.188+ (14 318 items CH+EU 1D-13D), sro-world.de.tl, silkroadkopat.tr.gg, Fandom wiki, openroad (docs formats v1.188), SilkroadDoc, elitepvpers, Bahamut (ZH), Inven/TGDaily (KO), Klasgame/Kopazar/SilkroadPazar (marché TR) — rapports ML_RESEARCH 2026-10 ; tables officielles KSRO krsilkroadcp.joymax.com (noms KR 11-13차, tiers 무신/투신, sets 파멸, devil spirits 2026) — rapport ML_RESEARCH/RESEARCH_KO2 (2026-10)*

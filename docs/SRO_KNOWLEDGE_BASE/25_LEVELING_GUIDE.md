@@ -13,6 +13,7 @@
 - [Level 60-80: Taklamakan](#-level-60-80-taklamakan)
 - [Level 70-100: Roc Mountain et Tombe de Qin-Shi](#-level-70-100-roc-mountain-et-tombe-de-qin-shi)
 - [Level 90-120: Alexandrie et Job Temple](#-level-90-120-alexandrie-et-job-temple)
+- [🇰🇷 Leveling KSRO 110-140 (2011-2026)](#️-leveling-ksro-110-140-2011-2026)
 - [Power Leveling (PLvL)](#-power-leveling-plvl)
 - [Questing vs Grinding](#-questing-vs-grinding)
 - [Tips](#-tips)
@@ -292,6 +293,33 @@ Ces bonus **s'additionnent** :
 
 ---
 
+## 🇰🇷 Leveling KSRO 110-140 (2011-2026)
+
+> ⚠️ **Périmètre** : progression haut-niveau du **service coréen uniquement** (paliers 106-140, caps 120 → 125 → 130 → 140) — à ne pas mélanger avec la progression classique iSRO ci-dessus. **Aucun guide coréen moderne de leveling 110-140 n'existe** (le web KR actif sur kSRO est réduit à quelques chaînes YouTube) : les spots ci-dessous sont **reconstitués** à partir des données officielles (gamedata kSRO, wiki TW DiGeam, Facebook iSRO). Rapport : [ML_RESEARCH/RESEARCH_KO2_WORLD.md §11](ML_RESEARCH/RESEARCH_KO2_WORLD.md) · chronologie : [RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md).
+
+### Paliers reconstitués
+
+| Palier | Zone / spot | Notes | Sources |
+|---|---|---|---|
+| 91-100+ | **次元沙漠 (Désert dimensionnel, 91+)** | farm alternatif en « miroir » du désert des Tempêtes, entrée NPC 哈辛 (Hashin) | DiGeam S18 |
+| 106-110 | **거울 차원 (Dimension Miroir)** — terrain | monstres 111-116 ; drops 12차 en raretés (jamais de 12D normal) | gamedata kSRO, DiGeam S13 |
+| 106-113 | **경배의 전당 초급** (Hall of Worship, mode 106 solo) | conçu pour l'entraînement : respawn continu, **aucun boss** — « le premier donjon solo du jeu » (Legend XII KR, 2011) | GameMeca S7, DiGeam S14 |
+| 111-118 | **경배의 전당 중급/상급 (111/113)** puis **광신도의 은신처 중급/상급 (116/118)** | en groupe ; 3 entrées/jour de 2 h ; boss Jupiter/Yuno/Deus puis Baal/Babilion/Zielkiaxe | DiGeam S14/S15 |
+| 121-130 | **바그다드 (Bagdad)** — champs + donjons | région 이슬람 121-130 ; donjons **3×50 min/jour** (바그다드 지하, 카일리아의 은신처) ; chambre des boss 121-130 (30 min, 2-8 joueurs) ; drops 13차. Vidéos KR de chasse party à Bagdad (2020-2021) | DiGeam S16/S17/S22, YouTube S34 |
+| 125+ | **파멸의 성전** (Temple of Destruction, field) + **비밀의 무덤** (Secret Tomb) | accès NPC Hotan/Bagdad ; raid boss « Squelette de Mort Éveillé » (despawn 3 h) ; sets 16-17차 — contenu **Legend 23 (~16/05/2023)** | DiGeam S19/S20, srolobby |
+| 131-135 | **Ice Temple (寒冰獄)** — Shambhala | accès NPC **Mortifying Monk** au Taklamakan (notice KR 27/03/2018, cap 140) | Facebook iSRO S26 |
+| 136-140 | **Fire Temple (火焰獄)** — Shambhala | source de la **clé du Secret Tomb** | Facebook iSRO S26, DiGeam S19 |
+
+### Notes de contexte KSRO
+
+- **Courbe d'XP** : la table `leveldata.txt` (ci-dessus) couvre jusqu'à 140 — les niveaux 135+ restent des « murs » intentionnels (139→140 ≈ 579 mille milliards d'XP).
+- **Aide au leveling coréenne** : le patch **Rebirth (27/06/2012)** a refait les courbes XP/SP, ajouté des équipements/consommables d'aide **≤ 70** et supprimé la possibilité de redescendre de niveau ; maj du 21/11/2012 (event : perso au cap → nouveau perso direct 101) — voir [01_INTRODUCTION.md — section KSRO](./01_INTRODUCTION.md).
+- **QoL 2025** : le système **자동 전투 (auto-combat, 15/04/2025)** fournit auto-potion, auto-skill et **auto-chasse** paramétrable (touches A/T, interdit en ville) — notice officielle K4 ([RESEARCH_KO2_SYSTEMS.md](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md)).
+- **Règle des 7 niveaux** (anti-carry) : aucun drop si le perso dépasse le monstre de 7 niveaux ou plus (confirmée pour les donjons 121-130) — ne farmez pas « vers le bas » au cap 140.
+- ⚠️ **Conflit de cap coréen non tranché** (cap 140 selon la notice 2018 vs palier mall 121-125 vs contenu 131+ en 2025) : détail dans [01_INTRODUCTION.md](./01_INTRODUCTION.md#️-conflit-de-cap-coréen-non-tranché-documenter-sans-trancher).
+
+---
+
 ## 🚀 Power Leveling (PLvL)
 
 **PLvL** = leveling accéléré par des joueurs de haut niveau en party EXP auto-share.
@@ -383,6 +411,12 @@ Ces bonus **s'additionnent** :
 - [Academy Guide — Fdherg](https://fdherg.wordpress.com/2010/06/14/silkroad-online-academy-guide/)
 - [Quests lvl 100-110 — WantedGuild](https://wantedguild.forumotion.com/t6-quests-from-lvl-100-to-110)
 
+### 🇰🇷 Leveling KSRO 110-140 (recherche KO2 2026-10)
+- [ML_RESEARCH/RESEARCH_KO2_WORLD.md §11](ML_RESEARCH/RESEARCH_KO2_WORLD.md) — spots 110-140 reconstitués (rapport source)
+- [ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md) — auto-combat 2025, courbes revues par Rebirth (2012)
+- Wiki officiel DiGeam (TW) : [敬拜的殿堂](https://srowiki.digeam.com/%E6%95%AC%E6%8B%9C%E7%9A%84%E6%AE%BF%E5%A0%82/) · [巴格達地下城](https://srowiki.digeam.com/%E5%B7%B4%E6%A0%BC%E9%81%94%E5%9C%B0%E4%B8%8B%E5%9F%8E/) · [香巴拉](https://srowiki.digeam.com/%E9%A6%99%E5%B7%B4%E6%8B%89/) · [古墓副本](https://srowiki.digeam.com/%E5%8F%A4%E5%A2%93%E5%89%AF%E6%9C%AC/) · [破滅聖殿](https://srowiki.digeam.com/%E7%A0%B4%E6%BB%85%E8%81%96%E6%AE%BF/)
+- [Facebook officiel iSRO — Lv.140 Shambhala / Ice & Fire Temple](https://www.facebook.com/officialsilkroad/posts/1502299075272015)
+
 ### Cartes
 - [xSROMap — carte interactive](https://jellybitz.github.io/xSROMap/)
 - [Silkroad Monster Maps — silkroadforums](http://www.silkroadforums.com/viewtopic.php?t=197)
@@ -417,4 +451,4 @@ Ces bonus **s'additionnent** :
 ---
 
 *Dernière mise à jour: 2026-10-01 (enrichi par la recherche multilingue ML_RESEARCH — mesures GAP DE 2006)*
-*Sources: leveldata.txt (client officiel, ce dépôt), sromobile.com (formule EXP/écart), florian0 (death penalty), Elitepvpers (PLvL), WantedGuild (quêtes Alexandrie), silkroadforums (party system), silkroadonline.de (mesures XP/SP 2006)*
+*Sources: leveldata.txt (client officiel, ce dépôt), sromobile.com (formule EXP/écart), florian0 (death penalty), Elitepvpers (PLvL), WantedGuild (quêtes Alexandrie), silkroadforums (party system), silkroadonline.de (mesures XP/SP 2006) · rapports KO2 2026-10 (section 🇰🇷 leveling KSRO 110-140)*

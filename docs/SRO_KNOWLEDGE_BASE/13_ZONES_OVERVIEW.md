@@ -15,6 +15,7 @@
 - [Téléporteurs et Transports](#-téléporteurs-et-transports)
 - [Leveling Progression par Cap](#-leveling-progression-par-cap)
 - [Évolution du Monde par Expansion](#-évolution-du-monde-par-expansion)
+- [🇰🇷 Contenu KSRO (2011-2026) — zones et donjons post-classiques](#️-contenu-ksro-2011-2026--zones-et-donjons-post-classiques)
 - [Safe Zones vs Danger Zones](#-safe-zones-vs-danger-zones)
 - [FAQ](#-faq)
 - [Resources](#-resources)
@@ -231,6 +232,7 @@ Sources : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (wiki DiGeam,
 - Palais du Roi Shahryar et de la Reine Sheherazade (contes des 1001 nuits)
 - Zones : Phantom Desert, Kirk Field, Kalia's Hideout (boss room)
 - Contenu postérieur au cap 120 classique — à n'implémenter que si le serveur cible l'inclut
+- 🇰🇷 **Données KSRO (recherche KO2 2026-10)** : région classée **이슬람 121~130** par namu.wiki ; ajoutée côté coréen en **mai 2014** (cap 125, donjon 121+) ; le Facebook officiel iSRO (ère cap 130 « Arabian Shore ») confirme « **New City: Baghdad**, center and main city of Arabia », traversée par le **fleuve Tigre**. Donjons associés (바그다드 지하 3×50 min/jour, 카일리아의 은신처, accès Legend 23 par NPC à Hotan/Bagdad) : voir la [section KSRO](#️-contenu-ksro-2011-2026--zones-et-donjons-post-classiques). Aucune forteresse à Bagdad (non vérifié — aucune source trouvée). Sources : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md)
 
 ---
 
@@ -368,6 +370,63 @@ La Corée numérotait ses mises à jour « Legend » (전설) **indépendamment 
 
 ---
 
+## 🇰🇷 Contenu KSRO (2011-2026) — zones et donjons post-classiques
+
+> ⚠️ **Périmètre** : cette section documente **exclusivement le service coréen (KSRO, jamais fermé)** au-delà du contenu classique iSRO 90-120. **Aucune de ces données ne doit être mélangée aux zones classiques ci-dessus.** Sources : site officiel kSRO (gamedata + AreaNpc, EUC-KR décodé), wiki officiel TW DiGeam (miroir du contenu récent d'origine KR), Facebook officiel iSRO, namu.wiki (extraits). Rapport : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) · chronologie : [RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md).
+
+### 🗺️ Nouvelles régions KSRO (paliers 106-140)
+
+| Région (KR) | Romanisation / EN | Palier | Contenu | Sources |
+|---|---|---|---|---|
+| **거울 차원** | Dimension Miroir (TW 鏡之次元, EN Mirror Dimension) | accès **106+**, monstres **111-116** | Copie du monde créée par Jupiter dans une fissure dimensionnelle, saisie par le chef démoniaque **바알 (Baal)** ; le sorcier **바빌리온 (Babilion)** y fonda le culte de Baal. Portail **hors des villes** ; téléportation en haut de carte puis marche jusqu'à la pierre de téléportation du Temple de Jupiter. Drops : **12차 (12D)** en raretés épique/légendaire/divin uniquement (jamais de 12D « normal »). Unique de champ **키데모나스 (Kidemonas, lv 120)** ajouté le 25/04/2012 | DiGeam [鏡之次元](https://srowiki.digeam.com/%E9%8F%A1%E4%B9%8B%E6%AC%A1%E5%85%83/) ; board KR K24 ; gamedata officielle |
+| **이슬람 지역 + 바그다드** | région arabe / Arabie + Bagdad (TW 巴格達) | **121-130** (région 116+ à l'origine) | namu.wiki classe la zone « 이슬람 » 121~130 ; le Facebook officiel iSRO décrit Bagdad comme « centre et ville principale de l'Arabie », traversée par le **Tigre** — univers des Mille et Une Nuits (roi **샤리야르**). Ajoutée côté KR en **mai 2014** (cap 125) ; l'event « 돌아온 알리바바와 40인의 도적 » tourne autour chaque printemps. FB iSRO (patch cap 130) : « **Arabian Shore**, New City: Baghdad » | namu.wiki S11 ; [Facebook iSRO — New City: Baghdad](https://www.facebook.com/officialsilkroad/photos/new-city-baghdad-baghdad-is-the-center-and-the-main-city-of-arabiait-is-characte/10152657798903549) ; board KR K14 |
+| **샴발라 / Shambhala Shore** (TW 香巴拉) | Shambhala — **Ice Temple 131-135** (寒冰獄) / **Fire Temple 136-140** (火焰獄) | **131-140** | Nouvelle carte + monstres ajoutées au **타클라마칸 (Taklamakan)** par la notice officielle du **27/03/2018** (cap 140). Accès : NPC **« Mortifying Monk »** situé au Taklamakan. Le Fire Temple fournit la **clé secrète** du Secret Tomb (비밀의 무덤). ⚠️ « Shambhala Shore » est l'appellation iSRO — la notice KR dit seulement « 샴발라 던전 » | [Facebook iSRO — Lv.140 Shambhala](https://www.facebook.com/officialsilkroad/posts/1502299075272015) ; DiGeam [香巴拉](https://srowiki.digeam.com/%E9%A6%99%E5%B7%B4%E6%8B%89/) ; board KR K9 |
+| **(차원 사막)** | Désert dimensionnel (TW 次元沙漠) | **91+** | « Reflet miroir du désert de la Tempête », entrée par le NPC **哈辛 (Hashin)** ; zone de farm alternative 91+. Nom coréen exact non sourcé (translittération probable) | DiGeam [次元沙漠](https://srowiki.digeam.com/%E6%AC%A1%E5%85%83%E6%B2%99%E6%BC%A0/) |
+| **선계 / 헤븐 / 천축** | Monde des immortels / Heaven / Tianzhu | **jamais implémentés (미구현)** | Régions fantômes listées par namu.wiki — jamais sorties ; les zones fantasy annoncées en 2004 n'ont pas toutes vu le jour | namu.wiki S11 |
+
+> ℹ️ La **gamedata officielle du site kSRO s'arrête au Temple de Jupiter (2011)** : aucun monstre 121+ n'y figure. Le post-120 (Bagdad, Shambhala) est documenté via le wiki TW DiGeam (opérateur officiel) et les annonces Facebook iSRO — les listes de monstres de terrain 121+ restent **non publiées** (extraction client requise).
+
+### 🏰 Nouveaux donjons KSRO (106-140)
+
+| Donjon (KR attesté / TW / EN) | Entrées | Règles | Boss | Drops | Sources |
+|---|---|---|---|---|---|
+| **경배의 전당** (Hall of Worship / 敬拜的殿堂) — Temple de Jupiter A | **초급 106 (solo)** · **중급 111 (groupe)** · **상급 113 (groupe)** | 3 entrées/jour/difficulté ; **2 h** ; progression zone par zone ; le mode 초급 est un **mode farm sans boss** (respawn continu) — « premier donjon solo du jeu » (Legend XII KR, 22/06/2011) | **Jupiter (朱庇特) / Yuno (柳諾) / Deus (帝厄斯)** | 12D épique/légendaire/divin | DiGeam [敬拜的殿堂](https://srowiki.digeam.com/%E6%95%AC%E6%8B%9C%E7%9A%84%E6%AE%BF%E5%A0%82/) |
+| **광신도의 은신처** (Zealots Hideout / 狂信徒的藏身處) — Temple de Jupiter B | **초급 106 (solo)** · **중급 116 (groupe)** · **상급 118 (groupe)** | 3 entrées/jour ; **2 h** ; mêmes règles de nettoyage | **바알 (Baal) / 바빌리온 (Babilion) / Zielkiaxe (吉爾其厄斯)** | 12D épique/légendaire/divin | Nom KR attesté officiellement (gamedata + AreaNpc) ; DiGeam |
+| **바그다드 지하** (Bagdad Underground / 巴格達地下城) | **121+** | **groupe obligatoire** ; **3 entrées/jour** ; **50 min max** ; progression **antihoraire** | **巨大魔神 (Grand Démon)** et **沙勒軍大將軍** (Général en chef de « l'armée de la vengeance » 萬眾復仇軍) | **13D** (chance faible) | DiGeam [巴格達地下城](https://srowiki.digeam.com/%E5%B7%B4%E6%A0%BC%E9%81%94%E5%9C%B0%E4%B8%8B%E5%9F%8E/) |
+| **카일리아의 은신처** (Repaire de Kailia / 凱麗亞的藏身處) | **121+** | groupe ; **3 entrées/jour** ; **50 min** | cheffe bandite **Kailia (盜賊頭目凱麗亞)** | 13D (chance faible) | DiGeam |
+| **神密Boss密室** (chambre des boss mystérieux / 神秘boss密室副本) | boss **121-130** | **2-8 joueurs** ; session **30 min** ; jusqu'à **10 boss invoqués** (pierre de sceau) ; ticket d'entrée boutique/event ; sortie par pierre d'异次元移动石 après clear | boss réinvocables (non nommés) | sets **12-15D** (3 raretés) | DiGeam |
+| **파멸의 성전** (Temple of Destruction / 破滅聖殿, EN Crusade of Ruin) — **Legend 23 (05/2023)** | **125+** | Donjon de type **field** (non instancié), le plus difficile du jeu ; accès par NPC **aux palais de Hotan (화전 왕궁) et à Bagdad** | tuer les **3 types de boss** → boss final **覺醒死亡駭骨 (« Squelette de Mort Éveillé »)** ; jamais plus d'1 final simultané ; **disparaît après 3 h** s'il n'est pas tué | équipements **17D+** dont **Ultimate items**, matériaux rares (파멸의 원소) | DiGeam [破滅聖殿](https://srowiki.digeam.com/%E7%A0%B4%E6%BB%85%E8%81%96%E6%AE%BF/) ; srolobby |
+| **비밀의 무덤** (Secret Tomb / 古墓副本) — **Legend 23** | **125+** | **1-8 joueurs** (tous doivent avoir la clé) ; **30 min** ; **3 vagues** → boss ; **1 clé par entrée**, obtenue au **Fire Temple (火焰獄) de Shambhala** | boss final (non nommé dans les pages officielles TW) | sets **16D et 17D** + matériaux 15-17 | DiGeam [古墓副本](https://srowiki.digeam.com/%E5%8F%A4%E5%A2%93%E5%89%AF%E6%9C%AC/) |
+| **Ice Temple (寒冰獄)** / **Fire Temple (火焰獄)** — Shambhala | **131-135** / **136-140** | donjons de Shambhala ; accès NPC **Mortifying Monk** (Taklamakan) | non documentés (aucune source consultée ne les nomme) | — (le Fire Temple donne la clé du Secret Tomb) | Facebook iSRO S26 ; DiGeam |
+
+### 📏 Règles transverses documentées (donjons KSRO)
+
+- **Règle des 7 niveaux** (anti-carry) : **aucun drop** si le personnage dépasse le monstre de **7 niveaux ou plus** — confirmée pour la chambre des boss 121-130 (DiGeam) et pour le FGW (TW).
+- **Timers** : instances Jupiter **2 h** ; Bagdad/Kailia **50 min** (3 entrées/jour) ; Secret Tomb et chambre des boss **30 min** ; boss final du Temple of Destruction **despawn 3 h**.
+- Les modes **초급 (106)** des donjons Jupiter sont des **modes d'entraînement solo** sans boss — c'est le « premier donjon solo » annoncé par Legend XII KR (2011).
+- 🇰🇷 Chronologie d'ajout : Jupiter 22/06/2011 (Legend XII) → Bagdad mai 2014 → Arabian Shore 27/05/2015 → Shambhala 27/03/2018 → 파멸의 성전/비밀의 무덤 ~16/05/2023 (Legend 23). Détail : [01_INTRODUCTION.md — section KSRO](./01_INTRODUCTION.md).
+
+### 🈶 Noms coréens des nouvelles zones (glossaire)
+
+| Coréen | Romanisation | Français / équivalent |
+|---|---|---|
+| 거울 차원 | geoul chawon | Dimension Miroir (champ Jupiter, 106+) |
+| 유피테르 신전 | Yupiteol sinjeon | Temple de Jupiter (zone + donjons) |
+| 경배의 전당 | gyeongbae ui jeondang | Hall of Worship (*reconstruction sémantique TW→KR non officielle*) |
+| 광신도의 은신처 | gwangsindo ui eunsincheo | Zealots Hideout (**attesté officiellement**) |
+| 슬픔의 숲 | seulpeum ui sup | Forêt de la Tristesse (zone des cultistes, Dimension Miroir) |
+| 이슬람 지역 | Islam jiyeok | région arabe (121-130, namu) |
+| 바그다드 지하 | — | Bagdad souterrain (donjon 121+) |
+| (카일리아의 은신처 ?) | Kailia | Repaire de Kailia — KR non sourcé |
+| (파멸의 성전) | pammeol ui seongjeon | Temple of Destruction (Legend 23) — **attesté** (notice 유물 2025) |
+| (비밀의 무덤) | bimil ui mudeom | Secret Tomb (Legend 23) — **attesté** |
+| (샴발라 던전) | — | Shambhala (notice KR 2018) — « 샴발라 해안/Shore » = appellation iSRO |
+| 선계 / 헤븐 / 천축 | — | régions jamais implémentées (미구현) |
+
+> ⚠️ **Lacunes signalées** : les noms coréens exacts de 경배의 전당, 카일리아, 차원 사막 et 샴발라 (graphie) n'ont **pas de source coréenne directe** (translittérations probables marquées comme telles). Les monstres de terrain de Bagdad et Shambhala ne sont publiés nulle part (la gamedata officielle s'arrête en 2011).
+
+---
+
 ## ⚔️ Safe Zones vs Danger Zones
 
 ### Safe Zones
@@ -434,9 +493,16 @@ La Corée numérotait ses mises à jour « Legend » (전설) **indépendamment 
 - [15_UNIQUE_BOSSES.md](./15_UNIQUE_BOSSES.md) — uniques et spawns
 - [25_LEVELING_GUIDE.md](./25_LEVELING_GUIDE.md) — parcours de leveling
 
+### Sources KSRO (recherche KO2 2026-10)
+- [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) — zones/donjons/uniques 100-140 (rapport source de la section 🇰🇷)
+- [ML_RESEARCH/RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md) — dates d'ajout officielles des zones (notices board KR)
+- Wiki officiel DiGeam (TW) : [鏡之次元](https://srowiki.digeam.com/%E9%8F%A1%E4%B9%8B%E6%AC%A1%E5%85%83/) · [敬拜的殿堂](https://srowiki.digeam.com/%E6%95%AC%E6%8B%9C%E7%9A%84%E6%AE%BF%E5%A0%82/) · [狂信徒的藏身處](https://srowiki.digeam.com/%E7%8B%82%E4%BF%A1%E5%BE%92%E7%9A%84%E8%97%8F%E8%BA%AB%E8%99%95/) · [巴格達地下城](https://srowiki.digeam.com/%E5%B7%B4%E6%A0%BC%E9%81%94%E5%9C%B0%E4%B8%8B%E5%9F%8E/) · [香巴拉](https://srowiki.digeam.com/%E9%A6%99%E5%B7%B4%E6%8B%89/) · [古墓副本](https://srowiki.digeam.com/%E5%8F%A4%E5%A2%93%E5%89%AF%E6%9C%AC/) · [破滅聖殿](https://srowiki.digeam.com/%E7%A0%B4%E6%BB%85%E8%81%96%E6%AE%BF/)
+- [Facebook officiel iSRO — New City: Baghdad](https://www.facebook.com/officialsilkroad/photos/new-city-baghdad-baghdad-is-the-center-and-the-main-city-of-arabiait-is-characte/10152657798903549) · [Lv.140 Shambhala / Mortifying Monk](https://www.facebook.com/officialsilkroad/posts/1502299075272015) · [Lv.130 Arabian Shore](https://www.facebook.com/officialsilkroad/photos/10158125904163549)
+- Gamedata officielle kSRO : [monstres Jupiter](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Europe_Monster_Jupiter.html) · [AreaNpc Jupiter](https://krsilkroadcp.joymax.com/gamedata/AreaNpc/iframe_AreaNpc/Europe_Jupiter.html)
+
 ---
 
 *Dernière mise à jour : 2026-10-01*
 *Sources : données client officielles extraites de xSROMap (697 NPCs, 161 téléporteurs), StrategyWiki, Rev6, SRO Info, Fandom Wiki, press releases Joymax*
-*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (chronologie Legend KR vs iSRO, cap 105 KR, noms KR) · [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (noms ZH régions/villes, FGW, Job Temple) · [ML_RESEARCH/RESEARCH_PT.md](ML_RESEARCH/RESEARCH_PT.md) (dates iSRO fines)*
+*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (chronologie Legend KR vs iSRO, cap 105 KR, noms KR) · [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (noms ZH régions/villes, FGW, Job Temple) · [ML_RESEARCH/RESEARCH_PT.md](ML_RESEARCH/RESEARCH_PT.md) (dates iSRO fines) · rapports KO2 (sections 🇰🇷 KSRO 2011-2026 : Dimension Miroir, Bagdad, Shambhala, donjons Legend 23)*
 *Système de coordonnées : PosX/PosY officiel (voir section Système de Coordonnées)*

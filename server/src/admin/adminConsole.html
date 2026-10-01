@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>SRObro — Console Admin</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.45 'Segoe UI', system-ui, sans-serif; background: #10141c; color: #dde3ee; }
+  header { display: flex; gap: 18px; align-items: baseline; padding: 12px 20px; background: #1a2130; border-bottom: 2px solid #2c3a55; }
+  header h1 { margin: 0; font-size: 18px; color: #7fb0ff; }
+  header .live { color: #6ee7a0; font-size: 12px; }
+  main { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 14px 20px; max-width: 1400px; margin: 0 auto; }
+  section { background: #161d2b; border: 1px solid #273349; border-radius: 8px; padding: 12px 14px; }
+  section.wide { grid-column: 1 / -1; }
+  h2 { margin: 0 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: #8fa3c8; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 4px 8px; border-bottom: 1px solid #232e44; white-space: nowrap; }
+  th { color: #93a7cd; font-weight: 600; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  input, select, button { background: #0d121c; color: #dde3ee; border: 1px solid #334363; border-radius: 5px; padding: 5px 8px; font: inherit; }
+  input:focus { outline: 1px solid #7fb0ff; }
+  button { cursor: pointer; background: #234a7a; }
+  button:hover { background: #2d5d97; }
+  button.danger { background: #7a2334; }
+  button.danger:hover { background: #972d43; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 8px; }
+  .pill { display: inline-block; padding: 1px 7px; border-radius: 99px; font-size: 11px; background: #2c3a55; color: #9db4dd; }
+  .pill.on { background: #1d4d33; color: #6ee7a0; }
+  .pill.warn { background: #4d1d1d; color: #ff9c9c; }
+  .muted { color: #7d8ca8; font-size: 12px; }
+  #toast { position: fixed; bottom: 14px; right: 14px; background: #1d4d33; color: #bffadb; padding: 8px 14px; border-radius: 6px; opacity: 0; transition: opacity .3s; }
+  #toast.err { background: #4d1d1d; color: #ffc9c9; }
+  .rates-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  .rates-grid label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: #9db4dd; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SRObro — Console Admin</h1>
+  <span class="live" id="status">chargement…</span>
+  <span class="muted" id="meta"></span>
+</header>
+<main>
+  <section>
+    <h2>Joueurs en ligne <span class="muted" id="playerCount"></span></h2>
+    <table id="players"><thead><tr><th>Nom</th><th>Niv.</th><th>HP</th><th>Or</th><th>Pos</th><th>Actions</th></tr></thead><tbody></tbody></table>
+    <div class="muted" id="noPlayers">Aucun joueur connecté.</div>
+  </section>
+
+  <section>
+    <h2>Taux live (Redis, sans reboot)</h2>
+    <div class="rates-grid" id="rates">
+      <label>XP ×<input data-key="exp" type="number" step="0.5" min="0"></label>
+      <label>SP ×<input data-key="sp" type="number" step="0.5" min="0"></label>
+      <label>Or ×<input data-key="gold" type="number" step="0.5" min="0"></label>
+      <label>Drop ×<input data-key="drop" type="number" step="0.5" min="0"></label>
+      <label>Respawn ×<input data-key="respawnMultiplier" type="number" step="0.5" min="0"></label>
+      <label>Aggro <select data-key="aggroEnabled"><option value="1">activé</option><option value="0">désactivé</option></select></label>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <button onclick="saveRates()">Appliquer (live)</button>
+      <span class="muted" id="ratesSaved"></span>
+    </div>
+    <h2 style="margin-top:14px">Annonce serveur</h2>
+    <div class="row">
+      <input id="annMsg" placeholder="Message diffusé à tous" style="flex:1">
+      <button onclick="announce()">Diffuser</button>
+    </div>
+    <div class="row">
+      <input id="tpPlayer" placeholder="Joueur en ligne" style="width:130px">
+      <input id="tpX" type="number" placeholder="X" style="width:80px">
+      <input id="tpZ" type="number" placeholder="Z" style="width:80px">
+      <button onclick="teleport()">Téléporter</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Comptes &amp; sanctions</h2>
+    <table id="accounts"><thead><tr><th>Compte</th><th>Rôle</th><th>Persos</th><th>État</th><th></th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section>
+    <h2>KillLog (récents)</h2>
+    <table id="killlog"><thead><tr><th>Heure</th><th>Tueur</th><th>Victime</th><th>Type</th><th class="num">Dégâts</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section>
+    <h2>Items <span class="muted" id="itemTotal"></span></h2>
+    <div class="row">
+      <input id="itemSearch" placeholder="Nom ou CODE (ex: ITEM_ETC_HP_POTION)" style="flex:1">
+      <button onclick="loadItems(1)">Rechercher</button>
+    </div>
+    <table id="items"><thead><tr><th>Nom</th><th>Code</th><th class="num">Prix</th><th class="num">Niv.</th><th>Donner</th></tr></thead><tbody></tbody></table>
+    <div class="row" style="margin-top:8px">
+      <button onclick="loadItems(pageItems-1)">←</button>
+      <span id="itemPage" class="muted"></span>
+      <button onclick="loadItems(pageItems+1)">→</button>
+      <select id="giveTo"></select>
+      <input id="giveQty" type="number" value="1" min="1" style="width:60px">
+    </div>
+  </section>
+
+  <section>
+    <h2>Monstres <span class="muted" id="mobTotal"></span></h2>
+    <div class="row">
+      <input id="mobSearch" placeholder="Nom (ex: Mangnyang)" style="flex:1">
+      <button onclick="loadMonsters(1)">Rechercher</button>
+    </div>
+    <table id="monsters"><thead><tr><th>Nom</th><th class="num">Niv.</th><th class="num">HP</th><th class="num">XP</th><th class="num">SP</th><th>Invoquer</th></tr></thead><tbody></tbody></table>
+    <div class="row" style="margin-top:8px">
+      <button onclick="loadMonsters(pageMobs-1)">←</button>
+      <span id="mobPage" class="muted"></span>
+      <button onclick="loadMonsters(pageMobs+1)">→</button>
+      <span class="muted">auprès de</span>
+      <select id="spawnAt"></select>
+      <input id="spawnCount" type="number" value="1" min="1" max="20" style="width:60px">
+    </div>
+  </section>
+</main>
+<div id="toast"></div>
+
+<script>
+let pageItems = 1, pageMobs = 1;
+let online = [];           // {id,name,...}
+let lastItems = [], lastMobs = [];
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function toast(msg, err = false) {
+  const t = $('toast');
+  t.textContent = msg;
+  t.className = err ? 'err' : '';
+  t.style.opacity = 1;
+  setTimeout(() => t.style.opacity = 0, 2500);
+}
+
+async function api(path, opts) {
+  const r = await fetch(path, opts);
+  if (!r.ok) {
+    const body = await r.json().catch(() => ({}));
+    throw new Error(body.error ?? `HTTP ${r.status}`);
+  }
+  return r.json();
+}
+
+async function refreshOverview() {
+  try {
+    const o = await api('/admin/api/overview');
+    $('status').textContent = '● temps réel';
+    $('meta').textContent = `up ${Math.floor(o.uptimeSec/60)} min · ${o.monstersAlive} monstres vivants · ${o.accounts} comptes · ${o.characters} persos · ${o.items.toLocaleString('fr-FR')} items`;
+    online = o.players;
+    $('playerCount').textContent = `(${o.players.length})`;
+    const tb = $('players').querySelector('tbody');
+    tb.innerHTML = o.players.map(p => `<tr>
+      <td>${esc(p.name)} ${p.flags.god?'<span class="pill on">GOD</span>':''}${p.flags.invisible?'<span class="pill">INVIS</span>':''}${p.flags.frozen?'<span class="pill warn">FREEZE</span>':''}</td>
+      <td class="num">${p.level}</td><td class="num">${p.hp}/${p.maxHp}</td><td class="num">${p.gold.toLocaleString('fr-FR')}</td>
+      <td class="num">${p.position.x}, ${p.position.z}</td>
+      <td><button onclick="kick('${esc(p.name)}')">Kick</button></td>
+    </tr>`).join('');
+    $('noPlayers').style.display = o.players.length ? 'none' : 'block';
+    for (const sel of ['giveTo','spawnAt','tpPlayer']) {
+      const el = $(sel);
+      if (sel === 'tpPlayer') continue;
+      el.innerHTML = o.players.map(p => `<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('');
+    }
+    for (const input of document.querySelectorAll('#rates [data-key]')) {
+      const v = o.rates[input.dataset.key];
+      if (input.tagName === 'SELECT') input.value = v ? '1' : '0';
+      else if (document.activeElement !== input) input.value = v;
+    }
+  } catch (e) {
+    $('status').textContent = '✖ ' + e.message;
+  }
+}
+
+async function saveRates() {
+  const body = {};
+  for (const input of document.querySelectorAll('#rates [data-key]')) {
+    body[input.dataset.key] = input.tagName === 'SELECT' ? input.value === '1' : Number(input.value);
+  }
+  try {
+    await api('/admin/api/rates', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(body) });
+    $('ratesSaved').textContent = '✓ appliqué à l\'instant, persisté Redis';
+    toast('Taux appliqués (live)');
+  } catch (e) { toast(e.message, true); }
+}
+
+async function announce() {
+  const message = $('annMsg').value.trim();
+  if (!message) return;
+  try {
+    await api('/admin/api/action', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'announce', message }) });
+    $('annMsg').value = '';
+    toast('Annonce diffusée');
+  } catch (e) { toast(e.message, true); }
+}
+
+async function teleport() {
+  const p = online.find(x => x.name === $('tpPlayer').value);
+  if (!p) { toast('Joueur en ligne introuvable', true); return; }
+  try {
+    await api('/admin/api/action', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'teleport', playerId: p.id, x: Number($('tpX').value), z: Number($('tpZ').value) }) });
+    toast(`${p.name} téléporté`);
+  } catch (e) { toast(e.message, true); }
+}
+
+async function kick(name) {
+  try {
+    await api('/admin/api/action', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'kick', player: name }) });
+    toast(`${name} déconnecté`);
+  } catch (e) { toast(e.message, true); }
+}
+
+async function loadAccounts() {
+  try {
+    const { accounts } = await api('/admin/api/accounts');
+    $('accounts').querySelector('tbody').innerHTML = accounts.map(a => `<tr>
+      <td>${esc(a.username)}</td>
+      <td><span class="pill ${a.role!=='player'?'on':''}">${esc(a.role)}</span></td>
+      <td>${a.characters.map(c => `${esc(c.name)} (${c.level})`).join(', ') || '—'}</td>
+      <td>${a.isBanned ? `<span class="pill warn">BANNI</span> <span class="muted">${esc(a.banReason ?? '')}</span>` : 'actif'}</td>
+      <td>${a.isBanned
+        ? `<button onclick="unban('${esc(a.username)}')">Débannir</button>`
+        : (a.role !== 'admin' ? `<button class="danger" onclick="ban('${esc(a.username)}')">Bannir</button>` : '')}</td>
+    </tr>`).join('');
+  } catch (e) { toast(e.message, true); }
+}
+
+async function ban(username) {
+  const reason = prompt(`Raison du ban de ${username} ?`, 'console admin');
+  if (reason === null) return;
+  try {
+    await api('/admin/api/action', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'ban', username, reason }) });
+    toast(`${username} banni`); loadAccounts();
+  } catch (e) { toast(e.message, true); }
+}
+
+async function unban(username) {
+  try {
+    await api('/admin/api/action', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'unban', username }) });
+    toast(`${username} débanni`); loadAccounts();
+  } catch (e) { toast(e.message, true); }
+}
+
+async function loadKilllog() {
+  try {
+    const { logs } = await api('/admin/api/killlog?limit=20');
+    $('killlog').querySelector('tbody').innerHTML = logs.map(l => `<tr>
+      <td class="muted">${new Date(l.at).toLocaleTimeString('fr-FR')}</td>
+      <td>${esc(l.killer)}</td><td>${esc(l.victim)}</td>
+      <td>${esc(l.victimType)}</td><td class="num">${l.damage.toLocaleString('fr-FR')}</td>
+    </tr>`).join('');
+  } catch (e) { /* silencieux */ }
+}
+
+async function loadItems(page) {
+  page = Math.max(1, page);
+  try {
+    const q = new URLSearchParams({ search: $('itemSearch').value.trim(), page, limit: 15 });
+    const d = await api('/admin/api/items?' + q);
+    pageItems = d.page; lastItems = d.items;
+    $('itemTotal').textContent = `(${d.total.toLocaleString('fr-FR')} au total)`;
+    $('itemPage').textContent = `${d.page} / ${Math.max(1, Math.ceil(d.total/d.limit))}`;
+    $('items').querySelector('tbody').innerHTML = d.items.map((it, i) => `<tr>
+      <td>${esc(it.name)}</td><td class="muted">${esc(it.code)}</td>
+      <td class="num">${it.price?.toLocaleString('fr-FR') ?? '—'}</td><td class="num">${it.level ?? ''}</td>
+      <td><button onclick="giveItem(${i})">Donner</button></td>
+    </tr>`).join('');
+  } catch (e) { toast(e.message, true); }
+}
+
+async function giveItem(i) {
+  const playerId = $('giveTo').value;
+  if (!playerId) { toast('Aucun joueur en ligne', true); return; }
+  try {
+    await api('/admin/api/action', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'giveItem', playerId, code: lastItems[i].code, qty: Number($('giveQty').value) || 1 }) });
+    toast(`${lastItems[i].name} donné`);
+  } catch (e) { toast(e.message, true); }
+}
+
+async function loadMonsters(page) {
+  page = Math.max(1, page);
+  try {
+    const q = new URLSearchParams({ search: $('mobSearch').value.trim(), page, limit: 15 });
+    const d = await api('/admin/api/monsters?' + q);
+    pageMobs = d.page; lastMobs = d.monsters;
+    $('mobTotal').textContent = `(${d.total.toLocaleString('fr-FR')} au total)`;
+    $('mobPage').textContent = `${d.page} / ${Math.max(1, Math.ceil(d.total/d.limit))}`;
+    $('monsters').querySelector('tbody').innerHTML = d.monsters.map((m, i) => `<tr>
+      <td>${esc(m.name)} <span class="muted">${esc(m.code)}</span></td><td class="num">${m.level}</td>
+      <td class="num">${Number(m.hp).toLocaleString('fr-FR')}</td>
+      <td class="num">${Number(m.exp).toLocaleString('fr-FR')}</td>
+      <td class="num">${Number(m.sp).toLocaleString('fr-FR')}</td>
+      <td><button onclick="spawnMob(${i})">Invoquer</button></td>
+    </tr>`).join('');
+  } catch (e) { toast(e.message, true); }
+}
+
+async function spawnMob(i) {
+  const playerId = $('spawnAt').value;
+  if (!playerId) { toast('Aucun joueur en ligne', true); return; }
+  try {
+    await api('/admin/api/action', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ type:'spawn', code: lastMobs[i].code, playerId, count: Number($('spawnCount').value) || 1 }) });
+    toast(`${lastMobs[i].code} invoqué près du joueur`);
+  } catch (e) { toast(e.message, true); }
+}
+
+// Boot: rafraîchissement temps réel + onglets statiques
+refreshOverview(); setInterval(refreshOverview, 2000);
+loadAccounts(); setInterval(loadAccounts, 15000);
+loadKilllog(); setInterval(loadKilllog, 10000);
+loadItems(1); loadMonsters(1);
+$('itemSearch').addEventListener('keydown', e => { if (e.key === 'Enter') loadItems(1); });
+$('mobSearch').addEventListener('keydown', e => { if (e.key === 'Enter') loadMonsters(1); });
+$('annMsg').addEventListener('keydown', e => { if (e.key === 'Enter') announce(); });
+</script>
+</body>
+</html>

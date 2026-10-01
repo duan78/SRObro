@@ -15,6 +15,7 @@
 - [Builds Classiques](#-builds-classiques)
 - [Cooldowns, Combos et Zerk](#-cooldowns-combos-et-zerk)
 - [Résumé des Arbres de Skills](#-résumé-des-arbres-de-skills)
+- [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026)
 - [FAQ](#-faq)
 - [Resources](#-resources)
 
@@ -412,6 +413,30 @@ Chaque maîtrise individuellement est toujours plafonnée **au niveau du personn
 
 ---
 
+## 🇰🇷 Contenu KSRO (2011-2026)
+
+> ⚠️ **Périmètre** : le service coréen (KSRO) **n'a jamais fermé** et a dépassé le cap 120 de cette fiche classique. Tout ce qui suit est **côté KSRO uniquement** et ne modifie pas les sections classiques ci-dessus. Sources : [ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md) (scraping du site officiel `krsilkroadcp.joymax.com`, pages EUC-KR décodées) · chronologie officielle : [ML_RESEARCH/RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md).
+
+### Caps de niveau coréens (au-delà du cap 120)
+
+Chaîne officielle (notices KSRO) : **105** (09/09/2009, Legend IX) → **110** (28/07/2010, Legend X) → **120** (22/06/2011, Legend XII 유피테르 신전의 영웅들) → **125** (05/2014, Bagdad/Arabie) → **130** (27/05/2015, 아라비아 해안) → **140** (27/03/2018, 샴발라 던전 — donjon 131+ au Taklamakan). Le cap est **resté à 140 de 2018 à 2026** (serveur unique 초원길). Les skills ont été étendus officiellement à 120 (2011), 130 (2015) puis 140 (2018) ; en revanche le **cap total de mastery au-delà de 120 n'est publié nulle part** (360 au cap 120 d'après les sources EN ; l'ancien namu.wiki disait 330).
+
+### La base de skills officielle coréenne (64 séries, 296 skills)
+
+Le site officiel KSRO héberge la **base de skills complète du service courant** : **64 séries** couvrant les 7 maîtrises (Bicheon ×10, Heuksal ×9, Pacheon ×10, Cold ×8, Lightning ×7, Fire ×8, **Force ×12**), avec les **noms KR officiels** — séries actives de **5 à 7 livres**, les derniers aux maîtrises **96-120** (et jusqu'à **122/124** pour la série Force 기담요결). Entrée : https://krsilkroadcp.joymax.com/gamedata/skill/asiaskill.asp?Mastery=1&Category=1 (pages séries en iframes `iframe_skill/Weapon_*_N.html`, `Force_*_N.html`).
+
+- **Structure complète série par série** → section [🇰🇷 Contenu KSRO](SKILLS_DATABASE_CHINESE.md) de [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md) ; **table intégrale livre par livre** → [RESEARCH_KO2_SYSTEMS.md §3](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md).
+- **La maîtrise Force a explosé** : de 4-5 séries à l'époque classique, elle en compte **12** sur le service coréen — soins de zone (치료술, jusqu'à 초월치료술 lv 116), vraie résurrection (부활심결, jusqu'à 귀환술 lv 77), séries tardives (반해진경, 점혈대법, 생사경, 활극천의경, 활인심결) et une série **au-delà du cap 120** : **기담요결** (122 박 · 124 제).
+- Autres ajouts post-classiques : **passifs d'armure par maîtrise d'arme** (천산신갑 / 불멸패왕갑 / 용린갑, maîtrise 80), **transformations 비천신공** (jusqu'à 일월, maîtrise 120), nouvelles séries Cold **섭설지혼** et Fire **발화술**.
+
+### Limites documentées
+
+- **Coûts SP des rangs 96-124 : inconnus** — le site officiel ne donne que noms + niveaux de maîtrise ; extraction du client (`skilldata_5000.txt` / `_RefSkill`) requise.
+- **Mapping codename ↔ noms KR tardifs non réalisé** (les noms iSRO tardifs ne correspondent pas mot à mot) — le codename reste la clé interne recommandée pour SRObro.
+- Systèmes 2025 associés (reliques 유물, auto-combat 자동 전투) → [30_SKILLS_DATABASE.md](30_SKILLS_DATABASE.md) (section KSRO).
+
+---
+
 ## ❓ FAQ
 
 **Q : Combien de maîtrises puis-je monter ?**
@@ -477,5 +502,5 @@ R : ✅ **Résolu (recherche KO/ZH 2026-10)** : les noms coréens officiels (비
 
 ---
 
-*Dernière mise à jour : 2026-10-01 (enrichie des noms originels KR/ZH — recherche multilingue ML_RESEARCH)*
+*Dernière mise à jour : 2026-10-01 (enrichie des noms originels KR/ZH — recherche multilingue ML_RESEARCH ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 — rapports ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md et RESEARCH_KO2_CHRONO.md)*
 *Sources : skills.txt client (GitHub SilkroadBot), notes officielles Silkroad Origin Mobile, UnKnoWnCheaTs wiki/forums, SilkroadForums, Fandom Wiki, StrategyWiki, IGN, elitepvpers, Reddit ; noms KR/ZH : Inven 2004, GameAbout 2005, guides KR, wiki TW DiGeam, archives CSRO Sina/17173, Bahamut, Zhihu ; mécanique imbues : silkroadonline.de 2006. Chiffres marqués « ~ » = estimations communautaires ; les valeurs par niveau (dégâts min/max, MP, SP exact par palier) restent à extraire de `skilldata_5000`/`_RefSkill`.*

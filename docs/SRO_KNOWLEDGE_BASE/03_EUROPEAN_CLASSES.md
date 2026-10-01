@@ -14,6 +14,7 @@
 - [Rôles et Synergies en Party](#-rôles-et-synergies-en-party)
 - [Builds Populaires](#-builds-populaires)
 - [Chinois vs Européen](#-chinois-vs-européen)
+- [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026)
 - [FAQ](#-faq)
 - [Resources](#-resources)
 
@@ -398,6 +399,19 @@ Armures EU (mêmes 3 familles que CH) : **Heavy Armor** (STR), **Light Armor** (
 
 ---
 
+## 🇰🇷 Contenu KSRO (2011-2026)
+
+> ⚠️ **Périmètre** : le service coréen (KSRO) n'a **jamais fermé** — caps 120 (22/06/2011, Legend XII) → 125 (05/2014) → 130 (27/05/2015) → **140** (27/03/2018, inchangé en 2026, serveur unique 초원길) — [ML_RESEARCH/RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md). Le plafond EU « 2 × niveau du perso » (240 au cap 120) n'est **pas re-publié au-delà** côté KR. Cette section ne modifie pas la fiche classique ci-dessus.
+
+### Les 269 noms coréens officiels des skills EU
+
+Le **calculateur de skills officiel** du site KSRO embarque la table complète `skillName["CODENAME"] = "nom coréen"` de race européenne : **269 skills EU** avec codename et nom KR officiels (plus `skillRank`, le nombre de niveaux par skill — jusqu'à 30 pour certains rangs de buff). Échantillon : WARRIOR_ONEHANDA_STRIKE_A **슬래쉬** (Slash) · WARRIOR_TWOHANDA_CHARGE_A **차지 스윙** (Charge Swing) · ROG_STEALTHA_HIDING_A **스텔스** (Stealth) · ROG_BOWA_POWER_A **파워 샷** (Power Shot) · WIZARD_FIREA_POINT_B **메테오** (Meteor) · WIZARD_EARTHA_AREA_B **어스 퀘이크** (Earth Quake) · WARLOCK_BLOODA_LIFEDRAIN_B **뱀파이어 키스** (Vampire Kiss) · WARLOCK_SOULA_MEZ_B **딥 슬럼버** (Deep Slumber) · CLERIC_REBIRTHA_SPECIAL_A **리버스 오블레이션-부활** (résurrection) · CLERIC_SAINTA_ABNORMAL_A **홀리 워드** (Holy Word).
+
+- 💡 Les skills EU portent en Corée des **transcriptions anglo-coréennes** (파이어 볼트 = Fire Bolt), à l'exception des séries numérotées (코드 0-4 du Bard) — cohérent avec l'origine « anglaise » de la race EU.
+- Source : https://krsilkroadcp.joymax.com/gamedata/skill/skillCalculator.asp — échantillon complet par classe et extraction : [ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §4](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md) · table côté base : section [🇰🇷 Contenu KSRO](SKILLS_DATABASE_EUROPEAN.md) de [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md).
+
+---
+
 ## ❓ FAQ
 
 ### Q: Quelle est la meilleure classe européenne?
@@ -454,5 +468,5 @@ Armures EU (mêmes 3 familles que CH) : **Heavy Armor** (STR), **Light Armor** (
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (révision majeure : noms de skills iSRO vérifiés, système de masteries corrigé, party builds, sources croisées ; enrichi des noms ZH/TW officiels des classes — recherche multilingue ML_RESEARCH)*
+*Dernière mise à jour: 2026-10-01 (révision majeure : noms de skills iSRO vérifiés, système de masteries corrigé, party builds, sources croisées ; enrichi des noms ZH/TW officiels des classes — recherche multilingue ML_RESEARCH ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : calculateur officiel = 269 noms KR des skills EU — rapport ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §4)*
 *Sources: elitepvpers (traductions 2008), silkroadforums, SRO Valkyria blog, Fandom Wiki, GitHub (PhBot, eSRO), silkroadtemptation, Rev6 ; noms ZH : wiki Bahamut + DiGeam (via ML_RESEARCH/RESEARCH_ZH.md)*

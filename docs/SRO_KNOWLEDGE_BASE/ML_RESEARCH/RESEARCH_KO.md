@@ -407,6 +407,7 @@ Confiance : 5 = confirmé par source coréenne primaire/presse · 4 = confirmé 
 8. **Valeurs numériques des skills par niveau** (dégâts min/max, coûts MP) : seuls des lv1 2005 sont documentés (S6) ; extraire `skilldata_5000.txt`/`_RefSkill` reste la voie (recommandation inchangée de la base).
 9. **Écart 17/03/2005 vs 2005.04** : deux versions du début du service commercial (Wikipedia EN vs rapport officiel Wemade) — à trancher avec les archives presse de mars-avril 2005.
 10. **Serveur « Hebe » / Arges Lv.120-140 (2020s)** : annonces Facebook iSRO datées partiellement (15/09 et 23/11 sans année explicite dans les snippets) — années exactes à confirmer.
+    - ⚠️ **Correction (KO2, 2026-10)** : « Hebe »/« Arges »/« Kali »/« Rhea » sont des **serveurs iSRO**, pas des uniques/boss — les annonces Facebook citées référencent des serveurs. Voir [RESEARCH_KO2_WORLD.md](RESEARCH_KO2_WORLD.md).
 
 ---
 

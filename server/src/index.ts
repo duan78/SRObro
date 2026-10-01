@@ -10,6 +10,7 @@ import express from 'express';
 import cors from 'cors';
 import { GameServer } from './core/GameServer';
 import { DatabaseManager } from './database/DatabaseManager';
+import { registerAdminRoutes } from './admin/AdminServer';
 import { createLogger } from './core/Logger';
 import prisma from './database/prisma';
 
@@ -75,6 +76,9 @@ async function main(): Promise<void> {
     const gameServer = new GameServer(io, dbManager);
     await gameServer.initialize();
     logger.info('Game server initialized');
+
+    // Console web /admin (phase 6): auth compte gm/admin
+    registerAdminRoutes(app, gameServer);
 
     // Start HTTP server
     httpServer.listen(PORT, () => {

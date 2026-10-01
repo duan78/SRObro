@@ -8,6 +8,7 @@
 - [Monstres Level 60-80](#-monstres-level-60-80)
 - [Monstres Level 80-100](#-monstres-level-80-100)
 - [Monstres Level 100+](#-level-100-110-alexandrie--job-temple--données-client-vérifiées)
+- [🇰🇷 Monstres KSRO 100-140 (données officielles coréennes)](#️-monstres-ksro-100-140-données-officielles-coréennes)
 - [Champion/Giant/Elite Stats](#-championgiantelite-stats)
 
 ---
@@ -61,6 +62,10 @@
 | 104 | Blood Hyena | Aggressive | Alexandrie/Job Temple — **vérifié client** |
 | 103-110 | Apis, Selket, Neith, Anubis, Isis, Haroeris, Seth | **UNIQUES Job Temple** | **vérifié client** |
 | 105 | BeakYung « Medusa » | **UNIQUE** | Qin-Shi Tomb B6 — **vérifié** |
+| 98-105 | 현무 전욱 · 주작 염제 · 백호 소호 · 청룡 태호 · 염화객 신무 · 백사 백령 | **Gardiens + boss (noms KR officiels)** | Qin-Shi Tomb B5-B6 — 🇰🇷 gamedata KSRO |
+| 111-116 | 45 monstres du Temple de Jupiter (신전 수호병, 그리핀, 바알 광신도…) | Aggressive | 🇰🇷 Dimension Miroir / Temple de Jupiter — gamedata KSRO |
+| 120 | 키데모나스 (Kidemonas) | **UNIQUE de champ** | 🇰🇷 거울 차원 (Dimension Miroir) — notice KR 25/04/2012 |
+| 121-140 | monstres de Bagdad / Shambhala | — | 🇰🇷 **non documentés officiellement** (gamedata s'arrête en 2011) |
 
 > ⚠️ **Note (2026):** les lignes « vérifié client » proviennent des données iSRO (silkroadonline.wiki). Les entrées anciennes non marquées (Shedim, Dark Devil, Bhima, Mu jun, Hang-A, Huang, Nightmare, Kujo, Petal, Castor, Jarad) n'ont pas pu être confirmées dans les données client — à traiter comme non vérifiées. Les anciennes lignes « Naga 80 / Harpy 82 / Mummy 85 / Ghole 88 / Djinn 90 / Ifrit 92 / Neith 95 / Isis 98 / Anubis 100 / Sphinx 102 / Serket 105 / Osiris 108 / Ra 110 » comme mobs de terrain ont été **supprimées** (noms introuvables dans le client — Neith/Isis/Anubis/Serket/Seth sont les uniques du Job Temple).
 
@@ -1070,6 +1075,61 @@ Zone: Roc Mountain — raid de guilde
 
 ---
 
+## 🇰🇷 Monstres KSRO 100-140 (données officielles coréennes)
+
+> ⚠️ **Périmètre** : monstres du **service coréen (KSRO, jamais fermé)** documentés par la **gamedata officielle du site krsilkroadcp.joymax.com** (tables EUC-KR décodées, fiabilité 5 — noms/niveaux/types officiels, **sans HP**). À ne pas mélanger avec les données client iSRO ci-dessus. Rapport source : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md).
+
+### 🦁 Temple de Jupiter — 45 monstres officiels lv 111-116 (Dimension Miroir, 2011)
+
+Source : [table officielle kSRO — Europe_Monster_Jupiter](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Europe_Monster_Jupiter.html). Tous **선공 (agressifs)** ; la table code le type de défense (일반형/물리방어형/마법방어형) et le type d'attaque.
+
+| Famille | Monstres (nom officiel KR — niveau) |
+|---|---|
+| **Statues-gardiennes du temple** | 신전 수호병 111 · 신전 수호 기사 111 · 신전 경계병 111 · 신전 감시자 112 · 신전 파수병 112 · 신전 문지기 113 · 영혼 파괴자 112 · 영혼 감시자 113 · 영혼 절단자 113 · 불멸의 문지기 114 · 불멸의 감시자 115 · 불멸의 수호병 115 |
+| **Lions (석상 사자)** | 어린 신전 사자 111 · 니케의 사자 111 · 아폴로의 사자 112 · 신전 사자 113 · 전투 사자 113 · 광포한 신전 사자 113 · 포효의 전투 사자 113 · 아세라의 사자 113 · 아낫의 사자 114 |
+| **Minotaures** | 미노타우르스 113 · 고난의 미노타우르스 115 · 절망의 미노타우르스 115 · 파멸의 감시자 117 · 파멸의 절단자 118 |
+| **Griffons** | 그리핀 수호자 112 (마법방어형) · 그리핀 정복자 112 · 그리핀 113 · 불멸의 그리핀 수호자 114 · 불멸의 그리핀 정복자 114 · 불의 수호자 114 · 물의 수호자 114 · 복수의 강철 발톱 114 · 경계의 강철 발톱 114 · 영혼의 수호자 115 · 보호의 강철 발톱 115 · 불멸의 그리핀 115 · 불멸의 뾰족부리 115 (chef de meute) |
+| **Cultistes de Baal (광신도)** | 바알 광신도 116 (magique) · 바알 추종자 116 · 잔혹한 광신도 116 · 바알 선지자 116 · 광폭한 광신도 116 — « gardiens de la 슬픔의 숲 (Forêt de la Tristesse), disciples de 바빌리온 » |
+
+> **Lore officiel** : les statues-gardiennes ont été **corrompues par le sortilège de 바빌리온** (« 바빌리온의 주술로 인해 악마의 성전을 지키는 하수인이 된 지금도… ») ; les 광신도 116 gardent la Forêt de la Tristesse (zone extérieure). Le nom coréen du donjon **광신도의 은신처 (Zealots Hideout)** est attesté deux fois (gamedata + AreaNpc : le soldat 페르난도 y est « perdu »). Boss de ces donjons (Jupiter/Yuno/Deus/Baal/Babilion/Zielkiaxe) : [15_UNIQUE_BOSSES.md — section KSRO](./15_UNIQUE_BOSSES.md).
+
+### 🐍 Qin-Shi Tomb — gardiens, noms officiels coréens (croisés TW)
+
+La table officielle KR ([China_Monster_Dungeon](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/China_Monster_Dungeon.html)) **confirme mot pour mot** les gardiens B5 documentés côté TW :
+
+| Coréen officiel (niveau) | TW (RESEARCH_ZH) | Rôle |
+|---|---|---|
+| 현무 전욱 (98) | 玄武颛顼 | Tortue Noire / Zhuanxu (JeonUk) |
+| 주작 염제 (98) | 朱雀炎帝 | Phénix Vermillon / Yandi (YumJae) |
+| 백호 소호 (99) | 白虎小昊 | Tigre Blanc / Xiaohao (SoHaow) |
+| 청룡 태호 (99) | 青龙太皥 | Dragon Azur / Taihao (TaeHo) |
+| 염화객 신무 (100) | 炎火客神武 | pré-boss central (= Shinmoo) |
+| 흑사 소소 (100) | — | élite B5-B6 |
+| 사린천 (99) | — | élite |
+| **백사 백령 (105)** | 白蛇白靈 | boss final B6 (« Medusa » / BeakYung) |
+
+> ✅ Correspondance JeonUk↔현무 전욱 etc. confirmée par les noms KR officiels (recherche KO2 2026-10). Structure TW officielle : entrée 70+ ; B5 par créneaux de 10 min (11:00/17:00/21:00) ; téléport aléatoire vers B6 après les 4 Rois Célestes + 염화객 신무.
+
+### 🐪 Égypte — monstres officiels coréens (100-110)
+
+**Terrain** ([Egypt_Monster_Field](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Egypt_Monster_Field.html)) : 우네그 100 (Uneg) · 샌드 레이더 100 · 웨네그 101 (Weneg) · 타텐 101 · 다크 케프리 101 (Dark Khepri) · 테넨 102 · 윈드 스파이더 102 · 데저트 버그 102 · 카멜 스파이더 103 · 다크 샌드맨 103 · 블러드 하이에나 104 (Blood Hyena) · 우레우스 104 · 아케르 105 · 메헨 105 · 실러켄스 107 · 아크니쉬 107 · 실러켄 108 · 샌드웜 108 · 아케루 109 · 데빌웜 110.
+
+**Donjons 신전 + 파라오의 무덤** (103-110) : 아피스 103 (Apis) · 셀키온 105 · **셀키스 105 (Selket)** · 데빌 샌드맨 105 · 히케 106 · **네이트 106 (Neith)** · 공포/복수의 사제 106 · 하르사페스 107 · 하르메스 107 · **아누비스 107 (Anubis)** · 징벌/수호/권능/치유의 사제 108 · **이시스 108 (Isis)** · 케이사스 버서커 108 · 질풍/화염의 사제 109 · 셉투 109 · **하로에리스 109 (Haroeris)** · 에리스 109 · 이무테스 110 · 탐욕/파괴의 망령 110 · 소페두 110 · 페트베 110 · **세이트 110 (Seth)**.
+
+> ✅ Les niveaux des 6 uniques du Job Temple sont **identiques côté KR officiel et client iSRO** (validation croisée KO2). Voir [15_UNIQUE_BOSSES.md](./15_UNIQUE_BOSSES.md).
+
+### 🐉 Dimension Miroir / Bagdad / Shambhala — au-delà de la gamedata officielle
+
+| Zone | Monstres connus | Statut |
+|---|---|---|
+| **거울 차원 (Dimension Miroir)** | les 45 monstres Jupiter ci-dessus (111-116) + unique de champ **키데모나스 (Kidemonas, 120)** ajouté le 25/04/2012 (notice K24) | ✅ officiel |
+| **바그다드 (Bagdad)** | vidéos KR de chasse party et d'uniques (2020-2021, S34) — **aucune liste officielle publiée** ; boss : 얍샤드 대장군 ?, Grand Démon, Général, Kailia | ⚠️ non documenté officiellement |
+| **샴발라 (Shambhala, 131-140)** | « nouvelle carte + nouveaux monstres » (notice K9) — **noms non publiés** | ⚠️ non documenté officiellement |
+
+> ⚠️ **La gamedata officielle kSRO s'arrête au Temple de Jupiter (2011)** : les monstres 121+ n'existent publiquement que dans les fichiers client/serveur (dumps vSRO — RaGEZone/Extraloob — à traiter comme extraction privée, fiabilité 2, non consultables) → l'extraction `characterdata` reste la voie pour HP/niveaux.
+
+---
+
 ## 👑 Unique Boss Stats
 
 ### 📊 Tableau Vérifié (données client iSRO — silkroadonline.wiki)
@@ -1253,8 +1313,13 @@ Zone: Roc Mountain — raid de guilde
 - [xSROMap](https://jellybitz.github.io/xSROMap/) — carte interactive
 - [Monster Area Maps](https://guildalgarb.wordpress.com/games/sro/maps/monster-areas/)
 
+### 🇰🇷 Gamedata officielle KSRO (recherche KO2 2026-10)
+- [Monstres du Temple de Jupiter — table officielle (45 mobs 111-116)](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Europe_Monster_Jupiter.html)
+- [Monstres Égypte — terrain](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Egypt_Monster_Field.html) · [donjons (uniques KR)](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Egypt_Monster_Dungeon.html) · [donjon Qin-Shi (gardiens 98-105)](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/China_Monster_Dungeon.html)
+- [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) — rapport source (tables décodées EUC-KR, lacunes 121+ documentées)
+
 ---
 
 *Dernière mise à jour: 2026-10-01 (uniques corrigés d'après données client silkroadonline.wiki; faune Alexandria/Roc Mountain corrigée)*
-*Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (validation HP, timers, Qin-Shi B6) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md)*
+*Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (validation HP, timers, Qin-Shi B6) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) · rapports KO2 (section 🇰🇷 monstres KSRO 100-140 : 45 monstres Jupiter officiels, gardiens Qin-Shi KR, monstres d'Égypte KR)*
 *Prochaine mise à jour: Monstres 60-110*

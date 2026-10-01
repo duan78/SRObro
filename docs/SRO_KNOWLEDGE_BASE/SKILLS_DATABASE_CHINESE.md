@@ -14,6 +14,7 @@
 - [Lightning Mastery](#-lightning-mastery)
 - [Fire Mastery](#-fire-mastery)
 - [Force Mastery](#-force-mastery-water)
+- [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026)
 - [Puissances de Skills (Origin Mobile)](#-puissances-de-skills-origin-mobile)
 - [Statuts et Imbues](#-statuts-et-imbues)
 - [Coûts SP et Progression](#-coûts-sp-et-progression)
@@ -734,6 +735,115 @@ Récupération HP (Move/Strength) et MP (Intellect/Circulate). CD 5 s.
 
 ---
 
+## 🇰🇷 Contenu KSRO (2011-2026)
+
+> **Source primaire** : le site officiel KSRO héberge la **base de skills complète du service coréen courant** — **64 pages de séries** (Bicheon ×10, Heuksal ×9, Pacheon ×10, Cold ×8, Lightning ×7, Fire ×8, **Force ×12**) couvrant les 7 maîtrises, avec **noms KR officiels** et icônes. Séries actives : **5 à 7 livres** dont les derniers aux maîtrises **96-124** ; cas unique au-delà de 120 : **기담요결** (Force, 122/124). Accès : https://krsilkroadcp.joymax.com/gamedata/skill/asiaskill.asp?Mastery=1&Category=1 (armes CH, catégories 1-3 ; `Mastery=2` = 기공) → iframes `iframe_skill/Weapon_*_N.html` / `Force_*_N.html`. Table intégrale et lecture : [ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §3](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md).
+>
+> ⚠️ Les équivalents iSRO ne sont repris que lorsqu'ils sont déjà établis dans les sections classiques ci-dessus ; « — » = série **post-classique** (mapping codename restant à faire). **Coûts SP des rangs 96-124 : inconnus** — le site officiel ne publie que noms + maîtrises (extraction client requise, cf. rapport §16).
+
+### Bicheon 비천검법 — 10 séries
+
+| Série (계열) | Équivalent iSRO | Livres (maîtrise → nom KR) |
+|---|---|---|
+| 필살검 | Smashing Sword | 5 비천일검 · 27 비천일섬 · 49 비천월아검 · 71 비천적성검 · 96 비천쌍린검 · **120 비천 절멸검** |
+| 연환검 | Chain Sword Attack | 7 일식 환영 · 29 이식 혈벽/혈량 · 51 삼식 승천/패천 · 73 사식 벽류 · 100 오식 천군 · **120 육식 파천** |
+| 방패술 | Shield Technique | 10 강성 · 32 태산 · 54 철벽 · 76 거성 · 98 철성 · **105 태양 방패술** |
+| 검기 | — (nuke d'épée) | 14 유혈검기 · 36 유혼 · 58 유귀 · 80 유마 · 102 유신 · **120 유황검기** |
+| 비검 | Hidden Blade (KD) | 19 비검개화 · 41 비검화망 · 63 비검무적 · 85 비검격류 · **112 비검천추** |
+| 천살 | Killing Heaven Blade (stabs au sol) | 19 천살참혼결 · 45 참마결 · 68 잠귀결 · 90 수라결 · 110 참해결 · **120 천살잠룡결** |
+| 이기어검 | — (vol d'épée par le Ki) | 31 혈사 · 54 낙화 · 76 돌풍 · 98 난비 · **120 이기어검 만천** |
+| 비천신공 | ≈ Bicheon Force (paliers 20-120 identiques ; 빙염/풍운/백귀/산해 ≈ Glacial Flame/Storm/Banshee/Summit & Depth — correspondance apparente, à confirmer) | 20 빙염 · 40 풍운 · 60 백귀 · 80 산해 · 100 건곤 · **120 일월 비천신공** |
+| 강화술 | passif maîtrise 10 (≈ Shield Protection, à confirmer) | 10 호신강화 |
+| 천산신갑 | — passif armure (maîtrise 80, post-classique) | 80 천산신갑 |
+
+### Heuksal 흑살창법 — 9 séries
+
+| Série | Équivalent iSRO | Livres |
+|---|---|---|
+| 멸절결 | Pierce | 5 낭아창 · 27 잔월창 · 49 유혼창 · 71 뇌응창 · 96 천운창 · **120 수라창** |
+| 선풍창 | Storm (spin) | 7 혈선풍 · 29 혈랑풍 · 51 혈사풍 · 73 혈마풍 · 98 혈망풍 · **105 혈섬풍** |
+| 흑살창 | Heuksal Spear (front) | 10 귀선창 · 32 파옥섬 · 54 쇄혼창 · 76 무풍아 · 98 사지창 · **116 천제창** |
+| 이혼창 | Soul Departs (stun) | 14 동 · 36 진 · 58 혼 · 80 제 · 102 격 · **120 벽** |
+| 창귀술 | Ghost Spear (AoE 360°) | 19 낙화 · 41 태자 · 63 신군 · 85 흑운 · 106 만암 · **120 용왕** |
+| 파륨창 | Chain Spear | 24 비호 · 47 나찰/수라 · 69 명왕/교룡 · 91 주작 · **116 태상** |
+| 비룡강하 | Flying Dragon Spear | 31 류 · 54 비 · 76 휘 · 98 섬 · **120 천** |
+| 철삼공 | passif HP maîtrise 10 (= Cheolsam Force) | 10 철삼공 |
+| 불멸패왕갑 | — passif armure (maîtrise 80, post-classique) | 80 불멸패왕갑 |
+
+### Pacheon 파천신궁 — 10 séries
+
+| Série | Équivalent iSRO | Livres |
+|---|---|---|
+| 항마궁술 | tir de base | 5 탄 · 27 파 · 49 쇄 · 71 격 · 96 멸 · 109 태 · **120 달** |
+| 벽력전 | Arrow Combo | 7 이연시 · 29 삼연시 · 51 사연시 · 73 오연시 · 94 연봉시 · **116 연사황** |
+| 매 소환 | Hawk Summon (les 6 oiseaux 백매/흑매/청매/뇌조/한조/화조 = White/Black/Blue/Lightning/Ice/Fire Hawk, paliers identiques) | 10 백매 · 32 흑매 · 54 청매 · 76 뇌조 · 104 한조 · **120 화조 소환** |
+| 추풍섬 | Autumn Wind (perforantes) | 14 화류전 · 36 사령전 · 58 철혈전 · 80 채홍전 · 102 천마전 · **120 창룡전** |
+| 파천 귀혼시 | — (AoE) | 19 귀혼시 · 41 혈영시 · 63 잠룡시 · 85 봉황시 · **112 건곤시** |
+| 폭멸전 | Explosion Arrow | 25 투신 · 47 광마 · 69 마수 · 91 천괴 · **116 지옥** |
+| 강궁시 | Strong Bow | 31 심 · 54 광 · 76 저 · 98 의 · **120 추** |
+| 어화심궁 | — (série tardive) | 25 비화 · 50 호접 · 75 순목 · **100 침뢰** |
+| 심원대법 | passif maîtrise 10 (décrit « passif MP » côté officiel — à recouper avec Mind Concentration) | 10 심원대법 |
+| 용린갑 | — passif armure (maîtrise 80, post-classique) | 80 용린갑 |
+
+### Cold 한빙면공 — 8 séries
+
+| Série | Équivalent iSRO | Livres |
+|---|---|---|
+| 빙기공타 | Cold Force (imbue) | 5 빙하결 · 25 빙옥결 · 45 빙해결 · 65 빙운결 · 98 빙기결 · **120 빙극결** |
+| 빙혼강기 | Frost Guard | 8 빙혼지공 · 28 빙혼신위 · 48 빙혼강기 · 68 빙혼강체 · **102 빙혼결기** |
+| 빙공파 | Cold Wave | 12 포박 · 32 결박 · 52 강박 · 72 밀박 · **106 혼박** |
+| 빙벽 | Frost Wall | 17 수정빙벽 · 37 천설 · 57 극한 · 77 만년 · **111 창극빙벽** |
+| 한빙광야결 | Frost Nova | 23 전풍 · 43 광림 · 63 한풍 · 83 빙야 · **114 극풍** |
+| 설풍지결 | Snow Storm (nuke) | 30 일결 · 50 이결 · 70 삼결 · 90 사결 · **118 오결 빙폭** |
+| **섭설지혼** | — **nouvelle série** | 20 어 · 40 이 · 60 동 · 80 경 · 100 속 · **120 절** |
+| 한빙지공 | passif maîtrise 10 (décrit « passif MP » côté officiel — à recouper avec Cold Armor) | 10 한빙지공 |
+
+### Lightning 풍뢰비공 — 7 séries
+
+| Série | Équivalent iSRO | Livres |
+|---|---|---|
+| 뇌기공타 | Thunder Force (imbue) | 5 뇌호결 · 25 뇌전결 · 45 뇌왕결 · 65 뇌룡결 · 98 뇌봉결 · **120 뇌참결** |
+| 관통섬공 | Piercing Force | 8 필 · 28 섬 · 48 쾌 · 68 기 · **102 극 관통섬공** |
+| 경공 | Wind Walk | 12 초상비 류 · 32 귀영신보 환영 · 52 초상비 쾌 · 72 귀영신보 비영 · **106 초상비 급** |
+| 사자후 | Lion Shout | 17 진명 · 37 낭천 · 57 광야 · 77 파공 · 98 참살 · **120 멸천 사자후** |
+| 정신집중술 | Concentration | 23 일성 · 43 이성 · 63 삼성 · 83 사성 · **114 오성** |
+| 뇌전격 | Thunderbolt Force (nuke) | 30 십랑결 · 50 백호결 · 70 천마결 · 90 만학결 · **116 현무결** |
+| 뇌천지공 | passif maîtrise 10 (décrit « passif MP » côté officiel — à recouper avec Heaven's Force) | 10 뇌천지공 |
+
+### Fire 화령신공 — 8 séries
+
+| Série | Équivalent iSRO | Livres |
+|---|---|---|
+| 화기공타 | Fire Force (imbue) | 5 화류결 · 25 화극결 · 45 화독결 · 65 화혼결 · 98 화운결 · **120 화양결** |
+| 화염 방패술 | Fire Shield | 8 화조 · 28 염화 · 48 화왕 · **68 불사황** |
+| 화염체 | Flame Body | 12 지 · 32 강 · 52 극 · 72 고 · **106 일위** |
+| 화염강기 | Fire Protection | 17 화염지공 · 37 화염신위 · 57 화염강기 · 77 화염방후 · **110 화염무결** |
+| 염화벽공 | Fire Wall | 23 고탑 · 43 거산 · 63 요새 · 83 옹성 · **103 금강** |
+| 폭염파 | Flame Wave (nuke) | 30 화시 · 43 열화 · 56 광폭 · 70 화탄 · 83 열섬 · 96 염광 · **118 멸탄 폭염파** |
+| **발화술** | — **nouvelle série** | 30 린 · 30 개운발화 · 80 경 · **100 일출발화** |
+| 화마지공 | passif maîtrise 10 (décrit « passif MP » côté officiel — à recouper avec Flame Devil Force) | 10 화마지공 일성 |
+
+### Force 기혈대법 — 12 séries (l'arbre a explosé)
+
+| Série | Rôle (rapport) | Livres |
+|---|---|---|
+| 내가 호흡법 | buff HP/MP | 5 호흡법 · 25 기료술 · 45 요상술 · 65 원기술 · 98 기흡법 · **120 명상술** |
+| 추궁과혈 | soins | 8 제독 · 28 요체 · 48 내성 · 68 원기 · 88 정좌 · **108 결극** |
+| 반해진경 | série tardive | 30 순 · 60 결 · **90 청** |
+| 제황신의경 | grand soin | 12 의수 · 32 귀수 · 52 신수 · 72 묘수 · 94 만수 · **116 건수** |
+| 부활심결 | **résurrection** | 17 귀령술 · 37 귀명술 · 57 귀혼술 · **77 귀환술** |
+| 치료술 | **soins de zone** | 23 조화 · 43 동화 · 63 일체 · 83 본원 · **116 초월치료술** |
+| 점혈대법 | série tardive | 30 속 · 50 집 · 60 체 · 70 사 · 80 무 · 90 지 · **110 절** |
+| 기혈신공 | passif (maîtrise 10) | 10 기혈신공 |
+| **기담요결** | **au-delà du cap 120 !** | **122 박 · 124 제** |
+| 생사경 | série tardive | 40 유혼술 · **90 강령술** |
+| 활극천의경 | série tardive | 40 청령기 · **90 건곤기** |
+| 활인심결 | série tardive | 10 동 · 20 정 · 60 패 · **70 순** |
+
+> 💡 **Lecture SRObro** (rapport §3.7) : le Force (기혈대법), arbre de 4-5 séries à l'époque classique, en compte **12** sur le service coréen actuel — dont des soins de zone (치료술), une vraie résurrection (부활심결) et des séries 121-124 (기담요결). Les passifs armure par maîtrise d'arme (천산신갑/불멸패왕갑/용린갑, maîtrise 80) et les transformations 비천신공 (jusqu'à 일월) sont également post-classiques. **Mapping codename client ↔ ces noms KR = travail restant** (les noms iSRO tardifs ne correspondent pas mot à mot). Les intitulés « passif MP » du site officiel (한빙지공/뇌천지공/화마지공/심원대법) restent à recouper avec les passifs classiques via `skilldata`.
+
+---
+
 ## 📊 Puissances de Skills (Origin Mobile)
 
 Valeurs « Skill Power » officielles (Silkroad Origin Mobile, base iSRO — **valeurs relatives de dégâts**, retouchées par Joymax pour mobile ; à utiliser comme ordre de grandeur, pas comme données client) :
@@ -849,5 +959,5 @@ Valeurs « Skill Power » officielles (Silkroad Origin Mobile, base iSRO — **v
 
 ---
 
-*Dernière mise à jour : 2026-10-01 (enrichie le même jour des noms originels KR/ZH — recherche multilingue ML_RESEARCH)*
+*Dernière mise à jour : 2026-10-01 (enrichie le même jour des noms originels KR/ZH — recherche multilingue ML_RESEARCH ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : base officielle 64 séries / 296 skills — rapport ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §3)*
 *Sources : skills.txt client (GitHub SilkroadBot), Silkroad Origin Mobile (officiel), UnKnoWnCheaTs, SilkroadForums, Fandom, StrategyWiki, elitepvpers, Reddit r/silkroadonline ; noms KR/ZH : Inven 2004, GameAbout 2005, guides KR, wiki TW DiGeam, archives CSRO Sina/17173, Bahamut. Voir section « Données Manquantes » avant d'utiliser les chiffres comme références absolues.*

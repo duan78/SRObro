@@ -14,6 +14,7 @@
 - [Comment Obtenir](#-comment-obtenir)
 - [Magic Pop System](#-magic-pop-system)
 - [Prix et Valeur](#-prix-et-valeur)
+- [🇰🇷 Contenu KSRO (2011-2026) : seals et raretés du service coréen](#-contenu-ksro-2011-2026--seals-et-raretés-du-service-coréen)
 - [FAQ](#-faq)
 - [Resources](#-resources)
 
@@ -30,12 +31,15 @@ Le **Seal Equipment** (« SOX ») est un tier d'équipement **rare et puissant**
 - ✅ **Blues souvent présentes** à la création (les SOX tombent régulièrement avec 1–4 blues)
 - ✅ **Alchimiables** comme les items normaux (+, pierres)
 - ✅ **Essentiel** pour le late game PvP
+- 🇰🇷 **Nuage KSRO** : « Seal of Nova » est le nom **iSRO** — côté coréen, le rare 11D+ s'appelle **혜성의 인장 (Seal of Comet)**, et l'échelle devient **매직/레어/레전드 (Magic/Rare/Legend)** au 12D+ → voir la section [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026--seals-et-raretés-du-service-coréen)
 
 ### Hiérarchie
 
 ```
 Normal < Seal of Star < Seal of Moon < Seal of Sun < Seal of Nova (D11) / Egypt A-B (D11) < Set items
 ```
+
+> 🇰🇷 **KSRO** : Star/Moon/Sun (별/달/해의 인장) ne valent que **jusqu'au 10차** ; dès le **11차** le rare est unifié en **혜성의 인장 (Seal of Comet)**, et au **12차+** l'échelle devient **매직/레어/레전드** — voir la section [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026--seals-et-raretés-du-service-coréen).
 
 ### Glossaire
 - **SOX :** « Seal of X » — terme générique
@@ -120,6 +124,8 @@ Règle communautaire confirmée par plusieurs sources (elitepvpers, kmkm guide, 
   - Magic Pop (selon époque).
 - Variante **Seal of Nova Egypt** (Job Temple / PS) : voir ci-dessous.
 
+> 🇰🇷 **⚠️ CORRECTION IMPORTANTE (recherche KO2 2026-10) — « Seal of Nova » est le nom iSRO.** Le mot **노바 (nova) n'apparaît nulle part** dans les sources coréennes officielles ni communautaires (requêtes « 실크로드 노바 아이템 씰 », « "노바" 실크로드 아이템 인장 11차 » : zéro résultat KR — uniquement des contenus iSRO/privés EN-TR). Côté coréen, le site officiel unifie le rare du 11차 sous un seul sceau : **« 레어아이템은 11차부터 '혜성의 인장' 하나로 통일됩니다 »** (« à partir du 11차, les items rares sont unifiés sous le **혜성의 인장**, Sceau de la **Comète** ») — et les items normaux n'ont plus de tiers A/B/C (« 일반아이템은 11차부터 1개의 등급으로 통일 »). Le wiki TW utilise la même image (彗星, comète). **Les trois désignations (Nova iSRO / 혜성의 인장 KR / 彗星 TW) désignent très probablement la même réalité** — correspondance croisée concordante mais **par inférence** : aucun document bilingue ne l'énonce (incertitude signalée). Source : [officiel KSRO — itemsystem_1](https://krsilkroadcp.joymax.com/gamedata/item/Iframe_item/itemsystem_1.html) · détail dans la section [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026--seals-et-raretés-du-service-coréen).
+
 ---
 
 ## 🐪 Items Egypt (Class A/B, D11)
@@ -130,6 +136,7 @@ Règle communautaire confirmée par plusieurs sources (elitepvpers, kmkm guide, 
   - Dernier unique du FGW D11 : **Egypt B-grade** (extrêmement rare).
   - **Battle Arena** : les *Arena Coins* (gagnées même en perdant) s'échangent à l'*Arena Item Manager* contre du Egypt A/B (ex. Bouclier Egy B ≈ 300 coins).
 - Ces items restent **D11** (pas D12/D13).
+- 🇰🇷 **Équivalent KSRO probable** : la paire de tiers **무신/투신** du 11차 (armes aux noms de dieux égyptiens — Anubis, Set, Selket…) — interprétation par inférence, voir [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026--seals-et-raretés-du-service-coréen).
 
 ---
 
@@ -244,6 +251,42 @@ Un **système de loterie** (gacha) auprès du NPC Magic Pop (présent dans les v
 
 ---
 
+## 🇰🇷 Contenu KSRO (2011-2026) : seals et raretés du service coréen
+
+> Issu du rapport `ML_RESEARCH/RESEARCH_KO2_ITEMS.md` (2026-10-01, §4-§5, §15). Source primaire : **site officiel KSRO** `krsilkroadcp.joymax.com` (pages EUC-KR converties manuellement — fiabilité 5), complété par le wiki TW DiGeam (via `RESEARCH_KO2_WORLD.md`). Le service coréen n'a jamais fermé.
+
+### Hiérarchie officielle des seals côté KR (texte officiel)
+
+| Degrés | Grades officiels KR | Notes officielles |
+|---|---|---|
+| **1차-10차** | 일반 (blanc) / 강화아이템 (+N, blanc) / **매직** (bleu) / **레어** (jaune) — le rare se subdivise en **별의 인장 / 달의 인장 / 해의 인장** (Seal of **Star / Moon / Sun**) | « 레어아이템은 능력치에 따라 별의 인장, 달의 인장, 해의 인장으로 구분 » ; effet lumineux sur les armes — **le système Star/Moon/Sun est décrit comme actif ≤ 10차** |
+| **11차+** | le rare est **unifié en 혜성의 인장 (Seal of Comet)** ; les items normaux n'ont plus qu'**un seul grade** | « 레어아이템은 11차부터 '혜성의 인장' 하나로 통일됩니다 » + « 일반아이템은 11차부터 1개의 등급으로 통일 » |
+| **12차+** | nouvelle échelle de rareté à 3 niveaux : **매직 / 레어 / 레전드 (Magic / Rare / Legend)** | attesté par l'item mall, qui vend des **보호석 (protection stones) « 매직/레어/레전드 » pour chaque degré 12→17차** ([mall ARCHEMY/ETC](https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?shoptype1=ARCHEMY&Shoptype2=ETC)) |
+
+Source : [officiel KSRO — itemsystem_1.html](https://krsilkroadcp.joymax.com/gamedata/item/Iframe_item/itemsystem_1.html) (sous [itemsystem.asp](https://krsilkroadcp.joymax.com/gamedata/item/itemsystem.asp)).
+
+### Lecture pour la base (corrections et équivalences)
+
+1. **« Seal of Nova » = nom iSRO.** Côté KR, le rare unifié 11D+ est **혜성의 인장 (Seal of Comet)** ; le wiki TW dit 彗星 (comète). Même réalité probable, noms par service — correspondance **par inférence** (aucun document bilingue), à signaler comme telle.
+2. **Star/Moon/Sun valent ≤ 10D** (drops FGW D10 SoM attestés ; page officielle décrivant le système 별/달/해 comme actif). À partir du 11차, ils **n'existent plus** côté KSRO.
+3. **Au 12D+ l'échelle devient 매직/레어/레전드 (Magic/Rare/Legend)** — le wiki TW affiche les raretés 12套 en **史詩/傳奇/神器 (épique/légendaire/divin)** : les monstres de la **거울 차원 (Dimension Miroir)** ne lâchent **pas de 12套 « normaux »**, uniquement ces 3 raretés ([wiki DiGeam](https://srowiki.digeam.com/%E9%8F%A1%E4%B9%8B%E6%AC%A1%E5%85%83), via rapport KO2_WORLD §4.1 — source TW, fiabilité 5 côté opérateur TW). Les drops du Dimension Miroir / Temple de Jupiter sont donc **épique/légende/divin uniquement**.
+4. **무신/투신 ↔ « Egyptian A/B »** : les 3 tiers du 11차 KR (normal / 무신 / 투신, dieux égyptiens) correspondent très probablement aux couches iSRO « 11D normal / Seal of Nova / Egypt A-B » — **interprétation signalée** (ordre de puissance + panthéon + Job Temple), pas un texte officiel. Détail des noms : [07_ITEM_DEGREES.md](07_ITEM_DEGREES.md#-contenu-ksro-2011-2026--les-degrés-11차--17차).
+5. **Conversion des grades à la montée de degré** *(source EN, recoupement — fiabilité 2-3)* : 11D normal +7+ → 12D **매직** ; 11D rare (Nova/혜성) → 12D **레어** ; 11D « Legend » → 12D **레전드** — cohérent avec l'échelle du mall KR ([elitepvpers](https://www.elitepvpers.com/forum/silkroad-online/1264143-guide-upgrading-11d-items-12d.html), non officiel).
+
+### ⚠️ « Aquila » : à bannir de la base (aucune attestation coréenne)
+
+- La requête « 실크로드 아퀼라 » ne renvoie **aucun résultat lié au jeu** côté coréen : le nom **n'existe pas dans l'écosystème KSRO**. À traiter comme **invention de serveur privé ou confusion** — **ne pas l'intégrer comme nom de set/seal haut niveau sans preuve client**.
+- Les sets 13차 KR utilisent bien des **noms latins de vents** (템페스트/프로셀라 **Tempest/Procella**/브리즈 **Breeze**) — mais « Aquila » n'en fait pas partie.
+- ⚠️ **À ne pas confondre** : le client contient bien des items « **Aquila** … » (ex. *Aquila Broad Sword*, *Aquila Tower Shield*) — c'est le **nom de constellation du tier C des armes/boucliers EU 3D** (données vérifiées `_RefItem`, voir [ITEMS_DATABASE.md](ITEMS_DATABASE.md)), **sans rapport** avec un hypothétique set/seal « Aquila » haut niveau.
+
+### Drops 16-17차 (Legend 23, 05/2023) — taux non officiels
+
+- La **Silkroad Box (실크로드 상자)** du mall (15 실크) peut donner des items **17차** ; des taux circulent côté EN (« référencés sur la version coréenne officielle » — [SroLobby](https://www.srolobby.com/konular/silkroad-online-silkroad-box-17-degree-item-drop-rates.4434), fiabilité 3, **non officiel**) : armes/armures 17차 Legend 0,0003 % · Rare 0,0009 % · Magic 0,003 % ; accessoires ×9. **À ne pas importer comme officiels** (recommandation du rapport KO2 §18-6).
+- Les sets 17차 y sont nommés en anglais (CH **Platina/Orbis/Tonitrus**, armes « Tiger… », accessoires **Gold Lion/Holy Lord**) — noms **EN communautaires**, les noms KR officiels des sets 16-17차 restent à extraire du client.
+- Un **봉인구** (« médaillon de scellement ») 16차/17차 à 32 실크, « 봉인 해제용 » (déverrouillage), est vendu à l'[accueil du site officiel](https://krsilkroadcp.joymax.com/) — mécanique exacte non documentée publiquement (incertitude signalée).
+
+---
+
 ## ❓ FAQ
 
 ### Q: Puis-je jouer sans SOX ?
@@ -263,6 +306,12 @@ Un **système de loterie** (gacha) auprès du NPC Magic Pop (présent dans les v
 
 ### Q: « Seal of Honor », « Seal of Olympus », « Seal of Divinity » ?
 **R:** « Seal of Honor » est un objet/event (Style Arena, versions tardives/mobile). Les autres noms ne correspondent pas à des items officiels PC — ce sont des variantes de serveurs privés.
+
+### Q: 🇰🇷 Comment s'appelle le « Seal of Nova » côté coréen ?
+**R:** **혜성의 인장 (Seal of Comet)** — le mot « Nova » (노바) n'existe dans aucune source coréenne. Le rare 11차+ y est **unifié sous un seul sceau**, et au 12차+ l'échelle devient **매직/레어/레전드 (Magic/Rare/Legend)**. Voir la section [🇰🇷 Contenu KSRO](#-contenu-ksro-2011-2026--seals-et-raretés-du-service-coréen).
+
+### Q: 🇰🇷 Existe-t-il un set/seal « Aquila » ?
+**R:** **Non** — aucune attestation coréenne (« 실크로드 아퀼라 » : zéro résultat). Les seuls items « Aquila » officiels sont les **tiers C 3D EU** (constellation, ex. *Aquila Broad Sword*). Ne pas utiliser « Aquila » comme nom de set haut niveau.
 
 ### Q: Comment vérifier qu'un item est un vrai SOX ?
 **R:** Nom « Seal of … », glow doré, et stats nettement au-dessus du normal du même degré. Attention aux scams en trade.
@@ -295,6 +344,14 @@ Un **système de loterie** (gacha) auprès du NPC Magic Pop (présent dans les v
 - [silkroadonline.de — Was genau ist an SoS so gut? (+5/+10/+15, DE)](https://www.silkroadonline.de/allgemein/allgemeines-ber-silkroad/7705-was-genau-ist-an-sos-so-gut)
 - [GMS Temple — Tuto traduction : équivalences ressenties FR 2008](https://forum.gmstemple.com/index.php?showtopic=4387)
 
+### 🇰🇷 Officiel KSRO — seals & raretés (recherche KO2 2026-10)
+- [Site officiel KSRO — système d'items : 별/달/해 ≤ 10차, 혜성의 인장 11차+, 매직/레어/레전드 12차+](https://krsilkroadcp.joymax.com/gamedata/item/Iframe_item/itemsystem_1.html) (page iframe de [itemsystem.asp](https://krsilkroadcp.joymax.com/gamedata/item/itemsystem.asp))
+- [Officiel — item mall ARCHEMY/ETC : 보호석 매직/레어/레전드 par degré 12→17차](https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?shoptype1=ARCHEMY&Shoptype2=ETC)
+- [Wiki officiel DiGeam (TW) — 鏡之次元 : drops 12套 épique/légendaire/divin uniquement](https://srowiki.digeam.com/%E9%8F%A1%E4%B9%8B%E6%AC%A1%E5%85%83/)
+- [SroLobby — taux Silkroad Box 17D « référencés KR » (EN, NON officiel)](https://www.srolobby.com/konular/silkroad-online-silkroad-box-17-degree-item-drop-rates.4434)
+- [Elitepvpers — conversion des grades à l'upgrade 11D→12D (EN, recoupement)](https://www.elitepvpers.com/forum/silkroad-online/1264143-guide-upgrading-11d-items-12d.html)
+- Rapport : `ML_RESEARCH/RESEARCH_KO2_ITEMS.md` (§4-§5, §15, §17) · `ML_RESEARCH/RESEARCH_KO2_WORLD.md` (§4.1)
+
 ### Bases de données
 - [Silkroad Online Database (items, client v1_657)](https://silkroadonline.wiki/items)
 - [xSROMap](https://jellybitz.github.io/xSROMap/)
@@ -325,4 +382,4 @@ Un **système de loterie** (gacha) auprès du NPC Magic Pop (présent dans les v
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: elitepvpers, silkroadonline.fandom.com, guildalgarb, seidenkraft, GameFAQs (Sintaku), eXay forums, RageZone, silkroadonline.de, annonces officielles Facebook Silkroad, 17173/Sina/Bahamut/iccgame (ZH), SroLobby/vSRO.org (TR), TGDaily (KO), GMS Temple (FR) — rapports ML_RESEARCH 2026-10*
+*Sources: elitepvpers, silkroadonline.fandom.com, guildalgarb, seidenkraft, GameFAQs (Sintaku), eXay forums, RageZone, silkroadonline.de, annonces officielles Facebook Silkroad, 17173/Sina/Bahamut/iccgame (ZH), SroLobby/vSRO.org (TR), TGDaily (KO), GMS Temple (FR) — rapports ML_RESEARCH 2026-10 ; site officiel KSRO krsilkroadcp.joymax.com (혜성의 인장 11차+, 매직/레어/레전드 12차+) — rapport ML_RESEARCH/RESEARCH_KO2 (2026-10)*

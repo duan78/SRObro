@@ -56,6 +56,12 @@ export class PlayerEntity extends Entity {
   public skillPoints: number;
   public statPoints: number;
 
+  // Drapeaux GM (phase 6): hors combat normal, jamais persistés en base
+  public godMode = false;
+  public invisible = false;
+  public frozen = false;
+  public speedMultiplier = 1;
+
   // Cached combat stats (calculated from equipment, buffs, etc.)
   public stats: {
     attackPower: { min: number; max: number };
@@ -284,6 +290,27 @@ export class PlayerEntity extends Entity {
     });
 
     this.emit('levelUp', { entityId: this.id, oldLevel, newLevel: this.level });
+  }
+
+  /**
+   * Niveau direct (commande GM /level): aligne l'XP cumulé sur la courbe
+   * officielle, accorde les points de stats manquants et recalcul les maxima.
+   */
+  setLevel(target: number): void {
+    const n = Math.max(1, Math.min(140, Math.floor(target)));
+    const oldLevel = this.level;
+    this.level = n;
+    this.exp = cumulativeXpForLevel(n);
+    // 3 points de stats par niveau franchi (comme levelUp)
+    if (n > oldLevel) this.statPoints += 3 * (n - oldLevel);
+    // Base niveau 1 (200 HP / 100 MP au CharacterManager) + 20/10 par niveau,
+    // + bonus de stats déjà réparties (20 HP/STR, 15 MP/INT)
+    this.maxHp = 200 + (n - 1) * 20 + (this.str - 20) * 20;
+    this.maxMp = 100 + (n - 1) * 10 + (this.int - 20) * 15;
+    this.hp = this.maxHp;
+    this.mp = this.maxMp;
+    this.stats = this.calculateStats();
+    this.emit('levelUp', { entityId: this.id, oldLevel, newLevel: n });
   }
 
   /**

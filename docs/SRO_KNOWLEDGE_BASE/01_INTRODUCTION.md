@@ -45,15 +45,17 @@
 | **15 mars 2011** | **Legend VII : Rise of the Thief-Hunter** |
 | **22 déc. 2011** | **Silkroad R** lancé en service **global** (et non 2013 — ✅ corrigé) : rebalance des skills (buff massif CH), leveling accéléré ; par la suite le client R a été supprimé et les serveurs fusionnés dans le jeu classique (date exacte inconnue) |
 | **Été 2011** | **Legend VIII : Mysterious Temple of Jupiter** — cap 120 |
-| **7 mars 2012** | Corée : fusion des serveurs en un serveur unique **초원길** (« la route des plaines ») |
-| **27 juin 2012** | Corée : « Update Reverse » — rebalance skills, XP/SP revus, drop rates ↑ |
+| **7 mars 2012** | Corée : fusion des serveurs **황하·로도스·베니스·장안·비잔틴** en un serveur unique **초원길** (« la route des plaines ») — seul serveur coréen depuis |
+| **27 juin 2012** | Corée : patch **« Rebirth (재 탄생) »**, surnommé « 리버스 (Reverse) » par la presse — c'est l'application coréenne de la « version R » (rebalance skills/masteries CH, courbes XP/SP revues, aide ≤70, Forgotten World retravaillé). ⚠️ En Corée, la « version R » n'a **jamais été un jeu séparé** (« R버전은 신규 서비스가 아닌 실크로드의 패치 ») |
 | **2008-2009** | Début de la scène des serveurs privés (fichiers vSRO 1.188 fuités) |
 | **2012 → 4 sept. 2013** | Chine : service renommé 《丝路传说R》 (2012), puis fermeture de tous les serveurs par 世模 (04/09/2013, fin de contrat) |
 | **5 sept. 2013** | Chine : **relance** sous le nom 《新·丝路传说》 par 游艺春秋 (ICC Game) — effacement complet des comptes (清档), litige de marque ; **toujours en service en 2025** |
 | **12 déc. 2019** | Taïwan/HK/Macau : 《絲路紀元》 (Silkroad Online) en OBT chez DiGeam |
-| **Janv. 2015 / mai 2016** | Mises à jour « Arabian Nights » (kSRO) — caps 125 puis 130 |
-| **Mars 2018** | Mise à jour « Shambhala » — cap 140 |
+| **Mai 2014 / 27 mai 2015** | Corée : maj « **아라비아 반도 + 바그다드** » (région arabe 116+, donjon Bagdad 121+, roi 샤리야르) — **cap 125**, puis « **아라비아 해안** » (Arabian Shore, arbre de feu) — **cap 130**. Côté iSRO : « Arabian Nights » 01/2015 puis cap 130 05/2016 |
+| **27 mars 2018** | Mise à jour « **샴발라 던전 (Shambhala)** » — donjon 131+ au Taklamakan, **cap 140** (notice officielle KR) |
 | **~16 mai 2023** | Corée : patch « **Legend 23** » (파멸의 성전, 비밀의 무덤) — la numérotation coréenne a continué bien au-delà de IX |
+| **25 mars 2021** | Corée : **Joymax renommé Wemade Max** (주)조이맥스 → (주)위메이드맥스 — service et URLs inchangés |
+| **15 avr. / 10 juin 2025** | Corée : systèmes **auto-combat** (자동 전투 : auto-potion/skill/chasse) puis **reliques** (유물 : 3 slots dédiés, forge à partir de 파멸의 원소, port dès lv 131) |
 | **Mai 2025 / avr. 2026** | **Silkroad Again** (mobile, IP Wemade Max) : Chine (05/2025, 150 M¥ cumulés) puis Corée (04/2026) |
 | **2024** | Lancement mondial de **Silkroad Origin Mobile** (licencé WeMade Max, publié par GOSUVERSE) |
 | **28 oct. 2025** | Nouveau serveur officiel « Hebe » ouvert |
@@ -99,17 +101,88 @@ Le tableau ci-dessous consolide les dates **iSRO** (serveurs internationaux) vé
 | Qin-Shi Tomb (진시황릉) | **Legend Ⅶ**, test public 08/08/2007 | Legend IV « Tomb of the Qin-Shi Emperor », 17/03/2009 | ~19 mois |
 | King of the Rocs (괴조로크, unique lv 107) | **Legend 8**, 10/04/2008 | Legend IV Plus, 26/08/2009 | ~16 mois |
 | Alexandrie + Égypte (폭풍과 구름의 사막, Delta, 파라오의 무덤) | **Legend 9**, 09/09/2009 — **cap 105** | Legend V « Heroes of Alexandria » printemps 2010 (cap 110) | ~6 mois |
-| Legend 23 (파멸의 성전, 비밀의 무덤) | ~16/05/2023 | — (kSRO uniquement) | — |
+| Legend 23 (파멸의 성전, 비밀의 무덤) | ~16/05/2023 | Legend XXIII « Destruction and Secret », 18/07/2023 | 2 mois |
 
 - Sources presse KR : Inven (Legend Ⅶ, 30/07/2007), GameDonga (Legend 8, 10/04/2008), TGDaily (Legend 9, 16/09/2009), namu.wiki via extraits (Legend 23) — détail dans `ML_RESEARCH/RESEARCH_KO.md`.
 - **Cap 105 (09/09/2009)** : palier intermédiaire **jamais sorti en iSRO** — « 모든 종족의 레벨 제한이 105레벨로 상향 · 최대 스킬 마스터리 레벨 제한도 105 » (TGDaily).
 - Cap 100 atteint en Corée dès août 2007 (Legend Ⅶ : « 100레벨까지의 스킬 », items 10차 dès lv 90).
 
+### 🇰🇷 Contenu KSRO (2009-2026) — chronologie complète du service coréen
+
+> ✅ **Nouveau (recherche KO2 2026-10)** : la chronologie coréenne 2009 → 2026 est désormais reconstituée à partir du **board officiel de notices** `krsilkroadcp.joymax.com` (≈ 700 notices lues, encodage EUC-KR) et de la presse KR (GameMeca, 경향게임스, AVING…). Tout ce qui suit concerne **uniquement le service coréen** — ne pas confondre avec la timeline iSRO ci-dessus. Rapport complet : [ML_RESEARCH/RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md).
+
+| Date KR | Mise à jour / événement (nom officiel coréen) | Cap | Sources |
+|---|---|---|---|
+| **09/09/2009** | **Legend IX « 알렉산드리아의 영웅 »** (Alexandrie, désert des Tempêtes et Nuages, Delta, Vallée des Rois, donjon 파라오의 무덤 100+, 고급 엘릭시르) | **105** | board KR K35, presse TGDaily |
+| 2009-12 | Fin de la migration Yahoo! Korea ; channeling **피망 (Pmang)** en place | — | board KR (réf 880) |
+| 31/03 → 14/04/2010 | **배틀 아레나 (Battle Arena)** — 4 modes de matchmaking (aléatoire/guilde/party/métier), jusqu'à 64 joueurs | — | board KR K34, GG게임 |
+| **28/07/2010** | **Legend X « 잊혀진 세계 » (Forgotten World)** — cap 110, zone-donjon, **위탁 판매** (vente en consignation), rebalance skills | **110** | board KR K33, GameMeca P1 |
+| 20/12/2010 | Serveur **베니스 (Venice)** converti en serveur adulte 19+ | — | board KR K32 |
+| **19/01/2011** | **Legend XI « 직업 대립의 완성 »** — renouvellement complet du commerce : hors marchand, chacun doit choisir **Chasseur (헌터) OU Voleur (도적)** ; classements de métiers | — | board KR K31, GG게임 P4 |
+| 27/04/2011 | 아이템 성장 시스템 (croissance d'items) | — | board KR K30 |
+| mai 2011 | Items **12차 (12D)** (thème dragon) | — | board KR K30 |
+| **22/06/2011** | **Legend XII « 유피테르 신전의 영웅들 » (Heroes of Jupiter Temple)** — cap 120, skills 120, **premier donjon à difficulté adaptative solo/groupe** | **120** | board KR K29, AVING P7 |
+| déc. 2011 | Items **13차 (13D)** (thème tempête) + montures **펠로우즈 (Fellows)** | — | board KR K26/K27 |
+| 08/02 → 07/03/2012 | **Grande fusion de serveurs : 초원길** (황하·로도스·베니스·장안·비잔틴 → 1 serveur unique) | — | board KR K21, GameMeca |
+| 25/04/2012 | 거울의 차원 필드 : unique de champ **키데모나스 (Kidemonas, lv 120)** | — | board KR K24 |
+| 25/05 → 02/06/2012 | **스티리아 대격전** : champ de bataille de métiers 10v10 → **100v100** | — | board KR K23 |
+| **27/06/2012** | **Rebirth (재 탄생)**, dit « 리버스 업데이트 » — voir encadré ci-dessous | — | board KR K20, 경향게임스 P9 |
+| 21/11/2012 | Maj croissance (soutien leveling massif) | — | board KR K19 |
+| 2013 | Année légère (QoL/cosmétique) : skins de transports, tenues de métier avancées, missions **지니의 램프** (Lampe du génie), avatar **얍샤드 대장군** (04/07/2013) | — | board KR K15-K17, S6 |
+| **mai 2014** | **Maj « 아라비아 반도 + 바그다드 »** — région péninsule Arabique 116+ (repaires de voleurs/rebelles), donjon **바그다드 (Bagdad)** 121+ (roi **샤리야르**, univers des Mille et Une Nuits) | **125** | board KR K14 |
+| juil.-août 2014 | Items **14차 (14D)** | — | board KR K13 |
+| **27/05/2015** | **아라비아 해안 (Arabian Shore)** — zone côtière 125+ autour de l'**arbre de feu** (불의 나무), skills 130 | **130** | board KR K12 |
+| 25/11/2015 | **한계돌파** : extension des plafonds d'amélioration d'équipement | — | board KR K11 |
+| 18/05/2016 | Fin du service PC방 (PC-bangs) | — | board KR K10 |
+| **27/03/2018** | **샴발라 던전 (Shambhala)** — donjon **131+** ajouté dans le **타클라마칸 (Taklamakan)**, skills 140 | **140** | board KR K9 |
+| **25/03/2021** | **Joymax → Wemade Max** (changement de raison sociale, service inchangé) | — | board KR K7 |
+| 08/05 → ~16/05/2023 | **Legend 23 « 파멸과 비밀 »** — **파멸의 성전** (Temple of Destruction : donjon de champ, entrées Hotan/Bagdad, 3 boss de raid + boss final) ; **비밀의 무덤** (Secret Tomb) ; items **16차/17차** + **Ultimate items** (16 armes + 6 accessoires), démantèlement (파멸의 원소). iSRO : 18/07/2023 | 140 (inchangé) | elitepvpers C1, srolobby C2, namu C7 |
+| 11/04/2023 | 통합우편함 (boîte aux lettres unifiée) | — | board KR K6 |
+| **15/04/2025** | **자동 전투 시스템** (auto-potion / auto-skill / **auto-chasse**, interdit en ville) | — | board KR K4 |
+| **10/06/2025** | **유물 시스템 (reliques)** — 3 slots d'équipement dédiés, 18 reliques forgées depuis **파멸의 원소**, recette auto-apprise à 131+, renforcement +5/+10/+15 (échec = destruction) | — | board KR K3 |
+| 2026 | Événements saisonniers récurrents (신년, 알리바바, 세 개의 달, 유령 사냥, 풍선불기…) — dernière notice **08/09/2026**, dernière maintenance **17/09/2026** | 140 | board KR K1/K2 |
+
+> 📖 **Numérotation « Legend » coréenne** : seuls **IX (2009), X (2010), XI (01/2011), XII (06/2011)** puis **« Legend 23 » (2023)** sont attestés sur le board officiel KR — le branding « Legend » disparaît des notices coréennes entre XII et 23. Les numéros 13 → 22 côté KR ne sont documentés nulle part (lacune structurelle ; hypothèse d'une numérotation mondiale commune, non prouvée). Le « XII » KR correspond au « Legend VIII » iSRO (Temple de Jupiter).
+
+> 🔄 **Le patch « Rebirth / 리버스 » du 27/06/2012 — correction importante** : officiellement **« Rebirth(재 탄생) »** (notice du 13/06/2012), surnommé « **리버스 업데이트** » par la presse (Ruliweb, 경향게임스). C'est l'application domestique de la **« R버전 (version R) »** sondée in-game du 02 au 09/05/2012 : Joymax avait précisé noir sur blanc que « la version R n'est **pas** l'ouverture d'un nouveau service, c'est un **patch** de Silkroad ». Contenu : fusion/suppression/ajout de **masteries chinoises**, équilibrage CH↔EU, courbes XP/SP refaites, suppression de la possibilité de redescendre de niveau, aide aux personnages **≤ 70**, quêtes obsolètes supprimées, **잊혀진 세계 (Forgotten World) amélioré**, positions des monstres revues. **En Corée, « Silkroad R » n'a donc jamais été un jeu séparé** — contrairement au service global lancé le 22/12/2011 (fermeture de ce dernier : client supprimé, serveurs fusionnés dans le jeu classique).
+
+#### ⚠️ Conflit de cap coréen non tranché (documenter sans trancher)
+
+Trois séries d'indices officiels KR divergent sur le cap actuel du KSRO :
+
+| Indice | Valeur suggérée | Fiabilité |
+|---|---|---|
+| Notice officielle **K9** (27/03/2018, 샴발라 던전) : « 모든 종족의 레벨 제한이 140Lv로 상향 » | **cap 140** | 5 (officiel, cité par le rapport KO2-CHRONO) |
+| **Item mall KR 2026** : resets de stats vendus par tranches 1-100 / 101-120 / **121-125** | palier **125** (indirect) | 5 (officiel, indirect) |
+| Notice **reliques** (10/06/2025) : recette auto-apprise **à 131+**, équipement porté **dès 131** | contenu **131+** actif | 5 (officiel) |
+| Sources EN (iSRO) : cap 140 en 2018, Legend 23 ne l'a pas monté | 140 | 2-3 (communauté) |
+
+> Le rapport KO2-SYSTEMS note par ailleurs qu'« aucune page coréenne n'énonce "cap 140" noir sur blanc », alors que le rapport KO2-CHRONO cite la notice K9 qui l'énonce — **conflit documenté, non tranché**. La lecture la plus cohérente (sans conclusion) : cap 140 depuis 2018, le mall n'ayant jamais ajouté de tranche de reset au-delà de 125, et le contenu 131+ (reliques, Shambhala) restant actif en 2025-2026.
+
+#### 🗺️ Mapping KSRO ↔ iSRO (mêmes contenus, dates décalées)
+
+| Contenu | Corée (KSRO) | International (iSRO) | Écart |
+|---|---|---|---|
+| Forgotten World (잊혀진 세계) | Legend X, 28/07/2010 | Legend VI, 20/12/2010 | ~5 mois |
+| Jupiter Temple (유피테르 신전, cap 120) | Legend XII, 22/06/2011 | Legend VIII, 02/08/2011 | **6 semaines** |
+| Arabie/Bagdad (cap KR 125) | mai 2014 | « Arabia » 01/2015 | ~8 mois |
+| Arabian Shore (아라비아 해안, cap 130) | 27/05/2015 | 05/2016 | ~1 an |
+| Shambhala (샴발라, cap 140) | 27/03/2018 | 03/2018 global, puis vagues de serveurs (Hebe 140 le 15/09, Nyx 130 le 21/12) | simultané |
+| Legend 23 « 파멸과 비밀 » | ~16/05/2023 | 18/07/2023 | 2 mois |
+
+> ⚠️ Les caps intermédiaires **105 (2009)** et **125 (2014)** n'ont **jamais existé sur iSRO**. « Hebe, Kali, Rhea, Nyx, Tyche, Eris, Arges » sont des **noms de serveurs iSRO** (pas des uniques ni des mises à jour) — les caps y ont été déployés serveur par serveur.
+
+#### 📊 État du service coréen en 2026
+
+- **Service vivant** : site officiel `krsilkroadcp.joymax.com` actif, opéré par **(주)위메이드맥스 (Wemade Max)**, ex-Joymax (renommé le 25/03/2021) ; dernière notice événementielle **08/09/2026** (풍선불기 축제), dernière maintenance **17/09/2026** ; paiements via 피망 (Pmang).
+- **Serveur unique 초원길** depuis le 07/03/2012 (14 ans) ; dernier grand contenu : Legend 23 (2023) ; derniers systèmes : auto-combat (04/2025) et reliques (06/2025). Population : aucune donnée officielle — profil de petite communauté vétéran (interprétation des compteurs de vues du board).
+- **IP en croissance chez Wemade Max (2026)** : licences T2 2026 de **144억 ₩ (+6,5 %)** tirées par **실크로드** et Night Crows, 49 % du CA à l'international (Bloter) ; T1 2026 CA 327억 ₩ (+137,8 %, ZDNet) ; Inven : la marque 실크로드 croît de **~20 %/an en moyenne sur 5 ans**.
+
 ### 🎮 Jeux Dérivés
 
 | Jeu | Année | Statut |
 |-----|-------|--------|
-| **Silkroad R** | **22 déc. 2011** (lancement global) | Renouvellement du client (rebalance CH, leveling accéléré) — ✅ corrige l'ancienne date « 2013 » ; par la suite le client R a été supprimé et les serveurs fusionnés dans le jeu classique (fermeture exacte non datée ; témoignage elitepvpers) |
+| **Silkroad R** | **22 déc. 2011** (lancement global) | Renouvellement du client (rebalance CH, leveling accéléré) — ✅ corrige l'ancienne date « 2013 » ; par la suite le client R a été supprimé et les serveurs fusionnés dans le jeu classique (fermeture exacte non datée ; témoignage elitepvpers). 🇰🇷 **En Corée, « Silkroad R » n'a jamais été un jeu séparé** : la « version R » y a été livrée via le patch **Rebirth (재 탄생)** du 27/06/2012 (recherche KO2 2026-10) |
 | **Silkroad Origin Mobile** | 2024 (mondial ; Vietnam 03/07/2024) | Adaptation mobile officielle licenciée WeMade Max, publiée par GOSUVERSE — actif |
 | **Silkroad Again (실크로드 어게인)** | 2025-2026 (mobile) | Chine 05/2025 (« 실크로드-연기장안 », ~150 M¥ cumulés), Corée 04/2026 (V5 Games) ; maj « civilisation européenne » 07/2026 (cap 85) — actif |
 | **Silkroad Online (PC)** | 2005 | Toujours en ligne en Corée (kSRO, jamais fermé), en Chine (《新丝路》 ICC Game) et à l'international (silkroadforever.com, U1 Interactive Technology, Hong Kong) |
@@ -128,8 +201,9 @@ Le tableau ci-dessous consolide les dates **iSRO** (serveurs internationaux) vé
 | **105** | **sept. 2009 (kSRO uniquement — Legend 9)** | 10D | Palier intermédiaire coréen **jamais sorti en iSRO** (presse KR TGDaily) |
 | **110** | 2010 (Legend V) | 11D | Alexandrie |
 | **120** | été 2011 (Legend VIII) | 12D | Temple de Jupiter |
-| **125/130** | 2015-2016 (kSRO) | 13D-15D | Arabian Nights (peu documenté en Occident) |
-| **140** | mars 2018 | — | Shambhala ; murs d'XP massifs au-delà (table leveldata) |
+| **125** | **mai 2014 (kSRO uniquement)** | 14D (été 2014) | 아라비아 반도 + 바그다드 — palier **jamais sorti en iSRO** sous cette forme (iSRO : « Arabia » 01/2015) |
+| **130** | **27 mai 2015 (kSRO)** | 15D | 아라비아 해안 (iSRO : Arabian Shore 05/2016) |
+| **140** | **27 mars 2018 (kSRO)** | 16D-17D (Legend 23, 2023) | 샴발라 던전 (Shambhala) ; murs d'XP massifs au-delà (table leveldata) — ⚠️ conflit de cap KR : voir [section KSRO](#️-conflit-de-cap-coréen-non-tranché-documenter-sans-trancher) |
 
 > ⚠️ La courbe d'XP officielle (fichier `leveldata.txt` du client, présent dans ce dépôt : `assets/pk2_media/server_dep/silkroad/textdata/leveldata.txt`) montre des « murs » intentionnels au-delà du niveau 130 : passer 129→130 coûte ~31,5 milliards d'XP, et 139→140 ~579 **mille milliards** — rendant ces niveaux pratiquement inatteignables.
 
@@ -317,7 +391,7 @@ Aucun job n'est dominant: sans traders, pas de thieves ni de hunters; sans hunte
 | Service | Statut 2026 |
 |---------|-------------|
 | **Silkroad Online PC (international)** | ✅ En ligne — site officiel silkroadforever.com, opéré par U1 Interactive Technology (HK) ; nouveau serveur « Hebe » ouvert le 28 oct. 2025 |
-| **Silkroad Online PC (Corée, kSRO)** | ✅ **En ligne — le service coréen n'a JAMAIS fermé** : site officiel krsilkroadcp.joymax.com actif (notices officielles datées jusqu'à sept. 2026), un seul serveur **초원길** (ouvert 07/03/2012), événements saisonniers 2026 (풍선불기 축제, 유령 사냥, 세 개의 달, 돌아온 알리바바) — ✅ Résolu (recherche KO 2026-10) |
+| **Silkroad Online PC (Corée, kSRO)** | ✅ **En ligne — le service coréen n'a JAMAIS fermé** : site officiel krsilkroadcp.joymax.com actif (dernière notice **08/09/2026**, dernière maintenance **17/09/2026**), opérateur **Wemade Max** (ex-Joymax, renommé 25/03/2021), un seul serveur **초원길** (ouvert 07/03/2012), cap 140 (⚠️ conflit de cap : voir section KSRO), événements saisonniers 2026 (풍선불기 축제, 유령 사냥, 세 개의 달, 돌아온 알리바바) — ✅ Résolu (recherches KO + KO2 2026-10) |
 | **Silkroad Online PC (Chine, cSRO)** | ✅ En ligne — 《新丝路》 opéré par 游艺春秋 (ICC Game) depuis le **05/09/2013** (contrat d'exclusivité 4 ans signé le 14/06/2013, reconduit avec Wemade Max ; nouveau serveur 「烈刃焚天」 le 24/04/2024, fusions 21/11/2024) ; Taïwan/HK/Macau : 《絲路紀元》 (DiGeam) depuis le 12/12/2019 |
 | **Joymax** | La marque existe toujours (joymax.com/silkroad) ; Wemade a acquis **25,46 % des actions le 02/07/2010** pour ≈ 69,36 mds ₩ (~57 M$) — la société a ensuite été intégrée au groupe sous le nom **Wemade Max** |
 | **Silkroad Origin Mobile** | ✅ Actif — adaptation mobile officielle licenciée WeMade Max, publiée par GOSUVERSE |
@@ -387,7 +461,7 @@ Raisons du déclin du CSRO d'origine (analyse TapTap) : grind répétitif, trans
 **R:** Non, vous devez créer un nouveau personnage.
 
 ### Q: Quel est le level cap?
-**R:** Historique : 60 (2005) → 80 (Europe, 2007) → 90 (2008) → 100 (2009) → 110 (2010) → 120 (2011) → 140 (2018). Le cap « classique » mémorisé par la communauté est 110-120. Les serveurs privés s'arrêtent souvent à 90/110/120.
+**R:** Historique : 60 (2005) → 80 (Europe, 2007) → 90 (2008) → 100 (2009) → 110 (2010) → 120 (2011) → 140 (2018). Le cap « classique » mémorisé par la communauté est 110-120. Les serveurs privés s'arrêtent souvent à 90/110/120. 🇰🇷 Côté coréen : paliers supplémentaires **105 (09/2009)** et **125 (05/2014)**, cap 140 en 03/2018 (⚠️ conflit de cap KR documenté dans la [section KSRO](#️-conflit-de-cap-coréen-non-tranché-documenter-sans-trancher)).
 
 ### Q: Combien de temps pour le niveau max?
 **R:** Sur officiel 1x, compter **des mois aux années** au-delà du niveau 100 (plus d'un milliard d'XP par niveau, voir la table dans [25_LEVELING_GUIDE.md](25_LEVELING_GUIDE.md)). Sur Silkroad Origin, un joueur rapporte le cap 120 en 3-4 mois. Sur privé à rates élevés : jours/semaines.
@@ -462,6 +536,13 @@ Raisons du déclin du CSRO d'origine (analyse TapTap) : grind répétitif, trans
 - [ZDNet Korea — Silkroad R lancement global (22/12/2011)](https://zdnet.co.kr/view/?no=20111222114801) · [ChosunBiz — MOU Wemade 25,8 % (04/06/2010)](https://biz.chosun.com/site/data/html_dir/2010/06/04/2010060401461.html) · [Nate News — acquisition finale 25,46 % / 693,56억 원 (02/07/2010)](https://news.nate.com/view/20100702n16436)
 - [GameMeca — ouverture serveur unifié 초원길 (07/03/2012)](https://www.gamemeca.com/view.php?gid=7327) · [Rapport annuel Wemade 2021 (PDF)](https://file.wemade.com/homepage/upload/[위메이드]사업보고서(2021.03.17)_20210518135109186.pdf) · Site officiel kSRO : https://krsilkroadcp.joymax.com
 
+**Coréen 2 (rapports KO2 2026-10 — service 2009-2026) :**
+- [ML_RESEARCH/RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md) — chronologie complète 2009-2026 (notices K1-K37 du board officiel + presse KR), caps 105→140, patch Rebirth, serveurs
+- [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) — zones/donjons/uniques 100-140 (Dimension Miroir, Bagdad, Shambhala), table officielle des 45 monstres du Temple de Jupiter
+- [ML_RESEARCH/RESEARCH_KO2_ITEMS.md](ML_RESEARCH/RESEARCH_KO2_ITEMS.md) — items 11차→17차, alchimie avancée (인핸서/보호석), seals 혜성의 인장
+- [ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md) — skills tardifs (296 CH/269 EU), reliques, auto-combat, events 2026, monétisation
+- Notices officielles clés : [샴발라 던전 cap 140 (27/03/2018)](https://krsilkroadcp.joymax.com/news/news_list.asp?sID=2) · [유물 시스템 (10/06/2025)](https://krsilkroadcp.joymax.com/news/news_view.asp?sID=1&Page=2&Num=5043&List_Ref=1583) · [경향게임스 — Rebirth/리버스 (2012)](https://www.khgames.co.kr/news/articleView.html?idxno=47671) · [Inven — 실크로드 +20 %/an (2026)](https://m.inven.co.kr/webzine/wznews.php?idx=313463)
+
 **Chinois (RESEARCH_ZH.md) :**
 - [Baidu Baike — 丝路传说](https://baike.baidu.com/item/丝路传说/423030) · [Baidu Baike — 北京世模科技](https://baike.baidu.com/item/北京世模科技有限责任公司/1929931) · [TapTap — histoire du service CN](https://www.taptap.cn/moment/686964545171753658)
 - [silkroad.iccgame.com — site officiel 新丝路](https://silkroad.iccgame.com/) · [srowiki.digeam.com — wiki officiel 絲路紀元 (DiGeam)](https://srowiki.digeam.com/) · [GNN — DiGeam obtient la licence TW](https://gnn.gamer.com.tw/detail.php?sn=186919)
@@ -503,5 +584,5 @@ Raisons du déclin du CSRO d'origine (analyse TapTap) : grind répétitif, trans
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (enrichi par la recherche multilingue ML_RESEARCH — KO/ZH/PT/FR/DE/TR)*
-*Sources: Wikipedia, IGN, GamesIndustry.biz, Nostalgic.gg, Elitepvpers, silkroadforever.com, sromobile.com, Inven/GameMeca/TGDaily/ZDNet Korea/ChosunBiz/Nate (presse KR), Baidu Baike/TapTap/iccgame/DiGeam (ZH), Adrenaline/UOL/Level Up (PT), JeuxVideo.com/JeuxOnline/Wikipédia FR (FR)*
+*Dernière mise à jour: 2026-10-01 (enrichi par la recherche multilingue ML_RESEARCH — KO/ZH/PT/FR/DE/TR, puis KO2 : chronologie KSRO 2009-2026)*
+*Sources: Wikipedia, IGN, GamesIndustry.biz, Nostalgic.gg, Elitepvpers, silkroadforever.com, sromobile.com, Inven/GameMeca/TGDaily/ZDNet Korea/ChosunBiz/Nate (presse KR), board officiel krsilkroadcp.joymax.com (notices KO2), Baidu Baike/TapTap/iccgame/DiGeam (ZH), Adrenaline/UOL/Level Up (PT), JeuxVideo.com/JeuxOnline/Wikipédia FR (FR)*

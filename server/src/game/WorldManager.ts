@@ -300,6 +300,12 @@ export class WorldManager {
       return;
     }
 
+    // GM /freeze: le joueur est figé côté serveur — on ignore le mouvement
+    // (le client rappellera sa vraie position dès la reprise)
+    if (playerEntity.frozen) {
+      return;
+    }
+
     // Update entity position
     playerEntity.setPosition(data.position);
     playerEntity.setRotation(data.rotation);
@@ -413,7 +419,7 @@ export class WorldManager {
   /**
    * Handle chat packet from client
    */
-  handleChatPacket(client: Client, packet: C2SPacket): void {
+  async handleChatPacket(client: Client, packet: C2SPacket): Promise<void> {
     if (!client.getIsAuthenticated()) {
       return;
     }
@@ -428,8 +434,12 @@ export class WorldManager {
 
     logger.info(`Chat from ${playerEntity.name}: ${data.message}`);
 
-    // Commandes slash joueur (phase 5): /who, /loc — réponse système privée
+    // Commandes slash: GM d'abord (phase 6), puis joueur (phase 5)
     if (data.message?.startsWith('/')) {
+      const handled = this.gmCommands ? await this.gmCommands.dispatch(client, packet) : false;
+      if (handled) {
+        return;
+      }
       const cmd = data.message.split(' ')[0].toLowerCase();
       if (cmd === '/who') {
         const others = this.getAllPlayers().filter((p) => p.id !== characterId);
@@ -449,7 +459,7 @@ export class WorldManager {
       }
       this.sendToClient(characterId, {
         type: 'chat', timestamp: packet.timestamp,
-        data: { channel: 'system', message: `Commande inconnue: ${cmd} (disponibles: /who, /loc)` },
+        data: { channel: 'system', message: `Commande inconnue: ${cmd} — /help pour la liste` },
       });
       return;
     }
@@ -741,6 +751,8 @@ export class WorldManager {
   // Pont combat (phase 2) — injecté après construction pour éviter le cycle
   // WorldManager ⇄ CombatBridge.
   combatBridge: import('./CombatBridge').CombatBridge | null = null;
+  /** Commandes GM (phase 6) — injecté par GameServer après CombatBridge */
+  gmCommands: import('../admin/GmCommands').GmCommands | null = null;
 
   on(event: string, listener: (...args: unknown[]) => void): void {
     if (!this.eventListeners.has(event)) {

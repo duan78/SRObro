@@ -279,12 +279,37 @@ export class NetworkCombat {
       }
     };
 
-    // Chat entrant (phase 5): affiché dans le HUD
+    // Chat entrant (phase 5): affiché dans le HUD — les canaux système et
+    // annonce s'affichent sans préfixe « Joueur: »
     this.network.on('chat', (data: any) => {
       const d = data?.data ?? data;
       if (d?.message) {
-        this.hud.addChatMessage(`${d.playerName ?? 'Joueur'}: ${d.message}`, 'say');
+        if (d.channel === 'system') {
+          this.hud.addChatMessage(d.message, 'system');
+        } else if (d.channel === 'announce') {
+          this.hud.addChatMessage(`📢 ${d.message}`, 'system');
+        } else {
+          this.hud.addChatMessage(`${d.playerName ?? 'Joueur'}: ${d.message}`, 'say');
+        }
       }
+    });
+
+    // Téléport GM (/tp, console admin): recalage du personnage local
+    this.network.onRaw('player:teleport', (d: any) => {
+      const pos = d?.position ?? d;
+      const player = this.scene.meshes.find((m) => m.name.startsWith('chinaman_'));
+      if (player && pos) {
+        const terrain = this.janganZone?.realTerrain;
+        const y = terrain ? terrain.heightAt(pos.x, pos.z) : (pos.y ?? 0);
+        const root = (player.parent ?? player) as { position: { set(x: number, y: number, z: number): void } };
+        root.position.set(pos.x, y, pos.z);
+      }
+    });
+
+    // Vitesse GM (/speed): propagée au contrôleur de déplacement
+    this.network.onRaw('gm:speed', (d: any) => {
+      const m = Number(d?.multiplier ?? 1);
+      window.dispatchEvent(new CustomEvent('srobro:speed', { detail: m }));
     });
 
     // Joueurs distants (phase 5)

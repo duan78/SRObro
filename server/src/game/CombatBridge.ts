@@ -160,6 +160,7 @@ export class CombatBridge {
     // module de rendu réseau existe (idempotent côté client).
     for (const other of this.worldManager.getAllPlayers()) {
       if (other.id === playerId) continue;
+      if (other.invisible) continue; // GM invisible: pas dans le snapshot
       const dp = Math.hypot(other.position.x - player.position.x, other.position.z - player.position.z);
       if (dp <= 200) {
         this.sendToPlayerRaw(playerId, 'spawn_player', this.serializePlayer(other));
@@ -316,6 +317,8 @@ export class CombatBridge {
       monster.target = null;
       return;
     }
+    // Mode dieu (GM): aucun dégât ne s'applique
+    if (player.godMode) return;
 
     globalCombatManager.startCombat(
       this.worldManager.toCombatParticipant(monster),
@@ -344,6 +347,14 @@ export class CombatBridge {
   // MORT D'UN MONSTRE: récompenses + loot
   // ============================================
 
+  /** Commande GM /kill: même pipeline qu'une mort en combat. */
+  gmKillMonster(monsterId: string, killerId: string): void {
+    const monster = globalSpawnManager.getMonsterEntity(monsterId);
+    if (!monster || monster.hp <= 0) return;
+    monster.setHp(0);
+    void this.onMonsterDeath(monsterId, killerId);
+  }
+
   private async onMonsterDeath(victimId: string, killerId: string): Promise<void> {
     try {
       const killer = this.worldManager.getPlayer(killerId);
@@ -353,7 +364,7 @@ export class CombatBridge {
       // Journal de kill (console admin, phase 6)
       try {
         await prisma.killLog.create({
-          data: { killerId, victimId, victimType: 'MONSTER', damage: monster.maxHp },
+          data: { killerId, victimId, victimName: monster.name, victimType: 'MONSTER', damage: monster.maxHp },
         });
       } catch { /* non bloquant */ }
 
@@ -534,9 +545,36 @@ export class CombatBridge {
       if (other.id === player.id) continue;
       const d = Math.hypot(other.position.x - player.position.x, other.position.z - player.position.z);
       if (d > 200) continue;
-      // Chacun voit l'autre
-      this.sendToPlayerRaw(other.id, 'spawn_player', packet);
+      // Chacun voit l'autre (un joueur invisible n'est pas annoncé)
+      if (!player.invisible) this.sendToPlayerRaw(other.id, 'spawn_player', packet);
       this.sendToPlayerRaw(player.id, 'spawn_player', this.serializePlayer(other));
+    }
+  }
+
+  /**
+   * Téléporte un joueur (commande GM /tp, console admin): déplace l'entité,
+   * informe le client (recalage terrain) et ré-annonce aux autres.
+   */
+  teleportPlayer(characterId: string, position: { x: number; y?: number; z: number }): void {
+    const player = this.worldManager.getPlayer(characterId);
+    if (!player) return;
+    // Disparait des anciennes vues, réapparait aux nouvelles
+    this.sendToPlayerRaw(characterId, 'player:teleport', { position });
+    this.syncPlayerVisibility(player);
+    this.sendPlayerState(characterId);
+  }
+
+  /** Invisibilité GM: masque/montre le joueur aux autres clients. */
+  setPlayerInvisible(characterId: string, invisible: boolean): void {
+    const player = this.worldManager.getPlayer(characterId);
+    if (!player) return;
+    player.invisible = invisible;
+    if (invisible) {
+      for (const other of this.worldManager.getAllPlayers()) {
+        if (other.id !== characterId) this.sendToPlayerRaw(other.id, 'despawn_player', { id: characterId });
+      }
+    } else {
+      this.syncPlayerVisibility(player);
     }
   }
 

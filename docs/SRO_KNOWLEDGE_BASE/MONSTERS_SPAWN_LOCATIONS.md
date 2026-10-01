@@ -5,6 +5,7 @@
 - [Unique Bosses](#-unique-bosses)
 - [Qin-Shi Tomb (Jangan Cave)](#-qin-shi-tomb-jangan-cave--uniques--structure)
 - [Job Temple (Alexandrie)](#-job-temple-alexandrie--uniques--monstres)
+- [🇰🇷 Zones de spawn KSRO 106-140](#️-zones-de-spawn-ksro-106-140)
 - [Champion/Giant Spawns](#-championgiant-spawns)
 - [SP Farming Spots](#-sp-farming-spots)
 - [Leveling Zones](#️-leveling-zones)
@@ -247,6 +248,71 @@ Isis      Level 108 | HP 154,677,234  | AP requis
 Haroeris  Level 109 | HP 440,747,010  | zone profonde
 Seth      Level 110 | HP 425,505,853  | zone profonde
 ```
+
+> 🇰🇷 Validation croisée (recherche KO2 2026-10) : la gamedata officielle coréenne liste les mêmes uniques — 셀키스 105 · 네이트 106 · 아누비스 107 · 이시스 108 · 하로에리스 109 · 세이트 110 — niveaux identiques au client iSRO. Source : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md).
+
+---
+
+## 🇰🇷 Zones de spawn KSRO 106-140
+
+> ⚠️ **Périmètre** : zones de chasse et de spawn du **service coréen (KSRO)** au-delà du contenu classique — à ne pas mélanger avec les zones classiques ci-dessus. **Aucune coordonnée numérique** n'est publiée pour ces zones (le client KSRO récent n'est pas cartographié publiquement — voir la note dans [MAP_COORDINATES_REFERENCE.md](MAP_COORDINATES_REFERENCE.md)) ; l'accès se fait par portails/NPC. Rapport : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md).
+
+### 거울 차원 — Dimension Miroir (106+, monstres 111-116)
+
+```
+Zone: Dimension Miroir (거울 차원) — champ dimensionnel du Temple de Jupiter
+Accès: portail situé HORS des villes ; niveau 106+ requis (wiki officiel TW DiGeam)
+       → téléportation en haut de la carte, marche jusqu'à la pierre de
+         téléportation du Temple de Jupiter
+Monstres: 45 monstres officiels lv 111-116 (statues-gardiennes, lions, griffons,
+          minotaures, cultistes de Baal) — liste complète: MONSTERS_DATABASE.md
+Unique de champ: 키데모나스 (Kidemonas, lv 120) — ajouté par notice officielle KR le 25/04/2012
+Drops: 12차 en raretés épique/légendaire/divin uniquement (pas de 12D "normal")
+Sous-zones: 슬픔의 숲 (Forêt de la Tristesse, gardée par les 광신도 116)
+```
+
+### Donjons Jupiter (Temple de Jupiter)
+
+```
+경배의 전당 (Hall of Worship):    초급 106 (solo, farm sans boss, respawn continu)
+                                  중급 111 / 상급 113 (groupe, boss Jupiter/Yuno/Deus)
+광신도의 은신처 (Zealots Hideout): 초급 106 (solo) · 중급 116 / 상급 118 (groupe,
+                                  boss Baal/Babilion/Zielkiaxe)
+Règles: 3 entrées/jour/difficulté · instance 2 h · progression zone par zone
+```
+
+### 바그다드 — Bagdad (121-130)
+
+```
+Zone: région arabe 이슬람 (121-130) — ville de Bagdad (Tigre, roi 샤리야르), mai 2014
+Champ: désert/canyons/oasis 121-130 — monstres NON documentés officiellement
+       (vidéos KR de chasse party 2020-2021 : YouTube S34, rapport KO2-WORLD)
+Donjons: 바그다드 지하 (groupe, 3×50 min/jour, progression antihoraire —
+         boss Grand Démon + Général en chef) · 카일리아의 은신처 (cheffe Kailia)
+Chambre des boss 121-130: 2-8 joueurs, 30 min, jusqu'à 10 boss invoqués (ticket)
+```
+
+### 파멸의 성전 / 비밀의 무덤 — Legend 23 (125+, 2023)
+
+```
+파멸의 성전 (Temple of Destruction): donjon de champ (non instancié), accès NPC
+       au palais de Hotan (화전 왕궁) ET à Bagdad ; 3 boss de raid → boss final
+       "Squelette de Mort Éveillé" (覺醒死亡駭骨) ; despawn 3 h ; 1 seul final
+비밀의 무덤 (Secret Tomb): 1-8 joueurs, 30 min, 3 vagues ; clé obtenue au
+       Fire Temple de Shambhala (火焰獄)
+```
+
+### 샴발라 — Shambhala (131-140)
+
+```
+Zone: Shambhala — "nouvelle carte + nouveaux monstres" (notice officielle KR 27/03/2018,
+      cap 140) ; monstres NON documentés officiellement
+Accès: NPC "Mortifying Monk" situé au 타클라마칸 (Taklamakan) — même logique de
+       portail dimensionnel que la Dimension Miroir (Facebook officiel iSRO)
+Donjons: Ice Temple (寒冰獄) 131-135 · Fire Temple (火焰獄) 136-140 (clé du Secret Tomb)
+```
+
+> ⚠️ **Lacunes** : niveaux exacts des boss Jupiter/Bagdad/Shambhala non publiés ; HP indisponibles partout (extraction client requise) ; monstres de terrain 121+ non listés officiellement (la gamedata kSRO s'arrête au Jupiter 2011). Détail des donjons : [13_ZONES_OVERVIEW.md — section KSRO](./13_ZONES_OVERVIEW.md).
 
 ---
 
@@ -786,4 +852,4 @@ class UniqueSpawnNotifier {
 *Dernière mise à jour: 1 Octobre 2026*
 
 *Sources: xSROMap, silkroadonline.wiki (données client), rev6, elitepvpers, mmorpg.com (Qin-Shi Tomb), Monster Area Wiki, Community Guides*
-*Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (timers de spawn par unique, Qin-Shi B6, validation HP) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5 nommés, skills Medusa) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) (conflit spawn 4h/6h) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md)*
+*Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (timers de spawn par unique, Qin-Shi B6, validation HP) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5 nommés, skills Medusa) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) (conflit spawn 4h/6h) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) · rapports KO2 (section 🇰🇷 zones de spawn KSRO 106-140 : Dimension Miroir, donjons Jupiter, Bagdad, Shambhala)*

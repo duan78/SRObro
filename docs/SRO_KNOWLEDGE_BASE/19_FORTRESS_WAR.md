@@ -6,6 +6,7 @@
 - [Vue d'Ensemble](#-vue-densemble)
 - [Historique (Legend II → aujourd'hui)](#-historique-legend-ii--aujourdhui)
 - [Les Forteresses](#-les-forteresses)
+- [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026)
 - [Calendrier et Inscription](#-calendrier-et-inscription)
 - [Participants et Rôles](#-participants-et-rôles)
 - [Structures de la Forteresse](#-structures-de-la-forteresse)
@@ -68,6 +69,30 @@ Le guide officiel distingue **deux types** :
 - **Constantinople Fortress** : 3 gates externes + gates internes + Charge/Glory/Resurrection (IDs 250-258)
 
 > Les gates **Charge / Glory / Resurrection** correspondent aux zones d'insertion et de résurrection des attaquants/défenseurs.
+
+---
+
+---
+
+## 🇰🇷 Contenu KSRO (2011-2026)
+
+> État documenté de la **Fortress War côté service coréen** (jamais fermé ; serveur unique 초원길 depuis le 07/03/2012). Rapports : [ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §11](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md) · [ML_RESEARCH/RESEARCH_KO2_WORLD.md §12](ML_RESEARCH/RESEARCH_KO2_WORLD.md) · chronologie : [ML_RESEARCH/RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md).
+
+### Les 5 forteresses de la page officielle
+
+La page officielle **요새 (forteresse)** liste **5 forteresses** dans son sélecteur : **장안 (Jangan) · 비잔틴 (Byzance) · 로도스 (Rhodes) · 황하 (Fleuve Jaune) · 베니스 (Venise)** — soit exactement les noms des **5 anciens serveurs coréens** (황하·로도스·베니스·장안·비잔틴) fusionnés dans 초원길 en 2012. La page affiche « **현재 세율은 20 %** » (taxe de la guilde propriétaire = **20 %**) et des **cycles de siège bimensuels** (exemple affiché : 07/02 → 21/02, bataille à 20 h). Source : https://krsilkroadcp.joymax.com/gamesystem/rank/fortressState.asp
+
+⚠️ **Les données affichées datent de février 2017** (page non maintenue) — mais la **Fortress War tourne toujours** : notice d'incident officielle « 09/21 요새전 이후 발생한 문제 » (octobre 2024, prouvant une guerre du 21/09/2024) et « 게임 버프 관련 비정상 현상 » (03/2026) — https://krsilkroadcp.joymax.com/news/news_list.asp?sID=1 ; vidéo d'une Fortress War sur le serveur 초원길 en 2024 : https://www.youtube.com/watch?v=yZYW_nJlgUA
+
+### Historique KR des forteresses
+
+| Forteresse | Preuve | Source |
+|---|---|---|
+| **장안 요새 (Jangan)** | présentée lors de l'introduction du système 요새전 (« 도시 쟁탈전 », guerre de conquête de ville) | [ThisIsGame](https://www.thisisgame.com/articles/4896) |
+| **호탄 요새 (Hotan)** | Fortress War retravaillée + forteresse de Hotan, 06-07/2009 (NPC 요새 사무관 au palais de Hotan) | [GameDonga](https://game.donga.com/46984) |
+| **비적단 요새 (Bandits)** | annonce officielle « 비적단 요새 업데이트 예정 안내 » (forteresse des bandits) | [board officiel kSRO](https://krsilkroadcp.joymax.com/news/news_list.asp?sID=2&Page=55) |
+
+Aucune nouvelle forteresse ni changement du système n'apparaît dans les notices officielles 2022-2026 (cf. rapport KO2 §11 et §16) ; pas de forteresse à Bagdad documentée ([RESEARCH_KO2_WORLD.md §12](ML_RESEARCH/RESEARCH_KO2_WORLD.md)).
 
 ---
 
@@ -436,4 +461,4 @@ Pour SRObro (implémentation serveur), les fichiers vSRO 1.188 / SRO_VT contienn
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : guide officiel Joymax traduit, IGN 2008, MMORPG.com, Silkroad Forums, Elitepvpers, RaGEZONE, silkroadonline.wiki — enrichi par la recherche multilingue ML_RESEARCH 2026-10 : guide officiel Legend II traduit DE, guide FR GMS Temple 2009, guides TR SroMax/SroCave, conflit PT signalé)*
+*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : guide officiel Joymax traduit, IGN 2008, MMORPG.com, Silkroad Forums, Elitepvpers, RaGEZONE, silkroadonline.wiki — enrichi par la recherche multilingue ML_RESEARCH 2026-10 : guide officiel Legend II traduit DE, guide FR GMS Temple 2009, guides TR SroMax/SroCave, conflit PT signalé ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : 5 forteresses de la page officielle, taxe 20 %, siège bimensuel, guerre prouvée active en 2024 — rapports ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md et RESEARCH_KO2_WORLD.md)*

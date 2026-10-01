@@ -68,6 +68,8 @@ export class Game {
   private animGeneration = 0;
   private clickMoveHandler: ((e: PointerEvent) => void) | null = null;
   private renderErrorCount = 0;
+  // Vitesse de déplacement (modifiable par /speed GM via évènement srobro:speed)
+  private moveSpeed = 5.0;
   private progression: ProgressionSystem | null = null;
   private equipment: EquipmentSystem | null = null;
   private combat: CombatSystem | null = null;
@@ -578,6 +580,12 @@ export class Game {
       return;
     }
 
+    // Vitesse GM (/speed): le module réseau relaie le multiplicateur serveur
+    window.addEventListener('srobro:speed', (e) => {
+      const m = Number((e as CustomEvent).detail ?? 1);
+      if (m >= 0.5 && m <= 10) this.moveSpeed = 5.0 * m;
+    });
+
     // Spawn player at Jangan zone spawn point (posé sur le relief réel).
     // Position serveur (dernière sauvegarde) si disponible, sinon spawn sûr.
     if (this.janganZone && this.characterManager) {
@@ -852,7 +860,7 @@ export class Game {
         this.normalizePlayerScale();
       }
     }
-    const speed = 5.0; // unités/s (marche/course)
+    const speed = this.moveSpeed; // unités/s (/speed GM ajuste le multiplicateur)
 
     if (this.moveDestination) {
       const dx = this.moveDestination.x - player.position.x;

@@ -27,6 +27,8 @@ import { CastingManager } from '../casting/CastingManager';
 import { MinimapManager } from '../minimap/MinimapManager';
 import { DropManager } from '../drop/DropManager';
 import { globalSpawnManager } from '../ai/SpawnManager';
+import { GmCommands } from '../admin/GmCommands';
+import { loadRateOverrides } from '../admin/rateOverrides';
 
 const logger = createLogger('GameServer');
 
@@ -38,6 +40,7 @@ export class GameServer {
   private systemHandlers: SystemHandlers | null = null;
   private authHandlers: AuthHandlers | null = null;
   private itemHandlers: ItemHandlers | null = null;
+  private gmCommands: GmCommands | null = null;
   private combatBridge: CombatBridge | null = null;
   private gameLoop: GameLoop;
   private isRunning = false;
@@ -56,6 +59,13 @@ export class GameServer {
 
   // Tick rate
   private tickRate = 20; // Hz
+
+  // Accès console admin (phase 6)
+  getWorldManager(): WorldManager | null { return this.worldManager; }
+  getClientManager(): ClientManager | null { return this.clientManager; }
+  getCombatBridge(): CombatBridge | null { return this.combatBridge; }
+  getGmCommands(): GmCommands | null { return this.gmCommands; }
+  getDbManager(): DatabaseManager { return this.dbManager; }
 
   constructor(io: IOServer, dbManager: DatabaseManager) {
     this.io = io;
@@ -120,6 +130,14 @@ export class GameServer {
     this.combatBridge = new CombatBridge(this.worldManager);
     this.combatBridge.initialize();
     this.worldManager.combatBridge = this.combatBridge;
+
+    // Commandes GM (phase 6): dispatché par handleChatPacket avant /who /loc
+    this.gmCommands = new GmCommands(this.worldManager, this.clientManager, this.dbManager);
+    this.gmCommands.setCombatBridge(this.combatBridge);
+    this.worldManager.gmCommands = this.gmCommands;
+
+    // Taux live: recharge les overrides persistés dans Redis (phase 6)
+    await loadRateOverrides(this.dbManager.getRedis());
 
     // Route les envois du WorldManager vers les sockets réels
     this.worldManager.on('sendToClient', (msg: unknown) => {

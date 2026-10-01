@@ -121,7 +121,7 @@ Jangan, Storage-Keeper Sansan : Region 25000, X 634, Y 1394
 |------|----------|-------------|
 | Gate of Ruler | (−4 612, −1) | Roc Mountain |
 | Gate « RC Roc » | (10 471, 1 810) | Roc Mountain (portal interne) |
-| Mortifying Monk (Shambhala Entrance) | (−593, 2 595) | Sky Temple (post-classique) |
+| Mortifying Monk (Shambhala Entrance) | (−593, 2 595) | Shambhala — 🇰🇷 confirmé par le Facebook officiel iSRO (accès Ice/Fire Temple 131-140, ajout KR 27/03/2018) ; l'ancien libellé « Sky Temple » est obsolète |
 
 ### Téléporteurs de garde (Jangan)
 Soldier Choiyoung (6 437, 1 150) · Jingyo (6 429, 963) · Hogang (6 177, 1 155) · Sangnam (6 667, 1 137) — navettes inter-portes.
@@ -265,6 +265,20 @@ Noms des zones de spawn cités par les sources chinoises officielles (wiki DiGea
 | **Kalia's Hideout** | Arabie | 120+ | couche 32793 |
 | **Zone Forgotten World** (instances) | coins de carte (PosX 17 000-21 700, PosY 3 700-6 700) | 100+ | Pillars of Party Recall, Dungeon Exits, « Lost Soldiers » |
 
+### 🇰🇷 Note KSRO — les zones récentes (2011-2026) ne sont pas cartographiées publiquement
+
+> ⚠️ **La recherche KO2 (2026-10) n'a trouvé AUCUNE coordonnée numérique** pour les zones/donjons post-2011 du service coréen : le client KSRO récent (Dimension Miroir 2011 → Bagdad 2014 → Shambhala 2018 → Legend 23) **n'est pas documenté dans les bases cartographiques publiques** (xSROMap s'arrête au client classique ; la gamedata officielle kSRO ne publie que des noms/niveaux de monstres, sans positions). Les accès connus se font par **NPC/portails**, sans coordonnées publiées :
+>
+> | Zone KSRO | Accès documenté (sans coordonnée) | Source |
+> |---|---|---|
+> | 거울 차원 (Dimension Miroir, 106+) | portail **hors des villes**, téléportation en haut de carte | wiki DiGeam |
+> | Temple de Jupiter (donjons 106-118) | pierre de téléportation au fond de la Dimension Miroir (le rift client (−12 331, 1 143) ci-dessus correspond à la couche classique) | DiGeam + client |
+> | 바그다드 / Bagdad (121-130) | ville de la carte (−8 540, −730, couche classique) ; donjons 121+ en interne | Facebook iSRO |
+> | 파멸의 성전 (Temple of Destruction, 125+) | NPC **aux palais de Hotan et de Bagdad** | DiGeam / srolobby |
+> | 샴발라 / Shambhala (131-140) | NPC **Mortifying Monk au Taklamakan** (row ci-dessus) | Facebook iSRO |
+>
+> → Toute coordonnée pour ces zones devra provenir d'une **extraction du client KSRO récent** (non disponible à ce jour). Détail des zones : [13_ZONES_OVERVIEW.md — section KSRO](./13_ZONES_OVERVIEW.md) · rapport : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md).
+
 ---
 
 ## 🌟 Zones Spéciales
@@ -386,6 +400,7 @@ R: Oui — les intérieurs de forteresse et tous les donjons sont des **couches 
 - [SRO Info — Unique spawn maps + coords (2009)](https://sroinfo.forumotion.com/t9-map-unique-spawn-map-cords)
 - [Rev6 — All Unique Spawn Points](https://rev6.org/en/post/silkroad-online-uniq-spawn-noktalari)
 - [StrategyWiki — Silkroad Online/Locations](https://strategywiki.org/wiki/Silkroad_Online/Locations)
+- 🇰🇷 [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) — zones KSRO 106-140 (aucune coordonnée publiée ; accès par NPC documentés) · [Facebook officiel iSRO — Lv.140 Shambhala / Mortifying Monk](https://www.facebook.com/officialsilkroad/posts/1502299075272015)
 - Docs internes : [NPCS_COORDINATES.md](NPCS_COORDINATES.md) · [13_ZONES_OVERVIEW.md](13_ZONES_OVERVIEW.md) · [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md)
 
 ---
@@ -402,4 +417,4 @@ R: Oui — les intérieurs de forteresse et tous les donjons sont des **couches 
 *Dernière mise à jour : 2026-10-01*
 
 *Sources : client officiel via xSROMap (JellyBitz), SRO Info (spawns uniques 2009), Rev6, StrategyWiki, SRObro Project*
-*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (noms ZH des zones d'uniques) · [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (noms KR, sous-zones Roc Mountain)*
+*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (noms ZH des zones d'uniques) · [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (noms KR, sous-zones Roc Mountain) · rapports KO2 (note 🇰🇷 : client KSRO récent non cartographié, accès NPC Shambhala/Miroir/Bagdad documentés sans coordonnées)*

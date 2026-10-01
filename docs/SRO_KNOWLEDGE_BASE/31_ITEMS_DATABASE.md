@@ -13,15 +13,16 @@
 - ✅ Armes chinoises 1D-13D (sword, blade, spear, glaive, bow) — noms des 3 tiers + niveaux + IDs
 - ✅ Armes européennes 1D-13D (épée 1M/2M, double hache, dagues, arbalète, bâton, dark staff, clerical rod, harpe)
 - ✅ Noms originels **ZH/KR** des armes et accessoires (剑/刀/枪/大刀/弓, 한손검…, 파천검 = Break Heaven Sword…) — nomenclature multilingue 2026-10
+- ✅ 🇰🇷 **Noms officiels coréens 11-13차 (service KSRO)** : tiers 무신/투신 (dieux égyptiens), armes 12차 dragon (마신검, 용비도, 황룡뇌극…), 13차 tempête (청룡검…), sets 아주라이트/케프타/아페피타 (effets 파멸 2/4/6), 룡위 보문/봉황룡/헤븐/엔젤/디보션, 템페스트/프로셀라/브리즈 — tables officielles KSRO 2026-10
 - ✅ Boucliers CH + EU par degré (block rate base 10, max ~20)
 - ✅ Accessoires (anneaux, colliers, boucles) CH + EU — noms, niveaux, absorption de dégâts
 - ✅ Blues / magic options (`MATTR_*`) par emplacement + glossaire
 - ✅ Matériaux d'alchimie (elixirs, lucky powders 1-12, tablets 17 familles, magic stones)
 - ✅ Consommables (potions, scrolls, munitions) avec IDs vérifiés
-- ✅ Avatars (587 items) et Devil Spirits (NASRUN, grades A/S)
-- ✅ Prix NPC vérifiés + repères de marché TR modernes (RMT 2024-2026)
+- ✅ Avatars (587 items) et Devil Spirits (NASRUN, grades A/S) + 🇰🇷 12 devil spirits tardifs au mall KSRO 2026 (55 실크)
+- ✅ Prix NPC vérifiés + repères de marché TR modernes (RMT 2024-2026) ; ⚠️ note 14-17차 (extraction client requise)
 
-**Sources principales:** dump `_RefItem` de client v1.188+ (14 318 items CH + EU, 1D-13D), stats brutes sro-world.de.tl / silkroadkopat.tr.gg, docs openroad/SilkroadDoc (formats vérifiés v1.188), wiki Fandom, rapports ML_RESEARCH (ZH/KO/TR, 2026-10).
+**Sources principales:** dump `_RefItem` de client v1.188+ (14 318 items CH + EU, 1D-13D), stats brutes sro-world.de.tl / silkroadkopat.tr.gg, docs openroad/SilkroadDoc (formats vérifiés v1.188), wiki Fandom, rapports ML_RESEARCH (ZH/KO/TR, 2026-10) ; 🇰🇷 site officiel KSRO `krsilkroadcp.joymax.com` (tables items 11-13차 — rapport ML_RESEARCH/RESEARCH_KO2, 2026-10).
 
 ---
 
@@ -35,6 +36,7 @@
 - Progression des stats
 - 11D (Drako, lv 101), 12D (Reo lv 113 + upgrades Draco), 13D (Seal uniquement, lv 121)
 - Nomenclature multilingue des degrés (第N套 ZH / N차 KO / DG TR) ; ✅ 10D confirmé dès lv 90 (presse KR 2007) ; 13D attesté en Corée dès 03/2012 ; zones de drop 11D/12D (Alexandrie/Bagdad, sources CN) ; ⚠️ garde-fou contre les chiffres des remakes mobiles 2024+
+- 🇰🇷 **Contenu KSRO (2011-2026)** : degrés jusqu'au **17차** (Legend 23, 05/2023) ; ⚠️ **dès le 12차 le niveau d'équipement est FIXÉ à 101** avec pénalité de maîtrise (아이템 숙련 패널티) et skills d'item ; 11차 = 3 tiers (normal/무신/투신, dieux égyptiens) ; timeline KR (12차 04-05/2011, 13차 12/2011, 14차 07-08/2014, 16-17차 05/2023) ; noms KR des armes/sets 11-13차
 
 ### Seal Equipment
 👉 **[06_SEAL_EQUIPMENT.md](06_SEAL_EQUIPMENT.md)** - Seal equipment (SOS, SOM, SOSun)
@@ -44,6 +46,7 @@
 - Seal of Star (SOS) / Seal of Moon (SOM) / Seal of Sun (SOSun)
 - Sources et drops
 - Nomenclature chinoise (星星装/月亮装/太阳装, argot 暗金) + règle du « 1er tier » (armes seal, 17173 2006) ; rareté des 32 talismans FGW par collection (TR) ; set items : origine Legend 9 KR (2009)
+- 🇰🇷 **Correction KSRO** : « Seal of Nova » est le nom **iSRO** — côté KR le rare 11차+ est unifié en **혜성의 인장 (Seal of Comet)** ; Star/Moon/Sun (별/달/해의 인장) ne valent que ≤ 10차 ; au 12차+ l'échelle devient **매직/레어/레전드 (Magic/Rare/Legend)** ; tiers 무신/투신 = équivalent probable Egypt A/B (inférence signalée) ; ⚠️ **« Aquila » banni** (aucune attestation coréenne — ne pas confondre avec la constellation 3D EU)
 
 ### Alchimie
 👉 **[05_ALCHEMY_SYSTEM.md](05_ALCHEMY_SYSTEM.md)** - Système d'alchimie (+1 à +12)
@@ -53,6 +56,7 @@
 - Lucky Powder (1st-12th), tablets, magic stones
 - Blues : Lucky, Steady, Immortal, Astral…
 - ✅ Validation croisée TR des taux (SroCave — unpacks + 30 000 mesures) ; « % » des attribute stones = probabilité de re-roll (DE) ; mythes & superstitions FR 2007 / DE 2006-2008 / TR (documentés et démentis)
+- 🇰🇷 **Alchimie KSRO 12D+** : **인핸서 (Enhancers)** — échec = destruction de l'item ET de l'enhancer ; **보호석 (protection stones)** par degré 12-17차 et rareté (8/16/32 실크, -1 au lieu de la destruction) ; options Lucky/Immortal/Astral ≤ 11차 seulement (mall 1→11차, 5→70 실크) ; **montée de degré 각석** (11차+7 min, échec = pierre perdue, 특수각석 100 % 45/50/55 실크) — ⚠️ **blues non hérités, seuls les socket stones le sont** ; 고급 강화 엘릭시르 A/B (+1/+2, 100 %) ; sockets (3 max, 6 types de 소켓석) ; 연금약 (+25→100 % MS)
 
 ### Armor Types
 👉 **[08_ARMOR_TYPES.md](08_ARMOR_TYPES.md)** - Types d'armor (détaillé)
@@ -102,7 +106,7 @@
 R: Un set 1D-2D complet du même type (pour le bonus de set) avec une arme 1D+3 : le rapport coût/efficacité est imbattable. Chez les chinois, le full Garment est recommandé pour leveler (économie de MP).
 
 **Q: Comment obtenir des items 13D ?**
-R: Les items 13D (Tempest/Procela/Breeze, armes « Dragon ») n'existent qu'en versions **Seal** (lv 121) : drops de contenus haut niveau / donjons / événements selon le serveur. Les 11D/12D s'obtiennent en jeu normal, et les tiers B/C du 12D par upgrade (Tessera).
+R: Les items 13D (Tempest/Procela/Breeze, armes « Dragon ») n'existent qu'en versions **Seal** (lv 121) : drops de contenus haut niveau / donjons / événements selon le serveur. Les 11D/12D s'obtiennent en jeu normal, et les tiers B/C du 12D par upgrade (Tessera). 🇰🇷 **Nuance KSRO** : côté coréen, le 13차 existe en items **normaux** (tables officielles, tous **Lv 101** — règle du niveau fixe 12차+) et s'obtenait notamment par **montée de degré** (각석, 12차+7 → 13차) ; les sets 13차 ont même été offerts au comeback 03/2012. Les deux services implémentent le 13D différemment — voir [07_ITEM_DEGREES.md](07_ITEM_DEGREES.md).
 
 **Q: Vaut-il la peine d'enhancer des items +10+ ?**
 R: Oui, mais le risque (destruction/downgrade) croît fortement — d'où les blues Immortal (anti-destruction), Astral (anti-reset) et Steady (anti-usure), et les Lucky Powders adaptés au degré. Voir [05_ALCHEMY_SYSTEM.md](05_ALCHEMY_SYSTEM.md).
@@ -328,10 +332,12 @@ model MagicOption {
 - **6D-8D** (lv 42-77) : Python/Pegasus, Cancer/Virgo
 - **9D-10D** (lv 76-100) : Twin Horn/Black Beast, Scorpio/Taurus
 - **11D-13D** (lv 101-121) : Drako/Reo/Tempest, Capricorn/Leo/13D Seal
+- 🇰🇷 **11차-17차 (service KSRO)** : noms KR 11-13차 dans [ITEMS_DATABASE.md](ITEMS_DATABASE.md#-noms-officiels-coréens-11-13차-service-ksro) (모든 items 12차+ = **Lv 101 fixe**) ; 14-17차 = extraction client requise (seuls les 보호석/봉인구 du mall prouvent leur existence)
 
 ### Par Rareté
 - **Normal** → tables des tiers A/B/C dans [ITEMS_DATABASE.md](ITEMS_DATABASE.md)
 - **Seal of Star / Moon / Sun** → [06_SEAL_EQUIPMENT.md](06_SEAL_EQUIPMENT.md)
+- 🇰🇷 **KSRO** : 혜성의 인장 (11차+, = « Seal of Nova » iSRO) puis **매직/레어/레전드** (12차+) → [06_SEAL_EQUIPMENT.md](06_SEAL_EQUIPMENT.md#-contenu-ksro-2011-2026--seals-et-raretés-du-service-coréen)
 
 ---
 
@@ -355,8 +361,8 @@ model MagicOption {
 
 ---
 
-**Note:** Ce fichier (31_ITEMS_DATABASE.md) est un hub/redirection vers [ITEMS_DATABASE.md](ITEMS_DATABASE.md). Enrichissements multilingues (ZH/KO/TR/FR/DE/PT) issus des rapports [ML_RESEARCH](ML_RESEARCH/) du 2026-10-01.
+**Note:** Ce fichier (31_ITEMS_DATABASE.md) est un hub/redirection vers [ITEMS_DATABASE.md](ITEMS_DATABASE.md). Enrichissements multilingues (ZH/KO/TR/FR/DE/PT) issus des rapports [ML_RESEARCH](ML_RESEARCH/) du 2026-10-01 ; contenu coréen tardif (degrés 11차→17차, 혜성의 인장, alchimie 인핸서/보호석/각석) issu du rapport [ML_RESEARCH/RESEARCH_KO2_ITEMS.md](ML_RESEARCH/RESEARCH_KO2_ITEMS.md) (site officiel KSRO, 2026-10).
 
 **Dernière mise à jour :** 2026-10-01
 **Base de données Items** - Tous les items de Silkroad Online
-**Fichier #31** - Hub mis en cohérence avec ITEMS_DATABASE.md (données vérifiées _RefItem + nomenclature multilingue)
+**Fichier #31** - Hub mis en cohérence avec ITEMS_DATABASE.md (données vérifiées _RefItem + nomenclature multilingue + 🇰🇷 contenu KSRO 2011-2026)

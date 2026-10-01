@@ -10,6 +10,7 @@
 - [Guild Storage](#-guild-storage)
 - [Emblème de Guilde et d'Union](#-emblème-de-guilde-et-dunion)
 - [Union System (Alliances)](#-union-system-alliances)
+- [🇰🇷 Contenu KSRO (2011-2026)](#-contenu-ksro-2011-2026)
 - [Guild Penalty (Délai de Ré-engagement)](#-guild-penalty-délai-de-ré-engagement)
 - [Guild Wars](#-guild-wars)
 - [Fortress Ownership](#-fortress-ownership)
@@ -210,6 +211,34 @@ Le guild window (touche **G**) gère tout. La structure de base :
 
 ---
 
+---
+
+## 🇰🇷 Contenu KSRO (2011-2026)
+
+### Academy system (아카데미) et honor buffs (명예)
+
+> Système d'**académie** (아카데미) — mentorat transverse aux guildes, introduit ~2009-2010, toujours d'actualité côté service coréen. **Nomenclature officielle coréenne** (miroir namu) : le mentor est **교수** (« professeur » = Guardian), les élèves sont **연수생** (« stagiaires » = Apprentices), la sortie est **졸업** (diplômation) — « 연수생이 졸업하면 연수생은 경험치 보너스를, 교수는 속성 강화 보상 » (l'apprenti reçoit un bonus d'XP, le professeur une récompense de renforcement d'attributs). Rapport : [ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §7](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md).
+
+| Élément | Valeur |
+|---|---|
+| Création | **100 000 pièces d'or**, par un joueur **niveau 60+** (le 교수/Guardian) ; une seule académie par professeur |
+| Effectif | **8 membres** max (dont le guardian ; les sources divergent : 5 vs 8 apprentis) |
+| Apprentis (연수생) | niveaux **1 à 40** ; XP bonifiée en compagnie du professeur |
+| Diplômation (졸업) | l'apprenti reçoit **50 % de l'XP nécessaire pour atteindre le niveau 41** |
+| Honor (명예) | le professeur gagne des **honor points** selon la note laissée par l'apprenti → **classement d'honneur 1 à 50** |
+| Honor buff | buff d'attributs du professeur, croissant avec le rang d'honneur (farmer les diplômes = farm d'honor buff) |
+
+⚠️ **Sources marquées (EN, 2010)** : aucune page officielle KSRO dédiée à l'academy n'a été trouvée (les guides officiels actuels ne le couvrent pas) — les chiffres proviennent de sources EN d'époque, pouvant avoir été retouchées depuis : [Fdherg's — Academy Guide (2010)](https://fdherg.wordpress.com/2010/06/14/silkroad-online-academy-guide) · [international-sro forum](https://international-sro.forumotion.com/t800-academy) · [Silkroad Forums — Guardian Update (honor ranks 1-50)](http://www.silkroadforums.com/viewtopic.php?f=5&t=46359) · [Origin forum — Honor Rank System (50 % XP lv41)](https://forum.playorigin.com/archive/index.php/t-3650.html). Le terme **명예 (honneur)** n'apparaît côté KR que via l'academy ; pas d'« honor point shop » séparé trouvé.
+
+### Guildes/unions côté service coréen tardif (notices 2022-2026)
+
+- **Aucune refonte** guilde/union trouvée dans les notices officielles 2022-2026 (le système reste vraisemblablement celui décrit ci-dessus depuis Legend VII).
+- Item mall : **길드명 변경권** (changement de nom de guilde, 250 silk, via le PNJ prestataire 청옥) — https://krsilkroadcp.joymax.com/itemmall/itemlist.asp?Shoptype1=PREMIUM&Shoptype2=PREMIUM
+- Autres particularités du service moderne : boîte mail intégrée **통합우편함** (2023), service de transfert de compte de défunt (02/2026) — détail : [RESEARCH_KO2_SYSTEMS.md §11](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md).
+- Forteresses KSRO (taxe 20 %, siège bimensuel, toujours actives en 2024) → [19_FORTRESS_WAR.md](19_FORTRESS_WAR.md) (section KSRO).
+
+---
+
 ## ⏳ Guild Penalty (Délai de Ré-engagement)
 
 ⚠️ Mécanique souvent oubliée mais bien documentée par la communauté :
@@ -366,4 +395,4 @@ Pour les émulateurs / serveurs privés (utile au projet SRObro) :
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : guides officiels Joymax traduits, Elitepvpers, Silkroad Forums, RaGEZONE, StrategyWiki, IGN — enrichi par la recherche DE 2026-10 : silkroadonline.de SeToY 2009 / elitepvpers 222528)*
+*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : guides officiels Joymax traduits, Elitepvpers, Silkroad Forums, RaGEZONE, StrategyWiki, IGN — enrichi par la recherche DE 2026-10 : silkroadonline.de SeToY 2009 / elitepvpers 222528 ; ajout de la section 🇰🇷 Contenu KSRO 2011-2026 : academy system 아카데미 + honor buffs — rapport ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md §7)*

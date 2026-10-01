@@ -8,6 +8,7 @@
 - [Roc (Roc Mountain)](#-roc-roc-mountain)
 - [Uniques du Qin-Shi Tomb (Medusa)](#-uniques-du-qin-shi-tomb-medusa)
 - [Uniques du Job Temple (Alexandrie)](#-uniques-du-job-temple-alexandrie)
+- [🇰🇷 Boss KSRO post-Medusa (2011-2023)](#️-boss-ksro-post-medusa-2011-2023)
 - [Boss du Forgotten World (FGW)](#-boss-du-forgotten-world-fgw)
 - [Variantes Event (Strong/Evil/GM)](#-variantes-event-strongevilgm)
 - [Spawn Times](#-spawn-times)
@@ -350,6 +351,40 @@ Le **Job Temple** (donjon de job au sud d'Alexandrie, cap 120) contient 6+ uniqu
 
 **Mécanique:** le temple est un PvP-job zone — tradez/portez la cape de job ; les unions se disputent les chambres.
 
+> 🇰🇷 **Validation croisée (recherche KO2 2026-10)** : la table officielle coréenne du donjon 신전 (gamedata kSRO, EUC-KR décodée) liste les uniques **셀키스 105 · 네이트 106 · 아누비스 107 · 이시스 108 · 하로에리스 109 · 세이트 110** — niveaux **strictement identiques** aux données client iSRO ci-dessus (Selket 105, Neith 106, Anubis 107, Isis 108, Haroeris 109, Seth 110), plus Apis (아피스 103) et les élites secondaires 소페두/페트베/이무테스/에리스 (110). Source : [gamedata officielle kSRO — Egypt_Monster_Dungeon](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Egypt_Monster_Dungeon.html) · [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md).
+
+---
+
+## 🇰🇷 Boss KSRO post-Medusa (2011-2023)
+
+> ⚠️ **Périmètre** : chaîne de boss du **service coréen (KSRO, jamais fermé)** au-delà du contenu classique iSRO. **Ne pas fusionner avec les tableaux classiques ci-dessus** (les niveaux/HP classiques restent ceux du client iSRO). Rapport source : [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) · chronologie : [RESEARCH_KO2_CHRONO.md](ML_RESEARCH/RESEARCH_KO2_CHRONO.md).
+>
+> ⚠️ **HP indisponibles** : aucune source officielle (KR ou TW) ne publie les HP/niveaux de ces boss — le site officiel KR ne donne que noms/niveaux (pour les monstres) et conditions d'entrée (pour les donjons). L'**extraction du client** (`characterdata`/`_RefObjChar`) reste la seule voie.
+
+### Chaîne chronologique post-Medusa
+
+| Vague | Boss | Niveau | Lieu | Notes | Sources |
+|---|---|---|---|---|---|
+| **Job Temple** (2009, données officielles KR) | 셀키스/네이트/아누비스/이시스/하로에리스/세이트 (Selket, Neith, Anubis, Isis, Haroeris, Seth) | **105 → 110** | 신전 (Égypte) | identiques aux données iSRO (voir validation ci-dessus) | gamedata kSRO |
+| **Temple de Jupiter** (Legend XII KR, 22/06/2011) | **Jupiter (朱庇特), Yuno (柳諾), Deus (帝厄斯)** | non publiés (~111-113, donjons 106/111/113) | 경배의 전당 (Hall of Worship) 중급/상급 | boss éponymes du temple ; documentés par vidéos de chasse | DiGeam S14, YouTube S31 |
+| **Temple de Jupiter B** | **바알 (Baal), 바빌리온 (Babilion), Zielkiaxe (吉爾其厄斯)** | non publiés (~116-118, donjons 106/116/118) | 광신도의 은신처 (Zealots Hideout) | Baal = chef démoniaque de la Dimension Miroir ; Babilion = fondateur du culte (lore officiel KR) ; « Zielkiaxe » = orthographe EN, KR non trouvée | gamedata kSRO S1, DiGeam S15, YouTube S31 |
+| **Unique de champ** (25/04/2012) | **키데모나스 (Kidemonas)** | **120** | 거울의 차원 (Dimension Miroir) | unique de champ ajouté par notice officielle KR (K24) — le seul boss 120+ dont le niveau est publié | board KR K24 |
+| **Bagdad** (mai 2014, cap 125) | **얍샤드 대장군** (Grand Général Yapshad) | non publié | 바그다드 (champ/donjon ?) | avatar officiel KR « 얍샤드 대장군 » (04/07/2013) + vidéos KR annotées 얍샤드 — **statut d'unique à confirmer** | board KR S6, YouTube S34 |
+| **Bagdad souterrain** | **巨大魔神 (Grand Démon)** · **沙勒軍大將軍** (Général en chef, « armée de la vengeance » 萬眾復仇軍) | non publiés | 바그다드 지하 (121+) | super-boss du donjon (3×50 min/jour) | DiGeam S16 |
+| **Repaire de Kailia** | **盜賊頭目凱麗亞 (Kailia, cheffe bandite)** | non publié | 카일리아의 은신처 (121+) | orthographe KR probable 카일리아 (non sourcée) | DiGeam S17 |
+| **Raid Legend 23** (~16/05/2023) | **覺醒死亡駭骨 (« Squelette de Mort Éveillé »)** | non publié | 파멸의 성전 (Temple of Destruction, 125+) | apparaît après les 3 boss de raid ; **jamais plus d'1 final simultané** ; **disparaît au bout de 3 h** s'il n'est pas tué ; raid multi-groupes | DiGeam S20, srolobby S28 |
+| **Shambhala** (27/03/2018) | boss des Ice/Fire Temple | 131-140 (niveaux de zone) | 샴발라 (accès NPC Mortifying Monk au Taklamakan) | **aucune source consultée ne les nomme** | Facebook iSRO S26 |
+
+### ⚠️ Correction préventive : « Hebe / Arges / Kali / Rhea » ne sont PAS des uniques
+
+> ✅ **Correction d'interprétation (recherche KO2 2026-10)** : les mentions « Lv.120 Hebe 21/04 », « Lv.130 Rhea/Nyx/Tyche », « Lv.140 Hebe/Kali/Arges… » des posts Facebook officiels iSRO désignent des **serveurs iSRO** (Hebe a été ouvert le 28/10/2025 ; Kali, Rhea, Tyche, Nyx, Eris, Arges… sont d'autres serveurs), **pas des boss**. Les caps 130/140 y ont été déployés **serveur par serveur**. Ces noms ne doivent jamais être ajoutés à une liste d'uniques. (Vérifié dans ce fichier : aucune occurrence erronée.) Source : [ML_RESEARCH/RESEARCH_KO2_WORLD.md §3](ML_RESEARCH/RESEARCH_KO2_WORLD.md) · [Reddit — serveur Hebe 2025](https://www.reddit.com/r/silkroadonline/comments/1oi5tqe/official_server_hebe_worth_a_shot/).
+
+### 📏 Règles associées (donjons KSRO)
+
+- **Timers** : instances Jupiter 2 h ; Bagdad/Kailia 3 entrées/jour de 50 min ; boss final du Temple of Destruction despawn 3 h.
+- **Règle des 7 niveaux** : aucun drop si le joueur dépasse le monstre de 7 niveaux ou plus (anti-carry).
+- Détail des donjons (accès, paliers 106/111/113/116/118/121/125, drops 12D→17D) : [13_ZONES_OVERVIEW.md — section KSRO](./13_ZONES_OVERVIEW.md).
+
 ---
 
 ## 🐉 Boss du Forgotten World (FGW)
@@ -601,7 +636,13 @@ Détails complets : [MONSTERS_SPAWN_LOCATIONS.md](./MONSTERS_SPAWN_LOCATIONS.md)
 - [Silkroad Online Wiki (Fandom) - Forgotten World](https://silkroadonline.fandom.com/wiki/Forgotten_World)
 - [Guild Algarb - FGW Maps](https://guildalgarb.wordpress.com/games/sro/maps/forgotten-world)
 
+### 🇰🇷 Boss KSRO post-classiques (recherche KO2 2026-10)
+- [ML_RESEARCH/RESEARCH_KO2_WORLD.md](ML_RESEARCH/RESEARCH_KO2_WORLD.md) — rapport source (chaîne post-Medusa, Jupiter/Bagdad/Legend 23, correction Hebe/Kali/Rhea)
+- [Gamedata officielle kSRO — monstres du Temple de Jupiter (45 mobs 111-116)](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Europe_Monster_Jupiter.html) · [monstres donjon Égypte (uniques KR)](https://krsilkroadcp.joymax.com/gamedata/Monster/iframe_monster/Egypt_Monster_Dungeon.html)
+- Wiki officiel DiGeam (TW) : [敬拜的殿堂](https://srowiki.digeam.com/%E6%95%AC%E6%8B%9C%E7%9A%84%E6%AE%BF%E5%A0%82/) · [狂信徒的藏身處](https://srowiki.digeam.com/%E7%8B%82%E4%BF%A1%E5%BE%92%E7%9A%84%E8%97%8F%E8%BA%AB%E8%99%95/) · [破滅聖殿](https://srowiki.digeam.com/%E7%A0%B4%E6%BB%85%E8%81%96%E6%AE%BF/) (boss final 覺醒死亡駭骨)
+- [Facebook officiel iSRO — Lv.140 Shambhala](https://www.facebook.com/officialsilkroad/posts/1502299075272015) · [Avatar 얍샤드 대장군 (board KR, 04/07/2013)](https://krsilkroadcp.joymax.com/news/news_view.asp?sID=2&Page=22&Num=4322&List_Ref=1501)
+
 ---
 
 *Dernière mise à jour: 2026-10-01 (recherche web exhaustive — données client vérifiées via silkroadonline.wiki, elitepvpers, rev6, mmorpg.com, strategywiki)*
-*Fusion multilingue 2026-10 : rapports [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) (timers TR, noms ZH/KR, gardiens B5, skills Medusa, FGW)*
+*Fusion multilingue 2026-10 : rapports [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) (timers TR, noms ZH/KR, gardiens B5, skills Medusa, FGW) · rapports KO2 (section 🇰🇷 boss KSRO 2011-2023, validation Job Temple KR, correction Hebe/Kali/Rhea)*

@@ -498,3 +498,44 @@ mode hors-ligne explicite de repli).
 - Navigateur (2 onglets): Kaiser et Visiteuse se voient (modèles officiels),
   position de Kaiser propagée en direct (0→19,4 vue identique au réel),
   « Visiteuse: Salut Kaiser ! » reçu chez Kaiser.
+
+---
+
+## Session du 1er Octobre 2026 (8/2) : PHASE 6 — Suite Admin
+
+### Commandes chat GM (~22, rôle Account.role gm/admin requis)
+`/help /tp(=/teleport) /spawn /item /iteminfo /level /gold /sp /kill /revive
+/speed /invisible /god /freeze /kick /ban /unban /announce /mobinfo /whereis
+/rates /gm promote|demote` — dispatché par WorldManager.handleChatPacket avant
+les commandes joueur; refus « réservée aux GM » pour un compte lambda.
+- **Effets réels**: god (aucun dégât IA), invisible (despawn + exclus du
+  snapshot/ré-annonce), freeze (move packets ignorés), speed (multiplicateur
+  propagé au client via gm:speed), level (points de stats + HP/MP recalculés),
+  kill (pipeline complet: loot, XP, KillLog), tp (recalage client player:teleport).
+- **Bestiaire officiel**: /spawn crée à la volée la ligne Monster depuis
+  characterdata (7 825 monstres invocables, ex `/spawn MOB_CH_MANGNYANG 2`).
+
+### Taux live sans reboot (Redis)
+`/rates exp 5` ou console → mutation du singleton + persistance clé
+`srobro:rates` (rechargée au boot). Mesuré: Mangnyang ×5 = +270 XP, ×1 = +54.
+
+### Console web /admin (auth Basic compte gm/admin)
+Dashboard temps réel (2 s: joueurs + flags GM, monstres vivants, uptime),
+éditeur de taux live, annonce serveur, téléporteur, navigateur des 21 529
+items (prix officiels, don au joueur en ligne) et des 7 825 monstres
+officiels (invoquables), sanctions (ban/unban/kick), KillLog (fix schema:
+victimId sans FK Character + victimName).
+
+### Fixes incidentels
+- Item.price BigInt → JSON.stringify explosait silencieusement (Express 4
+  n'attrape pas les promesses rejetées: requêtes pendantes) → wrapper aw() +
+  Number(price).
+- Recherche items: noms officiels coréens → chercher aussi le code latin
+  (description contains).
+- Compte owner: le 1er compte créé était un bot de test → 'arnaud' promu admin.
+- /help: rôle lu sur l'ACCOUNT id (pas le character id).
+
+### Preuves
+- `scripts/test-phase6.ts` **31/31**: refus rôle, 22 commandes, taux mesuré
+  ×5 vs ×1 SANS reboot, ban→login refusé, unban, kick déconnecte, console
+  HTTP (401/200, items/monstres/killlog, giveItem, taux POST Redis).

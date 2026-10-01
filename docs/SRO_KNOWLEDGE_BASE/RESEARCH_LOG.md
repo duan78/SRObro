@@ -42,6 +42,19 @@ This is the central tracking document for all multilingual research conducted to
 
 **Conflits de sources signalés (non tranchés)** : BeakYung Lv 100 (TR) vs 105 (client/DiGeam) ; spawn uniques 4 h (FR) vs 6 h (Wikipédia FR/EN) ; Wanted 3 000 points (TR) vs 2 000 (Inven KR 2004) ; HP FGW ×1000 (données vSRO TR vs wiki) ; FW samedi (PT, non sourcé, rejeté).
 
+## 🇰🇷 Session 2026-10-01 (3) — Deep-dive KSRO 2009-2026 (~70 requêtes coréennes)
+
+> 4 rapports dans [ML_RESEARCH/](ML_RESEARCH/) (RESEARCH_KO2_CHRONO/WORLD/ITEMS/SYSTEMS.md), fusionnés dans ~20 fichiers sous sections « 🇰🇷 Contenu KSRO ». Le site officiel krsilkroadcp.joymax.com (EUC-KR, décodé via curl+iconv) a fourni les données primaires : 37 notices officielles indexées.
+
+| Rapport | Contenu clé |
+|---------|-------------|
+| [KO2_CHRONO](ML_RESEARCH/RESEARCH_KO2_CHRONO.md) | Chronologie complète Legend IX→Legend 23 (2009-2026), caps 105→140, serveurs/fusions, Rebirth ≠ Silkroad R, état 2026 (Wemade Max, 초원길, notices 09/2026) |
+| [KO2_WORLD](ML_RESEARCH/RESEARCH_KO2_WORLD.md) | Zones 106-140 (Dimension Miroir, 이슬람/Bagdad, Shambhala Ice/Fire Temple), 8 donjons, 45 monstres officiels du Temple de Jupiter, chaîne boss post-Medusa, zones jamais implémentées (선계/헤븐/천축) |
+| [KO2_ITEMS](ML_RESEARCH/RESEARCH_KO2_ITEMS.md) | Degrés jusqu'au 17차, règle Lv 101 fixé au 12차+, Seal of Comet (≠ Nova iSRO), Magic/Rare/Legend 12D+, Enhancers/보호석/각석, sockets, noms KR 11-13차, mall officiel |
+| [KO2_SYSTEMS](ML_RESEARCH/RESEARCH_KO2_SYSTEMS.md) | Base skills officielle (64 séries/296 CH + 269 EU), Force 12 séries, 12 fellows, calendrier events 2022-2026, Battle Arena KR 12/2009, 5 forteresses, academy, reliques/auto-combat 2025, monétisation |
+
+**Conflits KO2 signalés** : cap 140 (notice 2018/presse EN) vs 125 (mall KR) vs 131+ (contenu 2025) ; numérotation Legend 13-22 KR non documentée ; HP des boss 111+ indisponibles (extraction client requise) ; équivalences 무신/투신↔Egyptian A/B et 혜성↔Nova = inférences.
+
 ---
 
 ## 🔍 Research Status Summary

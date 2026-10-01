@@ -99,7 +99,6 @@ model Character {
   partyMemberships  PartyMember[]
   guildMembership   GuildMember?
   kills             KillLog[]           @relation("Killer")
-  deaths            KillLog[]           @relation("Victim")
   statusEffects     StatusEffect[]
   jobState          JobState?
   pkStatus          PKStatus?
@@ -418,14 +417,15 @@ model MonsterDrop {
 model KillLog {
   id         String   @id @default(uuid())
   killerId   String
+  // La victime peut être un monstre (pas de FK Character possible)
   victimId   String
+  victimName String?
   victimType EntityType
   damage     Int
   timestamp  DateTime @default(now())
 
   // Relations
   killer Character @relation("Killer", fields: [killerId], references: [id], onDelete: Cascade)
-  victim Character @relation("Victim", fields: [victimId], references: [id], onDelete: Cascade)
 
   @@index([killerId])
   @@index([victimId])
