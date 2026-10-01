@@ -11,6 +11,7 @@
 - [Armor](#-armor)
 - [Accessories](#-accessories)
 - [Degree Progression](#-degree-progression)
+- [Nomenclature Multilingue des Degrés](#-nomenclature-multilingue-des-degrés)
 - [FAQ](#-faq)
 - [Resources](#-resources)
 
@@ -53,6 +54,7 @@ Le système de **Degrees** classifie les équipements de Silkroad Online selon l
 | Update Lv.120 + Temple of Jupiter | 120 | 12D et 13D |
 
 > ⚠️ Les items **Egypt restent du 11e degré** (Class A/B). Le 12D/13D arrive avec le cap 120. Les niveaux exacts des pièces 12D/13D (autour de 111–120) ne sont pas publiés de façon fiable — les listes communautaires les affichent souvent « Lv 101 » par défaut.
+> ✅ **Partiellement résolu (recherche KO 2026-10)** : le **13D existait en Corée dès le 07/03/2012** (sets 13차 offerts lors de l'event « comeback » du serveur unifié 초원길) — voir [Nomenclature Multilingue](#-nomenclature-multilingue-des-degrés). Les niveaux exacts des pièces restent non publiés.
 
 ---
 
@@ -76,7 +78,7 @@ Le système de **Degrees** classifie les équipements de Silkroad Online selon l
 | **12D** | ~111 → 115 | Lv 111* | Temple of Jupiter (cap 120) |
 | **13D** | ~116 → 120 | Lv 116* | Temple of Jupiter (cap 120) |
 
-\* Niveaux des sets 12D/13D non confirmés officiellement.
+\* Niveaux des sets 12D/13D non confirmés officiellement. ✅ **10D « dès le niveau 90 » confirmé** par la presse KR de 07/2007 et **13D attesté en Corée dès 03/2012** (recherche KO 2026-10) — voir [Nomenclature Multilingue](#-nomenclature-multilingue-des-degrés).
 
 **⚠️ Corrections fréquentes à retenir :**
 - 5D ≠ niveaux 40–49 (c'est 32–37). 9D ≠ 80–89 (c'est 76–81). 11D ≠ 105–110 (c'est 101+).
@@ -174,6 +176,8 @@ Sets nommés d'après la pièce de corps (niveau du plastron) — source Guild A
 \* Niveaux 12D/13D non confirmés (affichés « Lv 101 » dans les listes communautaires).
 
 **Variants de skin :** chaque pièce existe en 3 variantes A/B/C (ex. casque 1D : *Copper Casque*, *Wrought Copper Casque*, *Refining Copper Casque*).
+
+> ⚔️ **Règle du « 1er tier » pour les armes seal (ZH, 2006)** : la communauté CN confirme que le seal d'arme (暗金, « or sombre ») **n'existe que sur le premier tier d'un degré** — en 8D (tiers 64/68/72), seul le tier 64 existe en seal ([17173 — 暗金篇](http://sro.17173.com/content/2006-05-13/1147524473.shtml)). Détails dans [Seal Equipment](06_SEAL_EQUIPMENT.md).
 
 ---
 
@@ -289,6 +293,35 @@ Sets nommés d'après la pièce de corps (niveau du plastron) — source Guild A
 
 ---
 
+## 🌐 Nomenclature Multilingue des Degrés
+
+> Fusion des recherches multilingues 2026-10 (KO / ZH / TR) — chaque terme est attesté dans une source sourcée.
+
+| Langue | Terme | Exemples attestés |
+|--------|-------|-------------------|
+| **Chinois** | 第N套 / N套 (« N-ème set ») | 8套 ([Sina, 2005](http://games.sina.com.cn/o/z/slcs/2005-05-11/1029226837.shtml)), 13套 ([九游](https://a.9game.cn/xslcs/9544868.html)), 16套 (service TW — [wiki DiGeam](https://srowiki.digeam.com/16%E5%A5%97%E8%A3%9D%E5%82%99)) |
+| **Coréen** | N차 | 10차 (Inven 2007), 12차/13차 (Ruliweb/GameMeca 2012) |
+| **Turc** | derece (« DG ») | usage communautaire « 8DG » (glossaire TR) |
+
+### ✅ Confirmations et résolutions (recherche KO 2026-10)
+
+- **10D dès le niveau 90 — CONFIRMÉ** : « 10차 아이템은 레벨 90부터 각 종족 범위 내에서 단계적으로 착용 가능 » (« les items 10D se portent de façon progressive dès le niveau 90, dans la plage de chaque race ») — presse coréenne Inven, 30/07/2007 (https://www.inven.co.kr/webzine/news/?news=12272).
+- **13D existait en Corée dès le 07/03/2012 — RÉSOLU (existence/datation)** : l'événement « comeback » de l'ouverture du serveur unifié **초원길** offrait des **sets 13차** (Ruliweb : https://bbs.ruliweb.com/news/read/40937 · GameMeca : https://www.gamemeca.com/view.php?gid=7327). Les **niveaux exacts des pièces 13D restent non publiés** côté KR.
+- **Noms d'items 10D côté KR** : **파천검** (arme CH 10D, motif tigre du zodiaque = la série « …Break Heaven Sword » d'iSRO) et **다크모나크** (item EU 10D, motif Taureau = « Taurus Dark Monarch ») — Inven + TGDaily (https://www.tgdaily.co.kr/news/articleView.html?idxno=127275).
+- **Set items** : introduits par **Legend 9 KR (09/09/2009)** — bonus selon le nombre de pièces (« 세트의 개수에 따라 세트 속성이 발생 ») ; les grades normal/rare précédents ont été **unifiés en un seul grade** à cette occasion (TGDaily : https://www.tgdaily.co.kr/news/articleView.html?idxno=142381). Correspond à Legend V iSRO (2010).
+
+### 🇨🇳 Zones de drop par degré (sources CN — recherche ZH 2026-10)
+
+- **11套 (11D)** : drops des **mobs d'Alexandrie** — items 11D normaux **et** 11套暗金 (seal).
+- **12套 (12D)** : la série « 苍穹 » (« voûte azur ») droppe sur les **mobs de Bagdad**, avec des armures/bijoux « 12星灿级 ».
+- Source : [九游](https://a.9game.cn/xslcs/9544868.html) — l'ordre Alexandrie → Bagdad (11D → 12D) est cohérent avec la chronologie iSRO (D11 Égypte → D12). Donnée issue du service CN : à recouper sur le client cible.
+
+### ⚠️ Garde-fou : remakes mobiles 2024+ (AUTRE jeu)
+
+Les guides chinois récents (《丝路传说手游》, 《寻梦丝路》, « 怀旧版 » — Sohu/gwpao/gfpao…) décrivent un système divergent : enhancement max **+15**, « 100% de succès avant +5 », raretés en **couleurs** (blanc → rouge). Ces chiffres décrivent les **remakes mobiles, pas le Silkroad Online PC original** — ne jamais les importer dans cette base. (Recherche ZH 2026-10)
+
+---
+
 ## ❓ FAQ
 
 ### Q: Puis-je porter un équipement d'un degré supérieur à mon niveau ?
@@ -307,7 +340,7 @@ Sets nommés d'après la pièce de corps (niveau du plastron) — source Guild A
 **R:** Dès que le niveau de la première pièce du degré suivant est atteint… sauf si vous avez un SOX/Égypt du degré courant (souvent meilleur que le normal du degré supérieur).
 
 ### Q: À quoi servent les variants A/B/C des pièces ?
-**R:** Ce sont des skins/stats légèrement différents du même degré (ex. Copper / Wrought Copper / Refining Copper) — pas des « grades » de qualité type seal.
+**R:** Ce sont des skins/stats légèrement différents du même degré (ex. Copper / Wrought Copper / Refining Copper) — pas des « grades » de qualité type seal. ⚔️ **Armes** : règle du « 1er tier » confirmée côté CN — le seal d'arme n'existe que sur le premier tier d'un degré (8D : seul le 64) — [17173, 2006](http://sro.17173.com/content/2006-05-13/1147524473.shtml).
 
 ### Q: Les looks changent-ils avec les degrés ?
 **R:** Oui, chaque degré a son set visuel complet ; les variants A/B/C et les versions seal/Egypt ont leurs propres modèles.
@@ -334,6 +367,17 @@ Sets nommés d'après la pièce de corps (niveau du plastron) — source Guild A
 - [Silkroad Forums — Weapons and Shields Levels](http://www.silkroadforums.com/viewtopic.php?f=113&t=93506)
 - [xSROMap](https://jellybitz.github.io/xSROMap/)
 
+### Recherche multilingue (2026-10)
+- [Inven — Legend Ⅶ 진시황릉 : items 10차 dès lv 90 (KO, 30/07/2007)](https://www.inven.co.kr/webzine/news/?news=12272)
+- [TGDaily — items 10차 : 파천검 / 다크모나크 (KO)](https://www.tgdaily.co.kr/news/articleView.html?idxno=127275)
+- [TGDaily — Legend 9 KR : set items, unification des grades (KO, 2009)](https://www.tgdaily.co.kr/news/articleView.html?idxno=142381)
+- [Ruliweb — sets 13차 offerts au comeback de 초원길 (KO, 2012)](https://bbs.ruliweb.com/news/read/40937)
+- [GameMeca — ouverture du serveur unifié 초원길 (KO, 2012)](https://www.gamemeca.com/view.php?gid=7327)
+- [九游 — drops 11套 Alexandrie / 12套 Bagdad (CN)](https://a.9game.cn/xslcs/9544868.html)
+- [新浪 — 第8套装备 (CN, 2005)](http://games.sina.com.cn/o/z/slcs/2005-05-11/1029226837.shtml)
+- [wiki DiGeam — 16套装備 : le service TW est allé jusqu'au 16e set (TW)](https://srowiki.digeam.com/16%E5%A5%97%E8%A3%9D%E5%82%99)
+- [17173 — 暗金篇 : seal d'arme = 1er tier (CN, 2006)](http://sro.17173.com/content/2006-05-13/1147524473.shtml)
+
 ---
 
 ## 📚 Voir aussi
@@ -354,4 +398,4 @@ Sets nommés d'après la pièce de corps (niveau du plastron) — source Guild A
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: silkroadonline.fandom.com (Armor), guildalgarb.wordpress.com (sets CH), silkroadonline.wiki (DB items v1_657), annonces officielles Lv.120, elitepvpers, IGN Guidebook*
+*Sources: silkroadonline.fandom.com (Armor), guildalgarb.wordpress.com (sets CH), silkroadonline.wiki (DB items v1_657), annonces officielles Lv.120, elitepvpers, IGN Guidebook, Inven/TGDaily/Ruliweb/GameMeca (KO), 新浪/九游/17173/DiGeam (ZH) — rapports ML_RESEARCH 2026-10*

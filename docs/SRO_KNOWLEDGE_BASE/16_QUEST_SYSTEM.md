@@ -7,6 +7,7 @@
 - [Quêtes de Jangan (Lv 1-18)](#-quêtes-de-jangan-lv-1-18)
 - [Quêtes de Donwhang (Lv 19-40)](#-quêtes-de-donwhang-lv-19-40)
 - [Quêtes Ferry / Hotan / Taklamakan (Lv 35-80)](#-quêtes-ferry--hotan--taklamakan-lv-35-80)
+- [Quêtes coréennes originelles — Roc Mountain (07/2006)](#-quêtes-coréennes-originelles--roc-mountain-072006)
 - [Quêtes d'Alexandrie (Lv 100-110)](#-quêtes-dalexandrie-lv-100-110)
 - [Quêtes de Titre / Blue Zerk (Lv 95+)](#-quêtes-de-titre--blue-zerk-lv-95)
 - [Quêtes de Guilde et Union](#-quêtes-de-guilde-et-union)
@@ -206,6 +207,27 @@ Sélection des quêtes notables (liste complète : voir shinakuma / r-silk wiki 
 
 ---
 
+## 🇰🇷 Quêtes coréennes originelles — Roc Mountain (07/2006)
+
+> ✅ **Résolu (recherche KO 2026-10)** : les 11 quêtes de la mise à jour 로크산 (Roc Mountain) du **19/07/2006** sont nommées dans la presse coréenne d'époque (Inven, publisher Yahoo! Korea) — les plus anciennes quêtes de zone documentées nominativement côté source d'origine. Présentées à l'époque comme des quêtes à **mécaniques inédites** (capture, escorte).
+
+| # | Nom coréen | Traduction littérale (indicative) |
+|---|-----------|-----------------------------------|
+| 1 | 사련의 부탁 1 | La requête de la marchande 1 |
+| 2 | 사련의 부탁 2 | La requête de la marchande 2 |
+| 3 | 사련의 음모 | Le complot de la marchande |
+| 4 | 아자티의 부탁 | La requête d'Azati |
+| 5 | 느림보 포획하기 | Capturer le paresseux |
+| 6 | 엔틀로프 사냥 | Chasse à l'antilope |
+| 7-10 | 노예 탈출 계획 1-4 | Plan d'évasion des esclaves 1-4 (chaîne en 4 étapes) |
+| 11 | 양들의 복수 | La vengeance des moutons |
+
+- Source : [Inven — 로크산 11 quêtes + Trade System 2 (19/07/2006)](https://www.inven.co.kr/webzine/news/?news=2449) — voir `ML_RESEARCH/RESEARCH_KO.md`.
+- Ces quêtes one-shot/scénario confirment l'absence de « daily quests » dans le SRO d'origine (cohérent avec la section Vue d'Ensemble).
+- **Trade System 2** (mise à jour du même jour) : profits commerçant/chasseur ↑, chargement de spécialités **25 → 40 unités**, ajout de la revente de spécialités, coût d'entrée aux unions de métier ↓, difficulté des monstres chasseur/voleur ↓ + difficulté selon le transport.
+
+---
+
 ## 🏛️ Quêtes d'Alexandrie (Lv 100-110)
 
 Alexandrie (Legend V+) possède son propre hub de quêtes autour du **Vice-roi Senmute** et des marchands. Particularité : **à partir du Lv 104, la plupart des quêtes sont ILLIMITÉES** — c'est le mécanisme d'endgame pour quest-farming EXP/SP.
@@ -249,6 +271,34 @@ Les **quêtes militaires** débloquent les 4 titres et surtout les **potions Ber
 | 2 | **Baronet-General / Baronet-Captain** | Zerk rouge | 6 quêtes : Military Test, New Challenge, Branch of Life (20 Extraction of Mountain sur des Goats lv76 de Roc Mountain, à utiliser sur un Yeoha), Relic of Sun God (20+ Sparkling Crystals d'Ishade/Hashade, à utiliser sous la porte de Cléopâtre X:-6935 Y:1753), Spirit of Underworld, Another Increment |
 | 3 | **Baron-Senior General** | — | Prérequis : chaîne « Devil of Century » (17 étapes à Alexandrie : collectes 50x, livraisons, tuer l'unique **Apis**, 5 cœurs d'uniques du Holy Water Temple Beginner). Puis : Higher Will (Intermediate), Power of Ancient Egypt, 7 quêtes Ostracon (100 Insect/Warrior/Fairy/Monitor/Beast/Dead + **50 God Ostracon** sur les 5 uniques — goulot d'étranglement : 2-3 entrées temple/jour, max 5 pouches/entrée), Leaping Over Another Obstacle |
 | 4 | **Count / Chief General** | Rang max | Identique au titre 3 mais en mode **Advanced** du Holy Water Temple |
+
+### 🇫🇷 Détails complétés par les guides FR (2009-2010)
+
+> Sources : GMS Temple — « Quête Spécial Berzeker » (Yoplait, 21/05/2009) et « Energy of Life 1st Degree » (nikvel, 04/04/2010) — voir `ML_RESEARCH/RESEARCH_FR.md`.
+
+**Répartition exacte des titres par race** (affichés en jaune à côté du pseudo) :
+
+| Titre | Race | Niveau |
+|-------|------|--------|
+| **Captain** | Chinois | 95 |
+| **Knight** | Européen | 95 |
+| **General** | Chinois | 100 |
+| **Baronet** | Européen | 100 |
+
+**Zerks améliorés :**
+- **Zerk bleu** (quête 95) : **+20% de dégâts** par rapport au zerk normal.
+- **Zerk orange** : si **2 joueurs ou plus porteurs du titre**, proches et en **party de 8 (PartyShare 8)**, zerkaillent simultanément → zerk combiné « plus puissant que le zerk simple ou le bleu ». ⚠️ **Conflit signalé** : le tableau ci-dessus (source Silkroad Latino) décrit un « zerk rouge » débloqué par la chaîne 100 ; les guides FR de 2009-2010 ne mentionnent que bleu/orange — à trancher sur le client.
+- **Energy of Life** : potion qui **remplit instantanément la jauge de berserk** (+quelques secondes de durée) — utilisable **1 fois toutes les 20 minutes**, dès le niveau 95, après les quêtes de grades.
+
+**Chaîne 95 (8 étapes) — coordonnées FR complètes (guide Yoplait, 2009) :**
+1. Général **Sonhyeon** (Jangan, **6202/1182**, près de la hunter guild) / Général **Rachel** (Constantinople, **−10830/2468**, camp militaire) — NB : orthographié « Ratchel » dans les listes EN — → **survivre 10 minutes dans une arène**
+2. Exorciste (**5777/1223**) / Sunset Witch (**−10378/3230**)
+3. Cloche sur les **Lions de la cave de Jangan B2 salle 2** (monstres 86-88)
+4. Moine **Jeonghye** (**6594/1250**)
+5. Tombe au sud de Jangan (**X:7175 Y:309** ; un autre sujet FR donne −7179/314) pour invoquer le monstre de quête
+6. **100 filets** pour capturer l'âme d'un **Niya General** à Taklamakan (l'âme doit être « bonne ») — **aller à pied : la téléportation est bloquée**
+7. Arène finale : tuer le monstre **en état de zerk complet**
+8. Suite au niveau 100 : 6 quêtes pour General/Baronet (Baronet-General / Baronet-Captain selon le tableau ci-dessus)
 
 ### NPCs par race
 - **Chinois:** Général **Sonhyeon** (Jangan), Exorciste Miaoryeong, Hunter Associate Gwakwi
@@ -352,7 +402,12 @@ Ordre de grandeur vérifié des récompenses de quêtes par palier (utile pour c
 ### Quêtes de Titre / Blue Zerk
 - [Titles Guide: Knight to Chief General — Silkroad Latino Wiki](https://wiki.silkroadlatino.com/en/faq/guia-titulos)
 - [Blue Zerk Quest Level 95 — Eminence Forum](https://eminence.forumotion.net/t10-blue-zerk-quest-lvl-95)
+- [Quête Spécial Berzeker — GMS Temple (Yoplait, 21/05/2009)](https://forum.gmstemple.com/index.php?showtopic=6344) — chaîne 95 complète en français, coordonnées NPC
+- [Energy Of Life 1st Degree — GMS Temple (nikvel, 04/04/2010)](https://forum.gmstemple.com/index.php?showtopic=7892) — titres/zerg FR, Energy of Life 1/20 min
 - Vidéos : [Zerk 95 CH](https://www.youtube.com/watch?v=klBZAgJ_PXk) / [Zerk 95 EU](https://www.youtube.com/watch?v=trfXGfDTlSA) / [Zerk 100](https://www.youtube.com/watch?v=wOCUBhU-wZs)
+
+### Quêtes coréennes originelles
+- [Inven — 로크산 11 quêtes + Trade System 2 (19/07/2006)](https://www.inven.co.kr/webzine/news/?news=2449) — les 11 quêtes nommées de Roc Mountain KR
 
 ### Système Officiel
 - [Daily Mission — site officiel silkroadforever](https://www.silkroadforever.com/en-us/m/guideShow.html?f=Daily_Mission&t=0)
@@ -371,5 +426,5 @@ Ordre de grandeur vérifié des récompenses de quêtes par palier (utile pour c
 
 ---
 
-*Dernière mise à jour: 2026-10-01*
-*Sources: shinakuma, Kopazar, WantedGuild, Silkroad Latino Wiki, Eminence Forum, Origin Forums, silkroadforever.com*
+*Dernière mise à jour: 2026-10-01 (enrichi par la recherche multilingue ML_RESEARCH — quêtes KR originelles Inven 2006, détails Blue Zerk GMS Temple FR 2009-2010)*
+*Sources: shinakuma, Kopazar, WantedGuild, Silkroad Latino Wiki, Eminence Forum, Origin Forums, silkroadforever.com, Inven (KR), GMS Temple (FR)*

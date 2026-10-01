@@ -23,6 +23,7 @@ Cette base remplace l'ancienne version (noms inventés, chiffres non sourcés). 
 2. **Niveaux de skills** : chaque skill s'achète avec des SP une fois le palier de mastery atteint, et se monte sur plusieurs rangs (dégâts/effets croissants). Le mastery cap = niveau du perso.
 3. **Coûts MP / dégâts exacts** : ils varient fortement selon le rang du skill, le cap du serveur (90→140) et la version (iSRO/vSRO/SilkroadR). Les chiffres donnés ici sont des **valeurs documentées à un rang donné** et des **règles structurelles** (durations, chances, ratios) qui restent stables.
 4. **Deux masteries max** : total plafonné à 2 × niveau du perso (220 au cap 110, 240 au cap 120) — voir [03_EUROPEAN_CLASSES.md](03_EUROPEAN_CLASSES.md).
+5. **Noms ZH (TW officiel)** — les 6 masteries EU ont des noms chinois officiels côté service taïwanais (DiGeam) : Warrior **聖戰士** · Rogue **刺客** · Wizard **元素使** · Warlock **魔元素使** · Bard **吟遊詩人** · Cleric **聖職者**. Armes : 單手劍 (épée 1H), 雙手劍 (épée 2H), 雙斧 (double hache), 匕首 (dagues), 十字弓 (arbalète), 法杖 (staff), 術杖 (dark staff), 豎琴 (harpe), 牧杖 (clerical rod) ; armures : 重盔甲 (Heavy Armor), 轻铠甲 / TR 輕鎧甲 (Light Armor), 法袍 (Robe). Sources : [wiki Bahamut](https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山) + [DiGeam](https://srowiki.digeam.com/), via [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (recherche ZH 2026-10). Aucun nom officiel FR/TR/DE des skills EU : le client n'a jamais été localisé dans ces langues ([RESEARCH_FR](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_TR](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_DE](ML_RESEARCH/RESEARCH_DE.md)).
 
 ---
 
@@ -430,8 +431,9 @@ Autres curses confirmés dans les données serveur (eSRO) et forums : **Dull** (
 - [Fandom Wiki – Skills](https://silkroadonline.fandom.com/wiki/Skills) · [Weapons](https://silkroadonline.fandom.com/wiki/Weapons)
 - [Silkroad4Arab – explication des skills Rogue (Butterfly Blow/Dull)](https://www.silkroad4arab.com/vb/showthread.php?t=407416)
 - [elitepvpers – Cleric heal skills (Healing Orbit/aggro)](https://www.elitepvpers.com/forum/silkroad-online/1289296-cleric-heal-skills.html)
+- [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) — noms ZH (TW) officiels des 6 masteries EU, armes et armures ([wiki Bahamut](https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山) · [DiGeam](https://srowiki.digeam.com/))
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (révision majeure : remplacement des noms/chiffres non sourcés par les noms iSRO vérifiés et les valeurs documentées ; voir section Incertitudes pour les limites)*
-*Sources: elitepvpers (traductions 2008), silkroadforums, SRO Valkyria, PhBot Plugins (GitHub), eSRO (GitHub), Fandom Wiki, silkroad4arab, silkroadalani*
+*Dernière mise à jour: 2026-10-01 (révision majeure : remplacement des noms/chiffres non sourcés par les noms iSRO vérifiés et les valeurs documentées ; enrichi des noms ZH/TW officiels des masteries — recherche multilingue ML_RESEARCH ; voir section Incertitudes pour les limites)*
+*Sources: elitepvpers (traductions 2008), silkroadforums, SRO Valkyria, PhBot Plugins (GitHub), eSRO (GitHub), Fandom Wiki, silkroad4arab, silkroadalani ; noms ZH : wiki Bahamut + DiGeam (via ML_RESEARCH/RESEARCH_ZH.md)*

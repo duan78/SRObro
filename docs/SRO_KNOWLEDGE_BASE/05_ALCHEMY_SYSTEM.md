@@ -13,6 +13,7 @@
 - [Tablettes, Éléments et Pierres](#-tablettes-éléments-et-pierres)
 - [Blues (Magic Options) — Catalogue Complet](#-blues-magic-options--catalogue-complet)
 - [Stratégies d'Alchimie](#-stratégies-dalchimie)
+- [Mythes & Superstitions (documentés et démentis)](#-mythes--superstitions-documentés-et-démentis)
 - [Données Vérifiées (Ground Truth)](#-données-vérifiées-ground-truth)
 - [FAQ](#-faq)
 - [Resources](#-resources)
@@ -142,6 +143,8 @@ Le système d'**alchimie** de Silkroad Online permet d'améliorer votre équipem
 ### Serveurs privés
 Les rates alchimie sont configurables côté serveur (multiplicateurs courants x2–x5 sur les PS « fun »). **Vérifiez toujours les rates de votre serveur.**
 
+Confirmation TR : les administrateurs de privés vSRO ajustent les taux **via le champ Lucky Powder** — c'est LE levier de tuning côté serveur (vSRO.org : https://www.vsro.org/konular/alchemy-rate-ayarini-nasil-yapiyorsunuz.18197).
+
 ---
 
 ## ⚠️ Échec : Reset, Destruction, Malus
@@ -212,7 +215,9 @@ Ces 4 blues « spéciales » s'ajoutent via les **magic stones** correspondantes
 - Une seule famille d'items (pas de « weapon powder » / « armor powder ») : **Lucky Powder (1st) à (12th)** — une par degré.
 - **La powder doit être du même degré que l'item** (sinon refus).
 - Vendue par le **Grocery Store / Grocery Owner** de chaque ville (très bon marché).
+- Détail d'achat (guide BR ~2011, Fúria Brazil) : à Donwhang, fenêtre d'action **touche A** → onglet parchemin → bouton **Joint** (source : https://furia-brazil.forumeiros.com/t9-guia-basico-do-silkroad).
 - Le bonus ajouté dépend du palier de + (voir tableau plus haut) : +50% en +1, +30% en +2, +20% en +3, puis +8%.
+- ✅ **Additivité confirmée indépendamment (recherche TR 2026-10)** : SroCave a unpacké les `Param` du powder — `840832008` → 50,30,20,8 et `134744072` → 8,8,8,8 — le bonus **s'additionne** au taux d'élixir (voir [Données Vérifiées](#-données-vérifiées-ground-truth)).
 
 ### Variante : Lucky Magic Powder
 - Série `_B` (`ITEM_ETC_ARCHEMY_REINFORCE_PROB_UP_B_01..12`, « Lucky Magic Powder (1st–12th) ») : version « magique » au bonus supérieur, obtenue via Magic Pop / events / item mall selon les versions. Peu documentée officiellement.
@@ -261,9 +266,12 @@ Str, Int, Master (durabilité %), Strikes (attack rating %), Discipline (blockin
 ### Tablettes Ruby (attribute stones — reset des stats blanches), niveaux 1–12
 Courage (attaque physique arme), Warriors (reinforce phy arme), Philosophy (attaque magique arme), Meditation (reinforce mag arme), Challenge (critical arme), Focus (attack rating arme), Flesh (def phy armure/bouclier), Life (reinforce phy armure/bouclier), Mind (def mag armure/bouclier), Spirit (reinforce mag armure/bouclier), Dodging (parry ratio armure), Agility (block ratio bouclier), Training (absorption phy accessoire), Prayer (absorption mag accessoire).
 
+> 📝 **Corrections communautaires d'époque** (thread DE 2007, même source que ci-dessus) : Meditation et Warrior s'appliqueraient **aussi aux armures** (pas uniquement aux armes) ; Steady **n'existe pas** pour les accessoires ; « Tablet of Agility » = bien le ratio de **block** (pas la parade) — la nomenclature TR (DonanımHaber) aboutit aux mêmes fonctions.
+
 ### Chances des pierres (assimilation)
 - La **chance d'application** de la pierre est stockée dans la DB par degré (décroissante avec le degré, bornée 5–100%). Les guides communautaires avancent ~30–55% selon le degré — données exactes dans `_RefObjItem.Param4`.
 - Après une réussite, une **assimilation secondaire** peut se déclencher (taux propre à chaque pierre, affiché sur l'item) : elle modifie **au hasard** une AUTRE stat de l'item (blanche ou blue) → c'est le risque des pierres (elles peuvent améliorer… ou dégrader une autre stat).
+- 🇩🇪 **Lecture du « % » (guide DE 2007)** : le pourcentage affiché sur les attribute stones (souvent 10–30%) est la **probabilité de re-roll des autres stats** de l'item lors de l'assimilation — et il s'applique **même si la pierre elle-même échoue** (Alchemie-Guide, silkroadonline.de, 29.12.2007 : https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/alchemy/18242-alchemie-guide).
 - Un item possède un **nombre maximal de blues** (champ MaxMagic de la DB, jusqu'à 12).
 - Les valeurs des blues sont tirées d'un **ensemble de valeurs par degré** (paires min/max dans `_RefMagicOpt`), bornées 1–1700.
 
@@ -335,23 +343,89 @@ Un item +5/+6 en Stall est souvent moins cher que le coût espéré en élixirs/
 
 ---
 
+## 🧿 Mythes & Superstitions (documentés et démentis)
+
+> 🕵️ Témoignages communautaires datés et sourcés (FR 2007, DE 2006-2008, TR moderne) — **aucun de ces rituels n'a d'effet** d'après les taux de la DB et les mesures massives (voir [Données Vérifiées](#-données-vérifiées-ground-truth)). Ils restent précieux comme lore et sociologie du jeu.
+
+### 🇫🇷 Superstitions françaises de 2007 (GMS Temple)
+
+Source : fil « Existe-t-il une technique pour réussir ses alchimies ? » (juillet-août 2007) — https://forum.gmstemple.com/index.php?showtopic=2605
+
+| Rituel documenté | Description (fil d'époque) | Démenti |
+|------------------|----------------------------|---------|
+| « Le HL réussit mieux » | Un HL qui alchimise un item low level réussirait mieux (Seigaku) — l'admin Euclide_ répond : « avoir du bol », « plus on est HL, plus on peut se permettre de claquer des élixirs » | Le taux ne dépend ni du niveau du perso ni de l'item (DB) |
+| Méthode des 3 élixirs (_MiRe_) | 3 élixirs + 3 poudres de chance, les 2 premiers « le plus vite possible », puis **attendre ~8 secondes** avant le dernier (variante : le 3e « en fermant les yeux ») | Timing sans effet — tentatives indépendantes |
+| Sacrifice d'anneau | Bloqué à +X ? Faire échouer un élixir d'accessoire sur un anneau en inventaire, puis retenter la cible — « ça marche près de 90% du temps » (ressenti) | RNG indépendant ; l'auteur du fil a fini par **détruire une glavie SoS (lv 16) +5 en tentant +6** et conclut lui-même que tous ces trucs « c'est des conneries » |
+| Changer de coin de ville | Se déplacer dans un autre coin de la ville après +3 avant de tenter +4/+5 (Ptimass) | L'emplacement n'a aucun effet |
+| « Lucky planqué » | Croyance en un facteur chance **caché par item** (seren) | La chance = taux DB + bonus additifs documentés (powder, Lucky stone, premium) |
+| Premium « nul voire négatif » | « Avec le premium je rate toujours, sans premium ça passe du premier coup » | Premium PLUS = **+5%** mesuré (HyperbotDoc + SroCave) |
+
+- Autres témoignages d'époque : **40 élixirs de bouclier** sans parvenir à +3 ; **100+ élixirs d'arme** pour remonter une glavie +5 après un échec +6 — ordres de grandeur plausibles au vu des resets à +0. Consensus 2007 : « +9 tu oublies, ça marche pas » (à 20%/tentative avec powder).
+- L'admin moquait l'ensemble : « On a plus de succès en s'habillant de vieux caleçons. »
+- Seuls boosteurs reconnus légitimes par la communauté FR : **poudre de chance, blue « lucky », pierre Immortal**.
+- La glavie SoS +5 détruite en tentant +6 **corrobore la règle « destruction possible dès la tentative +5 → +6 », déjà effective en 2007**.
+
+### 🇩🇪 Mythes allemands — débunkés in-thread (2006-2008)
+
+Sources : Alchemie-Guide (silkroadonline.de, 29.12.2007 — URL ci-dessus) + elitepvpers « Alchemy trics » (https://www.elitepvpers.com/forum/silkroad-online/174665-alchemy-trics.html)
+
+- **« L'élixir weapon est plus rare »** (affirmé par ThE_Pa!N) — corrigé dans le fil même par smegin/Trava : **taux de drop identiques pour les 4 types d'élixirs** ; S3xyCrunK_06 : « 25% chacun » (répartition uniforme).
+- **« Il existe un trick »** — consensus elitepvpers : « **kein Trick** », la chance est fixée côté serveur (recoupé par le debunk moderne NoNo, 2020 : https://www.elitepvpers.com/forum/sro-private-server/4723508-silk-road-alchemy-debunk-nono.html).
+- Jargon DE d'époque : « **pimpen** » = faire des + ; fenêtre d'alchimie = touche **Z** sur clavier QWERTZ (= Y en QWERTY).
+
+### 🇹🇷 Turquie moderne — le mythe du RNG pur
+
+- SroLobby (https://www.srolobby.com/konular/alchemy-basari-oranlari.273) : le vétéran *onder* (2020) conteste l'existence de taux fixes (« certains passent +12 d'affilée sans rien, d'autres échouent +5 avec premium + lucky dress ») — démenti par les mesures massives (30 000+ tentatives) : les taux sont fixes, seule la variance est normale.
+- SroCave « Temel Bilgiler » présente un **maximum +9** (vision ancienne / serveur classique) : https://srocave.com/konular/silkroad-online-oyunu-hakkinda-en-temel-bilgiler-karakter-yapilandirmasi-ve-itemler.2635
+
+### 🇨🇳 Espace web chinois — constat négatif
+
+- Ni le wiki officiel TW (DiGeam), ni l'opérateur CN (iccgame), ni 17173 ne publient **aucune table de taux** ; les chiffres qui circulent en chinois (+15 max, « 100% de succès sous +5 ») appartiennent aux **remakes mobiles 2024+ et aux serveurs privés** — pas au PC original. La seule voie fiable reste l'extraction client/DB. (Recherche ZH 2026-10)
+
+### 🗣️ Glossaire alchimie multilingue (attesté dans les sources)
+
+| Terme iSRO | 🇫🇷 FR | 🇩🇪 DE | 🇹🇷 TR | 🇵🇹 PT-BR |
+|---|---|---|---|---|
+| Alchimie / enhancement | alchimiser, « monter » / « passer +3 » | die Alchemie, « pimpen » | simya, artı basma | alquimia, aprimoramento |
+| Élixir | élixir (arme/bouclier/accessoire) | der Waffenelixier / Schutzwall-Elixier | iksir | elixir |
+| Lucky Powder | poudre de chance | das Glückspulver | şans tozu | pó da sorte |
+| Pierre / tablette | pierre, tablette | der Stein / die Tablette | taş | pedra |
+| Échec / destruction | « failed » (verbe francisé) | der Fehlversuch / « Failsafe » | yanma (« brûler »), sıfırlanma (reset +0) | falha |
+| Blue de protection | Immortal / Steady / Lucky | der Unsterblichkeitsstein / standhaft / der Glücksstein | kırılmayı önler (Immortal), dayanıklılık (durabilité) | imortal / estável / sortudo |
+| Éléments | éléments | Feuer / Erde / Wasser / Luft | — | elementos |
+
+*(Sources : glossaires FR/DE/TR/PT des rapports ML_RESEARCH 2026-10.)*
+
+---
+
 ## 🔬 Données Vérifiées (Ground Truth)
 
 ### 1. Base de données du serveur (vSRO / iSRO)
 Les Param2/3/4 de `ITEM_ETC_ARCHEMY_REINFORCE_RECIPE_WEAPON_B` unpackés en octets donnent **50,40,30,19 / 17,17,17,17 / 17,12,12,12**. La Lucky Powder (10th) : **50,30,20,8 / 8,8,8,8 / 8,8,8,8**. (Source : blog HyperbotDoc, confirmé par le projet opensro.)
 
-### 2. Mesures automatisées (GM /makeitem)
+### 2. ✅ Validation croisée indépendante — SroCave (recherche TR 2026-10)
+Le site turc SroCave a décompressé les mêmes valeurs `Param` 32-bit (4 octets → 4 taux 8-bit), **indépendamment** d'HyperbotDoc :
+- `unpack(841489939)` → 50, 40, 30, 19 · `unpack(286331153)` → 17, 17, 17, 17 · `unpack(286002188)` → 17, 12, 12, 12 — **identiques** aux taux DB ci-dessus.
+- Lucky Powder : `unpack(840832008)` → 50, 30, 20, 8 (paliers +1→+4) ; `unpack(134744072)` → 8, 8, 8, 8 (+5→+12) — le powder **s'additionne** au taux d'élixir (additivité confirmée explicitement, plafond 100%).
+- Mesure sur 30 000 tentatives : 50.58% / 40.07% / 29.99% / 19.13% / 17.68% — mêmes valeurs que les mesures HyperbotDoc.
+- Magic Stone of Luck : pose à 100%, **+5% sur la tentative suivante** puis disparaît (~50 000 échantillons, intervalle de confiance de Wilson) ; Premium PLUS : **+5%** fixe ; avatar Lucky : mécanisme identique au Lucky stone.
+- Élixirs minimum pour un palier à 90% de probabilité (calcul récursif f(y,N,x)) : +2 = 10 · +3 = 47 · +4 = 205 · +5 = 840 · +6 = 3 384 — mêmes valeurs que le tableau plus haut. Exemple opérationnel : de +5 vers +6 avec seuil 0.8 → minimum 230 élixirs, 25% d'atteindre l'objectif, 73.47% de retomber à +5.
+- Source : https://srocave.com/konular/silkroad-onlineda-arti-basmanin-matematigi-gercek-oyun-kodlariyla-alchemy-basari-oranlari.3523 (TR)
+
+> ✅ **Résolu (recherche TR 2026-10)** : taux de base (50/40/30/19/17/12), additivité du powder (+50/30/20/8/8), Lucky stone +5% et Premium PLUS +5% — validés par une seconde chaîne d'extraction DB + des mesures statistiques indépendantes.
+
+### 3. Mesures automatisées (GM /makeitem)
 - 30 000 échantillons élixir seul ; ~2 000 élixir+powder ; ~50 000 avec Magic Stone of Luck (11 personnages en parallèle) ; ~70 000 avec Premium/avatar.
 - Conclusions : bonus **additifs plats** (Luck stone = +5%, Premium PLUS = +5%, avatar Lucky = +X%), conformes à la DB.
 
-### 3. Logique décompilée du gameserver (projet opensro)
+### 4. Logique décompilée du gameserver (projet opensro)
 - Tirage `rand % 100 < chance` ; chance = taux élixir + powder (si < 100) + 5% (Lucky) + bonus, bornée [10,100].
 - Échec : reset +0 ; à +5+ : 50% destruction (Immortal la nie) / 50% malus durabilité (Steady la nie) ; Astral : plancher +4.
 - Maximum 12 blues par item ; valeurs bornées 1–1700.
 
 ### ⚠️ Ce qui reste incertain
 - Taux exacts de la Lucky **Magic** Powder (série B).
-- Chances d'application des pierres par degré (dans la DB, non publiées).
+- Chances d'application des pierres par degré (dans la DB, non publiées) — constat négatif : aucun wiki officiel CN/TW (DiGeam, iccgame) ni 17173 ne publie de table (recherche ZH 2026-10).
 - Plages de valeurs des blues par degré.
 
 ---
@@ -401,6 +475,17 @@ Les Param2/3/4 de `ITEM_ETC_ARCHEMY_REINFORCE_RECIPE_WEAPON_B` unpackés en octe
 - [Piedras — tipos y función (ES, Silkroadmania)](https://silkroadmania.wordpress.com/2007/05/25/piedras-tipos-y-funcion/)
 - [Silkroad Forums — Alchemy myths: does your totem work](https://fgwgame.com/guides/silkroad-online-alchemy-myths-does-your-totem-actually-work)
 
+### Recherche multilingue (2026-10)
+- [SroCave — La mathématique des + : taux extraits des codes du jeu (TR)](https://srocave.com/konular/silkroad-onlineda-arti-basmanin-matematigi-gercek-oyun-kodlariyla-alchemy-basari-oranlari.3523)
+- [SroCave — Temel Bilgiler (TR, Zombie/Burn, vision +9)](https://srocave.com/konular/silkroad-online-oyunu-hakkinda-en-temel-bilgiler-karakter-yapilandirmasi-ve-itemler.2635)
+- [GMS Temple — Existe-t-il une technique pour réussir ses alchimies ? (superstitions FR 2007)](https://forum.gmstemple.com/index.php?showtopic=2605)
+- [silkroadonline.de — Alchemie-Guide (DE, 29.12.2007)](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/alchemy/18242-alchemie-guide)
+- [Elitepvpers — Alchemy trics : « kein Trick » (DE/EN)](https://www.elitepvpers.com/forum/silkroad-online/174665-alchemy-trics.html)
+- [Elitepvpers — Silkroad Alchemy Debunk (NoNo, 2020)](https://www.elitepvpers.com/forum/sro-private-server/4723508-silk-road-alchemy-debunk-nono.html)
+- [vSRO.org — ajustement des taux via Lucky Powder (TR)](https://www.vsro.org/konular/alchemy-rate-ayarini-nasil-yapiyorsunuz.18197)
+- [SroLobby — taux d'alchimie : le mythe du RNG pur (TR)](https://www.srolobby.com/konular/alchemy-basari-oranlari.273)
+- [Fúria Brazil — Guia Básico do Silkroad (PT-BR, ~2011)](https://furia-brazil.forumeiros.com/t9-guia-basico-do-silkroad)
+
 ### Données d'items (codenames)
 - [ItemData vSRO — ClientLibGUII ItemDataGenerated.h](https://github.com/aloneanqel1453/ClientLibGUII/blob/master/source/libs/ClientLib/src/ItemDataGenerated.h)
 - [RSBot — RefMagicOptExtension (libellés des blues)](https://github.com/myildirimofficial/RSBot/blob/master/Botbases/RSBot.Alchemy/Extension/RefMagicOptExtension.cs)
@@ -430,4 +515,4 @@ Les Param2/3/4 de `ITEM_ETC_ARCHEMY_REINFORCE_RECIPE_WEAPON_B` unpackés en octe
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: DB vSRO dépackée (HyperbotDoc/SandSnip3r), opensro (logique décompilée), elitepvpers, silkroadforums, DonanımHaber, Silkroadmania, ItemData vSRO*
+*Sources: DB vSRO dépackée (HyperbotDoc/SandSnip3r), opensro (logique décompilée), elitepvpers, silkroadforums, DonanımHaber, Silkroadmania, ItemData vSRO, SroCave + vSRO.org + SroLobby (validation TR), GMS Temple (superstitions FR 2007), silkroadonline.de (DE), Fúria Brazil (PT-BR) — rapports ML_RESEARCH 2026-10*

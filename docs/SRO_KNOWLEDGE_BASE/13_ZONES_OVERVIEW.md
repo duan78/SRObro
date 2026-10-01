@@ -99,6 +99,25 @@ Disposition réelle des grandes zones (PosX approx., PosY approx.) :
 
 ¹ *Les Penons se rencontrent en réalité surtout dans le bassin de Tarim / Karakoram ; le Stone Cave de Donwhang est peuplé d'Earth Ghosts.*
 
+### 🈶 Noms chinois / coréens des régions (✅ recherche ZH/KO 2026-10)
+
+| Région (iSRO) | Chinois (TW/CN officiel) | Coréen (KSRO) |
+|---|---|---|
+| Jangan | **长安** (Cháng'ān) | 장안 |
+| Donwhang | **敦煌** (Dūnhuáng) | 돈황 |
+| Hotan | **和田** (Hétián) | 호탄 |
+| Samarkand | **撒马尔罕** | — |
+| Constantinople | **君士坦丁堡** | 콘스탄티노플 |
+| Alexandria | **亚历山大** (TR 亞歷山大) | 알렉산드리아 |
+| Thief Village | **盗贼村** | — |
+| Taklamakan | **塔克拉玛干** | 타클라마칸 |
+| Karakoram | **卡拉昆仑** | 카라코람 |
+| Roc Mountain | **洛克山** | 로크산 |
+| Qin-Shi Tomb | **秦始皇陵** | 진시황릉 |
+| Delta (Alexandrie) | **三角洲地区** | — |
+
+Sources : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (wiki DiGeam, wiki Bahamut) · [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (Inven 2004, vivia2020). Noms ZH des uniques et de leurs zones de spawn : [15_UNIQUE_BOSSES.md](./15_UNIQUE_BOSSES.md#-noms-multilingues-des-uniques-zh--kr).
+
 ---
 
 ## 🏯 Régions Chinoises (Est)
@@ -153,6 +172,7 @@ Disposition réelle des grandes zones (PosX approx., PosY approx.) :
 - Massif montagneux sud-ouest (≈ −4 600, −200), ajouté avec **Legend III** (cap 90)
 - Entrée par la **Gate of Ruler** (−4 612, −1)
 - Pics : Heart Peak, Claw Peak, Wing Peak
+  - Noms des pics ZH : 心脏之峰 (Heart) · 利爪之峰 (Claw) · 翅膀之峰 (Wing) · 羽毛之峰 · 尖嘴之峰 · 雷峰 ; découpage KR : 양치기/버려진 마을 (82-84), 눈·심장·날개·부리의 봉우리 (85-87), 정상의 로키 (88-90) — ✅ recherche ZH/KO 2026-10
 - **Demon Shaitan** (90, ~12,7 M HP) : le boss final du cap 90 classique
 - Drops 9D / Seal of Moon-Star-Sun haut de gamme
 
@@ -199,6 +219,8 @@ Disposition réelle des grandes zones (PosX approx., PosY approx.) :
 - **North** : palais du gouverneur Senmute, unions de jobs, port avec phare
 - Zones de chasse : Delta Area, Egypt Desert, Storm & Cloud Desert, Kings Valley
 - **Job Temple** (dungeon PvPvE 105+) : entrée « Pharaoh Tomb » à (−11 351, −3 278), costume de job obligatoire
+  - En chinois : **神殿** (« le Temple »), situé dans **风暴沙漠** (Storm Desert) — accès lv 100+ en tenue de métier, **salles ouvertes 90 min**, 2 camps 侠客 vs 盗贼 (Hunter vs Thief) + points AP ; s'y rattache 法老王陵墓 (tombe du Pharaon) — ✅ recherche ZH/KO 2026-10
+  - En coréen, l'Égypte de Legend 9 (09/09/2009) : 폭풍과 구름의 사막 (désert des tempêtes et nuages), 왕가의 계곡 (vallée des Rois), donjon 파라오의 무덤 (3 runs/jour) — cap intermédiaire **105** propre à la Corée
 - **Medusa** (105) : unique de l'ère Legend V (dans le Temple)
 - Accessible par téléporteur dès Jangan/Hotan ou par la voie maritime depuis l'Europe
 
@@ -219,7 +241,7 @@ Disposition réelle des grandes zones (PosX approx., PosY approx.) :
 | **Thief Town** (9 130, 860) | Téléporteur au sol (2 485, 2 679), Soldier Kartino à Constantinople (−10 495, 2 473), ou via les Smugglers | Village caché des voleurs : Stolen Goods Dealer, Thief Associate, bandits |
 | **Bandit Fortress** (5 400, 50) | Portes I-III au sud de Jangan | Forteresse Fortress War « thief », ajoutée Legend III+ |
 | **Jangan / Hotan / Constantinople Fortresses** | Portes voir [MAP_COORDINATES_REFERENCE.md](./MAP_COORDINATES_REFERENCE.md) | Zones de Fortress War hebdomadaire |
-| **Forgotten World** | Portails dédiés (Dimension Pillars) | Instances journalières : Flame Mountain, etc. (Legend VI) |
+| **Forgotten World** | Portails dédiés (Dimension Pillars) | Instances journalières : Flame Mountain, etc. (Legend VI) — nom chinois officiel : **遗忘世界 / 異次元洞** (le nom « 千里之坟 » parfois cité n'existe pas — ✅ recherche ZH 2026-10) |
 | **Temple of Jupiter** | Entrée (13 138, −972), continent Est | Dungeon cap 120 (Hall of Worship, Zealots Hideout) |
 | **Arena / Survival Arena** | Arena Manager en ville | PvP en équipe, récompenses en Arena Coins |
 
@@ -328,6 +350,22 @@ Téléporteurs fixes en ville (~5 000 gold par trajet sur iSRO classique, tarif 
 | **Mises à jour Jupiter (2013+)** | Temple of Jupiter, 11D-13D | 120 |
 | **Ère post-classique** | Baghdad/Arabie, Silkroad R | 120+ |
 
+### 🇰🇷 Chronologie coréenne (kSRO) ≠ chronologie iSRO — ✅ documenté (recherche KO 2026-10)
+
+La Corée numérotait ses mises à jour « Legend » (전설) **indépendamment de l'international, et plus vite** :
+
+| Contenu | Legend **KR** (date coréenne) | Legend **iSRO** (date internationale) | Avance KR |
+|---|---|---|---|
+| Roc Mountain (zone + 11 quêtes) | mise à jour simple **07/2006** | Legend III « Roc Mountain » mi-2008 | ~2 ans |
+| Qin-Shi Tomb (진시황릉) | **Legend Ⅶ** — test public **08/08/2007** | Legend IV « Tomb of the Qin-Shi Emperor » **17/03/2009** | ~19 mois |
+| King of the Rocs (괴조로크, unique **lv 107**) | **Legend 8** **10/04/2008** | Legend IV Plus **26/08/2009** | ~16 mois |
+| Alexandrie / Égypte | **Legend 9** **09/09/2009** — **cap 105** | Legend V « Heroes of Alexandria » printemps 2010 — cap 110 | ~6 mois |
+
+- Le **cap 105 coréen** (Legend 9, 09/09/2009) est un palier intermédiaire **jamais sorti sur iSRO** (passage direct 100 → 110).
+- La numérotation KR a continué bien au-delà de IX : patch « **Legend 23** » (~16/05/2023, 파멸의 성전/비밀의 무덤).
+- Dates iSRO fines corroborées par [Wikipédia PT](https://pt.wikipedia.org/wiki/Silkroad_Online) (recherche PT 2026-10) : Legend I Europe 24/07/2007 · Legend II Fortress War 18/12/2007 · Legend III 20/05/2008 · Legend III+ 16/12/2008 · Legend IV 17/03/2009 · Legend IV+ Roc 25/08/2009 · Legend IV+ Hotan (forteresse) 15/12/2009 · Legend V 16/03/2010.
+- Sources : [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (Inven 2006/2007, GameDonga 2008, NewsWire 2007, TGDaily 2009, namu.wiki) · [ML_RESEARCH/RESEARCH_PT.md](ML_RESEARCH/RESEARCH_PT.md).
+
 ---
 
 ## ⚔️ Safe Zones vs Danger Zones
@@ -400,4 +438,5 @@ Téléporteurs fixes en ville (~5 000 gold par trajet sur iSRO classique, tarif 
 
 *Dernière mise à jour : 2026-10-01*
 *Sources : données client officielles extraites de xSROMap (697 NPCs, 161 téléporteurs), StrategyWiki, Rev6, SRO Info, Fandom Wiki, press releases Joymax*
+*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (chronologie Legend KR vs iSRO, cap 105 KR, noms KR) · [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (noms ZH régions/villes, FGW, Job Temple) · [ML_RESEARCH/RESEARCH_PT.md](ML_RESEARCH/RESEARCH_PT.md) (dates iSRO fines)*
 *Système de coordonnées : PosX/PosY officiel (voir section Système de Coordonnées)*

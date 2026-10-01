@@ -18,9 +18,11 @@ Cette documentation est une **référence complète** couvrant tous les aspects 
 - **Coordonnées:** 697 NPCs + 161 téléporteurs officiels (données client xSROMap, conversion PosX/PosY)
 - **Items:** 14 318 items du dump _RefItem client (noms/IDs/niveaux)
 - **Monstres documentés:** tous les uniques avec HP client exacts (Tiger Girl → Medusa)
-- **Dernière mise à jour:** 2026-10-01 — **révision majeure par recherche web exhaustive** (~250 requêtes, données inventées remplacées par des données sourcées, voir [CHANGELOG](CHANGELOG.md))
+- **Dernière mise à jour:** 2026-10-01 — **révision majeure par recherche web exhaustive** (~250 requêtes EN + ~120 requêtes multilingues TR/KO/PT/FR/ZH/DE, données inventées remplacées par des données sourcées, voir [CHANGELOG](CHANGELOG.md))
 
 > ⚠️ **Fiabilité :** depuis la révision 2026-10-01, chaque fichier comporte des sections « Resources » avec les URLs sources, et les données non vérifiables sont marquées « non vérifié » plutôt qu'inventées.
+
+> 🌍 **Recherche multilingue :** les rapports des 6 communautés historiques (turque, coréenne, chinoise, allemande, brésilienne, française) sont dans [ML_RESEARCH/](ML_RESEARCH/) — noms originels KR/ZH des skills/villes/uniques, taux et timers vérifiés, glossaire de ~430 termes dans [MULTILINGUAL_GLOSSARY.md](MULTILINGUAL_GLOSSARY.md).
 
 ---
 

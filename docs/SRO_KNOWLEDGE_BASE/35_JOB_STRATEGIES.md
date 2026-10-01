@@ -61,6 +61,11 @@ Le **système de jobs** de Silkroad Online est la fonctionnalité la plus unique
 
 **Mécanique de marché :** le taux de vente d'une specialty dans une ville **baisse** si elle y est massivement survendue, et se rétablit avec le temps. Scanner les taux avant d'acheter est LA compétence du trader.
 
+**✅ Résolu (recherche TR 2026-10) — monter et lire les étoiles :**
+- Les étoiles montent par **seuils de valeur chargée** ; l'écran du chamelier les affiche en direct ([FrmTR](https://www.frmtr.com/sro-rehberler-sorular-ve-teknik-yardim/952764-job-taktikleri-trader-programi.html))
+- Vue de l'extérieur (thief) : un kervan est suivi d'**autant de NPC thieves que d'étoiles** (un 4★ = 4 voleurs NPC) — c'est la « lecture » du niveau d'un kervan ([SroMax, guide Thief](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294))
+- Un kervan **1★ ne peut pas être attaqué directement** par un thief joueur ; contournement indirect : porter 1 goods soi-même pour attirer un NPC thief vers la cible (stratégie 6 du [11_THIEF_GUIDE.md](11_THIEF_GUIDE.md))
+
 ---
 
 ## 🐪 Stratégies Trader
@@ -83,6 +88,7 @@ Le **système de jobs** de Silkroad Online est la fonctionnalité la plus unique
 
 ### Timing
 - **Heures creuses** : moins de thieves (mais moins de hunters disponibles)
+- **Nuit** : le trade de nuit est réputé plus sûr, moins de thieves connectés (règle des guides TR — [burakakhan](https://burakakhan.com.tr/oyunlar/silkroad/kervan-ticaret))
 - **Heures de pointe** : plus de trades et d'action, plus de risques
 - Après une **baisse de taux** constatée à votre destination habituelle, changez de specialty ou de ville
 
@@ -120,6 +126,8 @@ Le **système de jobs** de Silkroad Online est la fonctionnalité la plus unique
 ☐ Amende de mort budgétée (~60k au lv40, croissante)
 ☐ Ne JAMAIS tanker « pour l'honneur » — le butin est au transport, pas au cimetière
 ```
+
+> ⚠️ **Conflit entre sources (seuil Wanted)** : **3 000** arrange points selon le guide Thief TR ([SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294), qui documente aussi la purge : amende à la Hunter Guild ou mort volontaire avec perte d'XP) vs **2 000 penalty points** selon l'article coréen de l'open beta ([Inven, 2004](https://www.inven.co.kr/webzine/news/?news=2285) — état *현상범* + **changement de métier bloqué**). Écart probablement lié à l'époque/la version — non tranché.
 
 ### Tips Thief
 ✅ **DO** : scouter avec un low level ; cibler les trades fatigués/affaiblis par les vagues NPC ; utiliser les thief monsters comme diversion ; planifier l'escape AVANT l'attaque
@@ -172,7 +180,11 @@ Le **système de jobs** de Silkroad Online est la fonctionnalité la plus unique
 | **Jangan ↔ Donwhang** | **~162%** (ex. officiel : 10M → 16,2M) | Route de référence, sûre, courte — 15-20 min |
 | **Hotan ↔ Samarkand** | **~300%** | Traversée du désert, haut risque (retour joueur iSRO) |
 | **Constantinople ↔ Samarkand** | **~313%** | Route européenne reine (données forum iSRO) |
+| **Trade iSRO général (2006)** | **~361%** du prix d'achat | ✅ Trouvé (recherche TR 2026-10) — [DonanımHaber, 2006](https://forum.donanimhaber.com/silkroad-da-tuccar-olmak--8024785) |
+| **Trade 5★ (privés vSRO)** | **30M+ gold/run** | ✅ Trouvé (recherche TR 2026-10) — [vSRO.org](https://www.vsro.org/konular/gold-sp-kasma-rehberi-slotlar-job-dungeon-ve-gunluk-taktikler.13648) ; taux custom (« rate kervan »), ne pas généraliser |
 | **Alexandria ↔ Hotan/Samarkand** | Très élevé | Ère tardive uniquement (Legend V+), très haut risque |
+
+**Hiérarchie des routes selon la communauté TR** ([burakakhan](https://burakakhan.com.tr/oyunlar/silkroad/kervan-ticaret)) : la plus rentable = **Jangan ↔ Constantinople** (risque maximal) ; la courte/sûre = **Jangan ↔ Donwhang** ; le profit suit la règle **distance × risque** ; le **trade de nuit** est plus sûr. ⚠️ Les chiffres 361% (iSRO 2006) et 30M+/run (privés) viennent d'ères différentes — ne pas les comparer directement.
 
 ### Routes par palier de niveau
 
@@ -211,8 +223,9 @@ Les centres de terrain vendent des **specialties de terrain + bargain goods à p
 ### Pour Traders
 1. **Scanner les taux** (le shop liste toutes les régions) et **suivre la fluctuation** — ne survendez pas une specialty dans une ville qui vient d'être saturée
 2. **Bargain flip** : acheter les goods à prix cassé en field center, revendre en ville
-3. **Transport optimal** : cheval pour enchaîner les petits runs, chameau/bœuf pour les grosses marges
+3. **Transport optimal** : cheval pour enchaîner les petits runs, chameau/bœuf pour les grosses marges — la **capacité du transport** augmente directement le gain par run
 4. **Étoiles maîtrisées** : montez d'une étoile seulement quand votre escorte le permet
+5. **Team type (privés vSRO)** : **2 Traders + 1 Hunter ≈ 90% de réussite** ([vSRO.org](https://www.vsro.org/konular/gold-sp-kasma-rehberi-slotlar-job-dungeon-ve-gunluk-taktikler.13648))
 
 ### Pour Thieves
 1. **Cibles** : trades 2★-3★ faiblement escortés > caravanes 5★ blindées (ratio risque/butin)
@@ -225,6 +238,9 @@ Les centres de terrain vendent des **specialties de terrain + bargain goods à p
 2. **Après-vol interception** : thieves lents et traqués = primes faciles
 3. **Vagues = XP** : les trades d'inconnus sont des fermes à thief monsters
 4. **Équipe régulière** : coordination > nombre
+
+### Complément de revenus : le farm de SoX (recherche TR 2026-10)
+Entre deux runs, la règle communautaire TR pour dropper du Seal of Star/Moon/Sun : ciblez les mobs **verts (-6 niveaux sous vous)** — **la plus haute chance de SoX du jeu et le meilleur SP** ; les rouges (+6 et plus) donnent l'exp maximale mais la plus faible chance. Tableau complet des couleurs dans [22_ECONOMY_GOLD.md](22_ECONOMY_GOLD.md) — source : [SroLobby, couleurs des mobs et drops](https://www.srolobby.com/konular/silkroad-online-mob-renkleri-ve-item-drop-iliskisi.2486).
 
 ---
 
@@ -314,6 +330,14 @@ Les centres de terrain vendent des **specialties de terrain + bargain goods à p
 - [Selling rates for each trade route - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=7&t=57407)
 - [Legend VII Tutorial (Princess Jane, 2011)](https://princessjane25.wordpress.com/2011/04/12/silkroad-online-legend-vii-rise-of-the-thief-hunter-some-simple-tutorial-guide/)
 
+### Recherche multilingue (ML_RESEARCH, 2026-10)
+- [Silkroad Online Thief olmak (SroMax, TR)](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294) — étoiles (1 NPC thief/étoile), 1★ inattaquable, arrange points
+- [silkroad'da tüccar olmak (DonanımHaber, TR, 2006)](https://forum.donanimhaber.com/silkroad-da-tuccar-olmak--8024785) — taux 361%
+- [Gold/SP kasma rehberi (vSRO.org, TR)](https://www.vsro.org/konular/gold-sp-kasma-rehberi-slotlar-job-dungeon-ve-gunluk-taktikler.13648) — 30M+/run 5★, 2T+1H (privés)
+- [Kervan/Ticaret (burakakhan, TR)](https://burakakhan.com.tr/oyunlar/silkroad/kervan-ticaret) — hiérarchie des routes, trade de nuit
+- [Les Métiers sur Silkroad (GMS Temple, FR, 2009)](https://forum.gmstemple.com/index.php?showtopic=6543) — trader ≤40 en 1★, banque des hunters
+- [로크산 + Trade System 2 (Inven, KR, 2006)](https://www.inven.co.kr/webzine/news/?news=2449) — chargement 25→40, profits ↑
+
 ### Vidéos
 - [Silkroad New Job & Crafting Tutorial - YouTube](https://www.youtube.com/watch?v=Jhtj9EbbgRs)
 - [Silkroad New Job System Playlist - YouTube](https://www.youtube.com/playlist?list=PLAuW2VXrJ453M3x70hH4Q6OX-boVJ4pu5)
@@ -326,4 +350,4 @@ Les centres de terrain vendent des **specialties de terrain + bargain goods à p
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: sromobile.com (officiel Origin), forum.playorigin.com (guide officiel), Silkroad Online Wiki (Fandom), StrategyWiki, Hanf_Hunter fan site, Hellsharpt 2006 (Wayback), Silkroad Forums (Wayback/snippets), Princess Jane (Legend VII), Reddit r/silkroadonline*
+*Sources: sromobile.com (officiel Origin), forum.playorigin.com (guide officiel), Silkroad Online Wiki (Fandom), StrategyWiki, Hanf_Hunter fan site, Hellsharpt 2006 (Wayback), Silkroad Forums (Wayback/snippets), Princess Jane (Legend VII), Reddit r/silkroadonline + recherche multilingue 2026-10 (ML_RESEARCH) : SroMax/SroLobby/DonanımHaber/vSRO.org/burakakhan/FrmTR (TR), GMS Temple/JeuxOnline (FR), silkroadonline.de (DE), Inven (KO)*

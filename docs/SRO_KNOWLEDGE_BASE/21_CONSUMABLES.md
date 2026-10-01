@@ -50,6 +50,8 @@ soin = (STR/416 + 1) × 1.02^(niveau_perso − 1) × param_item   (arrondi tronq
 
 Le montant total est appliqué en **pulses d'1 seconde** (file de régénération) — les potions ne sont pas instantanées. Les reductions de régénération (débuffs) s'appliquent pulse par pulse ; l'état **Zombie** inverse l'effet des items de soin.
 
+> ✅ Corroboration TR (SroCave, recherche TR 2026-10) : « **Zombie = les potions RÉDUISENT les HP/MP** » ; **Burn** = perte de HP toutes les **2 s** — https://srocave.com/konular/silkroad-online-oyunu-hakkinda-en-temel-bilgiler-karakter-yapilandirmasi-ve-itemler.2635
+
 **Cooldowns :** les items partagent des groupes de cooldown (« countdown link ») : potons rapides d'une part, grains/vigors d'autre part (d'après la doc officielle mobile : potions ~1 s, grains ~15 s — valeurs PC non publiées).
 
 ---
@@ -197,6 +199,7 @@ Fabriquées via les **tablettes Saphir** + éléments (voir [05_ALCHEMY_SYSTEM.m
 - **Monster summon scroll** (events) : invoque des monstres d'event.
 - **Mercenary scrolls** (guild) : soldats de forteresse (Bicheon/Heuksal/…).
 - **Quête SP** : `Resuscitation potion`, `Purification seed`, etc. (items de quête à ne pas consommer).
+- **Energy of Life** (potion de la quête des grades) : remplit **instantanément la jauge de berserk** (+quelques secondes de durée) ; utilisable **1 fois toutes les 20 minutes**, dès le niveau 95, après la quête des grades. Source FR : GMS Temple, guide « Energy Of Life 1st Degree » (nikvel, 04/04/2010) — https://forum.gmstemple.com/index.php?showtopic=7892 (recherche FR 2026-10).
 
 > ℹ️ Les « transform pills » ne figurent pas dans les données PC classiques (elles existent sur les versions mobiles/tardives).
 
@@ -262,6 +265,10 @@ Fabriquées via les **tablettes Saphir** + éléments (voir [05_ALCHEMY_SYSTEM.m
 - [Elitepvpers — How to be the fastest leveller (drug of wind)](https://www.elitepvpers.com/forum/sro-guides-templates/116389-guide-how-fastest-leveller.html)
 - [Tablets et drugs de vitesse (TR)](https://forum.donanimhaber.com/tabletler-ve-islevleri--13403834)
 
+### Recherche multilingue (2026-10)
+- [GMS Temple — Energy Of Life 1st Degree (FR, 2010)](https://forum.gmstemple.com/index.php?showtopic=7892)
+- [SroCave — Temel Bilgiler : Zombie/Burn (TR)](https://srocave.com/konular/silkroad-online-oyunu-hakkinda-en-temel-bilgiler-karakter-yapilandirmasi-ve-itemler.2635)
+
 ---
 
 ## 📚 Voir aussi
@@ -274,4 +281,4 @@ Fabriquées via les **tablettes Saphir** + éléments (voir [05_ALCHEMY_SYSTEM.m
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: opensro (formule décompilée), ItemData vSRO (codenames), dewsro-control, DarkEmu, elitepvpers, Neoseeker/GameFAQs, DonanımHaber*
+*Sources: opensro (formule décompilée), ItemData vSRO (codenames), dewsro-control, DarkEmu, elitepvpers, Neoseeker/GameFAQs, DonanımHaber, GMS Temple (FR), SroCave (TR) — rapports ML_RESEARCH 2026-10*

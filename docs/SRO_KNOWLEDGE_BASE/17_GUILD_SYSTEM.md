@@ -96,6 +96,8 @@ Le niveau maximum d'une guilde sur Silkroad Online classique est **5** (pas 20+ 
 
 **Coût total approximatif L1→L5:** ~52,5M gold + ~380k GP (un post Silkroad Forums cite ~48,5M gold au total ⚠️ léger écart selon périodes/serveurs).
 
+> ⚠️ **Divergence signalée (recherche DE 2026-10)** : le guide allemand SeToY (silkroadonline.de, 2009) donne **15/25/30/35/50** membres aux niveaux 1-5 (et 21M gold au L5), tandis qu'elitepvpers (222528) donne **15/20/25/35/50** (tableau ci-dessus). Deux threads d'époque fiables — probablement une évolution du jeu entre 2007 et 2009 ; à trancher avec le dump client. Le seuil **L5 = 50 membres** est identique dans les deux.
+
 ### Guild Powers
 
 Plus votre guilde est haut niveau:
@@ -135,6 +137,10 @@ Le guild window (touche **G**) gère tout. La structure de base :
 - Transférer le leadership à un autre membre
 - Dissoudre la guilde
 - Gérer les taxes de forteresse (si la guilde possède une forteresse)
+
+### GM inactif — vote de remplacement
+
+> ✅ Nouvelle donnée (recherche DE 2026-10) : après **40 jours d'inactivité** du Guild Master (ou en cas de ban), les membres peuvent élire un nouveau GM via le **Guild Agent** (option « Vote for a Master ») — source : [Gilden, Guildwar und Union — silkroadonline.de (SeToY, 07/01/2009)](https://www.silkroadonline.de/archiv/archiv/mitarbeiterbereich/30206-gilden-guildwar-und-union).
 
 ---
 
@@ -192,15 +198,15 @@ Le guild window (touche **G**) gère tout. La structure de base :
 
 | Étape | Détail |
 |-------|--------|
-| 1 | La guilde doit pouvoir créer une union (⚠️ sources communautaires : dès le **niveau 2** de guilde ; d'autres disent L5 — non confirmé officiellement) |
-| 2 | Le Guild Master invite d'autres guildes |
+| 1 | La guilde doit être **niveau 2 minimum** — ✅ **Résolu (recherche DE 2026-10)** : deux sources allemandes d'époque concordantes (« kann ab Level 2 eine Union gründen / beitreten » — silkroadonline.de SeToY 2009 + elitepvpers 222528) ; l'ancienne divergence « L2 vs L5 » est tranchée : **L5 n'est requis que pour l'emblème/message d'union** |
+| 2 | Le Guild Master invite d'autres guildes (rencontre entre GM → touche **U → Guild Relation → Alliances → APPLY**, l'autre GM doit accepter) |
 | 3 | Le chef de guilde invitée accepte (vote du leader, pas des membres) |
 | 4 | Le fondateur devient **Union Leader** |
 
 **Gestion:**
 - Seul l'Union Leader peut **expulser** une guilde de l'union
 - Une guilde ne peut appartenir qu'à une seule union
-- L'union est dissoute si la guilde leader se dissout / quitte ⚠️ comportement rapporté par la communauté
+- L'union est dissoute si la guilde leader se dissout — ✅ **confirmé** (« Wird die Leader-Gilde aufgelöst, wird auch die Union aufgelöst », guide DE SeToY 2009)
 
 ---
 
@@ -224,13 +230,22 @@ Le guild window (touche **G**) gère tout. La structure de base :
 
 La guilde peut entrer en **hostilité déclarée** avec une autre guilde (via l'interface de guilde, à l'initiative du Guild Master).
 
-⚠️ **Incertitudes:** les détails exacts du système de guild war classique (fee de déclaration, durée fixe 24/48/72h, mécanique d'acceptation par la cible) ne sont **pas documentés de manière fiable** par les sources disponibles. Les guides génériques (GuildOrder) confirment seulement le concept de « declared hostility » modifiant les interactions en monde ouvert. À re-vérifier si des archives du site officiel Joymax refont surface.
+> ✅ **Procédure complète documentée (recherche DE 2026-10)** — source : [Gilden, Guildwar und Union — silkroadonline.de (SeToY, 07/01/2009)](https://www.silkroadonline.de/archiv/archiv/mitarbeiterbereich/30206-gilden-guildwar-und-union) :
+>
+> 1. Le GM rencontre le GM de la guilde adverse
+> 2. Touche **U → Guild Relation → Hostility → Apply Combat**
+> 3. L'attaquant saisit lui-même : le **nom de guilde**, les **points** (optionnels — on peut laisser 0) et la **DURÉE** du conflit
+> 4. **C'est l'attaquant qui choisit la durée** — il n'y a PAS de durée fixe 24/48/72 h
+> 5. **Aucune fee de déclaration mentionnée** dans le guide (l'absence de mention n'est pas une preuve d'absence)
+>
+> ⚠️ **Historique** : avant Legend I, les guild wars pouvaient rapporter des **Guild Points** — ce système de gains GP a été **supprimé** avant Legend I (la fonction n'existe plus en 2009).
 
 ### Pendant la Guerre (comportement attendu)
 
 - Les membres des guildes en guerre peuvent s'attaquer **sans pénalité de meurtrier (murderer status)**
 - Le conflit continue en dehors de toute fenêtre programmée — affecte trades et activités des membres
 - Implique souvent les unions entières (« union war »)
+- ⚠️ **Drops d'items en guild war (conflit documenté)** : sur le thread DE SeToY (2009), deux joueurs témoignent avoir **perdu des items équipés** en guild war (cleric rod +8, shield +7) — « les items d'inventaire, armures et boucliers peuvent drop en GW » — tandis que le rédacteur du guide conteste ; consensus du thread : drop possible en guild war, **pas en job ni en Fortress War**. À traiter comme « rapporté, contesté ».
 
 ### Fin de la guerre
 
@@ -331,6 +346,7 @@ Pour les émulateurs / serveurs privés (utile au projet SRObro) :
 
 ### Forums (données chiffrées 2007-2010)
 - [[Guild]Infomation? - Elitepvpers](https://www.elitepvpers.com/forum/silkroad-online/222528-guild-infomation.html) — coûts GP/gold par niveau
+- [Gilden, Guildwar und Union — silkroadonline.de (SeToY, 07/01/2009)](https://www.silkroadonline.de/archiv/archiv/mitarbeiterbereich/30206-gilden-guildwar-und-union) — guide DE fondateur : procédure guild war U→Hostility, union dès L2, dissolution d'union, vote GM après 40 jours
 - [What is Guild Storage? - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=7&t=25719)
 - [Guild lvl 5 - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=29&t=112263) — union/emblème
 - [Union & Guild Emblem Guide - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?t=38590)
@@ -350,4 +366,4 @@ Pour les émulateurs / serveurs privés (utile au projet SRObro) :
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : guides officiels Joymax traduits, Elitepvpers, Silkroad Forums, RaGEZONE, StrategyWiki, IGN)*
+*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : guides officiels Joymax traduits, Elitepvpers, Silkroad Forums, RaGEZONE, StrategyWiki, IGN — enrichi par la recherche DE 2026-10 : silkroadonline.de SeToY 2009 / elitepvpers 222528)*

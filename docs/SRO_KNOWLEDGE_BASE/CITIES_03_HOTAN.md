@@ -25,6 +25,7 @@
 | Attribut | Valeur |
 |----------|--------|
 | **Région** | Oasis Kingdom |
+| **Nom chinois (officiel)** | **和田** (Hétián ; 和闐王宮 = le palais) · coréen : 호탄 |
 | **Position (officielle)** | ≈ X **115**, Y **50** |
 | **Niveaux** | 30-60 (hub mid-game) |
 | **Architecture** | Oasis désertique, caravansérails |
@@ -87,7 +88,7 @@
 | NPC | Position (X, Y) | Fonction |
 |-----|-----------------|----------|
 | **Storage-Keeper Auisan** | (113, 61) | Entrepôt |
-| **Guild Manager Musai** | (115, 443) | Guildes |
+| **Guild Manager Musai** | (115, 443) | Guildes — identifié côté ZH comme **武萨伊**, le NPC de remise des récompenses Forgotten World (8 收藏卡 → arme 10D Seal of Moon — [iccgame](https://silkroad.iccgame.com/content-667-49139.html), ✅ recherche ZH 2026-10) |
 | **Daily Quest Manager Dasra** | (167, 56) | Quêtes journalières |
 | **Hotan Fortress Clerk** | (15, 465) | Inscriptions Fortress War |
 | **Nephrite Refiner Pahap** | (230, 450) | Raffinage de néphrite (spécialité locale) |
@@ -167,6 +168,7 @@ Hotan est le premier endroit (chronologiquement) où les personnages européens 
 - Yetis, Evil Yetis, Penon Fighters (~52)
 - **Isyutaru** (60, 4,32 M HP) — spawns officiels :
   `−1552/−94 · −1291/−133 · −1275/−409 · −1540/−357 · −2162/249 · −2206/−1044 · −1837/−1131 · −860/−1104 · −1041/315 · −1408/462 · −1858/−123`
+  - Noms officiels : ZH **冰神之女** (« Fille du dieu de glace ») — zones ZH : 卡拉昆仑古代遗迹 (Ancient Remains), 绿洲, 蜘蛛树林 · KR **이슈타르** dans le 카라코람 (lacs de glace) — ✅ recherche ZH/KO 2026-10
 
 ### Taklamakan (nord, 60-80)
 - Niya Remains, démons, Niya Guards
@@ -265,3 +267,4 @@ R: Oui — Europe Medicine Supplier Shadi et Europe Valuables Dealer David sont 
 
 *Dernière mise à jour : 2026-10-01*
 *Sources : données client officielles (xSROMap), Rev6, SRO Info, Just Silkroad*
+*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (nom ZH 和田, Musai = 武萨伊, Isyutaru 冰神之女) · [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (호탄, 이슈타르)*

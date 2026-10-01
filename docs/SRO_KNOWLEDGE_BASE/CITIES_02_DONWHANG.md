@@ -23,6 +23,7 @@
 | Attribut | Valeur |
 |----------|--------|
 | **Région** | Western China |
+| **Nom chinois (officiel)** | **敦煌** (Dūnhuáng — la Dunhuang historique) · coréen : 돈황 |
 | **Position (officielle)** | ≈ X **3 550**, Y **2 050** |
 | **Niveaux** | 20-35 (ville-relais) |
 | **Architecture** | Chinoise, plus compacte que Jangan, temple bouddhiste |
@@ -151,6 +152,8 @@ Le donjon local, également appelé « Donwhang Cave » :
 - Désert : Ongs, Huns, Golems, Black Robber Den
 - **Uruchi (unique, niv. 40, 1 779 528 HP)** — spawns officiels :
   `2698/120 · 2695/−113 · 2515/−120 · 2495/104 · 2046/840 · 2317/617 · 2580/513 · 3170/−15 · 2588/−367 · 2041/351 · 2618/747`
+  - Noms officiels : ZH **乌鲁齐** (wūlǔqí) — zones ZH : 塔里木盆地 (Tarim Basin), 死亡溪谷, 黑漠团巢穴 (Black Robber Den) · KR **우르치** dans la 타림분지 — ✅ recherche ZH/KO 2026-10
+  - Fenêtre de respawn TR : **~230-450 min** après la mort (✅ recherche TR 2026-10)
 - **Ong Habitat** : le spot de SP farming légendaire (Ongs ~33-34) — se trouve dans le Tarim, accessible depuis Donwhang/Hotan
 
 ### Vers Karakoram (ouest puis nord-ouest)
@@ -237,3 +240,4 @@ R: À pied par le sud-ouest (Tarim), ou retournez à Jangan/Donwhang pour le Dim
 
 *Dernière mise à jour : 2026-10-01*
 *Sources : données client officielles (xSROMap), StrategyWiki, Rev6*
+*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (nom ZH 敦煌, zones Tarim) · [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (돈황) · [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (timer Uruchi)*

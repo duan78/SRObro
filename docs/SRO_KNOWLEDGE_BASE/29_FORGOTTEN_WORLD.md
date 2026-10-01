@@ -9,6 +9,7 @@
 - [Système de Difficulté (Grades 1★-4★)](#-système-de-difficulté-grades-1-4)
 - [Structure d'une Instance](#-structure-dune-instance)
 - [Boss, Uniques et Monstres](#-boss-uniques-et-monstres)
+- [Tables HP des uniques par tranche et grade](#-tables-hp-des-uniques-par-tranche-et-grade-recherche-tr-2026-10)
 - [Système de Talismans (Collections)](#-système-de-talismans-collections)
 - [Quêtes du Forgotten World](#-quêtes-du-forgotten-world)
 - [Récompenses](#-récompenses)
@@ -52,7 +53,7 @@
 | Durée de vie de l'item Dimension Hole | **24 h** (supprimé automatiquement) |
 | Délai entre 2 activations de Dimension Hole | **30 minutes** |
 | Timer de l'instance | **2 heures** pour tuer le boss (le donjon disparaît ensuite → retour au point de résurrection) |
-| Délai de ré-entrée (tous donjons confondus) | **3 heures** après être entré |
+| Délai de ré-entrée (tous donjons confondus) | **3 heures** après être entré — ✅ **confirmé par le wiki officiel ZH DiGeam** (pierre réutilisable après 30 min, chaque pierre expire en 24 h, reset possible via un ticket de boutique = le re-entry ticket) |
 | Bypass du délai de ré-entrée | **Forgotten World re-entry ticket** (Item Mall) |
 | Despawn du Dimension Pillar si vous quittez le donjon | **15 minutes** pour y retourner (sinon le trou disparaît) |
 | Sortir réapprovisionner/réparer | Autorisé (retour sous 15 min via Dungeon Exit / Gap of Dimensions) |
@@ -77,23 +78,44 @@ Le **leader de party** entre avec sa propre Dimension Hole ; les autres membres 
 > - « Shipwreck Dimension (91-100) » et « Temple of Egypt (101-110) » **n'existent pas** sous ces noms. Les items « égyptiens » (Nova) viennent des drops rares de **Ghost Sereness** dans The Sea of Resentment.
 > - « Togui's Tomb » (nom parfois cité) : le nom officiel du donjon est **Togui Village**.
 
+### 🇨🇳 Noms chinois officiels (recherche ZH 2026-10)
+
+> ✅ Le Forgotten World s'appelle **遗忘世界 / 異次元洞(窟)** (« monde oublié / grotte dimensionnelle ») — ⚠️ le nom « 千里之坟 » parfois cité **n'existe dans aucune source chinoise** (requête exacte : zéro résultat jeu). Sources officielles : [wiki DiGeam](https://srowiki.digeam.com/%E7%87%83%E7%87%92%E6%B7%B1%E6%B7%B5-%E7%81%B0%E5%B1%B1) + [silkroad.iccgame.com](https://silkroad.iccgame.com/content-667-49139.html).
+
+| Donjon / élément (iSRO) | Nom chinois officiel | Notes |
+|---|---|---|
+| FGW (système) | 遗忘世界 / 異次元洞副本 | Entrée : pierre **异次元洞石** (Dimension Hole) lootée sur les **妒鬼** (« spectres de l'envie » = les **Envies** !) après destruction des **异次元柱** (Dimension Pillars) |
+| Togui Village | **血灵地狱-土鬼村** (« Enfer de sang - village des démons de terre ») | Tranches 35-70 ; les sources ZH décrivent **6 difficultés** déterminées par le niveau de la pierre + taille du groupe ⚠️ variante CN/TW vs 4 grades iSRO |
+| Flame Mountain | **燃烧深渊-火焰山** (« Abysse ardente - montagne de feu ») | 71-90, 4 zones ; séquence officielle des boss : **妒鬼 (Envy) → 熔天魔将 (Général démon fondant) → 红孩儿 (Enfant Rouge) → 牛魔王 (final)** |
+| Flame Cow King | **牛魔王** (« Roi-Démon Bœuf ») | ✅ **Confirmé** — le folklore du *Voyage en Occident* est assumé dans le donjon |
+| Shipwreck (les 2) | **永恒之海-船舶墓地** (« Mer éternelle - cimetière de navires ») + variante **冰海之心** (« cœur de la mer glacée ») | ZH : 91-100 en 4 niveaux ★-★★★★ et 100-110 en 2 niveaux ★-★★ ⚠️ répartition TW/CN à ne pas confondre avec les 4 grades iSRO |
+| Ghost Sereness | **女妖** (« la sirène ») | Droppe **女妖私人的宝藏** (« le trésor privé de la sirène ») |
+| Talismans | **收藏卡** (« cartes de collection ») | 8 cartes complètes = 1 arme scellée ; correspondance quasi 1:1 avec les noms iSRO (银项坠 Silver Pendant, 海洋之泪 Cobalt Emerald, 航海日志 Logbook, 情书 Love Letter, 女人的肖像 Portrait, 财宝箱 Jewelry Box, 钻石表 Diamond Watch, 人鱼的眼泪 Mermaid's Tears) |
+| Faded Beads | **失去光泽的珠子** (« perle qui a perdu son éclat ») | SP aléatoires à l'usage |
+| NPC de remise Green Abyss | **武萨伊** (Guild Manager **Musai**, Hotan) | Récompense **第十套月亮印章** (« D10 Seal of Moon ») — ✅ confirme la ligne « Green Abyss 91-100 → D10 SOM » |
+| NPC de quête Sea of Resentment (TW) | **森姆特** (vice-roi **Senmut**) | Récompense **彗星武神武器** (arme Nova) |
+
 ---
 
 ## ⭐ Système de Difficulté (Grades 1★-4★)
 
 La difficulté est portée par la **Dimension Hole elle-même** (grade affiché sur l'item). Contrairement à une croyance répandue :
 
-- ❌ Les grades ne changent **pas** les HP/dégâts des uniques.
+- ❌ Les grades ne changent **pas** les HP/dégâts des uniques. ⚠️ **Conflit signalé (recherche TR 2026-10)** : les guides SroLobby donnent des **niveaux ET HP différents par grade** (ex. Flame Captain Lv73 en 1★ → Lv79 en 4★, HP ×6-7) — soit des variantes de monstres par grade, soit une spécificité vSRO ; le wiki Fandom (source de la règle « HP inchangés ») et la série TR divergent → **à trancher sur le client**.
 - ✅ Les grades changent le **type de monstres**, la **limite de party** et le **taux de drop des talismans** (grade supérieur = bien meilleures chances).
 
 | Grade | Type de monstres | Limite de party | Notes |
 |---|---|---|---|
-| **Grade 1 ★** | Normal | **4 joueurs** | Faisable en petit groupe / haut niveau bien stuffé |
+| **Grade 1 ★** | Normal (**General**) | **4 joueurs** | Faisable en petit groupe / haut niveau bien stuffé |
 | **Grade 2 ★★** | Champion | **4 joueurs** | Solo possible pour un level 120 correctement équipé (Seidenkraft) |
-| **Grade 3 ★★★** | ??? (élite) | **8 joueurs** | Conçu pour party ; la disposition des boxes change |
-| **Grade 4 ★★★★** | ??? (élite) | **8 joueurs** | « Hardcore » : full party coordonnée, wipes faciles, meilleurs taux de talismans |
+| **Grade 3 ★★★** | **Elite** — ✅ Résolu (recherche TR 2026-10) | **8 joueurs** | Conçu pour party ; la disposition des boxes change |
+| **Grade 4 ★★★★** | **Elite** — ✅ Résolu (recherche TR 2026-10) | **8 joueurs** | « Hardcore » : full party coordonnée, wipes faciles, meilleurs taux de talismans |
+
+> ✅ **Types exacts par grade (guides TR SroLobby + SroMax)** : 1★ = mobs normaux type **General** (les **Envies = Champion**) ; 2★ = Champion/Elite ; **3★-4★ = Elite**. Party : 1-2★ = 4 joueurs, 3-4★ = 8 joueurs — résout l'ancien « ??? » du wiki Fandom.
 
 **Règle d'accès aux grades 3-4** : uniquement au-dessus du **level 70** — les Envies de niveau < 71 ne droppent jamais de trou de grade supérieur à 2 (wiki Fandom).
+
+> 🇨🇳 **Règle de drop officielle ZH (recherche ZH 2026-10)** : **aucun drop si le joueur dépasse les monstres de 7 niveaux ou plus** (règle anti-carry documentée par le wiki officiel DiGeam) — s'applique aux talismans/drops FGW ; à rapprocher de la règle des mobs « gris » du leveling.
 
 ---
 
@@ -123,7 +145,7 @@ Tous les donjons FGW suivent **le même schéma** (wiki Fandom + guides Origin) 
 
 ## 👹 Boss, Uniques et Monstres
 
-⚠️ L'ancienne version présentait « Sereness Ghost » comme boss final de TOUS les donjons et inventait un « Elder Earth Ghost » mid-donjon universel + des phases/chiffres de HP. **Réalité vérifiée : chaque donjon a SES uniques ; seul The Sea of Resentment a Ghost Sereness comme boss final.**
+⚠️ L'ancienne version présentait « Sereness Ghost » comme boss final de TOUS les donjons et inventait un « Elder Earth Ghost » mid-donjon universel + des phases/chiffres de HP. **Réalité vérifiée : chaque donjon a SES uniques.** ✅ Précision (recherche TR 2026-10) : **Ghost Serenes est le boss final des DEUX donjons Shipwreck** (Green Abyss 91-100 et Sea of Resentment 101-110) — mais pas de Togui Village ni de Flame Mountain.
 
 ### Togui Village (35-70)
 | Unique | Rôle | Notes |
@@ -139,14 +161,31 @@ Tous les donjons FGW suivent **le même schéma** (wiki Fandom + guides Origin) 
 | *Mini-uniques* | Camps | Répartis dans les 3 « Areas » du donjon |
 
 ### Shipwreck – The Green Abyss (91-100)
-- Uniques **non documentés nominativement** dans les sources trouvées (structure identique : camps + mini-uniques + boss camp). Voir [Incertitudes](#-incertitudes--données-manquantes).
+
+> ✅ **LES UNIQUES DU GREEN ABYSS ENFIN IDENTIFIÉS (recherche TR 2026-10)** — incertitude majeure n°1 de ce fichier, résolue par la série complète des 7 guides FGW turcs (SroLobby, auteur Burak Yoğun) :
+
+| Unique | Rôle | Notes |
+|--------|------|-------|
+| **Ghost Beast** | Unique de camp (navires 1-2) | Spawn aussi hors des navires en 3-4★ |
+| **Ghost Gultton** | Unique de camp (dernier navire) | Également invoqué par Serenes à bas HP |
+| **Ghost Serenes** | **Boss final** | Invoque **2 Ghost Gultton** à bas HP ; en 3-4★ l'arène du boss contient **Serenes + Gultton + Beast ensemble** |
+
+- Cartes : **1-2★ = « Inside of The Shipwreck »** ; **3-4★ = « Outside of The Shipwreck »** (Ghost Beast y spawne aussi hors des navires).
+- HP par grade : voir [Tables HP des uniques](#-tables-hp-des-uniques-par-tranche-et-grade-recherche-tr-2026-10) ci-dessous.
+- Il faut ouvrir environ la moitié des zones/boxes pour que la carte révèle les Treasure Box.
 
 ### Shipwreck – The Sea of Resentment (101-110)
+
+> ✅ Uniques de camp identifiés côté TR (SroLobby) : **Ghost Beast** et **Ghost Gultton** (mêmes monstres que le Green Abyss, niveaux/HP supérieurs).
+
 | Boss/monstre | Notes |
 |---|---|
 | **Ghost Sereness** (boss final) | **Seul après le clear complet.** Cast une **pétrification** (esquive en se déplaçant pendant le cast). Spawn des **adds à ~60 % et ~20 % de HP**. Les joueurs pétrifiés à bas HP peuvent mourir |
+| **Ghost Beast / Ghost Gultton** (uniques de camp) | À bas HP du boss, Serenes invoque **2× Ghost Gultton + 2× Ghost Beast** (guide TR) |
 | **Ghost Curse** (monstre) | Monstre cité par les scripts communautaires (ProjectHax) dans le donjon 1★ |
 | Vindictive Spirit / Phantom (monstres) | Thème « esprits vengeurs » du donjon |
+
+- Anecdote communautaire TR : un joueur a vu **2 Ghost Sereness simultanés** — réponse d'admin : « bug système, normalement un seul unique final ».
 
 ### Drops rares de Ghost Sereness (wiki Fandom)
 - **Degré 11 Seal of Nova B Fight** (arme)
@@ -154,6 +193,70 @@ Tous les donjons FGW suivent **le même schéma** (wiki Fandom + guides Origin) 
 - **Degré 11 Seal of Nova B Guard** (bouclier)
 
 > ℹ️ Les items « égyptiens » (Nova A/B) de fin de jeu viennent donc de **Sea of Resentment**, pas d'un hypothétique « Temple of Egypt ».
+
+### 📊 Tables HP des uniques par tranche et grade (recherche TR 2026-10)
+
+> ✅ **Partiellement résolu (incertitude n°5)** : la série turque SroLobby (7 guides par tranche, auteur Burak Yoğun) publie les **niveaux ET HP des uniques pour les 7 tranches × 4 grades**. ⚠️ Les valeurs sont très probablement extraites de données **vSRO** : niveaux et structure conformes à l'officiel, mais **HP à recouper avec `_RefObjCommon`/`characterdata_5000.txt` avant implémentation**. Convention turque « 143.131K » = 143 131 000 HP.
+
+**a) Togui Village 35-50** — [guide](https://www.srolobby.com/konular/silkroad-online-togui-village-35-50-forgotten-world-map-rehberi.2684)
+
+| Boss | 1★ (Lv/HP) | 2★ (Lv/HP) |
+|---|---|---|
+| Togui General (camp 1) | 39 / 143 131 000 | 47 / 304 119 000 |
+| Togui Captain (camp 2) | 39 / 143 131 000 | 47 / 304 119 000 |
+| **Togui Elder** (final) | 39 / **1 275 761 000** | 47 / **2 702 114 000** |
+
+- Elder invoque **2 Togui General** à bas HP ; **2 Treasure Box par carte** ; récompense : **D8 Seal of Sun**.
+
+**b) Togui Village 51-60** — [guide](https://www.srolobby.com/konular/silkroad-online-togui-village-51-60-forgotten-world-map-rehberi.2688)
+
+| Boss | 1★ | 2★ |
+|---|---|---|
+| General / Captain | Lv53 / 257 926 000 | Lv58 / 489 931 000 |
+| **Togui Elder** | **2 287 684 000** | **4 339 138 000** |
+
+- ⚠️ Témoignage joueur iSRO officiel : sur la tranche 51-60, **Puppet et Spell Paper ne dropaient jamais**.
+
+**c) Togui Village 61-70** — [guide](https://www.srolobby.com/konular/silkroad-online-togui-village-61-70-forgotten-world-map-rehberi.2689)
+
+| Boss | 1★ | 2★ |
+|---|---|---|
+| General / Captain | Lv63 / 407 745 000 | Lv68 / 754 812 000 |
+| **Togui Elder** | **3 607 078 000** | **6 671 086 000** |
+
+**d) Flame Mountain 71-80** — [guide](https://www.srolobby.com/konular/silkroad-online-flame-mountain-71-80-forgotten-world-map-rehberi.2691)
+
+| Boss | 1★ | 2★ | 3★ | 4★ |
+|---|---|---|---|---|
+| Flame Captain | Lv73 / 471 374 000 | Lv76 / 778 953 000 | Lv76 / 2 077 209 000 | Lv79 / 3 142 325 000 |
+| Flame Adjutant Honghaea | Lv73 / 615 183 000 | Lv76 / 1 017 408 000 | Lv76 / 2 713 089 000 | Lv79 / 4 107 290 000 |
+| **Flame Cow King** | Lv73 / **4 713 740 000** | Lv76 / **7 789 534 000** | Lv76 / **10 386 045 000** | Lv79 / **15 235 513 000** |
+
+- Cow King invoque **2 Flame Captain** à bas HP ; récompense : **D9 Seal of Sun** (set « The Burning Abyss »).
+
+**e) Flame Mountain 81-90** — [guide](https://www.srolobby.com/konular/silkroad-online-flame-mountain-81-90-forgotten-world-map-rehberi.2700)
+
+| Boss | 1★ | 4★ |
+|---|---|---|
+| Flame Captain | Lv83 / 667 505 000 | Lv89 / 4 411 228 000 |
+| Flame Adjutant Honghaea | 873 457 000 | 5 779 128 000 |
+| **Flame Cow King** | **6 675 049 000** | **21 387 770 000** |
+
+**f) Shipwreck – The Green Abyss 91-100** — [guide](https://www.srolobby.com/konular/silkroad-online-shipwreck-91-100-forgotten-world-map-rehberi.2251)
+
+| Monstre | 1★ (Lv93) | 2★ (Lv96) | 3★ (Lv99) | 4★ (Lv99) |
+|---|---:|---:|---:|---:|
+| Ghost Beast / Ghost Gultton | 1 130 727 000 | 1 981 689 000 | 5 284 504 000 | 8 399 751 000 |
+| **Ghost Serenes** | **11 307 269 000** | **19 816 890 000** | **26 422 520 000** | **40 726 064 000** |
+
+**g) Shipwreck – The Sea of Resentment 101-110** — [guide](https://www.srolobby.com/konular/silkroad-online-shipwreck-100-110-forgotten-world-map-rehberi.2257)
+
+| Monstre | 1★ (Lv103) | 2★ (Lv106) | 3★ (Lv106) | 4★ (Lv109) |
+|---|---:|---:|---:|---:|
+| Ghost Beast / Ghost Gultton | 1 828 557 000 | 3 114 231 000 | 8 304 616 000 | 12 891 122 000 |
+| **Ghost Serenes** | **18 285 574 000** | **31 142 310 000** | **41 523 079 000** | **62 502 412 000** |
+
+- Amplitude totale documentée : de **143,1 M HP** (Togui General 1★ 35-50) à **62,5 milliards HP** (Ghost Serenes SoR 4★). Récompenses confirmées par les mêmes guides : Togui **D8 SUN**, Flame Mountain **D9 SUN**, Green Abyss **D10 MOON**, Sea of Resentment **D11 A Grade (Nova A)**.
 
 ---
 
@@ -200,6 +303,17 @@ Chaque donjon possède **une collection de 8 talismans** (noms officiels iSRO, c
 6. Hook Hand
 7. Commander's Patch *(plus rare)*
 8. Sereness's Tears *(plus rare)*
+
+### 🇹🇷 Paliers de rareté des talismans par collection (recherche TR 2026-10)
+
+> ✅ **Partiellement résolu (incertitude n°3)** : pas de multiplicateurs chiffrés, mais des **paliers de rareté officiels** par carte — 3 communs / 3 normaux / 2 rares — documentés par SroLobby + [vSRO.org (liste par difficulté D8-D11)](https://www.vsro.org/konular/forgetten-world-talisman-kart-listesi-8-9-10-11-dg-zorluk-derecesine-gore.7600). Confirme les marques « plus rare » de la collection D11 :
+
+| Collection | Communs (« çok çıkar ») | Normaux | Rares (« nadir ») |
+|---|---|---|---|
+| Togui (D8) | Red Tears, Western Scriptures, Togui Mask | Red Talisman, Puppet, Dull Kitchen Knife | Spell Paper, Elder Staff |
+| Flame Mountain (D9) | Fire Flower, Horned Cattle, Flame of Oblivion | Flame Paper, Hearthstone Flame, Enchantress Necklace | Honghaeah Armor, Fire Dragon Sword |
+| Green Abyss (D10) | Silver Pendant, Cobalt Emerald, Logbook | Love Letter, Portrait of a Woman, Jewelry Box | Diamond Watch, Mermaid's Tears |
+| Sea of Resentment (D11) | Broken Key, Large Tong, Phantom Harp | Evil's Heart, Vindictive Spirit's Bead, Hook Hand | Commander's Patch, Serenity's Tears |
 
 ### Compléter une collection
 1. Loot les Treasure Boxes + tuer les uniques/boss (les taux montent avec le grade).
@@ -286,7 +400,8 @@ Le donjon « Medusa » — entrée à l'**est de Jangan** (Jangan Cave), monstre
   - Sud : **YumJae The Red Hawk** (lv 98, magique)
   - Ouest : **TaeHo The Blue Dragon** (lv 99)
   - Est : **SoHaow The White Tiger** (lv 99, physique, ~80 % stun — le plus dur)
-- Les 4 tués → **Shinmoo, The Man of Flames** (lv 100) au centre SW → drops d'équipement level 100 (10D).
+  - Les 4 tués → **Shinmoo, The Man of Flames** (lv 100) au centre SW → drops d'équipement level 100 (10D).
+  - 🇨🇳 **Noms ZH des gardiens B5 (recherche ZH 2026-10)** : **玄武颛顼** (Tortue Noire/Zhuanxu), **白虎小昊** (Tigre Blanc/Xiaohao), **青龙太皥** (Dragon Azur/Taihao), **朱雀炎帝** (Phénix Vermillon/Yandi) + le pré-boss central **炎火客神武** — protocole officiel TW : nettoyer les 4 mini-boss cardinaux → le pré-boss central apparaît → ouvre B6 (mapping exact ↔ noms EN ci-dessus probable, à confirmer sur le client ; sources [DiGeam](https://sro.digeam.com/intro/20200212) + [iccgame B5/B6](http://silkroad.iccgame.com/content-667-84551.html)).
 - **B6** : 3 portails de cristal bleu → salle aléatoire parmi **Guardian Chamber** (vagues 92-99), **Man-Viper Chamber** (4 Snake Generals lv 95), **Black Viper Chamber** (**Soso The Black Viper**, lv 100). Au centre de B6, 4 cristaux verts téléportent vers B1-B4.
 - **BeakYung The White Viper** alias **« Medusa »** : l'unique le plus haut niveau du donjon (**lv 105**, ~183,5 M HP), dégâts magiques, fear/poison/bind/**pétrification 1 min incurable** — les meilleurs drops 10D lv 100.
 
@@ -335,9 +450,9 @@ interface FGWDungeonConfig {
 // Grades de difficulté — type de monstres + limite de party + multiplicateur de drop talisman
 interface FGWGrade {
   grade: 1 | 2 | 3 | 4;
-  monsterType: 'NORMAL' | 'CHAMPION' | 'ELITE_A' | 'ELITE_B';  // G3/G4 = '???' officiel
+  monsterType: 'NORMAL' | 'CHAMPION' | 'ELITE';  // G1=General, G2=Champion, G3/G4=Elite — ✅ résolu (recherche TR 2026-10)
   maxPartySize: 4 | 8;            // 4 pour G1/G2, 8 pour G3/G4
-  talismanDropMultiplier: number; // croissant ; à calibrer (officiel non chiffré)
+  talismanDropMultiplier: number; // croissant ; à calibrer (officiel non chiffré — paliers qualitatifs 3/3/2 documentés)
   minEnvyLevel?: 71;              // grades 3-4 seulement si Envies lv 71+
 }
 
@@ -472,7 +587,7 @@ R: Grade 1 oui (selon niveau/stuff), grade 2 possible pour un haut niveau bien �
 R: **Oui**, ils sont vendables/échangeables sur officiel (attention aux arnaques « talismans 9dg/10dg pour quête A-grade » — Seidenkraft).
 
 **Q: Ghost Sereness est-elle le boss de tous les donjons ?**
-R: **Non.** Ghost Sereness est le boss final de **The Sea of Resentment (101-110)** uniquement. Chaque donjon a ses propres uniques (Togui General/Elder, Elder Earth Ghost, Flame Cow King…).
+R: **Non.** Ghost Serenes est le boss final des **deux donjons Shipwreck** — The Green Abyss (91-100) ET The Sea of Resentment (101-110), avec ses acolytes **Ghost Beast** et **Ghost Gultton** (✅ recherche TR 2026-10). Togui Village et Flame Mountain ont leurs propres uniques (Togui General/Elder, Elder Earth Ghost, Flame Cow King…).
 
 **Q: Que donne la complétion d'une collection ?**
 R: Une **arme scellée** du degré du donjon (D8/D9 SUN, D10 MOON, D11 Nova A Power), sans plus ni blues — **une fois par donjon par personnage**.
@@ -490,11 +605,11 @@ R: Le boss doit être tué dans les 2 h, sinon le donjon disparaît et vous ête
 
 ## ⚠️ Incertitudes / Données Manquantes
 
-1. **Uniques du Green Abyss (91-100)** : aucun nom d'unique/boss final trouvé dans les sources publiques — structure identique aux autres (camps + boss camp) confirmée, mais les noms restent à extraire (base `_RefObjCommon` d'un client vSRO ou videos iSRO).
-2. **Type exact des monstres grades 3-4** : le wiki Fandom les note « ??? » — communément compris comme monstres élite/giant-like ; à confirmer dans les données.
-3. **Multiplicateurs exacts de drop de talismans par grade** : « plus élevé = mieux » est documenté, pas les chiffres.
-4. **Timer d'instance** : 2 h (Fandom) ; un post ProjectHax mentionne aussi une fenêtre totale de ~5 h autour — retenir 2 h comme référence officielle.
-5. **Niveaux/HP exacts des uniques FGW** : non publiés de façon fiable (l'ancienne version inventait HP 2M-10M) — à extraire de `_RefObjCommon`/`characterdata_5000.txt` si besoin précis.
+1. ~~**Uniques du Green Abyss (91-100)**~~ : ✅ **Résolu (recherche TR 2026-10)** — **Ghost Beast** (navires 1-2), **Ghost Gultton** (dernier navire), boss final **Ghost Serenes** (SroLobby, guide 91-100).
+2. ~~**Type exact des monstres grades 3-4**~~ : ✅ **Résolu (recherche TR 2026-10)** — 3★-4★ = monstres **Elite** (1★ = General, Envies = Champion ; 2★ = Champion/Elite).
+3. **Multiplicateurs exacts de drop de talismans par grade** : « plus élevé = mieux » est documenté, pas les chiffres — 🟡 **partiellement résolu** : paliers de rareté qualitatifs par collection documentés (3 communs / 3 normaux / 2 rares — SroLobby + vSRO.org).
+4. **Timer d'instance** : 2 h (Fandom) ; un post ProjectHax mentionne aussi une fenêtre totale de ~5 h autour — retenir 2 h comme référence officielle. Le **délai de ré-entrée 3 h** est confirmé par le wiki officiel ZH (DiGeam).
+5. **Niveaux/HP exacts des uniques FGW** : 🟡 **partiellement résolu (recherche TR 2026-10)** — tables complètes niveaux + HP pour les 7 tranches × 4 grades publiées par SroLobby (probablement données vSRO — **recouper `_RefObjCommon`/`characterdata_5000.txt` avant implémentation**). ⚠️ Conflit ouvert : le wiki Fandom affirme que les grades ne changent pas les HP des uniques, les tables TR montrent le contraire.
 6. **Job Temple** : niveaux des uniques et loot exacts varient fortement selon les serveurs (données ici = eXay SRO/vSRO-type) ; cycles 12 h et conditions AP documentés.
 7. **Holy Water Temple** : noms d'uniques issus de vidéos communautaires (Sphinx/Sekhmet/Nephthys/Horus) — croiser avec le client officiel avant implémentation.
 
@@ -514,6 +629,18 @@ R: Le boss doit être tué dans les 2 h, sinon le donjon disparaît et vous ête
 - [Forgotten World (FGW) Community Scripts — ProjectHax](https://forum.projecthax.com/t/forgotten-world-fgw-community-scripts/22648) — noms des talismans, Ghost Curse, plugins xAutoDungeon/FGW Helper
 - [Forgotten World — Guild Algarb](https://guildalgarb.wordpress.com/games/sro/maps/forgotten-world/) — talismans par donjon, NPC de quête SUN, grades
 - [Legend VI: Forgotten World Shipwreck Dimension II — PrincessJane](https://princessjaneblog.wordpress.com/2011/03/18/legend-vi-forgotten-world-shipwreck-dimension-ii/)
+
+### Série turque complète des 7 guides FGW (SroLobby, Burak Yoğun — recherche TR 2026-10)
+- [Togui Village 35-50](https://www.srolobby.com/konular/silkroad-online-togui-village-35-50-forgotten-world-map-rehberi.2684) · [51-60](https://www.srolobby.com/konular/silkroad-online-togui-village-51-60-forgotten-world-map-rehberi.2688) · [61-70](https://www.srolobby.com/konular/silkroad-online-togui-village-61-70-forgotten-world-map-rehberi.2689)
+- [Flame Mountain 71-80](https://www.srolobby.com/konular/silkroad-online-flame-mountain-71-80-forgotten-world-map-rehberi.2691) · [81-90](https://www.srolobby.com/konular/silkroad-online-flame-mountain-81-90-forgotten-world-map-rehberi.2700)
+- [Shipwreck 91-100 (Green Abyss)](https://www.srolobby.com/konular/silkroad-online-shipwreck-91-100-forgotten-world-map-rehberi.2251) — **uniques du Green Abyss identifiés + tables HP** · [100-110 (Sea of Resentment)](https://www.srolobby.com/konular/silkroad-online-shipwreck-100-110-forgotten-world-map-rehberi.2257)
+- [FGW Talisman kart listesi D8-D11 — vSRO.org](https://www.vsro.org/konular/forgetten-world-talisman-kart-listesi-8-9-10-11-dg-zorluk-derecesine-gore.7600) — raretés par collection
+
+### Sources chinoises officielles (recherche ZH 2026-10)
+- [Wiki officiel DiGeam — 燃燒深淵-火焰山 (Flame Mountain)](https://srowiki.digeam.com/%E7%87%83%E7%87%92%E6%B7%B1%E6%B7%B5-%E7%81%B0%E5%B1%B1) — accès, cooldown 3 h, règle des 7 niveaux, séquence des boss
+- [silkroad.iccgame.com — 船舶墓地通关宝典 (Shipwreck)](https://silkroad.iccgame.com/content-667-49139.html) — boss final 女妖, collections, NPC 武萨伊 (Musai), D10 Seal of Moon
+- [silkroad.iccgame.com — B5/B6 秦陵](http://silkroad.iccgame.com/content-667-84551.html) — gardiens B5
+- [LINE Today TW — Togui Village (6 difficultés)](https://today.line.me/tw/v3/article/o32zaq)
 
 ### Donjons liés
 - [Job Temple Unique Guide — eXay SRO](https://forum.exaysro.com/showthread.php?tid=3875) — sanctums, cycles 12 h, AP, drops
@@ -535,3 +662,4 @@ R: Le boss doit être tué dans les 2 h, sinon le donjon disparaît et vous ête
 
 *Dernière mise à jour : 2026-10-01*
 *Révision majeure : noms de donjons/tranches corrigés (Fandom wikitext), grades re-documentés (types + party, pas d'HP scaling), boss par donjon vérifiés (Origin/Seidenkraft/YouTube), collections complétées (8 talismans chacune), section donjons liés ajoutée (Job Temple/Qin-Shi/HWT), packets FGW officiels ajoutés. Chiffres non sourcés de l'ancienne version supprimés — voir « Incertitudes ».*
+*Enrichi par la recherche multilingue ML_RESEARCH 2026-10 : uniques du Green Abyss + tables HP 7 tranches × 4 grades + types Elite G3/G4 + raretés talismans (SroLobby/vSRO.org TR) ; noms ZH officiels, règle des 7 niveaux, cooldown 3 h confirmé (DiGeam/iccgame ZH).*

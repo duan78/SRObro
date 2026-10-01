@@ -126,6 +126,10 @@ Cette page fusionne et organise le contenu de :
 9. BeakYung « Medusa » (105) — Qin-Shi Tomb B6
 10. Apis (103) / Selket (105) / Neith (106) / Anubis (107) / Isis (108) / Haroeris (109) / Seth (110) — Job Temple
 
+> ✅ **Validation croisée ML 2026-10** : HP des 7 uniques classiques confirmés par 2 sources TR indépendantes (DonanımHaber + MMSRN), le guide FR GMS Temple 2010 et les forums DE — identiques aux données client.
+> 🌐 **Noms ZH/KR des uniques** (✅ recherche ZH/KO 2026-10 — Tiger Girl = 虎女/호녀, Uruchi = 乌鲁齐/우르치, Isyutaru = 冰神之女/이슈타르, Roc = 洛克/괴조로크, Medusa = 白蛇白灵/백령...) : voir [15_UNIQUE_BOSSES.md — Noms multilingues](15_UNIQUE_BOSSES.md#-noms-multilingues-des-uniques-zh--kr).
+> ⚠️ **Conflits non tranchés** : BeakYung **Lv 100** (sources TR : SroLobby/Extraloob) vs **105** (client iSRO + wiki TW DiGeam — HP identiques) ; Roc **107** (presse KR Legend 8 + Wikipédia FR) vs **100** (client iSRO).
+
 ---
 
 ### Guide Joueur
@@ -302,14 +306,15 @@ Cette page fusionne et organise le contenu de :
 | 15 | Haroeris | 109 | 440,747,010 | Job Temple (zone profonde) | — |
 | 16 | Seth | 110 | 425,505,853 | Job Temple (zone profonde) | — |
 
-**Boss de donjons FGW** (level selon bracket/grade): Togui General (A1=39), Ghost Sereness (A1=93, pétrification).
+**Boss de donjons FGW** (level selon bracket/grade): Togui General (A1=39), Ghost Sereness (A1=93, pétrification). ✅ Uniques du Green Abyss résolus (recherche TR 2026-10) : **Ghost Beast**, **Ghost Gultton**, boss final **Ghost Serenes** ; noms ZH officiels des donjons : 血灵地狱-土鬼村 (Togui), 燃烧深渊-火焰山 (Flame Mtn), 永恒之海-船舶墓地 (Shipwreck) — voir [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md#-boss-du-forgotten-world-fgw).
 
-**Sous-uniques Qin-Shi Tomb:** 4 Gardiens (98-99), Shinmoo (100), Soso the Black Viper (100), Snake Generals (95).
+**Sous-uniques Qin-Shi Tomb:** 4 Gardiens (98-99 — ✅ noms ZH officiels : 玄武颛顼/朱雀炎帝/青龙太皥/白虎小昊, recherche ZH 2026-10), Shinmoo (100), Soso the Black Viper (100, HP 27 655 068 — recherche TR 2026-10), Snake Generals (95). ⚠️ BeakYung : Lv 100 (TR) vs 105 (client) — conflit non tranché.
 
 > ❌ **Corrigé (2026):** l'ancien tableau listait « Bunny (80), Rooster (80), Monkey (90), Spider Queen (95), Cerberus King (90) » — **introuvables dans les données client iSRO** (inventions ou serveurs privés). « Lady Lyn » et « Beithy » : idem, supprimés partout.
 
 **Spawn Times:**
 - iSRO: **3-5 heures** après mort, point de spawn aléatoire (4h par défaut vSRO)
+- ⏱️ Fenêtres fines par unique (✅ recherche TR 2026-10): Tiger Girl ~210-390 min · Cerberus ~200-400 · Captain Ivy ~200-450 (jusqu'à 700) · Uruchi ~230-450 ; règle « min 2 h après le dernier kill, puis aléatoire » — ⚠️ conflit FR ~4 h vs ~6 h non tranché
 - Après crash serveur : spots fixes
 - Qin-Shi Tomb : Serin Gate à heures fixes (04h/10h/16h/22h)
 
@@ -543,6 +548,7 @@ model MonsterDrop {
 ---
 
 **Dernière mise à jour :** 2026-10-01 (uniques corrigés d'après données client; liens MONSTERS_HIGHLEVEL corrigés)
+*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md)*
 **Monstres - Référence Complète** - Consolidation de 4 fichiers → 1 hub centralisé
 
 ---

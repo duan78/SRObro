@@ -615,8 +615,9 @@ Européens : Warrior tank · Rogue burst/stealth · Wizard AoE · Warlock debuff
 | Recovery Division | 300 s de durée | guides |
 | Screens / Earth Barrier | 1 min / 20 s (CD 60 s) | guides |
 | FGW : timer instance | 2 h (boss à tuer) | wiki Fandom |
-| FGW : ré-entrée | 3 h (bypass : ticket Item Mall) | wiki Fandom |
+| FGW : ré-entrée | 3 h (bypass : ticket Item Mall) | wiki Fandom + ✅ confirmé wiki officiel ZH DiGeam (recherche ZH 2026-10) |
 | FGW : Dimension Hole | item 24 h · 30 min entre activations · 15 min de retour après sortie | wiki Fandom |
+| FGW : drop | aucun drop si le joueur dépasse les monstres de **7+ niveaux** (règle anti-carry) | wiki officiel ZH DiGeam (recherche ZH 2026-10) |
 | Job Temple | cycles d'ouverture 12 h (avertissements 10/5 min avant) | guides |
 | Respawn normaux / champions / uniques | 1-5 min / 5-15 min / 3-24 h | communauté |
 

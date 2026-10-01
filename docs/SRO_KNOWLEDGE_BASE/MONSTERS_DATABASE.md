@@ -1093,11 +1093,17 @@ Zone: Roc Mountain — raid de guilde
 | **Haroeris** | 109 | 440,747,010 | 3815-6277 | — | 99,204,245 | 26681 | MOB_SD_HAROERIS | Job Temple |
 | **Seth** | 110 | 425,505,853 | 4034-6637 | — | 101,035,947 | 26683 | MOB_SD_SETH | Job Temple |
 
-**Sous-uniques du Qin-Shi Tomb:** Gardiens 98-99 (Black Tortoise, Red Hawk, Blue Dragon, White Tiger), Shinmoo (100), Soso the Black Viper (100), Snake Generals (95).
+**Sous-uniques du Qin-Shi Tomb:** Gardiens 98-99 (Black Tortoise, Red Hawk, Blue Dragon, White Tiger — ✅ noms ZH officiels trouvés, recherche ZH 2026-10 : 玄武颛顼 / 朱雀炎帝 / 青龙太皥 / 白虎小昊, + 炎火客神武 cité), Shinmoo (100), Soso the Black Viper (100, **HP 27 655 068** — ✅ recherche TR 2026-10), Snake Generals (95).
 
-**Boss FGW (MOB_GOD_*):** Togui General (A1=39, HP 143,131), Ghost Sereness (A1=93, HP 11,307,269, Petrify) — level variable selon bracket/grade (A1-A4).
+**Boss FGW (MOB_GOD_*):** Togui General (A1=39, HP 143,131), Ghost Sereness (A1=93, HP 11,307,269, Petrify) — level variable selon bracket/grade (A1-A4). ✅ Noms des uniques du Green Abyss résolus (recherche TR 2026-10) : **Ghost Beast** (navires 1-2), **Ghost Gultton** (dernier navire), boss final **Ghost Serenes** — ⚠️ les guides TR (SroLobby) listent des HP 1000× les valeurs client (ex. Serenes 1★ : 11 307 269 000), probablement des valeurs vSRO, non tranché.
 
 **Spawn:** 3-5h après mort (iSRO; 4h par défaut vSRO), point aléatoire. Détails complets : [15_UNIQUE_BOSSES.md](./15_UNIQUE_BOSSES.md)
+
+> ✅ **Validation croisée (recherche ML 2026-10)** : les HP/niveaux des 7 uniques classiques ci-dessus sont confirmés par **2 sources turques indépendantes** ([DonanımHaber](https://forum.donanimhaber.com/yaratiklarin-canlari-cin-avrupa-ve-unique--28889841) + [MMSRN](https://www.mmsrn.com/silkroad-online-tum-unique-isimleri-levelleri-ve-hpleri-kactir)), le guide FR [GMS Temple 2010](https://forum.gmstemple.com/index.php?showtopic=8106) et les forums DE ([StageTwo](https://www.stagetwo.eu/gaming/rollenspiele/153328-silkroad-uniques)) — valeurs identiques au client.
+>
+> ⏱️ **Timers précis (recherche TR 2026-10 — [Extraloob](https://www.extraloob.com/threads/silkroad-1-100-level-unique-hakkinda-bilgiler-234754))** : Tiger Girl ~210-390 min · Cerberus ~200-400 · Captain Ivy ~200-450 (jusqu'à 700) · Uruchi ~230-450 ; règle DonanımHaber : « 3,5-5 h, minimum 2 h après le dernier kill puis aléatoire ». ⚠️ Conflit FR non tranché : ~4 h (guide FR 2010) vs ~6 h ([Wikipédia FR](https://fr.wikipedia.org/wiki/Silkroad_Online)).
+>
+> ⚠️ **Conflit BeakYung/Medusa non tranché** : niveau **100** selon les sources TR ([SroLobby — Qin-Shi Tomb B6](https://www.srolobby.com/konular/silkroad-online-qin-shi-tomb-b6-monsters-mob-hp-saldiri-tipleri.1780)) vs **105** selon le client iSRO et le wiki TW DiGeam — HP identiques (183 535 199). B6 = 4 salles dont 2 à uniques.
 
 > ❌ **Corrigé (2026):** l'ancienne section listait « Cerberus 40 / Captain Ivy 60 / Isyutaru 80 / Medusa 100 / Lady Lyn 105 / Beithy 110 » avec des stats inventées — voir historique. Les HP/levels ci-dessus sont extraits des données client.
 
@@ -1250,4 +1256,5 @@ Zone: Roc Mountain — raid de guilde
 ---
 
 *Dernière mise à jour: 2026-10-01 (uniques corrigés d'après données client silkroadonline.wiki; faune Alexandria/Roc Mountain corrigée)*
+*Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (validation HP, timers, Qin-Shi B6) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md)*
 *Prochaine mise à jour: Monstres 60-110*

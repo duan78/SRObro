@@ -71,12 +71,15 @@ Le système de jobs a beaucoup évolué. Ne pas mélanger les ères est **la pre
 
 ### Timeline des changements majeurs
 - **2005-2006:** lancement ; triangle classique, Thief Town secrète, suits 10k/1M
+- **2006-07 (kSRO):** « **Trade System 2** » — profits trader/hunter augmentés, chargement de spécialités **25 → 40 unités**, ajout de la revente de spécialités, coût d'entrée aux unions de métier réduit, difficulté des monstres hunter/thief revue à la baisse ([Inven, 19/07/2006](https://www.inven.co.kr/webzine/news/?news=2449))
 - **2007 (Legend II):** Europe — Constantinople et Samarkand rejoignent le réseau commercial (routes très rentables ~300%)
 - **~2010 (Legend V):** Alexandria (Égypte) — routes Hotan↔Alexandria à très haut risque
 - **2011-03-15 (Legend VII):** refonte totale — Trader retiré aux joueurs, consignation NPC, alias, capes
 - **2011+:** Battle Arena / Capture the Flag (arena coins)
 - **~2011 (fuite vSRO):** les fichiers 1.188 figent l'ancien système pour les serveurs privés (la création d'alias y fait planter le client — voir elitepvpers)
 - **2024-2026 (Origin Mobile):** triangle restauré, équilibrage ±15%/±50%, buffs de soutien, classements de job, suppression de la suppression de job après 14 jours d'inactivité (mars 2026)
+
+> ℹ️ **Migration Legend VII (mars 2011) — compensations officielles traduites par la communauté FR** : job level 1 = **1 000 SP**, 2 = 10 000, 3 = 20 000, 4 = 40 000, 5 = 60 000, 6 = 80 000, 7 = **100 000 SP** ; frais d'inscription remboursés = **niveau × 5 000 gold** ([fil JeuxOnline p.7, traduction des annonces Joymax](https://forums.jeuxonline.info/sujet/1104741/l-actualite-sur-silkroad-online-et-la-presentation)).
 
 ---
 
@@ -131,7 +134,7 @@ Le système de jobs a beaucoup évolué. Ne pas mélanger les ères est **la pre
 
 **Risk:** Mourir en combat (perte de job XP), ne pas être payé (scammers).
 
-**Reward:** Pourcentage du profit du trader, job XP par kill, primes sur thieves *wanted*.
+**Reward:** Pourcentage du profit du trader, job XP par kill, primes sur thieves *wanted*. En bonus système : quand un trader vend, une **somme supplémentaire est générée par le jeu et versée à la banque de l'union des hunters** (guide métiers FR 2009 — [GMS Temple 6543](https://forum.gmstemple.com/index.php?showtopic=6543)).
 
 ---
 
@@ -140,8 +143,8 @@ Le système de jobs a beaucoup évolué. Ne pas mélanger les ères est **la pre
 ### Conditions Communes (triangle classique)
 
 - **Level minimum:** 20
-- **Frais d'inscription:** payables au NPC de guilde, **calculés selon le niveau** du personnage
-- **Cooldown:** après avoir quitté une guilde de job, **re-joindre (un job) est impossible pendant 7 jours**
+- **Frais d'inscription:** payables au NPC de guilde, **calculés selon le niveau** du personnage — ✅ **Précisé (recherche TR/DE 2026-10)** : ~**10 000 gold** d'adhésion à la guilde de job au niveau 20 ([DonanımHaber, iSRO 2006](https://forum.donanimhaber.com/silkroad-da-tuccar-olmak--8024785) ; [guide jobs DE 2008](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/28727-guide-das-jobsystem)), + ~**10 000 gold** pour l'item de job (versions M/F, bonus **+1 STR ou +1 INT** — guide DE 2008)
+- **Cooldown:** après avoir quitté une guilde de job, **re-joindre (un job) est impossible pendant 7 jours** — ✅ **Précisé (recherche PT 2026-10)** : selon [Wikipédia PT](https://pt.wikipedia.org/wiki/Silkroad_Online), après un **changement de métier** le joueur reste **7 jours sans pouvoir exercer AUCUNE profession** (« A troca de profissão é permitida, porém o jogador ficará 7 dias sem poder exercer nenhuma profissão » — confiance 3, page non sourcée)
 - Un seul job actif à la fois (mais voir « alias » plus bas)
 
 ### Où rejoindre chaque job
@@ -181,11 +184,12 @@ Le système de jobs a beaucoup évolué. Ne pas mélanger les ères est **la pre
 - **Cooldown de 10 minutes** entre équipement/retrait du suit ; une téléportation ou déconnexion **réinitialise** ce cooldown
 - En Legend VII+, la **job cape** ne peut pas être équipée **en party**
 - Le suit affiche votre **job level** à la place du niveau de personnage
-- Prix des suits thief (2006, iSRO) : ~**10k** (suit noire de base) ou ~**1M** (« Black Devil », cosmétique), spécifique au genre du personnage
+- Prix des suits thief (2006, iSRO) : ~**10k** (suit noire de base) ou ~**1M** (« Black Devil », cosmétique), spécifique au genre du personnage — ✅ **Confirmé (recherche TR 2026-10)** : Black Suit **10 000 gold**, Black Devil Suit **1 000 000 gold** ([guide Thief SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294))
+- Le guide FR d'époque ([GMS Temple, « Les Métiers sur Silkroad », 2009](https://forum.gmstemple.com/index.php?showtopic=6543)) précise l'ancien système : la tenue se met dans **l'emplacement de la cape**, s'équipe/se retire **en ville uniquement, jamais en party** (restriction déjà présente avant Legend VII), et s'achète avec **1 attribut magique au choix (1 STR ou 1 INT)**
 - Les suits de haut niveau (ère moderne, serveurs privés) peuvent porter des **blues/stats** activés uniquement quand le suit est porté
 
 ### Alias / Pseudonyme
-- **Classique:** le pseudonyme est créé à l'équipement du premier suit ; racheter un suit permet de changer d'identité
+- **Classique:** le pseudonyme est créé à l'équipement du premier suit ; racheter un suit permet de changer d'identité — ✅ **Précisé (recherche FR 2026-10)** : le surnom fait **6 à 12 caractères**, est **préfixé d'un `*`** et **unique** ; il est interdit de whisper/ajouter en ami via le surnom ; le vrai nom reste visible dans les chats général/union/guilde, et le nom de guilde n'est plus affiché ([GMS Temple 6543](https://forum.gmstemple.com/index.php?showtopic=6543))
 - **Legend VII+:** « Create Alias » au NPC de job — **permanent** ; changer d'alias = abandonner le job (reset complet de la progression)
 - Le port navigateur de SRO (référence du projet) implémente l'**enregistrement des 3 jobs, les alias, les suits, les transports et le cargo** (voir thread RaGEZONE « Another browser port of Silkroad Online »)
 
@@ -206,6 +210,9 @@ Le **star rating** ne dépend PAS de la route, mais de la **quantité/valeur des
 **Règles vérifiées:**
 - Les **thief monsters** (NPC) qui embusquent un trade **n'apparaissent que pour les merchants** et **attaquent le plus proche** (merchants et hunters) ; leur nombre/force évolue avec les étoiles ET le niveau du trader (mobs verts → dorés → rouges en 5★)
 - **Détecter les étoiles d'un trade ennemi (thief):** double-cliquer sur le trader/transport en suit — un **message bleu** = trade 1★ (protégé), des dégâts = trade multi-étoiles
+- ✅ **Résolu (recherche TR 2026-10) — lecture du niveau d'un kervan :** **1 NPC thief spawn par étoile** — un kervan 4★ est suivi par 4 voleurs NPC, c'est ainsi qu'un thief « lit » l'étoile d'une caravane de l'extérieur ([guide Thief SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294))
+- ✅ **Résolu (recherche TR 2026-10) — montée des étoiles :** les étoiles montent quand la **valeur chargée dépasse des seuils** ; l'écran du chamelier affiche les étoiles en direct ([FrmTR, job taktikleri](https://www.frmtr.com/sro-rehberler-sorular-ve-teknik-yardim/952764-job-taktikleri-trader-programi.html))
+- **Un kervan 1★ ne peut PAS être attaqué directement** par un thief joueur (le guide TR ne cite pas de limite de niveau, alors que les guides FR/DE restreignent la protection aux traders ≤40 — voir 10_TRADER_GUIDE.md) ; un contournement indirect existe : porter soi-même 1 goods pour attirer un NPC thief et le mener sur la cible ([SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294))
 - En 1★ « Safe Trade » (ère moderne): livraison garantie, pas d'attaques de player thieves, mais **profit réduit**
 
 ---
@@ -266,6 +273,9 @@ Le **star rating** ne dépend PAS de la route, mais de la **quantité/valeur des
 - En Legend VII+, le *job rank* s'obtient en tuant des joueurs du job opposé ; **seuls ~3 kills par heure comptent** pour un même joueur (anti-farming)
 - Origin Mobile (2026) a ajouté des **Job Ranking Boards** séparés pour les 3 jobs
 
+### Promotion de job (« Promote »)
+✅ **Résolu (recherche TR 2026-10)** : l'option **« Promote »** se prend chez le NPC du job — Trader → **Merchant NPC**, Hunter → **Trader NPC**, Thief → **Smuggler NPC** ([Extraloob](https://www.extraloob.com/threads/silkroad-online-job-level-atlatma-311517)). Sur les serveurs privés vSRO, les paliers donnent : rangs 1-3 **Basic** (bonus XP%), 4-6 **Advanced** (HP + dégâts), 7+ **Elite** (Zerk + résistances) — [vSRO.org](https://www.vsro.org/konular/gold-sp-kasma-rehberi-slotlar-job-dungeon-ve-gunluk-taktikler.13648) (données de serveurs privés, à ne pas généraliser à iSRO officiel).
+
 ---
 
 ## ⚔️ Matrice d'Attaque et Monstres de Job
@@ -294,6 +304,8 @@ L'ancien système définit précisément qui peut attaquer qui (source: fan-site
 
 - **Arrangement Points (« arrange points »):** gagnés en tuant hunters, merchants ou transports
 - À **3 000+ points** → statut **WANTED**: visible par les hunters, qui reçoivent un **bonus** pour vous tuer
+- ✅ **Résolu (recherche TR 2026-10) — mécanique du Wanted :** à 3 000+ points le thief porte un **marqueur rouge** et devient attaquable **même sans costume** ; le statut se purge en **payant l'amende à la Hunter Guild** ou en **se laissant tuer** (perte d'XP) ([guide Thief SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294))
+- ⚠️ **Conflit entre sources (seuil Wanted) :** le guide TR indique **3 000** arrange points, mais l'article de présentation coréenne de l'open beta ([Inven, 20/12/2004](https://www.inven.co.kr/webzine/news/?news=2285)) indique qu'au-delà de **2 000 penalty points** le thief passe en état *현상범* (recherché) **avec changement de métier bloqué**. Écart probablement lié à l'époque (2004 KR) / à la version — à trancher sur le client cible (vSRO 1.188).
 - **Amende de mort en job:** ~**60k gold au level 40** (croissante avec le niveau)
 - Après une mort en statut *wanted*: **aucune activité de job pendant 3 heures**
 - Mourir tué par hunters/merchants peut faire **dropper des items** (y compris équipés) — comme une mort PvE
@@ -352,7 +364,7 @@ Conflit massif entre thieves et hunters (± traders) sur une route commerciale p
 
 - **Mercenaires de guilde:** recrutables pour les guild wars et job wars (donné par StrategyWiki)
 - **Battle Arena / Capture the Flag (2011+):** PvP en équipes (alignées ou aléatoires selon mode) ; récompenses en **Arena Coins** (~**7 coins victoire / 1 coin défaite** sur officiel) échangeables contre des prix ; événement quotidien ~20 min. Des modes CTF existent avec drapeaux à capturer.
-- **Job Caves (Legend VII+):** donjons réservés aux jobs (thief/hunter) pour farmer **gold et SP** (quêtes type « Proof of Strength », ~700 SP) — la principale source de revenus des jobs après la suppression des récompenses or en Legend VII
+- **Job Caves (Legend VII+):** donjons réservés aux jobs (thief/hunter) pour farmer **gold et SP** (quêtes type « Proof of Strength », ~700 SP) — la principale source de revenus des jobs après la suppression des récompenses or en Legend VII. Noms officiels TW (recherche ZH 2026-10) : le **Job Temple** (神殿) se situe dans le **Storm Desert** (风暴沙漠), accès **lv 100+ en tenue de métier**, salles ouvertes **90 min**, 2 camps **Hunter (侠客) vs Thief (盗贼)** + points AP ([wiki officiel DiGeam](https://srowiki.digeam.com/%E2%96%A0%E9%A2%A8%E6%9A%B4%E6%B2%99%E6%BC%A0%E5%9C%B0%E5%8D%80%E7%A5%9E%E6%AE%BF), [GNN](https://gnn.gamer.com.tw/detail.php?sn=195906))
 
 ---
 
@@ -510,6 +522,9 @@ La version mobile (basée sur l'ancien système, 3 jobs dès le **level 20**) a 
 - [Complete Thief's Guide (Hellsharpt, 2006) — Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=5&t=8457) (via Wayback Machine)
 - [Job Ranks - Hanf_Hunter fan site](https://hanfhunter-online.de.tl/%3D%3EJobs.htm) — les 7 rangs des 3 jobs
 - [Trade System - Hanf_Hunter fan site](https://hanfhunter-online.de.tl/%3D%3ETrade-System.htm) — 10 centres de commerce, matrice d'attaque
+- [Silkroad Online Thief olmak (SroMax, guide TR)](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294) — étoiles (1 NPC thief/étoile), arrange points, prix Thief Town
+- [Les Métiers sur Silkroad (GMS Temple, FR, 2009)](https://forum.gmstemple.com/index.php?showtopic=6543) — ancien système : Yumi/Cartino, surnoms 6-12, trader ≤40 en 1★, banque des hunters
+- [Das Jobsystem (silkroadonline.de, DE, 2008)](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/28727-guide-das-jobsystem) — adhésion 10k + item 10k, or hunter hebdomadaire
 - [Legend VII: Rise of the Thief-Hunter Tutorial (Princess Jane, 2011)](https://princessjane25.wordpress.com/2011/04/12/silkroad-online-legend-vii-rise-of-the-thief-hunter-some-simple-tutorial-guide/)
 
 ### Origin Mobile
@@ -552,4 +567,4 @@ La version mobile (basée sur l'ancien système, 3 jobs dès le **level 20**) a 
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: Silkroad Online Wiki (Fandom), StrategyWiki, Hellsharpt Thief Guide 2006 (via Wayback), Hanf_Hunter fan site, Princess Jane Legend VII Tutorial, sromobile.com (officiel Origin), forum.playorigin.com, elitepvpers, RaGEZONE*
+*Sources: Silkroad Online Wiki (Fandom), StrategyWiki, Hellsharpt Thief Guide 2006 (via Wayback), Hanf_Hunter fan site, Princess Jane Legend VII Tutorial, sromobile.com (officiel Origin), forum.playorigin.com, elitepvpers, RaGEZONE + recherche multilingue 2026-10 (ML_RESEARCH) : SroMax/SroLobby/DonanımHaber/Extraloob/vSRO.org (TR), Wikipédia PT (PT), GMS Temple/JeuxOnline (FR), silkroadonline.de (DE), Inven (KO), wiki DiGeam/GNN/Bahamut (ZH)*

@@ -3,6 +3,7 @@
 ## 📋 Table des Matières
 - [Vue d'Ensemble](#-vue-densemble)
 - [Liste Officielle des Uniques](#-liste-officielle-des-uniques)
+- [Noms Multilingues (ZH/KR)](#-noms-multilingues-des-uniques-zh--kr)
 - [Uniques Classiques (Chine/Europe)](#-uniques-classiques-chineeurope)
 - [Roc (Roc Mountain)](#-roc-roc-mountain)
 - [Uniques du Qin-Shi Tomb (Medusa)](#-uniques-du-qin-shi-tomb-medusa)
@@ -33,6 +34,8 @@ Les **Uniques** sont les boss les plus puissants de Silkroad Online. Ils dropent
 ### ⚠️ Note de fiabilité (recherche 2026)
 
 Ce document a été corrigé à partir de **données extraites du client officiel** (tables `_RefObjCommon`/`characterdata`, publiées sur silkroadonline.wiki) et de guides communautaires anciens (elitepvpers, rev6, mmorpg.com, strategywiki). Les HP/levels ci-dessous sont **vérifiés** sauf mention contraire.
+
+> ✅ **Validation croisée multilingue (recherche ML 2026-10)** : les HP/niveaux des 7 uniques classiques (Tiger Girl → Demon Shaitan) sont confirmés par **deux sources turques indépendantes** ([DonanımHaber](https://forum.donanimhaber.com/yaratiklarin-canlari-cin-avrupa-ve-unique--28889841) + [MMSRN](https://www.mmsrn.com/silkroad-online-tum-unique-isimleri-levelleri-ve-hpleri-kactir)), par le **guide FR « Les Uniques » (GMS Temple, 2010** — [source](https://forum.gmstemple.com/index.php?showtopic=8106)) et par les forums **allemands** ([StageTwo](https://www.stagetwo.eu/gaming/rollenspiele/153328-silkroad-uniques), elitepvpers) — valeurs strictement identiques aux données client. Rapports : [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md)
 
 > ❌ **Corrigé :** les anciennes versions de ce fichier listaient « Cerberus niveau 40 », « Captain Ivy 60 », « Isyutaru 80 », « Lady Lyn », « Beithy », « Bunny/Rooster/Monkey », « Spider Queen », « Sphinx/Osiris/Ra » comme uniques de terrain. **Lady Lyn, Beithy, Bunny, Rooster, Monkey, Spider Queen n'existent pas dans les données client iSRO** — ce sont des inventions ou des uniques de serveurs privés. Sphinx/Osiris/Neith/Isis/Serket/Seth existent mais sont les uniques du **Job Temple** (voir sections dédiées).
 
@@ -79,6 +82,34 @@ Ce document a été corrigé à partir de **données extraites du client officie
 | `MOB_SD_` | Désert d'Alexandrie / Job Temple |
 | `MOB_GOD_` | Forgotten World (donjons) |
 | `MOB_EV_` | Événements |
+
+---
+
+## 🌐 Noms multilingues des uniques (ZH / KR)
+
+> ✅ Résolu (recherche ZH 2026-10 + KO 2026-10) : noms chinois officiels (wiki TW DiGeam / sources CN) et coréens (presse KR d'époque) des uniques. Rapports : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md)
+
+| Unique (iSRO) | Chinois (officiel TW/CN) | Pinyin | Coréen (KSRO) | Zones citées côté ZH/KR |
+|---|---|---|---|---|
+| Tiger Girl | **虎女** — et non « 老虎女 » | hǔnǚ | **호녀** | 虎穴山 (mont du repaire aux tigres), 飞贼团山寨 (fort des bandits) ; KR : 호혈산 (« mont du sang-de-tigre ») |
+| Cerberus | **克贝洛斯** / 贝克洛斯 | kèbèiluòsī | — | 神的庭院 (Garden of Gods), 无法者的山坡 (Desperado Hill), 黄昏的树林 (Forest of Dusk), 黎明的海岸 |
+| Captain Ivy | **艾维船长** (TR 艾維船長) | àiwéi chuánzhǎng | — | 小亚细亚 (Asia Minor), 克利奥派特拉门 (Cleopatra's Gate), 邪恶之灵要塞 |
+| Uruchi | **乌鲁齐** (TR 烏魯齊) — et non « 巫女 » | wūlǔqí | **우르치** | 塔里木盆地 (Tarim Basin), 死亡溪谷, 黑漠团巢穴 (Black Robber Den) ; KR : 타림분지 |
+| Isyutaru | **冰神之女** (« Fille du dieu de glace ») | bīngshén zhī nǚ | **이슈타르** | 卡拉昆仑古代遗迹 (Ancient Remains), 绿洲 (oasis), 蜘蛛树林 (forêt aux araignées) ; KR : 카라코람 (lacs de glace) |
+| Lord Yarkan | **路亚汗** | lùyàhàn | — | 塔克拉玛干 (Taklamakan), 尼雅遗址 (ruines de Niya) |
+| Demon Shaitan | **撒旦** / 魔人撒旦 (« Satan ») | sādàn | — | 洛克山 (Roc Mountain), 心脏之峰 / 利爪之峰 / 翅膀之峰 (Heart/Claw/Wing Peak) |
+| Roc | **洛克** (« roi des oiseaux ») | luòkè | **괴조로크** (King of the Roc) | 洛克山 ; donjon 洛克副本 (porte 支配者之门, lv 80-130, clé 血族钥匙) |
+| BeakYung « Medusa » | **白蛇白灵** (TR 白蛇白靈) | báishé báilíng | **백령** (serpent blanc, légende 백사전설) | 秦始皇陵 B6 (Qin-Shi Tomb) |
+| Selket / Neith / Anubis / Isis (Job Temple) | 赛尔基斯 / 奈特 / 阿努比斯 / 伊希斯 | — | — | 神殿 (Job Temple), 风暴沙漠 (Storm Desert) |
+
+**Lore officiel ZH (nouveautés — recherche ZH 2026-10) :**
+- **虎女 (Tiger Girl)** : esprit-tigresse régnant sur 虎穴山, tuée par le général 孙玄 (Sun Xuan) ; son âme posséda une jeune fille perdue. Elle apparaît les nuits de pleine lune montée sur un **tigre blanc géant**, inflige l'état **Zombie** et invoque 5-10 tigres blancs/noirs. Sources : [wiki DiGeam — boss](https://srowiki.digeam.com/boss%E6%80%AA%E7%89%A9%E4%BB%8B%E7%B4%B9) · [Sina 2014](http://games.sina.com.cn/o/n/2014-03-26/1126772919.shtml)
+- **白蛇白灵 (BeakYung/Medusa)** : démon-serpent millénaire à forme humaine, emprisonné dans le mausolée de Qin Shi Huang après avoir été démasqué ; le lore TW le relie à la légende chinoise du **Serpent blanc** (白蛇传). **Compétences officielles** : 1) attaque magique AoE à distance, 2) 结界 (barrière) de ligature frontale, 3) **pétrification à 100 %** dans un rayon donné, 4) puissantes attaques. Sources : [DiGeam — ultimate boss](https://srowiki.digeam.com/%E7%B5%82%E6%A5%B5boss%E4%BB%8B%E7%B4%B9) · [iccgame B5/B6](http://silkroad.iccgame.com/content-667-84551.html)
+- **洛克 (Roc)** : après sa mort apparaîtrait un boss 洛克心魔 (« démon intime du cœur de Roc ») plus fort que l'original (source dérivée mobile — lore non confirmé PC) ; variantes d'event 变种洛克 / 死亡骷髅洛克. Source : [iccgame — donjon Roc](https://silkroad.iccgame.com/content-667-58635.html)
+
+**Mécanique originale des uniques (Corée, 2005)** — première description officielle ([GameMeca, 18/03/2005](https://www.gamemeca.com/view.php?gid=53792)) : spawn à un **endroit fixe**, respawn **aléatoire** après la mort, **annonce à tout le serveur** à l'apparition, XP répartie **par contribution**, items distribués **par ordre d'arrivée dans le groupe**. Les trois premiers uniques KR étaient **호녀** (Tiger Girl, 20+), **우르치** (Uruchi, 40+) et **이슈타르** (Isyutaru, 60+), respectivement dans 호혈산, 타림분지 et 카라코람.
+
+> ⚠️ **Conflits non tranchés (sources ML)** : (1) la fiche boss du wiki DiGeam liste **Cerberus niveau 20** (vs **24** dans le client iSRO) ; (2) **Roc niveau 107** selon la presse KR ([괴조로크, Legend 8 KR — GameDonga](https://game.donga.com/39114)) et Wikipédia FR (« Roc 107, présentement invincible » — [source](https://fr.wikipedia.org/wiki/Silkroad_Online)), vs **100** dans les données client iSRO ; (3) niveau de BeakYung : voir section Qin-Shi Tomb.
 
 ---
 
@@ -131,6 +162,8 @@ HP: 1,094,835 | ATK: 115-184 | DEF phys: 30 | Gold: 1,050,440
 **Zones de spawn:** Amphitheater, Cleopatra's Gate, Haran's Tower
 
 **Mécanique:** Attaques rapides de « pirate », forte ATK pour son level.
+
+**Histoire (communauté TR, ✅ recherche TR 2026-10) :** Captain Ivy aurait d'abord été un **monstre de quête uniquement** sur iSRO, et un unique **uniquement sur kSRO**, avant d'être ajoutée officiellement comme unique (témoignage DonanımHaber — [RESEARCH_TR.md §2](ML_RESEARCH/RESEARCH_TR.md)).
 
 **Stratégie:**
 - Level 40+ en petit groupe, full party à level 30-35
@@ -212,6 +245,22 @@ HP: 12,732,060 | ATK: 898-1528 | DEF phys: 268 | Gold: 8,671,974
 
 ---
 
+### 🗣️ Comportements rapportés par la communauté turque (Extraloob — ✅ recherche TR 2026-10)
+
+| Unique | Particularités de combat rapportées |
+|---|---|
+| Tiger Girl | inflige **Zombie** (les potions réduisent les HP/MP) → prévoir des Pill |
+| Cerberus | l'écran **s'assombrit** ; attaques Feu/Glace + **Fear** |
+| Captain Ivy | **Stun / Knock-Down / Knock-Back** ; zone Cleopatra Gate |
+| Uruchi | aucun statut particulier ; repérable via la touche V ; « le plus attendu » des uniques |
+| Isyutaru | **Cold/Freeze** (Pill obligatoire) ; tuable **solo par un Wizard 62-68** (fire imbue + 1er skill cold) selon le guide |
+| Lord Yarkan | « le père des uniques » ; spawn **entouré de tous les mobs 71+** alentour ; minimum 1 Cleric en party |
+| Demon Shaitan | coups relativement faibles mais **élites dangereuses** autour ; entrer avec un Cleric |
+
+Source : [Extraloob — Silkroad 1-100 unique bilgileri](https://www.extraloob.com/threads/silkroad-1-100-level-unique-hakkinda-bilgiler-234754) · [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md)
+
+---
+
 ## 🦅 Roc (Roc Mountain)
 
 ```
@@ -250,12 +299,14 @@ Position: centre du B4
 ```
 
 ### Les 4 Gardiens (B5, niveaux 98-99)
-| Gardien | Animal | Position | Level |
-|---------|--------|----------|-------|
-| JeonUk The Black Tortoise | Tortue noire | Nord | 98 |
-| YumJae The Red Hawk | Faucon rouge | Sud | 98 |
-| TaeHo The Blue Dragon | Dragon bleu | Ouest | 99 |
-| SoHaow The White Tiger | Tigre blanc | Est | 99 (le plus dur) |
+| Gardien | Animal | Position | Level | Nom ZH officiel (TW/CN) |
+|---------|--------|----------|-------|--------------------------|
+| JeonUk The Black Tortoise | Tortue noire | Nord | 98 | 玄武颛顼 (Xuánwǔ Zhuānxū) |
+| YumJae The Red Hawk | Faucon rouge | Sud | 98 | 朱雀炎帝 (Zhūquè Yándì) — « Phénix vermillon » |
+| TaeHo The Blue Dragon | Dragon bleu | Ouest | 99 | 青龙太皥 (Qīnglóng Tàihào) |
+| SoHaow The White Tiger | Tigre blanc | Est | 99 (le plus dur) | 白虎小昊 (Báihǔ Xiǎohǎo) |
+
+> ✅ **Résolu (recherche ZH 2026-10)** : les « 4 gardiens 98-99 » sont **nommés** dans les sources chinoises officielles — **玄武颛顼** (Tortue Noire/Zhuanxu), **白虎小昊** (Tigre Blanc/Xiaohao), **青龙太皥** (Dragon Azur/Taihao), **朱雀炎帝** (Phénix Vermillon/Yandi), plus un cinquième nom cité : **炎火客神武**. La correspondance exacte JeonUk↔玄武颛顼, TaeHo↔青龙太皥, SoHaow↔白虎小昊, YumJae↔朱雀炎帝 est **probable** (mêmes animaux cardinaux) mais non garantie mot pour mot. Protocole officiel TW : nettoyer les 4 mini-boss cardinaux → un **pré-boss central** apparaît (probablement Shinmoo) → ouvre l'accès au B6. Sources : [DiGeam](https://sro.digeam.com/intro/20200212) · [iccgame B5/B6](http://silkroad.iccgame.com/content-667-84551.html)
 
 ### SHINMOO, The Man of Flames (Level 100)
 - Spawn dans le coin sud-ouest de la salle centrale du B5 **après la mort des 4 gardiens**
@@ -263,12 +314,17 @@ Position: centre du B4
 
 ### SOSO, The Black Viper (Level 100)
 - Black Viper Chamber (B6) — drop du stuff 10D level 100
+- **HP : 27 655 068** ; attaques physique **et** magique (✅ Résolu, recherche TR 2026-10 — [SroLobby — Qin-Shi Tomb B6](https://www.srolobby.com/konular/silkroad-online-qin-shi-tomb-b6-monsters-mob-hp-saldiri-tipleri.1780))
 
 ### BEAKYUNG THE WHITE VIPER « MEDUSA » (Level 105)
 ```
 HP: 183,535,199 | Zone: White Viper Chamber (pièce nord du B6)
 ```
 - Le boss final du tombeau, la « Snake Lady / Medusa » de la communauté
+- **Structure B6 (recherche TR 2026-10)** : 4 salles, dont **2 avec uniques** — attaques physique et magique (SroLobby)
+- ⚠️ **Conflit de niveau non tranché** : les sources TR (SroLobby + Extraloob) indiquent **Lv 100** ; le client iSRO (KB) et le wiki TW DiGeam indiquent **105**. Les HP sont identiques des deux côtés (183 535 199) — à trancher via le client
+- **Accès rapporté (Extraloob)** : B5 = **5 uniques** à tuer, puis B6 = tuer **4 fois** l'unique 95 avant la salle Medusa — **divergent** du protocole « 4 gardiens + Shinmoo » du guide mmorpg.com (non tranché)
+- **Skills officiels (TW DiGeam)** : AoE magique à distance, ligature frontale, **pétrification 100 %** en rayon, fortes attaques — voir la section [Noms multilingues](#-noms-multilingues-des-uniques-zh--kr)
 - Sur iSRO son spawn est partiellement **codé en dur dans le GameServer** (source : guide elitepvpers « Fixing Medusa duplicated spawn »)
 - Considérée comme le unique le plus difficile du jeu classique — top guilds uniquement
 
@@ -301,24 +357,29 @@ Le **Job Temple** (donjon de job au sud d'Alexandrie, cap 120) contient 6+ uniqu
 Les donjons FGW (accessibles lvl 35-110 via les **Dimension Holes** ouverts par les **Envies** après destruction des **Dimension Pillars**) ont chacun un boss final. Code client : `MOB_GOD_*`.
 
 ### Donjons et brackets
-| Donjon | Brackets de level | Boss |
-|--------|-------------------|------|
-| **Togui Village** | 35-50 / 51-60 / 61-70 | **Togui General** (A1 = lvl 39, HP 143,131) + Togui Elder |
-| **Arab Flame Mountain** | 71-80 / 81-90 | Généraux de la montagne (noms exacts Ipne/Ipilla signalés par la communauté — *non vérifiés dans le client*) |
-| **Green Abyss (Shipwreck)** | 91-100 | **Ghost Sereness** (A1 = lvl 93, HP 11,307,269, **Petrify!**) |
-| **Sea of Resentment (Shipwreck)** | 101-110 | **Ghost Sereness** version 101-110 (drops D11 Nova) |
+| Donjon | Brackets de level | Boss | Nom chinois officiel (✅ recherche ZH 2026-10) |
+|--------|-------------------|------|-----------------------------------------------|
+| **Togui Village** | 35-50 / 51-60 / 61-70 | **Togui General** (A1 = lvl 39, HP 143,131) + Togui Elder | **血灵地狱-土鬼村** (« Enfer de sang - village des démons de terre ») |
+| **Arab Flame Mountain** | 71-80 / 81-90 | Généraux de la montagne (noms exacts Ipne/Ipilla signalés par la communauté — *non vérifiés dans le client*) | **燃烧深渊-火焰山** (« Abysse ardente - montagne de feu ») ; séquence officielle TW : 妒鬼 → 熔天魔将 → 红孩儿 → **牛魔王** (= Flame Cow King, « Roi-Démon Bœuf » du Voyage en Occident) |
+| **Green Abyss (Shipwreck)** | 91-100 | **Ghost Sereness** (A1 = lvl 93, HP 11,307,269, **Petrify!**) + uniques **Ghost Beast** (navires 1-2) et **Ghost Gultton** (dernier navire) | **永恒之海-船舶墓地** (« Mer éternelle - cimetière de navires ») ; boss final 女妖 (« la sirène ») |
+| **Sea of Resentment (Shipwreck)** | 101-110 | **Ghost Sereness** version 101-110 (drops D11 Nova) | variante **冰海之心** (« cœur de la mer glacée ») |
+
+> ✅ **Résolu (recherche ZH 2026-10)** : le nom chinois du système FGW est **遗忘世界 / 異次元洞** (« monde oublié / trou dimensionnel ») — le nom « 千里之坟 » parfois cité **n'existe pas** (requête exacte : zéro résultat jeu). Sources : [wiki DiGeam — Flame Mountain](https://srowiki.digeam.com/%E7%87%83%E7%87%92%E6%B7%B1%E6%B7%B5-%E7%81%B0%E5%B1%B1) · [iccgame — Shipwreck](https://silkroad.iccgame.com/content-667-49139.html)
+>
+> ✅ **Résolu (recherche TR 2026-10)** : noms des uniques du Green Abyss 91-100 — **Ghost Beast** (navires 1-2), **Ghost Gultton** (dernier navire), boss final **Ghost Serenes** (invoque 2 Gultton à bas HP ; en 3-4★ l'arène contient Serenes + Gultton + Beast). Source : [SroLobby — Shipwreck 91-100](https://www.srolobby.com/konular/silkroad-online-shipwreck-91-100-forgotten-world-map-rehberi.2251)
 
 ### Détails
-- **Grades:** chaque donjon existe en grades 1★-4★ ; le level du boss et des mobs monte avec le bracket et le grade (suffixe client A1-A4)
-- **Party:** 4 joueurs max en 1★-2★, 8 en 3★-4★
+- **Grades (✅ Résolu, recherche TR 2026-10)** : mobs 1★ = type **General**, les **Envies** = **Champion** ; 2★ = Champion/Elite ; 3★-4★ = monstres **Elite**. Party : 4 joueurs max en 1★-2★, **8 en 3★-4★** (série des 7 guides FGW turcs SroLobby)
 - **Timer:** 2h dans le donjon, ré-entrée impossible pendant 3h ; les trous de dimension se rouvrent toutes les 30 min
+- **Cooldown 3 h confirmé + règle des 7 niveaux (✅ recherche ZH 2026-10)** : pierre d'entrée (异次元洞石) réutilisable après 30 min, chaque pierre expire en 24 h ; **aucun drop si le joueur dépasse les monstres de 7 niveaux ou plus** (règle anti-carry officielle TW)
 - **Ghost Sereness** : boss « Serenity Ghost » présent dans tous les donjons FGW, avec **pétrification** — clez/tuez les adds, purgez la pétrification
 - **Récompenses de collection** (talisans → armes) :
   - Togui Village → arme **8D Seal of Sun**
   - Flame Mountain → arme **9D Seal of Sun**
-  - Green Abyss → arme **10D Seal of Moon**
+  - Green Abyss → arme **10D Seal of Moon** (confirmé : récompense rendue à Hotan au Guild Manager **Musai** = 武萨伊, contre 第十套月亮印章 — [iccgame](https://silkroad.iccgame.com/content-667-49139.html))
   - Sea of Resentment → arme **11D Seal of Nova** (Power)
 - Les talismans tombent dans les trésoreries et sur les boss ; les **Faded Beads** rapportent 200-20,000 SP
+- ⚠️ **HP FGW divergents (non tranché)** : les guides TR (SroLobby) listent des HP **1000× supérieurs** aux valeurs client de la KB (ex. Togui General 1★ : 143 131 000 ; Ghost Serenes 1★ : 11 307 269 000) — probablement extraits de fichiers vSRO, à recouper avec `_RefObjCommon` ; niveaux et structure concordent en revanche
 
 > 👉 Guide dédié : [29_FORGOTTEN_WORLD.md](./29_FORGOTTEN_WORLD.md)
 
@@ -361,6 +422,21 @@ StrategyWiki (2006)  : "spawn 1-2 fois par jour dans des zones spéciales" (anci
   - Lord Yarkan → arène
   - Demon Shaitan → près de Claw Peak
 - 🔗 Sur certains serveurs (ZsZC), Tiger Girl a une chance de spawn **après** la mort de Lord Yarkan ou Uruchi
+
+### ⏱️ Timers par unique (communauté TR) — ✅ Résolu (recherche TR 2026-10)
+
+Fenêtres de respawn rapportées **en minutes après la mort** ([Extraloob — guide uniques 1-100](https://www.extraloob.com/threads/silkroad-1-100-level-unique-hakkinda-bilgiler-234754)) :
+
+| Unique | Fenêtre rapportée |
+|---|---|
+| Tiger Girl | **~210-390 min** (3h30 - 6h30) |
+| Cerberus | **~200-400 min** |
+| Captain Ivy | **~200-450 min** (parfois jusqu'à **700 min** !) |
+| Uruchi | **~230-450 min** |
+
+Règles génériques citées sur DonanımHaber ([thread « unique spawn saatleri »](https://forum.donanimhaber.com/unique-spawn-saatleri--14339078)) : « **3,5-5 h** » (rebellon) / « **minimum 2 h après le dernier kill, ensuite aléatoire** » (_aNaToLia_).
+
+> ⚠️ **Conflit FR non tranché (recherche FR 2026-10)** : le guide FR « Les Uniques » (GMS Temple, 2010) décrit un spawn ressenti « **environ toutes les 4 heures** », tandis que [Wikipédia FR](https://fr.wikipedia.org/wiki/Silkroad_Online) indique « **environ toutes les 6 heures** » — aucune des deux n'est une donnée client. Les fenêtres TR ci-dessus (3h30 → 11h40 pour Ivy) englobent les deux estimations. Source : [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md)
 
 ### Variations serveurs privés
 - Low-rate (1x-5x) : souvent timers officiels
@@ -528,3 +604,4 @@ Détails complets : [MONSTERS_SPAWN_LOCATIONS.md](./MONSTERS_SPAWN_LOCATIONS.md)
 ---
 
 *Dernière mise à jour: 2026-10-01 (recherche web exhaustive — données client vérifiées via silkroadonline.wiki, elitepvpers, rev6, mmorpg.com, strategywiki)*
+*Fusion multilingue 2026-10 : rapports [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) (timers TR, noms ZH/KR, gardiens B5, skills Medusa, FGW)*

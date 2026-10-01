@@ -3,6 +3,8 @@
 > 📍 **Vous êtes ici :** [Accueil](README.md) → [Hub Classes](HUB_CLASSES.md) → [Skills Database](30_SKILLS_DATABASE.md)
 
 > ⚠️ **Révision majeure (2026-10)** : ce hub a été resynchronisé avec [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md) et [SKILLS_DATABASE_EUROPEAN.md](SKILLS_DATABASE_EUROPEAN.md), réécrits à partir des **vraies données iSRO** (fichier `skills.txt` du client, traductions elitepvpers, Silkroad Origin Mobile, PhBot). L'ancienne version du hub contenait des noms de skills **inventés** (« Flying Chain Series », « Two-Handed Warrior » comme classe…) — tout est corrigé ci-dessous.
+>
+> 🌏 **Enrichissement (recherche multilingue 2026-10)** : ajout des **noms originels KR/ZH** des maîtrises et séries CH (rapports [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) / [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md)) — l'incertitude « noms KSRO introuvables » est levée : ✅ **Résolu (recherche KO/ZH 2026-10)**.
 
 ## 📋 Table des Matières
 - [Introduction](#-introduction)
@@ -50,6 +52,22 @@ Chaque maîtrise = **séries** (lignes de progression), chaque série = **livres
 | 💪 **Force** (« Water ») | `SKILL_CH_WATER_*` | Self Heal · Force Cure (dissipe statuts) · Heal (cible) · Rebirth Art (résurrection) · Harmony Therapy (HoT) · **Vital Spot (debuffs nommés : Decay/Weaken/Impotent/Division)** · Cure Therapy · Vital Flow | Force Increasing (MP max) |
 
 Détails complets (tableaux livre par livre, cast/CD, puissances Origin Mobile) → [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md)
+
+### 🌏 Noms originels des maîtrises CH (KR/ZH)
+
+| Maîtrise | Nom KR officiel (2004) | Nom ZH |
+|---|---|---|
+| Bicheon | **비천검법** (bicheon geombeop) | 飞天剑法 (fēitiān jiànfǎ) |
+| Heuksal | **흑살창법** (heuksal changbeop) | 黑杀枪法 (hēishā qiāngfǎ) |
+| Pacheon | **파천신궁** (pacheon singung) | 破天神弓 (pòtiān shéngōng) |
+| Cold | **한빙면공** (hanbing myeongong) | 冰系 (bīngxì) |
+| Lightning | **풍뢰비공** (pungroe bigong) | 雷系 (léixì) |
+| Fire | **화령신공** (hwaryeong singong) | 火系 (huǒxì) |
+| Force | **기혈대법** (gihyeol daebeop) | 内功心法 (nèigōng xīnfǎ) |
+
+- ✅ **Résolu (recherche KO 2026-10)** : liste coréenne officielle de l'open beta ([Inven, 20/12/2004](https://www.inven.co.kr/webzine/news/?news=2285)) + noms ZH sémantiques d'origine ([wiki officiel TW DiGeam](https://srowiki.digeam.com/%E5%B1%AC%E6%80%A7%E6%B0%A3%E5%8A%9F), [archives CSRO Sina 2005-2007](http://games.sina.com.cn/o/z/slcs/)).
+- Séries notables : 멸절결 = Pierce · 선풍창 = Storm/spin · 이혼창 동/진/혼 = Soul Spear Move/Truth/Soul · 폭염파 = Flame Wave · 사자후 = Lion Shout · 관통섬공 = Piercing Force · 풍뢰경공 = Wind Walk · 狮子吼 = Lion Shout (ZH) · 净化术 = Force Cure (ZH) · 暴焰波 = Flame Wave (ZH) · 发火术 = Fire DETECT (détection des invisibles, ZH). Tableaux complets → [SKILLS_DATABASE_CHINESE.md](SKILLS_DATABASE_CHINESE.md).
+- ℹ️ **Localisations officielles** : coréen, chinois, japonais, anglais (INT), russe uniquement — **aucun client FR/TR/DE officiel n'a jamais existé** (vérifié [RESEARCH_FR](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_TR](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_DE](ML_RESEARCH/RESEARCH_DE.md)) : les communautés FR/TR/DE jouaient avec les noms anglais du client.
 
 ---
 
@@ -111,6 +129,8 @@ Détails complets (buffs par portée, rotations, tips) → [SKILLS_DATABASE_EURO
 ### Imbues (Chinois uniquement)
 - **Une seule imbue active** à la fois (toggle). Le CD de réactivation croît avec le livre (6 → 21 s).
 - Fire = dégâts max + **Burn** (DoT) · Cold = **Frostbite** (~40 %) + **Freeze** (~20 %) · Lightning = **Shock** (réduit le parry ratio) + splash.
+- ⚙️ Mécanique documentée (forum DE, 2006) : le bonus d'imbue est **multiplié par le % de dégâts du skill** (200 % → ×2 ; combo 68 %/coup → proportionnel) et figé côté serveur **à la confirmation d'activation** — [silkroadonline.de — Schadensberechnung](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/4266-schadensberechnung), via [RESEARCH_DE](ML_RESEARCH/RESEARCH_DE.md).
+- 🧪 Chiffres lv1 (officiels KR, 2005) : River Fire = 21 dégâts moyens · Thunder Tiger = 17,5 · splash Lightning = 12,25 (≈ +20 % de vitesse de farm) — [GameAbout](http://www.gameabout.com/news/articleView.html?idxno=615), via [RESEARCH_KO](ML_RESEARCH/RESEARCH_KO.md).
 
 ### Statuts et pilules
 | Statut | Source | Pilule universelle ? |
@@ -183,6 +203,8 @@ interface SkillIdentity {
   masteryGroup: number;  // 257 (Bicheon), 258 (Heuksal), 259 (Pacheon), 277 (Cold/Lightning/Fire), 276 (Force)
   book: 'A'|'B'|'C'|'D'|'E'|'F'|'G'|'H';
   level: number;         // niveau du skill (déverrouillage: +2 maîtrise par niveau)
+  nameKo?: string;       // nom coréen officiel, ex. "멸절결" — couche display (recherche KO 2026-10)
+  nameZh?: string;       // nom chinois, ex. "破轮枪系列" — couche display (recherche ZH 2026-10)
 }
 
 // EU: pas de codenames publics fiables -> clé = (mastery, ligne R, book 1|2)
@@ -215,6 +237,8 @@ model Skill {
   cooldown      Float?            // secondes (skills.txt)
   effectFlags   String[]          // burn/freeze/shock/stun/kd/...
   spCost        Int               // table à maîtrise+1
+  nameKo        String?           // nom coréen officiel (couche display — recherche KO 2026-10)
+  nameZh        String?           // nom chinois (couche display — recherche ZH 2026-10)
 }
 ```
 
@@ -228,7 +252,7 @@ model Skill {
 R: Chinois : jusqu'à 3 efficacement (total 300 points au cap historique). Européens : **2 maximum** (total ≤ 2 × niveau). Les skills sont verrouillés par race.
 
 **Q: Quelle est la clé de référence pour les skills CH ?**
-R: Le **codename client** (`SKILL_CH_…`) : identique sur toutes les versions (KSRO/iSRO/vSRO), contrairement aux noms affichés qui varient.
+R: Le **codename client** (`SKILL_CH_…`) : identique sur toutes les versions (KSRO/iSRO/vSRO), contrairement aux noms affichés qui varient. Les noms originels KR (비천검법, 멸절결…) et ZH (飞天剑法, 破轮枪系列…) sont désormais documentés (✅ recherche KO/ZH 2026-10) et servent de **couches d'affichage** — voir la section « Noms originels » ci-dessus.
 
 **Q: Peut-on réinitialiser ses compétences ?**
 R: Oui — quête **Skill Resuscitation** (CH, lvl 20+, rembourse **80 % du SP**) ; les nuances EU dépendent du serveur (l'ancien « NPC Skill Master à 100k gold » de ce hub n'était pas sourcé).
@@ -265,5 +289,5 @@ R: Voir [33_PVP_BUILDS.md](33_PVP_BUILDS.md) ; les interrupts (Sprint Assault, S
 
 ---
 
-**Dernière mise à jour : 2026-10-01**
+**Dernière mise à jour : 2026-10-01 (enrichi des noms originels KR/ZH et de la mécanique des imbues — recherche multilingue ML_RESEARCH)**
 *Hub resynchronisé avec les bases CH/EU révisées (noms iSRO réels, codenames, structure séries/livres et book 1-2 ; correction : 6 maîtrises EU, pas 8 « classes »). Les listes de skills non sourcés de l'ancienne version ont été remplacées par les skills vérifiés des bases détaillées.*

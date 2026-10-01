@@ -3,6 +3,7 @@
 ## 📋 Table des Matières
 - [Vue d'Ensemble](#-vue-densemble)
 - [Équivalences Star / Moon / Sun](#-équivalences-star--moon--sun)
+- [Nomenclature Chinoise & Règle du 1er Tier (Armes)](#-nomenclature-chinoise--règle-du-1er-tier-armes)
 - [Seal of Star (SOS)](#-seal-of-star-sos)
 - [Seal of Moon (SOM)](#-seal-of-moon-som)
 - [Seal of Sun (SOSun)](#-seal-of-sun-sosun)
@@ -55,6 +56,25 @@ Règle communautaire confirmée par plusieurs sources (elitepvpers, kmkm guide, 
 | **Seal of Sun** | Item normal **+15 niveaux** | SoSun D8 ≈ entre D10 et D11 |
 
 > 📝 Exemple : un SoS d'un degré donné a des stats proches d'un item **normal du degré suivant** ; un SoSun D8 « vaut » quasiment un normal D10. C'est pourquoi le SOX d'un degré reste souvent meilleur qu'un normal du degré supérieur, et se garde plusieurs niveaux de plus.
+
+---
+
+## 🐉 Nomenclature Chinoise & Règle du 1er Tier (Armes)
+
+> Sources : wiki officiel TW (DiGeam), forum Bahamut (TW), archive 17173 (CSRO, 2006) — recherche ZH 2026-10.
+
+| Concept iSRO | Chinois | Pinyin | Lecture |
+|--------------|---------|--------|---------|
+| Seal of Star | 星星装 (TW 星星裝) | xīngxing zhuāng | « équipement étoile » |
+| Seal of Moon | 月亮装 | yuèliang zhuāng | « équipement lune » |
+| Seal of Sun | 太阳装 (TW 太陽裝) | tàiyáng zhuāng | « équipement soleil » |
+| Seal (générique, argot CN) | 暗金 | ànjīn | « or sombre » |
+
+- Hiérarchie confirmée côté TW : **太阳 > 月亮 > 星星** (Sun > Moon > Star) — Bahamut : https://forum.gamer.com.tw/C.php?bsn=8441&snA=57079.
+- ⚔️ **Règle du « 1er tier » (armes)** : « 丝路的暗金武器只出每套武器的第一阶段 » — le seal d'arme n'existe que sur le **premier tier d'un degré**. En 8D (tiers 64/68/72), **seul le tier 64 existe en 暗金**. Source : [17173 — 暗金篇, 13/05/2006](http://sro.17173.com/content/2006-05-13/1147524473.shtml).
+  - Conséquence de farm : cibler les mobs du niveau du 1er tier (ex. mobs 63-64 pour une arme seal 8D) ; les events CSRO type « 疯狂宝盒 » multipliaient **×5 le taux d'暗金** ([Sina, 30/11/2006](http://games.sina.com.cn/o/n/2006-11-30/1917177688.shtml)).
+- 📜 **Témoignage FR (2008)** : le tuto de traduction GMS Temple donnait l'équivalence ressentie « SoS = +7, SoM = +7/+15 (formulation ambiguë), SoSun = +15 » — ressenti d'époque **contredit par la règle +5/+10/+15** issue des données ; à conserver comme note historique uniquement (https://forum.gmstemple.com/index.php?showtopic=4387).
+- 🇩🇪 **Corroboration DE** : SoS/SoM/SoSun compris comme **+5/+10/+15 niveaux virtuels** (« un Lv1 SoSun a les stats d'un Lv16 ») — https://www.silkroadonline.de/allgemein/allgemeines-ber-silkroad/7705-was-genau-ist-an-sos-so-gut
 
 ---
 
@@ -117,6 +137,7 @@ Règle communautaire confirmée par plusieurs sources (elitepvpers, kmkm guide, 
 
 - Système introduit avec **Legend V: Heroes of Alexandria** : items de set avec **bonus de set** quand plusieurs pièces sont équipées.
 - D11, drops Alexandria/uniques high-level. Complètent la gamme SOX/Egypt en fin de jeu.
+- Origine coréenne : introduits par **Legend 9 KR (09/09/2009)** — « 세트의 개수에 따라 세트 속성이 발생 » (les propriétés de set s'activent selon le nombre de pièces) ; à cette occasion, les grades normal/rare précédents ont été **unifiés en un seul grade** (TGDaily : https://www.tgdaily.co.kr/news/articleView.html?idxno=142381). Legend V iSRO (2010) est la version internationale de cette mise à jour.
 
 ---
 
@@ -145,6 +166,18 @@ Règle communautaire confirmée par plusieurs sources (elitepvpers, kmkm guide, 
 - Instance à 8 joueurs, 4 donjons par tranches de niveau, 4 grades de difficulté.
 - Récolter les **talismans** (collections) — le talisman « arme » complété = quête donnant l'arme seal du tier (D8 Sun / D9 Sun / D10 Moon / D11 Nova selon le donjon).
 - Tuer toutes les Treasure Boxes pour les talismans ; ouvrir les boxes sur un perso avec peu de talismans (meilleur taux).
+- NPC de remise des collections : Guild Manager **Musai** (Hotan) — l'opérateur CN documente l'échange de **8 cartes de collection** contre une arme **D10 Seal of Moon** (guide officiel iccgame : https://silkroad.iccgame.com/content-667-49139.html).
+
+**Rareté des talismans (32 au total : 8 par collection — recherche TR 2026-10)** — 3 communs / 3 normaux / 2 rares par collection :
+
+| Collection (récompense) | Communs (« çok çıkar ») | Normaux | Rares (« nadir ») |
+|---|---|---|---|
+| Togui Village (→ SoSun **D8**) | Red Tears, Western Scriptures, Togui Mask | Red Talisman, Puppet, Dull Kitchen Knife | Spell Paper, Elder Staff |
+| Flame Mountain (→ SoSun **D9**) | Fire Flower, Horned Cattle, Flame of Oblivion | Flame Paper, Hearthstone Flame, Enchantress Necklace | Honghaeah Armor, Fire Dragon Sword |
+| Green Abyss (→ SoM **D10**) | Silver Pendant, Cobalt Emerald, Logbook | Love Letter, Portrait of a Woman, Jewelry Box | Diamond Watch, Mermaid's Tears |
+| Sea of Resentment (→ SoN **D11**) | Broken Key, Large Tong, Phantom Harp | Evil's Heart, Vindictive Spirit's Bead, Hook Hand | Commander's Patch, Serenity's Tears |
+
+Sources TR : [vSRO.org — liste des talismans par degré](https://www.vsro.org/konular/forgetten-world-talisman-kart-listesi-8-9-10-11-dg-zorluk-derecesine-gore.7600) + guides SroLobby (ex. [Togui Village 35-50](https://www.srolobby.com/konular/silkroad-online-togui-village-35-50-forgotten-world-map-rehberi.2684)).
 
 ### 3. Job Temple (Egypt)
 - Uniques à fenêtres de spawn (matin/soir) : Anubis & Isis d'abord, puis Haroeris, puis Seth.
@@ -251,6 +284,17 @@ Un **système de loterie** (gacha) auprès du NPC Magic Pop (présent dans les v
 - [Silkroadonline.de — Gambling System (Magic Pop)](https://www.silkroadonline.de/allgemein/allgemeines-ber-silkroad/31148-gambling-system-in-isro)
 - [Elitepvpers — Magic POP Card](https://www.elitepvpers.com/forum/silkroad-online/302204-magic-pop-card.html)
 
+### Recherche multilingue (2026-10)
+- [17173 — 暗金篇 : seal d'arme = 1er tier du degré (CN, 2006)](http://sro.17173.com/content/2006-05-13/1147524473.shtml)
+- [Sina — event 疯狂宝盒 : taux d'暗金 ×5 (CN, 2006)](http://games.sina.com.cn/o/n/2006-11-30/1917177688.shtml)
+- [Bahamut — hiérarchie 星星/月亮/太阳 (TW)](https://forum.gamer.com.tw/C.php?bsn=8441&snA=57079)
+- [vSRO.org — liste des 32 talismans FGW par degré (TR)](https://www.vsro.org/konular/forgetten-world-talisman-kart-listesi-8-9-10-11-dg-zorluk-derecesine-gore.7600)
+- [SroLobby — série des 7 guides FGW (TR, Burak Yoğun)](https://www.srolobby.com/konular/silkroad-online-togui-village-35-50-forgotten-world-map-rehberi.2684)
+- [iccgame — guide officiel CN Shipwreck : NPC Musai, D10 Seal of Moon](https://silkroad.iccgame.com/content-667-49139.html)
+- [TGDaily — Legend 9 KR : set items, unification des grades (KO, 2009)](https://www.tgdaily.co.kr/news/articleView.html?idxno=142381)
+- [silkroadonline.de — Was genau ist an SoS so gut? (+5/+10/+15, DE)](https://www.silkroadonline.de/allgemein/allgemeines-ber-silkroad/7705-was-genau-ist-an-sos-so-gut)
+- [GMS Temple — Tuto traduction : équivalences ressenties FR 2008](https://forum.gmstemple.com/index.php?showtopic=4387)
+
 ### Bases de données
 - [Silkroad Online Database (items, client v1_657)](https://silkroadonline.wiki/items)
 - [xSROMap](https://jellybitz.github.io/xSROMap/)
@@ -281,4 +325,4 @@ Un **système de loterie** (gacha) auprès du NPC Magic Pop (présent dans les v
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: elitepvpers, silkroadonline.fandom.com, guildalgarb, seidenkraft, GameFAQs (Sintaku), eXay forums, RageZone, silkroadonline.de, annonces officielles Facebook Silkroad*
+*Sources: elitepvpers, silkroadonline.fandom.com, guildalgarb, seidenkraft, GameFAQs (Sintaku), eXay forums, RageZone, silkroadonline.de, annonces officielles Facebook Silkroad, 17173/Sina/Bahamut/iccgame (ZH), SroLobby/vSRO.org (TR), TGDaily (KO), GMS Temple (FR) — rapports ML_RESEARCH 2026-10*

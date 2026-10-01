@@ -25,6 +25,7 @@
 | Attribut | Valeur |
 |----------|--------|
 | **Région** | East Europe |
+| **Nom chinois (officiel)** | **君士坦丁堡** · coréen : 콘스탄티노플 |
 | **Position (officielle)** | ≈ X **−10 680**, Y **2 600** |
 | **Niveaux** | 1-20 (départ EU), hub permanent ensuite |
 | **Architecture** | Byzantine — remparts, église, place centrale, port |
@@ -202,6 +203,7 @@ Constantinople est le point de départ des **6 classes européennes**. Contraire
 
 ### Routes terrestres
 - **Est → Asia Minor** : zone 20-30 (Captain Ivy), avant-postes
+  - Asia Minor = **小亚细亚** en ZH ; Captain Ivy = **艾维船长** — zones ZH : 克利奥派特拉门 (Cleopatra's Gate), 邪恶之灵要塞 ; fenêtre de respawn TR : ~200-450 min (jusqu'à 700) — ✅ recherche ZH/TR 2026-10
 - **Nord-est → Samarkand** : longue route commerciale
 - **Return Scroll** : rappel à la résidence
 
@@ -251,7 +253,7 @@ R: **Smuggler Raul** (−10 969, 2 543), au sud de la ville. Soldier Kartino (�
 R: Oui — c'est l'origine thématique de la route maritime vers Alexandria (port effectif de départ : Harbor Manager Gale au sud-ouest).
 
 **Q: Où spawn Cerberus ?**
-R: Autour de Constantinople (Desperado Hill, Forest of Dusk, Garden of Gods) — spawns officiels X −12 490 à −11 330 / Y 1 300 à 2 225.
+R: Autour de Constantinople (Desperado Hill, Forest of Dusk, Garden of Gods) — spawns officiels X −12 490 à −11 330 / Y 1 300 à 2 225. Noms ZH des zones : 神的庭院 (Garden of Gods), 无法者的山坡 (Desperado Hill), 黄昏的树林 (Forest of Dusk), 黎明的海岸 — Cerberus = **克贝洛斯** ; fenêtre de respawn TR : ~200-400 min (✅ recherche ZH/TR 2026-10).
 
 **Q: Peut-on acheter de l'équipement chinois ici ?**
 R: Non — les marchands de Constantinople ne vendent que de l'équipement européen. Pour l'équipement chinois, allez à Jangan/Donwhang/Hotan (ou Samarkand qui sert les deux).
@@ -289,3 +291,4 @@ R: Non — les marchands de Constantinople ne vendent que de l'équipement europ
 
 *Dernière mise à jour : 2026-10-01*
 *Sources : données client officielles (xSROMap), SRO Lobby, Fandom Wiki, IGN*
+*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (nom ZH 君士坦丁堡, zones Cerberus/Ivy) · [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (콘스탄티노플) · [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (timers Cerberus/Ivy)*

@@ -24,6 +24,7 @@
 | Attribut | Valeur |
 |----------|--------|
 | **Région** | Egypt |
+| **Nom chinois (officiel)** | **亚历山大** (Yàlìshāndà) · coréen : 알렉산드리아 (Legend 9 KR, 09/09/2009 — cap 105) |
 | **Position (officielle)** | Alexandria **South** ≈ (−16 600, −300) · Alexandria **North** ≈ (−16 200, 50) |
 | **Niveaux** | 100-110+ |
 | **Équipement local** | 10D-11D (12D-13D sur les serveurs cap 120) |
@@ -218,7 +219,9 @@ Les deux parties sont reliées par leurs Dimensional Gates respectifs.
 | **Kings Valley** | 107-110 | Uraeus, Blood Hyena, Viper |
 | **Forbidden Plain / Abundance Ground** | 108-110+ | elites égyptiennes |
 
-> **Medusa** (unique, niv. 105) : l'unique emblématique de l'ère Legend V, associée au contenu du Temple.
+> **Medusa** (unique, niv. 105) : l'unique emblématique de l'ère Legend V, associée au contenu du Temple. ⚠️ Conflit non tranché (recherche TR 2026-10) : les sources TR situent BeakYung « Medusa » au **niv. 100** (Qin-Shi Tomb B6, HP 183 535 199 identiques) — voir [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md).
+>
+> 🈶 Noms ZH : Delta Area = **三角洲地区** ; Alexandria = ville « 侠客 vs 盗贼 » avec NPC d'échange propres aux jobs (✅ recherche ZH 2026-10).
 
 ---
 
@@ -236,6 +239,8 @@ Le donjon PvPvE d'Alexandria, appelé « Job Cave » par la communauté.
 | **Sorties** | vers **Kings Valley** |
 | **Boss de quête** | Sphinx, Sekhmet, Nephthys, Horus, Osiris (cœurs pour Senmute) |
 | **Drops** | Seal of Nova / Egypt, équipement 10D-11D+ (13D cap 120), matériaux |
+
+> 🈶 **Noms officiels ZH/KR (✅ recherche ZH/KO 2026-10)** : le Job Temple = **神殿** (« le Temple »), situé dans **风暴沙漠** (Storm Desert) — accès lv 100+ en tenue de métier, **salles ouvertes 90 min**, 2 camps **侠客 vs 盗贼** (Hunter vs Thief) + points AP ; s'y rattache **法老王陵墓** (tombe du Pharaon). Côté KR (Legend 9) : 폭풍과 구름의 사막 (Storm & Cloud Desert), 왕가의 계곡 (vallée des Rois), 파라오의 무덤 (3 runs/jour). Uniques ZH : 赛尔基斯 (Selket), 奈特 (Neith), 阿努比斯 (Anubis), 伊希斯 (Isis). Sources : [wiki DiGeam — 神殿](https://srowiki.digeam.com/%E2%96%A0%E9%A2%A8%E6%9A%B4%E6%B2%99%E6%BC%A0%E5%9C%B0%E5%8D%80%E7%A5%9E%E6%AE%BF) · [GNN](https://gnn.gamer.com.tw/detail.php?sn=195906) · [TGDaily Legend 9](https://www.tgdaily.co.kr/news/articleView.html?idxno=142381)
 
 ### Composition de groupe recommandée
 ```
@@ -321,3 +326,4 @@ R: À la série de quêtes principales « Overdriving Heart » du Governor Senmu
 
 *Dernière mise à jour : 2026-10-01*
 *Sources : données client officielles (xSROMap), Silkroad Secrets, Guild Algarb, press Joymax*
+*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (nom ZH 亚历山大, Job Temple 神殿, Delta 三角洲地区) · [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (Legend 9 KR, cap 105) · [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (conflit niveau BeakYung)*

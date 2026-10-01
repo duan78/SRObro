@@ -36,7 +36,33 @@ Ce document track toutes les modifications apportées à la documentation SRO_KN
 - Opcodes/structures de packets officiels (SilkroadDoc) dans TECHNICAL_SPECIFICATIONS.md
 - Chiffres sourcés partout : timers, cooldowns, HP, SP, prix, drops
 
-**Fichiers les plus impactés :** 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 33, 34, 35, CITIES_01→05, ITEMS_DATABASE, 31, 32, MONSTERS_*, NPCS_*, MAP_COORDINATES, SKILLS_DATABASE_*, TECHNICAL_SPECIFICATIONS, INDEX_BUILDS
+---
+
+## 🌍 2026-10-01 (2) — Passe Multilingue Exhaustive (TR/KO/PT/FR/ZH/DE)
+
+### 6 rapports de recherche + fusion dans ~35 fichiers
+
+**Méthode :** 6 campagnes de recherche dans les langues des grandes communautés historiques (~120 requêtes en turc, coréen, portugais, français, chinois, allemand), rapports sourcés dans `ML_RESEARCH/` (RESEARCH_TR/KO/PT/FR/ZH/DE.md), puis fusion par 7 agents thématiques dans les fichiers de la base.
+
+**Sources majeures découvertes :**
+- 🇹🇷 SroCave (taux d'alchimie extraits du code), SroLobby (série des 7 guides FGW), DonanımHaber (forum historique)
+- 🇰🇷 Inven/GameAbout 2004-2007 (noms officiels KR), site kSRO toujours actif, presse coréenne (acquisition Wemade 57 M$)
+- 🇨🇳 wiki DiGeam (officiel TW/HK), iccgame (officiel CN), archives Sina/17173 (CSRO 2005-2007), Bahamut
+- 🇩🇪 silkroadonline.de (forum historique 2006-2015, traductions des guides officiels Joymax), elitepvpers DE
+- 🇫🇷 JeuxOnline (traductions d'annonces 2006-2013), GMS Temple (12 guides FR 2007-2012), JeuxVideo.com
+- 🇧🇷 Adrenaline/UOL (éditeur BR Level Up!, GNGWC 2009), Wikipédia PT
+
+**Résolutions majeures d'incertitudes :**
+- Uniques du Green Abyss FGW identifiés (Ghost Beast/Ghost Gultton/Ghost Serenes) + tables HP 7 tranches × 4 grades (TR)
+- Noms coréens ET chinois originels des 7 maîtrises et des séries de skills (KO/ZH) → colonnes KR/ZH ajoutées
+- Divergence murderer 300/500/1000 vs 500/1000/2000 : le wiki FR n'existe pas (source fantôme) → 500/1000/2000 (FR)
+- Union de guildes dès le niveau 2 (double source DE) ; procédure guild war complète (DE)
+- Timers de spawn par unique (TR) ; étendards Fortress War chiffrés par le guide officiel (DE) ; histoire du jour jeudi→vendredi
+- Étoiles de trade = 1 NPC thief par étoile (TR) ; profits 361% (2006) ; frais stall 1% plafonnés 100k (FR)
+- Formules empiriques serveur Troy 2006 + mesures XP/SP par gap au monstre près (DE)
+- Pets : HGP <30% → stats ÷2, prix Silk d'époque, max 2 pets (DE) ; mythes d'alchimie FR/DE documentés et débunkés
+
+**Nouveaux contenus :** noms ZH/KR des villes, uniques, régions, sets et armes ; glossaires multilingues enrichis (~430 entrées sourcées : 73 KO, 117 ZH, 69 TR, 74 DE, 43 PT, 35 FR) ; chronologie coréenne distincte (cap 105 KR inédit) ; services régionaux documentés (BR, CN, TW) ; 4 conflits de sources signalés sans trancher.
 
 ---
 

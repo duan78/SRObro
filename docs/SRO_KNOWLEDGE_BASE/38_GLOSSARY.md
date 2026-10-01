@@ -5,6 +5,11 @@
 - [Gameplay Terms](#-gameplay-terms)
 - [Community Terms](#-community-terms)
 - [Abbreviations](#-abbreviations)
+- [Common Phrases Explained](#-common-phrases-explained)
+- [Lexique de la communauté francophone](#-lexique-de-la-communauté-francophone)
+- [Jargon communautaire international](#-jargon-communautaire-international)
+- [Notes de localisation](#-notes-de-localisation)
+- [Additional Resources](#-additional-resources)
 
 ---
 
@@ -313,13 +318,168 @@
 
 ---
 
+## 🇫🇷 Lexique de la communauté francophone
+
+> Source : [ML_RESEARCH/RESEARCH_FR.md](./ML_RESEARCH/RESEARCH_FR.md) — Glossaire français de la communauté FR (vocabulaire réellement observé sur JeuxVideo.com 2005-2018, GMS Temple 2007-2012, JeuxOnline 2006-2013).
+> ⚠️ Le client officiel n'ayant **jamais existé en français**, ce lexique est **entièrement communautaire** : anglicismes bruts du client EN + traductions informelles (voir [Notes de localisation](#-notes-de-localisation)).
+
+### Armes / classes
+
+| Terme FR | Signification | Source |
+|----------|---------------|--------|
+| **glavie** / glaive | Glaive (orthographe communautaire « glavie ») | JVC 2006, GMS Temple 2605 (« ma glavie ») |
+| guisarme | traduction occasionnelle de glaive | — |
+| **nuke** | attaque magique à distance | GMS 8110 (« nuke fire », « nuke light ») |
+| **imbue** | enchantement d'arme élémentaire | GMS 8110, 4387 |
+| **KD / stab** | knockdown / coup au sol | GMS 8110 (« Hidden blade (Knock Down) », « Killing Heaven blade (stab) ») |
+| full INT / full STR / **hybride INT** | répartition STR/INT | GMS 8110 (« l'hybride INT est un compromis parfait ») |
+| wizzard / wiz | wizard EU | GMS 74, 7892 (« utiliser l'invisible si vous êtes wizzard ») |
+
+### Métiers / commerce
+
+| Terme FR | Signification |
+|----------|---------------|
+| **métier** | job (marchand/chasseur/voleur) |
+| **faire du trade** | escorter une caravane ; **thiever** = voler |
+| **pseudo / surnom** | job nickname (préfixé `*`, 6-12 caractères) |
+| **suit / tenue de job** | job suit (portée dans l'emplacement **cape**) |
+| **étoiles** | niveau de la caravane (1-5 étoiles) |
+| **staller** | tenir un stall (verbe francisé !) ; « il faut un 2e compte pour staller » |
+| commis de forteresse | Fortress Association NPC |
+| ministre de guerre | officier habilité à manœuvrer la porte (FW) |
+
+### Alchimie
+
+| Terme FR | Signification |
+|----------|---------------|
+| **alchimiser / monter / passer +3 / remonter** | améliorer un item (« remonter ma glavie +5 ») |
+| **claquer des élixirs** | consumer des élixirs (souvent en vain) |
+| **failed** | échec d'alchimie, employé comme verbe FR (« pake jai failed le +6 ») |
+| **poudre de chance** | lucky powder |
+| **élixirs shield / arme / accessoire** | shield/weapon/accessory elixir |
+| **stuff** | équipement ; **stuff tout fait** = item déjà amélioré acheté |
+| **éléments** | elements (void rondo → éléments) |
+| **lucky planqué** | chance cachée mythique par item (superstition 2007) |
+| sos / som / sosun | Seal of Star/Moon/Sun (prononcés tels quels) |
+
+### Systèmes
+
+| Terme FR | Signification |
+|----------|---------------|
+| **écharpe (de couleur)** | cape PvP (JVC 2006) |
+| **invocations** | summons/pets (JVC 2006) |
+| **loup** / **écureuil** | wolf pet / squirrel pet ramasseur d'or |
+| **grade** : Captain/Knight/General/Baronet | titres de quête 95/100 (CH/EU) |
+| **zerk / berzerk / blue zerk / zerk orange** | berserker et variantes (quêtes 95/100) |
+| **gardiens / apprentis** | guardians / apprentices (académie) |
+| **cœur de la forteresse, tours de garde, étendards, camps de défense** | vocabulaire FW complet FR |
+| **farm / farmer / farm de SP** | grinding ; **gap** = décalage mastery |
+| **CB** | « payer en CB » = acheter des silks avec une carte bancaire |
+| k / m | 1k = 1 000 golds ; 3m = 3 millions |
+| **drop / mob** | anglicismes définis en FR dans le tuto GMS 4387 (« drop : objet tombé ; mob : monstre ») |
+
+### Monstres francisés (spots de farm)
+
+**penons** (Penon Fighters), **isshades/ashades**, **sonars**, **yetis**, **nachals** (INT) / **yachals** (STR) dans les caves, **Niya snipers/hunters/generals**, **black robbers** (bowman/archers), **ujigi/mujigi**, **maong**, **bunwangs**, **yeowa**, « flowers », « lions » (cave de Jangan B2), scorpions — tous issus des guides FR GMS 8110 et 6344.
+
+### Serveurs « français » (aucun serveur officiel FR)
+
+Les FR se regroupaient sur : **Xian** (2006), **Aege** (2009, guilde La_Horde), **Helios** (« team française », 2010), **Alexander/Zeus/Hera** (2011), puis Oasis/Tigris/Uranus/RedSea/Neptune/Maya (2011-2012).
+
+---
+
+## 🌍 Jargon communautaire international
+
+> Argot notable des communautés étrangères, issu des rapports [ML_RESEARCH/](./ML_RESEARCH/). Pour les tableaux complets (termes par langue avec sources), voir **[MULTILINGUAL_GLOSSARY.md](./MULTILINGUAL_GLOSSARY.md)**.
+
+### 🇩🇪 Allemand (silkroadonline.de, elitepvpers)
+
+| Jargon DE | Signification |
+|---|---|
+| **pimpen** | enhancer un item (+X) — « bis +3 relativement facile, ensuite ça devient risqué » (2007) |
+| **SoS / SoM / SoSun** | items Seal of Star/Moon/Sun — aussi **compteurs de kills dans les signatures** : `TG:0, SOS:3, URI:3, SOM:1, ISY:6, SUN:1, LORD:0` |
+| **TG / URI / ISY / LORD** | Tiger Girl / Uruchi / Isyutaru / Lord Yarkan (abréviations de signatures) |
+| **der Twink** | personnage secondaire (alt) |
+| **plvln** (powerleveln) | power-leveler |
+| **die Gilde hochziehen** | monter la guilde (GP) |
+| **Leecher / leechen** | suiveur de party XP |
+| **Failsafe / Verlust** | destruction d'item (alchimie) |
+| **„Kein Trick"** | consensus DE/elitepvpers : **aucune astuce d'alchimie ne fonctionne** (« la chance est fixée côté serveur ») |
+| **Glückspulver / Sp-Farmen** | poudre de chance / farm de SP |
+
+### 🇹🇷 Turc (SroCave, SroLobby, DonanımHaber, vSRO.org…)
+
+> ⚠️ Le jeu n'a **jamais été localisé en turc** : la communauté TR utilise les **noms anglais** des skills/uniques/items (Tiger Girl, Lord Yarkan, Seal of Sun…) et mélange turc + anglicismes (skill, drop, unique, level).
+
+| Jargon TR | Signification |
+|---|---|
+| **kasma** | farming/grinding (« kasılma yerleri » = spots de farm) |
+| **artı basma** | « mettre un plus » (enhancement +X) |
+| **yanma** | « brûler » = destruction d'item à l'alchimie |
+| **sıfırlanma** | remise à zéro (retomber à +0) |
+| **uniq** | unique (boss) |
+| **kervan** | caravane (convoi de trade) |
+| **deveci** | chamelier (écran des étoiles du convoi) |
+| **mühür (yıldız/ay/güneş)** | sceau (étoile/lune/soleil) = Seal of Star/Moon/Sun |
+| **mavi özellikler** | stats bleues (blues) |
+| **çıkış yerleri** | points de spawn |
+| **Medusa kesimi** | « kill de Medusa » (BeakYung) |
+| **kurt** (Gri/Beyaz Kurt) | loup (gris NPC / blanc 130 silk) |
+
+### 🇧🇷 Portugais BR (Wikipédia PT, forums d'époque, YouTube BR)
+
+| Jargon BR | Signification |
+|---|---|
+| **upar / up** | monter en niveau (« dicas de up », « upar 1-90 ») |
+| **farmar** | farmer |
+| **maestria** | maîtrise (mastery) |
+| **estande / barraca** | étal / stall (boutique personnelle) |
+| **pó da sorte** | poudre de la chance (Lucky Powder) |
+| **pedras da sorte / de luck** | pierres de chance (Lucky Stones) |
+| **monstro único / unique** | unique (les BR gardent le mot anglais) |
+| **despertar** | « éveil » = évolution du pet au lvl 40 |
+| **macaco** | singe ramasseur (ability pet) |
+| **fila de login** | file d'attente de connexion (souvenir Joymax) |
+| **passo a passo** | tutoriel pas-à-pas (titres YouTube BR) |
+| **cartão pré-pago** | carte prépayée Level Up! (R$ 40 = 100 silks) |
+
+### 🇨🇳🇰🇷 Chinois & coréen (extraits — voir MULTILINGUAL_GLOSSARY.md)
+
+- 🇨🇳 **暗金** (ànjīn, « or sombre ») = argot CN pour les Seal equipment (règle CN : le seal ne tombe que sur le **premier tier** d'un degré)
+- 🇨🇳 **冰上冰** (« glace sur glace ») = nuker INT double glace
+- 🇨🇳 **红名** (hóngmíng, « nom rouge ») = état meurtrier ; **恶人值** = points de crime
+- 🇰🇷 **스포 / 스포작** (spo/spojak) = SP / SP farming ; **뉴커** (nyukeo) = nuker ; **올지/올힘** = full INT/full STR
+- 🇰🇷 **환** (hwan) = Berserk (jauge 환게이지, touche Tab)
+
+---
+
+## 🌐 Notes de localisation
+
+> Points critiques issus des rapports [ML_RESEARCH/](./ML_RESEARCH/) — à lire avant toute traduction ou citation de source.
+
+1. **Langues officielles du client : coréen, japonais, chinois, anglais (iSRO), russe.** Le client officiel n'a **JAMAIS** eu de version française → tout le lexique FR ci-dessus est **communautaire** (sources : Wikipédia FR, JeuxOnline, GMS Temple — [RESEARCH_FR](./ML_RESEARCH/RESEARCH_FR.md) §1).
+2. **Le wiki Fandom FR de Silkroad n'existe pas** (API 404 vérifiée par 3 voies, aucun snapshot Wayback — RESEARCH_FR). Ne jamais le citer comme source : la mention « wiki FR » dans d'anciens documents est une **source fantôme**.
+3. **Jamais de localisation turque non plus** : la communauté TR joue avec les noms anglais ([RESEARCH_TR](./ML_RESEARCH/RESEARCH_TR.md) — incertitude n°12 : « iSRO n'ayant jamais été localisé en turc, les skills restent en anglais dans les guides TR »).
+4. **🇨🇳 Garde-fou MOBILE** : les remakes mobiles chinois 2024+ (丝路传说手游, 寻梦丝路, 丝路传说怀旧版) utilisent un **vocabulaire différent** (enhancement max **+15**, raretés en **couleur**, etc.) qui **ne décrit PAS le jeu PC classique** — ne pas importer ces termes/chiffres ([RESEARCH_ZH](./ML_RESEARCH/RESEARCH_ZH.md)).
+5. **🇩🇪/🇧🇷** : pas de client officiel allemand ni portugais — le projet fan **gSRO « German Patch »** (~2008) a fourni une terminologie DE officieuse ; **Level Up! Brasil** (2007) n'était qu'un revendeur de Silk (E-PIN), sans serveurs BR ni traduction PT.
+
+---
+
 ## 📚 Additional Resources
 
 Pour plus de termes et slang, consultez:
-- [Silkroad Online Wiki - Glossary](https://silkroadonline.fandom.com/wiki/Glossary)
+- **[MULTILINGUAL_GLOSSARY.md](./MULTILINGUAL_GLOSSARY.md)** — glossaire multilingue complet (KO/ZH/TR/DE/PT/EN/FR) avec sources
+- [Silkroad Online Wiki - Glossary](https://silkroadonline.fandom.com/wiki/Glossary) (anglais uniquement — le wiki Fandom FR n'existe pas)
+- Rapports de recherche multilingues :
+  - [ML_RESEARCH/RESEARCH_FR.md](./ML_RESEARCH/RESEARCH_FR.md) — lexique FR (JOL, GMS Temple, JVC)
+  - [ML_RESEARCH/RESEARCH_DE.md](./ML_RESEARCH/RESEARCH_DE.md) — jargon DE (silkroadonline.de : https://www.silkroadonline.de)
+  - [ML_RESEARCH/RESEARCH_TR.md](./ML_RESEARCH/RESEARCH_TR.md) — glossaire TR (SroCave : https://srocave.com, SroLobby : https://www.srolobby.com)
+  - [ML_RESEARCH/RESEARCH_PT.md](./ML_RESEARCH/RESEARCH_PT.md) — glossaire BR (Wikipédia PT : https://pt.wikipedia.org/wiki/Silkroad_Online)
+  - [ML_RESEARCH/RESEARCH_ZH.md](./ML_RESEARCH/RESEARCH_ZH.md) — noms ZH officiels (wiki TW : https://srowiki.digeam.com, CN : https://silkroad.iccgame.com)
+  - [ML_RESEARCH/RESEARCH_KO.md](./ML_RESEARCH/RESEARCH_KO.md) — noms KR officiels (Inven 2004 : https://www.inven.co.kr/webzine/news/?news=2285)
 - Community forums
 - In-game: Ask other players!
 
 ---
 
-*Dernière mise à jour: 2025-01-20*
+*Dernière mise à jour: 2026-10-01 (fusion des glossaires ML_RESEARCH — lexique FR + jargon international)*

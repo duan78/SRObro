@@ -79,14 +79,16 @@ Les **growth pets** sont les véritables « attack pets » d'iSRO. Ils commencen
 
 | Pet | Type | Acquisition | Croissance visuelle |
 |---|---|---|---|
-| **White Wolf** | Loup blanc | Item Mall (Silk) | Bébé louveteau → **loup adulte au niveau 40** |
-| **Grey Wolf** | Loup gris | **Stable-Keeper : 1,000,000 gold** | Idem White Wolf |
+| **White Wolf** | Loup blanc | Item Mall — **130 Silk (~11 € en 2006)**, non échangeable | Bébé louveteau → **loup adulte au niveau 40** |
+| **Grey Wolf** | Loup gris | **Stable-Keeper : 1,000,000 gold** (échangeable) | Idem White Wolf |
 | **Penguin** | Pingouin | Item Mall | Bébé → adulte (revivable avec Grass of Life) |
 | **Three-Footed Crow** | Corbeau à trois pattes | Item Mall | Bébé → adulte |
 | **Bear (Oso)** | Ours | Item Mall | Bébé → adulte |
 
 > 📌 StrategyWiki : « Wolves and Grey Wolves are combat-oriented pets with the ability to grow, starting as a puppy and maturing into a full-grown wolf that can attack alongside you. » La « growth phase » culmine au **level 40** où le louveteau devient un loup adulte.
-> ❌ **Corrigé :** il n'existe **pas** de chaîne « Baby Wolf → Giant Wolf → Dire Wolf », ni d'« Evolution Stones », ni de skill trees « Bite/Growl/Alpha Howl ». Les growth pets d'iSRO ont une **attaque automatique de mêlée sans compétences actives** (les skills de pet n'existent que via le système Fellow ou sur des serveurs privés).
+> ✅ **Prix d'époque confirmés (guide DE juin 2006 — recherche DE 2026-10)** : White Wolf **130 Silk** / Grey Wolf **1M gold** / Grass of Life **50k gold** / HGP potion **2k gold**. Confirmations croisées FR/PT (recherche 2026-10) : loup gris **1M gold** (« o lobo, que custa 1 milhão de gold » — Wikipédia PT ; fil JeuxOnline 2010) et croissance arrêtée au **lvl 40** (« ces pets grandissent jusqu'au lvl 40 » — JOL 2010) ; un guide économie FR de 2009 cite ~3M budget total pour s'offrir un loup et son entretien.
+> ℹ️ Croissance **graduelle visible dès ~Lv30** selon des témoignages directs in-thread (« plus grand, cou plus long ») — le changement de modèle adulte est au Lv40.
+> ❌ **Corrigé :** il n'existe **pas** de chaîne « Baby Wolf → Giant Wolf → Dire Wolf », ni d'« Evolution Stones », ni de skill trees « Bite/Growl/Alpha Howl ». Les growth pets d'iSRO ont une **attaque automatique de mêlée sans compétences actives** (les skills de pet n'existent que via le système Fellow ou sur des serveurs privés). Le guide DE 2006 confirme : le loup **n'a aucun skill, ne ramasse rien, ne se monte pas** (époque 2006-2008).
 
 ### Mécaniques principales
 
@@ -97,22 +99,26 @@ Les **growth pets** sont les véritables « attack pets » d'iSRO. Ils commencen
 
 **2. HGP (Hunger Gauge Point)**
 - Jauge de faim qui **baisse avec le temps** pendant que le pet est invoqué.
-- Restaurée avec des **HGP Potions** (vendues au Stable / Item Mall).
-- À **0 HGP**, le pet refuse de se battre et **perd progressivement des HP** — toujours garder des HGP potions (silkroadforums « Wolf help »).
+- Restaurée avec des **HGP Potions** (vendues au Stable — **2 000 gold** pièce en 2006 — / Item Mall).
+- ✅ **Seuil critique : < 30% HGP** (recherche DE 2026-10, guide « Alles über die Pets », juin 2006) : message « le loup a faim » et **TOUTES les stats d'attaque/défense du pet sont DIVISÉES PAR 2** (« halbiert ») tant qu'il a faim.
+- À **0 HGP prolongé**, le pet **meurt de faim** — résurrection via **Grass of Life** (50 000 gold au Stable-Keeper). Toujours garder des HGP potions (silkroadforums « Wolf help »).
+- 🐛 Bug d'époque documenté : si le loup monte de niveau **en état de faim**, il affiche HGP 100% mais garde les stats réduites → le dés-invoquer/ré-invoquer corrige.
 - ℹ️ Le user note parfois « HGP = Horse Grass Powder » : **non confirmé**. HGP désigne la jauge (*Hunger Gauge Point*) ; la « Grass of Life » est l'herbe de **résurrection**, pas de nourriture.
 
 **3. Mort et résurrection**
 - Un growth pet **peut mourir** en combat (wolf : « wolves can be killed during combat »).
-- Résurrection : item **Grass of Life** vendu par le **Stable-Keeper** de chaque ville, **ou** service de résurrection du Stable (~**50,000 gold** rapporté pour le wolf sur les forums MMORPG.com).
+- Résurrection : item **Grass of Life** vendu par le **Stable-Keeper** de chaque ville pour **50 000 gold** — ✅ **confirmé** par le guide allemand de juin 2006 (« Gras des Lebens : 50 000 Gold im Stall », recherche DE 2026-10), qui recoupe le « ~50k rapporté » des forums MMORPG.com.
 - Le pet ne disparaît jamais définitivement : c'est un item permanent (une fois nommé).
 
 **4. Nom**
 - On nomme le pet à la première invocation ; le nom est **définitif**.
 - Un **Naming Scroll** (Item Mall) permet de le réinitialiser (guide Fellow-Pet elitepvpers).
 
-**5. Aggro / party**
+**5. Aggro / party / comportement PvP**
 - Le pet **génère de la menace** sur les monstres qu'il attaque (il peut servir de semi-tank en early game).
-- Le pet **ne rejoint pas la party** en tant que membre : il suit son maître. Une seule invocation de pet actif à la fois par personnage (growth pet OU ability pet OU monture).
+- Le pet **ne rejoint pas la party** en tant que membre : il suit son maître.
+- ✅ **Limite simultanée (guide DE juin 2006 — recherche DE 2026-10)** : **maximum 2 pets actifs au total** par personnage — typiquement **1 growth pet + 1 pickup pet** (ex. wolf + singe) ; **2 pickup pets ensemble interdits**. ⚠️ Corrige la formulation précédente « une seule invocation à la fois » — trop stricte pour l'iSRO d'époque (les versions mobiles/récentes peuvent différer).
+- Comportement d'époque : le loup est **auto-désinvoqué en PvP à cape** ; en tenue de job il attaque les hunters/thieves ; si le maître devient **meurtrier, le loup le devient aussi**.
 
 ---
 
@@ -136,9 +142,11 @@ Les **ability pets** (appelés **COS** dans les fichiers du jeu — pets invoqu�
 
 | Pet | Animal | Acquisition | Durée |
 |---|---|---|---|
-| **Pet Myowon** | Singe | Item Mall (Silk) — ~10 $ | **28 jours** |
+| **Pet Myowon** | Singe | Item Mall — **88 Silk (~7 € en 2006)** (≈ ~10 $ rapporté plus tard) | **28 jours** |
 | **Pet Seowon** | Écureuil | Item Mall (Silk) | **28 jours** |
 | **Pet Toto** | Lapin | Item Mall (Silk) | **28 jours** |
+
+> ✅ **Détails du guide DE juin 2006 (recherche DE 2026-10)** : le Myowon à **88 Silk** dure **28 jours**, ne meurt pas, ne level pas, ramasse tout dans son rayon et possède **28 slots** d'inventaire ; l'**Extension Clock** (horloge d'extension) à **48 Silk ≈ 4 €** ajoute +28 jours, est stackable et **réactive un pet expiré** (grisé) ; Seowon (écureuil), Toto (lapin) et le cochon doré/rose suivent la même mécanique de ramassage.
 
 D'autres modèles (cat, penguin, tiger, rhinoceros...) ont été annoncés/distribués au fil des mises à jour de l'Item Mall (annonce 2007 : « Cat, Penguin, Tiger, Rhinoceros »).
 
@@ -196,9 +204,11 @@ Conseils pratiques :
 | Basic Horse | Stable (gold) | ~10,000 gold + scroll Lv10 via quête | Permanent |
 | Transport Horse / Ox | Stable (gold, job Trader actif) | Quelques dizaines de milliers de gold | Par trajet |
 | Grey Wolf | Stable (gold) | **1,000,000 gold** | Permanent |
-| White Wolf / Penguin / Crow / Bear | Item Mall (Silk) | Silk | Permanent |
+| White Wolf / Penguin / Crow / Bear | Item Mall (Silk) | **White Wolf : 130 Silk (~11 €, 2006)** ; autres en Silk | Permanent |
+| Grass of Life (revive growth pet) | Stable-Keeper | **50,000 gold** ✅ confirmé (guide DE 2006) | Consommable |
+| HGP Potion | Stable-Keeper | **2,000 gold** (2006) | Consommable |
 | Potion of Evolution (Fellow) | Item Mall (Silk) | Silk | Consommable |
-| Pickup pet (Myowon/Seowon/Toto) | Item Mall (Silk) | ~10 $ | **28 jours** (+Renewal ~5 $/28 j) |
+| Pickup pet (Myowon/Seowon/Toto) | Item Mall (Silk) | **Myowon : 88 Silk (~7 €, 2006)** ; ~10 $ rapporté ensuite | **28 jours** (+Extension Clock **48 Silk**/28 j) |
 | Devil Spirit A | Item Mall / events | Silk | Permanent (+upgrades) |
 | Awesome Mounts (White Tiger...) | Item Mall (Silk) | Silk | Permanent |
 
@@ -270,28 +280,29 @@ R : Il combat à vos côtés et génère son propre aggro, mais il n'occupe **pa
 ```
 
 ### Points d'implémentation clés
-- Un seul pet invoqué à la fois (growth / ability / mount / transport selon contexte).
-- La jauge HGP doit décroître **avec le temps réel passé invoqué** (tick), pas avec la distance.
+- **Max 2 pets actifs simultanés** (typiquement 1 growth + 1 pickup), jamais 2 pickup pets ensemble (guide DE 2006) ; 1 monture/transport en plus selon le contexte.
+- La jauge HGP doit décroître **avec le temps réel passé invoqué** (tick), pas avec la distance ; appliquer le malus **stats ÷ 2 sous 30% HGP**.
 - Le pickup pet ramasse dans **son** inventaire → prévoir une UI de transfert pet→joueur.
-- Le loup change de modèle au **level 40** (2 modèles par growth pet : bébé/adulte).
+- Le loup change de modèle au **level 40** (2 modèles par growth pet : bébé/adulte ; croissance graduelle visible dès ~Lv30).
 
 ---
 
 ## ⚠️ Incertitudes / Données Manquantes
 
 - **Les 2 montures manquantes** de la liste officielle « 10 kinds of Mount » : le snippet officiel n'expose que 8 noms (Yellow Horse, Donkey, White Tiger, Sugar Loaf, Kamaitachi, Flame Tiger, Elk, Phoenix). La page officielle est dynamique et ne se laisse pas archiver facilement.
-- **HGP max exact** (360 ?) : non confirmé par les sources ; seuls le mécanisme et les HGP Potions sont attestés.
+- **HGP max exact** (360 ?) : non confirmé par les sources ; seuls le mécanisme, les HGP Potions et le seuil **30% (stats ÷ 2)** sont attestés.
 - **Slots exacts des transports** (horse vs ox) : le « 9 slots » attesté concerne le cheval de selle ; la capacité de bât des transports n'a pas de chiffre officiel publié.
-- **Coût exact du revival** (50k gold) : rapporté par des joueurs (MMORPG.com), non documenté officiellement.
-- **Prix Silk exacts** : varient selon les époques de l'Item Mall ; seules les équivalences en dollars (~10 $/28 j pickup) sont rapportées.
+- ~~**Coût exact du revival** (50k gold)~~ : ✅ **Résolu (recherche DE 2026-10)** — **Grass of Life = 50 000 gold** au Stable-Keeper (guide allemand « Alles über die Pets », juin 2006).
+- **Prix Silk exacts** : varient selon les époques de l'Item Mall — relevés d'époque (juin 2006, guide DE) : White Wolf **130 Silk** (~11 €), Myowon/Seowon **88 Silk** (~7 €), Extension Clock **48 Silk** (~4 €) ; les ~10 $/28 j des forums datent d'une époque ultérieure.
 - **Devil Spirit : valeurs de buffs** (+20 %/10 %/15 %) rapportées par des threads communautaires et un serveur privé fidèle au système officiel — à traiter comme « valeurs rapportées ».
-- **Niveau minimum pour invoquer un growth pet** : non confirmé (le wiki Fandom suggère un prérequis bas, possiblement Lv5 personnage).
+- **Niveau minimum pour invoquer un growth pet** : non confirmé (le wiki Fandom suggère un prérequis bas, possiblement Lv5 personnage ; un forum TR 2026 évoque « niveau 5+ requis » pour posséder un pet — non recoupé).
 
 ---
 
 ## 🔗 Sources
 
 - StrategyWiki — Silkroad Online/Pets : https://strategywiki.org/wiki/Silkroad_Online/Pets (growth/pickup pets, 28 jours, Revival Clock, Grass of Life)
+- silkroadonline.de — Alles über die Pets (wolf, affe, eichhörnchen) (juin 2006, maj 2008) : https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/5628-alles-ber-die-pets-wolf-affe-eichh-rnchen — prix d'époque (130/88/48 Silk, 1M/50k/2k gold), HGP < 30% = stats ÷ 2, max 2 pets (recherche DE 2026-10)
 - Elitepvpers — [Guide] The Fellow-Pet System : https://www.elitepvpers.com/forum/sro-guides-templates/1802274-guide-fellow-pet-system.html (Potion of Evolution, naming, attack/mount)
 - Elitepvpers — Devil's Spirit A grade transformation : https://www.elitepvpers.com/forum/silkroad-online/193879-devils-spirit-grade-transformation.html (+20 % dmg / +10 % speed)
 - Silkroad Forums — Devil spirit grade A : http://www.silkroadforums.com/viewtopic.php?f=29&t=114721 (+15 % HP/MP)
@@ -308,9 +319,11 @@ R : Il combat à vos côtés et génère son propre aggro, mais il n'occupe **pa
 - IGN — Silkroad Online Peek #2 (2008) : https://www.ign.com/articles/2008/08/26/silkroad-online-peek-2 (bears/wolves adultes, ability pets)
 - kmkm forum (annonce 2007) : https://kmkm.forumotion.com/t3147-silkroad-online-pets-to-arrive-soon-in-an-item-mall-near-you (Cat, Penguin, Tiger, Rhinoceros)
 - Silkroad Origin Mobile — Pet System : https://sromobile.com/en/guide/features-guide/new-feature-update-pet-system (système Fellow mobile, Nasrun/Amalrun)
+- JeuxOnline — fil d'actualité Silkroad (2010) : https://forums.jeuxonline.info/sujet/1104741/l-actualite-sur-silkroad-online-et-la-presentation (loup 1M gold, croissance jusqu'au lvl 40, pets 130 silks — recherche FR 2026-10)
+- Wikipédia PT — Silkroad Online : https://pt.wikipedia.org/wiki/Silkroad_Online (« o lobo, que custa 1 milhão de gold », seul mascote achetable en or — recherche PT 2026-10)
 
 ---
 
-*Dernière mise à jour : 1er octobre 2026*
+*Dernière mise à jour : 1er octobre 2026 (enrichi par la recherche multilingue ML_RESEARCH — guide pets DE juin 2006, confirmations FR/PT)*
 
-*Sources : StrategyWiki, elitepvpers, silkroadforums, site officiel silkroadforever.com, MMORPG.com, GameFAQs — voir section Sources.*
+*Sources : StrategyWiki, elitepvpers, silkroadforums, site officiel silkroadforever.com, MMORPG.com, GameFAQs, silkroadonline.de (DE), JeuxOnline (FR), Wikipédia PT — voir section Sources.*

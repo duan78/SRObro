@@ -8,6 +8,7 @@
 - [Events Saisonniers Historiques (vérifiés)](#-events-saisonniers-historiques-vérifiés)
 - [Rate Events (EXP / SP / Drop)](#-rate-events-exp--sp--drop)
 - [GM Events](#-gm-events)
+- [Events iSRO 2010-2013 documentés côté FR](#-events-isro-2010-2013-documentés-côté-fr)
 - [Events Permanents](#-events-permanents)
 - [Magic Pop](#-magic-pop)
 - [Events Item Mall et Promotions](#-events-item-mall-et-promotions)
@@ -94,6 +95,8 @@ Joimax appliquait régulièrement des **multiplicateurs serveur** à l'EXP, aux 
 |---|---|---|
 | Valentine's Week-ends | Février 2009 | **200 % EXP + 200 % drop** |
 | 100 % EXP/SP Event | **15 nov. – 13 déc. 2011** | **+100 % EXP et SP** |
+| **Compensation fermeture Alexander** | **15 déc. 2011 – 5 janv. 2012** | **+30 % XP/SP** (+ spots de farm dédiés, serveurs RB5-RB13 à +3 %) — fil JOL (recherche FR 2026-10) |
+| **Silkroad Ignite** | **21-28 nov. 2012** | **+50 % XP** + amélioration du taux de drop — fil JOL (recherche FR 2026-10) |
 | 50 % SP Event | 2011 | +50 % SP |
 | SP / Skill Event | 2011 | bonus SP/skills |
 | Attendance Event | nov.-déc. 2011 | cadeaux quotidiens (checked via So-Ok) |
@@ -113,6 +116,28 @@ Ces rate events coincidaient souvent avec les périodes de forte affluence (fêt
 - ✅ **Halloween 2009 « Bombs on your face »** : animation GM en ville.
 - ✅ **Finding the GM / screenshot contests** : events communauté fin 2009 - début 2010 avec envoi de screenshots contre des prix (archives elitepvpers).
 - ℹ️ Les formats **Hide & Seek, Trivia, PvP Tournament, Lottery** listés par l'ancienne version existent surtout sur les **serveurs privés** (voir section vSRO) — pas d'annonce officielle iSRO retrouvée.
+
+---
+
+## 🇫🇷 Events iSRO 2010-2013 documentés côté FR
+
+> ✅ **Nouvelles données datées (recherche FR 2026-10)** : le fil « L'actualité sur Silkroad Online » de JeuxOnline (traductions d'annonces Joymax par Kahyo, 2006-2013) documente précisément les events iSRO de 2010-2012 tels que vécus par la communauté FR — voir `ML_RESEARCH/RESEARCH_FR.md`.
+
+| Période | Event | Détails |
+|---------|-------|---------|
+| **16/11 – 07/12/2010** | **Grand Caravan** | Trade Run avec GM + Video Contest ; **1er prix = arme 11D Seal of Nova**, 2e = **10D Seal of Sun (3 items)**, 3e = **10D Seal of Moon (6 items)** — tout en +0 sans blues ; livraison le 14/12/2010 ; rotation complète des serveurs planifiée jour par jour |
+| **09/11/2010** | **Web Item Mall** | Ouverture de la boutique web + events premium silk |
+| Nov. 2010 | Halloween | Avatars « Dress » à 130 silks ; statues anti-bot **Sword of Justice** (1 XP si tuées, compte bloqué si elles vous tuent, étiquetées « lvl 140 ») |
+| **18/01 – 02/03/2011** | **Newbie Support** | Cadran 10h/15h/20h ; **bonus SP ×2/×3 selon le niveau** ; cadeaux So-Ok (+28% vitesse etc.) ; changement de couleur de cheveux gratuit si identique (payant sinon) ; So-Ok Rag Doll ~5% drop |
+| **08/03 – 05/04/2011** | **Shadow of the Sphinx** | Énigmes journalières sur le site officiel (énigme 1 = réponse **Demon Shaitan**) ; gagnants listés (Alexander, Zeus, Hera) ; **table de rotation des 46 serveurs** jour/nuit |
+| **14/12/2011** | **Fermeture du serveur Alexander** (botting) | Joueurs déplacés vers serveurs dédiés RB5-RB13 (+3% XP/SP) ; **compensation +30% XP/SP du 15/12/2011 au 05/01/2012** + spots de farm dédiés |
+| **20/12/2011 → 17/01/2012** | **Silkroad-R** | Bêta ouverte le 20/12/2011, lancement le 17/01/2012 (« R » = Rebirth/Renaissance) |
+| Déc. 2011 - janv. 2012 | Events de fin d'année | Reaper/Santa (28/12), event unique kill |
+| **09/11/2012** | **Silkroad Ignite** | Mise à jour « pour reconquérir les anciens joueurs » (vidéo de lancement style DotA) ; dans la foulée **le plus grand ban de bots de l'histoire du jeu** (« les 12 vs 1 », ~2000+ comptes) ; événement **+50% XP du 21 au 28/11/2012** ; amélioration du taux de drop ; un employé historique (Kayyo) quitte l'équipe |
+| 2012 | **Joymax Day** | Vidéos amateurs ; 5 gagnants dont 2 FR (Fabfab57/Mars, Duskers/Neptune) |
+| Mai-juin 2013 | Fusions de serveurs (« Pandémonium 2 ») | Poseidon→Eos et Hera→Mars (une fusion également évoquée au 29/02/2012) |
+
+- Source : [JeuxOnline — fil « L'actualité sur Silkroad Online et la Présentation » (2006-2013)](https://forums.jeuxonline.info/sujet/1104741/l-actualite-sur-silkroad-online-et-la-presentation) + [actu Silkroad-R (janv. 2012)](https://www.jeuxonline.info/actualite/33940/silkroad-r-ouvre-beta-test).
 
 ---
 
@@ -209,11 +234,12 @@ Rendez-vous PvP/PvE récurrents quotidiens-hebdo (successeurs officiels) : Guild
 | **2007** | Events Christmas + Fortress War launch (GamesIndustry) |
 | **2008** | Halloween Jewel Boxes ; Legend III Plus Holiday Season ; Valentine's annoncée ; **Easter Egg Hunt** ; annonce pets Item Mall (Cat/Penguin/Tiger/Rhino) |
 | **2009** | Valentine's **200 % EXP/drop week-ends** + chocolats ; Halloween « Bombs on your face » ; GM Activity Expansion (screenshots) |
-| **2010** | **Daily GM events** (nov.) dont **Rise of the Uniques** ; **Ice Festival Jewel Box** ; Easter 2010 ; guild CTF Battle Arena (mars 2011 pour la première trace) |
-| **2011** | **New Year : 4 global events** jusqu'au 15 mars (Lucky Letter Collection) ; **Battle Arena** active ; Halloween event (8-15 nov.) ; **100 % EXP/SP Event** (15 nov. – 13 déc.), 50 % SP event, Attendance |
-| **2012** | Premier **Joymax Day** (20 nov.) ; montée des serveurs privés vSRO et de leurs events custom |
-| **2013-2016** | Era des serveurs privés : Lucky Box, Trivia, Kill GM, Survival Arena deviennent standards ; iSRO continue les events saisonniers (annonces éparses) |
+| **2010** | **Daily GM events** (nov.) dont **Rise of the Uniques** ; **Ice Festival Jewel Box** ; Easter 2010 ; guild CTF Battle Arena (mars 2011 pour la première trace) ; **Grand Caravan** (16/11-07/12, 1er prix arme 11D Seal of Nova — fil JOL) |
+| **2011** | **New Year : 4 global events** jusqu'au 15 mars (Lucky Letter Collection) ; **Newbie Support** (18/01-02/03, SP ×2/×3) ; **Shadow of the Sphinx** (08/03-05/04, rotation 46 serveurs) ; **Battle Arena** active ; Halloween event (8-15 nov.) ; **100 % EXP/SP Event** (15 nov. – 13 déc.), 50 % SP event, Attendance ; **fermeture d'Alexander** (14/12) + compensation **+30 % XP/SP** (15/12-05/01/2012) ; bêta Silkroad-R (20/12) |
+| **2012** | Lancement **Silkroad-R** (17/01) ; **Silkroad Ignite** (09/11) : ban de masse ~2000+ bots (« 12 vs 1 »), **+50 % XP** (21-28/11), drops améliorés ; premier **Joymax Day** (20 nov.) ; montée des serveurs privés vSRO et de leurs events custom |
+| **2013-2016** | Era des serveurs privés : Lucky Box, Trivia, Kill GM, Survival Arena deviennent standards ; iSRO continue les events saisonniers (annonces éparses) ; **Pandémonium 2** : équilibrage CH/EU, D13 (cap 130), fusions Poseidon→Eos et Hera→Mars (mai-juin 2013 — fil JOL) |
 | **2020+** | Silkroad Origin Mobile / SRO Forever : événements saisonniers quotidiens (Lunar New Year, Champion Festival, Summer Festival, Mid-Autumn), tournois (Desert King), cross-server Hall of Fame (Glory Race), Guild Boss/Arena quotidiens, event pass |
+| **2026** | **Le service coréen officiel anime toujours des events saisonniers** (site officiel kSRO — recherche KO 2026-10) : 풍선불기 축제 (festival des ballons), 유령 사냥 (chasse aux fantômes), 세 개의 달 (les trois lunes), 돌아온 알리바바 (le retour d'Alibaba) |
 
 ---
 
@@ -284,6 +310,9 @@ R : Mécaniques custom : silk/heure en ligne, events automatiques (Trivia, Lucky
 - Silkroad4Arab — Halloween Event 2011 : https://www.silkroad4arab.com/vb/showthread.php?t=394089
 - Silkroad Forums — Joymax Day 2012 : http://www.silkroadforums.com/viewtopic.php?f=1&t=132589
 - Blog archive princessjane25 (events 2010-2012) : https://princessjane25.wordpress.com/category/silkroad-online-events/
+- JeuxOnline — L'actualité sur Silkroad Online et la Présentation (2006-2013) : https://forums.jeuxonline.info/sujet/1104741/l-actualite-sur-silkroad-online-et-la-presentation — traductions FR d'annonces Joymax : Grand Caravan, Newbie Support, Sphinx (rotation 46 serveurs), fermeture Alexander, Ignite (recherche FR 2026-10)
+- JeuxOnline — Silkroad-R ouvre sa bêta-test (janv. 2012) : https://www.jeuxonline.info/actualite/33940/silkroad-r-ouvre-beta-test
+- Site officiel kSRO (Joymax) — liste des news/événements (service coréen actif, events 2026) : https://krsilkroadcp.joymax.com (recherche KO 2026-10)
 - So-Ok Attendance Event (archive) : https://silkroadeventsoko.weebly.com/
 - SRO Valkyria — [Beginner Guide] Battle Arena : http://srovalkyria.blog.fc2.com/blog-entry-50.html
 - International SRO Forum — Battle Arena : https://international-sro.forumotion.com/t4475-battle-arena
@@ -304,6 +333,6 @@ R : Mécaniques custom : silk/heure en ligne, events automatiques (Trivia, Lucky
 
 ---
 
-*Dernière mise à jour : 1er octobre 2026*
+*Dernière mise à jour : 1er octobre 2026 (enrichi par la recherche multilingue ML_RESEARCH — events FR datés 2010-2013 via JeuxOnline, events 2026 du service coréen kSRO)*
 
-*Sources : annonces Joymax archivées (IGN, GamesIndustry.biz, MMORPG.com), silkroadforums, silkroad4arab, wikis communautaires — voir section Sources.*
+*Sources : annonces Joymax archivées (IGN, GamesIndustry.biz, MMORPG.com), silkroadforums, silkroad4arab, wikis communautaires, JeuxOnline (FR), krsilkroadcp.joymax.com (KO) — voir section Sources.*

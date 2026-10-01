@@ -52,8 +52,8 @@ export class DropManager {
 
     // Create dropped item
     const droppedItemResult = await query<DroppedItem>(
-      `INSERT INTO "DroppedItem" ("zoneId", "itemId", "itemData", "positionX", "positionY", "positionZ", "ownerId", "expiresAt", "createdAt")
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, NOW())
+      `INSERT INTO "DroppedItem" ("id", "zoneId", "itemId", "itemData", "positionX", "positionY", "positionZ", "ownerId", "expiresAt", "createdAt")
+       VALUES (gen_random_uuid()::text, $1, $2, $3::jsonb, $4, $5, $6, $7, $8, NOW())
        RETURNING *`,
       [
         zoneId,
@@ -183,8 +183,8 @@ export class DropManager {
     await transaction(async (client) => {
       // Add to inventory
       await client.query(
-        `INSERT INTO "InventoryItem" ("characterId", "itemId", "slot", "quantity", "plus", "durability", "createdAt", "updatedAt")
-         VALUES ($1, $2, $3, $4, $5, $6, NOW(), NOW())`,
+        `INSERT INTO "InventoryItem" ("id", "characterId", "itemId", "slot", "quantity", "plus", "durability", "createdAt", "updatedAt")
+         VALUES (gen_random_uuid()::text, $1, $2, $3, $4, $5, $6, NOW(), NOW())`,
         [
           characterId,
           droppedItem.itemId,

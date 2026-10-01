@@ -51,12 +51,12 @@ Le **Thief** est le job le plus **risqué et rentable** de Silkroad Online. En v
 
 | Ère | Comment |
 |-----|---------|
-| **Classique (vSRO 1.188)** | Se téléporter à la **Thief Town** : parler à **Gisaeng Yumi**, quartier rouge de Jangan (Barrom Street, ~coord. 6203,993), téléport **~2-3k gold**. Acheter le suit sur place |
+| **Classique (vSRO 1.188)** | Se téléporter à la **Thief Town** : parler à **Gisaeng Yumi**, quartier rouge de Jangan (Barrom Street, ~coord. 6203,993), téléport **~2-3k gold** (✅ prix exact TR : **2 000 gold**, « NPC YUMI, Barron Street » — [SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294)). Acheter le suit sur place. Accès alternatif : le soldat **Cartino** au port de Constantinople ([GMS Temple, FR 2009](https://forum.gmstemple.com/index.php?showtopic=6543) ; [guide Thief DE — silkroadonline.de](https://www.silkroadonline.de/silkroadonline-allgemein/jobs-co/18278-guide-wie-werde-ich-thief), qui décrit aussi les guildes de voleurs **rouge/noire**) |
 | **Legend VII+** | **Smuggler NPC** en ville : *Smuggler Chao* (Jangan), *Smuggler Chungho* (Donwhang), *Smuggler Raul* (Constantinople), *Smuggler Barus* (Samarkand) — puis « Create Alias » et achat de la job cape |
 | **Origin Mobile** | Job choisi au level 20, avec équilibrage automatique des factions |
 
 ### Thief Suit
-- **Suit noire basique : ~10k gold** ; version « **Black Devil » : ~1M** (différence purement cosmétique selon Joymax)
+- **Suit noire basique : ~10k gold** ; version « **Black Devil » : ~1M** (différence purement cosmétique selon Joymax) — ✅ **Confirmé (recherche TR 2026-10)** : Black Suit **10 000 gold**, Black Devil Suit **1 000 000 gold** ([SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294))
 - Spécifique au **genre** du personnage
 - En portant le suit : votre nom devient votre **alias**, les traders/hunters peuvent vous attaquer et vous pouvez les attaquer
 - **Cooldown 10 min** à l'équipement/retrait (reset par téléport/déco)
@@ -69,7 +69,7 @@ Le **Thief** est le job le plus **risqué et rentable** de Silkroad Online. En v
 D'après les guides d'époque (Hellsharpt 2006, silkroadforums t=4888), la séquence canonique est :
 
 1. **Repérer** une caravane (trade **2★ minimum** — un 1★ est protégé)
-2. **Vérifier les étoiles** : double-cliquez sur le trader/le transport en suit — un **message bleu** = trade 1★ (impossible à voler), des **dégâts** = trade multi-étoiles attaquable
+2. **Vérifier les étoiles** : double-cliquez sur le trader/le transport en suit — un **message bleu** = trade 1★ (impossible à voler), des **dégâts** = trade multi-étoiles attaquable. ✅ **Résolu (recherche TR 2026-10) — lecture à distance :** un kervan est suivi d'**autant de NPC thieves que d'étoiles** (un 4★ = 4 voleurs NPC à ses trousses) ; les étoiles montent par **seuils de valeur chargée** et s'affichent sur l'écran du chamelier ([SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294) · [FrmTR](https://www.frmtr.com/sro-rehberler-sorular-ve-teknik-yardim/952764-job-taktikleri-trader-programi.html))
 3. **Engager** : tuez le **trader** (et ses hunters si présents) — « dead men tell no tales », ne laissez pas de témoins
 4. **Tuer le TRANSPORT** (pas seulement le trader !) : c'est la mort du transport qui fait **tomber les goods au sol**
 5. **Looter** : les goods s'empilent au sol, cliquez-les pour les ramasser ; vous ne pouvez PAS invoquer de transport pendant ~20 s après un combat → invoquez-le **avant** le fight final si possible, ou loottez puis invoquez
@@ -98,7 +98,7 @@ D'après les guides d'époque (Hellsharpt 2006, silkroadforums t=4888), la séqu
   - Un marchand de **gear de thief** (suits, scrolls)
   - Un **acheteur de butin** (vendez les goods volées ici)
   - Un **téléporteur gratuit** vers votre point de respawn (astuce: désuiter avant de l'utiliser pour reset le cooldown du suit)
-- **Bandit Den Return Scrolls:** scrolls dédiés (≠ return scrolls normaux), **~5 min d'activation**, achetez-en **plusieurs** avant chaque sortie
+- **Bandit Den Return Scrolls:** scrolls dédiés (≠ return scrolls normaux), **~5 min d'activation**, achetez-en **plusieurs** avant chaque sortie (✅ prix exact TR : **1 000 gold**/scroll — [SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294))
 - Les **field trade centers** type *Secret Bandits Den* (lv20+) et *Hukmak Bandits Den* (lv30+) sont des comptoirs de bandits où s'échapper/recommercer
 
 > ⚠️ Un thief **ne peut pas invoquer de transport dans les villages** ni y amener son transport — planifiez l'escape hors des murs.
@@ -126,15 +126,20 @@ Le système de pénalités spécifique aux thieves (vérifié sur guide 2006) :
 | Action / État | Effet |
 |---------------|-------|
 | Tuer un hunter / merchant / transport | **Arrange points** |
-| **3 000+ arrange points** | Statut **WANTED** — visible par tous les hunters, **bonus pour qui vous tue** |
+| **3 000+ arrange points** | Statut **WANTED** — visible par tous les hunters, **bonus pour qui vous tue** ; marqueur rouge, attaquable **même sans costume** (✅ recherche TR 2026-10 — [SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294)) |
 | Mourir en job | **Amende** (~60k gold au lv40, croissante) |
 | Mourir en statut *wanted* | **3 heures sans activité de job** possible |
 | Mourir tué par hunters/merchants | **Drop d'items possible** (y compris équipés) |
 | Être tué | Perte de **job XP** |
 
+✅ **Résolu (recherche TR 2026-10) — purge du statut Wanted :** payer l'amende à la **Hunter Guild** ou **se laisser tuer** (au prix d'une perte d'XP) ([SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294)).
+
+> ⚠️ **Conflit entre sources (seuil Wanted) :** le guide TR fixe le seuil à **3 000** arrange points ; l'article coréen de présentation de l'open beta ([Inven, 20/12/2004](https://www.inven.co.kr/webzine/news/?news=2285)) indique qu'au-delà de **2 000 penalty points** le thief passe en état *현상범* (recherché) et **ne peut plus changer de métier**. Écart probablement lié à l'époque (2004 KR) / à la version — à trancher sur le client cible (vSRO 1.188).
+
 **Contre-mesures:**
 - Ne tuez que ce qui est nécessaire (chaque kill inutile = points)
 - Surveillez vos arrange points — « arrester » de tuer les fait retomber avec le temps
+- Pensez à la **purge** (amende Hunter Guild / mort volontaire) avant un gros coup
 - Les hunters tuent les thieves **sans aucune pénalité** : le rapport de force légal est contre vous
 
 ---
@@ -183,6 +188,11 @@ Le système de pénalités spécifique aux thieves (vérifié sur guide 2006) :
 ### Stratégie 5: Scavenger (débutants)
 - Sous le lv30, attendez les **restes de batailles** : goods au sol après qu'un autre thief/gang a cassé une caravane
 - Ou suivez les NPC thieves qui cassent des trades
+
+### Stratégie 6: Aggro-redirect sur un 1★ (guide TR)
+- Un kervan **1★ ne peut PAS être attaqué directement** par un thief joueur — contournement documenté : portez **une seule marchandise** vous-même pour qu'un **NPC thief vous poursuive**, puis **menez-le sur le kervan ciblé** : c'est l'attaque indirecte du 1★ ([SroMax, guide Thief TR](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294))
+
+> ℹ️ Les événements type **Grand Caravan (iSRO, 16/11–07/12/2010)** étaient des trade runs accompagnés de GM avec concours vidéo — la récompense du 1er était une **arme 11D Seal of Nova** ([fil JeuxOnline, trad. FR](https://forums.jeuxonline.info/sujet/1104741/l-actualite-sur-silkroad-online-et-la-presentation)).
 
 ### L'escape parfaite (checklist d'époque)
 ```
@@ -297,6 +307,9 @@ En mars 2011 (« Rise of the Thief-Hunter »), le rôle change radicalement :
 ### Guides
 - [Complete Thief's Guide (Hellsharpt, 2006) — Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=5&t=8457) (via Wayback Machine) — LA référence d'époque : arrange points, scrolls, tactics
 - [Thief Guide - Silkroad Forums (t=4888)](http://www.silkroadforums.com/viewtopic.php?f=5&t=4888) — règles d'étoiles, bandit den scrolls
+- [Silkroad Online Thief olmak (SroMax, guide TR, 2026-10)](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294) — 1 NPC thief/étoile, 1★ inattaquable directement + aggro-redirect, seuil 3 000 points, prix exacts Thief Town
+- [Wie werde ich Thief? (silkroadonline.de, DE)](https://www.silkroadonline.de/silkroadonline-allgemein/jobs-co/18278-guide-wie-werde-ich-thief) — Thief Town, guildes rouge/noire, NPC hunters pendant le retour
+- [Les Métiers sur Silkroad (GMS Temple, FR, 2009)](https://forum.gmstemple.com/index.php?showtopic=6543) — accès Cartino (Constantinople), surnoms, règles d'époque
 - [Thief - Silkroad Online Wiki (Fandom)](https://silkroadonline.fandom.com/wiki/Thief)
 - [Legend VII: Rise of the Thief-Hunter Tutorial (Princess Jane, 2011)](https://princessjane25.wordpress.com/2011/04/12/silkroad-online-legend-vii-rise-of-the-thief-hunter-some-simple-tutorial-guide/)
 
@@ -310,4 +323,4 @@ En mars 2011 (« Rise of the Thief-Hunter »), le rôle change radicalement :
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: Hellsharpt Thief Guide 2006 (Wayback), Silkroad Forums, Silkroad Online Wiki (Fandom), Hanf_Hunter fan site, Princess Jane (Legend VII), sromobile.com*
+*Sources: Hellsharpt Thief Guide 2006 (Wayback), Silkroad Forums, Silkroad Online Wiki (Fandom), Hanf_Hunter fan site, Princess Jane (Legend VII), sromobile.com + recherche multilingue 2026-10 (ML_RESEARCH) : SroMax/FrmTR (TR), GMS Temple/JeuxOnline (FR), silkroadonline.de (DE), Inven (KO)*

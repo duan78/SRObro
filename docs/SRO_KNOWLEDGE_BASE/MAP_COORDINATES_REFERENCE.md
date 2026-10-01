@@ -209,6 +209,24 @@ Soldier Choiyoung (6 437, 1 150) · Jingyo (6 429, 963) · Hogang (6 177, 1 155)
 | **Lord Yarkan** | 80 | 9 353 045 | Taklamakan — Niya Remains | −1559/2550 · −1558/2555 · −1562/2555 · −1563/2551 · −1559/2549 · −1560/1858 · −545/2510 · 50/2449 · −1178/2144 · −16/2006 |
 | **Demon Shaitan** | 90 | 12 732 060 | Roc Mountain — Heart/Claw/Wing Peak | −4509/−468 · −4829/−519 · −4179/−262 · −4917/−225 · −4294/141 · −4588/215 |
 
+### 🈶 Noms ZH/KR des zones d'uniques (✅ recherche ZH/KO 2026-10)
+
+Noms des zones de spawn cités par les sources chinoises officielles (wiki DiGeam, Bahamut) et la presse coréenne — utiles pour croiser les cartes communautaires TW/KR :
+
+| Unique | Zones — noms chinois cités | Noms coréens cités |
+|---|---|---|
+| Tiger Girl (虎女) | 虎穴山 (mont du repaire aux tigres), 飞贼团山寨 (fort des bandits) | 호혈산 (« mont du sang-de-tigre ») |
+| Cerberus (克贝洛斯) | 神的庭院 (Garden of Gods), 无法者的山坡 (Desperado Hill), 黄昏的树林 (Forest of Dusk), 黎明的海岸 | — |
+| Captain Ivy (艾维船长) | 小亚细亚 (Asia Minor), 克利奥派特拉门 (Cleopatra's Gate), 邪恶之灵要塞 | — |
+| Uruchi (乌鲁齐) | 塔里木盆地 (Tarim Basin), 死亡溪谷, 黑漠团巢穴 (Black Robber Den) | 타림분지 (bassin du Tarim) |
+| Isyutaru (冰神之女) | 卡拉昆仑古代遗迹 (Ancient Remains), 绿洲 (oasis), 蜘蛛树林 (forêt aux araignées) | 카라코람 (lacs de glace) |
+| Lord Yarkan (路亚汗) | 塔克拉玛干 (Taklamakan), 尼雅遗址 (ruines de Niya) | — |
+| Demon Shaitan (撒旦) | 洛克山, 心脏之峰 / 利爪之峰 / 翅膀之峰 (Heart/Claw/Wing Peak), 羽毛之峰 / 尖嘴之峰 / 雷峰 | — |
+
+- **Roc Mountain (로크산) côté KR** : 양치기/버려진 마을 (villages berger/abandonné, 82-84) · 눈·심장·날개·부리의 봉우리 (pics œil/cœur/aile/bec, 85-87) · 정상의 로키 (sommet du Roc, 88-90).
+- **Qin-Shi Tomb** : 秦始皇陵 (ZH) / 진시황릉 (KR) ; **Thief Town** : 盗贼村 (ZH).
+- Sources : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md)
+
 ### Emplacements des uniques ultérieurs
 
 | Unique | Niv. | Zone / accès |
@@ -384,3 +402,4 @@ R: Oui — les intérieurs de forteresse et tous les donjons sont des **couches 
 *Dernière mise à jour : 2026-10-01*
 
 *Sources : client officiel via xSROMap (JellyBitz), SRO Info (spawns uniques 2009), Rev6, StrategyWiki, SRObro Project*
+*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (noms ZH des zones d'uniques) · [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (noms KR, sous-zones Roc Mountain)*

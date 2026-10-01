@@ -25,6 +25,7 @@
 | Attribut | Valeur |
 |----------|--------|
 | **Région** | China |
+| **Nom chinois (officiel)** | **长安** (Cháng'ān — la Chang'an historique) · coréen : 장안 |
 | **Position (officielle)** | ≈ X **6 460**, Y **1 100** (PosX/PosY monde) |
 | **Niveaux** | 1-20 (ville de départ chinoise) |
 | **Architecture** | Chinoise impériale, toits rouges, temple bouddhiste |
@@ -204,6 +205,8 @@ Le quartier ouest de Jangan (unique en son genre) accueille :
 - Mangyangs, Yeohas, Small/Big-Eye Ghosts, Tigers
 - **Tiger Girl (unique, niv. 18, 598 720 HP)** — 11 points de spawn officiels :
   `4853/94 · 4733/−34 · 4840/−123 · 5039/−28 · 4230/201 · 4418/599 · 4744/414 · 5335/360 · 5355/−224 · 4544/−303 · 4309/−151`
+  - Noms officiels : ZH **虎女** (hǔnǚ) sur la 虎穴山 (« mont du repaire aux tigres ») · KR **호녀** sur la 호혈산 — ✅ recherche ZH/KO 2026-10
+  - Fenêtre de respawn TR : **~210-390 min** après la mort (✅ recherche TR 2026-10) ; inflige l'état **Zombie** → prévoir des Pill
 
 ### Bandit Stronghold (sud)
 - Bandits, Bandit Archers — bon spot de farming bas niveau
@@ -214,6 +217,7 @@ Le quartier ouest de Jangan (unique en son genre) accueille :
 
 ### Tomb of Qin-Shi Emperor (nord-est)
 - Entrée du donjon 70-100 : **(7 200, 2 086)** — voir [14_MONSTER_GUIDE.md](14_MONSTER_GUIDE.md)
+- Noms officiels : ZH **秦始皇陵** (mausolée de Qin Shi Huang) · KR **진시황릉** (Legend Ⅶ KR, test 08/08/2007 — ~19 mois avant l'iSRO) — ✅ recherche ZH/KO 2026-10
 
 ---
 
@@ -293,3 +297,4 @@ R: Les versions précédentes utilisaient des noms inventés. Cette version util
 
 *Dernière mise à jour : 2026-10-01*
 *Sources : données client officielles (xSROMap), StrategyWiki, Fandom Wiki*
+*Fusion multilingue 2026-10 : [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (nom ZH 长安, zones 虎穴山/秦始皇陵) · [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) (noms KR) · [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (timer Tiger Girl)*

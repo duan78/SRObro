@@ -458,3 +458,43 @@ mode hors-ligne explicite de repli).
   « First Steps » débloquée.
 - Navigateur: 7 PNJ rendus, journal L (3 quêtes), panneau C (STR, 7
   maîtrises), 60 FPS.
+
+---
+
+## Session du 1er Octobre 2026 (7/2) : PHASE 5 — Multi-joueurs
+
+### Visibilité mutuelle
+- `syncPlayerVisibility` (CombatBridge): à chaque joueur qui rejoint, spawn_player
+  croisé aux joueurs < 200 m; playerLeft → despawn. Le world:snapshot inclut
+  maintenant AUSSI les joueurs proches (le client charge des minutes durant,
+  les spawn initiaux seraient perdus).
+- Client: rendu des joueurs distants (modèle officiel chinaman/chinawoman selon
+  gender, anim walk sur update, annonce chat « X est en ligne »), purge à la
+  reconnexion.
+
+### Chat + commandes
+- Entrée de saisie dans le HUD (Entrée ouvre/valide, Échap ferme), canal
+  general diffusé en zone; commandes slash serveur **/who** (joueurs en ligne)
+  et **/loc** (position) en réponse système privée.
+
+### Loot concurrentiel
+- Drops étiquetés propriétaire (tueur, 30 s): l'autre joueur reçoit
+  « Item is owned by another player ». Fixes DropManager: convention de
+  paramètres query() (tableau vs variadique), cast jsonb, id généré côté SQL
+  (drop ET pickup) — le loot ne fonctionnait plus du tout.
+
+### Sessions par onglet
+- Token + characterId en **sessionStorage** (isolé par onglet): deux comptes
+  jouables simultanément dans le même navigateur (le localStorage partagé
+  faisait s'éjecter les onglets mutuellement).
+- characterId persisté (ré-authentification après reconnexion fiable) et
+  filet de sécurité: socket mort sans reconnexion → nouvelle connexion après
+  12 s.
+
+### Preuves
+- `scripts/test-phase5.ts` **10/10** (deux sockets simultanés): visibilité
+  croisée, updates de déplacement, chat A→B, /who, /loc, mob partagé (un seul
+  set de loot), propriété du drop (B refusé, A ramasse).
+- Navigateur (2 onglets): Kaiser et Visiteuse se voient (modèles officiels),
+  position de Kaiser propagée en direct (0→19,4 vue identique au réel),
+  « Visiteuse: Salut Kaiser ! » reçu chez Kaiser.

@@ -163,6 +163,11 @@ Le **Hunter** est le défenseur de la route de la soie. En protégeant les carav
 - Variantes : paiement fixe, fixe + %, ou horaire (pratiques de serveur)
 - Exemple : trade 10M de goods à 162% → 6,2M de profit → votre cut 30% ≈ **1,86M**
 
+### Paiement « système » (mécanique d'époque, ancien système)
+- ✅ **Résolu (recherche FR 2026-10)** : quand un trader vend ses specialties, une **somme supplémentaire est générée par le jeu et versée à la banque de l'union des hunters** — le hunter est donc payé en partie par le système, pas uniquement par son client ([GMS Temple, « Les Métiers sur Silkroad », 2009](https://forum.gmstemple.com/index.php?showtopic=6543))
+- Selon le guide allemand de 2008, l'or du hunter est **crédité hebdomadairement** à la **Hunter Association**, et un **Hunter Merchant** existe dans chaque ville ([silkroadonline.de — Das Jobsystem](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/28727-guide-das-jobsystem) · [Job Guide Hunter, Legend4](https://www.silkroadonline.de/silkroadonline-allgemein/jobs-co/25013-job-guide-hunter-update-legend4))
+- Historique kSRO : le « **Trade System 2** » (19/07/2006) a **augmenté les profits des traders et hunters** et réduit la difficulté des monstres de job ([Inven](https://www.inven.co.kr/webzine/news/?news=2449))
+
 ### Job XP (mécanique réelle, ancien système)
 | Source | XP |
 |--------|-----|
@@ -196,6 +201,9 @@ Le **Hunter** est le défenseur de la route de la soie. En protégeant les carav
 ### Stratégie 5: Chasse au butin (après-vol)
 - Un trade s'est fait casser ? Les thieves fuient LENTS avec leur transport chargé + des hunter monsters sur le dos
 - Interceptez : butin récupéré + primes
+
+### Stratégie 6: Équipe « 2 Traders + 1 Hunter » (privés vSRO)
+- Composition citée avec **~90% de réussite** sur les caravanes multi-étoiles ; la **capacité des transports** augmente le gain global du run — un seul hunter bien placé couvre deux traders ([vSRO.org, guide gold/SP](https://www.vsro.org/konular/gold-sp-kasma-rehberi-slotlar-job-dungeon-ve-gunluk-taktikler.13648) — données serveurs privés)
 
 ---
 
@@ -292,6 +300,9 @@ Le **Hunter** est le défenseur de la route de la soie. En protégeant les carav
 - [Hunter - Silkroad Online Wiki (Fandom)](https://silkroadonline.fandom.com/wiki/Hunter)
 - [Job - Silkroad Online Wiki (Fandom)](https://silkroadonline.fandom.com/wiki/Job) — scaling des étoiles, NPCs
 - [Job Ranks - Hanf_Hunter fan site](https://hanfhunter-online.de.tl/%3D%3EJobs.htm) — mécanique d'XP hunter par confirmation d'époque
+- [Job Guide Hunter, Update Legend4 (silkroadonline.de, DE, 2010)](https://www.silkroadonline.de/silkroadonline-allgemein/jobs-co/25013-job-guide-hunter-update-legend4) — 11 pages, Hunter Merchant par ville
+- [Das Jobsystem (silkroadonline.de, DE, 2008)](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/28727-guide-das-jobsystem) — or hunter crédité hebdomadairement à la Hunter Association
+- [Les Métiers sur Silkroad (GMS Temple, FR, 2009)](https://forum.gmstemple.com/index.php?showtopic=6543) — banque de l'union des hunters alimentée à chaque vente de trader
 - [Legend VII Tutorial (Princess Jane, 2011)](https://princessjane25.wordpress.com/2011/04/12/silkroad-online-legend-vii-rise-of-the-thief-hunter-some-simple-tutorial-guide/)
 
 ### Origin Mobile
@@ -304,4 +315,4 @@ Le **Hunter** est le défenseur de la route de la soie. En protégeant les carav
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: Silkroad Online Wiki (Fandom), Hanf_Hunter fan site, Princess Jane (Legend VII), sromobile.com, Silkroad Forums (via Wayback)*
+*Sources: Silkroad Online Wiki (Fandom), Hanf_Hunter fan site, Princess Jane (Legend VII), sromobile.com, Silkroad Forums (via Wayback) + recherche multilingue 2026-10 (ML_RESEARCH) : GMS Temple (FR), silkroadonline.de (DE), vSRO.org (TR), Inven (KO)*

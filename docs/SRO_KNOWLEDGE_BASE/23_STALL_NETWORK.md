@@ -42,6 +42,10 @@ Comprendre l'historique est essentiel pour SRObro, car le client vSRO 1.188 (bas
 - Le **Stall Network** (fenêtre de recherche, accessible via l'interface) liste les items en vente dans **toutes les villes** : *"players can browse items sold in every town at the press of a button, paging through listings"* (IGN, oct. 2007)
 - **Achat = déplacement physique** : la recherche indique où est l'item (ville/stall), il faut ensuite se rendre au stall pour acheter — pas d'achat à distance dans cette ère
 - Les routes menant aux villes sont bordées de stalls ; "la ville principale et les routes étaient remplies de boutiques où l'on se promenait" (rétrospectives r/MMORPG)
+- ✅ **Résolu (recherche FR 2026-10) — frais du réseau (2009)** : le Stall Network prélavait **1% du prix de vente, plafonné à 100 000 gold** ([GMS Temple, « Le Stall Network », _Altair_Fr_, 26/10/2009](https://forum.gmstemple.com/index.php?showtopic=7033)) — premier chiffre documenté pour cette ère ; les commissions de la consignation Juel (post-2010) restent, elles, non documentées
+- **Loterie Merchant's Blessing** (même source) : la guilde des marchands tirait au sort des utilisateurs du réseau → scroll **Merchant's Blessing** : **30 minutes, +50% d'or droppé sur les créatures tuées** ; ni vendable ni jetable (storage uniquement)
+- Raccourcis d'époque (guide FR) : ouvrir son stall via la **fenêtre d'action « Q »** (icône malle) ; recherche du réseau via le **raccourci « F »**
+- Corroboration lusophone : [Wikipédia PT](https://pt.wikipedia.org/wiki/Silkroad_Online) confirme la vente via « estandes (stalls) » **en ville uniquement** + le réseau « stall network » (sans chiffres de commission)
 
 ### Ère 2 — Consignation via NPC (~2010-2011, update "Forgotten World")
 
@@ -89,7 +93,7 @@ Comprendre l'historique est essentiel pour SRObro, car le client vSRO 1.188 (bas
 ### Restrictions (vérifiées)
 
 - **Level requis:** Aucun (même level 1 peut ouvrir un stall)
-- **Coût:** Gratuit (pas de fee de stall à l'ère classique)
+- **Coût:** ouverture **gratuite** (pas de fee de stall à l'ère classique) ; en revanche le réseau prélevait **1% du prix de vente, plafonné à 100 000 gold** (✅ recherche FR 2026-10 — [GMS Temple 7033](https://forum.gmstemple.com/index.php?showtopic=7033))
 - **Durée:** Permanent jusqu'à fermeture / déconnexion
 - **Items limite:** **~10 items** (Silkroad Online Wiki - Fandom)
 - **Prix minimum:** 1 gold
@@ -213,7 +217,7 @@ Annulation:
 
 - **Max 10 items** simultanément en consignation
 - **Durée ~3 jours** par enregistrement (retours joueurs)
-- **2 commissions** : à l'enregistrement + sur la vente (taux exacts non documentés en ligne)
+- **2 commissions** : à l'enregistrement + sur la vente — ⚠️ taux exacts toujours non documentés en ligne : la recherche FR 2026-10 n'a chiffré que les frais du **Stall Network 2009** (1% plafonné à 100k, ère précédente), et la recherche lusophone 2026-10 ne les a pas trouvés non plus → **à mesurer en jeu** pour l'ère Juel
 - **Avantage** vs stall classique : vente 24h/24, même déconnecté
 - **Inconvénient** : frais + risque de perte à l'expiration
 
@@ -507,6 +511,8 @@ Accessories: +stats, crit %, atk %
 4. Rotation des items rares
 ```
 
+> 💡 **Astuce d'époque (recherche FR 2026-10)** : le guide économie FR recommandait un **2ᵉ compte dédié au stall** pendant que le personnage principal farm (« il faut un 2e compte pour staller ») — et de garder un pet ramasseur (écureuil) pour collecter l'or au sol pendant le grind ([GMS Temple, L'économie dans SRO, 2009](https://forum.gmstemple.com/index.php?showtopic=6532)).
+
 ### Service Client
 
 ```
@@ -700,7 +706,7 @@ Pour l'implémentation dans SRObro (clone navigateur basé sur le client officie
 | Slots par stall | ~10 items |
 | Localisation | En ville uniquement (position du perso) |
 | Achat à distance | **Non supporté nativement** — la recherche indique le stall, déplacement requis |
-| Fees | Aucun (ère classique) |
+| Fees | Ouverture gratuite ; frais réseau documentés en 2009 : **1% du prix de vente, plafonné à 100 000 gold** (✅ recherche FR 2026-10) |
 | Vendeur | Doit rester connecté et immobile |
 
 ### Consignation
@@ -737,13 +743,13 @@ Pour l'implémentation dans SRObro (clone navigateur basé sur le client officie
 **R:** **Consignment Merchant Juel**, dans le Specialty Shop du Hotan Palace. Option "Access consignment/purchases/settlements". Fonctionne dans toutes les villes sauf Alexandria.
 
 ### Q: Combien coûte la consignation?
-**R:** Une commission à l'enregistrement + une commission sur chaque vente encaissée. Les taux exacts ne sont pas documentés en ligne — à mesurer en jeu (variables selon version/serveur).
+**R:** Une commission à l'enregistrement + une commission sur chaque vente encaissée. Les taux exacts ne sont pas documentés en ligne — à mesurer en jeu (variables selon version/serveur). Seul repère chiffré (✅ recherche FR 2026-10) : l'ère **précédente** (Stall Network 2009) prélevait **1% plafonné à 100 000 gold** — [GMS Temple 7033](https://forum.gmstemple.com/index.php?showtopic=7033).
 
 ### Q: Que deviennent les items non vendus en consignation?
 **R:** Après ~3 jours, l'enregistrement expire et l'item est supprimé s'il n'est pas renouvelé ou récupéré ("Cancel Registration" / retrieve).
 
 ### Q: Le stall a-t-il un coût?
-**R:** Non, ouvrir un stall physique est gratuit (ère classique). Les frais n'apparaissent qu'avec la consignation (commissions).
+**R:** Ouvrir un stall physique est gratuit (ère classique), mais le réseau prélevait **1% du prix de vente, plafonné à 100 000 gold** (iSRO 2009 — [GMS Temple 7033](https://forum.gmstemple.com/index.php?showtopic=7033)). Les commissions « registration + vente » n'apparaissent qu'avec la consignation Juel.
 
 ### Q: Pourquoi mon item ne se vend-il pas?
 **R:** Prix trop haut, mauvaise ville (mauvais public), stats non documentées, mauvais timing (vente en semaine, achat le week-end). Vérifiez le Stall Network pour comparer.
@@ -757,10 +763,13 @@ Pour l'implémentation dans SRObro (clone navigateur basé sur le client officie
 
 ### Guides et Mécaniques
 - [princessjane25 — How to use the new Stall Network (2011)](https://princessjane25.wordpress.com/2011/01/16/how-to-use-the-new-stall-network) — le guide de référence sur la consignation Juel
+- [GMS Temple — Le Stall Network (FR, 26/10/2009)](https://forum.gmstemple.com/index.php?showtopic=7033) — frais 1% plafonnés à 100k, loterie Merchant's Blessing, raccourcis Q/F (ère 2009)
+- [GMS Temple — L'économie dans SRO (FR, 2009)](https://forum.gmstemple.com/index.php?showtopic=6532) — repères budget, conseil du 2ᵉ compte stall
 - [IGN — Interview Silkroad Online (oct. 2007)](https://www.ign.com/articles/2007/10/20/silkroad-online-interview) — description du Stall Network global à l'ère classique
 - [GameFAQs — Silkroad Online Guide and Walkthrough (Sintaku, 2007)](https://gamefaqs.gamespot.com/pc/930711-silkroad-online/faqs/44908) — mise en place d'un stall, silk, bases
 - [TaultUnleashed — SRO Pricing and Selling Guide](https://www.taultunleashed.com/silkroad-submissions/sro-pricing-and-selling-guide-t36134.html) — ratios NPC, formule BIP, règles de pricing stall
 - [phBot Guide — Stall](https://guide.phbot.org/phbot/stall) — automatisation stall/consignation (spécification utile)
+- [Wikipédia PT — Silkroad Online](https://pt.wikipedia.org/wiki/Silkroad_Online) — corroborations stalls en ville + réseau (recherche PT 2026-10)
 
 ### Wikis
 - [Silkroad Online Wiki (Fandom) — Stall](https://silkroadonline.fandom.com/wiki/Stall)
@@ -809,4 +818,4 @@ Pour l'implémentation dans SRObro (clone navigateur basé sur le client officie
 
 *Dernière mise à jour: 2026-10-01*
 
-*Sources: IGN (2007), princessjane25 (2011), Fandom Wiki, TaultUnleashed, elitepvpers, phBot Guide, GameFAQs, communautés r/silkroadonline et r/MMORPG, recherche web exhaustive 2026 — SRObro Project*
+*Sources: IGN (2007), princessjane25 (2011), Fandom Wiki, TaultUnleashed, elitepvpers, phBot Guide, GameFAQs, communautés r/silkroadonline et r/MMORPG, recherche web exhaustive 2026 — SRObro Project + recherche multilingue ML_RESEARCH 2026-10 : GMS Temple (FR), Wikipédia PT (PT)*

@@ -15,6 +15,7 @@
 - [Tips pour Réussir en PvP](#-tips-pour-réussir-en-pvp)
 - [Différences Classic vs Silkroad-R](#-différences-classic-vs-silkroad-r)
 - [FAQ](#-faq)
+- [Findings Recherche Multilingue (2026-10)](#-findings-recherche-multilingue-2026-10)
 - [Resources](#-resources)
 
 ---
@@ -72,7 +73,8 @@ Chaque kill non-consensuel ajoute des **murder points** (PK penalty points). Les
 | **1000+** | **Murderer Level 2** | rouge | drop fort, EXP loss accru |
 | **2000+** | **Murderer Level 3** | rouge foncé + icône | drop massif, débuffs |
 
-> ⚠️ **Divergence sources** : le wiki FR silkroad.fandom (via flux) liste 300/500/1000 comme seuils ; le wiki EN liste 500/1000/2000. Les deux décrivent le même système à versions différentes. À traiter comme ~**500/1000/2000** (EN, plus complet) avec réserve.
+> ✅ **Résolu (recherche FR, 2026-10)** : la divergence « wiki FR 300/500/1000 vs wiki EN 500/1000/2000 » est tranchée en faveur de **500/1000/2000**. Le wiki Fandom FR de Silkroad **n'existe pas** — vérifié 3 voies : `silkroad.fandom.com/fr/api.php` → 404, `silkroadonline.fandom.com/fr/api.php` → 404, aucune version linguistique FR listée sur le wiki EN et aucun snapshot Wayback. La mention « wiki FR via flux » était une **source fantôme** ; aucune source FR réelle (JeuxOnline, GMS Temple, JeuxVideo.com, Wikipédia FR) ne soutient les seuils 300/500/1000. Les seuils ci-dessus sont retenus **sans réserve**.
+> Source 🇫🇷 : rapport [ML_RESEARCH/RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) §Incertitudes résolues (constat négatif vérifié, confiance 5/5).
 
 ### Apparence du Murderer
 
@@ -85,6 +87,37 @@ Chaque kill non-consensuel ajoute des **murder points** (PK penalty points). Les
 - **Guards de ville** : attaquent à vue les murderers (impossible d'utiliser les NPCs en toute sécurité)
 - **Perte d'EXP à la mort** : ~**2%** de base, **plus élevée en murderer** (selon statut)
 - **Drop d'items à la mort** : voir section suivante (données techniques)
+
+### 📜 Règles PK officielles TW (DiGeam 絲路紀元 — page officielle)
+
+Source 🇨🇳 (chinois traditionnel) : **https://sro.digeam.com/post_1113-1** (site officiel du service TW/HK/MO opéré par DiGeam), via rapport [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) :
+
+**Activation et restrictions :**
+- PK possible dès **Lv 20+** (sous Lv 19 : ne peut ni PK ni être victime)
+- Activation en maintenant la touche **Alt**
+- PK **interdit** en équipe / guilde / ville
+- Attaquer les **pets, invocations ou transports** d'un joueur = PK
+
+**Les 3 états (noms officiels TW) :**
+
+| État | Nom TW | Signification | Règle |
+|---|---|---|---|
+| ⚪ Blanc | 一般人 | neutre | état par défaut |
+| 🟣 Violet | 加害者 | agresseur | persiste durant le combat (si la cible riposte, pas de pénalité pour elle) |
+| 🔴 Rouge | 杀人者 | meurtrier | **attaquer un rouge n'entraîne aucune pénalité** |
+
+**Pénalités de l'état rouge (liste officielle) :**
+1. Impossible d'**ouvrir un stall**
+2. Impossible d'utiliser le **retour en ville**, les portails, les transports et les montures
+3. **En ville : 2% de dégâts toutes les 4 secondes + régénération stoppée**
+4. À la mort : perte d'EXP **et** de SP supplémentaire + **chance de drop d'équipement**
+5. **Scroll de résurrection : XP réduit de moitié**
+
+**Points de crime (恶人值) :**
+- Tuer un joueur neutre en rapporte ; **tuer des monstres les réduit** ; **à zéro, l'état rouge disparaît** ; une valeur trop élevée impose un état PK forcé (formulation officielle ambiguë)
+- ⚠️ Les valeurs « 500 de base, +50 par niveau d'écart » ne circulent que via des sources **mobiles** (gfpao, remake 2024-2025) — **exclues** de la KB PC conformément aux recommandations du rapport ZH
+
+**Anecdote officielle 🇨🇳 :** un **classement des joueurs rouges** (红名排行榜) existait sur le service CN et a été purgé à la suite d'une exploitation (source : https://silkroad.iccgame.com/content-669-66645.html, iccgame officiel).
 
 ---
 
@@ -123,6 +156,7 @@ Le serveur exécute : `rand() % 101 <= DeathPenaltyRate(player)` — le taux est
 
 - Mort normale : **~2% d'EXP**
 - Mort en murderer : perte accrue (dé-level possible)
+- ✅ Témoignage d'époque 🇩🇪 (2006) : mort en murderer = **−6% d'EXP** — guide SP farming Radon, https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/1454-guide-sp-farming-was-wie-wann (via [ML_RESEARCH/RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md))
 - Le **de-level** par mort en murderer existe (retours communautaires multiples)
 
 ---
@@ -134,6 +168,8 @@ Le serveur exécute : `rand() % 101 <= DeathPenaltyRate(player)` — le taux est
 - Ordre de grandeur communautaire : **−1 à −5 points par monstre** selon le niveau du monstre vs le vôtre (haut niveau = plus de réduction)
 - Décroissance passive par le temps : très lente/non confirmée sur iSRO classic (les FAQ anciennes mentionnaient « attendre », sans chiffre officiel)
 - Sur certaines versions : possibilité de payer une amende (NPC) — variable par serveur
+
+> ✅ **Corroboration ZH (officiel TW, 2026-10)** : la page officielle DiGeam confirme que **tuer des monstres réduit les points de crime** (恶人值) et que **l'état rouge disparaît à zéro** (https://sro.digeam.com/post_1113-1).
 
 **Murder count vs PK penalty points :** le `murder count` (nombre de kills) affiché et les `pk_penalty_points` internes peuvent différer (le second pondère par contexte : niveau de la victime, job flags...).
 
@@ -228,6 +264,15 @@ Sur les serveurs dédiés PvP (ex: Sky City de l'édition occidentale), le port 
 - **Traders** : transportent des marchandises (PvE défensif + risque PvP)
 - Job XP et job points gagnés sur les kills
 - Les pénalités de drop à la mort s'appliquent aussi aux jobs (job flag = facteur aggravant dans le code de death penalty, cf. florian0)
+
+### 🧹 Système « Wanted » des Thieves (données multilingues)
+
+| Donnée | Valeur | Source |
+|---|---|---|
+| État **현상범** (recherché) | au-delà de **2 000 penalty points** → marqueur « wanted » + **changement de métier bloqué** | 🇰🇷 Inven — présentation officielle open beta (20/12/2004) : https://www.inven.co.kr/webzine/news/?news=2285 |
+| **Arrange Point (Wanted)** | seuil **≥ 3 000 points** → marqueur rouge, **attaquable même sans costume** ; se purge en payant l'amende à la Hunter Guild ou en se laissant tuer (perte d'EXP) | 🇹🇷 SroMax — guide Thief : https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294 |
+
+> ⚠️ Divergence 2 000 (KR 2004) vs 3 000 (TR moderne) : époques et services différents — à trancher avec le client cible.
 
 ---
 
@@ -393,6 +438,30 @@ Sur les serveurs dédiés PvP (ex: Sky City de l'édition occidentale), le port 
 - [PlayOrigin — CTF Event Guide](https://forum.playorigin.com/showthread.php?47-Capture-The-Flag-(C-T-F-)-Origin-Guide)
 - [Silkroad Forever (officiel) — Guide CTF](https://www.silkroadforever.com/en-us/m/guideShow.html?f=Fortress&t=1)
 
+### Sources officielles & multilingues (2026-10)
+- [DiGeam — Système PK officiel TW](https://sro.digeam.com/post_1113-1) 🇨🇳 (chinois traditionnel)
+- [iccgame — purge du classement des joueurs rouges (CN officiel)](https://silkroad.iccgame.com/content-669-66645.html) 🇨🇳
+- [Inven — présentation open beta KR 2004 (jobs, wanted 현상범)](https://www.inven.co.kr/webzine/news/?news=2285) 🇰🇷
+- [SroMax — guide Thief (Arrange Point / Wanted)](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294) 🇹🇷
+- [silkroadonline.de — SP-Farming (mort murderer −6% XP)](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/1454-guide-sp-farming-was-wie-wann) 🇩🇪
+- Rapports [ML_RESEARCH/](ML_RESEARCH/) — RESEARCH_FR / DE / TR / ZH / KO / PT (2026-10)
+
+---
+
+## 🌍 Findings Recherche Multilingue (2026-10)
+
+| Sujet | Trouvaille | Source (langue) | Confiance |
+|---|---|---|---|
+| **Seuils murderer** | Divergence 300/500/1000 vs 500/1000/2000 **résolue** : le wiki FR n'existe pas (source fantôme, API 404) → seuils EN retenus sans réserve | [ML_RESEARCH/RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) 🇫🇷 | 5/5 |
+| **Règles PK officielles** | Lv 20+ requis, états blanc/violet/rouge (一般人/加害者/杀人者), 2% dégâts/4 s en ville pour les rouges, drop d'équipement + perte SP à la mort, scroll de résurrection ÷2 | sro.digeam.com/post_1113-1 (officiel TW) 🇨🇳 | 5/5 |
+| **Décrément** | Tuer des monstres réduit les points de crime (恶人值) ; état rouge disparaît à zéro | sro.digeam.com/post_1113-1 (officiel TW) 🇨🇳 | 5/5 |
+| **Perte d'EXP murderer** | −6% d'EXP à la mort en murderer (témoignage 2006) | silkroadonline.de (guide Radon) 🇩🇪 | 3/5 |
+| **Wanted thief** | > 2 000 penalty points (KR 2004, job change bloqué) / ≥ 3 000 Arrange Points (TR, attaquable sans costume) | Inven 🇰🇷 + SroMax 🇹🇷 | 4/5 |
+| **Drops en guild war** | 2 témoignages de perte d'items **équipés** en guild war (cleric rod +8, shield +7), contesté par le guideur — consensus du thread : drop possible en GW, PAS en job ni FW → « rapporté, contesté » | silkroadonline.de (guide SeToY 2009) 🇩🇪 | 2/5 |
+| **Classement des rouges** | Un classement des joueurs rouges a existé sur le service CN, purgé après exploitation | silkroad.iccgame.com (officiel CN) 🇨🇳 | 4/5 |
+
+Rapports complets : [ML_RESEARCH/](ML_RESEARCH/) (RESEARCH_FR / DE / TR / ZH / KO / PT, 2026-10). La recherche PT n'a pas produit de donnée PK/PvP exploitable pour ce fichier.
+
 ---
 
 ## 📚 Voir aussi
@@ -428,4 +497,4 @@ Sur les serveurs dédiés PvP (ex: Sky City de l'édition occidentale), le port 
 ---
 
 *Dernière mise à jour : 2026-10-01*
-*Sources : florian0 (RE serveur), silkroad.fandom.com, strategywiki.org, silkroadforums.com, elitepvpers.com, playorigin.com, silkroadforever.com*
+*Sources : florian0 (RE serveur), silkroad.fandom.com, strategywiki.org, silkroadforums.com, elitepvpers.com, playorigin.com, silkroadforever.com, sro.digeam.com (ZH officiel), silkroad.iccgame.com (ZH officiel), silkroadonline.de (DE), inven.co.kr (KO), sromax.com (TR) — rapports ML_RESEARCH (2026-10)*

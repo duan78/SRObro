@@ -59,6 +59,17 @@ L'économie de SRO n'a **jamais été documentée officiellement** par Joymax (p
 - **Quests** : récompenses en gold aux bas niveaux
 - **Job trading** : la source de gold "active" la plus rentable (voir section Job)
 - **Drops max sur mobs "verts"** : les monstres proches de votre niveau donnent le maximum de drops (gold, elixirs, items) ; les mobs bleus (trop faibles) et rouges (trop forts) donnent le minimum
+- ✅ **Précisé (recherche TR 2026-10)** — règle complète des couleurs ↔ drops/SoX ([SroLobby, « Mob renkleri ve item drop ilişkisi »](https://www.srolobby.com/konular/silkroad-online-mob-renkleri-ve-item-drop-iliskisi.2486)) :
+
+| Couleur du mob (vs votre niveau) | Écart | Exp/SP | Chance SoX |
+|---|---|---|---|
+| 🔵 Bleu | -7 lvls et moins | quasi nulle | quasi nulle |
+| 🟢 **Vert** | **-6 lvls** | **meilleur SP du jeu** | **LA PLUS HAUTE du jeu** |
+| ⚪ Gris | 0 à -3 | équilibré | 2e meilleure |
+| 🟠 Orange | +1 à +5 | bonne exp, SP faible | plus basse que gris |
+| 🔴 Rouge | +6 et plus | exp max, SP nul | la plus basse |
+
+→ Règle TR : **farmer le SoX sur les mobs verts (-6 niveaux)**, l'exp sur les rouges/orange. À rapprocher des threads Elitepvpers (~30% de chance de stat bleue, drop rare ≈ 0,001/mob) déjà cités par la recherche.
 
 ### Le Silk en Détail
 
@@ -99,6 +110,7 @@ Aucun taux officiel n'existe sur iSRO (le silk n'est pas transférable). En prat
 **Tips spécifiques vérifiés:**
 - Au level ~20, farmer les **crabs/megalopas** et vendre leurs drops de matériaux d'alchemy (elements de type mer) est cité comme l'un des meilleurs revenus early game (elitepvpers)
 - Ne jamais acheter de gear aux NPCs : le ratio de revente fait perdre 50-90% de la valeur
+- Buff de farm (recherche FR 2026-10) : le scroll **Merchant's Blessing** (loterie du Stall Network, iSRO 2009) donne **+50% d'or droppé pendant 30 min** ([GMS Temple 7033](https://forum.gmstemple.com/index.php?showtopic=7033))
 
 ### Method 2: Job System
 
@@ -212,6 +224,7 @@ BIP = Prix de vente NPC × modificateur de degree × discount (0.5 à 0.75)
 - Stalls joueurs posés **dans les villes** (perso assis, boutique perso, max **10 items**)
 - **Stall Network global** : interface de recherche "qui liste les items en vente dans **toutes les villes** en un clic" (confirmé par l'interview IGN d'octobre 2007)
 - Achat = se rendre physiquement au stall
+- ✅ **Résolu (recherche FR 2026-10)** — frais du Stall Network (2009) : **1% du prix de vente, plafonnés à 100 000 gold**, et loterie **Merchant's Blessing** (scroll : 30 min, **+50% d'or droppé sur les créatures tuées**, ni vendable ni jetable) tirée au sort parmi les utilisateurs du réseau ([GMS Temple, « Le Stall Network », 26/10/2009](https://forum.gmstemple.com/index.php?showtopic=7033)) — détails dans [23_STALL_NETWORK.md](23_STALL_NETWORK.md)
 
 **Ère consignation (après l'update Forgotten World, ~2010-2011) :**
 - Joymax **supprime le réseau de stalls player-run** et le remplace par un NPC de **consignation** : *Consignment Merchant Juel* (Hotan Palace, Specialty Shop)
@@ -227,7 +240,7 @@ BIP = Prix de vente NPC × modificateur de degree × discount (0.5 à 0.75)
 4. Ouvrez le stall — **le perso reste assis, immobile, en ville**
 5. Attendez (vous pouvez être semi-AFK)
 
-**Limitations:** max ~10 items, en ville uniquement, perso immobile, pas de fees.
+**Limitations:** max ~10 items, en ville uniquement, perso immobile ; frais réseau de 1% plafonnés à 100k documentés en 2009 (voir 23_STALL_NETWORK.md).
 
 ---
 
@@ -283,6 +296,17 @@ Mesures community (TaultUnleashed) pour les **armes Seal au début d'iSRO** :
 
 **⚠️ Ces fourchettes "matures" sont des ordres de grandeur communautaires, pas des mesures archivées.** Sur un serveur low-rate récent, divisez par 10-100 ; sur un high-rate, multipliez.
 
+### Prix de Référence — Marché RMT turc (2024-2026, ✅ recherche TR 2026-10)
+
+Première donnée chiffrée de **valeur réelle** du gold trouvée en recherche (comble partiellement l'incertitude « archives $/billion » pour l'époque moderne uniquement) :
+
+| Donnée | Valeur | Source |
+|--------|--------|--------|
+| **1M gold** | **≈ 4,50 - 6,00 TL** selon le serveur (Hebe ≈ 4,50 TL/M) | [Klasgame](https://www.klasgame.com/en/joymax/silkroad-online-joymax/silkroad-gold) · [Kopazar](https://www.kopazar.com/silkroad-online-gold) · GameSatış (lots à partir de 11 TL) |
+| Lot type (serveur LİDYA) | **100M gold + 1 100 silk ≈ 4 900 TL** | [SilkroadPazar](https://www.silkroadpazar.com) |
+
+> ⚠️ Prix commerciaux RMT (contre les ToS) des serveurs officiels TR actuels — ils documentent la valeur **moderne** du gold, pas les prix historiques 2006-2013 (introuvables côté TR également). Le silk officiel TR est revendu par [ByNoGame](https://www.bynogame.com/tr/oyunlar/silkroad-online).
+
 ---
 
 ## 💼 Job Trading Profits
@@ -319,6 +343,12 @@ Au lieu de vendre directement vos specialty goods au marchand de destination, **
 | **1-Star** | Low | 100k-500k | 10 min |
 | **2-3 Star** | Medium | 500k-5M | 15-30 min |
 | **5-Star** | Very High | 50M-200M | 30-60 min |
+
+### Repères historiques et privés (✅ recherche TR 2026-10)
+
+- **iSRO 2006 :** revente des goods à **361% du prix d'achat** (licence trader ~10 000 gold au lv20) — [DonanımHaber, « silkroad'da tüccar olmak »](https://forum.donanimhaber.com/silkroad-da-tuccar-olmak--8024785), LA référence historique turque du trade
+- **Privés vSRO (modernes) :** trade 5★ = **30M+ gold par run** ; team **2 Traders + 1 Hunter ≈ 90% de réussite** ; la capacité des transports augmente le gain ; « rate kervan » ×15 = acheter 50M → vendre 750M — [vSRO.org, guide gold/SP](https://www.vsro.org/konular/gold-sp-kasma-rehberi-slotlar-job-dungeon-ve-gunluk-taktikler.13648) · [calcul de rate kervan](https://www.vsro.org/konular/kervan-rate-hesaplama.1608) (taux custom de serveurs privés — non officiels)
+- **Contrepoint FR (2009) :** « *même un trade 5 étoiles réussi ne vous rapportera pas autant d'argent* » que la revente d'éléments d'alchimie — les métiers « sont vraiment là uniquement pour le fun » selon le guide économie FR d'époque ([GMS Temple, L'économie dans SRO, 2009](https://forum.gmstemple.com/index.php?showtopic=6532)) ; repères budget du même guide : « petit budget » < **500k**, techniques avancées dès **3M**, un loup ≈ **3M** à l'époque. Ressenti de joueur 2009, à nuancer selon les taux du serveur.
 
 ---
 
@@ -419,11 +449,11 @@ Boutique en **argent réel** (micro-paiements) de Joymax, accessible via le site
 - Budget type : 1M-100M par session, **2B+** pour un push +9/+10 endgame
 
 **5. Mounts / Pets:**
-- Pet scrolls : **~1M gold** en shop NPC (fandom wiki)
+- Pet scrolls : **~1M gold** en shop NPC (fandom wiki) — ✅ corroboré (recherche PT 2026-10) : le loup est « le seul mascotte achetable en gold », **1 000 000 gold** ([Wikipédia PT](https://pt.wikipedia.org/wiki/Silkroad_Online), confiance 3)
 - Horse, Camel, Elephant via stable keepers — 100k-10M selon type/version
 
 **6. Guild:**
-- Création de guilde : **500 000 gold** à l'origine (2007, confirmé IGN), **1 000 000 gold** dans les versions récentes (fandom wiki)
+- Création de guilde : **500 000 gold** à l'origine (2007, confirmé IGN), **1 000 000 gold** dans les versions récentes (fandom wiki) — ✅ corroboré (recherche PT 2026-10) : 500k gold également selon [Wikipédia PT](https://pt.wikipedia.org/wiki/Silkroad_Online)
 - Level up de guilde : ex. level 2 = 5 400 GP + **3M gold** ; croissant ensuite
 - Les guildes sont financées par les **donations de gold ET de skill points** des membres
 
@@ -566,11 +596,23 @@ Recherche web de février-octobre 2026 sur les sources primaires et communautair
 | [Facebook SRO Origin group](https://www.facebook.com/groups/srooriginm/posts/1158738178540511) | Gold drops ~500/700/1000 par type de mob |
 | [elitepvpers — drops from monsters](https://www.elitepvpers.com/forum/silkroad-online/150057-recived-drops-monsters.html) | Drops max sur mobs verts, min sur bleus/rouges |
 
+### 🔎 Sources multilingues (recherche ML_RESEARCH, 2026-10)
+
+| Source | Données |
+|--------|---------|
+| [SroLobby — couleurs des mobs ↔ drops (TR)](https://www.srolobby.com/konular/silkroad-online-mob-renkleri-ve-item-drop-iliskisi.2486) | Table complète des couleurs : verts (-6 lvls) = meilleure chance SoX + meilleur SP ; rouges (+6+) = exp max, SoX minimale |
+| [DonanımHaber — silkroad'da tüccar olmak (TR, 2006)](https://forum.donanimhaber.com/silkroad-da-tuccar-olmak--8024785) | Trade iSRO 2006 : revente à **361%** du prix d'achat ; licence trader ~10k gold (lv20) |
+| [vSRO.org — guide gold/SP (TR)](https://www.vsro.org/konular/gold-sp-kasma-rehberi-slotlar-job-dungeon-ve-gunluk-taktikler.13648) · [kervan rate](https://www.vsro.org/konular/kervan-rate-hesaplama.1608) | Privés : 30M+/run en 5★ ; 2T+1H = 90% ; « rate kervan » ×15 (50M → 750M) — taux custom |
+| [Klasgame](https://www.klasgame.com/en/joymax/silkroad-online-joymax/silkroad-gold) / [Kopazar](https://www.kopazar.com/silkroad-online-gold) / [SilkroadPazar](https://www.silkroadpazar.com) (TR, 2024-2026) | RMT TR : **1M gold ≈ 4,50-6,00 TL** ; lot LİDYA 100M + 1 100 silk ≈ 4 900 TL |
+| [GMS Temple — Le Stall Network (FR, 2009)](https://forum.gmstemple.com/index.php?showtopic=7033) | Frais réseau **1% plafonnés à 100k** ; loterie **Merchant's Blessing** (+50% or droppé, 30 min) |
+| [GMS Temple — L'économie dans SRO (FR, 2009)](https://forum.gmstemple.com/index.php?showtopic=6532) | Repères budget 2009 (<500k petit budget, 3M avancé, loup ~3M) ; perception « alchimie > trade 5★ » |
+| [Wikipédia PT — Silkroad Online](https://pt.wikipedia.org/wiki/Silkroad_Online) | Guilde = 500k gold ; loup = seul pet achetable en gold (**1M**) ; **48 serveurs internationaux** (Xian 01/10/2005 → Genesis 15/11/2011), capacité **~3 500 joueurs/serveur** (page non sourcée — confiance 3) |
+
 ### ⚠️ Incertitudes Restantes
 
-1. **Le pourcentage exact des commissions de consignation** (registration + vente) n'est documenté nulle part en ligne — à mesurer en jeu
+1. **Le pourcentage exact des commissions de consignation** (registration + vente) n'est documenté nulle part en ligne — à mesurer en jeu. (✅ Partiellement résolu, recherche FR 2026-10 : les frais du **Stall Network de 2009** sont chiffrés — 1% plafonné à 100k — mais les taux de la consignation **Juel post-2010** restent inconnus ; la recherche PT 2026-10 ne les a pas trouvés non plus)
 2. **Les formules internes** (gold drop exact par mob level, prix NPC exacts) ne sont pas publiées ; les valeurs ci-dessus sont des mesures communautaires
-3. **Prix historiques $/billion du RMT** : aucune archive indexée ; uniquement témoignages
+3. **Prix historiques $/billion du RMT** : aucune archive indexée ; uniquement témoignages (les prix TR 2024-2026 ci-dessus documentent la valeur **moderne** du gold, pas l'historique 2006-2013)
 4. **Ratios NPC 5D-6D** : non mesurés dans le guide source
 5. Le nombre exact de slots d'un stall joueur (10 selon le wiki Fandom et le système de consignation ; certains serveurs custom l'étendent)
 
@@ -655,4 +697,4 @@ Recherche web de février-octobre 2026 sur les sources primaires et communautair
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : IGN 2007, TaultUnleashed, Fandom Wiki, elitepvpers, princessjane25, MMODude, forums communautaires)*
+*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : IGN 2007, TaultUnleashed, Fandom Wiki, elitepvpers, princessjane25, MMODude, forums communautaires + recherche multilingue ML_RESEARCH 2026-10 : SroLobby/DonanımHaber/vSRO.org/Klasgame/Kopazar/SilkroadPazar (TR), Wikipédia PT (PT), GMS Temple (FR))*

@@ -97,6 +97,8 @@ Les **field trade centers** (camps de bandits, ruines — voir table plus bas) v
 ### Stock Limit
 La capacité dépend du **transport** (voir section suivante), PAS de « slots par type de good ». Les goods ont un poids/une valeur, et le total chargé détermine vos étoiles.
 
+> ℹ️ **Ère TW (recherche ZH 2026-10)** : sur le service taïwanais, les **caisses de spécialités (特产箱)** tombent sur les monstres et se ramassent via le skill « sac du marchand » (贸易商的袋子) ; le **nombre de caisses transportées détermine le gain final** ([Bahamut, 跑商小教室](https://forum.gamer.com.tw/C.php?bsn=8441&snA=57582)).
+
 ---
 
 ## ⭐ Le Système d'Étoiles
@@ -112,9 +114,11 @@ La capacité dépend du **transport** (voir section suivante), PAS de « slots p
 | **5★** | Peuvent attaquer | Groupes massifs, niveau rouge | Quasi impossible solo — caravane organisée |
 
 **À retenir:**
-- Un 1★ sous le niveau 40 est **protégé du PvP de job** (données d'époque)
+- Un 1★ sous le niveau 40 est **protégé du PvP de job** (données d'époque) — ✅ **Confirmé (recherche FR/DE 2026-10)** : « un trader de niveau ≤40 en caravane 1 étoile ne peut pas être attaqué par un thief joueur » ([GMS Temple 6543, FR, 2009](https://forum.gmstemple.com/index.php?showtopic=6543)) ; le guide allemand de 2008 indique la même règle ([silkroadonline.de, Das Jobsystem](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/28727-guide-das-jobsystem))
 - Plus d'étoiles = plus de profit (plus de goods) MAIS des vagues de thief monsters plus fortes
 - La valeur de charge d'un 1★ dépend du transport : ~**16k de goods max sur un cheval**, ~**21k sur un chameau** (données communautaires iSRO)
+- ✅ **Résolu (recherche TR 2026-10) — montée et lecture des étoiles :** les étoiles montent par **seuils de valeur chargée** et s'affichent en direct sur l'écran du chamelier ; vue de l'extérieur, un kervan est suivi d'**autant de NPC thieves que d'étoiles** (un 4★ = 4 voleurs NPC à ses trousses) — c'est comme ça que les thieves « lisent » votre trade ([SroMax](https://www.sromax.com/konular/silkroad-online-thief-olmak-hirsiz-jobu-rehberi.294) · [FrmTR](https://www.frmtr.com/sro-rehberler-sorular-ve-teknik-yardim/952764-job-taktikleri-trader-programi.html))
+- Historique kSRO : le chargement de spécialités est passé de **25 à 40 unités** avec le « Trade System 2 » du 19/07/2006 (profits trader/hunter augmentés au passage) ([Inven](https://www.inven.co.kr/webzine/news/?news=2449))
 
 ---
 
@@ -176,6 +180,14 @@ Les **centres de village** vendent specialties locales + générales ; les **cen
 
 > ⚠️ **vSRO 1.188:** pas d'Alexandria (Legend V, ~2010). Les routes Egypte (Alexandria↔Hotan, Alexandria↔Samarkand — très haut risque) n'existent que dans les versions tardives d'iSRO.
 
+### Hiérarchie des routes selon la communauté TR (recherche TR 2026-10)
+
+Source : [burakakhan — système kervan/ticaret](https://burakakhan.com.tr/oyunlar/silkroad/kervan-ticaret) :
+- La plus rentable = **Jangan ↔ Constantinople** (risque maximal)
+- La courte/sûre = **Jangan ↔ Donwhang**
+- Le profit suit la règle **distance × risque**
+- Le **trade de nuit** est plus sûr (moins de thieves connectés)
+
 ---
 
 ## 💰 Profits Chiffrés par Route
@@ -187,7 +199,11 @@ Taux de vente vérifiés (le « taux » est le multiplicateur appliqué au prix 
 | **Jangan → Donwhang** | **~162%** (10M investis → 16,2M) | Guide officiel Origin (2025) |
 | **Hotan → Samarkand** | **~300%** (retour joueur) | Silkroad Forums (iSRO) |
 | **Constantinople → Samarkand** | **~313%** | Silkroad Forums (iSRO) |
+| **Trade iSRO en général (2006)** | **~361%** du prix d'achat (licence trader ~10 000 gold au lv20) | ✅ Trouvé (recherche TR 2026-10) — [DonanımHaber, « silkroad'da tüccar olmak », 2006](https://forum.donanimhaber.com/silkroad-da-tuccar-olmak--8024785), LA référence historique turque |
+| **Trade 5★ (serveurs privés vSRO)** | **30M+ gold par run** (taux serveur custom : « rate kervan » ×15 = acheter 50M → vendre 750M) | ✅ Trouvé (recherche TR 2026-10) — [vSRO.org, guide gold/SP](https://www.vsro.org/konular/gold-sp-kasma-rehberi-slotlar-job-dungeon-ve-gunluk-taktikler.13648) · [calcul de rate kervan](https://www.vsro.org/konular/kervan-rate-hesaplama.1608) — **ne pas généraliser à l'officiel** |
 | Routes « Egypte » (Alexandria) | Très élevées, haut risque | Wiki Fandom (ère tardive) |
+
+> ⚠️ Les chiffres 361% (iSRO 2006) et 30M+/run (privés vSRO) viennent d'**ères différentes** : à appliquer avec prudence. Contrepoint FR de 2009 : « *même un trade 5 étoiles réussi ne vous rapportera pas autant d'argent* » que la revente d'éléments d'alchimie — les métiers « sont vraiment là uniquement pour le fun » selon ce guide économie d'époque, un ressenti à nuancer selon les taux du serveur ([GMS Temple, L'économie dans SRO, 2009](https://forum.gmstemple.com/index.php?showtopic=6532)).
 
 **Exemple de run 1★ chiffré (données communautaires iSRO, Jangan↔Donwhang):**
 ```
@@ -262,7 +278,7 @@ Revenu à l'arrivée: ~45 000 gold (retour joueur, horse 1★)
 
 1. **Lisez les taux** : le shop affiche les prix/taux des specialties dans chaque région — achetez ce qui se vend le plus cher à votre destination
 2. **Évitez la survendre** : si tout le serveur vend « White Silk of Jangan » à Donwhang, le taux a chuté — diversifiez les goods ou changez de destination
-3. **Timing** : heures creuses = moins de thieves (mais moins de hunters disponibles)
+3. **Timing** : heures creuses = moins de thieves (mais moins de hunters disponibles) ; le **trade de nuit** est réputé plus sûr (règle des guides TR — [burakakhan](https://burakakhan.com.tr/oyunlar/silkroad/kervan-ticaret))
 4. **Transport adapté** : cheval pour la vitesse (petites charges répétées), chameau/bœuf pour la capacité
 5. **Bargain goods** : les field centers vendent des goods à prix cassé (accès par quêtes niveau) — marges maximales
 6. **Caravanes** : plusieurs traders ensemble = mutualisation des hunters, plus de cibles pour disperser les thieves
@@ -293,6 +309,12 @@ Revenu à l'arrivée: ~45 000 gold (retour joueur, horse 1★)
 ### Stratégie 5: Bargain Flip
 - Acheter des bargain goods dans un field center (bandit den, ruines) et revendre en ville
 - Attention: ces zones sont des repères de thieves
+
+### Stratégie 6: Équipe « 2 Traders + 1 Hunter » (privés vSRO)
+- Composition citée avec **~90% de réussite** sur les caravanes multi-étoiles ; la **capacité des pets/transports** augmente directement le gain par run ([vSRO.org, guide gold/SP](https://www.vsro.org/konular/gold-sp-kasma-rehberi-slotlar-job-dungeon-ve-gunluk-taktikler.13648) — données serveurs privés)
+
+### Événements économiques d'époque (iSRO)
+- **Grand Caravan (16/11–07/12/2010)** : trade run accompagné de GM + concours vidéo ; récompenses : 1er = **arme 11D Seal of Nova**, 2e = **10D Seal of Sun (3 items)**, 3e = **10D Seal of Moon (6 items)** — le tout en +0 sans blues, livraison le 14/12/2010, rotation planifiée sur tous les serveurs ([fil JeuxOnline, traduction des annonces Joymax](https://forums.jeuxonline.info/sujet/1104741/l-actualite-sur-silkroad-online-et-la-presentation))
 
 ---
 
@@ -364,6 +386,11 @@ Revenu à l'arrivée: ~45 000 gold (retour joueur, horse 1★)
 - [Trade l Trade Outposts l Profit - Origin Guide (forum officiel Origin)](https://forum.playorigin.com/showthread.php?501-%E2%9C%B3-Trade-l-Trade-Outposts-l-Profit-Origin-Guide) — taux 162% Jangan→Donwhang, mécanique de marché
 - [How to Become a Trader in Silkroad (2015)](https://asdfeer1.hatenablog.com/entry/2015/04/01/173112) — pas-à-pas flag/pseudonyme/transport
 - [Trade System - Hanf_Hunter (d'époque)](https://hanfhunter-online.de.tl/%3D%3ETrade-System.htm) — 10 centres de commerce, règles des transports
+- [silkroad'da tüccar olmak (DonanımHaber, TR, 2006)](https://forum.donanimhaber.com/silkroad-da-tuccar-olmak--8024785) — taux 361% historique, licence ~10k
+- [Kervan/Ticaret (burakakhan, TR)](https://burakakhan.com.tr/oyunlar/silkroad/kervan-ticaret) — hiérarchie des routes, distance × risque, trade de nuit
+- [Gold/SP kasma rehberi (vSRO.org, TR)](https://www.vsro.org/konular/gold-sp-kasma-rehberi-slotlar-job-dungeon-ve-gunluk-taktikler.13648) — 30M+/run 5★, équipe 2T+1H (privés)
+- [Les Métiers sur Silkroad (GMS Temple, FR, 2009)](https://forum.gmstemple.com/index.php?showtopic=6543) — trader ≤40 immunisé en 1★, rangs, banque des hunters
+- [跑商小教室 (Bahamut, TW)](https://forum.gamer.com.tw/C.php?bsn=8441&snA=57582) — caisses de spécialités, skill sac du marchand (ère TW)
 
 ### Outils
 - [Trade Route Profit Calculator - silkroadonline.wiki](https://silkroadonline.wiki/tools/trade-routes)
@@ -377,4 +404,4 @@ Revenu à l'arrivée: ~45 000 gold (retour joueur, horse 1★)
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: Silkroad Online Wiki (Fandom), forum.playorigin.com (guide officiel Origin), Hanf_Hunter fan site, Silkroad Forums (via Wayback/snippets), StrategyWiki, sromobile.com, asdfeer1.hatenablog.com*
+*Sources: Silkroad Online Wiki (Fandom), forum.playorigin.com (guide officiel Origin), Hanf_Hunter fan site, Silkroad Forums (via Wayback/snippets), StrategyWiki, sromobile.com, asdfeer1.hatenablog.com + recherche multilingue 2026-10 (ML_RESEARCH) : DonanımHaber/vSRO.org/SroMax/burakakhan/FrmTR (TR), GMS Temple/JeuxOnline (FR), silkroadonline.de (DE), Inven (KO), Bahamut (ZH)*

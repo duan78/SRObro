@@ -17,6 +17,7 @@
 - [Tables de Référence Rapide](#tables-de-référence-rapide)
 - [Mythes et Réalités](#mythes-et-réalités)
 - [Findings Recherche Communautaire (2025-2026)](#findings-recherche-communautaire-2025-2026)
+- [Recherche Multilingue (2026-10)](#recherche-multilingue-2026-10)
 - [Sources](#sources)
 
 ---
@@ -132,6 +133,8 @@ Exemple concret (arme 80 ~ 112 de dégâts, source UnKnoWnCheaTs) :
   Votre AR faible vs  PR adverse fort    →  dégâts ≈ 80  (min)
   AR ≈ PR                                →  dégâts ≈ 96  (milieu)
 ```
+
+> ✅ **Corroboration TR (SroCave, 2026)** : « Attack Rating rapproche le dégât du **maximum** (important après Lv 44) ; Parry rapproche le dégât subi du **minimum** » — même lecture que ce document. Source 🇹🇷 : https://srocave.com/konular/silkroad-online-oyunu-hakkinda-en-temel-bilgiler-karakter-yapilandirmasi-ve-itemler.2635
 
 ### Sources de gain
 
@@ -251,6 +254,8 @@ Deux lectures coexistent dans les threads elitepvpers :
 
 → Utiliser la forme 1 ; la forme 2 donne des résultats proches pour les builds STR.
 
+> ✅ **Résolu (recherche DE, 2026-10)** : relecture du thread fondateur (elitepvpers 412387) — la lecture **fondatrice** est bien **crit = 2×PHY + MAG** (doublement PHY) ; la « variante balance » n'est qu'une proposition tardive du même thread. Source 🇩🇪 : rapport [ML_RESEARCH/RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) (confiance 3-4/5).
+
 ### Renforts (Reinforce) — plus forts qu'ils n'y paraissent
 
 ```
@@ -259,6 +264,36 @@ Exemple communauté : 500 STR × 276.8% + 2146 base = 3 530 total
 ```
 
 Les % de renfort **multiplient** la contribution de la stat → un passif de renfort élevé vaut souvent plus qu'un gain d'arme brut.
+
+### 🇩🇪 Formules empiriques de 2006 (serveur Troy — silkroadonline.de)
+
+Postées par un joueur du **serveur Troy** (issues de la communauté RE de l'époque, « quasi-certaines » d'après le thread), **vérifiées empiriquement in-thread** :
+
+```
+mag_damage    = mag_reinforce × INT + weapon_mag_damage
+mastery_bonus = (100 + wep_mastery_level) / 100     ← ex : mastery 40 → ×1.4
+phy_damage    = (phy_reinforce × STR + weapon_phy_damage) × mastery_bonus
+HP/MP         = Stat × 10 × 1.02^(Lvl−1)
+MAXSTAT       = 16 + Lvl × 4    (corrigé in-thread : 20 + (Lvl−1) × 4)
+INT BALANCE   = 100 × INT / MAXSTAT
+STR BALANCE   = (1 + 2 × STR / MAXSTAT) / 3 × 100
+```
+
+**Notes :**
+- **Vérification communautaire in-thread** : `(1.073 × 287 + 517) × 1.58 = 1303` = dégât minimum affiché en jeu → formule PHY validée empiriquement
+- Le **mastery_bonus** ×(100+mastery)/100 correspond au composant `mastery_incr` de la formule elitepvpers (mastery 90 → ×1.90) — **corroboration indépendante** de la structure
+- Max HP calculé Lv70 : full INT ≈ **8 121 HP**, full STR glaive ≈ **16 042 HP** (avec tous les bonus)
+- Défense analogue : `Σ(Reinforce × STR ou INT) + Σ(défenses d'équipement)`
+- ⚠️ **Divergence** : la formule HP **exponentielle** de 2006 (×1.02 par niveau) diffère de la formule **linéaire** moderne (Max HP = 20×Level + STR×8 + INT×2, evolex.dev) — deux ères/reconstructions différentes, non tranché (voir Incertitudes)
+- ⚠️ Données d'époque iSRO 2006-2011 — à re-valider sur le client cible (v1.188+)
+- Source 🇩🇪 : https://www.silkroadonline.de/allgemein/allgemeines-ber-silkroad/9220-diverse-formeln-in-silkroad (2006 — via [ML_RESEARCH/RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md), fiabilité 5/5)
+
+### ⚔️ Mécanique des imbues : le ×% de la skill (source DE 2006)
+
+- Le dégât d'imbue est **multiplié par le % du skill** qui la porte : un skill à 200% **double** le bonus d'imbue, un coup de combo à 68% le réduit proportionnellement (tests chiffrés in-thread : Hidden Blade 200 → 400 avec Fire ; sans imbue 25-30 dégâts, avec 250-300)
+- Le calcul côté serveur s'effectue à la **confirmation d'activation du skill** → une skill lancée une fraction de seconde avant l'activation de l'imbue n'en bénéficie pas (explication des « combos non imbueés »)
+- Deux lectures coexistent in-thread (« bonus réparti sur toute la combo » vs « **×% par coup** ») — c'est la seconde qui concorde avec les tests chiffrés
+- Source 🇩🇪 : https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/4266-schadensberechnung (mai 2006)
 
 ---
 
@@ -725,16 +760,81 @@ Réalité : Snow Shield (Cold) absorbe une part des dégâts en MP —
 | **Stab ×2 vs sol** | effet Specialized | silkroaddoc (RefSkill) | 5/5 |
 | **DoT tick** | toutes les 2 s (ex: 560×4 ticks) | silkroaddoc (RefSkill) | 5/5 |
 | **Perte EXP mort** | ~2% | florian0 + communauté | 3/5 |
+| **Formules empiriques 2006 (Troy)** | HP = Stat×10×1.02^(Lvl−1) ; PHY = (Reinforce×STR + arme)×(100+mastery)/100 | silkroadonline.de (DE, 2006) | 4/5 |
+| **Mastery bonus = mastery_incr** | ×(100+mastery)/100 — mastery 90 → ×1.90 | silkroadonline.de (DE) — corrobore elitepvpers | 4/5 |
+| **Imbue : ×% de la skill** | 200% → double ; calcul à l'activation du skill | silkroadonline.de (DE, 2006) | 4/5 |
+| **GAP : ±10%/niveau** | gap 9 = 10% XP / 190% SP (max utile) + mesures réelles | silkroadonline.de (DE, 2006) | 5/5 |
+| **AR/PR : lecture jet min/max** | AR→max (dès Lv 44), PR→min | SroCave (TR) — corroboration | 4/5 |
+| **Formule TR simplifiée** | stat × Reinforce% + atk power (sans constantes) | silkroadportal.com (TR) | 3/5 |
+| **Scaling 기공 2005** | attaque→ATK magique, défense→DEF magique, vitesse→équipement | GameAbout (KO, officiel) | 4/5 |
 
 ---
 
 ### ⚠️ Incertitudes restantes (sources divergentes)
 
-1. **Constantes multiplier exactes** (1.2767…/1.2870…) : reconstruites par tests, jamais officielles ; modifiées par certains serveurs privés
-2. **Variante du crit** (doublement PHY vs ajout du balance PHY en %) : deux lectures dans les mêmes threads
-3. **Chance de proc des imbues par pallier de skill** : ordres de grandeur (fire ~20-30%, cold 20-60% selon skill) mais pas de table exacte publiée — se fier aux tooltips client
-4. **Échelle exacte de la vitesse d'attaque** (coups/minute par arme) : l'ordre relatif est sûr, les valeurs absolues varient selon les sources
-5. **Effet du Zerk sur la défense** : aucun en classic ; les variantes (Origin mobile) ajoutent des stats
+1. **Constantes multiplier exactes** (1.2767…/1.2870…) : reconstruites par tests, jamais officielles ; modifiées par certains serveurs privés — les formules DE 2006 (Troy) et TR modernes ne les contiennent pas non plus (recherches DE/TR 2026-10) → **toujours non résolues**
+2. **Variante du crit** : ✅ **Résolu (recherche DE 2026-10)** — le thread fondateur (elitepvpers 412387) donne bien **2×PHY + MAG** ; la « variante balance » est une proposition tardive marginale du même thread
+3. **Chance de proc des imbues par pallier de skill** : ordres de grandeur (fire ~20-30%, cold 20-60% selon skill) mais pas de table exacte publiée — la recherche DE 2026-10 explique le **scaling des dégâts** d'imbue (×% de la skill) mais pas les taux de proc ; la recherche TR ne documente que la hiérarchie Cold < Lightning < Fire → se fier aux tooltips client
+4. **Échelle exacte de la vitesse d'attaque** (coups/minute par arme) : l'ordre relatif est sûr, les valeurs absolues varient selon les sources — non documentée côté TR non plus (recherche TR 2026-10)
+5. **Effet du Zerk sur la défense** : aucun en classic (corroboré par la description officielle KR 2004 « puissance d'attaque + vitesse de déplacement », Inven) ; les variantes (Origin mobile) ajoutent des stats
+6. **Formule HP (nouvelle)** : forme **exponentielle 2006** (Stat×10×1.02^(Lvl−1), serveur Troy, DE) vs forme **linéaire moderne** (20×Level + STR×8 + INT×2, evolex.dev) — divergence non tranchée (ères/reconstructions différentes)
+
+---
+
+## 🌍 Recherche Multilingue (2026-10)
+
+### 📈 Mécanique du GAP (XP↔SP) — mesures allemandes de 2006
+
+Source 🇩🇪 : https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/1454-guide-sp-farming-was-wie-wann (guide Radon, 2006)
+
+**Principe : ±10% d'XP↔SP par niveau de gap** (table d'époque) :
+
+| Gap | XP | SP |
+|---|---|---|
+| 0 | 100% | 100% |
+| 1 | 90% | 110% |
+| 5 | 50% | 150% |
+| **9 (max utile)** | **10%** | **190%** |
+
+**Mesures réelles monstre par monstre** (monstre Lv23, perso mastery 16 vs 23 — **débunk du mythe du « dé-level »** par keywarrior) :
+
+| Monstre | XP/SP (mastery 16) | XP/SP (mastery 23) |
+|---|---|---|
+| Mangyang | 2/1 | 4/1 |
+| Tiger | 32/5 | 576/27 |
+| Black Tiger | 359/64 | 761/35 |
+| White Tiger | 380/67 | 826/38 |
+| Chakij Worker | 402/71 | 896/42 |
+
+→ « la formule marche aussi en sens inverse » : mastery > niveau du monstre = **plus d'XP aussi**. (Tableau de mesures ground-truth rare.)
+
+Autres données du même guide :
+- **Suicide farming** : mourir ne fait perdre **que de l'XP, jamais de SP** → technique de dé-leveling documentée
+- Mort en murderer : **−6% d'EXP** (témoignage d'époque)
+- Conseils gap d'époque : gap 5 en général, **gap 6 dès Lv59** (passives), **sans gap dès Lv72-75** (thread « Welcher Gap? »)
+
+### 🇹🇷 Formules turques (version simplifiée) et status effects
+
+Sources 🇹🇷 : https://silkroadportal.com/konular/silkroad-online-hasar-defans-hesaplama-attritube-stone.366 (repris par https://www.srolobby.com/konular/silkroad-online-reinforce-nedir.560) + https://srocave.com/konular/silkroad-online-oyunu-hakkinda-en-temel-bilgiler-karakter-yapilandirmasi-ve-itemler.2635
+
+```
+Fiziksel Hasar (dégât PHY) = Total STR × Physical Reinforce % + Physical Attack Power
+Büyüsel Hasar  (dégât MAG) = Total INT × Magical Reinforce % + Magical Attack Power
+(mêmes formules pour les défenses : STR/INT × Reinforce + Def Power)
+```
+
+- Corrobore la **structure reinforce** (stat × reinforce % + arme) — mais **ne couvre ni les constantes 1.2767/1.2870 ni la variante du crit** (divergence documentée, pas contradiction)
+- **Status effects (SroCave)** : Burn = perte de HP toutes les **2 s** · Zombie = « les potions **réduisent** les HP/MP » au lieu de soigner · Electric shock = baisse du parry · Freezing = immobilise · Frostbite = ralentit · Poison = dégâts fixes
+- **Crit** : chance exacte « inconnue » côté communauté TR (aucune table) — la correspondance Critical X = X% reste une construction communautaire EN
+- **Stats** : 5 points/niveau dont 2 automatiques (1 STR + 1 INT)
+
+### 🇰🇷 Tests officiels coréens de 2005 (GameAbout)
+
+- **Dégâts moyens lv 1** : River Fire Force (화류결, imbue feu) = **21** ; Thunder Tiger Force (뇌호결, imbue foudre) = **17,5** ; transfert lightning (splash) = **12,25** en moyenne → le splash accélère le farm de **~+20%** (http://www.gameabout.com/news/articleView.html?idxno=615)
+- **Cibles AoE** : Lion Shout livre 1 (진명) = **3 cibles**, livre 2 (낭천) = **5 cibles** ; Frost Nova 전풍 = 3 cibles, 광릉/광우 = 5 cibles
+- **Scaling 기공술 (officiel 2005)** : skills d'attaque 기공 scalent sur l'**attaque magique**, skills défensifs sur la **défense magique**, skills de vitesse selon l'équipement porté (http://www.gameabout.com/news/articleView.html?idxno=613)
+- **Test de balance 2005** (Bicheon 20 vs Pacheon 10) : l'arc chasse aussi vite malgré la mastery moitié moindre ; l'épée critique et gèle plus (coups plus nombreux) mais encaisse plus (http://www.gameabout.com/news/articleView.html?idxno=584)
+- Rapport [ML_RESEARCH/RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) : « formules officielles : non résolu (Joymax n'a jamais publié) » — mais scaling 2005 confirmé (confiance 3/5)
 
 ---
 
@@ -753,6 +853,13 @@ Réalité : Snow Shield (Cold) absorbe une part des dégâts en MP —
 - [UnKnoWnCheaTs — SRO General Tips and Stats](https://www.unknowncheats.me/forum/silkroad/38774-sro-tips-stats.html)
 - [Silkroad Forums — What is Parry Ratio](http://www.silkroadforums.com/viewtopic.php?f=2&t=49338)
 - [PlayOrigin — Chinese Race Guide (archive)](https://forum.playorigin.com/archive/index.php/t-26.html)
+- [silkroadonline.de — Diverse Formeln in Silkroad (formules Troy 2006)](https://www.silkroadonline.de/allgemein/allgemeines-ber-silkroad/9220-diverse-formeln-in-silkroad) 🇩🇪
+- [silkroadonline.de — Schadensberechnung (imbues ×% de la skill, 2006)](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/4266-schadensberechnung) 🇩🇪
+- [silkroadonline.de — SP-Farming Was? Wie? Wann? (gap XP/SP + mesures réelles, 2006)](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/1454-guide-sp-farming-was-wie-wann) 🇩🇪
+- [SilkroadPortal — formules hasar/defans (TR)](https://silkroadportal.com/konular/silkroad-online-hasar-defans-hesaplama-attritube-stone.366) 🇹🇷
+- [SroCave — Temel Bilgiler (AR/parry, status effects, éléments)](https://srocave.com/konular/silkroad-online-oyunu-hakkinda-en-temel-bilgiler-karakter-yapilandirmasi-ve-itemler.2635) 🇹🇷
+- [GameAbout — tests 2005 (imbues lv 1, AoE, scaling 기공)](http://www.gameabout.com/news/articleView.html?idxno=613) 🇰🇷
+- Rapports [ML_RESEARCH/](ML_RESEARCH/) — RESEARCH_DE / TR / KO / FR / ZH / PT (2026-10)
 
 ### Calculateurs
 - [evolex.dev — SRO Character Stats Calculator](https://evolex.dev/sro-char-stats)
@@ -761,4 +868,4 @@ Réalité : Snow Shield (Cold) absorbe une part des dégâts en MP —
 
 *Dernière mise à jour : 2026-10-01*
 
-*Sources : elitepvpers, silkroadforums, UnKnoWnCheaTs, florian0 (RE), silkroaddoc.github.io, PlayOrigin, evolex.dev, silkroad.fandom.com, SRObro Project*
+*Sources : elitepvpers, silkroadforums, UnKnoWnCheaTs, florian0 (RE), silkroaddoc.github.io, PlayOrigin, evolex.dev, silkroad.fandom.com, SRObro Project, silkroadonline.de (DE), SilkroadPortal/SroCave (TR), GameAbout/Inven (KO) — rapports ML_RESEARCH (2026-10)*

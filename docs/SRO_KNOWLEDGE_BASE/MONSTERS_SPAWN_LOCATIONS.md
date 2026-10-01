@@ -25,6 +25,7 @@ Ce document fournit les **coordonnées de spawn précises** pour les monstres im
 - Elitepvpers Unique Spawns (https://www.elitepvpers.com/forum/sro-guides-templates/186742-guide-unique-spawns.html)
 - Monster Area Wiki
 - Community guides et databases
+- Rapports multilingues 2026-10 : [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) · [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md)
 
 **Format des Coordonnées:**
 - X, Y (World coordinates)
@@ -38,12 +39,18 @@ Ce document fournit les **coordonnées de spawn précises** pour les monstres im
 ### Unique Spawns — Données vérifiées (client iSRO + rev6/elitepvpers)
 
 > ✅ **HP/levels = données client** (silkroadonline.wiki). Zones = guides rev6/elitepvpers. Coordonnées X/Y précises = **rapportées, non vérifiées**.
+>
+> ✅ **Timers par unique (recherche TR 2026-10)** : fenêtres rapportées en minutes après la mort — **Tiger Girl ~210-390 min · Cerberus ~200-400 min · Captain Ivy ~200-450 min (jusqu'à 700 min !) · Uruchi ~230-450 min** ; règle générique DonanımHaber : « 3,5-5 h », « minimum 2 h après le dernier kill, ensuite aléatoire ». Sources : [Extraloob](https://www.extraloob.com/threads/silkroad-1-100-level-unique-hakkinda-bilgiler-234754) · [DonanımHaber](https://forum.donanimhaber.com/unique-spawn-saatleri--14339078)
+>
+> ✅ **HP validés en croisé (recherche TR/FR/DE 2026-10)** : les 7 uniques classiques sont confirmés par 2 sources TR indépendantes (DonanımHaber + MMSRN), le guide FR GMS Temple 2010 et les forums DE — valeurs identiques au client.
+>
+> ⚠️ **Conflit FR non tranché** : spawn ressenti ~4 h ([GMS Temple 2010](https://forum.gmstemple.com/index.php?showtopic=8106)) vs ~6 h ([Wikipédia FR](https://fr.wikipedia.org/wiki/Silkroad_Online)) — voir [15_UNIQUE_BOSSES.md](15_UNIQUE_BOSSES.md) (section Spawn Times).
 
 #### Tiger Girl (Level 20)
 ```
 Zone: Bandit Stronghold (Bijeokdan Mountain) / Tiger Mountain — Chine, Jangan
 Coordonnées (rapportées): X: 4853.28, Y: 93.81 (Tiger Mountain)
-Spawn Time: 3-5 heures après mort (4h défaut vSRO), point aléatoire
+Spawn Time: 3-5 heures après mort (4h défaut vSRO), point aléatoire — fenêtre TR: 210-390 min (✅ recherche TR 2026-10)
 HP: 598,720 | ATK: 42-51 | DEF: 18 | Gold: 586,560
 ID: 1954 | Code: MOB_CH_TIGERWOMAN
 Special: AOE stun (roar)
@@ -58,7 +65,7 @@ Strategy: solo possible à 30+; sinon party 4-6 joueurs level 20+
 ```
 Zone: Desperado Hill / Forest of Dusk / Garden of Gods — Europe (Constantinople)
 Coordonnées (rapportées): X: -1551.74, Y: -93.72 (Desperado Hill)
-Spawn Time: 3-5 heures, point aléatoire
+Spawn Time: 3-5 heures, point aléatoire — fenêtre TR: 200-400 min (✅ recherche TR 2026-10)
 HP: 693,072 | ATK: 52-70 | DEF: 22 | Gold: 740,519
 ID: 5871 | Code: MOB_EU_KERBEROS
 Special: attaques multiples (3 têtes)
@@ -73,7 +80,7 @@ Strategy: 2-4 joueurs level 25+, ranged pratique
 ```
 Zone: Amphitheater / Cleopatra's Gate / Haran's Tower — Asie Mineure
 Coordonnées (rapportées): X: -6424.71, Y: 2744.64 (Amphitheater)
-Spawn Time: 3-5 heures, point aléatoire
+Spawn Time: 3-5 heures, point aléatoire — fenêtre TR: 200-450 min, parfois jusqu'à 700 min (✅ recherche TR 2026-10)
 HP: 1,094,835 | ATK: 115-184 | DEF: 30 | Gold: 1,050,440
 ID: 14778 | Code: MOB_AM_IVY
 Après crash serveur: spawn fixe à l'Amphitheater
@@ -86,7 +93,7 @@ Strategy: party 4-6 joueurs level 35+
 #### Uruchi (Level 40)
 ```
 Zone: Black Robber Den (forteresse) + routes du Tarim Ferry — Tarim Basin (Asie Centrale)
-Spawn Time: 3-5 heures, point aléatoire
+Spawn Time: 3-5 heures, point aléatoire — fenêtre TR: 230-450 min (✅ recherche TR 2026-10)
 HP: 1,779,528 | ATK: 124-149 | DEF: 47 | Gold: 1,711,056
 ID: 1982 | Code: MOB_OA_URUCHI
 Après crash serveur: spawn fixe à l'intérieur du Black Robber Den
@@ -151,10 +158,13 @@ Drops: top tier (raid de guilde)
 Zone: Qin-Shi Tomb B6 — White Viper Chamber (pièce nord)
 Accès: Serin Gate (centre du B4), ouvertes 04h00/10h00/16h00/22h00 pendant 10 min
 HP: 183,535,199
-Prérequis: clear du B5 (4 gardiens level 98-99)
+Prérequis: clear du B5 (4 gardiens level 98-99 — noms ZH officiels: 玄武颛顼/白虎小昊/青龙太皥/朱雀炎帝, + 炎火客神武 cité)
 
 Drops: équipement 10D-11D (top tier)
 ```
+> ✅ **Résolu (recherche TR 2026-10 — [SroLobby B6](https://www.srolobby.com/konular/silkroad-online-qin-shi-tomb-b6-monsters-mob-hp-saldiri-tipleri.1780))** : le B6 compte **4 salles dont 2 avec uniques** — SoSo The Black Viper **Lv 100, HP 27 655 068** (attaques physique & magique) ; BeakYung the White Viper HP 183 535 199 (physique & magique).
+> ⚠️ **Conflit non tranché** : niveau de BeakYung **100** selon les sources TR (SroLobby + Extraloob) vs **105** selon le client iSRO et le wiki TW DiGeam (HP identiques des deux côtés).
+> **Accès rapporté (Extraloob)** : B5 = **5 uniques** à tuer, B6 = tuer **4× l'unique 95** puis salle Medusa — divergent du protocole « 4 gardiens + Shinmoo » (non tranché). Skills officiels TW : AoE magique, ligature frontale, **pétrification 100 %** en rayon ([DiGeam](https://srowiki.digeam.com/%E7%B5%82%E6%A5%B5boss%E4%BB%8B%E7%B4%B9)).
 
 #### Uniques du Job Temple (Alexandrie, levels 103-110)
 ```
@@ -200,19 +210,23 @@ Les anciens documents mentionnaient "Cerberus Strong (70)" et "Captain Ivy Stron
 
 ### Les 4 Gardiens (B5)
 ```
-JeonUk The Black Tortoise  (Nord)  Level 98
-YumJae The Red Hawk        (Sud)   Level 98
-TaeHo  The Blue Dragon     (Ouest) Level 99
-SoHaow The White Tiger     (Est)   Level 99 (le plus dur)
+JeonUk The Black Tortoise  (Nord)  Level 98   — ZH: 玄武颛顼 (Zhuanxu)
+YumJae The Red Hawk        (Sud)   Level 98   — ZH: 朱雀炎帝 (Yandi, « Phénix vermillon »)
+TaeHo  The Blue Dragon     (Ouest) Level 99   — ZH: 青龙太皥 (Taihao)
+SoHaow The White Tiger     (Est)   Level 99 (le plus dur) — ZH: 白虎小昊 (Xiaohao)
++ cinquième nom cité côté ZH: 炎火客神武
 ```
+> ✅ Résolu (recherche ZH 2026-10) : les gardiens B5 sont nommés dans les sources chinoises officielles (correspondance iSRO↔ZH probable, mêmes animaux cardinaux). Protocole TW : 4 mini-boss cardinaux → pré-boss central (probablement Shinmoo) → ouvre B6. Sources : [DiGeam](https://sro.digeam.com/intro/20200212) · [iccgame](http://silkroad.iccgame.com/content-667-84551.html)
 
 ### Boss du tombeau
 ```
 Shinmoo, The Man of Flames    Level 100 — spawn coin SW de la salle centrale du B5
                               après la mort des 4 gardiens; drop stuff lvl 100
 Soso, The Black Viper         Level 100 — Black Viper Chamber (B6); drop 10D
+                              HP: 27,655,068 (✅ recherche TR 2026-10 — SroLobby)
 BeakYung, The White Viper     Level 105 — White Viper Chamber (B6 nord)
                               "Medusa" — HP: 183,535,199 — boss final
+                              ⚠️ Lv 100 selon sources TR (vs 105 client) — conflit non tranché
 ```
 
 ---
@@ -772,3 +786,4 @@ class UniqueSpawnNotifier {
 *Dernière mise à jour: 1 Octobre 2026*
 
 *Sources: xSROMap, silkroadonline.wiki (données client), rev6, elitepvpers, mmorpg.com (Qin-Shi Tomb), Monster Area Wiki, Community Guides*
+*Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (timers de spawn par unique, Qin-Shi B6, validation HP) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (gardiens B5 nommés, skills Medusa) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) (conflit spawn 4h/6h) · [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md)*

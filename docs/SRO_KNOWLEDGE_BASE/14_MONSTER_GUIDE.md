@@ -375,6 +375,19 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 - ~10 elixirs/heure aux Earth Ghosts en solo (avec pickup pet)
 - 9-12 items utiles en ~6h de grind
 
+**Couleur des mobs ↔ chance SoX (✅ recherche TR 2026-10 — SroLobby):**
+Par rapport à VOTRE niveau (couleur du nom du monstre):
+
+| Couleur | Écart de niveau | Exp/SP | Chance SoX |
+|---|---|---|---|
+| 🔵 Bleu | -7 niveaux et moins | quasi nulle | quasi nulle |
+| 🟢 Vert | -6 niveaux | **meilleur SP** | **LA PLUS HAUTE du jeu** |
+| ⚪ Gris | 0 à -3 | équilibré | 2e meilleure |
+| 🟠 Orange | +1 à +5 | bonne exp, SP faible | plus basse que gris |
+| 🔴 Rouge | +6 et plus | exp max, SP nul | la plus basse |
+
+→ Règle communautaire TR : **farmer le SoX sur les mobs verts (-6)**, l'expérience sur les rouges/orange. Source: [SroLobby — couleurs des mobs et drops](https://www.srolobby.com/konular/silkroad-online-mob-renkleri-ve-item-drop-iliskisi.2486)
+
 ---
 
 ## 📈 Farming Efficiency
@@ -454,6 +467,10 @@ Les monstres de Silkroad Online sont votre source principale d'**EXP, SP, et dro
 
 > ❌ **Corrigé (2026):** « Lady Lyn », « Beithy », « Bunny », « Rooster », « Monkey », « Spider Queen » — **introuvables dans les données client iSRO**, ne pas implémenter tels quels (uniques de serveurs privés ou inventions). L'ancien tableau « Cerberus 20 / Yarkan 70+ / Shaitan 80+ » était erroné.
 
+> ⏱️ **Timers précis par unique (✅ Résolu — recherche TR 2026-10)** : Tiger Girl **~210-390 min** · Cerberus **~200-400 min** · Captain Ivy **~200-450 min** (jusqu'à 700 min !) · Uruchi **~230-450 min** ; règle générique DonanımHaber : « 3,5-5 h », « **minimum 2 h après le dernier kill, ensuite aléatoire** ». Sources : [Extraloob](https://www.extraloob.com/threads/silkroad-1-100-level-unique-hakkinda-bilgiler-234754) · [DonanımHaber](https://forum.donanimhaber.com/unique-spawn-saatleri--14339078).
+> ⚠️ **Conflit FR non tranché** : spawn ressenti **~4 h** (guide FR GMS Temple 2010) vs **~6 h** ([Wikipédia FR](https://fr.wikipedia.org/wiki/Silkroad_Online)) — les fenêtres TR englobent les deux.
+> ✅ **HP validés en croisé (recherche TR/FR/DE 2026-10)** : les HP des 7 uniques classiques sont confirmés par 2 sources TR indépendantes, le guide FR 2010 et les forums DE — identiques aux données client.
+
 ### 🎯 Détails par Unique
 
 #### TIGER GIRL (Level 20)
@@ -525,8 +542,11 @@ Zone: Roc Mountain (world boss)
 HP: 183,535,199
 Zone: Qin-Shi Tomb B6 — White Viper Chamber (accès par Serin Gate, B4, ouvertes 04h/10h/16h/22h)
 ```
-- Nécessite de clear B5 (4 gardiens 98-99: Black Tortoise, Red Hawk, Blue Dragon, White Tiger)
-- Sous-uniques: Shinmoo (100), Soso the Black Viper (100), Snake Generals (95)
+- Nécessite de clear B5 (4 gardiens 98-99: Black Tortoise, Red Hawk, Blue Dragon, White Tiger — ✅ noms ZH officiels : 玄武颛顼/朱雀炎帝/青龙太皥/白虎小昊, recherche ZH 2026-10)
+- Sous-uniques: Shinmoo (100), Soso the Black Viper (100, **HP 27 655 068** — ✅ recherche TR 2026-10), Snake Generals (95)
+- B6 = 4 salles dont 2 à uniques ; accès rapporté (Extraloob) : B5 = 5 uniques à tuer, B6 = tuer 4× l'unique 95 puis salle Medusa (⚠️ divergent du protocole mmorpg.com, non tranché)
+- ⚠️ **Conflit de niveau non tranché** : BeakYung **Lv 100** selon les sources TR (SroLobby/Extraloob) vs **105** selon le client iSRO et le wiki TW DiGeam (HP identiques)
+- Skills officiels (TW) : AoE magique à distance, ligature frontale, **pétrification 100 %** en rayon, fortes attaques
 - Top guilds uniquement
 
 #### JOB TEMPLE UNIQUES (103-110)
@@ -543,6 +563,18 @@ Zone: Job Temple, sud d'Alexandrie (accès selon AP de l'union de job)
 - La **Serin Gate** (Qin-Shi Tomb B4) ouvre 4x/jour à heures fixes (04h00, 10h00, 16h00, 22h00) pendant 10 minutes
 - Le **FGW** (Forgotten World) propose des boss de donjon (Togui General lvl 39+, Ghost Sereness lvl 93+) par brackets de level avec grades 1★-4★
 - Des events serveur spawnent des variantes **Strong/Evil** (ex: Strong Tiger Girl `MOB_CH_TIGERWOMAN_L2/L3`)
+
+**Noms officiels chinois des donjons FGW (✅ Résolu — recherche ZH 2026-10):**
+| Donjon | Nom chinois officiel |
+|---|---|
+| FGW (système) | **遗忘世界 / 異次元洞** (« monde oublié / trou dimensionnel ») — le nom « 千里之坟 » parfois cité **n'existe pas** |
+| Togui Village | **血灵地狱-土鬼村** (« Enfer de sang - village des démons de terre ») |
+| Flame Mountain | **燃烧深渊-火焰山** ; séquence de boss officielle TW : 妒鬼 → 熔天魔将 → 红孩儿 → **牛魔王** (Flame Cow King) |
+| Shipwreck (Green Abyss / Sea of Resentment) | **永恒之海-船舶墓地** (« Mer éternelle - cimetière de navires ») + variante 冰海之心 ; boss final **女妖** (« la sirène ») |
+
+Sources: [wiki DiGeam — Flame Mountain](https://srowiki.digeam.com/%E7%87%83%E7%87%92%E6%B7%B1%E6%B7%B1-%E7%81%B0%E5%B1%B1) · [iccgame — Shipwreck](https://silkroad.iccgame.com/content-667-49139.html)
+
+**Uniques du Green Abyss 91-100 (✅ Résolu — recherche TR 2026-10):** **Ghost Beast** (navires 1-2), **Ghost Gultton** (dernier navire), boss final **Ghost Serenes** (invoque 2 Gultton à bas HP). Types par grade (guides SroLobby) : mobs 1★ = **General**, Envies = **Champion**, 2★ = Champion/Elite, 3★-4★ = **Elite** ; party 4 joueurs (1★-2★) / 8 joueurs (3★-4★). Source: [SroLobby — Shipwreck 91-100](https://www.srolobby.com/konular/silkroad-online-shipwreck-91-100-forgotten-world-map-rehberi.2251)
 
 **Utilisation Stratégique:**
 1. **Préparez votre team** à l'avance (spots connus d'avance pour la Serin Gate)
@@ -610,3 +642,4 @@ Zone: Job Temple, sud d'Alexandrie (accès selon AP de l'union de job)
 ---
 
 *Dernière mise à jour: 2026-10-01 (uniques et types corrigés d'après les données client silkroadonline.wiki + elitepvpers/rev6/mmorpg.com)*
+*Fusion multilingue 2026-10: [ML_RESEARCH/RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) (timers par unique, Qin-Shi B6, couleurs mobs/SoX) · [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) (noms ZH FGW, gardiens B5, skills Medusa) · [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md)*

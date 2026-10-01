@@ -12,14 +12,16 @@
 - ✅ Structure `_RefItem` (TypeID1-4, Country, Sex, ItemClass/SetID, colonnes de stats)
 - ✅ Armes chinoises 1D-13D (sword, blade, spear, glaive, bow) — noms des 3 tiers + niveaux + IDs
 - ✅ Armes européennes 1D-13D (épée 1M/2M, double hache, dagues, arbalète, bâton, dark staff, clerical rod, harpe)
+- ✅ Noms originels **ZH/KR** des armes et accessoires (剑/刀/枪/大刀/弓, 한손검…, 파천검 = Break Heaven Sword…) — nomenclature multilingue 2026-10
 - ✅ Boucliers CH + EU par degré (block rate base 10, max ~20)
 - ✅ Accessoires (anneaux, colliers, boucles) CH + EU — noms, niveaux, absorption de dégâts
 - ✅ Blues / magic options (`MATTR_*`) par emplacement + glossaire
 - ✅ Matériaux d'alchimie (elixirs, lucky powders 1-12, tablets 17 familles, magic stones)
 - ✅ Consommables (potions, scrolls, munitions) avec IDs vérifiés
 - ✅ Avatars (587 items) et Devil Spirits (NASRUN, grades A/S)
+- ✅ Prix NPC vérifiés + repères de marché TR modernes (RMT 2024-2026)
 
-**Sources principales:** dump `_RefItem` de client v1.188+ (14 318 items CH + EU, 1D-13D), stats brutes sro-world.de.tl / silkroadkopat.tr.gg, docs openroad/SilkroadDoc (formats vérifiés v1.188), wiki Fandom.
+**Sources principales:** dump `_RefItem` de client v1.188+ (14 318 items CH + EU, 1D-13D), stats brutes sro-world.de.tl / silkroadkopat.tr.gg, docs openroad/SilkroadDoc (formats vérifiés v1.188), wiki Fandom, rapports ML_RESEARCH (ZH/KO/TR, 2026-10).
 
 ---
 
@@ -32,6 +34,7 @@
 - Niveaux réels par degré (pièces A/B/C et armes A/B/C — les degrés se chevauchent)
 - Progression des stats
 - 11D (Drako, lv 101), 12D (Reo lv 113 + upgrades Draco), 13D (Seal uniquement, lv 121)
+- Nomenclature multilingue des degrés (第N套 ZH / N차 KO / DG TR) ; ✅ 10D confirmé dès lv 90 (presse KR 2007) ; 13D attesté en Corée dès 03/2012 ; zones de drop 11D/12D (Alexandrie/Bagdad, sources CN) ; ⚠️ garde-fou contre les chiffres des remakes mobiles 2024+
 
 ### Seal Equipment
 👉 **[06_SEAL_EQUIPMENT.md](06_SEAL_EQUIPMENT.md)** - Seal equipment (SOS, SOM, SOSun)
@@ -40,6 +43,7 @@
 - Versions `_RARE` des codenames (5 232 items Seal dans le dump)
 - Seal of Star (SOS) / Seal of Moon (SOM) / Seal of Sun (SOSun)
 - Sources et drops
+- Nomenclature chinoise (星星装/月亮装/太阳装, argot 暗金) + règle du « 1er tier » (armes seal, 17173 2006) ; rareté des 32 talismans FGW par collection (TR) ; set items : origine Legend 9 KR (2009)
 
 ### Alchimie
 👉 **[05_ALCHEMY_SYSTEM.md](05_ALCHEMY_SYSTEM.md)** - Système d'alchimie (+1 à +12)
@@ -48,6 +52,7 @@
 - Enhancement +1 à +12 (elixirs weapon/shield/protector/accessory, Advanced Elixirs par degré)
 - Lucky Powder (1st-12th), tablets, magic stones
 - Blues : Lucky, Steady, Immortal, Astral…
+- ✅ Validation croisée TR des taux (SroCave — unpacks + 30 000 mesures) ; « % » des attribute stones = probabilité de re-roll (DE) ; mythes & superstitions FR 2007 / DE 2006-2008 / TR (documentés et démentis)
 
 ### Armor Types
 👉 **[08_ARMOR_TYPES.md](08_ARMOR_TYPES.md)** - Types d'armor (détaillé)
@@ -55,8 +60,9 @@
 **Contenu:**
 - Chinois : Armor (heavy) / Protector (light) / Garment (clothes)
 - Européens : Heavy Armor / Light Armor / Robe — restrictions par arme
-- Bonus de set : écarts relatifs vitesse/MP (-20%/-10%/0% entre Garment et Armor ; mix = aucun bonus)
+- Bonus de set : écarts relatifs vitesse/MP (-20%/-10%/0% entre Garment et Armor ; mix = aucun bonus) — corroborés TW (Bahamut) et FR (GMS Temple 2008)
 - Noms de tous les sets par degré (1D-13D, CH + EU, 3 tiers)
+- Nomenclature multilingue des lignes d'armure (重甲/轻甲/道服 ZH, 갑옷/호구/도복 KO)
 
 ---
 
@@ -349,8 +355,8 @@ model MagicOption {
 
 ---
 
-**Note:** Ce fichier (31_ITEMS_DATABASE.md) est un hub/redirection vers [ITEMS_DATABASE.md](ITEMS_DATABASE.md)
+**Note:** Ce fichier (31_ITEMS_DATABASE.md) est un hub/redirection vers [ITEMS_DATABASE.md](ITEMS_DATABASE.md). Enrichissements multilingues (ZH/KO/TR/FR/DE/PT) issus des rapports [ML_RESEARCH](ML_RESEARCH/) du 2026-10-01.
 
 **Dernière mise à jour :** 2026-10-01
 **Base de données Items** - Tous les items de Silkroad Online
-**Fichier #31** - Hub mis en cohérence avec ITEMS_DATABASE.md (données vérifiées _RefItem)
+**Fichier #31** - Hub mis en cohérence avec ITEMS_DATABASE.md (données vérifiées _RefItem + nomenclature multilingue)

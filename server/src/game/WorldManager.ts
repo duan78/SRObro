@@ -191,6 +191,7 @@ export class WorldManager {
         id: character.id,
         name: character.name,
         accountId: character.accountId,
+        gender: character.gender,
         race: toSharedRace(character.race),
         level: character.level,
         exp: Number(character.exp),
@@ -426,6 +427,32 @@ export class WorldManager {
     const data = packet.data as { message: string; channel: string; targetId?: string };
 
     logger.info(`Chat from ${playerEntity.name}: ${data.message}`);
+
+    // Commandes slash joueur (phase 5): /who, /loc — réponse système privée
+    if (data.message?.startsWith('/')) {
+      const cmd = data.message.split(' ')[0].toLowerCase();
+      if (cmd === '/who') {
+        const others = this.getAllPlayers().filter((p) => p.id !== characterId);
+        const list = others.map((p) => `${p.name} (niv. ${p.level})`).join(', ');
+        this.sendToClient(characterId, {
+          type: 'chat', timestamp: packet.timestamp,
+          data: { channel: 'system', message: `En ligne: ${others.length + 1} joueur(s) — ${playerEntity.name}${list ? ', ' + list : ''}` },
+        });
+        return;
+      }
+      if (cmd === '/loc') {
+        this.sendToClient(characterId, {
+          type: 'chat', timestamp: packet.timestamp,
+          data: { channel: 'system', message: `Position: X=${playerEntity.position.x.toFixed(0)} Z=${playerEntity.position.z.toFixed(0)} (zone ${playerEntity.zoneId})` },
+        });
+        return;
+      }
+      this.sendToClient(characterId, {
+        type: 'chat', timestamp: packet.timestamp,
+        data: { channel: 'system', message: `Commande inconnue: ${cmd} (disponibles: /who, /loc)` },
+      });
+      return;
+    }
 
     // Broadcast chat based on channel
     switch (data.channel) {
@@ -734,5 +761,10 @@ export class WorldManager {
   /** Joueur connecté par characterId (null si hors ligne). */
   getPlayer(characterId: string): PlayerEntity | undefined {
     return this.players.get(characterId);
+  }
+
+  /** Tous les joueurs connectés (visibilité multi-joueurs). */
+  getAllPlayers(): PlayerEntity[] {
+    return Array.from(this.players.values());
   }
 }

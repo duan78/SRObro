@@ -47,6 +47,19 @@ Correspondance des codenames `_RefItem` :
 - Un personnage chinois ne peut pas porter d'armure européenne et inversement (champ `Country` de `_RefItem` : 0 = chinois, 1 = européen).
 - Les armures M/F ne sont pas interchangeables (champ `Sex` : 0 = femme, 1 = homme, 2 = universel — armes/boucliers toujours universels).
 
+### 🌐 Nomenclature multilingue des lignes d'armure (ZH/KO)
+
+| Ligne | Chinois | Coréen (2004) |
+|-------|---------|----------------|
+| Armor (CH lourde) | 重甲 zhòngjiǎ | 갑옷 (gabot) |
+| Protector (CH intermédiaire) | 轻甲 (TW 輕甲) qīngjiǎ | 호구 (hogu) |
+| Garment (CH légère) | 道服 dàofú | 도복 (dobok) |
+| Heavy Armor (EU) | 重盔甲 zhòngkuījiǎ | — |
+| Light Armor (EU) | 轻铠甲 (TW 輕鎧甲) qīngkǎijiǎ | — |
+| Robe / Cloth (EU) | 法袍 fǎpáo | — |
+
+*Sources : wiki Bahamut 絲路Online 攻略百科 (TW — https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山) ; Inven, présentation open beta du 20/12/2004 (KO — https://www.inven.co.kr/webzine/news/?news=2285). Recherches ZH/KO 2026-10.*
+
 ### Points Clés par ligne
 
 | Ligne | DEF PHY | DEF MAG | Vitesse (vs Garment) | Consommation MP |
@@ -210,6 +223,8 @@ Consensus des guides : la Heavy est de fait réservée aux **Warriors** ; la Lig
 - **Mix de types = AUCUN bonus** (consensus absolu : guides Casque/elitepvpers, silkroadforums « Armor Types and Facts », Tapatalk, UnKnoWnCheaTs).
 - Le guide de référence vSRO ([Casque, elitepvpers 2019](https://www.elitepvpers.com/forum/sro-guides-templates/4634305-guide-armor-protector-garment.html), testé en jeu) mesure : Armor = -20% vitesse et +20% MP **relativement à Garment**, Protector pile au milieu.
 - Le wiki Fandom exprime le gain en unités de vitesse du jeu : Garment « +6m », Protector « +5.5m » — écarts faibles en absolu mais hiérarchie identique.
+- 🇨🇳 Corroboration TW (Bahamut, recherche ZH 2026-10) : full 道服 (Garment) = « **MP des skills −20% et vitesse +20%** » ; 重甲 (Armor) = plus haute DEF PHY mais **aucun bonus** — mêmes écarts (https://forum.gamer.com.tw/C.php?bsn=8441&snA=57807).
+- 🇫🇷 Corroboration FR (GMS Temple, mai 2008) : protector « **+10% vitesse** », garment « **+20% vitesse** » (https://forum.gmstemple.com/index.php?showtopic=4387).
 
 ### Les deux lectures absolues
 
@@ -439,6 +454,12 @@ Pour le **SP farming** chinois (spam de skills), le full Garment reste la réfé
 - [Elitepvpers — Why CH choose Garment / EU Light Armor](https://www.elitepvpers.com/forum/sro-private-server/4597410-why-ch-player-choose-garment-why-eu-players-choose-light-armor.html) — restrictions EU
 - [openroad — docs formats itemdata](https://github.com/ferdoran/openroad/blob/main/docs/formats/textdata-itemdata.md) — colonnes itemdata (défenses, block rate, SetID)
 
+### Recherche multilingue (2026-10)
+- [Bahamut 絲路Online 攻略百科 — catégories d'équipement (TW)](https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山)
+- [Bahamut — bonus de set 重甲/道服 (TW)](https://forum.gamer.com.tw/C.php?bsn=8441&snA=57807)
+- [Inven — présentation open beta : 갑옷/호구/도복 (KO, 20/12/2004)](https://www.inven.co.kr/webzine/news/?news=2285)
+- [GMS Temple — Tuto traduction du jeu : vitesses protector/garment (FR, 2008)](https://forum.gmstemple.com/index.php?showtopic=4387)
+
 ### Données de référence (SRObro)
 - Dump d'items `_RefItem` (14 318 items, CH+EU, 1D-13D) : voir [ITEMS_DATABASE.md](ITEMS_DATABASE.md#-données-refitem-ids--codenames)
 
@@ -466,4 +487,4 @@ Pour le **SP farming** chinois (spam de skills), le full Garment reste la réfé
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: dump _RefItem client v1.188+ (14 318 items), sro-world.de.tl, silkroadkopat.tr.gg, guildalgarb, Fandom/StrategyWiki, elitepvpers (Casque), IGN Guidebook, openroad docs*
+*Sources: dump _RefItem client v1.188+ (14 318 items), sro-world.de.tl, silkroadkopat.tr.gg, guildalgarb, Fandom/StrategyWiki, elitepvpers (Casque), IGN Guidebook, openroad docs, Bahamut/DiGeam (ZH), Inven (KO), GMS Temple (FR) — rapports ML_RESEARCH 2026-10*

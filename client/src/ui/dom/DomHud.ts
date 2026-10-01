@@ -134,6 +134,47 @@ export class DomHud {
     this.setBar(this.targetFill, this.targetText, t.hp, t.maxHp);
   }
 
+  /** Callback d'envoi de message chat (branché par NetworkCombat). */
+  onChatSend: ((message: string) => void) | null = null;
+  private chatInput: HTMLInputElement | null = null;
+
+  /** Active le champ de saisie: Entrée ouvre/valide, Échap referme. */
+  setupChatInput(): void {
+    const hint = this.root.querySelector('#hud-chat-hint');
+    const input = document.createElement('input') as HTMLInputElement;
+    input.id = 'hud-chat-input';
+    input.type = 'text';
+    input.maxLength = 120;
+    input.placeholder = 'Message… (/who, /loc)';
+    input.style.cssText = 'width:100%;box-sizing:border-box;margin-top:3px;padding:4px 6px;background:#141008;border:1px solid #55461f;border-radius:3px;color:#f0e6d2;font-size:12px;outline:none;display:none;';
+    hint?.after(input);
+    this.chatInput = input;
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && input.style.display === 'none') {
+        input.style.display = 'block';
+        input.focus();
+        e.preventDefault();
+      } else if (e.key === 'Escape' && input.style.display !== 'none') {
+        input.style.display = 'none';
+        input.blur();
+      }
+    });
+    input.addEventListener('keydown', (e) => {
+      e.stopPropagation();
+      if (e.key === 'Enter') {
+        const msg = input.value.trim();
+        if (msg) this.onChatSend?.(msg);
+        input.value = '';
+        input.style.display = 'none';
+        input.blur();
+      } else if (e.key === 'Escape') {
+        input.style.display = 'none';
+        input.blur();
+      }
+    });
+  }
+
   addChatMessage(text: string, kind: 'system' | 'say' | 'combat' = 'say'): void {
     const line = document.createElement('div');
     line.className = 'hud-chat-line hud-chat-' + kind;

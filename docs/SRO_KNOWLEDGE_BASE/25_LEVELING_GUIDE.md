@@ -109,6 +109,12 @@ Mécanique documentée par Silkroad Origin (update « Adjusting The Mechanism To
 - En party (mode partage de points actif, rayon ~200 m), les malus/bonus sont amplifiés (ex. écart +10 en party de 6 : +100%)
 - ⚠️ Les monstres « gris » (10+ niveaux en dessous) ne donnent **plus rien** — ne restez jamais sur des mobs trop bas
 
+### Deuxième facteur : l'écart MAÎTRISE ↔ monstre (mesures allemandes 2006)
+
+> ✅ Nouvelle donnée (recherche DE 2026-10) : en plus de l'écart perso/monstre, l'écart entre votre **maîtrise la plus haute** et le niveau du monstre déplace le ratio XP/SP de chaque kill — règle **±10% par niveau de gap** (GAP 9 = 10% XP / 190% SP, détail dans [26_SP_FARMING.md](26_SP_FARMING.md)).
+
+Mesures réelles d'époque (monstre lv 23, personnage à mastery 23 vs mastery 16 — XP/SP par kill, silkroadonline.de 2006) : Tiger 32/5 vs 576/27 · White Tiger 380/67 vs 826/38 · Chakji Worker 402/71 vs 896/42. La formule « marche aussi en sens inverse » : une maîtrise **supérieure** au monstre augmente aussi l'XP — c'est le mécanisme exact du SP farming par GAP.
+
 ---
 
 ## 👥 Parties et Bonus d'EXP
@@ -144,6 +150,7 @@ Ces bonus **s'additionnent** :
 ## 💀 Pénalité de Mort
 
 - **Perte d'EXP : ~2% de la barre de niveau** par mort (analyse du code client par florian0, 2016) — on peut **re-descendre de niveau** si la barre est basse
+- ℹ️ **La mort ne fait perdre que de l'XP, jamais de SP** (guide DE 2006 — base technique du « dé-leveling » volontaire ; mort en état de meurtrier : −6% XP rapporté). Voir [26_SP_FARMING.md](26_SP_FARMING.md).
 - **Perte d'items au sol :**
   | PK Penalty Points | Chance de drop d'un item |
   |---:|---:|
@@ -371,6 +378,7 @@ Ces bonus **s'additionnent** :
 ### Guides
 - [How to farm SP (PLvL/Ongs) — Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/2461754-guide-how-farm-sp-skillpoints.html) — méthode 8/8 + plvl
 - [Complete Guide For Silkroad Starters — Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/2407342-complete-guide-silkroad-starters.html)
+- [SP-Farming Was? Wie? Wann? — silkroadonline.de (Radon, 2006)](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/1454-guide-sp-farming-was-wie-wann) — mesures XP/SP par écart maîtrise/monstre
 - [Party Systems — Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=7&t=19130)
 - [Academy Guide — Fdherg](https://fdherg.wordpress.com/2010/06/14/silkroad-online-academy-guide/)
 - [Quests lvl 100-110 — WantedGuild](https://wantedguild.forumotion.com/t6-quests-from-lvl-100-to-110)
@@ -408,5 +416,5 @@ Ces bonus **s'additionnent** :
 
 ---
 
-*Dernière mise à jour: 2026-10-01*
-*Sources: leveldata.txt (client officiel, ce dépôt), sromobile.com (formule EXP/écart), florian0 (death penalty), Elitepvpers (PLvL), WantedGuild (quêtes Alexandrie), silkroadforums (party system)*
+*Dernière mise à jour: 2026-10-01 (enrichi par la recherche multilingue ML_RESEARCH — mesures GAP DE 2006)*
+*Sources: leveldata.txt (client officiel, ce dépôt), sromobile.com (formule EXP/écart), florian0 (death penalty), Elitepvpers (PLvL), WantedGuild (quêtes Alexandrie), silkroadforums (party system), silkroadonline.de (mesures XP/SP 2006)*

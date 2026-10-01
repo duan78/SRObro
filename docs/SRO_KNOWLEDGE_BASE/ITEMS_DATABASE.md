@@ -7,6 +7,7 @@
 - [Structure _RefItem (TypeID, pays, IDs)](#-structure-refitem)
 - [Armes Chinoises](#-armes-chinoises)
 - [Caractéristiques de Combat des Armes](#-caractéristiques-de-combat-des-armes)
+- [Noms Originels des Armes et Accessoires (ZH/KR)](#-noms-originels-des-armes-et-accessoires-zhkr)
 - [Armes Européennes](#-armes-européennes)
 - [Boucliers](#-boucliers)
 - [Accessoires (Anneaux / Colliers / Boucles)](#-accessoires)
@@ -215,6 +216,27 @@ Chaque stat est un couple (min, max) ; la valeur réelle d'une instance = `min +
 
 ### Vitesses d'attaque
 SRO n'expose pas de stat « vitesse d'attaque » par item : chaque type d'arme a sa propre animation. Repères communautaires : dagues EU les plus rapides, harpe la plus rapide des armes magiques, armes 2M les plus lentes. L'attack rating (« Accuracy ») monte avec les tiers (ex. sword 1D : 24 → 28 → 32).
+
+---
+
+## 🌐 Noms Originels des Armes et Accessoires (ZH/KR)
+
+> Recherches multilingues 2026-10 (ZH : wiki Bahamut/TW ; KO : Inven 20/12/2004, TGDaily). Utile pour un affichage multilingue — les **codenames restent la clé unique**.
+
+| Arme iSRO | Chinois | Coréen (2004) |
+|-----------|---------|----------------|
+| Sword | 剑 (TW 劍) jiàn | 한손검 |
+| Blade | 刀 / 小刀 dāo | 한손도 |
+| Spear | 枪 (TW 槍) qiāng | 창 |
+| Glaive | 大刀 dàdāo | 대도 |
+| Bow | 弓 gōng | 활 |
+| Shield | 盾 dùn | — |
+
+- Armes EU (noms TW) : 單手劍 (épée 1M), 雙手劍 (épée 2M), 雙斧 (double hache), 匕首 (dagues), 十字弓 (arbalète), 法杖 (bâton wizard), 術杖 (dark staff), 豎琴 (harpe), 牧杖 (clerical rod).
+- Accessoires (ZH) : 戒指 jièzhi (anneau), 项链 xiàngliàn (collier), 耳环 ěrhuán (boucle d'oreille).
+- Ordre physique → magique des 5 armes CN selon la communauté : **大刀 → 小刀 → 弓 → 剑 → 枪**.
+- Noms d'items 10D attestés côté KR : **파천검** = la série « …Break Heaven Sword » (sword CH 10D, motif tigre du zodiaque) ; **다크모나크** = « Taurus Dark Monarch » (épée 1M EU 10D, motif Taureau).
+- Sources : https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山 (Bahamut, TW) · https://www.inven.co.kr/webzine/news/?news=2285 (Inven, KO) · https://www.tgdaily.co.kr/news/articleView.html?idxno=127275 (TGDaily, KO).
 
 ---
 
@@ -617,6 +639,13 @@ Prix NPC d'achat/vente (`Price` / `SellPrice` d'itemdata), vérifiés sur corpus
 
 Les prix « marché » (stalls) dépendent du serveur et de la rareté (Seal, +X, blues) — voir [22_ECONOMY_GOLD.md](22_ECONOMY_GOLD.md). Les anciens tableaux de prix fixes de ce document (ex. « 13D = 1 000 000 000 gold ») étaient des **estimations non sourcées** et ont été retirés.
 
+### Repères de marché TR modernes (RMT, 2024-2026 — recherche TR 2026-10)
+
+- 1M gold ≈ **4,50–6,00 TL** selon le serveur (ex. Hebe ~4,50 TL/M) — vendeurs RMT turcs.
+- Annonce type : « [LİDYA] 100M gold + 1 100 silk ≈ 4 900 TL » (SilkroadPazar).
+- ⚠️ Ces montants sont des **taux RMT** (gold contre argent réel) sur les serveurs officiels TR encore actifs : ils situent l'échelle de valeur du gold, pas le prix d'un item. Les prix **historiques** d'items du marché TR (2006-2013) n'ont pas été retrouvés (forums d'époque inaccessibles, 403).
+- Sources : https://www.klasgame.com/en/joymax/silkroad-online-joymax/silkroad-gold · https://www.kopazar.com/silkroad-online-gold · https://www.silkroadpazar.com
+
 ---
 
 ## 🔗 Resources
@@ -640,6 +669,14 @@ Les prix « marché » (stalls) dépendent du serveur et de la rareté (Seal, +X
 - [Elitepvpers — Alchemy Principals](https://www.elitepvpers.com/forum/sro-guides-templates/212591-guide-alchemy-principals.html)
 - [Silkroad Forums — blues expliqués](http://www.silkroadforums.com/viewtopic.php?f=29&t=39439) (Immortal/Astral)
 
+### Recherche multilingue (2026-10)
+- [Bahamut 絲路Online 攻略百科 — noms ZH des armes/accessoires (TW)](https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山)
+- [Inven — noms KR des armes, open beta 2004 (KO)](https://www.inven.co.kr/webzine/news/?news=2285)
+- [TGDaily — items 10차 : 파천검 / 다크모나크 (KO)](https://www.tgdaily.co.kr/news/articleView.html?idxno=127275)
+- [Klasgame — Silkroad Gold (marché RMT TR)](https://www.klasgame.com/en/joymax/silkroad-online-joymax/silkroad-gold)
+- [Kopazar — Silkroad Online Gold (marché RMT TR)](https://www.kopazar.com/silkroad-online-gold)
+- [SilkroadPazar — annonces items/gold TR](https://www.silkroadpazar.com)
+
 ---
 
 ## 📚 Voir aussi
@@ -652,4 +689,4 @@ Les prix « marché » (stalls) dépendent du serveur et de la rareté (Seal, +X
 ---
 
 *Dernière mise à jour: 2026-10-01*
-*Sources: dump _RefItem client v1.188+ (14 318 items CH+EU 1D-13D), sro-world.de.tl, silkroadkopat.tr.gg, Fandom wiki, openroad (docs formats v1.188), SilkroadDoc, elitepvpers*
+*Sources: dump _RefItem client v1.188+ (14 318 items CH+EU 1D-13D), sro-world.de.tl, silkroadkopat.tr.gg, Fandom wiki, openroad (docs formats v1.188), SilkroadDoc, elitepvpers, Bahamut (ZH), Inven/TGDaily (KO), Klasgame/Kopazar/SilkroadPazar (marché TR) — rapports ML_RESEARCH 2026-10*

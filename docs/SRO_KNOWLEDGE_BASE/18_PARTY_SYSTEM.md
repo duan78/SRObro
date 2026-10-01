@@ -218,6 +218,8 @@ L'ancienne version de ce document décrivait l'Union Party comme « 8 partys de 
 4. **3x DPS** (Wizard AOE) — damage de masse
 
 > Composition 8/8 très citée (MMORPG.com, Elitepvpers) : 2 wizards, 2 tanks, 2 bards, 1 cleric, 1 warlock/rogue.
+>
+> 🇹🇷 **Variante turque attestée (recherche TR 2026-10)** : les guides de farm TR modernes préconisent **1 Cleric + 2 Warriors + 3 Wizards + 1 Bard + 1 Warlock** pour le grinding/SP 70-100 (vSRO.org, « Gold/SP kasma rehberi » — voir `ML_RESEARCH/RESEARCH_TR.md`) — même logique (tank/heal/support + DPS de masse), répartition différente des slots DPS.
 
 ### Leveling Efficiently
 
@@ -461,6 +463,7 @@ EXP Finale = 1,000 × 1.09 × 1.2 = 1,308 EXP
 ### Discussions EXP
 - [XP share/distribute parties - Silkroad Forums](http://www.silkroadforums.com/viewtopic.php?f=5&t=4080) — +3%/membre
 - [Party EXP adjustments - Silkroad Origin Mobile](https://sromobile.com/en/news/updates/party-exp-farming-system-adjustments)
+- [Gold/SP kasma rehberi (slots, job dungeon, tactiques) — vSRO.org](https://www.vsro.org/konular/gold-sp-kasma-rehberi-slotlar-job-dungeon-ve-gunluk-taktikler.13648) — composition party 8/8 turque (1 Cleric + 2 Warrior + 3 Wizard + 1 Bard + 1 Warlock)
 
 ---
 
@@ -471,4 +474,4 @@ EXP Finale = 1,000 × 1.09 × 1.2 = 1,308 EXP
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : Silkroad Forums, Elitepvpers, silkroadonline.de, phBot, sromobile)*
+*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : Silkroad Forums, Elitepvpers, silkroadonline.de, phBot, sromobile — enrichi par la recherche TR 2026-10 : vSRO.org)*

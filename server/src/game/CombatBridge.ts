@@ -94,6 +94,17 @@ export class CombatBridge {
       }
     });
 
+    // Multi-joueurs: signaler le départ d'un joueur aux autres
+    this.worldManager.on('playerLeft', (data: unknown) => {
+      const { playerId } = data as { playerId: string };
+      this.sendToPlayerRaw(playerId, 'player:despawn_self', {});
+      for (const other of this.worldManager.getAllPlayers()) {
+        if (other.id !== playerId) {
+          this.sendToPlayerRaw(other.id, 'despawn_player', { id: playerId });
+        }
+      }
+    });
+
     // Quêtes: toute complétion (auto au dernier objectif OU rendu PNJ)
     // crédite les récompenses à l'ENTITÉ vivante — le QuestManager n'écrit
     // qu'en base, l'entité en jeu écraserait ces valeurs à la sauvegarde.
@@ -128,6 +139,10 @@ export class CombatBridge {
       globalSpawnManager.forceCheckNearby(playerEntity.position, 120);
       setTimeout(() => this.sendWorldSnapshot(playerEntity.id), 2500).unref?.();
       this.sendPlayerState(playerEntity.id);
+
+      // Multi-joueurs (phase 5): le nouveau voit les joueurs proches, les
+      // autres le voient apparaître.
+      this.syncPlayerVisibility(playerEntity);
     });
 
     logger.info('CombatBridge initialisé');
@@ -140,6 +155,16 @@ export class CombatBridge {
   sendWorldSnapshot(playerId: string): void {
     const player = this.worldManager.getPlayer(playerId);
     if (!player) return;
+    // Aussi les joueurs proches: le client charge le monde des minutes
+    // durant, les spawn_player émis à son arrivée sont perdus avant que son
+    // module de rendu réseau existe (idempotent côté client).
+    for (const other of this.worldManager.getAllPlayers()) {
+      if (other.id === playerId) continue;
+      const dp = Math.hypot(other.position.x - player.position.x, other.position.z - player.position.z);
+      if (dp <= 200) {
+        this.sendToPlayerRaw(playerId, 'spawn_player', this.serializePlayer(other));
+      }
+    }
     for (const monster of globalSpawnManager.getMonsterEntities().values()) {
       const d = Math.hypot(monster.position.x - player.position.x, monster.position.z - player.position.z);
       if (d <= 120) {
@@ -393,6 +418,9 @@ export class CombatBridge {
         monster.zoneId,
         toDrop.map((t) => ({ itemId: t.itemId, quantity: t.quantity })),
         monster.position,
+        // Propriétaire = tueur: les autres joueurs ne peuvent ramasser qu'a
+        //près 30 s (anti-vol de loot, verrou par joueur du prompt phase 5)
+        { ownerId: killerId },
       );
 
       // Diffusion aux joueurs proches: items visibles au sol
@@ -493,6 +521,35 @@ export class CombatBridge {
         position: player.position,
       },
     });
+  }
+
+  // ============================================
+  // MULTI-JOUEURS (phase 5)
+  // ============================================
+
+  /** Annonce un joueur aux joueurs proches et vice-versa. */
+  private syncPlayerVisibility(player: PlayerEntity): void {
+    const packet = this.serializePlayer(player);
+    for (const other of this.worldManager.getAllPlayers()) {
+      if (other.id === player.id) continue;
+      const d = Math.hypot(other.position.x - player.position.x, other.position.z - player.position.z);
+      if (d > 200) continue;
+      // Chacun voit l'autre
+      this.sendToPlayerRaw(other.id, 'spawn_player', packet);
+      this.sendToPlayerRaw(player.id, 'spawn_player', this.serializePlayer(other));
+    }
+  }
+
+  private serializePlayer(p: PlayerEntity): Record<string, unknown> {
+    return {
+      id: p.id,
+      entityType: 'player',
+      name: p.name,
+      level: p.level,
+      gender: p.gender,
+      position: p.position,
+      rotation: p.rotation,
+    };
   }
 
   // ============================================

@@ -80,6 +80,32 @@ GAP = Character Level − Highest Mastery Level
 
 → À GAP 9, le monstre ne « vaut » plus que 250 points totaux mais **presque tout se transforme en SP-exp**. Le SP est « plus cher » que l'XP : vous gagnez moins de total, beaucoup plus de SP.
 
+### Tableau de mesures réelles d'époque (guide allemand Radon, 2006) — ✅ Résolu (recherche DE 2026-10)
+
+Le guide « SP-Farming Was? Wie? Wann? » (silkroadonline.de, 2006) documente la mécanique comme **±10% d'XP↔SP par niveau de gap** :
+
+| GAP | XP | SP |
+|:---:|:---:|:---:|
+| 0 | 100% | 100% |
+| 1 | 90% | 110% |
+| 5 | 50% | 150% |
+| **9 (max utile)** | **10%** | **190%** |
+
+- Source : [SP-Farming Was? Wie? Wann? — silkroadonline.de (Radon, 2006)](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/1454-guide-sp-farming-was-wie-wann) — voir `ML_RESEARCH/RESEARCH_DE.md`.
+- **Cohérence croisée** : 10% XP / 190% SP à GAP 9 correspond exactement au facteur ~**19-20× plus de SP par point d'XP** documenté par UnKnoWnCheaTs (ligne « 220/30 » de l'exemple concret) — deux sources indépendantes, deux époques, même règle.
+- **Mesures ground-truth monstre par monstre (débunkage du mythe « délevel »)** — monstre lv 23 tué par un personnage à mastery 23 vs mastery 16 (XP/SP par kill, keywarrior in-thread) :
+
+| Monstre | Mastery 23 | Mastery 16 |
+|---------|-----------:|-----------:|
+| Mangyang | 2 / 1 | 4 / 1 |
+| Tiger | 32 / 5 | 576 / 27 |
+| Black Tiger | 359 / 64 | 761 / 35 |
+| White Tiger | 380 / 67 | 826 / 38 |
+| Chakji Worker | 402 / 71 | 896 / 42 |
+
+  → « la formule marche aussi en sens inverse » : mastery **supérieure** au niveau du monstre = plus d'XP aussi. Le mythe du pur dé-level (re-farmer les paliers bas délibérément) est contre-productif côté XP total — seul le ratio SP change en faveur du SP.
+- **Suicide farming documenté (2006)** : mourir ne fait perdre **que de l'XP, jamais de SP** → base technique du dé-leveling volontaire ; mort en état de meurtrier : **−6% XP** (témoignage d'époque).
+
 ### SP cumulé relatif par GAP (cohérent avec [02_CHINESE_CLASSES.md](02_CHINESE_CLASSES.md))
 
 | GAP | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
@@ -107,6 +133,8 @@ GAP = Character Level − Highest Mastery Level
 | 45-60 | 5-9 | Hotan (Bunwangs, Mujigis) — rendement correct mais inférieur |
 | 60-80 | 9 (avec plvl) | Niyas du Taklamakan en party 8/8 — le volume de kills compense le ratio |
 | 80+ | libre | FGW, quêtes illimitées d'Alexandrie et autres sources alternatives |
+
+> ℹ️ **Variantes d'époque** : le guide DE de 2006 recommandait « gap 5 en général, gap 6 dès Lv59 (passives), sans gap dès Lv72-75 » ([silkroadonline.de, thread « Welcher Gap? »](https://www.silkroadonline.de/index.php?page=Thread&postID=279703)) — la fenêtre GAP 9 (13-32) ci-dessus est le consensus ultérieur (guides PLvL Elitepvpers). Les guides TR modernes confirment GAP 9 comme maximum utile et le recommandent pour les niveaux 70-100 (vSRO.org).
 
 ### Stratégie « délevel » (coréenne, historique)
 Les joueurs kSRO farmaient les Ongs pendant des semaines jusqu'à ~30k SP, puis **redescendaient de niveau volontairement** (morts répétées) pour re-farmer les paliers bas au ratio maximal. Extrême mais optimal — sur serveurs privés, on la remplace par des rates SP.
@@ -185,7 +213,7 @@ Le farming GAP n'est pas la seule source — sur les versions tardives et beauco
 
 | Source | SP | Conditions | Répétabilité | Confiance |
 |--------|---:|------------|--------------|-----------|
-| **FGW — collection Talismans complète** | **500 000** par collection | Collecter les 8 cartes (Togui Village etc.) | 1 par collection (répétable) | 5/5 (confirmé admin Origin) |
+| **FGW — collection Talismans complète** | **500 000** par collection | Collecter les 8 cartes (Togui Village etc.) | 1 par collection (répétable) | 5/5 (confirmé admin Origin **+ 2 tutoriels vidéo BR** — recherche PT 2026-10) |
 | **FGW — SP balls** | 200 - 4 000 par ball | Runs d'instance (35-70) | Oui | 4/5 |
 | **Quête Premium+ (Hotan)** | 10 000 × 3 = 30 000 | Boutique de potions de Hotan, premium actif | 3× par période premium | 5/5 (confirmé admin Origin) |
 | **Becoming a Deity (1)** (Alexandrie, lvl 100) | 250 SP de base / **750 avec ×3** | Tuer 300 Unegs (soldat Turian, porte Sud) | **Illimité** | 5/5 |
@@ -250,7 +278,7 @@ Le farming GAP n'est pas la seule source — sur les versions tardives et beauco
 **R:** Oui : quête **Resuscitation Potion** (Lv 20+, 10 cœurs maudits = 1 potion, rembourse 80% du SP) ou Scroll of Skill Restore de l'item mall.
 
 ### Q: Le FGW 500k SP, c'est fiable ?
-**R:** C'est confirmé sur Origin (admin) et par de nombreux joueurs (« after collecting all talismans you get 500k SP which will balance your skills gap »). Sur iSRO classique, la récompense de collection était différente (sets/objets) — vérifiez les règles de votre serveur.
+**R:** C'est confirmé sur Origin (admin) et par de nombreux joueurs (« after collecting all talismans you get 500k SP which will balance your skills gap »). **Confirmation supplémentaire côté brésilien (recherche PT 2026-10)** : deux tutoriels vidéo BR intitulés « 500K SKILL POINTS FGW TOGUI PASSO A PASSO » ([vidéo 1 Cristiano Alves](https://www.youtube.com/watch?v=MK7WGejMoFo), [vidéo 2](https://www.youtube.com/watch?v=iCgAU8icRoU)) présentent la collecte des talismans Togui comme LA méthode standard de farm de SP. Sur iSRO classique, la récompense de collection était différente (sets/objets) — vérifiez les règles de votre serveur.
 
 ---
 
@@ -259,6 +287,7 @@ Le farming GAP n'est pas la seule source — sur les versions tardives et beauco
 ### Guides de référence
 - [Masteries and SP Farming — UnKnoWnCheaTs (cougher)](https://www.unknowncheats.me/wiki/Silkroad:Masteries_and_SP_Farming) — données GAP vérifiées
 - [Complete Guide to Skill Points — UnKnoWnCheaTs](https://www.unknowncheats.me/wiki/Silkroad:Complete_Guide_to_Skill_Points) — 400 SXP = 1 SP, coûts de maîtrise
+- [SP-Farming Was? Wie? Wann? — silkroadonline.de (Radon, 2006)](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/1454-guide-sp-farming-was-wie-wann) — tableau de mesures ±10%/gap (10%/190% à GAP 9), mesures anti-delvl, suicide farming
 - [How to farm SP (SkillPoints) — Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/2461754-guide-how-farm-sp-skillpoints.html) — méthode PLvL 8/8 + Ongs, FGW, rendements
 - [How to make a full-farmed char — Elitepvpers](https://www.elitepvpers.com/forum/sro-guides-templates/365938-guide-how-make-full-farmed-char.html)
 - [How To Farm SP? — Origin Online Forums](https://forum.playorigin.com/showthread.php?7167-How-To-Farm-SP) — sources FGW/Premium+/Alexandrie
@@ -296,5 +325,5 @@ Le farming GAP n'est pas la seule source — sur les versions tardives et beauco
 
 ---
 
-*Dernière mise à jour: 2026-10-01*
-*Sources: UnKnoWnCheaTs (mécanique GAP), Elitepvpers (méthodes PLvL, rendements), Origin Forums (FGW 500k, Premium+, Becoming a Deity), 02_CHINESE_CLASSES.md (coûts par build)*
+*Dernière mise à jour: 2026-10-01 (enrichi par la recherche multilingue ML_RESEARCH — tableau GAP/mesures DE 2006, confirmation BR FGW 500k)*
+*Sources: UnKnoWnCheaTs (mécanique GAP), Elitepvpers (méthodes PLvL, rendements), Origin Forums (FGW 500k, Premium+, Becoming a Deity), 02_CHINESE_CLASSES.md (coûts par build), silkroadonline.de (mesures GAP 2006), YouTube BR (confirmation 500k SP)*

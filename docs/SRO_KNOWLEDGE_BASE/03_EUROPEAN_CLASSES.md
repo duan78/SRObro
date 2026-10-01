@@ -97,16 +97,18 @@ Sources : [Guide Chinese vs Europe (Temptation)](https://silkroadtemptation.word
 
 ### Vue d'Ensemble
 
-| Classe | Rôle Principal | Armes | Stat principale | Difficulté |
-|--------|----------------|-------|-----------------|------------|
-| **Warrior** | Tank / DPS melee / Party buffer | Épée 1H+bouclier, épée 2H, double hache | STR | ⭐⭐ |
-| **Rogue** | Assassin / Burst DPS / Lurer | Dague, arbalète | STR | ⭐⭐⭐⭐ |
-| **Wizard** | Nuker AoE magique | Staff | INT | ⭐⭐⭐ |
-| **Warlock** | Debuffer / DoT / Contrôle | Dark staff (warlock rod) | INT | ⭐⭐⭐⭐⭐ |
-| **Bard** | Buffer / Support mana | Harpe (robe uniquement) | INT/hybride | ⭐⭐ |
-| **Cleric** | Healer / Buffs défensifs | Cleric rod + bouclier | INT/hybride | ⭐⭐ |
+| Classe | Rôle Principal | Armes | Stat principale | Difficulté | Nom ZH (TW officiel) |
+|--------|----------------|-------|-----------------|------------|----------------------|
+| **Warrior** | Tank / DPS melee / Party buffer | Épée 1H+bouclier, épée 2H, double hache | STR | ⭐⭐ | 聖戰士 |
+| **Rogue** | Assassin / Burst DPS / Lurer | Dague, arbalète | STR | ⭐⭐⭐⭐ | 刺客 |
+| **Wizard** | Nuker AoE magique | Staff | INT | ⭐⭐⭐ | 元素使 |
+| **Warlock** | Debuffer / DoT / Contrôle | Dark staff (warlock rod) | INT | ⭐⭐⭐⭐⭐ | 魔元素使 |
+| **Bard** | Buffer / Support mana | Harpe (robe uniquement) | INT/hybride | ⭐⭐ | 吟遊詩人 |
+| **Cleric** | Healer / Buffs défensifs | Cleric rod + bouclier | INT/hybride | ⭐⭐ | 聖職者 |
 
 Armures EU (mêmes 3 familles que CH) : **Heavy Armor** (STR), **Light Armor** (hybride, bonus pour Wiz/Cleric et Warrior), **Robe** (INT, Warlock/Bard). Le Bard ne porte que la robe (pas de bouclier avec la harpe).
+
+> 🌏 **Noms ZH (service officiel taïwanais)** — classes ci-dessus (noms TW DiGeam, en chinois traditionnel) ; armes EU : 單手劍 (épée 1H), 雙手劍 (épée 2H), 雙斧 (double hache), 匕首 (dagues), 十字弓 (arbalète), 法杖 (staff), 術杖 (dark staff), 豎琴 (harpe), 牧杖 (clerical rod) ; armures : 重盔甲 (Heavy Armor), 轻铠甲 / TR 輕鎧甲 (Light Armor), 法袍 (Robe). Sources : [wiki Bahamut — 絲路Online 攻略百科](https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山) · [wiki officiel DiGeam](https://srowiki.digeam.com/), via [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md). Aucun nom officiel FR/TR/DE : clients jamais localisés dans ces langues ([RESEARCH_FR](ML_RESEARCH/RESEARCH_FR.md) · [RESEARCH_TR](ML_RESEARCH/RESEARCH_TR.md) · [RESEARCH_DE](ML_RESEARCH/RESEARCH_DE.md)).
 
 ---
 
@@ -443,6 +445,7 @@ Armures EU (mêmes 3 familles que CH) : **Heavy Armor** (STR), **Light Armor** (
 - [Rev6 – Stat & SP Calculator](https://rev6.org/en/stat-sp-calculator) (règles mastery CH/EU)
 - [PhBot AutoParty (GitHub) — listes de skills iSRO réels](https://github.com/Day4Date/PhBot-Plugins/blob/master/AutoParty.py)
 - [eSRO skill_builder.cpp (GitHub) — effets/curses EU côté serveur](https://github.com/myildirimofficial/eSRO/blob/master/SOL/src/skill_builder.cpp)
+- [ML_RESEARCH/RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) — noms ZH (TW) officiels des 6 classes EU, armes et armures ([wiki Bahamut](https://wiki2.gamer.com.tw/wiki.php?n=10948:洛克山) · [DiGeam](https://srowiki.digeam.com/))
 
 ### Communauté
 - [Silkroad Forums – European Section](http://www.silkroadforums.com/)
@@ -451,5 +454,5 @@ Armures EU (mêmes 3 familles que CH) : **Heavy Armor** (STR), **Light Armor** (
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (révision majeure : noms de skills iSRO vérifiés, système de masteries corrigé, party builds, sources croisées)*
-*Sources: elitepvpers (traductions 2008), silkroadforums, SRO Valkyria blog, Fandom Wiki, GitHub (PhBot, eSRO), silkroadtemptation, Rev6*
+*Dernière mise à jour: 2026-10-01 (révision majeure : noms de skills iSRO vérifiés, système de masteries corrigé, party builds, sources croisées ; enrichi des noms ZH/TW officiels des classes — recherche multilingue ML_RESEARCH)*
+*Sources: elitepvpers (traductions 2008), silkroadforums, SRO Valkyria blog, Fandom Wiki, GitHub (PhBot, eSRO), silkroadtemptation, Rev6 ; noms ZH : wiki Bahamut + DiGeam (via ML_RESEARCH/RESEARCH_ZH.md)*

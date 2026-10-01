@@ -34,6 +34,7 @@ export interface PlayerEntityOptions {
   modelId: string;
   skillPoints: number;
   statPoints: number;
+  gender?: string;
 }
 
 /**
@@ -42,6 +43,7 @@ export interface PlayerEntityOptions {
 export class PlayerEntity extends Entity {
   public readonly accountId: string;
   public readonly race: CharacterRace;
+  public readonly gender: string;
   public exp: number;
   public sp: number;
   public hp: number;
@@ -88,6 +90,7 @@ export class PlayerEntity extends Entity {
     });
 
     this.accountId = options.accountId;
+    this.gender = options.gender ?? 'male';
     this.race = options.race;
     this.exp = options.exp;
     this.sp = options.sp;

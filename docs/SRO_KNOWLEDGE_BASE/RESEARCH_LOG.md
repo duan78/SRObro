@@ -27,17 +27,32 @@ This is the central tracking document for all multilingual research conducted to
 | 14 | FGW / Skills hub / Technique | 29, 30, TECHNICAL_SPECIFICATIONS | Shipwreck 91-100/101-110, grades = types + limite party, packets FGW 0x7519-0x351E, handshake Blowfish 0x5000, opcodes Gateway/Agent, ports 15779/15884 | SilkroadDoc (wiki cloné), Fandom API |
 | 📸 | Screenshots | screenshots/ + SCREENSHOTS_INDEX.md | 127 images officielles 2003-2026 (villes, uniques, UI, jobs, FW, FGW, events) | Fandom CDN, YouTube thumbs, janganhub |
 
+## 🌍 Session 2026-10-01 (2) — Passe multilingue TR/KO/PT/FR/ZH/DE (~120 requêtes)
+
+> 6 rapports sourcés dans [ML_RESEARCH/](ML_RESEARCH/) (RESEARCH_TR/KO/PT/FR/ZH/DE.md), fusionnés dans ~35 fichiers par 7 agents thématiques. Détail : [CHANGELOG.md](CHANGELOG.md) (entrée « Passe Multilingue »).
+
+| Langue | Requêtes | Sources majeures | Résolutions clés |
+|--------|----------|------------------|------------------|
+| 🇹🇷 TR | ~22+25 lectures | SroCave (5), SroLobby (4-5, 7 guides FGW), DonanımHaber (4) | Uniques Green Abyss + HP FGW 7×4 grades, timers spawn par unique, étoiles trade = 1 NPC thief/étoile, taux alchimie validés, glossaire 60+ termes |
+| 🇰🇷 KO | ~25+15 lectures | Inven 2004-2007 (5), site kSRO officiel (5), presse coréenne (4) | Noms KR officiels des 7 maîtrises + ~40 séries, chronologie Legend KR distincte (cap 105 inédit), service KR jamais fermé, Wemade 57 M$ (25,46%) |
+| 🇨🇳 ZH | ~17+8 lectures | DiGeam wiki TW (5), iccgame CN (5), Sina/17173 (4), Bahamut (4) | Noms ZH des maîtrises/uniques/villes/dons FGW (牛魔王=Flame Cow King, 女妖=Sereness), règle « aucun drop si +7 niveaux », historique CSRO complet 2005→2025, règle seal 1er tier |
+| 🇩🇪 DE | ~22+20 lectures | silkroadonline.de (5, traductions guides officiels), elitepvpers DE (4) | Union dès L2, guild war complet, étendards FW officiels, formules Troy 2006, mesures gap au monstre près, pets (HGP<30% = stats ÷2), glossaire 100+ termes |
+| 🇫🇷 FR | 15+30 lectures | JeuxOnline (4), GMS Temple (4), JeuxVideo.com (3-4) | Wiki Fandom FR inexistant (murderer tranché 500/1000/2000), mythes alchimie 2007 documentés, events 2010-2012 datés, Blue Zerk complet, pas de client FR officiel |
+| 🇧🇷 PT | 28+15 lectures | Adrenaline (4), UOL (5), Level Up! officiel (5) | Éditeur BR = Level Up! (monétisation seulement, 09/05/2007, R$40=100 silks), GNGWC São Paulo 10/10/2009, 48 serveurs iSRO, FGW 500k SP confirmé |
+
+**Conflits de sources signalés (non tranchés)** : BeakYung Lv 100 (TR) vs 105 (client/DiGeam) ; spawn uniques 4 h (FR) vs 6 h (Wikipédia FR/EN) ; Wanted 3 000 points (TR) vs 2 000 (Inven KR 2004) ; HP FGW ×1000 (données vSRO TR vs wiki) ; FW samedi (PT, non sourcé, rejeté).
+
 ---
 
 ## 🔍 Research Status Summary
 
 | Status | Count | Last Updated |
 |--------|-------|--------------|
-| Total Entries | 20 | 2025-01-22 |
-| Completed | 0 | - |
-| In Progress | 20 | - |
-| Validated | 0 | - |
-| Pending | 20 | - |
+| Total Entries | 20 + 20 (sessions 2026-10) | 2026-10-01 |
+| Completed | 20 (sessions 2026-10) | 2026-10-01 |
+| In Progress | 20 (entrées 2025, historique) | - |
+| Validated | 14 campagnes + 6 langues (2026-10) | 2026-10-01 |
+| Pending | 0 (nouvelles) | - |
 
 ---
 
@@ -45,9 +60,13 @@ This is the central tracking document for all multilingual research conducted to
 
 | Language | Sources Found | Entries Added | Last Updated |
 |----------|---------------|---------------|--------------|
-| 🇰🇷 Korean | 3 | 0 | 2025-01-22 |
-| 🇹🇷 Turkish | 2 | 0 | 2025-01-22 |
-| 🇺🇸 English | 12 | 20 | 2025-01-22 |
+| 🇰🇷 Korean | 40 (Inven, kSRO, presse) | [RESEARCH_KO.md](ML_RESEARCH/RESEARCH_KO.md) | 2026-10-01 |
+| 🇹🇷 Turkish | 21 (SroCave, SroLobby, DH) | [RESEARCH_TR.md](ML_RESEARCH/RESEARCH_TR.md) | 2026-10-01 |
+| 🇺🇸 English | 12+ (vagues 1-3) | 14 campagnes ci-dessous | 2026-10-01 |
+| 🇨🇳 Chinese | 25 (DiGeam, iccgame, Sina) | [RESEARCH_ZH.md](ML_RESEARCH/RESEARCH_ZH.md) | 2026-10-01 |
+| 🇩🇪 German | 40 (silkroadonline.de, e*pvp) | [RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md) | 2026-10-01 |
+| 🇧🇷 Portuguese | 15 (Adrenaline, UOL) | [RESEARCH_PT.md](ML_RESEARCH/RESEARCH_PT.md) | 2026-10-01 |
+| 🇫🇷 French | 30 (JeuxOnline, GMS, JVC) | [RESEARCH_FR.md](ML_RESEARCH/RESEARCH_FR.md) | 2026-10-01 |
 
 ---
 

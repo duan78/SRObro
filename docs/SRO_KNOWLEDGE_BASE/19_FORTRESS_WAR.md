@@ -43,6 +43,7 @@
 | **Fin 2008** | Ajout de la **Bandit Fortress** (petite forteresse, présentée comme extension du dispositif de Jangan — IGN Guidebook #47, déc. 2008) |
 | **2010** | **Legend IV Plus : « Hotan Fortress »** — revamp du Fortress War System + ajout de la grande forteresse de Hotan (communiqué Joymax/press) |
 | **~2013** | **Constantinople Fortress** (Europe de l'Est) — présente dans les clients récents (téléport ID 250, v1.657) ⚠️ date exacte d'ajout non confirmée |
+| **2011 (Legend VII)** | Ajout des **béliers et catapultes** réservés aux **Fortress Engineers** (les catapultes ont une portée plus longue) — traduction FR des notes officielles (fil JeuxOnline, mars 2011 — recherche FR 2026-10) |
 | **2010+** | **Legend V : Heroes of Alexandria** = cap 110 + Égypte — ⚠️ **pas de forteresse à Alexandrie** sur PC (la ville n'a pas de gates de FW dans les données du client) |
 
 > ⚠️ **Correction :** l'ancienne version de ce document citait une « Alexandria Fortress » — elle n'existe pas dans le client PC. La forteresse tardive est **Constantinople**.
@@ -55,8 +56,10 @@ Le guide officiel distingue **deux types** :
 
 | Type | Particularité | Forteresses |
 |------|---------------|-------------|
-| **Grande forteresse** | Près d'une **grande ville** ; taxe les activités de la ville | **Jangan**, **Hotan** (⚠️ Constantinople probablement grande, non confirmé) |
-| **Petite forteresse** | Sur un **centre commercial / axe de trade** ; taxe ferries, bateaux privés, tunnels | **Bandit Fortress** |
+| **Grande forteresse** (étendard rouge) | Près d'une **grande ville** ; taxe les activités de la ville dépendante | **Jangan**, **Hotan** (⚠️ Constantinople probablement grande, non confirmé) |
+| **Petite forteresse** (étendard bleu) | Sur un **centre commercial / axe de trade** ; taxe les **centres commerciaux ET les ferrys** (bateaux privés, tunnels) | **Bandit Fortress** |
+
+> ✅ Précision des sources FR (recherche FR 2026-10, guide GMS Temple 2009) : « grandes forteresses (étendard rouge) = taxes sur la ville dépendante ; petites forteresses (étendard bleu) = taxes sur les centres commerciaux **et les ferrys** ».
 
 **Détail des gates (données client — silkroadonline.wiki):**
 - **Jangan Fortress** : 3 gates externes + Gate I/II/III of Fortress, Gate of Charge, Gate of Glory, Gate of Resurrection (IDs 46-54)
@@ -81,6 +84,12 @@ Le guide officiel distingue **deux types** :
 | **Fixation des taxes** | Chaque **samedi** ; taux notifié à **00:01 dimanche** |
 | **Fréquence** | Le guide officiel indique un cycle « **every other week** » (toutes les 2 semaines) après la première guerre ⚠️ la plupart des serveurs privés tournent en hebdomadaire |
 
+> 📅 **Historique du jour de guerre (recherche DE/FR 2026-10)** : l'horaire a **varié dans le temps**. À l'origine (2007 → fin 2009), la guerre avait lieu le **JEUDI** : « jeudi 11h-13h » (serveur Red Sea 10h40-12h40, « every second Thursday » — silkroadonline.de, déc. 2007) et le guide FR de 2009 (guilde La_Horde, Aege) confirme « **un jeudi sur deux** », le vainqueur occupant la forteresse une semaine. Le guide officiel Legend II (traduction allemande) puis les sources récentes indiquent le **vendredi** (Silkroad Standard Time). Le guide TR moderne (SroMax 2025) confirme « chaque vendredi ».
+>
+> ⚠️ **Conflits signalés** :
+> - Wikipédia PT affirme « todo sábado » (guerre **le samedi**) — affirmation **non sourcée**, contredite par le guide officiel (vendredi) ET par les sources d'époque (jeudi) → **à rejeter explicitement** (recherche PT 2026-10).
+> - **Durée** : 2 h (interview IGN 2008, « exactly two hours ») vs **90 min** (Q&A elitepvpers 2011) vs **~1 h** (guides TR modernes) — possibles évolutions selon les époques/versions ; retenir 2 h pour l'iSRO classique d'origine.
+
 ### Serveurs privés / versions récentes
 - **Silkroad Origin Mobile** : dimanche, formation des équipes 19:50-20:00, bataille **20:00-21:00** (1h), inscription lundi 05:00 → samedi 22:00, guilde **niveau 5+** requise
 - Serveurs privés : le plus souvent **dimanche 20:00**, durée 1-2h — **vérifiez toujours le calendrier de votre serveur**
@@ -93,6 +102,8 @@ Le guide officiel distingue **deux types** :
 | **Membres** | **3 membres minimum** dans la guilde au moment de la demande |
 | **Restriction** | La guilde ne doit **pas être alliée** (union) de la guilde occupante |
 | **Qui inscrit** | Le **Guild Master** uniquement |
+
+> ⚠️ **Conflit signalé (recherche TR 2026-10)** : les guides TR modernes (SroMax) exigent une guilde **niveau 3+** et **20+ membres** pour s'inscrire, avec inscription attaquant payante / défenseur gratuite — conditions plus strictes que le « 3 membres minimum » documenté côté iSRO classique ; possibles différences d'époque ou de version, à vérifier sur le client cible. Côté TR : ~300 joueurs par guerre, guildes alliées acceptées, début après un compte à rebours de 5 s.
 
 ---
 
@@ -151,12 +162,21 @@ Le guide officiel Joymax décrit la forteresse comme un ensemble de **7 élémen
 
 - **Tente** installée par chaque guilde attaquante
 - **Point de résurrection** des attaquants (sinon : ville la plus proche)
+- ✅ **Régénération HP/MP +100%** dans la zone du poste (guide officiel Legend II traduit DE : « battle aura/command post » — régén HP/MP +100% ; corroboré par le guide FR « poste de commandement : respawn des joueurs tués + régénération +100% » — recherche DE/FR 2026-10)
 - Réduit le temps de respawn (version mobile) ; si détruite, la guilde perd son point de rez — elle **clignote sur la carte** quand attaquée (MMORPG.com)
 
-### 🚩 War Flag (Drapeau de guerre)
+### 🚩 War Flags (Étendards de guerre)
 
-- Item plantable pendant la guerre
-- **+10% dégâts physiques/magiques** pour jusqu'à **24 membres de guilde** dans un rayon de **24 mètres**, pendant **2 minutes**
+> ✅ **Chiffres exacts confirmés (recherche DE + FR 2026-10)** : traduction allemande fidèle du **guide officiel Joymax Legend II** ([Anleitung Fortress War — silkroadonline.de](https://www.silkroadonline.de/allgemein/allgemeines-ber-silkroad/29524-anleitung-fortress-war)) + guide FR ([Fortress War — GMS Temple, _Altair_Fr_, oct.-nov. 2009](https://forum.gmstemple.com/index.php?showtopic=7055)) — les trois étendards partagent les mêmes paramètres (**24 membres max, rayon 24 m, durée 2 min**) :
+
+| Étendard | Effet exact |
+|----------|-------------|
+| **Flag of Combat** (War flag) | **+10% dégâts physiques ET magiques** |
+| **Flag of Defense** | **absorbe 10% des dégâts physiques et magiques** |
+| **Flag of Healing** | **régénère 5% HP/MP toutes les 5 secondes** |
+
+- Confirmé côté turc (SroMax, guide Fortress War 2025) : mêmes valeurs, Healing Flag « +5% HP/MP toutes les 5 s ».
+- Items plantables pendant la guerre, au sol (drapeaux = seule structure non soumise aux points de pose prédéfinis selon le guide FR).
 
 ---
 
@@ -178,6 +198,8 @@ La séquence d'objectifs est **imposée et strictement ordonnée** (GuildOrder +
 - Les structures ne tombent **qu'aux armes de siège** (marteaux etc.) — les dégâts des skills ne font pas avancer la chaîne
 - Le **combat joueur vs joueur** se déroule en parallèle de la chaîne d'objectifs
 - Au **début de la guerre** : un **compte à rebours de 5 secondes** s'affiche pour tous les non-occupants, puis les joueurs sont déplacés au village le plus proche
+- ✅ **Capture de structure (recherche DE 2026-10)** : compte à rebours **5 s**, puis **10 s d'invisibilité** (guide officiel Legend II traduit) ; **ré-entrée interdite 5 min** aux attaquants après la prise d'un objectif ; une structure capturée **perd 1 degré** (dégradation)
+- 🇹🇷 **Ordre exact côté Bandit Fortress (recherche TR 2026-10)** : **Gate 1 → Gate 2 → Tower 1 → Tower 2 → Heart of the Fortress** — « la première guilde à frapper le Cœur prend la forteresse » (SroMax, guide kale savaşı)
 
 **Défenseurs :**
 - Réparer gates/tours/cœur (marteaux de réparation)
@@ -193,8 +215,10 @@ La séquence d'objectifs est **imposée et strictement ordonnée** (GuildOrder +
 |------|--------|----------|
 | **Commander** | 1 (le **Guild Master**) | Commandement global, opération des gates (pulley) |
 | **Deputy Commanders** | jusqu'à **4** | Nombrés par le commander, aident au commandement + gates |
-| **Military Engineers** | jusqu'à **10** | Réparent les structures avec des marteaux (défenseurs) |
+| **Military Engineers** | jusqu'à **10** | Réparent les structures avec des marteaux (défenseurs) ; seuls habilités à opérer **béliers/catapultes** |
 | **Hammerers / porteurs** | ⚠️ guide communautaire 2009 : limite de **15** par guilde | Portent les marteaux de siège/réparation achetés au NPC |
+
+> ✅ Les plafonds **4 adjoints + 10 ingénieurs** sont confirmés par le guide officiel Legend II traduit (recherche DE 2026-10 : silkroadonline.de 29524 + elitepvpers 1430992 — « le GM nomme jusqu'à 4 commandants adjoints et jusqu'à 10 ingénieurs militaires »).
 
 **Achat du matériel** : marteaux, barrières, marteaux de réparation etc. se vendent au **NPC de la forteresse** (ex: celui de Jangan) **avant la guerre** — les officiers doivent en stocker et distribuer.
 
@@ -219,7 +243,7 @@ La séquence d'objectifs est **imposée et strictement ordonnée** (GuildOrder +
 **1. Taxes (la récompense majeure)**
 - Taux réglable de **-20% à +20%** (fixé chaque samedi, notifié 00:01 dimanche)
 - Appliqué aux : **achats NPC** de la zone, **stalls** des joueurs, **téléports** et services de transport
-- Grande forteresse → taxe la grande ville adjacente ; petite forteresse → taxe ferries/bateaux/tunnels du centre commercial
+- Grande forteresse → taxe la grande ville adjacente ; petite forteresse → taxe **centres commerciaux et ferrys** du centre commercial (bateaux privés, tunnels) — guide FR 2009
 - La guilde occupante et ses alliés bénéficient de taux entre **-20% et 0%** dans leur propre zone
 - ⚠️ Les montants « 10M-200M/jour » des anciens guides sont des **estimations non sourcées** — très dépendants de l'économie du serveur
 
@@ -331,7 +355,7 @@ Pour SRObro (implémentation serveur), les fichiers vSRO 1.188 / SRO_VT contienn
 **R:** **2 heures** sur le client PC officiel (téléports ouverts 1h avant). Mobile : 1h. Serveurs privés : 1-2h.
 
 ### Q: Quand a lieu la Fortress War?
-**R:** Officiel iSRO : **vendredi 20:00 SST** (cycle à l'origine bi-hebdomadaire par forteresse). Serveurs privés modernes : le plus souvent dimanche soir. Vérifiez votre serveur.
+**R:** Officiel iSRO : **vendredi 20:00 SST** (cycle à l'origine bi-hebdomadaire par forteresse) — ⚠️ à l'origine (2007-2009) la guerre avait lieu le **jeudi** (« un jeudi sur deux » selon les sources DE et FR d'époque) ; le passage au vendredi est documenté par le guide officiel traduit. Serveurs privés modernes : le plus souvent dimanche soir. Vérifiez votre serveur.
 
 ### Q: Comment gagne-t-on?
 **R:** En détruisant le **Heart of the Fortress** (après gates + toutes les tours + 3 min d'attente). La guilde qui tient la dernière occupation temporaire à la fin des 2h remporte la forteresse pour une semaine.
@@ -360,10 +384,13 @@ Pour SRObro (implémentation serveur), les fichiers vSRO 1.188 / SRO_VT contienn
 
 ### Guides communautaires (traduction du guide officiel Joymax)
 - [Fortress war guide english - Silkroad Imperial](https://silkroad-imperial.superforo.net/t21-fortress-war-guide-english)
+- [Anleitung Fortress War — silkroadonline.de (traduction DE fidèle du guide officiel Legend II)](https://www.silkroadonline.de/allgemein/allgemeines-ber-silkroad/29524-anleitung-fortress-war) — chiffres exacts des flags/tentes/commandement (recherche DE 2026-10)
+- [Fortress War — GMS Temple (_Altair_Fr_, 2009, guilde La_Horde/Aege)](https://forum.gmstemple.com/index.php?showtopic=7055) — guide FR complet : jeudi/300 participants/3 portes-3 tours/étendards/taxation des petites forteresses (recherche FR 2026-10)
 - [Overview of Fortress War - International SRO Forum](https://international-sro.forumotion.com/t18-overview-of-fortress-war)
 - [Fortress Wars Guide - MMORPG.com](https://www.mmorpg.com/guides/fortress-wars-2000116969)
 - [Fortress Wars Guide (Rid3r, 2009) - gguides](http://gguides.weebly.com/fortress-wars-guide.html)
 - [Fortress War Objectives and Roles - GuildOrder](https://guildorder.com/games/silkroad_online/wiki/fortress-war-objectives-and-roles)
+- [Silkroad kale savaşı rehberi — SroMax (TR)](https://www.sromax.com/konular/silkroad-kale-savasi-fortress-war-detayli-rehberi.284) · [Fortress War 2025 — SroCave (TR)](https://srocave.com/konular/silkroad-online-fortress-war-nedir-nasil-kazanilir-kale-savasi-stratejileri-ve-oduller-2025.2474) — vendredis, flags, ordre des structures Bandit Fortress (recherche TR 2026-10)
 
 ### Forums
 - [Question about Fortress War - Elitepvpers](https://www.elitepvpers.com/forum/silkroad-online/1430992-question-about-fortress-war.html)
@@ -409,4 +436,4 @@ Pour SRObro (implémentation serveur), les fichiers vSRO 1.188 / SRO_VT contienn
 
 ---
 
-*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : guide officiel Joymax traduit, IGN 2008, MMORPG.com, Silkroad Forums, Elitepvpers, RaGEZONE, silkroadonline.wiki)*
+*Dernière mise à jour: 2026-10-01 (recherche web exhaustive : guide officiel Joymax traduit, IGN 2008, MMORPG.com, Silkroad Forums, Elitepvpers, RaGEZONE, silkroadonline.wiki — enrichi par la recherche multilingue ML_RESEARCH 2026-10 : guide officiel Legend II traduit DE, guide FR GMS Temple 2009, guides TR SroMax/SroCave, conflit PT signalé)*

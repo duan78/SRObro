@@ -110,6 +110,21 @@ export class NetworkManager {
           this.isConnected = false;
           this.stopHeartbeat();
           this.emit('disconnected');
+
+          // Filet de sécurité: certaines déconnexions serveur ferment le
+          // socket SANS reconnexion automatique (socket.io renonce). Si après
+          // 12 s on est toujours mort, recréer une connexion fraîche (la
+          // ré-authentification suit via 'connect').
+          const dead = this.socket;
+          setTimeout(() => {
+            if (!this.isConnected && this.socket === dead) {
+              console.warn('[Network] socket mort sans reconnexion — nouvelle tentative');
+              this.socket = null;
+              this.isConnecting = false;
+              this.reconnectAttempts = 0;
+              void this.connect().catch(() => undefined);
+            }
+          }, 12000);
         });
 
         // Server packets
@@ -122,8 +137,15 @@ export class NetworkManager {
     });
   }
 
-  /** characterId sélectionné (pour ré-auth après reconnexion). */
-  private lastCharacterId: string | null = null;
+  /** characterId sélectionné (persisté: survit aux rechargements de module). */
+  private get lastCharacterId(): string | null {
+    return sessionStorage.getItem('srobro_character_id');
+  }
+
+  private set lastCharacterId(v: string | null) {
+    if (v) sessionStorage.setItem('srobro_character_id', v);
+    else sessionStorage.removeItem('srobro_character_id');
+  }
 
   rememberCharacter(characterId: string): void {
     this.lastCharacterId = characterId;
@@ -136,7 +158,7 @@ export class NetworkManager {
    */
   private reauthenticate(): void {
     if (!this.socket || !this.isConnected) return;
-    const token = localStorage.getItem('srobro_session_token');
+    const token = sessionStorage.getItem('srobro_session_token');
     if (!token) return;
     this.socket.emit('auth:resume', { token }, (res: { success: boolean }) => {
       if (!res?.success || !this.lastCharacterId) return;

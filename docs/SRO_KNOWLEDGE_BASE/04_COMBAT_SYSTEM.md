@@ -367,6 +367,7 @@ Les types d'armure ne donnent PAS un % de parry. Ils diffèrent par :
 - Le personnage prend son **mode Berserker** (« Destructeur de masse » → « Démoniaque » → « Dieu » selon le rang du titre)
 - **Dégâts multipliés (~×2)** et animations accélérées pendant la durée
 - ⚠️ Contrairement à une idée reçue répandue, le Zerk **n'augmente pas la défense** dans le client classique — il booste l'offensif (les variantes mobiles/privées ajoutent parfois des stats)
+- ✅ **Corroboration KO (présentation officielle open beta, Inven 20/12/2004)** : le Berserk (환모드, « mode Hwan », jauge 환, touche Tab) y est décrit comme « augmentation brutale de la puissance d'attaque et de la vitesse de déplacement » (공격력·이동속도 급증) — **aucune mention de défense**, ce qui confirme l'absence de bonus défensif. Source 🇰🇷 : https://www.inven.co.kr/webzine/news/?news=2285
 - **Blue Zerk** (iSRO, quête titre lvl 95 « Captain » puis 100 « Senior General ») : même dégâts que le zerk rouge mais **+10% de défense** (15% pour la version lvl 100) pour tout le groupe si plusieurs membres l'utilisent
 
 ### Stratégies
@@ -413,6 +414,10 @@ Les status (« bad states ») sont appliqués par skills et imbues. Structure de
 
 > ℹ️ Les seuils « pill 1/2/3 » correspondent aux **Universal Pill (Purification) grades** : grade 1 retire Freeze/Frostbite, grade 2 retire Burn/Poison/Decay, grade 3 retire Panic/Dull/Fear-type et curses supérieurs. Les **hard CC** (Stun, KD, Sleep avant break, Fear) ne se soignent pas aux pills — il faut attendre.
 
+> ✅ **Corroborations multilingues (2026-10)** :
+> - 🇹🇷 **SroCave** confirme : Burn = perte de HP toutes les **2 s** ; Zombie = « les potions **réduisent** les HP/MP » au lieu de soigner ; Electric shock = baisse du parry ; Freezing = immobilise ; Frostbite = ralentit ; Poison = dégâts fixes. Hiérarchie des dégâts élémentaux : **Cold (les plus bas + freeze) < Lightning (intermédiaire + vitesse) < Fire (dégâts max + burn)**. La même source précise que la chance de crit exacte est « inconnue » côté communauté TR. Source : https://srocave.com/konular/silkroad-online-oyunu-hakkinda-en-temel-bilgiler-karakter-yapilandirmasi-ve-itemler.2635
+> - 🇨🇳 Corroboration indirecte (source **mobile**, qualitative seulement) : Fire lv 1 = burn, Cold lv 1 = chance de freeze, cités comme « excellent rapport niveau/effet » — cohérent avec Burn ~25% / Freeze ~20%. Source : https://www.taptap.cn/moment/645615206830965814 (⚠️ remake MOBILE — ne pas importer comme donnée PC)
+
 ### Résistances aux status
 
 - **Accessoires** : stats de résistance par élément (ex: accessoires D8 jusqu'à **+20% résistance Ice**), cumulables
@@ -442,6 +447,23 @@ Les imbues ajoutent des dégâts magiques élémentaires à chaque attaque et pe
 - **Lightning imbue** : dégâts proches de Fire, shock réduit le parry adverse (plus de dégâts effectifs)
 - **Cold imbue** : deux status (frostbite + freeze), le **freeze root complet** est le "roi du PvP 1v1" ; les skills Cold dédiés ont 20 à 60% de chance de freeze selon le skill et son niveau
 - Le status d'imbue se déclenche par **hit** → les armes rapides (sword/dagger) proc plus souvent
+
+**⚖️ Mécanique de scaling de l'imbue (source DE 2006) :**
+- Le dégât d'imbue est **multiplié par le % de la skill** qui la porte : un skill à 200% double le bonus d'imbue, un coup de combo à 68% le réduit proportionnellement (tests chiffrés in-thread : Hidden Blade 200 → 400 avec Fire ; sans imbue 25-30 dégâts, avec 250-300)
+- Le calcul côté serveur s'effectue à la **confirmation d'activation du skill** → une skill lancée une fraction de seconde avant l'activation de l'imbue n'en bénéficie pas (explication des « combos non imbueés »)
+- Deux lectures coexistent dans le thread source ; celle du **×% par coup** est celle qui concorde avec les tests chiffrés
+- Source 🇩🇪 : https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/4266-schadensberechnung (mai 2006, via [ML_RESEARCH/RESEARCH_DE.md](ML_RESEARCH/RESEARCH_DE.md))
+
+**📊 Dégâts d'imbue au niveau 1 (tests presse coréenne, 2005) :**
+
+| Imbue (livre lv 1) | Dégât moyen | Note |
+|---|---|---|
+| River Fire Force (화류결, Fire) | **21** | |
+| Thunder Tiger Force (뇌호결, Lightning) | **17,5** | |
+| Transfert lightning (splash) | **12,25** | le splash accélère le farm de **~+20%** |
+
+- Source 🇰🇷 : http://www.gameabout.com/news/articleView.html?idxno=615 (GameAbout, janv. 2005)
+- Corroboration 🇰🇷 (test Bicheon 20 vs Pacheon 10, 2005) : l'épée **critique plus et gèle plus** que l'arc (coups plus nombreux) mais encaisse plus — confirme le proc par hit. Source : http://www.gameabout.com/news/articleView.html?idxno=584
 
 ---
 
@@ -581,6 +603,15 @@ Il n'existe **pas de réduction globale des dégâts PvP documentée** dans le c
 - [StrategyWiki — Silkroad Online/Gameplay](https://strategywiki.org/wiki/Silkroad_Online/Gameplay)
 - [Silkroad Forums — What is Parry Ratio](http://www.silkroadforums.com/viewtopic.php?f=2&t=49338)
 
+### Sources multilingues (2026-10)
+- [silkroadonline.de — Diverse Formeln in Silkroad (formules empiriques Troy 2006)](https://www.silkroadonline.de/allgemein/allgemeines-ber-silkroad/9220-diverse-formeln-in-silkroad) 🇩🇪
+- [silkroadonline.de — Schadensberechnung (mécanique des imbues ×%, 2006)](https://www.silkroadonline.de/silkroadonline-allgemein/anleitungen-guides/4266-schadensberechnung) 🇩🇪
+- [SroCave — Temel Bilgiler (status effects, AR/parry, éléments)](https://srocave.com/konular/silkroad-online-oyunu-hakkinda-en-temel-bilgiler-karakter-yapilandirmasi-ve-itemler.2635) 🇹🇷
+- [SilkroadPortal — formules hasar/defans (TR)](https://silkroadportal.com/konular/silkroad-online-hasar-defans-hesaplama-attritube-stone.366) 🇹🇷
+- [GameAbout — tests dégâts 2005 (imbues lv 1, AoE)](http://www.gameabout.com/news/articleView.html?idxno=615) 🇰🇷
+- [Inven — présentation open beta 2004 (Berserk 환모드)](https://www.inven.co.kr/webzine/news/?news=2285) 🇰🇷
+- Rapports [ML_RESEARCH/](ML_RESEARCH/) — RESEARCH_DE / TR / KO / FR / ZH / PT (2026-10)
+
 ### Calculateurs
 - [evolex.dev — SRO Character Stats Calculator (HP/MP/balance)](https://evolex.dev/sro-char-stats)
 
@@ -632,14 +663,22 @@ Il n'existe **pas de réduction globale des dégâts PvP documentée** dans le c
 | **DoT burn/poison : tick 2 s** | ex: 560/2s pendant 8 s | silkroaddoc (RefSkill) | 5/5 (données client) |
 | **Weaken : −16% MAG DEF** | 8 s | silkroaddoc (RefSkill) | 5/5 (données client) |
 | **Zerk : 5 orbs, ~×2 dégâts** | ~1 drop/3 mobs | guides Origin + forums | 4/5 |
+| **Imbue : dégât ×% de la skill** | 200% → double ; combo 68% → proportionnel | silkroadonline.de (DE, 2006) | 4/5 |
+| **Imbue calculée à l'activation** | skill lancée avant l'imbue = non imbueée | silkroadonline.de (DE, 2006) | 4/5 |
+| **Dégâts imbue lv 1 (2005)** | River Fire 21 · Thunder Tiger 17,5 · splash 12,25 | GameAbout (KO, 2005) | 4/5 |
+| **Burn tick 2 s / Zombie** | potions HP/MP infligent la perte au lieu de soigner | SroCave (TR, 2026) | 4/5 |
+| **Hiérarchie dégâts éléments** | Cold < Lightning < Fire | SroCave (TR, 2026) | 4/5 |
+| **Zerk = attaque + vitesse (pas def)** | 환모드, description officielle OB 2004 | Inven (KO, 2004) | 4/5 |
+| **Formule dégâts TR simplifiée** | Dégât = STR × Reinforce% + Atk Power (sans constantes) | silkroadportal.com (TR) | 3/5 |
 
 ### Divergences connues entre sources
 
-1. **Chance exacte de Burn par imbue** : « ~20-30% » (guide Origin) vs valeurs par niveau de skill non publiées → utiliser les tooltips in-game par pallier
+1. **Chance exacte de Burn par imbue** : « ~20-30% » (guide Origin) vs valeurs par niveau de skill non publiées → utiliser les tooltips in-game par pallier (corroboration indirecte ZH : burn dès l'imbue Fire lv 1 — source mobile, qualitative uniquement)
 2. **Cap block / immunités KD** : variables selon client (iSRO tardif vs vSRO)
-3. **L'effet exact du Zerk sur la défense** : aucune défense en classic ; +10-15% en Blue Zerk (quête 95+)
+3. **L'effet exact du Zerk sur la défense** : aucune défense en classic (corroboré par la description officielle KR 2004 « attaque + vitesse de déplacement » uniquement) ; +10-15% en Blue Zerk (quête 95+)
+4. **Constantes des formules de dégâts** : les formules TR modernes (silkroadportal.com : Dégât = STR × Reinforce% + Atk Power) et DE 2006 (mastery bonus ×(100+mastery)/100, HP exponentielle) ne contiennent pas les constantes elitepvpers 1.2767/1.2870 — divergences détaillées dans [28_ADVANCED_MECHANICS.md](28_ADVANCED_MECHANICS.md)
 
 ---
 
 *Dernière mise à jour : 2026-10-01*
-*Sources : elitepvpers, silkroadforums, UnKnoWnCheaTs, florian0 (RE), silkroaddoc.github.io, PlayOrigin, StrategyWiki, evolex.dev, silkroad.fandom.com*
+*Sources : elitepvpers, silkroadforums, UnKnoWnCheaTs, florian0 (RE), silkroaddoc.github.io, PlayOrigin, StrategyWiki, evolex.dev, silkroad.fandom.com, silkroadonline.de (DE), SilkroadPortal/SroCave (TR), GameAbout/Inven (KO) — rapports ML_RESEARCH (2026-10)*

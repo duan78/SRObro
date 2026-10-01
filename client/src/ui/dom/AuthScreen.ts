@@ -38,6 +38,8 @@ export interface CharacterFull extends CharacterSummary {
   rotation: number;
 }
 
+// sessionStorage (pas localStorage): isolé PAR ONGLET — deux persos
+// peuvent jouer simultanément dans deux onglets du même navigateur.
 const TOKEN_KEY = 'srobro_session_token';
 
 export class AuthScreen {
@@ -68,7 +70,7 @@ export class AuthScreen {
     }
 
     // Reprise de session automatique si un token valide existe
-    const token = localStorage.getItem(TOKEN_KEY);
+    const token = sessionStorage.getItem(TOKEN_KEY);
     if (token) {
       try {
         const res = await this.network.request<{ success: boolean; account?: AuthAccountInfo }>(
@@ -79,9 +81,9 @@ export class AuthScreen {
           await this.showCharacterList();
           return;
         }
-        localStorage.removeItem(TOKEN_KEY);
+        sessionStorage.removeItem(TOKEN_KEY);
       } catch {
-        localStorage.removeItem(TOKEN_KEY);
+        sessionStorage.removeItem(TOKEN_KEY);
       }
     }
 
@@ -261,7 +263,7 @@ export class AuthScreen {
           btn.disabled = false;
           return;
         }
-        if (res.token) localStorage.setItem(TOKEN_KEY, res.token);
+        if (res.token) sessionStorage.setItem(TOKEN_KEY, res.token);
         this.account = res.account;
         await this.showCharacterList();
       } catch (e: any) {
@@ -315,7 +317,7 @@ export class AuthScreen {
           'auth:login', { username, password }
         );
         if (login.success && login.account) {
-          if (login.token) localStorage.setItem(TOKEN_KEY, login.token);
+          if (login.token) sessionStorage.setItem(TOKEN_KEY, login.token);
           this.account = login.account;
           await this.showCharacterList();
         } else {
@@ -385,7 +387,7 @@ export class AuthScreen {
 
     card.querySelector('#char-goto-create')?.addEventListener('click', () => this.showCharacterCreate());
     card.querySelector('#char-logout')?.addEventListener('click', () => {
-      localStorage.removeItem(TOKEN_KEY);
+      sessionStorage.removeItem(TOKEN_KEY);
       void this.network.request('auth:logout').catch(() => undefined);
       this.account = null;
       this.showLogin();

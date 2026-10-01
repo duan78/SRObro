@@ -59,6 +59,13 @@ export class NetworkCombat {
   private damageNumbers: DamageNumberManager;
 
   // Entités
+  // Joueurs distants (phase 5): rendus avec le modèle officiel
+  private remotePlayers = new Map<string, {
+    data: { id: string; name: string; level: number; gender: string };
+    root: any;
+    animState: string | null;
+  }>();
+
   private monsters = new Map<string, {
     data: ServerMonster;
     root: any; // TransformNode racine du modèle officiel
@@ -120,6 +127,8 @@ export class NetworkCombat {
       this.clearTarget();
       for (const it of this.groundItems.values()) it.mesh.dispose();
       this.groundItems.clear();
+      for (const rp of this.remotePlayers.values()) rp.root.dispose();
+      this.remotePlayers.clear();
     });
 
     this.network.on('spawn', (data: any) => {
@@ -136,6 +145,27 @@ export class NetworkCombat {
 
     this.network.on('update', (data: any) => {
       const d = data?.data?.id ? data.data : data;
+      // Joueur distant: position + anim de marche
+      const rp = this.remotePlayers.get(d?.id);
+      if (rp && d.position) {
+        const terrain2 = this.janganZone?.realTerrain;
+        const y2 = terrain2 ? terrain2.heightAt(d.position.x, d.position.z) : d.position.y;
+        rp.root.position.set(d.position.x, y2, d.position.z);
+        if (typeof d.rotation === 'number') rp.root.rotation.y = d.rotation;
+        if (rp.animState !== 'walk') {
+          rp.animState = 'walk';
+          const skeletons: any[] = [];
+          for (const mesh of rp.root.getChildMeshes()) {
+            const sk = (mesh as any).skeleton;
+            if (sk && !skeletons.includes(sk)) skeletons.push(sk);
+          }
+          if (skeletons.length > 0) {
+            AnimationService.loadAndPlay(this.scene, skeletons, AnimationService.playerClip('walkforward'), true, 1.0)
+              .catch(() => undefined);
+          }
+        }
+        return;
+      }
       const m = this.monsters.get(d?.id);
       if (m && d.position) {
         const terrain = this.janganZone?.realTerrain;
@@ -235,6 +265,69 @@ export class NetworkCombat {
 
     // Visuel de l'arme équipée (phase 3): attache le GLB officiel au perso
     this.network.onRaw('equipment:weapon', (d: any) => void this.attachWeaponVisual(d));
+
+    // Chat sortant (phase 5): champ de saisie HUD → serveur
+    this.hud.setupChatInput();
+    this.hud.onChatSend = (message: string) => {
+      if (!message) return;
+      if (message.startsWith('/')) {
+        // Les commandes slash passent par le canal chat (le serveur répond
+        // en message système — pas de diffusion).
+        this.network.sendChat(message, 'general');
+      } else {
+        this.network.sendChat(message, 'general');
+      }
+    };
+
+    // Chat entrant (phase 5): affiché dans le HUD
+    this.network.on('chat', (data: any) => {
+      const d = data?.data ?? data;
+      if (d?.message) {
+        this.hud.addChatMessage(`${d.playerName ?? 'Joueur'}: ${d.message}`, 'say');
+      }
+    });
+
+    // Joueurs distants (phase 5)
+    this.network.onRaw('spawn_player', (d: any) => void this.spawnRemotePlayer(d));
+    this.network.onRaw('despawn_player', (d: any) => {
+      const id = (d && d.id) ?? d;
+      const rp = this.remotePlayers.get(id);
+      if (rp) { rp.root.dispose(); this.remotePlayers.delete(id); }
+    });
+  }
+
+  /** Rend un autre joueur (modèle officiel chinaman/chinawoman + anim). */
+  private async spawnRemotePlayer(data: any): Promise<void> {
+    if (!data || this.remotePlayers.has(data.id)) return;
+    const terrain = this.janganZone?.realTerrain;
+    const y = terrain ? terrain.heightAt(data.position.x, data.position.z) : data.position.y;
+
+    // Marqueur immédiat pendant le chargement du modèle
+    const root = MeshBuilder.CreateCylinder(`netplayer_${data.id}`, { diameter: 0.7, height: 1.8 }, this.scene);
+    root.position.set(data.position.x, y + 0.9, data.position.z);
+    const mat = new StandardMaterial(`netplayer_mat_${data.id}`, this.scene);
+    mat.diffuseColor = new Color3(0.3, 0.75, 0.4);
+    root.material = mat;
+    this.remotePlayers.set(data.id, { data, root, animState: null });
+    this.hud.addChatMessage(`${data.name} (niv. ${data.level}) est en ligne`, 'system');
+
+    // Modèle officiel
+    try {
+      const stem = data.gender === 'female' ? 'chinawoman_adventurer' : 'chinaman_adventurer';
+      const loaded = await this.assetLoader.loadGameObject(stem);
+      if (loaded?.root && this.remotePlayers.has(data.id)) {
+        loaded.root.position.set(data.position.x, y, data.position.z);
+        loaded.root.rotation.y = data.rotation ?? 0;
+        const old = this.remotePlayers.get(data.id)!;
+        old.root.dispose();
+        old.root = loaded.root;
+        const skeletons = (loaded as any).skeletons as any[] | undefined;
+        if (skeletons && skeletons.length > 0) {
+          AnimationService.loadAndPlay(this.scene, skeletons, AnimationService.playerClip('standcity'), true, 1.0)
+            .catch(() => undefined);
+        }
+      }
+    } catch { /* marqueur conservé */ }
   }
 
   /** Attache/détache le modèle d'arme officiel sur le personnage. */
