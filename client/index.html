@@ -63,8 +63,11 @@
       .hud-bar-target .hud-fill { background: linear-gradient(180deg, #d04545, #7f1d1d); }
       .hud-bar-text { position: absolute; inset: 0; text-align: center; font-size: 10px; line-height: 14px; color: #fff; text-shadow: 0 1px 1px #000; }
       .hud-gold-row { margin-top: 4px; font-size: 11px; color: #ffd700; }
-      .hud-slot { width: 40px; height: 40px; background: rgba(30,24,12,0.9); border: 1px solid #8a6d2f; border-radius: 3px; display: flex; align-items: center; justify-content: center; position: relative; }
-      .hud-slot-key { color: #c9b98a; font-size: 12px; font-weight: 600; text-shadow: 0 1px 2px #000; }
+      .hud-slot { width: 40px; height: 40px; background: rgba(30,24,12,0.9); border: 1px solid #8a6d2f; border-radius: 3px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+      .hud-slot:hover { border-color: #d4af37; }
+      .hud-slot-key { color: #c9b98a; font-size: 12px; font-weight: 600; text-shadow: 0 1px 2px #000; z-index: 2; }
+      .hud-slot-icon { position: absolute; inset: 2px; background-size: cover; background-position: center; border-radius: 2px; }
+      .hud-slot-cd { position: absolute; inset: 0; z-index: 3; pointer-events: none; border-radius: 3px; }
       #hud-chat-log { max-height: 140px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; }
       .hud-chat-line { text-shadow: 0 1px 1px #000; line-height: 1.45; }
       .hud-chat-system { color: #ffd700; }

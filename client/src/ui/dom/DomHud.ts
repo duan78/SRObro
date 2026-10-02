@@ -130,17 +130,48 @@ export class DomHud {
     this.addChatMessage('ZQSD/WASD pour bouger (relatif à la caméra), Shift: courir, clic sol: y aller, clic monstre: cibler. S: skills, Tab: zerk.', 'system');
   }
 
-  /** Hotbar dynamique (skills appris, touches 1-8 — Phase C). */
-  setHotbarSkills(skills: Array<{ label: string; key: string; mpCost?: number }>): void {
+  /** Hotbar dynamique (skills appris, touches 1-8 + clic — V4 §B).
+   *  icon: URL PNG officiel (phase C) ; clic sur slot → srobro:hotbar-use. */
+  setHotbarSkills(skills: Array<{ label: string; key: string; mpCost?: number; icon?: string }>): void {
     this.hotbarSlots.forEach((slot, i) => {
+      slot.onclick = null;
       const s = skills[i];
       if (s) {
-        slot.innerHTML = `<span class="hud-slot-key">${s.key}</span><span class="hud-slot-label" style="font-size:9px;color:#f0e6d2;overflow:hidden;max-width:40px;text-overflow:ellipsis;white-space:nowrap;">${s.label}</span>`;
+        slot.innerHTML =
+          `<span class="hud-slot-key">${s.key}</span>` +
+          (s.icon
+            ? `<span class="hud-slot-icon" style="background-image:url('${s.icon}')"></span>`
+            : `<span class="hud-slot-label" style="font-size:9px;color:#f0e6d2;overflow:hidden;max-width:40px;text-overflow:ellipsis;white-space:nowrap;">${s.label}</span>`);
         slot.title = `${s.label}${s.mpCost ? ` (${s.mpCost} MP)` : ''}`;
+        slot.style.cursor = 'pointer';
+        const idx = i;
+        slot.onclick = () => window.dispatchEvent(new CustomEvent('srobro:hotbar-use', { detail: idx }));
       } else {
         slot.innerHTML = `<span class="hud-slot-key">${i < 8 ? i + 1 : 'F' + (i + 1)}</span>`;
+        slot.style.cursor = 'default';
       }
     });
+  }
+
+  /** Voile radial de cooldown sur un slot (V4 §B/D) — se dissipe en conic-gradient. */
+  startSlotCooldown(index: number, ms: number): void {
+    const slot = this.hotbarSlots[index];
+    if (!slot || ms <= 0) return;
+    slot.querySelector('.hud-slot-cd')?.remove();
+    const ov = document.createElement('div');
+    ov.className = 'hud-slot-cd';
+    slot.appendChild(ov);
+    const t0 = performance.now();
+    const tick = (): void => {
+      const p = Math.min(1, (performance.now() - t0) / ms);
+      ov.style.background = `conic-gradient(rgba(0,0,0,0.78) ${p * 360}deg, transparent 0deg)`;
+      if (p >= 1) {
+        ov.remove();
+        return;
+      }
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
   }
 
   /** Orbes berserker (0-5); actif = orbes rouges pulsantes. */

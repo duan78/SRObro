@@ -19,6 +19,7 @@ import {
 import { GLTFFileLoader } from '@babylonjs/loaders/glTF';
 import { Game } from './core/Game';
 import { DomHud } from './ui/dom/DomHud';
+import { WindowManager } from './ui/dom/WindowManager';
 
 // Register GLTF loader
 SceneLoader.RegisterPlugin(new GLTFFileLoader());
@@ -151,15 +152,26 @@ async function init(): Promise<void> {
     updateLoadingProgress(100, 'Ready!');
     await game.start();
 
-    // Initialize UI AFTER the render loop runs: une ADT fullscreen créée avant
-    // le premier render() peut rester vierge (texture jamais redessinée).
+    // HUD UNIQUE EN DOM (V4 §B): la couche Babylon-GUI (UIManager) doublait
+    // le HUD DOM — deux hotbars empilées, chat fantôme, quick-slots morts.
+    // Elle n'a aucun consommateur externe (ses méthodes sont null-safe et
+    // le HUD DOM couvre tout) — on ne l'initialise plus. Seule exception
+    // conservée hors UIManager: DamageNumberManager (dégâts flottants 3D),
+    // qui possède sa propre texture.
     updateLoadingProgress(90, 'Creating user interface...');
-    ui.initialize();
-    ui.guiTexture?.markAsDirty();
+    // ui.initialize(); // V4 §B: couche GUI retirée — HUD DOM unique
+    // ui.guiTexture?.markAsDirty();
 
     // HUD DOM overlay (fiable) branché sur l'état du jeu
     const hud = new DomHud();
     (window as unknown as { hud: DomHud }).hud = hud;
+
+    // Gestionnaire de fenêtres (V4 §B): zones d'écran par panneau,
+    // anti-collision à l'ouverture (0 chevauchement fenêtres ouvertes),
+    // glisser-déposer, passage devant au clic, Échap ferme la fenêtre du dessus.
+    const winMgr = new WindowManager();
+    winMgr.start();
+    (window as unknown as { windowManager: WindowManager }).windowManager = winMgr;
 
     // Combat réseau (monstres serveur, ciblage, skills, HUD, mort, loot)
     let netCombat: NetworkCombat | null = null;

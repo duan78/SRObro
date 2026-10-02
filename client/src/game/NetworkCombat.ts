@@ -978,6 +978,13 @@ export class NetworkCombat {
         });
       }
     });
+
+    // Clic sur un slot de la hotbar DOM (V4 §B) → même chemin que la touche.
+    window.addEventListener('srobro:hotbar-use', (e) => {
+      const idx = (e as CustomEvent<number>).detail;
+      const s = this.hotbar[idx];
+      if (s) this.useSkill(s);
+    });
   }
 
   /**
@@ -1127,6 +1134,8 @@ export class NetworkCombat {
       return;
     }
     this.skillCooldowns.set(skill.code, now + skill.cooldownMs);
+    const slotIdx = this.hotbar.indexOf(skill);
+    if (slotIdx >= 0) this.hud.startSlotCooldown(slotIdx, skill.cooldownMs);
     this.network.send({
       type: 'cast_skill',
       timestamp: now,
