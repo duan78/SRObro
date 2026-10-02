@@ -34,6 +34,10 @@ export interface MonsterEntityOptions {
   attackPower: { min: number; max: number };
   defense: number;
   magicalDefense: number;
+  /** Ratio de parade officiel (er_parry): positionne le jet adverse vers le min. */
+  parryRatio?: number;
+  /** Attack rating officiel (colonne par de la DB serveur). */
+  attackRating?: number;
   exp: number;
   sp: number;
   aggroRange: number;
@@ -59,6 +63,8 @@ export class MonsterEntity extends Entity {
   public attackPower: { min: number; max: number };
   public defense: number;
   public magicalDefense: number;
+  public parryRatio: number;
+  public attackRating: number;
   public exp: number;
   public sp: number;
   public aggroRange: number;
@@ -98,6 +104,8 @@ export class MonsterEntity extends Entity {
     this.attackPower = options.attackPower;
     this.defense = options.defense;
     this.magicalDefense = options.magicalDefense;
+    this.parryRatio = options.parryRatio ?? 5;
+    this.attackRating = options.attackRating ?? options.level * 10;
     this.exp = options.exp;
     this.sp = options.sp;
     this.aggroRange = options.aggroRange;
@@ -421,10 +429,10 @@ export class MonsterEntity extends Entity {
       magicalAttackPower: { min: 0, max: 0 },
       defense: this.defense,
       magicalDefense: this.magicalDefense,
-      parryRatio: 5,
+      parryRatio: this.parryRatio,
       blockRatio: 0,
       criticalChance: 5,
-      attackRating: this.level * 10,
+      attackRating: this.attackRating,
     };
   }
 

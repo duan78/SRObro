@@ -171,7 +171,7 @@ export class WorldManager {
       const character = await prisma.character.findUnique({
         where: { id: characterId },
         include: {
-          masteries: true,
+          masteries: { include: { mastery: true } },
           skills: {
             include: { skill: true },
           },
@@ -209,6 +209,13 @@ export class WorldManager {
         modelId: 'char_chinese_male',
         skillPoints: character.skillPoints,
         statPoints: character.statPoints,
+        // Maîtrises { clé normalisée → niveau } (GAP + formules de dégâts)
+        masteries: new Map(
+          character.masteries.map((cm) => [
+            (cm.mastery?.name ?? '').toLowerCase().split(/[\s(]/)[0],
+            cm.level,
+          ]),
+        ),
       });
 
       this.players.set(characterId, playerEntity);

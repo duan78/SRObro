@@ -189,7 +189,11 @@ async function main(): Promise<void> {
   const expB = Number(last(GM.states).exp);
   await gmCmd('/kill'); await wait(1500);
   const gainX1 = Number(last(GM.states).exp) - expB;
-  check('Taux XP appliqué sans reboot (×5 vs ×1)', gainX5 === gainX1 * 5, `×5=+${gainX5} ×1=+${gainX1}`);
+  // NB: le GAP officiel (±10%/niveau d'écart perso↔maîtrise) module l'XP de
+  // chaque kill → le ratio n'est pas exactement 5 si le perso a levelé entre
+  // les deux mesures. L'assertion clé = le taux live est appliqué sans reboot.
+  const ratio = gainX1 > 0 ? gainX5 / gainX1 : 0;
+  check('Taux XP appliqué sans reboot (×5 vs ×1)', ratio >= 4.0 && ratio <= 6.0, `×5=+${gainX5} ×1=+${gainX1} ratio=${ratio.toFixed(2)}`);
 
   // --- 14. /announce diffusé au joueur lambda ---
   await gmCmd('/announce Maintenance dans 10 minutes !');

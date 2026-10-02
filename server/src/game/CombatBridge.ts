@@ -11,6 +11,11 @@ import type { WorldManager } from './WorldManager';
 import type { Client } from '../network/Client';
 import { globalSpawnManager } from '../ai/SpawnManager';
 import { globalCombatManager } from '../combat/CombatManager';
+import {
+  computeSkillDamage, applyCritical, physicalBalance, magicalBalance, gapMultipliers,
+} from '../combat/OfficialFormulas';
+import { GameDataService } from '../data/GameDataService';
+import type { OfficialSkill } from '../data/GameDataService';
 import { DropManager } from '../drop/DropManager';
 import { PlayerEntity } from '../world/PlayerEntity';
 import { MonsterEntity } from '../world/MonsterEntity';
@@ -21,10 +26,11 @@ import { cumulativeXpForLevel } from '@srobro/shared';
 import type { S2CPacket } from '@srobro/shared';
 
 const logger = createLogger('CombatBridge');
+const gameData = GameDataService.getInstance();
 
-// Compétences d'attaque de base (phase 2). Les codes existent dans skilldata
-// officiel (identité visuelle/nom) — les paramètres seront remplacés par les
-// vraies colonnes 118 de skilldata à la phase 4.
+// Compétences d'attaque de base (phase 2) — FALLBACK uniquement: la résolution
+// passe d'abord par les données OFFICIELLES extraites du skilldata serveur
+// (skills_official.json, 6 909 skills, phase A du PROMPT_MAITRE_V2).
 export interface BasicSkill {
   code: string;
   label: string;
@@ -41,8 +47,67 @@ export const BASIC_SKILLS: BasicSkill[] = [
   { code: 'SKILL_CH_SWORD_CHAIN_A_1S_01', label: 'Enchaînement', mpCost: 9, cooldownMs: 6000, range: 4, damageMultiplier: 0.9, hits: 2 },
 ];
 
+/** Skill résolu (données officielles si disponibles, fallback BASIC_SKILLS). */
+interface ResolvedSkill {
+  code: string;
+  label: string;
+  mpCost: number;
+  hpCost: number;
+  cooldownMs: number;
+  group: number;          // groupe de cooldown partagé (cooltime)
+  groupCdMs: number;
+  rangeM: number;
+  hits: number;
+  castMs: number;
+  attKind: number;
+  attPct: number;
+  attMin: number;
+  attMax: number;
+  canCrit: boolean;
+  masteryKey: string;
+  reqMasteryLv: number;
+  official: OfficialSkill | null;
+}
+
+function resolveSkill(skillCode: string): ResolvedSkill | null {
+  const official = gameData.getOfficialSkill(skillCode);
+  if (official) {
+    return {
+      code: official.code,
+      label: official.name,
+      mpCost: official.mpCost,
+      hpCost: official.hpCost,
+      cooldownMs: official.cooldownMs || 3000,
+      group: official.group,
+      groupCdMs: official.cooltimeMs,
+      rangeM: official.range > 0 ? official.range : 5, // 0 = portée mêlée
+      hits: Math.max(1, official.mcHits),
+      castMs: Math.max(official.prepareMs, official.castMs),
+      attKind: official.attKind,
+      attPct: Math.max(1, official.attPct),
+      attMin: official.attMin,
+      attMax: Math.max(official.attMax, official.attMin),
+      canCrit: official.crit > 0,
+      masteryKey: official.masteryKey,
+      reqMasteryLv: official.reqMasteryLv,
+      official,
+    };
+  }
+  const basic = BASIC_SKILLS.find((s) => s.code === skillCode);
+  if (!basic) return null;
+  return {
+    code: basic.code, label: basic.label, mpCost: basic.mpCost, hpCost: 0,
+    cooldownMs: basic.cooldownMs, group: 0, groupCdMs: 0,
+    rangeM: basic.range, hits: basic.hits, castMs: 0,
+    attKind: 5, attPct: Math.round(basic.damageMultiplier * 100),
+    attMin: 0, attMax: 0, canCrit: true, masteryKey: '', reqMasteryLv: 0,
+    official: null,
+  };
+}
+
 interface PlayerCooldowns {
   skills: Map<string, number>; // code -> timestamp de fin de cooldown
+  groups: Map<number, number>; // groupe de cooldown partagé (skilldata cooltime)
   lastSkillPacket: number; // anti-spam réseau
 }
 
@@ -50,6 +115,8 @@ export class CombatBridge {
   private worldManager: WorldManager;
   private dropManager: DropManager;
   private cooldowns: Map<string, PlayerCooldowns> = new Map();
+  // Dernières récompenses de kill (pour le log, hors scope if(killer))
+  private lastKillRewards: { expGain: number; gap: number } | null = null;
   // Diffusion de positions monstres: au plus toutes les 250 ms par monstre
   private lastMonsterBroadcast: Map<string, number> = new Map();
 
@@ -207,14 +274,16 @@ export class CombatBridge {
   // ============================================
 
   /**
-   * Exécute une compétence pour un joueur. Retourne une réponse pour le
-   * client (cooldowns/erreurs affichables).
+   * Exécute une compétence pour un joueur. Résolution par les données
+   * OFFICIELLES du skilldata serveur (skills_official.json) — cooldowns réels,
+   * coûts MP, % fixe de la série + part fixe, portées, multi-coups.
+   * Retourne une réponse pour le client (cooldowns/erreurs affichables).
    */
   processSkillCast(_client: Client, characterId: string, skillCode: string, targetId: string): void {
     const player = this.worldManager.getPlayer(characterId);
     if (!player || !player.isAlive()) return;
 
-    const skill = BASIC_SKILLS.find((s) => s.code === skillCode);
+    const skill = resolveSkill(skillCode);
     if (!skill) {
       this.sendToPlayer(characterId, {
         type: 'skill_rejected', timestamp: Date.now(), data: { skillCode, reason: 'Compétence inconnue' },
@@ -222,15 +291,15 @@ export class CombatBridge {
       return;
     }
 
-    const cd = this.cooldowns.get(characterId) ?? { skills: new Map(), lastSkillPacket: 0 };
+    const cd = this.cooldowns.get(characterId) ?? { skills: new Map(), groups: new Map(), lastSkillPacket: 0 };
     this.cooldowns.set(characterId, cd);
 
     const now = Date.now();
     if (now - cd.lastSkillPacket < 300) return; // anti-spam
     cd.lastSkillPacket = now;
 
-    // Cooldown
-    const readyAt = cd.skills.get(skill.code) ?? 0;
+    // Cooldown individuel + groupe de cooldown partagé (skilldata cooltime)
+    const readyAt = Math.max(cd.skills.get(skill.code) ?? 0, cd.groups.get(skill.group) ?? 0);
     if (now < readyAt) {
       this.sendToPlayer(characterId, {
         type: 'skill_rejected', timestamp: now,
@@ -239,51 +308,74 @@ export class CombatBridge {
       return;
     }
 
-    // Coût MP
-    if (player.mp < skill.mpCost) {
+    // Prérequis de maîtrise (données officielles req_mastery_lv). Le système
+    // complet d'apprentissage arrive en phase C: on ne gate que les skills
+    // exigeant une maîtrise entraînée (> 5).
+    if (skill.reqMasteryLv > 5 && skill.masteryKey && skill.masteryKey !== 'character') {
+      const masteryLevel = player.getMasteryLevel(skill.masteryKey);
+      if (masteryLevel < skill.reqMasteryLv) {
+        this.sendToPlayer(characterId, {
+          type: 'skill_rejected', timestamp: now,
+          data: { skillCode, reason: `Maîtrise ${skill.masteryKey} ${skill.reqMasteryLv} requise (actuel ${masteryLevel})` },
+        });
+        return;
+      }
+    }
+
+    // Coût MP / HP
+    if (skill.mpCost > 0 && player.mp < skill.mpCost) {
       this.sendToPlayer(characterId, {
         type: 'skill_rejected', timestamp: now, data: { skillCode, reason: 'Pas assez de MP' },
       });
       return;
     }
+    if (skill.hpCost > 0 && player.hp <= skill.hpCost) {
+      this.sendToPlayer(characterId, {
+        type: 'skill_rejected', timestamp: now, data: { skillCode, reason: 'Pas assez de HP' },
+      });
+      return;
+    }
 
-    // Cible valide + à portée
+    // Cible valide + à portée (skills: seuls joueurs et monstres sont attaquables)
     const target = this.worldManager.getEntityById(targetId);
-    if (!target || !target.isAlive()) {
+    if (!target || !target.isAlive() || !(target instanceof PlayerEntity || target instanceof MonsterEntity)) {
       this.sendToPlayer(characterId, {
         type: 'skill_rejected', timestamp: now, data: { skillCode, reason: 'Cible invalide' },
       });
       return;
     }
+    const fightable: PlayerEntity | MonsterEntity = target;
     const distance = player.distanceTo(target);
-    if (distance > Math.max(skill.range * 3, 15)) {
+    if (distance > Math.max(skill.rangeM * 3, 15)) {
       this.sendToPlayer(characterId, {
         type: 'skill_rejected', timestamp: now, data: { skillCode, reason: 'Hors de portée' },
       });
       return;
     }
 
-    // Applique: MP + cooldown
-    player.setMp(player.mp - skill.mpCost);
+    // Applique: MP/HP + cooldowns (individuel + groupe)
+    if (skill.mpCost > 0) player.setMp(player.mp - skill.mpCost);
+    if (skill.hpCost > 0) player.setHp(player.hp - skill.hpCost);
     cd.skills.set(skill.code, now + skill.cooldownMs);
+    if (skill.groupCdMs > 0 && skill.group > 0) {
+      cd.groups.set(skill.group, now + skill.groupCdMs);
+    }
 
-    // Casting bar côté client (silence serveur bref = cast instantané de
-    // base; les vrais castTime viendront des colonnes skilldata)
+    // Casting bar côté client (vraie durée skilldata: prepare/cast)
     this.sendToPlayer(characterId, {
       type: 'casting_start', timestamp: now,
-      data: { skillCode, durationMs: 0, targetId },
+      data: { skillCode, durationMs: skill.castMs, targetId },
     });
 
-    // Dégâts (multi-coups)
+    // Dégâts par la formule OFFICIELLE (multi-coups mc_hits)
+    const dmgType: 'physical' | 'magical' = skill.attKind === 5 ? 'physical' : 'magical';
     for (let i = 0; i < skill.hits; i++) {
+      const precomputed = this.computeOfficialSkillDamage(player, fightable, skill);
       globalCombatManager.startCombat(
         this.worldManager.toCombatParticipant(player),
         this.worldManager.toCombatParticipant(target),
       );
-      const bonus = Math.round(
-        ((player.stats.attackPower.min + player.stats.attackPower.max) / 2) * (skill.damageMultiplier - 1),
-      );
-      const result = globalCombatManager.processAttack(characterId, targetId, 'physical', bonus);
+      const result = globalCombatManager.processAttack(characterId, targetId, dmgType, 0, precomputed);
       if (result && (target instanceof PlayerEntity || target instanceof MonsterEntity)) {
         target.setHp(result.targetHp);
         this.broadcastToNearby(target.position, {
@@ -303,6 +395,48 @@ export class CombatBridge {
     }
 
     this.sendPlayerState(characterId);
+  }
+
+  /**
+   * Dégâts d'un skill par la formule documentée (elitepvpers 412387):
+   *   PHY = [(base + skill_pow × mastery_incr − def) × balance × skill% × buffs × 1.2767]
+   * Critique: 2×PHY + MAG, uniquement si la série porte le tag crit du
+   * skilldata (14 séries — aucun nuke/imbue).
+   */
+  private computeOfficialSkillDamage(
+    player: PlayerEntity,
+    target: PlayerEntity | MonsterEntity,
+    skill: ResolvedSkill,
+  ): { damage: number; isCritical: boolean; isBlocked: boolean } {
+    const masteryLevel = skill.masteryKey && skill.masteryKey !== 'character'
+      ? Math.max(1, player.getMasteryLevel(skill.masteryKey))
+      : 1;
+    const tStats = target instanceof MonsterEntity ? target.getCombatStats() : target.stats;
+
+    const dmg = computeSkillDamage({
+      baseAttack: {
+        min: player.stats.attackPower.min,
+        max: player.stats.attackPower.max,
+      },
+      skillPow: { min: skill.attMin, max: skill.attMax },
+      masteryLevel,
+      skillPct: skill.attPct,
+      physDefense: tStats.defense,
+      magDefense: tStats.magicalDefense,
+      physBalancePct: physicalBalance(player),
+      magBalancePct: magicalBalance(player),
+      attKind: skill.attKind,
+      attackRating: player.stats.attackRating,
+      parryRatio: tStats.parryRatio,
+    });
+
+    let damage = dmg.total;
+    let isCritical = false;
+    if (skill.canCrit && Math.random() * 100 < player.stats.criticalChance) {
+      damage = applyCritical(dmg);
+      isCritical = true;
+    }
+    return { damage: Math.max(1, damage), isCritical, isBlocked: false };
   }
 
   // ============================================
@@ -369,10 +503,14 @@ export class CombatBridge {
       } catch { /* non bloquant */ }
 
       if (killer) {
-        // XP / SP / or (taux configurables à chaud)
-        const expGain = Math.max(1, Math.round(monster.exp * rates.exp));
-        const spGain = Math.max(0, Math.round(monster.sp * rates.sp));
+        // XP / SP / or (taux configurables à chaud) + GAP officiel:
+        // écart niveau ↔ maîtrise la plus haute, ±10%/niveau, gap 9 max utile
+        // (10% XP / 190% SP) — docs/SRO_KNOWLEDGE_BASE/26_SP_FARMING.md
+        const gap = gapMultipliers(killer.level, killer.highestMasteryLevel());
+        const expGain = Math.max(1, Math.round(monster.exp * rates.exp * gap.expMult));
+        const spGain = Math.max(0, Math.round(monster.sp * rates.sp * gap.spMult));
         const goldGain = Math.round((monster.level * 8 + Math.random() * monster.level * 4) * rates.gold);
+        this.lastKillRewards = { expGain, gap: gap.gap };
 
         killer.addExp(expGain);
         killer.sp += spGain;
@@ -380,13 +518,15 @@ export class CombatBridge {
 
         this.sendToPlayer(killerId, {
           type: 'xp_gain', timestamp: Date.now(),
-          data: { amount: expGain, total: killer.exp },
+          data: { amount: expGain, total: killer.exp, gap: gap.gap, gapExpMult: gap.expMult, gapSpMult: gap.spMult },
         });
         this.sendToPlayer(killerId, {
           type: 'sp_gain', timestamp: Date.now(),
           data: { amount: spGain, total: killer.sp },
         });
         this.sendPlayerState(killerId);
+      } else {
+        this.lastKillRewards = null;
       }
 
       // Loot: table MonsterDrop officielle si remplie, sinon rien (l'or est auto)
@@ -398,7 +538,8 @@ export class CombatBridge {
       }
 
       // Le SpawnManager gère despawn (3 s) + respawn via son propre cycle
-      logger.info(`Monstre tué: ${monster.name} par ${killer?.name ?? killerId} (+${killer ? Math.round(monster.exp * rates.exp) : 0} XP)`);
+      const rewards = this.lastKillRewards;
+      logger.info(`Monstre tué: ${monster.name} par ${killer?.name ?? killerId}${rewards ? ` (+${rewards.expGain} XP, gap ${rewards.gap})` : ''}`);
     } catch (error) {
       logger.error('Erreur onMonsterDeath:', error);
     }

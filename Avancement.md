@@ -592,3 +592,51 @@ niveau 2 + stats (attaque 35~45), boutique officielle + potion + arme
 partagé), GM complet (22 commandes, /rates ×5 mesuré +270 XP sans reboot,
 console /admin temps réel, ban/kick), 60 FPS + 1 warn bénin en 15 min,
 tsc 0/0, persistance après relance serveur.
+
+---
+
+## Session du 2 octobre 2026 : PROMPT_MAITRE_V2 — PHASE A (données officielles)
+
+### Étape 0 : audit des modules MVP (avant toute écriture)
+| Module | État | Verdict |
+|---|---|---|
+| quest | Branché réseau+combat+DB, anti-exploit | Réutilisable (manque récompenses items) |
+| drop | En jeu (CombatBridge), SQL brut | Réutilisable (migrer vers Prisma plus tard) |
+| guild | Branché (15 events), CRUD solide | Réutilisable (invitations non livrées, storage OK) |
+| fortress | Branché, scheduler complet | Guerre factice (vainqueur arbitraire) — gameplay siège à écrire |
+| mount | Branché DB | Aucune entité monde/vitesse — à compléter |
+| hotkey | SQL sur tables inexistantes | À réécrire en Prisma |
+| casting | Rien n'appelle startCasting | Code mort (doublon SkillManager) — à fusionner/supprimer |
+| alchemy | Logique propre + DB, débranché | Branchable (handlers socket + consommation items à faire) |
+| job | Bugs bloquants (clés étoiles) | À réécrire en partie |
+| pvp | PKManager prêt; PvPManager 2 bugs | PK branchable sur morts joueur de CombatBridge |
+| stall | Squelette + bugs transaction | À corriger (slot vendeur, stock) |
+
+### Réalisé (Phase A)
+- **Import des données officielles** (campaigne 2026-10): `scripts/import-official-csv.ts`
+  → `data/game/monsters_official.json` (6 483 monstres, stats DB serveur vSRO)
+  + `skills_official.json` (6 909 skills, skilldata serveur). GameDataService les
+  charge avec priorité sur les données client.
+- **Monstres officiels**: SpawnManager applique les stats exactes (HP/MP/EXP/atk/
+  parry/AR par stem) — Tiger Girl 598 720 HP/451 200 EXP vérifiés en jeu. Défense =
+  courbe 2+niveau×2 (pas de colonne défense dans la DB). Mobs tutoriels DOCILES
+  (mangnyang/yeoha/ghosts: aggro 0, vengeance seule) — comportement officiel.
+- **Moteur de skills générique** (CombatBridge): résolution par skills_official —
+  % FIXE par série + part fixe, MP/coûts HP, cooldowns individuels + groupes
+  (cooltime), prepare/cast réels (barre d'incantation 411 ms Strike Smash),
+  multi-coups mc_hits, gating maîtrise req_mastery_lv (>5), dégâts par la formule
+  officielle. Fallback BASIC_SKILLS si absent.
+- **OfficialFormulas.ts**: formule elitepvpers 412387 complète (multipliers
+  1.2767/1.2870, balances, mastery_incr, crit 2×PHY+MAG sur séries crit seule-
+  ment, block bouclier, AR/PR jets), HP/MP officiels, GAP (±10%/niveau, gap 9 max).
+- **GAP appliqué** aux kills (xp_gain expose gap/mult); DamageCalculator aligné
+  (crit ×2, block quasi-annulatif); défense de base perso ≈ niveau (perso nu).
+- **Masteries en mémoire** (PlayerEntity, chargées à la connexion) pour GAP et
+  formules. CombatManager accepte des dégâts précalculés (moteur officiel).
+
+### Tests
+- `scripts/test-phaseA.ts` — 9/9 ✓ (TG HP/EXP officiels, GAP gap1=×0.9=406 080,
+  Strike Smash MP 19/cast 411/CD 3000/dégâts, gating bicheon 27).
+- Régressions V1: combat-flow ✓, phase4 ✓ (boucle retarget corrigée + /god),
+  phase5 ✓ (targeting ordonné + tueur dynamique), phase6 ✓ (ratio taux tolérance
+  GAP). tsc 0/0.

@@ -117,38 +117,45 @@ async function main(): Promise<void> {
     }
     await wait(900);
     const drops: any[] = [];
-    A.socket.on('drop_item', (d: any) => drops.push(d.data ?? d));
-    B.socket.on('drop_item', (d: any) => drops.push(d.data ?? d));
-    // Les deux attaquent les mobs ensemble jusqu'à obtenir un drop (25%/kill)
+    let lastKillerId: 'A' | 'B' | null = null;
+    A.socket.on('drop_item', (d: any) => drops.push({ ...d.data ?? d, killer: lastKillerId }));
+    B.socket.on('drop_item', (d: any) => drops.push({ ...d.data ?? d, killer: lastKillerId }));
+    A.socket.on('xp_gain', () => { lastKillerId = 'A'; });
+    B.socket.on('xp_gain', () => { lastKillerId = 'B'; });
+    // Les deux attaquent les mobs ensemble jusqu'à obtenir un drop (25%/kill).
+    // Placement auprès de CHAQUE cible AVANT de l'attaquer (sinon hors de portée).
     for (const m of spawns.slice(0, 10)) {
+      if (drops.length > 0) break;
+      A.socket.emit('move', { type: 'move', timestamp: Date.now(), data: { position: { x: m.position.x + 2, y: 0, z: m.position.z + 2 }, rotation: 0, isRunning: false } });
+      B.socket.emit('move', { type: 'move', timestamp: Date.now(), data: { position: { x: m.position.x - 2, y: 0, z: m.position.z + 2 }, rotation: 0, isRunning: false } });
+      await wait(700);
       for (let i = 0; i < 14 && drops.length === 0; i++) {
         A.socket.emit('attack', { type: 'attack', timestamp: Date.now(), data: { targetId: m.id } });
         B.socket.emit('attack', { type: 'attack', timestamp: Date.now(), data: { targetId: m.id } });
         await wait(480);
       }
-      if (drops.length > 0) break;
-      A.socket.emit('move', { type: 'move', timestamp: Date.now(), data: { position: { x: m.position.x + 2, y: 0, z: m.position.z + 2 }, rotation: 0, isRunning: false } });
-      B.socket.emit('move', { type: 'move', timestamp: Date.now(), data: { position: { x: m.position.x - 2, y: 0, z: m.position.z + 2 }, rotation: 0, isRunning: false } });
-      await wait(700);
     }
     check('Mob partagé: loot généré (un set par mob)', drops.length > 0 && drops.length <= 6, `${drops.length} drops`);
 
-    // B tente de ramasser le drop de A (propriétaire 30 s) → refus.
-    // Le pickup répond par ÉVÉNEMENTS (pickup_success/failed), pas par ack.
+    // Propriétaire du drop = TUEUR (xp_gain). Le test ne présuppose PAS qui
+    // tue: le non-tueur doit être refusé, le tueur doit réussir.
     if (drops.length) {
-      const bResults: any[] = [];
-      const aResults: any[] = [];
-      B.socket.on('pickup_failed', (d: any) => bResults.push(d.data ?? d));
-      B.socket.on('pickup_success', (d: any) => bResults.push({ ok: true, ...(d.data ?? d) }));
-      A.socket.on('pickup_success', (d: any) => aResults.push(d.data ?? d));
-      A.socket.on('pickup_failed', (d: any) => aResults.push({ failed: true, ...(d.data ?? d) }));
-      B.socket.emit('pickup_item', { droppedItemId: drops[0].droppedItemId, timestamp: Date.now() });
+      const killer = drops[0].killer as 'A' | 'B' | null; // tueur du drop[0]
+      const owner = killer === 'B' ? B : A;
+      const other = killer === 'B' ? A : B;
+      const ownerResults: any[] = [];
+      const otherResults: any[] = [];
+      owner.socket.on('pickup_success', (d: any) => ownerResults.push({ ok: true, ...(d.data ?? d) }));
+      owner.socket.on('pickup_failed', (d: any) => ownerResults.push({ failed: true, ...(d.data ?? d) }));
+      other.socket.on('pickup_success', (d: any) => otherResults.push({ ok: true, ...(d.data ?? d) }));
+      other.socket.on('pickup_failed', (d: any) => otherResults.push({ failed: true, ...(d.data ?? d) }));
+      other.socket.emit('pickup_item', { droppedItemId: drops[0].droppedItemId, timestamp: Date.now() });
       await wait(1500);
-      check('Loot propriétaire: B ne ramasse pas le drop de A', bResults.length > 0 && !bResults[0].ok,
-        String(bResults[0]?.message ?? JSON.stringify(bResults[0] ?? {})).slice(0, 60));
-      A.socket.emit('pickup_item', { droppedItemId: drops[0].droppedItemId, timestamp: Date.now() });
+      check(`Loot propriétaire: le non-tueur ne ramasse pas (tueur=${killer ?? '?'})`, otherResults.length > 0 && !otherResults[0].ok,
+        String(otherResults[0]?.message ?? JSON.stringify(otherResults[0] ?? {})).slice(0, 60));
+      owner.socket.emit('pickup_item', { droppedItemId: drops[0].droppedItemId, timestamp: Date.now() });
       await wait(1500);
-      check('A ramasse son drop', aResults.length > 0 && !aResults[0].failed);
+      check('Le tueur ramasse son drop', ownerResults.length > 0 && !ownerResults[0].failed);
     } else {
       check('Loot générée', false, 'aucun drop (chance 25%)');
     }

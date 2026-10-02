@@ -7,7 +7,18 @@ import { MonsterEntity } from '../world/MonsterEntity';
 import { prisma } from '../database/prisma';
 import { globalSpatialManager } from '../world/SpatialManager';
 import { createLogger } from '../core/Logger';
+import { GameDataService } from '../data/GameDataService';
 import { EventEmitter } from 'events';
+
+/**
+ * Monstres DOCILES (non-aggro) — comportement officiel: les mobs tutoriel
+ * n'attaquent jamais en premier (docs/SRO_KNOWLEDGE_BASE/14_MONSTER_GUIDE.md,
+ *spots Mangnyang/Yeoha de Jangan; vengeance seule s'ils sont frappés).
+ */
+const DOCILE_STEMS = new Set([
+  'mangnyang', 'yeoha', 'bigeyeghost', 'smalleyeghost', 'stoneghost',
+  'waterghost', 'gyo', 'chakji', 'tombstone',
+]);
 
 const logger = createLogger('SpawnManager');
 
@@ -219,23 +230,41 @@ export class SpawnManager extends EventEmitter {
         return;
       }
 
+      // Stats OFFICIELLES (DB serveur vSRO extraite 2026-10, priorité sur le
+      // seed client): HP/MP/EXP/atk exacts par stem modelId (ex: tigerwoman).
+      const official = GameDataService.getInstance().getOfficialMonster(monster.modelId);
+      const mLevel = official?.level || monster.level;
+      const mHp = official?.hp || monster.hp;
+      const mMp = official?.mp || monster.mp;
+      const mAtkMin = official ? official.atkMin : monster.attackPowerMin;
+      const mAtkMax = official ? Math.max(official.atkMax, official.atkMin) : monster.attackPowerMax;
+      const mExp = official ? official.exp : Number(monster.exp);
+      // SP: la DB serveur n'expose qu'une colonne EXP — les gains SP officiels
+      // proviennent du SXP (400 SXP = 1 SP) [APROX: sp ≈ 10% de l'EXP]
+      const mSp = official ? Math.max(1, Math.round(official.exp * 0.1)) : Number(monster.sp);
+      // Défense: courbe documentée 2 + niveau×2 (pas de colonne défense dans la DB)
+      const mDef = 2 + mLevel * 2;
+
       // Create monster entity
       const monsterId = `${activeSpawn.spawnId}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
       const monsterEntity = new MonsterEntity({
         id: monsterId,
         name: monster.name,
-        level: monster.level,
-        hp: monster.hp,
-        maxHp: monster.hp,
-        mp: monster.mp,
-        maxMp: monster.mp,
-        attackPower: { min: monster.attackPowerMin, max: monster.attackPowerMax },
-        defense: monster.defense,
-        magicalDefense: monster.magicalDefense,
-        exp: Number(monster.exp),
-        sp: Number(monster.sp),
-        aggroRange: monster.aggroRange,
+        level: mLevel,
+        hp: mHp,
+        maxHp: mHp,
+        mp: mMp,
+        maxMp: mMp,
+        attackPower: { min: mAtkMin, max: mAtkMax },
+        defense: mDef,
+        magicalDefense: mDef,
+        parryRatio: official?.parry ?? 5,
+        attackRating: official?.atkRating ?? mLevel * 10,
+        // Mobs tutoriels dociles: pas d'aggro spontanée (vengeance seulement)
+        aggroRange: official && DOCILE_STEMS.has(official.stem) ? 0 : monster.aggroRange,
+        exp: mExp,
+        sp: mSp,
         attackRange: 3, // Default melee range
         moveSpeed: 3.0,
         attackSpeed: 2000,

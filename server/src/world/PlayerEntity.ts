@@ -35,6 +35,8 @@ export interface PlayerEntityOptions {
   skillPoints: number;
   statPoints: number;
   gender?: string;
+  /** Maîtrises du perso: clé normalisée (bicheon|heuksal|pacheon|fire|cold|lightning|force|warrior|...) → niveau. */
+  masteries?: Map<string, number>;
 }
 
 /**
@@ -55,6 +57,8 @@ export class PlayerEntity extends Entity {
   public gold: number;
   public skillPoints: number;
   public statPoints: number;
+  /** Maîtrises { clé normalisée → niveau } (GAP + formules officielles). */
+  public masteries: Map<string, number>;
 
   // Drapeaux GM (phase 6): hors combat normal, jamais persistés en base
   public godMode = false;
@@ -83,6 +87,18 @@ export class PlayerEntity extends Entity {
   private hpRegenAccumulator = 0;
   private mpRegenAccumulator = 0;
 
+  /** Niveau d'une maîtrise (clé normalisée: 'bicheon', 'fire'...), 0 si absente. */
+  getMasteryLevel(key: string): number {
+    return this.masteries?.get(key.toLowerCase()) ?? 0;
+  }
+
+  /** Maîtrise la plus haute (utilisée par le système de GAP). */
+  highestMasteryLevel(): number {
+    let max = 0;
+    for (const lv of this.masteries?.values() ?? []) max = Math.max(max, lv);
+    return max;
+  }
+
   constructor(options: PlayerEntityOptions) {
     super({
       id: options.id,
@@ -109,6 +125,7 @@ export class PlayerEntity extends Entity {
     this.gold = options.gold;
     this.skillPoints = options.skillPoints;
     this.statPoints = options.statPoints;
+    this.masteries = options.masteries ?? new Map();
 
     // Calculate initial combat stats
     this.stats = this.calculateStats();
@@ -362,13 +379,15 @@ export class PlayerEntity extends Entity {
    * Calculate combat stats
    */
   private calculateStats(): PlayerEntity['stats'] {
-    // Base stats from STR/INT
+    // Base stats from STR/INT. Défense de base quasi-nulle sans équipement
+    // (officiel: defense = armure + renforts — un perso nu encaisse presque
+    // tout) [APROX: courbe ≈ niveau + 10% de la stat].
     const baseAttack = Math.floor(this.str * 1.5);
     const baseMagicAttack = Math.floor(this.int * 1.5);
-    const baseDefense = Math.floor(this.str * 0.5);
-    const baseMagicDefense = Math.floor(this.int * 0.5);
+    const baseDefense = this.level + Math.floor(this.str * 0.1);
+    const baseMagicDefense = this.level + Math.floor(this.int * 0.1);
 
-    // Level-based bonuses
+    // Level-based bonuses (attaque)
     const levelBonus = this.level * 2;
 
     return {
@@ -380,8 +399,8 @@ export class PlayerEntity extends Entity {
         min: baseMagicAttack + levelBonus,
         max: baseMagicAttack + levelBonus + 10,
       },
-      defense: baseDefense + levelBonus,
-      magicalDefense: baseMagicDefense + Math.floor(levelBonus / 2),
+      defense: baseDefense,
+      magicalDefense: baseMagicDefense,
       parryRatio: Math.min(50, 5 + this.level),
       blockRatio: Math.min(40, this.level),
       criticalChance: Math.min(30, 3 + this.level * 0.5),

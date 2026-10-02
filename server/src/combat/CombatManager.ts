@@ -150,7 +150,10 @@ export class CombatManager extends EventEmitter {
     attackerId: string,
     defenderId: string,
     damageType: DamageType = 'physical',
-    skillBonus: number = 0
+    skillBonus: number = 0,
+    /** Dégâts pré-calculés par le moteur officiel (OfficialFormulas) —
+     *  court-circuite DamageCalculator en gardant sessions/mort/évènements. */
+    precomputed?: { damage: number; isCritical: boolean; isBlocked: boolean }
   ): DamageCalculationResult | null {
     const combatId = this.generateCombatId(attackerId, defenderId);
     const session = this.activeCombats.get(combatId);
@@ -171,16 +174,32 @@ export class CombatManager extends EventEmitter {
       return null;
     }
 
-    // Calculate damage
-    const result = DamageCalculator.calculateDamage(
-      attacker.stats,
-      {
-        ...defender.stats,
-        hp: defender.hp,
-        maxHp: defender.maxHp,
-      },
-      { damageType, skillBonus }
-    );
+    // Calculate damage (moteur officiel si fourni, sinon calcul générique)
+    let result: DamageCalculationResult;
+    if (precomputed) {
+      const damage = Math.max(1, Math.floor(precomputed.damage));
+      result = {
+        damage,
+        type: damageType,
+        isCritical: precomputed.isCritical,
+        isBlocked: precomputed.isBlocked,
+        isParried: false,
+        rawDamage: damage,
+        defenseIgnored: 0,
+        mitigation: 0,
+        targetHp: Math.max(0, defender.hp - damage),
+      };
+    } else {
+      result = DamageCalculator.calculateDamage(
+        attacker.stats,
+        {
+          ...defender.stats,
+          hp: defender.hp,
+          maxHp: defender.maxHp,
+        },
+        { damageType, skillBonus }
+      );
+    }
 
     // Apply damage
     defender.hp = result.targetHp;

@@ -1,12 +1,12 @@
 /**
  * SRObro - Damage Calculator
- * Implements Silkroad Online damage formulas
+ * Dégâts des ATTAQUES NORMALES (auto-attaque joueur/monstre).
  *
- * Formulas:
- * - Physical Damage = (Attack - Defense) * Multiplier
- * - Magical Damage = (MagicalAttack - MagicalDefense) * Multiplier
- * - Critical = Damage * 1.5
- * - Blocked = Damage * 0.5
+ * Les SKILLS passent par OfficialFormulas (formule elitepvpers complète).
+ * Règles officielles appliquées ici (docs/SRO_KNOWLEDGE_BASE/28):
+ * - Pas de "miss": l'attaque porte, AR/PR déplacent le jet dans la range
+ * - Critique = doublement de la part physique (≈×2 en attaque pure)
+ * - Blocage bouclier = % direct de chance, quasi-annulation du coup
  */
 
 import { DamageType, DamageResult } from '@srobro/shared';
@@ -105,22 +105,21 @@ export class DamageCalculator {
     const effectiveCritChance = attacker.criticalChance + criticalBonus;
     const isCritical = critRoll < effectiveCritChance;
 
-    // Apply critical multiplier
+    // Apply critical multiplier (officiel: la part physique double)
     if (isCritical) {
-      damage = Math.floor(damage * 1.5);
+      damage = Math.floor(damage * 2);
     }
 
-    // Roll for block/parry
+    // Roll for block: % direct du bouclier, quasi-annulation du coup bloqué
     const blockRoll = Math.random() * 100;
     const isBlocked = damageType === 'physical' && blockRoll < parryOrBlockRatio;
 
-    // Apply block reduction
     if (isBlocked) {
-      damage = Math.floor(damage * 0.5);
+      damage = Math.floor(damage * 0.1);
     }
 
-    // Parry only applies to physical attacks and is not the same as block
-    const isParried = damageType === 'physical' && !isBlocked && blockRoll < (parryOrBlockRatio / 2);
+    // Parry: jet déjà déplacé vers le min via parryRatio dans la range
+    const isParried = false;
 
     // Calculate remaining HP
     const targetHp = Math.max(0, defender.hp - damage);

@@ -61,25 +61,45 @@ async function main(): Promise<void> {
   const mang = spawns.filter((m) => m.name === 'Mangnyang');
   check('Mangnyangs visibles', mang.length > 0, `${mang.length}`);
   if (mang.length) {
+    // Test sur compte admin: mode dieu pour un leveling déterministe
+    // (l'anneau de 40 Mangnyangs submerge un perso niveau 1 sinon)
+    socket.emit('chat', { type: 'chat', timestamp: Date.now(), data: { message: '/god', channel: 'general' } });
+    await wait(400);
     socket.emit('move', { type: 'move', timestamp: Date.now(), data: { position: { x: mang[0].position.x + 2, y: 0, z: mang[0].position.z + 2 }, rotation: 0, isRunning: false } });
     await wait(800);
-    const deadline = Date.now() + 90000;
-    while (Date.now() < deadline) {
-      const st = states[states.length - 1];
-      if (st && (st.exp >= 118 || st.level >= 2)) break;
-      // La cible la plus proche encore vivante
-      const target = mang.find((mm) => mm.hp === undefined || mm.hp > 0);
-      if (!target) break;
-      socket.emit('attack', { type: 'attack', timestamp: Date.now(), data: { targetId: target.id } });
-      await wait(500);
-      // Considérer la cible morte après ~6 attaques (24 HP / dégâts)
-      const hits = Math.floor((Date.now() - (deadline - 90000)) / 500);
-      void hits; void target;
-      if ((states[states.length - 1]?.exp ?? 0) % 54 === 0 && (states[states.length - 1]?.exp ?? 0) > 0) {
-        // un kill de plus: retirer la cible de la liste
-        const idx = mang.indexOf(target);
-        if (idx >= 0) mang[idx] = { ...target, hp: 0 };
+    // Carte vivante des monstres vue via les spawns (EXP officielle: ~22/kill
+    // au gap 1 → ~6 kills pour 118 XP; les résurrections ajoutent de nouvelles cibles)
+    const live = new Map<string, any>();
+    const onSpawn = (d: any) => { const m = d.data ?? d; if (m.entityType === 'monster') live.set(m.id, m); };
+    const onDespawn = (d: any) => { const m = d.data ?? d; live.delete(m.id); };
+    const onAttack = (d: any) => { const a = d.data ?? d; if (a.remainingHp <= 0) live.delete(a.targetId); };
+    socket.on('spawn', onSpawn); socket.on('despawn', onDespawn); socket.on('attack', onAttack);
+    spawns.filter((m) => m.entityType === 'monster').forEach((m) => live.set(m.id, m)); // état initial
+    try {
+      const deadline = Date.now() + 90000;
+      let lastLog = 0;
+      let currentId: string | null = null;
+      while (Date.now() < deadline) {
+        const st = states[states.length - 1];
+        if (st && (st.exp >= 118 || st.level >= 2)) break;
+        // Cible la plus proche encore vivante (live = spawns − tués/despawn)
+        const alive = mang.filter((m) => live.has(m.id));
+        const target = alive.find((m) => m.id === currentId) ?? alive[0];
+        if (Date.now() - lastLog > 10000) {
+          lastLog = Date.now();
+          console.log(`  [loop] hp=${st?.hp}/${st?.maxHp} exp=${st?.exp} vivantes=${alive.length}/${mang.length}`);
+        }
+        if (!target) { await wait(700); continue; }
+        if (target.id !== currentId) {
+          currentId = target.id;
+          socket.emit('move', { type: 'move', timestamp: Date.now(), data: { position: { x: target.position.x + 2, y: 0, z: target.position.z + 2 }, rotation: 0, isRunning: false } });
+          await wait(600);
+        }
+        socket.emit('attack', { type: 'attack', timestamp: Date.now(), data: { targetId: target.id } });
+        await wait(450);
       }
+    } finally {
+      socket.off('spawn', onSpawn); socket.off('despawn', onDespawn); socket.off('attack', onAttack);
     }
     const st = states[states.length - 1];
     check('Niveau 2 atteint (courbe officielle)', st?.level === 2, `lvl=${st?.level} exp=${st?.exp} (seuil 118)`);

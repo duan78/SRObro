@@ -54,6 +54,70 @@ export interface GameSkill {
   name: string | null;
 }
 
+/** Stats de monstre issues de la DB SERVEUR officielle (extraction vSRO 2026-10). */
+export interface OfficialMonster {
+  code: string;
+  stem: string;
+  zone: string;
+  level: number;
+  hp: number;
+  mp: number;
+  exp: number;
+  atkMin: number;
+  atkMax: number;
+  atkRating: number;
+  magRating: number;
+  parry: number;
+  rarity: number; // 0 normal / 1 champion / 2 giant / 3 unique / 8 unique silencieux
+  country: number;
+  walkSpeed: number;
+  runSpeed: number;
+}
+
+/** Skill avec valeurs par niveau issues du skilldata SERVEUR officiel (extraction 2026-10). */
+export interface OfficialSkill {
+  id: number;
+  group: number;
+  code: string;
+  series: string;
+  name: string;
+  race: 'CH' | 'EU';
+  masteryKey: string;
+  masteryLabel: string;
+  level: number;
+  activity: number;
+  chainNext: number;
+  prepareMs: number;
+  castMs: number;
+  actionMs: number;
+  cooldownMs: number;
+  cooltimeMs: number;
+  range: number;
+  reqMasteryLv: number;
+  reqSp: number;
+  weapon1: string;
+  weapon2: string;
+  hpCost: number;
+  mpCost: number;
+  hpRatio: number;
+  mpRatio: number;
+  uiTab: number; uiPage: number; uiCol: number; uiRow: number;
+  icon: string;
+  tags: string[];
+  attKind: number; // 5 physique / 8 imbue / 10 magique
+  attPct: number;  // % FIXE de la série
+  attMin: number;  // part fixe (monte avec le niveau)
+  attMax: number;
+  duraMs: number;
+  mcHits: number;
+  crit: number;
+  heal: number;
+  defp: number;
+  hrFlat: number; hrPct: number;
+  erFlat: number; erPct: number;
+  stDurMs: number;
+}
+
 /**
  * Service singleton chargé au démarrage du GameServer.
  * Les fichiers manquants ne sont pas fatals: le service fonctionne
@@ -71,8 +135,14 @@ export class GameDataService {
   public readonly skillsById = new Map<number, GameSkill>();
   public readonly skillsByCode = new Map<string, GameSkill>();
 
+  // Données officielles extraites (DB serveur vSRO + skilldata serveur, 2026-10)
+  public readonly officialMonstersByCode = new Map<string, OfficialMonster>();
+  public readonly officialMonstersByStem = new Map<string, OfficialMonster>();
+  public readonly officialSkillsByCode = new Map<string, OfficialSkill>();
+  public readonly officialSkillsBySeries = new Map<string, OfficialSkill[]>();
+
   public loaded = false;
-  public counts = { items: 0, characters: 0, monsters: 0, npcs: 0, skills: 0 };
+  public counts = { items: 0, characters: 0, monsters: 0, npcs: 0, skills: 0, officialMonsters: 0, officialSkills: 0 };
 
   static getInstance(): GameDataService {
     if (!GameDataService.instance) {
@@ -118,10 +188,33 @@ export class GameDataService {
         this.counts.skills = this.skillsById.size;
       }
 
+      // Données officielles extraites (2026-10): priorité sur characters/skills.json
+      const officialMonstersFile = path.join(dataDir, 'monsters_official.json');
+      if (fs.existsSync(officialMonstersFile)) {
+        for (const m of JSON.parse(fs.readFileSync(officialMonstersFile, 'utf8')) as OfficialMonster[]) {
+          this.officialMonstersByCode.set(m.code, m);
+          this.officialMonstersByStem.set(m.stem, m);
+        }
+        this.counts.officialMonsters = this.officialMonstersByCode.size;
+      }
+      const officialSkillsFile = path.join(dataDir, 'skills_official.json');
+      if (fs.existsSync(officialSkillsFile)) {
+        for (const s of JSON.parse(fs.readFileSync(officialSkillsFile, 'utf8')) as OfficialSkill[]) {
+          this.officialSkillsByCode.set(s.code, s);
+          const list = this.officialSkillsBySeries.get(s.series);
+          if (list) list.push(s);
+          else this.officialSkillsBySeries.set(s.series, [s]);
+        }
+        this.counts.officialSkills = this.officialSkillsByCode.size;
+      }
+
       this.loaded = true;
       console.log(
         `[GameData] Chargé: ${this.counts.items} items, ${this.counts.monsters} monstres, ` +
-        `${this.counts.npcs} NPC, ${this.counts.skills} skills`,
+        `${this.counts.npcs} NPC, ${this.counts.skills} skills` +
+        (this.counts.officialMonsters
+          ? ` | OFFICIEL: ${this.counts.officialMonsters} monstres (DB serveur), ${this.counts.officialSkills} skills (skilldata serveur)`
+          : ''),
       );
     } catch (e) {
       console.warn('[GameData] Échec de chargement des données importées:', e);
@@ -129,14 +222,39 @@ export class GameDataService {
     return this.loaded;
   }
 
-  /** Stats de monstre par code (ex: 'MOB_CH_MANGNYANG'), avec valeurs par défaut sûres. */
+  /** Stats de monstre par code (ex: 'MOB_CH_MANGNYANG'), avec valeurs par défaut sûres.
+   *  Priorité aux stats OFFICIELLES (DB serveur vSRO, 2026-10) puis fallback client. */
   getMonsterTemplate(code: string): {
     name: string; level: number; hp: number; maxHp: number;
+    mp: number; maxMp: number;
     attackPower: { min: number; max: number };
     defense: number; magicalDefense: number; exp: number;
+    rarity: number; parry: number;
     bsrPath: string | null;
   } | null {
-    const c = this.monstersByCode.get(code.toUpperCase());
+    const key = code.toUpperCase();
+    const official = this.officialMonstersByCode.get(key) ?? this.officialMonstersByStem.get(code.toLowerCase());
+    if (official) {
+      // Défense: la DB serveur n'expose pas de colonne défense plate — courbe
+      // documentée défense = 2 + niveau×2 (KB 28, session phase 3)
+      const defCurve = 2 + official.level * 2;
+      return {
+        name: official.code,
+        level: official.level,
+        hp: official.hp || 24,
+        maxHp: official.hp || 24,
+        mp: official.mp,
+        maxMp: official.mp,
+        attackPower: { min: official.atkMin || 1, max: Math.max(official.atkMax, official.atkMin || 1) },
+        defense: defCurve,
+        magicalDefense: defCurve,
+        exp: official.exp,
+        rarity: official.rarity,
+        parry: official.parry,
+        bsrPath: null,
+      };
+    }
+    const c = this.monstersByCode.get(key);
     if (!c || c.level == null) return null;
     const hp = c.hp ?? 24;
     return {
@@ -144,12 +262,35 @@ export class GameDataService {
       level: c.level,
       hp,
       maxHp: hp,
+      mp: 0,
+      maxMp: 0,
       attackPower: { min: c.phyAtkMin ?? 1, max: c.phyAtkMax ?? c.phyAtkMin ?? 1 },
       defense: c.phyDefense ?? 1,
       magicalDefense: c.magDefense ?? 1,
       exp: c.expReward ?? 0,
+      rarity: 0,
+      parry: 0,
       bsrPath: c.bsrPath,
     };
+  }
+
+  /** Monstre officiel par code OU par stem (clé modelId serveur, ex: 'tigerwoman'). */
+  getOfficialMonster(codeOrStem: string): OfficialMonster | null {
+    return (
+      this.officialMonstersByCode.get(codeOrStem.toUpperCase()) ??
+      this.officialMonstersByStem.get(codeOrStem.toLowerCase()) ??
+      null
+    );
+  }
+
+  /** Skill officiel (valeurs skilldata serveur) par code, ex: 'SKILL_CH_SWORD_SMASH_A_01'. */
+  getOfficialSkill(code: string): OfficialSkill | null {
+    return this.officialSkillsByCode.get(code.toUpperCase()) ?? null;
+  }
+
+  /** Tous les niveaux d'une série officielle (ex: 'SKILL_CH_SWORD_SMASH_A'). */
+  getOfficialSkillSeries(series: string): OfficialSkill[] {
+    return this.officialSkillsBySeries.get(series.toUpperCase()) ?? [];
   }
 
   /** Item par code (ex: 'ITEM_ETC_HP_POTION_01'). */
