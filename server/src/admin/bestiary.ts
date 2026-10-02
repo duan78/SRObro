@@ -105,27 +105,58 @@ export async function ensureMonsterInDb(codeOrName: string): Promise<{ id: strin
     candidates.find((m) => m.code.toLowerCase() === q) ??
     candidates.find((m) => m.code.toLowerCase().includes(q)) ??
     candidates.find((m) => m.name.includes(codeOrName));
-  if (!official) return null;
 
-  const created = await prisma.monster.create({
-    data: {
-      name: official.code, // code latin identique au référentiel (retrouvable)
-      level: official.level,
-      hp: official.hp,
-      mp: 0,
-      attackPowerMin: official.phyAtkMin,
-      attackPowerMax: official.phyAtkMax,
-      // Défense affichée par characterdata (armor) + formule serveur 2+lvl×2
-      defense: Math.max(2 + official.level * 2, official.phyDefense),
-      magicalDefense: official.magDefense,
-      exp: BigInt(Math.round(official.expReward)),
-      sp: BigInt(Math.round(official.expReward / 8)),
-      aggroRange: 15,
-      // MOB_CH_MANGNYANG → mangnyang (stem du manifest client quand il existe,
-      // sinon le client affichera le proxy cube)
-      modelId: official.code.toLowerCase().replace(/^mob_(ch|eu|rm)_/, ''),
-    },
-  });
-  logger.info(`Monstre officiel créé en base: ${official.code} (niv. ${official.level})`);
-  return created;
+  if (official) {
+    const created = await prisma.monster.create({
+      data: {
+        name: official.code, // code latin identique au référentiel (retrouvable)
+        level: official.level,
+        hp: official.hp,
+        mp: 0,
+        attackPowerMin: official.phyAtkMin,
+        attackPowerMax: official.phyAtkMax,
+        // Défense affichée par characterdata (armor) + formule serveur 2+lvl×2
+        defense: Math.max(2 + official.level * 2, official.phyDefense),
+        magicalDefense: official.magDefense,
+        exp: BigInt(Math.round(official.expReward)),
+        sp: BigInt(Math.round(official.expReward / 8)),
+        aggroRange: 15,
+        // MOB_CH_MANGNYANG → mangnyang (stem du manifest client quand il existe,
+        // sinon le client affichera le proxy cube)
+        modelId: official.code.toLowerCase().replace(/^mob_(ch|eu|rm)_/, ''),
+      },
+    });
+    logger.info(`Monstre officiel créé en base: ${official.code} (niv. ${official.level})`);
+    return created;
+  }
+
+  // 3. Référentiel DB SERVEUR vSRO (monsters_official.json, Phase A V2):
+  // couvre les codes absents de characterdata (ex. MOB_CI_MANGNYANG) avec
+  // les stats exactes (HP/EXP/atk officiels de la DB vSRO)
+  {
+    const { GameDataService } = await import('../data/GameDataService.js');
+    const off = GameDataService.getInstance().getOfficialMonster(codeOrName);
+    if (off) {
+      const created = await prisma.monster.create({
+        data: {
+          name: off.code,
+          level: off.level,
+          hp: off.hp,
+          mp: off.mp,
+          attackPowerMin: off.atkMin,
+          attackPowerMax: Math.max(off.atkMax, off.atkMin),
+          defense: 2 + off.level * 2,
+          magicalDefense: 2 + off.level * 2,
+          exp: BigInt(off.exp),
+          sp: BigInt(Math.max(1, Math.round(off.exp * 0.1))),
+          aggroRange: off.stem === 'mangnyang' || off.stem === 'yeoha' ? 0 : 15,
+          modelId: off.stem,
+          isUnique: off.rarity === 3 || off.rarity === 8,
+        },
+      });
+      logger.info(`Monstre officiel (DB serveur) créé: ${off.code} (niv. ${off.level})`);
+      return created;
+    }
+  }
+  return null;
 }

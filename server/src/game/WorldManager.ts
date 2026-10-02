@@ -216,6 +216,8 @@ export class WorldManager {
             cm.level,
           ]),
         ),
+        // Skills appris (codes officiels) — gating de cast (Phase C)
+        learnedSkills: new Set(character.skills.map((cs) => cs.skillId)),
       });
 
       this.players.set(characterId, playerEntity);

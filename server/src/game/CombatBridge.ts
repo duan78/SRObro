@@ -322,18 +322,14 @@ export class CombatBridge {
       return;
     }
 
-    // Prérequis de maîtrise (données officielles req_mastery_lv). Le système
-    // complet d'apprentissage arrive en phase C: on ne gate que les skills
-    // exigeant une maîtrise entraînée (> 5).
-    if (skill.reqMasteryLv > 5 && skill.masteryKey && skill.masteryKey !== 'character') {
-      const masteryLevel = player.getMasteryLevel(skill.masteryKey);
-      if (masteryLevel < skill.reqMasteryLv) {
-        this.sendToPlayer(characterId, {
-          type: 'skill_rejected', timestamp: now,
-          data: { skillCode, reason: `Maîtrise ${skill.masteryKey} ${skill.reqMasteryLv} requise (actuel ${masteryLevel})` },
-        });
-        return;
-      }
+    // Prérequis: skill APPRIS (Phase C — apprentissage officiel par SP).
+    // Les skills de départ sont accordés à la création du perso.
+    if (skill.official && !player.learnedSkills.has(skill.code)) {
+      this.sendToPlayer(characterId, {
+        type: 'skill_rejected', timestamp: now,
+        data: { skillCode, reason: 'Compétence non apprise (fenêtre Skills: touche S)' },
+      });
+      return;
     }
 
     // Coût MP / HP
@@ -351,6 +347,15 @@ export class CombatBridge {
     }
 
     // Cible valide + à portée (skills: seuls joueurs et monstres sont attaquables)
+    // Imbues (kind 8): buff SELF — pas de cible, active la composante magique
+    if (skill.attKind === 8) {
+      if (skill.mpCost > 0) player.setMp(player.mp - skill.mpCost);
+      cd.skills.set(skill.code, now + skill.cooldownMs);
+      player.activeImbue = skill.code;
+      this.sendToPlayerRaw(characterId, 'imbue:activated', { code: skill.code, name: skill.label });
+      this.sendPlayerState(characterId);
+      return;
+    }
     const target = this.worldManager.getEntityById(targetId);
     if (!target || !target.isAlive() || !(target instanceof PlayerEntity || target instanceof MonsterEntity)) {
       this.sendToPlayer(characterId, {
@@ -427,6 +432,16 @@ export class CombatBridge {
       : 1;
     const tStats = target instanceof MonsterEntity ? target.getCombatStats() : target.stats;
 
+    // Imbue active (kind 8 appris): composante magique additionnelle — les
+    // dégâts d'imbue scalent par le % de la skill porteuse (mécanique DE 2006)
+    let imbuePow: { min: number; max: number } | null = null;
+    if (skill.attKind === 5 && player.activeImbue) {
+      const imbue = gameData.getOfficialSkill(player.activeImbue);
+      if (imbue) {
+        imbuePow = { min: imbue.attMin, max: Math.max(imbue.attMax, imbue.attMin) };
+      }
+    }
+
     const dmg = computeSkillDamage({
       baseAttack: {
         min: player.stats.attackPower.min,
@@ -440,6 +455,7 @@ export class CombatBridge {
       physBalancePct: physicalBalance(player),
       magBalancePct: magicalBalance(player),
       attKind: skill.attKind,
+      imbuePow,
       attackRating: player.stats.attackRating,
       parryRatio: tStats.parryRatio,
     });
@@ -449,6 +465,10 @@ export class CombatBridge {
     if (skill.canCrit && Math.random() * 100 < player.stats.criticalChance) {
       damage = applyCritical(dmg);
       isCritical = true;
+    }
+    // Berserker (5 orbes): dégâts ×2 pendant 15 s — comportement officiel
+    if (player.zerkActiveUntil > Date.now()) {
+      damage *= 2;
     }
     return { damage: Math.max(1, damage), isCritical, isBlocked: false };
   }
@@ -529,6 +549,13 @@ export class CombatBridge {
         killer.addExp(expGain);
         killer.sp += spGain;
         killer.addGold(goldGain);
+
+        // Orbes berserker: ~1 orbe par tranche de 3 kills (5 orbes = ×2, 15 s)
+        killer.killCount++;
+        if (killer.killCount % 3 === 0 && killer.zerkOrbs < 5) {
+          killer.zerkOrbs++;
+          this.sendToPlayerRaw(killerId, 'zerk:orbs', { orbs: killer.zerkOrbs, max: 5 });
+        }
 
         this.sendToPlayer(killerId, {
           type: 'xp_gain', timestamp: Date.now(),

@@ -13,7 +13,6 @@ import { io } from 'socket.io-client';
 
 const OFFICIAL_TG = { level: 20, hp: 598720, exp: 451200 };
 const SMASH_A = { code: 'SKILL_CH_SWORD_SMASH_A_01', mpCost: 19, castMs: 411, cooldownMs: 3000 };
-const SMASH_B = { code: 'SKILL_CH_SWORD_SMASH_B_01', reqMastery: 27 };
 
 let failures = 0;
 const check = (label: string, ok: boolean, detail = ''): void => {
@@ -112,11 +111,11 @@ async function main(): Promise<void> {
     check('Strike Smash: cooldown officiel 3000 ms', !!rej && rej.remainingMs > 1000 && rej.remainingMs <= 3000,
       `remaining=${rej?.remainingMs} (≈3000 − 1200 écoulés)`);
 
-    // ---------- 4. Gating maîtrise (SMASH_B exige bicheon 27) ----------
-    socket.emit('cast_skill', { type: 'cast_skill', timestamp: Date.now(), data: { targetId: mob.id, skillId: SMASH_B.code } });
+    // ---------- 4. Gating skills non appris (Phase C: SMASH_C, maîtrise 49) ----------
+    socket.emit('cast_skill', { type: 'cast_skill', timestamp: Date.now(), data: { targetId: mob.id, skillId: 'SKILL_CH_SWORD_SMASH_C_01' } });
     await wait(600);
-    const rejB = received['skill_rejected'].find((r: any) => r.skillCode === SMASH_B.code);
-    check(`Gating maîtrise: ${SMASH_B.code} (bicheon 27) rejeté`, !!rejB && /maîtrise/i.test(rejB.reason ?? ''),
+    const rejB = received['skill_rejected'].find((r: any) => r.skillCode === 'SKILL_CH_SWORD_SMASH_C_01');
+    check('Gating: skill non appris rejeté', !!rejB && /appris/i.test(rejB.reason ?? ''),
       rejB?.reason);
   }
 

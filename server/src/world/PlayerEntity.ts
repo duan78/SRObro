@@ -37,6 +37,8 @@ export interface PlayerEntityOptions {
   gender?: string;
   /** Maîtrises du perso: clé normalisée (bicheon|heuksal|pacheon|fire|cold|lightning|force|warrior|...) → niveau. */
   masteries?: Map<string, number>;
+  /** Codes des skills officiels appris. */
+  learnedSkills?: Set<string>;
 }
 
 /**
@@ -55,6 +57,16 @@ export class PlayerEntity extends Entity {
   public str: number;
   public int: number;
   public gold: number;
+  /** Codes des skills appris (SKILL_CH_SWORD_SMASH_A_01...) — Phase C. */
+  public learnedSkills: Set<string> = new Set();
+  /** Imbue active (code officiel kind 8) — composante magique des coups. */
+  public activeImbue: string | null = null;
+  /** Orbes berserker (0-5): ~1 par tranche de kills; activation = ×2 dégâts. */
+  public zerkOrbs = 0;
+  /** Timestamp de fin du zerk actif (0 = inactif). */
+  public zerkActiveUntil = 0;
+  /** Compteur de kills pour la progression des orbes (~1 orbe / 3 kills). */
+  public killCount = 0;
   public skillPoints: number;
   public statPoints: number;
   /** Maîtrises { clé normalisée → niveau } (GAP + formules officielles). */
@@ -126,6 +138,7 @@ export class PlayerEntity extends Entity {
     this.skillPoints = options.skillPoints;
     this.statPoints = options.statPoints;
     this.masteries = options.masteries ?? new Map();
+    this.learnedSkills = options.learnedSkills ?? new Set();
 
     // Calculate initial combat stats
     this.stats = this.calculateStats();

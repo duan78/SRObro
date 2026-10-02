@@ -138,6 +138,10 @@ export class AuthHandlers {
           data: { characterId, masteryId, level: 1 },
         });
       }
+      // Miroir vers l'entité EN JEU: la map masteries alimente le GAP et les
+      // formules officielles (sinon elle reste vide jusqu'à la reconnexion)
+      const key = (mastery.name ?? '').toLowerCase().split(/[\s(]/)[0];
+      player.masteries.set(key, level + 1);
       void player.saveToDatabase().catch(() => undefined);
       this.worldManager?.combatBridge?.sendPlayerState(characterId);
       this.ack(ack, { success: true, level: level + 1, spent: cost, sp: player.sp });
@@ -423,6 +427,34 @@ export class AuthHandlers {
       // Kit de départ (potions + lame degré 1) — items officiels
       const { ItemHandlers: IH } = await import('./ItemHandlers.js');
       await IH.giveStarterKit(character.id);
+
+      // Skills de départ (Phase C): premières séries officielles de la race.
+      // Le vrai apprentissage passe par la fenêtre Skills (SP + maîtrise,
+      // données officielles) — ces skills ouvrent le gameplay immédiatement.
+      const starterSkills = race === 'european'
+        ? ['SKILL_EU_WARRIOR_ONEHANDA_STRIKE_A_01'] // Slash (Warrior, série A)
+        : ['SKILL_CH_SWORD_SMASH_A_01', 'SKILL_CH_SWORD_SMASH_B_01', 'SKILL_CH_SWORD_CHAIN_A_1S_01'];
+      // Les Mastery.id sont des UUID: résoudre l'id réel par l'arbre (la FK
+      // Skill.masteryId rejette les ids symboliques — erreurs auparavant
+      // silencieuses → persos sans skills de départ)
+      const masteryTree = race === 'european' ? 'WARRIOR' : 'BICHEON';
+      const masteryRow = await prisma.mastery.findFirst({ where: { tree: masteryTree } });
+      if (masteryRow) {
+        for (const code of starterSkills) {
+          await prisma.skill.upsert({
+            where: { id: code },
+            update: {},
+            create: {
+              id: code,
+              masteryId: masteryRow.id,
+              name: code, type: 'active', level: 1,
+            },
+          });
+          await prisma.characterSkill.create({
+            data: { characterId: character.id, skillId: code, level: 1 },
+          }).catch(() => undefined); // idempotent
+        }
+      }
 
       logger.info(`Character created: ${name} (${race}/${gender}) for account ${accountId}`);
       this.ack(ack, {

@@ -45,7 +45,9 @@ interface HotbarSkill {
   mpCost: number;
   cooldownMs: number;
 }
-const HOTBAR: HotbarSkill[] = [
+// Hotbar de DÉMARRAGE (CH) — remplacée dynamiquement par les skills appris
+// (skills:available, Phase C) dès la connexion: touches 1-8.
+const STARTER_HOTBAR: HotbarSkill[] = [
   { code: 'SKILL_CH_SWORD_SMASH_A_01', label: 'Frappe', key: '1', mpCost: 5, cooldownMs: 3000 },
   { code: 'SKILL_CH_SWORD_SMASH_B_01', label: 'Taillade', key: '2', mpCost: 12, cooldownMs: 8000 },
   { code: 'SKILL_CH_SWORD_CHAIN_A_1S_01', label: 'Enchaînement', key: '3', mpCost: 9, cooldownMs: 6000 },
@@ -73,6 +75,9 @@ export class NetworkCombat {
     proxy: any; // mesh de picking invisible
     animState: string | null; // état d'anim courant (évite les rechargements)
   }>();
+
+  /** Hotbar courante (skills appris, touches 1-8). */
+  private hotbar: HotbarSkill[] = [...STARTER_HOTBAR];
   private groundItems = new Map<string, GroundItem & { mesh: any }>();
 
   // Ciblage / combat
@@ -111,6 +116,8 @@ export class NetworkCombat {
     // ont été émis pendant le chargement, avant que ce module existe).
     if (this.network.getIsConnected()) {
       void this.network.request('world:snapshot', {}, 15000).catch(() => undefined);
+      // Hotbar dynamique depuis les skills appris (Phase C)
+      setTimeout(() => void this.refreshHotbar(), 2000);
     }
     console.log('[NetworkCombat] initialisé');
   }
@@ -600,11 +607,46 @@ export class NetworkCombat {
         this.clearTarget();
         return;
       }
-      const skill = HOTBAR.find((s) => s.key === e.key);
+      const skill = this.hotbar.find((s) => s.key === e.key);
       if (skill) {
         this.useSkill(skill);
       }
+      // Tab = berserker (5 orbes → ×2 dégâts, comportement officiel)
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        void this.network.request('zerk:activate', {}).then((r: any) => {
+          if (!r?.success) this.hud.addChatMessage(r?.error ?? 'Zerk indisponible', 'system');
+        });
+      }
     });
+  }
+
+  /**
+   * Recharge la hotbar depuis les skills APPRIS (Phase C): attaques (kind 5)
+   * puis magiques (kind 10) puis imbues (kind 8), touches 1-8. Une entrée
+   * par série (le plus haut niveau appris).
+   */
+  async refreshHotbar(): Promise<void> {
+    try {
+      const res = await this.network.request<{
+        success: boolean; series?: Array<{
+          code: string; name: string; masteryKey: string;
+          levels: Array<{ code: string; name: string; learned: boolean; attKind: number; mpCost: number; cooldownMs: number }>;
+        }>;
+      }>('skills:available');
+      if (!res.success || !res.series) return;
+      const order = (k: number) => (k === 5 ? 0 : k === 10 ? 1 : 2);
+      const withKind: Array<HotbarSkill & { kind: number }> = [];
+      for (const s of res.series) {
+        const lvl = [...s.levels].reverse().find((l) => l.learned);
+        if (!lvl) continue;
+        withKind.push({ code: lvl.code, label: s.name, key: '', mpCost: lvl.mpCost, cooldownMs: lvl.cooldownMs, kind: lvl.attKind });
+      }
+      withKind.sort((a, b) => order(a.kind) - order(b.kind));
+      this.hotbar = withKind.slice(0, 8).map((h, i) => ({ ...h, key: String(i + 1) }));
+      this.hud.setHotbarSkills(this.hotbar);
+      console.log(`[NetworkCombat] Hotbar: ${this.hotbar.map((h) => h.label).join(', ')}`);
+    } catch { /* silencieux */ }
   }
 
   private findNetMonsterId(mesh: any): string | null {
@@ -773,9 +815,9 @@ export class NetworkCombat {
 
   playerName = 'Aventurier';
 
-  /** Nom des skills pour l'affichage hotbar (F1..F10 → 1..3 utilisables). */
-  static get hotbarSkills(): HotbarSkill[] {
-    return HOTBAR;
+  /** Hotbar courante (affichage). */
+  get hotbarSkills(): HotbarSkill[] {
+    return this.hotbar;
   }
 
   // ============================================

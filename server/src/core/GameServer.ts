@@ -283,7 +283,134 @@ export class GameServer {
         }
       });
 
-      // Téléporteurs officiels (Phase B): destinations de la zone courante
+      // ===== PHASE C: skills officiels (apprentissage + arbre) =====
+      // Arbre des skills disponibles pour le perso (données officielles)
+      socket.on('skills:available', (_d: unknown, ack?: (r: unknown) => void) => {
+        try {
+          const client = this.clientManager?.getClient(socket.id);
+          const characterId = client?.getCharacterId() ?? null;
+          const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+          if (!client?.getCharacterId() || !player) {
+            if (typeof ack === 'function') ack({ success: false, error: 'Non authentifié' });
+            return;
+          }
+          const gameData = GameDataService.getInstance();
+          const race = player.race === 'european' ? 'EU' : 'CH';
+          // Séries jouables (activity > 0 = castable), séries de la race
+          const series = new Map<string, {
+            code: string; name: string; masteryKey: string; masteryLabel: string;
+            levels: Array<Record<string, unknown>>;
+          }>();
+          for (const s of gameData.officialSkillsByCode.values()) {
+            if (s.race !== race || s.activity === 0) continue;
+            if (s.masteryKey === 'character') continue; // passifs génériques hors arbre
+            let entry = series.get(s.series);
+            if (!entry) {
+              entry = { code: s.series, name: s.name.replace(/ \d+$/, ''), masteryKey: s.masteryKey, masteryLabel: s.masteryLabel, levels: [] };
+              series.set(s.series, entry);
+            }
+            entry.levels.push({
+              code: s.code, name: s.name, level: s.level,
+              reqMasteryLv: s.reqMasteryLv, reqSp: s.reqSp,
+              mpCost: s.mpCost, cooldownMs: s.cooldownMs, castMs: Math.max(s.prepareMs, s.castMs),
+              attKind: s.attKind, attPct: s.attPct, attMin: s.attMin, attMax: s.attMax,
+              hits: s.mcHits, range: s.range, icon: s.icon,
+              learned: player.learnedSkills.has(s.code),
+              masteryLevel: player.getMasteryLevel(s.masteryKey),
+            });
+          }
+          if (typeof ack === 'function') {
+            ack({
+              success: true, sp: player.sp, race,
+              masteries: [...player.masteries.entries()],
+              series: [...series.values()].map((e) => ({
+                ...e,
+                levels: e.levels.sort((a, b) => (a.level as number) - (b.level as number)),
+              })),
+            });
+          }
+        } catch (error) {
+          logger.error('skills:available error:', error);
+          if (typeof ack === 'function') ack({ success: false, error: 'Erreur serveur' });
+        }
+      });
+
+      // Apprentissage d'un skill officiel (SP + maîtrise requis)
+      socket.on('skill:learn', (data: unknown, ack?: (r: unknown) => void) => {
+        try {
+          const client = this.clientManager?.getClient(socket.id);
+          const characterId = client?.getCharacterId() ?? null;
+          const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+          const code = String((data as { code?: string })?.code ?? '').toUpperCase();
+          const skill = GameDataService.getInstance().getOfficialSkill(code);
+          if (!client?.getCharacterId() || !player) {
+            if (typeof ack === 'function') ack({ success: false, error: 'Non authentifié' });
+            return;
+          }
+          if (!skill) { ack?.({ success: false, error: 'Skill inconnu' }); return; }
+          if (player.learnedSkills.has(code)) { ack?.({ success: false, error: 'Déjà appris' }); return; }
+          if (skill.activity === 0) { ack?.({ success: false, error: 'Passif (non apprennable ici)' }); return; }
+          const masteryLevel = player.getMasteryLevel(skill.masteryKey);
+          if (masteryLevel < skill.reqMasteryLv) {
+            ack?.({ success: false, error: `Maîtrise ${skill.masteryLabel} ${skill.reqMasteryLv} requise (${masteryLevel})` });
+            return;
+          }
+          if (player.sp < skill.reqSp) { ack?.({ success: false, error: `SP insuffisants (${skill.reqSp} requis)` }); return; }
+          player.sp -= skill.reqSp;
+          player.learnedSkills.add(code);
+          // Persistance: Skill row (id = code) + CharacterSkill
+          void (async () => {
+            try {
+              // Mastery.id = UUID: résoudre par l'arbre (FK)
+              const masteryTree = skill.masteryKey.toUpperCase();
+              const masteryRow = (await prisma.mastery.findFirst({ where: { tree: masteryTree as never } }))
+                ?? (await prisma.mastery.findFirst({ where: { name: { contains: skill.masteryLabel.split(' ')[0], mode: 'insensitive' } } }));
+              if (!masteryRow) throw new Error('mastery introuvable pour ' + skill.masteryKey);
+              await prisma.skill.upsert({
+                where: { id: code },
+                update: { name: skill.name, mpCost: skill.mpCost, cooldown: skill.cooldownMs, castTime: Math.max(skill.prepareMs, skill.castMs) },
+                create: {
+                  id: code, masteryId: masteryRow.id, name: skill.name,
+                  type: skill.attKind === 8 ? 'buff' : skill.activity === 0 ? 'passive' : 'active',
+                  level: skill.level, mpCost: skill.mpCost,
+                  castTime: Math.max(skill.prepareMs, skill.castMs), cooldown: skill.cooldownMs,
+                  baseDamage: skill.attPct, range: skill.range,
+                },
+              });
+              await prisma.characterSkill.upsert({
+                where: { characterId_skillId: { characterId: characterId as string, skillId: code } },
+                update: {},
+                create: { characterId: characterId as string, skillId: code, level: skill.level },
+              });
+            } catch (e) {
+              logger.warn('Persistance skill:learn:', e);
+            }
+          })();
+          this.combatBridge?.sendPlayerState(characterId);
+          if (typeof ack === 'function') ack({ success: true, code, spLeft: player.sp });
+        } catch (error) {
+          logger.error('skill:learn error:', error);
+          if (typeof ack === 'function') ack({ success: false, error: 'Erreur serveur' });
+        }
+      });
+
+      // Activation berserker (5 orbes → ×2 dégâts 15 s — comportement officiel)
+      socket.on('zerk:activate', (_d: unknown, ack?: (r: unknown) => void) => {
+        try {
+          const client = this.clientManager?.getClient(socket.id);
+          const characterId = client?.getCharacterId() ?? null;
+          const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+          if (!player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+          if (player.zerkOrbs < 5) { ack?.({ success: false, error: `Orbes insuffisantes (${player.zerkOrbs}/5)` }); return; }
+          player.zerkOrbs = 0;
+          player.zerkActiveUntil = Date.now() + 15000;
+          this.combatBridge?.sendToPlayerRaw(characterId, 'zerk:activated', { durationMs: 15000 });
+          ack?.({ success: true });
+        } catch (error) {
+          logger.error('zerk:activate error:', error);
+          if (typeof ack === 'function') ack({ success: false, error: 'Erreur serveur' });
+        }
+      });
       socket.on('teleport:list', (_d: unknown, ack?: (r: unknown) => void) => {
         try {
           const client = this.clientManager?.getClient(socket.id);

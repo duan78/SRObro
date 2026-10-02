@@ -112,8 +112,48 @@ export class DomHud {
       this.hotbarSlots.push(slot);
     }
 
+    // Jauge berserker (5 orbes, Tab pour activer — Phase C)
+    const zerk = document.createElement('div');
+    zerk.id = 'hud-zerk';
+    zerk.style.cssText = 'position:absolute;bottom:96px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:20;';
+    for (let i = 0; i < 5; i++) {
+      const orb = document.createElement('div');
+      orb.style.cssText =
+        'width:14px;height:14px;border-radius:50%;border:1px solid #8f751d;' +
+        'background:rgba(30,20,5,0.7);transition:background 0.3s,box-shadow 0.3s;';
+      zerk.appendChild(orb);
+    }
+    (byId('hud-root') ?? document.body).appendChild(zerk);
+
     this.addChatMessage('Welcome to SRObro!', 'system');
-    this.addChatMessage('WASD/ZQSD pour bouger, clic pour attaquer.', 'system');
+    this.addChatMessage('WASD/ZQSD pour bouger, clic pour attaquer. S: skills, Tab: zerk.', 'system');
+  }
+
+  /** Hotbar dynamique (skills appris, touches 1-8 — Phase C). */
+  setHotbarSkills(skills: Array<{ label: string; key: string; mpCost?: number }>): void {
+    this.hotbarSlots.forEach((slot, i) => {
+      const s = skills[i];
+      if (s) {
+        slot.innerHTML = `<span class="hud-slot-key">${s.key}</span><span class="hud-slot-label" style="font-size:9px;color:#f0e6d2;overflow:hidden;max-width:40px;text-overflow:ellipsis;white-space:nowrap;">${s.label}</span>`;
+        slot.title = `${s.label}${s.mpCost ? ` (${s.mpCost} MP)` : ''}`;
+      } else {
+        slot.innerHTML = `<span class="hud-slot-key">${i < 8 ? i + 1 : 'F' + (i + 1)}</span>`;
+      }
+    });
+  }
+
+  /** Orbes berserker (0-5); actif = orbes rouges pulsantes. */
+  setZerkOrbs(orbs: number, active = false): void {
+    const zerk = document.getElementById('hud-zerk');
+    if (!zerk) return;
+    [...zerk.children].forEach((orb, i) => {
+      const el = orb as HTMLElement;
+      const filled = i < orbs || active;
+      el.style.background = active
+        ? 'radial-gradient(circle, #ff5a2a, #a01a00)'
+        : filled ? 'radial-gradient(circle, #ffb347, #b06000)' : 'rgba(30,20,5,0.7)';
+      el.style.boxShadow = filled ? '0 0 8px rgba(255,120,40,0.8)' : 'none';
+    });
   }
 
   setStats(s: HudStats): void {

@@ -29,6 +29,7 @@ import { NetworkCombat } from './game/NetworkCombat';
 import { InventoryPanel } from './ui/dom/InventoryPanel';
 import { CharacterPanel } from './ui/dom/CharacterPanel';
 import { QuestSystem } from './ui/dom/QuestPanel';
+import { SkillPanel } from './ui/dom/SkillPanel';
 import { gameAudio } from './ui/dom/GameAudio';
 
 // Collecte des erreurs console pour diagnostic navigateur (window.__errors)
@@ -162,6 +163,20 @@ async function init(): Promise<void> {
       network.rememberCharacter(character?.id ?? '');
       (window as unknown as { netCombat: NetworkCombat }).netCombat = netCombat;
       game.getScene()!.onBeforeRenderObservable.add(() => netCombat!.update());
+
+      // Fenêtre Skills (touche S — Phase C): apprentissage SP + hotbar dynamique
+      const skillPanel = new SkillPanel(network, () => void netCombat?.refreshHotbar());
+      (window as unknown as { skillPanel: SkillPanel }).skillPanel = skillPanel;
+
+      // Zerk (Phase C): orbes + activation visuelle
+      network.onRaw('zerk:orbs', (d: any) => hud.setZerkOrbs(d?.orbs ?? 0));
+      network.onRaw('zerk:activated', () => {
+        hud.setZerkOrbs(5, true);
+        hud.addChatMessage('🔥 BERSERKER ! Dégâts ×2 (15 s)', 'system');
+        setTimeout(() => hud.setZerkOrbs(0), 15000);
+      });
+      network.onRaw('imbue:activated', (d: any) =>
+        hud.addChatMessage(`✨ Imbue active: ${d?.name ?? ''}`, 'system'));
     }
 
     // Inventaire + boutique (phase 3): I = inventaire, B = marchand de Jangan

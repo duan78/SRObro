@@ -670,3 +670,24 @@ tsc 0/0, persistance après relance serveur.
 - **Tests**: test-phaseB.ts (npc 3 villes, téléport payant + position,
   mobs Donwhang, Tiger Girl HP officiels) — TOUT PASSÉ; régressions V1
   complètes (A 9/9, combat-flow, 4, 5, 6) en séquence.
+
+### PHASE C (classes & skills complets) — 2026-10-02
+- **Apprentissage officiel**: skills:available (280 séries CH/EU par race avec
+  niveaux/req/SP/dégâts), skill:learn (validation maîtrise + SP, persistance
+  CharacterSkill avec Mastery UUID résolu), gating au cast (skill non appris
+  rejeté). Skills de départ accordés à la création (CH: 3 séries Bicheon,
+  EU: Slash Warrior).
+- **Miroir mémoire**: mastery:levelup met à jour l'entité en jeu (GAP et
+  formules vivantes sans reconnexion).
+- **Zerk officiel**: orbes (1/3 kills, max 5), zerk:activate → ×2 dégâts
+  15 s (mesuré 123→236), jauge HUD 5 orbes + Tab client.
+- **Imbues (kind 8)**: cast self → activeImbue, composante magique
+  additionnelle sur les skills physiques (mécanique ×% DE 2006).
+- **Client**: SkillPanel (touche S: onglets maîtrises, séries, niveaux,
+  boutons Apprentissage SP), hotbar dynamique (skills appris → touches 1-8,
+  DomHud.setHotbarSkills), notifications zerk/imbue.
+- **Bestiaire**: fallback monsters_official (codes absents de characterdata
+  comme MOB_CI_MANGNYANG), matching exact-first sans _CLON.
+- **Tests**: test-phaseC.ts TOUT PASSÉ (arbre, refus, learn SP décrémentés,
+  cast gating, dégâts officiels, orbes 15 kills→5, zerk ×2). Régressions
+  complètes A/B/combat/4/5/6 au vert.
