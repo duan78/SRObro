@@ -334,12 +334,13 @@ export class SystemHandlers {
     }
   }
 
-  private async handleQuestGetCompleted(socket: Socket, _data: any, _ack?: (r: any) => void): Promise<void> {
+  private async handleQuestGetCompleted(socket: Socket, _data: any, ack?: (r: any) => void): Promise<void> {
     const session = this.requireSession(socket);
     if (!session) return;
     try {
       const quests = await this.questManager.getCompletedQuests(session.characterId);
       socket.emit('quest:completed_list', quests);
+      if (typeof ack === 'function') ack({ success: true, quests });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
@@ -360,15 +361,16 @@ export class SystemHandlers {
   }
 
   private async handleQuestAbandon(socket: Socket, data: any, ack?: (r: any) => void): Promise<void> {
-    void ack;
     const session = this.requireSession(socket);
     if (!session) return;
     try {
       const { questId } = data;
       await this.questManager.abandonQuest(session.characterId, questId);
       socket.emit('quest:abandoned', { questId });
+      if (typeof ack === 'function') ack({ success: true });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
+      if (typeof ack === 'function') ack({ success: false, error: error.message });
     }
   }
 

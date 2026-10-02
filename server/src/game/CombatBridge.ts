@@ -26,6 +26,7 @@ import { JobManager, computeStarLevel } from '../job/JobManager';
 import { BossMechanics } from './BossMechanics';
 import { cumulativeXpForLevel } from '@srobro/shared';
 import type { S2CPacket } from '@srobro/shared';
+import { globalTitleManager } from './TitleManager';
 
 const logger = createLogger('CombatBridge');
 const gameData = GameDataService.getInstance();
@@ -240,6 +241,8 @@ export class CombatBridge {
       // du précédent joueur) au lieu d'attendre un respawnTime complet.
       globalSpawnManager.forceCheckNearby(playerEntity.position, 120);
       setTimeout(() => this.sendWorldSnapshot(playerEntity.id), 2500).unref?.();
+      // Titres: précharger le cache (zerkKills/title) pour player:state
+      void globalTitleManager.load(playerEntity.id).then(() => this.sendPlayerState(playerEntity.id)).catch(() => undefined);
       this.sendPlayerState(playerEntity.id);
 
       // Multi-joueurs (phase 5): le nouveau voit les joueurs proches, les
@@ -698,6 +701,21 @@ export class CombatBridge {
       // Quêtes: faire avancer les objectifs de kill du tueur
       if (killer) {
         void this.trackQuestKills(killerId, monster.name).catch(() => undefined);
+        // Titres «Blue Zerk» (phase C V3): kill EN ZERK comptabilisé
+        if (killer.zerkActiveUntil > Date.now()) {
+          void import('./TitleManager.js').then(async ({ globalTitleManager }) => {
+            const r = await globalTitleManager.onMonsterKilled({
+              characterId: killerId, playerName: killer.name, wasZerk: true,
+            });
+            if (r?.newTitle) {
+              this.sendToPlayerRaw(killerId, 'chat', {
+                message: `🎖️ Titre militaire obtenu: ${r.newTitle} (Energy of Life débloquée)`,
+                channel: 'system',
+              });
+              this.sendPlayerState(killerId);
+            }
+          }).catch(() => undefined);
+        }
         // Donjons (Phase G): talismans FGW / complétion Qin-Shi B6
         void import('./DungeonManager.js').then(async ({ DungeonManager }) => {
           const r = await DungeonManager.getInstance().onMonsterKilled(victimId, killerId);
@@ -891,6 +909,8 @@ export class CombatBridge {
     // la progression dans le niveau courant: (exp − levelBase)/(next − levelBase).
     const nextLevelExp = cumulativeXpForLevel(player.level + 1);
     const levelBaseExp = cumulativeXpForLevel(player.level);
+    // Titre «Blue Zerk» (phase C V3): cache du TitleManager (sans await)
+    const titleInfo = globalTitleManager.snapshot(characterId);
     this.sendToPlayer(characterId, {
       type: 'player:state',
       timestamp: Date.now(),
@@ -902,6 +922,8 @@ export class CombatBridge {
         str: player.str, int: player.int,
         statPoints: player.statPoints,
         position: player.position,
+        title: titleInfo?.title ?? null,
+        zerkKills: titleInfo?.zerkKills ?? 0,
       },
     });
   }

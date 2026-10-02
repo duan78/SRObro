@@ -11,6 +11,7 @@
 import { Minimap } from './Minimap';
 
 export interface HudStats {
+  title?: string | null;
   name: string;
   level: number;
   hp: number;
@@ -157,7 +158,7 @@ export class DomHud {
   }
 
   setStats(s: HudStats): void {
-    this.nameLabel.textContent = s.name;
+    this.nameLabel.textContent = s.title ? s.name + ' [' + s.title + ']' : s.name;
     this.levelBadge.textContent = 'Lv. ' + s.level;
     this.setBar(this.hpFill, this.hpText, s.hp, s.maxHp);
     this.setBar(this.mpFill, this.mpText, s.mp, s.maxMp);

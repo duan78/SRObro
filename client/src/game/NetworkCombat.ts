@@ -143,7 +143,16 @@ export class NetworkCombat {
     this.registerHandlers();
     this.setupInput();
 
-    // Le monde 3D se charge longtemps APRÈS la sélection du perso: redemander
+    // Energy of Life (phase C V3): touche B, 1×/20 min dès le titre Knight
+    window.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'b' || e.key === 'B') {
+        void this.network.request('zerk:energy', {}, 8000)
+          .then((r: any) => { if (!r?.success && r?.error) this.hud.addChatMessage(r.error, 'system'); })
+          .catch(() => undefined);
+      }
+    });
+
+// Le monde 3D se charge longtemps APRÈS la sélection du perso: redemander
     // l'état du monde à la création de ce module (les premiers spawn packets
     // ont été émis pendant le chargement, avant que ce module existe).
     if (this.network.getIsConnected()) {

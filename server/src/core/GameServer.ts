@@ -494,6 +494,33 @@ export class GameServer {
         });
       });
 
+      // Energy of Life (phase C V3, titres «Blue Zerk»): remplit la jauge
+      // zerk, 1×/20 min, dès le titre Knight (KB 16 §titres).
+      socket.on('zerk:energy', (_d: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { globalTitleManager } = await import('../game/TitleManager.js');
+            const r = await globalTitleManager.useEnergyOfLife(characterId);
+            if (!r.ok) {
+              ack?.({ success: false, error: r.remainingMs ? `Energy of Life: ${Math.ceil(r.remainingMs / 60000)} min restantes` : 'Titre Knight requis' });
+              return;
+            }
+            player.zerkOrbs = r.orbs;
+            this.combatBridge?.sendPlayerState(characterId);
+            this.combatBridge?.sendToPlayerRaw(characterId, 'chat', {
+              message: '⚡ Energy of Life: jauge de berserk remplie', channel: 'system',
+            });
+            ack?.({ success: true });
+          } catch (e) {
+            ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' });
+          }
+        })();
+      });
+
       // Stalls (Phase D V2 — économie joueur: stall network officiel)
       const { StallHandlers } = await import('./StallHandlers.js');
       new StallHandlers(

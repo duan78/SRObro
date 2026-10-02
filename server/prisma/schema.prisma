@@ -87,6 +87,11 @@ model Character {
   skillPoints  Int      @default(0)
   statPoints   Int      @default(0)
   isOnline     Boolean  @default(false)
+  // Titre militaire («Blue Zerk»): Knight → Count, débloqué par kills en
+  // zerk (chaîne officielle lv95 adaptée [APPROX]) + Energy of Life.
+  title        String?
+  zerkKills    Int      @default(0)
+  energyOfLifeAt BigInt?
   createdAt    DateTime @default(now())
   lastLoginAt  DateTime @default(now())
 

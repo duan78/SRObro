@@ -1,5 +1,34 @@
 # Avancement du Projet SRObro
 
+## Session du 2 Octobre 2026 (20): PHASE C V3 — QUÊTES OFFICIELLES + TITRES
+
+**46 quêtes officielles** (Jangan ~23 + Donwhang ~23, KB 16 sourcée:
+niveaux/NPCs/objectifs/récompenses EXACTES/repeat ×1-5, chaînes de
+prérequis) via `scripts/seed-official-quests.ts` + **24 PNJ de quête
+aux coordonnées officielles** (Sonhyeon, Yangyun, Iyang, Juho, Bori,
+Makgo… CITIES_01/02). Adaptations documentées: collectes → kills du mob
+porteur [APPROX], cibles mappées aux mobs réels du monde (Blackrobber,
+Bigeyeghost, Whitetiger, Gyo…), livraisons → talk au PNJ.
+
+**Journal complet** (QuestPanel): section Terminées (quest:get_completed,
+ack ajouté), bouton Abandonner (ack ajouté), **widget HUD de suivi** (une
+quête trackée ◉ façon SRO, progression temps réel), rafraîchissement live
+sur quest:progress/completed.
+
+**Titres «Blue Zerk»** (TitleManager): kills EN ZERK comptabilisés à
+chaque mort (paliers Knight 500 / Baronet 2000 / Baron 5000 / Count
+10000 [APPROX documenté — la chaîne officielle 8 quêtes à arènes est
+hors moteur, la mécanique «Piece of Spirit: tuer en zerk» est la clé
+officielle]), titre dérivé/affiché dans player:state + HUD (nom [Titre]),
+**Energy of Life** (touche B): remplit la jauge zerk, 1×/20 min dès
+Knight (handler zerk:energy). Champs Character: title/zerkKills/
+energyOfLifeAt (db push).
+
+**test-phaseC-quests.ts 15/15**: Sonhyeon position exacte, 24 PNJ, 51
+quêtes, Vanished Child/Weasel dispo, Weapon Delivery rendue à Iyang
+(+205 or EXACT), terminées listées, kill crédité (1/30), abandon, Knight
+dans player:state, EoL ok puis cooldown refusé. tsc 0.
+
 ## Session du 2 Octobre 2026 (19): PHASE B V3 — VFX OFFICIELS + CIEL
 
 **Format .efp décodé** (JMXVEFF 0011): blocs propriétés [len][nom][blob]

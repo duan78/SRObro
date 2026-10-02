@@ -222,6 +222,7 @@ async function init(): Promise<void> {
       // Quêtes + PNJ (phase 4): L = journal, clic PNJ = dialogue/quêtes
       const quests = new QuestSystem(network, game.getScene()!, game.getJanganZone());
       (window as unknown as { questSystem: QuestSystem }).questSystem = quests;
+      quests.bindLiveRefresh();
       void quests.loadNpcs();
     }
     const g = game as unknown as {

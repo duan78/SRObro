@@ -25,6 +25,8 @@ export class QuestSystem {
   private visible = false;
   private npcMeshes = new Map<string, any>();
   private npcsLoaded = false;
+  /** Quête suivie dans le HUD (une seule à la fois, façon SRO). */
+  private trackedQuestId: string | null = null;
 
   constructor(network: NetworkManager, scene: Scene, janganZone: JanganZone | null) {
     this.network = network;
@@ -322,13 +324,76 @@ export class QuestSystem {
           const progressData = (p.progress ?? {}) as Record<string, number>;
           const objLines = objectives.map((o, i) =>
             `<div class="q-obj">${o.targetName ?? o.targetId}: ${progressData[i] ?? 0}/${o.count}</div>`).join('');
-          row.innerHTML = `<span class="q-name">${q.name}</span>${objLines}`;
+          // Phase C V3: suivi HUD (une quête trackée) + abandon
+          const done = objectives.every((o, i) => (progressData[i] ?? 0) >= o.count);
+          row.innerHTML = `<span class="q-name">${q.name}${done ? ' ✓ (à rendre)' : ''}</span>
+            <button class="q-track" title="Suivre dans le HUD">${this.trackedQuestId === q.id ? '◉' : '○'}</button>
+            <button class="q-abandon" title="Abandonner">✕</button>${objLines}`;
+          row.querySelector('.q-track')?.addEventListener('click', () => {
+            this.trackedQuestId = this.trackedQuestId === q.id ? null : q.id;
+            this.updateTracker(p);
+            void this.refresh();
+          });
+          row.querySelector('.q-abandon')?.addEventListener('click', async () => {
+            const res = await this.network.request('quest:abandon', { questId: q.id });
+            this.notify(res?.success ? `Quête abandonnée: ${q.name}` : res?.error ?? 'Impossible');
+            if (this.trackedQuestId === q.id) { this.trackedQuestId = null; this.updateTracker(null); }
+            void this.refresh();
+          });
+          if (this.trackedQuestId === q.id) this.updateTracker(p);
           body.appendChild(row);
         }
       }
+      // Phase C V3: section Terminées (journal complet)
+      try {
+        const done = await this.network.request<{ success: boolean; quests?: any[] }>('quest:get_completed', {});
+        if (done.success && done.quests?.length) {
+          const sec = document.createElement('div');
+          sec.className = 'q-section';
+          sec.textContent = `Terminées (${done.quests.length})`;
+          body.appendChild(sec);
+          for (const q of done.quests.slice(0, 30)) {
+            const row = document.createElement('div');
+            row.className = 'q-row';
+            row.innerHTML = `<span class="q-name" style="color:#7fa76f">✔ ${q.name ?? (q.quest ?? {}).name ?? q.id}</span>`;
+            body.appendChild(row);
+          }
+        }
+      } catch { /* optionnel */ }
       if (!body.children.length) {
-        body.innerHTML = '<div class="q-obj">Aucune quête — parlez au Garde de Jangan !</div>';
+        body.innerHTML = '<div class="q-obj">Aucune quête — parlez aux PNJ de quête (L: journal) !</div>';
       }
     } catch { /* silencieux */ }
+  }
+
+  /** Widget HUD de suivi d'objectif (une quête à la fois, façon SRO). */
+  private updateTracker(p: { quest?: any; objectives?: any[]; progress?: Record<string, number> } | null): void {
+    let el = document.getElementById('quest-tracker');
+    if (!p) { el?.remove(); return; }
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'quest-tracker';
+      el.style.cssText = 'position:fixed;top:200px;right:12px;z-index:590;background:rgba(10,12,18,0.72);' +
+        'border:1px solid #55461f;border-radius:6px;padding:6px 10px;pointer-events:none;max-width:250px;';
+      document.body.appendChild(el);
+    }
+    const q = p.quest ?? p;
+    const objectives = (q.objectives ?? p.objectives ?? []) as any[];
+    const progressData = p.progress ?? {};
+    const lines = objectives.map((o, i) => {
+      const cur = Math.min(progressData[i] ?? 0, o.count);
+      return `<div style="color:#a9b6d6;font-size:11px;">${o.targetName ?? o.targetId} ${cur}/${o.count}${cur >= o.count ? ' ✓' : ''}</div>`;
+    }).join('');
+    el.innerHTML = `<div style="color:#ffd700;font-size:11px;font-weight:600;">${q.name ?? 'Quête'}</div>${lines}`;
+  }
+
+  /** Rafraîchissement temps réel (progress/complétion pendant le jeu). */
+  bindLiveRefresh(): void {
+    const net = (this as unknown as { network: { onRaw?: (ev: string, cb: (d: any) => void) => void; on?: (ev: string, cb: (d: any) => void) => void } }).network;
+    const hook = (ev: string) => net.on?.(ev, () => {
+      if (this.visible) void this.refresh();
+    });
+    hook('quest:progress');
+    hook('quest:completed');
   }
 }
