@@ -92,7 +92,11 @@ export class WindowManager {
         }
       }
     });
-    this.observer.observe(document.body, { childList: true, subtree: false, attributes: true, attributeFilter: ['class'] });
+    // ⚠️ subtree: true requis — avec false, les mutations d'attributs des
+    // ENFANTS du body ne sont pas observées (seul body lui-même l'était):
+    // les réouvertures de panneaux (toggle hud-hidden) déclenchaient ni
+    // zone exclusive ni anti-collision au 2e affichage.
+    this.observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
     // Les panneaux déjà présents (rares: construits avant start)
     for (const el of Array.from(document.body.children)) {
       if (el instanceof HTMLElement) this.tryManage(el);
