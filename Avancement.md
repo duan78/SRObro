@@ -1,5 +1,37 @@
 # Avancement du Projet SRObro
 
+## Session du 2 Octobre 2026 (19): PHASE B V3 — VFX OFFICIELS + CIEL
+
+**Format .efp décodé** (JMXVEFF 0011): blocs propriétés [len][nom][blob]
+(NormalTimeLife=ENTIER en 1/10 s, StaticEmit, DiffuseGraph, ScaleGraph,
+Program, EmitShape, Velocity). `scripts/extract-efp-descriptors.ts` →
+**855 descripteurs** (skills china/europe + hiteffect) dans
+client/public/assets/efp-descriptors.json: {life, emit, scales, colors,
+textures officielles} — 853 avec textures réelles (PNG particles).
+Pièges de décodage: denormals (entiers lus en float — filtres de
+plausibilité), graphes RGBA à double alignement, vie en u32 /10.
+
+**SkillEffectManager.playOfficial()**: priorité au VFX officiel — 2 couches
+(cœur + halo) de systèmes de particules Babylon avec les TEXTURES
+officielles de l'effet, vie/émission/échelles du .efp, blend additif,
+gradients DiffuseGraph sanitisés, salve unique auto-dispose (garde +
+dispose forcé après vie max — cas limite Babylon). Mapping familles:
+fire/cold/lightning/force CH → attack_motion_shoot_a, EU wizard →
+wizard_cold_bolt_a, slash → hiteffect/hit_1_cut_critical; repli
+procédural conservé. vfxElement: sorts EU wizard/warlock → wizard.
+
+**SkyDome** (`client/src/zones/jangan/SkyDome.ts`): le client officiel n'a
+PAS de skybox 6 faces — ciel = dégradé + nuages (choix documenté). Dôme
+sphérique dégradé (DynamicTexture, infiniteDistance) + plan de nuages
+OFFICIEL cloud1.png en dérive lente suivant le joueur, **teinte par
+continent** (Chine bleu / Europe azur / Égypte chaud) recalée au
+déplacement. Remplace l'ancienne box cloud1 unique.
+
+**Vérifié navigateur**: 855 descripteurs chargés, fire+ice distincts
+(5 systèmes efp_* actifs, captures analysées: bursts colorés visibles),
+ciel dôme+nuages OK, test fuite: 40 systèmes pendant, 0 après extinction
+(+1 cas limite corrigé par dispose forcé). tsc 0.
+
 ## Session du 2 Octobre 2026 (18): PHASE A V3 — PERSONNAGE FIDELE
 
 **Armures PAR PIÈCE skinnées au rig du porteur** — découverte clé: les

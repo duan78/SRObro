@@ -1029,6 +1029,10 @@ export class Game {
       terrain.update(player.position.x, player.position.z);
     }
 
+    // Ciel (phase B V3): dérive des nuages + teinte par continent (throttlé
+    // par l'update interne du SkyDome).
+    this.janganZone?.sky?.update(player.position.x, player.position.z, dt);
+
     // Synchronisation réseau throttlée (le serveur fait autorité sur la position)
     if (this.network.getIsConnected()) {
       const now = performance.now();

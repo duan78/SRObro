@@ -9,6 +9,7 @@ import type { Position } from '@srobro/shared';
 import { JANGAN_CONFIG, getJanganSpawnPoint, isWithinZoneBoundaries } from './JanganConfig';
 import { RealTerrain } from './RealTerrain';
 import { WorldObjects } from './WorldObjects';
+import { SkyDome } from './SkyDome';
 import { AnimationService } from '../../animation/BanAnimationService';
 import type { AssetLoader } from '../../core/AssetLoader';
 import { getMonsterAssetPath } from '../../config/AssetMapping';
@@ -115,9 +116,13 @@ export class JanganZone {
    */
   private terrain: RealTerrain | null = null;
   private worldObjects: WorldObjects | null = null;
+  private skyDome: SkyDome | null = null;
 
   /** Bâtiments officiels (rechargés au téléport, Phase B). */
   get worldObjectsPublic(): WorldObjects | null { return this.worldObjects; }
+
+  /** Ciel (dôme dégradé + nuages officiels, phase B V3). */
+  get sky(): SkyDome | null { return this.skyDome; }
 
   /** Terrain réel (heightmaps officiels) si chargé, pour placer les objets. */
   get realTerrain(): RealTerrain | null {
@@ -159,29 +164,17 @@ export class JanganZone {
    * Set up environment (sky, fog, etc.)
    */
   private setupEnvironment(): void {
-    // Skybox officiel (texture cloud de Map.pk2/skybox)
+    // Ciel V3 (phase B): dôme dégradé par continent + nuages officiels en
+    // dérive (SkyDome) — remplace la box cloud1 unique.
     try {
-      const skybox = MeshBuilder.CreateBox('skyBox', { size: 9000 }, this.scene);
-      const skyMat = new StandardMaterial('skyMat', this.scene);
-      skyMat.backFaceCulling = false;
-      skyMat.disableLighting = true;
-      const skyTex = new Texture('/assets/textures/skybox/cloud1.png', this.scene);
-      skyTex.uScale = 3;
-      skyTex.vScale = 3;
-      skyMat.diffuseTexture = null;
-      skyMat.emissiveTexture = skyTex;
-      skyMat.specularColor = new Color3(0, 0, 0);
-      skybox.material = skyMat;
-      skybox.infiniteDistance = true;
-      skybox.isPickable = false;
-      console.log('[JanganZone] Skybox officiel chargé');
+      this.skyDome = new SkyDome(this.scene);
+      console.log('[JanganZone] SkyDome (dégradé + nuages officiels) chargé');
     } catch (e) {
-      console.warn('[JanganZone] Skybox non chargé:', e);
+      console.warn('[JanganZone] SkyDome non chargé:', e);
     }
 
     // Set scene clear color (sky) - use Color4 with alpha
     this.scene.clearColor = new Color4(0.53, 0.8, 0.92, 1.0);
-    console.log('[JanganZone] Scene clear color set to:', this.scene.clearColor.toString());
 
     // Add fog for atmosphere
     this.scene.fogMode = 2; // Exponential fog

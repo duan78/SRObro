@@ -28,9 +28,30 @@ export class SkillEffectManager {
     private effects: Map<string, SkillEffect> = new Map();
     private activeEffects: Map<string, ParticleSystem[]> = new Map();
 
+    // ---- Phase B V3: descripteurs VFX OFFICIELS (Particles.pk2 .efp) ----
+    /** efp key → {life, emit, colors, scales, textures[], blend} */
+    private efp: Record<string, Record<string, unknown>> | null = null;
+    /** familles de skills → effet officiel (stems réels de l'index efp) */
+    private static readonly OFFICIAL_KEYS: Record<string, string> = {
+        fire: 'skill/china/fire_attack_motion_shoot_a',
+        cold: 'skill/china/cold_attack_motion_shoot_a',
+        ice: 'skill/china/cold_attack_motion_shoot_a',
+        lightning: 'skill/china/lightning_attack_motion_shoot_a',
+        heal: 'skill/china/force_bow_area',
+        force: 'skill/china/force_bow_area',
+        wizard: 'skill/europe/wizard_cold_bolt_a',
+        eu: 'skill/europe/wizard_cold_bolt_a',
+        slash: 'hiteffect/hit_1_cut_critical',
+    };
+
     constructor(scene: Scene) {
         this.scene = scene;
         this.registerDefaultEffects();
+        // Descripteurs officiels (extraits par scripts/extract-efp-descriptors.ts)
+        void fetch('/assets/efp-descriptors.json')
+            .then((r) => (r.ok ? r.json() : null))
+            .then((d: Record<string, Record<string, unknown>> | null) => { this.efp = d; })
+            .catch(() => undefined);
     }
 
     /**
@@ -143,9 +164,11 @@ export class SkillEffectManager {
     };
 
     /**
-     * Play a skill effect
+     * Play a skill effect — VFX OFFICIEL en priorité (descripteur .efp +
+     * textures officielles, phase B V3), repli procédural sinon.
      */
     public playEffect(effectId: string, start: Vector3, end?: Vector3): void {
+        if (this.playOfficial(effectId, start)) return;
         const effect = this.effects.get(effectId);
         if (!effect) {
             console.warn(`SkillEffectManager: Unknown effect ${effectId}`);
@@ -168,6 +191,64 @@ export class SkillEffectManager {
                 this.playInstantEffect(effect, start);
                 break;
         }
+    }
+
+    /**
+     * Effet OFFICIEL piloté par le descripteur .efp: textures réelles de
+     * Particles.pk2, vie/émission/échelles du fichier, blend additif,
+     * couleurs du DiffuseGraph (sanitisées — les denormals de l'extract
+     * sont ignorées). Un système « cœur » + un « halo » (2e texture).
+     */
+    private playOfficial(effectId: string, pos: Vector3): boolean {
+        const key = SkillEffectManager.OFFICIAL_KEYS[effectId];
+        const d = key ? this.efp?.[key] : undefined;
+        if (!d) return false;
+        const textures = (d.textures as string[]) ?? [];
+        if (textures.length === 0) return false;
+        const life = Math.min(Math.max((d.life as number) ?? 1, 0.4), 3);
+        const emit = Math.min(Math.max((d.emit as number) ?? 60, 20), 300);
+        const scales = (d.scales as number[]) ?? [0.5, 2];
+        // Échelle monde: les valeurs efp sont en unités SRO (×10 cm) — un
+        // facteur 0.35 donne un burst lisible à l'échelle du perso (~17 u).
+        const min = Math.max(0.8, scales[0] * 0.35);
+        const max = Math.max(min + 0.4, scales[1] * 0.35 * 0.5);
+        const cols = (d.colors as number[][] | undefined) ?? [];
+        const clean = cols.filter((q) => q.every((v) => v >= 0.01 && v <= 1));
+        const c1 = clean[0] ?? [1, 1, 1, 1];
+        const c2 = clean[clean.length - 1] ?? [c1[0], c1[1], c1[2], 0];
+
+        const made: ParticleSystem[] = [];
+        const layers = textures.slice(0, 2);
+        layers.forEach((tex, i) => {
+            const ps = new ParticleSystem(`efp_${effectId}_${i}`, Math.ceil(emit * life), this.scene);
+            ps.particleTexture = new Texture(`/assets/textures/particles/${tex}.png`, this.scene, false, false);
+            ps.emitter = pos.clone();
+            ps.minEmitBox = new Vector3(-1.2, -0.5, -1.2);
+            ps.maxEmitBox = new Vector3(1.2, 0.8, 1.2);
+            ps.color1 = new Color4(c1[0], c1[1], c1[2], c1[3] ?? 1);
+            ps.color2 = new Color4(c2[0], c2[1], c2[2], c2[3] ?? 0.6);
+            ps.colorDead = new Color4(c2[0], c2[1], c2[2], 0);
+            ps.minSize = min * (i === 0 ? 1 : 1.6);
+            ps.maxSize = max * (i === 0 ? 1 : 1.8);
+            ps.minLifeTime = life * 0.6;
+            ps.maxLifeTime = life;
+            ps.emitRate = emit / layers.length;
+            ps.blendMode = ParticleSystem.BLENDMODE_ADD;
+            ps.gravity = new Vector3(0, effectId === 'fire' ? 4 : -2, 0);
+            ps.direction1 = new Vector3(-3, 1, -3);
+            ps.direction2 = new Vector3(3, 6, 3);
+            ps.minAngularSpeed = -1.5;
+            ps.maxAngularSpeed = 1.5;
+            ps.disposeOnStop = true;
+            ps.start();
+            // Ceinture de sécurité: disposeOnStop a un cas limite (stop alors
+            // que 0 particule émise) — dispose forcé après la vie max.
+            setTimeout(() => { try { ps.dispose(); } catch { /* déjà parti */ } }, life * 1000 + 2500);
+            made.push(ps);
+        });
+        // Auto-stop après la vie de l'effet (une seule salve, pas de fuite)
+        setTimeout(() => { for (const ps of made) ps.stop(); }, life * 1000 + 120).unref?.();
+        return true;
     }
 
     /**

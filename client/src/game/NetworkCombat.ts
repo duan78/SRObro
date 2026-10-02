@@ -1065,6 +1065,8 @@ export class NetworkCombat {
     if (/(ice|frost|cold|freez|binggyeong|glace)/.test(n)) return 'ice';
     if (/(lightning|thunder|electro|shock|jeonkyung|foudre)/.test(n)) return 'lightning';
     if (/(heal|recovery|cure|vital|lifeturn|soin)/.test(n)) return 'heal';
+    // Sorts EU sans élément explicite → VFX officiel wizard (bolt)
+    if (/skill_eu_(wizard|warlock)/.test(n)) return 'wizard';
     return 'slash';
   }
 
