@@ -389,6 +389,7 @@ model MonsterSpawn {
   maxCount    Int      @default(10)
   respawnTime Int      @default(10)       // seconds
   patrolRange Float    @default(20.0)     // meters
+  persistent  Boolean  @default(false)    // uniques: spawn au boot, jamais despawnés
   createdAt   DateTime @default(now())
 
   // Relations

@@ -134,6 +134,20 @@ export class CombatBridge {
         timestamp: Date.now(),
         data: this.serializeMonster(monsterEntity),
       });
+      // Comportement officiel: l'apparition d'un unique est annoncée à tout
+      // le serveur (docs/SRO_KNOWLEDGE_BASE/15_UNIQUE_BOSSES.md — mécaniques
+      // KR 2005: annonce serveur au spawn)
+      if (monsterEntity.isUnique) {
+        const announce = {
+          type: 'unique:spawned' as const,
+          timestamp: Date.now(),
+          data: { name: monsterEntity.name, level: monsterEntity.level, zoneId: monsterEntity.zoneId },
+        };
+        for (const p of this.worldManager.getAllPlayers()) {
+          this.sendToPlayer(p.id, announce);
+        }
+        logger.info(`⭐ UNIQUE APPARU: ${monsterEntity.name} (niv. ${monsterEntity.level}) — ${monsterEntity.zoneId}`);
+      }
     });
 
     globalSpawnManager.on('monsterDespawned', (data: unknown) => {
@@ -699,10 +713,21 @@ export class CombatBridge {
   teleportPlayer(characterId: string, position: { x: number; y?: number; z: number }): void {
     const player = this.worldManager.getPlayer(characterId);
     if (!player) return;
+    // Déplacement AUTORITAIRE de l'entité serveur (le GM /tp et les
+    // téléporteurs officiels passent ici — sans cela le client bougeait
+    // visuellement mais l'entité restait à l'ancienne position)
+    player.setPosition({ x: position.x, y: position.y ?? 0, z: position.z });
+    // L'entrée spatiale doit suivre: checkDespawn/AOI s'appuient dessus —
+    // une entrée restée à l'ancienne position ferait despawn tous les mobs
+    // autour du point d'arrivée (vécu: spawns GM supprimés après 1 s).
+    globalSpatialManager.updateEntityPosition(characterId, player.position);
     // Disparait des anciennes vues, réapparait aux nouvelles
     this.sendToPlayerRaw(characterId, 'player:teleport', { position });
     this.syncPlayerVisibility(player);
     this.sendPlayerState(characterId);
+    // Repeuple les camps autour du point d'arrivée (snapshots immédiats)
+    globalSpawnManager.forceCheckNearby(player.position, 120);
+    setTimeout(() => this.sendWorldSnapshot(characterId), 800).unref?.();
   }
 
   /** Invisibilité GM: masque/montre le joueur aux autres clients. */

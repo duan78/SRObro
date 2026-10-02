@@ -58,7 +58,8 @@ async function main(): Promise<void> {
     socket.emit('world:snapshot', {});
     setTimeout(() => { socket.off('spawn', h); resolve(seen.filter((x) => x.entityType === 'monster')); }, 3000);
   });
-  const mang = spawns.filter((m) => m.name === 'Mangnyang');
+  const TUTORIAL_MOBS = ['Mangnyang', 'Yeoha', 'Bigeyeghost', 'Gyo', 'Waterghost'];
+  const mang = spawns.filter((m) => TUTORIAL_MOBS.includes(m.name));
   check('Mangnyangs visibles', mang.length > 0, `${mang.length}`);
   if (mang.length) {
     // Test sur compte admin: mode dieu pour un leveling déterministe
@@ -82,8 +83,9 @@ async function main(): Promise<void> {
       while (Date.now() < deadline) {
         const st = states[states.length - 1];
         if (st && (st.exp >= 118 || st.level >= 2)) break;
-        // Cible la plus proche encore vivante (live = spawns − tués/despawn)
-        const alive = mang.filter((m) => live.has(m.id));
+        // Cible vivante = entrée de la carte live (respawns inclus, nouveaux
+        // ids) — pas les ids figés du snapshot
+        const alive = [...live.values()].filter((m) => TUTORIAL_MOBS.includes(m.name));
         const target = alive.find((m) => m.id === currentId) ?? alive[0];
         if (Date.now() - lastLog > 10000) {
           lastLog = Date.now();

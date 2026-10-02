@@ -640,3 +640,33 @@ tsc 0/0, persistance après relance serveur.
 - Régressions V1: combat-flow ✓, phase4 ✓ (boucle retarget corrigée + /god),
   phase5 ✓ (targeting ordonné + tueur dynamique), phase6 ✓ (ratio taux tolérance
   GAP). tsc 0/0.
+
+### PHASE B (monde chinois complet) — 2026-10-02
+- **Bâtiments 3 villes** fusionnés dans objects.json (1 148 placements MAPO
+  exacts, multi-centres Jangan 69,71 + Donwhang 67,71 + Hotan 66,70; dédup
+  des grilles). WorldObjects.reload() au téléport (streaming-lite, budget
+  perf constant 200 meshes).
+- **Seed monde officiel** (seed-world.ts): zones 1-35/20-55/40-90, 12 NPCs
+  fonctionnels Donwhang+Hotan (noms KB), 6 téléporteurs (coûts/niveaux,
+  réseau Jangan↔Donwhang↔Hotan), 42 spawns d'anneaux par niveaux depuis
+  monsters_official.json (variantes 'plain' avant _STRONG_/_CLON), 5 uniques
+  de Chine aux coordonnées officielles xSROMap converties (engine = PosX−6460,
+  PosY−590): Tiger Girl 6h, Uruchi 3h, Isyutaru/Yarkan/Shaitan 6h — flag
+  persistent (spawn au boot, jamais despawnés).
+- **Téléporteurs jouables**: handlers teleport:list/teleport:use (coût +
+  niveau + proximité Gatekeeper, or débité), dialogue DOM Gatekeeper client,
+  npc:list multi-villes + npcType.
+- **Annonces d'uniques**: packet unique:spawned broadcast serveur + bannière
+  client au spawn de chaque unique (comportement officiel).
+- **Corrections structurelles découvertes par les tests**:
+  - teleportPlayer déplace désormais l'ENTITÉ serveur + l'entrée spatiale
+    (avant: seul le client bougeait → AOI/despawn cassés; le GM /tp aussi)
+  - spawnMonsterAt enregistre le spawn adHoc dans activeSpawns (les mobs GM
+    se nettoient sans joueurs à 150 m au lieu de s'accumuler)
+  - bestiary.ensureMonsterInDb: matching exact d'abord, jamais les _CLON
+  - /kill GM: portée 150 m (anneaux à 60 m+ des villes)
+  - mobs tutoriels dociles = Mangnyang/Yeoha uniquement (les ghosts/bandits
+    sont agressifs — officiel)
+- **Tests**: test-phaseB.ts (npc 3 villes, téléport payant + position,
+  mobs Donwhang, Tiger Girl HP officiels) — TOUT PASSÉ; régressions V1
+  complètes (A 9/9, combat-flow, 4, 5, 6) en séquence.

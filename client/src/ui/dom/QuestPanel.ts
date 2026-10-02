@@ -11,6 +11,7 @@ import type { JanganZone } from '../../zones/jangan/JanganZone';
 interface NpcInfo {
   id: string;
   name: string;
+  npcType?: string;
   position: { x: number; y: number; z: number };
   rotation: number;
   dialogue: string | null;
@@ -38,6 +39,9 @@ export class QuestSystem {
       const r = d?.rewards ?? {};
       this.notify(`Quête « ${d?.questName} » terminée ! +${r.exp ?? 0} XP, +${r.sp ?? 0} SP, +${r.gold ?? 0} or`);
     });
+    // Annonce serveur d'apparition d'un unique (comportement officiel)
+    this.network.onRaw('unique:spawned', (d: any) =>
+      this.notify(`⭐ ${d?.name ?? 'Un unique'} (niv. ${d?.level ?? '?'}) est apparu dans la région !`));
   }
 
   private notify(text: string): void {
@@ -66,16 +70,24 @@ export class QuestSystem {
     marker.position.set(npc.position.x, y + 0.95, npc.position.z);
     const mat = new StandardMaterial(`npc_mat_${npc.id}`, this.scene);
     const isGuard = npc.id.includes('guard');
-    mat.diffuseColor = isGuard ? new Color3(0.2, 0.4, 0.9) : new Color3(0.85, 0.7, 0.2);
+    const isTeleporter = npc.npcType === 'teleport' || npc.id.includes('teleport') || npc.id.includes('gatekeeper');
+    mat.diffuseColor = isTeleporter
+      ? new Color3(0.3, 0.85, 0.9)
+      : isGuard ? new Color3(0.2, 0.4, 0.9) : new Color3(0.85, 0.7, 0.2);
     mat.emissiveColor = mat.diffuseColor.scale(0.25);
     marker.material = mat;
     marker.isPickable = true;
-    marker.metadata = { npcId: npc.id, npcName: npc.name };
+    marker.metadata = { npcId: npc.id, npcName: npc.name, npcType: npc.npcType };
     this.npcMeshes.set(npc.id, marker);
   }
 
-  /** Clic sur un PNJ: dialogue + quêtes (talk/rendu au garde). */
+  /** Clic sur un PNJ: Gatekeeper → téléporteurs officiels, sinon quêtes. */
   async interact(npcId: string): Promise<void> {
+    const meta = this.npcMeshes.get(npcId)?.metadata as { npcType?: string } | undefined;
+    if (meta?.npcType === 'teleport' || npcId.includes('teleport') || npcId.includes('gatekeeper')) {
+      await this.openTeleportDialog(npcId);
+      return;
+    }
     const res = await this.network.request<{
       success: boolean; error?: string; completed?: string[]; startedDialogue?: string;
     }>('quest:interact', { npcId });
@@ -91,6 +103,66 @@ export class QuestSystem {
       for (const q of res.completed) this.notify(`Quête rendue: ${q}`);
     } else if (!res.startedDialogue) {
       this.notify(`${npc} n'a rien pour l'instant (quêtes: touche L)`);
+    }
+  }
+
+  /** Boîte de dialogue du Gatekeeper: destinations officielles (coût/niveau). */
+  private async openTeleportDialog(npcId: string): Promise<void> {
+    try {
+      const res = await this.network.request<{
+        success: boolean; gold?: number;
+        destinations?: Array<{ id: string; name: string; cost: number; requiredLevel: number }>;
+      }>('teleport:list');
+      if (!res.success || !res.destinations?.length) {
+        this.notify('Gatekeeper: aucune destination disponible');
+        return;
+      }
+      document.getElementById('teleport-dialog')?.remove();
+      const dlg = document.createElement('div');
+      dlg.id = 'teleport-dialog';
+      dlg.innerHTML = `
+        <style>
+          #teleport-dialog { position: fixed; top: 90px; left: 50%; transform: translateX(-50%);
+            background: rgba(18,14,6,0.94); border: 1px solid #8f751d; border-radius: 6px;
+            padding: 14px 18px; z-index: 900; pointer-events: auto; min-width: 260px; }
+          #teleport-dialog h4 { color: #ffd700; margin: 0 0 8px; font-size: 14px; }
+          .tp-row { display: flex; justify-content: space-between; gap: 14px; padding: 5px 4px;
+            border-bottom: 1px solid rgba(85,70,31,0.4); font-size: 12px; align-items: center; }
+          .tp-name { color: #f0e6d2; } .tp-cost { color: #ffd700; font-size: 11px; }
+          .tp-go { padding: 2px 10px; cursor: pointer; font-size: 11px;
+            background: linear-gradient(180deg, #d8b54a, #8f751d); border: 1px solid #ffd700;
+            border-radius: 3px; color: #1c1405; }
+          .tp-close { margin-top: 8px; width: 100%; padding: 4px; cursor: pointer; font-size: 11px;
+            background: #3a2f14; color: #c9b98a; border: 1px solid #8f751d; border-radius: 3px; }
+        </style>
+        <h4>Gatekeeper — Téléportation</h4>
+        <div class="tp-rows"></div>
+        <button class="tp-close">Fermer</button>`;
+      document.body.appendChild(dlg);
+      const rows = dlg.querySelector('.tp-rows') as HTMLElement;
+      for (const d of res.destinations) {
+        const row = document.createElement('div');
+        row.className = 'tp-row';
+        row.innerHTML = `
+          <span class="tp-name">${d.name}</span>
+          <span class="tp-cost">${d.cost.toLocaleString('fr')} or${d.requiredLevel > 1 ? ` · niv. ${d.requiredLevel}` : ''}</span>
+          <button class="tp-go">Voyager</button>`;
+        row.querySelector('.tp-go')?.addEventListener('click', async () => {
+          const r = await this.network.request<{ success: boolean; error?: string; destination?: string }>(
+            'teleport:use', { teleportPointId: d.id });
+          if (r?.success) {
+            this.notify(`Téléporté vers ${r.destination} (−${d.cost.toLocaleString('fr')} or)`);
+            dlg.remove();
+          } else {
+            this.notify(r?.error ?? 'Téléportation impossible');
+          }
+        });
+        rows.appendChild(row);
+      }
+      dlg.querySelector('.tp-close')?.addEventListener('click', () => dlg.remove());
+      setTimeout(() => dlg.remove(), 60000);
+    } catch {
+      this.notify('Gatekeeper indisponible');
     }
   }
 

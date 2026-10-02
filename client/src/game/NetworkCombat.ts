@@ -303,7 +303,8 @@ export class NetworkCombat {
       }
     });
 
-    // Téléport GM (/tp, console admin): recalage du personnage local
+    // Téléport (GM /tp, console admin, Gatekeeper officiel): recalage du
+    // personnage local + rechargement des bâtiments autour du nouveau point
     this.network.onRaw('player:teleport', (d: any) => {
       const pos = d?.position ?? d;
       const player = this.scene.meshes.find((m) => m.name.startsWith('chinaman_'));
@@ -312,6 +313,9 @@ export class NetworkCombat {
         const y = terrain ? terrain.heightAt(pos.x, pos.z) : (pos.y ?? 0);
         const root = (player.parent ?? player) as { position: { set(x: number, y: number, z: number): void } };
         root.position.set(pos.x, y, pos.z);
+        // Streaming-lite (Phase B): les bâtiments de la ville de destination
+        // remplacent ceux de la ville d'origine (budget perf constant).
+        void this.janganZone?.worldObjectsPublic?.reload(pos.x, pos.z);
       }
     });
 

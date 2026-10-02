@@ -20,8 +20,20 @@ const MAP_DIR = path.join(ROOT, 'assets/pk2_map');
 const MANIFEST = path.resolve(ROOT, 'client/public/assets/manifest.json');
 const OUT = path.join(ROOT, 'client/public/assets/terrain/objects.json');
 
-const args = process.argv.slice(2).map(Number);
-const [cx, cz, half] = args.length >= 3 ? args : [69, 71, 3]; // Jangan ville
+const args = process.argv.slice(2);
+// Centres "x,z,demi" séparés par espaces (ancres de villes), p.ex.:
+//   npx tsx scripts/parse-map-objects.ts 69,71,3 67,71,3 66,70,3
+// Défaut: Jangan + Donwhang + Hotan (Phase B V2). Toutes les positions sont
+// relatives à l'ancre GLOBALE (69,71) pour un seul monde continu.
+const DEFAULT_CENTERS: Array<[number, number, number]> = [
+  [69, 71, 3], // Jangan
+  [67, 71, 3], // Donwhang
+  [66, 70, 3], // Hotan
+];
+const centers: Array<[number, number, number]> = args.length > 0
+  ? args.map((a) => a.split(',').map(Number) as [number, number, number])
+  : DEFAULT_CENTERS;
+const GLOBAL_ANCHOR = { x: 69, z: 71 };
 
 interface Placement {
   id: number;
@@ -46,24 +58,30 @@ function main(): void {
   const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));
   const available = new Set(Object.keys(manifest.resources ?? {}));
 
-  // 3. Parse exact des .o de la grille
+  // 3. Parse exact des .o de la grille (multi-villes, régions dédupliquées)
   const objects: Placement[] = [];
+  const seen = new Set<string>();
   let filesRead = 0;
-  for (let x = cx - half; x <= cx + half; x++) {
-    for (let z = cz - half; z <= cz + half; z++) {
-      const oPath = path.join(MAP_DIR, String(x), `${z}.o`);
-      if (!fs.existsSync(oPath)) continue;
-      const b = fs.readFileSync(oPath);
-      filesRead++;
-      parseFile(b, x, z, assetToBsr, available, objects, cx, cz);
+  for (const [cx, cz, half] of centers) {
+    for (let x = cx - half; x <= cx + half; x++) {
+      for (let z = cz - half; z <= cz + half; z++) {
+        const key = `${x}_${z}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        const oPath = path.join(MAP_DIR, String(x), `${z}.o`);
+        if (!fs.existsSync(oPath)) continue;
+        const b = fs.readFileSync(oPath);
+        filesRead++;
+        parseFile(b, x, z, assetToBsr, available, objects, GLOBAL_ANCHOR.x, GLOBAL_ANCHOR.z);
+      }
     }
   }
 
   objects.sort((p, q) => (p.x ** 2 + p.z ** 2) - (q.x ** 2 + q.z ** 2));
-  const limited = objects.slice(0, 3000);
+  const limited = objects.slice(0, 12000);
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
-  fs.writeFileSync(OUT, JSON.stringify({ anchor: { x: cx, z: cz }, objects: limited }));
+  fs.writeFileSync(OUT, JSON.stringify({ anchor: GLOBAL_ANCHOR, objects: limited }));
   const byStem = new Map<string, number>();
   for (const o of limited) byStem.set(o.bsr, (byStem.get(o.bsr) ?? 0) + 1);
   console.log(`${filesRead} fichiers .o lus, ${objects.length} placements valides (${limited.length} retenus)`);

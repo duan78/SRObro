@@ -72,7 +72,19 @@ export function searchOfficialMonsters(search: string, page: number, limit: numb
  * rend les 7 825 monstres officielles invocables (/spawn, console admin).
  */
 export async function ensureMonsterInDb(codeOrName: string): Promise<{ id: string; name: string; level: number } | null> {
-  // 1. Déjà en base (les 13 seedés + les créés à la demande)
+  // 1. Déjà en base: correspondance EXACTE d'abord (nom ou modelId insensible
+  // à la casse), puis floue — évite de résoudre 'MOB_CH_BANDIT' vers les
+  // variantes _CLON/_L2 parasites
+  const exact = await prisma.monster.findFirst({
+    where: {
+      OR: [
+        { name: { equals: codeOrName, mode: 'insensitive' } },
+        { modelId: { equals: codeOrName, mode: 'insensitive' } },
+        { id: { equals: codeOrName.startsWith('mon_') ? codeOrName : `mon_${codeOrName.toLowerCase()}` } },
+      ],
+    },
+  });
+  if (exact) return exact;
   const existing = await prisma.monster.findFirst({
     where: {
       OR: [
@@ -83,11 +95,16 @@ export async function ensureMonsterInDb(codeOrName: string): Promise<{ id: strin
   });
   if (existing) return existing;
 
-  // 2. Référentiel officiel → création à la volée
+  // 2. Référentiel officiel → création à la volée (codes exacts avant flous,
+  //    jamais les clones _CLON)
   const q = codeOrName.toLowerCase();
-  const official = getOfficialMonsters().find(
-    (m) => m.code.toLowerCase() === q || m.code.toLowerCase().includes(q) || m.name.includes(codeOrName),
+  const candidates = getOfficialMonsters().filter(
+    (m) => !m.code.endsWith('_CLON'),
   );
+  const official =
+    candidates.find((m) => m.code.toLowerCase() === q) ??
+    candidates.find((m) => m.code.toLowerCase().includes(q)) ??
+    candidates.find((m) => m.name.includes(codeOrName));
   if (!official) return null;
 
   const created = await prisma.monster.create({

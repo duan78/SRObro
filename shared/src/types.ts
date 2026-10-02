@@ -260,6 +260,8 @@ export type PacketType =
   | 'level_up'
   | 'drop_item'
   | 'remove_dropped_item'
+  // Phase B V2: monde complet
+  | 'unique:spawned'
   // Phase 2: combat complet
   | 'skill_rejected'
   | 'player:death'

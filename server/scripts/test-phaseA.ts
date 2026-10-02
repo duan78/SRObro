@@ -57,6 +57,10 @@ async function main(): Promise<void> {
   if (!create.success) throw new Error('create: ' + JSON.stringify(create).slice(0, 100));
   const sel = await req('character:select', { characterId: create.character.id });
   if (!sel.success) throw new Error('select');
+  // Mode dieu: le test mesure des valeurs officielles, pas la survie (des
+  // bandits GM issus d'autres tests peuvent rester près du spawn)
+  socket.emit('chat', { type: 'chat', timestamp: Date.now(), data: { message: '/god', channel: 'general' } });
+  await wait(400);
   await wait(2500); // snapshot monde
 
   // ---------- 1. Monstre officiel: Tiger Girl ----------

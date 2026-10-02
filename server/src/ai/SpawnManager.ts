@@ -12,13 +12,10 @@ import { EventEmitter } from 'events';
 
 /**
  * Monstres DOCILES (non-aggro) — comportement officiel: les mobs tutoriel
- * n'attaquent jamais en premier (docs/SRO_KNOWLEDGE_BASE/14_MONSTER_GUIDE.md,
- *spots Mangnyang/Yeoha de Jangan; vengeance seule s'ils sont frappés).
+ * de Jangan n'attaquent jamais en premier (KB 14_MONSTER_GUIDE.md). Les
+ * ghosts/bandits/tigres sont AGGRESSIFS (ils vengent et aggroient).
  */
-const DOCILE_STEMS = new Set([
-  'mangnyang', 'yeoha', 'bigeyeghost', 'smalleyeghost', 'stoneghost',
-  'waterghost', 'gyo', 'chakji', 'tombstone',
-]);
+const DOCILE_STEMS = new Set(['mangnyang', 'yeoha']);
 
 const logger = createLogger('SpawnManager');
 
@@ -38,6 +35,8 @@ export interface ActiveSpawn {
   lastSpawnCheck: number;
   /** Garde anti double-spawn: checkSpawn est async et appelée en fire-and-forget */
   isChecking: boolean;
+  /** Spawn persistant (unique/boss): jamais despawné faute de joueurs, spawné au boot. */
+  persistent?: boolean;
 }
 
 /**
@@ -76,6 +75,14 @@ export class SpawnManager extends EventEmitter {
     // Load monster spawns from database
     await this.loadMonsterSpawns();
 
+    // Uniques/boss persistants: présents dès le boot du serveur (comportement
+    // officiel — le monde vit même sans joueurs, annonce à l'apparition)
+    for (const spawn of this.activeSpawns.values()) {
+      if (spawn.persistent) {
+        spawn.lastSpawnCheck = 0; // spawn immédiat au premier cycle
+      }
+    }
+
     logger.info(`Spawn manager initialized with ${this.activeSpawns.size} spawn points`);
   }
 
@@ -96,6 +103,7 @@ export class SpawnManager extends EventEmitter {
           maxCount: spawn.maxCount,
           respawnTime: spawn.respawnTime,
           patrolRange: spawn.patrolRange,
+          persistent: spawn.persistent,
           currentMonsters: new Map(),
           // lastSpawnCheck "échu": le premier cycle de spawn n'attend pas un
           // respawnTime complet — les monstres apparaissent dès qu'un joueur
@@ -201,8 +209,8 @@ export class SpawnManager extends EventEmitter {
           100 // 100m radius
         );
 
-        if (nearbyPlayers.length === 0) {
-          return; // Don't spawn if no players nearby
+        if (nearbyPlayers.length === 0 && !activeSpawn.persistent) {
+          return; // Don't spawn if no players nearby (sauf uniques persistants)
         }
 
         // Spawn needed monsters
@@ -261,6 +269,7 @@ export class SpawnManager extends EventEmitter {
         magicalDefense: mDef,
         parryRatio: official?.parry ?? 5,
         attackRating: official?.atkRating ?? mLevel * 10,
+        isUnique: monster.isUnique,
         // Mobs tutoriels dociles: pas d'aggro spontanée (vengeance seulement)
         aggroRange: official && DOCILE_STEMS.has(official.stem) ? 0 : monster.aggroRange,
         exp: mExp,
@@ -346,9 +355,13 @@ export class SpawnManager extends EventEmitter {
       respawnTime: Number.MAX_SAFE_INTEGER,
       patrolRange: 5,
       currentMonsters: new Map(),
-      lastSpawnCheck: 0,
+      lastSpawnCheck: Date.now(),
       isChecking: false,
     };
+    // Enregistré dans activeSpawns: la boucle update() applique checkDespawn
+    // (nettoyage quand plus aucun joueur à 150 m) — sinon les mobs GM
+    // s'accumulent pour toujours au même endroit.
+    this.activeSpawns.set(adHoc.spawnId, adHoc);
     await this.spawnMonster(adHoc);
     const newId = [...this.monsterEntities.keys()].find((id) => !before.has(id));
     return newId ? this.monsterEntities.get(newId) ?? null : null;
@@ -372,6 +385,9 @@ export class SpawnManager extends EventEmitter {
    * Check for despawning (no players nearby)
    */
   private checkDespawn(activeSpawn: ActiveSpawn): void {
+    // Uniques/boss persistants: ils restent au monde même sans joueurs
+    if (activeSpawn.persistent) return;
+
     const nearbyPlayers = globalSpatialManager.getEntitiesByType(
       'player',
       activeSpawn.position,

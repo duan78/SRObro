@@ -47,9 +47,10 @@ async function main(): Promise<void> {
   console.log('Connecté');
 
   const suffix = Date.now().toString(36);
-  const username = 'fight_' + suffix;
-  await req('auth:register', { username, password: 'test1234' });
-  await req('auth:login', { username, password: 'test1234' });
+  // Compte admin (arnaud): le test d'IA offensive GM-spawn des Bandits —
+  // les permissions joueur/GM sont couvertes par test-phase6.
+  const login = await req('auth:login', { username: 'arnaud', password: 'hunter2' });
+  if (!login.success) throw new Error('login admin requis pour ce test');
   const create = await req<{ success: boolean; character?: { id: string } }>('character:create', {
     name: 'War' + suffix.slice(-6), race: 'chinese', gender: 'male',
   });
@@ -75,6 +76,7 @@ async function main(): Promise<void> {
   if (mobList.length === 0) {
     console.log('AUCUN MONSTRE — les spawn points serveur sont trop loin du point (0,500) ?');
   }
+  let spawnCountPreKill = 0; // pris AVANT le kill (race respawn, cf. §4)
   let target = mobList[0];
   if (target) {
     console.log(`  Cible: ${target.name} lvl ${target.level} hp ${target.hp}/${target.maxHp} à (${target.position.x.toFixed(0)},${target.position.z.toFixed(0)})`);
@@ -105,6 +107,10 @@ async function main(): Promise<void> {
 
     // 2. Attaques de base jusqu'à la mort (max 60 coups)
     const xpBefore = (received['player:state'] ?? []).length;
+    // Compteur AVANT le kill: le respawn du slot libéré doit survenir dans
+    // les ~40 s (respawnTime anneau = 20 s) — le prendre avant évite la race
+    // si le respawn arrive plus vite que la lecture post-kill.
+    spawnCountPreKill = (received.spawn ?? []).length;
     let killed = false;
     for (let i = 0; i < 60 && !killed; i++) {
       socket.emit('attack', {
@@ -130,20 +136,19 @@ async function main(): Promise<void> {
 
   // (skill testé en 1b, avant la mort de la cible)
 
-  // 4. Respawn du mob: après ~15-20 s un nouveau spawn doit arriver près de nous
-  const spawnCountBefore = (received.spawn ?? []).length;
-  await wait(35000);
+  // 4. Respawn du mob: le slot libéré par le kill doit se repeupler
+  // (respawnTime anneau 20 s — fenêtre 40 s)
+  const spawnCountBefore = spawnCountPreKill ?? (received.spawn ?? []).length;
+  await wait(40000);
   check('Respawn de monstre', (received.spawn ?? []).length > spawnCountBefore,
     `${spawnCountBefore} → ${(received.spawn ?? []).length}`);
 
-  // 5. Mort du joueur: se téléporter au milieu des monstres agressifs et attendre
-  // (les mangnyang lvl 1-5 peuvent mettre du temps — on force via un gros paquet de mobs)
-  // Approche: spam le mob jusqu'à l'aggro, rester sans attaquer ni bouger
-  console.log('  Attente d\'aggro/mort joueur (max 60 s)...');
-  // Aller au camp de bandits lvl 16: ils tapent assez fort pour tuer un lvl 1
-  socket.emit('move', {
-    type: 'move', timestamp: Date.now(),
-    data: { position: { x: 500, y: 0, z: 1000 }, rotation: 0, isRunning: false },
+  // 5. Mort du joueur: GM-spawn des Bandits (MOB_CH_BANDIT lv16, agressifs —
+  // les mobs tutoriels officiels sont passifs) autour du perso et attendre
+  console.log('  Spawn de Bandits agressifs + attente de mort joueur (max 60 s)...');
+  socket.emit('chat', {
+    type: 'chat', timestamp: Date.now(),
+    data: { message: '/spawn MOB_CH_BANDIT 4', channel: 'general' },
   });
   const deathDeadline = Date.now() + 60000;
   let lastReport = 0;
@@ -151,7 +156,7 @@ async function main(): Promise<void> {
     await wait(2000);
     const states = (received['player:state'] ?? []).map((s: any) => (s.data ?? s));
     const last = states[states.length - 1];
-    const banditSpawns = (received.spawn ?? []).filter((sp: any) => /Bandit/.test((sp.data ?? sp).name ?? '')).length;
+    const banditSpawns = (received.spawn ?? []).filter((sp: any) => /bandit/i.test((sp.data ?? sp).name ?? '')).length;
     if (Date.now() - lastReport > 10000) {
       lastReport = Date.now();
       console.log(`    [diag] states=${states.length} hp=${last ? last.hp + '/' + last.maxHp : '?'} banditsSpawnes=${banditSpawns} updates=${(received.update ?? []).length}`);

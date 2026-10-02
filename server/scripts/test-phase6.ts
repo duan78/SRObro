@@ -180,20 +180,21 @@ async function main(): Promise<void> {
   await gmCmd('/rates exp 5');
   const r5 = await http('/admin/api/rates', { headers: basic });
   check('/rates exp 5 (live)', r5.body.exp === 5, `exp=${r5.body.exp}`);
-  await gmCmd('/spawn MOB_CH_MANGNYANG 1'); await wait(1500);
+  const spawnMsg5 = await gmCmd('/spawn MOB_CH_MANGNYANG 1'); await wait(1500);
   const expA = Number(last(GM.states).exp);
-  await gmCmd('/kill'); await wait(1500);
+  const killMsg5 = await gmCmd('/kill'); await wait(1500);
   const gainX5 = Number(last(GM.states).exp) - expA;
   await gmCmd('/rates exp 1');
-  await gmCmd('/spawn MOB_CH_MANGNYANG 1'); await wait(1500);
+  const spawnMsg1 = await gmCmd('/spawn MOB_CH_MANGNYANG 1'); await wait(1500);
   const expB = Number(last(GM.states).exp);
-  await gmCmd('/kill'); await wait(1500);
+  const killMsg1 = await gmCmd('/kill'); await wait(1500);
   const gainX1 = Number(last(GM.states).exp) - expB;
   // NB: le GAP officiel (±10%/niveau d'écart perso↔maîtrise) module l'XP de
   // chaque kill → le ratio n'est pas exactement 5 si le perso a levelé entre
   // les deux mesures. L'assertion clé = le taux live est appliqué sans reboot.
   const ratio = gainX1 > 0 ? gainX5 / gainX1 : 0;
-  check('Taux XP appliqué sans reboot (×5 vs ×1)', ratio >= 4.0 && ratio <= 6.0, `×5=+${gainX5} ×1=+${gainX1} ratio=${ratio.toFixed(2)}`);
+  check('Taux XP appliqué sans reboot (×5 vs ×1)', ratio >= 4.0 && ratio <= 6.0,
+    `×5=+${gainX5} ×1=+${gainX1} ratio=${ratio.toFixed(2)} | spawn5="${spawnMsg5.slice(0, 40)}" kill5="${killMsg5.slice(0, 40)}" kill1="${killMsg1.slice(0, 40)}"`);
 
   // --- 14. /announce diffusé au joueur lambda ---
   await gmCmd('/announce Maintenance dans 10 minutes !');

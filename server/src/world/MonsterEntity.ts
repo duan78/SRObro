@@ -38,6 +38,8 @@ export interface MonsterEntityOptions {
   parryRatio?: number;
   /** Attack rating officiel (colonne par de la DB serveur). */
   attackRating?: number;
+  /** Unique/boss: annonce serveur au spawn, jamais de despawn silencieux. */
+  isUnique?: boolean;
   exp: number;
   sp: number;
   aggroRange: number;
@@ -65,6 +67,8 @@ export class MonsterEntity extends Entity {
   public magicalDefense: number;
   public parryRatio: number;
   public attackRating: number;
+  /** Unique/boss officiel (Tiger Girl, Uruchi...): annoncé au spawn. */
+  public isUnique: boolean;
   public exp: number;
   public sp: number;
   public aggroRange: number;
@@ -106,6 +110,7 @@ export class MonsterEntity extends Entity {
     this.magicalDefense = options.magicalDefense;
     this.parryRatio = options.parryRatio ?? 5;
     this.attackRating = options.attackRating ?? options.level * 10;
+    this.isUnique = options.isUnique ?? false;
     this.exp = options.exp;
     this.sp = options.sp;
     this.aggroRange = options.aggroRange;

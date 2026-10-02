@@ -295,9 +295,11 @@ export class GmCommands {
 
   /** /kill: monstre le plus proche → pipeline complet (loot, XP, KillLog) */
   private cmdKill(characterId: string, player: PlayerEntity): boolean {
-    const monster = globalSpawnManager.getNearestMonster(player.position, 60);
+    // 150 m: les anneaux officiels commencent à ~60 m des villes, l'ancienne
+    // portée 60 m ne trouvait plus rien depuis le spawn
+    const monster = globalSpawnManager.getNearestMonster(player.position, 150);
     if (!monster) {
-      this.reply(characterId, 'Aucun monstre à moins de 60 m.');
+      this.reply(characterId, 'Aucun monstre à moins de 150 m.');
       return true;
     }
     this.combatBridge?.gmKillMonster(monster.id, characterId);

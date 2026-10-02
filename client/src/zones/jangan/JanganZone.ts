@@ -116,6 +116,9 @@ export class JanganZone {
   private terrain: RealTerrain | null = null;
   private worldObjects: WorldObjects | null = null;
 
+  /** Bâtiments officiels (rechargés au téléport, Phase B). */
+  get worldObjectsPublic(): WorldObjects | null { return this.worldObjects; }
+
   /** Terrain réel (heightmaps officiels) si chargé, pour placer les objets. */
   get realTerrain(): RealTerrain | null {
     return this.terrain;

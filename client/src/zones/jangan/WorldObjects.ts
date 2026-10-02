@@ -51,7 +51,6 @@ export class WorldObjects {
 
   async load(centerX = 0, centerZ = 0): Promise<number> {
     if (this.isLoaded) return this.roots.length;
-    this.isLoaded = true;
     let data: ObjectsFile;
     try {
       const res = await fetch('/assets/terrain/objects.json');
@@ -62,6 +61,22 @@ export class WorldObjects {
       return 0;
     }
     this.placements = data.objects ?? [];
+    this.isLoaded = true;
+    return this.placeAround(centerX, centerZ);
+  }
+
+  /**
+   * Recharge les bâtiments autour d'un nouveau centre (téléport vers une
+   * autre ville, Phase B). Les modèles GLB restent en cache: seules les
+   * instances sont recréées — rapide.
+   */
+  async reload(centerX: number, centerZ: number): Promise<number> {
+    for (const r of this.roots) r.dispose();
+    this.roots = [];
+    return this.placeAround(centerX, centerZ);
+  }
+
+  private async placeAround(centerX: number, centerZ: number): Promise<number> {
 
     // Budget + proximité + limite par modèle
     const perModel = new Map<string, number>();

@@ -256,7 +256,7 @@ export class GameServer {
         }
       });
 
-      // Liste des PNJ de la zone (rendu client + interactions)
+      // Liste des PNJ (toutes zones — Phase B: monde multi-villes)
       socket.on('npc:list', (_d: unknown, ack?: (r: unknown) => void) => {
         try {
           const client = this.clientManager?.getClient(socket.id);
@@ -264,12 +264,12 @@ export class GameServer {
             if (typeof ack === 'function') ack({ success: false, error: 'Non authentifié' });
             return;
           }
-          void prisma.nPC.findMany({ where: { zoneId: 'zone_jangan' } }).then((npcs) => {
+          void prisma.nPC.findMany().then((npcs) => {
             if (typeof ack === 'function') {
               ack({
                 success: true,
                 npcs: npcs.map((n) => ({
-                  id: n.id, name: n.name,
+                  id: n.id, name: n.name, npcType: n.npcType,
                   position: { x: n.positionX, y: n.positionY, z: n.positionZ },
                   rotation: n.rotation,
                   dialogue: n.dialogue,
@@ -279,6 +279,67 @@ export class GameServer {
           });
         } catch (error) {
           logger.error('npc:list error:', error);
+          if (typeof ack === 'function') ack({ success: false, error: 'Erreur serveur' });
+        }
+      });
+
+      // Téléporteurs officiels (Phase B): destinations de la zone courante
+      socket.on('teleport:list', (_d: unknown, ack?: (r: unknown) => void) => {
+        try {
+          const client = this.clientManager?.getClient(socket.id);
+          const characterId = client?.getCharacterId() ?? null;
+          const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+          if (!client?.getCharacterId() || !player) {
+            if (typeof ack === 'function') ack({ success: false, error: 'Non authentifié' });
+            return;
+          }
+          void prisma.teleportPoint.findMany({ where: { zoneId: player.zoneId } }).then((tps) => {
+            if (typeof ack === 'function') {
+              ack({
+                success: true,
+                gold: player.gold,
+                destinations: tps.map((t) => ({
+                  id: t.id, name: t.name, cost: Number(t.cost), requiredLevel: t.requiredLevel,
+                })),
+              });
+            }
+          });
+        } catch (error) {
+          logger.error('teleport:list error:', error);
+          if (typeof ack === 'function') ack({ success: false, error: 'Erreur serveur' });
+        }
+      });
+
+      // Utilisation d'un téléporteur: niveau + or + proximité vérifiés
+      socket.on('teleport:use', (data: unknown, ack?: (r: unknown) => void) => {
+        try {
+          const client = this.clientManager?.getClient(socket.id);
+          const characterId = client?.getCharacterId() ?? null;
+          const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+          const tpId = String((data as { teleportPointId?: string })?.teleportPointId ?? '');
+          if (!client?.getCharacterId() || !player || !tpId) {
+            if (typeof ack === 'function') ack({ success: false, error: 'Requête invalide' });
+            return;
+          }
+          void (async () => {
+            const tp = await prisma.teleportPoint.findUnique({ where: { id: tpId } });
+            if (!tp) { ack?.({ success: false, error: 'Destination inconnue' }); return; }
+            const d = Math.hypot(tp.positionX - player.position.x, tp.positionZ - player.position.z);
+            if (d > 40) { ack?.({ success: false, error: `Trop loin du Gatekeeper (${Math.round(d)} m)` }); return; }
+            if (player.level < tp.requiredLevel) { ack?.({ success: false, error: `Niveau ${tp.requiredLevel} requis` }); return; }
+            if (player.gold < Number(tp.cost)) { ack?.({ success: false, error: `${Number(tp.cost).toLocaleString('fr')} or requis` }); return; }
+            player.addGold(-Number(tp.cost));
+            player.zoneId = tp.destinationZoneId;
+            // Positionner l'ENTITÉ avant l'annonce réseau (teleportPlayer
+            // suppose le déplacement déjà effectué — cf. cmdTeleport GM)
+            player.setPosition({ x: tp.destinationPositionX, y: tp.destinationPositionY, z: tp.destinationPositionZ });
+            this.combatBridge?.teleportPlayer(characterId, {
+              x: tp.destinationPositionX, y: tp.destinationPositionY, z: tp.destinationPositionZ,
+            });
+            ack?.({ success: true, destination: tp.name, cost: Number(tp.cost) });
+          })();
+        } catch (error) {
+          logger.error('teleport:use error:', error);
           if (typeof ack === 'function') ack({ success: false, error: 'Erreur serveur' });
         }
       });
