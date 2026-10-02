@@ -83,6 +83,9 @@ export class SystemHandlers {
     socket.on('guild:update_notice', (data) => this.handleGuildUpdateNotice(socket, data));
     socket.on('guild:create_union', (data) => this.handleGuildCreateUnion(socket, data));
     socket.on('guild:leave_union', (data) => this.handleGuildLeaveUnion(socket, data));
+    // Guild war (phase D V3, KB 17)
+    socket.on('guild:war_declare', (data, ack) => this.handleGuildWarDeclare(socket, data, ack));
+    socket.on('guild:war_state', (_d, ack) => this.handleGuildWarState(socket, ack));
 
     // Quest handlers
     // NB: pas de 'quest:update_objective' — la progression des objectifs est
@@ -269,6 +272,27 @@ export class SystemHandlers {
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
+  }
+
+  /** Guild war (phase D V3): déclaration par le leader, état des guerres. */
+  private async handleGuildWarDeclare(socket: Socket, data: any, ack?: (r: any) => void): Promise<void> {
+    const session = this.requireSession(socket);
+    if (!session) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+    try {
+      const { attackerGuildId, defenderGuildId } = data;
+      const { globalGuildWarManager } = await import('../guild/GuildWarManager.js');
+      const war = await globalGuildWarManager.declareWar(attackerGuildId, defenderGuildId, session.characterId);
+      ack?.({ success: true, war: { id: war.id, scores: war.scores, endsAt: war.endsAt } });
+    } catch (error: any) {
+      ack?.({ success: false, error: error.message });
+    }
+  }
+
+  private handleGuildWarState(socket: Socket, ack?: (r: any) => void): void {
+    if (!this.requireSession(socket)) return;
+    void import('../guild/GuildWarManager.js').then(({ globalGuildWarManager }) => {
+      ack?.({ success: true, wars: globalGuildWarManager.state() });
+    });
   }
 
   private async handleGuildUpdateNotice(socket: Socket, data: any): Promise<void> {

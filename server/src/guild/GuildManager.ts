@@ -445,6 +445,12 @@ export class GuildManager extends EventEmitter {
       return { hasAccess: false, reason: 'You are not in this guild' };
     }
 
+    // Gate officiel (KB 17): entrepôt dès le niveau 2 de guilde
+    const guild = await prisma.guild.findUnique({ where: { id: guildId }, select: { level: true } });
+    if (!guild || guild.level < 2) {
+      return { hasAccess: false, reason: 'Entrepôt de guilde disponible dès le niveau 2' };
+    }
+
     // Check if storage is locked by another character
     const lockedBy = this.storageLocks.get(guildId);
     if (lockedBy && lockedBy !== characterId) {
@@ -542,7 +548,17 @@ export class GuildManager extends EventEmitter {
     return membership?.guildId ?? null;
   }
 
+  /** Accès au storage: guilde niveau 2+ (KB 17 — officiel). */
+  private async requireStorageAccess(guildId: string): Promise<void> {
+    const guild = await prisma.guild.findUnique({ where: { id: guildId }, select: { level: true } });
+    if (!guild || guild.level < 2) {
+      throw new Error('Entrepôt de guilde disponible dès le niveau 2');
+    }
+  }
+
   async depositToStorage(guildId: string, itemId: string, quantity: number, characterId?: string): Promise<void> {
+    // Gate officiel (KB 17): storage accessible dès le niveau 2 de guilde
+    await this.requireStorageAccess(guildId);
     if (characterId) {
       // Seuls les membres peuvent déposer (sinon n'importe qui alimente/vide
       // le stock de n'importe quelle guilde)
@@ -576,12 +592,18 @@ export class GuildManager extends EventEmitter {
   }
 
   async withdrawFromStorage(guildId: string, itemId: string, quantity: number, characterId?: string): Promise<void> {
+    // Gate officiel (KB 17): storage niveau 2+ ET retrait réservé aux
+    // officiers (leader/assistant) — l'or était déjà bridé, les items non.
+    await this.requireStorageAccess(guildId);
     if (characterId) {
       const membership = await prisma.guildMember.findUnique({
         where: { characterId }
       });
       if (!membership || membership.guildId !== guildId) {
         throw new Error('You are not in this guild');
+      }
+      if (membership.rank !== 'leader' && membership.rank !== 'assistant') {
+        throw new Error('Retrait réservé aux officiers (leader/assistant)');
       }
     }
 

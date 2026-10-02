@@ -341,13 +341,16 @@ export class NetworkCombat {
     this.hud.setupChatInput();
     this.hud.onChatSend = (message: string) => {
       if (!message) return;
-      if (message.startsWith('/')) {
-        // Les commandes slash passent par le canal chat (le serveur répond
-        // en message système — pas de diffusion).
-        this.network.sendChat(message, 'general');
-      } else {
-        this.network.sendChat(message, 'general');
+      // Préfixes de canal sociaux (phase D V3): /p party, /g guilde,
+      // /u union, /w nom whisper — le reste part en general (commandes
+      // slash incluses: le serveur répond en message système).
+      const m = message.match(/^\/(p|g|u)\s+(.+)$/i);
+      if (m) {
+        const channel = m[1].toLowerCase() === 'p' ? 'party' : m[1].toLowerCase() === 'g' ? 'guild' : 'union';
+        this.network.sendChat(m[2], channel);
+        return;
       }
+      this.network.sendChat(message, 'general');
     };
 
     // Chat entrant (phase 5): affiché dans le HUD — les canaux système et
@@ -359,6 +362,16 @@ export class NetworkCombat {
           this.hud.addChatMessage(d.message, 'system');
         } else if (d.channel === 'announce') {
           this.hud.addChatMessage(`📢 ${d.message}`, 'system');
+        } else if (d.channel === 'party') {
+          this.hud.addChatMessage(`[Groupe] ${d.playerName ?? ''}: ${d.message}`, 'party');
+        } else if (d.channel === 'guild') {
+          this.hud.addChatMessage(`[Guilde] ${d.playerName ?? ''}: ${d.message}`, 'guild');
+        } else if (d.channel === 'union') {
+          this.hud.addChatMessage(`[Union] ${d.playerName ?? ''}: ${d.message}`, 'union');
+        } else if (d.channel === 'whisper') {
+          this.hud.addChatMessage(`[Chuchoté] ${d.playerName ?? ''}: ${d.message}`, 'whisper');
+        } else if (d.channel === 'whisper_sent') {
+          this.hud.addChatMessage(d.message, 'whisper_sent');
         } else {
           this.hud.addChatMessage(`${d.playerName ?? 'Joueur'}: ${d.message}`, 'say');
         }

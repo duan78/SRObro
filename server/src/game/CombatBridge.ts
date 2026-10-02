@@ -27,6 +27,7 @@ import { BossMechanics } from './BossMechanics';
 import { cumulativeXpForLevel } from '@srobro/shared';
 import type { S2CPacket } from '@srobro/shared';
 import { globalTitleManager } from './TitleManager';
+import { globalPartyManager } from './PartyManager';
 
 const logger = createLogger('CombatBridge');
 const gameData = GameDataService.getInstance();
@@ -771,9 +772,10 @@ export class CombatBridge {
         monster.zoneId,
         toDrop.map((t) => ({ itemId: t.itemId, quantity: t.quantity })),
         monster.position,
-        // Propriétaire = tueur: les autres joueurs ne peuvent ramasser qu'a
-        //près 30 s (anti-vol de loot, verrou par joueur du prompt phase 5)
-        { ownerId: killerId },
+        // Loot à tour de rôle officiel (KB 18): en groupe, le propriétaire
+        // du drop est le ramasseur du TOUR (le tueur hors groupe); le verrou
+        // 30 s reste la mécanique d'exclusivité.
+        { ownerId: this.lootOwnerFor(killerId) },
       );
 
       // Diffusion aux joueurs proches: items visibles au sol
@@ -801,6 +803,13 @@ export class CombatBridge {
   // MORT DU JOUEUR: écran de résurrection
   // ============================================
 
+  /** Propriétaire du loot: ramasseur au tour du groupe (KB 18) sinon tueur. */
+  private lootOwnerFor(killerId: string): string {
+    const party = globalPartyManager.getParty(killerId);
+    if (!party) return killerId;
+    return globalPartyManager.nextLooter(party.id) ?? killerId;
+  }
+
   private onPlayerDeath(victimId: string, killerId: string): void {
     const player = this.worldManager.getPlayer(victimId);
     const monster = globalSpawnManager.getMonsterEntity(killerId);
@@ -822,6 +831,19 @@ export class CombatBridge {
           ]);
           if (kMember && vMember) {
             await FortressManager.getInstance().recordWarKill(kMember.guildId, vMember.guildId);
+            // Guild war (phase D V3, KB 17): PvP entre guildes en guerre →
+            // kill scoré SANS points de murder
+            const { globalGuildWarManager } = await import('../guild/GuildWarManager.js');
+            if (globalGuildWarManager.atWar(kMember.guildId, vMember.guildId)) {
+              const r = globalGuildWarManager.recordKill(kMember.guildId, vMember.guildId);
+              if (r) {
+                this.sendToPlayerRaw(killerId, 'chat', {
+                  message: `⚔️ Guerre de guilde: kill scoré (${JSON.stringify(r.scores)})${r.ended ? ' — GUERRE TERMINÉE' : ''}`,
+                  channel: 'system',
+                });
+              }
+              return; // pas de flux PK pour un kill de guerre
+            }
           }
         } catch { /* silencieux */ }
       })();

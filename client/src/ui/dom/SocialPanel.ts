@@ -115,6 +115,25 @@ export class SocialPanel {
         row.appendChild(btn);
         body.appendChild(row);
       }
+      // Matching window (phase D V3, KB 18 Four Square): recherche de groupe
+      const matchRow = document.createElement('div');
+      matchRow.className = 'pty-inv';
+      const matchBtn = document.createElement('button');
+      matchBtn.className = 'pty-btn';
+      matchBtn.textContent = '🔍 Chercher un groupe';
+      matchBtn.addEventListener('click', async () => {
+        const r = await this.network.request('party:seek', {});
+        const hud = (window as unknown as { hud?: { addChatMessage(t: string, k: string): void } }).hud;
+        if (r?.success) {
+          const seekers = (r.seekers ?? []) as Array<{ name: string; level: number }>;
+          hud?.addChatMessage(
+            seekers.length
+              ? '👥 Joueurs en recherche: ' + seekers.map((x) => x.name + ' (Lv.' + x.level + ')').join(', ')
+              : 'Personne ne cherche de groupe pour le moment', 'system');
+        }
+      });
+      matchRow.appendChild(matchBtn);
+      body.appendChild(matchRow);
       return;
     }
 

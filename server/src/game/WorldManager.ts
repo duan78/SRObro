@@ -476,6 +476,39 @@ export class WorldManager {
         });
         return;
       }
+      // /w <nom> <message> — chuchotement par NOM (phase D V3): le client ne
+      // connaît pas les characterId, le serveur résout le nom.
+      if (cmd === '/w' || cmd === '/whisper') {
+        const parts = data.message.split(' ');
+        const targetName = parts[1];
+        const text = parts.slice(2).join(' ');
+        if (!targetName || !text) {
+          this.sendToClient(characterId, {
+            type: 'chat', timestamp: packet.timestamp,
+            data: { channel: 'system', message: 'Usage: /w <nom> <message>' },
+          });
+          return;
+        }
+        const { resolvePlayerByName } = await import('./ChatChannels.js');
+        const target = await resolvePlayerByName(targetName);
+        if (!target) {
+          this.sendToClient(characterId, {
+            type: 'chat', timestamp: packet.timestamp,
+            data: { channel: 'system', message: `Joueur introuvable ou hors ligne: ${targetName}` },
+          });
+          return;
+        }
+        // Livraison au destinataire + accusé à l'expéditeur
+        this.sendToClient(target.id, {
+          type: 'chat', timestamp: packet.timestamp,
+          data: { playerId: characterId, playerName: playerEntity.name, message: text, channel: 'whisper' },
+        });
+        this.sendToClient(characterId, {
+          type: 'chat', timestamp: packet.timestamp,
+          data: { channel: 'whisper_sent', message: `À ${target.name}: ${text}` },
+        });
+        return;
+      }
       this.sendToClient(characterId, {
         type: 'chat', timestamp: packet.timestamp,
         data: { channel: 'system', message: `Commande inconnue: ${cmd} — /help pour la liste` },
@@ -511,7 +544,35 @@ export class WorldManager {
           });
         }
         break;
-      // TODO: Handle party, guild, shout channels
+      // Phase D V3: canaux sociaux party / guild / union
+      case 'party':
+      case 'guild':
+      case 'union': {
+        void (async () => {
+          const { partyTargets, guildTargets, unionTargets } = await import('./ChatChannels.js');
+          let targets: { characterIds: string[]; label: string } | null = null;
+          if (data.channel === 'party') targets = partyTargets(characterId);
+          else if (data.channel === 'guild') targets = await guildTargets(characterId);
+          else targets = await unionTargets(characterId);
+          if (!targets) {
+            this.sendToClient(characterId, {
+              type: 'chat', timestamp: packet.timestamp,
+              data: { channel: 'system', message: `Canal ${data.channel} indisponible (pas de ${data.channel === 'party' ? 'groupe' : data.channel === 'guild' ? 'guilde' : 'union'}).` },
+            });
+            return;
+          }
+          for (const id of targets.characterIds) {
+            this.sendToClient(id, {
+              type: 'chat', timestamp: packet.timestamp,
+              data: {
+                playerId: characterId, playerName: playerEntity.name,
+                message: data.message, channel: data.channel,
+              },
+            });
+          }
+        })();
+        break;
+      }
     }
   }
 

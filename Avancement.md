@@ -1,5 +1,29 @@
 # Avancement du Projet SRObro
 
+## Session du 2 Octobre 2026 (21): PHASE D V3 — SOCIAL COMPLET
+
+**Canaux chat** (ChatChannels.ts + WorldManager): party/guild/union routés
+aux membres (PartyManager / GuildMember / UnionMember), **/w <nom>** par
+NOM (résolution en ligne insensible à la casse) avec accusé
+expéditeur + refus hors-ligne; couleurs par canal au HUD (party bleu,
+guilde vert, union violet, whisper rose), préfixes /p /g /u côté client.
+
+**Guilde**: storage gate **L2** (accessGuildStorage + requireStorageAccess),
+**retrait items réservé officier** (leader/assistant — l'or l'était déjà),
+**GuildWarManager**: déclaration leader-only → PvP scoré SANS PK (le kill
+de guerre court-circuite le flux murder), fin à 10 kills d'écart ou
+expiration 30 min, handlers guild:war_declare/war_state.
+
+**Party**: **MatchingManager** (file de recherche ±10 niveaux, expiration
+5 min, handlers party:seek/cancel_seek + bouton 🔍 au SocialPanel), **loot
+à tour de rôle OFFICIEL** (nextLooter existant ENFIN câblé: le drop
+appartient au ramasseur du tour, verrou 30 s conservé).
+
+**test-phaseD-social.ts 17/17**: party reçu par membre+écho, /w livré +
+accusé + refus hors-ligne, matching A voit B puis annule, storage L1
+refusé, retrait membre refusé, guerre non-leader refusée / déclarée /
+visible, canal guild membre oui étranger non. tsc 0.
+
 ## Session du 2 Octobre 2026 (20): PHASE C V3 — QUÊTES OFFICIELLES + TITRES
 
 **46 quêtes officielles** (Jangan ~23 + Donwhang ~23, KB 16 sourcée:

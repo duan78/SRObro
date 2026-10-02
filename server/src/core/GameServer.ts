@@ -257,6 +257,31 @@ export class GameServer {
       ).register(socket);
 
       // Party (Phase F V2 — KB 18: Each Get 4 / Auto Share 8, bonus +3%/membre)
+      // Matching window (phase D V3, KB 18 Four Square): recherche par niveau
+      socket.on('party:seek', (_d: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { globalMatchingManager, MATCH_LEVEL_RANGE } = await import('../game/MatchingManager.js');
+            const all = globalMatchingManager.seek(characterId, player.name, player.level);
+            const compatible = all.filter((c) => Math.abs(c.level - player.level) <= MATCH_LEVEL_RANGE);
+            ack?.({ success: true, seekers: compatible });
+          } catch (e) { ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' }); }
+        })();
+      });
+
+      socket.on('party:cancel_seek', (_d: unknown, ack?: (r: unknown) => void) => {
+        const client = this.clientManager?.getClient(socket.id);
+        if (client?.getCharacterId()) {
+          void import('../game/MatchingManager.js').then(({ globalMatchingManager }) =>
+            globalMatchingManager.cancel(client.getCharacterId()!));
+        }
+        ack?.({ success: true });
+      });
+
       socket.on('party:create', (data: unknown, ack?: (r: unknown) => void) => {
         void (async () => {
           try {

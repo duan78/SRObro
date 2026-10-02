@@ -229,7 +229,7 @@ export class DomHud {
     });
   }
 
-  addChatMessage(text: string, kind: 'system' | 'say' | 'combat' = 'say'): void {
+  addChatMessage(text: string, kind: 'system' | 'say' | 'combat' | 'party' | 'guild' | 'union' | 'whisper' | 'whisper_sent' = 'say'): void {
     const line = document.createElement('div');
     line.className = 'hud-chat-line hud-chat-' + kind;
     line.textContent = text;
