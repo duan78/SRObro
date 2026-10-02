@@ -256,6 +256,156 @@ export class GameServer {
         this.clientManager, this.worldManager ?? null, this.combatBridge ?? null,
       ).register(socket);
 
+      // Party (Phase F V2 — KB 18: Each Get 4 / Auto Share 8, bonus +3%/membre)
+      socket.on('party:create', (data: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { globalPartyManager } = await import('../game/PartyManager.js');
+            const mode = ((data as { mode?: string })?.mode === 'each_get' ? 'each_get' : 'auto_share') as 'each_get' | 'auto_share';
+            const party = globalPartyManager.create(characterId, player.name, player.level, socket.id, mode);
+            ack?.({ success: true, party: globalPartyManager.serialize(party) });
+          } catch (e) { ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' }); }
+        })();
+      });
+
+      socket.on('party:invite', (data: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            const targetName = String((data as { name?: string })?.name ?? '');
+            if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const target = this.worldManager?.getAllPlayers().find((p) => p.name === targetName);
+            if (!target) { ack?.({ success: false, error: 'Joueur introuvable' }); return; }
+            const { globalPartyManager } = await import('../game/PartyManager.js');
+            globalPartyManager.invite(characterId, target.id);
+            this.combatBridge?.sendToPlayerRaw(target.id, 'party:invited', {
+              from: player.name, partyId: globalPartyManager.getParty(characterId)?.id,
+            });
+            ack?.({ success: true });
+          } catch (e) { ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' }); }
+        })();
+      });
+
+      socket.on('party:accept', (_d: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { globalPartyManager } = await import('../game/PartyManager.js');
+            const party = globalPartyManager.accept(characterId, player.name, player.level, socket.id);
+            // Notifier tous les membres
+            for (const m of party.members.values()) {
+              this.combatBridge?.sendToPlayerRaw(m.characterId, 'party:state', globalPartyManager.serialize(party));
+            }
+            ack?.({ success: true, party: globalPartyManager.serialize(party) });
+          } catch (e) { ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' }); }
+        })();
+      });
+
+      socket.on('party:leave', (_d: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId();
+            if (!characterId) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { globalPartyManager } = await import('../game/PartyManager.js');
+            globalPartyManager.leave(characterId);
+            ack?.({ success: true });
+          } catch (e) { ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' }); }
+        })();
+      });
+
+      socket.on('party:state', (_d: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId();
+            if (!characterId) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { globalPartyManager } = await import('../game/PartyManager.js');
+            const party = globalPartyManager.getParty(characterId);
+            ack?.({ success: true, party: party ? globalPartyManager.serialize(party) : null });
+          } catch (e) { ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' }); }
+        })();
+      });
+
+      // Consignation NPC Juel (Phase D V2 — KB 23: Hotan, 10 items, 3 jours)
+      socket.on('consign:list', (data: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { ConsignmentManager } = await import('../game/ConsignmentManager.js');
+            const cm = new ConsignmentManager(prisma);
+            const slot = Number((data as { slot?: number })?.slot ?? -1);
+            const price = Number((data as { price?: number })?.price ?? 0);
+            await prisma.character.update({ where: { id: characterId }, data: { gold: BigInt(player.gold) } });
+            const r = await cm.list(characterId, player.name, slot, price);
+            ack?.({ success: true, ...r });
+          } catch (e) {
+            ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' });
+          }
+        })();
+      });
+
+      socket.on('consign:search', (data: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const { ConsignmentManager } = await import('../game/ConsignmentManager.js');
+            const cm = new ConsignmentManager(prisma);
+            const q = (data ?? {}) as { itemName?: string; maxPrice?: number };
+            ack?.({ success: true, listings: await cm.search(q) });
+          } catch (e) {
+            ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' });
+          }
+        })();
+      });
+
+      socket.on('consign:buy', (data: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { ConsignmentManager } = await import('../game/ConsignmentManager.js');
+            const cm = new ConsignmentManager(prisma);
+            await prisma.character.update({ where: { id: characterId }, data: { gold: BigInt(player.gold) } });
+            const r = await cm.buy(characterId, String((data as { listingId?: string })?.listingId ?? ''));
+            player.addGold(-r.price);
+            this.combatBridge?.sendPlayerState(characterId);
+            ack?.({ success: true, ...r });
+          } catch (e) {
+            ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' });
+          }
+        })();
+      });
+
+      socket.on('consign:cancel', (data: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            if (!characterId) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { ConsignmentManager } = await import('../game/ConsignmentManager.js');
+            const cm = new ConsignmentManager(prisma);
+            await cm.cancel(characterId, String((data as { listingId?: string })?.listingId ?? ''));
+            ack?.({ success: true });
+          } catch (e) {
+            ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' });
+          }
+        })();
+      });
+
       // Loup de compagnie (Phase H V2 — KB 24: 1M or à l'écurie, lv 40 adulte)
       socket.on('pet:buy_wolf', (_d: unknown, ack?: (r: unknown) => void) => {
         void (async () => {

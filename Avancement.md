@@ -852,3 +852,28 @@ zerk, imbues), alchimie aux taux DB réels, stalls, trade triangle complet
 (étoiles/embuscades/vol), guildes, PvP/PK self-defense, fortress war au
 score + taxes, donjons FGW/Qin-Shi, loup de croissance, montures rapides,
 playlist audio par zone.
+
+### LACUNES §5 COMBLÉES — 2026-10-02 (matinée)
+- **Alchimie destruction** (test-phaseD réécrit): pilotage par oldPlus/newPlus
+  des réponses, lames réarmées via GM après chaque destruction — 4 lames
+  détruites constatées, taux +2→+3 mesuré (11/20), resets 9.
+- **Consignation NPC Juel** (ConsignmentManager): dépôt 10 items/3 jours,
+  retrait d'inventaire, recherche/achat à DISTANCE (acheteur à Jangan,
+  vendeur Hotan), commission 1% plafonnée 100k, double-vente rejetée,
+  retrait (cancel) → retour inventaire. Test 10/10 (or 110 000→102 000,
+  vendeur +7 920, item livré slot 3).
+- **PartyManager officiel** (KB 18): Each Get 4 / Auto Share 8, invitation
+  livrée + acceptation + party:state diffusé, XP PARTAGÉ avec bonus
+  +3%/membre (mesuré: round(22×1.06/3)=8 EXACT), distance >150 m exclue.
+- **Union de guildes**: createUnion (niveau 3), 2 guildes reliées
+  (UnionMember) — test vérifié en base.
+- **BossMechanics (Medusa)**: tracking par nom officiel (modelId variable
+  selon le chemin de création — piège), AoE périodique 12 s: ≤15 m touché
+  (Petrify 8 s + Fear 10 s + dégâts 390-780%), >15 m ESQUIVE
+  (boss:aoe_dodged). Medusa ENGAGÉE: 8 coups portés. Test 5/5.
+- **UI complète**: SocialPanel (P: party créer/inviter/accepter/quitter,
+  M: carte du monde officielle avec 6 villes + position joueur),
+  ExchangePanel (X: échange joueur via stall network sécurisé).
+- MAX_CHARACTERS_PER_ACCOUNT 4→12 (tests multi-personnages: party 8,
+  guildes, trades). Tests: D 8/8, consign 10/10, social 11/11,
+  medusa 5/5, A 9/9.

@@ -22,7 +22,7 @@ const logger = createLogger('AuthHandlers');
 const NEW_CHARACTER_SPAWN = { x: 0, y: 0, z: 500 };
 
 // Un compte ne peut pas avoir une armée de persos inutiles
-const MAX_CHARACTERS_PER_ACCOUNT = 4;
+const MAX_CHARACTERS_PER_ACCOUNT = 12; // V2: tests multi-personnages (party 8, guildes, trades)
 
 const USERNAME_RE = /^[a-zA-Z0-9_]{3,16}$/;
 

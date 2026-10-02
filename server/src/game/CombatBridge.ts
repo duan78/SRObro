@@ -23,6 +23,7 @@ import { globalSpatialManager } from '../world/SpatialManager';
 import { rates } from '../config/rates';
 import { QuestManager } from '../quest/QuestManager';
 import { JobManager, computeStarLevel } from '../job/JobManager';
+import { BossMechanics } from './BossMechanics';
 import { cumulativeXpForLevel } from '@srobro/shared';
 import type { S2CPacket } from '@srobro/shared';
 
@@ -139,6 +140,11 @@ export class CombatBridge {
     // Monstres: diffusion spawn/despawn aux joueurs proches
     globalSpawnManager.on('monsterSpawned', (data: unknown) => {
       const { monsterEntity } = data as { monsterEntity: MonsterEntity };
+      // Boss à mécaniques (Medusa): tracker pour l'AoE périodique.
+      // NB: monsterEntity.name = code officiel (MOB_TQ_WHITESNAKE) — le
+      // modelId varie selon le chemin de création (mob_tq_whitesnake ou
+      // whitesnake), le nom est la clé fiable.
+      BossMechanics.getInstance().track(monsterEntity.id, monsterEntity.name.toUpperCase());
       this.broadcastToNearby(monsterEntity.position, {
         type: 'spawn',
         timestamp: Date.now(),
@@ -292,6 +298,14 @@ export class CombatBridge {
       });
     }
     void this.checkTradeAmbushes(now);
+    // Mécaniques de boss (Medusa): AoE périodique esquivable par distance
+    try {
+      BossMechanics.getInstance().update(
+        this.worldManager,
+        this,
+        (id) => globalSpawnManager.getMonsterEntity(id)?.position ?? null,
+      );
+    } catch { /* silencieux */ }
     // Loup de compagnie (Phase H): suit le maître + attaque sa cible
     void import('./PetService.js').then(({ PetService }) => {
       PetService.getInstance().update(this.worldManager, this, _delta);
@@ -592,6 +606,7 @@ export class CombatBridge {
   gmKillMonster(monsterId: string, killerId: string): void {
     const monster = globalSpawnManager.getMonsterEntity(monsterId);
     if (!monster || monster.hp <= 0) return;
+    BossMechanics.getInstance().untrack(monsterId);
     monster.setHp(0);
     void this.onMonsterDeath(monsterId, killerId);
   }
@@ -618,6 +633,30 @@ export class CombatBridge {
         const spGain = Math.max(0, Math.round(monster.sp * rates.sp * gap.spMult));
         const goldGain = Math.round((monster.level * 8 + Math.random() * monster.level * 4) * rates.gold);
         this.lastKillRewards = { expGain, gap: gap.gap };
+
+        // Party Auto Share officiel (KB 18): XP/SP répartis entre membres à
+        // distance avec bonus +3%/membre (chaque membre reçoit base×(1+3%(n−1))/n)
+        void import('./PartyManager.js').then(({ globalPartyManager }) => {
+          const targets = globalPartyManager.shareTargets(killerId, killer.position, this.worldManager);
+          for (const t of targets) {
+            const p = this.worldManager.getPlayer(t.characterId);
+            if (!p) continue;
+            if (p.id === killerId) continue; // déjà crédité ci-dessous
+            const sharedExp = Math.max(1, Math.round(expGain * t.ratio));
+            const sharedSp = Math.max(0, Math.round(spGain * t.ratio));
+            p.addExp(sharedExp);
+            p.sp += sharedSp;
+            this.sendToPlayer(p.id, {
+              type: 'xp_gain', timestamp: Date.now(),
+              data: { amount: sharedExp, total: p.exp, partyShare: true, ratio: t.ratio },
+            });
+            this.sendToPlayer(p.id, {
+              type: 'sp_gain', timestamp: Date.now(),
+              data: { amount: sharedSp, total: p.sp, partyShare: true },
+            });
+            this.sendPlayerState(p.id);
+          }
+        }).catch(() => undefined);
 
         killer.addExp(expGain);
         killer.sp += spGain;

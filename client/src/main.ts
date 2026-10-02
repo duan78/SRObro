@@ -31,6 +31,8 @@ import { CharacterPanel } from './ui/dom/CharacterPanel';
 import { QuestSystem } from './ui/dom/QuestPanel';
 import { SkillPanel } from './ui/dom/SkillPanel';
 import { JobPanel } from './ui/dom/JobPanel';
+import { SocialPanel } from './ui/dom/SocialPanel';
+import { ExchangePanel } from './ui/dom/ExchangePanel';
 import { gameAudio } from './ui/dom/GameAudio';
 
 // Collecte des erreurs console pour diagnostic navigateur (window.__errors)
@@ -172,6 +174,14 @@ async function init(): Promise<void> {
       // Métiers (touche J — Phase E V2): triangle trade + embuscades
       const jobPanel = new JobPanel(network);
       (window as unknown as { jobPanel: JobPanel }).jobPanel = jobPanel;
+
+      // Social (P: party, M: carte du monde — Phase F/H V2)
+      const socialPanel = new SocialPanel(network);
+      (window as unknown as { socialPanel: SocialPanel }).socialPanel = socialPanel;
+
+      // Échange joueur-joueur (X — Phase H V2)
+      const exchangePanel = new ExchangePanel(network);
+      (window as unknown as { exchangePanel: ExchangePanel }).exchangePanel = exchangePanel;
 
       // Zerk (Phase C): orbes + activation visuelle
       network.onRaw('zerk:orbs', (d: any) => hud.setZerkOrbs(d?.orbs ?? 0));
