@@ -828,3 +828,14 @@ tsc 0/0, persistance après relance serveur.
 - **Tests** (test-phaseH-pets.ts) 6/6: refus loin écurie (6 720 m), achat
   1M débité, invocation lv 1, loup attaque (7 attaques sur Bunwang 45),
   croissance lv 2, monture ×1.67.
+
+### AUDIO PAR ZONE (playlist officielle Music.pk2) — 2026-10-02 (phase H)
+- **GameAudio**: playlist par position — jangan/donwhang/centralasia _town
+  dans les villes (<450 m du centre), *_field en zone sauvage (bandes
+  rectangulaires par région), karakoram au-delà d'Hotan. Changement de
+  piste throttlé 3 s, reprise onglet visible. 47 pistes officielles
+  disponibles (3 continents + donjons + login).
+- **Fix test**: combat-flow respawn vérifié par RE-SNAPSHOT (le packet du
+  respawn part du camp, pas de la position du mob tué — AOI flaky).
+- **Régressions complètes**: A 9/9, B, combat-flow, 4, 5, 6, jobs, stalls,
+  fortress, donjons, pets — TOUT PASSÉ.

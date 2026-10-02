@@ -274,6 +274,12 @@ async function init(): Promise<void> {
 
     // Audio de zone (phase 7): musique de Jangan en boucle + touche M (couper)
     gameAudio.startZoneMusic();
+    // Playlist par zone (V2 phase H): la piste suit la position serveur
+    window.setInterval(() => {
+      const nc = (window as unknown as { netCombat?: { playerState?: { position?: { x: number; z: number } } } }).netCombat;
+      const pos = nc?.playerState?.position;
+      if (pos) gameAudio.updateZoneMusic(pos.x, pos.z);
+    }, 3000);
     (window as unknown as { gameAudio: typeof gameAudio }).gameAudio = gameAudio; // observabilité/test
     window.addEventListener('keydown', (e) => {
       if (e.key === 'm' || e.key === 'M') {

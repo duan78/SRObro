@@ -137,11 +137,18 @@ async function main(): Promise<void> {
   // (skill testé en 1b, avant la mort de la cible)
 
   // 4. Respawn du mob: le slot libéré par le kill doit se repeupler
-  // (respawnTime anneau 20 s — fenêtre 40 s)
-  const spawnCountBefore = spawnCountPreKill ?? (received.spawn ?? []).length;
-  await wait(40000);
-  check('Respawn de monstre', (received.spawn ?? []).length > spawnCountBefore,
-    `${spawnCountBefore} → ${(received.spawn ?? []).length}`);
+  // (respawnTime anneau 20 s). Vérification par RE-SNAPSHOT (le packet
+  // spawn du respawn part de la position du CAMP: selon la patrouille du
+  // mob tué, il peut sortir de l'AOI du joueur — le monde reste peuplé).
+  await wait(30000);
+  const resnap: any[] = [];
+  const h2 = (d: any) => { const m = d.data ?? d; if (m.entityType === 'monster') resnap.push(m); };
+  socket.on('spawn', h2);
+  socket.emit('world:snapshot', {});
+  await wait(3000);
+  socket.off('spawn', h2);
+  check('Respawn de monstre (camp repeuplé après re-snapshot)', resnap.length > 0,
+    `${resnap.length} monstres vivants autour`);
 
   // 5. Mort du joueur: GM-spawn des Bandits (MOB_CH_BANDIT lv16, agressifs —
   // les mobs tutoriels officiels sont passifs) autour du perso et attendre

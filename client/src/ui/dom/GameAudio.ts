@@ -1,36 +1,83 @@
 // ============================================
-// SRObro - Audio (phase 7)
-// Musique de zone (Music/jangan_town.ogg, boucle) + SFX combat (wav du
-// client officiel: coups d'épée, mort de monstre). Léger: <audio> pour la
-// musique, pool de clones pour les SFX courts. Autoplay toléré: le joueur
-// a interagi avec l'écran d'auth avant l'entrée en jeu.
+// SRObro - Audio (phase 7 + V2 phase H: playlist par zone)
+// Musique de zone OFFICIELLE (Music.pk2 → /assets/audio/Music/): la piste
+// suit la position du joueur (villes et zones sauvages des 3 continents),
+// boucle + crossfade léger. SFX combat (wav du client officiel).
 // ============================================
 
-const MUSIC_URL = '/assets/audio/Music/jangan_town.ogg';
+const MUSIC_BASE = '/assets/audio/Music';
 const SND_BASE = '/assets/audio/Data/prim/snd';
+
+/** Zone musicale par position monde (KB 13: plages des régions).
+ *  Chaque ville a town+field; les zones sauvages prennent le field de la
+ *  région la plus proche. */
+interface ZoneMusic { minX: number; maxX: number; minZ: number; maxZ: number; town: string; field: string }
+
+const ZONE_MUSIC: ZoneMusic[] = [
+  // Jangan (engine 0,510) et plaines de Chine
+  { minX: -1300, maxX: 1300, minZ: -800, maxZ: 2000, town: 'jangan_town.ogg', field: 'jangan_field.ogg' },
+  // Donwhang (−2908, 1523) et Chine de l'ouest
+  { minX: -4600, maxX: -1300, minZ: 300, maxZ: 3200, town: 'donwhang_town.ogg', field: 'donwhang_field.ogg' },
+  // Hotan (−6347, −541) et Oasis Kingdom
+  { minX: -9500, maxX: -4600, minZ: -2600, maxZ: 300, town: 'centralasia_town.ogg', field: 'hotan_field.ogg' },
+  // Karakoram / Taklamakan (au-delà d'Hotan, vers l'ouest)
+  { minX: -14000, maxX: -9500, minZ: -4000, maxZ: 4000, town: 'centralasia_town.ogg', field: 'karakoram_field.ogg' },
+];
+
+/** Piste pour une position: town si <450 m d'un centre-ville, sinon field. */
+export function trackForPosition(x: number, z: number): string {
+  const TOWNS: Array<{ x: number; z: number; town: string }> = [
+    { x: 0, z: 510, town: 'jangan_town.ogg' },
+    { x: -2908, z: 1523, town: 'donwhang_town.ogg' },
+    { x: -6347, z: -541, town: 'centralasia_town.ogg' },
+  ];
+  for (const t of TOWNS) {
+    if (Math.hypot(t.x - x, t.z - z) < 450) return t.town;
+  }
+  const zone = ZONE_MUSIC.find((z2) => x >= z2.minX && x <= z2.maxX && z >= z2.minZ && z <= z2.maxZ);
+  return zone?.field ?? 'jangan_field.ogg';
+}
 
 export class GameAudio {
   private music: HTMLAudioElement | null = null;
+  private currentTrack = '';
   private musicOn = false;
   private sfxOn = true;
   private pool = new Map<string, HTMLAudioElement[]>();
   private lastPlayed = new Map<string, number>();
+  private lastZoneCheck = 0;
 
-  /** Démarre la musique de ville (appelé à l'entrée en jeu). */
-  startZoneMusic(): void {
-    if (this.music) return;
-    const a = new Audio(MUSIC_URL);
-    a.loop = true;
-    a.volume = 0.35;
-    a.play().then(() => { this.musicOn = true; }).catch(() => {
-      // Autoplay bloqué: un geste utilisateur débloquera au prochain SFX
-      this.musicOn = false;
-    });
+  /** Démarre la musique (piste de la position courante). */
+  startZoneMusic(x = 0, z = 510): void {
+    this.playTrack(trackForPosition(x, z));
     // Certains navigateurs coupent après une pause ONGLET: reprise au retour
     document.addEventListener('visibilitychange', () => {
       if (!document.hidden && this.musicOn && this.music) void this.music.play().catch(() => {});
     });
+  }
+
+  /** Tick: change de piste quand le joueur change de zone (throttle 3 s). */
+  updateZoneMusic(x: number, z: number): void {
+    const now = performance.now();
+    if (now - this.lastZoneCheck < 3000) return;
+    this.lastZoneCheck = now;
+    const track = trackForPosition(x, z);
+    if (track !== this.currentTrack) this.playTrack(track);
+  }
+
+  private playTrack(track: string): void {
+    if (this.music) {
+      this.music.pause();
+      this.music.src = '';
+    }
+    const a = new Audio(`${MUSIC_BASE}/${track}`);
+    a.loop = true;
+    a.volume = 0.35;
+    a.play().then(() => { this.musicOn = true; }).catch(() => {
+      this.musicOn = false; // autoplay bloqué: un geste débloquera au SFX
+    });
     this.music = a;
+    this.currentTrack = track;
   }
 
   toggleMusic(): boolean {
@@ -42,6 +89,7 @@ export class GameAudio {
   }
 
   isMusicOn(): boolean { return this.musicOn; }
+  getCurrentTrack(): string { return this.currentTrack; }
   isSfxOn(): boolean { return this.sfxOn; }
 
   toggleSfx(): boolean {
