@@ -177,6 +177,13 @@ async function init(): Promise<void> {
       });
       network.onRaw('imbue:activated', (d: any) =>
         hud.addChatMessage(`✨ Imbue active: ${d?.name ?? ''}`, 'system'));
+      // Guilde (Phase F): invitation reçue → notification + acceptation directe
+      network.onRaw('guild:invited', (d: any) => {
+        hud.addChatMessage(`🛡️ Invitation de guilde: ${d?.guildName ?? '?'} — auto-acceptation...`, 'system');
+        if (d?.guildId) void network.request('guild:accept_invite', { guildId: d.guildId })
+          .then((r: any) => hud.addChatMessage(r?.success ? `Guilde rejointe: ${d.guildName}` : (r?.error ?? 'Refus'), 'system'))
+          .catch(() => undefined);
+      });
     }
 
     // Inventaire + boutique (phase 3): I = inventaire, B = marchand de Jangan

@@ -73,6 +73,18 @@ export class GameServer {
 
     // Initialize singleton managers
     this.guildManager = GuildManager.getInstance();
+    // Guildes (Phase F V2): livrer les invitations au client cible —
+    // l'event GuildManager n'avait AUCUN listener (audit modules)
+    this.guildManager.on('guildInvitation', (ev: unknown) => {
+      const e = ev as { targetCharacterId: string; guildId: string; guildName?: string; inviterId: string };
+      this.worldManager?.emit('sendToClient', {
+        playerId: e.targetCharacterId,
+        event: 'guild:invited',
+        data: { guildId: e.guildId, guildName: e.guildName, inviterId: e.inviterId },
+      });
+      logger.info(`Invitation de guilde livrée: ${e.guildName} → ${e.targetCharacterId}`);
+    });
+
     this.questManager = QuestManager.getInstance();
     this.fortressManager = FortressManager.getInstance();
     this.mountManager = MountManager.getInstance();

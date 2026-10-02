@@ -720,3 +720,21 @@ tsc 0/0, persistance après relance serveur.
 - **Tests** (test-phaseE.ts): A tue B → annonce PvP, PKStatus, B avait
   attaqué en premier → +0 pt (légitime défense officielle). Régressions
   A/combat au vert.
+
+### PHASE F (guildes bout-en-bout) — 2026-10-02
+- **Invitations LIVRÉES**: l'event guildInvitation de GuildManager (aucun
+  listener — audit) est relayé vers le client cible (packet guild:invited),
+  notification + acceptation client.
+- **3 corrections**: sérialisation BigInt des payloads guilde (récursif),
+  usage du bon event guild:accept_invite côté client, coût/niveau officiels
+  vérifiés en test (500k or, niveau 20+ — KB 17_GUILD_SYSTEM).
+- **Tests** (test-phaseF.ts): création 500k, invitation reçue par la CIBLE,
+  acceptation → GuildMember en base. NB: deux commandes GM consécutives
+  (= deux saves concurrents) se marchent dessus — sérialiser dans les tests.
+
+### Backlog restant (phases G/H + modules)
+- Jobs (triangle trade): module à réécrire partiellement (bug clés étoiles)
+  + spawn monde des transports — données KB 09-12/35 prêtes.
+- Stalls: bugs transaction (slot vendeur) à corriger + UI.
+- Fortress War: gameplay de siège réel (le scheduler existe).
+- FGW/Qin-Shi (donjons), pets/mounts monde, playlist audio par zone.

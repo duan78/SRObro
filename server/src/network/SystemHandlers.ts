@@ -129,7 +129,10 @@ export class SystemHandlers {
         leaderAccountId: session.accountId ?? session.characterId,
         leaderCharacterId: session.characterId
       });
-      socket.emit('guild:created', guild);
+      // Sanitiser TOUS les BigInt (récursif) — sinon la sérialisation échoue
+      const safeGuild = JSON.parse(JSON.stringify(guild, (_k, v: unknown) =>
+        typeof v === 'bigint' ? Number(v) : v));
+      socket.emit('guild:created', safeGuild);
       logger.info(`Guild created: ${name} by ${session.characterId}`);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
