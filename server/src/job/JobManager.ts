@@ -680,17 +680,49 @@ export class JobManager {
   /**
    * Get profit multiplier for trade route
    */
+  /**
+   * Fluctuation du marché (phase E V3): les prix de vente varient par
+   * destination et par fenêtre de 10 min (±15% autour du multiplicateur de
+   * route officiel — le 162% de référence reste la moyenne). Cache statique
+   * pour que tous les joueurs voient le MÊME prix (marché partagé).
+   */
+  private static marketCache: { at: number; factors: Record<string, number> } = { at: 0, factors: {} };
+  private static readonly MARKET_WINDOW_MS = 10 * 60 * 1000;
+  private static readonly MARKET_AMPLITUDE = 0.15;
+
+  private marketFactor(destinationZone: string): number {
+    const now = Date.now();
+    if (now - JobManager.marketCache.at > JobManager.MARKET_WINDOW_MS) {
+      const zones = ['zone_jangan', 'zone_donwhang', 'zone_hotan',
+        'zone_constantinople', 'zone_samarkand', 'zone_alexandria'];
+      const factors: Record<string, number> = {};
+      for (const z of zones) {
+        // hash déterministe (fenêtre, zone) → dérive bornée [−15%, +15%]
+        const seed = Math.floor(now / JobManager.MARKET_WINDOW_MS) * 131 + z.length * 17 + z.charCodeAt(5) * 7;
+        factors[z] = 1 + Math.max(-JobManager.MARKET_AMPLITUDE, Math.min(JobManager.MARKET_AMPLITUDE,
+          ((seed % 1000) / 1000 - 0.5) * 2 * JobManager.MARKET_AMPLITUDE));
+      }
+      JobManager.marketCache = { at: now, factors };
+    }
+    return JobManager.marketCache.factors[destinationZone] ?? 1;
+  }
+
   private getProfitMultiplier(sourceZone: string, destinationZone: string): number {
     // Different routes have different profit multipliers
     // KB 10_TRADER_GUIDE: 162% mesuré Jangan→Donwhang (iSRO 2006);
     // autres routes [APPROX] croissantes avec la distance
     const routes: Record<string, Record<string, number>> = {
-      'zone_jangan': { 'zone_donwhang': 1.62, 'zone_hotan': 2.0 },
-      'zone_donwhang': { 'zone_jangan': 1.5, 'zone_hotan': 1.8 },
-      'zone_hotan': { 'zone_jangan': 2.2, 'zone_donwhang': 1.9 },
+      'zone_jangan': { 'zone_donwhang': 1.62, 'zone_hotan': 2.0, 'zone_samarkand': 2.1, 'zone_constantinople': 2.4, 'zone_alexandria': 2.8 },
+      'zone_donwhang': { 'zone_jangan': 1.5, 'zone_hotan': 1.8, 'zone_samarkand': 1.9, 'zone_constantinople': 2.2, 'zone_alexandria': 2.6 },
+      'zone_hotan': { 'zone_jangan': 2.2, 'zone_donwhang': 1.9, 'zone_samarkand': 1.7, 'zone_constantinople': 2.0, 'zone_alexandria': 2.3 },
+      'zone_constantinople': { 'zone_jangan': 2.4, 'zone_donwhang': 2.2, 'zone_hotan': 2.0, 'zone_samarkand': 1.8, 'zone_alexandria': 2.5 },
+      'zone_samarkand': { 'zone_jangan': 2.1, 'zone_donwhang': 1.9, 'zone_hotan': 1.7, 'zone_constantinople': 1.8, 'zone_alexandria': 2.2 },
+      'zone_alexandria': { 'zone_jangan': 2.8, 'zone_donwhang': 2.6, 'zone_hotan': 2.3, 'zone_constantinople': 2.5, 'zone_samarkand': 2.2 },
     };
 
-    return routes[sourceZone]?.[destinationZone] || 1.0;
+    const base = routes[sourceZone]?.[destinationZone] || 1.0;
+    // Phase E V3: fluctuation du marché par fenêtre de 10 min (±15%)
+    return Math.round(base * this.marketFactor(destinationZone) * 1000) / 1000;
   }
 
   /**

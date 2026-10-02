@@ -1,5 +1,27 @@
 # Avancement du Projet SRObro
 
+## Session du 2 Octobre 2026 (22): PHASE E V3 — VIE DU MONDE
+
+**Ferry maritime officiel** (FerryManager): port de Gale → Marwa
+(Alexandrie), embarquement 20 000 or [APPROX] à proximité, traversée
+20 s avec **EVENT PIRATES à mi-course** (MOB_GOD_GHOST_PIRATE_A1/B1,
+pirates officiels lv 92/102 des données vSRO), arrivée téléportée à
+Marwa; handler ferry:board + tick serveur.
+
+**Fluctuation du marché**: multiplicateurs de route étendus aux 7 zones
+(Jangan↔Alexandria 2.8 etc. [APPROX distance]) × facteur de marché par
+fenêtre de 10 min (±15%, déterministe par fenêtre — tous les joueurs
+voient le même prix; le 162% KB reste la moyenne Jangan→Donwhang).
+
+**FW Eastern Europe** (KB 19/CITIES_05): FORTRESS_CONFIG.easternEurope
+(vendredi 20h, 120 min, taxes ±20%) + ligne forteresse en base + mapping
+zone_constantinople → même moteur (inscription, siège au score, taxes).
+
+**test-phaseE-world.ts 9/9**: forteresse EE en base + config + zone mappée,
+ferry refusé loin/accepté à Gale/payé, pirates annoncés, arrivée Marwa
+exacte (−4222/−41929), marché borné ±15% et fluctuant entre fenêtres.
+tsc 0.
+
 ## Session du 2 Octobre 2026 (21): PHASE D V3 — SOCIAL COMPLET
 
 **Canaux chat** (ChatChannels.ts + WorldManager): party/guild/union routés

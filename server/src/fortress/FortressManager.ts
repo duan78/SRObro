@@ -54,6 +54,21 @@ export const FORTRESS_CONFIG = {
     },
     registrationDay: 'Saturday',
     registrationHour: 18
+  },
+  // Phase E V3 (KB 19 + CITIES_05): Eastern Europe Fortress — même moteur,
+  // entrée de guilde, siège au score, taxes sur la zone Constantinople.
+  easternEurope: {
+    name: 'Eastern Europe Fortress',
+    level: 3,
+    maxGuilds: 5,
+    duration: 120,
+    taxRange: [-20, 20],
+    rewards: {
+      dailyGold: 5000000n,
+      exp: 500000n
+    },
+    registrationDay: 'Friday',
+    registrationHour: 20
   }
 };
 
@@ -360,6 +375,7 @@ export class FortressManager extends EventEmitter {
     [FORTRESS_CONFIG.jangan.name]: 'zone_jangan',
     [FORTRESS_CONFIG.hotan.name]: 'zone_hotan',
     [FORTRESS_CONFIG.bandit.name]: 'zone_donwhang',
+    [FORTRESS_CONFIG.easternEurope.name]: 'zone_constantinople',
   };
 
   /** Taxe applicable dans une zone (null si pas de forteresse occupée). */

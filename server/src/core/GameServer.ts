@@ -258,6 +258,41 @@ export class GameServer {
 
       // Party (Phase F V2 — KB 18: Each Get 4 / Auto Share 8, bonus +3%/membre)
       // Matching window (phase D V3, KB 18 Four Square): recherche par niveau
+      // Ferry maritime officiel (phase E V3, KB): Gale → Marwa + pirates
+      socket.on('ferry:board', (_d: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { globalFerryManager, FERRY } = await import('../game/FerryManager.js');
+            if (!globalFerryManager.atGale(player.position)) {
+              ack?.({ success: false, error: 'Rendez-vous au port de Gale pour embarquer' });
+              return;
+            }
+            if (player.gold < FERRY.cost) { ack?.({ success: false, error: FERRY.cost.toLocaleString('fr') + ' or requis' }); return; }
+            player.addGold(-FERRY.cost);
+            const c = globalFerryManager.board(characterId);
+            this.combatBridge?.sendToPlayerRaw(characterId, 'chat', {
+              message: '⛵ Le ferry quitte Gale... traversée ' + c.crossingSec + ' s vers Alexandrie',
+              channel: 'system',
+            });
+            // Arrivée programmée: débarquement à Marwa
+            setTimeout(() => {
+              const dest = globalFerryManager.arrival();
+              player.setPosition({ x: dest.x, y: 0, z: dest.z });
+              this.combatBridge?.teleportPlayer(characterId, dest);
+              this.combatBridge?.sendToPlayerRaw(characterId, 'chat', {
+                message: '⚓ Arrivée à Alexandrie (Marwa) !',
+                channel: 'system',
+              });
+            }, c.crossingSec * 1000).unref?.();
+            ack?.({ success: true, crossingSec: c.crossingSec, cost: c.cost });
+          } catch (e) { ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' }); }
+        })();
+      });
+
       socket.on('party:seek', (_d: unknown, ack?: (r: unknown) => void) => {
         void (async () => {
           try {
@@ -947,6 +982,11 @@ export class GameServer {
 
       // Update all active casts
       this.castingManager.updateAllActiveCasts();
+
+      // Ferry maritime (phase E V3): évènements de traversée
+      void import('../game/FerryManager.js').then(({ globalFerryManager }) =>
+        globalFerryManager.tick((cid, msg) => this.combatBridge?.sendToPlayerRaw(cid, 'chat', { message: msg, channel: 'system' }))
+      ).catch(() => undefined);
     } catch (error) {
       logger.error('Game tick error:', error);
     }
