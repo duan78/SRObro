@@ -13,6 +13,7 @@ import { AnimationService } from '../animation/BanAnimationService';
 import { DamageNumberManager, DamageType } from '../combat/DamageNumberManager';
 import { SkillEffectManager } from '../effects/SkillEffectManager';
 import { gameAudio } from '../ui/dom/GameAudio';
+import { iconUrl } from '../ui/dom/iconUrl';
 import type { JanganZone } from '../zones/jangan/JanganZone';
 
 interface ServerMonster {
@@ -45,6 +46,7 @@ interface HotbarSkill {
   key: string;
   mpCost: number;
   cooldownMs: number;
+  icon?: string;
 }
 // Hotbar de DÉMARRAGE (CH) — remplacée dynamiquement par les skills appris
 // (skills:available, Phase C) dès la connexion: touches 1-8.
@@ -997,7 +999,7 @@ export class NetworkCombat {
       const res = await this.network.request<{
         success: boolean; series?: Array<{
           code: string; name: string; masteryKey: string;
-          levels: Array<{ code: string; name: string; learned: boolean; attKind: number; mpCost: number; cooldownMs: number }>;
+          levels: Array<{ code: string; name: string; learned: boolean; attKind: number; mpCost: number; cooldownMs: number; icon?: string }>;
         }>;
       }>('skills:available');
       if (!res.success || !res.series) return;
@@ -1006,7 +1008,11 @@ export class NetworkCombat {
       for (const s of res.series) {
         const lvl = [...s.levels].reverse().find((l) => l.learned);
         if (!lvl) continue;
-        withKind.push({ code: lvl.code, label: s.name, key: '', mpCost: lvl.mpCost, cooldownMs: lvl.cooldownMs, kind: lvl.attKind });
+        withKind.push({
+          code: lvl.code, label: s.name, key: '', mpCost: lvl.mpCost,
+          cooldownMs: lvl.cooldownMs, kind: lvl.attKind,
+          icon: iconUrl(lvl.icon) ?? undefined,
+        });
       }
       withKind.sort((a, b) => order(a.kind) - order(b.kind));
       this.hotbar = withKind.slice(0, 8).map((h, i) => ({ ...h, key: String(i + 1) }));

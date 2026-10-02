@@ -5,6 +5,23 @@
  */
 
 import type { NetworkManager } from '../../network/NetworkManager';
+import { iconUrl, DEFAULT_ICON } from './iconUrl';
+
+/** Icône officielle de maîtrise (bicheon→sword, fire…, warrior→eu_warrior…). */
+function masteryIconUrl(masteryKey: string): string | null {
+  const CH: Record<string, string> = {
+    bicheon: 'sword', heuksal: 'spear', pacheon: 'bow',
+    fire: 'fire', cold: 'cold', lightning: 'lightning', force: 'gigong',
+  };
+  const EU: Record<string, string> = {
+    warrior: 'warrior', rogue: 'rog', wizard: 'wizard',
+    warlock: 'warlock', cleric: 'cleric', bard: 'bard',
+  };
+  const base = CH[masteryKey] ? `/assets/icons/skillmastery/china/mastery_${CH[masteryKey]}.png`
+    : EU[masteryKey] ? `/assets/icons/skillmastery/europe/eu_${EU[masteryKey]}.png`
+    : null;
+  return base;
+}
 
 interface SkillLevel {
   code: string;
@@ -20,6 +37,7 @@ interface SkillLevel {
   attMax: number;
   learned: boolean;
   masteryLevel: number;
+  icon?: string;
 }
 
 interface SeriesInfo {
@@ -115,7 +133,7 @@ export class SkillPanel {
       const spEl = this.root.querySelector('#skill-sp') as HTMLElement;
       spEl.textContent = `SP disponibles: ${this.sp.toLocaleString('fr')} — monter les maîtrises: console admin ou quêtes (gap farming officiel)`;
 
-      // Onglets par maîtrise (avec niveau entraîné)
+      // Onglets par maîtrise (avec niveau entraîné + icône officielle)
       const masteryLevels = new Map(res.masteries ?? []);
       const masteries = [...new Set(this.series.map((s) => s.masteryKey))];
       if (!this.activeMastery || !masteries.includes(this.activeMastery)) {
@@ -128,7 +146,10 @@ export class SkillPanel {
         tab.className = 'sk-tab' + (m === this.activeMastery ? ' active' : '');
         const label = this.series.find((s) => s.masteryKey === m)?.masteryLabel ?? m;
         const lv = masteryLevels.get(m) ?? 0;
-        tab.textContent = `${label}${lv ? ` (${lv})` : ''}`;
+        const icon = masteryIconUrl(m);
+        tab.innerHTML =
+          (icon ? `<img src="${icon}" style="width:22px;height:22px;object-fit:contain;" onerror="this.style.display='none'">` : '') +
+          `<span>${label}${lv ? ` (${lv})` : ''}</span>`;
         tab.addEventListener('click', () => { this.activeMastery = m; void this.refresh(); });
         tabs.appendChild(tab);
       }
@@ -141,7 +162,12 @@ export class SkillPanel {
         const row = document.createElement('div');
         row.className = 'sk-series';
         const kind = s.levels[0]?.attKind ?? 5;
-        row.innerHTML = `<span class="sk-series-name">${s.name}</span><span class="sk-kind">${KIND_LABEL[kind] ?? ''}</span>`;
+        // Icône officielle de la série (icône du plus haut niveau)
+        const topLvl = [...s.levels].reverse().find((l) => l.icon) ?? s.levels.find((l) => l.icon);
+        const sIcon = iconUrl(topLvl?.icon as string | undefined) ?? DEFAULT_ICON;
+        row.innerHTML =
+          `<img src="${sIcon}" style="width:34px;height:34px;object-fit:contain;flex:none" onerror="this.src='${DEFAULT_ICON}'">` +
+          `<span class="sk-series-name">${s.name}</span><span class="sk-kind">${KIND_LABEL[kind] ?? ''}</span>`;
         const lvRow = document.createElement('div');
         lvRow.className = 'sk-levels';
         for (const lvl of s.levels) {
