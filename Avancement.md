@@ -691,3 +691,18 @@ tsc 0/0, persistance après relance serveur.
 - **Tests**: test-phaseC.ts TOUT PASSÉ (arbre, refus, learn SP décrémentés,
   cast gating, dégâts officiels, orbes 15 kills→5, zerk ×2). Régressions
   complètes A/B/combat/4/5/6 au vert.
+
+### PHASE D (alchimie officielle) — 2026-10-02
+- **Taux RÉELS DB vSRO** dans ProbabilityCalculator (extraction 2026-10,
+  validée SroCave): élixir seul 50/40/30/19/17/12..., Lucky Powder ADDITIF
+  +50/30/20/8 (→ 100/70/50/27/25/20), échec ≤+4 = reset +0, échec ≥+5 =
+  50% destruction (Immortal/protector annulent). Fin des taux inventés du
+  MVP (100% jusqu'à +5, ×1.5 critique — supprimés).
+- **Consommation des matériaux**: 1 élixir du type (noms coréens officiels
+  무기강화주문서/엘릭시르...) + 1 pierre de chance (행운의 연금석, substitut
+  documenté du Lucky Powder absent de l'import) — refus si manquants.
+- **Handler alchemy:enhance** (slot + usePowder) + Alt+clic équipement dans
+  l'InventoryPanel (toast résultat: +N/échec/💥 destruction).
+- **Tests** (test-phaseD.ts): +0→+1 pierre = 100% (mesuré finalSuccessRate
+  1.0 = 50+50 ✓), élixir décrémenté, +2→+3 pierre ≈50% (15/40, n≥30),
+  resets +0 observés (39). Régressions A/combat/4 au vert.

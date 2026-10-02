@@ -23,8 +23,8 @@ export interface AlchemyAttemptResult {
 
 export interface AlchemyOptions {
   luckyPowder?: LuckyPowderGrade;
-  protector?: boolean;  // Tablet/Stone
-  elixirType: ElixirType;
+  protector?: boolean;  // Tablet/Stone (Immortal/Steady)
+  elixirType?: ElixirType;
 }
 
 /**
@@ -84,22 +84,14 @@ export class AlchemyManager {
     // Determine elixir type from item type if not specified
     const elixirType = this.determineElixirType(inventoryItem.item.type, options.elixirType);
 
-    // Calculate probability
-    const probability = ProbabilityCalculator.calculate(
-      currentPlus,
-      targetPlus,
-      elixirType,
-      options.luckyPowder || null
-    );
+    // Consommation des matériaux (officiel: 1 élixir du type + 1 pierre de
+    // chance si powder — identifiés par nom coréen du client officiel)
+    await this.consumeMaterials(characterId, elixirType, !!options.luckyPowder);
 
-    // Roll for success
-    const roll = ProbabilityCalculator.roll(
-      currentPlus,
-      targetPlus,
-      elixirType,
-      options.luckyPowder || null,
-      options.protector || false
-    );
+    // Taux officiels DB vSRO (2026-10) — powder = flag booléen
+    const usePowder = !!options.luckyPowder;
+    const probability = ProbabilityCalculator.calculate(currentPlus, targetPlus, elixirType, usePowder);
+    const roll = ProbabilityCalculator.roll(currentPlus, targetPlus, elixirType, usePowder, options.protector || false);
 
     // Create alchemy attempt record
     const attempt = await this.prisma.alchemyAttempt.create({
@@ -108,7 +100,7 @@ export class AlchemyManager {
         characterId,
         targetPlus,
         result: roll.destroyed ? 'destroyed' : (roll.success ? 'success' : 'fail'),
-        wasCritical: roll.critical,
+        wasCritical: false, // pas de critique dans les données officielles
         wasDestroyed: roll.destroyed,
         usedLuckyPowder: options.luckyPowder || null,
         usedElixir: elixirType,
@@ -134,13 +126,55 @@ export class AlchemyManager {
 
     return {
       success: roll.success,
-      critical: roll.critical,
+      critical: false,
       destroyed: roll.destroyed,
       oldPlus: currentPlus,
       newPlus: roll.destroyed ? 0 : roll.newPlus,
-      probability,
+      probability: { ...probability, criticalRate: 0 },
       attemptId: attempt.id
     };
+  }
+
+  /**
+   * Consomme 1 élixir du type + (option) 1 pierre de chance de l'inventaire.
+   * Noms coréens officiels du client (extraction items.json):
+   *   무기강화주문서(소)/강화 엘릭시르(무기) = élixir d'arme, 행운의 연금석
+   *   = pierre de chance (substitut Lucky Powder, non présent dans l'import).
+   */
+  private async consumeMaterials(characterId: string, elixirType: ElixirType, usePowder: boolean): Promise<void> {
+    const namePatterns: Record<ElixirType, string[]> = {
+      weapon: ['무기강화주문서', '엘릭시르(무기)'],
+      armor: ['방어구강화주문서', '엘릭시르(방어구)'],
+      shield: ['방패강화주문서', '엘릭시르(방패)'],
+      accessory: ['악세강화주문서', '엘릭시르(장신구)'],
+    };
+    const needed: Array<{ patterns: string[]; label: string }> = [
+      { patterns: namePatterns[elixirType], label: `Élixir (${elixirType})` },
+    ];
+    if (usePowder) needed.push({ patterns: ['행운의 연금석'], label: 'Pierre de chance' });
+
+    for (const mat of needed) {
+      const rows = await this.prisma.inventoryItem.findMany({
+        where: {
+          characterId,
+          quantity: { gte: 1 },
+          item: { OR: mat.patterns.map((p) => ({ name: { contains: p } })) },
+        },
+        orderBy: { quantity: 'desc' },
+      });
+      const row = rows[0];
+      if (!row) {
+        throw new Error(`${mat.label} requis (introuvable dans l'inventaire)`);
+      }
+      if (row.quantity <= 1) {
+        await this.prisma.inventoryItem.delete({ where: { id: row.id } });
+      } else {
+        await this.prisma.inventoryItem.update({
+          where: { id: row.id },
+          data: { quantity: { decrement: 1 } },
+        });
+      }
+    }
   }
 
   /**
@@ -246,12 +280,7 @@ export class AlchemyManager {
       throw new Error('Already at maximum + level');
     }
 
-    return ProbabilityCalculator.getProbabilityDisplay(
-      currentPlus,
-      targetPlus,
-      elixirType,
-      luckyPowder || null
-    );
+    return ProbabilityCalculator.calculate(currentPlus, targetPlus, elixirType, !!luckyPowder);
   }
 
   /**

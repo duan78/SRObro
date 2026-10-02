@@ -283,6 +283,40 @@ export class GameServer {
         }
       });
 
+      // ===== PHASE D: alchimie officielle (taux DB vSRO) =====
+      socket.on('alchemy:enhance', (data: unknown, ack?: (r: unknown) => void) => {
+        try {
+          const client = this.clientManager?.getClient(socket.id);
+          const characterId = client?.getCharacterId() ?? null;
+          const slot = Number((data as { slot?: number })?.slot ?? -1);
+          const usePowder = !!(data as { usePowder?: boolean })?.usePowder;
+          if (!characterId || slot < 0) {
+            ack?.({ success: false, error: 'Requête invalide' });
+            return;
+          }
+          void (async () => {
+            try {
+              // Slot → InventoryItem (l'inventaire est adressé par slot)
+              const inv = await prisma.inventoryItem.findFirst({
+                where: { characterId, slot },
+              });
+              if (!inv) { ack?.({ success: false, error: 'Slot vide' }); return; }
+              const { AlchemyManager } = await import('../alchemy/AlchemyManager.js');
+              const mgr = new AlchemyManager(prisma);
+              const result = await mgr.enhanceItem(inv.id, characterId, {
+                luckyPowder: usePowder ? ('A' as never) : undefined,
+              });
+              ack?.({ success: true, ...result });
+            } catch (e) {
+              ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur alchimie' });
+            }
+          })();
+        } catch (error) {
+          logger.error('alchemy:enhance error:', error);
+          ack?.({ success: false, error: 'Erreur serveur' });
+        }
+      });
+
       // ===== PHASE C: skills officiels (apprentissage + arbre) =====
       // Arbre des skills disponibles pour le perso (données officielles)
       socket.on('skills:available', (_d: unknown, ack?: (r: unknown) => void) => {

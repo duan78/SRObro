@@ -133,7 +133,13 @@ export class InventoryPanel {
           }
           cell.addEventListener('mousemove', (e) => this.showTooltip(e, data));
           cell.addEventListener('mouseleave', () => this.hideTooltip());
-          cell.addEventListener('click', (e) => this.onSlotClick(data, e.shiftKey));
+          cell.addEventListener('click', (e) => {
+            if (e.altKey && ['weapon','shield','helmet','chest','shoulder','legs','boots','ring','necklace','earring'].includes(data.item.type)) {
+              void this.enhanceItem(data.slot, true); // Alt+clic: alchimie (+pierre de chance)
+              return;
+            }
+            this.onSlotClick(data, e.shiftKey);
+          });
         }
         grid.appendChild(cell);
       }
@@ -206,6 +212,30 @@ export class InventoryPanel {
       if (!res.success) this.toast(res.error ?? 'Équipement impossible');
       this.refresh();
     }
+  }
+
+  /**
+   * Alchimie officielle (Phase D): renforce un item d'inventaire.
+   * Alt+clic sur un équipement → tente +1 (taux DB vSRO officiels).
+   */
+  async enhanceItem(slot: number, usePowder = true): Promise<void> {
+    const res = await this.network.request<{
+      success: boolean; error?: string;
+      newPlus?: number; oldPlus?: number; destroyed?: boolean;
+      probability?: { finalSuccessRate: number };
+    }>('alchemy:enhance', { slot, usePowder });
+    if (!res.success) {
+      this.toast(res.error ?? 'Alchimie impossible');
+      return;
+    }
+    if (res.destroyed) {
+      this.toast(`💥 +${res.oldPlus} → ITEM DÉTRUIT (échec critique officiel)`);
+    } else if ((res.newPlus ?? 0) > (res.oldPlus ?? 0)) {
+      this.toast(`✨ +${res.oldPlus} → +${res.newPlus} ! (${Math.round((res.probability?.finalSuccessRate ?? 0) * 100)}%)`);
+    } else {
+      this.toast(`Échec: +${res.oldPlus} → +${res.newPlus}`);
+    }
+    this.refresh();
   }
 
   private async unequip(slot: string): Promise<void> {
