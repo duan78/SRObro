@@ -798,6 +798,17 @@ export class Game {
   }
 
   /**
+   * Maillage du JOUEUR LOCAL (source de vérité). ⚠️ Ne JAMAIS chercher le
+   * joueur par nom de mesh « chinaman_* »: les PNJ et joueurs distants
+   * utilisent les mêmes modèles officiels (chinaman_adventurer___root__) —
+   * les handlers attrapaient un PNJ/joueur distant à la place du perso
+   * (PNJ « téléportés en l'air », attaques/tp appliqués au mauvais mesh).
+   */
+  getLocalPlayerMesh(): import('@babylonjs/core/Meshes/transformNode').TransformNode | null {
+    return this.characterManager?.player ?? null;
+  }
+
+  /**
    * Asset loader (pour les systèmes externes: NetworkCombat...)
    */
   getAssetLoader(): AssetLoader | null {

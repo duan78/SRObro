@@ -165,7 +165,7 @@ async function init(): Promise<void> {
     let netCombat: NetworkCombat | null = null;
     if (!singlePlayer && game.getScene() && game.getAssetLoader()) {
       game.legacyEntities = false; // NetworkCombat gère les entités réseau
-      netCombat = new NetworkCombat(game.getScene()!, network, game.getAssetLoader()!, hud, game.getJanganZone());
+      netCombat = new NetworkCombat(game.getScene()!, network, game.getAssetLoader()!, hud, game.getJanganZone(), () => game.getLocalPlayerMesh());
       netCombat.playerName = character?.name ?? 'Aventurier';
       netCombat.playerGender = character?.gender === 'female';
       network.rememberCharacter(character?.id ?? '');

@@ -115,18 +115,26 @@ export class NetworkCombat {
   private vfx: SkillEffectManager;
   private lastSkillCast: { label: string; code: string; at: number } | null = null;
 
+  /** Accès au mesh du JOUEUR LOCAL (source de vérité, jamais par nom). */
+  private getPlayerMesh: () => import('@babylonjs/core/Meshes/transformNode').TransformNode | null;
+
   constructor(
     scene: Scene,
     network: NetworkManager,
     assetLoader: AssetLoader,
     hud: DomHud,
     janganZone: JanganZone | null,
+    getPlayerMesh?: () => import('@babylonjs/core/Meshes/transformNode').TransformNode | null,
   ) {
     this.scene = scene;
     this.network = network;
     this.assetLoader = assetLoader;
     this.hud = hud;
     this.janganZone = janganZone;
+    // ⚠️ Ne pas chercher le joueur par nom « chinaman_* »: PNJ et joueurs
+    // distants partagent les mêmes modèles (chinaman_adventurer___root__) —
+    // les handlers téléportaient un PNJ à la place du perso.
+    this.getPlayerMesh = getPlayerMesh ?? (() => null);
     this.damageNumbers = new DamageNumberManager(scene);
     this.vfx = new SkillEffectManager(scene);
 
@@ -245,8 +253,7 @@ export class NetworkCombat {
         // Dégâts sur le joueur: réaction officielle (behardhit/benormalhit)
         // + nombre au-dessus du perso (hauteur SRO ~tête)
         this.playLocalOneShot(AnimationService.hitClip(!!d.isCritical || d.damage > 20, this.playerGender), 1.2);
-        const player = this.scene.getTransformNodeByName('player_root')
-          ?? (this.scene.meshes.find((mm) => mm.name.startsWith('chinaman_')));
+        const player = this.getPlayerMesh() ?? this.scene.getTransformNodeByName('player_root');
         const anchor = player ? player.getAbsolutePosition() : Vector3.Zero();
         this.damageNumbers.showDamage(d.damage, anchor.add(new Vector3(0, 17, 0)), d.isCritical ? DamageType.CRITICAL : DamageType.PHYSICAL);
       }
@@ -275,7 +282,7 @@ export class NetworkCombat {
       this.hideDeathScreen();
       // Téléporter le perso client à la position de résurrection (ville/ici)
       const d = data?.data ?? data;
-      const player = this.scene.meshes.find((m) => m.name.startsWith('chinaman_'));
+      const player = this.getPlayerMesh();
       if (player && d?.position) {
         const terrain = this.janganZone?.realTerrain;
         const y = terrain ? terrain.heightAt(d.position.x, d.position.z) : (d.position.y ?? 0);
@@ -340,19 +347,25 @@ export class NetworkCombat {
     // personnage local + rechargement des bâtiments autour du nouveau point
     this.network.onRaw('player:teleport', (d: any) => {
       const pos = d?.position ?? d;
-      const player = this.scene.meshes.find((m) => m.name.startsWith('chinaman_'));
+      const player = this.getPlayerMesh();
       if (player && pos) {
         const terrain = this.janganZone?.realTerrain;
         // Bloc de régions de la destination chargé AVANT le déplacement:
         // heightAt juste et sol visible dès l'arrivée (monde multi-continents).
         void (async () => {
-          if (terrain) await terrain.teleportTo(pos.x, pos.z);
+          try {
+            if (terrain) await terrain.teleportTo(pos.x, pos.z);
+          } catch {
+            // Un échec de streaming ne doit JAMAIS bloquer le déplacement
+            // (bug phase I: fetch région raté → exception avalée → le perso
+            // restait à l'ancienne position = rubber-band permanent).
+          }
           const y = terrain ? terrain.heightAt(pos.x, pos.z) : (pos.y ?? 0);
           const root = (player.parent ?? player) as { position: { set(x: number, y: number, z: number): void } };
           root.position.set(pos.x, y, pos.z);
           // Streaming-lite (Phase B): les bâtiments de la ville de destination
           // remplacent ceux de la ville d'origine (budget perf constant).
-          void this.janganZone?.worldObjectsPublic?.reload(pos.x, pos.z);
+          void this.janganZone?.worldObjectsPublic?.reload(pos.x, pos.z).catch(() => undefined);
         })();
       }
     });
@@ -415,7 +428,7 @@ export class NetworkCombat {
    * reprenne les anims d'état après un plus récent.
    */
   private playLocalOneShot(clipPath: string, speed = 1.0): void {
-    const playerMesh = this.scene.meshes.find((m) => m.name.startsWith('chinaman_') || m.name.startsWith('chinawoman_'));
+    const playerMesh = this.getPlayerMesh();
     if (!playerMesh) return;
     let root: any = playerMesh;
     while (root.parent) root = root.parent;
@@ -484,7 +497,7 @@ export class NetworkCombat {
       const loaded = await this.assetLoader.loadGameObject(stem);
       if (loaded?.root) {
         loaded.root.name = 'equipped_weapon';
-        const player = this.scene.meshes.find((m) => m.name.startsWith('chinaman_'));
+        const player = this.getPlayerMesh();
         if (player?.parent) {
           loaded.root.parent = player.parent as any;
           loaded.root.position.set(0.35, 1.0, 0.1);
@@ -888,7 +901,7 @@ export class NetworkCombat {
 
   /** Position d'ancrage du joueur local (poitrine) pour les VFX. */
   private playerAnchor(): Vector3 | null {
-    const player = this.scene.meshes.find((m) => m.name.startsWith('chinaman_'));
+    const player = this.getPlayerMesh();
     if (!player) return null;
     const root = (player.parent ?? player) as Mesh;
     return root.getAbsolutePosition().add(new Vector3(0, 11, 0));
@@ -1066,6 +1079,25 @@ export class NetworkCombat {
         if (restant >= 0 && m.animState !== wanted) {
           m.animState = wanted;
           this.switchMonsterAnim(m, wanted);
+        }
+      }
+
+      // Purge des FANTÔMES: un monstre sorti de l'AOI serveur (~150 m) sans
+      // packet despawn (téléport GM, respawn hors vue) reste sinon affiché
+      // pour toujours — cibler/attaquer un fantôme ne fait rien, ce qui
+      // paraît « cassé » en jeu. Ramassage toutes les 2 s.
+      const nowMs = performance.now();
+      if (nowMs - (this as any)._lastGhostPurge > 2000) {
+        (this as any)._lastGhostPurge = nowMs;
+        const playerMesh = this.getPlayerMesh();
+        const pr = playerMesh?.position;
+        if (pr) {
+          const ghosts: string[] = [];
+          for (const [id, m] of this.monsters) {
+            const d = Math.hypot(m.root.position.x - pr.x, m.root.position.z - pr.z);
+            if (d > 300) ghosts.push(id); // AOI serveur 150 m: >300 u = forcément un fantôme
+          }
+          for (const id of ghosts) this.despawnMonster(id);
         }
       }
     }

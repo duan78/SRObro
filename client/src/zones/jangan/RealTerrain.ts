@@ -82,9 +82,14 @@ export class RealTerrain {
     void this.streamTo(playerX, playerZ);
   }
 
-  /** Téléport lointain: bloc autour de la destination chargé AVANT de bouger. */
+  /** Téléport lointain: bloc autour de la destination chargé AVANT de bouger.
+   * Garde-fou 1,5 s: un serveur d'assets lent ne doit jamais retarder le
+   * déplacement du joueur (le reste arrive en streaming via update()). */
   async teleportTo(x: number, z: number): Promise<void> {
-    await this.streamTo(x, z);
+    await Promise.race([
+      this.streamTo(x, z).catch(() => undefined),
+      new Promise((r) => setTimeout(r, 1500)),
+    ]);
   }
 
   /**

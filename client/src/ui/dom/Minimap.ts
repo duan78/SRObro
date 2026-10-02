@@ -6,6 +6,10 @@
 // ============================================
 
 const TILE_URL = '/assets/textures/Media/minimap';
+/** Fallback phase I: tuiles générées depuis les tilemaps officielles
+ *  (server/scripts/gen-minimap-tiles.ts) pour les régions sans tuile Media
+ *  (Europe, Égypte, Samarkand — le client officiel n'en fournit pas). */
+const TILE_URL_FALLBACK = '/assets/terrain/minimap';
 const TILE_PX = 256;
 const REGION_UNITS = 1920;
 /** Ancre du monde local (cf. RealTerrain.ANCHOR): région 69×71 = (0,0) local */
@@ -112,7 +116,8 @@ export class Minimap {
     this.mosaicRegion = { x: rx, z: rz };
   }
 
-  /** Charge (une fois) une tuile minimap; null si absente. */
+  /** Charge (une fois) une tuile minimap; null si absente. Media d'abord,
+   *  puis fallback tilemaps officielles (Europe/Égypte/Samarkand). */
   private tile(rx: number, rz: number): HTMLImageElement | null {
     const key = `${rx}x${rz}`;
     if (this.tiles.has(key)) return this.tiles.get(key)!;
@@ -121,6 +126,15 @@ export class Minimap {
     img.onload = () => {
       this.tiles.set(key, img);
       this.drawMosaic(this.mosaicRegion.x, this.mosaicRegion.z); // rafraîchit la mosaïque affichée
+    };
+    img.onerror = () => {
+      // Pas de tuile Media: essayer la tuile générée depuis les tilemaps
+      const gen = new Image();
+      gen.onload = () => {
+        this.tiles.set(key, gen);
+        this.drawMosaic(this.mosaicRegion.x, this.mosaicRegion.z);
+      };
+      gen.src = `${TILE_URL_FALLBACK}/${key}.png`;
     };
     img.src = `${TILE_URL}/${key}.webp`;
     return null;
