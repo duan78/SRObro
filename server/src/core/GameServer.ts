@@ -256,6 +256,57 @@ export class GameServer {
         this.clientManager, this.worldManager ?? null, this.combatBridge ?? null,
       ).register(socket);
 
+      // Loup de compagnie (Phase H V2 — KB 24: 1M or à l'écurie, lv 40 adulte)
+      socket.on('pet:buy_wolf', (_d: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            // Écurie de Jangan (NPC stable @ (0, 510))
+            const { PetService, WOLF_COST } = await import('../game/PetService.js');
+            const r = PetService.getInstance().buyWolf(characterId, player.gold, { x: 0, y: 0, z: 510 }, player.position);
+            player.addGold(-r.spent);
+            this.combatBridge?.sendPlayerState(characterId);
+            ack?.({ success: true, spent: r.spent, cost: WOLF_COST });
+          } catch (e) {
+            ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' });
+          }
+        })();
+      });
+
+      socket.on('pet:summon', (_d: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            if (!characterId || !player || !this.combatBridge) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { PetService } = await import('../game/PetService.js');
+            const pet = PetService.getInstance().summonWolf(characterId, player.name, player.position, this.combatBridge);
+            ack?.({ success: true, pet: { name: pet.name, level: pet.level, hp: pet.hp, maxHp: pet.maxHp } });
+          } catch (e) {
+            ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' });
+          }
+        })();
+      });
+
+      socket.on('pet:dismiss', (_d: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            if (!characterId || !this.combatBridge) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { PetService } = await import('../game/PetService.js');
+            PetService.getInstance().dismissWolf(characterId, this.combatBridge);
+            ack?.({ success: true });
+          } catch (e) {
+            ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' });
+          }
+        })();
+      });
+
       // Donjons (Phase G V2 — FGW Togui + Qin-Shi B6)
       socket.on('dungeon:enter', (data: unknown, ack?: (r: unknown) => void) => {
         void (async () => {

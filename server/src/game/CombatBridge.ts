@@ -292,6 +292,10 @@ export class CombatBridge {
       });
     }
     void this.checkTradeAmbushes(now);
+    // Loup de compagnie (Phase H): suit le maître + attaque sa cible
+    void import('./PetService.js').then(({ PetService }) => {
+      PetService.getInstance().update(this.worldManager, this, _delta);
+    }).catch(() => undefined);
   }
 
   /**
@@ -618,6 +622,11 @@ export class CombatBridge {
         killer.addExp(expGain);
         killer.sp += spGain;
         killer.addGold(goldGain);
+
+        // Loup de compagnie: XP sur les kills du maître (croissance lv 40)
+        void import('./PetService.js').then(({ PetService }) => {
+          PetService.getInstance().onOwnerKill(killerId, this);
+        }).catch(() => undefined);
 
         // Orbes berserker: ~1 orbe par tranche de 3 kills (5 orbes = ×2, 15 s)
         killer.killCount++;

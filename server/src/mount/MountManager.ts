@@ -17,6 +17,13 @@ const MOUNT_TYPES = {
   horse_c: { name: 'Combat Horse', baseSpeed: 6, baseHp: 200, level: 30 }
 };
 
+/** Multiplicateur de vitesse joueur par monture (base/3 — KB 24: cheval ~2×). */
+export const MOUNT_SPEED: Record<string, number> = {
+  horse_a: 5 / 3,
+  horse_b: 7 / 3,
+  horse_c: 2,
+};
+
 export class MountManager extends EventEmitter {
   private static instance: MountManager;
 

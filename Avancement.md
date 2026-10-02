@@ -814,3 +814,17 @@ tsc 0/0, persistance après relance serveur.
   8 talismans, complétion, cooldown 180 min refusé, Medusa 183 535 199 HP.
 - Piège de test: les cadavres (3 s) piègent le /kill « plus proche » —
   attendre le despawn entre les kills GM.
+
+### PETS/MOUNTS (loup officiel + vitesse monture) — 2026-10-02 (phase H)
+- **PetService** (game/PetService.ts): loup de croissance officiel KB 24 —
+  achat 1 000 000 or à l'écurie (proximité <40 m vérifiée), invocation
+  (pipeline monstre: rendu + spatial), SUIT le maître, ATTAQUE sa cible
+  (currentTargetId mémorisé à chaque attaque joueur; CD 1,5 s, portée 4 m),
+  XP sur les kills du maître (30 kills/niveau, adulte lv 40), packets
+  pet:levelup/dungeon-like. Handlers pet:buy_wolf/summon/dismiss.
+- **Vitesse monture APPLIQUÉE** (le MountManager ne flipait qu'isActive):
+  MOUNT_SPEED exporté (cheval 5/3 ≈ 1.67×, blanc 7/3, combat 2×), gm:speed
+  émis au summon/dismiss, payloads mount:* sanitizés BigInt.
+- **Tests** (test-phaseH-pets.ts) 6/6: refus loin écurie (6 720 m), achat
+  1M débité, invocation lv 1, loup attaque (7 attaques sur Bunwang 45),
+  croissance lv 2, monture ×1.67.

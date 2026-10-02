@@ -67,6 +67,8 @@ export class PlayerEntity extends Entity {
   public zerkActiveUntil = 0;
   /** Compteur de kills pour la progression des orbes (~1 orbe / 3 kills). */
   public killCount = 0;
+  /** Cible de combat courante (attaques du loup, Phase H). */
+  public currentTargetId: string | null = null;
   public skillPoints: number;
   public statPoints: number;
   /** Maîtrises { clé normalisée → niveau } (GAP + formules officielles). */

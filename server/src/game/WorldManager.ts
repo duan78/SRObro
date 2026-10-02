@@ -365,6 +365,9 @@ export class WorldManager {
       return;
     }
 
+    // Cible courante du joueur: le loup attaque la même (Phase H)
+    playerEntity.currentTargetId = data.targetId;
+
     // PvP (Phase E V2): tracer l'agresseur pour le self-defense officiel
     if (targetEntity instanceof PlayerEntity) {
       void import('../pvp/PvPManager.js').then(({ globalPvPManager }) => {

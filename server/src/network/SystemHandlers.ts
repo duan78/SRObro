@@ -510,7 +510,8 @@ export class SystemHandlers {
     try {
       const { mountType } = data;
       const mount = await this.mountManager.purchaseMount(session.characterId, mountType);
-      socket.emit('mount:purchased', mount);
+      const safeMount = JSON.parse(JSON.stringify(mount, (_k, v: unknown) => (typeof v === 'bigint' ? Number(v) : v)));
+      socket.emit('mount:purchased', safeMount);
       logger.info(`Mount purchased: ${mountType} by ${session.characterId}`);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -522,8 +523,14 @@ export class SystemHandlers {
     if (!session) return;
     try {
       const mount = await this.mountManager.summonMount(session.characterId);
-      socket.emit('mount:summoned', mount);
-      logger.info(`Mount summoned by ${session.characterId}`);
+      // Vitesse OFFICIELLE appliquée (KB 24: cheval ~2× la marche — avant,
+      // summon ne flipait qu'isActive en base sans effet monde)
+      const { MOUNT_SPEED } = await import('../mount/MountManager.js');
+      const mult = MOUNT_SPEED[mount.mountType] ?? 2;
+      const safeMount = JSON.parse(JSON.stringify(mount, (_k, v: unknown) => (typeof v === 'bigint' ? Number(v) : v)));
+      socket.emit('gm:speed', { multiplier: mult });
+      socket.emit('mount:summoned', { ...safeMount, speedMultiplier: mult });
+      logger.info(`Mount summoned by ${session.characterId} (vitesse ×${mult})`);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
@@ -534,7 +541,9 @@ export class SystemHandlers {
     if (!session) return;
     try {
       const mount = await this.mountManager.dismissMount(session.characterId);
-      socket.emit('mount:dismissed', mount);
+      const safeMount = JSON.parse(JSON.stringify(mount, (_k, v: unknown) => (typeof v === 'bigint' ? Number(v) : v)));
+      socket.emit('gm:speed', { multiplier: 1 });
+      socket.emit('mount:dismissed', safeMount);
     } catch (error: any) {
       socket.emit('error', { message: error.message });
     }
