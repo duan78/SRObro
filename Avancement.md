@@ -782,3 +782,20 @@ tsc 0/0, persistance après relance serveur.
   close. Noms d'items officiels coréens (recherche par type/prix).
 - **Tests**: test-phaseD2-stalls.ts 8/8 (ouverture, dépôt, recherche,
   achat, or débité 60 000→55 000, slot libre 3, double-vente rejetée).
+
+### FORTRESS WAR (siège réel + taxes) — 2026-10-02
+- **Points de siège RÉELS** (fin du placeholder « première guilde inscrite »):
+  recordWarKill sur chaque mort PvP — si une guerre est ACTIVE et que les
+  DEUX guildes (tueur + victime) y sont inscrites: +1 point au tueur.
+  Scores Redis-backed (srobro:fw:scores:<id> hash): les kills sont scorés
+  par le processus serveur, la fin de guerre peut être déclenchée ailleurs.
+- **Vainqueur au MEILLEUR score**; sans kill = personne ne capture (défense
+  conservée) — comportement officiel KB 19.
+- **Taxes officielles**: setTaxRate −20%→+20% par l'occupant; mapping
+  forteresse→zone (Jangan Fortress→zone_jangan, Hotan→zone_hotan,
+  Bandit→zone_donwhang); achat boutique NPC taxé (shop:buy → prix×(1+rate)),
+  recette incrémentée au GuildStorage de la guilde occupante.
+- **Tests** (test-phaseF2-fortress.ts) 10/10: 2 guildes inscrites, guerre
+  active, kill PvP B→A score 1 (Redis), vainqueur = A (B était première
+  inscrite), taxe 10%: achat base 60 → 66 débités, storage guilde +6.
+- Régressions: phaseA 9/9, jobs 16/16, stalls 8/8.

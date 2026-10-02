@@ -719,6 +719,21 @@ export class CombatBridge {
     // ≥15000=70%, ≥30000=100% — docs 20_PVP_PK_SYSTEM.md)
     const killerPlayer = this.worldManager.getPlayer(killerId);
     if (killerPlayer && player) {
+      // Fortress War (KB 19): kill de siège = +1 point pour la guilde du
+      // tueur si les DEUX guildes sont inscrites à une guerre ACTIVE
+      void (async () => {
+        try {
+          const { FortressManager } = await import('../fortress/FortressManager.js');
+          const { prisma: p } = await import('../database/prisma.js');
+          const [kMember, vMember] = await Promise.all([
+            p.guildMember.findFirst({ where: { characterId: killerId } }),
+            p.guildMember.findFirst({ where: { characterId: victimId } }),
+          ]);
+          if (kMember && vMember) {
+            await FortressManager.getInstance().recordWarKill(kMember.guildId, vMember.guildId);
+          }
+        } catch { /* silencieux */ }
+      })();
       void import('../pvp/PvPManager.js').then(async ({ globalPvPManager }) => {
         try {
           const result = await globalPvPManager.handlePvPDeath(victimId, killerId);

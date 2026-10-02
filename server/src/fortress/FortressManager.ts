@@ -6,6 +6,7 @@
 import { Fortress, FortressState } from '@prisma/client';
 import { EventEmitter } from 'events';
 import { prisma } from '../database/prisma';
+import Redis from 'ioredis';
 import { createLogger } from '../core/Logger';
 
 // Re-export for the fortress module index
@@ -59,6 +60,22 @@ export const FORTRESS_CONFIG = {
 export class FortressManager extends EventEmitter {
   private static instance: FortressManager;
   private warTimers: Map<string, NodeJS.Timeout> = new Map();
+  // Points de siège (guerre active): fortressId → guildId → points.
+  // Un kill d'un membre d'une guilde ADVERSE inscrite = +1 point (KB 19:
+  // le score de guerre départage les guildes — le vainqueur arbitraire
+  // « première inscrite » était un placeholder).
+  // Redis-backed: les kills sont scorés par le processus serveur et la fin
+  // de guerre peut être déclenchée ailleurs (admin/test) — mémoire non partagée.
+  private redis: Redis | null = null;
+  private scoresKey(fortressId: string): string {
+    return `srobro:fw:scores:${fortressId}`;
+  }
+  private redisClient(): Redis {
+    if (!this.redis) {
+      this.redis = new Redis(process.env.REDIS_URL ?? 'redis://:srobro123@127.0.0.1:6379/0');
+    }
+    return this.redis;
+  }
 
   private constructor() {
     super();
@@ -217,6 +234,38 @@ export class FortressManager extends EventEmitter {
   // FORTRESS WAR EXECUTION
   // ============================================
 
+  /**
+   * Enregistre un kill de siège: le tueur gagne un point pour sa guilde si
+   * une guerre est ACTIVE sur une forteresse où les DEUX guildes (tueur et
+   * victime) sont inscrites. Retourne la forteresse concernée (ou null).
+   */
+  async recordWarKill(killerGuildId: string, victimGuildId: string): Promise<string | null> {
+    if (killerGuildId === victimGuildId) return null;
+    const activeFortresses = await prisma.fortress.findMany({
+      where: { state: FortressState.active },
+      select: { id: true },
+    });
+    for (const f of activeFortresses) {
+      const regs = await prisma.fortressRegistration.findMany({
+        where: { fortressId: f.id },
+        select: { guildId: true },
+      });
+      const ids = new Set(regs.map((r) => r.guildId));
+      if (ids.has(killerGuildId) && ids.has(victimGuildId)) {
+        await this.redisClient().hincrby(this.scoresKey(f.id), killerGuildId, 1);
+        this.emit('fortressWarKill', { fortressId: f.id, guildId: killerGuildId });
+        return f.id;
+      }
+    }
+    return null;
+  }
+
+  /** Scores courants d'une guerre (lecture admin/test). */
+  async getWarScores(fortressId: string): Promise<Record<string, number>> {
+    const h = await this.redisClient().hgetall(this.scoresKey(fortressId));
+    return Object.fromEntries(Object.entries(h).map(([k, v]) => [k, Number(v)]));
+  }
+
   async startFortressWar(fortressId: string): Promise<void> {
     const fortress = await prisma.fortress.findUnique({
       where: { id: fortressId }
@@ -243,6 +292,7 @@ export class FortressManager extends EventEmitter {
         lastWarAt: new Date()
       }
     });
+    await this.redisClient().del(this.scoresKey(fortressId));
 
     this.emit('fortressWarStarted', { fortressId });
 
@@ -264,12 +314,15 @@ export class FortressManager extends EventEmitter {
       return;
     }
 
-    // Determine winner (simplified - in reality would track points)
-    // For now, first guild registered wins
-    const registrations = await prisma.fortressRegistration.findMany({
-      where: { fortressId }
-    });
-    const winnerGuildId = registrations[0]?.guildId;
+    // Vainqueur = guilde avec le MEILLEUR SCORE de siège (kills); en
+    // l'absence de tout kill, personne ne capture (défense conservée)
+    const scores = await this.getWarScores(fortressId);
+    let winnerGuildId: string | undefined;
+    let best = 0;
+    for (const [guildId, pts] of Object.entries(scores)) {
+      if (pts > best) { best = pts; winnerGuildId = guildId; }
+    }
+    await this.redisClient().del(this.scoresKey(fortressId));
 
     if (winnerGuildId) {
       // Update fortress owner
@@ -300,6 +353,46 @@ export class FortressManager extends EventEmitter {
 
     // Schedule next war
     await this.scheduleNextWar(fortressId);
+  }
+
+  /** Forteresse par zone (Jangan Fortress → zone_jangan, etc.). */
+  private static readonly FORTRESS_ZONE: Record<string, string> = {
+    [FORTRESS_CONFIG.jangan.name]: 'zone_jangan',
+    [FORTRESS_CONFIG.hotan.name]: 'zone_hotan',
+    [FORTRESS_CONFIG.bandit.name]: 'zone_donwhang',
+  };
+
+  /** Taxe applicable dans une zone (null si pas de forteresse occupée). */
+  async getZoneTax(zoneId: string): Promise<{ fortressId: string; guildId: string; rate: number } | null> {
+    const fortresses = await prisma.fortress.findMany({
+      where: { ownerGuildId: { not: null } },
+    });
+    for (const f of fortresses) {
+      if (FortressManager.FORTRESS_ZONE[f.name] === zoneId && f.taxRate !== 0) {
+        return { fortressId: f.id, guildId: f.ownerGuildId as string, rate: f.taxRate };
+      }
+    }
+    return null;
+  }
+
+  /**
+   * Taxe d'achat boutique NPC (KB 19: l'occupant perçoit sur les achats de
+   * la zone; −20%→+20%, recettes vers le storage de guilde). Retourne le
+   * surcoût appliqué (0 si aucune taxe).
+   */
+  async applyPurchaseTax(zoneId: string, basePrice: number): Promise<number> {
+    const t = await this.getZoneTax(zoneId);
+    if (!t) return 0;
+    const amount = Math.max(0, Math.floor(basePrice * (t.rate / 100)));
+    if (amount > 0) {
+      await prisma.guildStorage.upsert({
+        where: { guildId: t.guildId },
+        update: { gold: { increment: BigInt(amount) } },
+        create: { guildId: t.guildId, gold: BigInt(amount), items: [] },
+      }).catch(() => undefined);
+      this.emit('fortressTaxCollected', { fortressId: t.fortressId, guildId: t.guildId, amount });
+    }
+    return amount;
   }
 
   private async scheduleNextWar(fortressId: string): Promise<void> {

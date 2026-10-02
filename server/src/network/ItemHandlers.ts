@@ -302,7 +302,13 @@ export class ItemHandlers {
       const item = await prisma.item.findUnique({ where: { id: String(data?.itemId) } });
       if (!item) { this.ack(ack, { success: false, error: 'Article inconnu' }); return; }
 
-      const total = Number(item.price) * qty;
+      // Taxe de forteresse officielle (KB 19): l'occupant de la forteresse de
+      // la zone perçoit −20%→+20% sur les achats NPC (storage de guilde)
+      const { FortressManager } = await import('../fortress/FortressManager.js');
+      const base = Number(item.price) * qty;
+      const tax = await FortressManager.getInstance().applyPurchaseTax(player.zoneId, base);
+
+      const total = base + tax;
       if (player.gold < total) {
         this.ack(ack, { success: false, error: `Or insuffisant (${total} requis)` });
         return;
