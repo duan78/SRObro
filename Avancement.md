@@ -1,5 +1,68 @@
 # Avancement du Projet SRObro
 
+## Session du 2 Octobre 2026 (17) : PROMPT_MAITRE_V3.md — prompt de finalisation
+
+Rédigé à la demande utilisateur pour compléter et finaliser le jeu. 8 phases
+A→H à critères mesurables: A personnage fidèle (armures par pièce, armes
+visibles, anim de mort, anims par skill), B VFX officiels Particles.pk2
+(efp→Babylon, 3 331 efp déjà indexés) + ciel, C quêtes officielles complètes
+(Jangan 22/Donwhang 25) + titres Blue Zerk + journal, D social complet (canaux
+chat party/guild/union + /w, storage L2, guild war, matching party), E vie du
+monde (ferry maritime + pirates, fluctuations marché, FW Eastern Europe),
+F fin de jeu (AP réels Job Temple, drops 11D Égypte, réskill 80%), G
+robustesse (reconnexion auto, 3 clients ≥50 FPS, SFX, raccourcis/options),
+H audit final filmé (définition de « finalisé »). Reprend l'état V1+V2+I
+prouvé, les conventions/pièges cumulés et le mémo exécutable complet.
+Au passage: découverte que les « commits » affichés en sessions 15/16 pour
+minimap+audit étaient des sorties shell fantômes — tout a été réellement
+commité ce jour en `267cb1697` (vérifié git log).
+
+## Session du 2 Octobre 2026 (16) : AUDIT RÉPARATION « monstres/attaques/PNJ en l'air/sol inversé/déplacement lent »
+
+**Signalement utilisateur**: monstres mal affichés, attaques HS, PNJ en
+l'air, perso sous le sol inversé, déplacement lent. **Trois causes réelles
+trouvées et réparées** (commit `267cb1697`), tout vérifié vert.
+
+### 1. CACHE VITE CORROMPU (la cause principale des « monstres cassés »)
+`node_modules/.vite/deps/chunk-XXXX.js` contenait un chunk de **3 octets**
+(placeholder d'un crash d'optimisation) servi en HTTP 200: la page exécutait
+du code Babylon fantôme → « Unsupported texture format » au chargement des
+monstres (cylindres sans mesh → clics/attaques impossibles) + affichages
+aberrants. Fix: purge .vite + kill esbuild + redémarrage propre. Vérifié:
+mangnyang texturé au sol (capture analysée), textures servies 200 image/png.
+
+### 2. HANDLERS CLIENT CIBLAIENT LE MAUVAIS MESH (« PNJ en l'air », tp cassés)
+7 endroits de NetworkCombat cherchaient le joueur local par
+`meshes.find(name.startsWith('chinaman_'))` — or les PNJ officiels ET les
+joueurs distants utilisent les MÊMES modèles (`chinaman_adventurer___root__`):
+le handler de téléport déplaçait un PNJ/joueur distant au lieu du perso
+(PNJ « en l'air », perso immobile = rubber-band), VFX/nombres de dégâts/anims
+d'attaque au mauvais endroit. Fix: `Game.getLocalPlayerMesh()`
+(characterManager.player = source de vérité) passé à NetworkCombat en
+callback — les 7 lookups remplacés (grep: 0 restant).
+
+### 3. TÉLÉPORT ASYNC FRAGILE (phase I) + monstres FANTÔMES
+- `player:teleport` attendait `terrain.teleportTo()` SANS garde: un fetch de
+  région lent/rejeté → exception avalée → position jamais appliquée. Fix:
+  try/catch + `teleportTo` plafonné 1,5 s (Promise.race).
+- Entités sorties de l'AOI sans packet despawn = fantômes affichés/attaquables
+  à jamais (cibler un fantôme = « l'attaque ne fait rien »). Fix: purge >300 u
+  du joueur toutes les 2 s dans NetworkCombat.update().
+
+### Vérifié (navigateur + suites)
+- Perso au sol (Δ Y=0), terrain à l'endroit, monstres texturés posés (captures
+  analysées), marche 23,9 u/s — PAS de lenteur; minimap Europe affichée
+  (luma 15,9→87,3 — 529 fonds générés par `scripts/gen-minimap-tiles.ts`
+  depuis les tilemaps officielles, fallback Media→généré dans Minimap.ts).
+- Téléport serveur→client: packet reçu, position exacte (83,521), 10 monstres
+  de camps spawnés, attaque 230 dégâts; **combat-flow TOUT VERT** (kills, XP,
+  respawn, IA offensive: bandits tuent le perso 22→0 HP, résurrection).
+- Pièges d'audit: (a) émissions socket depuis un onglet automatisé mortes
+  après 30 s (timers throttled onglet caché → heartbeat manuel nécessaire);
+  (b) sondes parallèles = joueurs zombies qui perturbent l'aggro (tests
+  flaky) — UNE session à la fois; (c) sorties shell du tour TRONQUÉES/
+  déformées — recouper via node -e + fichier avant de conclure.
+
 ## Session du 2 Octobre 2026 (15) : PHASE I — EUROPE + ÉGYPTE + CAP 120
 
 **Objectif (phase I du PROMPT_MAITRE_V2)**: Constantinople (départ EU),
