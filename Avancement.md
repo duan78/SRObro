@@ -799,3 +799,18 @@ tsc 0/0, persistance après relance serveur.
   active, kill PvP B→A score 1 (Redis), vainqueur = A (B était première
   inscrite), taxe 10%: achat base 60 → 66 débités, storage guilde +6.
 - Régressions: phaseA 9/9, jobs 16/16, stalls 8/8.
+
+### DONJONS (FGW Togui + Qin-Shi B6) — 2026-10-02 (phase G2)
+- **DungeonManager** (game/DungeonManager.ts): instances FGW Togui 3 tranches
+  (a1 35-50, a2 51-60, b1 61-70) avec trash + Elder Earth Ghost officiels
+  (HP DB vSRO: 1,27 M a1) et Qin-Shi B6 (Medusa MOB_TQ_WHITESNAKE
+  183 535 199 HP). Handlers dungeon:enter/state.
+- **Mécanique officielle**: 8 kills (7 trash + boss) → 8 talismans =
+  collection complète → récompense D8 Seal of Sun (KB 29), cooldown 3 h
+  par donjon (re-entrée refusée, message minutes restantes).
+- **Intégration combat**: onMonsterDeath → talismans (packet
+  dungeon:talisman + chat), complétion annoncée.
+- **Tests** (test-phaseG2-dungeons.ts) 7/7: entrée, Elder 1 275 761 HP,
+  8 talismans, complétion, cooldown 180 min refusé, Medusa 183 535 199 HP.
+- Piège de test: les cadavres (3 s) piègent le /kill « plus proche » —
+  attendre le despawn entre les kills GM.

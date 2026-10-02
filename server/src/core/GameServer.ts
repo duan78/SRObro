@@ -256,6 +256,35 @@ export class GameServer {
         this.clientManager, this.worldManager ?? null, this.combatBridge ?? null,
       ).register(socket);
 
+      // Donjons (Phase G V2 — FGW Togui + Qin-Shi B6)
+      socket.on('dungeon:enter', (data: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            const kind = String((data as { kind?: string })?.kind ?? 'fgw_togui') as 'fgw_togui' | 'qinshi_b6';
+            const tier = String((data as { tier?: string })?.tier ?? 'a1');
+            if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { DungeonManager } = await import('../game/DungeonManager.js');
+            const dg = await DungeonManager.getInstance().enter(characterId, kind, tier, player.position);
+            this.combatBridge?.sendToPlayerRaw(characterId, 'chat', {
+              message: `🌀 ${dg.note}`, channel: 'system',
+            });
+            ack?.({ success: true, ...dg });
+          } catch (e) {
+            ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' });
+          }
+        })();
+      });
+
+      socket.on('dungeon:state', (data: unknown, ack?: (r: unknown) => void) => {
+        const id = String((data as { id?: string })?.id ?? '');
+        void import('../game/DungeonManager.js').then(({ DungeonManager }) => {
+          ack?.({ success: true, state: DungeonManager.getInstance().getState(id) });
+        });
+      });
+
       // Stalls (Phase D V2 — économie joueur: stall network officiel)
       const { StallHandlers } = await import('./StallHandlers.js');
       new StallHandlers(

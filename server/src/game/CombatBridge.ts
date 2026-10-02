@@ -645,6 +645,21 @@ export class CombatBridge {
       // Quêtes: faire avancer les objectifs de kill du tueur
       if (killer) {
         void this.trackQuestKills(killerId, monster.name).catch(() => undefined);
+        // Donjons (Phase G): talismans FGW / complétion Qin-Shi B6
+        void import('./DungeonManager.js').then(async ({ DungeonManager }) => {
+          const r = await DungeonManager.getInstance().onMonsterKilled(victimId, killerId);
+          if (r?.talisman) {
+            this.sendToPlayerRaw(killerId, 'dungeon:talisman', { talisman: r.talisman });
+            this.sendToPlayerRaw(killerId, 'chat', {
+              message: `📜 Talisman obtenu: ${r.talisman}`, channel: 'system',
+            });
+          }
+          if (r?.completed) {
+            this.sendToPlayerRaw(killerId, 'chat', {
+              message: `🏆 Donjon terminé ! ${r.reward}`, channel: 'system',
+            });
+          }
+        }).catch(() => undefined);
       }
 
       // Le SpawnManager gère despawn (3 s) + respawn via son propre cycle
