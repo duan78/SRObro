@@ -9,6 +9,7 @@
  */
 
 import { Minimap } from './Minimap';
+import { iconUrl } from './iconUrl';
 
 export interface HudStats {
   title?: string | null;
@@ -172,6 +173,56 @@ export class DomHud {
       requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
+  }
+
+  /** Barre d'incantation (V4 §D): se vide sur la durée réelle du cast. */
+  showCasting(label: string, durationMs: number): void {
+    this.hideCasting();
+    if (durationMs <= 0) return;
+    const bar = document.createElement('div');
+    bar.id = 'hud-casting';
+    bar.innerHTML =
+      `<span class="hud-casting-label">${label}</span>` +
+      `<div class="hud-casting-track"><div class="hud-casting-fill"></div></div>`;
+    document.body.appendChild(bar);
+    const fill = bar.querySelector('.hud-casting-fill') as HTMLElement;
+    const t0 = performance.now();
+    const tick = (): void => {
+      const p = 1 - Math.min(1, (performance.now() - t0) / durationMs);
+      fill.style.width = (p * 100) + '%';
+      if (p <= 0) {
+        bar.remove();
+        return;
+      }
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  hideCasting(): void {
+    document.getElementById('hud-casting')?.remove();
+  }
+
+  /** Barre de buffs actifs (V4 §D): icônes officielles + décompte. */
+  setBuffs(buffs: Array<{ code: string; name: string; until: number; icon?: string | null }>): void {
+    let bar = document.getElementById('hud-buffs');
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.id = 'hud-buffs';
+      document.body.appendChild(bar);
+    }
+    const now = Date.now();
+    bar.innerHTML = '';
+    for (const b of buffs) {
+      const el = document.createElement('div');
+      el.className = 'hud-buff';
+      const url = iconUrl(b.icon ?? undefined);
+      if (url) el.style.backgroundImage = `url('${url}')`;
+      const secs = Math.max(0, Math.ceil((b.until - now) / 1000));
+      el.innerHTML = `<span class="hud-buff-timer">${secs}s</span>`;
+      el.title = b.name;
+      bar.appendChild(el);
+    }
   }
 
   /** Orbes berserker (0-5); actif = orbes rouges pulsantes. */

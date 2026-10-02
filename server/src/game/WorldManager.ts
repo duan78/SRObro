@@ -690,6 +690,21 @@ export class WorldManager {
     return this.players.get(entityId) || this.monsterEntities.get(entityId) || this.npcEntities.get(entityId);
   }
 
+  /** Monstres vivants dans un rayon (AoE des nukes — V4 §D). */
+  getMonsterEntitiesInRange(
+    center: { x: number; y: number; z: number },
+    radius: number,
+  ): MonsterEntity[] {
+    const out: MonsterEntity[] = [];
+    for (const e of this.monsterEntities.values()) {
+      if (!e.isAlive()) continue;
+      const dx = e.position.x - center.x;
+      const dz = e.position.z - center.z;
+      if (Math.hypot(dx, dz) <= radius) out.push(e);
+    }
+    return out;
+  }
+
   /**
    * Get a logged-in player entity by character ID
    */

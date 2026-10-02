@@ -89,6 +89,9 @@ export class MonsterEntity extends Entity {
   public currentWaypointIndex: number = 0;
   public lastAttackTime: number = 0;
   public aggroTime: number = 0;
+  /** Étourdi jusqu'à (ms epoch) — skill officiel stDurMs (V4 §D): ni
+   *  attaque ni déplacement tant que non écoulé. */
+  public stunnedUntil: number = 0;
 
   private patrolTimer: NodeJS.Timeout | null = null;
 
@@ -151,6 +154,9 @@ export class MonsterEntity extends Entity {
    * Update AI state machine
    */
   private updateAI(deltaTime: number): void {
+    // Étourdissement (skill officiel stDurMs — V4 §D): IA gelée, ni attaque
+    // ni déplacement (comme le client officiel: le monstre reste figé).
+    if (this.stunnedUntil > Date.now()) return;
     switch (this.aiState) {
       case MonsterAIState.IDLE:
         this.handleIdle();

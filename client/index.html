@@ -80,6 +80,13 @@
       .hud-chat-whisper_sent { color: #c9a0c0; font-style: italic; }
       #hud-chat-hint { margin-top: 4px; font-size: 10px; color: #8a7d5c; }
       #hud-coords { font-size: 11px; color: #c9b98a; }
+      #hud-casting { position: absolute; top: 84px; left: 50%; transform: translateX(-50%); z-index: 25; text-align: center; pointer-events: none; }
+      .hud-casting-label { font-size: 11px; color: #f0e6d2; text-shadow: 0 1px 2px #000; }
+      .hud-casting-track { width: 180px; height: 8px; margin-top: 2px; background: #1c1810; border: 1px solid #8a6d2f; border-radius: 2px; overflow: hidden; }
+      .hud-casting-fill { height: 100%; width: 100%; background: linear-gradient(180deg, #d0b34a, #8f751d); transition: none; }
+      #hud-buffs { position: absolute; top: 142px; left: 14px; z-index: 25; display: flex; gap: 4px; }
+      .hud-buff { width: 30px; height: 30px; border: 1px solid #8a6d2f; border-radius: 3px; background-size: cover; background-position: center; background-color: rgba(20,16,8,0.85); position: relative; }
+      .hud-buff-timer { position: absolute; bottom: -2px; right: 0; font-size: 9px; color: #fff; text-shadow: 0 1px 2px #000; }
 
       #loading-screen {
         position: fixed;

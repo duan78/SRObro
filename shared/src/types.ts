@@ -267,7 +267,10 @@ export type PacketType =
   | 'player:death'
   | 'player:respawned'
   | 'player:state'
-  | 'player:respawn';
+  | 'player:respawn'
+  // V4 §D: effets de skills officiels
+  | 'heal'
+  | 'entity_stunned';
 
 export interface BasePacket {
   type: PacketType;

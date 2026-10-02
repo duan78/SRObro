@@ -720,6 +720,9 @@ export class GameServer {
               mpCost: s.mpCost, cooldownMs: s.cooldownMs, castMs: Math.max(s.prepareMs, s.castMs),
               attKind: s.attKind, attPct: s.attPct, attMin: s.attMin, attMax: s.attMax,
               hits: s.mcHits, range: s.range, icon: s.icon,
+              // Effets V4 §D (casts sans cible / catégorie dans l'UI)
+              heal: s.heal, stunMs: s.stDurMs,
+              defPct: s.defp, hrPct: s.hrPct, erPct: s.erPct,
               learned: player.learnedSkills.has(s.code),
               masteryLevel: player.getMasteryLevel(s.masteryKey),
             });

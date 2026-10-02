@@ -47,6 +47,8 @@ interface HotbarSkill {
   mpCost: number;
   cooldownMs: number;
   icon?: string;
+  /** attKind officiel (5 physique, 8 imbue, 10 magique, 0 utilitaire). */
+  kind?: number;
 }
 // Hotbar de DÉMARRAGE (CH) — remplacée dynamiquement par les skills appris
 // (skills:available, Phase C) dès la connexion: touches 1-8.
@@ -340,6 +342,15 @@ export class NetworkCombat {
     this.network.onRaw('equipment:weapon', (d: any) => void this.attachWeaponVisual(d));
     // Apparence complète (login + chaque équipement/déséquipement)
     this.network.onRaw('equipment:full', (d: any) => void this.applyEquipmentVisual(d));
+    // Cast & buffs (V4 §D): barre d'incantation sur la durée réelle skilldata,
+    // barre de buffs avec icônes officielles.
+    this.network.onRaw('casting_start', (d: any) => {
+      const ms = Math.max(0, Number(d?.durationMs) || 0);
+      this.hud.showCasting(String(d?.skillCode ?? ''), ms);
+    });
+    this.network.onRaw('buff:update', (d: any) => {
+      this.hud.setBuffs(Array.isArray(d?.buffs) ? d.buffs : []);
+    });
 
     // Chat sortant (phase 5): champ de saisie HUD → serveur
     this.hud.setupChatInput();
@@ -999,23 +1010,41 @@ export class NetworkCombat {
       const res = await this.network.request<{
         success: boolean; series?: Array<{
           code: string; name: string; masteryKey: string;
-          levels: Array<{ code: string; name: string; learned: boolean; attKind: number; mpCost: number; cooldownMs: number; icon?: string }>;
+          levels: Array<{
+            code: string; name: string; learned: boolean; attKind: number;
+            mpCost: number; cooldownMs: number; icon?: string;
+            heal?: number; defPct?: number; hrPct?: number; erPct?: number;
+          }>;
         }>;
       }>('skills:available');
       if (!res.success || !res.series) return;
-      const order = (k: number) => (k === 5 ? 0 : k === 10 ? 1 : 2);
-      const withKind: Array<HotbarSkill & { kind: number }> = [];
+      // Meilleur niveau appris par série, catégorisé (V4 §D): attaques (5/10),
+      // imbue (8), heal, buff — la hotbar réserve un slot par catégorie pour
+      // que heals/buffs/imbue restent accessibles clavier.
+      const learned: Array<HotbarSkill & { kind: number; cat: string }> = [];
       for (const s of res.series) {
         const lvl = [...s.levels].reverse().find((l) => l.learned);
         if (!lvl) continue;
-        withKind.push({
+        const cat = lvl.attKind === 8 ? 'imbue'
+          : (lvl.heal ?? 0) > 0 ? 'heal'
+          : lvl.attKind !== 5 && lvl.attKind !== 10 && ((lvl.defPct ?? 0) > 0 || (lvl.hrPct ?? 0) > 0 || (lvl.erPct ?? 0) > 0) ? 'buff'
+          : 'attack';
+        learned.push({
           code: lvl.code, label: s.name, key: '', mpCost: lvl.mpCost,
           cooldownMs: lvl.cooldownMs, kind: lvl.attKind,
-          icon: iconUrl(lvl.icon) ?? undefined,
+          icon: iconUrl(lvl.icon) ?? undefined, cat,
         });
       }
-      withKind.sort((a, b) => order(a.kind) - order(b.kind));
-      this.hotbar = withKind.slice(0, 8).map((h, i) => ({ ...h, key: String(i + 1) }));
+      const byCat = (c: string) => learned.filter((h) => h.cat === c);
+      const attacks = [...byCat('attack')];
+      const picks = [
+        ...attacks.slice(0, 5),
+        ...byCat('imbue').slice(0, 1),
+        ...byCat('heal').slice(0, 1),
+        ...byCat('buff').slice(0, 1),
+        ...attacks.slice(5),
+      ].slice(0, 10);
+      this.hotbar = picks.map((h, i) => ({ ...h, key: String(i + 1) }));
       this.hud.setHotbarSkills(this.hotbar);
       console.log(`[NetworkCombat] Hotbar: ${this.hotbar.map((h) => h.label).join(', ')}`);
     } catch { /* silencieux */ }
@@ -1129,9 +1158,17 @@ export class NetworkCombat {
   }
 
   private useSkill(skill: HotbarSkill): void {
-    if (!this.targetId) {
-      this.hud.addChatMessage('Aucune cible', 'system');
-      return;
+    // Skills sans cible (V4 §D): imbues (kind 8), heals et buffs (kind 0)
+    // se castent sur soi-même — pas de sélection requise.
+    const needsTarget = skill.kind === 5 || skill.kind === 10;
+    let targetId = this.targetId;
+    if (!targetId) {
+      if (needsTarget) {
+        this.hud.addChatMessage('Aucune cible', 'system');
+        return;
+      }
+      targetId = sessionStorage.getItem('srobro_character_id') ?? undefined;
+      if (!targetId) return;
     }
     const now = Date.now();
     const ready = this.skillCooldowns.get(skill.code) ?? 0;
@@ -1145,7 +1182,7 @@ export class NetworkCombat {
     this.network.send({
       type: 'cast_skill',
       timestamp: now,
-      data: { targetId: this.targetId, skillId: skill.code },
+      data: { targetId, skillId: skill.code },
     } as any);
     this.hud.addChatMessage(`${skill.label}!`, 'combat');
 

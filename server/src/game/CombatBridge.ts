@@ -71,6 +71,13 @@ interface ResolvedSkill {
   masteryKey: string;
   reqMasteryLv: number;
   official: OfficialSkill | null;
+  // Effets V4 §D (champs officiels du skilldata)
+  heal: number;           // restauration HP (237 skills CH/EU)
+  stunMs: number;         // étourdissement de la cible (stDurMs, 271 skills)
+  defPct: number;         // buff défense (defp)
+  hrPct: number;          // buff toucher (hrPct)
+  erPct: number;          // buff esquive/parade (erPct)
+  isNukeAoe: boolean;     // nuke AoE [APPROX]: magique ≥ 200% (mécanique officielle des nukes CH)
 }
 
 function resolveSkill(skillCode: string): ResolvedSkill | null {
@@ -94,6 +101,12 @@ function resolveSkill(skillCode: string): ResolvedSkill | null {
       canCrit: official.crit > 0,
       masteryKey: official.masteryKey,
       reqMasteryLv: official.reqMasteryLv,
+      heal: official.heal ?? 0,
+      stunMs: official.stDurMs ?? 0,
+      defPct: official.defp ?? 0,
+      hrPct: official.hrPct ?? 0,
+      erPct: official.erPct ?? 0,
+      isNukeAoe: official.attKind === 10 && official.attPct >= 200,
       official,
     };
   }
@@ -105,6 +118,7 @@ function resolveSkill(skillCode: string): ResolvedSkill | null {
     rangeM: basic.range, hits: basic.hits, castMs: 0,
     attKind: 5, attPct: Math.round(basic.damageMultiplier * 100),
     attMin: 0, attMax: 0, canCrit: true, masteryKey: '', reqMasteryLv: 0,
+    heal: 0, stunMs: 0, defPct: 0, hrPct: 0, erPct: 0, isNukeAoe: false,
     official: null,
   };
 }
@@ -452,6 +466,46 @@ export class CombatBridge {
       this.sendPlayerState(characterId);
       return;
     }
+    // HEAL (skilldata heal > 0, V4 §D): restaure la cible (joueur) ou
+    // soi-même sans cible. Montant officiel scalé par la maîtrise.
+    if (skill.heal > 0) {
+      if (skill.mpCost > 0) player.setMp(player.mp - skill.mpCost);
+      if (skill.hpCost > 0) player.setHp(player.hp - skill.hpCost);
+      cd.skills.set(skill.code, now + skill.cooldownMs);
+      if (skill.groupCdMs > 0 && skill.group > 0) cd.groups.set(skill.group, now + skill.groupCdMs);
+      let healed = player;
+      if (targetId && targetId !== characterId) {
+        const t = this.worldManager.getEntityById(targetId);
+        if (t instanceof PlayerEntity && t.isAlive()) healed = t;
+      }
+      const mastery = skill.masteryKey !== 'character' ? Math.max(1, player.getMasteryLevel(skill.masteryKey)) : 1;
+      const amount = Math.round(skill.heal * (1 + mastery * 0.04)); // [APPROX] scaling maîtrise
+      healed.setHp(Math.min(healed.maxHp, healed.hp + amount));
+      this.broadcastToNearby(healed.position, {
+        type: 'heal', timestamp: now,
+        data: { healerId: characterId, targetId: healed.id, skillId: skill.code, amount },
+      });
+      this.sendPlayerState(characterId);
+      return;
+    }
+    // BUFF (kind 0 avec defp/hr/er, V4 §D): modificateurs officiels sur
+    // soi-même, durée fixe 60 s [APPROX — durées officielles hors skilldata].
+    if (skill.attKind !== 5 && skill.attKind !== 10
+      && (skill.defPct > 0 || skill.hrPct > 0 || skill.erPct > 0)) {
+      if (skill.mpCost > 0) player.setMp(player.mp - skill.mpCost);
+      cd.skills.set(skill.code, now + skill.cooldownMs);
+      const until = now + 60000;
+      player.activeBuffs.set(skill.code, {
+        until, name: skill.label,
+        defPct: skill.defPct, hrPct: skill.hrPct, erPct: skill.erPct,
+      });
+      this.sendToPlayerRaw(characterId, 'buff:update', {
+        buffs: [...player.activeBuffs.entries()].map(([code, b]) =>
+          ({ code, name: b.name, until: b.until, icon: skill.official?.icon ?? null })),
+      });
+      this.sendPlayerState(characterId);
+      return;
+    }
     const target = this.worldManager.getEntityById(targetId);
     if (!target || !target.isAlive() || !(target instanceof PlayerEntity || target instanceof MonsterEntity)) {
       this.sendToPlayer(characterId, {
@@ -482,29 +536,48 @@ export class CombatBridge {
       data: { skillCode, durationMs: skill.castMs, targetId },
     });
 
-    // Dégâts par la formule OFFICIELLE (multi-coups mc_hits)
+    // Dégâts par la formule OFFICIELLE (multi-coups mc_hits). Les nukes
+    // (magique ≥ 200%) frappent en AoE ~8 m autour de la cible (mécanique
+    // officielle des nukes CH — rayon [APPROX]).
     const dmgType: 'physical' | 'magical' = skill.attKind === 5 ? 'physical' : 'magical';
-    for (let i = 0; i < skill.hits; i++) {
-      const precomputed = this.computeOfficialSkillDamage(player, fightable, skill);
-      globalCombatManager.startCombat(
-        this.worldManager.toCombatParticipant(player),
-        this.worldManager.toCombatParticipant(target),
-      );
-      const result = globalCombatManager.processAttack(characterId, targetId, dmgType, 0, precomputed);
-      if (result && (target instanceof PlayerEntity || target instanceof MonsterEntity)) {
-        target.setHp(result.targetHp);
-        this.broadcastToNearby(target.position, {
-          type: 'attack',
-          timestamp: now,
-          data: {
-            attackerId: characterId,
-            targetId,
-            skillId: skill.code,
-            damage: result.damage,
-            isCritical: result.isCritical,
-            isBlocked: result.isBlocked,
-            remainingHp: result.targetHp,
-          },
+    const aoeTargets: Array<PlayerEntity | MonsterEntity> = [fightable];
+    if (skill.isNukeAoe && fightable instanceof MonsterEntity) {
+      for (const e of this.worldManager.getMonsterEntitiesInRange(fightable.position, 8)) {
+        if (e.isAlive() && e.id !== fightable.id) aoeTargets.push(e);
+      }
+    }
+    for (const foe of aoeTargets) {
+      for (let i = 0; i < skill.hits; i++) {
+        const precomputed = this.computeOfficialSkillDamage(player, foe, skill);
+        globalCombatManager.startCombat(
+          this.worldManager.toCombatParticipant(player),
+          this.worldManager.toCombatParticipant(foe),
+        );
+        const result = globalCombatManager.processAttack(characterId, foe.id, dmgType, 0, precomputed);
+        if (result && (foe instanceof PlayerEntity || foe instanceof MonsterEntity)) {
+          foe.setHp(result.targetHp);
+          this.broadcastToNearby(foe.position, {
+            type: 'attack',
+            timestamp: now,
+            data: {
+              attackerId: characterId,
+              targetId: foe.id,
+              skillId: skill.code,
+              damage: result.damage,
+              isCritical: result.isCritical,
+              isBlocked: result.isBlocked,
+              remainingHp: result.targetHp,
+            },
+          });
+        }
+      }
+      // Étourdissement officiel (stDurMs): le monstre touché ne contre-attaque
+      // plus pendant la durée (respecté par l'IA dans son tick).
+      if (skill.stunMs > 0 && foe instanceof MonsterEntity && foe.isAlive()) {
+        foe.stunnedUntil = Math.max(foe.stunnedUntil ?? 0, now + skill.stunMs);
+        this.broadcastToNearby(foe.position, {
+          type: 'entity_stunned', timestamp: now,
+          data: { targetId: foe.id, skillId: skill.code, durationMs: skill.stunMs },
         });
       }
     }
@@ -526,7 +599,15 @@ export class CombatBridge {
     const masteryLevel = skill.masteryKey && skill.masteryKey !== 'character'
       ? Math.max(1, player.getMasteryLevel(skill.masteryKey))
       : 1;
-    const tStats = target instanceof MonsterEntity ? target.getCombatStats() : target.stats;
+    const tStats = target instanceof MonsterEntity ? target.getCombatStats() : { ...target.stats };
+
+    // Buffs actifs (V4 §D): la cible bénéficie de defp (défense) et erPct
+    // (parade), l'attaquant de hrPct (toucher) — modificateurs officiels.
+    const tBuffs = target instanceof PlayerEntity ? target.getBuffModifiers() : null;
+    const aBuffs = player.getBuffModifiers();
+    const physDefense = tStats.defense * (1 + (tBuffs?.defPct ?? 0) / 100);
+    const parryRatio = tStats.parryRatio * (1 + (tBuffs?.erPct ?? 0) / 100);
+    const attackRating = player.stats.attackRating * (1 + aBuffs.hrPct / 100);
 
     // Imbue active (kind 8 appris): composante magique additionnelle — les
     // dégâts d'imbue scalent par le % de la skill porteuse (mécanique DE 2006)
@@ -546,14 +627,14 @@ export class CombatBridge {
       skillPow: { min: skill.attMin, max: skill.attMax },
       masteryLevel,
       skillPct: skill.attPct,
-      physDefense: tStats.defense,
-      magDefense: tStats.magicalDefense,
+      physDefense,
+      magDefense: tStats.magicalDefense * (1 + (tBuffs?.defPct ?? 0) / 100),
       physBalancePct: physicalBalance(player),
       magBalancePct: magicalBalance(player),
       attKind: skill.attKind,
       imbuePow,
-      attackRating: player.stats.attackRating,
-      parryRatio: tStats.parryRatio,
+      attackRating,
+      parryRatio,
     });
 
     let damage = dmg.total;

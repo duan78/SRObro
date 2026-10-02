@@ -61,6 +61,31 @@ export class PlayerEntity extends Entity {
   public learnedSkills: Set<string> = new Set();
   /** Imbue active (code officiel kind 8) — composante magique des coups. */
   public activeImbue: string | null = null;
+  /** Buffs actifs (V4 §D): code → fin (ms) + modificateurs officiels
+   *  (defp défense %, hrPct toucher %, erPct esquive/parade %). */
+  public activeBuffs = new Map<string, {
+    until: number;
+    name: string;
+    defPct: number;
+    hrPct: number;
+    erPct: number;
+  }>();
+
+  /** Modificateurs cumulés des buffs NON EXPIRÉS (appelé par les formules). */
+  getBuffModifiers(): { defPct: number; hrPct: number; erPct: number } {
+    const now = Date.now();
+    const mods = { defPct: 0, hrPct: 0, erPct: 0 };
+    for (const [code, b] of this.activeBuffs) {
+      if (b.until <= now) {
+        this.activeBuffs.delete(code);
+        continue;
+      }
+      mods.defPct += b.defPct;
+      mods.hrPct += b.hrPct;
+      mods.erPct += b.erPct;
+    }
+    return mods;
+  }
   /** Orbes berserker (0-5): ~1 par tranche de kills; activation = ×2 dégâts. */
   public zerkOrbs = 0;
   /** Timestamp de fin du zerk actif (0 = inactif). */
