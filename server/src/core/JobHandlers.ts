@@ -96,6 +96,9 @@ export class JobHandlers {
       void this.withPlayer(socket, ack, async (characterId, player) => {
         const r = await this.jobManager.sellGoods(characterId, player.zoneId);
         player.addGold(r.totalProfit);
+        // Phase F V3: AP d'union via les activités de métier (KB 15: quêtes/ventes)
+        void import('../game/APManager.js').then(({ globalAPManager }) =>
+          globalAPManager.grant(characterId, Math.max(3, Math.floor(r.totalProfit / 5000)), 'vente trade')).catch(() => undefined);
         this.combatBridge?.sendPlayerState(characterId);
         this.combatBridge?.sendToPlayerRaw(characterId, 'chat', {
           message: `Trade livré ! Profit: ${r.totalProfit.toLocaleString('fr')} or (+${r.jobExp} XP métier)`,
@@ -115,6 +118,8 @@ export class JobHandlers {
         const stolen = await this.jobManager.stealGoods(characterId, traderId);
         const fencedInput = stolen.map((g) => ({ name: g.name, buyPrice: g.value, quantity: g.quantity }));
         const fenced = await this.jobManager.fenceStolenGoods(characterId, fencedInput);
+        void import('../game/APManager.js').then(({ globalAPManager }) =>
+          globalAPManager.grant(characterId, 5, 'vol thief')).catch(() => undefined);
         player.addGold(fenced);
         this.combatBridge?.sendPlayerState(characterId);
         this.combatBridge?.sendToPlayerRaw(traderId, 'chat', {

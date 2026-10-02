@@ -100,7 +100,7 @@ export class DungeonManager {
     kind: 'fgw_togui' | 'qinshi_b6' | 'job_temple',
     tier: string,
     center: { x: number; y?: number; z: number },
-    opts?: { level?: number; jobType?: string | null },
+    opts?: { level?: number; jobType?: string | null; characterUnionGate?: string },
   ): Promise<{ id: string; trashCount: number; bossCode: string; note: string }> {
     const cd = this.cooldowns.get(characterId + ':' + kind) ?? 0;
     if (Date.now() < cd) {
@@ -119,6 +119,16 @@ export class DungeonManager {
       }
       if (!opts?.jobType || opts.jobType === 'none') {
         throw new Error('Job Temple: costume de métier obligatoire (Trader/Hunter ou Thief)');
+      }
+      // Phase F V3 — gating AP officiel (KB 15:458-462): Anubis/Haroeris/
+      // Seth exigent l'union au PLUS HAUT AP; sans AP des deux côtés →
+      // les deux entrent. Paliers AP concernés: intermediate (Anubis) et
+      // advanced (Haroeris/Seth) — beginner (Selket/Neith) reste libre.
+      if (tier !== 'beginner' && opts.characterUnionGate !== undefined) {
+        const mine = opts.characterUnionGate;
+        if (mine === 'none') {
+          throw new Error('Job Temple: l\'union adverse a plus d\'AP — entrée refusée (KB 15)');
+        }
       }
     }
 

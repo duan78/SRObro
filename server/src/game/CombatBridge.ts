@@ -766,6 +766,25 @@ export class CombatBridge {
           toDrop.push({ itemId: d.itemId, quantity: qty });
         }
       }
+
+      // Phase F V3 — drops 11D d'Égypte (KB 15/22): les mobs SD 100+ du
+      // désert égyptien (bornes grille Egypte x 36-52k / z < −38k) ont une
+      // chance de dropper du 11D (codes ITEM_*_11_*) sans table déclarée.
+      const inEgypt = monster.position.x > 36000 && monster.position.x < 52000
+        && monster.position.z < -38000 && monster.position.z > -52000;
+      if (toDrop.length === 0 && inEgypt && monster.level >= 100) {
+        const soc = await prisma.item.findFirst({
+          where: { description: { contains: '_11_' }, price: { gt: 1000000 } },
+          orderBy: { price: 'desc' },
+        }).catch(() => null);
+        // ~2% par kill (rareté SoX d'élite [APPROX]) — sensible au taux /rates
+        if (soc && Math.random() < 0.02 * rates.drop) {
+          toDrop.push({ itemId: soc.id, quantity: 1 });
+          this.sendToPlayerRaw(killerId, 'chat', {
+            message: `✨ ${soc.name} droppé ! (11D)`, channel: 'system',
+          });
+        }
+      }
       if (toDrop.length === 0) return;
 
       const droppedIds = await this.dropManager.dropItems(

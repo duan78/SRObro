@@ -1,5 +1,26 @@
 # Avancement du Projet SRObro
 
+## Session du 2 Octobre 2026 (23): PHASE F V3 — FIN DE JEU
+
+**AP réels du Job Temple** (APManager, KB 15:458-462): AP d'UNION gagnés
+par les activités de métier (ventes de trade ~1 AP/5000 or, vols thief
++5), **gating officiel**: Anubis (intermediate) et Haroeris/Seth
+(advanced) exigent l'union au plus haut AP; sans AP des deux côtés →
+les deux entrent; entrée refusée au camp perdant. Colonnes Union.ap
+(raw SQL auto-migrate).
+
+**Drops 11D d'Égypte**: mobs SD 100+ du désert égyptien (bornes grille
+Egypte) → ~2% par kill de dropper une pièce 11D (codes ITEM_*_11_*, la
+plus chère d'abord), sensible au taux /rates drop.
+
+**Réskill 80% officiel** (KB 16): handler skill:reskill — somme des reqSp
+des skills appris × 0.8 restituée, skills effacés, maîtrises conservées.
+
+**test-phaseF-endgame.ts 6/6**: gate both sans union (règle officielle),
+AP null sans union (pas de fuite), drop 11D constaté (taux ×50 via
+rates Redis), réskill 80% (refund 99 SP sur 2 skills + réapprentissage
+rouvert). tsc 0.
+
 ## Session du 2 Octobre 2026 (22): PHASE E V3 — VIE DU MONDE
 
 **Ferry maritime officiel** (FerryManager): port de Gale → Marwa

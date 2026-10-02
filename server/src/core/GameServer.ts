@@ -534,8 +534,14 @@ export class GameServer {
               jobType = (await new JobManager(prisma).getJobState(characterId))?.jobType ?? null;
             }
             const { DungeonManager } = await import('../game/DungeonManager.js');
+            // Phase F V3: gating AP officiel (Anubis/Haroeris/Seth)
+            let unionGate: string | undefined;
+            if (tier !== 'beginner') {
+              const { globalAPManager } = await import('../game/APManager.js');
+              unionGate = await globalAPManager.gateFor(characterId);
+            }
             const dg = await DungeonManager.getInstance().enter(characterId, kind, tier, player.position, {
-              level: player.level, jobType,
+              level: player.level, jobType, characterUnionGate: unionGate,
             });
             this.combatBridge?.sendToPlayerRaw(characterId, 'chat', {
               message: `🌀 ${dg.note}`, channel: 'system',
@@ -775,6 +781,39 @@ export class GameServer {
           logger.error('skill:learn error:', error);
           if (typeof ack === 'function') ack({ success: false, error: 'Erreur serveur' });
         }
+      });
+
+      // Réskill officiel 80% (phase F V3, KB 16): quête restituant 80% des SP
+      // dépensés en skills (les maîtrises sont conservées).
+      socket.on('skill:reskill', (_d: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
+            if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            // SP dépensés = somme des reqSp des skills appris (données officielles)
+            const { GameDataService } = await import('../data/GameDataService.js');
+            const gds = GameDataService.getInstance();
+            let spent = 0;
+            for (const code of player.learnedSkills) {
+              const sk = gds.getOfficialSkill(code);
+              if (sk) spent += sk.reqSp;
+            }
+            const refund = Math.floor(spent * 0.8);
+            if (refund <= 0) { ack?.({ success: false, error: 'Aucun skill à restituer' }); return; }
+            player.learnedSkills.clear();
+            player.sp += refund;
+            await prisma.characterSkill.deleteMany({ where: { characterId } });
+            await prisma.character.update({ where: { id: characterId }, data: { sp: BigInt(Math.floor(player.sp)) } });
+            this.combatBridge?.sendPlayerState(characterId);
+            this.combatBridge?.sendToPlayerRaw(characterId, 'chat', {
+              message: '🔁 Réskill: ' + refund.toLocaleString('fr') + ' SP restitués (80% officiel)',
+              channel: 'system',
+            });
+            ack?.({ success: true, refund, sp: player.sp });
+          } catch (e) { ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' }); }
+        })();
       });
 
       // Activation berserker (5 orbes → ×2 dégâts 15 s — comportement officiel)
