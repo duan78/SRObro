@@ -252,8 +252,8 @@ export class GmCommands {
   /** /level <n> */
   private cmdLevel(characterId: string, player: PlayerEntity, args: string[]): boolean {
     const n = parseInt(args[0] ?? '', 10);
-    if (!n || n < 1 || n > 140) {
-      this.reply(characterId, 'Usage: /level <1-140>');
+    if (!n || n < 1 || n > 120) {
+      this.reply(characterId, 'Usage: /level <1-120>');
       return true;
     }
     const old = player.level;

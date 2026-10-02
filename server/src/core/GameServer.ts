@@ -457,18 +457,26 @@ export class GameServer {
         })();
       });
 
-      // Donjons (Phase G V2 — FGW Togui + Qin-Shi B6)
+      // Donjons (Phase G V2 — FGW Togui + Qin-Shi B6; Phase I — Job Temple)
       socket.on('dungeon:enter', (data: unknown, ack?: (r: unknown) => void) => {
         void (async () => {
           try {
             const client = this.clientManager?.getClient(socket.id);
             const characterId = client?.getCharacterId() ?? null;
             const player = characterId ? this.worldManager?.getPlayer(characterId) : null;
-            const kind = String((data as { kind?: string })?.kind ?? 'fgw_togui') as 'fgw_togui' | 'qinshi_b6';
+            const kind = String((data as { kind?: string })?.kind ?? 'fgw_togui') as 'fgw_togui' | 'qinshi_b6' | 'job_temple';
             const tier = String((data as { tier?: string })?.tier ?? 'a1');
             if (!characterId || !player) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            // Job Temple: niveau + costume de métier (JobState) vérifiés
+            let jobType: string | null = null;
+            if (kind === 'job_temple') {
+              const { JobManager } = await import('../job/JobManager.js');
+              jobType = (await new JobManager(prisma).getJobState(characterId))?.jobType ?? null;
+            }
             const { DungeonManager } = await import('../game/DungeonManager.js');
-            const dg = await DungeonManager.getInstance().enter(characterId, kind, tier, player.position);
+            const dg = await DungeonManager.getInstance().enter(characterId, kind, tier, player.position, {
+              level: player.level, jobType,
+            });
             this.combatBridge?.sendToPlayerRaw(characterId, 'chat', {
               message: `🌀 ${dg.note}`, channel: 'system',
             });

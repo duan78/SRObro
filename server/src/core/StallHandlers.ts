@@ -17,7 +17,7 @@ import type { CombatBridge } from '../game/CombatBridge';
 const logger = createLogger('StallHandlers');
 
 /** Villes où un stall peut être ouvert (KB 23: partout en ville). */
-const CITY_ZONES = new Set(['zone_jangan', 'zone_donwhang', 'zone_hotan']);
+const CITY_ZONES = new Set(['zone_jangan', 'zone_donwhang', 'zone_hotan', 'zone_constantinople', 'zone_samarkand', 'zone_alexandria']);
 
 export class StallHandlers {
   private stallManager = StallManager.getInstance(prisma);

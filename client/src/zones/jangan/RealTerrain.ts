@@ -21,24 +21,35 @@ export interface RegionIndexEntry {
 export class RealTerrain {
   private scene: Scene;
   private heights = new Map<string, Float32Array>(); // "x_z" -> 97*97
-  private meshes: Mesh[] = [];
+  private meshesByRegion = new Map<string, import('@babylonjs/core').Mesh[]>();
   private index: { regionSize: number; heightmapSize: number; regions: RegionIndexEntry[] } | null = null;
   private tileIndex: Record<string, string> | null = null;
   private texCache = new Map<string, Texture>();
   private matCache = new Map<string, StandardMaterial>();
+  /** Streaming: régions chargées autour du joueur (monde multi-continents). */
+  private queue: RegionIndexEntry[] = [];
+  private queued = new Set<string>();
+  private pumping = false;
+  private lastStreamAt = 0;
+  private lastCenter: { x: number; z: number } | null = null;
   /** Région ancrée au centre du monde local (Jangan ville, zone la plus plate) */
   public static readonly ANCHOR = { x: 69, z: 71 };
+  /** Rayon de streaming en régions (2 → bloc 5×5 autour du joueur). */
+  public static readonly STREAM_RADIUS = 2;
 
   constructor(scene: Scene) {
     this.scene = scene;
   }
 
+  /** Nombre de régions dont les meshes sont en scène (diagnostic). */
+  get loadedRegionCount(): number {
+    return this.meshesByRegion.size;
+  }
+
   /**
-   * Charge le terrain. Les régions proches du point d'apparition (bloc 3×3)
-   * sont chargées en priorité AVANT de rendre la main — le joueur peut entrer
-   * dans le monde dès que son voisinage est prêt; les régions lointaines
-   * continuent en tâche de fond (heightAt renvoie 0 tant qu'une région
-   * manque: dégradation connue et temporaire).
+   * Charge l'index puis le bloc de régions autour du point d'apparition
+   * (attente synchrone du voisinage immédiat). Le reste du monde (819
+   * régions, 3 continents) est streamé à la demande par update().
    */
   async load(centerX = 960, centerZ = 960): Promise<boolean> {
     try {
@@ -51,67 +62,119 @@ export class RealTerrain {
       console.warn('[RealTerrain] index indisponible:', e);
       return false;
     }
+    const near = await this.streamTo(centerX, centerZ);
+    console.log(`[RealTerrain] ${this.meshesByRegion.size} régions prêtes (ancre ${RealTerrain.ANCHOR.x}x${RealTerrain.ANCHOR.z}, streaming rayon ${RealTerrain.STREAM_RADIUS})`);
+    return near > 0;
+  }
 
-    const size = this.index.regionSize;        // 1920
-    const hm = this.index.heightmapSize;       // 97
-    const step = size / (hm - 1);              // 20 unités entre samples
+  /** Streaming périodique appelé depuis la boucle de jeu (throttlé). */
+  update(playerX: number, playerZ: number): void {
+    const now = performance.now();
+    if (now - this.lastStreamAt < 700) return;
+    // Rien à faire si le joueur est resté dans la même région
+    if (this.lastCenter) {
+      const size = this.index?.regionSize ?? 1920;
+      const dx = Math.abs(playerX - this.lastCenter.x);
+      const dz = Math.abs(playerZ - this.lastCenter.z);
+      if (dx < size * 0.5 && dz < size * 0.5) return;
+    }
+    this.lastStreamAt = now;
+    void this.streamTo(playerX, playerZ);
+  }
 
-    // Priorité: régions les plus proches du centre demandé d'abord
-    const sorted = [...this.index.regions].sort((a, b) => {
-      const world = (r: { x: number; z: number }) => ({
-        x: (r.x - RealTerrain.ANCHOR.x) * size,
-        z: (r.z - RealTerrain.ANCHOR.z) * size,
-      });
-      const wa = world(a), wb = world(b);
-      const da = (wa.x + size / 2 - centerX) ** 2 + (wa.z + size / 2 - centerZ) ** 2;
-      const db = (wb.x + size / 2 - centerX) ** 2 + (wb.z + size / 2 - centerZ) ** 2;
-      return da - db;
-    });
+  /** Téléport lointain: bloc autour de la destination chargé AVANT de bouger. */
+  async teleportTo(x: number, z: number): Promise<void> {
+    await this.streamTo(x, z);
+  }
 
-    const loadRegion = async (region: RegionIndexEntry): Promise<boolean> => {
-      if (this.heights.has(`${region.x}_${region.z}`)) return false;
-      try {
-        const [hBuf, tBuf] = await Promise.all([
-          (await fetch(`/assets/terrain/${region.file}`)).arrayBuffer(),
-          (await fetch(`/assets/terrain/${region.file.replace('.f32', '.tiles')}`)).arrayBuffer(),
-        ]);
-        const heights = new Float32Array(hBuf);
-        const tiles = new Uint16Array(tBuf);
-        this.heights.set(`${region.x}_${region.z}`, heights);
-        this.buildRegionMesh(region, heights, tiles, hm, step);
-        return true;
-      } catch {
-        return false; // région illisible: ignorée
-      }
-    };
+  /**
+   * Charge les régions dans le rayon de streaming autour d'une position
+   * (sync=true: attendues avant retour; sinon en tâche de fond) et décharge
+   * les meshes au-delà du rayon+1. Les heightmaps restent en mémoire
+   * (heightAt doit rester juste partout, ~37 Ko/région).
+   */
+  private async streamTo(px: number, pz: number): Promise<number> {
+    if (!this.index) return 0;
+    const size = this.index.regionSize;
+    const crx = RealTerrain.ANCHOR.x + Math.floor(px / size);
+    const crz = RealTerrain.ANCHOR.z + Math.floor(pz / size);
+    this.lastCenter = { x: px, z: pz };
 
-    // 1) Bloc 3×3 autour du centre, attendu (monde jouable immédiatement)
-    const NEAR = 9;
-    let near = 0;
-    for (const region of sorted.slice(0, NEAR)) {
-      if (await loadRegion(region)) near++;
+    const inRadius = this.index.regions.filter((r) =>
+      Math.max(Math.abs(r.x - crx), Math.abs(r.z - crz)) <= RealTerrain.STREAM_RADIUS);
+
+    // Déchargement des régions sorties du rayon (meshes seuls)
+    const keep = new Set(inRadius.map((r) => `${r.x}_${r.z}`));
+    for (const [key, meshes] of this.meshesByRegion) {
+      if (keep.has(key)) continue;
+      for (const m of meshes) m.dispose();
+      this.meshesByRegion.delete(key);
     }
 
-    // 2) Reste des régions en tâche de fond, par petites vagues parallèles
-    const rest = sorted.slice(NEAR);
+    // Chargement synchrone du voisinage (retour rapide: rayon 1 d'abord)
+    let loaded = 0;
+    const sorted = [...inRadius].sort((a, b) =>
+      (Math.max(Math.abs(a.x - crx), Math.abs(a.z - crz)) - Math.max(Math.abs(b.x - crx), Math.abs(b.z - crz))));
+    for (const region of sorted) {
+      if (Math.max(Math.abs(region.x - crx), Math.abs(region.z - crz)) > 1) break;
+      if (await this.loadRegion(region)) loaded++;
+    }
+    // Rayon 2: en file d'attente (tâche de fond, concurrence 3)
+    for (const region of sorted) {
+      const key = `${region.x}_${region.z}`;
+      if (this.meshesByRegion.has(key) || this.queued.has(key)) continue;
+      this.queued.add(key);
+      this.queue.push(region);
+    }
+    this.pump();
+    return loaded;
+  }
+
+  /** Pompe de la file de streaming (3 chargements parallèles max). */
+  private pump(): void {
+    if (this.pumping) return;
+    this.pumping = true;
     void (async () => {
-      const CONCURRENCY = 6;
-      let i = 0, loaded = near;
+      let i = 0;
       const worker = async (): Promise<void> => {
-        while (i < rest.length) {
-          const region = rest[i++];
-          if (await loadRegion(region)) loaded++;
-          if (loaded % 20 === 0) {
-            console.log(`[RealTerrain] tâche de fond: ${loaded}/${sorted.length} régions`);
-          }
+        while (i < this.queue.length) {
+          const region = this.queue[i++];
+          await this.loadRegion(region);
+          this.queued.delete(`${region.x}_${region.z}`);
         }
       };
-      await Promise.all(Array.from({ length: CONCURRENCY }, worker));
-      console.log(`[RealTerrain] ${loaded}/${sorted.length} régions chargées (fond) (ancre ${RealTerrain.ANCHOR.x}x${RealTerrain.ANCHOR.z})`);
+      await Promise.all(Array.from({ length: Math.min(3, this.queue.length) }, worker));
+      this.queue.length = 0;
+      this.pumping = false;
     })();
+  }
 
-    console.log(`[RealTerrain] ${near} régions proches prêtes, ${rest.length} en tâche de fond`);
-    return near > 0;
+  /** Charge une région (heightmap + tilemap → meshes par texture). */
+  private async loadRegion(region: RegionIndexEntry): Promise<boolean> {
+    const key = `${region.x}_${region.z}`;
+    if (this.meshesByRegion.has(key)) return false;
+    try {
+      const [hBuf, tBuf] = await Promise.all([
+        (await fetch(`/assets/terrain/${region.file}`)).arrayBuffer(),
+        (await fetch(`/assets/terrain/${region.file.replace('.f32', '.tiles')}`)).arrayBuffer(),
+      ]);
+      const heights = new Float32Array(hBuf);
+      const tiles = new Uint16Array(tBuf);
+      this.heights.set(key, heights);
+      const size = this.index!.regionSize;
+      const hm = this.index!.heightmapSize;
+      const step = size / (hm - 1);
+      const meshes: import('@babylonjs/core').Mesh[] = [];
+      if (this.buildRegionMesh(region, heights, tiles, hm, step, meshes)) {
+        this.meshesByRegion.set(key, meshes);
+      } else {
+        // Région sans texture exploitable: marquée vide pour ne pas re-charger
+        this.meshesByRegion.set(key, []);
+      }
+      return true;
+    } catch {
+      return false; // région illisible: ignorée
+    }
   }
 
   /**
@@ -124,6 +187,7 @@ export class RealTerrain {
     tiles: Uint16Array,
     hm: number,
     step: number,
+    target: import('@babylonjs/core').Mesh[],
   ): boolean {
     const size = this.index!.regionSize;
     const originX = (region.x - RealTerrain.ANCHOR.x) * size;
@@ -176,7 +240,7 @@ export class RealTerrain {
       mesh.checkCollisions = true;
       mesh.receiveShadows = true;
       mesh.freezeWorldMatrix();
-      this.meshes.push(mesh);
+      target.push(mesh);
       built = true;
     }
     return built;
@@ -231,8 +295,10 @@ export class RealTerrain {
   }
 
   dispose(): void {
-    for (const m of this.meshes) m.dispose();
-    this.meshes = [];
+    for (const meshes of this.meshesByRegion.values()) {
+      for (const m of meshes) m.dispose();
+    }
+    this.meshesByRegion.clear();
     this.heights.clear();
   }
 }

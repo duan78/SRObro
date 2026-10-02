@@ -4,6 +4,7 @@
 // ============================================
 
 import type { Character, CharacterStats } from '@srobro/shared';
+import { xpForNextLevel } from '@srobro/shared';
 import { Observable } from '@babylonjs/core';
 
 export interface LevelUpEvent {
@@ -18,9 +19,11 @@ export interface XPGainEvent {
   level: number;
 }
 
+/** Cap 120 (phase I — Legend VIII, extension Europe/Égypte). */
+export const LEVEL_CAP = 120;
+
 export class ProgressionSystem {
   private character: Character;
-  private xpTable: number[] = [];
 
   // Observables for events
   public onLevelUp = new Observable<LevelUpEvent>();
@@ -29,30 +32,17 @@ export class ProgressionSystem {
 
   constructor(character: Character) {
     this.character = character;
-    this.generateXPTable();
-  }
-
-  /**
-   * Generate XP table for all levels (1-110)
-   * Based on SRO formula: level^2 * 100 * 1.2
-   */
-  private generateXPTable(): void {
-    this.xpTable = [0]; // Level 0 doesn't exist
-
-    for (let level = 1; level <= 110; level++) {
-      const xp = Math.floor(level * level * 100 * 1.2);
-      this.xpTable.push(xp);
-    }
   }
 
   /**
    * Get XP required for a specific level
+   * Courbe OFFICIELLE leveldata (shared/xpcurve — extraite du client).
    */
   getXPForLevel(level: number): number {
-    if (level < 1 || level > 110) {
+    if (level < 1 || level > LEVEL_CAP) {
       return 0;
     }
-    return this.xpTable[level];
+    return xpForNextLevel(level - 1);
   }
 
   /**
@@ -67,7 +57,7 @@ export class ProgressionSystem {
    */
   getNextLevelXP(): number {
     const nextLevel = this.character.level + 1;
-    if (nextLevel > 110) {
+    if (nextLevel > LEVEL_CAP) {
       return this.getCurrentLevelXP(); // Max level
     }
     return this.getXPForLevel(nextLevel);
@@ -83,7 +73,7 @@ export class ProgressionSystem {
     let leveledUp = false;
     let totalStatPoints = 0;
 
-    while (this.character.level < 110 && this.character.exp >= this.getNextLevelXP()) {
+    while (this.character.level < LEVEL_CAP && this.character.exp >= this.getNextLevelXP()) {
       this.character.exp -= this.getNextLevelXP();
       this.character.level++;
 

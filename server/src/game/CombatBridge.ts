@@ -124,6 +124,11 @@ export class CombatBridge {
     { id: 'zone_jangan', x: 0, z: 510 },        // Jangan
     { id: 'zone_donwhang', x: -2908, z: 1523 }, // Donwhang
     { id: 'zone_hotan', x: -6347, z: -541 },    // Hotan
+    // Phase I (grille client réelle — cf. scripts/seed-world-phaseI.ts)
+    { id: 'zone_constantinople', x: 69370, z: 15846 }, // Constantinople
+    { id: 'zone_asia_minor', x: 33600, z: 27840 },     // Asia Minor
+    { id: 'zone_samarkand', x: 35520, z: 29760 },      // Samarkand
+    { id: 'zone_alexandria', x: 40300, z: -42300 },    // Alexandria
   ];
   private jobManager = new JobManager(prisma);
   private lastAmbushCheck = new Map<string, number>(); // characterId → ts
@@ -700,6 +705,11 @@ export class CombatBridge {
             this.sendToPlayerRaw(killerId, 'dungeon:talisman', { talisman: r.talisman });
             this.sendToPlayerRaw(killerId, 'chat', {
               message: `📜 Talisman obtenu: ${r.talisman}`, channel: 'system',
+            });
+          }
+          if (r?.note) {
+            this.sendToPlayerRaw(killerId, 'chat', {
+              message: `🌀 ${r.note}`, channel: 'system',
             });
           }
           if (r?.completed) {

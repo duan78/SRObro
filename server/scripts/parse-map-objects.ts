@@ -29,6 +29,9 @@ const DEFAULT_CENTERS: Array<[number, number, number]> = [
   [69, 71, 3], // Jangan
   [67, 71, 3], // Donwhang
   [66, 70, 3], // Hotan
+  [104, 78, 2], // Constantinople (phase I — grille client réelle)
+  [87, 86, 2], // Samarkand (phase I)
+  [91, 49, 2], // Alexandria (phase I — Égypte)
 ];
 const centers: Array<[number, number, number]> = args.length > 0
   ? args.map((a) => a.split(',').map(Number) as [number, number, number])

@@ -1,5 +1,99 @@
 # Avancement du Projet SRObro
 
+## Session du 2 Octobre 2026 (15) : PHASE I — EUROPE + ÉGYPTE + CAP 120
+
+**Objectif (phase I du PROMPT_MAITRE_V2)**: Constantinople (départ EU),
+Asia Minor, Samarkand, Alexandria + déserts égyptiens, Job Temple, cap 120,
+maîtrises CH 360 / EU 240. Le monde passe de 3 villes chinoises à 7 zones
+sur 3 continents. **test-phaseI.ts: 14/14 ✓, régressions complètes vertes,
+vérifié en navigateur (60 FPS, 0 erreur console).**
+
+### DÉCOUVERTE CLÉ — la grille régions du client est la vérité (PAS xSROMap)
+Les PosX/PosY « officiels » de la KB (extraction xSROMap) ne sont PAS alignés
+sur la grille interne du client (nv_RRCC.nvm / <X>/<Z>.o / minimap) — la
+conversion naïve `x−6460` plantait Constantinople en plein oasis. Vérité
+terrain par scan des `.o` (famille de bâtiments par région):
+- **Jangan 69x71** (validé V1) · **Constantinople 103-106×77-80**
+  (`euro_constan_*`, centroïde moteur (69370, 15846)) · **Samarkand 87x86**
+  (ville murée confirmée par tuile minimap) · **Alexandria ~91x49**
+  (`alex_minga/sphinx/castle` + port) · couches z>160 = instances (miroirs).
+- Les PosX/PosY officiels restent fiables en **offsets RELATIFS
+  intra-ville** (échelle 1:1, 1 région = 1920 u partout): chaque NPC/spawn
+  = ancre moteur de la ville + (officiel − centre officiel de la ville).
+
+### Terrain: 819 régions (3 continents) + streaming
+- Extraction globale 56-109 × 44-83 (`extract-region-heightmaps.ts`) —
+  la grille couvre Chine + Europe de l'Est + Égypte + Samarkand.
+- **RealTerrain repassé en STREAMING dynamique** (l'ancien « tout charger
+  en tâche de fond » était tenable à 110 régions, pas à 819): bloc 5×5
+  autour du joueur (rayon 2), déchargement des meshes au-delà du rayon+1,
+  heightmaps conservées (heightAt juste partout, ~37 Ko/région),
+  `update()` throttlé 700 ms dans la boucle, `teleportTo()` attend le bloc
+  de destination AVANT de déplacer le joueur. 25 régions en scène, 60 FPS.
+- **WorldObjects: tri par distance au CENTRE demandé** — objects.json est
+  trié par distance à l'origine (Jangan): sans re-tri, le budget de 200
+  objets des autres villes partait en herbes lointaines (Constantinople
+  « vide » en capture). Vérifié: remparts + 15-25 structures européenes.
+- parse-map-objects: 6 centres de villes → 6529 placements officiels.
+
+### Serveur: zones, spawn EU, gates, peuplement (seed-world-phaseI.ts)
+- Zones: zone_constantinople 1-24, zone_asia_minor 20-30, zone_samarkand
+  29-45, zone_alexandria 95-120 (7 zones au total).
+- **Bug spawn EU corrigé**: AuthHandlers créait TOUT perso à Jangan
+  (NEW_CHARACTER_SPAWN figé) → spawn par race; les persos EU apparaissent
+  à Constantinople près de la Dimensional Gate (69368, 15831).
+- 44 NPCs officiels (CITIES_04/05 + NPCS_COORDINATES): Balbardo/Jatomo/
+  Bajel/Shadi/Treno/Juel/Gilt/Georion… Constantinople, Julia/Smarkand,
+  Hemaka/Sharon/Senmute/Marwa/Snefru… Alexandria S+N.
+- **Graphe de gates officiel** (16 routes, coût 5000): Constantinople↔
+  Samarkand, Samarkand↔Hotan, Jangan/Hotan↔Alexandria S/N, S↔N,
+  gates internes d'Égypte (Storm and Cloud, Kings Valley).
+- Anneaux MOB_EU (movoi 2 → siren 20), MOB_AM (crab→punisher 23-30),
+  MOB_CA (peryton→golem 32-40), MOB_SD (60 espèces 100-110, désert à
+  l'est d'Alexandria). **Uniques persistants**: Cerberus 693 072 HP
+  (East Europe, spawn officiel), Captain Ivy (Asia Minor).
+- CombatBridge.CITIES étendu (zone par <800 m lors des téléports),
+  stalls autorisés dans les 3 nouvelles villes.
+
+### Job Temple (Pharaoh Tomb) — DungeonManager
+- 3 difficultés (beginner/intermediate/advanced), paliers OFFICIELS:
+  Selket (57 722 800) → Neith (59 340 839) [→ Anubis (94 054 249) →
+  Haroeris (244 859 450) → Seth (236 392 140) → Apis+Eris en advanced],
+  chaque palier se débloque à la mort du précédent («kill Haroeris
+  before Seth», KB 15). Trash = mobs SD officiels (Uneg/Weneg/Khepri…).
+- Entrée: niveau 100+ ET costume de métier (KB CITIES_04:236-237),
+  hunter/trader → Red Eggre, thief → Black Eggre. Cooldown 3 h,
+  récompenses Seal of Nova/Egypt 11D. Annonce «palier suivant» en chat.
+
+### Cap 120 (unifié)
+- Client: ProgressionSystem utilisait une formule INVENTÉE
+  (lvl²×100×1.2, cap 110) → **courbe officielle partagée** (xpcurve,
+  leveldata du client), LEVEL_CAP=120.
+- GM /level clampé à 120 (était 140), setLevel pareil.
+- **Plafonds totaux de maîtrises officiels** (KB 02/03): CH 3×niveau
+  (360 au cap 120), EU 2×niveau (240) — vérifiés au levelup
+  (AuthHandlers) en plus du plafond individuel = niveau.
+- Maîtrises DB maxLevel → 120 (seed).
+
+### Pièges du jour
+- **Plafond 12 persos/compte**: les suites créent des persos sans nettoyer
+  → les échecs «ERREUR: create» des suites = compte saturé, purger les
+  persos de test (garder les 2 persos de la session filmée).
+- Tests de kill GM: entrer les donjons à un point ISOLÉ (l'entrée
+  officielle de la tombe (45549,−45278) est à >1,3 km de tout camp) —
+  à Samarkand les anneaux 29-45 interfèrent avec /kill (150 m).
+- Le cache Vite repend les objets/terrain: recharger la page après
+  régénération d'objects.json.
+
+### Preuves (test-phaseI.ts 14/14)
+Spawn EU (69368/15831 ✓) · Movoi 55 HP lv2 DB vSRO ✓ · Cerberus persistant
+à son spawn ✓ · gate Samarkand 5000 or + arrivée exacte (35520/29760) ✓ ·
+gates Samarkand→Constantinople+Hotan ✓ · Job Temple: refus sans costume ✓,
+hunter ✓, Selket 57,7M ✓, Neith après Selket ✓, complétion Seal of Nova ✓,
+cooldown 3 h ✓ · cap 120 ✓.
+Navigateur: perso EU posé sur le relief (h=80,2), 25 régions streamées,
+60 FPS, 0 console.error, Constantinople rendue (remparts/maisons européenes).
+
 ## Session du 2 Octobre 2026 (14) : OBJECTIF FIDÉLITÉ SRO — ANIMATIONS D'ATTAQUE DU PERSO
 
 **Écart de fidélité**: le perso ne jouait AUCUNE animation d'attaque (seuls

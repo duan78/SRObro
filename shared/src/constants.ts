@@ -13,11 +13,11 @@ export const GAME_CONFIG = {
   },
 
   // Chinese masteries
-  CHINESE_MASTERY_MAX_LEVEL: 80,
-  TOTAL_CHINESE_MASTERY_LEVELS: 560, // 7 masteries * 80
+  CHINESE_MASTERY_MAX_LEVEL: 120, // cap 120 (phase I)
+  TOTAL_CHINESE_MASTERY_LEVELS: 360, // plafond TOTAL officiel 3×niveau (KB 02: 360 au cap 120)
 
   // European masteries
-  EUROPEAN_MASTERY_MAX_LEVEL: 60,
+  EUROPEAN_MASTERY_MAX_LEVEL: 120, // plafond individuel = niveau; TOTAL 2×niveau = 240 (KB 03)
 
   // Stat points per level
   STAT_POINTS_PER_LEVEL: 3,
@@ -288,8 +288,27 @@ export const ZONES = {
   CONSTANTINOPLE: {
     id: 'zone_constantinople',
     name: 'Constantinople',
-    levelRange: { min: 1, max: 20 },
-    position: { x: -1000, y: 0, z: 0 },
+    levelRange: { min: 1, max: 24 },
+    // Ancre moteur phase I (bâtiments euro_constan_* — grille client 105x79)
+    position: { x: 69370, y: 0, z: 15846 },
+  },
+  ASIA_MINOR: {
+    id: 'zone_asia_minor',
+    name: 'Asia Minor',
+    levelRange: { min: 20, max: 30 },
+    position: { x: 33600, y: 0, z: 27840 },
+  },
+  SAMARKAND: {
+    id: 'zone_samarkand',
+    name: 'Samarkand',
+    levelRange: { min: 29, max: 45 },
+    position: { x: 35520, y: 0, z: 29760 },
+  },
+  ALEXANDRIA: {
+    id: 'zone_alexandria',
+    name: 'Alexandria',
+    levelRange: { min: 95, max: 120 },
+    position: { x: 40300, y: 0, z: -42300 },
   },
   THIEF_VILLAGE: {
     id: 'zone_thief_village',

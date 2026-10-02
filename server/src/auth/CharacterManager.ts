@@ -100,8 +100,10 @@ const DEFAULT_SPAWN = {
     rotation: 0,
   },
   european: {
+    // Départ EU officiel: Constantinople, près de la Dimensional Gate
+    // (ancre moteur phase I — bâtiments euro_constan_* région 105x79).
     zoneId: 'zone_constantinople',
-    position: { x: -100, y: 0, z: 100 },
+    position: { x: 69368, y: 0, z: 15831 },
     rotation: 0,
   },
 };

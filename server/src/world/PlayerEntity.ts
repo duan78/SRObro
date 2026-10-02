@@ -329,7 +329,7 @@ export class PlayerEntity extends Entity {
    * officielle, accorde les points de stats manquants et recalcul les maxima.
    */
   setLevel(target: number): void {
-    const n = Math.max(1, Math.min(140, Math.floor(target)));
+    const n = Math.max(1, Math.min(120, Math.floor(target))); // cap 120 (phase I)
     const oldLevel = this.level;
     this.level = n;
     this.exp = cumulativeXpForLevel(n);

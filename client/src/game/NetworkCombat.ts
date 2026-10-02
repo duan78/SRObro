@@ -343,12 +343,17 @@ export class NetworkCombat {
       const player = this.scene.meshes.find((m) => m.name.startsWith('chinaman_'));
       if (player && pos) {
         const terrain = this.janganZone?.realTerrain;
-        const y = terrain ? terrain.heightAt(pos.x, pos.z) : (pos.y ?? 0);
-        const root = (player.parent ?? player) as { position: { set(x: number, y: number, z: number): void } };
-        root.position.set(pos.x, y, pos.z);
-        // Streaming-lite (Phase B): les bâtiments de la ville de destination
-        // remplacent ceux de la ville d'origine (budget perf constant).
-        void this.janganZone?.worldObjectsPublic?.reload(pos.x, pos.z);
+        // Bloc de régions de la destination chargé AVANT le déplacement:
+        // heightAt juste et sol visible dès l'arrivée (monde multi-continents).
+        void (async () => {
+          if (terrain) await terrain.teleportTo(pos.x, pos.z);
+          const y = terrain ? terrain.heightAt(pos.x, pos.z) : (pos.y ?? 0);
+          const root = (player.parent ?? player) as { position: { set(x: number, y: number, z: number): void } };
+          root.position.set(pos.x, y, pos.z);
+          // Streaming-lite (Phase B): les bâtiments de la ville de destination
+          // remplacent ceux de la ville d'origine (budget perf constant).
+          void this.janganZone?.worldObjectsPublic?.reload(pos.x, pos.z);
+        })();
       }
     });
 

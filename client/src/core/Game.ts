@@ -989,10 +989,11 @@ export class Game {
       }
     }
 
-    // Hauteur du terrain sous le joueur
+    // Hauteur du terrain sous le joueur + streaming des régions autour de lui
     const terrain = this.janganZone?.realTerrain;
     if (terrain) {
       player.position.y = terrain.heightAt(player.position.x, player.position.z);
+      terrain.update(player.position.x, player.position.z);
     }
 
     // Synchronisation réseau throttlée (le serveur fait autorité sur la position)

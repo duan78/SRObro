@@ -66,8 +66,32 @@ export class WorldManager {
     this.zones.set('zone_constantinople', {
       id: 'zone_constantinople',
       name: 'Constantinople',
-      levelRange: { min: 1, max: 20 },
+      levelRange: { min: 1, max: 24 },
       size: { width: 2000, height: 2000 },
+    });
+
+    // Asia Minor (phase I)
+    this.zones.set('zone_asia_minor', {
+      id: 'zone_asia_minor',
+      name: 'Asia Minor',
+      levelRange: { min: 20, max: 30 },
+      size: { width: 2000, height: 2000 },
+    });
+
+    // Samarkand (phase I)
+    this.zones.set('zone_samarkand', {
+      id: 'zone_samarkand',
+      name: 'Samarkand',
+      levelRange: { min: 29, max: 45 },
+      size: { width: 2000, height: 2000 },
+    });
+
+    // Alexandria (phase I)
+    this.zones.set('zone_alexandria', {
+      id: 'zone_alexandria',
+      name: 'Alexandria',
+      levelRange: { min: 95, max: 120 },
+      size: { width: 2400, height: 2400 },
     });
 
     // Thief Village

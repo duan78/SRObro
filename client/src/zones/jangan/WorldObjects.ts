@@ -78,14 +78,25 @@ export class WorldObjects {
 
   private async placeAround(centerX: number, centerZ: number): Promise<number> {
 
-    // Budget + proximité + limite par modèle
+    // Candidats dans le rayon, triés par proximité au CENTRE demandé (la
+    // ville de destination), puis budget + limite par modèle. Le tri par
+    // distance est indispensable: objects.json est trié par distance à
+    // l'ORIGINE du monde (Jangan) — sans lui, le budget des autres villes
+    // (Constantinople, Alexandria...) partait en herbes lointaines.
     const perModel = new Map<string, number>();
-    const selected: Placement[] = [];
+    const candidates: Array<{ p: typeof this.placements[0]; d2: number }> = [];
     for (const p of this.placements) {
       if (EXCLUDE.test(p.bsr)) continue;
       const dx = p.x - centerX;
       const dz = p.z - centerZ;
-      if (dx * dx + dz * dz > LOAD_RADIUS * LOAD_RADIUS) continue;
+      const d2 = dx * dx + dz * dz;
+      if (d2 > LOAD_RADIUS * LOAD_RADIUS) continue;
+      candidates.push({ p, d2 });
+    }
+    candidates.sort((a, b) => a.d2 - b.d2);
+
+    const selected: Placement[] = [];
+    for (const { p } of candidates) {
       const n = perModel.get(p.bsr) ?? 0;
       if (n >= MAX_PER_MODEL) continue;
       perModel.set(p.bsr, n + 1);

@@ -19,7 +19,12 @@ const logger = createLogger('AuthHandlers');
 
 // Point d'apparition des nouveaux personnages: centre de Jangan (ville),
 // aligné sur JANGAN_CONFIG.playerSpawnPoint du client (évite les bâtiments).
-const NEW_CHARACTER_SPAWN = { x: 0, y: 0, z: 500 };
+// Spawn par race (phase I): départ chinois à Jangan, départ européen à
+// Constantinople près de la Dimensional Gate (ancre moteur 105x79).
+const NEW_CHARACTER_SPAWN_BY_RACE: Record<string, { x: number; y: number; z: number; zoneId: string }> = {
+  chinese: { x: 0, y: 0, z: 500, zoneId: 'zone_jangan' },
+  european: { x: 69368, y: 0, z: 15831, zoneId: 'zone_constantinople' },
+};
 
 // Un compte ne peut pas avoir une armée de persos inutiles
 const MAX_CHARACTERS_PER_ACCOUNT = 12; // V2: tests multi-personnages (party 8, guildes, trades)
@@ -119,6 +124,21 @@ export class AuthHandlers {
       const level = existing?.level ?? 0;
       if (level >= player.level) {
         this.ack(ack, { success: false, error: `Cap atteint (niveau ${player.level})` });
+        return;
+      }
+      // Plafond TOTAL officiel par race (KB 02/03: CH 3×niveau — 360 au cap 120,
+      // EU 2×niveau — 240 au cap 120)
+      const [char, allMasteries] = await Promise.all([
+        prisma.character.findUnique({ where: { id: characterId }, select: { race: true } }),
+        prisma.characterMastery.findMany({ where: { characterId }, select: { level: true } }),
+      ]);
+      const totalLevels = allMasteries.reduce((s, m) => s + m.level, 0);
+      const totalCap = (char?.race === 'european' ? 2 : 3) * player.level;
+      if (totalLevels + 1 > totalCap) {
+        this.ack(ack, {
+          success: false,
+          error: `Plafond total de maîtrises atteint (${totalCap} — ${char?.race === 'european' ? '2' : '3'}×niveau)`,
+        });
         return;
       }
       const cost = masterySpCost(level + 1);
@@ -401,6 +421,7 @@ export class AuthHandlers {
         return;
       }
 
+      const spawn = NEW_CHARACTER_SPAWN_BY_RACE[race] ?? NEW_CHARACTER_SPAWN_BY_RACE.chinese;
       const character = await prisma.character.create({
         data: {
           accountId,
@@ -416,10 +437,10 @@ export class AuthHandlers {
           maxMp: 100,
           str: 20,
           int: 20,
-          positionX: NEW_CHARACTER_SPAWN.x,
-          positionY: NEW_CHARACTER_SPAWN.y,
-          positionZ: NEW_CHARACTER_SPAWN.z,
-          zoneId: 'zone_jangan',
+          positionX: spawn.x,
+          positionY: spawn.y,
+          positionZ: spawn.z,
+          zoneId: spawn.zoneId,
           gold: 10000n,
         },
       });
