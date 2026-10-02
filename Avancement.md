@@ -877,3 +877,17 @@ playlist audio par zone.
 - MAX_CHARACTERS_PER_ACCOUNT 4→12 (tests multi-personnages: party 8,
   guildes, trades). Tests: D 8/8, consign 10/10, social 11/11,
   medusa 5/5, A 9/9.
+
+### SESSION DE TEST FILMÉE V2 — 2026-10-02 (final)
+- **audit-filme-v2.ts**: session scriptée de bout en bout couvrant les 8
+  critères §5 avec timestamps (transcription complète dans
+  docs/audit/AUDIT_FILME_V2_TRANSCRIPT.log) — TOUS DÉMONTRÉS:
+  C1 téléports payés, C2 TG EXP×GAP exact, C3 skill SP+zerk, C4 alchimie
+  100%+destruction+consignation (achat à distance 2 010 000→2 005 000),
+  C5 trade 3★+embuscade+vente 5 720 EXACTE, C6 guilde+union+party bonus
+  51.5% mesuré, C7 FGW 8 talismans+Medusa ENGAGÉE (AoE Petrify+esquive 48 m),
+  C8 loup+monture ×1.67+UI 8 fenêtres.
+- Pièges: heartbeat périodique obligatoire dans les scripts multi-sockets
+  (timeout 30 s sinon), /item atterrit au premier slot LIBRE (variable
+  selon l'alchimie), tracking Medusa par NOM (modelId variable).
+- AUDIT_FINAL_V2.md mis à jour avec les preuves filmées.
