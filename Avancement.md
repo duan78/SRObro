@@ -765,3 +765,20 @@ tsc 0/0, persistance après relance serveur.
 - **Tests**: test-phaseG-jobs.ts 16/16 (transport 1★ accepté, étoiles 4/9→3★,
   embuscade 3 thieves, vente 5 720 or = 4×(1500×1.62−1000) EXACT, rechargement
   Hotan, vol + recel 4 800 + avertissement). Régressions A/B/combat vertes.
+
+### STALLS (stall network officiel) — 2026-10-02
+- **3 bugs corrigés** (audit modules + découverts):
+  1. Transfert d'item: le slot du VENDEUR était conservé → collision
+     @@unique([characterId, slot]) chez l'acheteur. Désormais slot libre
+     calculé pour l'acheteur (vérifié: slot 3 avec 0-2 occupés).
+  2. Anti double-vente: transaction Prisma interactive avec deleteMany
+     garde (0 ligne détruite = déjà vendu → rollback complet).
+  3. Cache: addItemToStall stockait l'id de l'INVENTORY item comme id de
+     StallItem → recherche renvoyait des stallItemId introuvables.
+  (+ singleton StallManager: une instance par socket isolait les caches;
+  + recherche: vrais plus/rarity lus en base, plus 0/common hardcodés)
+- **Handlers** (StallHandlers.ts): stall:open (1 000 or, en ville uniquement),
+  add_item, search (stall network), buy (or base+entité synchronisés),
+  close. Noms d'items officiels coréens (recherche par type/prix).
+- **Tests**: test-phaseD2-stalls.ts 8/8 (ouverture, dépôt, recherche,
+  achat, or débité 60 000→55 000, slot libre 3, double-vente rejetée).

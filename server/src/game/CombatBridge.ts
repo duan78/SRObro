@@ -848,10 +848,11 @@ export class CombatBridge {
     player.setPosition({ x: position.x, y: position.y ?? 0, z: position.z });
     // Zone recalculée par proximité (le GM /tp ne transporte pas l'info de
     // zone — sinon ventes/spécialités restent ancrées à la ville d'origine)
-    const nearest = CombatBridge.CITIES.reduce((best, c) => {
+    let nearest: { id: string; d: number } = { id: player.zoneId, d: Infinity };
+    for (const c of CombatBridge.CITIES) {
       const d = Math.hypot(c.x - position.x, c.z - position.z);
-      return d < best.d ? { ...c, d } : best;
-    }, { id: player.zoneId, x: Infinity, z: Infinity, d: Infinity } as { id: string; x: number; z: number; d: number });
+      if (d < nearest.d) nearest = { id: c.id, d };
+    }
     if (Number.isFinite(nearest.d) && nearest.d < 800) player.zoneId = nearest.id;
     // L'entrée spatiale doit suivre: checkDespawn/AOI s'appuient dessus —
     // une entrée restée à l'ancienne position ferait despawn tous les mobs

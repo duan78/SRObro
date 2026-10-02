@@ -256,6 +256,12 @@ export class GameServer {
         this.clientManager, this.worldManager ?? null, this.combatBridge ?? null,
       ).register(socket);
 
+      // Stalls (Phase D V2 — économie joueur: stall network officiel)
+      const { StallHandlers } = await import('./StallHandlers.js');
+      new StallHandlers(
+        this.clientManager, this.worldManager ?? null, this.combatBridge ?? null,
+      ).register(socket);
+
       socket.on('quest:interact', (data: unknown, ack?: (r: unknown) => void) => {
         try {
           const client = this.clientManager?.getClient(socket.id);

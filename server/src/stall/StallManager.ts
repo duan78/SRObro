@@ -57,9 +57,18 @@ export class StallManager {
   // Cache of open stalls for quick lookup
   private stallCache: Map<string, StallData> = new Map();
 
+  private static instance: StallManager | null = null;
+
   constructor(prisma: PrismaClient) {
     this.prisma = prisma;
     this.initializeCache();
+  }
+
+  /** Singleton partagé (le cache stall doit être commun à TOUS les sockets —
+   * une instance par handler isolait les stalls de chaque joueur). */
+  static getInstance(prisma: PrismaClient): StallManager {
+    if (!StallManager.instance) StallManager.instance = new StallManager(prisma);
+    return StallManager.instance;
   }
 
   /**
@@ -237,8 +246,9 @@ export class StallManager {
       throw new Error('Price must be greater than 0');
     }
 
-    // Add item to stall
-    await this.prisma.stallItem.create({
+    // Add item to stall (bug d'origine: le cache stockait l'id de
+    // l'INVENTORY item — la recherche renvoyait un stallItemId introuvable)
+    const created = await this.prisma.stallItem.create({
       data: {
         stallId,
         inventoryItemId,
@@ -246,11 +256,11 @@ export class StallManager {
       }
     });
 
-    // Update cache
+    // Update cache (vrai StallItem.id)
     const cachedStall = this.stallCache.get(stallId);
     if (cachedStall) {
       cachedStall.items.push({
-        id: inventoryItemId,
+        id: created.id,
         inventoryItemId,
         price,
         item: inventoryItem.item
@@ -352,28 +362,43 @@ export class StallManager {
       throw new Error('Inventory item not found');
     }
 
-    // Transfer gold
-    await this.prisma.$transaction([
-      // Deduct gold from buyer
-      this.prisma.character.update({
+    // Slot libre chez l'ACHETEUR (bug d'origine: le slot du vendeur était
+    // conservé → collision @@unique([characterId, slot]) avec l'inventaire
+    // existant de l'acheteur)
+    const buyerItems = await this.prisma.inventoryItem.findMany({
+      where: { characterId: buyerCharacterId },
+      select: { slot: true },
+    });
+    const taken = new Set(buyerItems.map((i) => i.slot));
+    let freeSlot = -1;
+    for (let i = 0; i < 45; i++) {
+      if (!taken.has(i)) { freeSlot = i; break; }
+    }
+    if (freeSlot === -1) throw new Error("Inventaire de l'acheteur plein");
+
+    // Transaction: or + item (slot recalculé) + garde anti double-vente
+    // (deleteMany retourne 0 si déjà vendu → rollback complet)
+    const tx = await this.prisma.$transaction(async (prisma) => {
+      const deleted = await prisma.stallItem.deleteMany({
+        where: { id: stallItemId },
+      });
+      if (deleted.count === 0) throw new Error('Article déjà vendu');
+
+      await prisma.character.update({
         where: { id: buyerCharacterId },
-        data: { gold: { decrement: BigInt(price) } }
-      }),
-      // Add gold to seller
-      this.prisma.character.update({
+        data: { gold: { decrement: BigInt(price) } },
+      });
+      await prisma.character.update({
         where: { id: stall.characterId },
-        data: { gold: { increment: BigInt(price) } }
-      }),
-      // Transfer inventory item
-      this.prisma.inventoryItem.update({
+        data: { gold: { increment: BigInt(price) } },
+      });
+      await prisma.inventoryItem.update({
         where: { id: stallItem.inventoryItemId },
-        data: { characterId: buyerCharacterId }
-      }),
-      // Delete stall item
-      this.prisma.stallItem.delete({
-        where: { id: stallItemId }
-      })
-    ]);
+        data: { characterId: buyerCharacterId, slot: freeSlot },
+      });
+      return true;
+    });
+    void tx;
 
     // Update cache
     const cachedStall = this.stallCache.get(stallId);
@@ -425,18 +450,29 @@ export class StallManager {
       });
 
       if (matchingItems.length > 0) {
+        // Vrais plus/rarity: lecture base (le cache inventory était inerte —
+        // plus:0/rarity common hardcodés, filtres non fonctionnels)
+        const invRows = await this.prisma.inventoryItem.findMany({
+          where: { id: { in: matchingItems.map((i) => i.inventoryItemId) } },
+          include: { item: true },
+        });
+        const invById = new Map(invRows.map((r) => [r.id, r]));
         results.push({
           stallId: stall.id,
           characterName: stall.characterName,
           title: stall.title,
           zoneId: stall.zoneId,
           itemCount: matchingItems.length,
-          items: matchingItems.map(item => ({
-            name: item.item.name,
-            plus: 0, // Would need to load from inventory item
-            price: item.price,
-            rarity: 'common'
-          }))
+          items: matchingItems.map(item => {
+            const inv = invById.get(item.inventoryItemId);
+            return {
+              name: item.item.name,
+              stallItemId: item.id,
+              plus: inv?.plus ?? 0,
+              price: item.price,
+              rarity: inv?.item.rarity ?? 'common',
+            };
+          })
         });
       }
     }
