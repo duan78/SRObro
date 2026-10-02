@@ -564,16 +564,38 @@ export class NetworkCombat {
         if (player) {
           // Attache OFFICIELLE à l'os de la main (Bip01 R HandMid si le rig
           // le possède, sinon R Hand) — l'arme suit la main animée.
-          const handBone = this.findPlayerBone(/Bip01 R HandMid$/) ?? this.findPlayerBone(/Bip01 R Hand$/);
+          const handMid = this.findPlayerBone(/Bip01 R HandMid$/);
+          const handBone = handMid ?? this.findPlayerBone(/Bip01 R Hand$/);
           if (handBone) {
-            const { Vector3: V3 } = await import('@babylonjs/core/Maths/math.vector');
+            const { Vector3: V3, Quaternion } = await import('@babylonjs/core/Maths/math.vector');
             loaded.root.parent = null;
             loaded.root.scaling.setAll(1.0);
             loaded.root.position.copyFrom(handBone.getAbsolutePosition());
-            loaded.root.rotation.set(0, 0, 0);
+            // Orientation: les GLB d'armes SRO ont la lame le long de leur
+            // −Z local (mesuré: blade/sword/spear/bow bbox étendue en Z,
+            // pommeau vers l'origine). alignToBone avec rotation(0,0,0)
+            // laissait la lame dans un axe arbitraire du rig («épée
+            // flottante horizontale»). On aligne la lame sur le
+            // prolongement de la main (poignet → bout des doigts) mesuré
+            // sur le rig — attachToBone préserve l'orientation monde.
+            const wrist = this.findPlayerBone(/Bip01 R Hand$/) ?? this.findPlayerBone(/Bip01 R Forearm$/);
+            let dir: InstanceType<typeof V3> | null = null;
+            if (wrist && wrist !== handBone) {
+              dir = handBone.getAbsolutePosition().subtract(wrist.getAbsolutePosition());
+            } else if (!handMid) {
+              // repli: prolonger l'avant-bras
+              const forearm = this.findPlayerBone(/Bip01 R Forearm$/);
+              if (forearm && forearm !== handBone) {
+                dir = handBone.getAbsolutePosition().subtract(forearm.getAbsolutePosition());
+              }
+            }
+            const bladeDir = dir && dir.lengthSquared() > 1e-6 ? dir.normalize() : new V3(0, 1, 0);
+            const q = new Quaternion();
+            Quaternion.FromUnitVectorsToRef(new V3(0, 0, -1), bladeDir, q);
+            loaded.root.rotationQuaternion = q;
             loaded.root.attachToBone(handBone, player as any);
-            // Petit recul le long de la paume pour ne pas traverser la main
-            loaded.root.position.addInPlace(new V3(0, 0, 0));
+            // Recul le long de la paume pour ne pas traverser la main
+            loaded.root.position.addInPlace(bladeDir.scale(-0.6));
           } else {
             // Repli: parent + offset fixes (pas d'os disponible)
             if (player.parent) {
@@ -632,23 +654,27 @@ export class NetworkCombat {
       this.armorNodes = [];
 
       const player = this.getPlayerMesh();
-      if (!player) {
-        // Modèle pas encore chargé (async): réessayer (max ~20 s — le modèle
-        // officiel met ~10-18 s à arriver) tant qu'aucun assemblage plus
-        // récent n'a pris le relais.
+      // Nœud flip du corps (les parties skinnées y vivent — même orientation).
+      // S'il manque, le modèle n'est PAS prêt: même chemin de réessai que
+      // sans modèle (l'assemblage des parties est différé, le flip arrive
+      // avec la 1re partie — l'ancien « return » sec abandonnait l'équipement
+      // à jamais sur ce cas).
+      const flip = player
+        ? player.getChildTransformNodes().find((n) => n.name.endsWith('_flip'))
+        : null;
+      if (!player || !flip) {
+        // Modèle pas encore chargé (async): réessayer (max ~60 s — le modèle
+        // officiel met ~10-18 s à arriver, 60 s couvre les machines lentes)
+        // tant qu'aucun assemblage plus récent n'a pris le relais.
         if (gen === this.armorGen) {
           this.armorRetries = (this.armorRetries ?? 0) + 1;
-          if (this.armorRetries <= 10) {
-            setTimeout(() => { if (gen === this.armorGen) void this.applyEquipmentVisual(slots); }, 2000);
+          if (this.armorRetries <= 40) {
+            setTimeout(() => { if (gen === this.armorGen) void this.applyEquipmentVisual(slots); }, 1500);
           }
         }
         return;
       }
       this.armorRetries = 0;
-
-      // Nœud flip du corps (les parties skinnées y vivent — même orientation)
-      const flip = player.getChildTransformNodes().find((n) => n.name.endsWith('_flip'));
-      if (!flip) return;
 
       const prefix = `${this.playerRace === 'european' ? 'eu' : 'ch'}_${this.playerGender ? 'woman' : 'man'}_`;
       // Décalage vertical appliqué par normalizePlayerScale aux enfants du
@@ -669,6 +695,15 @@ export class NetworkCombat {
         loaded.root.name = `equip_armor_${slot}`;
         loaded.root.parent = flip;
         loaded.root.scaling.setAll(1.0);
+        // Le corps vit déjà sous le nœud _flip (rotation π). La pièce
+        // chargée embarque SON PROPRE flip interne (loadMultiPartGlb
+        // n'applique le demi-tour qu'aux modèles skinnés): l'annuler,
+        // sinon 2×π = pièce tournée de 180° (buste dans le dos, pieds
+        // gauche/droite échangés).
+        const innerFlip = loaded.root
+          .getChildTransformNodes()
+          .find((n) => n.name.endsWith('_flip'));
+        if (innerFlip) innerFlip.rotation.y = 0;
         // Même recalage que les parties du corps (pose pieds au sol)
         for (const child of loaded.root.getChildTransformNodes(true)) child.position.y = yShift;
         this.armorNodes.push(loaded.root);
