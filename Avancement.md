@@ -74,6 +74,11 @@ terrain par scan des `.o` (famille de bâtiments par région):
   (360 au cap 120), EU 2×niveau (240) — vérifiés au levelup
   (AuthHandlers) en plus du plafond individuel = niveau.
 - Maîtrises DB maxLevel → 120 (seed).
+- **Degrés 10-11 obtenables**: le degré vit dans le CODE officiel
+  (ITEM_*_<degré>_<lettre> dans description — 66 items 10D + 22 11D,
+  toutes familles CH/EU). shop:list à Alexandria (zone) vend 8×10D +
+  12×11D chez Hemaka (KB CITIES_04 «armes 10D+», test: 22 articles,
+  max 12 540 000 or) — les autres villes gardent le stock bas niveau.
 
 ### Pièges du jour
 - **Plafond 12 persos/compte**: les suites créent des persos sans nettoyer
@@ -85,12 +90,12 @@ terrain par scan des `.o` (famille de bâtiments par région):
 - Le cache Vite repend les objets/terrain: recharger la page après
   régénération d'objects.json.
 
-### Preuves (test-phaseI.ts 14/14)
+### Preuves (test-phaseI.ts 15/15)
 Spawn EU (69368/15831 ✓) · Movoi 55 HP lv2 DB vSRO ✓ · Cerberus persistant
 à son spawn ✓ · gate Samarkand 5000 or + arrivée exacte (35520/29760) ✓ ·
-gates Samarkand→Constantinople+Hotan ✓ · Job Temple: refus sans costume ✓,
-hunter ✓, Selket 57,7M ✓, Neith après Selket ✓, complétion Seal of Nova ✓,
-cooldown 3 h ✓ · cap 120 ✓.
+gates Samarkand→Constantinople+Hotan ✓ · Hemaka Alexandria 10D/11D ✓ ·
+Job Temple: refus sans costume ✓, hunter ✓, Selket 57,7M ✓, Neith après
+Selket ✓, complétion Seal of Nova ✓, cooldown 3 h ✓ · cap 120 ✓.
 Navigateur: perso EU posé sur le relief (h=80,2), 25 régions streamées,
 60 FPS, 0 console.error, Constantinople rendue (remparts/maisons européenes).
 

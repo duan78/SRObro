@@ -95,6 +95,16 @@ async function main(): Promise<void> {
   const names = gates2.map((g: any) => g.name).join(', ');
   check('Gate Samarkand → Constantinople + Hotan', names.includes('Constantinople') && names.includes('Hotan'), names);
 
+  // ---------- 4b. Alexandria: marchands officiels 10D/11D (KB CITIES_04) ----------
+  await chat('/tp 40257 -42275'); // Dimensional Gate (South) d'Alexandria
+  await wait(1500);
+  const shopAlex = await req('shop:list', {});
+  const alexGoods: any[] = shopAlex.goods ?? [];
+  const has11D = alexGoods.some((g: any) => Number(g.price) > 1000000);
+  check('Alexandria vend le 10D/11D (Hemaka, KB CITIES_04)',
+    shopAlex.success && (shopAlex.npcName ?? '').includes('Alexandria') && alexGoods.length >= 10 && has11D,
+    `${shopAlex.npcName}: ${alexGoods.length} articles, max ${Math.max(0, ...alexGoods.map((g: any) => Number(g.price))).toLocaleString('fr')} or`);
+
   // ---------- 5. Job Temple ----------
   await chat('/level 100');
   await wait(1200);

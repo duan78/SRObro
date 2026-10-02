@@ -271,11 +271,28 @@ export class ItemHandlers {
     try {
       const s = this.session(socket);
       if (!s) { this.ack(ack, { success: false, error: 'Non authentifié' }); return; }
+      const player = this.worldManager?.getPlayer(s.characterId);
+
+      const paid = { price: { gt: 0 } };
+
+      // Alexandria (phase I): marchands officiels 10D+ CH & EU (KB CITIES_04:
+      // «Weapon Trader Hemaka: Armes 10D+» — degrés lisibles dans les codes
+      // officiels ITEM_*_<degré>_<rarereté> de la description).
+      if (player?.zoneId === 'zone_alexandria') {
+        const [hpPot, mpPot, d10, d11] = await Promise.all([
+          prisma.item.findFirst({ where: { type: 'potion', subType: 'hp', ...paid }, orderBy: { price: 'asc' } }),
+          prisma.item.findFirst({ where: { type: 'potion', subType: 'mp', ...paid }, orderBy: { price: 'asc' } }),
+          prisma.item.findMany({ where: { type: 'weapon', description: { contains: '_10_' }, ...paid }, orderBy: { price: 'asc' }, take: 8 }),
+          prisma.item.findMany({ where: { type: 'weapon', description: { contains: '_11_' }, ...paid }, orderBy: { price: 'desc' }, take: 12 }),
+        ]);
+        const goods = [hpPot, mpPot, ...d10, ...d11].filter(Boolean).map((i: any) => serializeItem(i));
+        this.ack(ack, { success: true, npcName: 'Weapon Trader Hemaka (Alexandria)', goods });
+        return;
+      }
 
       // Boutique générique de Jangan: potions de base + lames degré 1-2 +
       // équipement léger — construite depuis les items officiels (phase 3;
       // le mapping NPC→tab fin viendra avec les refshop du client).
-      const paid = { price: { gt: 0 } };
       const [hpPot, mpPot, blades, clothes] = await Promise.all([
         prisma.item.findFirst({ where: { type: 'potion', subType: 'hp', ...paid }, orderBy: { price: 'asc' } }),
         prisma.item.findFirst({ where: { type: 'potion', subType: 'mp', ...paid }, orderBy: { price: 'asc' } }),
