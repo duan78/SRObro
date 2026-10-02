@@ -280,6 +280,8 @@ export class NetworkCombat {
     this.network.on('level_up', (data: any) => {
       const d = data?.data ?? data;
       this.hud.addChatMessage(`Niveau ${d.newLevel} atteint !`, 'system');
+      // SFX officiel de level-up (phase G V3)
+      import('../ui/dom/GameAudio.js').then(({ gameAudio }) => gameAudio.levelUp()).catch(() => undefined);
     });
 
     this.network.on('xp_gain', (data: any) => {

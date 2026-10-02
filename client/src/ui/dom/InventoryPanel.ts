@@ -41,7 +41,8 @@ export class InventoryPanel {
   constructor(network: NetworkManager) {
     this.network = network;
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'i' || e.key === 'I') this.toggle();
+      // Raccourcis officiels SRO (phase G V3): I ET A = inventaire
+      if (e.key === 'i' || e.key === 'I' || e.key === 'a' || e.key === 'A') this.toggle();
       if (e.key === 'Escape') { this.closeShop(); this.hide(); }
     });
   }

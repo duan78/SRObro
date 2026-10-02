@@ -121,6 +121,22 @@ export class GameAudio {
   swordSwing(): void { this.sfx('player/bateuswordswing1.wav', 0.3); }
   monsterDie(): void { this.sfx('ca_mob/cara_bunwang_die.wav', 0.5); }
   monsterHurt(): void { this.sfx('ca_mob/cara_bunwang_moan1.wav', 0.35); }
+  // Phase G V3 — SFX étendus (officiels Data/prim/snd)
+  levelUp(): void { this.sfx('ui/itlevelup.wav', 0.6); }
+  uiClick(): void { this.sfx('common/iron_click.wav', 0.25); }
+  bowShot(): void { this.sfx('common/batbowswing3.wav', 0.4); }
+  crit(): void { this.sfx('player/batswordhit1n.wav', 0.55); }
+
+  /** Volume général persisté (options). */
+  setVolume(v: number): void {
+    for (const pool of this.pool.values()) {
+      for (const a of pool) a.volume = Math.max(0, Math.min(1, v));
+    }
+    try { localStorage.setItem('srobro:volume', String(v)); } catch { /* privé */ }
+  }
+  getVolume(): number {
+    try { return Number(localStorage.getItem('srobro:volume') ?? '0.5'); } catch { return 0.5; }
+  }
 }
 
 export const gameAudio = new GameAudio();

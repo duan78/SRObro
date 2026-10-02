@@ -166,6 +166,10 @@ export class NetworkManager {
         if (sel?.success) {
           console.log('[Network] Session ré-authentifiée après reconnexion');
           this.socket!.emit('world:snapshot', {});
+          // Phase G V3: recharger l'état complet après reconnexion (l'apparence
+          // et la hotbar dépendent de packets émis pendant la coupure)
+          this.socket!.emit('equipment:request', {}, () => undefined);
+          window.dispatchEvent(new CustomEvent('srobro:reconnected'));
         }
       });
     });

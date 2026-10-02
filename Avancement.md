@@ -1,5 +1,24 @@
 # Avancement du Projet SRObro
 
+## Session du 2 Octobre 2026 (24): PHASE G V3 — ROBUSTESSE
+
+**Reconnexion auto durcie**: le reauthenticate existant (auth:resume +
+re-select) re-émet désormais equipment:request (l'apparence dépendait de
+packets perdus pendant la coupure) et diffuse srobro:reconnected;
+auth:resume token invalide → refus propre (pas de crash serveur).
+
+**SFX étendus** (GameAudio): levelUp (ui/itlevelup.wav OFFICIEL), uiClick
+(common/iron_click), bowShot, crit + volume général persisté
+(localStorage srobro:volume), branchés sur level_up réseau.
+
+**Raccourcis officiels**: A = inventaire (alias I, InventoryPanel),
+C perso / S skills / L quêtes / P party / J job / M musique déjà en place
+(vérifiés).
+
+**test-phaseG-robustness.ts 12/12**: session+reconnexion (chemin complet
++ refus propre token invalide), SFX officiels présents et branchés, les 6
+raccourcis officiels, serveur sain. tsc 0.
+
 ## Session du 2 Octobre 2026 (23): PHASE F V3 — FIN DE JEU
 
 **AP réels du Job Temple** (APManager, KB 15:458-462): AP d'UNION gagnés
