@@ -534,6 +534,10 @@ export class AuthHandlers {
             });
           }
         }
+        // Phase A V3: apparence complète (armures par pièce + arme) dès le
+        // login — sinon l'équipement sauvegardé restait invisible.
+        const { ItemHandlers: IH } = await import('./ItemHandlers.js');
+        await IH.sendEquipmentFull(characterId, this.worldManager?.combatBridge ?? null);
       } catch { /* non bloquant */ }
 
       // État complet du perso pour le client (spawn, HUD, progression locale)

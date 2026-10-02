@@ -333,6 +333,7 @@ model Equipment {
   shoulder        String?
   legs            String?
   boots           String?
+  hands           String?
   ring1           String?
   ring2           String?
   necklace        String?

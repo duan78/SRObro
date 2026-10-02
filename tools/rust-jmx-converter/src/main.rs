@@ -128,13 +128,36 @@ fn main() -> Result<()> {
     Ok(())
 }
 
+/** Nom de fichier sans extension (minuscules possible) d'un chemin. */
+fn stem_of(p: &PathBuf) -> String {
+    p.file_stem()
+        .and_then(|s| s.to_str())
+        .unwrap_or("unknown")
+        .to_string()
+}
+
+/** Racine du pack (parent du dossier «prim» ancêtre du BMS): les chemins
+ *  candidats «prim/...» y sont résolus quel que soit l'input CLI. */
+fn pack_root(bms_path: &PathBuf) -> Option<PathBuf> {
+    let mut dir = bms_path.parent()?;
+    loop {
+        if dir.file_name().and_then(|n| n.to_str()) == Some("prim") {
+            return dir.parent().map(|p| p.to_path_buf());
+        }
+        dir = dir.parent()?;
+    }
+}
+
 /**
  * Résout le squelette .bsk d'un mesh .bms:
  * convention du pack: prim/mesh/<cat>/mode le.bms ↔ prim/skel/<cat>/modele.bsk
  * (le squelette est partagé entre les parties `_partN`).
  */
 fn find_skeleton(bms_path: &PathBuf, input_root: &PathBuf) -> Option<PathBuf> {
-    let rel = bms_path.strip_prefix(input_root).ok()?;
+    // Chemin relatif SIGNIFICATIF: depuis la racine du pack (contient
+    // «prim/mesh/...») — l'input CLI peut être un sous-dossier profond.
+    let root = pack_root(bms_path).unwrap_or_else(|| input_root.clone());
+    let rel = bms_path.strip_prefix(&root).ok()?;
     let rel_str = rel.to_string_lossy().replace('\\', "/");
     let stem = rel.file_stem()?.to_string_lossy().to_string();
     // Retirer un suffixe _partN / _partNN
@@ -159,7 +182,32 @@ fn find_skeleton(bms_path: &PathBuf, input_root: &PathBuf) -> Option<PathBuf> {
             }
         }
     }
+    // Armures d'item: BMS skinnés au rig du PORTEUR (pièces _ha/_ba/_la/_sa/
+    // _aa/_fa sans BSR de squelette propre) → squelette du personnage de la
+    // même région/genre (mesh/item/china/man_item/x.bms → chinaman_skel).
+    if rel_str.contains("/mesh/item/") {
+        for (dir, skel) in [
+            ("china/man_item", "chinaman_skel.bsk"),
+            ("china/woman_item", "chinawoman_skel.bsk"),
+            ("europe/man_item", "europeman_skel.bsk"),
+            ("europe/woman_item", "europewoman_skel.bsk"),
+        ] {
+            if rel_str.contains(&format!("/mesh/item/{}/", dir)) {
+                let region = dir.split('/').next().unwrap_or(dir);
+                candidates.push(format!("prim/skel/char/{}/{}", region, skel));
+            }
+        }
+    }
     for c in candidates {
+        // Résoudre contre la racine CLI (input=pack) ET contre la racine du
+        // pack détectée (input=un sous-dossier profond) — le premier qui
+        // existe gagne.
+        if let Some(pk) = pack_root(bms_path) {
+            let p = pk.join(&c);
+            if p.exists() {
+                return Some(p);
+            }
+        }
         let p = input_root.join(&c);
         if p.exists() {
             return Some(p);
@@ -197,24 +245,58 @@ fn convert_single_file(
     };
 
     let bmt_path = base_dir.join(format!("{}.bmt", base_name));
-    let bmt = if bmt_path.exists() {
-        let bmt_data = std::fs::read(&bmt_path)?;
-        let parsed = BMTFile::parse(&bmt_data)?;
-        // Références de textures pour le client (chemins ddj tels que dans le pack)
-        if !parsed.materials.is_empty() {
-            let texs: Vec<String> = parsed.materials.iter()
-                .filter_map(|m| m.texture.as_ref())
-                .cloned()
-                .collect();
-            if !texs.is_empty() {
-                texture_map.lock().unwrap()
-                    .insert(base_name.to_lowercase(), texs);
+    // Items: le BMT vit dans prim/mtrl (pas à côté du BMS) — convention
+    // mesh→mtrl, avec le nom de SET pour les armures (heavy_02_ba.bms →
+    // heavy_02.bmt: le suffixe de pièce _ha/_ba/_la/_sa/_aa/_fa se retire).
+    let bmt_candidates = {
+        // Relatif depuis la racine du pack (même logique que find_skeleton)
+        let root = pack_root(&bms_path).unwrap_or_else(|| input_root.clone());
+        let rel = bms_path.strip_prefix(&root)
+            .unwrap_or_else(|_| bms_path.as_path());
+        let rel_mtrl = rel.to_string_lossy().replace('\\', "/").replace("/mesh/", "/mtrl/");
+        let stem_str = stem_of(bms_path);
+        let set_name = {
+            let mut s = base_name.to_string();
+            for piece in ["_ha", "_ba", "_la", "_sa", "_aa", "_fa"] {
+                if s.ends_with(piece) {
+                    s = s.trim_end_matches(piece).to_string();
+                    break;
+                }
             }
+            s
+        };
+        let mut v = vec![bmt_path.clone()];
+        let mtrl_candidates = [
+            rel_mtrl.replace(&format!("{}.bms", stem_str), &format!("{}.bmt", base_name)),
+            rel_mtrl.replace(&format!("{}.bms", stem_str), &format!("{}.bmt", set_name)),
+        ];
+        for c in mtrl_candidates {
+            if let Some(pk) = pack_root(&bms_path) {
+                v.push(pk.join(&c));
+            }
+            v.push(input_root.join(&c));
         }
-        Some(parsed)
-    } else {
-        None
+        v
     };
+    let bmt = bmt_candidates.iter()
+        .find(|p| p.exists())
+        .map(|p| {
+            let bmt_data = std::fs::read(p)?;
+            let parsed = BMTFile::parse(&bmt_data)?;
+            // Références de textures pour le client (chemins ddj tels que dans le pack)
+            if !parsed.materials.is_empty() {
+                let texs: Vec<String> = parsed.materials.iter()
+                    .filter_map(|m| m.texture.as_ref())
+                    .cloned()
+                    .collect();
+                if !texs.is_empty() {
+                    texture_map.lock().unwrap()
+                        .insert(base_name.to_lowercase(), texs);
+                }
+            }
+            Ok::<BMTFile, anyhow::Error>(parsed)
+        })
+        .transpose()?;
 
     // Calculate output path (preserve directory structure)
     let relative_path = bms_path.strip_prefix(base_dir)

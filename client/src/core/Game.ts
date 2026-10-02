@@ -619,8 +619,10 @@ export class Game {
       const spawnX = hasSavedPosition ? sc!.position.x : spawnPoint.x;
       const spawnZ = hasSavedPosition ? sc!.position.z : spawnPoint.z;
       const groundY = terrain ? terrain.heightAt(spawnX, spawnZ) : spawnPoint.y;
-      // Modèle officiel selon le genre du personnage (CH_W_* → chinawoman)
-      const modelId = sc?.gender === 'female' ? 'CH_W_01' : 'CH_M_01';
+      // Modèle officiel selon race + genre (EU_M/EU_W → europeman/woman)
+      const modelId = sc?.race === 'european'
+        ? (sc?.gender === 'female' ? 'EU_W_01' : 'EU_M_01')
+        : (sc?.gender === 'female' ? 'CH_W_01' : 'CH_M_01');
       await this.characterManager.spawnPlayer(modelId, new Vector3(spawnX, groundY, spawnZ));
       if (this.characterManager.player) {
         this.characterManager.player.rotation.y = sc?.rotation ?? 0;
@@ -646,6 +648,18 @@ export class Game {
       // legacy de CharacterManager (double déplacement sinon).
       this.characterManager.legacyKeyboardMovement = false;
     }
+
+    // Apparence (phase A): quand l'équipement visuel change (armures par
+    // pièce), rafraîchir les groupes d'animation pour y inclure les
+    // squelettes des nouvelles pièces.
+    window.addEventListener('srobro:player-appearance', () => {
+      if (this.playerAnimState) {
+        // forcer la re-sélection (les groupes sont recréés avec TOUS les
+        // squelettes courants, armures comprises)
+        this.playerAnimState = null;
+        void this.switchPlayerAnim('idle').then(() => { this.playerAnimState = 'idle'; }).catch(() => undefined);
+      }
+    });
 
     // NOTE: pas de worldManager.loadZone('zone_jangan') — JanganZone fournit
     // déjà le vrai terrain officiel; la zone procédurale se superposait
@@ -916,6 +930,14 @@ export class Game {
   private updateClickToMove(dt: number): void {
     const player = this.characterManager?.player;
     if (!player) return;
+
+    // Mort: aucun déplacement tant que le respawn n'est pas fait (l'overlay
+    // ne bloque pas le clavier — phase A V3).
+    const netCombat = (window as unknown as { netCombat?: { playerDead: boolean } }).netCombat;
+    if (netCombat?.playerDead) {
+      this.moveDestination = null;
+      return;
+    }
 
     // Recalage du perso une fois le modèle officiel chargé (arrière-plan):
     // le placeholder est remplacé par le chinaman après coup, on suit la référence.

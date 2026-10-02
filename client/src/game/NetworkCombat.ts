@@ -97,6 +97,8 @@ export class NetworkCombat {
 
   /** Genre du perso local (clips d'attaque/réaction dédiés chinawoman). */
   playerGender = false;
+  /** Mort du perso local: verrouille le déplacement jusqu'au respawn. */
+  playerDead = false;
   /** Famille d'armes équipée → clips de combo (skill_ch_<famille>_chain_*). */
   private equippedFamily: 'sword' | 'spear' | 'bow' = 'sword';
   /** Compteur de combo: fait tourner les chaînes a → b → c comme en jeu. */
@@ -148,6 +150,8 @@ export class NetworkCombat {
       void this.network.request('world:snapshot', {}, 15000).catch(() => undefined);
       // Hotbar dynamique depuis les skills appris (Phase C)
       setTimeout(() => void this.refreshHotbar(), 2000);
+      // Apparence (le packet de login part avant nos handlers): re-demander
+      setTimeout(() => void this.network.request('equipment:request', {}, 8000).catch(() => undefined), 1500);
     }
     console.log('[NetworkCombat] initialisé');
   }
@@ -275,11 +279,18 @@ export class NetworkCombat {
     });
 
     this.network.on('player:death', (data: any) => {
+      // Phase A V3: anim officielle de chute (downdie), sans reprise des
+      // anims d'état — le perso reste au sol jusqu'au respawn.
+      this.playerDead = true;
+      this.playLocalOneShot(AnimationService.deathClip(this.playerGender), 1.0, { noResume: true });
       this.showDeathScreen();
     });
 
     this.network.on('player:respawned', (data: any) => {
       this.hideDeathScreen();
+      this.playerDead = false;
+      // Reprise des anims d'état (idle) — le downdie les avait laissées en pause
+      window.dispatchEvent(new CustomEvent('srobro:player-appearance'));
       // Téléporter le perso client à la position de résurrection (ville/ici)
       const d = data?.data ?? data;
       const player = this.getPlayerMesh();
@@ -314,6 +325,8 @@ export class NetworkCombat {
 
     // Visuel de l'arme équipée (phase 3): attache le GLB officiel au perso
     this.network.onRaw('equipment:weapon', (d: any) => void this.attachWeaponVisual(d));
+    // Apparence complète (login + chaque équipement/déséquipement)
+    this.network.onRaw('equipment:full', (d: any) => void this.applyEquipmentVisual(d));
 
     // Chat sortant (phase 5): champ de saisie HUD → serveur
     this.hud.setupChatInput();
@@ -427,7 +440,7 @@ export class NetworkCombat {
    * repris. Un compteur de génération évite qu'un one-shot obsolète ne
    * reprenne les anims d'état après un plus récent.
    */
-  private playLocalOneShot(clipPath: string, speed = 1.0): void {
+  private playLocalOneShot(clipPath: string, speed = 1.0, opts?: { noResume?: boolean }): void {
     const playerMesh = this.getPlayerMesh();
     if (!playerMesh) return;
     let root: any = playerMesh;
@@ -442,6 +455,8 @@ export class NetworkCombat {
     const gen = ++this.oneShotGen;
     const stateGroups = this.scene.animationGroups.filter(g => g.name.startsWith('player_anim_'));
     for (const g of stateGroups) g.pause();
+    // noResume (mort): les groupes d'état restent en pause — le perso reste
+    // au sol jusqu'au respawn.
 
     AnimationService.loadAndPlay(this.scene, skeletons, clipPath, false, speed)
       .then((groups: any[]) => {
@@ -450,8 +465,12 @@ export class NetworkCombat {
           for (const g of groups) { g.stop(); g.dispose(); }
           return;
         }
+        const resume = () => {
+          if (opts?.noResume) return;
+          for (const g of this.scene.animationGroups.filter(x => x.name.startsWith('player_anim_'))) g.play();
+        };
         if (groups.length === 0) {
-          for (const g of this.scene.animationGroups.filter(g => g.name.startsWith('player_anim_'))) g.play();
+          resume();
           return;
         }
         let finis = 0;
@@ -459,21 +478,30 @@ export class NetworkCombat {
           g.onAnimationGroupEndObservable.addOnce(() => {
             g.dispose();
             if (++finis >= groups.length && gen === this.oneShotGen) {
-              for (const sg of this.scene.animationGroups.filter(x => x.name.startsWith('player_anim_'))) sg.play();
+              resume();
             }
           });
         }
       })
       .catch(() => {
-        if (gen === this.oneShotGen) {
-          for (const g of this.scene.animationGroups.filter(g => g.name.startsWith('player_anim_'))) g.play();
+        if (gen === this.oneShotGen && !opts?.noResume) {
+          for (const g of this.scene.animationGroups.filter(x => x.name.startsWith('player_anim_'))) g.play();
         }
       });
   }
 
-  /** Animation d'attaque du perso local: chaîne de combo officielle de la
-   * famille d'arme équipée (a → b → c, comme les combos SRO). */
+  /** Animation d'attaque du perso local: clip du SKILL officiel si un cast
+   *  est frais (phase A V3), sinon la chaîne de combo de la famille d'arme
+   *  (a → b → c, comme les combos SRO). */
   private playLocalAttackAnim(): void {
+    const skillHit = this.lastSkillCast && Date.now() - this.lastSkillCast.at < 1500;
+    if (skillHit) {
+      const clip = AnimationService.skillClip(this.lastSkillCast!.code);
+      if (clip) {
+        this.playLocalOneShot(clip, 1.0);
+        return;
+      }
+    }
     this.playLocalOneShot(
       AnimationService.attackClip(this.equippedFamily, this.attackCombo++, this.playerGender),
       1.15,
@@ -486,27 +514,150 @@ export class NetworkCombat {
       if (old) { old.dispose(); }
 
       if (!d) return;
-      // bsr "item\china\weapon\blade_01.bsr" → stem "blade_01" (manifest)
-      const stem = (d.itemCode || '').replace(/\\/g, '/').split('/').pop()?.replace(/\.bsr$/i, '') ?? '';
-      if (!stem) return;
+      // bsr "item\china\weapon\blade_01.bsr" → stem préfixé par région
+      // (phase A: GLB régénérés ch_/eu_ pour lever les collisions de stems)
+      const piece = (d.itemCode || '').replace(/\\/g, '/').split('/').pop()?.replace(/\.bsr$/i, '') ?? '';
+      if (!piece) return;
+      const prefix = d.itemCode.includes('europe') ? 'eu_' : 'ch_';
+      const stem = `${prefix}${piece}`;
       // Famille d'armes → clips de combo (sword couvre épée/lame, spear
       // couvre lance/hallebarde; arc à part)
-      if (/bow/i.test(stem)) this.equippedFamily = 'bow';
-      else if (/spear|glaive/i.test(stem)) this.equippedFamily = 'spear';
+      if (/bow/i.test(piece)) this.equippedFamily = 'bow';
+      else if (/spear|glaive/i.test(piece)) this.equippedFamily = 'spear';
       else this.equippedFamily = 'sword';
-      const loaded = await this.assetLoader.loadGameObject(stem);
+      // Préférer le GLB préfixé (régénéré), repli sur l'ancien stem nu
+      let loaded = await this.assetLoader.loadGameObject(stem).catch(() => null);
+      if (!loaded?.root) loaded = await this.assetLoader.loadGameObject(piece).catch(() => null);
       if (loaded?.root) {
         loaded.root.name = 'equipped_weapon';
         const player = this.getPlayerMesh();
-        if (player?.parent) {
-          loaded.root.parent = player.parent as any;
-          loaded.root.position.set(0.35, 1.0, 0.1);
-          loaded.root.scaling.setAll(1.0);
+        if (player) {
+          // Attache OFFICIELLE à l'os de la main (Bip01 R HandMid si le rig
+          // le possède, sinon R Hand) — l'arme suit la main animée.
+          const handBone = this.findPlayerBone(/Bip01 R HandMid$/) ?? this.findPlayerBone(/Bip01 R Hand$/);
+          if (handBone) {
+            const { Vector3: V3 } = await import('@babylonjs/core/Maths/math.vector');
+            loaded.root.parent = null;
+            loaded.root.scaling.setAll(1.0);
+            loaded.root.position.copyFrom(handBone.getAbsolutePosition());
+            loaded.root.rotation.set(0, 0, 0);
+            loaded.root.attachToBone(handBone, player as any);
+            // Petit recul le long de la paume pour ne pas traverser la main
+            loaded.root.position.addInPlace(new V3(0, 0, 0));
+          } else {
+            // Repli: parent + offset fixes (pas d'os disponible)
+            if (player.parent) {
+              loaded.root.parent = player.parent as any;
+              loaded.root.position.set(0.35, 1.0, 0.1);
+              loaded.root.scaling.setAll(1.0);
+            }
+          }
         }
         this.hud.addChatMessage(`${d.name} équipée`, 'system');
       }
     } catch (e) {
       console.warn('[NetworkCombat] visuel arme non chargé:', e);
+    }
+  }
+
+  /** Cherche un os du joueur local par regex sur le nom (suffixe accepté —
+   *  les squelettes instanciés sont préfixés « resourceId_Bip01… »). */
+  private findPlayerBone(pattern: RegExp): any | null {
+    const player = this.getPlayerMesh();
+    if (!player) return null;
+    for (const mesh of player.getChildMeshes()) {
+      const sk = (mesh as any).skeleton;
+      if (!sk) continue;
+      for (const bone of sk.bones) {
+        if (pattern.test(bone.name)) return bone;
+      }
+    }
+    return null;
+  }
+
+  // ============================================
+  // APPARENCE: ARMURES PAR PIÈCE (phase A V3)
+  // ============================================
+
+  /** Race du perso local (stems ch_/eu_ des pièces d'équipement). */
+  playerRace: 'chinese' | 'european' = 'chinese';
+
+  /** Nœuds d'armure portés (reconstruits à chaque equipment:full). */
+  private armorNodes: import('@babylonjs/core/Meshes/transformNode').TransformNode[] = [];
+  /** Génération d'assemblage (les packets arrivent en rafale: seul le
+   *  dernier assemblage doit survivre — sinon pièces en double). */
+  private armorGen = 0;
+  private armorRetries = 0;
+
+  /** equipment:full → assemble les pièces d'armure skinnées sur le perso. */
+  private async applyEquipmentVisual(slots: Record<string, { itemCode: string; name: string } | null> | null): Promise<void> {
+    try {
+      const gen = ++this.armorGen;
+
+      // Purger TOUTES les pièces existantes (par nom — les builds concurrents
+      // obsolètes ne sont pas tous dans armorNodes)
+      for (const n of this.scene.getNodes().filter((x: any) => String(x.name || '').startsWith('equip_armor_'))) {
+        n.dispose();
+      }
+      this.armorNodes = [];
+
+      const player = this.getPlayerMesh();
+      if (!player) {
+        // Modèle pas encore chargé (async): réessayer (max ~20 s — le modèle
+        // officiel met ~10-18 s à arriver) tant qu'aucun assemblage plus
+        // récent n'a pris le relais.
+        if (gen === this.armorGen) {
+          this.armorRetries = (this.armorRetries ?? 0) + 1;
+          if (this.armorRetries <= 10) {
+            setTimeout(() => { if (gen === this.armorGen) void this.applyEquipmentVisual(slots); }, 2000);
+          }
+        }
+        return;
+      }
+      this.armorRetries = 0;
+
+      // Nœud flip du corps (les parties skinnées y vivent — même orientation)
+      const flip = player.getChildTransformNodes().find((n) => n.name.endsWith('_flip'));
+      if (!flip) return;
+
+      const prefix = `${this.playerRace === 'european' ? 'eu' : 'ch'}_${this.playerGender ? 'woman' : 'man'}_`;
+      // Décalage vertical appliqué par normalizePlayerScale aux enfants du
+      // perso (valeur absolue commune) — les nouvelles pièces l'héritent.
+      const yShift = flip.position.y;
+
+      const order = ['boots', 'legs', 'chest', 'shoulder', 'hands', 'helmet'];
+      for (const slot of order) {
+        if (gen !== this.armorGen) return; // assemblage obsolète: abandonner
+        const it = slots?.[slot];
+        if (!it?.itemCode) continue;
+        const piece = (it.itemCode || '').replace(/\\/g, '/').split('/').pop()?.replace(/\.bsr$/i, '') ?? '';
+        if (!piece) continue;
+        const stem = `${prefix}${piece}`;
+        const loaded = await this.assetLoader.loadGameObject(stem).catch(() => null);
+        if (gen !== this.armorGen) return; // obsolète pendant le chargement
+        if (!loaded?.root) continue;
+        loaded.root.name = `equip_armor_${slot}`;
+        loaded.root.parent = flip;
+        loaded.root.scaling.setAll(1.0);
+        // Même recalage que les parties du corps (pose pieds au sol)
+        for (const child of loaded.root.getChildTransformNodes(true)) child.position.y = yShift;
+        this.armorNodes.push(loaded.root);
+      }
+
+      // Arme (visuel + famille de combo) depuis le même packet — au login il
+      // n'y a pas de packet equipment:weapon séparé.
+      if (slots?.weapon?.itemCode && gen === this.armorGen) {
+        void this.attachWeaponVisual({ itemCode: slots.weapon.itemCode, name: slots.weapon.name ?? '' });
+      }
+
+      if (this.armorNodes.length > 0 || slots?.weapon?.itemCode) {
+        // Rafraîchir les groupes d'animation pour inclure les squelettes des
+        // nouvelles pièces (le prochain changement d'état le ferait, mais on
+        // veut l'armure animée immédiatement).
+        window.dispatchEvent(new CustomEvent('srobro:player-appearance'));
+      }
+    } catch (e) {
+      console.warn('[NetworkCombat] apparence armure:', e);
     }
   }
 

@@ -168,6 +168,7 @@ async function init(): Promise<void> {
       netCombat = new NetworkCombat(game.getScene()!, network, game.getAssetLoader()!, hud, game.getJanganZone(), () => game.getLocalPlayerMesh());
       netCombat.playerName = character?.name ?? 'Aventurier';
       netCombat.playerGender = character?.gender === 'female';
+      netCombat.playerRace = character?.race === 'european' ? 'european' : 'chinese';
       network.rememberCharacter(character?.id ?? '');
       (window as unknown as { netCombat: NetworkCombat }).netCombat = netCombat;
       game.getScene()!.onBeforeRenderObservable.add(() => netCombat!.update());

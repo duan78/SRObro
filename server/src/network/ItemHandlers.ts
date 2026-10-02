@@ -43,12 +43,52 @@ export class ItemHandlers {
     socket.on('shop:list', (d, ack) => this.handleShopList(socket, d, ack));
     socket.on('shop:buy', (d, ack) => this.handleShopBuy(socket, d, ack));
     socket.on('shop:sell', (d, ack) => this.handleShopSell(socket, d, ack));
+
+    // Demande explicite d'apparence (le packet de login part avant que le
+    // client n'enregistre ses handlers — il re-demande une fois prêt).
+    socket.on('equipment:request', (_d, ack) => {
+      const s = this.session(socket);
+      if (!s) { if (typeof ack === 'function') ack({ success: false }); return; }
+      void ItemHandlers.sendEquipmentFull(s.characterId, this.worldManager?.combatBridge ?? null);
+      if (typeof ack === 'function') ack({ success: true });
+    });
   }
 
   private session(socket: Socket): { characterId: string } | null {
     const client = this.clientManager.getClient(socket.id);
     if (!client || !client.getIsAuthenticated() || !client.getCharacterId()) return null;
     return { characterId: client.getCharacterId()! };
+  }
+
+  // ============================================
+  // APPARENCE COMPLÈTE (phase A V3: armures par pièce)
+  // ============================================
+
+  /** Slots visuels portés par le perso (armures + arme + bouclier). */
+  static readonly VISUAL_SLOTS = ['weapon', 'shield', 'helmet', 'chest', 'shoulder', 'legs', 'boots', 'hands'] as const;
+
+  /** Envoie `equipment:full` — pour chaque slot visuel: {itemCode (bsr), name} ou null.
+   *  Appelé au login (AuthHandlers), à l'équipement et au déséquipement. */
+  static async sendEquipmentFull(
+    characterId: string,
+    combatBridge: { sendToPlayerRaw: (id: string, ev: string, data: unknown) => void } | null,
+  ): Promise<void> {
+    try {
+      const equipment = await prisma.equipment.findUnique({ where: { characterId } });
+      const slots: Record<string, { itemCode: string; name: string } | null> = {};
+      const itemIds = ItemHandlers.VISUAL_SLOTS.map((s) => (equipment as any)?.[s] ?? null);
+      const items = await Promise.all(
+        itemIds.map((id: string | null) => (id ? prisma.item.findUnique({ where: { id } }) : null)),
+      );
+      ItemHandlers.VISUAL_SLOTS.forEach((slot, i) => {
+        const it = items[i];
+        // modelId = chemin BSR officiel (ex. item\china\man_item\heavy_02_ba.bsr)
+        slots[slot] = it ? { itemCode: it.modelId, name: it.name } : null;
+      });
+      combatBridge?.sendToPlayerRaw(characterId, 'equipment:full', slots);
+    } catch (e) {
+      logger.error('sendEquipmentFull error:', e);
+    }
   }
 
   // ============================================
@@ -181,7 +221,7 @@ export class ItemHandlers {
       });
       if (!row || row.quantity < 1) { this.ack(ack, { success: false, error: 'Emplacement vide' }); return; }
 
-      const equipSlot = itemTypeToEquipSlot(row.item.type);
+      const equipSlot = itemTypeToEquipSlot(row.item.type, row.item.modelId);
       if (!equipSlot) { this.ack(ack, { success: false, error: 'Objet non équipable' }); return; }
 
       if (row.item.requiredLevel > player.level) {
@@ -225,6 +265,8 @@ export class ItemHandlers {
           name: row.item.name,
         });
       }
+      // Phase A V3: rafraîchir l'apparence complète (armures par pièce)
+      await ItemHandlers.sendEquipmentFull(s.characterId, this.worldManager?.combatBridge ?? null);
 
       this.ack(ack, { success: true, slot: equipSlot, item: serializeItem(row.item) });
     } catch (e: any) {
@@ -256,6 +298,7 @@ export class ItemHandlers {
         player?.applyWeaponStats(null);
         this.worldManager?.combatBridge?.sendToPlayerRaw(s.characterId, 'equipment:weapon', null);
       }
+      await ItemHandlers.sendEquipmentFull(s.characterId, this.worldManager?.combatBridge ?? null);
       this.ack(ack, { success: true });
     } catch (e: any) {
       logger.error('inventory:unequip error:', e);
@@ -446,7 +489,21 @@ function serializeItem(item: any): Record<string, unknown> {
   };
 }
 
-function itemTypeToEquipSlot(type: string): string | null {
+function itemTypeToEquipSlot(type: string, bsrPath?: string | null): string | null {
+  // Pièces d'armure: l'import leur donne toutes type='weapon' — la VRAIE
+  // pièce se lit dans le suffixe du chemin BSR officiel (heavy_02_ha.bsr:
+  // _ha casque, _ba torse, _sa épaules, _la jambes, _aa gants, _fa bottes).
+  if (bsrPath) {
+    const m = bsrPath.replace(/\\/g, '/').match(/_(ha|ba|sa|la|aa|fa)\.bsr$/i);
+    if (m) {
+      const piece = m[1].toLowerCase();
+      const map: Record<string, string> = {
+        ha: 'helmet', ba: 'chest', sa: 'shoulder',
+        la: 'legs', aa: 'hands', fa: 'boots',
+      };
+      return map[piece] ?? null;
+    }
+  }
   switch (type) {
     case 'weapon': return 'weapon';
     case 'shield': return 'shield';
@@ -455,6 +512,7 @@ function itemTypeToEquipSlot(type: string): string | null {
     case 'shoulder': return 'shoulder';
     case 'legs': return 'legs';
     case 'boots': return 'boots';
+    case 'hands': return 'hands';
     case 'ring': return 'ring1';
     case 'necklace': return 'necklace';
     case 'earring': return 'earring1';

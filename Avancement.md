@@ -1,5 +1,34 @@
 # Avancement du Projet SRObro
 
+## Session du 2 Octobre 2026 (18): PHASE A V3 — PERSONNAGE FIDELE
+
+**Armures PAR PIÈCE skinnées au rig du porteur** — découverte clé: les
+BMS d'armure SONT skinnés (Bip01 Spine1/Head/…) mais leur BSR ne
+référence AUCUN squelette et leurs stems collident entre races/genres
+(un seul heavy_02_ba.glb pour 4 variantes). Livré:
+- **jmx_converter étendu**: squelette du PORTEUR pour les items
+  (chinaman/woman/europeman/woman_skel par catégorie), BMT de set
+  (mesh→mtrl + suffixe de pièce), résolution par racine du pack;
+  `scripts/regen-equipment-glbs.ts` → **1 289 GLB** (ch_man_/ch_woman_/
+  eu_man_/eu_woman_/ch_/eu_), 986 armures patchées ancêtres+pose neutre
+  (même bind que les corps — sinon «bras en l'air»), manifest + textures
+  de pièce filtrées, stamp bumpé.
+- **Serveur**: `equipment:full` (login+equip+unequip) + `equipment:request`
+  (le packet login part avant les handlers client), slot MAINS ajouté au
+  schéma, pièce déduite du suffixe BSR (_ha/_ba/_sa/_la/_aa/_fa —
+  l'import leur donnait toutes type=weapon → tout allait en slot arme).
+- **Client**: assembleur d'apparence dans NetworkCombat (6 pièces sous le
+  nœud flip, génération anti-doublons, recalage yShift, anims rafraîchies
+  via événement), arme attachée à l'os Bip01 R HandMid (attachToBone),
+  modèles EU (europeman/woman), `skillClip()` (nuke CH → gigong officiel,
+  EU par classe) prioritaire sur les combos, mort: clip downdie SANS
+  reprise + verrou déplacement + respawn (reprise 15/15).
+- **Vérifié navigateur**: 6 pièces alignées texturées animées (analyse
+  d'image), arme en main, cadavre couché + overlay + respawn, gigong
+  15 groupes synchrones corps+armures. **test-phaseA-equip.ts 20/20**
+  (slots officiels, packets, déséquipement, persistance, femme).
+  Régressions: phaseA 9/9, combat-flow VERT.
+
 ## Session du 2 Octobre 2026 (17) : PROMPT_MAITRE_V3.md — prompt de finalisation
 
 Rédigé à la demande utilisateur pour compléter et finaliser le jeu. 8 phases

@@ -105,8 +105,11 @@ export class CharacterManager {
   private async loadCharacterModel(characterId: string, position: Vector3): Promise<void> {
     // 1) Vrai modèle officiel multi-parties via l'AssetLoader
     try {
-      const resourceId = characterId.toUpperCase().startsWith('CH_W')
-        ? 'chinawoman_adventurer'
+      // Race + genre (EU → rig europeman/europewoman, CH → chinaman/woman)
+      const id = characterId.toUpperCase();
+      const resourceId = id.startsWith('EU_W') ? 'europewoman_adventurer'
+        : id.startsWith('EU_M') ? 'europeman_adventurer'
+        : id.startsWith('CH_W') ? 'chinawoman_adventurer'
         : 'chinaman_adventurer';
       const loaded = await this.assetLoader.loadGameObject(resourceId);
       if (loaded && loaded.root) {

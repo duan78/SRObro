@@ -252,4 +252,37 @@ export class AnimationService {
     const race = female ? 'chinawoman' : 'chinaman';
     return `/assets/anims/char/china/${female ? 'woman' : 'man'}/${race}_a_${hard ? 'behardhit' : 'benormalhit'}.json`;
   }
+
+  /** Mort du perso: le clip officiel de chute (downdie). */
+  static deathClip(female = false): string {
+    const race = female ? 'chinawoman' : 'chinaman';
+    return `/assets/anims/char/china/${female ? 'woman' : 'man'}/${race}_a_downdie.json`;
+  }
+
+  /**
+   * Clip de CAST par skill (phase A V3): les codes officiels mènent aux
+   * familles de clips réelles du client. Les séries d'armes gardent leurs
+   * combos (retour null); nukes/buffs élémentaires CH → cast gigong (le
+   * client n'a pas de clip par nuke, ils partagent le cast); EU → clip de
+   * la classe. Retour null = repli combo par famille d'arme.
+   */
+  static skillClip(code: string): string | null {
+    const c = String(code || '').toUpperCase();
+    if (!c) return null;
+    // Séries d'armes: combos dédiés (attackClip)
+    if (/BICHEON|SWORD|BLADE|HEUKSAL|SPEAR|GLAIVE|PACHEON|BOW/.test(c)) return null;
+    // CH: éléments/force → cast officiel gigong (nuke/buff/heal partagés)
+    if (c.includes('SKILL_CH_FIRE') || c.includes('SKILL_CH_COLD') || c.includes('SKILL_CH_LIGHT')
+      || c.includes('SKILL_CH_FORCE') || c.includes('CHUKBOK')) {
+      return '/assets/anims/char/china/man/skill_china_gigong_shoot_a.json';
+    }
+    // EU par classe (chemins réels de l'index anims)
+    if (c.includes('CLERIC')) return '/assets/anims/char/europe/man/skill_eu_cleric_battlea_cross_shot.json';
+    if (c.includes('BARD')) return '/assets/anims/char/europe/man/skill_eu_bard_harf_attack01.json';
+    if (c.includes('ROGUE') || c.includes('CROSSBOW')) return '/assets/anims/char/europe/man/skill_eu_rog_bowa_attack01.json';
+    if (c.includes('WIZARD') || c.includes('WARLOCK') || c.includes('WARRIOR') || c.includes('SKILL_EU')) {
+      return '/assets/anims/char/europe/man/skill_eu_cast_b_punch_02_shot.json';
+    }
+    return null;
+  }
 }
