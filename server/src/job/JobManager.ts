@@ -9,7 +9,8 @@ import { TRADE_GOODS } from '../../../shared/src/constants';
 export type JobType = 'trader' | 'thief' | 'hunter' | 'none';
 
 export interface TransportConfig {
-  type: 'one_star' | 'two_star' | 'three_star' | 'four_star' | 'five_star';
+  type: '1_star' | '2_star' | '3_star' | '4_star' | '5_star';
+  label: string;
   hp: number;
   slots: number;
   cost: number;
@@ -39,14 +40,33 @@ export interface TransportData {
   isActive: boolean;
 }
 
-// Transport configurations based on star level
+/**
+ * Transports officiels (KB 10_TRADER_GUIDE + 24_MOUNTS_PETS):
+ *  - Cheval basic ~2 000 or, 9 slots (KB: 9 slots confirmés)
+ *  - Bœuf: capacité intermédiaire (pills XL), Chameau ~21 000 de charge, +HP
+ *  - Les ÉTOILES ne sont PAS le transport: elles dérivent de la VALEUR des
+ *    marchandises chargées (computeStarLevel) — 1 NPC thief par étoile.
+ * 4★/5★ = tiers étendus [APPROX] (multi-chameaux).
+ */
 const TRANSPORT_CONFIGS: Record<string, TransportConfig> = {
-  one_star: { type: 'one_star', hp: 5000, slots: 9, cost: 100000, requiredLevel: 20, requiredJobLevel: 1 },
-  two_star: { type: 'two_star', hp: 10000, slots: 18, cost: 500000, requiredLevel: 30, requiredJobLevel: 2 },
-  three_star: { type: 'three_star', hp: 20000, slots: 27, cost: 1500000, requiredLevel: 40, requiredJobLevel: 3 },
-  four_star: { type: 'four_star', hp: 40000, slots: 36, cost: 4000000, requiredLevel: 50, requiredJobLevel: 4 },
-  five_star: { type: 'five_star', hp: 80000, slots: 45, cost: 10000000, requiredLevel: 60, requiredJobLevel: 5 },
+  '1_star': { type: '1_star', label: 'Cheval', hp: 5000, slots: 9, cost: 2000, requiredLevel: 10, requiredJobLevel: 1 },
+  '2_star': { type: '2_star', label: 'Bœuf', hp: 10000, slots: 18, cost: 8000, requiredLevel: 20, requiredJobLevel: 2 },
+  '3_star': { type: '3_star', label: 'Chameau', hp: 20000, slots: 27, cost: 20000, requiredLevel: 30, requiredJobLevel: 3 },
+  '4_star': { type: '4_star', label: 'Caravane', hp: 40000, slots: 36, cost: 60000, requiredLevel: 40, requiredJobLevel: 4 },
+  '5_star': { type: '5_star', label: 'Grande caravane', hp: 80000, slots: 45, cost: 150000, requiredLevel: 50, requiredJobLevel: 5 },
 };
+
+/** Étoiles d'un trade = valeur chargée (KB 09/10: stars selon les goods,
+ *  1 NPC thief par étoile). [APPROX] paliers proportionnels à la capacité. */
+export function computeStarLevel(goods: Array<{ quantity: number }>, slots: number): number {
+  const totalUnits = goods.reduce((sum, g) => sum + g.quantity, 0);
+  if (totalUnits === 0) return 0;
+  return Math.max(1, Math.min(5, Math.ceil((totalUnits / slots) * 5)));
+}
+
+/** Enum Prisma = one_star.. (legacy) ↔ clés internes numériques 1_star.. */
+const TO_DB: Record<string, string> = { '1_star': 'one_star', '2_star': 'two_star', '3_star': 'three_star', '4_star': 'four_star', '5_star': 'five_star' };
+const FROM_DB: Record<string, string> = { one_star: '1_star', two_star: '2_star', three_star: '3_star', four_star: '4_star', five_star: '5_star' };
 
 /**
  * JobManager - Manages the Job Triangle Conflict System
@@ -148,6 +168,21 @@ export class JobManager {
     };
   }
 
+  /** Vente des marchandises volées par un thief (au den / contrebandier):
+   *  rend 60% de la valeur d'achat [APPROX officiel: vente au den]. */
+  async fenceStolenGoods(
+    thiefCharacterId: string,
+    goods: Array<{ name: string; buyPrice: number; quantity: number }>,
+  ): Promise<number> {
+    const total = goods.reduce((sum, g) => sum + Math.floor(g.buyPrice * 0.6) * g.quantity, 0);
+    await this.prisma.character.update({
+      where: { id: thiefCharacterId },
+      data: { gold: { increment: BigInt(total) } },
+    });
+    await this.addJobExp(thiefCharacterId, Math.floor(total / 50));
+    return total;
+  }
+
   /**
    * Create a transport for a trader
    */
@@ -178,8 +213,9 @@ export class JobManager {
       throw new Error('Character already has an active transport');
     }
 
-    // Get transport config
-    // (validated against TRANSPORT_CONFIGS below, so the template string maps to a valid star type)
+    // Clés internes numériques '1_star'..'5_star' (bug d'origine: le code
+    // fabriquait '1_star' contre des clés 'one_star' → tout rejeté).
+    // L'enum Prisma reste one_star..: conversion à l'écriture.
     const transportType = `${starLevel}_star` as TransportConfig['type'];
     const config = TRANSPORT_CONFIGS[transportType];
 
@@ -220,7 +256,7 @@ export class JobManager {
       this.prisma.transport.create({
         data: {
           characterId,
-          transportType,
+          transportType: (TO_DB[transportType] ?? transportType) as never,
           starLevel,
           hp: config.hp,
           maxHp: config.hp,
@@ -234,8 +270,11 @@ export class JobManager {
       })
     ]);
 
+    const created = await this.prisma.transport.findFirst({
+      where: { characterId, isActive: true },
+    });
     return {
-      id: characterId, // Will be set by DB
+      id: created?.id ?? characterId,
       characterId,
       transportType,
       starLevel,
@@ -269,8 +308,8 @@ export class JobManager {
       throw new Error('No active transport found');
     }
 
-    // Get transport config
-    const config = TRANSPORT_CONFIGS[transport.transportType];
+    // Get transport config (conversion forme DB → interne)
+    const config = TRANSPORT_CONFIGS[FROM_DB[transport.transportType] ?? transport.transportType];
     const currentGoods = JSON.parse((transport.inventorySlots || '[]') as string) as TradeGoodData[];
 
     if (currentGoods.length >= config.slots) {
@@ -310,6 +349,49 @@ export class JobManager {
         inventorySlots: JSON.stringify(currentGoods)
       }
     });
+  }
+
+  /**
+   * Achat de marchandises de spécialité (boutique de la ville courante).
+   * Débite l'or du perso, empile par goodId, respecte les slots du transport.
+   */
+  async buyTradeGoods(
+    characterId: string,
+    goodId: string,
+    quantity: number,
+    sourceZone: string,
+  ): Promise<{ goods: TradeGoodData[]; spent: number; starLevel: number }> {
+    const transport = await this.prisma.transport.findFirst({
+      where: { characterId, isActive: true },
+    });
+    if (!transport) throw new Error('Aucun transport actif (achetez un cheval)');
+
+    const zoneGoods = this.getTradeGoodsForZone(sourceZone);
+    const good = zoneGoods.find((g) => g.id === goodId);
+    if (!good) throw new Error('Marchandise introuvable dans cette ville');
+
+    const config = TRANSPORT_CONFIGS[FROM_DB[transport.transportType] ?? transport.transportType];
+    const goods = JSON.parse((transport.inventorySlots || '[]') as string) as TradeGoodData[];
+    const used = goods.reduce((sum, g) => sum + g.quantity, 0);
+    if (used + quantity > config.slots) {
+      throw new Error(`Transport plein (${used}/${config.slots} — ${config.slots - used} libres)`);
+    }
+
+    const spent = good.buyPrice * quantity;
+    const character = await this.prisma.character.findUnique({ where: { id: characterId } });
+    if (!character) throw new Error('Personnage introuvable');
+    if (Number(character.gold) < spent) throw new Error(`Or insuffisant (${spent} requis)`);
+
+    const existing = goods.find((g) => g.id === goodId && g.sourceZone === sourceZone);
+    if (existing) existing.quantity += quantity;
+    else goods.push({ id: goodId, name: good.name, buyPrice: good.buyPrice, sellPrice: good.sellPrice, sourceZone, quantity });
+
+    await this.prisma.$transaction([
+      this.prisma.character.update({ where: { id: characterId }, data: { gold: { decrement: BigInt(spent) } } }),
+      this.prisma.transport.update({ where: { id: transport.id }, data: { inventorySlots: JSON.stringify(goods) } }),
+    ]);
+
+    return { goods, spent, starLevel: computeStarLevel(goods, config.slots) };
   }
 
   /**
@@ -389,7 +471,12 @@ export class JobManager {
     const soldItems: Array<{ name: string; quantity: number; profit: number }> = [];
 
     for (const good of goods) {
-      // Calculate profit based on destination
+      // Officiel: on ne revend pas dans la ville d'origine (aucun profit)
+      if (good.sourceZone === destinationZone) {
+        soldItems.push({ name: good.name, quantity: good.quantity, profit: 0 });
+        continue;
+      }
+      // Multiplicateur de route officiel (162% Jangan→Donwhang, KB 10)
       const multiplier = this.getProfitMultiplier(good.sourceZone, destinationZone);
       const sellPrice = Math.floor(good.sellPrice * multiplier);
       const profit = (sellPrice - good.buyPrice) * good.quantity;
@@ -595,19 +682,12 @@ export class JobManager {
    */
   private getProfitMultiplier(sourceZone: string, destinationZone: string): number {
     // Different routes have different profit multipliers
+    // KB 10_TRADER_GUIDE: 162% mesuré Jangan→Donwhang (iSRO 2006);
+    // autres routes [APPROX] croissantes avec la distance
     const routes: Record<string, Record<string, number>> = {
-      'Jangan': {
-        'Donwhang': 1.5,
-        'Hotan': 2.0
-      },
-      'Donwhang': {
-        'Jangan': 1.4,
-        'Hotan': 1.6
-      },
-      'Hotan': {
-        'Jangan': 2.2,
-        'Donwhang': 1.7
-      }
+      'zone_jangan': { 'zone_donwhang': 1.62, 'zone_hotan': 2.0 },
+      'zone_donwhang': { 'zone_jangan': 1.5, 'zone_hotan': 1.8 },
+      'zone_hotan': { 'zone_jangan': 2.2, 'zone_donwhang': 1.9 },
     };
 
     return routes[sourceZone]?.[destinationZone] || 1.0;
@@ -679,7 +759,7 @@ export class JobManager {
     return {
       id: transport.id,
       characterId: transport.characterId,
-      transportType: transport.transportType,
+      transportType: FROM_DB[transport.transportType] ?? transport.transportType,
       starLevel: transport.starLevel,
       hp: transport.hp,
       maxHp: transport.maxHp,

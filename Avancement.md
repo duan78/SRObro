@@ -738,3 +738,30 @@ tsc 0/0, persistance après relance serveur.
 - Stalls: bugs transaction (slot vendeur) à corriger + UI.
 - Fortress War: gameplay de siège réel (le scheduler existe).
 - FGW/Qin-Shi (donjons), pets/mounts monde, playlist audio par zone.
+
+### JOBS (triangle Trader/Thief/Hunter) — 2026-10-02 (phase G-jobs)
+- **Bug clés étoiles CORRIGÉ**: createTransport fabriquait '1_star' contre
+  des clés 'one_star' → tout achat rejeté « Invalid star level ». Conversion
+  à la frontière Prisma (enum legacy one_star..five_star conservé).
+- **Modèle officiel**: transports cheval 2 000 or/9 slots (KB 24), bœuf,
+  chameau 20 000/27 slots (KB 10) ; ÉTOILES = valeur chargée
+  (computeStarLevel: ceil(unités/slots×5)) — PAS le transport (KB 09/10) ;
+  multiplicateurs de route alignés KB (Jangan→Donwhang 1.62, réf. 2006) ;
+  revente interdite dans la ville d'origine (profit 0).
+- **Handlers complets** (JobHandlers.ts): job:state/change/buy_transport/
+  buy_goods/sell_goods/steal/dismiss_transport — miroir or entité→base
+  avant tout coût (les gains vivent dans l'entité en jeu).
+- **Embuscades NPC officielles** (CombatBridge.checkTradeAmbushes): trader
+  chargé à >600 m de toute ville → N thieves NPC (N = étoiles, 1/étoile,
+  mobs officiels MOB_THIEF_NPC lv2) spawnés autour de lui, cooldown 90 s,
+  packet job:ambush. Mort du trader = transport détruit (goods perdues).
+- **Vol thief**: job:steal à <50 m → 30% des lots volés (KB), recel 60%,
+  XP métier, trader averti.
+- **Client**: JobPanel (touche J): métiers, transports, spécialités par
+  ville, vente, notifications embuscade/transport.
+- **Fix transverse**: teleportPlayer recalcule zoneId par ville la plus
+  proche (<800 m) — le GM /tp laissait la zone d'origine (ventes/spécialités
+  ancrées à Jangan).
+- **Tests**: test-phaseG-jobs.ts 16/16 (transport 1★ accepté, étoiles 4/9→3★,
+  embuscade 3 thieves, vente 5 720 or = 4×(1500×1.62−1000) EXACT, rechargement
+  Hotan, vol + recel 4 800 + avertissement). Régressions A/B/combat vertes.

@@ -166,7 +166,7 @@ export class GameServer {
     });
 
     // Set up Socket.IO handlers
-    this.setupSocketHandlers();
+    void this.setupSocketHandlers();
 
     // Boucle de jeu unique (GameLoop émet 'tick' à tickRate Hz).
     // Historique: un double mécanisme GameLoop + setInterval existait — les
@@ -180,8 +180,8 @@ export class GameServer {
   /**
    * Set up Socket.IO connection handlers
    */
-  private setupSocketHandlers(): void {
-    this.io.on('connection', (socket: Socket) => {
+  private async setupSocketHandlers(): Promise<void> {
+    this.io.on('connection', async (socket: Socket) => {
       logger.info(`Client connected: ${socket.id}`);
 
       // Handle client connection
@@ -250,6 +250,12 @@ export class GameServer {
       socket.on('player:respawn', (data) => this.handleRespawnRequest(socket, data));
 
       // Interaction PNJ: quêtes (donner/rendre) avec vérification de proximité
+      // Jobs (Phase E V2 — triangle Trader/Thief/Hunter)
+      const { JobHandlers } = await import('./JobHandlers.js');
+      new JobHandlers(
+        this.clientManager, this.worldManager ?? null, this.combatBridge ?? null,
+      ).register(socket);
+
       socket.on('quest:interact', (data: unknown, ack?: (r: unknown) => void) => {
         try {
           const client = this.clientManager?.getClient(socket.id);

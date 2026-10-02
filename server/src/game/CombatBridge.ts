@@ -22,6 +22,7 @@ import { MonsterEntity } from '../world/MonsterEntity';
 import { globalSpatialManager } from '../world/SpatialManager';
 import { rates } from '../config/rates';
 import { QuestManager } from '../quest/QuestManager';
+import { JobManager, computeStarLevel } from '../job/JobManager';
 import { cumulativeXpForLevel } from '@srobro/shared';
 import type { S2CPacket } from '@srobro/shared';
 
@@ -117,6 +118,15 @@ export class CombatBridge {
   private cooldowns: Map<string, PlayerCooldowns> = new Map();
   // Dernières récompenses de kill (pour le log, hors scope if(killer))
   private lastKillRewards: { expGain: number; gap: number } | null = null;
+  // Jobs (Phase E V2): embuscades thief NPC par trader
+  private static readonly CITIES = [
+    { id: 'zone_jangan', x: 0, z: 510 },        // Jangan
+    { id: 'zone_donwhang', x: -2908, z: 1523 }, // Donwhang
+    { id: 'zone_hotan', x: -6347, z: -541 },    // Hotan
+  ];
+  private jobManager = new JobManager(prisma);
+  private lastAmbushCheck = new Map<string, number>(); // characterId → ts
+  private lastAmbushAt = new Map<string, number>(); // characterId → ts (cooldown 90 s)
   // Diffusion de positions monstres: au plus toutes les 250 ms par monstre
   private lastMonsterBroadcast: Map<string, number> = new Map();
 
@@ -280,6 +290,65 @@ export class CombatBridge {
           state: monster.aiState,
         },
       });
+    }
+    void this.checkTradeAmbushes(now);
+  }
+
+  /**
+   * Embuscades officielles (KB 09/10): un trader avec marchandises qui
+   * s'éloigne des villes est attaqué par N thieves NPC (N = étoiles du
+   * trade, 1 par étoile). Cooldown 90 s par trader. Mort du trader =
+   * transport détruit (goods perdues) — cf. onPlayerDeath.
+   */
+  private async checkTradeAmbushes(now: number): Promise<void> {
+    for (const player of this.worldManager.getAllPlayers()) {
+      const lastCheck = this.lastAmbushCheck.get(player.id) ?? 0;
+      if (now - lastCheck < 5000) continue; // check 1×/5 s par joueur
+      this.lastAmbushCheck.set(player.id, now);
+      try {
+        const transport = await this.jobManager.getTransport(player.id);
+        if (!transport || transport.goods.length === 0) continue;
+        const lastAmbush = this.lastAmbushAt.get(player.id) ?? 0;
+        if (now - lastAmbush < 90000) continue;
+        // Loin de TOUTES les villes (routes sauvages) ?
+        const cities = CombatBridge.CITIES;
+        const nearCity = cities.some(
+          (c) => Math.hypot(c.x - player.position.x, c.z - player.position.z) < 600,
+        );
+        if (nearCity) continue;
+        // Étoiles du trade → N thieves NPC
+        const stars = computeStarLevel(transport.goods, { 1: 9, 2: 18, 3: 27, 4: 36, 5: 45 }[transport.starLevel] ?? 9);
+        this.lastAmbushAt.set(player.id, now);
+        // Thieves NPC officiels (vagues 1-2+, KB: thieves verts/rouges par étoile)
+        const { ensureMonsterInDb } = await import('../admin/bestiary.js');
+        const THIEF_CODES = [
+          'MOB_THIEF_NPC_00110011', // lv2
+          'MOB_THIEF_NPC_00120012', // lv2
+          'MOB_THIEF_NPC_00130013', // lv2
+          'MOB_THIEF_NPC_00140014', // lv2
+          'MOB_THIEF_NPC_00150015', // lv2
+        ];
+        const spawned: string[] = [];
+        for (let i = 0; i < stars; i++) {
+          const angle = (i / stars) * Math.PI * 2;
+          const pos = {
+            x: player.position.x + Math.cos(angle) * 18,
+            y: 0,
+            z: player.position.z + Math.sin(angle) * 18,
+          };
+          const monster = await ensureMonsterInDb(THIEF_CODES[i % THIEF_CODES.length]);
+          if (!monster?.id) continue;
+          const m = await globalSpawnManager.spawnMonsterAt(monster.id, pos);
+          if (m) spawned.push(m.id);
+        }
+        this.sendToPlayerRaw(player.id, 'job:ambush', {
+          stars, thieves: spawned.length,
+          message: `⚠️ Embuscade ! ${spawned.length} thief(s) attaquent votre caravane (${'★'.repeat(stars)})`,
+        });
+        logger.info(`Embuscade trade: ${player.name} (${stars}★) — ${spawned.length} thieves NPC`);
+      } catch {
+        // pas de transport / erreur DB: ignorer silencieusement
+      }
     }
   }
 
@@ -664,6 +733,19 @@ export class CombatBridge {
         }
       });
     }
+    // Mort d'un trader en train de trader: transport détruit, goods perdues
+    // (officiel: tuer le transport = loot au sol; ici le porteur meurt)
+    if (player) {
+      void this.jobManager.getTransport(victimId).then(async (t) => {
+        if (t && t.goods.length > 0) {
+          await this.jobManager.destroyTransport(victimId);
+          this.sendToPlayerRaw(victimId, 'chat', {
+            message: '💥 Votre transport a été détruit — marchandises perdues !',
+            channel: 'system',
+          });
+        }
+      }).catch(() => undefined);
+    }
     this.sendToPlayer(victimId, {
       type: 'player:death',
       timestamp: Date.now(),
@@ -764,6 +846,13 @@ export class CombatBridge {
     // téléporteurs officiels passent ici — sans cela le client bougeait
     // visuellement mais l'entité restait à l'ancienne position)
     player.setPosition({ x: position.x, y: position.y ?? 0, z: position.z });
+    // Zone recalculée par proximité (le GM /tp ne transporte pas l'info de
+    // zone — sinon ventes/spécialités restent ancrées à la ville d'origine)
+    const nearest = CombatBridge.CITIES.reduce((best, c) => {
+      const d = Math.hypot(c.x - position.x, c.z - position.z);
+      return d < best.d ? { ...c, d } : best;
+    }, { id: player.zoneId, x: Infinity, z: Infinity, d: Infinity } as { id: string; x: number; z: number; d: number });
+    if (Number.isFinite(nearest.d) && nearest.d < 800) player.zoneId = nearest.id;
     // L'entrée spatiale doit suivre: checkDespawn/AOI s'appuient dessus —
     // une entrée restée à l'ancienne position ferait despawn tous les mobs
     // autour du point d'arrivée (vécu: spawns GM supprimés après 1 s).

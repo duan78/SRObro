@@ -30,6 +30,7 @@ import { InventoryPanel } from './ui/dom/InventoryPanel';
 import { CharacterPanel } from './ui/dom/CharacterPanel';
 import { QuestSystem } from './ui/dom/QuestPanel';
 import { SkillPanel } from './ui/dom/SkillPanel';
+import { JobPanel } from './ui/dom/JobPanel';
 import { gameAudio } from './ui/dom/GameAudio';
 
 // Collecte des erreurs console pour diagnostic navigateur (window.__errors)
@@ -167,6 +168,10 @@ async function init(): Promise<void> {
       // Fenêtre Skills (touche S — Phase C): apprentissage SP + hotbar dynamique
       const skillPanel = new SkillPanel(network, () => void netCombat?.refreshHotbar());
       (window as unknown as { skillPanel: SkillPanel }).skillPanel = skillPanel;
+
+      // Métiers (touche J — Phase E V2): triangle trade + embuscades
+      const jobPanel = new JobPanel(network);
+      (window as unknown as { jobPanel: JobPanel }).jobPanel = jobPanel;
 
       // Zerk (Phase C): orbes + activation visuelle
       network.onRaw('zerk:orbs', (d: any) => hud.setZerkOrbs(d?.orbs ?? 0));
