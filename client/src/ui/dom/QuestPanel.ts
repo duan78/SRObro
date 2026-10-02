@@ -116,7 +116,8 @@ export class QuestSystem {
           const sk = (m as any).skeleton;
           if (sk && !skeletons.includes(sk)) skeletons.push(sk);
         }
-        if (skeletons.length > 0) {
+        if (skeletons.length > 0 && !root.__idleLoaded) {
+          root.__idleLoaded = true;
           void import('../../animation/BanAnimationService').then(({ AnimationService }) =>
             AnimationService.loadAndPlay(
               this.scene,
@@ -124,7 +125,10 @@ export class QuestSystem {
               AnimationService.playerClip('standcity', female),
               true,
               1.0,
-            )).catch(() => undefined);
+            )).then((groups: any[]) => {
+              (root as any).__idleGroups = groups;
+              this.startNpcDistanceCulling();
+            }).catch(() => undefined);
         }
       }).catch(() => this.spawnNpcCylinder(npc, y));
       return;
@@ -132,6 +136,33 @@ export class QuestSystem {
     this.spawnNpcCylinder(npc, y);
   }
 
+  /**
+   * Coupure d'animation des PNJ par distance (perf H V3): 54 PNJ × 9
+   * squelettes = ~800 groupes d'animation TOUS en lecture même à 800 m
+   * → 30 ms/frame. Au-delà de 250 m du JOUEUR, les groupes sont pausés
+   * (le modèle reste visible, figé en pose d'idle — invisible à distance).
+   */
+  private npcCullTimer: number | null = null;
+  private startNpcDistanceCulling(): void {
+    if (this.npcCullTimer !== null) return;
+    this.npcCullTimer = window.setInterval(() => {
+      const nc = (window as unknown as { netCombat?: { getPlayerMesh?: () => any; findPlayerBone?: (re: RegExp) => any } }).netCombat;
+      const player = nc?.getPlayerMesh?.() ?? null;
+      if (!player) return;
+      const px = player.getAbsolutePosition().x;
+      const pz = player.getAbsolutePosition().z;
+      for (const root of this.npcMeshes.values()) {
+        const groups = (root as any).__idleGroups as any[] | undefined;
+        if (!groups) continue;
+        const d = Math.hypot(root.position.x - px, root.position.z - pz);
+        const shouldPlay = d < 250;
+        for (const g of groups) {
+          if (shouldPlay && !g.isPlaying) g.play();
+          else if (!shouldPlay && g.isPlaying) g.pause();
+        }
+      }
+    }, 1000);
+  }
   /** Borne cylindrique cliquable (repli sans modèle 3D). */
   private spawnNpcCylinder(npc: NpcInfo, y: number): void {
     const marker = MeshBuilder.CreateCylinder(`npc_${npc.id}`, { diameter: 0.8, height: 1.9 }, this.scene);

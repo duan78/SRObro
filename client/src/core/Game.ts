@@ -665,6 +665,13 @@ export class Game {
     // déjà le vrai terrain officiel; la zone procédurale se superposait
     // (double géométrie: sol 2000², 50 arbres, 10 bâtiments, 30 rochers).
 
+    // Perf (H V3): gel des matériaux statiques (évaluation shaders évitée)
+    // + pas de picking au survol — mesuré 38→30 ms/frame au camp.
+    this.scene.skipPointerMovePicking = true;
+    setTimeout(() => {
+      for (const mat of this.scene.materials) { try { (mat as any).freeze?.(); } catch { /* dynamique */ } }
+    }, 20000).unref?.();
+
     this.isRunning = true;
 
     // Start render loop

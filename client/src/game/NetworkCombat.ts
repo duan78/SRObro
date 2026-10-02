@@ -418,7 +418,13 @@ export class NetworkCombat {
     this.network.onRaw('despawn_player', (d: any) => {
       const id = (d && d.id) ?? d;
       const rp = this.remotePlayers.get(id);
-      if (rp) { rp.root.dispose(); this.remotePlayers.delete(id); }
+      if (rp) {
+        if ((rp as any).animGroups) {
+          for (const g of (rp as any).animGroups) { try { g.stop(); g.dispose(); } catch { /* déjà parti */ } }
+        }
+        rp.root.dispose();
+        this.remotePlayers.delete(id);
+      }
     });
   }
 
@@ -750,10 +756,34 @@ export class NetworkCombat {
   private despawnMonster(id: string): void {
     const m = this.monsters.get(id);
     if (!m) return;
+    const holder = m as any;
+    if (holder.animGroups) {
+      for (const g of holder.animGroups) { try { g.stop(); g.dispose(); } catch { /* déjà parti */ } }
+      holder.animGroups = null;
+    }
     m.root.dispose();
     m.proxy.dispose();
     this.monsters.delete(id);
     if (this.targetId === id) this.clearTarget();
+  }
+
+  /**
+   * Fuite de groupes d'animation (perf H V3): chaque entité instanciée crée
+   * des groupes par clip×squelette (loadAndPlay) qui SURVIVENT au dispose
+   * des meshes — vécu: 2 126 groupes tous en lecture → 30 FPS. Un groupe
+   * dont la cible est un squelette/os de l'entité est disposé ici.
+   */
+  private disposeEntityAnims(root: any): void {
+    const bones = new Set<string>();
+    for (const mesh of root.getChildMeshes()) {
+      const sk = (mesh as any).skeleton;
+      if (sk) for (const bone of sk.bones) bones.add(bone.name);
+    }
+    if (bones.size === 0) return;
+    for (const g of [...this.scene.animationGroups]) {
+      const targets = (g as any).targets ? [...((g as any).targets as any[])] : [];
+      if (targets.some((t: any) => bones.has(t?.name))) g.dispose();
+    }
   }
 
   private switchMonsterAnim(m: { data: ServerMonster; root: any; animState: string | null }, state: string, once = false): void {
@@ -769,12 +799,21 @@ export class NetworkCombat {
     const looping = state === 'walk' || state === 'run' || state === 'stand01';
     const action = state === 'attack01' || state === 'damage01' || looping ? state : 'walk';
     const clip = AnimationService.monsterClip(stem, action as 'attack01' | 'damage01' | 'walk' | 'run' | 'stand01');
+    // Fuite (perf H V3): chaque changement d'état créait de NOUVEAUX groupes
+    // sans disposer les précédents (1 952 groupes cumulés → 20 FPS). Les
+    // groupes sont tenus PAR ENTITÉ et disposés à chaque bascule.
+    const holder = m as any;
+    if (holder.animGroups) {
+      for (const g of holder.animGroups) { try { g.stop(); g.dispose(); } catch { /* déjà parti */ } }
+    }
     AnimationService.loadAndPlay(this.scene, skeletons, clip, !once, once ? 1.4 : 1.0)
       .then((groups: any[]) => {
+        holder.animGroups = groups;
         if (once) {
           // Retour au walk après l'attaque
           setTimeout(() => {
             for (const g of groups) { g.stop(); g.dispose(); }
+            holder.animGroups = null;
             this.switchMonsterAnim(m, 'walk');
           }, 1200);
         }
@@ -1227,8 +1266,15 @@ export class NetworkCombat {
       for (const rp of this.remotePlayers.values()) {
         const restant = step(rp.root, null, rp.target);
         const wanted = restant > 1.5 ? 'walk' : 'idle';
-        if (restant >= 0 && rp.animState !== wanted) {
+        // Hystérésis (perf H V3): une seule bascule par NET changement —
+        // dispose les groupes précédents du joueur distant avant rechargement.
+        const lastWanted = ((rp as any).animWanted ?? rp.animState);
+        (rp as any).animWanted = wanted;
+        if (restant >= 0 && lastWanted !== wanted) {
           rp.animState = wanted;
+          if ((rp as any).animGroups) {
+            for (const g of (rp as any).animGroups) { try { g.stop(); g.dispose(); } catch { /* déjà parti */ } }
+          }
           const skeletons: any[] = [];
           for (const mesh of rp.root.getChildMeshes()) {
             const sk = (mesh as any).skeleton;
@@ -1239,7 +1285,7 @@ export class NetworkCombat {
               this.scene, skeletons,
               AnimationService.playerClip(wanted === 'walk' ? 'walkforward' : 'standcity'),
               true, 1.0,
-            ).catch(() => undefined);
+            ).then((groups: any[]) => { (rp as any).animGroups = groups; }).catch(() => undefined);
           }
         }
       }
@@ -1253,7 +1299,12 @@ export class NetworkCombat {
         if (m.netState === 'aggro' || m.netState === 'attack') wanted = 'run';
         else if (restant > 1.5) wanted = 'walk';
         else wanted = 'stand01';
-        if (restant >= 0 && m.animState !== wanted) {
+        // Hystérésis (perf H V3): la bascule walk↔idle clignotait à chaque
+        // frame (convergence oscillante autour de 1,5 u) → chaque bascule
+        // rechargeait des clips. Ne basculer qu'une fois par NET changement.
+        const lastWanted = ((m as any).animWanted ?? m.animState);
+        (m as any).animWanted = wanted;
+        if (restant >= 0 && lastWanted !== wanted) {
           m.animState = wanted;
           this.switchMonsterAnim(m, wanted);
         }

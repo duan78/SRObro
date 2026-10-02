@@ -27,7 +27,7 @@ export class RealTerrain {
   private texCache = new Map<string, Texture>();
   private matCache = new Map<string, StandardMaterial>();
   /** Streaming: régions chargées autour du joueur (monde multi-continents). */
-  private queue: RegionIndexEntry[] = [];
+  private queue: Array<{ region: RegionIndexEntry; withMesh: boolean }> = [];
   private queued = new Set<string>();
   private pumping = false;
   private lastStreamAt = 0;
@@ -124,12 +124,13 @@ export class RealTerrain {
       if (Math.max(Math.abs(region.x - crx), Math.abs(region.z - crz)) > 1) break;
       if (await this.loadRegion(region)) loaded++;
     }
-    // Rayon 2: en file d'attente (tâche de fond, concurrence 3)
+    // Rayon 2: heightmaps seules en file (meshes limités au rayon mesh)
     for (const region of sorted) {
       const key = `${region.x}_${region.z}`;
       if (this.meshesByRegion.has(key) || this.queued.has(key)) continue;
+      const withMesh = Math.max(Math.abs(region.x - crx), Math.abs(region.z - crz)) <= RealTerrain.MESH_RADIUS;
       this.queued.add(key);
-      this.queue.push(region);
+      this.queue.push({ region, withMesh });
     }
     this.pump();
     return loaded;
@@ -143,9 +144,9 @@ export class RealTerrain {
       let i = 0;
       const worker = async (): Promise<void> => {
         while (i < this.queue.length) {
-          const region = this.queue[i++];
-          await this.loadRegion(region);
-          this.queued.delete(`${region.x}_${region.z}`);
+          const item = this.queue[i++];
+          await this.loadRegion(item.region, item.withMesh);
+          this.queued.delete(`${item.region.x}_${item.region.z}`);
         }
       };
       await Promise.all(Array.from({ length: Math.min(3, this.queue.length) }, worker));
@@ -154,8 +155,14 @@ export class RealTerrain {
     })();
   }
 
-  /** Charge une région (heightmap + tilemap → meshes par texture). */
-  private async loadRegion(region: RegionIndexEntry): Promise<boolean> {
+  /** Charge une région (heightmap + tilemap → meshes par texture).
+   *  MESH_RADIUS (perf H V3): les MESHES ne sont construits que dans le
+   *  rayon 1 (3×3 régions, ~25 × ~8 = 200 meshes — au-delà les draw calls
+   *  plombaient le frame: 581 meshes = 50 ms). Les HEIGHTMAPS du rayon 2
+   *  continuent d'être chargées (heightAt juste partout). */
+  private static readonly MESH_RADIUS = 1;
+
+  private async loadRegion(region: RegionIndexEntry, withMesh = true): Promise<boolean> {
     const key = `${region.x}_${region.z}`;
     if (this.meshesByRegion.has(key)) return false;
     try {
@@ -170,10 +177,10 @@ export class RealTerrain {
       const hm = this.index!.heightmapSize;
       const step = size / (hm - 1);
       const meshes: import('@babylonjs/core').Mesh[] = [];
-      if (this.buildRegionMesh(region, heights, tiles, hm, step, meshes)) {
+      if (withMesh && this.buildRegionMesh(region, heights, tiles, hm, step, meshes)) {
         this.meshesByRegion.set(key, meshes);
       } else {
-        // Région sans texture exploitable: marquée vide pour ne pas re-charger
+        // Hors rayon mesh ou sans texture: marquée vide pour ne pas re-charger
         this.meshesByRegion.set(key, []);
       }
       return true;

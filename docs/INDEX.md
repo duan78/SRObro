@@ -56,6 +56,21 @@ docs/
 
 ## 📋 Table des Matières
 
+### Jeu & audits (V3 finalisée)
+
+- **[Audit final V3](./audit/AUDIT_FINAL_V3.md)** — preuves critère par critère
+  (suites 22/22 + 24/24, FW Eastern Europe de bout en bout, Job Temple
+  advanced jusqu'à Seth, 3 clients + kill serveur → reconnexion 0,1 s,
+  83 FPS). Films : `demo_final_v3.webm`.
+- **[Audit V2](./audit/AUDIT_FINAL_V2.md)** ·
+  [Audit V1](./audit/AUDIT_FINAL.md) ·
+  [Transcription session filmée V2](./audit/AUDIT_FILME_V2_TRANSCRIPT.log)
+- [Cahier des charges V3 (racine)](../PROMPT_MAITRE_V3.md) ·
+  [V2](../PROMPT_MAITRE_V2.md) · [V1](../PROMPT_MAITRE.md) ·
+  [Avancement](../Avancement.md)
+- Suites de tests : `server/scripts/test-phase*.ts`, `test-audit-v3.ts`,
+  `test-phaseH-finalaudit.ts` (lancées via `npx tsx` sur le serveur de dev)
+
 ### Documentation Technique
 
 #### Français
@@ -117,8 +132,8 @@ Nous recherchons des traducteurs volontaires pour aider à traduire la documenta
 
 ---
 
-**Dernière mise à jour** : 2025-01-20
-**Version** : 1.0 - Système multilingue initial
+**Dernière mise à jour** : 2026-10-02 (V3 finalisée — audit 24/24, 83 FPS/3 clients)
+**Version** : 3.0 - Jeu finalisé (3 continents, 7 zones, FW avec taxe, Job Temple AP)
 **Prochaine étape** : Traduction des fichiers techniques prioritaires
 
 ---

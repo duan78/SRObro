@@ -32,11 +32,17 @@ export class APManager {
     return { unionId: um.unionId, camp };
   }
 
-  /** AP actuels d'une union (0 si inconnue). */
+  /** AP actuels d'une union (0 si inconnue) — cache d'abord, sinon SQL brut
+   *  (la colonne ap est ajoutée dynamiquement, hors schéma Prisma). */
   async ap(unionId: string): Promise<number> {
     if (this.cache.has(unionId)) return this.cache.get(unionId)!;
-    const u = await prisma.union.findUnique({ where: { id: unionId } }).catch(() => null);
-    const v = Number((u as unknown as { ap?: unknown })?.ap ?? 0);
+    let v = 0;
+    try {
+      const rows: unknown = await prisma.$queryRawUnsafe(
+        `SELECT ap FROM "Union" WHERE id = $1`, unionId);
+      const r = Array.isArray(rows) ? (rows[0] as { ap?: number } | undefined) : undefined;
+      v = Number(r?.ap ?? 0);
+    } catch { /* colonne absente → 0 */ }
     this.cache.set(unionId, v);
     return v;
   }
@@ -62,23 +68,23 @@ export class APManager {
   async gateFor(characterId: string): Promise<'both' | 'trader_hunter' | 'thief' | 'none'> {
     const mine = await this.unionOf(characterId);
     if (!mine) return 'both'; // sans union: règle du «aucun AP» — les deux entrent
-    // AP du camp adverse (unions des guildes dont un membre a le job adverse)
+    // AP des unions ADVERSES (via le camp du premier membre de chaque guilde)
     const myAp = await this.ap(mine.unionId);
-    const allUnions = await prisma.union.findMany().catch(() => []);
+    const allMembers = await prisma.unionMember.findMany().catch(() => []);
+    const unionIds = [...new Set(allMembers.map((m) => m.unionId).filter((id) => id !== mine.unionId))];
     let opposingAp = 0;
-    for (const u of allUnions) {
-      if (u.id === mine.unionId) continue;
-      const v = Number((u as unknown as { ap?: unknown })?.ap ?? 0);
-      // camp d'une union: via le premier membre trouvé
-      const members = await prisma.unionMember.findMany({ where: { unionId: u.id } });
+    for (const uid of unionIds) {
+      // camp de l'union: via le premier membre trouvé
+      const members = allMembers.filter((m) => m.unionId === uid);
       for (const m of members) {
-        const g = await prisma.guild.findUnique({ where: { id: m.guildId } }).catch(() => null);
-        if (!g) continue;
-        const gm = await prisma.guildMember.findFirst({ where: { guildId: g.id } });
+        const gm = await prisma.guildMember.findFirst({ where: { guildId: m.guildId } }).catch(() => null);
         if (!gm) continue;
-        const job = await prisma.jobState.findUnique({ where: { characterId: gm.characterId } });
+        const job = await prisma.jobState.findUnique({ where: { characterId: gm.characterId } }).catch(() => null);
         const theirCamp = job?.jobType === 'thief' ? 'thief' : 'trader_hunter';
-        if (theirCamp !== mine.camp) { opposingAp = Math.max(opposingAp, v); break; }
+        if (theirCamp !== mine.camp) {
+          opposingAp = Math.max(opposingAp, await this.ap(uid));
+          break;
+        }
       }
     }
     if (myAp === 0 && opposingAp === 0) return 'both'; // règle officielle

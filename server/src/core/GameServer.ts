@@ -560,6 +560,22 @@ export class GameServer {
         });
       });
 
+      // AP du Job Temple (phase H V3): état de l'union + gate officielle
+      socket.on('ap:state', (_d: unknown, ack?: (r: unknown) => void) => {
+        void (async () => {
+          try {
+            const client = this.clientManager?.getClient(socket.id);
+            const characterId = client?.getCharacterId() ?? null;
+            if (!characterId) { ack?.({ success: false, error: 'Non authentifié' }); return; }
+            const { globalAPManager } = await import('../game/APManager.js');
+            const u = await globalAPManager.unionOf(characterId);
+            const ap = u ? await globalAPManager.ap(u.unionId) : 0;
+            const gate = await globalAPManager.gateFor(characterId);
+            ack?.({ success: true, unionId: u?.unionId ?? null, camp: u?.camp ?? null, ap, gate });
+          } catch (e) { ack?.({ success: false, error: e instanceof Error ? e.message : 'Erreur' }); }
+        })();
+      });
+
       // Energy of Life (phase C V3, titres «Blue Zerk»): remplit la jauge
       // zerk, 1×/20 min, dès le titre Knight (KB 16 §titres).
       socket.on('zerk:energy', (_d: unknown, ack?: (r: unknown) => void) => {
