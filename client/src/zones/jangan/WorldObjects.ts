@@ -100,35 +100,41 @@ export class WorldObjects {
       byModel.get(p.bsr)!.push(p);
     }
 
-    for (const [bsr, group] of byModel) {
-      // loadGameObject met les containers GLB en cache (AssetLoader.loadGlb):
-      // le premier placement d'un modèle paie le chargement, les suivants
-      // instancient depuis le cache. Pas de "proto" pré-chargé — il serait
-      // resté orphelin et visible à l'origine (0,0,0).
-      for (const p of group) {
-        try {
-          const inst = await this.assetLoader.loadGameObject(bsr);
-          if (!inst || !inst.root) continue;
-          const groundY = this.heightAt ? this.heightAt(p.x, p.z) : p.y;
-          inst.root.position.set(p.x, groundY, p.z);
-          inst.root.rotation.y = p.yaw;
-          // Bâtiments collisionnables: le rayon de la caméra les prend en
-          // compte pour ne pas passer à travers (et le clic les ignore).
-          for (const mesh of inst.root.getChildMeshes()) {
-            mesh.isPickable = true;
-            (mesh as import('@babylonjs/core').Mesh).checkCollisions = true;
-            // Statique par nature: gèle la world matrix (sinon ~1500 meshes
-            // réévaluent leur transform chaque frame).
-            mesh.freezeWorldMatrix();
+    // Chargement parallèle des modèles (8 groupes à la fois — chaque groupe
+    // est un modèle unique, les appels successifs d'un même groupe tapent le
+    // cache de containers de l'AssetLoader). Séquentiel, ~100 modèles GLB
+    // prenaient plusieurs dizaines de secondes.
+    const groups = [...byModel.entries()];
+    let gi = 0;
+    const worker = async (): Promise<void> => {
+      while (gi < groups.length) {
+        const [bsr, group] = groups[gi++];
+        for (const p of group) {
+          try {
+            const inst = await this.assetLoader.loadGameObject(bsr);
+            if (!inst || !inst.root) continue;
+            const groundY = this.heightAt ? this.heightAt(p.x, p.z) : p.y;
+            inst.root.position.set(p.x, groundY, p.z);
+            inst.root.rotation.y = p.yaw;
+            // Bâtiments collisionnables: le rayon de la caméra les prend en
+            // compte pour ne pas passer à travers (et le clic les ignore).
+            for (const mesh of inst.root.getChildMeshes()) {
+              mesh.isPickable = true;
+              (mesh as import('@babylonjs/core').Mesh).checkCollisions = true;
+              // Statique par nature: gèle la world matrix (sinon ~1500 meshes
+              // réévaluent leur transform chaque frame).
+              mesh.freezeWorldMatrix();
+            }
+            inst.root.freezeWorldMatrix();
+            this.roots.push(inst.root as unknown as import('@babylonjs/core').TransformNode);
+            loaded++;
+          } catch {
+            // placement isolé raté: on continue
           }
-          inst.root.freezeWorldMatrix();
-          this.roots.push(inst.root as unknown as import('@babylonjs/core').TransformNode);
-          loaded++;
-        } catch {
-          // placement isolé raté: on continue
         }
       }
-    }
+    };
+    await Promise.all(Array.from({ length: Math.min(8, groups.length) }, worker));
 
     console.log(`[WorldObjects] ${loaded}/${selected.length} objets officiels placés (${byModel.size} modèles)`);
     return loaded;

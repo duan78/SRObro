@@ -61,15 +61,23 @@ export class Game {
   private thirdPersonCamera: ThirdPersonCamera | null = null;
   // Déplacement au clic
   private moveDestination: import('@babylonjs/core').Vector3 | null = null;
-  private playerAnimState: 'idle' | 'walk' | null = null;
+  private playerAnimState: 'idle' | 'walk' | 'run' | null = null;
   private playerScaleDone = false;
   private normalizedPlayerRef: unknown = null;
   private lastNormalizeAttempt = 0;
+  /** Signature bbox locale + horodatage de stabilité du recalage du perso */
+  private lastNormalizeSignature = '';
+  private lastNormalizeStableSince = 0;
   private animGeneration = 0;
   private clickMoveHandler: ((e: PointerEvent) => void) | null = null;
   private renderErrorCount = 0;
-  // Vitesse de déplacement (modifiable par /speed GM via évènement srobro:speed)
-  private moveSpeed = 5.0;
+  // Vitesse de déplacement en UNITÉS SRO (1 u ≈ 10 cm — même échelle que le
+  // terrain 1920 u/région, les monstres BMS natifs et les vitesses
+  // officielles: mangnyang marche 8, course médiane 66). Marche 8 u/s ≈ la
+  // foulée du clip walkforward (1,166 s/cycle); course Shift 17 ≈ le run
+  // 100% officiel (16,6).
+  private readonly baseMoveSpeed = 8.0;
+  private moveSpeed = 8.0;
   // En mode réseau, les monstres/joueurs distants sont gérés par NetworkCombat:
   // l'EntityManager legacy (monstres locaux) ne doit rien recréer (warns + meshes en double)
   legacyEntities = true;
@@ -178,11 +186,12 @@ export class Game {
 
     // Caméra troisième personne orbitale: clic droit = rotation, molette = zoom.
     // Collision activée: la caméra ne traverse pas les bâtiments.
+    // Distances en unités SRO (perso natif ~17 u de haut).
     this.thirdPersonCamera = new ThirdPersonCamera(this.scene, {
-      distance: 9,
-      height: 2.2,
-      minDistance: 1.5,
-      maxDistance: 150,
+      distance: 48,
+      height: 11,
+      minDistance: 8,
+      maxDistance: 400,
       rotationSpeed: 0.005,
       zoomSpeed: 1.2,
       smoothness: 0.2,
@@ -597,7 +606,7 @@ export class Game {
     // Vitesse GM (/speed): le module réseau relaie le multiplicateur serveur
     window.addEventListener('srobro:speed', (e) => {
       const m = Number((e as CustomEvent).detail ?? 1);
-      if (m >= 0.5 && m <= 10) this.moveSpeed = 5.0 * m;
+      if (m >= 0.5 && m <= 10) this.moveSpeed = this.baseMoveSpeed * m;
     });
 
     // Spawn player at Jangan zone spawn point (posé sur le relief réel).
@@ -633,6 +642,9 @@ export class Game {
       }
 
       this.setupClickToMove();
+      // Clavier + clic unifiés dans updateClickToMove: couper le chemin
+      // legacy de CharacterManager (double déplacement sinon).
+      this.characterManager.legacyKeyboardMovement = false;
     }
 
     // NOTE: pas de worldManager.loadZone('zone_jangan') — JanganZone fournit
@@ -796,6 +808,12 @@ export class Game {
    * Normalise le personnage officiel: échelle ~1.8 m ET recalage vertical
    * (le squelette SRO a son origine en hauteur, pas aux pieds). Appelé en
    * différé car le modèle se charge en arrière-plan.
+   *
+   * Robustesse (bug perso enterré, oct. 2026): le recalage n'est validé
+   * (playerScaleDone) que lorsque la bbox LOCALE du modèle est stable ~1,5 s
+   * — l'assemblage multi-parties et la pose du squelette arrivent en différé,
+   * et marquer "terminé" sur une mesure partielle figeait une échelle 2× et
+   * un pivot au milieu du corps.
    */
   private normalizePlayerScale(): void {
     const player = this.characterManager?.player;
@@ -803,28 +821,60 @@ export class Game {
     const meshes = player.getChildMeshes() as import('@babylonjs/core').Mesh[];
     const real = meshes.filter((m) => m.getTotalVertices() > 0);
     if (real.length === 0) return; // modèle pas encore chargé: réessai au tick suivant
-    player.computeWorldMatrix(true);
+
+    // Bbox des VERTICES BRUTS (statique): insensible à la pose animée. Mesurer
+    // la bbox monde (refreshBoundingInfo) couplait le recalage des enfants à
+    // la frame d'animation courante → le perso sautait verticalement au repos
+    // dès que les animations jouaient (bug « oscille de haut en bas », oct.
+    // 2026 — invisible avant car les anims étaient figées par le bug fps).
     let min = Infinity;
     let max = -Infinity;
     for (const m of real) {
-      m.refreshBoundingInfo(true);
-      const bb = m.getBoundingInfo().boundingBox;
-      min = Math.min(min, bb.minimumWorld.y);
-      max = Math.max(max, bb.maximumWorld.y);
-    }
-    const height = max - min;
-    if (height > 0.01 && Number.isFinite(height)) {
-      const s = 1.8 / height;
-      player.scaling.setAll(s);
-      // Recalage vertical: décaler les enfants du root pour poser les pieds
-      // au niveau du root (le squelette SRO a son origine en hauteur).
-      // NB: la position enfant est exprimée AVANT le scaling du root.
-      const yShift = -min;
-      for (const child of player.getChildTransformNodes()) {
-        child.position.y = yShift;
+      const pos = m.getVerticesData('position');
+      if (!pos) continue;
+      for (let i = 1; i < pos.length; i += 3) {
+        if (pos[i] < min) min = pos[i];
+        if (pos[i] > max) max = pos[i];
       }
+    }
+    const localHeight = max - min;
+    if (!(localHeight > 0.01) || !Number.isFinite(localHeight)) return;
+
+    // Garde-fou: un humanoïde SRO fait ~15-35 unités locales. Une mesure
+    // explosive (pose d'animation corrompue, squelette éclaté) ne doit JAMAIS
+    // piloter l'échelle — sinon boucle de rétroaction qui rétrécit le perso
+    // (bug oct. 2026: échelle 0.011, perso invisible).
+    if (!(localHeight >= 5 && localHeight <= 60)) {
+      console.warn(`[Game] Recalage: hauteur locale aberrante ${localHeight.toFixed(1)} u ignorée`);
+      return;
+    }
+
+    const hKey = `${min.toFixed(2)}/${localHeight.toFixed(2)}`;
+    const now = performance.now();
+    if (hKey !== this.lastNormalizeSignature) {
+      this.lastNormalizeSignature = hKey;
+      this.lastNormalizeStableSince = 0;
+    } else if (!this.lastNormalizeStableSince) {
+      this.lastNormalizeStableSince = now;
+    }
+
+    // ÉCHELLE NATIVE BMS (~17 u ≈ 1,7 m en unités SRO): le monde (régions
+    // 1920 u, monstres natifs, vitesses officielles walk 8-20) est en unités
+    // SRO — l'ancienne cible 1,8 rendait le perso ~9× trop petit face aux
+    // mobs (mangnyang « géant », déplacement rampant).
+    player.scaling.setAll(1.0);
+    // Pieds au niveau du root (les vertices montent jusqu'à ~min localement).
+    const yShift = -min;
+    for (const child of player.getChildTransformNodes(true)) {
+      child.position.y = yShift;
+    }
+
+    // Validation uniquement si la signature n'a plus bougé depuis 1,5 s
+    // (les 9 parties arrivent en différé: la bbox brute grandit à chaque
+    // partie chargée puis se fige).
+    if (this.lastNormalizeStableSince && now - this.lastNormalizeStableSince > 1500) {
       this.playerScaleDone = true;
-      console.log(`[Game] Perso recalé: hauteur ${height.toFixed(2)}, échelle ${s.toFixed(3)}, décalage ${yShift.toFixed(2)}`);
+      console.log(`[Game] Perso recalé (stable): hauteur locale ${localHeight.toFixed(2)}, décalage ${yShift.toFixed(2)}`);
     }
   }
 
@@ -861,33 +911,81 @@ export class Game {
     if (player !== this.normalizedPlayerRef) {
       this.normalizedPlayerRef = player;
       this.playerScaleDone = false;
+      this.lastNormalizeSignature = '';
+      this.lastNormalizeStableSince = 0;
+      // La bascule d'animation ne se déclenche qu'une fois par état: si elle
+      // a tiré pendant le placeholder (aucun squelette), il faut la rejouer
+      // pour le vrai modèle.
+      this.playerAnimState = null;
       // La caméra doit suivre le NOUVEAU modèle (sinon le perso paraît décentré)
       if (this.thirdPersonCamera && this.thirdPersonCamera.getTarget() !== player) {
         this.thirdPersonCamera.setTarget(player);
       }
     }
     if (!this.playerScaleDone) {
-      // Throttle: le recalage fait un bounding refresh par mesh — inutile chaque frame
+      // Throttle: le recalage parcourt les vertices — inutile chaque frame
       const now = performance.now();
       if (now - this.lastNormalizeAttempt > 250) {
         this.lastNormalizeAttempt = now;
         this.normalizePlayerScale();
       }
     }
-    const speed = this.moveSpeed; // unités/s (/speed GM ajuste le multiplicateur)
-
-    if (this.moveDestination) {
+    // Pas de correction de dérive périodique: l'ancienne version recalait les
+    // enfants depuis la bbox ANIMÉE (refreshBoundingInfo) → sauts verticaux
+    // au repos dès que les clips jouaient. Le recalage est désormais calculé
+    // sur les vertices bruts (statiques) et n'a plus rien à corriger.
+    // Déplacement unifié: CLAVIER (ZQSD/WASD/flèches, relatif à la caméra,
+    // Shift = course) prioritaire sur la destination cliquée. Historiquement
+    // le clavier vivait dans CharacterManager.handleMovement avec des
+    // animations placeholder → le perso glissait en pose idle (bug
+    // « déplacements pas naturels », oct. 2026). Tout passe désormais par
+    // cette boucle: mêmes animations BAN, même terrain, même sync serveur.
+    let moving = false;
+    let effectiveSpeed = this.moveSpeed; // unités/s (/speed GM ajuste le multiplicateur)
+    const input = this.inputManager?.getState();
+    if (input && (input.forward || input.backward || input.left || input.right)) {
+      // Le clavier annule une destination cliquée en cours
+      this.moveDestination = null;
+      // Direction caméra-relative: avant = projection XZ de l'axe de visée
+      const cam = this.scene.activeCamera;
+      let fwd = { x: 0, z: 1 };
+      let right = { x: 1, z: 0 };
+      if (cam) {
+        const dir = cam.getForwardRay().direction;
+        const len = Math.hypot(dir.x, dir.z);
+        if (len > 0.001) {
+          fwd = { x: dir.x / len, z: dir.z / len };
+          right = { x: fwd.z, z: -fwd.x };
+        }
+      }
+      let dx = fwd.x * ((input.forward ? 1 : 0) - (input.backward ? 1 : 0))
+        + right.x * ((input.right ? 1 : 0) - (input.left ? 1 : 0));
+      let dz = fwd.z * ((input.forward ? 1 : 0) - (input.backward ? 1 : 0))
+        + right.z * ((input.right ? 1 : 0) - (input.left ? 1 : 0));
+      const dl = Math.hypot(dx, dz);
+      if (dl > 0.001) {
+        dx /= dl; dz /= dl;
+        // Shift = course (17 u/s ≈ run officiel 100%, anim runforward)
+        effectiveSpeed = this.moveSpeed * (input.shift ? 2.125 : 1.0);
+        const step = effectiveSpeed * dt;
+        player.position.x += dx * step;
+        player.position.z += dz * step;
+        player.rotation.y = Math.atan2(dx, dz);
+        moving = true;
+      }
+    } else if (this.moveDestination) {
       const dx = this.moveDestination.x - player.position.x;
       const dz = this.moveDestination.z - player.position.z;
       const dist = Math.hypot(dx, dz);
-      if (dist < 0.6) {
+      if (dist < 5) {
         this.moveDestination = null;
       } else {
-        const step = Math.min(speed * dt, dist);
+        const step = Math.min(effectiveSpeed * dt, dist);
         player.position.x += (dx / dist) * step;
         player.position.z += (dz / dist) * step;
         // Orientation vers la direction de marche
         player.rotation.y = Math.atan2(dx, dz);
+        moving = true;
       }
     }
 
@@ -905,14 +1003,17 @@ export class Game {
         this.network.sendMove(
           { x: player.position.x, y: player.position.y, z: player.position.z },
           player.rotation.y,
-          this.moveDestination !== null
+          moving
         );
       }
     }
 
-    // Bascule des animations officielles selon l'état de déplacement
-    const moving = this.moveDestination !== null;
-    const wanted: 'idle' | 'walk' = moving ? 'walk' : 'idle';
+    // Bascule des animations officielles selon l'état de déplacement:
+    // idle ↔ walk, et run quand la vitesse effective dépasse la marche
+    // (Shift, monture ×1.67, zerk ×2, /speed GM) — le perso court.
+    const wanted: 'idle' | 'walk' | 'run' = !moving
+      ? 'idle'
+      : effectiveSpeed > 10 ? 'run' : 'walk';
     if (wanted !== this.playerAnimState) {
       this.playerAnimState = wanted;
       void this.switchPlayerAnim(wanted).catch((err) =>
@@ -920,7 +1021,7 @@ export class Game {
     }
   }
 
-  private async switchPlayerAnim(state: 'idle' | 'walk'): Promise<void> {
+  private async switchPlayerAnim(state: 'idle' | 'walk' | 'run'): Promise<void> {
     const player = this.characterManager?.player;
     const scene = this.scene;
     if (!player || !scene) return;
@@ -943,7 +1044,10 @@ export class Game {
     if (skeletons.length === 0) return;
     const { AnimationService } = await import('../animation/BanAnimationService');
     if (gen !== this.animGeneration) return; // bascule plus récente en cours
-    const clip = AnimationService.playerClip(state === 'walk' ? 'walkforward' : 'standcity');
+    // Genre du perso (femme → rig chinawoman) pour les clips dédiés
+    const female = this.serverCharacter?.gender === 'female';
+    const action = state === 'run' ? 'runforward' : state === 'walk' ? 'walkforward' : 'standcity';
+    const clip = AnimationService.playerClip(action, female);
     const groups = await AnimationService.loadAndPlay(scene, skeletons, clip, true, 1.0);
     if (gen !== this.animGeneration) {
       // Obsolète: une bascule plus récente a déjà pris le relais

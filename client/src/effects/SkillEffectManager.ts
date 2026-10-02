@@ -5,7 +5,7 @@
  * Handles particle effects, mesh effects, and sound for skill usage
  */
 
-import { Scene, Vector3, ParticleSystem, Color4, Mesh, Texture } from '@babylonjs/core';
+import { Scene, Vector3, ParticleSystem, Color4, Mesh, Texture, DynamicTexture } from '@babylonjs/core';
 
 /**
  * Skill effect data
@@ -76,7 +76,71 @@ export class SkillEffectManager {
             particleCount: 50,
             duration: 1.5
         });
+
+        // Slash (coup d'arme / impact physique)
+        this.effects.set('slash', {
+            id: 'slash',
+            name: 'Slash',
+            type: 'instant',
+            color: new Color4(0.95, 0.95, 1, 1),
+            particleCount: 45,
+            duration: 0.45
+        });
     }
+
+    /**
+     * Texture de particule générée localement (dégradé radial blanc).
+     * Évite la dépendance à un CDN externe (flare.png) — le jeu doit
+     * fonctionner hors-ligne.
+     */
+    private flareTexture(): Texture {
+        if (this._flareTex) return this._flareTex;
+        const size = 64;
+        const dyn = new DynamicTexture('skillvfx_flare', size, this.scene, false);
+        const ctx = dyn.getContext() as CanvasRenderingContext2D;
+        const grad = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+        grad.addColorStop(0, 'rgba(255,255,255,1)');
+        grad.addColorStop(0.35, 'rgba(255,255,255,0.7)');
+        grad.addColorStop(1, 'rgba(255,255,255,0)');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, size, size);
+        dyn.update();
+        dyn.hasAlpha = true;
+        this._flareTex = dyn;
+        return dyn;
+    }
+    private _flareTex: Texture | null = null;
+
+    /**
+     * Texture de particule pour un effet: textures OFFICIELLES extraites de
+     * Particles.pk2 (référencées par les .efp des skills), avec repli
+     * procédural (dégradé radial) si la famille n'en a pas — le jeu doit
+     * fonctionner hors-ligne.
+     */
+    private textureFor(effectId: string): Texture {
+        const cached = this._texCache.get(effectId);
+        if (cached) return cached;
+        const official = SkillEffectManager.OFFICIAL_TEXTURES[effectId];
+        let tex: Texture;
+        if (official) {
+            tex = new Texture(official, this.scene);
+            tex.hasAlpha = true;
+        } else {
+            tex = this.flareTexture();
+        }
+        this._texCache.set(effectId, tex);
+        return tex;
+    }
+    private _texCache = new Map<string, Texture>();
+
+    /** Textures officielles (Particles.pk2 → PNG) par famille d'effet. */
+    private static readonly OFFICIAL_TEXTURES: Record<string, string> = {
+        fire: '/assets/textures/particles/fire.png',
+        ice: '/assets/textures/particles/byuk-ice.png',
+        lightning: '/assets/textures/particles/cho-light.png',
+        heal: '/assets/textures/particles/bumpy_healline.png',
+        slash: '/assets/textures/particles/cho-wind-y.png',
+    };
 
     /**
      * Play a skill effect
@@ -113,7 +177,7 @@ export class SkillEffectManager {
         const particleSystem = new ParticleSystem(`${effect.id}_particles`, effect.particleCount, this.scene);
 
         // Texture
-        particleSystem.particleTexture = new Texture('https://assets.babylonjs.com/textures/flare.png', this.scene);
+        particleSystem.particleTexture = this.textureFor(effect.id);
 
         // Colors
         particleSystem.color1 = effect.color;
@@ -166,7 +230,7 @@ export class SkillEffectManager {
         const particleSystem = new ParticleSystem(`${effect.id}_area`, effect.particleCount, this.scene);
 
         // Texture
-        particleSystem.particleTexture = new Texture('https://assets.babylonjs.com/textures/flare.png', this.scene);
+        particleSystem.particleTexture = this.textureFor(effect.id);
 
         // Colors
         particleSystem.color1 = effect.color;
@@ -218,7 +282,7 @@ export class SkillEffectManager {
         const particleSystem = new ParticleSystem(`${effect.id}_beam`, effect.particleCount, this.scene);
 
         // Texture
-        particleSystem.particleTexture = new Texture('https://assets.babylonjs.com/textures/flare.png', this.scene);
+        particleSystem.particleTexture = this.textureFor(effect.id);
 
         // Colors
         particleSystem.color1 = effect.color;
@@ -272,7 +336,7 @@ export class SkillEffectManager {
         const particleSystem = new ParticleSystem(`${effect.id}_instant`, effect.particleCount, this.scene);
 
         // Texture
-        particleSystem.particleTexture = new Texture('https://assets.babylonjs.com/textures/flare.png', this.scene);
+        particleSystem.particleTexture = this.textureFor(effect.id);
 
         // Colors
         particleSystem.color1 = effect.color;

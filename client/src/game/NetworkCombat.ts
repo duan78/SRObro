@@ -11,6 +11,7 @@ import type { AssetLoader } from '../core/AssetLoader';
 import type { DomHud } from '../ui/dom/DomHud';
 import { AnimationService } from '../animation/BanAnimationService';
 import { DamageNumberManager, DamageType } from '../combat/DamageNumberManager';
+import { SkillEffectManager } from '../effects/SkillEffectManager';
 import { gameAudio } from '../ui/dom/GameAudio';
 import type { JanganZone } from '../zones/jangan/JanganZone';
 
@@ -62,11 +63,15 @@ export class NetworkCombat {
   private damageNumbers: DamageNumberManager;
 
   // Entités
-  // Joueurs distants (phase 5): rendus avec le modèle officiel
+  // Joueurs distants (phase 5): rendus avec le modèle officiel.
+  // `target` = dernière position/rotation serveur: le rendu INTERPOLE vers
+  // elle chaque frame (les packets arrivent à ~5 Hz, un snap direct donne
+  // l'effet téléportation).
   private remotePlayers = new Map<string, {
     data: { id: string; name: string; level: number; gender: string };
     root: any;
     animState: string | null;
+    target: { x: number; z: number; rot: number } | null;
   }>();
 
   private monsters = new Map<string, {
@@ -74,6 +79,8 @@ export class NetworkCombat {
     root: any; // TransformNode racine du modèle officiel
     proxy: any; // mesh de picking invisible
     animState: string | null; // état d'anim courant (évite les rechargements)
+    netState: string | null; // aiState serveur du dernier packet (aggro/attack…)
+    target: { x: number; z: number; rot: number } | null;
   }>();
 
   /** Hotbar courante (skills appris, touches 1-8). */
@@ -88,11 +95,25 @@ export class NetworkCombat {
   // État réseau du joueur (source HUD quand connecté)
   playerState: PlayerNetworkState | null = null;
 
+  /** Genre du perso local (clips d'attaque/réaction dédiés chinawoman). */
+  playerGender = false;
+  /** Famille d'armes équipée → clips de combo (skill_ch_<famille>_chain_*). */
+  private equippedFamily: 'sword' | 'spear' | 'bow' = 'sword';
+  /** Compteur de combo: fait tourner les chaînes a → b → c comme en jeu. */
+  private attackCombo = 0;
+  /** Génération des anims one-shot (attaque/réaction): une obsolète ne doit
+   * pas « reprendre » les anims d'état après une plus récente. */
+  private oneShotGen = 0;
+
   // Écran de mort
   private deathOverlay: HTMLElement | null = null;
 
   // Anti-spam network
   private lastAttackSent = 0;
+
+  // Effets visuels des skills (cast + impact + critiques)
+  private vfx: SkillEffectManager;
+  private lastSkillCast: { label: string; code: string; at: number } | null = null;
 
   constructor(
     scene: Scene,
@@ -107,6 +128,7 @@ export class NetworkCombat {
     this.hud = hud;
     this.janganZone = janganZone;
     this.damageNumbers = new DamageNumberManager(scene);
+    this.vfx = new SkillEffectManager(scene);
 
     this.registerHandlers();
     this.setupInput();
@@ -153,41 +175,28 @@ export class NetworkCombat {
 
     this.network.on('update', (data: any) => {
       const d = data?.data?.id ? data.data : data;
-      // Joueur distant: position + anim de marche
+      // Joueur distant: on mémorise la cible, l'interpolation (update) fait
+      // le déplacement fluide et bascule walk/idle à la convergence.
       const rp = this.remotePlayers.get(d?.id);
       if (rp && d.position) {
-        const terrain2 = this.janganZone?.realTerrain;
-        const y2 = terrain2 ? terrain2.heightAt(d.position.x, d.position.z) : d.position.y;
-        rp.root.position.set(d.position.x, y2, d.position.z);
-        if (typeof d.rotation === 'number') rp.root.rotation.y = d.rotation;
-        if (rp.animState !== 'walk') {
-          rp.animState = 'walk';
-          const skeletons: any[] = [];
-          for (const mesh of rp.root.getChildMeshes()) {
-            const sk = (mesh as any).skeleton;
-            if (sk && !skeletons.includes(sk)) skeletons.push(sk);
-          }
-          if (skeletons.length > 0) {
-            AnimationService.loadAndPlay(this.scene, skeletons, AnimationService.playerClip('walkforward'), true, 1.0)
-              .catch(() => undefined);
-          }
+        if (!rp.target) {
+          // Premier packet: pose directe (sinon il traverserait la carte)
+          const terrain2 = this.janganZone?.realTerrain;
+          const y2 = terrain2 ? terrain2.heightAt(d.position.x, d.position.z) : d.position.y;
+          rp.root.position.set(d.position.x, y2, d.position.z);
         }
+        rp.target = { x: d.position.x, z: d.position.z, rot: typeof d.rotation === 'number' ? d.rotation : 0 };
         return;
       }
       const m = this.monsters.get(d?.id);
       if (m && d.position) {
-        const terrain = this.janganZone?.realTerrain;
-        const y = terrain ? terrain.heightAt(d.position.x, d.position.z) : d.position.y;
-        // Interpolation légère: va au point serveur (tick 20 Hz ≈ fluide)
-        m.root.position.set(d.position.x, y, d.position.z);
-        if (typeof d.rotation === 'number') m.root.rotation.y = d.rotation;
-        m.proxy.position.set(d.position.x, y + 0.7, d.position.z);
-        if (typeof d.rotation === 'number') m.proxy.rotation.y = d.rotation;
-        const wantedState = d.state === 'aggro' || d.state === 'attack' ? 'run' : 'walk';
-        if (m.animState !== wantedState) {
-          m.animState = wantedState;
-          this.switchMonsterAnim(m, wantedState);
+        if (!m.target) {
+          const terrain = this.janganZone?.realTerrain;
+          const y = terrain ? terrain.heightAt(d.position.x, d.position.z) : d.position.y;
+          m.root.position.set(d.position.x, y, d.position.z);
         }
+        m.target = { x: d.position.x, z: d.position.z, rot: typeof d.rotation === 'number' ? d.rotation : 0 };
+        m.netState = d.state ?? m.netState;
       }
     });
 
@@ -203,9 +212,24 @@ export class NetworkCombat {
       if (m) {
         this.damageNumbers.showDamage(
           d.damage,
-          m.root.position.add(new Vector3(0, 1.5, 0)),
+          m.root.position.add(new Vector3(0, 13, 0)),
           d.isCritical ? DamageType.CRITICAL : DamageType.PHYSICAL,
         );
+        // VFX d'impact: skill récent du joueur → burst élémentaire (double en
+        // critique), sinon coup blanc → petit éclat d'arme
+        const fromLocalPlayer = !this.monsters.has(d.attackerId) && !this.remotePlayers.has(d.attackerId);
+        // Le perso local joue sa chaîne de combo officielle sur coup confirmé
+        if (fromLocalPlayer) this.playLocalAttackAnim();
+        if (fromLocalPlayer && d.damage > 0) {
+          const impactPos = m.root.position.add(new Vector3(0, 11, 0));
+          const skillHit = this.lastSkillCast && Date.now() - this.lastSkillCast.at < 1200;
+          if (skillHit) {
+            this.vfx.playEffect(this.vfxElement(this.lastSkillCast!.code, this.lastSkillCast!.label), impactPos);
+            if (d.isCritical) this.vfx.playEffect('slash', impactPos);
+          } else {
+            this.vfx.playEffect('slash', impactPos);
+          }
+        }
         // Anim d'attaque de l'attaquant si c'est un monstre visible
         const attacker = this.monsters.get(d.attackerId);
         if (attacker) this.switchMonsterAnim(attacker, 'attack01', true);
@@ -218,11 +242,13 @@ export class NetworkCombat {
         if (d.remainingHp > 0 && d.damage > 0) this.switchMonsterAnim(m, 'damage01', true);
         if (d.remainingHp <= 0) this.playMonsterDeath(m);
       } else if (d.targetId === 'player' || this.isLocalPlayerTarget(d)) {
-        // Dégâts sur le joueur: nombre au-dessus du perso
+        // Dégâts sur le joueur: réaction officielle (behardhit/benormalhit)
+        // + nombre au-dessus du perso (hauteur SRO ~tête)
+        this.playLocalOneShot(AnimationService.hitClip(!!d.isCritical || d.damage > 20, this.playerGender), 1.2);
         const player = this.scene.getTransformNodeByName('player_root')
           ?? (this.scene.meshes.find((mm) => mm.name.startsWith('chinaman_')));
         const anchor = player ? player.getAbsolutePosition() : Vector3.Zero();
-        this.damageNumbers.showDamage(d.damage, anchor.add(new Vector3(0, 2, 0)), d.isCritical ? DamageType.CRITICAL : DamageType.PHYSICAL);
+        this.damageNumbers.showDamage(d.damage, anchor.add(new Vector3(0, 17, 0)), d.isCritical ? DamageType.CRITICAL : DamageType.PHYSICAL);
       }
     });
 
@@ -348,12 +374,12 @@ export class NetworkCombat {
     const y = terrain ? terrain.heightAt(data.position.x, data.position.z) : data.position.y;
 
     // Marqueur immédiat pendant le chargement du modèle
-    const root = MeshBuilder.CreateCylinder(`netplayer_${data.id}`, { diameter: 0.7, height: 1.8 }, this.scene);
-    root.position.set(data.position.x, y + 0.9, data.position.z);
+    const root = MeshBuilder.CreateCylinder(`netplayer_${data.id}`, { diameter: 6, height: 17 }, this.scene);
+    root.position.set(data.position.x, y + 8.5, data.position.z);
     const mat = new StandardMaterial(`netplayer_mat_${data.id}`, this.scene);
     mat.diffuseColor = new Color3(0.3, 0.75, 0.4);
     root.material = mat;
-    this.remotePlayers.set(data.id, { data, root, animState: null });
+    this.remotePlayers.set(data.id, { data, root, animState: null, target: null });
     this.hud.addChatMessage(`${data.name} (niv. ${data.level}) est en ligne`, 'system');
 
     // Modèle officiel
@@ -376,6 +402,66 @@ export class NetworkCombat {
   }
 
   /** Attache/détache le modèle d'arme officiel sur le personnage. */
+  /**
+   * Joue une animation ponctuelle du perso local (attaque, réaction aux
+   * dégâts) PAR-DESSUS l'anim d'état: les groupes player_anim_* (idle/walk/run
+   * gérés par Game) sont mis en pause le temps du clip officiel, puis
+   * repris. Un compteur de génération évite qu'un one-shot obsolète ne
+   * reprenne les anims d'état après un plus récent.
+   */
+  private playLocalOneShot(clipPath: string, speed = 1.0): void {
+    const playerMesh = this.scene.meshes.find((m) => m.name.startsWith('chinaman_') || m.name.startsWith('chinawoman_'));
+    if (!playerMesh) return;
+    let root: any = playerMesh;
+    while (root.parent) root = root.parent;
+    const skeletons: any[] = [];
+    for (const mesh of root.getChildMeshes()) {
+      const sk = (mesh as any).skeleton;
+      if (sk && !skeletons.includes(sk)) skeletons.push(sk);
+    }
+    if (skeletons.length === 0) return;
+
+    const gen = ++this.oneShotGen;
+    const stateGroups = this.scene.animationGroups.filter(g => g.name.startsWith('player_anim_'));
+    for (const g of stateGroups) g.pause();
+
+    AnimationService.loadAndPlay(this.scene, skeletons, clipPath, false, speed)
+      .then((groups: any[]) => {
+        if (gen !== this.oneShotGen) {
+          // Une anim plus récente a pris le relais: juste nettoyer
+          for (const g of groups) { g.stop(); g.dispose(); }
+          return;
+        }
+        if (groups.length === 0) {
+          for (const g of this.scene.animationGroups.filter(g => g.name.startsWith('player_anim_'))) g.play();
+          return;
+        }
+        let finis = 0;
+        for (const g of groups) {
+          g.onAnimationGroupEndObservable.addOnce(() => {
+            g.dispose();
+            if (++finis >= groups.length && gen === this.oneShotGen) {
+              for (const sg of this.scene.animationGroups.filter(x => x.name.startsWith('player_anim_'))) sg.play();
+            }
+          });
+        }
+      })
+      .catch(() => {
+        if (gen === this.oneShotGen) {
+          for (const g of this.scene.animationGroups.filter(g => g.name.startsWith('player_anim_'))) g.play();
+        }
+      });
+  }
+
+  /** Animation d'attaque du perso local: chaîne de combo officielle de la
+   * famille d'arme équipée (a → b → c, comme les combos SRO). */
+  private playLocalAttackAnim(): void {
+    this.playLocalOneShot(
+      AnimationService.attackClip(this.equippedFamily, this.attackCombo++, this.playerGender),
+      1.15,
+    );
+  }
+
   private async attachWeaponVisual(d: { itemCode: string; name: string } | null): Promise<void> {
     try {
       const old = this.scene.getTransformNodeByName('equipped_weapon');
@@ -385,6 +471,11 @@ export class NetworkCombat {
       // bsr "item\china\weapon\blade_01.bsr" → stem "blade_01" (manifest)
       const stem = (d.itemCode || '').replace(/\\/g, '/').split('/').pop()?.replace(/\.bsr$/i, '') ?? '';
       if (!stem) return;
+      // Famille d'armes → clips de combo (sword couvre épée/lame, spear
+      // couvre lance/hallebarde; arc à part)
+      if (/bow/i.test(stem)) this.equippedFamily = 'bow';
+      else if (/spear|glaive/i.test(stem)) this.equippedFamily = 'spear';
+      else this.equippedFamily = 'sword';
       const loaded = await this.assetLoader.loadGameObject(stem);
       if (loaded?.root) {
         loaded.root.name = 'equipped_weapon';
@@ -428,13 +519,13 @@ export class NetworkCombat {
 
     // Proxy de picking invisible: les meshes skinées GLTF se pickent en bind
     // pose (loin de la position visuelle) — un volume simple suit la racine.
-    const proxy = MeshBuilder.CreateBox(`netmobproxy_${data.id}`, { width: 1.4, depth: 1.8, height: 1.4 }, this.scene);
-    proxy.position.set(data.position.x, y + 0.7, data.position.z);
+    const proxy = MeshBuilder.CreateBox(`netmobproxy_${data.id}`, { width: 10, depth: 14, height: 10 }, this.scene);
+    proxy.position.set(data.position.x, y + 5, data.position.z);
     proxy.isVisible = false;
     proxy.isPickable = true;
     proxy.metadata = { netMonsterId: data.id };
 
-    this.monsters.set(data.id, { data, root, proxy, animState: null });
+    this.monsters.set(data.id, { data, root, proxy, animState: null, netState: null, target: null });
 
     // Modèle officiel (multi-parties skinées) en arrière-plan
     try {
@@ -481,9 +572,10 @@ export class NetworkCombat {
     }
     if (skeletons.length === 0) return;
     const stem = (m.data as any).modelId ?? m.data.name.toLowerCase();
-    // walk/idle ↔ boucle; attack01/damage01 ponctuels
-    const action = state === 'attack01' || state === 'damage01' ? state : 'walk';
-    const clip = AnimationService.monsterClip(stem, action as 'attack01' | 'damage01' | 'walk');
+    // walk/run/stand01 ↔ boucle; attack01/damage01 ponctuels
+    const looping = state === 'walk' || state === 'run' || state === 'stand01';
+    const action = state === 'attack01' || state === 'damage01' || looping ? state : 'walk';
+    const clip = AnimationService.monsterClip(stem, action as 'attack01' | 'damage01' | 'walk' | 'run' | 'stand01');
     AnimationService.loadAndPlay(this.scene, skeletons, clip, !once, once ? 1.4 : 1.0)
       .then((groups: any[]) => {
         if (once) {
@@ -708,7 +800,7 @@ export class NetworkCombat {
       mat.disableLighting = true;
       mat.backFaceCulling = false;
 
-      const plane = MeshBuilder.CreatePlane(`target_label_plane_${(m.data as any).id}`, { width: 3.2, height: 0.8 }, this.scene);
+      const plane = MeshBuilder.CreatePlane(`target_label_plane_${(m.data as any).id}`, { width: 30, height: 7.5 }, this.scene);
       plane.material = mat;
       plane.billboardMode = Mesh.BILLBOARDMODE_ALL;
       plane.position.y = 2.4;
@@ -774,6 +866,37 @@ export class NetworkCombat {
       data: { targetId: this.targetId, skillId: skill.code },
     } as any);
     this.hud.addChatMessage(`${skill.label}!`, 'combat');
+
+    // VFX de cast au joueur (l'impact jouera sur la cible à la réponse serveur)
+    this.lastSkillCast = { code: skill.code, label: skill.label, at: now };
+    const pv = this.playerAnchor();
+    if (pv) {
+      const element = this.vfxElement(skill.code, skill.label);
+      if (element === 'lightning') {
+        const m = this.monsters.get(this.targetId);
+        this.vfx.playEffect('lightning', pv, m ? m.root.position.add(new Vector3(0, 11, 0)) : undefined);
+      } else {
+        this.vfx.playEffect(element, pv);
+      }
+    }
+  }
+
+  /** Position d'ancrage du joueur local (poitrine) pour les VFX. */
+  private playerAnchor(): Vector3 | null {
+    const player = this.scene.meshes.find((m) => m.name.startsWith('chinaman_'));
+    if (!player) return null;
+    const root = (player.parent ?? player) as Mesh;
+    return root.getAbsolutePosition().add(new Vector3(0, 11, 0));
+  }
+
+  /** Élément visuel d'un skill selon son code/nom (maîtrises SRO). */
+  private vfxElement(code: string, label: string): string {
+    const n = `${code} ${label}`.toLowerCase();
+    if (/(fire|flame|burn|hwakyung|feu)/.test(n)) return 'fire';
+    if (/(ice|frost|cold|freez|binggyeong|glace)/.test(n)) return 'ice';
+    if (/(lightning|thunder|electro|shock|jeonkyung|foudre)/.test(n)) return 'lightning';
+    if (/(heal|recovery|cure|vital|lifeturn|soin)/.test(n)) return 'heal';
+    return 'slash';
   }
 
   // ============================================
@@ -876,6 +999,72 @@ export class NetworkCombat {
   // ============================================
 
   update(): void {
+    // Interpolation des entités distantes vers leur dernière position serveur
+    // (packets ~5 Hz: monstres 250 ms, joueurs 200 ms — un snap direct fait
+    // un déplacement « téléportation », oct. 2026).
+    const dt = Math.min(this.scene.getEngine().getDeltaTime() / 1000, 0.1);
+    if (dt > 0) {
+      const k = 1 - Math.exp(-dt * 10); // lissage exponentiel indépendant du fps
+      const terrain = this.janganZone?.realTerrain;
+      const step = (root: any, proxy: any | null, tgt: { x: number; z: number; rot: number } | null): number => {
+        if (!tgt) return -1;
+        const p = root.position;
+        const dx = tgt.x - p.x;
+        const dz = tgt.z - p.z;
+        const dist = Math.hypot(dx, dz);
+        if (dist > 80) {
+          // Grand saut (téléporteur, correction serveur): pose directe
+          p.x = tgt.x; p.z = tgt.z;
+        } else if (dist > 0.02) {
+          p.x += dx * k;
+          p.z += dz * k;
+        }
+        // Rotation: chemin le plus court (wrap ±π)
+        let dr = tgt.rot - root.rotation.y;
+        while (dr > Math.PI) dr -= Math.PI * 2;
+        while (dr < -Math.PI) dr += Math.PI * 2;
+        if (Math.abs(dr) > 0.01) root.rotation.y += dr * k;
+        if (terrain) p.y = terrain.heightAt(p.x, p.z);
+        if (proxy) { proxy.position.set(p.x, p.y + 5, p.z); proxy.rotation.y = root.rotation.y; }
+        return Math.hypot(tgt.x - p.x, tgt.z - p.z);
+      };
+
+      for (const rp of this.remotePlayers.values()) {
+        const restant = step(rp.root, null, rp.target);
+        const wanted = restant > 1.5 ? 'walk' : 'idle';
+        if (restant >= 0 && rp.animState !== wanted) {
+          rp.animState = wanted;
+          const skeletons: any[] = [];
+          for (const mesh of rp.root.getChildMeshes()) {
+            const sk = (mesh as any).skeleton;
+            if (sk && !skeletons.includes(sk)) skeletons.push(sk);
+          }
+          if (skeletons.length > 0) {
+            AnimationService.loadAndPlay(
+              this.scene, skeletons,
+              AnimationService.playerClip(wanted === 'walk' ? 'walkforward' : 'standcity'),
+              true, 1.0,
+            ).catch(() => undefined);
+          }
+        }
+      }
+
+      for (const m of this.monsters.values()) {
+        const restant = step(m.root, m.proxy, m.target);
+        // Annonce serveur aggro/attaque → course; sinon marche tant qu'on
+        // n'a pas rejoint la cible, idle à l'arrêt (le serveur ne diffuse
+        // pas les monstres idle → la convergence détecte l'arrêt).
+        let wanted: string;
+        if (m.netState === 'aggro' || m.netState === 'attack') wanted = 'run';
+        else if (restant > 1.5) wanted = 'walk';
+        else wanted = 'stand01';
+        if (restant >= 0 && m.animState !== wanted) {
+          m.animState = wanted;
+          this.switchMonsterAnim(m, wanted);
+        }
+      }
+    }
+
     // Animation douce du loot (rotation)
     const t = performance.now() / 1000;
     for (const item of this.groundItems.values()) {
@@ -898,5 +1087,6 @@ export class NetworkCombat {
     for (const it of this.groundItems.values()) it.mesh.dispose();
     this.groundItems.clear();
     this.damageNumbers.dispose();
+    this.vfx.dispose();
   }
 }

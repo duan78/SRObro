@@ -400,6 +400,12 @@ export class CharacterManager {
   update(deltaTime: number): void {
     if (!this.player) return;
 
+    // Déplacement CLAVIER: désactivé en mode réseau — Game.updateClickToMove
+    // gère désormais clavier + clic de façon unifiée (animations BAN réelles,
+    // direction caméra-relative, terrain). L'ancien chemin déplaçait le perso
+    // en axes monde avec des animations placeholder → glissement en idle.
+    if (!this.legacyKeyboardMovement) return;
+
     // Handle movement
     this.handleMovement(deltaTime);
 
@@ -409,6 +415,10 @@ export class CharacterManager {
     // Update animations
     this.updateAnimations(deltaTime);
   }
+
+  /** Le déplacement clavier legacy (axes monde, anims placeholder) ne doit
+   * plus tourner que hors réseau. */
+  public legacyKeyboardMovement = true;
 
   /**
    * Handle movement input

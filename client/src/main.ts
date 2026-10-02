@@ -34,6 +34,7 @@ import { JobPanel } from './ui/dom/JobPanel';
 import { SocialPanel } from './ui/dom/SocialPanel';
 import { ExchangePanel } from './ui/dom/ExchangePanel';
 import { gameAudio } from './ui/dom/GameAudio';
+import { AssetVersion } from './config/AssetVersion';
 
 // Collecte des erreurs console pour diagnostic navigateur (window.__errors)
 (function installErrorCollector(): void {
@@ -79,6 +80,9 @@ async function init(): Promise<void> {
   if (!canvas) {
     throw new Error('Render canvas not found');
   }
+
+  // Stamp anti-cache des assets AVANT tout chargement (GLB re-patchés etc.)
+  await AssetVersion.init();
 
   // Initialize Babylon.js engine
   const engine = new Engine(canvas, true, {
@@ -163,6 +167,7 @@ async function init(): Promise<void> {
       game.legacyEntities = false; // NetworkCombat gère les entités réseau
       netCombat = new NetworkCombat(game.getScene()!, network, game.getAssetLoader()!, hud, game.getJanganZone());
       netCombat.playerName = character?.name ?? 'Aventurier';
+      netCombat.playerGender = character?.gender === 'female';
       network.rememberCharacter(character?.id ?? '');
       (window as unknown as { netCombat: NetworkCombat }).netCombat = netCombat;
       game.getScene()!.onBeforeRenderObservable.add(() => netCombat!.update());

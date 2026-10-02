@@ -33,7 +33,14 @@ export class RealTerrain {
     this.scene = scene;
   }
 
-  async load(): Promise<boolean> {
+  /**
+   * Charge le terrain. Les régions proches du point d'apparition (bloc 3×3)
+   * sont chargées en priorité AVANT de rendre la main — le joueur peut entrer
+   * dans le monde dès que son voisinage est prêt; les régions lointaines
+   * continuent en tâche de fond (heightAt renvoie 0 tant qu'une région
+   * manque: dégradation connue et temporaire).
+   */
+  async load(centerX = 960, centerZ = 960): Promise<boolean> {
     try {
       const res = await fetch('/assets/terrain/regions.json');
       if (!res.ok) return false;
@@ -49,9 +56,20 @@ export class RealTerrain {
     const hm = this.index.heightmapSize;       // 97
     const step = size / (hm - 1);              // 20 unités entre samples
 
-    let loaded = 0;
-    let textured = 0;
-    for (const region of this.index.regions) {
+    // Priorité: régions les plus proches du centre demandé d'abord
+    const sorted = [...this.index.regions].sort((a, b) => {
+      const world = (r: { x: number; z: number }) => ({
+        x: (r.x - RealTerrain.ANCHOR.x) * size,
+        z: (r.z - RealTerrain.ANCHOR.z) * size,
+      });
+      const wa = world(a), wb = world(b);
+      const da = (wa.x + size / 2 - centerX) ** 2 + (wa.z + size / 2 - centerZ) ** 2;
+      const db = (wb.x + size / 2 - centerX) ** 2 + (wb.z + size / 2 - centerZ) ** 2;
+      return da - db;
+    });
+
+    const loadRegion = async (region: RegionIndexEntry): Promise<boolean> => {
+      if (this.heights.has(`${region.x}_${region.z}`)) return false;
       try {
         const [hBuf, tBuf] = await Promise.all([
           (await fetch(`/assets/terrain/${region.file}`)).arrayBuffer(),
@@ -60,14 +78,40 @@ export class RealTerrain {
         const heights = new Float32Array(hBuf);
         const tiles = new Uint16Array(tBuf);
         this.heights.set(`${region.x}_${region.z}`, heights);
-        if (this.buildRegionMesh(region, heights, tiles, hm, step)) textured++;
-        loaded++;
+        this.buildRegionMesh(region, heights, tiles, hm, step);
+        return true;
       } catch {
-        // région illisible: ignorée
+        return false; // région illisible: ignorée
       }
+    };
+
+    // 1) Bloc 3×3 autour du centre, attendu (monde jouable immédiatement)
+    const NEAR = 9;
+    let near = 0;
+    for (const region of sorted.slice(0, NEAR)) {
+      if (await loadRegion(region)) near++;
     }
-    console.log(`[RealTerrain] ${loaded} régions chargées, ${textured} texturées (ancre ${RealTerrain.ANCHOR.x}x${RealTerrain.ANCHOR.z})`);
-    return loaded > 0;
+
+    // 2) Reste des régions en tâche de fond, par petites vagues parallèles
+    const rest = sorted.slice(NEAR);
+    void (async () => {
+      const CONCURRENCY = 6;
+      let i = 0, loaded = near;
+      const worker = async (): Promise<void> => {
+        while (i < rest.length) {
+          const region = rest[i++];
+          if (await loadRegion(region)) loaded++;
+          if (loaded % 20 === 0) {
+            console.log(`[RealTerrain] tâche de fond: ${loaded}/${sorted.length} régions`);
+          }
+        }
+      };
+      await Promise.all(Array.from({ length: CONCURRENCY }, worker));
+      console.log(`[RealTerrain] ${loaded}/${sorted.length} régions chargées (fond) (ancre ${RealTerrain.ANCHOR.x}x${RealTerrain.ANCHOR.z})`);
+    })();
+
+    console.log(`[RealTerrain] ${near} régions proches prêtes, ${rest.length} en tâche de fond`);
+    return near > 0;
   }
 
   /**

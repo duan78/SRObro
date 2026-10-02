@@ -45,6 +45,8 @@ export interface MonsterEntityOptions {
   aggroRange: number;
   attackRange: number;
   moveSpeed: number;
+  /** Vitesse de poursuite/retour (unités SRO/s, ex: runSpeed officiel CSV). */
+  runSpeed?: number;
   attackSpeed: number;
   respawnTime: number;
   position: Position;
@@ -74,6 +76,7 @@ export class MonsterEntity extends Entity {
   public aggroRange: number;
   public attackRange: number;
   public moveSpeed: number;
+  public runSpeed: number;
   public attackSpeed: number;
   public respawnTime: number;
   public readonly spawnId: string;
@@ -116,6 +119,7 @@ export class MonsterEntity extends Entity {
     this.aggroRange = options.aggroRange;
     this.attackRange = options.attackRange;
     this.moveSpeed = options.moveSpeed;
+    this.runSpeed = options.runSpeed ?? options.moveSpeed * 2.5;
     this.attackSpeed = options.attackSpeed;
     this.respawnTime = options.respawnTime;
     this.spawnId = options.spawnId;
@@ -189,7 +193,7 @@ export class MonsterEntity extends Entity {
     const targetWaypoint = this.patrolWaypoints[this.currentWaypointIndex];
     const distance = this.distanceToPosition(targetWaypoint);
 
-    if (distance < 1) {
+    if (distance < 4) {
       // Reached waypoint, move to next
       this.currentWaypointIndex = (this.currentWaypointIndex + 1) % this.patrolWaypoints.length;
 
@@ -233,8 +237,8 @@ export class MonsterEntity extends Entity {
     if (distance <= this.attackRange) {
       this.aiState = MonsterAIState.ATTACK;
     } else {
-      // Move towards target (deltaTime en secondes)
-      this.moveTowards(this.target.position, deltaTime);
+      // Poursuite à la vitesse de course officielle (unités SRO)
+      this.moveTowards(this.target.position, deltaTime, this.runSpeed);
     }
   }
 
@@ -276,8 +280,8 @@ export class MonsterEntity extends Entity {
       this.hp = this.maxHp; // Reset HP
       this.mp = this.maxMp;
     } else {
-      // Move towards spawn
-      this.moveTowards(this.spawnPosition, deltaTime);
+      // Retour au spawn au trot
+      this.moveTowards(this.spawnPosition, deltaTime, this.runSpeed * 0.6);
     }
   }
 
@@ -305,7 +309,7 @@ export class MonsterEntity extends Entity {
    * Move towards a position
    * @param deltaTime en SECONDES (le tick serveur fournit des secondes)
    */
-  private moveTowards(target: Position, deltaTime: number): void {
+  private moveTowards(target: Position, deltaTime: number, speed = this.moveSpeed): void {
     const dx = target.x - this.position.x;
     const dz = target.z - this.position.z;
     const distance = Math.sqrt(dx * dx + dz * dz);
@@ -313,7 +317,7 @@ export class MonsterEntity extends Entity {
     if (distance < 0.1) return;
 
     // Calculate movement distance
-    const moveDistance = this.moveSpeed * deltaTime;
+    const moveDistance = speed * deltaTime;
 
     // Normalize and apply
     const nx = dx / distance;
@@ -335,7 +339,7 @@ export class MonsterEntity extends Entity {
   private generatePatrolWaypoints(): void {
     this.patrolWaypoints = [];
     const patrolCount = Math.floor(Math.random() * 3) + 2; // 2-4 waypoints
-    const patrolRange = 20; // 20 meters
+    const patrolRange = 120; // ~12 m en unités SRO
 
     for (let i = 0; i < patrolCount; i++) {
       const angle = (i / patrolCount) * Math.PI * 2;

@@ -129,7 +129,7 @@ export class WorldManager {
           defense: monster.defense,
           exp: Number(monster.exp),
           sp: Number(monster.sp),
-          aggroRange: monster.aggroRange,
+          aggroRange: monster.aggroRange * 8, // unités SRO
           respawnTime: monster.respawnTime,
           drops: [],
         } as Monster);

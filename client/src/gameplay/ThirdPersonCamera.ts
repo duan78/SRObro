@@ -287,11 +287,11 @@ export class ThirdPersonCamera {
       return true;
     });
 
-    // Ignorer les contacts immédiats (< 0.9 m): le point de départ du rayon
-    // peut être à l'intérieur d'un mesh (couture de terrain, propre corps)
-    // et écraserait la caméra contre le personnage.
-    if (hit?.hit && hit.pickedPoint && hit.distance > 0.9) {
-      const collisionDistance = Math.max(1.2, hit.distance - 0.5);
+    // Ignorer les contacts immédiats (< 8 u ≈ envergure du perso natif ~17 u):
+    // le point de départ du rayon peut être à l'intérieur d'un mesh (couture
+    // de terrain, propre corps) et écraserait la caméra contre le personnage.
+    if (hit?.hit && hit.pickedPoint && hit.distance > 8) {
+      const collisionDistance = Math.max(8, hit.distance - 4);
       const d = Math.min(collisionDistance, distance);
       outPosition.set(
         targetPos.x + this._direction.x * d,

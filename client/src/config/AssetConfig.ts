@@ -4,6 +4,8 @@
  * Central configuration for asset loading paths and sources
  */
 
+import { AssetVersion } from './AssetVersion';
+
 export enum AssetSource {
     STANDARD = 'standard',      // Original assets without skinning
     BLENDER = 'blender',        // Blender-converted assets with skinning
@@ -113,11 +115,12 @@ export class AssetConfigManager {
     static getAssetPath(relativePath: string, assetType?: 'character' | 'monster' | 'npc' | 'item'): string {
         const useBlender = assetType ? this.shouldUseBlender(assetType) : this.currentConfig.source === AssetSource.BLENDER;
 
-        if (useBlender) {
-            return this.currentConfig.blenderPath + relativePath.replace(/\\/g, '/');
-        }
-
-        return this.currentConfig.baseUrl + relativePath.replace(/\\/g, '/');
+        const base = useBlender
+            ? this.currentConfig.blenderPath
+            : this.currentConfig.baseUrl;
+        // ?v=<stamp> anti-cache: un GLB re-patché change d'URL → rechargement
+        // garanti même pour les entrées déjà en cache disque (bug oct. 2026)
+        return AssetVersion.withVersion(base + relativePath.replace(/\\/g, '/'));
     }
 
     /**

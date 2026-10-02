@@ -66,6 +66,72 @@ export class QuestSystem {
   private spawnNpcMesh(npc: NpcInfo): void {
     const terrain = this.janganZone?.realTerrain;
     const y = terrain ? terrain.heightAt(npc.position.x, npc.position.z) : npc.position.y;
+    // Modèle humain officiel animé (idle standcity) quand l'AssetLoader est
+    // disponible; cylindre coloré en repli. Le genre alterne selon l'id.
+    const game = (window as unknown as { appState?: { game?: { getAssetLoader?: () => unknown } } }).appState;
+    const loader = game?.game?.getAssetLoader?.() as
+      | { loadGameObject(id: string): Promise<{ root: any } | null> }
+      | undefined;
+    if (loader) {
+      const hash = [...npc.id].reduce((a, c) => a + c.charCodeAt(0), 0);
+      const female = hash % 2 === 0;
+      const resource = female ? 'chinawoman_adventurer' : 'chinaman_adventurer';
+      void loader.loadGameObject(resource).then((loaded) => {
+        if (!loaded?.root) {
+          this.spawnNpcCylinder(npc, y);
+          return;
+        }
+        const root = loaded.root;
+        root.position.set(npc.position.x, y, npc.position.z);
+        root.rotation.y = npc.rotation || (hash % 628) / 100;
+        // Pieds au sol depuis les VERTICES BRUTS (statiques — la bbox animée
+        // bouge avec l'idle et ferait « flotter » le PNJ), échelle native
+        // BMS ~17 u: le monde est en unités SRO, ne pas réduire à 1,8.
+        const parts = root.getChildMeshes().filter((m: any) => m.getTotalVertices?.() > 0) as any[];
+        let min = Infinity, max = -Infinity;
+        for (const m of parts) {
+          const pos = m.getVerticesData?.('position');
+          if (!pos) continue;
+          for (let i = 1; i < pos.length; i += 3) {
+            if (pos[i] < min) min = pos[i];
+            if (pos[i] > max) max = pos[i];
+          }
+        }
+        const h = max - min;
+        if (h > 5 && Number.isFinite(h)) {
+          root.scaling.setAll(1.0);
+          for (const child of root.getChildTransformNodes(true)) child.position.y = -min;
+        }
+        // Ciblage (dialogue/téléport) sur le corps du PNJ
+        for (const mesh of root.getChildMeshes()) {
+          mesh.isPickable = true;
+          mesh.metadata = { npcId: npc.id, npcName: npc.name, npcType: npc.npcType };
+        }
+        this.npcMeshes.set(npc.id, root);
+        // Idle officiel en boucle
+        const skeletons: unknown[] = [];
+        for (const m of root.getChildMeshes()) {
+          const sk = (m as any).skeleton;
+          if (sk && !skeletons.includes(sk)) skeletons.push(sk);
+        }
+        if (skeletons.length > 0) {
+          void import('../../animation/BanAnimationService').then(({ AnimationService }) =>
+            AnimationService.loadAndPlay(
+              this.scene,
+              skeletons as never,
+              AnimationService.playerClip('standcity', female),
+              true,
+              1.0,
+            )).catch(() => undefined);
+        }
+      }).catch(() => this.spawnNpcCylinder(npc, y));
+      return;
+    }
+    this.spawnNpcCylinder(npc, y);
+  }
+
+  /** Borne cylindrique cliquable (repli sans modèle 3D). */
+  private spawnNpcCylinder(npc: NpcInfo, y: number): void {
     const marker = MeshBuilder.CreateCylinder(`npc_${npc.id}`, { diameter: 0.8, height: 1.9 }, this.scene);
     marker.position.set(npc.position.x, y + 0.95, npc.position.z);
     const mat = new StandardMaterial(`npc_mat_${npc.id}`, this.scene);

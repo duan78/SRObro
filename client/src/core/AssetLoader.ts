@@ -404,6 +404,15 @@ export class AssetLoader {
     const { StandardMaterial } = await import('@babylonjs/core/Materials/standardMaterial');
     const { Texture } = await import('@babylonjs/core/Materials/Textures/texture');
     const root = new TransformNode(`${resourceId}_root`, this.scene);
+    // Les modèles SRO regardent vers **−Z** (mesuré sur le maillage face: le
+    // nez dépasse à Z=−1,36, l'arrière du crâne à +0,85) alors que tout le
+    // code oriente le +Z du root vers la direction de marche (atan2(dx,dz)
+    // côté client ET serveur). Un demi-tour au niveau du modèle aligne le
+    // visage avec le déplacement pour TOUS les consommateurs (joueur, PNJ,
+    // monstres, joueurs distants) — sinon les persos avancent en moonwalk.
+    const flip = new TransformNode(`${resourceId}_flip`, this.scene);
+    flip.rotation.y = Math.PI;
+    flip.parent = root;
     let skeleton: Skeleton | undefined;
     const skeletons: Skeleton[] = [];
     let loadedAny = false;
@@ -449,8 +458,9 @@ export class AssetLoader {
       // instance (ils sont de toute façon écrasés par partMats ci-dessous —
       // les clones seraient des orphelins jamais disposés dans la scène).
       const instance = container.instantiateModelsToScene(name => `${resourceId}_${name}`, false);
+      const partNodes: import('@babylonjs/core/Meshes/transformNode').TransformNode[] = [];
       for (const node of instance.rootNodes) {
-        node.parent = root;
+        partNodes.push(node as import('@babylonjs/core/Meshes/transformNode').TransformNode);
         for (const mesh of node.getChildMeshes()) {
           const m = mesh as Mesh;
           // Les GLB skinés embarquent leur squelette: réutiliser le premier
@@ -459,6 +469,9 @@ export class AssetLoader {
           if (partMats.length > 0) m.material = partMats[pIdx % partMats.length];
         }
       }
+      // Le demi-tour ne concerne que les modèles SKINNÉS (persos/mobs/PNJ
+      // qui regardent −Z); armes et objets gardent leur orientation.
+      partNodes.forEach(n => { n.parent = skeletons.length > 0 ? flip : root; });
     }
 
     if (!loadedAny) {

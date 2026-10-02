@@ -10,6 +10,13 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+    // Les assets (GLB/textures) sont RE-PATCHÉS par des scripts pendant le
+    // développement: sans revalidation, le navigateur peut conserver une
+    // version périmée par cache heuristique (bug pose "bras en l'air",
+    // oct. 2026). On force la revalidation (ETag → 304 si identique).
+    headers: {
+      'Cache-Control': 'no-cache',
+    },
     proxy: {
       '/socket.io': {
         target: 'http://localhost:3001',

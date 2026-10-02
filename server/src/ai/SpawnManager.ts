@@ -271,11 +271,14 @@ export class SpawnManager extends EventEmitter {
         attackRating: official?.atkRating ?? mLevel * 10,
         isUnique: monster.isUnique,
         // Mobs tutoriels dociles: pas d'aggro spontanée (vengeance seulement)
-        aggroRange: official && DOCILE_STEMS.has(official.stem) ? 0 : monster.aggroRange,
+        aggroRange: official && DOCILE_STEMS.has(official.stem) ? 0 : monster.aggroRange * 8, // unités SRO
         exp: mExp,
         sp: mSp,
-        attackRange: 3, // Default melee range
-        moveSpeed: 3.0,
+        attackRange: 10, // mêlée ~1 m en unités SRO (1 u ≈ 10 cm)
+        // Vitesses officielles du bestiaire CSV (walk/run en unités SRO/s);
+        // repli: marche médiane 12, course ×2,5.
+        moveSpeed: official?.walkSpeed ?? 12,
+        runSpeed: official?.runSpeed ?? (official?.walkSpeed ?? 12) * 2.5,
         attackSpeed: 2000,
         respawnTime: activeSpawn.respawnTime,
         position: { ...activeSpawn.position },

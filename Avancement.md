@@ -1,5 +1,167 @@
 # Avancement du Projet SRObro
 
+## Session du 2 Octobre 2026 (14) : OBJECTIF FIDÉLITÉ SRO — ANIMATIONS D'ATTAQUE DU PERSO
+
+**Écart de fidélité**: le perso ne jouait AUCUNE animation d'attaque (seuls
+monstres, VFX et sons s'animaient). SRO n'a pas d'« attack01 » générique:
+les coups sont les **chaînes de combo par famille d'arme** (clips officiels
+`skill_ch_sword_chain_a..h`, `spear_chain_a..g`, `bow_*`; réactions
+`chinaman_a_behardhit`/`benormalhit`, versions chinawoman incluses).
+
+**Ajouts** (`NetworkCombat` + `BanAnimationService`):
+- `attackClip(famille, combo, genre)` / `hitClip(dur, genre)`.
+- `playLocalOneShot()`: joue un clip ponctuel PAR-DESSUS l'anim d'état —
+  groupes `player_anim_*` mis en pause puis repris, compteur de génération
+  contre les reprises obsolètes; déclenché par le packet `attack` CONFIRMÉ
+  (attaquant = perso local → combo a→b→c; cible = perso local → réaction
+  officielle dur/normal selon critique).
+- Famille d'arme détectée à l'équipement (bow / spear|glaive / sword par
+  défaut), genre transmis depuis la sélection de personnage.
+- Au passage: offsets dégâts/VFX restés à l'ancienne échelle convertis en
+  unités SRO (chiffres monstre +13, impact VFX +11, dégâts joueur +17).
+
+**Vérifié en jeu** (bandit agressif spawné): groupes `skill_ch_sword_chain_a,
+b, c` ET `chinaman_a_benormalhit`, `chinaman_a_behardhit` observés en jeu;
+capture analysée: « pose d'attaque, corps tordu mi-frappe, bras en extension
+complète ». tsc 0. Source assets: `C:\Program Files (x86)\Silkroad`
+(Data/Map/Media/Music/Particles.pk2) déjà extraite dans assets/pk2_data.
+
+## Session du 1er Octobre 2026 (13) : FIX OSCILLATION VERTICALE AU REPOS
+
+**Symptôme**: le perso bougeait de haut en bas à l'arrêt. Cause: la
+« correction de dérive » de `normalizePlayerScale` relançait le recalage
+toutes les 2 s et reposait les enfants selon la **bbox animée**
+(refreshBoundingInfo) — laquelle varie désormais à chaque frame depuis que
+les animations jouent (invisible avant, quand le bug fps figeait tout).
+Le clip idle lui-même est innocent (bob du root Bip01: 0,024 u = 2,4 mm).
+
+**Correctif**: le sol des pieds se mesure désormais sur les **vertices
+bruts** (`getVerticesData` — statique, insensible à la pose), et la dérive
+périodique est supprimée (plus rien à corriger avec le bind T-pose correct).
+Même changement pour les PNJ dans QuestPanel (sinon ils « flottaient » dès
+que leur idle jouait).
+
+**Vérifié en jeu**: 6 s au repos → amplitude du root Y = 0,000, pieds
+constants à 0,005 u. tsc 0.
+
+## Session du 1er Octobre 2026 (12) : ÉCHELLE UNIFIÉE EN UNITÉS SRO
+
+**Symptôme**: perso minuscule à côté des monstres (« mangnyang géant »),
+déplacement rampant. Mesures: perso/PNJ normalisés à 1,8 u alors que le
+monde est en **unités SRO** (1 u ≈ 10 cm — régions 1920, monstres BMS
+natifs: mangnyang 15,2 u, vitesses officielles CSV walk 8-20 / run 20-399,
+skills range en u). Le perso était ~9× trop petit et rampait à 1,7 u/s
+(marche officielle du mangnyang: 8).
+
+**Correctifs client**:
+- `normalizePlayerScale`: échelle **native BMS** (~17-18 u) au lieu de 1,8.
+- Vitesses: marche **8 u/s** (foulée walkforward 1,166 s/cycle), Shift ×2,125
+  = **17 u/s** (run officiel 100% = 16,6); seuil anim run > 10; /speed GM base 8.
+- Caméra TPC: distance 48 (était 9), hauteur 11, min 8, collision ignore 8 u.
+- NetworkCombat: cylindre joueur distant 6×17, proxy monstre 10×14×10,
+  étiquettes 30×7,5, ancre VFX +11, convergence interpolation 1,5, snap 80.
+- QuestPanel PNJ: échelle native (1,0). Seuil d'arrivée clic: 5 u.
+
+**Correctifs serveur**:
+- Vitesses **officielles CSV** au spawn: moveSpeed = walkSpeed, runSpeed =
+  runSpeed (repli 12 / ×2,5); aggro et retour au spawn à runSpeed (retour
+  ×0,6), patrouille moveSpeed (rayon 20→120 u, seuil waypoint 4).
+- aggroRange DB (15) ×8 = unités SRO aux 2 sites de création; attackRange 3→10.
+
+**Vérifié en jeu**: perso 18,3 u vs mangnyang 15,2 u (proportions justes),
+caméra 54 u, marche ~8 u/s, monstres qui patrouillent réellement (86→34 u
+hors de portée en 10 s), combat au contact OK (« Mangnyang tué par Au2iix0j
++2 XP »), tsc 0/0 client+serveur.
+
+## Session du 1er Octobre 2026 (11) : FIX MOONWALK — LES MODÈLES SRO REGARDENT −Z
+
+**Symptôme**: le perso marchait dos à son déplacement (moonwalk). Mesure
+décisive sur le maillage `chinaman_adventurer_face`: le NEZ dépasse à
+Z=−1,36 (cluster de 10 vertices extrêmes) contre +0,85 pour l'arrière du
+crâne, X symétrique (oreilles ±0,85) → **le visage regarde −Z**, alors que
+tout le code oriente le +Z du nœud vers la marche (`atan2(dx,dz)` côté
+client ET serveur — MonsterEntity utilise la même convention).
+
+**Correctif** (`AssetLoader.loadMultiPartGlb`): nœud intermédiaire
+`<id>_flip` avec rotation.y = π entre le root et les parties — UNIQUEMENT
+pour les modèles skinnés (persos/mobs/PNJ; les armes/objets non skinés
+gardent leur orientation pour ne pas casser l'attache d'arme). Soigne
+joueur, PNJ, monstres et joueurs distants d'un coup (tous passent par ce
+chargeur).
+
+**Vérifié**: corrélation nez↔direction de marche = **1.0** (mesure du
+vertex extrême du mesh tête via matrice monde), capture zoom pendant la
+marche analysée: « vue de dos, foulée naturelle, une jambe en avant, bras
+en opposition, pas de moonwalk ». tsc 0 erreur.
+
+## Session du 1er Octobre 2026 (10) : DÉPLACEMENT NATUREL — ANIMATIONS À LA BONNE VITESSE + INTERPOLATION
+
+**Symptôme**: perso/monstres/PNJ glissaient en « téléportation », membres
+figés. Cause 1: `BanAnimationService.play()` créait les Animations avec
+**framePerSecond = 1** alors que les clés sont numérotées `time(s) × 30` →
+un clip de 1,17 s durait ~35 s (30× trop lent) : les os s'appliquaient sur
+la première clé puis semblaient immobiles (cuisse: 0,03 d'amplitude au lieu
+de ~100°/cycle). Les times des clips JSON sont en **SECONDES** (pas ms).
+
+**Correctifs**:
+- `BanAnimationService.ts`: fps 1 → **30** (rot + pos) — soigne TOUT:
+  idle du perso (balancement), idle PNJ (standcity), marche/course joueur,
+  marche/run monstres, joueurs distants.
+- Vitesses naturelles (`Game.ts`): marche **1,7 u/s** (~6 km/h pour un perso
+  de 1,8 u; avant 5,0 = patinage), Shift = ×3,2 ≈ 5,4 u/s, seuil anim run
+  6,5 → 3,0 (basé sur effectiveSpeed), base `/speed` GM = baseMoveSpeed.
+- **Interpolation des entités distantes** (`NetworkCombat.ts`): le serveur
+  diffuse les monstres à 250 ms (CombatBridge, idle non diffusé) et les
+  joueurs à ~200 ms — le client snappait chaque packet (= téléportation).
+  Désormais: cible mémorisée, lissage exponentiel `1-exp(-dt×10)` vers elle
+  chaque frame, rotation par plus court chemin, snap seulement si saut > 8 u
+  (téléporteurs), Y repris du terrain; bascule d'anim par CONVERGENCE
+  (> 0,15 u de la cible = walk, rejoint = idle stand01/standcity) — règle
+  aussi le cas « le serveur ne diffuse pas les monstres idle → anim walk
+  collée à l'arrêt ». run si aiState serveur aggro/attack.
+
+**Vérifié en jeu**: cuisse 101° cumulés par cycle de marche (ampleur
+naturelle), 19 777 px de diff de silhouette entre deux phases du pas,
+vitesse réelle 1,7 u/s, mangnyang idle stand01 animé, bandit aggro: membres
+135° cumulés en anim run, aucun saut après pose initiale, tsc 0 erreur.
+
+## Session du 1er Octobre 2026 (9) : FIX « BRAS EN L'AIR » — BIND T-POSE BSK
+
+**Symptôme**: le perso rendait bras en T (tendus à l'horizontale) alors que
+les os CPU étaient bras baissés (main 9.7 < épaule 14.9) et que le rendu
+suivait bien les os (13 992 px changés après rotation manuelle d'un os).
+
+**Cause racine (mesurée sur les vertices)**: les maillages BMS sont modélisés
+en **T-pose** (`man_arm_upper` brut: X ±5.01, Y constant 13.8..15.5) et les
+**absolues BSK sont exactement cette T-pose dans le repère GLB, 1:1 sans
+échelle** (L UpperArm (1.49, 14.87), L Hand (6.96, 14.93), pelvis 9.87,
+foot 1.26 = ancres du maillage). L'ancienne lecture « BSK éparpillé main
+Y=89 » était un artefact d'ordre de matrices. Les patches « pose neutre »
+précédents avaient posé IBM = inv(monde_neutre(clé 0)): au repos ET pendant
+l'idle (≈ neutre) le skinning était ≈ identité → c'est le maillage BRUT
+(T-pose) qui s'affichait. Divergence CPU/GPU trompeuse: seuls un crop
+d'écran + une simulation de skinning sur les vrais vertices le révèlent.
+
+**Correctif — `scripts/fix-glb-tpose-bind.js`** (nouveau, 1623 GLB patchés) :
+- locals des nodes os = inv(bind parent) × absolue BSK ; IBM = inv(bind).
+- os dégénérés du BSK (abs = identité, ex. `Spine_Base`, le seul du rig
+  chinois) : local inchangé, bind = bind(parent) × local.
+- résolution BSK par GLB: stem exact → stems élagués (mangnyang_part2 →
+  mangnyang) → familles humanoïdes (chinaman/chinawoman/europeman/
+  europewoman, proportions distinctes) → plus petit BSK surensemble.
+- validation par fichier: recomposition repos = identité; **auto-test
+  géométrique** `--selftest`: skinne les vrais vertices de man_arm_upper
+  avec la clé 0 du clip standcity → bras repliés (larg 5.39, Y 11.5..15.5)
+  au lieu de la T-pose (larg 10, Y 13.8..15.5).
+- pièges corrigés en route: JOINTS_0 lu en float32 alors qu'entier (indices
+  aberrants), mémoisation prématurée des mondes composés, Spine_Base.
+
+**Vérifié en jeu** (captures + analyse d'image): perso idle **bras baissés
+le long du corps**, marche clavier (9 groupes walkforward, 45 u parcourues,
+retour idle 180 groupes), PNJ chinaman/chinawoman **pose idle naturelle,
+aucune déformation**. Monstres: mêmes BSK/même pipeline validé (mangnyang →
+mangnyang.bsk OK en dry-run). `?v=` version.txt bumpé → pas de cache.
+
 ## Session du 1er Octobre 2026 (8/8) : AUDIT & CONSOLIDATION DES FONDATIONS
 
 Audit complet (4 sous-systèmes en parallèle) puis corrections par priorité.
@@ -891,3 +1053,166 @@ playlist audio par zone.
   (timeout 30 s sinon), /item atterrit au premier slot LIBRE (variable
   selon l'alchimie), tracking Medusa par NOM (modelId variable).
 - AUDIT_FINAL_V2.md mis à jour avec les preuves filmées.
+
+### FIX GRAPHIQUE MAJEUR + EFFETS + CHARGEMENT — 2026-10-02 (session 9)
+
+**Bug: personnage invisible au centre de l'écran (rapport utilisateur).**
+- Diagnostic en live (window.appState/netCombat exposés): le perso était
+  ENTOURRE de ~3,4 m sous terre — le skinning glTF des GLB était corrompu.
+- **Cause racine**: l'exporteur ne déclarait comme joints du skin QUE les os
+  pondérés par la partie; les os ancêtres (Bip01, Pelvis...) restaient
+  non-joints. Le chargeur Babylon (_updateBoneMatrices, branche boneIndex
+  === -1) remplace alors leur matrice de bind par inv(parentBind) → leur
+  transform PROPRE est perdu → toute la chaîne compose faux → perso enterré.
+  Preuve mathématique sur disque: world(joint)×IBM ≠ identité au repos.
+- **Correctif**: scripts/fix-glb-skins.js — étend joints à TOUS les ancêtres
+  (les indices JOINTS_0 restent valides: anciens joints en tête), réécrit
+  les IBM = inv(world(node)), ajoute skins.skeleton = racine commune.
+  **1 624 GLB patchés** (persos, monstres, familiers) avec validation
+  d'identité intégrée. Piège GLB: le padding du chunk JSON doit être des
+  ESPACES (0x20), jamais des \0 (JSON.parse échoue sinon).
+- **Animations BAN réparées au passage**: (1) les noms d'os correspondent
+  exacte OU par suffixe (l'instantiation préfixe les noms); (2) déliage
+  linkTransformNode(null) AVANT animer — sinon les nodes liés écrasent la
+  pose (T-pose permanente). Idle standcity vérifié: bras le long du corps.
+- **normalizePlayerScale durci**: signature de stabilité bbox locale
+  (verrou après 1,5 s sans changement), garde-fou hauteur locale 5..60 u
+  (une pose explosive ne pilote PLUS l'échelle — bug d'échelle 0.011),
+  correction de dérive lente tous les 2 s après verrouillage.
+- ATTENTION: re-baser les positions BAN sur le bind (key_i−key_0+bind) fait
+  EXPLOSER la pose (les rotations vivent dans le repère d'origine) — revert.
+- Vérifié en navigateur: perso 1,8 m posé au sol, au centre (test de
+  masquage: Δluminance 58 au centre du canvas), idle animé, 0 erreur GLB.
+
+**Chantier VFX (Skills)**: SkillEffectManager branché sur le VRAI chemin de
+jeu (avant: appelé seulement par les tests) — effet de CAST au perso
+(élément déduit du nom de skill: feu/glace/foudre/soin/slash), IMPACT sur la
+cible (double en critique), petit éclat sur coups blancs. Texture de flare
+procédurale locale (plus de CDN externe).
+
+**Particles.pk2 extrait** (175 Mo → assets/pk2_particles): 3 331 .efp
+indexés avec leurs textures (scripts/index-efp-textures.js →
+efp-textures.json), 999 textures .ddj converties en PNG
+(textures/particles/). 5 textures officielles utilisées par famille d'effet
+(fire, byuk-ice, cho-light, bumpy_healline, cho-wind-y). Piège: dossier créé
+avec majuscule (`Particles`) — sirv/Vite est SENSIBLE À LA CASSE → fallback
+SPA HTML au lieu du PNG (symptôme: EncodingError sur img.decode()).
+
+**Chargement initial: ~1-2 min → 6-17 s**: RealTerrain charge le bloc 3×3
+autour du spawn en priorité puis le reste en tâche de fond (6 workers);
+WorldObjects charge les ~100 modèles GLB en parallèle (8 workers au lieu de
+séquentiel).
+
+Autres observations: en navigateur en arrière-plan, rAF est en pause → la
+boucle de rendu semble morte (fps figé) — normal, elle reprend à l'affichage.
+Les tests navigateur doivent donc "pomper" les frames manuellement
+(engine._activeRenderLoops[0]()) quand la page n'est pas visible.
+
+### FIX "le personnage s'affiche mal" (corps éparpillé) — 2026-10-02 (session 9, suite)
+
+**Symptôme**: au repos le perso était parfait (0..1,8 m) mais dès que
+l'animation idle démarrait, le corps s'éclatait (bbox ±11 m).
+
+**Cause racine (validée par simulation skinning complète hors ligne,
+scripts/test-ban-convention.js)**: les maillages BMS sont modélisés dans la
+pose NEUTRE DEBOUT du rig — la pose que décrit la CLÉ 0 des clips BAN — et
+PAS dans la pose de bind du BSK (une pose éparse: main Y=89, tête Z=−42).
+Les IBM en inv(world BSK) étaient donc fausses du delta bind→neutre, et
+retargeter avec les locaux du clip éparpillait le corps.
+
+**Correctif — scripts/fix-glb-neutral-pose.js** (nouvelle passe):
+- node locals et IBM recalculés depuis la pose NEUTRE (clé 0 du clip de
+  référence de la famille: chinaman/chinawoman_fighter_standcity, walk pour
+  les mobs);
+- au repos le skinning est identité ET l'application directe des locaux du
+  clip redonne exactement la pose neutre → l'animation retargete correctement;
+- 66 fichiers perso (homme+femme) + 35 fichiers monstres (ceux avec clip
+  walk) patchés, 100% validés (world×IBM=I, A-locaux=bind).
+
+**Convention BAN définitive (ne plus re-tester)**: quaternions xyzw,
+positions/rotations LOCALES au parent, clé 0 = pose neutre. Une conversion
+abs→local (inv(absParent)×abs) a été essayée et est FAUSSE — les valeurs
+sont déjà locales. Le BSK en revanche est ABSOLU (confirmé par
+l'importateur Blender: bl_bone.matrix = armature space).
+
+**Bug bonus**: la bascule d'animation est one-shot par état — si elle tirait
+pendant le placeholder (aucun squelette), aucune anim ne jouait jamais.
+Réinitialisation de playerAnimState quand la référence joueur change.
+
+Vérifié en navigateur: 9 groupes idle en lecture, bbox 0..1,8 m PENDANT
+l'animation, bras le long du corps (largeur 1,8 m), 0 erreur GLB.
+
+### ANIMATIONS GÉNÉRALES (perso figé bras en l'air → tout animé) — 2026-10-02 (session 10)
+
+**Bug « bras en l'air »**: le chargeur glTF de Babylon DIFFÈRE ses
+linkTransformNode au premier render (_postSceneLoadActions) — le déliage de
+play() s'exécutait avant et était annulé juste après → nodes (pose BSK
+éparse, bras en V) écrasaient la pose animée. Correctif: re-déliage au frame
+suivant (onAfterRenderObservable.addOnce, une fois par squelette) + Cache-
+Control: no-cache dans vite.config.ts (le navigateur gardait des GLB
+pré-patch en cache heuristique). ⚠️ Bone.linkTransformNode est une MÉTHODE
+(toujours truthy) — lire le node réel via getTransformNode().
+
+**Couverture animations (toutes les familles)**:
+- index des clips (scripts/build-anims-index.js → anims/index.json,
+  3 916 clips) + résolution par fallback dans loadClip: chemin direct →
+  index (normalisation des séparateurs bigeyeghost↔bigeye_ghost, alias de
+  stems wolf→p_wolf_01) — les clips vivent par RÉGION (mob/china, mob/oasis,
+  mob/taklamakan, npc/*, cos/*) pas seulement mob/china.
+- Perso: idle standcity + marche walkforward + COURSE runforward quand
+  moveSpeed > 6,5 (monture ×1,67, zerk ×2, /speed) — les deux genres
+  (chinaman_/chinawoman_fighter_*).
+- Monstres: walk/run/attack01/damage01/die déjà branchés (switchMonsterAnim)
+  — désormais résolus toutes régions + pose neutre patchée sur 495 GLB
+  (66 persos + 460 mobs/NPC/familiers, scripts/fix-glb-neutral-all.js avec
+  idempotence et repli de stem blackrobberarcher_bow→blackrobberarcher).
+- NPC: cylindres colorés REMPLACÉS par modèles humains officiels animés
+  (chinaman/chinawoman_adventurer assemblés, 1,8 m, idle standcity, genre
+  alterné par id) — cylindre conservé en repli (QuestPanel.spawnNpcMesh).
+- Vérifié en live: 188 groupes d'animation simultanés (perso 9, NPC ~170,
+  mangnyang ×2 spawnés par /spawn), marche 9 groupes walkforward pendant le
+  click-to-move puis retour idle, monstres intacts visuellement.
+
+### DÉPLACEMENTS UNIFIÉS (perso figé/glissant au clavier) — 2026-10-02 (session 11)
+
+**Diagnostic**: DEUX systèmes de déplacement coexistaient. Le click-to-move
+(Game.updateClickToMove) jouait les vraies animations BAN, mais le CLAVIER
+viviait dans CharacterManager.handleMovement — déplacement en AXES MONDE
+(non relatif caméra, TODO présent dans le code) et animations PLACEHOLDER
+(playAnimation = console.log). En network mode les DEUX tournaient: ZQSD
+déplaçait le perso SANS animation → glissement en pose idle = « figé,
+déplacements pas naturels ».
+
+**Correctif**: déplacement unifié dans updateClickToMove:
+- clavier prioritaire (annule la destination cliquée), direction
+  CAMERA-RELATIVE (projection XZ de l'axe de visée), Shift = course
+  (×1,6 → animation runforward via seuil 6,5 u/s);
+- mêmes animations BAN / hauteur de terrain / sync serveur (moving correct)
+  pour clavier et clic; CharacterManager.legacyKeyboardMovement = false en
+  mode réseau (plus de double déplacement ni de double sendMove).
+- message d'accueil mis à jour (ZQSD caméra-relative, Shift, clic).
+
+Vérifié en live: Z maintenu → 20,7 m parcourus, état walk, 9 groupes
+walkforward, orientation vers la marche; Shift+Z → état run, 9 groupes
+runforward, 24,7 m; relâche → idle (standcity). Click-to-move inchangé.
+
+### STAMP ANTI-CACHE + CRISE VITE — 2026-10-02 (session 12)
+
+**Perso « toujours figé bras en l'air » malgré tous les fixes**: l'écran
+était bon côté serveur/tests — la cause restante était le CACHE HTTP du
+navigateur: les entrées GLB stockées AVANT l'en-tête no-cache étaient
+reservies sans revalidation (pose pré-patch = bras en V).
+- **Correctif durable**: /assets/version.txt (horodatage) écrit par les
+  scripts de patch; AssetVersion.init() au boot; AssetConfigManager ajoute
+  ?v=<stamp> à chaque URL d'asset → un GLB re-patché change d'URL, cache
+  impossible à trommer.
+- **Crise Vite au passage** (serveur « ready » mais ne répond jamais):
+  1) cache node_modules/.vite corrompu par le churn de fichiers du jour →
+  purge; 2) CINQ processus esbuild ORPHELINS (05:25) — Vite leur parlait sur
+  des pipes morts → EPIPE/pend. Purge esbuild + un seul Vite propre = tout
+  repart (200 sur /, main.ts, assets versionnés).
+- Diagnostic clé: mini-serveur Node HTTP répondait → réseau/Node sains →
+  problème Vite seul; TCP accepté mais HTTP muet = event loop bloquée.
+- Vérifié en live après réparation: bras BAISSÉS (main Y 9,7 < épaule 14,9),
+  0/26 os liés, bbox 0..1,8, 180 anims, marche clavier 13,2 m avec 9 groupes
+  walkforward puis idle au relâchement.

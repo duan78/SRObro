@@ -126,7 +126,7 @@ export class DomHud {
     (byId('hud-root') ?? document.body).appendChild(zerk);
 
     this.addChatMessage('Welcome to SRObro!', 'system');
-    this.addChatMessage('WASD/ZQSD pour bouger, clic pour attaquer. S: skills, Tab: zerk.', 'system');
+    this.addChatMessage('ZQSD/WASD pour bouger (relatif à la caméra), Shift: courir, clic sol: y aller, clic monstre: cibler. S: skills, Tab: zerk.', 'system');
   }
 
   /** Hotbar dynamique (skills appris, touches 1-8 — Phase C). */

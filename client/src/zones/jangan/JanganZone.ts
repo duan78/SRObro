@@ -127,9 +127,11 @@ export class JanganZone {
   private async loadGround(): Promise<void> {
     console.log('[JanganZone] Loading ground...');
 
-    // Terrain réel depuis les heightmaps .nvm du client officiel
+    // Terrain réel depuis les heightmaps .nvm du client officiel.
+    // Les régions proches du spawn Jangan (0,510) se chargent d'abord: le jeu
+    // démarre sans attendre les 110 régions (reste en tâche de fond).
     this.terrain = new RealTerrain(this.scene);
-    const loaded = await this.terrain.load();
+    const loaded = await this.terrain.load(0, 510);
     if (loaded) {
       this.groundMesh = this.terrain;
       console.log('[JanganZone] Terrain réel chargé');
