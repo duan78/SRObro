@@ -839,3 +839,16 @@ tsc 0/0, persistance après relance serveur.
   respawn part du camp, pas de la position du mob tué — AOI flaky).
 - **Régressions complètes**: A 9/9, B, combat-flow, 4, 5, 6, jobs, stalls,
   fortress, donjons, pets — TOUT PASSÉ.
+
+---
+
+## Session du 2 octobre 2026 (matin): AUDIT FINAL V2 §5 — 8/8 critères démontrés
+
+Voir `docs/audit/AUDIT_FINAL_V2.md`: les 8 critères du §5 du PROMPT_MAITRE_V2
+sont couverts par les suites scriptées (toutes vertes, cf. tableau preuves).
+12 commits V2 au total. Le jeu couvre désormais: monde 3 villes + téléports
+officiels + 5 uniques persistants, skills complets (apprentissage SP,
+zerk, imbues), alchimie aux taux DB réels, stalls, trade triangle complet
+(étoiles/embuscades/vol), guildes, PvP/PK self-defense, fortress war au
+score + taxes, donjons FGW/Qin-Shi, loup de croissance, montures rapides,
+playlist audio par zone.
