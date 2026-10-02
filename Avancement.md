@@ -706,3 +706,17 @@ tsc 0/0, persistance après relance serveur.
 - **Tests** (test-phaseD.ts): +0→+1 pierre = 100% (mesuré finalSuccessRate
   1.0 = 50+50 ✓), élixir décrémenté, +2→+3 pierre ≈50% (15/40, n≥30),
   resets +0 observés (39). Régressions A/combat/4 au vert.
+
+### PHASE E (PvP/PK branché) — 2026-10-02
+- **Flux PvP sur morts joueur**: CombatBridge.onPlayerDeath route vers
+  PvPManager.handlePvPDeath quand le tueur est un joueur → PKManager
+  (points, seuils officiels 500/1000/2000, drops du meurtrier, pénalités).
+- **2 bugs corrigés** (repérés par l'audit modules): self-defense inversé
+  (initiateur lu sur la mauvaise clé — désormais: la VICTIME avait-elle
+  attaqué le tueur en premier) et handlePKDeath appelé sur le TUEUR au
+  lieu de la victime (c'est le mort qui droppe).
+- **Traçage d'agression**: recordAttack sur toute attaque joueur→joueur
+  (self-defense officiel: tueur défenseur = 0 pt).
+- **Tests** (test-phaseE.ts): A tue B → annonce PvP, PKStatus, B avait
+  attaqué en premier → +0 pt (légitime défense officielle). Régressions
+  A/combat au vert.

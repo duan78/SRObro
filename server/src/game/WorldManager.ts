@@ -365,6 +365,13 @@ export class WorldManager {
       return;
     }
 
+    // PvP (Phase E V2): tracer l'agresseur pour le self-defense officiel
+    if (targetEntity instanceof PlayerEntity) {
+      void import('../pvp/PvPManager.js').then(({ globalPvPManager }) => {
+        globalPvPManager.recordAttack(characterId, data.targetId);
+      }).catch(() => undefined);
+    }
+
     // Compétence: déléguée au CombatBridge (cooldown, MP, multi-coups)
     if (data.skillId && this.combatBridge) {
       this.combatBridge.processSkillCast(client, characterId, data.skillId, data.targetId);

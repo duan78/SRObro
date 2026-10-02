@@ -644,6 +644,26 @@ export class CombatBridge {
   private onPlayerDeath(victimId: string, killerId: string): void {
     const player = this.worldManager.getPlayer(victimId);
     const monster = globalSpawnManager.getMonsterEntity(killerId);
+    // Mort PvP (joueur tué par joueur, Phase E V2): flux officiel PK —
+    // points de meurtre (self-defense tracé), drops du meurtrier mort
+    // (table florian0 5→100% selon pkPoints: 0=5%, >0=30%, ≥4000=50%,
+    // ≥15000=70%, ≥30000=100% — docs 20_PVP_PK_SYSTEM.md)
+    const killerPlayer = this.worldManager.getPlayer(killerId);
+    if (killerPlayer && player) {
+      void import('../pvp/PvPManager.js').then(async ({ globalPvPManager }) => {
+        try {
+          const result = await globalPvPManager.handlePvPDeath(victimId, killerId);
+          this.sendToPlayer(killerId, {
+            type: 'xp_gain', timestamp: Date.now(),
+            data: { amount: 0, total: killerPlayer.exp, pkPoints: result.pkPointsGained, pvp: true },
+          });
+          this.sendToPlayerRaw(killerId, 'chat', { message: `PvP: ${player.name} éliminé (+${result.pkPointsGained} pts PK${result.droppedItems?.length ? `, ${result.droppedItems.length} item(s) droppé(s)` : ''})`, channel: 'system' });
+          logger.info(`PvP kill: ${killerPlayer.name} → ${player.name} (self-defense: ${result.wasSelfDefense})`);
+        } catch (e) {
+          logger.warn('PvP death handling:', e);
+        }
+      });
+    }
     this.sendToPlayer(victimId, {
       type: 'player:death',
       timestamp: Date.now(),

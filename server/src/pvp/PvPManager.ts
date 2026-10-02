@@ -146,12 +146,13 @@ export class PvPManager {
     victimId: string,
     killerId: string
   ): Promise<PvPDeathResult> {
-    // Check if this was self-defense
-    const initiator = this.combatInitiators.get(victimId);
-    const wasSelfDefense = initiator === victimId; // Victim attacked first
+    // Self-defense: le tueur s'est défendu si la VICTIME l'avait attaqué
+    // en premier (la map donne, pour un joueur, qui l'a attaqué)
+    const wasSelfDefense = this.combatInitiators.get(killerId) === victimId;
 
-    // Clear combat initiator
+    // Nettoyage des traces de combat des deux côtés
     this.combatInitiators.delete(victimId);
+    this.combatInitiators.delete(killerId);
 
     // Handle PK points
     const killResult = await this.pkManager.handlePlayerKill(
@@ -160,8 +161,9 @@ export class PvPManager {
       wasSelfDefense
     );
 
-    // Handle PK death (drop items if murderer)
-    const deathResult = await this.pkManager.handlePKDeath(killerId);
+    // Handle PK death (drop items if murderer) — c'est la VICTIME qui meurt
+    // et droppe, pas le tueur (bug d'origine inversé)
+    const deathResult = await this.pkManager.handlePKDeath(victimId);
 
     return {
       victimId,
@@ -368,3 +370,10 @@ export class PvPManager {
     this.endPvPMatch(match.id, winnerId);
   }
 }
+
+/** Singleton serveur (Phase E V2: branché sur les morts PvP). */
+import { prisma as prismaDefault } from '../database/prisma';
+import { PKManager as PKManagerCtor } from './PKManager';
+
+/** Singleton serveur (Phase E V2: branché sur les morts PvP). */
+export const globalPvPManager = new PvPManager(prismaDefault, new PKManagerCtor(prismaDefault));
