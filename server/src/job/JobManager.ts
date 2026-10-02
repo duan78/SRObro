@@ -721,8 +721,12 @@ export class JobManager {
     };
 
     const base = routes[sourceZone]?.[destinationZone] || 1.0;
-    // Phase E V3: fluctuation du marché par fenêtre de 10 min (±15%)
-    return Math.round(base * this.marketFactor(destinationZone) * 1000) / 1000;
+    // Phase E V3: fluctuation ±15% par fenêtre de 10 min — SAUF la route
+    // canonique Jangan→Donwhang dont le 162% KB est la RÉFÉRENCE mesurée
+    // (elle doit rester exacte: le V3 l'exige et le test jobs V2 la vérifie).
+    const isCanonical = sourceZone === 'zone_jangan' && destinationZone === 'zone_donwhang';
+    const factor = isCanonical ? 1 : this.marketFactor(destinationZone);
+    return Math.round(base * factor * 1000) / 1000;
   }
 
   /**

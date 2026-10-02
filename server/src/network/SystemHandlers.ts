@@ -255,7 +255,7 @@ export class SystemHandlers {
     if (!session) return;
     try {
       const { guildId, itemId, quantity } = data;
-      await this.guildManager.depositToStorage(guildId, session.characterId, itemId, quantity);
+      await this.guildManager.depositToStorage(guildId, itemId, quantity, session.characterId);
       socket.emit('guild:deposited', { guildId, itemId, quantity });
     } catch (error: any) {
       socket.emit('error', { message: error.message });
@@ -267,7 +267,7 @@ export class SystemHandlers {
     if (!session) return;
     try {
       const { guildId, itemId, quantity } = data;
-      await this.guildManager.withdrawFromStorage(guildId, session.characterId, itemId, quantity);
+      await this.guildManager.withdrawFromStorage(guildId, itemId, quantity, session.characterId);
       socket.emit('guild:withdrawn', { guildId, itemId, quantity });
     } catch (error: any) {
       socket.emit('error', { message: error.message });

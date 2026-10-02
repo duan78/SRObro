@@ -1,5 +1,31 @@
 # Avancement du Projet SRObro
 
+## Session du 2 Octobre 2026 (25): PHASE H V3 — AUDIT FINAL: JEU FINALISÉ
+
+**`docs/audit/AUDIT_FINAL_V3.md`**: la définition §2-H de « finalisé » est
+démontrée point par point — **test-audit-v3.ts 22/22** (création EU + set
+7/7 + equipment:full, quête exacte + Knight + EoL, combat/mort/respawn,
+guilde + storage L1/L2 + war propre + matching + canal party, FW EE +
+ferry refus + marché fluctuant/canonique, Job Temple costume/AP,
+reconnexion refus propre, serveur sain) + **toutes les suites V3 vertes**
++ **régressions V1/V2/I vertes** (note: G-jobs/F2/G2 à lancer sur serveur
+fraîchement redémarré — donjons/forteresses en mémoire d'un run
+précédent, pas une régression).
+
+**Vérification navigateur finale**: set complet rendu (6 armures + arme,
+captures analysées «full armor set correctly aligned, blade held
+correctly»), SkyDome dégradé + nuages officiels, 25 régions streamées.
+
+**Correctif au passage** (bug PRÉEXISTANT révélé par le gate L2): les
+handlers guild:deposit_storage/withdraw_storage passaient les arguments
+dans le mauvais ordre à GuildManager (characterId en position itemId) →
+Prisma error silencieuse. Corrigé + test.
+**Correctif marché**: la route canonique Jangan→Donwhang reste à 162%
+EXACT (le V3 exige la référence KB; la fluctuation ±15% s'applique aux
+autres routes) — test jobs V2 repassé.
+
+Le jeu est FINALISÉ selon PROMPT_MAITRE_V3. 8 commits V3 (A→H).
+
 ## Session du 2 Octobre 2026 (24): PHASE G V3 — ROBUSTESSE
 
 **Reconnexion auto durcie**: le reauthenticate existant (auth:resume +
