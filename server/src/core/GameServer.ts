@@ -627,6 +627,38 @@ export class GameServer {
         }
       });
 
+      // Marqueurs de quête par PNJ (V4 §E): « ! » quête disponible (startsAt),
+      // « ? » quête en cours rendable chez ce PNJ (endsAt, in_progress).
+      socket.on('quest:markers', (_data: unknown, ack?: (r: unknown) => void) => {
+        try {
+          const client = this.clientManager?.getClient(socket.id);
+          const characterId = client?.getCharacterId();
+          if (!client || !characterId) {
+            ack?.({ success: false, error: 'Non authentifié' });
+            return;
+          }
+          void (async () => {
+            const qm = this.questManager ?? QuestManager.getInstance();
+            const available = await qm.getAvailableQuests(characterId as string);
+            const progress = await qm.getQuestProgress(characterId as string);
+            const markers: Record<string, 'start' | 'progress'> = {};
+            for (const q of available) {
+              for (const npc of q.startsAt ?? []) markers[npc] = 'start';
+            }
+            for (const p of progress) {
+              if (p.status !== 'in_progress') continue;
+              for (const npc of p.quest?.endsAt ?? []) {
+                if (!markers[npc]) markers[npc] = 'progress';
+              }
+            }
+            ack?.({ success: true, markers });
+          })();
+        } catch (error) {
+          logger.error('quest:markers error:', error);
+          ack?.({ success: false, error: 'Erreur serveur' });
+        }
+      });
+
       // Liste des PNJ (toutes zones — Phase B: monde multi-villes)
       socket.on('npc:list', (_d: unknown, ack?: (r: unknown) => void) => {
         try {

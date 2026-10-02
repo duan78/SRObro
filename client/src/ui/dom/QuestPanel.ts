@@ -40,6 +40,8 @@ export class QuestSystem {
     this.network.onRaw('quest:completed', (d: any) => {
       const r = d?.rewards ?? {};
       this.notify(`Quête « ${d?.questName} » terminée ! +${r.exp ?? 0} XP, +${r.sp ?? 0} SP, +${r.gold ?? 0} or`);
+      // Le marqueur « ? » de ce PNJ doit disparaître (V4 §E)
+      setTimeout(() => void this.refreshQuestMarkers(), 800);
     });
     // Annonce serveur d'apparition d'un unique (comportement officiel)
     this.network.onRaw('unique:spawned', (d: any) =>
@@ -62,6 +64,11 @@ export class QuestSystem {
       }
       this.npcsLoaded = true;
       console.log(`[QuestSystem] ${this.npcMeshes.size} PNJ rendus`);
+      // Marqueurs de quête (V4 §E): état du joueur par PNJ (les modèles
+      // arrivent en différé — retry échelonné jusqu'à coïncider avec eux).
+      for (const delay of [4000, 12000, 25000, 45000]) {
+        setTimeout(() => void this.refreshQuestMarkers(), delay);
+      }
     } catch { /* silencieux */ }
   }
 
@@ -130,10 +137,38 @@ export class QuestSystem {
               this.startNpcDistanceCulling();
             }).catch(() => undefined);
         }
+        // Nom au-dessus de la tête (V4 §E, comme le client officiel) +
+        // marqueur de quête si l'état est déjà connu.
+        const top = Number.isFinite(h) && h > 5 ? max + 2.5 : 20;
+        (root as any).__labelTop = top;
+        void import('../../game/FloatingLabel').then(({ setEntityLabel, setQuestMarker }) => {
+          setEntityLabel(this.scene, root, `npc_${npc.id}`, npc.name, top, {
+            color: npc.npcType === 'teleport' ? '#7fd4ff' : '#ffd76e',
+          });
+          const st = this.questMarkers.get(npc.id);
+          if (st) setQuestMarker(this.scene, root, npc.id, st, top);
+        });
       }).catch(() => this.spawnNpcCylinder(npc, y));
       return;
     }
     this.spawnNpcCylinder(npc, y);
+  }
+
+  /** Marqueurs de quête par PNJ (V4 §E): « ! » disponible, « ? » en cours. */
+  private questMarkers = new Map<string, 'start' | 'progress'>();
+  async refreshQuestMarkers(): Promise<void> {
+    try {
+      const res = await this.network.request<{ success: boolean; markers?: Record<string, 'start' | 'progress'> }>('quest:markers');
+      if (!res.success || !res.markers) return;
+      this.questMarkers = new Map(Object.entries(res.markers));
+      void import('../../game/FloatingLabel').then(({ setQuestMarker }) => {
+        for (const [npcId, root] of this.npcMeshes) {
+          const st = this.questMarkers.get(npcId) ?? null;
+          const h = (root as any).__labelTop ?? 20;
+          setQuestMarker(this.scene, root, npcId, st, h);
+        }
+      });
+    } catch { /* silencieux */ }
   }
 
   /**

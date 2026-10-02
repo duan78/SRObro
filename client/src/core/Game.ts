@@ -456,6 +456,13 @@ export class Game {
     if (!this.scene) return;
 
     // Hemispheric light (ambient + directional)
+    // Brume de distance (V4 §E — profondeur atmosphérique officielle): la
+    // couleur matche le ciel, densité faible (visible vers 300-600 m, les
+    // régions lointaines se fondent dans l'horizon au lieu de s'afficher sec).
+    this.scene.fogMode = Scene.FOGMODE_EXP2;
+    this.scene.fogColor = new Color3(0.53, 0.8, 0.92);
+    this.scene.fogDensity = 0.0016;
+
     this.hemisphericLight = new HemisphericLight(
       'hemiLight',
       new Vector3(0, 1, 0),

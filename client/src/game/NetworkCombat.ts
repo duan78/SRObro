@@ -789,6 +789,12 @@ export class NetworkCombat {
         const old = this.monsters.get(data.id)!;
         old.root.dispose();
         old.root = loaded.root;
+        // Nom + niveau au-dessus de la tête (V4 §E — comme le client officiel)
+        void import('./FloatingLabel').then(({ setEntityLabel }) => {
+          setEntityLabel(this.scene, loaded.root, `mob_${data.id}`,
+            `${data.name} Lv.${data.level ?? '?'}`, 22,
+            { color: (data as any).isUnique ? '#ff9a3c' : '#ff8f8f' });
+        });
         // Anim walk par défaut
         const skeletons = (loaded as any).skeletons as any[] | undefined;
         if (skeletons && skeletons.length > 0) {
@@ -810,6 +816,9 @@ export class NetworkCombat {
       holder.animGroups = null;
     }
     m.root.dispose();
+    // L'étiquette nom survit au root (mesh scène) — la disposer aussi
+    void import('./FloatingLabel').then(({ disposeEntityLabels }) =>
+      disposeEntityLabels(this.scene, `mob_${id}`));
     m.proxy.dispose();
     this.monsters.delete(id);
     if (this.targetId === id) this.clearTarget();
